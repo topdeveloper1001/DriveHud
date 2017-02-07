@@ -1,0 +1,971 @@
+#Game No : 596021270
+***** 888poker Hand History for Game 596021270 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:05:09
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 1: ZiYangZi ( $2,000 )
+Seat 2: Pudding77777 ( $2,000 )
+Seat 3: Peon_84 ( $2,000 )
+Seat 4: denchik0712 ( $2,000 )
+Seat 5: estebanito ( $2,000 )
+Seat 7: szebasztian ( $2,000 )
+Seat 9: frmn1000 ( $2,000 )
+Seat 10: Victoriyaone ( $2,000 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+Peon_84 posts small blind [$25]
+denchik0712 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 5h, Ac ]
+estebanito calls [$50]
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi raises [$1,990]
+Pudding77777 folds
+Peon_84 folds
+denchik0712 folds
+estebanito folds
+** Summary **
+ZiYangZi did not show his hand
+ZiYangZi collected [ $255 ]
+
+
+
+#Game No : 596021292
+***** 888poker Hand History for Game 596021292 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:05:31
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 8
+Seat 1: ZiYangZi ( $2,195 )
+Seat 2: Pudding77777 ( $1,990 )
+Seat 3: Peon_84 ( $1,965 )
+Seat 4: denchik0712 ( $1,940 )
+Seat 5: estebanito ( $1,940 )
+Seat 7: szebasztian ( $1,990 )
+Seat 9: frmn1000 ( $1,990 )
+Seat 10: Victoriyaone ( $1,990 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+denchik0712 posts small blind [$25]
+estebanito posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 2s, 8s ]
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi calls [$50]
+Pudding77777 folds
+Peon_84 folds
+denchik0712 calls [$25]
+estebanito checks
+** Dealing flop ** [ Qc, Ad, Kc ]
+denchik0712 checks
+estebanito bets [$115]
+ZiYangZi raises [$2,135]
+denchik0712 folds
+estebanito calls [$1,765]
+** Dealing turn ** [ 4c ]
+** Dealing river ** [ Qd ]
+** Summary **
+ZiYangZi shows [ 4h, Kh ]
+estebanito shows [ Kd, Qs ]
+estebanito collected [ $3,990 ]
+
+
+
+#Game No : 596021810
+***** 888poker Hand History for Game 596021810 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:06:06
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $255 )
+Seat 2: Pudding77777 ( $1,980 )
+Seat 3: Peon_84 ( $1,955 )
+Seat 4: denchik0712 ( $1,880 )
+Seat 5: estebanito ( $3,990 )
+Seat 6: oksa2879 ( $1,990 )
+Seat 7: szebasztian ( $1,980 )
+Seat 9: frmn1000 ( $1,980 )
+Seat 10: Victoriyaone ( $1,980 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+oksa2879 posts ante [$10]
+estebanito posts small blind [$25]
+oksa2879 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 7c, Kh ]
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi raises [$245]
+Pudding77777 folds
+Peon_84 folds
+denchik0712 calls [$245]
+estebanito calls [$220]
+oksa2879 calls [$195]
+** Dealing flop ** [ Td, 6h, 7s ]
+estebanito checks
+oksa2879 bets [$1,070]
+denchik0712 folds
+estebanito folds
+** Dealing turn ** [ Ts ]
+** Dealing river ** [ Js ]
+** Summary **
+ZiYangZi shows [ 9c, Tc ]
+oksa2879 shows [ 6s, 7h ]
+ZiYangZi collected [ $1,070 ]
+
+
+
+#Game No : 596022904
+***** 888poker Hand History for Game 596022904 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:06:48
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $1,070 )
+Seat 2: Pudding77777 ( $1,970 )
+Seat 3: Peon_84 ( $1,945 )
+Seat 4: denchik0712 ( $1,625 )
+Seat 5: estebanito ( $3,735 )
+Seat 6: oksa2879 ( $1,735 )
+Seat 7: szebasztian ( $1,970 )
+Seat 9: frmn1000 ( $1,970 )
+Seat 10: Victoriyaone ( $1,970 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+oksa2879 posts ante [$10]
+oksa2879 posts small blind [$25]
+szebasztian posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 4h, 5c ]
+frmn1000 folds
+Victoriyaone raises [$100]
+ZiYangZi folds
+Pudding77777 folds
+Peon_84 folds
+denchik0712 folds
+estebanito folds
+oksa2879 calls [$75]
+szebasztian folds
+** Dealing flop ** [ 7s, 8d, 6s ]
+oksa2879 checks
+Victoriyaone checks
+** Dealing turn ** [ 9s ]
+oksa2879 checks
+Victoriyaone bets [$255]
+oksa2879 calls [$255]
+** Dealing river ** [ 8c ]
+oksa2879 checks
+Victoriyaone checks
+** Summary **
+oksa2879 shows [ Jc, Ah ]
+Victoriyaone shows [ Td, 6d ]
+Victoriyaone collected [ $850 ]
+
+
+
+#Game No : 596024303
+***** 888poker Hand History for Game 596024303 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:07:29
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $1,060 )
+Seat 2: Pudding77777 ( $1,960 )
+Seat 3: Peon_84 ( $1,935 )
+Seat 4: denchik0712 ( $1,615 )
+Seat 5: estebanito ( $3,725 )
+Seat 6: oksa2879 ( $1,370 )
+Seat 7: szebasztian ( $1,910 )
+Seat 9: frmn1000 ( $1,960 )
+Seat 10: Victoriyaone ( $2,455 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+oksa2879 posts ante [$10]
+szebasztian posts small blind [$25]
+frmn1000 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ Jc, Qd ]
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$1,950]
+Peon_84 folds
+denchik0712 folds
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $215 ]
+
+
+
+#Game No : 596024792
+***** 888poker Hand History for Game 596024792 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:07:44
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 7 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $1,050 )
+Seat 2: Pudding77777 ( $2,115 )
+Seat 3: Peon_84 ( $1,925 )
+Seat 4: denchik0712 ( $1,605 )
+Seat 5: estebanito ( $3,715 )
+Seat 6: oksa2879 ( $1,360 )
+Seat 7: szebasztian ( $1,875 )
+Seat 9: frmn1000 ( $1,900 )
+Seat 10: Victoriyaone ( $2,445 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+oksa2879 posts ante [$10]
+frmn1000 posts small blind [$25]
+Victoriyaone posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 8d, Qc ]
+ZiYangZi folds
+Pudding77777 folds
+Peon_84 folds
+denchik0712 raises [$150]
+estebanito calls [$150]
+oksa2879 calls [$150]
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+** Dealing flop ** [ 7h, 4s, 3h ]
+denchik0712 bets [$50]
+estebanito calls [$50]
+oksa2879 raises [$815]
+denchik0712 folds
+estebanito folds
+** Summary **
+oksa2879 did not show his hand
+oksa2879 collected [ $765 ]
+
+
+
+#Game No : 596026009
+***** 888poker Hand History for Game 596026009 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:08:20
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $1,040 )
+Seat 2: Pudding77777 ( $2,105 )
+Seat 3: Peon_84 ( $1,915 )
+Seat 4: denchik0712 ( $1,395 )
+Seat 5: estebanito ( $3,505 )
+Seat 6: oksa2879 ( $1,915 )
+Seat 7: szebasztian ( $1,865 )
+Seat 9: frmn1000 ( $1,865 )
+Seat 10: Victoriyaone ( $2,385 )
+denchik0712 posts ante [$20]
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+Victoriyaone posts small blind [$50]
+ZiYangZi posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, 8c ]
+Pudding77777 folds
+Peon_84 folds
+denchik0712 raises [$500]
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+** Summary **
+denchik0712 did not show his hand
+denchik0712 collected [ $430 ]
+
+
+
+#Game No : 596026829
+***** 888poker Hand History for Game 596026829 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:08:45
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 10 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $920 )
+Seat 2: Pudding77777 ( $2,085 )
+Seat 3: Peon_84 ( $1,895 )
+Seat 4: denchik0712 ( $1,705 )
+Seat 5: estebanito ( $3,485 )
+Seat 6: oksa2879 ( $1,895 )
+Seat 7: szebasztian ( $1,845 )
+Seat 9: frmn1000 ( $1,845 )
+Seat 10: Victoriyaone ( $2,315 )
+denchik0712 posts ante [$20]
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+ZiYangZi posts small blind [$50]
+Pudding77777 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 2s, 3s ]
+Peon_84 folds
+denchik0712 folds
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $330 ]
+
+
+
+#Game No : 596027662
+***** 888poker Hand History for Game 596027662 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:09:08
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $850 )
+Seat 2: Pudding77777 ( $2,295 )
+Seat 3: Peon_84 ( $1,875 )
+Seat 4: denchik0712 ( $1,685 )
+Seat 5: estebanito ( $3,465 )
+Seat 6: oksa2879 ( $1,875 )
+Seat 7: szebasztian ( $1,825 )
+Seat 9: frmn1000 ( $1,825 )
+Seat 10: Victoriyaone ( $2,295 )
+denchik0712 posts ante [$20]
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+Pudding77777 posts small blind [$50]
+Peon_84 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 5d, 7c ]
+denchik0712 calls [$100]
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$2,225]
+Peon_84 folds
+denchik0712 calls [$1,565]
+** Dealing flop ** [ Jd, 4c, 9c ]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ 8c ]
+** Summary **
+Pudding77777 shows [ Kc, Js ]
+denchik0712 shows [ 3c, As ]
+Pudding77777 collected [ $3,610 ]
+
+
+
+#Game No : 596028945
+***** 888poker Hand History for Game 596028945 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:09:45
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $830 )
+Seat 2: Pudding77777 ( $4,220 )
+Seat 3: Peon_84 ( $1,755 )
+Seat 4: perattin ( $8,225 )
+Seat 5: estebanito ( $3,445 )
+Seat 6: oksa2879 ( $1,855 )
+Seat 7: szebasztian ( $1,805 )
+Seat 9: frmn1000 ( $1,805 )
+Seat 10: Victoriyaone ( $2,275 )
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+perattin posts ante [$20]
+Peon_84 posts small blind [$50]
+perattin posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 4h, 6s ]
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone raises [$400]
+ZiYangZi folds
+Pudding77777 raises [$4,200]
+Peon_84 folds
+perattin folds
+Victoriyaone calls [$1,855]
+** Dealing flop ** [ Kc, 8s, Ad ]
+** Dealing turn ** [ 7s ]
+** Dealing river ** [ Jd ]
+** Summary **
+Pudding77777 shows [ 3h, 3d ]
+Victoriyaone shows [ Qc, Tc ]
+Victoriyaone collected [ $4,840 ]
+
+
+
+#Game No : 596030175
+***** 888poker Hand History for Game 596030175 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:10:22
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $810 )
+Seat 2: Pudding77777 ( $1,945 )
+Seat 3: Peon_84 ( $1,685 )
+Seat 4: perattin ( $8,105 )
+Seat 5: estebanito ( $3,425 )
+Seat 6: oksa2879 ( $1,835 )
+Seat 7: szebasztian ( $1,785 )
+Seat 9: frmn1000 ( $1,785 )
+Seat 10: Victoriyaone ( $4,840 )
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+perattin posts ante [$20]
+perattin posts small blind [$50]
+estebanito posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9h, 4c ]
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 folds
+Peon_84 folds
+perattin folds
+** Summary **
+estebanito did not show his hand
+estebanito collected [ $330 ]
+
+
+
+#Game No : 596030746
+***** 888poker Hand History for Game 596030746 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:10:40
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $790 )
+Seat 2: Pudding77777 ( $1,925 )
+Seat 3: Peon_84 ( $1,665 )
+Seat 4: perattin ( $8,035 )
+Seat 5: estebanito ( $3,635 )
+Seat 6: oksa2879 ( $1,815 )
+Seat 7: szebasztian ( $1,765 )
+Seat 9: frmn1000 ( $1,765 )
+Seat 10: Victoriyaone ( $4,820 )
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+perattin posts ante [$20]
+estebanito posts small blind [$50]
+oksa2879 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ Kh, 5d ]
+szebasztian folds
+frmn1000 folds
+Victoriyaone raises [$200]
+ZiYangZi folds
+Pudding77777 folds
+Peon_84 folds
+perattin folds
+estebanito folds
+oksa2879 calls [$100]
+** Dealing flop ** [ 4d, 7h, Qs ]
+oksa2879 checks
+Victoriyaone checks
+** Dealing turn ** [ 3h ]
+oksa2879 checks
+Victoriyaone bets [$200]
+oksa2879 calls [$200]
+** Dealing river ** [ 7s ]
+oksa2879 checks
+Victoriyaone bets [$515]
+oksa2879 folds
+** Summary **
+Victoriyaone did not show his hand
+Victoriyaone collected [ $1,030 ]
+
+
+
+#Game No : 596032422
+***** 888poker Hand History for Game 596032422 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:11:31
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $770 )
+Seat 2: Pudding77777 ( $1,905 )
+Seat 3: Peon_84 ( $1,645 )
+Seat 4: perattin ( $8,015 )
+Seat 5: estebanito ( $3,565 )
+Seat 6: oksa2879 ( $1,395 )
+Seat 7: szebasztian ( $1,745 )
+Seat 9: frmn1000 ( $1,745 )
+Seat 10: Victoriyaone ( $5,430 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+oksa2879 posts ante [$40]
+perattin posts ante [$40]
+oksa2879 posts small blind [$100]
+szebasztian posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ 9d, 5c ]
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$1,865]
+Peon_84 folds
+perattin folds
+estebanito folds
+oksa2879 calls [$1,255]
+szebasztian folds
+** Dealing flop ** [ Jd, 4h, 6h ]
+** Dealing turn ** [ 8c ]
+** Dealing river ** [ Qs ]
+** Summary **
+Pudding77777 shows [ 8d, Ah ]
+oksa2879 shows [ Ad, Ks ]
+Pudding77777 collected [ $3,270 ]
+
+
+
+#Game No : 596033341
+***** 888poker Hand History for Game 596033341 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:11:58
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 8
+Seat 1: ZiYangZi ( $730 )
+Seat 2: Pudding77777 ( $3,780 )
+Seat 3: Peon_84 ( $1,605 )
+Seat 4: perattin ( $7,975 )
+Seat 5: estebanito ( $3,525 )
+Seat 7: szebasztian ( $1,505 )
+Seat 9: frmn1000 ( $1,705 )
+Seat 10: Victoriyaone ( $5,390 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+perattin posts ante [$40]
+szebasztian posts small blind [$100]
+frmn1000 posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ 4h, Kh ]
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 folds
+Peon_84 folds
+perattin raises [$7,935]
+estebanito folds
+szebasztian folds
+frmn1000 folds
+** Summary **
+perattin collected [ $820 ]
+
+
+
+#Game No : 596033996
+***** 888poker Hand History for Game 596033996 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:12:17
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 7 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $690 )
+Seat 2: Pudding77777 ( $3,740 )
+Seat 3: Peon_84 ( $1,565 )
+Seat 4: perattin ( $8,555 )
+Seat 5: estebanito ( $3,485 )
+Seat 6: somi4002 ( $1,555 )
+Seat 7: szebasztian ( $1,365 )
+Seat 9: frmn1000 ( $1,465 )
+Seat 10: Victoriyaone ( $5,350 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+perattin posts ante [$40]
+somi4002 posts ante [$40]
+frmn1000 posts small blind [$100]
+Victoriyaone posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ 3c, 5s ]
+ZiYangZi folds
+Pudding77777 raises [$3,700]
+Peon_84 folds
+perattin folds
+estebanito folds
+somi4002 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $860 ]
+
+
+
+#Game No : 596034525
+***** 888poker Hand History for Game 596034525 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:12:33
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $650 )
+Seat 2: Pudding77777 ( $4,360 )
+Seat 3: Peon_84 ( $1,525 )
+Seat 4: perattin ( $8,515 )
+Seat 5: estebanito ( $3,445 )
+Seat 6: somi4002 ( $1,515 )
+Seat 7: szebasztian ( $1,325 )
+Seat 9: frmn1000 ( $1,325 )
+Seat 10: Victoriyaone ( $5,110 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+perattin posts ante [$40]
+somi4002 posts ante [$40]
+Victoriyaone posts small blind [$100]
+ZiYangZi posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ Ks, 7s ]
+Pudding77777 raises [$4,320]
+Peon_84 folds
+perattin folds
+estebanito folds
+somi4002 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $860 ]
+
+
+
+#Game No : 596035496
+***** 888poker Hand History for Game 596035496 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:13:01
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 10 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $410 )
+Seat 2: Pudding77777 ( $4,980 )
+Seat 3: Peon_84 ( $1,485 )
+Seat 4: perattin ( $8,475 )
+Seat 5: estebanito ( $3,405 )
+Seat 6: somi4002 ( $1,475 )
+Seat 7: szebasztian ( $1,285 )
+Seat 9: frmn1000 ( $1,285 )
+Seat 10: Victoriyaone ( $4,970 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+perattin posts ante [$40]
+somi4002 posts ante [$40]
+ZiYangZi posts small blind [$100]
+Pudding77777 posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ Jh, 2h ]
+Peon_84 folds
+perattin folds
+estebanito calls [$200]
+somi4002 folds
+szebasztian raises [$1,245]
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 folds
+estebanito calls [$1,045]
+** Dealing flop ** [ 4c, Ad, 6d ]
+** Dealing turn ** [ 9h ]
+** Dealing river ** [ 6h ]
+** Summary **
+estebanito shows [ Ts, 8s ]
+szebasztian shows [ Tc, Ah ]
+szebasztian collected [ $3,150 ]
+
+
+
+#Game No : 596036827
+***** 888poker Hand History for Game 596036827 *****
+$100/$200 Blinds No Limit Holdem - *** 04 02 2017 20:13:43
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $270 )
+Seat 2: Pudding77777 ( $4,740 )
+Seat 3: Peon_84 ( $1,445 )
+Seat 4: perattin ( $8,435 )
+Seat 5: estebanito ( $2,120 )
+Seat 6: somi4002 ( $1,435 )
+Seat 7: szebasztian ( $3,150 )
+Seat 9: frmn1000 ( $1,245 )
+Seat 10: Victoriyaone ( $4,930 )
+frmn1000 posts ante [$40]
+Victoriyaone posts ante [$40]
+szebasztian posts ante [$40]
+ZiYangZi posts ante [$40]
+Pudding77777 posts ante [$40]
+Peon_84 posts ante [$40]
+estebanito posts ante [$40]
+perattin posts ante [$40]
+somi4002 posts ante [$40]
+Pudding77777 posts small blind [$100]
+Peon_84 posts big blind [$200]
+** Dealing down cards **
+Dealt to Peon_84 [ Td, 4c ]
+perattin folds
+estebanito calls [$200]
+somi4002 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 calls [$100]
+Peon_84 checks
+** Dealing flop ** [ Jc, 8s, Js ]
+Pudding77777 bets [$480]
+Peon_84 folds
+estebanito folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $960 ]
+
+
+
+#Game No : 596037821
+***** 888poker Hand History for Game 596037821 *****
+$200/$400 Blinds No Limit Holdem - *** 04 02 2017 20:14:14
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $230 )
+Seat 2: Pudding77777 ( $5,460 )
+Seat 3: Peon_84 ( $1,205 )
+Seat 4: perattin ( $8,395 )
+Seat 5: estebanito ( $1,880 )
+Seat 6: somi4002 ( $1,395 )
+Seat 7: szebasztian ( $3,110 )
+Seat 9: frmn1000 ( $1,205 )
+Seat 10: Victoriyaone ( $4,890 )
+frmn1000 posts ante [$80]
+Victoriyaone posts ante [$80]
+szebasztian posts ante [$80]
+ZiYangZi posts ante [$80]
+Pudding77777 posts ante [$80]
+Peon_84 posts ante [$80]
+estebanito posts ante [$80]
+perattin posts ante [$80]
+somi4002 posts ante [$80]
+Peon_84 posts small blind [$200]
+perattin posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ Ts, 4s ]
+estebanito folds
+somi4002 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$5,380]
+Peon_84 folds
+perattin folds
+** Summary **
+Pudding77777 did not show his hand
+Pudding77777 collected [ $1,720 ]
+
+
+
+#Game No : 596038567
+***** 888poker Hand History for Game 596038567 *****
+$200/$400 Blinds No Limit Holdem - *** 04 02 2017 20:14:38
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $150 )
+Seat 2: Pudding77777 ( $6,700 )
+Seat 3: Peon_84 ( $925 )
+Seat 4: perattin ( $7,915 )
+Seat 5: estebanito ( $1,800 )
+Seat 6: somi4002 ( $1,315 )
+Seat 7: szebasztian ( $3,030 )
+Seat 9: frmn1000 ( $1,125 )
+Seat 10: Victoriyaone ( $4,810 )
+frmn1000 posts ante [$80]
+Victoriyaone posts ante [$80]
+szebasztian posts ante [$80]
+ZiYangZi posts ante [$80]
+Pudding77777 posts ante [$80]
+Peon_84 posts ante [$80]
+estebanito posts ante [$80]
+perattin posts ante [$80]
+somi4002 posts ante [$80]
+perattin posts small blind [$200]
+estebanito posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ Jc, Qh ]
+somi4002 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$6,620]
+Peon_84 calls [$845]
+perattin folds
+estebanito folds
+** Dealing flop ** [ 4s, 6d, 7d ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ 5h ]
+** Summary **
+Pudding77777 shows [ Kc, Ac ]
+Peon_84 shows [ Jc, Qh ]
+Pudding77777 collected [ $1,505 ]
+Peon_84 collected [ $1,505 ]
+
+
+
+#Game No : 596039587
+***** 888poker Hand History for Game 596039587 *****
+$200/$400 Blinds No Limit Holdem - *** 04 02 2017 20:15:08
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $70 )
+Seat 2: Pudding77777 ( $7,280 )
+Seat 3: Peon_84 ( $1,505 )
+Seat 4: perattin ( $7,635 )
+Seat 5: estebanito ( $1,320 )
+Seat 6: somi4002 ( $1,235 )
+Seat 7: szebasztian ( $2,950 )
+Seat 9: frmn1000 ( $1,045 )
+Seat 10: Victoriyaone ( $4,730 )
+frmn1000 posts ante [$80]
+Victoriyaone posts ante [$80]
+szebasztian posts ante [$80]
+ZiYangZi posts ante [$70]
+Pudding77777 posts ante [$80]
+Peon_84 posts ante [$80]
+estebanito posts ante [$80]
+perattin posts ante [$80]
+somi4002 posts ante [$80]
+estebanito posts small blind [$200]
+somi4002 posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ Qh, Jd ]
+szebasztian calls [$400]
+frmn1000 folds
+Victoriyaone folds
+Pudding77777 folds
+Peon_84 raises [$1,425]
+perattin folds
+estebanito folds
+somi4002 folds
+szebasztian calls [$1,025]
+** Dealing flop ** [ 4d, Ah, 5s ]
+** Dealing turn ** [ 9d ]
+** Dealing river ** [ Td ]
+** Summary **
+ZiYangZi shows [ 3d, 3s ]
+Peon_84 shows [ Qh, Jd ]
+szebasztian shows [ 4c, 3h ]
+szebasztian collected [ $630 ]
+szebasztian collected [ $3,530 ]
+
+
+

@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using Microsoft.Practices.Unity;
-using Model.Shop;
+using Model.AppStore;
 using System;
 
 namespace Model
@@ -28,8 +28,8 @@ namespace Model
                 throw new ArgumentNullException(nameof(container));
             }
 
-            container.RegisterType<IShopRepository, ShopRepository>();
-            container.RegisterType<IShopModel, ShopModel>();
+            container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
+            container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
         }
     }
 }

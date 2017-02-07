@@ -13,11 +13,7 @@
 using DriveHUD.Common.Wpf.Events;
 using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace DriveHUD.Common.Wpf.Mvvm
@@ -36,6 +32,26 @@ namespace DriveHUD.Common.Wpf.Mvvm
             {
                 this.RaiseAndSetIfChanged(ref currentOperation, value);
             }
+        }
+
+        private OperationViewModel operationInfo;
+
+        public IOperationViewModel OperationInfo
+        {
+            get
+            {
+                if (operationInfo == null)
+                {
+                    operationInfo = new OperationViewModel();
+                    ConfigureOperationViewModel(operationInfo);
+                }
+                return operationInfo;
+            }
+        }
+
+        protected virtual void ConfigureOperationViewModel(OperationViewModel operationViewModel)
+        {            
+            operationViewModel.SetOperationBinding(this, vm => vm.CurrentOperation);
         }
 
         protected ReactiveOperation StartAsyncOperation(Action action, Action callback)

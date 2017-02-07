@@ -1,0 +1,4252 @@
+﻿PokerStars Home Game Hand #165437790683: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IV (30/60) - 2017/01/30 21:44:18 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 2: AnthonyLai (1945 in chips) 
+Seat 3: xxCeDxx (5763 in chips) 
+Seat 4: Charismastic (4115 in chips) 
+Seat 5: SwaggerKat (7118 in chips) 
+Seat 6: thejthief (6059 in chips) 
+AnthonyLai: posts the ante 5
+xxCeDxx: posts the ante 5
+Charismastic: posts the ante 5
+SwaggerKat: posts the ante 5
+thejthief: posts the ante 5
+thejthief: posts small blind 30
+AnthonyLai: posts big blind 60
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5d 8h]
+xxCeDxx: raises 60 to 120
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: calls 90
+AnthonyLai: calls 60
+*** FLOP *** [Qc Kc Kd]
+thejthief: checks 
+AnthonyLai: checks 
+xxCeDxx: bets 120
+thejthief: folds 
+AnthonyLai: calls 120
+*** TURN *** [Qc Kc Kd] [3d]
+AnthonyLai: checks 
+xxCeDxx: checks 
+*** RIVER *** [Qc Kc Kd 3d] [2d]
+AnthonyLai: checks 
+xxCeDxx: bets 240
+AnthonyLai: folds 
+Uncalled bet (240) returned to xxCeDxx
+xxCeDxx collected 625 from pot
+xxCeDxx: shows [Qs]
+*** SUMMARY ***
+Total pot 625 | Rake 0 
+Board [Qc Kc Kd 3d 2d]
+Seat 2: AnthonyLai (big blind) folded on the River
+Seat 3: xxCeDxx collected (625)
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+Seat 6: thejthief (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165437831353: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:45:52 ET
+Table '1808966073 1' 6-max Seat #2 is the button
+Seat 2: AnthonyLai (1610 in chips) 
+Seat 3: xxCeDxx (6263 in chips) 
+Seat 4: Charismastic (4100 in chips) 
+Seat 5: SwaggerKat (7103 in chips) 
+Seat 6: thejthief (5924 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 40
+Charismastic: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ac 2c]
+SwaggerKat: folds 
+thejthief: folds 
+AnthonyLai: folds 
+xxCeDxx: calls 40
+Charismastic: raises 160 to 240
+xxCeDxx: folds 
+Uncalled bet (160) returned to Charismastic
+Charismastic collected 210 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 210 | Rake 0 
+Seat 2: AnthonyLai (button) folded before Flop (didn't bet)
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (210)
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165437860662: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:47:01 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 2: AnthonyLai (1600 in chips) 
+Seat 3: xxCeDxx (6173 in chips) 
+Seat 4: Charismastic (4220 in chips) 
+Seat 5: SwaggerKat (7093 in chips) 
+Seat 6: thejthief (5914 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+Charismastic: posts small blind 40
+SwaggerKat: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4c Jd]
+thejthief: folds 
+AnthonyLai: folds 
+xxCeDxx: calls 80
+Charismastic: folds 
+SwaggerKat: checks 
+*** FLOP *** [As 8d 3h]
+SwaggerKat: checks 
+xxCeDxx: bets 160
+SwaggerKat: folds 
+Uncalled bet (160) returned to xxCeDxx
+xxCeDxx collected 250 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Board [As 8d 3h]
+Seat 2: AnthonyLai folded before Flop (didn't bet)
+Seat 3: xxCeDxx (button) collected (250)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded on the Flop
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165437873528: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:47:32 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 2: AnthonyLai (1590 in chips) 
+Seat 3: xxCeDxx (6333 in chips) 
+Seat 4: Charismastic (4170 in chips) 
+Seat 5: SwaggerKat (7003 in chips) 
+Seat 6: thejthief (5904 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+SwaggerKat: posts small blind 40
+thejthief: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ts 2d]
+AnthonyLai: folds 
+xxCeDxx: raises 120 to 200
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: folds 
+Uncalled bet (120) returned to xxCeDxx
+xxCeDxx collected 250 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: AnthonyLai folded before Flop (didn't bet)
+Seat 3: xxCeDxx collected (250)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+Seat 6: thejthief (big blind) folded before Flop
+
+
+
+
+PokerStars Home Game Hand #165437885747: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:48:01 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 2: AnthonyLai (1580 in chips) 
+Seat 3: xxCeDxx (6493 in chips) 
+Seat 4: Charismastic (4160 in chips) 
+Seat 5: SwaggerKat (6953 in chips) 
+Seat 6: thejthief (5814 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+thejthief: posts small blind 40
+AnthonyLai: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4c 6s]
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: folds 
+Uncalled bet (40) returned to AnthonyLai
+AnthonyLai collected 130 from pot
+*** SUMMARY ***
+Total pot 130 | Rake 0 
+Seat 2: AnthonyLai (big blind) collected (130)
+Seat 3: xxCeDxx folded before Flop (didn't bet)
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+Seat 6: thejthief (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165437893882: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:48:20 ET
+Table '1808966073 1' 6-max Seat #6 is the button
+Seat 2: AnthonyLai (1660 in chips) 
+Seat 3: xxCeDxx (6483 in chips) 
+Seat 4: Charismastic (4150 in chips) 
+Seat 5: SwaggerKat (6943 in chips) 
+Seat 6: thejthief (5764 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+AnthonyLai: posts small blind 40
+xxCeDxx: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6d Th]
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: folds 
+AnthonyLai: folds 
+Uncalled bet (40) returned to xxCeDxx
+xxCeDxx collected 130 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 130 | Rake 0 
+Seat 2: AnthonyLai (small blind) folded before Flop
+Seat 3: xxCeDxx (big blind) collected (130)
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165437900700: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:48:36 ET
+Table '1808966073 1' 6-max Seat #2 is the button
+Seat 2: AnthonyLai (1610 in chips) 
+Seat 3: xxCeDxx (6563 in chips) 
+Seat 4: Charismastic (4140 in chips) 
+Seat 5: SwaggerKat (6933 in chips) 
+Seat 6: thejthief (5754 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 40
+Charismastic: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3s 7c]
+SwaggerKat: folds 
+thejthief: folds 
+AnthonyLai: folds 
+xxCeDxx: raises 160 to 240
+Charismastic: folds 
+Uncalled bet (160) returned to xxCeDxx
+xxCeDxx collected 210 from pot
+*** SUMMARY ***
+Total pot 210 | Rake 0 
+Seat 2: AnthonyLai (button) folded before Flop (didn't bet)
+Seat 3: xxCeDxx (small blind) collected (210)
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165437910383: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:48:59 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 2: AnthonyLai (1600 in chips) 
+Seat 3: xxCeDxx (6683 in chips) 
+Seat 4: Charismastic (4050 in chips) 
+Seat 5: SwaggerKat (6923 in chips) 
+Seat 6: thejthief (5744 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+Charismastic: posts small blind 40
+SwaggerKat: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kd 5h]
+thejthief: calls 80
+AnthonyLai: folds 
+xxCeDxx: calls 80
+Charismastic: calls 40
+SwaggerKat: checks 
+*** FLOP *** [Qh 4d Td]
+Charismastic: checks 
+SwaggerKat: checks 
+thejthief: bets 185
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (185) returned to thejthief
+thejthief collected 370 from pot
+thejthief: doesn't show hand 
+*** SUMMARY ***
+Total pot 370 | Rake 0 
+Board [Qh 4d Td]
+Seat 2: AnthonyLai folded before Flop (didn't bet)
+Seat 3: xxCeDxx (button) folded on the Flop
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) folded on the Flop
+Seat 6: thejthief collected (370)
+
+
+
+PokerStars Home Game Hand #165437936272: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:50:00 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 2: AnthonyLai (1590 in chips) 
+Seat 3: xxCeDxx (6593 in chips) 
+Seat 4: Charismastic (3960 in chips) 
+Seat 5: SwaggerKat (6833 in chips) 
+Seat 6: thejthief (6024 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+SwaggerKat: posts small blind 40
+thejthief: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6h 2h]
+AnthonyLai: raises 160 to 240
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: folds 
+Uncalled bet (160) returned to AnthonyLai
+AnthonyLai collected 250 from pot
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: AnthonyLai collected (250)
+Seat 3: xxCeDxx folded before Flop (didn't bet)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+Seat 6: thejthief (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165437947002: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:50:26 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 2: AnthonyLai (1750 in chips) 
+Seat 3: xxCeDxx (6583 in chips) 
+Seat 4: Charismastic (3950 in chips) 
+Seat 5: SwaggerKat (6783 in chips) 
+Seat 6: thejthief (5934 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+thejthief: posts small blind 40
+AnthonyLai: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kh 6h]
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: raises 80 to 160
+thejthief: folds 
+AnthonyLai: raises 1580 to 1740 and is all-in
+SwaggerKat: folds 
+Uncalled bet (1580) returned to AnthonyLai
+AnthonyLai collected 410 from pot
+*** SUMMARY ***
+Total pot 410 | Rake 0 
+Seat 2: AnthonyLai (big blind) collected (410)
+Seat 3: xxCeDxx folded before Flop (didn't bet)
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) folded before Flop
+Seat 6: thejthief (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165437962430: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:51:02 ET
+Table '1808966073 1' 6-max Seat #6 is the button
+Seat 2: AnthonyLai (1990 in chips) 
+Seat 3: xxCeDxx (6573 in chips) 
+Seat 4: Charismastic (3940 in chips) 
+Seat 5: SwaggerKat (6613 in chips) 
+Seat 6: thejthief (5884 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+AnthonyLai: posts small blind 40
+xxCeDxx: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh 7s]
+Charismastic: folds 
+SwaggerKat: raises 80 to 160
+thejthief: calls 160
+AnthonyLai: folds 
+xxCeDxx: calls 80
+*** FLOP *** [2h 6s 7d]
+xxCeDxx: checks 
+SwaggerKat: bets 360
+thejthief: folds 
+xxCeDxx: calls 360
+*** TURN *** [2h 6s 7d] [Ks]
+xxCeDxx: checks 
+SwaggerKat: bets 600
+xxCeDxx: calls 600
+*** RIVER *** [2h 6s 7d Ks] [Th]
+xxCeDxx: checks 
+SwaggerKat: checks 
+*** SHOW DOWN ***
+xxCeDxx: shows [7c Ad] (a pair of Sevens)
+SwaggerKat: mucks hand 
+xxCeDxx collected 2490 from pot
+*** SUMMARY ***
+Total pot 2490 | Rake 0 
+Board [2h 6s 7d Ks Th]
+Seat 2: AnthonyLai (small blind) folded before Flop
+Seat 3: xxCeDxx (big blind) showed [7c Ad] and won (2490) with a pair of Sevens
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat mucked [Qh 7s]
+Seat 6: thejthief (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165437997883: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level V (40/80) - 2017/01/30 21:52:27 ET
+Table '1808966073 1' 6-max Seat #2 is the button
+Seat 2: AnthonyLai (1940 in chips) 
+Seat 3: xxCeDxx (7933 in chips) 
+Seat 4: Charismastic (3930 in chips) 
+Seat 5: SwaggerKat (5483 in chips) 
+Seat 6: thejthief (5714 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 40
+Charismastic: posts big blind 80
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c 2h]
+SwaggerKat: folds 
+thejthief: folds 
+AnthonyLai: calls 80
+xxCeDxx: calls 40
+Charismastic: checks 
+*** FLOP *** [3c 2c 2s]
+xxCeDxx: bets 80
+Charismastic: folds 
+AnthonyLai: calls 80
+*** TURN *** [3c 2c 2s] [5c]
+xxCeDxx: checks 
+AnthonyLai: checks 
+*** RIVER *** [3c 2c 2s 5c] [9h]
+xxCeDxx: checks 
+AnthonyLai: bets 225
+xxCeDxx: calls 225
+*** SHOW DOWN ***
+AnthonyLai: shows [3d 3s] (a full house, Threes full of Deuces)
+xxCeDxx: mucks hand 
+AnthonyLai collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | Rake 0 
+Board [3c 2c 2s 5c 9h]
+Seat 2: AnthonyLai (button) showed [3d 3s] and won (900) with a full house, Threes full of Deuces
+Seat 3: xxCeDxx (small blind) mucked [3h Jh]
+Seat 4: Charismastic (big blind) folded on the Flop
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438070202: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:55:24 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 2: AnthonyLai (2445 in chips) 
+Seat 3: xxCeDxx (7538 in chips) 
+Seat 4: Charismastic (3840 in chips) 
+Seat 5: SwaggerKat (5473 in chips) 
+Seat 6: thejthief (5704 in chips) 
+AnthonyLai: posts the ante 10
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+Charismastic: posts small blind 50
+SwaggerKat: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d Kc]
+thejthief: folds 
+AnthonyLai: raises 200 to 300
+xxCeDxx: folds 
+Charismastic: raises 500 to 800
+SwaggerKat: folds 
+AnthonyLai: raises 1635 to 2435 and is all-in
+Charismastic: calls 1635
+*** FLOP *** [Kd 6h 2h]
+*** TURN *** [Kd 6h 2h] [2c]
+*** RIVER *** [Kd 6h 2h 2c] [Qc]
+*** SHOW DOWN ***
+Charismastic: shows [Ks Ad] (two pair, Kings and Deuces)
+AnthonyLai: shows [Ac Qd] (two pair, Queens and Deuces)
+Charismastic collected 5020 from pot
+AnthonyLai finished the tournament in 5th place
+*** SUMMARY ***
+Total pot 5020 | Rake 0 
+Board [Kd 6h 2h 2c Qc]
+Seat 2: AnthonyLai showed [Ac Qd] and lost with two pair, Queens and Deuces
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) showed [Ks Ad] and won (5020) with two pair, Kings and Deuces
+Seat 5: SwaggerKat (big blind) folded before Flop
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438092855: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:56:03 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7528 in chips) 
+Seat 4: Charismastic (6415 in chips) 
+Seat 5: SwaggerKat (5363 in chips) 
+Seat 6: thejthief (5694 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+SwaggerKat: posts small blind 50
+thejthief: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6s Qd]
+xxCeDxx: calls 100
+Charismastic: folds 
+SwaggerKat: calls 50
+thejthief: checks 
+*** FLOP *** [Kh 5c Td]
+SwaggerKat: checks 
+thejthief: bets 170
+xxCeDxx: calls 170
+SwaggerKat: folds 
+*** TURN *** [Kh 5c Td] [Ks]
+thejthief: checks 
+xxCeDxx: bets 300
+thejthief: folds 
+Uncalled bet (300) returned to xxCeDxx
+xxCeDxx collected 680 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 680 | Rake 0 
+Board [Kh 5c Td Ks]
+Seat 3: xxCeDxx collected (680)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded on the Flop
+Seat 6: thejthief (big blind) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165438121486: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:57:24 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7928 in chips) 
+Seat 4: Charismastic (6405 in chips) 
+Seat 5: SwaggerKat (5253 in chips) 
+Seat 6: thejthief (5414 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+thejthief: posts small blind 50
+xxCeDxx: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6h Ts]
+Charismastic: folds 
+SwaggerKat: raises 100 to 200
+thejthief: raises 540 to 740
+xxCeDxx: folds 
+SwaggerKat: folds 
+Uncalled bet (540) returned to thejthief
+thejthief collected 540 from pot
+thejthief: doesn't show hand 
+*** SUMMARY ***
+Total pot 540 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) folded before Flop
+Seat 6: thejthief (small blind) collected (540)
+
+
+
+PokerStars Home Game Hand #165438147385: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:58:37 ET
+Table '1808966073 1' 6-max Seat #6 is the button
+Seat 3: xxCeDxx (7818 in chips) 
+Seat 4: Charismastic (6395 in chips) 
+Seat 5: SwaggerKat (5043 in chips) 
+Seat 6: thejthief (5744 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 50
+Charismastic: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5d Ts]
+SwaggerKat: folds 
+thejthief: calls 100
+xxCeDxx: folds 
+Charismastic: checks 
+*** FLOP *** [5s 7d 2d]
+Charismastic: bets 100
+thejthief: folds 
+Uncalled bet (100) returned to Charismastic
+Charismastic collected 290 from pot
+*** SUMMARY ***
+Total pot 290 | Rake 0 
+Board [5s 7d 2d]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (290)
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165438159489: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:59:12 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7758 in chips) 
+Seat 4: Charismastic (6575 in chips) 
+Seat 5: SwaggerKat (5033 in chips) 
+Seat 6: thejthief (5634 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+Charismastic: posts small blind 50
+SwaggerKat: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6c Jd]
+thejthief: folds 
+xxCeDxx: calls 100
+Charismastic: calls 50
+SwaggerKat: raises 300 to 400
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (300) returned to SwaggerKat
+SwaggerKat collected 340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (340)
+Seat 6: thejthief folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438171865: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 21:59:46 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7648 in chips) 
+Seat 4: Charismastic (6465 in chips) 
+Seat 5: SwaggerKat (5263 in chips) 
+Seat 6: thejthief (5624 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+SwaggerKat: posts small blind 50
+thejthief: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3c Ah]
+xxCeDxx: folds 
+Charismastic: raises 100 to 200
+SwaggerKat: folds 
+thejthief: folds 
+Uncalled bet (100) returned to Charismastic
+Charismastic collected 290 from pot
+*** SUMMARY ***
+Total pot 290 | Rake 0 
+Seat 3: xxCeDxx folded before Flop (didn't bet)
+Seat 4: Charismastic (button) collected (290)
+Seat 5: SwaggerKat (small blind) folded before Flop
+Seat 6: thejthief (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438188357: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:00:32 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7638 in chips) 
+Seat 4: Charismastic (6645 in chips) 
+Seat 5: SwaggerKat (5203 in chips) 
+Seat 6: thejthief (5514 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+thejthief: posts small blind 50
+xxCeDxx: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4h Ad]
+Charismastic: folds 
+SwaggerKat: raises 100 to 200
+thejthief: folds 
+xxCeDxx: calls 100
+*** FLOP *** [9d Tc Jd]
+xxCeDxx: checks 
+SwaggerKat: bets 300
+xxCeDxx: folds 
+Uncalled bet (300) returned to SwaggerKat
+SwaggerKat collected 490 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 490 | Rake 0 
+Board [9d Tc Jd]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) collected (490)
+Seat 6: thejthief (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438202125: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:01:08 ET
+Table '1808966073 1' 6-max Seat #6 is the button
+Seat 3: xxCeDxx (7428 in chips) 
+Seat 4: Charismastic (6635 in chips) 
+Seat 5: SwaggerKat (5483 in chips) 
+Seat 6: thejthief (5454 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 50
+Charismastic: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3s Qs]
+SwaggerKat: folds 
+thejthief: folds 
+xxCeDxx: calls 50
+Charismastic: checks 
+*** FLOP *** [Ts 6d Th]
+xxCeDxx: checks 
+Charismastic: bets 150
+xxCeDxx: folds 
+Uncalled bet (150) returned to Charismastic
+Charismastic collected 240 from pot
+*** SUMMARY ***
+Total pot 240 | Rake 0 
+Board [Ts 6d Th]
+Seat 3: xxCeDxx (small blind) folded on the Flop
+Seat 4: Charismastic (big blind) collected (240)
+Seat 5: SwaggerKat folded before Flop (didn't bet)
+Seat 6: thejthief (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438212708: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:01:35 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7318 in chips) 
+Seat 4: Charismastic (6765 in chips) 
+Seat 5: SwaggerKat (5473 in chips) 
+Seat 6: thejthief (5444 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+Charismastic: posts small blind 50
+SwaggerKat: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4s Kd]
+thejthief: calls 100
+xxCeDxx: folds 
+Charismastic: calls 50
+SwaggerKat: checks 
+*** FLOP *** [Ad 3d 5h]
+Charismastic: checks 
+SwaggerKat: checks 
+thejthief: checks 
+*** TURN *** [Ad 3d 5h] [Td]
+Charismastic: checks 
+SwaggerKat: bets 150
+thejthief: calls 150
+Charismastic: folds 
+*** RIVER *** [Ad 3d 5h Td] [9c]
+SwaggerKat: bets 600
+thejthief: folds 
+Uncalled bet (600) returned to SwaggerKat
+SwaggerKat collected 640 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 640 | Rake 0 
+Board [Ad 3d 5h Td 9c]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Turn
+Seat 5: SwaggerKat (big blind) collected (640)
+Seat 6: thejthief folded on the River
+
+
+
+PokerStars Home Game Hand #165438246644: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:03:00 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7308 in chips) 
+Seat 4: Charismastic (6655 in chips) 
+Seat 5: SwaggerKat (5853 in chips) 
+Seat 6: thejthief (5184 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+SwaggerKat: posts small blind 50
+thejthief: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kc Tc]
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: raises 100 to 200
+thejthief: folds 
+Uncalled bet (100) returned to SwaggerKat
+SwaggerKat collected 240 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 240 | Rake 0 
+Seat 3: xxCeDxx folded before Flop (didn't bet)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) collected (240)
+Seat 6: thejthief (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438258152: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:03:29 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7298 in chips) 
+Seat 4: Charismastic (6645 in chips) 
+Seat 5: SwaggerKat (5983 in chips) 
+Seat 6: thejthief (5074 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+thejthief: posts small blind 50
+xxCeDxx: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6h 5c]
+Charismastic: folds 
+SwaggerKat: folds 
+thejthief: calls 50
+xxCeDxx: checks 
+*** FLOP *** [Qh 7h 6s]
+thejthief: checks 
+xxCeDxx: bets 120
+thejthief: folds 
+Uncalled bet (120) returned to xxCeDxx
+xxCeDxx collected 240 from pot
+*** SUMMARY ***
+Total pot 240 | Rake 0 
+Board [Qh 7h 6s]
+Seat 3: xxCeDxx (big blind) collected (240)
+Seat 4: Charismastic folded before Flop (didn't bet)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+Seat 6: thejthief (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165438275681: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:04:13 ET
+Table '1808966073 1' 6-max Seat #6 is the button
+Seat 3: xxCeDxx (7428 in chips) 
+Seat 4: Charismastic (6635 in chips) 
+Seat 5: SwaggerKat (5973 in chips) 
+Seat 6: thejthief (4964 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+thejthief: posts the ante 10
+xxCeDxx: posts small blind 50
+Charismastic: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ac As]
+SwaggerKat: raises 100 to 200
+thejthief: raises 4754 to 4954 and is all-in
+xxCeDxx: folds 
+Charismastic: folds 
+SwaggerKat: calls 4754
+*** FLOP *** [4d Ah 6c]
+*** TURN *** [4d Ah 6c] [6h]
+*** RIVER *** [4d Ah 6c 6h] [Th]
+*** SHOW DOWN ***
+SwaggerKat: shows [Ac As] (a full house, Aces full of Sixes)
+thejthief: shows [8c 8d] (two pair, Eights and Sixes)
+SwaggerKat collected 10098 from pot
+thejthief finished the tournament in 4th place
+*** SUMMARY ***
+Total pot 10098 | Rake 0 
+Board [4d Ah 6c 6h Th]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat showed [Ac As] and won (10098) with a full house, Aces full of Sixes
+Seat 6: thejthief (button) showed [8c 8d] and lost with two pair, Eights and Sixes
+
+
+
+PokerStars Home Game Hand #165438290472: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VI (50/100) - 2017/01/30 22:04:50 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7368 in chips) 
+Seat 4: Charismastic (6525 in chips) 
+Seat 5: SwaggerKat (11107 in chips) 
+xxCeDxx: posts the ante 10
+Charismastic: posts the ante 10
+SwaggerKat: posts the ante 10
+Charismastic: posts small blind 50
+SwaggerKat: posts big blind 100
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kd Tc]
+xxCeDxx: folds 
+Charismastic: calls 50
+SwaggerKat: checks 
+*** FLOP *** [Jh Qc 6d]
+Charismastic: bets 100
+SwaggerKat: calls 100
+*** TURN *** [Jh Qc 6d] [9h]
+Charismastic: checks 
+SwaggerKat: checks 
+*** RIVER *** [Jh Qc 6d 9h] [Ks]
+Charismastic: bets 400
+SwaggerKat: raises 1200 to 1600
+Charismastic: folds 
+Uncalled bet (1200) returned to SwaggerKat
+SwaggerKat collected 1230 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1230 | Rake 0 
+Board [Jh Qc 6d 9h Ks]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the River
+Seat 5: SwaggerKat (big blind) collected (1230)
+
+
+
+PokerStars Home Game Hand #165438330773: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:06:30 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7358 in chips) 
+Seat 4: Charismastic (5915 in chips) 
+Seat 5: SwaggerKat (11727 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+SwaggerKat: posts small blind 60
+xxCeDxx: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3h 5d]
+Charismastic: raises 120 to 240
+SwaggerKat: folds 
+xxCeDxx: calls 120
+*** FLOP *** [5c Kc Jc]
+xxCeDxx: checks 
+Charismastic: bets 360
+xxCeDxx: calls 360
+*** TURN *** [5c Kc Jc] [Qc]
+xxCeDxx: checks 
+Charismastic: checks 
+*** RIVER *** [5c Kc Jc Qc] [Jh]
+xxCeDxx: bets 1305
+Charismastic: folds 
+Uncalled bet (1305) returned to xxCeDxx
+xxCeDxx collected 1305 from pot
+*** SUMMARY ***
+Total pot 1305 | Rake 0 
+Board [5c Kc Jc Qc Jh]
+Seat 3: xxCeDxx (big blind) collected (1305)
+Seat 4: Charismastic (button) folded on the River
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438358416: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:07:39 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (8198 in chips) 
+Seat 4: Charismastic (5165 in chips) 
+Seat 5: SwaggerKat (11637 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+Charismastic: posts small blind 60
+SwaggerKat: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d Jc]
+xxCeDxx: raises 240 to 360
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (240) returned to xxCeDxx
+xxCeDxx collected 345 from pot
+*** SUMMARY ***
+Total pot 345 | Rake 0 
+Seat 3: xxCeDxx (button) collected (345)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438371140: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:08:11 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (8408 in chips) 
+Seat 4: Charismastic (5090 in chips) 
+Seat 5: SwaggerKat (11502 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+SwaggerKat: posts small blind 60
+xxCeDxx: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ah Kd]
+Charismastic: folds 
+SwaggerKat: raises 120 to 240
+xxCeDxx: calls 120
+*** FLOP *** [5s Jh 3c]
+SwaggerKat: checks 
+xxCeDxx: bets 360
+SwaggerKat: calls 360
+*** TURN *** [5s Jh 3c] [3s]
+SwaggerKat: checks 
+xxCeDxx: bets 587
+SwaggerKat: folds 
+Uncalled bet (587) returned to xxCeDxx
+xxCeDxx collected 1245 from pot
+*** SUMMARY ***
+Total pot 1245 | Rake 0 
+Board [5s Jh 3c 3s]
+Seat 3: xxCeDxx (big blind) collected (1245)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165438397502: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:09:17 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9038 in chips) 
+Seat 4: Charismastic (5075 in chips) 
+Seat 5: SwaggerKat (10887 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+xxCeDxx: posts small blind 60
+Charismastic: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8c Qh]
+SwaggerKat: raises 120 to 240
+xxCeDxx: folds 
+Charismastic: calls 120
+*** FLOP *** [Ts 3c Qc]
+Charismastic: checks 
+SwaggerKat: bets 300
+Charismastic: calls 300
+*** TURN *** [Ts 3c Qc] [3h]
+Charismastic: checks 
+SwaggerKat: checks 
+*** RIVER *** [Ts 3c Qc 3h] [Tc]
+Charismastic: bets 720
+SwaggerKat: folds 
+Uncalled bet (720) returned to Charismastic
+Charismastic collected 1185 from pot
+Charismastic: shows [Js 9s]
+*** SUMMARY ***
+Total pot 1185 | Rake 0 
+Board [Ts 3c Qc 3h Tc]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (1185)
+Seat 5: SwaggerKat (button) folded on the River
+
+
+
+PokerStars Home Game Hand #165438429052: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:10:36 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (8963 in chips) 
+Seat 4: Charismastic (5705 in chips) 
+Seat 5: SwaggerKat (10332 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+Charismastic: posts small blind 60
+SwaggerKat: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ts Qs]
+xxCeDxx: calls 120
+Charismastic: calls 60
+SwaggerKat: checks 
+*** FLOP *** [3h 8c Ah]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: checks 
+*** TURN *** [3h 8c Ah] [4d]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: bets 240
+Charismastic: calls 240
+SwaggerKat: folds 
+*** RIVER *** [3h 8c Ah 4d] [5c]
+Charismastic: checks 
+xxCeDxx: checks 
+*** SHOW DOWN ***
+Charismastic: shows [4c 6h] (a pair of Fours)
+xxCeDxx: shows [6d 8d] (a pair of Eights)
+xxCeDxx collected 885 from pot
+*** SUMMARY ***
+Total pot 885 | Rake 0 
+Board [3h 8c Ah 4d 5c]
+Seat 3: xxCeDxx (button) showed [6d 8d] and won (885) with a pair of Eights
+Seat 4: Charismastic (small blind) showed [4c 6h] and lost with a pair of Fours
+Seat 5: SwaggerKat (big blind) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165438461555: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:11:58 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9473 in chips) 
+Seat 4: Charismastic (5330 in chips) 
+Seat 5: SwaggerKat (10197 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+SwaggerKat: posts small blind 60
+xxCeDxx: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c 2d]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (60) returned to xxCeDxx
+xxCeDxx collected 165 from pot
+*** SUMMARY ***
+Total pot 165 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (165)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438467219: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:12:12 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9563 in chips) 
+Seat 4: Charismastic (5315 in chips) 
+Seat 5: SwaggerKat (10122 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+xxCeDxx: posts small blind 60
+Charismastic: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9d 2d]
+SwaggerKat: raises 120 to 240
+xxCeDxx: folds 
+Charismastic: calls 120
+*** FLOP *** [Qh 3d Qs]
+Charismastic: bets 240
+SwaggerKat: calls 240
+*** TURN *** [Qh 3d Qs] [Ts]
+Charismastic: bets 600
+SwaggerKat: folds 
+Uncalled bet (600) returned to Charismastic
+Charismastic collected 1065 from pot
+*** SUMMARY ***
+Total pot 1065 | Rake 0 
+Board [Qh 3d Qs Ts]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (1065)
+Seat 5: SwaggerKat (button) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165438493964: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:13:20 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9488 in chips) 
+Seat 4: Charismastic (5885 in chips) 
+Seat 5: SwaggerKat (9627 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+Charismastic: posts small blind 60
+SwaggerKat: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9d Jh]
+xxCeDxx: raises 240 to 360
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (240) returned to xxCeDxx
+xxCeDxx collected 345 from pot
+*** SUMMARY ***
+Total pot 345 | Rake 0 
+Seat 3: xxCeDxx (button) collected (345)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438499739: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:13:35 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9698 in chips) 
+Seat 4: Charismastic (5810 in chips) 
+Seat 5: SwaggerKat (9492 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+SwaggerKat: posts small blind 60
+xxCeDxx: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d Ts]
+Charismastic: raises 180 to 300
+SwaggerKat: folds 
+xxCeDxx: calls 180
+*** FLOP *** [7h Ac 2d]
+xxCeDxx: checks 
+Charismastic: bets 360
+xxCeDxx: folds 
+Uncalled bet (360) returned to Charismastic
+Charismastic collected 705 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 705 | Rake 0 
+Board [7h Ac 2d]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (705)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438512549: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:14:08 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9383 in chips) 
+Seat 4: Charismastic (6200 in chips) 
+Seat 5: SwaggerKat (9417 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+xxCeDxx: posts small blind 60
+Charismastic: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Th 3h]
+SwaggerKat: folds 
+xxCeDxx: raises 240 to 360
+Charismastic: calls 240
+*** FLOP *** [2h 5h Jh]
+xxCeDxx: bets 383
+Charismastic: folds 
+Uncalled bet (383) returned to xxCeDxx
+xxCeDxx collected 765 from pot
+xxCeDxx: shows [7d 2d]
+*** SUMMARY ***
+Total pot 765 | Rake 0 
+Board [2h 5h Jh]
+Seat 3: xxCeDxx (small blind) collected (765)
+Seat 4: Charismastic (big blind) folded on the Flop
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438521970: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VII (60/120) - 2017/01/30 22:14:32 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9773 in chips) 
+Seat 4: Charismastic (5825 in chips) 
+Seat 5: SwaggerKat (9402 in chips) 
+xxCeDxx: posts the ante 15
+Charismastic: posts the ante 15
+SwaggerKat: posts the ante 15
+Charismastic: posts small blind 60
+SwaggerKat: posts big blind 120
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Th Kc]
+xxCeDxx: folds 
+Charismastic: raises 120 to 240
+SwaggerKat: calls 120
+*** FLOP *** [Td 9c 5h]
+Charismastic: bets 240
+SwaggerKat: raises 480 to 720
+Charismastic: folds 
+Uncalled bet (480) returned to SwaggerKat
+SwaggerKat collected 1005 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1005 | Rake 0 
+Board [Td 9c 5h]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (1005)
+
+
+
+PokerStars Home Game Hand #165438537700: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:15:11 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9758 in chips) 
+Seat 4: Charismastic (5330 in chips) 
+Seat 5: SwaggerKat (9912 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+SwaggerKat: posts small blind 75
+xxCeDxx: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5d 9h]
+Charismastic: raises 200 to 350
+SwaggerKat: folds 
+xxCeDxx: calls 200
+*** FLOP *** [8c 5c Jd]
+xxCeDxx: checks 
+Charismastic: bets 480
+xxCeDxx: folds 
+Uncalled bet (480) returned to Charismastic
+Charismastic collected 835 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 835 | Rake 0 
+Board [8c 5c Jd]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (835)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438549997: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:15:43 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9388 in chips) 
+Seat 4: Charismastic (5795 in chips) 
+Seat 5: SwaggerKat (9817 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+xxCeDxx: posts small blind 75
+Charismastic: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5s 9s]
+SwaggerKat: folds 
+xxCeDxx: calls 75
+Charismastic: checks 
+*** FLOP *** [Ks 6s Ad]
+xxCeDxx: checks 
+Charismastic: checks 
+*** TURN *** [Ks 6s Ad] [4c]
+xxCeDxx: bets 150
+Charismastic: calls 150
+*** RIVER *** [Ks 6s Ad 4c] [Qc]
+xxCeDxx: bets 330
+Charismastic: raises 720 to 1050
+xxCeDxx: folds 
+Uncalled bet (720) returned to Charismastic
+Charismastic collected 1320 from pot
+Charismastic: shows [4h]
+*** SUMMARY ***
+Total pot 1320 | Rake 0 
+Board [Ks 6s Ad 4c Qc]
+Seat 3: xxCeDxx (small blind) folded on the River
+Seat 4: Charismastic (big blind) collected (1320)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438578166: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:16:54 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (8738 in chips) 
+Seat 4: Charismastic (6465 in chips) 
+Seat 5: SwaggerKat (9797 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+Charismastic: posts small blind 75
+SwaggerKat: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2d 4s]
+xxCeDxx: folds 
+Charismastic: calls 75
+SwaggerKat: checks 
+*** FLOP *** [Ah Ac 8s]
+Charismastic: checks 
+SwaggerKat: checks 
+*** TURN *** [Ah Ac 8s] [Kh]
+Charismastic: checks 
+SwaggerKat: bets 225
+Charismastic: folds 
+Uncalled bet (225) returned to SwaggerKat
+SwaggerKat collected 360 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Board [Ah Ac 8s Kh]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Turn
+Seat 5: SwaggerKat (big blind) collected (360)
+
+
+
+PokerStars Home Game Hand #165438588953: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:17:22 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (8718 in chips) 
+Seat 4: Charismastic (6295 in chips) 
+Seat 5: SwaggerKat (9987 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+SwaggerKat: posts small blind 75
+xxCeDxx: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ks Qs]
+Charismastic: raises 200 to 350
+SwaggerKat: calls 275
+xxCeDxx: raises 1110 to 1460
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (1110) returned to xxCeDxx
+xxCeDxx collected 1110 from pot
+*** SUMMARY ***
+Total pot 1110 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (1110)
+Seat 4: Charismastic (button) folded before Flop
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438605207: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:18:03 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9458 in chips) 
+Seat 4: Charismastic (5925 in chips) 
+Seat 5: SwaggerKat (9617 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+xxCeDxx: posts small blind 75
+Charismastic: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ks Kd]
+SwaggerKat: raises 150 to 300
+xxCeDxx: folds 
+Charismastic: calls 150
+*** FLOP *** [8d 5s Tc]
+Charismastic: bets 480
+SwaggerKat: raises 870 to 1350
+Charismastic: folds 
+Uncalled bet (870) returned to SwaggerKat
+SwaggerKat collected 1695 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1695 | Rake 0 
+Board [8d 5s Tc]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded on the Flop
+Seat 5: SwaggerKat (button) collected (1695)
+
+
+
+PokerStars Home Game Hand #165438621909: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:18:46 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9363 in chips) 
+Seat 4: Charismastic (5125 in chips) 
+Seat 5: SwaggerKat (10512 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+Charismastic: posts small blind 75
+SwaggerKat: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6s Jd]
+xxCeDxx: raises 150 to 300
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (150) returned to xxCeDxx
+xxCeDxx collected 435 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 435 | Rake 0 
+Seat 3: xxCeDxx (button) collected (435)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438627056: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:18:59 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9628 in chips) 
+Seat 4: Charismastic (5030 in chips) 
+Seat 5: SwaggerKat (10342 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+SwaggerKat: posts small blind 75
+xxCeDxx: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Js Kd]
+Charismastic: calls 150
+SwaggerKat: calls 75
+xxCeDxx: checks 
+*** FLOP *** [Qc 3h Kc]
+SwaggerKat: bets 300
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (300) returned to SwaggerKat
+SwaggerKat collected 510 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 510 | Rake 0 
+Board [Qc 3h Kc]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) folded on the Flop
+Seat 5: SwaggerKat (small blind) collected (510)
+
+
+
+PokerStars Home Game Hand #165438642203: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:19:38 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9458 in chips) 
+Seat 4: Charismastic (4860 in chips) 
+Seat 5: SwaggerKat (10682 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+xxCeDxx: posts small blind 75
+Charismastic: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4h 3c]
+SwaggerKat: raises 150 to 300
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (150) returned to SwaggerKat
+SwaggerKat collected 435 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 435 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (435)
+
+
+
+PokerStars Home Game Hand #165438652684: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:20:05 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9363 in chips) 
+Seat 4: Charismastic (4690 in chips) 
+Seat 5: SwaggerKat (10947 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+Charismastic: posts small blind 75
+SwaggerKat: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Th 2s]
+xxCeDxx: folds 
+Charismastic: calls 75
+SwaggerKat: checks 
+*** FLOP *** [Kc 5c 8h]
+Charismastic: bets 150
+SwaggerKat: folds 
+Uncalled bet (150) returned to Charismastic
+Charismastic collected 360 from pot
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Board [Kc 5c 8h]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) collected (360)
+Seat 5: SwaggerKat (big blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165438660099: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:20:25 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9343 in chips) 
+Seat 4: Charismastic (4880 in chips) 
+Seat 5: SwaggerKat (10777 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+SwaggerKat: posts small blind 75
+xxCeDxx: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9d Ks]
+Charismastic: folds 
+SwaggerKat: raises 150 to 300
+xxCeDxx: calls 150
+*** FLOP *** [7c 2s 6h]
+SwaggerKat: checks 
+xxCeDxx: bets 325
+SwaggerKat: folds 
+Uncalled bet (325) returned to xxCeDxx
+xxCeDxx collected 660 from pot
+*** SUMMARY ***
+Total pot 660 | Rake 0 
+Board [7c 2s 6h]
+Seat 3: xxCeDxx (big blind) collected (660)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165438682125: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:21:22 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9683 in chips) 
+Seat 4: Charismastic (4860 in chips) 
+Seat 5: SwaggerKat (10457 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+xxCeDxx: posts small blind 75
+Charismastic: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qs Qc]
+SwaggerKat: raises 150 to 300
+xxCeDxx: folds 
+Charismastic: raises 300 to 600
+SwaggerKat: raises 825 to 1425
+Charismastic: raises 3415 to 4840 and is all-in
+SwaggerKat: folds 
+Uncalled bet (3415) returned to Charismastic
+Charismastic collected 2985 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 2985 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (2985)
+Seat 5: SwaggerKat (button) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438748975: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:24:03 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9588 in chips) 
+Seat 4: Charismastic (6400 in chips) 
+Seat 5: SwaggerKat (9012 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+Charismastic: posts small blind 75
+SwaggerKat: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6c 5c]
+xxCeDxx: calls 150
+Charismastic: calls 75
+SwaggerKat: checks 
+*** FLOP *** [8d Ts Qs]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: checks 
+*** TURN *** [8d Ts Qs] [6s]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: checks 
+*** RIVER *** [8d Ts Qs 6s] [Th]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: bets 300
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (300) returned to xxCeDxx
+xxCeDxx collected 510 from pot
+*** SUMMARY ***
+Total pot 510 | Rake 0 
+Board [8d Ts Qs 6s Th]
+Seat 3: xxCeDxx (button) collected (510)
+Seat 4: Charismastic (small blind) folded on the River
+Seat 5: SwaggerKat (big blind) folded on the River
+
+
+
+PokerStars Home Game Hand #165438767209: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level VIII (75/150) - 2017/01/30 22:24:51 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9928 in chips) 
+Seat 4: Charismastic (6230 in chips) 
+Seat 5: SwaggerKat (8842 in chips) 
+xxCeDxx: posts the ante 20
+Charismastic: posts the ante 20
+SwaggerKat: posts the ante 20
+SwaggerKat: posts small blind 75
+xxCeDxx: posts big blind 150
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Tc 5d]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (75) returned to xxCeDxx
+xxCeDxx collected 210 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 210 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (210)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438775284: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:25:12 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (10043 in chips) 
+Seat 4: Charismastic (6210 in chips) 
+Seat 5: SwaggerKat (8747 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2s Qh]
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (100) returned to Charismastic
+Charismastic collected 275 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 275 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (275)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438780858: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:25:26 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9918 in chips) 
+Seat 4: Charismastic (6360 in chips) 
+Seat 5: SwaggerKat (8722 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8d 5s]
+xxCeDxx: raises 300 to 500
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (300) returned to xxCeDxx
+xxCeDxx collected 575 from pot
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (button) collected (575)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438787103: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:25:43 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (10268 in chips) 
+Seat 4: Charismastic (6235 in chips) 
+Seat 5: SwaggerKat (8497 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9s 6c]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (100) returned to xxCeDxx
+xxCeDxx collected 275 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 275 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (275)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438792439: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:25:57 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (10418 in chips) 
+Seat 4: Charismastic (6210 in chips) 
+Seat 5: SwaggerKat (8372 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kh Ad]
+SwaggerKat: raises 200 to 400
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (200) returned to SwaggerKat
+SwaggerKat collected 575 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (575)
+
+
+
+PokerStars Home Game Hand #165438799200: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:26:15 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (10293 in chips) 
+Seat 4: Charismastic (5985 in chips) 
+Seat 5: SwaggerKat (8722 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh Ts]
+xxCeDxx: folds 
+Charismastic: calls 100
+SwaggerKat: checks 
+*** FLOP *** [Tc 4c Kh]
+Charismastic: checks 
+SwaggerKat: bets 200
+Charismastic: folds 
+Uncalled bet (200) returned to SwaggerKat
+SwaggerKat collected 475 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 475 | Rake 0 
+Board [Tc 4c Kh]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (475)
+
+
+
+PokerStars Home Game Hand #165438808878: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:26:40 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (10268 in chips) 
+Seat 4: Charismastic (5760 in chips) 
+Seat 5: SwaggerKat (8972 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c Qs]
+Charismastic: raises 250 to 450
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 575 from pot
+Charismastic: shows [2d 7d]
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (575)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438815656: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:26:59 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (10043 in chips) 
+Seat 4: Charismastic (6110 in chips) 
+Seat 5: SwaggerKat (8847 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ks 5s]
+SwaggerKat: raises 200 to 400
+xxCeDxx: folds 
+Charismastic: calls 200
+*** FLOP *** [8c 4d 4c]
+Charismastic: checks 
+SwaggerKat: bets 400
+Charismastic: raises 600 to 1000
+SwaggerKat: calls 600
+*** TURN *** [8c 4d 4c] [Jd]
+Charismastic: bets 1600
+SwaggerKat: folds 
+Uncalled bet (1600) returned to Charismastic
+Charismastic collected 2975 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 2975 | Rake 0 
+Board [8c 4d 4c Jd]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (2975)
+Seat 5: SwaggerKat (button) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165438834375: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:27:48 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (9918 in chips) 
+Seat 4: Charismastic (7660 in chips) 
+Seat 5: SwaggerKat (7422 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qd Kc]
+xxCeDxx: raises 300 to 500
+Charismastic: folds 
+SwaggerKat: calls 300
+*** FLOP *** [Qc Ts 6c]
+SwaggerKat: bets 600
+xxCeDxx: folds 
+Uncalled bet (600) returned to SwaggerKat
+SwaggerKat collected 1175 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1175 | Rake 0 
+Board [Qc Ts 6c]
+Seat 3: xxCeDxx (button) folded on the Flop
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (1175)
+
+
+
+PokerStars Home Game Hand #165438850008: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:28:30 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9393 in chips) 
+Seat 4: Charismastic (7535 in chips) 
+Seat 5: SwaggerKat (8072 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8d Tc]
+Charismastic: raises 200 to 400
+SwaggerKat: folds 
+xxCeDxx: calls 200
+*** FLOP *** [Qd Qs 3h]
+xxCeDxx: checks 
+Charismastic: checks 
+*** TURN *** [Qd Qs 3h] [Kc]
+xxCeDxx: checks 
+Charismastic: bets 400
+xxCeDxx: calls 400
+*** RIVER *** [Qd Qs 3h Kc] [4s]
+xxCeDxx: bets 1000
+Charismastic: folds 
+Uncalled bet (1000) returned to xxCeDxx
+xxCeDxx collected 1775 from pot
+*** SUMMARY ***
+Total pot 1775 | Rake 0 
+Board [Qd Qs 3h Kc 4s]
+Seat 3: xxCeDxx (big blind) collected (1775)
+Seat 4: Charismastic (button) folded on the River
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438875392: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:29:37 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (10343 in chips) 
+Seat 4: Charismastic (6710 in chips) 
+Seat 5: SwaggerKat (7947 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c 4c]
+SwaggerKat: folds 
+xxCeDxx: calls 100
+Charismastic: checks 
+*** FLOP *** [9s 2c Kd]
+xxCeDxx: checks 
+Charismastic: checks 
+*** TURN *** [9s 2c Kd] [3c]
+xxCeDxx: checks 
+Charismastic: bets 200
+xxCeDxx: folds 
+Uncalled bet (200) returned to Charismastic
+Charismastic collected 475 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 475 | Rake 0 
+Board [9s 2c Kd 3c]
+Seat 3: xxCeDxx (small blind) folded on the Turn
+Seat 4: Charismastic (big blind) collected (475)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165438893171: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:30:25 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (10118 in chips) 
+Seat 4: Charismastic (6960 in chips) 
+Seat 5: SwaggerKat (7922 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qc 7d]
+xxCeDxx: raises 200 to 400
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (200) returned to xxCeDxx
+xxCeDxx collected 575 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (button) collected (575)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438899652: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:30:42 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (10468 in chips) 
+Seat 4: Charismastic (6835 in chips) 
+Seat 5: SwaggerKat (7697 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qs 9d]
+Charismastic: raises 250 to 450
+SwaggerKat: folds 
+xxCeDxx: calls 250
+*** FLOP *** [2s Ad 7c]
+xxCeDxx: checks 
+Charismastic: bets 600
+xxCeDxx: calls 600
+*** TURN *** [2s Ad 7c] [Qh]
+xxCeDxx: checks 
+Charismastic: checks 
+*** RIVER *** [2s Ad 7c Qh] [3s]
+xxCeDxx: bets 1138
+Charismastic: folds 
+Uncalled bet (1138) returned to xxCeDxx
+xxCeDxx collected 2275 from pot
+*** SUMMARY ***
+Total pot 2275 | Rake 0 
+Board [2s Ad 7c Qh 3s]
+Seat 3: xxCeDxx (big blind) collected (2275)
+Seat 4: Charismastic (button) folded on the River
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438913587: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:31:20 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (11668 in chips) 
+Seat 4: Charismastic (5760 in chips) 
+Seat 5: SwaggerKat (7572 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh Qs]
+SwaggerKat: raises 200 to 400
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (200) returned to SwaggerKat
+SwaggerKat collected 575 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (575)
+
+
+
+PokerStars Home Game Hand #165438922194: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:31:43 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (11543 in chips) 
+Seat 4: Charismastic (5535 in chips) 
+Seat 5: SwaggerKat (7922 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kh Ad]
+xxCeDxx: calls 200
+Charismastic: folds 
+SwaggerKat: raises 400 to 600
+xxCeDxx: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 575 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (575)
+
+
+
+PokerStars Home Game Hand #165438934009: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:32:15 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (11318 in chips) 
+Seat 4: Charismastic (5410 in chips) 
+Seat 5: SwaggerKat (8272 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [7h 4h]
+Charismastic: raises 250 to 450
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 575 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (575)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438940278: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:32:31 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (11093 in chips) 
+Seat 4: Charismastic (5760 in chips) 
+Seat 5: SwaggerKat (8147 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8s 5h]
+SwaggerKat: raises 200 to 400
+xxCeDxx: calls 300
+Charismastic: folds 
+*** FLOP *** [8c Js 9s]
+xxCeDxx: checks 
+SwaggerKat: bets 500
+xxCeDxx: calls 500
+*** TURN *** [8c Js 9s] [7h]
+xxCeDxx: checks 
+SwaggerKat: checks 
+*** RIVER *** [8c Js 9s 7h] [5d]
+xxCeDxx: bets 1200
+SwaggerKat: calls 1200
+*** SHOW DOWN ***
+xxCeDxx: shows [Tc Qc] (a straight, Eight to Queen)
+SwaggerKat: mucks hand 
+xxCeDxx collected 4475 from pot
+*** SUMMARY ***
+Total pot 4475 | Rake 0 
+Board [8c Js 9s 7h 5d]
+Seat 3: xxCeDxx (small blind) showed [Tc Qc] and won (4475) with a straight, Eight to Queen
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) mucked [8s 5h]
+
+
+
+PokerStars Home Game Hand #165438964521: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:33:37 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13443 in chips) 
+Seat 4: Charismastic (5535 in chips) 
+Seat 5: SwaggerKat (6022 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+Charismastic: posts small blind 100
+SwaggerKat: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Jc Td]
+xxCeDxx: folds 
+Charismastic: calls 100
+SwaggerKat: checks 
+*** FLOP *** [Jh 3h 6h]
+Charismastic: bets 250
+SwaggerKat: calls 250
+*** TURN *** [Jh 3h 6h] [7d]
+Charismastic: checks 
+SwaggerKat: bets 400
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 975 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 975 | Rake 0 
+Board [Jh 3h 6h 7d]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Turn
+Seat 5: SwaggerKat (big blind) collected (975)
+
+
+
+PokerStars Home Game Hand #165438978777: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:34:16 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13418 in chips) 
+Seat 4: Charismastic (5060 in chips) 
+Seat 5: SwaggerKat (6522 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+SwaggerKat: posts small blind 100
+xxCeDxx: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2d 8h]
+Charismastic: raises 200 to 400
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (200) returned to Charismastic
+Charismastic collected 575 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (575)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165438983971: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level IX (100/200) - 2017/01/30 22:34:29 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13193 in chips) 
+Seat 4: Charismastic (5410 in chips) 
+Seat 5: SwaggerKat (6397 in chips) 
+xxCeDxx: posts the ante 25
+Charismastic: posts the ante 25
+SwaggerKat: posts the ante 25
+xxCeDxx: posts small blind 100
+Charismastic: posts big blind 200
+*** HOLE CARDS ***
+Dealt to SwaggerKat [As Ac]
+SwaggerKat: raises 200 to 400
+xxCeDxx: folds 
+Charismastic: calls 200
+*** FLOP *** [7c Ah 5d]
+Charismastic: checks 
+SwaggerKat: checks 
+*** TURN *** [7c Ah 5d] [Th]
+Charismastic: checks 
+SwaggerKat: bets 400
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 975 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 975 | Rake 0 
+Board [7c Ah 5d Th]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded on the Turn
+Seat 5: SwaggerKat (button) collected (975)
+
+
+
+PokerStars Home Game Hand #165438999732: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:35:12 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13068 in chips) 
+Seat 4: Charismastic (4985 in chips) 
+Seat 5: SwaggerKat (6947 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2c 7s]
+xxCeDxx: calls 250
+Charismastic: calls 125
+SwaggerKat: checks 
+*** FLOP *** [Th Qc Qd]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: checks 
+*** TURN *** [Th Qc Qd] [6c]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: checks 
+*** RIVER *** [Th Qc Qd 6c] [8d]
+Charismastic: checks 
+SwaggerKat: bets 500
+xxCeDxx: calls 500
+Charismastic: folds 
+*** SHOW DOWN ***
+SwaggerKat: shows [2c 7s] (a pair of Queens)
+xxCeDxx: shows [7c 8c] (two pair, Queens and Eights)
+xxCeDxx collected 1840 from pot
+*** SUMMARY ***
+Total pot 1840 | Rake 0 
+Board [Th Qc Qd 6c 8d]
+Seat 3: xxCeDxx (button) showed [7c 8c] and won (1840) with two pair, Queens and Eights
+Seat 4: Charismastic (small blind) folded on the River
+Seat 5: SwaggerKat (big blind) showed [2c 7s] and lost with a pair of Queens
+
+
+
+PokerStars Home Game Hand #165439019794: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:36:06 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (14128 in chips) 
+Seat 4: Charismastic (4705 in chips) 
+Seat 5: SwaggerKat (6167 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qd Qh]
+Charismastic: raises 300 to 550
+SwaggerKat: raises 825 to 1375
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (825) returned to SwaggerKat
+SwaggerKat collected 1440 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1440 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) folded before Flop
+Seat 5: SwaggerKat (small blind) collected (1440)
+
+
+
+PokerStars Home Game Hand #165439031069: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:36:37 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13848 in chips) 
+Seat 4: Charismastic (4125 in chips) 
+Seat 5: SwaggerKat (7027 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2c 8h]
+SwaggerKat: folds 
+xxCeDxx: calls 125
+Charismastic: checks 
+*** FLOP *** [9s 5d Ah]
+xxCeDxx: bets 250
+Charismastic: folds 
+Uncalled bet (250) returned to xxCeDxx
+xxCeDxx collected 590 from pot
+*** SUMMARY ***
+Total pot 590 | Rake 0 
+Board [9s 5d Ah]
+Seat 3: xxCeDxx (small blind) collected (590)
+Seat 4: Charismastic (big blind) folded on the Flop
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439041937: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:37:06 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (14158 in chips) 
+Seat 4: Charismastic (3845 in chips) 
+Seat 5: SwaggerKat (6997 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8c 3c]
+xxCeDxx: calls 250
+Charismastic: folds 
+SwaggerKat: checks 
+*** FLOP *** [3s 5d Qs]
+SwaggerKat: bets 375
+xxCeDxx: folds 
+Uncalled bet (375) returned to SwaggerKat
+SwaggerKat collected 715 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Board [3s 5d Qs]
+Seat 3: xxCeDxx (button) folded on the Flop
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (715)
+
+
+
+PokerStars Home Game Hand #165439057457: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:37:39 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13878 in chips) 
+Seat 4: Charismastic (3690 in chips) 
+Seat 5: SwaggerKat (7432 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6h Qh]
+Charismastic: folds 
+SwaggerKat: raises 250 to 500
+xxCeDxx: calls 250
+*** FLOP *** [2d Ac Kh]
+SwaggerKat: bets 750
+xxCeDxx: folds 
+Uncalled bet (750) returned to SwaggerKat
+SwaggerKat collected 1090 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1090 | Rake 0 
+Board [2d Ac Kh]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) collected (1090)
+
+
+
+PokerStars Home Game Hand #165439069510: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:38:12 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13348 in chips) 
+Seat 4: Charismastic (3660 in chips) 
+Seat 5: SwaggerKat (7992 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3c 5h]
+SwaggerKat: folds 
+xxCeDxx: calls 125
+Charismastic: raises 3380 to 3630 and is all-in
+xxCeDxx: folds 
+Uncalled bet (3380) returned to Charismastic
+Charismastic collected 590 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 590 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (590)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439081397: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:38:44 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13068 in chips) 
+Seat 4: Charismastic (3970 in chips) 
+Seat 5: SwaggerKat (7962 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kd Th]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (125) returned to SwaggerKat
+SwaggerKat collected 340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (340)
+
+
+
+PokerStars Home Game Hand #165439087319: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:39:01 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13038 in chips) 
+Seat 4: Charismastic (3815 in chips) 
+Seat 5: SwaggerKat (8147 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6h Jh]
+Charismastic: raises 250 to 500
+SwaggerKat: folds 
+xxCeDxx: calls 250
+*** FLOP *** [8s 4d 2d]
+xxCeDxx: checks 
+Charismastic: bets 650
+xxCeDxx: folds 
+Uncalled bet (650) returned to Charismastic
+Charismastic collected 1215 from pot
+*** SUMMARY ***
+Total pot 1215 | Rake 0 
+Board [8s 4d 2d]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (1215)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439098795: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:39:32 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (12508 in chips) 
+Seat 4: Charismastic (4500 in chips) 
+Seat 5: SwaggerKat (7992 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [7h Jh]
+SwaggerKat: raises 250 to 500
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (250) returned to SwaggerKat
+SwaggerKat collected 715 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (715)
+
+
+
+PokerStars Home Game Hand #165439107701: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:39:57 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (12353 in chips) 
+Seat 4: Charismastic (4220 in chips) 
+Seat 5: SwaggerKat (8427 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2c 8d]
+xxCeDxx: calls 250
+Charismastic: folds 
+SwaggerKat: checks 
+*** FLOP *** [Ah Qd Js]
+SwaggerKat: bets 500
+xxCeDxx: calls 500
+*** TURN *** [Ah Qd Js] [9s]
+SwaggerKat: checks 
+xxCeDxx: bets 750
+SwaggerKat: folds 
+Uncalled bet (750) returned to xxCeDxx
+xxCeDxx collected 1715 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 1715 | Rake 0 
+Board [Ah Qd Js 9s]
+Seat 3: xxCeDxx (button) collected (1715)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165439121447: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:40:35 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13288 in chips) 
+Seat 4: Charismastic (4065 in chips) 
+Seat 5: SwaggerKat (7647 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8d 5h]
+Charismastic is disconnected 
+Charismastic is connected 
+Charismastic: raises 250 to 500
+SwaggerKat: folds 
+xxCeDxx: calls 250
+*** FLOP *** [Ad Jd 4h]
+xxCeDxx: checks 
+Charismastic: checks 
+*** TURN *** [Ad Jd 4h] [6s]
+xxCeDxx: checks 
+Charismastic: checks 
+*** RIVER *** [Ad Jd 4h 6s] [2s]
+xxCeDxx: checks 
+Charismastic: checks 
+*** SHOW DOWN ***
+xxCeDxx: shows [Qs 6d] (a pair of Sixes)
+Charismastic: mucks hand 
+xxCeDxx collected 1215 from pot
+*** SUMMARY ***
+Total pot 1215 | Rake 0 
+Board [Ad Jd 4h 6s 2s]
+Seat 3: xxCeDxx (big blind) showed [Qs 6d] and won (1215) with a pair of Sixes
+Seat 4: Charismastic (button) mucked [Ks 8h]
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439149069: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:41:51 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13973 in chips) 
+Seat 4: Charismastic (3535 in chips) 
+Seat 5: SwaggerKat (7492 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4c 9c]
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (125) returned to Charismastic
+Charismastic collected 340 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (340)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439156303: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:42:12 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13818 in chips) 
+Seat 4: Charismastic (3720 in chips) 
+Seat 5: SwaggerKat (7462 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4h 2s]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (125) returned to SwaggerKat
+SwaggerKat collected 340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (340)
+
+
+
+PokerStars Home Game Hand #165439160239: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:42:22 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13788 in chips) 
+Seat 4: Charismastic (3565 in chips) 
+Seat 5: SwaggerKat (7647 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2d 8s]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (125) returned to xxCeDxx
+xxCeDxx collected 340 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (340)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439166158: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:42:39 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13973 in chips) 
+Seat 4: Charismastic (3535 in chips) 
+Seat 5: SwaggerKat (7492 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Jd Ac]
+SwaggerKat: raises 250 to 500
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (250) returned to SwaggerKat
+SwaggerKat collected 715 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (715)
+
+
+
+PokerStars Home Game Hand #165439171241: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:42:53 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13818 in chips) 
+Seat 4: Charismastic (3255 in chips) 
+Seat 5: SwaggerKat (7927 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2s 8h]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (125) returned to SwaggerKat
+SwaggerKat collected 340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (340)
+
+
+
+PokerStars Home Game Hand #165439177753: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:43:11 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13788 in chips) 
+Seat 4: Charismastic (3100 in chips) 
+Seat 5: SwaggerKat (8112 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2h 6c]
+Charismastic: raises 250 to 500
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 715 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (715)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439182730: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:43:25 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13508 in chips) 
+Seat 4: Charismastic (3535 in chips) 
+Seat 5: SwaggerKat (7957 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Jh Qh]
+SwaggerKat: raises 250 to 500
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (250) returned to SwaggerKat
+SwaggerKat collected 715 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (715)
+
+
+
+PokerStars Home Game Hand #165439189068: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:43:42 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (13353 in chips) 
+Seat 4: Charismastic (3255 in chips) 
+Seat 5: SwaggerKat (8392 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9s Th]
+xxCeDxx: folds 
+Charismastic: raises 250 to 500
+SwaggerKat: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 590 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 590 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) collected (590)
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439197835: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:44:07 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (13323 in chips) 
+Seat 4: Charismastic (3565 in chips) 
+Seat 5: SwaggerKat (8112 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [As Ts]
+Charismastic: raises 250 to 500
+SwaggerKat: raises 500 to 1000
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (500) returned to SwaggerKat
+SwaggerKat collected 1340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1340 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) folded before Flop
+Seat 5: SwaggerKat (small blind) collected (1340)
+
+
+
+PokerStars Home Game Hand #165439205226: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:44:27 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (13043 in chips) 
+Seat 4: Charismastic (3035 in chips) 
+Seat 5: SwaggerKat (8922 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+xxCeDxx: posts small blind 125
+Charismastic: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh 6d]
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (125) returned to Charismastic
+Charismastic collected 340 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (340)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439209561: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:44:39 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (12888 in chips) 
+Seat 4: Charismastic (3220 in chips) 
+Seat 5: SwaggerKat (8892 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+Charismastic: posts small blind 125
+SwaggerKat: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qd Qh]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (125) returned to SwaggerKat
+SwaggerKat collected 340 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 340 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (340)
+
+
+
+PokerStars Home Game Hand #165439213578: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level X (125/250) - 2017/01/30 22:44:51 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (12858 in chips) 
+Seat 4: Charismastic (3065 in chips) 
+Seat 5: SwaggerKat (9077 in chips) 
+xxCeDxx: posts the ante 30
+Charismastic: posts the ante 30
+SwaggerKat: posts the ante 30
+SwaggerKat: posts small blind 125
+xxCeDxx: posts big blind 250
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qd 5c]
+Charismastic: raises 250 to 500
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 715 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 715 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (715)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439222576: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:45:16 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (12578 in chips) 
+Seat 4: Charismastic (3500 in chips) 
+Seat 5: SwaggerKat (8922 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4d 9d]
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (150) returned to Charismastic
+Charismastic collected 420 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (420)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439227827: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:45:31 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (12388 in chips) 
+Seat 4: Charismastic (3730 in chips) 
+Seat 5: SwaggerKat (8882 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Tc 8c]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (150) returned to SwaggerKat
+SwaggerKat collected 420 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (420)
+
+
+
+PokerStars Home Game Hand #165439231671: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:45:42 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (12348 in chips) 
+Seat 4: Charismastic (3540 in chips) 
+Seat 5: SwaggerKat (9112 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3s Qs]
+Charismastic: raises 300 to 600
+SwaggerKat: folds 
+xxCeDxx: calls 300
+*** FLOP *** [8c Js 7s]
+xxCeDxx: checks 
+Charismastic: bets 750
+xxCeDxx: raises 2970 to 3720
+Charismastic: calls 2150 and is all-in
+Uncalled bet (820) returned to xxCeDxx
+*** TURN *** [8c Js 7s] [Kh]
+*** RIVER *** [8c Js 7s Kh] [Kd]
+*** SHOW DOWN ***
+xxCeDxx: shows [9c Jd] (two pair, Kings and Jacks)
+Charismastic: shows [8s Ks] (a full house, Kings full of Eights)
+Charismastic collected 7270 from pot
+*** SUMMARY ***
+Total pot 7270 | Rake 0 
+Board [8c Js 7s Kh Kd]
+Seat 3: xxCeDxx (big blind) showed [9c Jd] and lost with two pair, Kings and Jacks
+Seat 4: Charismastic (button) showed [8s Ks] and won (7270) with a full house, Kings full of Eights
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439252417: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:46:40 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (8808 in chips) 
+Seat 4: Charismastic (7270 in chips) 
+Seat 5: SwaggerKat (8922 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8d Kh]
+SwaggerKat: raises 300 to 600
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (300) returned to SwaggerKat
+SwaggerKat collected 870 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 870 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (870)
+
+
+
+PokerStars Home Game Hand #165439259912: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:47:00 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (8618 in chips) 
+Seat 4: Charismastic (6930 in chips) 
+Seat 5: SwaggerKat (9452 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c 2s]
+xxCeDxx: raises 600 to 900
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (600) returned to xxCeDxx
+xxCeDxx collected 870 from pot
+*** SUMMARY ***
+Total pot 870 | Rake 0 
+Seat 3: xxCeDxx (button) collected (870)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439265108: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:47:15 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (9148 in chips) 
+Seat 4: Charismastic (6740 in chips) 
+Seat 5: SwaggerKat (9112 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5h Kd]
+Charismastic: raises 300 to 600
+SwaggerKat: folds 
+xxCeDxx: calls 300
+*** FLOP *** [6h 6d Qh]
+xxCeDxx: checks 
+Charismastic: bets 750
+xxCeDxx: folds 
+Uncalled bet (750) returned to Charismastic
+Charismastic collected 1470 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1470 | Rake 0 
+Board [6h 6d Qh]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (1470)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439274787: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:47:42 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (8508 in chips) 
+Seat 4: Charismastic (7570 in chips) 
+Seat 5: SwaggerKat (8922 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6c 7s]
+SwaggerKat: raises 300 to 600
+xxCeDxx: folds 
+Charismastic: raises 700 to 1300
+SwaggerKat: folds 
+Uncalled bet (700) returned to Charismastic
+Charismastic collected 1470 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1470 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (1470)
+Seat 5: SwaggerKat (button) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439284616: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:48:09 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (8318 in chips) 
+Seat 4: Charismastic (8400 in chips) 
+Seat 5: SwaggerKat (8282 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kh 7d]
+xxCeDxx: raises 300 to 600
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (300) returned to xxCeDxx
+xxCeDxx collected 870 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 870 | Rake 0 
+Seat 3: xxCeDxx (button) collected (870)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439290811: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:48:27 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (8848 in chips) 
+Seat 4: Charismastic (8210 in chips) 
+Seat 5: SwaggerKat (7942 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2c 9c]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (150) returned to xxCeDxx
+xxCeDxx collected 420 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (420)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439295325: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:48:40 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (9078 in chips) 
+Seat 4: Charismastic (8170 in chips) 
+Seat 5: SwaggerKat (7752 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5h 4c]
+SwaggerKat: folds 
+xxCeDxx: calls 150
+Charismastic: checks 
+*** FLOP *** [Js 5s 8s]
+xxCeDxx: bets 300
+Charismastic: calls 300
+*** TURN *** [Js 5s 8s] [8h]
+xxCeDxx: checks 
+Charismastic: bets 900
+xxCeDxx: calls 900
+*** RIVER *** [Js 5s 8s 8h] [Kc]
+xxCeDxx: checks 
+Charismastic: bets 2100
+xxCeDxx: folds 
+Uncalled bet (2100) returned to Charismastic
+Charismastic collected 3120 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 3120 | Rake 0 
+Board [Js 5s 8s 8h Kc]
+Seat 3: xxCeDxx (small blind) folded on the River
+Seat 4: Charismastic (big blind) collected (3120)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439311551: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:49:25 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7538 in chips) 
+Seat 4: Charismastic (9750 in chips) 
+Seat 5: SwaggerKat (7712 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9h 6d]
+xxCeDxx: folds 
+Charismastic: raises 300 to 600
+SwaggerKat: raises 900 to 1500
+Charismastic: folds 
+Uncalled bet (900) returned to SwaggerKat
+SwaggerKat collected 1320 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1320 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (1320)
+
+
+
+PokerStars Home Game Hand #165439322753: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:49:53 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7498 in chips) 
+Seat 4: Charismastic (9110 in chips) 
+Seat 5: SwaggerKat (8392 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5c 4c]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (150) returned to xxCeDxx
+xxCeDxx collected 420 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (420)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439328097: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:50:08 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7728 in chips) 
+Seat 4: Charismastic (9070 in chips) 
+Seat 5: SwaggerKat (8202 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Jc 5h]
+SwaggerKat: folds 
+xxCeDxx: calls 150
+Charismastic: raises 380 to 680
+xxCeDxx: calls 380
+*** FLOP *** [Kh 6h Kd]
+xxCeDxx: checks 
+Charismastic: bets 750
+xxCeDxx: folds 
+Uncalled bet (750) returned to Charismastic
+Charismastic collected 1480 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1480 | Rake 0 
+Board [Kh 6h Kd]
+Seat 3: xxCeDxx (small blind) folded on the Flop
+Seat 4: Charismastic (big blind) collected (1480)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439338797: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:50:39 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7008 in chips) 
+Seat 4: Charismastic (9830 in chips) 
+Seat 5: SwaggerKat (8162 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ks Jc]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (150) returned to SwaggerKat
+SwaggerKat collected 420 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (420)
+
+
+
+PokerStars Home Game Hand #165439343167: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:50:51 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (6968 in chips) 
+Seat 4: Charismastic (9640 in chips) 
+Seat 5: SwaggerKat (8392 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5s 6d]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (150) returned to xxCeDxx
+xxCeDxx collected 420 from pot
+*** SUMMARY ***
+Total pot 420 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (420)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439347733: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:51:04 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7198 in chips) 
+Seat 4: Charismastic (9600 in chips) 
+Seat 5: SwaggerKat (8202 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh 2h]
+SwaggerKat: folds 
+xxCeDxx: calls 150
+Charismastic: checks 
+*** FLOP *** [Ah 5c Tc]
+xxCeDxx: bets 300
+Charismastic: folds 
+Uncalled bet (300) returned to xxCeDxx
+xxCeDxx collected 720 from pot
+*** SUMMARY ***
+Total pot 720 | Rake 0 
+Board [Ah 5c Tc]
+Seat 3: xxCeDxx (small blind) collected (720)
+Seat 4: Charismastic (big blind) folded on the Flop
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439358150: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:51:34 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7578 in chips) 
+Seat 4: Charismastic (9260 in chips) 
+Seat 5: SwaggerKat (8162 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d 3c]
+xxCeDxx: calls 300
+Charismastic: calls 150
+SwaggerKat: checks 
+*** FLOP *** [4h Kd 7h]
+Charismastic: checks 
+SwaggerKat: checks 
+xxCeDxx: bets 510
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (510) returned to xxCeDxx
+xxCeDxx collected 1020 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 1020 | Rake 0 
+Board [4h Kd 7h]
+Seat 3: xxCeDxx (button) collected (1020)
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165439374257: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:52:20 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (8258 in chips) 
+Seat 4: Charismastic (8920 in chips) 
+Seat 5: SwaggerKat (7822 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9d Ts]
+Charismastic: raises 300 to 600
+SwaggerKat: folds 
+xxCeDxx: calls 300
+*** FLOP *** [8h Td Jc]
+xxCeDxx: checks 
+Charismastic: bets 750
+xxCeDxx: folds 
+Uncalled bet (750) returned to Charismastic
+Charismastic collected 1470 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1470 | Rake 0 
+Board [8h Td Jc]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (1470)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439383205: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:52:46 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (7618 in chips) 
+Seat 4: Charismastic (9750 in chips) 
+Seat 5: SwaggerKat (7632 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qs 4s]
+SwaggerKat: raises 300 to 600
+xxCeDxx: folds 
+Charismastic: calls 300
+*** FLOP *** [7h 6h 7d]
+Charismastic: bets 600
+SwaggerKat: folds 
+Uncalled bet (600) returned to Charismastic
+Charismastic collected 1470 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1470 | Rake 0 
+Board [7h 6h 7d]
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (1470)
+Seat 5: SwaggerKat (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165439392161: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:53:12 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (7428 in chips) 
+Seat 4: Charismastic (10580 in chips) 
+Seat 5: SwaggerKat (6992 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+Charismastic: posts small blind 150
+SwaggerKat: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Th Kd]
+xxCeDxx: folds 
+Charismastic: calls 150
+SwaggerKat: raises 450 to 750
+Charismastic: calls 450
+*** FLOP *** [8d 2c 9h]
+Charismastic: checks 
+SwaggerKat: bets 750
+Charismastic: folds 
+Uncalled bet (750) returned to SwaggerKat
+SwaggerKat collected 1620 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1620 | Rake 0 
+Board [8d 2c 9h]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (1620)
+
+
+
+PokerStars Home Game Hand #165439403420: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:53:44 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (7388 in chips) 
+Seat 4: Charismastic (9790 in chips) 
+Seat 5: SwaggerKat (7822 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+SwaggerKat: posts small blind 150
+xxCeDxx: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8h Ah]
+Charismastic: raises 300 to 600
+SwaggerKat: calls 450
+xxCeDxx: calls 300
+*** FLOP *** [Qs Js 2s]
+SwaggerKat: checks 
+xxCeDxx: bets 900
+Charismastic: raises 1200 to 2100
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (1200) returned to Charismastic
+Charismastic collected 3720 from pot
+Charismastic: shows [8s]
+*** SUMMARY ***
+Total pot 3720 | Rake 0 
+Board [Qs Js 2s]
+Seat 3: xxCeDxx (big blind) folded on the Flop
+Seat 4: Charismastic (button) collected (3720)
+Seat 5: SwaggerKat (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165439424199: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XI (150/300) - 2017/01/30 22:54:43 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (5848 in chips) 
+Seat 4: Charismastic (11970 in chips) 
+Seat 5: SwaggerKat (7182 in chips) 
+xxCeDxx: posts the ante 40
+Charismastic: posts the ante 40
+SwaggerKat: posts the ante 40
+xxCeDxx: posts small blind 150
+Charismastic: posts big blind 300
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4s Ad]
+SwaggerKat: raises 300 to 600
+xxCeDxx: calls 450
+Charismastic: folds 
+*** FLOP *** [9s Kh 8h]
+xxCeDxx: checks 
+SwaggerKat: checks 
+*** TURN *** [9s Kh 8h] [Qs]
+xxCeDxx: bets 810
+SwaggerKat: folds 
+Uncalled bet (810) returned to xxCeDxx
+xxCeDxx collected 1620 from pot
+*** SUMMARY ***
+Total pot 1620 | Rake 0 
+Board [9s Kh 8h Qs]
+Seat 3: xxCeDxx (small blind) collected (1620)
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) folded on the Turn
+
+
+
+PokerStars Home Game Hand #165439437637: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:55:23 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (6828 in chips) 
+Seat 4: Charismastic (11630 in chips) 
+Seat 5: SwaggerKat (6542 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ks 5h]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (200) returned to SwaggerKat
+SwaggerKat collected 550 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 550 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (550)
+
+
+
+PokerStars Home Game Hand #165439445298: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:55:49 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (6778 in chips) 
+Seat 4: Charismastic (11380 in chips) 
+Seat 5: SwaggerKat (6842 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9c Ks]
+Charismastic: raises 400 to 800
+SwaggerKat: raises 5992 to 6792 and is all-in
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (5992) returned to SwaggerKat
+SwaggerKat collected 2150 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 2150 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) folded before Flop
+Seat 5: SwaggerKat (small blind) collected (2150)
+
+
+
+PokerStars Home Game Hand #165439456355: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:56:25 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (6328 in chips) 
+Seat 4: Charismastic (10530 in chips) 
+Seat 5: SwaggerKat (8142 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qh 3d]
+SwaggerKat: folds 
+xxCeDxx: calls 200
+Charismastic: checks 
+*** FLOP *** [7h 8s 6h]
+xxCeDxx: checks 
+Charismastic: bets 450
+xxCeDxx: calls 450
+*** TURN *** [7h 8s 6h] [2s]
+xxCeDxx: checks 
+Charismastic: checks 
+*** RIVER *** [7h 8s 6h 2s] [5s]
+xxCeDxx: bets 800
+Charismastic: calls 800
+*** SHOW DOWN ***
+xxCeDxx: shows [7s Ac] (a pair of Sevens)
+Charismastic: shows [Jh 4c] (a straight, Four to Eight)
+Charismastic collected 3450 from pot
+*** SUMMARY ***
+Total pot 3450 | Rake 0 
+Board [7h 8s 6h 2s 5s]
+Seat 3: xxCeDxx (small blind) showed [7s Ac] and lost with a pair of Sevens
+Seat 4: Charismastic (big blind) showed [Jh 4c] and won (3450) with a straight, Four to Eight
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439481392: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:57:26 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (4628 in chips) 
+Seat 4: Charismastic (12280 in chips) 
+Seat 5: SwaggerKat (8092 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8h 5s]
+xxCeDxx: folds 
+Charismastic: calls 200
+SwaggerKat: checks 
+*** FLOP *** [Jh 4s Ks]
+Charismastic: checks 
+SwaggerKat: bets 400
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 950 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 950 | Rake 0 
+Board [Jh 4s Ks]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (950)
+
+
+
+PokerStars Home Game Hand #165439488579: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:57:49 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (4578 in chips) 
+Seat 4: Charismastic (11830 in chips) 
+Seat 5: SwaggerKat (8592 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8h 7h]
+Charismastic: raises 400 to 800
+SwaggerKat: raises 800 to 1600
+xxCeDxx: folds 
+Charismastic: calls 800
+*** FLOP *** [3s 2s Ad]
+SwaggerKat: bets 1400
+Charismastic: folds 
+Uncalled bet (1400) returned to SwaggerKat
+SwaggerKat collected 3750 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 3750 | Rake 0 
+Board [3s 2s Ad]
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) folded on the Flop
+Seat 5: SwaggerKat (small blind) collected (3750)
+
+
+
+PokerStars Home Game Hand #165439500275: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:58:27 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (4128 in chips) 
+Seat 4: Charismastic (10180 in chips) 
+Seat 5: SwaggerKat (10692 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kc 9c]
+SwaggerKat: raises 400 to 800
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 1150 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1150 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (1150)
+
+
+
+PokerStars Home Game Hand #165439507556: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:58:50 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (3878 in chips) 
+Seat 4: Charismastic (9730 in chips) 
+Seat 5: SwaggerKat (11392 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qc 4s]
+xxCeDxx: folds 
+Charismastic: raises 400 to 800
+SwaggerKat: folds 
+Uncalled bet (400) returned to Charismastic
+Charismastic collected 950 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 950 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) collected (950)
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439512706: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:59:07 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (3828 in chips) 
+Seat 4: Charismastic (10230 in chips) 
+Seat 5: SwaggerKat (10942 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ah 7s]
+Charismastic: folds 
+SwaggerKat: raises 10492 to 10892 and is all-in
+xxCeDxx: folds 
+Uncalled bet (10492) returned to SwaggerKat
+SwaggerKat collected 950 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 950 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) collected (950)
+
+
+
+PokerStars Home Game Hand #165439517933: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:59:24 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (3378 in chips) 
+Seat 4: Charismastic (10180 in chips) 
+Seat 5: SwaggerKat (11442 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ts Qc]
+SwaggerKat: raises 400 to 800
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 1150 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1150 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) collected (1150)
+
+
+
+PokerStars Home Game Hand #165439523030: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 22:59:41 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (3128 in chips) 
+Seat 4: Charismastic (9730 in chips) 
+Seat 5: SwaggerKat (12142 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Qs 8c]
+xxCeDxx: folds 
+Charismastic: calls 200
+SwaggerKat: checks 
+*** FLOP *** [7s 2h Qd]
+Charismastic: bets 500
+SwaggerKat: calls 500
+*** TURN *** [7s 2h Qd] [Kh]
+Charismastic: checks 
+SwaggerKat: checks 
+*** RIVER *** [7s 2h Qd Kh] [6d]
+Charismastic: bets 1200
+SwaggerKat: calls 1200
+*** SHOW DOWN ***
+Charismastic: shows [Js 9c] (high card King)
+SwaggerKat: shows [Qs 8c] (a pair of Queens)
+SwaggerKat collected 4350 from pot
+*** SUMMARY ***
+Total pot 4350 | Rake 0 
+Board [7s 2h Qd Kh 6d]
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) showed [Js 9c] and lost with high card King
+Seat 5: SwaggerKat (big blind) showed [Qs 8c] and won (4350) with a pair of Queens
+
+
+
+PokerStars Home Game Hand #165439546298: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:00:55 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (3078 in chips) 
+Seat 4: Charismastic (7580 in chips) 
+Seat 5: SwaggerKat (14342 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5d Ks]
+Charismastic: raises 400 to 800
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (400) returned to Charismastic
+Charismastic collected 1150 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1150 | Rake 0 
+Seat 3: xxCeDxx (big blind) folded before Flop
+Seat 4: Charismastic (button) collected (1150)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439551343: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:01:10 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (2628 in chips) 
+Seat 4: Charismastic (8280 in chips) 
+Seat 5: SwaggerKat (14092 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d Jc]
+SwaggerKat: folds 
+xxCeDxx: folds 
+Uncalled bet (200) returned to Charismastic
+Charismastic collected 550 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 550 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (550)
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439555336: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:01:22 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (2378 in chips) 
+Seat 4: Charismastic (8580 in chips) 
+Seat 5: SwaggerKat (14042 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [3d 4d]
+xxCeDxx: folds 
+Charismastic: folds 
+Uncalled bet (200) returned to SwaggerKat
+SwaggerKat collected 550 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 550 | Rake 0 
+Seat 3: xxCeDxx (button) folded before Flop (didn't bet)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (550)
+
+
+
+PokerStars Home Game Hand #165439560972: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:01:39 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (2328 in chips) 
+Seat 4: Charismastic (8330 in chips) 
+Seat 5: SwaggerKat (14342 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2c 6h]
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (200) returned to xxCeDxx
+xxCeDxx collected 550 from pot
+xxCeDxx: doesn't show hand 
+*** SUMMARY ***
+Total pot 550 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (550)
+Seat 4: Charismastic (button) folded before Flop (didn't bet)
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439565334: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:01:52 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (2628 in chips) 
+Seat 4: Charismastic (8280 in chips) 
+Seat 5: SwaggerKat (14092 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9h Qd]
+SwaggerKat: raises 400 to 800
+xxCeDxx: folds 
+Charismastic: raises 800 to 1600
+SwaggerKat: folds 
+Uncalled bet (800) returned to Charismastic
+Charismastic collected 1950 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1950 | Rake 0 
+Seat 3: xxCeDxx (small blind) folded before Flop
+Seat 4: Charismastic (big blind) collected (1950)
+Seat 5: SwaggerKat (button) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439578931: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:02:32 ET
+Table '1808966073 1' 6-max Seat #3 is the button
+Seat 3: xxCeDxx (2378 in chips) 
+Seat 4: Charismastic (9380 in chips) 
+Seat 5: SwaggerKat (13242 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4d Jc]
+xxCeDxx: raises 1928 to 2328 and is all-in
+Charismastic: folds 
+SwaggerKat: folds 
+Uncalled bet (1928) returned to xxCeDxx
+xxCeDxx collected 1150 from pot
+*** SUMMARY ***
+Total pot 1150 | Rake 0 
+Seat 3: xxCeDxx (button) collected (1150)
+Seat 4: Charismastic (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439583280: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:02:45 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 3: xxCeDxx (3078 in chips) 
+Seat 4: Charismastic (9130 in chips) 
+Seat 5: SwaggerKat (12792 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+xxCeDxx: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kd 5c]
+Charismastic: raises 400 to 800
+SwaggerKat: folds 
+xxCeDxx: raises 2228 to 3028 and is all-in
+Charismastic: folds 
+Uncalled bet (2228) returned to xxCeDxx
+xxCeDxx collected 1950 from pot
+*** SUMMARY ***
+Total pot 1950 | Rake 0 
+Seat 3: xxCeDxx (big blind) collected (1950)
+Seat 4: Charismastic (button) folded before Flop
+Seat 5: SwaggerKat (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439589346: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:03:04 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 3: xxCeDxx (4178 in chips) 
+Seat 4: Charismastic (8280 in chips) 
+Seat 5: SwaggerKat (12542 in chips) 
+xxCeDxx: posts the ante 50
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+xxCeDxx: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [9h 6c]
+SwaggerKat: folds 
+xxCeDxx: raises 3728 to 4128 and is all-in
+Charismastic: calls 3728
+*** FLOP *** [8s 2c Kh]
+*** TURN *** [8s 2c Kh] [2s]
+*** RIVER *** [8s 2c Kh 2s] [Qh]
+*** SHOW DOWN ***
+xxCeDxx: shows [3h Kd] (two pair, Kings and Deuces)
+Charismastic: shows [8d 8h] (a full house, Eights full of Deuces)
+Charismastic collected 8406 from pot
+xxCeDxx finished the tournament in 3rd place
+*** SUMMARY ***
+Total pot 8406 | Rake 0 
+Board [8s 2c Kh 2s Qh]
+Seat 3: xxCeDxx (small blind) showed [3h Kd] and lost with two pair, Kings and Deuces
+Seat 4: Charismastic (big blind) showed [8d 8h] and won (8406) with a full house, Eights full of Deuces
+Seat 5: SwaggerKat (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #165439599056: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:03:32 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 4: Charismastic (12508 in chips) 
+Seat 5: SwaggerKat (12492 in chips) 
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [5c 4h]
+Charismastic: calls 200
+SwaggerKat: checks 
+*** FLOP *** [6c 4c Th]
+SwaggerKat: bets 400
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 900 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 900 | Rake 0 
+Board [6c 4c Th]
+Seat 4: Charismastic (button) (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (900)
+
+
+
+PokerStars Home Game Hand #165439608148: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:03:59 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 4: Charismastic (12058 in chips) 
+Seat 5: SwaggerKat (12942 in chips) 
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [2d 6c]
+SwaggerKat: folds 
+Uncalled bet (200) returned to Charismastic
+Charismastic collected 500 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 500 | Rake 0 
+Seat 4: Charismastic (big blind) collected (500)
+Seat 5: SwaggerKat (button) (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439611415: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:04:09 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 4: Charismastic (12308 in chips) 
+Seat 5: SwaggerKat (12692 in chips) 
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+Charismastic: posts small blind 200
+SwaggerKat: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Th Kd]
+Charismastic: raises 400 to 800
+SwaggerKat: calls 400
+*** FLOP *** [Ah Td Qc]
+SwaggerKat: checks 
+Charismastic: bets 1000
+SwaggerKat: folds 
+Uncalled bet (1000) returned to Charismastic
+Charismastic collected 1700 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1700 | Rake 0 
+Board [Ah Td Qc]
+Seat 4: Charismastic (button) (small blind) collected (1700)
+Seat 5: SwaggerKat (big blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #165439627198: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XII (200/400) - 2017/01/30 23:04:55 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 4: Charismastic (13158 in chips) 
+Seat 5: SwaggerKat (11842 in chips) 
+Charismastic: posts the ante 50
+SwaggerKat: posts the ante 50
+SwaggerKat: posts small blind 200
+Charismastic: posts big blind 400
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kh 8s]
+SwaggerKat: raises 400 to 800
+Charismastic: folds 
+Uncalled bet (400) returned to SwaggerKat
+SwaggerKat collected 900 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 900 | Rake 0 
+Seat 4: Charismastic (big blind) folded before Flop
+Seat 5: SwaggerKat (button) (small blind) collected (900)
+
+
+
+PokerStars Home Game Hand #165439633324: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:05:13 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 4: Charismastic (12708 in chips) 
+Seat 5: SwaggerKat (12292 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+Charismastic: posts small blind 250
+SwaggerKat: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Ts 2c]
+Charismastic: raises 500 to 1000
+SwaggerKat: folds 
+Uncalled bet (500) returned to Charismastic
+Charismastic collected 1120 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 1120 | Rake 0 
+Seat 4: Charismastic (button) (small blind) collected (1120)
+Seat 5: SwaggerKat (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439637812: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:05:26 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 4: Charismastic (13268 in chips) 
+Seat 5: SwaggerKat (11732 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+SwaggerKat: posts small blind 250
+Charismastic: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [4h 7c]
+SwaggerKat: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 620 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 620 | Rake 0 
+Seat 4: Charismastic (big blind) collected (620)
+Seat 5: SwaggerKat (button) (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439641068: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:05:36 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 4: Charismastic (13578 in chips) 
+Seat 5: SwaggerKat (11422 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+Charismastic: posts small blind 250
+SwaggerKat: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [6c Ad]
+Charismastic: raises 500 to 1000
+SwaggerKat: raises 10362 to 11362 and is all-in
+Charismastic: folds 
+Uncalled bet (10362) returned to SwaggerKat
+SwaggerKat collected 2120 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 2120 | Rake 0 
+Seat 4: Charismastic (button) (small blind) folded before Flop
+Seat 5: SwaggerKat (big blind) collected (2120)
+
+
+
+PokerStars Home Game Hand #165439652771: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:06:11 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 4: Charismastic (12518 in chips) 
+Seat 5: SwaggerKat (12482 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+SwaggerKat: posts small blind 250
+Charismastic: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [8h 2s]
+SwaggerKat: folds 
+Uncalled bet (250) returned to Charismastic
+Charismastic collected 620 from pot
+Charismastic: doesn't show hand 
+*** SUMMARY ***
+Total pot 620 | Rake 0 
+Seat 4: Charismastic (big blind) collected (620)
+Seat 5: SwaggerKat (button) (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #165439656146: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:06:21 ET
+Table '1808966073 1' 6-max Seat #4 is the button
+Seat 4: Charismastic (12828 in chips) 
+Seat 5: SwaggerKat (12172 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+Charismastic: posts small blind 250
+SwaggerKat: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [7h Th]
+Charismastic: calls 250
+SwaggerKat: checks 
+*** FLOP *** [4s Qd Ad]
+SwaggerKat: bets 500
+Charismastic: folds 
+Uncalled bet (500) returned to SwaggerKat
+SwaggerKat collected 1120 from pot
+SwaggerKat: doesn't show hand 
+*** SUMMARY ***
+Total pot 1120 | Rake 0 
+Board [4s Qd Ad]
+Seat 4: Charismastic (button) (small blind) folded on the Flop
+Seat 5: SwaggerKat (big blind) collected (1120)
+
+
+
+PokerStars Home Game Hand #165439665371: {Poker LF} Tournament #1808966073, 17000+3000 Hold'em No Limit - Level XIII (250/500) - 2017/01/30 23:06:49 ET
+Table '1808966073 1' 6-max Seat #5 is the button
+Seat 4: Charismastic (12268 in chips) 
+Seat 5: SwaggerKat (12732 in chips) 
+Charismastic: posts the ante 60
+SwaggerKat: posts the ante 60
+SwaggerKat: posts small blind 250
+Charismastic: posts big blind 500
+*** HOLE CARDS ***
+Dealt to SwaggerKat [Kd 6c]
+SwaggerKat: raises 500 to 1000
+Charismastic: calls 500
+*** FLOP *** [2d Kh 9d]
+Charismastic: bets 1000
+SwaggerKat: raises 10672 to 11672 and is all-in
+Charismastic: calls 10208 and is all-in
+Uncalled bet (464) returned to SwaggerKat
+*** TURN *** [2d Kh 9d] [3d]
+*** RIVER *** [2d Kh 9d 3d] [2c]
+*** SHOW DOWN ***
+Charismastic: shows [Qc 9s] (two pair, Nines and Deuces)
+SwaggerKat: shows [Kd 6c] (two pair, Kings and Deuces)
+SwaggerKat collected 24536 from pot
+Charismastic finished the tournament in 2nd place
+SwaggerKat wins the tournament and receives 85000.00 - congratulations!
+*** SUMMARY ***
+Total pot 24536 | Rake 0 
+Board [2d Kh 9d 3d 2c]
+Seat 4: Charismastic (big blind) showed [Qc 9s] and lost with two pair, Nines and Deuces
+Seat 5: SwaggerKat (button) (small blind) showed [Kd 6c] and won (24536) with two pair, Kings and Deuces
+
+
+

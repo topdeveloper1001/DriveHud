@@ -61,11 +61,6 @@ namespace DriveHUD.Application.TableConfigurators
             return predefinedPositions;
         }
 
-        protected override bool IsRightOriented(int seats, int seat)
-        {
-            return (seats > 6 && seat < 5) || (seats < 7 && seats > 2 && seat < 3) || (seats < 3 && seat < 1);
-        }
-
         protected override void SetWidthBinding(RadDiagramShape shape, HudElementViewModel viewModel)
         {            
         }

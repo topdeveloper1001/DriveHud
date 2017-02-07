@@ -6,13 +6,15 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Common.Utils
 {
     public static class SmtpClientHelper
     {
+        private const string LogsFolder = "Logs";
+        private const string LayoutsFolder = "Layouts";
+        private const string ImportFolder = "Import";
+
         private static readonly string _supportEmail = CommonResourceManager.GetResourceStringForCompositeKey("SystemSettings_SupportEmail");
 
         private static readonly string[] _advancedSupportEmails = new string[]
@@ -69,6 +71,7 @@ namespace DriveHUD.Common.Utils
             mail.Body = string.Format(_supportMessageBody, userName, userMessage);
 
             var memoryStream = new MemoryStream();
+
             using (var archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
             {
                 if (sendAdvancedLog)
@@ -80,10 +83,15 @@ namespace DriveHUD.Common.Utils
                     AddSimpleLog(appFolder, dataFolder, archive);
                 }
             }
+
             if (memoryStream.Length <= 0)
+            {
                 return mail;
+            }
+
             memoryStream.Seek(0, SeekOrigin.Begin);
             mail.Attachments.Add(new Attachment(memoryStream, Path.GetFileName("drivehud.zip")));
+
             return mail;
         }
 
@@ -91,13 +99,15 @@ namespace DriveHUD.Common.Utils
         {
             var logs = new List<string>();
 
-            if (!string.IsNullOrWhiteSpace(appFolder))
+            if (!string.IsNullOrWhiteSpace(appFolder) && Directory.Exists(appFolder))
             {
-                logs.AddRange(new string[]
+                var logsFolder = Path.Combine(appFolder, LogsFolder);
+
+                if (Directory.Exists(logsFolder))
                 {
-                    Path.Combine(appFolder, "Logs", "drivehud.log"),
-                    Path.Combine(appFolder, "Logs", "hud.log"),
-                });
+                    logs.AddRange(Directory.GetFiles(logsFolder, "drivehud*log*"));
+                    logs.AddRange(Directory.GetFiles(logsFolder, "hud*log*"));
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(dataFolder))
@@ -115,16 +125,35 @@ namespace DriveHUD.Common.Utils
 
         private static void AddAdvancedLog(string appFolder, string dataFolder, ZipArchive archive)
         {
-            if (!string.IsNullOrEmpty(appFolder))
+            if (!string.IsNullOrEmpty(appFolder) && Directory.Exists(appFolder))
             {
                 AddZipAtachment(archive,
                     Directory.GetFiles(appFolder)
                         .Where(f => string.Equals(Path.GetExtension(f), ".config", StringComparison.InvariantCultureIgnoreCase)));
-                var logsFolder = Path.Combine(appFolder, "Logs");
-                AddZipAtachment(archive, Directory.GetFiles(logsFolder), "Logs");
+
+                var logsFolder = Path.Combine(appFolder, LogsFolder);
+
+                if (Directory.Exists(logsFolder))
+                {
+                    AddZipAtachment(archive, Directory.GetFiles(logsFolder), LogsFolder);
+                }
+
+                var layoutsFolder = Path.Combine(dataFolder, LayoutsFolder);
+
+                if (Directory.Exists(layoutsFolder))
+                {
+                    AddZipAtachment(archive, Directory.GetFiles(layoutsFolder, "*.xml"), LayoutsFolder);
+                }
+
+                var importFolder = Path.Combine(dataFolder, ImportFolder);
+
+                if (Directory.Exists(importFolder))
+                {
+                    AddZipAtachment(archive, Directory.GetFiles(importFolder), ImportFolder);
+                }
             }
 
-            if (!string.IsNullOrEmpty(dataFolder))
+            if (!string.IsNullOrEmpty(dataFolder) && Directory.Exists(dataFolder))
             {
                 var extensionsToZip = new[] { ".data", ".xml", ".df" };
                 AddZipAtachment(archive,
@@ -149,7 +178,7 @@ namespace DriveHUD.Common.Utils
                             : Path.Combine(subFolderName, Path.GetFileName(file));
                         using (var entryStream = archive.CreateEntry(entryName).Open())
                         {
-                            using (var s = new FileStream(file, FileMode.Open, FileAccess.Read))
+                            using (var s = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                             {
                                 s.CopyTo(entryStream);
                             }

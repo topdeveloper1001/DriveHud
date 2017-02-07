@@ -88,6 +88,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AppStore.
+        /// </summary>
+        internal static string SystemSettings_AppStoreDataFolder {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreDataFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to products.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to products.tmp.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalTempProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalTempProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/products.hash.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteProductHash {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteProductHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/products.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to drivehud.db.
         /// </summary>
         internal static string SystemSettings_DbFileName {

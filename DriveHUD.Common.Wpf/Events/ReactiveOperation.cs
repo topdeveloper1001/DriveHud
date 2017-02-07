@@ -15,7 +15,7 @@ using System;
 
 namespace DriveHUD.Common.Wpf.Events
 {
-    public class ReactiveOperation : BindableBase
+    public class ReactiveOperation : BindableBase, IAsyncOperation
     {
         private readonly WeakDelegatesManager completedListners = new WeakDelegatesManager();
 
@@ -47,9 +47,7 @@ namespace DriveHUD.Common.Wpf.Events
             completedListners.Raise(
                 d =>
                 {
-                    EventHandler h = (EventHandler)d;
-                    if (h != null)
-                        h(this, EventArgs.Empty);
+                    ((EventHandler)d)?.Invoke(this, EventArgs.Empty);
                 });
         }
 

@@ -13,12 +13,10 @@
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Entities;
-using Model.Enums;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
-using System;
-using System.Linq;
 
 namespace DriveHUD.Application.Views
 {

@@ -147,7 +147,9 @@ namespace DriveHUD.Importers.Loggers
                 var logId = DateTime.Now.ToString(configuration.DateFormat, CultureInfo.InvariantCulture);
                 logFile = Path.Combine(configuration.LogDirectory, string.Format(configuration.LogTemplate, logId));
 
-                streamWriter = new StreamWriter(logFile, true, Encoding.UTF8, bufferSize);
+                var fileStream = new FileStream(logFile, FileMode.Append, FileAccess.Write, FileShare.Read);             
+                streamWriter = new StreamWriter(fileStream, Encoding.UTF8, bufferSize);                
+
                 isStarted = true;
             }
             catch

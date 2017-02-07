@@ -20,7 +20,7 @@ namespace DriveHUD.ViewModels
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable]
     [ProtoContract]
-    [ProtoInclude(29, typeof(StatInfoBreak))]
+    [ProtoInclude(30, typeof(StatInfoBreak))]
     public class StatInfo : INotifyPropertyChanged
     {
         private const string totalHandFormat = "{0:0}";
@@ -579,6 +579,23 @@ namespace DriveHUD.ViewModels
         [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
+        [NonSerialized]
+        private bool isAvailable = true;
+
+        [XmlIgnore]
+        [ProtoMember(29)]
+        public virtual bool IsAvailable
+        {
+            get { return isAvailable; }
+            set
+            {
+                if (isAvailable == value)
+                    return;
+                isAvailable = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -640,7 +657,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        public StatInfo Clone()
+        public virtual StatInfo Clone()
         {
             var statInfoClone = new StatInfo();
 
@@ -671,6 +688,7 @@ namespace DriveHUD.ViewModels
             statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
                                                         new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
                                                         StatInfoToolTipCollection;
+            statInfoClone.IsAvailable = IsAvailable;
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);
@@ -702,7 +720,7 @@ namespace DriveHUD.ViewModels
         {
             if (string.IsNullOrEmpty(PropertyName))
             {
-                LogProvider.Log.Error(string.Format("Couldn't find properyName for {0}", Stat));
+                LogProvider.Log.Error(string.Format("Couldn't find propertyName for {0}", Stat));
                 return;
             }
 

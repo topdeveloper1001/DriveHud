@@ -1,0 +1,38 @@
+#Game No : 596021270
+***** 888poker Hand History for Game 596021270 *****
+$25/$50 Blinds No Limit Holdem - *** 04 02 2017 20:05:09
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 1: ZiYangZi ( $2,000 )
+Seat 2: Pudding77777 ( $2,000 )
+Seat 3: Peon_84 ( $2,000 )
+Seat 4: denchik0712 ( $2,000 )
+Seat 5: estebanito ( $2,000 )
+Seat 7: szebasztian ( $2,000 )
+Seat 9: frmn1000 ( $2,000 )
+Seat 10: Victoriyaone ( $2,000 )
+denchik0712 posts ante [$10]
+frmn1000 posts ante [$10]
+Victoriyaone posts ante [$10]
+szebasztian posts ante [$10]
+ZiYangZi posts ante [$10]
+Pudding77777 posts ante [$10]
+Peon_84 posts ante [$10]
+estebanito posts ante [$10]
+Peon_84 posts small blind [$25]
+denchik0712 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 5h, Ac ]
+estebanito calls [$50]
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi raises [$1,990]
+Pudding77777 folds
+Peon_84 folds
+denchik0712 folds
+estebanito folds
+** Summary **
+ZiYangZi did not show his hand
+ZiYangZi collected [ $255 ]

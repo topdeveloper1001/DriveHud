@@ -242,36 +242,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // Sng 
             //   PokerStars Hand #121732531381: Tournament #974085159, $5.20+$1.30+$0.50 USD Hold'em No Limit - Level IV (50/100) - 2014/09/18 16:58:15 ET
             //   PokerStars Game #121732531381: Tournament #974085159, $5.20+$1.30+$0.50 USD Hold'em No Limit - Level IV (50/100) - 2014/09/18 16:58:15 ET
-            const int zoomHandIdStartIndex = 22;//"PokerStars Zoom Hand #".Length
 
-            string line = handLines[0];
+            var startIndexOfHandId = handLines[0].IndexOf("#") + 1;
+            var endIndexOfHandId = handLines[0].IndexOf(":", startIndexOfHandId);
 
-            int firstDigitIndex;// = handLines[0][38] == '#' ? 39 : 17;
+            var handId = handLines[0].Substring(startIndexOfHandId, endIndexOfHandId - startIndexOfHandId);
 
-            char handIDchar = line[11];
-            switch (handIDchar)
-            {
-                case 'Z':
-                    firstDigitIndex = zoomHandIdStartIndex;
-                    break;
-                case 'H':
-                    firstDigitIndex = GameIdStartIndex;
-                    break;
-                default:
-                    if (line[TournamentIdStartindex - 1] == '#')
-                    {
-                        firstDigitIndex = line.IndexOf('#') + 1;
-                    }
-                    else
-                    {
-                        firstDigitIndex = line.LastIndexOf('#') + 1;
-                    }
-                    break;
-            }
-
-            int lastDigitIndex = line.IndexOf(':');
-
-            string handId = line.Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
         }
 
@@ -613,10 +589,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             string smallBlind = limitSubstring.Substring(0, slashIndex);
             string bigBlind = limitSubstring.Substring(slashIndex + 1, endIndex - (slashIndex + 1) + 1);
-            
+
             decimal small = ParserUtils.ParseMoney(smallBlind);
             decimal big = ParserUtils.ParseMoney(bigBlind);
-          
+
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 

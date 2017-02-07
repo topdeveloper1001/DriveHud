@@ -168,12 +168,17 @@
     <Compile Include="DataTemplateSelectors\DynamicTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\FacingPreflopTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\OmahaHandGridTemplateSelector.cs" />
+    <Compile Include="Events\IAsyncOperation.cs" />
     <Compile Include="Events\ReactiveOperation.cs" />
     <Compile Include="Events\WeakDelegateReference.cs" />
     <Compile Include="Events\WeakDelegatesManager.cs" />
     <Compile Include="Helpers\ColorsHelper.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
+    <Compile Include="Mvvm\AsyncOperationItem.cs" />
+    <Compile Include="Mvvm\IAsyncOperationItem.cs" />
+    <Compile Include="Mvvm\IOperationViewModel.cs" />
+    <Compile Include="Mvvm\OperationViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\WindowViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

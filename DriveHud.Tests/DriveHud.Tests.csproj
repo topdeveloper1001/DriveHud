@@ -323,6 +323,9 @@
     <Content Include="UnitTests\TestData\888PokerHands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\888PokerSummary.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -369,6 +372,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\PokerStarsOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\PokerStarsSummary.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\SnGHand-8-max-ipoker.xml">

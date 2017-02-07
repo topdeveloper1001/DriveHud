@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IShopCacheService.cs" company="Ace Poker Solutions">
+// <copyright file="AppsViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,15 +11,22 @@
 //----------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 
-namespace Model.Shop
+namespace DriveHUD.Application.ViewModels.AppStore
 {
-    public interface IShopCacheService
+    public interface IAppStoreViewModel : INotifyPropertyChanged
     {
+        event EventHandler Updated;
 
+        void Initialize();
+
+        int ItemsCount { get; }
+
+        int ProductsPerPage { get; }
+
+        void Refresh(int pageNumber);
+
+        void Search(string searchText);
     }
 }

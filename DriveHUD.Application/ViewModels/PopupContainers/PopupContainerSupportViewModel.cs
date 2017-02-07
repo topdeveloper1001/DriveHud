@@ -2,18 +2,13 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
-using Prism.Commands;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-using Model;
-using Prism.Interactivity.InteractionRequest;
 using DriveHUD.Common.Wpf.Actions;
+using Model;
+using Prism.Commands;
+using Prism.Interactivity.InteractionRequest;
+using System;
+using System.Diagnostics;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
@@ -125,15 +120,19 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 IsSending = true;
                 var appFolder = string.Empty;
                 var dataFolder = string.Empty;
+
                 if (AttachLog)
                 {
                     appFolder = AppDomain.CurrentDomain.BaseDirectory;
                     dataFolder = StringFormatter.GetAppDataFolderPath();
                 }
+
                 using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, appFolder, dataFolder, SendAdvancedLog))
-                using (var client = SmtpClientHelper.GetSmtpClient())
                 {
-                    await client.SendMailAsync(message);
+                    using (var client = SmtpClientHelper.GetSmtpClient())
+                    {
+                        await client.SendMailAsync(message);
+                    }
                 }
 
                 RaiseMessage("Support", "The message has been sent.");
