@@ -287,7 +287,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void ProcessPlayersCards()
         {
-            foreach(var player in PlayersCollection)
+            foreach (var player in PlayersCollection)
             {
                 if (CurrentStreet > Street.River)
                 {
@@ -534,6 +534,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         #region Properties
         private ReplayerDataModel _currentHand;
+        private ReplayerDataModel _selectedLastHand;
+        private ReplayerDataModel _selectedSessionHand;
         private ObservableCollection<ReplayerDataModel> _lastHandsCollection;
         private ObservableCollection<ReplayerDataModel> _sessionHandsCollection;
         private HandHistory _currentGame;
@@ -557,10 +559,35 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             set
             {
-                if (value == null) return;
+                if (value == _currentHand || value == null)
+                    return;
 
                 LoadGame(value);
                 SetProperty(ref _currentHand, value);
+
+                _selectedSessionHand = SessionHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
+                _selectedLastHand = LastHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
+
+                OnPropertyChanged(nameof(SelectedLastHand));
+                OnPropertyChanged(nameof(SelectedSessionHand));
+            }
+        }
+
+        public ReplayerDataModel SelectedLastHand
+        {
+            get { return _selectedLastHand; }
+            set
+            {
+                CurrentHand = value;
+            }
+        }
+
+        public ReplayerDataModel SelectedSessionHand
+        {
+            get { return _selectedSessionHand; }
+            set
+            {
+                CurrentHand = value;
             }
         }
 
