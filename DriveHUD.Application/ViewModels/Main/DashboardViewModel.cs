@@ -99,10 +99,6 @@ namespace DriveHUD.Application.ViewModels
         }
         #endregion
 
-        #region ICommand
-        public ICommand HideEquityCalculatorCommand { get; set; }
-        #endregion
-
         internal DashboardViewModel(SynchronizationContext _synchronizationContext)
         {
             synchronizationContext = _synchronizationContext;

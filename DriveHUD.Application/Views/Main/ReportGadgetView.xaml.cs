@@ -50,7 +50,7 @@ namespace DriveHUD.Application.Views
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
-        
+
         public ReportGadgetView()
         {
             InitializeComponent();
@@ -97,6 +97,9 @@ namespace DriveHUD.Application.Views
             tournamentsGridContextMenu = new RadContextMenu();
             /* Calculate equity item */
             RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false, EquityCalcMenuItem_Click);
+            Binding equityEnabledBinding = new Binding(nameof(ReportGadgetViewModel.IsEquityCalculatorEnabled)) { Source = this.reportGadgetViewModel };
+            calculateEquityItem.SetBinding(RadMenuItem.IsEnabledProperty, equityEnabledBinding);
+
             /* Export items */
             RadMenuItem exportHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportHandResourceString), false, null);
             RadMenuItem twoPlustTwoItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.TwoPlustTwoResourceString), false, GeneralExportItem_Click);

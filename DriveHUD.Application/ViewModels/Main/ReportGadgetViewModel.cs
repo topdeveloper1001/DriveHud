@@ -329,6 +329,8 @@ namespace DriveHUD.Application.ViewModels
         private BuiltFilterModel _currentlyBuiltFilter;
         private bool _isBusy;
 
+        private bool _isEquityCalculatorEnabled = true;
+
         public bool IsShowTournamentData
         {
             get { return _isShowTournamentData; }
@@ -511,6 +513,12 @@ namespace DriveHUD.Application.ViewModels
                 else
                     SetProperty(ref _isBusy, false);
             }
+        }
+
+        public bool IsEquityCalculatorEnabled
+        {
+            get { return _isEquityCalculatorEnabled; }
+            set { SetProperty(ref _isEquityCalculatorEnabled, value); }
         }
 
         #endregion

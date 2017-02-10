@@ -55,6 +55,7 @@ using System.Windows.Input;
 using DriveHUD.Application.ViewModels.Layouts;
 using Telerik.Windows.Controls;
 using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.Services;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -100,6 +101,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
+            eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
 
             InitializeFilters();
             InitializeData();
@@ -107,6 +109,8 @@ namespace DriveHUD.Application.ViewModels
 
             HudViewModel = new HudViewModel();
             filterModelManager.SetFilterType(EnumFilterType.Cash);
+
+            PokerStarsDetectorSingletonService.Instance.Start();
         }
 
         private void InitializeData()
@@ -480,7 +484,18 @@ namespace DriveHUD.Application.ViewModels
                             return statInfoBreak.Clone();
                         }
 
-                        return x.Clone();
+                        if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
+                        {
+                            // for poker stars we take only 3 last color ranges.
+                            var clone = x.Clone();
+                            clone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3)));
+                            return clone;
+                        }
+                        else
+                        {
+                            return x.Clone();
+                        }
+
                     }).Concat(statsExceptActive);
 
                     foreach (var statInfo in allStats)
@@ -543,7 +558,7 @@ namespace DriveHUD.Application.ViewModels
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
                             importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session,
                                 playerCollectionItem), activeLayout.Name);
-                    }                    
+                    }
 
                     ht.ListHUDPlayer.Add(playerHudContent);
                 }
@@ -1139,6 +1154,8 @@ namespace DriveHUD.Application.ViewModels
             var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
             tournamentsCacheService.Flush();
 
+            PokerStarsDetectorSingletonService.Instance.Stop();
+
             if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
             {
                 eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
@@ -1207,6 +1224,19 @@ namespace DriveHUD.Application.ViewModels
             confirmation.HyperLinkText = obj.HyperLink;
 
             NotificationRequest.Raise(confirmation);
+        }
+
+        private void OnPokerStarsDetected(PokerStarsDetectedEventArgs obj)
+        {
+            if (obj.IsDetected)
+            {
+                HideEquityCalculator(null);
+                ReportGadgetViewModel.IsEquityCalculatorEnabled = false;
+            }
+            else
+            {
+                ReportGadgetViewModel.IsEquityCalculatorEnabled = true;
+            }
         }
 
         private class HudTrackConditionsMeterData

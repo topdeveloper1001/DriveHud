@@ -673,7 +673,7 @@
                                             WindowStyle="{StaticResource NotificationWindowStyle}" 
                                             WindowContent="{StaticResource NotificationWindowContentTemplate}" />
         </prism:InteractionRequestTrigger>
-        
+
         <prism:InteractionRequestTrigger SourceObject="{Binding Path=PopupRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction>
                 <infra:PopupTelerikWindowAction.WindowStyle>
@@ -725,81 +725,81 @@
             <Rectangle Grid.ColumnSpan="3" Stretch="Fill" Grid.Row="1"  VerticalAlignment="Top" Height="1"  Fill="#4971c4"/>
             <Rectangle Grid.ColumnSpan="3" Grid.Row="3" Stretch="Fill" Fill="#232528"/>
 
-                <ListBox x:Name="ReportRadioButtonPanel"
+            <ListBox x:Name="ReportRadioButtonPanel"
                          Grid.Row="1"
                          Grid.Column="1"
                          Height="51"
                          Style="{StaticResource ListBoxWithAutoScrollHorizontal}">
-                    <ListBox.Items>
-                <!-- Cash Columns -->
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="OverAll" Width="150" Height="51"
+                <ListBox.Items>
+                    <!-- Cash Columns -->
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="OverAll" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OverAll}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Position" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Position" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Position}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Sessions" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Sessions" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Session}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Stakes" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Stakes" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Stake}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Holecards" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Holecards" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.HoleCards}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Time" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Time" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Time}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.ShowdownHands}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Poker Site" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="Poker Site" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <!--<RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
+                    <!--<RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />-->
-                <!-- Tournament Columns -->
+                    <!-- Tournament Columns -->
 
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Results}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Results}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentResults}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Tournaments}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Tournaments}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Tournaments}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Stats}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Stats}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStats}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_StackSize}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_StackSize}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStackSizes}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Position}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Position}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPosition}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_HoleCards}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_HoleCards}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentHoleCards}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentShowdownHands}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_PokerSite}" Width="150" Height="51"
+                    <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_PokerSite}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPokerSite}}"
                              Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}"/>
@@ -811,7 +811,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition MinHeight="30" Height="Auto"/>
                 </Grid.RowDefinitions>
-               <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
+                <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
                                  Grid.Row="0" MaxHeight="260"
                                  VerticalAlignment="Stretch"
                                  RowHeight="40" SelectionMode="Single"
@@ -833,7 +833,7 @@
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
                 </telerik:RadGridView>
-                
+
                 <telerik:RadBusyIndicator Grid.Row="0" IsBusy="{Binding Path=IsBusy}" Background="{StaticResource BackgroundBrush}"
                                           Visibility="{Binding Path=IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
                     <telerik:RadBusyIndicator.OverlayStyle>
@@ -856,7 +856,7 @@
                         <DataTemplate />
                     </telerik:RadBusyIndicator.BusyContentTemplate>
                 </telerik:RadBusyIndicator>
-                
+
                 <ItemsControl Grid.Row="1" Margin="5" Background="{StaticResource BackgroundBrush1}"
                       ItemsSource="{Binding Path=CurrentlyBuiltFilter.FilterSectionCollection}">
                     <ItemsControl.ItemTemplate>
@@ -942,7 +942,7 @@
                         SelectedValuePath="Key"
                         DisplayMemberPath="Value" />
 
-                    <Button Margin="40 0 0 0" Command="{Binding CalculateEquityCommand}">
+                    <Button Margin="40 0 0 0" IsEnabled="{Binding IsEquityCalculatorEnabled}" Command="{Binding CalculateEquityCommand}">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Cursor" Value="Hand"/>
