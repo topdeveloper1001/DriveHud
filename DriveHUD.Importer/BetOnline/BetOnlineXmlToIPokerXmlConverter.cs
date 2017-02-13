@@ -238,11 +238,13 @@ namespace DriveHUD.Importers.BetOnline
 
             if (isTournament)
             {
-                var entryIdNode = tableDetails.GetFirstElement("TournamentTable").Attribute("entryId");
+                var entryIdNode = gameState.Attribute("historyId");
 
                 if (entryIdNode != null)
                 {
-                    sessionIdentifier = entryIdNode.Value;
+                    sessionIdentifier = entryIdNode.Value.Length < 17 ?
+                                            entryIdNode.Value :
+                                            entryIdNode.Value.Substring(entryIdNode.Value.Length - 16);
                 }
             }
 
