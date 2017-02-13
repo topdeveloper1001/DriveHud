@@ -736,35 +736,42 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            var mappings = HudLayoutMappings.Mappings.
-                            Where(m => m.PokerSite == pokerSite
-                                    && m.GameType == gameType
-                                    && m.TableType == tableType).
-                            ToArray();
-
-            var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
-
-            if (mapping == null)
+            try
             {
-                mapping = new HudLayoutMapping
+                var mappings = HudLayoutMappings.Mappings.
+                                Where(m => m.PokerSite == pokerSite
+                                        && m.GameType == gameType
+                                        && m.TableType == tableType).
+                                ToArray();
+
+                var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
+
+                if (mapping == null)
                 {
-                    PokerSite = pokerSite,
-                    TableType = tableType,
-                    GameType = gameType,
-                    IsDefault = hudToLoad.IsDefault,
-                    Name = hudToLoad.Name,
-                    FileName = GetLayoutFileName(hudToLoad.Name),
-                    HudViewType = hudToLoad.HudViewType
-                };
+                    mapping = new HudLayoutMapping
+                    {
+                        PokerSite = pokerSite,
+                        TableType = tableType,
+                        GameType = gameType,
+                        IsDefault = hudToLoad.IsDefault,
+                        Name = hudToLoad.Name,
+                        FileName = GetLayoutFileName(hudToLoad.Name),
+                        HudViewType = hudToLoad.HudViewType
+                    };
 
-                HudLayoutMappings.Mappings.Add(mapping);
+                    HudLayoutMappings.Mappings.Add(mapping);
+                }
+
+                mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
+
+                mapping.IsSelected = true;
+
+                SaveLayoutMappings();
             }
-
-            mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
-
-            mapping.IsSelected = true;
-
-            SaveLayoutMappings();
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Layout has not been set active", e);
+            }
         }
 
         public bool Delete(string layoutName)
