@@ -14,6 +14,7 @@ using System.Linq;
 
 using DriveHUD.Importers;
 using HandHistories.Objects.GameDescription;
+using DriveHUD.Common.Log;
 
 namespace DriveHUD.Application.Security
 {
@@ -47,6 +48,12 @@ namespace DriveHUD.Application.Security
             var match = AllowedGameTypes.Contains(gameInfo.GameType) &&
                             gameInfo.CashBuyIn <= CashLimit &&
                                 gameInfo.TournamentBuyIn <= TournamentLimit;
+
+            if (!match)
+            {
+                LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {gameInfo.CashBuyIn}, GameTournamentBuyIn: {gameInfo.TournamentBuyIn}");
+                LogProvider.Log.Info($"LicenseCashBuyIn: {CashLimit}, LicenseTournamentBuyIn: {TournamentLimit}");
+            }
 
             return match;
         }
