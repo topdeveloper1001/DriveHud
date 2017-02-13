@@ -92,6 +92,9 @@
                                 <DataTrigger Binding="{Binding IsDefaultImage}" Value="false">
                                     <Setter Property="Source" Value="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
                                 </DataTrigger>
+                                <DataTrigger Binding="{Binding PokerSiteId}" Value="7"> <!-- Disable icon for pokerstars -->
+                                    <Setter Property="Visibility" Value="Hidden" />
+                                </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Image.Style>

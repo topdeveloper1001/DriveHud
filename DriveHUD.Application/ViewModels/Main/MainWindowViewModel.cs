@@ -459,19 +459,24 @@ namespace DriveHUD.Application.ViewModels
 
                     // create new array to prevent Collection was modified exception
                     var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
+                    {
+                        // remove prohibited for PS stats.
+                        activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToArray();
+                    }
 
                     var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                                            .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
+                                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
+                                        {
+                                            var statInfoBreak = x as StatInfoBreak;
+
+                                            if (statInfoBreak != null)
                                             {
-                                                var statInfoBreak = x as StatInfoBreak;
+                                                return statInfoBreak.Clone();
+                                            }
 
-                                                if (statInfoBreak != null)
-                                                {
-                                                    return statInfoBreak.Clone();
-                                                }
-
-                                                return x.Clone();
-                                            }).ToArray();
+                                            return x.Clone();
+                                        }).ToArray();
 
                     statsExceptActive.ForEach(x => x.IsNotVisible = true);
 
@@ -546,7 +551,7 @@ namespace DriveHUD.Application.ViewModels
                         playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
-                    if (lastHandStatistic != null)
+                    if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
                     {
                         var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.Name);
 
@@ -567,8 +572,11 @@ namespace DriveHUD.Application.ViewModels
 
                 Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
 
-                var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
+                if (gameInfo.PokerSite != EnumPokerSites.PokerStars)
+                {
+                    var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
+                }
 
                 Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                 {
