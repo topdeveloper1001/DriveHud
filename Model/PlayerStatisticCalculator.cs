@@ -552,6 +552,15 @@ namespace Model
             stat.PositionString = Converter.ToPositionString(stat.Position);
             stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
 
+            if (stat.Equity > 0)
+            {
+                stat.EVDiff = GetExpectedValue(parsedHand, playerHandActions, stat.Equity) - netWon;
+            }
+            else
+            {
+                stat.EVDiff = 0;
+            }
+
             if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
                 stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind,
@@ -597,6 +606,15 @@ namespace Model
             #endregion
 
             return stat;
+        }
+
+        private static decimal GetExpectedValue(HandHistory parsedHand, HandAction[] playerHandActions, decimal equity)
+        {
+            var canWin = parsedHand.WinningActions.Sum(x => x.Amount);
+            var moneyInPot = playerHandActions.Where(x => x.Amount < 0).Sum(x => Math.Abs(x.Amount));
+            var possibleNetWon = canWin - moneyInPot;
+
+            return possibleNetWon * equity - moneyInPot * (1 - equity);
         }
 
         #region Infrastructure

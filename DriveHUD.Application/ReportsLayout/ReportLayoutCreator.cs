@@ -6,6 +6,10 @@ using Telerik.Windows.Controls;
 
 using DriveHUD.Application.ValueConverters;
 using DriveHUD.Common.Wpf.Helpers;
+using Model.Data;
+using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace DriveHUD.Application.ReportsLayout
 {
@@ -98,7 +102,7 @@ namespace DriveHUD.Application.ReportsLayout
         protected virtual GridViewDataColumn AddPercentile(string name, string member, GridViewLength width, bool isVisible)
         {
             FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
-            var bindingText = new Binding(member) { StringFormat = "{0:n1}"};
+            var bindingText = new Binding(member) { StringFormat = "{0:n1}" };
             fef.SetBinding(TextBlock.TextProperty, bindingText);
 
             DataTemplate template = new DataTemplate { VisualTree = fef };
@@ -117,10 +121,10 @@ namespace DriveHUD.Application.ReportsLayout
             return column;
         }
 
-        public static double GetColumnWidth(string  text)
+        public static double GetColumnWidth(string text)
         {
             double minWidth = TextMeasurer.MesureString(text);
-            if(text.Length <= 2)
+            if (text.Length <= 2)
             {
                 minWidth += 40;
             }
@@ -134,5 +138,118 @@ namespace DriveHUD.Application.ReportsLayout
             }
             return minWidth;
         }
+
+        /// <summary>
+        /// Populates grid  with default columns (hidden by default)
+        /// </summary>
+        /// <param name="gridView">Grid to populate</param>
+        protected virtual void AddDefaultStats(RadGridView gridView)
+        {
+            AddDefaultStats(gridView, new string[] { });
+        }
+
+        /// <summary>
+        /// Populates grid with default columns (hidden by default)
+        /// </summary>
+        /// <param name="gridView">Grid to populate</param>
+        /// <param name="columnsToSkip">Collection of properties that should be skipped from defaults list</param>
+        protected virtual void AddDefaultStats(RadGridView gridView, params string[] columnsToSkip)
+        {
+            foreach (var columnTuple in defaultColumns)
+            {
+                if (columnsToSkip?.Contains(columnTuple.Item2) ?? false)
+                {
+                    continue;
+                }
+
+                switch (columnTuple.Item3)
+                {
+                    case ColumnType.Regular:
+                        gridView.Columns.Add(Add(columnTuple.Item1, columnTuple.Item2, false));
+                        break;
+                    case ColumnType.Percentile:
+                        gridView.Columns.Add(AddPercentile(columnTuple.Item1, columnTuple.Item2, false));
+                        break;
+                    case ColumnType.Financial:
+                        gridView.Columns.Add(AddFinancial(columnTuple.Item1, columnTuple.Item2, false));
+                        break;
+                }
+            }
+        }
+
+        #region Default Columns
+
+        private enum ColumnType { Regular, Percentile, Financial };
+
+        /// <summary>
+        /// Item1 - Column name, item2 - property name, item3 - isPercentile
+        /// </summary>
+        private Tuple<string, string, ColumnType>[] defaultColumns = new Tuple<string, string, ColumnType>[]
+        {
+            new Tuple<string, string, ColumnType>("4-Bet%", nameof(Indicators.FourBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Check-Raise%", nameof(Indicators.CheckRaise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call%", nameof(Indicators.ColdCall), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Flop AGG%", nameof(Indicators.FlopAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to 3-Bet%", nameof(Indicators.FoldToThreeBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to 4-Bet%", nameof(Indicators.FoldToFourBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("River AGG%", nameof(Indicators.RiverAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Squeeze%", nameof(Indicators.Squeeze), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Turn AGG%", nameof(Indicators.TurnAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet BB%", nameof(Indicators.ThreeBetInBB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet BTN%", nameof(Indicators.ThreeBetInBTN), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet CO%", nameof(Indicators.ThreeBetInCO), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet IP%", nameof(Indicators.ThreeBetIP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet MP%", nameof(Indicators.ThreeBetInMP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet OPP%", nameof(Indicators.ThreeBetOOP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet SB%", nameof(Indicators.ThreeBetInSB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("3-Bet vs. Steal", nameof(Indicators.ThreeBetVsSteal), ColumnType.Regular),
+            new Tuple<string, string, ColumnType>("C-Bet in 3-Bet Pot%", nameof(Indicators.FlopCBetInThreeBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to C-Bet 3-Bet Pot%", nameof(Indicators.FoldFlopCBetFromThreeBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("4-Bet BB%", nameof(Indicators.FourBetInBB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("4-Bet BTN%", nameof(Indicators.FourBetInBTN), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("4-Bet CO%", nameof(Indicators.FourBetInCO), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("4-Bet MP%", nameof(Indicators.FourBetInMP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("4-Bet SB%", nameof(Indicators.FourBetInSB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet 4-Bet Pot%", nameof(Indicators.FlopCBetInFourBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet IP%", nameof(Indicators.CBetIP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet OOP%", nameof(Indicators.CBetOOP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet Monotone Pot%", nameof(Indicators.FlopCBetMonotone), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet MW Pot%", nameof(Indicators.FlopCBetMW), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet Rag Flop%", nameof(Indicators.FlopCBetRag), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet vs 1 Opp%", nameof(Indicators.FlopCBetVsOneOpp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("C-Bet vs 2 Opp%", nameof(Indicators.FlopCBetVsTwoOpp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to C-Bet 3-Bet Pot%", nameof(Indicators.FoldFlopCBetFromThreeBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Raise C-Bet%", nameof(Indicators.RaiseCBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call BB%", nameof(Indicators.ColdCallInBB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call BTN%", nameof(Indicators.ColdCallInBTN), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call CO%", nameof(Indicators.ColdCallInCO), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call MP%", nameof(Indicators.ColdCallInMP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call SB%", nameof(Indicators.ColdCallInSB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Float Flop%", nameof(Indicators.FloatFlop), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Flop Check-Raise%", nameof(Indicators.FlopCheckRaise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Raise Flop%", nameof(Indicators.RaiseFlop), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Delayed C-Bet%", nameof(Indicators.DidDelayedTurnCBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Raise Turn%", nameof(Indicators.RaiseTurn), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Seen Turn%", nameof(Indicators.TurnSeen), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Turn AGG%", nameof(Indicators.TurnAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Turn Check-Raise%", nameof(Indicators.TurnCheckRaise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Check River On BX Line%", nameof(Indicators.CheckRiverOnBXLine), ColumnType.Regular),
+            new Tuple<string, string, ColumnType>("Raise River%", nameof(Indicators.RaiseRiver), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("River AGG%", nameof(Indicators.RiverAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Seen River%", nameof(Indicators.RiverSeen), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp Call%", nameof(Indicators.DidLimpCall), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp Fold%", nameof(Indicators.DidLimpFold), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp Reraise%", nameof(Indicators.DidLimpReraise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp%", nameof(Indicators.DidLimp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Donk Bet%", nameof(Indicators.DonkBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Raise Frequency Factor%", nameof(Indicators.RaiseFrequencyFactor), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("True Aggression% (TAP)", nameof(Indicators.TrueAggression), ColumnType.Percentile),
+            //new Tuple<string, string, ColumnType>("$EV Diff", nameof(Indicators.EVDiff), ColumnType.Financial),
+            new Tuple<string, string, ColumnType>("EV bb/100", nameof(Indicators.EVBB), ColumnType.Percentile),
+        };
+
+        #endregion
     }
 }
