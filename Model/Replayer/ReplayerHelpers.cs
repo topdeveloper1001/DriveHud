@@ -35,7 +35,7 @@ namespace Model.Replayer
                 }
             }
 
-            var result = potStat.Where(x => x.Pot > (6 * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
+            var result = potStat.Where(x => Math.Abs(x.NetWon) > (6 * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
 
             return result;
         }
