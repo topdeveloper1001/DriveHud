@@ -343,11 +343,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", TournamentSpeed.HyperTurbo)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20170216 T6995792-G39795657.txt", TournamentSpeed.Turbo)]
         public void ParseTournamentSpeedTest(string handHistoryFile, TournamentSpeed speed)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
-            Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
+            Assert.AreEqual(speed, handHistory.GameDescription.Tournament.Speed);
         }
 
         [Test]
