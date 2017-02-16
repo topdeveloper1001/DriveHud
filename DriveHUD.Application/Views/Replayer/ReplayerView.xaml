@@ -70,7 +70,7 @@
         <controls:ComboBoxEx Grid.Row="0" 
                              Grid.Column="0"
                              ItemsSource="{Binding LastHandsCollection, Mode=TwoWay}" 
-                             SelectedItem="{Binding CurrentHand, Mode=TwoWay}" 
+                             SelectedItem="{Binding SelectedLastHand, Mode=TwoWay}" 
                              Height="40" Margin="0,0,0,1" 
                              VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
                              ItemsBackgroundColor="{StaticResource ComboBoxBackGround}" 
@@ -195,7 +195,7 @@
         </StackPanel>
 
         <ListBox Name="SessionListBox" Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="5" Margin="0 10 0 0" Background="Transparent" 
-                 ItemsSource="{Binding SessionHandsCollection, Mode=TwoWay}" SelectedItem="{Binding CurrentHand, Mode=TwoWay}"
+                 ItemsSource="{Binding SessionHandsCollection, Mode=TwoWay}" SelectedItem="{Binding SelectedSessionHand, Mode=TwoWay}"
                  BorderThickness="0,3" BorderBrush="#FF3A5FC1" Style="{StaticResource ReplayerListBoxStyle}" ItemContainerStyle="{StaticResource ReplayerListBoxItemStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>

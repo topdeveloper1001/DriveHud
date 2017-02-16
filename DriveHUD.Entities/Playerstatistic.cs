@@ -662,6 +662,9 @@ namespace DriveHUD.Entities
         [ProtoMember(247)]
         public virtual int Buttonstealreraised { get; set; }
 
+        [ProtoMember(248)]
+        public virtual decimal EVDiff { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -1049,6 +1052,7 @@ namespace DriveHUD.Entities
 
             MRatio = a.MRatio;
             StackInBBs = a.StackInBBs;
+            EVDiff = a.EVDiff;
 
             #region tilt meter 
 
@@ -1345,6 +1349,8 @@ namespace DriveHUD.Entities
 
             r.MRatio = b.MRatio;
             r.StackInBBs = b.StackInBBs;
+
+            r.EVDiff = a.EVDiff + b.EVDiff;
 
             #region tilt meter
 

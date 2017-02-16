@@ -30,12 +30,12 @@ namespace Model.Replayer
                     var session = new SessionsReportCreator().Create(statistics.ToList()).Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
                     if (session != null && session.Count() > 0)
                     {
-                        potStat = session.FirstOrDefault().Statistics.OrderByDescending(x => x.Time).Take(30);
+                        potStat = session.FirstOrDefault().Statistics.OrderByDescending(x => x.Time);
                     }
                 }
             }
 
-            var result = potStat.Where(x => x.Pot > (6 * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
+            var result = potStat.Where(x => Math.Abs(x.NetWon) > (6 * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
 
             return result;
         }
