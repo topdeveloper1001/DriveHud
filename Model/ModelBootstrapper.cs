@@ -28,6 +28,7 @@ namespace Model
                 throw new ArgumentNullException(nameof(container));
             }
 
+            container.RegisterType<ISessionFactoryService, SessionFactoryService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
             container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
         }

@@ -304,6 +304,9 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                // need to update UI info
+                RefreshData(e.GameInfo);
+
                 // if no handle available then we don't need to do anything with this data, because hud won't be up
                 if (e.GameInfo.WindowHandle == 0)
                 {
@@ -315,7 +318,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-                RefreshData(e.GameInfo);
+            
 
                 var refreshTime = sw.ElapsedMilliseconds;
 

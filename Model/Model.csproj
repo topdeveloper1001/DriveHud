@@ -210,6 +210,7 @@
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayerStatisticCalculator.cs" />
+    <Compile Include="ISessionFactoryService.cs" />
     <Compile Include="LocalCalculator\PreflopRange.cs" />
     <Compile Include="Mapping\HandhistoryrecordMap.cs" />
     <Compile Include="Mapping\PlayernotesMap.cs" />
@@ -248,6 +249,7 @@
     <Compile Include="Reports\TimeReportCreator.cs" />
     <Compile Include="Reports\TournamentReportCreator.cs" />
     <Compile Include="Reports\TournamentStackSizeReportCreator.cs" />
+    <Compile Include="SessionFactoryService.cs" />
     <Compile Include="Settings\DatabaseSettingsProviders\BaseDatabaseSettingsProvider.cs" />
     <Compile Include="Settings\DatabaseSettingsProviders\HM2DatabaseSettingsProvider.cs" />
     <Compile Include="Settings\DatabaseSettingsProviders\PT4DatabaseSettingsProvider.cs" />
