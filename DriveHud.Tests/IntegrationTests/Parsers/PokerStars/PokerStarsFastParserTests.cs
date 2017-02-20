@@ -37,6 +37,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\PokerStars\TestData";
 
+        [OneTimeSetUp]
+        public void Initialize()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         [Test]
         [TestCase("en-US")]
         [TestCase("hu-HU")]

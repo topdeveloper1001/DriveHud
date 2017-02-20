@@ -1,4 +1,16 @@
-﻿using DriveHUD.Common.Utils;
+﻿//-----------------------------------------------------------------------
+// <copyright file="WinningPokerNetworkFastParserTests.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -16,10 +28,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 {
@@ -27,6 +36,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
     class WinningPokerNetworkFastParserTests
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData";
+
+        [OneTimeSetUp]
+        public void Initialize()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test]
         [TestCase("en-US")]

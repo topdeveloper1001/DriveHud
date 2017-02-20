@@ -20,8 +20,10 @@ using NHibernate.Linq;
 using NSubstitute;
 using NUnit.Framework;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -36,7 +38,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <summary>
         /// Initialize environment for test
         /// </summary>
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             Initalize();
@@ -47,7 +49,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <summary>
         /// Freeing resources
         /// </summary>
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             RemoveDatabase();
@@ -100,6 +102,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
         [TestCase("5569123611", "ThaGhostGoose", 100)]
         [TestCase("5569123611", "WhiteRiderT", 60)]
         [TestCase("5569123611", "yako70", 40)]
@@ -123,6 +126,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
         [TestCase("6995792", "Peon_84", 150)]
         [TestCase("5944035303", "BOLL1X", 10)]
         [TestCase("5569123611", "yako70", 20)]
@@ -144,6 +148,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
         [TestCase("6995792", "Peon_84", 15)]
         [TestCase("5944035303", "BOLL1X", 2)]
         [TestCase("5569123611", "yako70", 4)]
@@ -165,6 +170,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
         [TestCase("6995792", "Peon_84", 1500)]
         [TestCase("5944035303", "BOLL1X", 1500)]
         [TestCase("5569123611", "yako70", 1500)]
@@ -186,7 +192,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
-        [Test]
+        [Test, Order(1)]
         public void ImporterDoesntThrowExceptions()
         {
             customLogger.DidNotReceive()
@@ -205,7 +211,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 foreach (var handHistoryFile in TestCaseDataSet)
                 {
-                    var fileImporter = new FileImporter();
+                    var fileImporter = new FileImporter();                    
 
                     var handHistoryFileFullName = Path.Combine(TestDataFolder, handHistoryFile);
 
@@ -219,7 +225,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         protected virtual void ConfigureCustomLogger()
-        {
+        {            
             customLogger = Substitute.For<IDHLog>();
             LogProvider.SetCustomLogger(customLogger);
         }

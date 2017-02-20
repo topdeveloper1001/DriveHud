@@ -21,6 +21,8 @@ using Microsoft.Practices.Unity;
 using Model;
 using Model.Interfaces;
 using NSubstitute;
+using NUnit.Framework;
+using System;
 using System.IO;
 
 namespace DriveHud.Tests.IntegrationTests.Base
@@ -29,6 +31,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
     {
         protected virtual void Initalize()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             InitializeDatabase();
             InitializeEnvironment();
         }
