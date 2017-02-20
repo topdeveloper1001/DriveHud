@@ -402,6 +402,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="IntegrationTests\Importers\TestData\" />
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
