@@ -56,6 +56,7 @@ using DriveHUD.Application.ViewModels.Layouts;
 using Telerik.Windows.Controls;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.Services;
+using DriveHUD.API;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -74,6 +75,8 @@ namespace DriveHUD.Application.ViewModels
         private IHudTransmitter hudTransmitter;
 
         private IFilterModelManagerService filterModelManager;
+
+        private IAPIHost apiHost;
 
         private bool isAdvancedLoggingEnabled = false;
 
@@ -111,6 +114,9 @@ namespace DriveHUD.Application.ViewModels
             filterModelManager.SetFilterType(EnumFilterType.Cash);
 
             PokerStarsDetectorSingletonService.Instance.Start();
+
+            apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
+            apiHost.StartAPIService();
         }
 
         private void InitializeData()
@@ -1163,6 +1169,8 @@ namespace DriveHUD.Application.ViewModels
             tournamentsCacheService.Flush();
 
             PokerStarsDetectorSingletonService.Instance.Stop();
+
+            apiHost.CloseAPIService();
 
             if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
             {

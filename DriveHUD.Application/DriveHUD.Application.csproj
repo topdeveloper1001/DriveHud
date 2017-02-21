@@ -1097,6 +1097,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.API\DriveHUD.API.csproj">
+      <Project>{1a63378b-690b-46d3-96f3-0d0c941d43a9}</Project>
+      <Name>DriveHUD.API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
       <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
       <Name>DriveHUD.Common.Infrastructure</Name>
