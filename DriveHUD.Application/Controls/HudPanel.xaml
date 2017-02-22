@@ -82,40 +82,10 @@
                 Property="BorderThickness"
                 Value="0,0.75,0,0" />
         </Style>
-
-        <Style
-            TargetType="Image"
-            x:Key="ImageTooltip">
-            <Setter
-                Property="telerik:RadToolTipService.InitialShowDelay"
-                Value="1" />
-            <Setter
-                Property="telerik:RadToolTipService.ShowDuration"
-                Value="60000" />
-            <Setter
-                Property="telerik:RadToolTipService.VerticalOffset"
-                Value="-5" />
-            <Setter
-                Property="telerik:RadToolTipService.Placement"
-                Value="Top" />
-            <Setter
-                Property="telerik:RadToolTipService.ToolTipContent"
-                Value="" />
-            <Setter
-                Property="telerik:RadToolTipService.ToolTipContentTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <control:HudPlayerToolTip
-                            DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext}" />
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
+     
         <Style
             x:Key="DefaultImage"
-            TargetType="{x:Type Image}"
-            BasedOn="{StaticResource ImageTooltip}">
+            TargetType="{x:Type Image}">
             <Setter
                 Property="Source">
                 <Setter.Value>
