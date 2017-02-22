@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
@@ -103,11 +104,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         #region Methods
 
         internal void SetLayout(HudLayout layout)
-        {
+        {            
             using (var write = _readerWriterLock.Write())
             {
                 if (layout != null)
-                {
+                {                    
                     LayoutName = layout.LayoutName;
                     _gameNumber = layout.GameNumber;
                     _pokerSite = layout.PokerSite;
@@ -128,6 +129,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
+            LogProvider.Log.Info($"Saving hud positions '{hudTable.LayoutName}' '{hudTable.TableType}' '{hudTable.GameType}' [{hudTable.PokerSite}]");
+
             HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable);
         }
 
@@ -138,10 +141,13 @@ namespace DriveHUD.Application.ViewModels.Hud
                 using (var readToken = _readerWriterLock.Read())
                 {
                     EnumHandTag tag = EnumHandTag.None;
+
                     if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
                     {
                         return;
                     }
+
+                    LogProvider.Log.Info($"Tagging hand {_gameNumber} [{_pokerSite}]");
 
                     HudNamedPipeBindingService.TagHand(_gameNumber, (short)_pokerSite, (int)tag);
                 }
@@ -161,6 +167,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var readToken = _readerWriterLock.Read())
                 {
+                    LogProvider.Log.Info($"Exporting hand {_gameNumber}, {exportType} [{_pokerSite}]");
+
                     ExportFunctions.ExportHand(_gameNumber, (short)_pokerSite, exportType, true);
                     RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
@@ -173,6 +181,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var readToken = _readerWriterLock.Read())
                 {
+                    LogProvider.Log.Info($"Replaying hand {_gameNumber} [{_pokerSite}]");
+
                     HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, (short)_pokerSite);
                 }
             });
@@ -207,7 +217,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         new PopupActionNotification
                         {
                             Content = content,
-                            Title = title,
+                            Title = title
                         });
             });
         }
