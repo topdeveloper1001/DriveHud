@@ -766,7 +766,7 @@ namespace DriveHUD.Importers
                                      where lastHand != null && lastHand.IsLost
                                      select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name }).ToArray();
 
-            var currentPosition = lastParsingResult.Players.Count;
+            var currentPosition = firstParsingResult.Players.Count;
 
             var tournamentsByPlayer = tournaments.ToDictionary(x => x.PlayerName, x => x);
 
@@ -778,25 +778,33 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
+                var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName);
+
+                tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
+                    Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :
+                    GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
+
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = currentPosition--;
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer = true;
             }
 
             var numberOfWinners = GetNumberOfWinnersForTournament(tournamentName, totalPlayers, tournamentTag);
+
             if (currentPosition <= numberOfWinners)
             {
                 foreach (var winnerPlayer in tournaments.Where(x => x != null && x.Finishposition == 0).Take(numberOfWinners))
                 {
                     winnerPlayer.Finishposition = 1;
 
-                    if (lastParsingResult.Source.GameDescription.Tournament.Winning == 0)
+                    var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(winnerPlayer.PlayerName);
+
+                    if (isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0)
                     {
-                        winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
+                        winnerPlayer.Winningsincents = Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning);
                     }
                     else
                     {
-                        winnerPlayer.Winningsincents = Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning);
+                        winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
                     }
 
                     winnerPlayer.Tourneyendedforplayer = true;
@@ -916,6 +924,7 @@ namespace DriveHUD.Importers
                 }
 
                 var prizePool = buyinInCents * totalPlayers;
+
                 var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId, sttType == STTTypes.Beginner);
 
                 if (prizeRatesDictionary == null || !prizeRatesDictionary.ContainsKey(totalPlayers))
@@ -924,6 +933,7 @@ namespace DriveHUD.Importers
                 }
 
                 var prizeRates = prizeRatesDictionary[totalPlayers];
+
                 if (finishPosition <= prizeRates.Count())
                 {
                     return (int)(prizePool * prizeRates.ElementAtOrDefault(finishPosition - 1));

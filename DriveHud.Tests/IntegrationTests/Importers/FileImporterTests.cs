@@ -107,8 +107,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5569123611", "WhiteRiderT", 60)]
         [TestCase("5569123611", "yako70", 40)]
         [TestCase("5944035303", "WhiteRiderT", 42)]
-        [TestCase("5944035303", "BOLL1X", 9)]
-        [TestCase("5944035303", "AntoniAG9", 9)]
+        [TestCase("5944035303", "BOLL1X", 0)]
+        [TestCase("5944035303", "AntoniAG9", 18)]
         public void TournamentsWinIsImported(string tournamentNumber, string playerName, int winningInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsWinIsImported"))
@@ -209,23 +209,31 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             {
                 var progress = Substitute.For<IDHProgress>();
 
-                foreach (var handHistoryFile in TestCaseDataSet)
+                foreach (var testCase in TestCaseDataSet)
                 {
-                    var fileImporter = new FileImporter();                    
+                    var fileImporter = new FileImporter();
 
-                    var handHistoryFileFullName = Path.Combine(TestDataFolder, handHistoryFile);
+                    var handHistoryFileFullName = Path.Combine(TestDataFolder, testCase.Item1);
 
                     var handHistoryFileInfo = new FileInfo(handHistoryFileFullName);
 
                     Assert.That(handHistoryFileInfo.Exists, $"{handHistoryFileFullName} doesn't exists. Please check.");
 
-                    fileImporter.Import(handHistoryFileInfo, progress);                  
+                    var handHistoryText = File.ReadAllText(handHistoryFileInfo.FullName);
+
+                    var gameInfo = new GameInfo
+                    {
+                        PokerSite = testCase.Item2,
+                        FileName = handHistoryFileInfo.FullName
+                    };
+
+                    fileImporter.Import(handHistoryText, progress, gameInfo);
                 }
             }
         }
 
         protected virtual void ConfigureCustomLogger()
-        {            
+        {
             customLogger = Substitute.For<IDHLog>();
             LogProvider.SetCustomLogger(customLogger);
         }
@@ -235,13 +243,13 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <summary>
         /// Set of hh files to fill DB, summaries must follow normal hh, summary data must be added for WPN hh
         /// </summary>
-        private string[] TestCaseDataSet = new[]
+        private Tuple<string, EnumPokerSites>[] TestCaseDataSet = new Tuple<string, EnumPokerSites>[]
         {
-            @"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt",
-            @"iPoker\NLH-6-max-5944035303.xml",
-            @"iPoker\NLH-9-max-5569123611.xml",
-            @"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt",
-            @"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt"
+            Tuple.Create(@"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt", EnumPokerSites.Unknown),
+            Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
+            Tuple.Create( @"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown)
         };
     }
 }
