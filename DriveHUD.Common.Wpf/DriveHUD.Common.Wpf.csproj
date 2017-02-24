@@ -132,6 +132,7 @@
     <Compile Include="AttachedBehaviors\IgnoreMouseWheelBehavior.cs" />
     <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />
     <Compile Include="AttachedBehaviors\MainScrollBarBehavior.cs" />
+    <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
     <Compile Include="Controls\NonTopmostPopup.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Events\WeakDelegateReference.cs" />
     <Compile Include="Events\WeakDelegatesManager.cs" />
     <Compile Include="Helpers\ColorsHelper.cs" />
+    <Compile Include="Helpers\ResolutionSettings.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />

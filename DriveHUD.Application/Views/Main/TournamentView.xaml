@@ -58,8 +58,8 @@
     <telerik:RadExpander Style="{StaticResource RadExpanderStyle_CollapseButton}" Header="Collapse" HorizontalAlignment="Center" ExpandDirection="Up" IsExpanded="{Binding IsExpanded, Mode=TwoWay}">
         <Grid x:Name="GadgetArea">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="900"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
