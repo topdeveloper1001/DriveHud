@@ -757,21 +757,21 @@ namespace DriveHUD.Importers
             var handsByPlayer = (from parsingRes in parsingResult
                                  let handNumber = parsingRes.Source.HandId
                                  from player in parsingRes.Source.Players
-                                 group new { IsLost = player.IsLost, HandNumber = handNumber } by player.PlayerName into grouped
+                                 group new { IsLost = player.IsLost, HandNumber = handNumber, InitialStackSize = player.StartingStack } by player.PlayerName into grouped
                                  select new { Name = grouped.Key, Hands = grouped.ToArray() }).ToArray();
 
             // get hand where the player lost 
             var lastHandsByPlayer = (from player in handsByPlayer
                                      let lastHand = player.Hands.LastOrDefault()
                                      where lastHand != null && lastHand.IsLost
-                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name }).ToArray();
+                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name, InitialStackSize = lastHand.InitialStackSize }).ToArray();
 
             var currentPosition = firstParsingResult.Players.Count;
 
             var tournamentsByPlayer = tournaments.ToDictionary(x => x.PlayerName, x => x);
 
             // get end position in tournament
-            foreach (var lastHandByPlayer in lastHandsByPlayer.OrderBy(x => x.HandNumber))
+            foreach (var lastHandByPlayer in lastHandsByPlayer.OrderBy(x => x.HandNumber).ThenBy(x => x.InitialStackSize))
             {
                 if (!tournamentsByPlayer.ContainsKey(lastHandByPlayer.PlayerName))
                 {

@@ -20,10 +20,8 @@ using NHibernate.Linq;
 using NSubstitute;
 using NUnit.Framework;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -32,17 +30,14 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// </summary>
     [TestFixture]
     public class FileImporterTests : BaseDatabaseTest
-    {
-        private IDHLog customLogger;
-
+    {        
         /// <summary>
         /// Initialize environment for test
         /// </summary>
         [OneTimeSetUp]
         public void SetUp()
         {
-            Initalize();
-            ConfigureCustomLogger();
+            Initalize();            
             FillDatabase();
         }
 
@@ -79,6 +74,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("6995792", "pkslcd13", 9)]
         [TestCase("6995792", "Maschris", 8)]
         [TestCase("5944035303", "WhiteRiderT", 1)]
+        [TestCase("5944035303", "BOLL1X", 3)]
+        [TestCase("5944035303", "AntoniAG9", 2)]
         [TestCase("5944035303", "Martinoq", 4)]
         [TestCase("5944035303", "FotisTheGreek", 6)]
         [TestCase("5569123611", "WhiteRiderT", 2)]
@@ -231,13 +228,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 }
             }
         }
-
-        protected virtual void ConfigureCustomLogger()
-        {
-            customLogger = Substitute.For<IDHLog>();
-            LogProvider.SetCustomLogger(customLogger);
-        }
-
+  
         private const string TestDataFolder = @"..\..\IntegrationTests\Importers\TestData";
 
         /// <summary>

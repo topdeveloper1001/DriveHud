@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Importers;
 using DriveHUD.Importers.Loggers;
@@ -29,12 +30,15 @@ namespace DriveHud.Tests.IntegrationTests.Base
 {
     public class BaseDatabaseTest
     {
+        protected IDHLog customLogger;
+
         protected virtual void Initalize()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
 
             InitializeDatabase();
             InitializeEnvironment();
+            ConfigureCustomLogger();
         }
 
         protected virtual void InitializeEnvironment()
@@ -109,6 +113,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     }
                 }
             }
+        }
+
+        protected virtual void ConfigureCustomLogger()
+        {
+            customLogger = Substitute.For<IDHLog>();
+            LogProvider.SetCustomLogger(customLogger);
         }
 
         #region Initializers
