@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+
 namespace DriveHUD.Importers.BetOnline
 {
     /// <summary>
@@ -22,9 +24,14 @@ namespace DriveHUD.Importers.BetOnline
         private const string dllToInject = "CapPipedB.dll";
 
         /// <summary>
-        /// Name of process where dll will be injected
+        /// Name of process in which dll will be injected
         /// </summary>
         private const string processName = "GameClient";
+
+        /// <summary>
+        /// Class of window in which dll will be injected
+        /// </summary>
+        private const string windowClassName = "Antares Game Client Window Class";
 
         #region PokerCatcher members
 
@@ -41,6 +48,14 @@ namespace DriveHUD.Importers.BetOnline
             get
             {
                 return processName;
+            }
+        }
+
+        protected override string WindowClassName
+        {
+            get
+            {
+                return windowClassName;
             }
         }
 

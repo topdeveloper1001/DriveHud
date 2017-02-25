@@ -22,6 +22,7 @@ namespace DriveHUD.DBMigration
             UnityContainer = new UnityContainer();
 
             UnityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            ModelBootstrapper.ConfigureContainer(UnityContainer);
 
             var locator = new UnityServiceLocator(UnityContainer);
 

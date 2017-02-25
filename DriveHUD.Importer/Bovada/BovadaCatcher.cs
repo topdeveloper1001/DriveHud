@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+
 namespace DriveHUD.Importers.Bovada
 {
     /// <summary>
@@ -23,9 +25,14 @@ namespace DriveHUD.Importers.Bovada
         private const string dllToInject = "CapPipedI.dll";
 
         /// <summary>
-        /// Name of process where dll will be injected
+        /// Name of process in which dll will be injected
         /// </summary>
         private const string processName = "Lobby";
+
+        /// <summary>
+        /// Class of window in which dll will be injected
+        /// </summary>
+        private const string windowClassName = "Qt5QWindowIcon";
 
         #region PokerCatcher members
 
@@ -42,6 +49,14 @@ namespace DriveHUD.Importers.Bovada
             get
             {
                 return processName;
+            }
+        }
+
+        protected override string WindowClassName
+        {
+            get
+            {
+                return windowClassName;
             }
         }
 
