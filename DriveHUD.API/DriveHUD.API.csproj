@@ -81,8 +81,9 @@
     <Compile Include="APIHost.cs" />
     <Compile Include="APIService.cs" />
     <Compile Include="APIServicesBootstrapper.cs" />
-    <Compile Include="IAPIHost.cs" />
-    <Compile Include="IAPIService.cs" />
+    <Compile Include="DataContracts\HandInfoDataContract.cs" />
+    <Compile Include="Interfaces\IAPIHost.cs" />
+    <Compile Include="Interfaces\IAPIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

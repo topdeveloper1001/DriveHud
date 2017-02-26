@@ -38,9 +38,12 @@ namespace DriveHUD.API
                 _apiServiceHost.Open();
 
                 LogProvider.Log.Info("API Service Started.");
-            }            catch (Exception ex)            {
+            }
+            catch (Exception ex)
+            {
                 LogProvider.Log.Error(this, ex);
-            }        }
+            }
+        }
 
         private void APIServiceHost_Faulted(object sender, EventArgs e)
         {
