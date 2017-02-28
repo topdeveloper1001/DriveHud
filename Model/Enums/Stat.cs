@@ -10,10 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using ProtoBuf;
-
 namespace Model.Enums
-{    
+{
     /// <summary>
     /// All Stats
     /// </summary>
@@ -128,6 +126,7 @@ namespace Model.Enums
         PFRInBTN,
         PFRInBB,
         PFRInSB,
-        PlayerInfoIcon
+        PlayerInfoIcon,
+        LineBreak
     }
 }

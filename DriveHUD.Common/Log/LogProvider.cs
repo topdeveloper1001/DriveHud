@@ -27,7 +27,7 @@ namespace DriveHUD.Common.Log
     {
         private static ILog mainLog;
 
-        private static readonly IDHLog internalLog = new InternalLog();
+        private static IDHLog internalLog = new InternalLog();
 
         static LogProvider()
         {
@@ -75,6 +75,15 @@ namespace DriveHUD.Common.Log
         public static void SetDefaultLogger(string alias)
         {
             mainLog = LogManager.GetLogger(alias);
+        }
+
+        /// <summary>
+        /// Set custom logger
+        /// </summary>
+        /// <param name="customLog">Custom logger</param>
+        public static void SetCustomLogger(IDHLog customLog)
+        {
+            internalLog = customLog;
         }
 
         /// <summary>

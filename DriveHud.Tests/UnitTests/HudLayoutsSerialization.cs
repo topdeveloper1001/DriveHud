@@ -1,14 +1,21 @@
-﻿using DriveHUD.Application.Surrogates;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudLayoutsSerialization.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.Surrogates;
 using DriveHUD.ViewModels;
 using NUnit.Framework;
 using ProtoBuf;
 using ProtoBuf.Meta;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace DriveHud.Tests.UnitTests
@@ -17,7 +24,7 @@ namespace DriveHud.Tests.UnitTests
 
     class HudLayoutsSerialization
     {
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.Color), false).SetSurrogate(typeof(ColorDto));
@@ -79,7 +86,6 @@ namespace DriveHud.Tests.UnitTests
                 Assert.That(actualStatInfoMeterModel.BackgroundBrush[i].Color, Is.EqualTo(statInfoMeterModel.BackgroundBrush[i].Color));
                 Assert.That(actualStatInfoMeterModel.BorderBrush[i].Color, Is.EqualTo(statInfoMeterModel.BorderBrush[i].Color));
             }
-
         }
     }
 }

@@ -13,6 +13,8 @@
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
+using DriveHUD.Application.Services;
+using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
@@ -24,13 +26,13 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Common.Wpf.Helpers;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
-using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
@@ -52,10 +54,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using DriveHUD.Application.ViewModels.Layouts;
 using Telerik.Windows.Controls;
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.Services;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -111,6 +110,8 @@ namespace DriveHUD.Application.ViewModels
             filterModelManager.SetFilterType(EnumFilterType.Cash);
 
             PokerStarsDetectorSingletonService.Instance.Start();
+
+            ConfigureResolutionDependentProperties();            
         }
 
         private void InitializeData()
@@ -159,6 +160,23 @@ namespace DriveHUD.Application.ViewModels
             if (settings.GeneralSettings.IsSaveFiltersOnExit)
             {
                 eventAggregator.GetEvent<LoadDefaultFilterRequestedEvent>().Publish(new LoadDefaultFilterRequestedEventArgs());
+            }
+        }
+
+        private void ConfigureResolutionDependentProperties()
+        {
+            var screenResolution = Utils.GetScreenResolution();
+
+            if (screenResolution.Width < ResolutionSettings.HighResolutionWidth)
+            {
+                IsLowResolutionMode = true;
+                WindowMinWidth = ResolutionSettings.LowResolutionWidth;
+                WindowWidth = ResolutionSettings.LowResolutionWidth;
+            }
+            else
+            {
+                WindowMinWidth = ResolutionSettings.HighResolutionWidth;
+                WindowWidth = ResolutionSettings.HighResolutionWidth;
             }
         }
 
@@ -304,6 +322,9 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                // need to update UI info
+                RefreshData(e.GameInfo);
+
                 // if no handle available then we don't need to do anything with this data, because hud won't be up
                 if (e.GameInfo.WindowHandle == 0)
                 {
@@ -315,7 +336,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-                RefreshData(e.GameInfo);
+
 
                 var refreshTime = sw.ElapsedMilliseconds;
 
@@ -1073,6 +1094,60 @@ namespace DriveHUD.Application.ViewModels
             {
                 isHudRunning = value;
                 OnPropertyChanged();
+            }
+        }
+
+        private bool isLowResolutionMode;
+
+        public bool IsLowResolutionMode
+        {
+            get
+            {
+                return isLowResolutionMode;
+            }
+            private set
+            {
+                if (isLowResolutionMode != value)
+                {
+                    isLowResolutionMode = value;         
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private int windowMinWidth;
+
+        public int WindowMinWidth
+        {
+            get
+            {
+                return windowMinWidth;
+            }
+            private set
+            {
+                if (windowMinWidth != value)
+                {
+                    windowMinWidth = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private int windowWidth;
+
+        public int WindowWidth
+        {
+            get
+            {
+                return windowWidth;
+            }
+            set
+            {
+                if (windowWidth != value)
+                {
+                    windowWidth = value;
+                    OnPropertyChanged();
+                }
             }
         }
 

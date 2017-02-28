@@ -83,6 +83,8 @@ namespace DriveHUD.Importers
 
         protected abstract string ProcessName { get; }
 
+        protected abstract string WindowClassName { get; }
+
         #region IBackgroundProcess implementation
 
         public event EventHandler ProcessStopped;
@@ -97,7 +99,7 @@ namespace DriveHUD.Importers
             }
 
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" catcher", Identifier));
-          
+
             // start main job
             Task.Run(() =>
             {
@@ -138,7 +140,28 @@ namespace DriveHUD.Importers
         {
             var processes = Process.GetProcesses();
 
-            var pokerClientProcess = processes.FirstOrDefault(x => x.ProcessName.Equals(ProcessName));
+            var pokerClientProcess = processes.FirstOrDefault(x =>
+            {
+                if (!x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return false;
+                }
+
+                if (!string.IsNullOrEmpty(WindowClassName))
+                {
+                    var sb = new StringBuilder(256);
+
+                    if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
+                    {
+                        var windowClassName = sb.ToString();
+                        return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
+                    }
+
+                    return false;
+                }
+
+                return true;
+            });
 
             return pokerClientProcess;
         }
@@ -215,7 +238,7 @@ namespace DriveHUD.Importers
                 }
 
                 Task.Delay(ProcessSearchingTimeout).Wait();
-            }            
+            }
         }
 
         /// <summary>
@@ -225,12 +248,7 @@ namespace DriveHUD.Importers
         {
             isRunning = false;
 
-            var handler = ProcessStopped;
-
-            if (handler != null)
-            {
-                handler(this, EventArgs.Empty);
-            }
+            ProcessStopped?.Invoke(this, EventArgs.Empty);
 
             LogProvider.Log.Info(this, $"\"{Identifier}\" catcher has been stopped");
         }

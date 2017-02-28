@@ -37,6 +37,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\PokerStars\TestData";
 
+        [OneTimeSetUp]
+        public void Initialize()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         [Test]
         [TestCase("en-US")]
         [TestCase("hu-HU")]
@@ -275,6 +281,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLSD-MTT-USD-1000-50-201609.reentry.txt", 1000)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-MTT-FPP-100-201309.Finished.Super.Satellite.txt", 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-EUR-SnG-10-201101.Sample.txt", 9.04)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", 0)]
         public void TournamentSummaryBuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -287,6 +294,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLSD-MTT-USD-1000-50-201609.reentry.txt", 50)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-MTT-FPP-100-201309.Finished.Super.Satellite.txt", 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-EUR-SnG-10-201101.Sample.txt", 0.96)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", 0)]
         public void TournamentSummaryBuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

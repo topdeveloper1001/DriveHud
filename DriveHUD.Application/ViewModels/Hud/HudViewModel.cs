@@ -417,40 +417,43 @@ namespace DriveHUD.Application.ViewModels
                 h => StatInfoObserveCollection.CollectionChanged += h,
                 h => StatInfoObserveCollection.CollectionChanged -= h).Subscribe(x =>
             {
-                var hudElements = x.Sender as ObservableCollection<StatInfo>;
+                var statsCollection = x.Sender as ObservableCollection<StatInfo>;
 
-                if (hudElements == null)
+                if (statsCollection == null)
                 {
                     return;
                 }
 
-                var statsToHide = StatInfoCollection.Where(s => hudElements.Any(h => h != s && h.Stat == s.Stat));
+                var statsToHide = StatInfoCollection.Where(s => statsCollection.Any(h => h != s && h.Stat == s.Stat && !(h is StatInfoBreak)));
+
                 StatInfoCollection.Where(s => s.IsDuplicateSelected && !statsToHide.Contains(s))
                     .ForEach(s => s.IsDuplicateSelected = false);
+
                 statsToHide.ForEach(s => s.IsDuplicateSelected = true);
 
                 CurrentHudTableViewModel.HudElements.ForEach(o =>
                 {
                     o.StatInfoCollection.Clear();
-                    o.StatInfoCollection.AddRange(hudElements);
+                    o.StatInfoCollection.AddRange(statsCollection);
                     o.UpdateMainStats();
 
                 });
+
                 if (PreviewHudElementViewModel != null)
                 {
                     PreviewHudElementViewModel.StatInfoCollection.Clear();
 
                     Random r = new Random();
 
-                    for (int i = 0; i < hudElements.Count; i++)
+                    for (int i = 0; i < statsCollection.Count; i++)
                     {
-                        if (hudElements[i] is StatInfoBreak)
+                        if (statsCollection[i] is StatInfoBreak)
                         {
-                            PreviewHudElementViewModel.StatInfoCollection.Add((hudElements[i] as StatInfoBreak).Clone());
+                            PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
                             continue;
                         }
 
-                        var stat = hudElements[i].Clone();
+                        var stat = statsCollection[i].Clone();
                         stat.CurrentValue = r.Next(0, 100);
                         stat.Caption = string.Format(stat.Format, stat.CurrentValue);
                         PreviewHudElementViewModel.StatInfoCollection.Add(stat);
@@ -459,7 +462,6 @@ namespace DriveHUD.Application.ViewModels
                     PreviewHudElementViewModel.UpdateMainStats();
                 }
             });
-
         }
 
         #region Properties
@@ -788,7 +790,9 @@ namespace DriveHUD.Application.ViewModels
         private void UpdateLayout(HudLayoutInfo layout)
         {
             if (layout == null)
+            {
                 return;
+            }
 
             // Get all chosen stats back to list
             foreach (var statInfo in StatInfoObserveCollection)
@@ -1067,8 +1071,6 @@ namespace DriveHUD.Application.ViewModels
             });
 
             CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
-
-            //_hudLayoutsSevice.SaveBumperStickers(_currentLayoutInfo);
 
             ClosePopup();
         }

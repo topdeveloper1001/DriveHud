@@ -244,8 +244,8 @@ namespace Model.Importer
 
                 // holdem
                 var boardCards = CardHelper.IsStreetAvailable(hand.CommunityCards.ToString(), lastHeroStreetAction.Street)
-                      ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street).ToString()
-                      : hand.CommunityCards.ToString();
+                      ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street)
+                      : hand.CommunityCards;
 
                 if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.Count <= 2))
                 {
@@ -255,7 +255,7 @@ namespace Model.Importer
                     long totalhands = 0;
 
 
-                    Hand.HandWinOdds(cards.Select(x => x.ToString()).ToArray(), boardCards, string.Empty, wins, ties, losses, ref totalhands);
+                    Hand.HandWinOdds(cards.Select(x => x.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
 
                     if (totalhands != 0)
                     {

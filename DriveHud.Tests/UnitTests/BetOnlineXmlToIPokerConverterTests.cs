@@ -26,7 +26,7 @@ namespace DriveHud.Tests
 {
     [TestFixture]
     public class BetOnlineXmlToIPokerXmlConverterTests
-    {
+    {      
         private const int SessionCode = 7777777;
 
         private class TableServiceStub : IBetOnlineTableService
@@ -59,7 +59,8 @@ namespace DriveHud.Tests
 
             public int GetWindowHandle(ulong handId, out EnumPokerSites site)
             {
-                throw new NotImplementedException();
+                site = EnumPokerSites.BetOnline;
+                return SessionCode;
             }
 
             public void Reset()
@@ -81,19 +82,24 @@ namespace DriveHud.Tests
             }
         }
 
-        [SetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             var unityContainer = new UnityContainer();
 
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
             unityContainer.RegisterType<IBetOnlineTableService, TableServiceStub>();
-            unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.SportsBetting.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.TigerGaming.ToString());
             unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
 
             var locator = new UnityServiceLocator(unityContainer);
@@ -118,7 +124,7 @@ namespace DriveHud.Tests
 
             var expected = XDocument.Load(GetTestDataFilePath(expectedXmlFile));
 
-            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();
+            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();         
 
             var convertedResult = betOnlineXmlToIPokerConverter.Convert(source);
 
