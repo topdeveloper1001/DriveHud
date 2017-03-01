@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using System.Linq;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Creates HUD element based on elements on table

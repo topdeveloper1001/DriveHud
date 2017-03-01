@@ -18,7 +18,7 @@ using System.Linq;
 using System.Windows;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [Serializable]
     public class HudSavedLayouts

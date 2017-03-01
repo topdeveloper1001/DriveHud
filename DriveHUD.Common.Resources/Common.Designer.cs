@@ -800,6 +800,87 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Stat DH Box.
+        /// </summary>
+        internal static string Common_HudSideBar_4StatDHBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_4StatDHBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bumper Stickers.
+        /// </summary>
+        internal static string Common_HudSideBar_BumperStickersTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BumperStickersTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gauge Indicator.
+        /// </summary>
+        internal static string Common_HudSideBar_GaugeIndicatorTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GaugeIndicatorTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graph.
+        /// </summary>
+        internal static string Common_HudSideBar_GraphTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GraphTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Map.
+        /// </summary>
+        internal static string Common_HudSideBar_HeatMapTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_HeatMapTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player Profile Icon.
+        /// </summary>
+        internal static string Common_HudSideBar_PlayerProfileIconTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlayerProfileIconTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Box.
+        /// </summary>
+        internal static string Common_HudSideBar_TextBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TextBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tilt Meter.
+        /// </summary>
+        internal static string Common_HudSideBar_TiltMeterTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TiltMeterTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Designer Tools.
+        /// </summary>
+        internal static string Common_HudSideBar_Title {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Avg.Pot Size.
         /// </summary>
         internal static string Common_HudTrackConditions_AveragePotSize {

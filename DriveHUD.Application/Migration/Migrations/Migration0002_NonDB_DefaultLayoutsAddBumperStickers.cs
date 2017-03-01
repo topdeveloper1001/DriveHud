@@ -1,4 +1,4 @@
-﻿using DriveHUD.Application.ViewModels;
+﻿using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using FluentMigrator;
@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Xml.Serialization;
 

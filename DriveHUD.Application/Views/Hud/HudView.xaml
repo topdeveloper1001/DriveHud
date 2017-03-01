@@ -1,184 +1,279 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.HudView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
-             xmlns:controls="clr-namespace:DriveHUD.Application.Controls"
-             xmlns:comboboxControl="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
-             xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls"
-             xmlns:System="clr-namespace:System;assembly=mscorlib"
-             xmlns:c="clr-namespace:DriveHUD.Application.ValueConverters"
-             xmlns:m="clr-namespace:Model.Enums;assembly=Model"
-             xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
-             xmlns:app="clr-namespace:DriveHUD.Application"
-             xmlns:v="clr-namespace:DriveHUD.Application.Views"             
-             xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"              
-             xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
-             xmlns:prism="http://www.codeplex.com/prism"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
-             xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
-             xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
-             xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
-             xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
-             mc:Ignorable="d" Foreground="White">
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.HudView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
+    xmlns:controls="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:comboboxControl="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:c="clr-namespace:DriveHUD.Application.ValueConverters"
+    xmlns:m="clr-namespace:Model.Enums;assembly=Model"
+    xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
+    xmlns:app="clr-namespace:DriveHUD.Application"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+    xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
+    xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
+    xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
+    xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    mc:Ignorable="d"
+    Foreground="White">
 
     <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
-            <infra:PopupTelerikWindowAction IsModal="True" 
-                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
-                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction
+                IsModal="True"
+                WindowStyle="{StaticResource NotificationWindowStyle}"
+                WindowContent="{StaticResource NotificationWindowContentTemplate}" />
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 
     <UserControl.Resources>
 
-        <DataTemplate x:Key="IconTemplate">
-            <Image Height="25" Source="{markupext:IconExtension  /images/drivehud.ico, 32}" Stretch="Uniform"/>
+        <DataTemplate
+            x:Key="IconTemplate">
+            <Image
+                Height="25"
+                Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
+                Stretch="Uniform" />
         </DataTemplate>
 
-        <SolidColorBrush x:Key="BackgroundBrush3" Color="#2a2d31"/>
+        <SolidColorBrush
+            x:Key="BackgroundBrush3"
+            Color="#2a2d31" />
 
-        <ObjectDataProvider x:Key="TableTypeEnum" MethodName="GetValues"
-                            ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider
+            x:Key="TableTypeEnum"
+            MethodName="GetValues"
+            ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="ent:EnumTableType"/>
+                <x:Type
+                    TypeName="ent:EnumTableType" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
 
-        <Style x:Key="add_splitter" TargetType="{x:Type Button}">
-            <Setter Property="Template">
+        <Style
+            x:Key="AddSplitterStyle"
+            TargetType="{x:Type Button}">
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
                         <Grid>
                             <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
+                                <VisualStateGroup
+                                    x:Name="CommonStates">
+                                    <VisualState
+                                        x:Name="Normal" />
+                                    <VisualState
+                                        x:Name="MouseOver">
                                         <Storyboard>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-                                                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="Black" />
                                             </ColorAnimationUsingKeyFrames>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-                                                <EasingColorKeyFrame KeyTime="0" Value="#FF363B41"/>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#FF363B41" />
                                             </ColorAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
-                                    <VisualState x:Name="Pressed">
+                                    <VisualState
+                                        x:Name="Pressed">
                                         <Storyboard>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-                                                <EasingColorKeyFrame KeyTime="0" Value="#FF1F2123"/>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#FF1F2123" />
                                             </ColorAnimationUsingKeyFrames>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-                                                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="Black" />
                                             </ColorAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
-                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState
+                                        x:Name="Disabled" />
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
-                            <Rectangle x:Name="rectangle" Fill="#FF2A2D31" RadiusY="3" RadiusX="3" Stroke="#FF111315"/>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Rectangle
+                                x:Name="rectangle"
+                                Fill="#FF2A2D31"
+                                RadiusY="3"
+                                RadiusX="3"
+                                Stroke="#FF111315" />
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Grid>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsFocused" Value="True"/>
-                            <Trigger Property="IsDefaulted" Value="True"/>
-                            <Trigger Property="IsMouseOver" Value="True"/>
-                            <Trigger Property="IsPressed" Value="True"/>
-                            <Trigger Property="IsEnabled" Value="False"/>
+                            <Trigger
+                                Property="IsFocused"
+                                Value="True" />
+                            <Trigger
+                                Property="IsDefaulted"
+                                Value="True" />
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="True" />
+                            <Trigger
+                                Property="IsPressed"
+                                Value="True" />
+                            <Trigger
+                                Property="IsEnabled"
+                                Value="False" />
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
+        <SolidColorBrush
+            x:Key="CloseButtonBackground"
+            Color="#191a1e" />
 
-        <DataTemplate DataType="{x:Type vm:HudStatSettingsViewModel}">
+        <DataTemplate
+            DataType="{x:Type vm:HudStatSettingsViewModel}">
             <hud:HudStatSettingsView />
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type vm:HudSelectLayoutViewModel}">
+        <DataTemplate
+            DataType="{x:Type vm:HudSelectLayoutViewModel}">
             <hud:HudLayoutsPopup />
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type vm:HudPlayerSettingsViewModel}">
+        <DataTemplate
+            DataType="{x:Type vm:HudPlayerSettingsViewModel}">
             <hud:HudPlayerSettingsView />
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
+        <DataTemplate
+            DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
 
-        <DrawingBrush x:Key="ColorButtonBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="ColorButtonBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FF2a2d31" Geometry="F1 M 14.1652,21.04C 13.6865,20.2694 14.8445,17.1835 15.5472,15.8342C 17.0885,12.8608 19.8575,12.5767 17.0402,16.79C 15.5708,18.9833 14.9043,21.0817 17.811,21.0817C 21.3687,21.1866 21.8777,20.2179 18.4777,16.0192C 15.9617,12.9152 16.1151,12.7661 11.1512,15.1368C 5.56315,17.7982 4.88582,17.4542 1.94848,10.4221C -0.0208346,5.70881 0.0111478,5.39684 2.58317,4.02216C 4.7445,2.86616 5.59383,3.76081 8.8125,5.35017C 11.8072,6.82347 14.7192,9.79816 13.2552,6.63683C 12.7765,5.59947 14.4792,5.94884 15.0578,7.45417C 15.5418,8.71951 16.2765,9.42215 16.6818,9.0115C 17.0938,8.60485 16.1725,7.07416 15.3018,5.44351C 14.0992,3.18883 11.9218,0.042141 13.9112,5.18883C 14.5205,6.77151 11.9272,5.24083 9.99516,4.13683C 1.47917,-0.712498 8.42183,0.042141 11.9218,0.042141C 14.8538,0.042141 18.5418,6.25548 18.5418,11.1995C 18.5418,13.0062 19.0755,14.7597 19.7902,14.9984C 20.1315,15.5491 21.7712,17.9542 21.9738,19.7875C 22.2818,22.5168 21.3698,22.0475 18.4685,22.3862C 16.5205,22.6102 14.8677,22.1387 14.3943,21.3734"/>
+                        <GeometryDrawing
+                            Brush="#FF2a2d31"
+                            Geometry="F1 M 14.1652,21.04C 13.6865,20.2694 14.8445,17.1835 15.5472,15.8342C 17.0885,12.8608 19.8575,12.5767 17.0402,16.79C 15.5708,18.9833 14.9043,21.0817 17.811,21.0817C 21.3687,21.1866 21.8777,20.2179 18.4777,16.0192C 15.9617,12.9152 16.1151,12.7661 11.1512,15.1368C 5.56315,17.7982 4.88582,17.4542 1.94848,10.4221C -0.0208346,5.70881 0.0111478,5.39684 2.58317,4.02216C 4.7445,2.86616 5.59383,3.76081 8.8125,5.35017C 11.8072,6.82347 14.7192,9.79816 13.2552,6.63683C 12.7765,5.59947 14.4792,5.94884 15.0578,7.45417C 15.5418,8.71951 16.2765,9.42215 16.6818,9.0115C 17.0938,8.60485 16.1725,7.07416 15.3018,5.44351C 14.0992,3.18883 11.9218,0.042141 13.9112,5.18883C 14.5205,6.77151 11.9272,5.24083 9.99516,4.13683C 1.47917,-0.712498 8.42183,0.042141 11.9218,0.042141C 14.8538,0.042141 18.5418,6.25548 18.5418,11.1995C 18.5418,13.0062 19.0755,14.7597 19.7902,14.9984C 20.1315,15.5491 21.7712,17.9542 21.9738,19.7875C 22.2818,22.5168 21.3698,22.0475 18.4685,22.3862C 16.5205,22.6102 14.8677,22.1387 14.3943,21.3734" />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <DrawingBrush x:Key="ColorButtonHighlightedBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="ColorButtonHighlightedBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FFaaaaaa" Geometry="F1 M 14.1652,21.04C 13.6865,20.2694 14.8445,17.1835 15.5472,15.8342C 17.0885,12.8608 19.8575,12.5767 17.0402,16.79C 15.5708,18.9833 14.9043,21.0817 17.811,21.0817C 21.3687,21.1866 21.8777,20.2179 18.4777,16.0192C 15.9617,12.9152 16.1151,12.7661 11.1512,15.1368C 5.56315,17.7982 4.88582,17.4542 1.94848,10.4221C -0.0208346,5.70881 0.0111478,5.39684 2.58317,4.02216C 4.7445,2.86616 5.59383,3.76081 8.8125,5.35017C 11.8072,6.82347 14.7192,9.79816 13.2552,6.63683C 12.7765,5.59947 14.4792,5.94884 15.0578,7.45417C 15.5418,8.71951 16.2765,9.42215 16.6818,9.0115C 17.0938,8.60485 16.1725,7.07416 15.3018,5.44351C 14.0992,3.18883 11.9218,0.042141 13.9112,5.18883C 14.5205,6.77151 11.9272,5.24083 9.99516,4.13683C 1.47917,-0.712498 8.42183,0.042141 11.9218,0.042141C 14.8538,0.042141 18.5418,6.25548 18.5418,11.1995C 18.5418,13.0062 19.0755,14.7597 19.7902,14.9984C 20.1315,15.5491 21.7712,17.9542 21.9738,19.7875C 22.2818,22.5168 21.3698,22.0475 18.4685,22.3862C 16.5205,22.6102 14.8677,22.1387 14.3943,21.3734"/>
+                        <GeometryDrawing
+                            Brush="#FFaaaaaa"
+                            Geometry="F1 M 14.1652,21.04C 13.6865,20.2694 14.8445,17.1835 15.5472,15.8342C 17.0885,12.8608 19.8575,12.5767 17.0402,16.79C 15.5708,18.9833 14.9043,21.0817 17.811,21.0817C 21.3687,21.1866 21.8777,20.2179 18.4777,16.0192C 15.9617,12.9152 16.1151,12.7661 11.1512,15.1368C 5.56315,17.7982 4.88582,17.4542 1.94848,10.4221C -0.0208346,5.70881 0.0111478,5.39684 2.58317,4.02216C 4.7445,2.86616 5.59383,3.76081 8.8125,5.35017C 11.8072,6.82347 14.7192,9.79816 13.2552,6.63683C 12.7765,5.59947 14.4792,5.94884 15.0578,7.45417C 15.5418,8.71951 16.2765,9.42215 16.6818,9.0115C 17.0938,8.60485 16.1725,7.07416 15.3018,5.44351C 14.0992,3.18883 11.9218,0.042141 13.9112,5.18883C 14.5205,6.77151 11.9272,5.24083 9.99516,4.13683C 1.47917,-0.712498 8.42183,0.042141 11.9218,0.042141C 14.8538,0.042141 18.5418,6.25548 18.5418,11.1995C 18.5418,13.0062 19.0755,14.7597 19.7902,14.9984C 20.1315,15.5491 21.7712,17.9542 21.9738,19.7875C 22.2818,22.5168 21.3698,22.0475 18.4685,22.3862C 16.5205,22.6102 14.8677,22.1387 14.3943,21.3734" />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <DrawingBrush x:Key="ProfileButtonBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="ProfileButtonBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FF2a2d31" Geometry="F1 M 6.70799,21.0213C 0,18.328 2.28404,11.0964 13.672,11.2347C 24.4106,11.5571 25.5573,18.584 18.9533,21.0986C 14.8227,22.6667 10.7386,22.64 6.70799,21.0213 Z M 9.59865,8.32267C 9.17598,7.224 9.02533,4.93196 9.27065,3.22933C 9.59332,0.931965 10.5667,0.130655 13.0413,0.130655C 15.9627,0.130655 16.3747,0.707966 16.3747,4.79732C 16.3747,8.62533 15.8333,9.5413 13.3693,9.89067C 11.6147,10.14 10.0413,9.48397 9.59865,8.32267 Z "/>
+                        <GeometryDrawing
+                            Brush="#FF2a2d31"
+                            Geometry="F1 M 6.70799,21.0213C 0,18.328 2.28404,11.0964 13.672,11.2347C 24.4106,11.5571 25.5573,18.584 18.9533,21.0986C 14.8227,22.6667 10.7386,22.64 6.70799,21.0213 Z M 9.59865,8.32267C 9.17598,7.224 9.02533,4.93196 9.27065,3.22933C 9.59332,0.931965 10.5667,0.130655 13.0413,0.130655C 15.9627,0.130655 16.3747,0.707966 16.3747,4.79732C 16.3747,8.62533 15.8333,9.5413 13.3693,9.89067C 11.6147,10.14 10.0413,9.48397 9.59865,8.32267 Z " />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <DrawingBrush x:Key="ProfileButtonHighlightedBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="ProfileButtonHighlightedBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FFaaaaaa" Geometry="F1 M 6.70799,21.0213C 0,18.328 2.28404,11.0964 13.672,11.2347C 24.4106,11.5571 25.5573,18.584 18.9533,21.0986C 14.8227,22.6667 10.7386,22.64 6.70799,21.0213 Z M 9.59865,8.32267C 9.17598,7.224 9.02533,4.93196 9.27065,3.22933C 9.59332,0.931965 10.5667,0.130655 13.0413,0.130655C 15.9627,0.130655 16.3747,0.707966 16.3747,4.79732C 16.3747,8.62533 15.8333,9.5413 13.3693,9.89067C 11.6147,10.14 10.0413,9.48397 9.59865,8.32267 Z "/>
+                        <GeometryDrawing
+                            Brush="#FFaaaaaa"
+                            Geometry="F1 M 6.70799,21.0213C 0,18.328 2.28404,11.0964 13.672,11.2347C 24.4106,11.5571 25.5573,18.584 18.9533,21.0986C 14.8227,22.6667 10.7386,22.64 6.70799,21.0213 Z M 9.59865,8.32267C 9.17598,7.224 9.02533,4.93196 9.27065,3.22933C 9.59332,0.931965 10.5667,0.130655 13.0413,0.130655C 15.9627,0.130655 16.3747,0.707966 16.3747,4.79732C 16.3747,8.62533 15.8333,9.5413 13.3693,9.89067C 11.6147,10.14 10.0413,9.48397 9.59865,8.32267 Z " />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <DrawingBrush x:Key="TagButtonBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="TagButtonBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FF2a2d31" Geometry="F1 M 3.916,15.9067L 0,11.8134L 5.61466,6.57336C 11.964,0.650675 15.2187,0.120035 20.7973,4.08936C 25.1973,7.22404 25.792,9.33337 22.2707,9.33337C 20.9533,9.33337 17.5307,11.7347 14.6667,14.6667C 11.8013,17.5987 9.09334,20 8.64534,20C 8.19735,20 6.07334,18.156 3.916,15.9067 Z M 22.6093,6.57336C 22.1253,5.79203 20.744,5.09867 20.0307,5.80269C 17.4587,8.3387 17.6613,5.79203 16.8533,4.98401C 16.0413,4.17204 14.9373,3.95337 14.396,4.49467C 13.0413,5.84937 16.6773,7.95337 20.4107,7.98002C 22.26,7.98934 23.14,7.42668 22.6093,6.57336 Z "/>
+                        <GeometryDrawing
+                            Brush="#FF2a2d31"
+                            Geometry="F1 M 3.916,15.9067L 0,11.8134L 5.61466,6.57336C 11.964,0.650675 15.2187,0.120035 20.7973,4.08936C 25.1973,7.22404 25.792,9.33337 22.2707,9.33337C 20.9533,9.33337 17.5307,11.7347 14.6667,14.6667C 11.8013,17.5987 9.09334,20 8.64534,20C 8.19735,20 6.07334,18.156 3.916,15.9067 Z M 22.6093,6.57336C 22.1253,5.79203 20.744,5.09867 20.0307,5.80269C 17.4587,8.3387 17.6613,5.79203 16.8533,4.98401C 16.0413,4.17204 14.9373,3.95337 14.396,4.49467C 13.0413,5.84937 16.6773,7.95337 20.4107,7.98002C 22.26,7.98934 23.14,7.42668 22.6093,6.57336 Z " />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <DrawingBrush x:Key="TagButtonHighlightedBackground" Stretch="Uniform">
+        <DrawingBrush
+            x:Key="TagButtonHighlightedBackground"
+            Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
                     <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FFaaaaaa" Geometry="F1 M 3.916,15.9067L 0,11.8134L 5.61466,6.57336C 11.964,0.650675 15.2187,0.120035 20.7973,4.08936C 25.1973,7.22404 25.792,9.33337 22.2707,9.33337C 20.9533,9.33337 17.5307,11.7347 14.6667,14.6667C 11.8013,17.5987 9.09334,20 8.64534,20C 8.19735,20 6.07334,18.156 3.916,15.9067 Z M 22.6093,6.57336C 22.1253,5.79203 20.744,5.09867 20.0307,5.80269C 17.4587,8.3387 17.6613,5.79203 16.8533,4.98401C 16.0413,4.17204 14.9373,3.95337 14.396,4.49467C 13.0413,5.84937 16.6773,7.95337 20.4107,7.98002C 22.26,7.98934 23.14,7.42668 22.6093,6.57336 Z "/>
+                        <GeometryDrawing
+                            Brush="#FFaaaaaa"
+                            Geometry="F1 M 3.916,15.9067L 0,11.8134L 5.61466,6.57336C 11.964,0.650675 15.2187,0.120035 20.7973,4.08936C 25.1973,7.22404 25.792,9.33337 22.2707,9.33337C 20.9533,9.33337 17.5307,11.7347 14.6667,14.6667C 11.8013,17.5987 9.09334,20 8.64534,20C 8.19735,20 6.07334,18.156 3.916,15.9067 Z M 22.6093,6.57336C 22.1253,5.79203 20.744,5.09867 20.0307,5.80269C 17.4587,8.3387 17.6613,5.79203 16.8533,4.98401C 16.0413,4.17204 14.9373,3.95337 14.396,4.49467C 13.0413,5.84937 16.6773,7.95337 20.4107,7.98002C 22.26,7.98934 23.14,7.42668 22.6093,6.57336 Z " />
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <Style x:Key="ColorButton" TargetType="{x:Type Button}">
-            <Setter Property="Width" Value="18" />
-            <Setter Property="Height" Value="18" />
-            <Setter Property="Template">
+        <Style
+            x:Key="ColorButton"
+            TargetType="{x:Type Button}">
+            <Setter
+                Property="Width"
+                Value="18" />
+            <Setter
+                Property="Height"
+                Value="18" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
                         <Border
                             x:Name="MainBorder"
                             Width="{TemplateBinding Width}"
@@ -188,8 +283,13 @@
                             Cursor="Hand">
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ColorButtonHighlightedBackground}" />
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="true">
+                                <Setter
+                                    TargetName="MainBorder"
+                                    Property="Background"
+                                    Value="{StaticResource ColorButtonHighlightedBackground}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -197,12 +297,20 @@
             </Setter>
         </Style>
 
-        <Style x:Key="ProfileButton" TargetType="{x:Type Button}">
-            <Setter Property="Width" Value="14" />
-            <Setter Property="Height" Value="18" />
-            <Setter Property="Template">
+        <Style
+            x:Key="ProfileButton"
+            TargetType="{x:Type Button}">
+            <Setter
+                Property="Width"
+                Value="14" />
+            <Setter
+                Property="Height"
+                Value="18" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
                         <Border
                             x:Name="MainBorder"
                             Width="{TemplateBinding Width}"
@@ -212,8 +320,13 @@
                             Cursor="Hand">
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ProfileButtonHighlightedBackground}" />
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="true">
+                                <Setter
+                                    TargetName="MainBorder"
+                                    Property="Background"
+                                    Value="{StaticResource ProfileButtonHighlightedBackground}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -221,12 +334,20 @@
             </Setter>
         </Style>
 
-        <Style x:Key="TagButton" TargetType="{x:Type Button}">
-            <Setter Property="Width" Value="18" />
-            <Setter Property="Height" Value="15" />
-            <Setter Property="Template">
+        <Style
+            x:Key="TagButton"
+            TargetType="{x:Type Button}">
+            <Setter
+                Property="Width"
+                Value="18" />
+            <Setter
+                Property="Height"
+                Value="15" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
                         <Border
                             x:Name="MainBorder"
                             Width="{TemplateBinding Width}"
@@ -236,8 +357,13 @@
                             Cursor="Hand">
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource TagButtonHighlightedBackground}" />
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="true">
+                                <Setter
+                                    TargetName="MainBorder"
+                                    Property="Background"
+                                    Value="{StaticResource TagButtonHighlightedBackground}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -245,182 +371,350 @@
             </Setter>
         </Style>
 
+        <Style
+            x:Key="HudDesignerTextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+
+            <Setter
+                Property="FontSize"
+                Value="17" />
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFFFF" />
+            <Setter
+                Property="FontWeight"
+                Value="Bold" />
+        </Style>
+
     </UserControl.Resources>
 
-    <Grid x:Name="GridMain" Background="{x:Null}"
-          VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <Grid
+        x:Name="GridMain"
+        Background="{x:Null}"
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch">
 
-        <Grid x:Name="GridTable" Background="#1F2124"
-              VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid
+            x:Name="GridTable"
+            Background="#1F2124"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="20"/>
+                <ColumnDefinition
+                    Width="20" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="20" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="270"/>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="270" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="2">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="270" />
+                    <ColumnDefinition
+                        Width="270" />
+                    <ColumnDefinition
+                        Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <!-- HUD NAME ********************************************************************* -->
-                <TextBlock Grid.Row="0" Grid.Column="1" Margin="1,5,40,1"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="{ResX Key=Common_Hud_HudName}" FontSize="13"/>
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="1" Margin="0,0,40,0"
-                                     MaxWidth="260" Height="35"
-                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
-                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                                     ItemsSource="{Binding Layouts}"
-                                     DisplayMemberPath="Name"
-                                     SelectedValue="{Binding Path=CurrentLayout}">
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="1,5,40,1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Text="{ResX Key=Common_Hud_HudName}"
+                    FontSize="13" />
+                <comboboxControl:ComboBoxEx
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,0,40,0"
+                    MaxWidth="260"
+                    Height="35"
+                    PopupMaxWidth="230"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Stretch"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding Layouts}"
+                    DisplayMemberPath="Name"
+                    SelectedValue="{Binding Path=CurrentLayout}">
                 </comboboxControl:ComboBoxEx>
 
                 <!-- TABLE LAYOUT ***************************************************************** -->
-                <TextBlock Grid.Row="0" Grid.Column="2" Margin="1,5,40,1"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="{ResX Key=Common_Hud_TableLayout}" FontSize="13"/>
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="1,5,40,1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Text="{ResX Key=Common_Hud_TableLayout}"
+                    FontSize="13" />
 
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
-                                     MaxWidth="260" Height="35"
-                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
-                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                                     ItemsSource="{Binding TableTypes}"
-                                     DisplayMemberPath="TableTypeText"
-                                     SelectedValue="{Binding Path=CurrentTableType}">
+                <comboboxControl:ComboBoxEx
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="0,0,40,0"
+                    MaxWidth="260"
+                    Height="35"
+                    PopupMaxWidth="230"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Stretch"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding TableTypes}"
+                    DisplayMemberPath="TableTypeText"
+                    SelectedValue="{Binding Path=CurrentTableType}">
                 </comboboxControl:ComboBoxEx>
 
             </Grid>
 
             <!-- COMMAND BUTTONS - SAVE/IMPORT/EXPORT/LOAD **************************************************************** -->
-            <StackPanel Grid.Row="1" Grid.Column="2"                  
-                        Orientation="Vertical">
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                Orientation="Vertical">
 
-                <Button Margin="0,21,0,5"
-						HorizontalAlignment="Right" VerticalAlignment="Bottom"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding DataSaveCommand}"
-						Content="{ResX Key=Common_Hud_Save}">
-                </Button>
+                <Grid
+                    Margin="0,0,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="15" />
+                        <ColumnDefinition
+                            Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition
+                            Height="5" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-                <Button Margin="0,0,0,5"
-						HorizontalAlignment="Right" VerticalAlignment="Bottom"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding DataDeleteCommand}"
-						Content="{ResX Key=Common_Hud_Delete}">
-                </Button>
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataImportCommand}"
+                        Content="{ResX Key=Common_Hud_Import}">
+                    </Button>
 
-                <!--<Button Margin="0,0,0,5"
-						HorizontalAlignment="Right" VerticalAlignment="Bottom"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding DataCopyCommand}"
-						Content="{ResX Key=Common_Hud_Copy}">
-                </Button>-->
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataExportCommand}"
+                        Content="{ResX Key=Common_Hud_Export}">
+                    </Button>
 
-                <Button Margin="0,0,0,5"
-						HorizontalAlignment="Right" VerticalAlignment="Bottom"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding DataImportCommand}"
-						Content="{ResX Key=Common_Hud_Import}">
-                </Button>
+                    <Button
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataSaveCommand}"
+                        Content="{ResX Key=Common_Hud_Save}">
+                    </Button>
 
-                <Button Margin="0,0,0,5"
-						HorizontalAlignment="Right" VerticalAlignment="Bottom"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding DataExportCommand}"
-						Content="{ResX Key=Common_Hud_Export}">
-                </Button>
+                    <Button
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataDeleteCommand}"
+                        Content="{ResX Key=Common_Hud_Delete}">
+                    </Button>
+
+                </Grid>
+
+                <TextBlock
+                    Margin="0,10,0,10"
+                    Style="{StaticResource HudDesignerTextBlockStyle}"
+                    Text="{ResX Key=Common_HudSideBar_Title}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_TextBoxTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_GraphTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.Graph}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_BumperStickersTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_HeatMapTool}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
 
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="*" />
                 </Grid.RowDefinitions>
 
-                <telerik:RadDiagram 
-                    x:Name="diagram" 
-                    Grid.Row="1" 
+                <telerik:RadDiagram
+                    x:Name="diagram"
+                    Grid.Row="1"
                     Grid.Column="1"
-					Width="{x:Static vm:HudDefaultSettings.HudTableWidth}" 
+                    Width="{x:Static vm:HudDefaultSettings.HudTableWidth}"
                     Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
-					BorderThickness="0" 
-                    AllowDrop="False"                    
-					primitives:BackgroundGrid.CellSize="10,10"
-					primitives:BackgroundGrid.LineStroke="#26282b"
-					ViewportChanged="OnDiagramViewportChanged"
-					Style="{StaticResource ClassDiagramStyle}" />
+                    BorderThickness="0"
+                    AllowDrop="False"
+                    primitives:BackgroundGrid.CellSize="10,10"
+                    primitives:BackgroundGrid.LineStroke="#26282b"
+                    ViewportChanged="OnDiagramViewportChanged"
+                    Style="{StaticResource HudTableDiagramStyle}" />
 
             </Grid>
 
-            <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="15"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="15" />
+                    <ColumnDefinition
+                        Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <app:GadgetPanel Grid.Row="0" Grid.Column="0"
-								 Width="270"
-								 HeaderColor="#76a134">
-                    <Grid Margin="30,10,30,20">
+                <app:GadgetPanel
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Width="270"
+                    HeaderColor="#76a134">
+                    <Grid
+                        Margin="30,10,30,20">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition
+                                Height="35" />
+                            <RowDefinition
+                                Height="*" />
                         </Grid.RowDefinitions>
 
-                        <TextBlock Foreground="#93c940" Text="Preview" FontSize="13"/>
+                        <TextBlock
+                            Foreground="#93c940"
+                            Text="Preview"
+                            FontSize="13" />
 
-                        <Grid Grid.Row="1">
+                        <Grid
+                            Grid.Row="1">
                             <Grid.Background>
-                                <ImageBrush ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png"/>
+                                <ImageBrush
+                                    ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png" />
                             </Grid.Background>
 
-                            <controls:HudPanel 
-                                DataContext="{Binding PreviewHudElementViewModel}"                                 
+                            <controls:HudPanel
+                                DataContext="{Binding PreviewHudElementViewModel}"
                                 Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center">
                             </controls:HudPanel>
 
-                            <controls:HudRichPanel 
-                                DataContext="{Binding PreviewHudElementViewModel}" 
+                            <controls:HudRichPanel
+                                DataContext="{Binding PreviewHudElementViewModel}"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"  
+                                HorizontalAlignment="Center"
                                 Width="{x:Static vm:HudDefaultSettings.BovadaRichHudElementWidth}"
                                 Height="{x:Static vm:HudDefaultSettings.BovadaRichHudElementHeight}"
-                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"                                                               >
+                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}">
                                 <controls:HudRichPanel.Style>
-                                    <Style TargetType="{x:Type controls:HudRichPanel}">
-                                        <Setter Property="Margin" Value="0,0,0,-25" />
+                                    <Style
+                                        TargetType="{x:Type controls:HudRichPanel}">
+                                        <Setter
+                                            Property="Margin"
+                                            Value="0,0,0,-25" />
                                     </Style>
                                 </controls:HudRichPanel.Style>
                             </controls:HudRichPanel>
@@ -429,50 +723,65 @@
                     </Grid>
                 </app:GadgetPanel>
 
-                <app:GadgetPanel Grid.Row="0" Grid.Column="2"
-								 HeaderColor="#76a134">
+                <app:GadgetPanel
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HeaderColor="#76a134">
 
-                    <Grid Margin="30,10,30,20">
+                    <Grid
+                        Margin="30,10,30,20">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="30"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition
+                                Height="30" />
+                            <RowDefinition
+                                Height="*" />
+                            <RowDefinition
+                                Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition
+                                Width="50" />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.Column="0"
-								   Foreground="#93c940" FontSize="13"
-								   Text="All Stats">
+                        <TextBlock
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Foreground="#93c940"
+                            FontSize="13"
+                            Text="All Stats">
                         </TextBlock>
 
-                        <telerik:RadListBox 
-                            Grid.Row="1" 
-                            Grid.Column="0" 
-                            Tag="Collapsed"											
-                            VerticalAlignment="Stretch" 
-                            HorizontalAlignment="Stretch"     
+                        <telerik:RadListBox
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Tag="Collapsed"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"
                             ScrollViewer.CanContentScroll="False"
-                            ScrollViewer.VerticalScrollBarVisibility="Visible"											
-                            BorderThickness="0" 
-                            Background="#111315"											
-                            Style="{StaticResource RadListBoxStyle_StatInfo}"											
-                            ItemsSource="{Binding StatInfoCollectionView}"											
+                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                            BorderThickness="0"
+                            Background="#111315"
+                            Style="{StaticResource RadListBoxStyle_StatInfo}"
+                            ItemsSource="{Binding StatInfoCollectionView}"
                             ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
 
                             <telerik:RadListBox.Resources>
-                                <Style x:Key="ContainerStyle" TargetType="{x:Type GroupItem}">
-                                    <Setter Property="Template">
+                                <Style
+                                    x:Key="ContainerStyle"
+                                    TargetType="{x:Type GroupItem}">
+                                    <Setter
+                                        Property="Template">
                                         <Setter.Value>
                                             <ControlTemplate>
-                                                <telerik:RadExpander IsExpanded="False"
-                                                                     FontWeight="Bold" Foreground="Silver"
-                                                                     Style="{StaticResource RadExpanderStyle_TripleArrow}"
-                                                                     Header="{Binding Path=Name}">
-                                                    <ItemsPresenter/>
+                                                <telerik:RadExpander
+                                                    IsExpanded="False"
+                                                    FontWeight="Bold"
+                                                    Foreground="Silver"
+                                                    Style="{StaticResource RadExpanderStyle_TripleArrow}"
+                                                    Header="{Binding Path=Name}">
+                                                    <ItemsPresenter />
                                                 </telerik:RadExpander>
                                             </ControlTemplate>
                                         </Setter.Value>
@@ -481,28 +790,40 @@
                             </telerik:RadListBox.Resources>
 
                             <telerik:RadListBox.DragVisualProvider>
-                                <telerik:ScreenshotDragVisualProvider/>
+                                <telerik:ScreenshotDragVisualProvider />
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
-                                <controls:RadListBoxDragDropBehavior  AllowReorder="True" telerik:DragDropManager.TouchDragTrigger="TapAndHold"/>
+                                <controls:RadListBoxDragDropBehavior
+                                    AllowReorder="True"
+                                    telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                             <telerik:RadListBox.GroupStyle>
-                                <GroupStyle ContainerStyle="{StaticResource ContainerStyle}">
+                                <GroupStyle
+                                    ContainerStyle="{StaticResource ContainerStyle}">
                                     <GroupStyle.HeaderTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Name}" Foreground="White"/>
+                                            <TextBlock
+                                                Text="{Binding Path=Name}"
+                                                Foreground="White" />
                                         </DataTemplate>
                                     </GroupStyle.HeaderTemplate>
                                 </GroupStyle>
                             </telerik:RadListBox.GroupStyle>
                         </telerik:RadListBox>
 
-                        <Button Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="5"
-								VerticalContentAlignment="Center" HorizontalAlignment="Center"
-								Width="40" Height="40"
-								Style="{StaticResource add_splitter}"
-								Command="{Binding SpliterAddCommand}">
-                            <Path Data="F1M13.573,359.345C13.573,359.345 392.425,359.345 392.425,359.345 399.368,359.345 404.997,364.969
+                        <Button
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Grid.RowSpan="2"
+                            Margin="5"
+                            VerticalContentAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Width="40"
+                            Height="40"
+                            Style="{StaticResource AddSplitterStyle}"
+                            Command="{Binding SpliterAddCommand}">
+                            <Path
+                                Data="F1M13.573,359.345C13.573,359.345 392.425,359.345 392.425,359.345 399.368,359.345 404.997,364.969
 								  404.996,371.907 404.996,371.907 404.996,405.408 404.996,405.408 404.996,412.346 399.366,417.97 392.423,417.97
 								  392.423,417.97 232.333,417.97 232.333,417.97 232.333,417.97 232.333,505.981 232.333,505.981 232.333,505.981
 								  257.688,480.645 257.688,480.645 262.596,475.738 270.557,475.737 275.467,480.643 275.467,480.643 299.175,504.331
@@ -524,8 +845,10 @@
 								  143.4,138.262 135.439,138.263 130.529,133.357 130.529,133.357 106.821,109.669 106.821,109.669 104.464,107.312
 								  103.138,104.116 103.138,100.784 103.138,97.453 104.462,94.259 106.821,91.902 106.821,91.902 194.11,4.68
 								  194.11,4.68 196.466,2.323 199.665,1 202.999,1z"
-								  Stretch="Fill" Fill="Silver"
-								  Width="15.248" Height="23.058"/>
+                                Stretch="Fill"
+                                Fill="Silver"
+                                Width="15.248"
+                                Height="23.058" />
                         </Button>
 
                         <Grid
@@ -533,51 +856,61 @@
                             Grid.Column="2">
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock 
+                            <TextBlock
                                 Grid.Column="0"
-								Foreground="#93c940" FontSize="13"
-								Text="Selected Stats" />
+                                Foreground="#93c940"
+                                FontSize="13"
+                                Text="Selected Stats" />
 
                             <StackPanel
                                 Grid.Column="1"
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Right">
 
-                                <Button 
-                                    Style="{StaticResource ColorButton}" Margin="20,0,0,0" 
-                                    Command="{Binding SettingsStatInfoCommand}"
-                                    />
+                                <Button
+                                    Style="{StaticResource ColorButton}"
+                                    Margin="20,0,0,0"
+                                    Command="{Binding SettingsStatInfoCommand}" />
 
-                                <Button 
-                                    Style="{StaticResource ProfileButton}" Margin="20,0,0,0" 
-                                     Command="{Binding PlayerTypeStatsCommand}"
-                                    />
+                                <Button
+                                    Style="{StaticResource ProfileButton}"
+                                    Margin="20,0,0,0"
+                                    Command="{Binding PlayerTypeStatsCommand}" />
 
                                 <Button
                                     Style="{StaticResource TagButton}"
-                                    Command="{Binding BumperStickersCommand}" Margin="20,0,0,0"
-                                    />
+                                    Command="{Binding BumperStickersCommand}"
+                                    Margin="20,0,0,0" />
 
                             </StackPanel>
                         </Grid>
 
-                        <telerik:RadListBox Grid.Row="1" Grid.Column="2" Tag="Visible"
-											VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-											BorderThickness="0" Background="#111315"
-											Style="{StaticResource RadListBoxStyle_StatInfo}"
-                                            Padding="0,0,0,10"
-											SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
-											ItemsSource="{Binding Path=StatInfoObserveCollection}"
-											ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
+                        <telerik:RadListBox
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Tag="Visible"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"
+                            BorderThickness="0"
+                            Background="#111315"
+                            Style="{StaticResource RadListBoxStyle_StatInfo}"
+                            Padding="0,0,0,10"
+                            SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
+                            ItemsSource="{Binding Path=StatInfoObserveCollection}"
+                            ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
                             <telerik:RadListBox.DragVisualProvider>
-                                <telerik:ScreenshotDragVisualProvider/>
+                                <telerik:ScreenshotDragVisualProvider />
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
-                                <controls:RadListBoxDragDropBehavior AllowReorder="True" telerik:DragDropManager.TouchDragTrigger="TapAndHold"/>
+                                <controls:RadListBoxDragDropBehavior
+                                    AllowReorder="True"
+                                    telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                         </telerik:RadListBox>
 
@@ -590,25 +923,29 @@
         </Grid>
 
         <dh:NonTopmostPopup
-            IsOpen="{Binding IsPopupOpened}"                    
-            AllowsTransparency="True"            
+            IsOpen="{Binding IsPopupOpened}"
+            AllowsTransparency="True"
             Placement="Center">
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="40" />
                 </Grid.ColumnDefinitions>
 
                 <Border
                     Grid.Column="0"
                     CornerRadius="4"
                     Background="#335199"
-                    Height="10"                    
-                    VerticalAlignment="Top"
-                    />
+                    Height="10"
+                    VerticalAlignment="Top" />
 
-                <ContentControl Content="{Binding PopupViewModel}"  Grid.Column="0" Margin="0,5,0,0" />
+                <ContentControl
+                    Content="{Binding PopupViewModel}"
+                    Grid.Column="0"
+                    Margin="0,5,0,0" />
 
                 <Button
                     Grid.Column="1"
@@ -619,17 +956,16 @@
                     Command="{Binding ClosePopupCommand}"
                     Background="{StaticResource CloseButtonBackground}">
 
-                    <Path 
-                        SnapsToDevicePixels="True" 
-                        ToolTip="Close" 
-                        Width="11" 
-                        Height="11" 
-                        HorizontalAlignment="Center" 
-                        VerticalAlignment="Center" 
-                        Stretch="Fill" 
-                        Fill="#FFFFFF" 
-                        Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " 
-                        />
+                    <Path
+                        SnapsToDevicePixels="True"
+                        ToolTip="Close"
+                        Width="11"
+                        Height="11"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="Fill"
+                        Fill="#FFFFFF"
+                        Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
 
                 </Button>
 

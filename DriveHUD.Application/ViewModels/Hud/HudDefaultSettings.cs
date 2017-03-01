@@ -12,7 +12,7 @@
 
 using DriveHUD.Entities;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Predefined hard-coded settings

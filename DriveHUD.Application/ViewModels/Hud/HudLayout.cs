@@ -10,18 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
-using Model.Enums;
 using Model.Interfaces;
 using ProtoBuf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     public class HudLayout : ICleanable

@@ -10,22 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
-using Model.Enums;
-using System;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Media;
-using System.Linq;
 using DriveHUD.Application.Controls;
-using DriveHUD.Application.Views;
-using DriveHUD.Common;
-using Telerik.Windows.Controls;
-using DriveHUD.Application.Views.Popups;
 using DriveHUD.Application.ViewModels.Popups;
-using DriveHUD.Common.Resources;
-using System.Windows.Data;
+using DriveHUD.Application.Views;
+using DriveHUD.Application.Views.Popups;
+using DriveHUD.Common;
 using DriveHUD.Entities;
+using System;
+using System.Windows;
+using System.Windows.Data;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudTableLayout.cs" company="Ace Poker Solutions">
+// <copyright file="HudDesignerToolType.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,32 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using Model.Enums;
-using ProtoBuf;
-
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    //[ProtoContract]
-    //public class HudTableLayout
-    //{
-    //    [ProtoMember(1)]
-    //    public EnumPokerSites Site
-    //    {
-    //        get;
-    //        set;
-    //    }
-
-    //    [ProtoMember(2)]
-    //    public EnumTableType TableType
-    //    {
-    //        get;
-    //        set;
-    //    }
-
-    //    public HudTableLayout Clone()
-    //    {
-    //        return new HudTableLayout { Site = this.Site, TableType = this.TableType };
-    //    }
-    //}
+    public enum HudDesignerToolType
+    {
+        TextBox,
+        Graph,
+        GaugeIndicator,
+        BumperSticker,
+        FourStatBox,
+        TiltMeter,
+        PlayerProfileIcon,
+        HeatMap
+    }
 }

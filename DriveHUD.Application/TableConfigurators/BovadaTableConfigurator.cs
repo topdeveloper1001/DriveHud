@@ -1,19 +1,11 @@
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common;
-using Model.Enums;
-using System;
+using DriveHUD.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Diagrams.Core;
-using System.Collections.Generic;
-using DriveHUD.Application.TableConfigurators;
-using System.Windows.Data;
-using System.Windows.Controls;
-using DriveHUD.Entities;
 
 namespace DriveHUD.Application.TableConfigurators
 {

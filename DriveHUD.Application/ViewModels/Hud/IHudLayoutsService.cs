@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
-using Model.Enums;
+using System.Collections.Generic;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Operates with HUD layouts

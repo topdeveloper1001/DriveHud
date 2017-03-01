@@ -386,6 +386,8 @@
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
@@ -397,7 +399,6 @@
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickerType.cs" />
-    <Compile Include="ViewModels\Hud\HudTableLayoutMenuItem.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
@@ -465,7 +466,6 @@
     </Compile>
     <Compile Include="Security\UserSession.cs" />
     <Compile Include="TableConfigurators\CommonRichTableConfiguration.cs" />
-    <Compile Include="ViewModels\Hud\HudTableLayout.cs" />
     <Compile Include="ViewModels\Popups\EditTournamentViewModel.cs" />
     <Compile Include="ViewModels\Popups\DataRemoverViewModel.cs" />
     <Compile Include="Views\Popups\EditTournamentView.xaml.cs">

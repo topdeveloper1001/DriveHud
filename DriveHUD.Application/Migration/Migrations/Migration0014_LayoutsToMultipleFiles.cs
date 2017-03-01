@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -31,6 +30,7 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     using Model.Settings;
+    using ViewModels.Hud;
 
     [Migration(14)]
     public class Migration0014_LayoutsToMultipleFiles : Migration

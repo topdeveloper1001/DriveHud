@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudStatSettingsViewModelInfo.cs" company="Ace Poker Solutions">
+// <copyright file="HudDesignerViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,24 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using DriveHUD.Common.Wpf.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    /// <summary>
-    /// Initial data for hud stat settings
-    /// </summary>
-    public class HudStatSettingsViewModelInfo
+    public class HudDesignerViewModel : ViewModelBase
     {
-        public StatInfo SelectedStatInfo { get; set; }
+        public void Initialize()
+        {
 
-        public IEnumerable<StatInfo> SelectedStatInfoCollection { get; set; }
-        public int HudOpacity { get; set; }
-
-        public Action Save { get; set; }
-
-        public Action Cancel { get; set; }
+        }
     }
 }

@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
@@ -24,7 +23,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     /// <summary>

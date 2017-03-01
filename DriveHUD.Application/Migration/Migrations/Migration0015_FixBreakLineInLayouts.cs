@@ -10,18 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
-using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {

@@ -10,18 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using Model.Enums;
 using ReactiveUI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Xml.Serialization;
 using System.Linq;
-using DriveHUD.Common.Linq;
-using Microsoft.Practices.ServiceLocation;
+using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Hud player profile type

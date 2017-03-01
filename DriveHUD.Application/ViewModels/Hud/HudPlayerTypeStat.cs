@@ -10,11 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Enums;
-using ReactiveUI;
 using System;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Hud player type stat range

@@ -10,10 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ValueConverters;
+using DriveHUD.Application.Controls;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
 using DriveHUD.ViewModels;
+using Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -21,13 +23,10 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Interactivity;
 using System.Windows.Media;
-using System;
 using Telerik.Windows.Controls;
-using DriveHUD.Application.Controls;
-using System.Windows.Documents;
-using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {

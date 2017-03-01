@@ -17,7 +17,7 @@ using ReactiveUI;
 using System;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable, ProtoContract]

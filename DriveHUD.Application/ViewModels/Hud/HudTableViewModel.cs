@@ -12,14 +12,13 @@
 
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Entities;
 using ProtoBuf;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
-using DriveHUD.Entities;
-using Model.Enums;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     public class HudTableViewModel : BaseViewModel

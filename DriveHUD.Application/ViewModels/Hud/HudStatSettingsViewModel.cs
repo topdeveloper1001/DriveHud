@@ -13,14 +13,14 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.ViewModels;
+using Model.Enums;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Media;
-using Model.Enums;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudStatSettingsViewModel : ViewModelBase
     {

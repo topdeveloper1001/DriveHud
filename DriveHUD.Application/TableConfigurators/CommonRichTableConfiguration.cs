@@ -10,11 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using Model.Enums;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Media;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators

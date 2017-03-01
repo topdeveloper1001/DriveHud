@@ -666,4 +666,31 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Hud_TableLayout" xml:space="preserve">
     <value>Table Layout</value>
   </data>
+  <data name="Common_HudSideBar_4StatDHBoxTool" xml:space="preserve">
+    <value>4-Stat DH Box</value>
+  </data>
+  <data name="Common_HudSideBar_BumperStickersTool" xml:space="preserve">
+    <value>Bumper Stickers</value>
+  </data>
+  <data name="Common_HudSideBar_GaugeIndicatorTool" xml:space="preserve">
+    <value>Gauge Indicator</value>
+  </data>
+  <data name="Common_HudSideBar_GraphTool" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="Common_HudSideBar_HeatMapTool" xml:space="preserve">
+    <value>Heat Map</value>
+  </data>
+  <data name="Common_HudSideBar_PlayerProfileIconTool" xml:space="preserve">
+    <value>Player Profile Icon</value>
+  </data>
+  <data name="Common_HudSideBar_TextBoxTool" xml:space="preserve">
+    <value>Text Box</value>
+  </data>
+  <data name="Common_HudSideBar_TiltMeterTool" xml:space="preserve">
+    <value>Tilt Meter</value>
+  </data>
+  <data name="Common_HudSideBar_Title" xml:space="preserve">
+    <value>HUD Designer Tools</value>
+  </data>
 </root>

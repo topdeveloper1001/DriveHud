@@ -10,33 +10,34 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
+using Model.Data;
 using Model.Enums;
+using Model.Events;
+using Model.Filters;
+using Model.Settings;
+using Model.Site;
 using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Data;
-using ReactiveUI;
-using System.Reactive.Linq;
-using Model.Data;
-using DriveHUD.Application.TableConfigurators;
 using System.Collections.Specialized;
-using DriveHUD.Application.ViewModels.Hud;
-using Model.Site;
-using Prism.Interactivity.InteractionRequest;
-using Model.Settings;
-using Model.Events;
-using DriveHUD.Entities;
 using System.ComponentModel;
-using Model.Filters;
-using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Common;
-using Microsoft.Win32;
+using System.Diagnostics;
+using System.Linq;
+using System.Reactive.Linq;
+using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -127,6 +128,8 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand<object> PlayerTypeStatsCommand { get; private set; }
 
         public ReactiveCommand<object> BumperStickersCommand { get; private set; }
+
+        public ReactiveCommand<object> DesignerToolCommand { get; private set; }
 
         #endregion
 
@@ -409,6 +412,9 @@ namespace DriveHUD.Application.ViewModels
 
             BumperStickersCommand = ReactiveCommand.Create();
             BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
+
+            DesignerToolCommand = ReactiveCommand.Create();
+            DesignerToolCommand.Subscribe(x => InitializeDesigner((HudDesignerToolType)x));
         }
 
         private void InitializeObservables()
@@ -635,6 +641,8 @@ namespace DriveHUD.Application.ViewModels
                 this.RaiseAndSetIfChanged(ref previewHudElementViewModel, value);
             }
         }
+
+
 
         private IEnumerable<ISiteConfiguration> _configurations;
         private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
@@ -1093,7 +1101,6 @@ namespace DriveHUD.Application.ViewModels
             this.RaisePropertyChanged(nameof(CurrentTableType));
         }
 
-
         private void OnUpdateHudRaised(UpdateHudEventArgs obj)
         {
             if (obj == null)
@@ -1104,6 +1111,11 @@ namespace DriveHUD.Application.ViewModels
                 x.Height = obj.Height;
                 x.Width = obj.Width;
             });
+        }
+
+        private void InitializeDesigner(HudDesignerToolType toolType)
+        {
+            Debug.WriteLine(toolType);
         }
 
         #endregion
