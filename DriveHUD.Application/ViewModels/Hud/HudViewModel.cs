@@ -642,7 +642,33 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isInDesignMode;
 
+        public bool IsInDesignMode
+        {
+            get
+            {
+                return isInDesignMode;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isInDesignMode, value);
+            }
+        }
+
+        private HudDesignerViewModel hudDesignerViewModel;
+
+        public HudDesignerViewModel HudDesignerViewModel
+        {
+            get
+            {
+                return hudDesignerViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref hudDesignerViewModel, value);
+            }
+        }
 
         private IEnumerable<ISiteConfiguration> _configurations;
         private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
@@ -1115,7 +1141,10 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeDesigner(HudDesignerToolType toolType)
         {
-            Debug.WriteLine(toolType);
+            HudDesignerViewModel = new HudDesignerViewModel();
+            HudDesignerViewModel.Initialize(this, toolType);
+
+            IsInDesignMode = true;
         }
 
         #endregion

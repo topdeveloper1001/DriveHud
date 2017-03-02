@@ -19,6 +19,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         GaugeIndicator,
         BumperSticker,
         FourStatBox,
+        PlainStatBox,
         TiltMeter,
         PlayerProfileIcon,
         HeatMap

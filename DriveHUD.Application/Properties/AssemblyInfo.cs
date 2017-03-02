@@ -57,6 +57,7 @@ using System.Windows;
 #if DEBUG
 
 [assembly: InternalsVisibleTo("DriveHUD.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 #endif
 

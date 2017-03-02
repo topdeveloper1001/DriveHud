@@ -845,6 +845,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Plain Stat Box.
+        /// </summary>
+        internal static string Common_HudSideBar_PlainStatBox {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlainStatBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Player Profile Icon.
         /// </summary>
         internal static string Common_HudSideBar_PlayerProfileIconTool {

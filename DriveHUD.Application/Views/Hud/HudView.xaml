@@ -16,6 +16,7 @@
     xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
     xmlns:app="clr-namespace:DriveHUD.Application"
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:vd="clr-namespace:DriveHUD.Application.Views.Hud.Designer"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:prism="http://www.codeplex.com/prism"
@@ -23,8 +24,6 @@
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
-    xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
-    xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     mc:Ignorable="d"
     Foreground="White">
 
@@ -176,6 +175,11 @@
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
 
+        <DataTemplate
+            DataType="{x:Type vm:HudDesignerViewModel}">
+            <vd:HudDesignerView />
+        </DataTemplate>
+        
         <DrawingBrush
             x:Key="ColorButtonBackground"
             Stretch="Uniform">
@@ -602,6 +606,12 @@
 
                 <Button
                     Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
+                    Command="{Binding DesignerToolCommand}"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}" />
+
+                <Button
+                    Style="{StaticResource HudDesignerToolButtonStyle}"
                     Content="{ResX Key=Common_HudSideBar_TiltMeterTool}"
                     Command="{Binding DesignerToolCommand}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
@@ -620,6 +630,7 @@
 
             </StackPanel>
 
+            <!-- Poker table -->
             <Grid
                 Grid.Row="1"
                 Grid.Column="1"
@@ -645,6 +656,7 @@
                     x:Name="diagram"
                     Grid.Row="1"
                     Grid.Column="1"
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     Width="{x:Static vm:HudDefaultSettings.HudTableWidth}"
                     Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
                     BorderThickness="0"
@@ -653,6 +665,9 @@
                     primitives:BackgroundGrid.LineStroke="#26282b"
                     ViewportChanged="OnDiagramViewportChanged"
                     Style="{StaticResource HudTableDiagramStyle}" />
+
+                <ContentControl
+                    Content="{Binding HudDesignerViewModel}" />
 
             </Grid>
 

@@ -21,9 +21,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudDesignerViewModel : ViewModelBase
     {
-        public void Initialize()
-        {
+        private HudViewModel hudViewModel;
 
+        public void Initialize(HudViewModel hudViewModel, HudDesignerToolType initialToolType)
+        {
+            this.hudViewModel = hudViewModel;
         }
     }
 }
