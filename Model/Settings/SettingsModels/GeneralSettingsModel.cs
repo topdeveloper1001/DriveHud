@@ -34,6 +34,8 @@ namespace Model.Settings
 
         public int HudViewMode { get; set; }
 
+        public bool IsHudSavedAtFirstTime { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();
@@ -43,8 +45,9 @@ namespace Model.Settings
         {
             IsAutomaticallyDownloadUpdates = true;
             IsApplyFiltersToTournamentsAndCashGames = true;
-            IsSaveFiltersOnExit = true;            
+            IsSaveFiltersOnExit = true;
             IsAdvancedLoggingEnabled = false;
+            IsHudSavedAtFirstTime = true;
             TimeZoneOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).Hours;
             HudViewMode = (int)HudViewType.Vertical_1;
 

@@ -176,6 +176,11 @@
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
 
+        <DataTemplate
+            DataType="{x:Type vm:HudSaveFirstTimeNotificationViewModel}">
+            <hud:HudSaveFirstTimeNotificationView />
+        </DataTemplate>
+
         <DrawingBrush
             x:Key="ColorButtonBackground"
             Stretch="Uniform">
@@ -376,6 +381,7 @@
     <Grid
         x:Name="GridMain"
         Background="{x:Null}"
+        IsEnabled="{Binding IsPopupOpened, Converter={dh:BoolNotConverter}}"
         VerticalAlignment="Stretch"
         HorizontalAlignment="Stretch">
 

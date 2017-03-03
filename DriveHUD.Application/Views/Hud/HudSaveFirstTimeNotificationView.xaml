@@ -1,0 +1,71 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.Hud.HudSaveFirstTimeNotificationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <Style
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="Foreground"
+                Value="White" />
+            <Setter
+                Property="Margin"
+                Value="0,0,0,10" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid
+        Background="#191a1e">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Margin="13"
+            Orientation="Vertical">
+
+            <TextBlock
+                FontSize="14px"
+                Text="{ResX Key=Common_HudLayout_FirstSaveNotifyHeader}" />
+
+            <TextBlock
+                Text="{ResX Key=Common_HudLayout_FirstSaveNotifyP1}" />
+
+            <TextBlock
+                Text="{ResX Key=Common_HudLayout_FirstSaveNotifyP2}" />
+
+            <TextBlock
+                Text="{ResX Key=Common_HudLayout_FirstSaveNotifyP3}" />
+
+            <Border
+                BorderThickness="1"
+                BorderBrush="#335199">
+                <Image
+                    Source="/DriveHUD.Common.Resources;component/images/hud/drivehud-hudmenu.png" />
+            </Border>
+
+        </StackPanel>
+
+        <Button
+            Margin="0,0,13,13"
+            Grid.Row="1"
+            Height="40"
+            Width="77"
+            Foreground="White"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Content="{ResX Key=Common_HudLayout_GotIt}"
+            Command="{Binding OkCommand}" />
+
+    </Grid>
+</UserControl>

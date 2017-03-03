@@ -148,7 +148,7 @@
                 VerticalAlignment="Center" />
 
             <TextBox
-                MaxLength="24"
+                MaxLength="70"
                 Margin="15,0,0,0"
                 VerticalAlignment="Center"
                 VerticalContentAlignment="Center"
