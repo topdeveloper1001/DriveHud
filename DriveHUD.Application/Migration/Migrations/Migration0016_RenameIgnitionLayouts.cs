@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Migration0015_FixBreakLineInLayouts.cs" company="Ace Poker Solutions">
+// <copyright file="Migration0016_RenameIgnitionLayouts.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -17,13 +17,21 @@ using DriveHUD.ViewModels;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DriveHUD.Common.Extensions;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
-    [Migration(15)]
-    public class Migration0015_FixBreakLineInLayouts : Migration
+    [Migration(16)]
+    public class Migration0016_RenameIgnitionLayouts : Migration
     {
-        private static int MigrationNumber = 15;
+        private static int MigrationNumber = 16;
+
+        private const string Suffix = " - Ignition/Bodog";
 
         public override void Down()
         {
@@ -37,19 +45,26 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
+                // update layouts
                 foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
                 {
                     foreach (var layout in hudLayoutService.GetAllLayouts(tableType))
                     {
-                        for (var i = 0; i < layout.HudStats.Count; i++)
+                        if (layout.HudViewType == HudViewType.Plain || !layout.IsDefault || layout.Name.Contains(Suffix))
                         {
-                            if (string.IsNullOrWhiteSpace(layout.HudStats[i].PropertyName) && !(layout.HudStats[i] is StatInfoBreak))
-                            {
-                                layout.HudStats[i] = new StatInfoBreak();
-                            }
+                            continue;
                         }
 
+                        // mark old layout as non-default to be able to delete it
+                        layout.IsDefault = false;
                         hudLayoutService.Save(layout);
+
+                        var oldLayoutName = layout.Name;
+                        layout.Name = UpdateLayoutName(layout.Name);
+                        layout.IsDefault = true;
+
+                        hudLayoutService.Save(layout);
+                        hudLayoutService.Delete(oldLayoutName);
                     }
                 }
 
@@ -59,6 +74,11 @@ namespace DriveHUD.Application.MigrationService.Migrations
             {
                 LogProvider.Log.Error(this, $"Migration #{MigrationNumber} failed.", e);
             }
+        }
+
+        private string UpdateLayoutName(string name)
+        {
+            return $"{name}{Suffix}";
         }
     }
 }

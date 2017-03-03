@@ -584,6 +584,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Note: This HUD is for Ignition/Bodog only..
+        /// </summary>
+        internal static string Common_Hud_IgnWarning {
+            get {
+                return ResourceManager.GetString("Common_Hud_IgnWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
         internal static string Common_Hud_Import {

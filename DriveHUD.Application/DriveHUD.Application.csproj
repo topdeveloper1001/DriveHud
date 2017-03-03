@@ -330,6 +330,7 @@
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\Migrations\Migration0015_FixBreakLineInLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0016_RenameIgnitionLayouts.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />

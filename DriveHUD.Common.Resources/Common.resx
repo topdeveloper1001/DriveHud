@@ -666,4 +666,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Hud_TableLayout" xml:space="preserve">
     <value>Table Layout</value>
   </data>
+  <data name="Common_Hud_IgnWarning" xml:space="preserve">
+    <value>Note: This HUD is for Ignition/Bodog only.</value>
+  </data>
 </root>
