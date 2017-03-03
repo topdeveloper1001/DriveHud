@@ -666,4 +666,22 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Hud_TableLayout" xml:space="preserve">
     <value>Table Layout</value>
   </data>
+  <data name="Common_Hud_IgnWarning" xml:space="preserve">
+    <value>Note: This HUD is for Ignition/Bodog only.</value>
+  </data>
+  <data name="Common_HudLayout_FirstSaveNotifyHeader" xml:space="preserve">
+    <value>To change the poker hud you want to use on your poker table, simply do the following:</value>
+  </data>
+  <data name="Common_HudLayout_FirstSaveNotifyP1" xml:space="preserve">
+    <value>1. Right click on the DriveHUD logo at the top center of your poker table.</value>
+  </data>
+  <data name="Common_HudLayout_FirstSaveNotifyP2" xml:space="preserve">
+    <value>2. Mouse over to the LOAD HUD from the menu.</value>
+  </data>
+  <data name="Common_HudLayout_FirstSaveNotifyP3" xml:space="preserve">
+    <value>3. Select the HUD you wish to use from the pop out menu and left click to select. The HUD you selected will load on the next hand.</value>
+  </data>
+  <data name="Common_HudLayout_GotIt" xml:space="preserve">
+    <value>Got It!</value>
+  </data>
 </root>

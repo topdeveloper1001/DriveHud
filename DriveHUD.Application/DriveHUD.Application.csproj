@@ -330,6 +330,7 @@
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\Migrations\Migration0015_FixBreakLineInLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0016_RenameIgnitionLayouts.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -389,6 +390,7 @@
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -438,6 +440,9 @@
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
+      <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
@@ -758,6 +763,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.IO;
 using System.Linq;
 
 namespace DriveHUD.Common.Extensions
@@ -24,6 +25,11 @@ namespace DriveHUD.Common.Extensions
         public static string RemoveWhitespace(this string text)
         {
             return new string(text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+        }
+
+        public static string RemoveInvalidFileNameChars(this string text)
+        {
+            return Path.GetInvalidFileNameChars().Aggregate(text, (current, c) => current.Replace(c.ToString(), string.Empty));
         }
     }
 }
