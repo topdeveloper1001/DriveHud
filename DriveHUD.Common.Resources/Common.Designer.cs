@@ -656,7 +656,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To change the poker hud you want to use on your poker table, simply do the following:.
+        ///   Looks up a localized string similar to Important! In order to make your new HUD active on your poker table, you&apos;ll need to do the following on your poker site table:.
         /// </summary>
         internal static string Common_HudLayout_FirstSaveNotifyHeader {
             get {
