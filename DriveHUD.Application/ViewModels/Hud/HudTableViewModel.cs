@@ -47,6 +47,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         [ProtoMember(8)]
         public HudViewType HudViewType { get; set; }
 
+        public bool IsInDesignerMode
+        {
+            get
+            {
+                return HudViewType == HudViewType.CustomDesigned;
+            }
+        }
+
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
 
         internal ObservableCollection<ITableSeatArea> TableSeatAreaCollection { get; set; }

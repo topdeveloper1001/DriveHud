@@ -1144,7 +1144,7 @@ namespace DriveHUD.Application.ViewModels
             HudDesignerViewModel = new HudDesignerViewModel();
             HudDesignerViewModel.Initialize(this, toolType);
 
-            IsInDesignMode = true;
+            IsInDesignMode = !IsInDesignMode;
         }
 
         #endregion

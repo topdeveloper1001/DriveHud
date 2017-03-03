@@ -386,6 +386,7 @@
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
@@ -727,6 +728,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\RadDiagramStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\ToggleSwitchTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -824,7 +829,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ControlStyles\ButtonTemplate.xaml">
+    <Page Include="ControlStyles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

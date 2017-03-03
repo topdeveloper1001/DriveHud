@@ -27,5 +27,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             this.hudViewModel = hudViewModel;
         }
+
+
     }
 }

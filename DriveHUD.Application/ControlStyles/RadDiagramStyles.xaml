@@ -1,0 +1,147 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:ts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
+    xmlns:hvm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams">
+
+    <!-- Template for element with Player name on table on HUD settings -->
+    <DataTemplate
+        x:Key="StructTemplate">
+        <Grid
+            Margin="-4">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Text="{Binding DataContext.Player, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+
+            <TextBlock
+                Text="{Binding DataContext.Bank, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}, StringFormat={}${0}}"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+        </Grid>
+    </DataTemplate>
+
+    <!-- Template for plain hud element on table on HUD settings -->
+    <DataTemplate
+        x:Key="HudTemplate">
+        <ctl:HudPanel
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
+    <!-- Template for DH hud element on table on HUD settings -->
+    <DataTemplate
+        x:Key="RichHudTemplate">
+        <ctl:HudRichPanel
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
+    <ControlTemplate
+        x:Key="PreferredSeatControlTemplate">
+        <Border
+            Background="#242F41"
+            BorderBrush="#325398"
+            CornerRadius="2"
+            BorderThickness="2"
+            Visibility="{Binding DataContext.IsVisible, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}">
+            <TextBlock
+                Text="P"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="White"
+                FontSize="18"
+                FontWeight="Bold" />
+        </Border>
+    </ControlTemplate>
+
+    <ts:HudPanelTemplateSelector
+        x:Key="HudPanelTemplateSelector"
+        PlayerPlaceTemplate="{StaticResource StructTemplate}"
+        PlainHudTemplate="{StaticResource HudTemplate}"
+        RichHudTemplate="{StaticResource RichHudTemplate}" />
+
+    <Style
+        x:Key="RadDiagramStyle"
+        TargetType="telerik:RadDiagram" />
+
+    <!-- Style for table with HUD elements on HUD settings screen -->
+    <Style
+        x:Key="HudTableDiagramStyle"
+        TargetType="telerik:RadDiagram"
+        BasedOn="{StaticResource RadDiagramStyle}">
+        <Setter
+            Property="AllowCopy"
+            Value="False" />
+        <Setter
+            Property="AllowCut"
+            Value="False" />
+        <Setter
+            Property="AllowDelete"
+            Value="False" />
+        <Setter
+            Property="AllowDrop"
+            Value="False" />
+        <Setter
+            Property="AllowPaste"
+            Value="False" />
+        <Setter
+            Property="BorderThickness"
+            Value="0" />
+        <Setter
+            Property="IsConnectorsManipulationEnabled"
+            Value="False" />
+        <Setter
+            Property="IsEditable"
+            Value="False" />
+        <Setter
+            Property="IsBackgroundSurfaceVisible"
+            Value="True" />
+        <Setter
+            Property="IsSnapToGridEnabled"
+            Value="False" />
+        <Setter
+            Property="IsSnapToItemsEnabled"
+            Value="False" />
+        <Setter
+            Property="IsResizingEnabled"
+            Value="True" />
+        <Setter
+            Property="IsRotationEnabled"
+            Value="False" />
+        <Setter
+            Property="IsZoomEnabled"
+            Value="False" />
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Stretch" />
+        <Setter
+            Property="primitives:BackgroundGrid.CellSize"
+            Value="10,10" />
+        <Setter
+            Property="primitives:BackgroundGrid.LineStroke"
+            Value="#26282b" />
+        <Setter
+            Property="Width"
+            Value="{x:Static hvm:HudDefaultSettings.HudTableWidth}" />
+        <Setter
+            Property="Height"
+            Value="{x:Static hvm:HudDefaultSettings.HudTableHeight}" />
+        <Setter
+            Property="ShapeTemplateSelector"
+            Value="{StaticResource HudPanelTemplateSelector}" />
+    </Style>
+
+</ResourceDictionary>

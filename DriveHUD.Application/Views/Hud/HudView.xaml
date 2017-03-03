@@ -179,7 +179,7 @@
             DataType="{x:Type vm:HudDesignerViewModel}">
             <vd:HudDesignerView />
         </DataTemplate>
-        
+
         <DrawingBrush
             x:Key="ColorButtonBackground"
             Stretch="Uniform">
@@ -657,16 +657,13 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                    Width="{x:Static vm:HudDefaultSettings.HudTableWidth}"
-                    Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
-                    BorderThickness="0"
-                    AllowDrop="False"
-                    primitives:BackgroundGrid.CellSize="10,10"
-                    primitives:BackgroundGrid.LineStroke="#26282b"
                     ViewportChanged="OnDiagramViewportChanged"
                     Style="{StaticResource HudTableDiagramStyle}" />
 
                 <ContentControl
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{Binding HudDesignerViewModel}" />
 
             </Grid>

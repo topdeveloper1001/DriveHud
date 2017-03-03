@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.HUD.Service;
 using ProtoBuf;

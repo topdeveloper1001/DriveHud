@@ -70,7 +70,7 @@ namespace DriveHUD.Application.TableConfigurators
             Check.Require(hudTable.HudElements != null);
             Check.Require(hudTable.HudElements.Count != seats);
 
-            var table = InitializeTable(diagram, hudTable, seats);            
+            var table = InitializeTable(diagram, hudTable, seats);
 
             var labelPositions = GetPredefinedLabelPositions();
 
@@ -83,6 +83,11 @@ namespace DriveHUD.Application.TableConfigurators
                 label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
 
                 diagram.AddShape(label);
+
+                if (hudTable.IsInDesignerMode)
+                {
+                    continue;
+                }
 
                 // create shapes with stats
                 var hud = CreateHudLabel(hudElement);
@@ -178,6 +183,6 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             return label;
-        }      
+        }
     }
 }
