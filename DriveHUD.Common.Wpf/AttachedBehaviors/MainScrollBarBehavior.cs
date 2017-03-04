@@ -46,11 +46,28 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             }
 
             behavior.ContentContainer.SizeChanged += behavior.ContentContainer_SizeChanged;
+            behavior.ContentContainer.IsVisibleChanged += behavior.ContentContainer_IsVisibleChanged;
+        }
+
+        private ScrollBarVisibility scrollBarVisibilitySaved;
+
+        private void ContentContainer_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (ContentContainer.Visibility != Visibility.Visible)
+            {
+                scrollBarVisibilitySaved = AssociatedObject.VerticalScrollBarVisibility;
+                AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
+            }
+            else
+            {
+                AssociatedObject.VerticalScrollBarVisibility = scrollBarVisibilitySaved;
+                Update();
+            }
         }
 
         internal void ContentContainer_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (this.AssociatedObject.VerticalScrollBarVisibility == ScrollBarVisibility.Disabled)
+            if (AssociatedObject.VerticalScrollBarVisibility == ScrollBarVisibility.Disabled)
             {
                 Update();
             }
@@ -58,7 +75,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
         private void AssociatedObject_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
-            if (e.OriginalSource == this.AssociatedObject)
+            if (e.OriginalSource == AssociatedObject)
             {
                 Update();
                 e.Handled = true;
@@ -72,22 +89,22 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 return;
             }
 
-            if ((0 >= this.AssociatedObject.ActualHeight))
+            if ((0 >= AssociatedObject.ActualHeight))
             {
                 // The attached ScrollViewer was probably not laid out yet, or has zero size.
-                this.AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
+                AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
                 return;
             }
 
-            var scrollBarVisibility = this.AssociatedObject.VerticalScrollBarVisibility;
+            var scrollBarVisibility = AssociatedObject.VerticalScrollBarVisibility;
 
-            if (this.AssociatedObject.ScrollableHeight == 0)
+            if (AssociatedObject.ScrollableHeight == 0)
             {
                 if (scrollBarVisibility == ScrollBarVisibility.Auto
                     && ContentContainer.ActualHeight >= ThresholdHeight)
                 {
-                    this.AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
-                    ContentContainer.MaxHeight = Double.PositiveInfinity;
+                    AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                    ContentContainer.MaxHeight = double.PositiveInfinity;
                     return;
                 }
 
@@ -95,7 +112,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                     && ContentContainer.ActualHeight < ThresholdHeight)
                 {
                     ContentContainer.MaxHeight = ThresholdHeight;
-                    this.AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
+                    AssociatedObject.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
                     return;
                 }
             }
@@ -104,17 +121,18 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         protected override void OnAttached()
         {
             base.OnAttached();
-            this.AssociatedObject.ScrollChanged += AssociatedObject_ScrollChanged;
+            AssociatedObject.ScrollChanged += AssociatedObject_ScrollChanged;
         }
 
         protected override void OnDetaching()
         {
-            if (this.ContentContainer != null)
+            if (ContentContainer != null)
             {
-                this.ContentContainer.SizeChanged -= ContentContainer_SizeChanged;
+                ContentContainer.SizeChanged -= ContentContainer_SizeChanged;
+                ContentContainer.IsVisibleChanged -= ContentContainer_IsVisibleChanged;
             }
 
-            this.AssociatedObject.ScrollChanged -= AssociatedObject_ScrollChanged;
+            AssociatedObject.ScrollChanged -= AssociatedObject_ScrollChanged;
             base.OnDetaching();
         }
     }
