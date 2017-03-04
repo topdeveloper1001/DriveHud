@@ -584,6 +584,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Note: This HUD is for Ignition/Bodog only..
+        /// </summary>
+        internal static string Common_Hud_IgnWarning {
+            get {
+                return ResourceManager.GetString("Common_Hud_IgnWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
         internal static string Common_Hud_Import {
@@ -643,6 +652,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudLayout_DeleteLabel {
             get {
                 return ResourceManager.GetString("Common_HudLayout_DeleteLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Important! In order to make your new HUD active on your poker table, you&apos;ll need to do the following on your poker site table:.
+        /// </summary>
+        internal static string Common_HudLayout_FirstSaveNotifyHeader {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_FirstSaveNotifyHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Right click on the DriveHUD logo at the top center of your poker table..
+        /// </summary>
+        internal static string Common_HudLayout_FirstSaveNotifyP1 {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_FirstSaveNotifyP1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. Mouse over to the LOAD HUD from the menu..
+        /// </summary>
+        internal static string Common_HudLayout_FirstSaveNotifyP2 {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_FirstSaveNotifyP2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3. Select the HUD you wish to use from the pop out menu and left click to select. The HUD you selected will load on the next hand..
+        /// </summary>
+        internal static string Common_HudLayout_FirstSaveNotifyP3 {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_FirstSaveNotifyP3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Got It!.
+        /// </summary>
+        internal static string Common_HudLayout_GotIt {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_GotIt", resourceCulture);
             }
         }
         

@@ -112,7 +112,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
                     {
                         defaultLayoutInfo.Name =
-                            $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
+                            $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : $"{hudViewType} - Ignition/Bodog")}"
                                 .Trim();
 
                         if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
@@ -466,13 +466,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             return layoutsDirectory;
         }
 
-
         private string InternalSave(HudLayoutInfo hudLayoutInfo)
         {
             var layoutsDirectory = GetLayoutsDirectory().FullName;
-            var layoutsFile = Path.Combine(layoutsDirectory,
-                    GetLayoutFileName(hudLayoutInfo.Name));
+
+            var layoutsFile = Path.Combine(layoutsDirectory, GetLayoutFileName(hudLayoutInfo.Name));
+
             _rwLock.EnterWriteLock();
+
             try
             {
                 using (var fs = File.Open(layoutsFile, FileMode.Create))
@@ -489,6 +490,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 _rwLock.ExitWriteLock();
             }
+
             return layoutsFile;
         }
 
@@ -1296,8 +1298,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public HudLayoutInfo GetLayout(string name)
         {
-
             var defaultNames = new List<string>();
+
             foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
             {
                 foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
@@ -1307,6 +1309,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             .Trim());
                 }
             }
+
             if (defaultNames.Contains(name))
                 return
                     LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
