@@ -22,6 +22,7 @@
     </UserControl.Resources>
 
     <Grid
+        Width="820"
         Background="#191a1e">
 
         <Grid.RowDefinitions>
@@ -36,6 +37,7 @@
 
             <TextBlock
                 FontSize="14px"
+                TextWrapping="Wrap"
                 Text="{ResX Key=Common_HudLayout_FirstSaveNotifyHeader}" />
 
             <TextBlock
@@ -51,6 +53,8 @@
                 BorderThickness="1"
                 BorderBrush="#335199">
                 <Image
+                    Width="794"
+                    Height="517"
                     Source="/DriveHUD.Common.Resources;component/images/hud/drivehud-hudmenu.png" />
             </Border>
 
