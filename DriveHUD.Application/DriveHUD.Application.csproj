@@ -619,7 +619,6 @@
     </Compile>
     <Compile Include="ValueConverters\BoolToggleConverter.cs" />
     <Compile Include="ValueConverters\BoolToTextConverter.cs" />
-    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\ColorToBrushConverter.cs" />
     <Compile Include="ValueConverters\ColorToChipsConverter.cs" />
     <Compile Include="ValueConverters\DecimalToPlayerPotConverter.cs" />

@@ -4,11 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:hud="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:control="clr-namespace:DriveHUD.Application.Controls"
-    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     mc:Ignorable="d"
     MinWidth="50"
@@ -82,7 +82,7 @@
                 Property="BorderThickness"
                 Value="0,0.75,0,0" />
         </Style>
-     
+
         <Style
             x:Key="DefaultImage"
             TargetType="{x:Type Image}">
@@ -144,7 +144,7 @@
                 </Setter>
             </Style>
         </Grid.Style>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="Auto" />
@@ -178,7 +178,7 @@
                     VerticalAlignment="Top"
                     Margin="0 -10 -10 0"
                     ToolTip="{Binding NoteToolTip}"
-                    Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    Visibility="{Binding IsNoteIconVisible, Converter={dh:BoolToVisibilityConverter}}">
                     <Path
                         Style="{StaticResource PlayerNotePathStyle}"
                         Width="20"

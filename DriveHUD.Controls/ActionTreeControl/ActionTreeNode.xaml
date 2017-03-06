@@ -1,38 +1,61 @@
-﻿<UserControl x:Class="DriveHUD.Controls.ActionTreeControl.ActionTreeNode"
-             x:Name="ActionTreeNodeControl"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DriveHUD.Controls.ActionTreeControl"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+﻿<UserControl
+    x:Class="DriveHUD.Controls.ActionTreeControl.ActionTreeNode"
+    x:Name="ActionTreeNodeControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:local="clr-namespace:DriveHUD.Controls.ActionTreeControl"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300">
 
     <UserControl.Resources>
-        <SolidColorBrush x:Key="UnselectedColor" Color="{StaticResource ForegroundColor}"/>
-        <SolidColorBrush x:Key="SelectedColor" Color="{StaticResource BackgroundBlueColor}"/>
+        <SolidColorBrush
+            x:Key="UnselectedColor"
+            Color="{StaticResource ForegroundColor}" />
+        <SolidColorBrush
+            x:Key="SelectedColor"
+            Color="{StaticResource BackgroundBlueColor}" />
     </UserControl.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="Auto" />
+            <ColumnDefinition
+                Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
+        <Grid
+            Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="1" BorderThickness="0 1 0 0" Visibility="{Binding Path=IsLeftLineVisible, ElementName=ActionTreeNodeControl}">
+            <Border
+                Grid.Row="1"
+                BorderThickness="0 1 0 0"
+                Visibility="{Binding Path=IsLeftLineVisible, ElementName=ActionTreeNodeControl}">
                 <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="BorderBrush" Value="{StaticResource UnselectedColor}" />
+                    <Style
+                        TargetType="Border">
+                        <Setter
+                            Property="BorderBrush"
+                            Value="{StaticResource UnselectedColor}" />
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsLeftLineHighlighted, ElementName=ActionTreeNodeControl}" Value="True">
-                                <Setter Property="BorderBrush" Value="{StaticResource SelectedColor}" />
+                            <DataTrigger
+                                Binding="{Binding Path=IsLeftLineHighlighted, ElementName=ActionTreeNodeControl}"
+                                Value="True">
+                                <Setter
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SelectedColor}" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
@@ -40,51 +63,97 @@
             </Border>
         </Grid>
 
-        <Border Grid.Column="1" Height="30" Width="30" BorderBrush="{Binding Path=ContentBorderBrush, ElementName=ActionTreeNodeControl}" BorderThickness="{Binding Path=ContentBorderThickness, ElementName=ActionTreeNodeControl}" Background="{Binding Path=ContentBackgroundBrush, ElementName=ActionTreeNodeControl}" CornerRadius="2">
-            <ContentPresenter x:Name="contentPresenter" Visibility="{Binding Path=IsEmptyNode, ElementName=ActionTreeNodeControl, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=Inverse}" 
-                              Focusable="False" HorizontalAlignment="Center"  RecognizesAccessKey="True" VerticalAlignment="Center" 
-                              TextBlock.FontWeight="Bold" TextBlock.Foreground="White"/>
+        <Border
+            Grid.Column="1"
+            Height="30"
+            Width="30"
+            BorderBrush="{Binding Path=ContentBorderBrush, ElementName=ActionTreeNodeControl}"
+            BorderThickness="{Binding Path=ContentBorderThickness, ElementName=ActionTreeNodeControl}"
+            Background="{Binding Path=ContentBackgroundBrush, ElementName=ActionTreeNodeControl}"
+            CornerRadius="2">
+            <ContentPresenter
+                x:Name="contentPresenter"
+                Visibility="{Binding Path=IsEmptyNode, ElementName=ActionTreeNodeControl, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=Inverse}"
+                Focusable="False"
+                HorizontalAlignment="Center"
+                RecognizesAccessKey="True"
+                VerticalAlignment="Center"
+                TextBlock.FontWeight="Bold"
+                TextBlock.Foreground="White" />
         </Border>
 
-        <Grid Grid.Column="2">
+        <Grid
+            Grid.Column="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" BorderThickness="0 0 1 0" Visibility="{Binding Path=IsTopRightLineVisible, ElementName=ActionTreeNodeControl}">
+            <Border
+                Grid.Row="0"
+                BorderThickness="0 0 1 0"
+                Visibility="{Binding Path=IsTopRightLineVisible, ElementName=ActionTreeNodeControl}">
                 <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="BorderBrush" Value="{StaticResource UnselectedColor}" />
+                    <Style
+                        TargetType="Border">
+                        <Setter
+                            Property="BorderBrush"
+                            Value="{StaticResource UnselectedColor}" />
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsTopRightLineHighlighted, ElementName=ActionTreeNodeControl}" Value="True">
-                                <Setter Property="BorderBrush" Value="{StaticResource SelectedColor}" />
+                            <DataTrigger
+                                Binding="{Binding Path=IsTopRightLineHighlighted, ElementName=ActionTreeNodeControl}"
+                                Value="True">
+                                <Setter
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SelectedColor}" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
             </Border>
 
-            <Border Grid.Row="1" BorderThickness="0 1 0 0" Visibility="{Binding Path=IsRightLineVisible, ElementName=ActionTreeNodeControl}">
+            <Border
+                Grid.Row="1"
+                BorderThickness="0 1 0 0"
+                Visibility="{Binding Path=IsRightLineVisible, ElementName=ActionTreeNodeControl}">
                 <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="BorderBrush" Value="{StaticResource UnselectedColor}" />
+                    <Style
+                        TargetType="Border">
+                        <Setter
+                            Property="BorderBrush"
+                            Value="{StaticResource UnselectedColor}" />
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsRightLineHighlighted, ElementName=ActionTreeNodeControl}" Value="True">
-                                <Setter Property="BorderBrush" Value="{StaticResource SelectedColor}" />
+                            <DataTrigger
+                                Binding="{Binding Path=IsRightLineHighlighted, ElementName=ActionTreeNodeControl}"
+                                Value="True">
+                                <Setter
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SelectedColor}" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
             </Border>
 
-            <Border Grid.Row="1" BorderThickness="0 0 1 0" Visibility="{Binding Path=IsBottomRightLineVisible, ElementName=ActionTreeNodeControl}">
+            <Border
+                Grid.Row="1"
+                BorderThickness="0 0 1 0"
+                Visibility="{Binding Path=IsBottomRightLineVisible, ElementName=ActionTreeNodeControl}">
                 <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="BorderBrush" Value="{StaticResource UnselectedColor}" />
+                    <Style
+                        TargetType="Border">
+                        <Setter
+                            Property="BorderBrush"
+                            Value="{StaticResource UnselectedColor}" />
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsBottomRightLineHighlighted, ElementName=ActionTreeNodeControl}" Value="True">
-                                <Setter Property="BorderBrush" Value="{StaticResource SelectedColor}" />
+                            <DataTrigger
+                                Binding="{Binding Path=IsBottomRightLineHighlighted, ElementName=ActionTreeNodeControl}"
+                                Value="True">
+                                <Setter
+                                    Property="BorderBrush"
+                                    Value="{StaticResource SelectedColor}" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
