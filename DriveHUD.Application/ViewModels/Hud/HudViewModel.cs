@@ -709,13 +709,26 @@ namespace DriveHUD.Application.ViewModels
                 Stats = StatInfoObserveCollection,
                 LayoutInfo = CurrentLayout
             };
+
             ClosePopup();
+
             var savedLayout = _hudLayoutsSevice.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
                 Layouts.Add(savedLayout);
                 CurrentLayout = savedLayout;
+            }
+
+            var settings = SettingsService.GetSettings();
+
+            if (settings.GeneralSettings.IsHudSavedAtFirstTime)
+            {
+                var hudSaveFirstTimeNotificationViewModel = new HudSaveFirstTimeNotificationViewModel(ClosePopup);
+                OpenPopup(hudSaveFirstTimeNotificationViewModel);
+
+                settings.GeneralSettings.IsHudSavedAtFirstTime = false;
+                SettingsService.SaveSettings(settings);
             }
         }
 

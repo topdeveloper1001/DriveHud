@@ -506,6 +506,7 @@
     <Resource Include="images\cards_new\spade.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\hud\drivehud-hudmenu.png" />
     <Content Include="Layouts\DH-6max-Basic.xml">
       <SubType>Designer</SubType>
     </Content>

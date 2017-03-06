@@ -179,6 +179,10 @@
             DataType="{x:Type vm:HudDesignerViewModel}">
             <vd:HudDesignerView />
         </DataTemplate>
+        <DataTemplate
+            DataType="{x:Type vm:HudSaveFirstTimeNotificationViewModel}">
+            <hud:HudSaveFirstTimeNotificationView />
+        </DataTemplate>
 
         <DrawingBrush
             x:Key="ColorButtonBackground"
@@ -395,6 +399,7 @@
     <Grid
         x:Name="GridMain"
         Background="{x:Null}"
+        IsEnabled="{Binding IsPopupOpened, Converter={dh:BoolNotConverter}}"
         VerticalAlignment="Stretch"
         HorizontalAlignment="Stretch">
 
@@ -439,9 +444,9 @@
                     <ColumnDefinition
                         Width="*" />
                     <ColumnDefinition
-                        Width="270" />
+                        Width="295" />
                     <ColumnDefinition
-                        Width="270" />
+                        Width="295" />
                     <ColumnDefinition
                         Width="*" />
                 </Grid.ColumnDefinitions>
@@ -459,9 +464,9 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="0,0,40,0"
-                    MaxWidth="260"
+                    MaxWidth="285"
                     Height="35"
-                    PopupMaxWidth="230"
+                    PopupMaxWidth="255"
                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Stretch"
@@ -487,9 +492,9 @@
                     Grid.Row="1"
                     Grid.Column="2"
                     Margin="0,0,40,0"
-                    MaxWidth="260"
+                    MaxWidth="285"
                     Height="35"
-                    PopupMaxWidth="230"
+                    PopupMaxWidth="255"
                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Stretch"

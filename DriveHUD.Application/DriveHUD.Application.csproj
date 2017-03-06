@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.0.9.1160, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.0.9.1172, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.0.9.1160, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.0.9.1172, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.0.9.1160, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.0.9.1172, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -330,6 +330,7 @@
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\Migrations\Migration0015_FixBreakLineInLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0016_RenameIgnitionLayouts.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -392,6 +393,7 @@
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -443,6 +445,9 @@
     </Compile>
     <Compile Include="Views\Hud\Designer\HudDesignerView.xaml.cs">
       <DependentUpon>HudDesignerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
+      <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
@@ -618,7 +623,6 @@
     </Compile>
     <Compile Include="ValueConverters\BoolToggleConverter.cs" />
     <Compile Include="ValueConverters\BoolToTextConverter.cs" />
-    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\ColorToBrushConverter.cs" />
     <Compile Include="ValueConverters\ColorToChipsConverter.cs" />
     <Compile Include="ValueConverters\DecimalToPlayerPotConverter.cs" />
@@ -770,6 +774,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Hud\Designer\HudDesignerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
