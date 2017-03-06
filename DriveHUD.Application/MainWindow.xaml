@@ -1373,12 +1373,7 @@
                     CommandParameter="{x:Static enums:EnumViewModelType.AppsViewModel}" />
 
             </StackPanel>
-
-            <!-- temp -->
-            <!--<CheckBox
-                Grid.Column="2"
-                IsChecked="{Binding IsLowResolutionMode}" />-->
-
+      
             <!-- Version panel -->
             <StackPanel
                 Grid.Row="1"
@@ -1637,7 +1632,7 @@
                     Grid.Row="1"
                     VerticalAlignment="Top"
                     MaxHeight="600"
-                    Visibility="{Binding Path=ReportGadgetView_IsVisible, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=ContentPresenter, Mode=TwoWay}">
+                    Visibility="{Binding Path=ReportGadgetView_IsVisible, Converter={dh:BoolToVisibilityConverter}, Mode=TwoWay}">
                     <ContentPresenter
                         Content="{Binding Path=ReportGadgetViewModel}" />
                 </Grid>
