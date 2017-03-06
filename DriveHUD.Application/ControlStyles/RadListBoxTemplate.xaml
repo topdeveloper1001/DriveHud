@@ -9,8 +9,7 @@
 
     <c:StatTypeToVisibilityConverter x:Key="StatTypeToVisibilityConverter"/>
     <c:ZeroNonZeroToVisibilityConverter x:Key="ZeroNonZeroToVisibilityConverter"/>
-    <c:TextToVisibilityConverter x:Key="TextToVisibilityConverter"/>
-    <c:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    <c:TextToVisibilityConverter x:Key="TextToVisibilityConverter"/>    
     <c:BoolToTextConverter_OnOff x:Key="BoolToTextConverter_OnOff"/>
     <c:BoolToggleConverter x:Key="BoolToggleConverter"/>
     <c:ColorToBrushConverter x:Key="ColorToBrushConverter"/>

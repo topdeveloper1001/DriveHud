@@ -1,33 +1,47 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.FilterBoardTextureView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
-             xmlns:v="clr-namespace:DriveHUD.Application.Views"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:ab="clr-namespace:DriveHUD.Common.Wpf.AttachedBehaviors;assembly=DriveHUD.Common.Wpf"
-             mc:Ignorable="d"              
-             xmlns:prism="http://www.codeplex.com/prism"
-             xmlns:pv="clr-namespace:DriveHUD.Application.Views.PopupContainers"
-             xmlns:popup="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
-             xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
-             d:DesignHeight="300" d:DesignWidth="1200">
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.FilterBoardTextureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:ab="clr-namespace:DriveHUD.Common.Wpf.AttachedBehaviors;assembly=DriveHUD.Common.Wpf"
+    mc:Ignorable="d"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:pv="clr-namespace:DriveHUD.Application.Views.PopupContainers"
+    xmlns:popup="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+    xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
+    d:DesignHeight="300"
+    d:DesignWidth="1200">
 
     <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger SourceObject="{Binding CardSelectorRequest, Mode=OneWay}">
-            <popup:PopupTelerikWindowAction IsModal="True">
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding CardSelectorRequest, Mode=OneWay}">
+            <popup:PopupTelerikWindowAction
+                IsModal="True">
                 <popup:PopupTelerikWindowAction.WindowStyle>
-                    <Style TargetType="{x:Type telerik:RadWindow}">
-                        <Setter Property="SizeToContent" Value="True" />
-                        <Setter Property="Foreground" Value="#7D7F84" />
-                        <Setter Property="Background" Value="#1F2124" />
-                        <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="SizeToContent"
+                            Value="True" />
+                        <Setter
+                            Property="Foreground"
+                            Value="#7D7F84" />
+                        <Setter
+                            Property="Background"
+                            Value="#1F2124" />
+                        <Setter
+                            Property="WindowStartupLocation"
+                            Value="CenterScreen" />
                     </Style>
                 </popup:PopupTelerikWindowAction.WindowStyle>
                 <popup:PopupTelerikWindowAction.WindowContent>
-                    <pv:PopupContainerCardSelectorView/>
+                    <pv:PopupContainerCardSelectorView />
                 </popup:PopupTelerikWindowAction.WindowContent>
             </popup:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
@@ -36,53 +50,107 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/Filters/FilterListBoxTemplate.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/CardImageBinder.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/Filters/FilterListBoxTemplate.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/CardImageBinder.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
-            <Style x:Key="BoardTextBlockStyle" TargetType="Run">
+            <Style
+                x:Key="BoardTextBlockStyle"
+                TargetType="Run">
                 <Style.Triggers>
-                    <DataTrigger Binding="{Binding ElementName=rbFlop, Path=IsChecked}" Value="True">
-                        <Setter Property="Text" Value="Specific Flop" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbFlop, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="Text"
+                            Value="Specific Flop" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbTurn, Path=IsChecked}" Value="True">
-                        <Setter Property="Text" Value="Specific Flop+Turn" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbTurn, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="Text"
+                            Value="Specific Flop+Turn" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbRiver, Path=IsChecked}" Value="True">
-                        <Setter Property="Text" Value="Specific Full Board" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbRiver, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="Text"
+                            Value="Specific Full Board" />
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
 
-            <Style x:Key="BoardItemsControlStyle" TargetType="ItemsControl">
+            <Style
+                x:Key="BoardItemsControlStyle"
+                TargetType="ItemsControl">
                 <Style.Triggers>
-                    <DataTrigger Binding="{Binding ElementName=rbFlop, Path=IsChecked}" Value="True">
-                        <Setter Property="ItemsControl.ItemsSource" Value="{Binding FilterModel.FlopCardItemsCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbFlop, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ItemsControl.ItemsSource"
+                            Value="{Binding FilterModel.FlopCardItemsCollection}" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbTurn, Path=IsChecked}" Value="True">
-                        <Setter Property="ItemsControl.ItemsSource" Value="{Binding FilterModel.TurnCardItemsCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbTurn, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ItemsControl.ItemsSource"
+                            Value="{Binding FilterModel.TurnCardItemsCollection}" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbRiver, Path=IsChecked}" Value="True">
-                        <Setter Property="ItemsControl.ItemsSource" Value="{Binding FilterModel.RiverCardItemsCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbRiver, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ItemsControl.ItemsSource"
+                            Value="{Binding FilterModel.RiverCardItemsCollection}" />
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
 
-            <Style x:Key="FiltersListBoxStyle" TargetType="ListBox">
-                <Setter Property="MaxHeight" Value="650" />
-                <Setter Property="SelectionMode" Value="Multiple" />
-                <Setter Property="ItemContainerStyle" Value="{StaticResource FilterBoardTextureListBoxItemStyle}" />
-                <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
-                <Setter Property="BorderThickness" Value="0" />
+            <Style
+                x:Key="FiltersListBoxStyle"
+                TargetType="ListBox">
+                <Setter
+                    Property="MaxHeight"
+                    Value="650" />
+                <Setter
+                    Property="SelectionMode"
+                    Value="Multiple" />
+                <Setter
+                    Property="ItemContainerStyle"
+                    Value="{StaticResource FilterBoardTextureListBoxItemStyle}" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
                 <Style.Triggers>
-                    <DataTrigger Binding="{Binding ElementName=rbFlop, Path=IsChecked}" Value="True">
-                        <Setter Property="ListBox.ItemsSource" Value="{Binding FilterModel.FlopBoardTextureCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbFlop, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ListBox.ItemsSource"
+                            Value="{Binding FilterModel.FlopBoardTextureCollection}" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbTurn, Path=IsChecked}" Value="True">
-                        <Setter Property="ListBox.ItemsSource" Value="{Binding FilterModel.TurnBoardTextureCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbTurn, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ListBox.ItemsSource"
+                            Value="{Binding FilterModel.TurnBoardTextureCollection}" />
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=rbRiver, Path=IsChecked}" Value="True">
-                        <Setter Property="ListBox.ItemsSource" Value="{Binding FilterModel.RiverBoardTextureCollection}" />
+                    <DataTrigger
+                        Binding="{Binding ElementName=rbRiver, Path=IsChecked}"
+                        Value="True">
+                        <Setter
+                            Property="ListBox.ItemsSource"
+                            Value="{Binding FilterModel.RiverBoardTextureCollection}" />
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
@@ -91,43 +159,82 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition
+                Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto"  />
-            <RowDefinition Height="*" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Section Radio Buttons -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <RadioButton x:Name="rbFlop" Content="{ResX Key=Common_Flop}" Margin="0 10 10 10" Height="35" Width="200" Style="{StaticResource RadioButtonStyle}" IsChecked="True" />
-            <RadioButton x:Name="rbTurn" Content="{ResX Key=Common_Turn}" Margin="10 10 10 10" Height="35" Width="200" Style="{StaticResource RadioButtonStyle}" />
-            <RadioButton x:Name="rbRiver" Content="{ResX Key=Common_River}" Margin="10 10 0 10" Height="35" Width="200" Style="{StaticResource RadioButtonStyle}" />
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+            <RadioButton
+                x:Name="rbFlop"
+                Content="{ResX Key=Common_Flop}"
+                Margin="0 10 10 10"
+                Height="35"
+                Width="200"
+                Style="{StaticResource RadioButtonStyle}"
+                IsChecked="True" />
+            <RadioButton
+                x:Name="rbTurn"
+                Content="{ResX Key=Common_Turn}"
+                Margin="10 10 10 10"
+                Height="35"
+                Width="200"
+                Style="{StaticResource RadioButtonStyle}" />
+            <RadioButton
+                x:Name="rbRiver"
+                Content="{ResX Key=Common_River}"
+                Margin="10 10 0 10"
+                Height="35"
+                Width="200"
+                Style="{StaticResource RadioButtonStyle}" />
         </StackPanel>
 
         <!-- Section Card Selector -->
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Center">
-                <Run Style="{StaticResource BoardTextBlockStyle}" />
-                <Run Text=":" />
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Stretch">
+            <TextBlock
+                HorizontalAlignment="Center">
+                <Run
+                    Style="{StaticResource BoardTextBlockStyle}" />
+                <Run
+                    Text=":" />
             </TextBlock>
 
-            <ItemsControl Style="{StaticResource BoardItemsControlStyle}" HorizontalAlignment="Center">
+            <ItemsControl
+                Style="{StaticResource BoardItemsControlStyle}"
+                HorizontalAlignment="Center">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <StackPanel x:Name="Cards" Orientation="Horizontal"/>
+                        <StackPanel
+                            x:Name="Cards"
+                            Orientation="Horizontal" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="5 2" IsEnabled="{Binding IsEnabled}">
+                        <Grid
+                            Margin="5 2"
+                            IsEnabled="{Binding IsEnabled}">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
                             </Grid.RowDefinitions>
-                            <control:CardImageControl 
+                            <control:CardImageControl
                                 Grid.Row="0"
                                 Width="60"
                                 Height="Auto"
@@ -135,16 +242,41 @@
                                 SuitValue="{Binding Suit}"
                                 Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                 CommandParameter="{Binding}"
-                                Style="{StaticResource CardImageBinder}"/>
-                            <StackPanel Grid.Row="1" Margin="0 3" Orientation="Horizontal" HorizontalAlignment="Stretch" Visibility="{Binding IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <control:CardImageControl Grid.Row="0" Width="15" Height="Auto" Source="{StaticResource CardSpade}"
-                                                          Command="{Binding DataContext.SelectSpadesCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
-                                <control:CardImageControl Grid.Row="0" Width="15" Height="Auto" Source="{StaticResource CardHeart}"
-                                                          Command="{Binding DataContext.SelectHeartsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
-                                <control:CardImageControl Grid.Row="0" Width="15" Height="Auto" Source="{StaticResource CardDiamond}"
-                                                          Command="{Binding DataContext.SelectDiamondsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
-                                <control:CardImageControl Grid.Row="0" Width="15" Height="Auto" Source="{StaticResource CardClub}"
-                                                          Command="{Binding DataContext.SelectClubsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
+                                Style="{StaticResource CardImageBinder}" />
+                            <StackPanel
+                                Grid.Row="1"
+                                Margin="0 3"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Stretch"
+                                Visibility="{Binding IsEnabled, Converter={dh:BoolToVisibilityConverter}}">
+                                <control:CardImageControl
+                                    Grid.Row="0"
+                                    Width="15"
+                                    Height="Auto"
+                                    Source="{StaticResource CardSpade}"
+                                    Command="{Binding DataContext.SelectSpadesCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                    CommandParameter="{Binding}" />
+                                <control:CardImageControl
+                                    Grid.Row="0"
+                                    Width="15"
+                                    Height="Auto"
+                                    Source="{StaticResource CardHeart}"
+                                    Command="{Binding DataContext.SelectHeartsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                    CommandParameter="{Binding}" />
+                                <control:CardImageControl
+                                    Grid.Row="0"
+                                    Width="15"
+                                    Height="Auto"
+                                    Source="{StaticResource CardDiamond}"
+                                    Command="{Binding DataContext.SelectDiamondsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                    CommandParameter="{Binding}" />
+                                <control:CardImageControl
+                                    Grid.Row="0"
+                                    Width="15"
+                                    Height="Auto"
+                                    Source="{StaticResource CardClub}"
+                                    Command="{Binding DataContext.SelectClubsCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                    CommandParameter="{Binding}" />
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
@@ -154,7 +286,9 @@
         </StackPanel>
 
         <!-- Section Filters -->
-        <ListBox  Grid.Row="2" Style="{StaticResource FiltersListBoxStyle}">
+        <ListBox
+            Grid.Row="2"
+            Style="{StaticResource FiltersListBoxStyle}">
             <i:Interaction.Behaviors>
                 <ab:IgnoreMouseWheelBehavior />
             </i:Interaction.Behaviors>

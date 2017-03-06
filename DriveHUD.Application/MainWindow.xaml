@@ -42,9 +42,6 @@
 
     <telerik:RadWindow.Resources>
 
-        <converter:BoolToVisibilityConverter
-            x:Key="BoolToVisibilityConverter" />
-
         <DataTemplate
             DataType="{x:Type vm:DashboardViewModel}">
             <v:DashboardView />
@@ -1322,7 +1319,7 @@
                                     Width="40"
                                     Background="#2a2d31"
                                     HorizontalAlignment="Center"
-                                    Visibility="{Binding Path=DataContext.IsHudRunning, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"
+                                    Visibility="{Binding Path=DataContext.IsHudRunning, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Visible}"
                                     Command="{Binding DataContext.StartHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
                                     <Button.Content>
                                         <Path
@@ -1341,7 +1338,7 @@
                                     Width="40"
                                     Background="#2a2d31"
                                     HorizontalAlignment="Center"
-                                    Visibility="{Binding Path=DataContext.IsHudRunning, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                                    Visibility="{Binding Path=DataContext.IsHudRunning, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                                     Command="{Binding DataContext.StopHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
                                     <Button.Content>
                                         <Path
@@ -1600,7 +1597,7 @@
                         </ContentPresenter.Style>
                     </ContentPresenter>
                     <StackPanel
-                        Visibility="{Binding IsShowEquityCalculator, Converter={StaticResource BoolToVisibilityConverter}}"
+                        Visibility="{Binding IsShowEquityCalculator, Converter={dh:BoolToVisibilityConverter}}"
                         Background="#181A1D">
                         <Button
                             Command="{Binding HideEquityCalculatorCommand}">

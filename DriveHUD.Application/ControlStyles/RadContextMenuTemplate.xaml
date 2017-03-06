@@ -1,60 +1,117 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-                    xmlns:local="clr-namespace:DriveHUD.Application.ControlStyles">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:DriveHUD.Application.ControlStyles">
 
-    <ControlTemplate x:Key="RadMenuItemTemplate" TargetType="telerik:RadMenuItem">
-        <Grid x:Name="RootElement">
+    <ControlTemplate
+        x:Key="RadMenuItemTemplate"
+        TargetType="telerik:RadMenuItem">
+        <Grid
+            x:Name="RootElement">
             <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="SubMenuOpen">
+                <VisualStateGroup
+                    x:Name="CommonStates">
+                    <VisualState
+                        x:Name="SubMenuOpen">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="HighlightVisual" Storyboard.TargetProperty="Fill">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{telerik:VisualStudio2013Resource ResourceKey=AccentDarkBrush}"/>
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0"
+                                Storyboard.TargetName="HighlightVisual"
+                                Storyboard.TargetProperty="Fill">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0"
+                                    Value="{telerik:VisualStudio2013Resource ResourceKey=AccentDarkBrush}" />
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="HighlightVisual" Storyboard.TargetProperty="Stroke">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{telerik:VisualStudio2013Resource ResourceKey=AccentDarkBrush}"/>
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0"
+                                Storyboard.TargetName="HighlightVisual"
+                                Storyboard.TargetProperty="Stroke">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0"
+                                    Value="{telerik:VisualStudio2013Resource ResourceKey=AccentDarkBrush}" />
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(TextBlock.Foreground)">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{telerik:VisualStudio2013Resource ResourceKey=SelectedBrush}"/>
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Content"
+                                Storyboard.TargetProperty="(TextBlock.Foreground)">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0"
+                                    Value="{telerik:VisualStudio2013Resource ResourceKey=SelectedBrush}" />
                             </ObjectAnimationUsingKeyFrames>
-                            <DoubleAnimation To="1" Duration="0:0:0" Storyboard.TargetName="HighlightVisual" Storyboard.TargetProperty="Opacity"/>
+                            <DoubleAnimation
+                                To="1"
+                                Duration="0:0:0"
+                                Storyboard.TargetName="HighlightVisual"
+                                Storyboard.TargetProperty="Opacity" />
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="Highlighted">
+                    <VisualState
+                        x:Name="Highlighted">
                         <Storyboard>
-                            <DoubleAnimation To="1" Duration="0:0:0" Storyboard.TargetName="HighlightVisual" Storyboard.TargetProperty="Opacity"/>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandIconRight" Storyboard.TargetProperty="Fill">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}"/>
+                            <DoubleAnimation
+                                To="1"
+                                Duration="0:0:0"
+                                Storyboard.TargetName="HighlightVisual"
+                                Storyboard.TargetProperty="Opacity" />
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="ExpandIconRight"
+                                Storyboard.TargetProperty="Fill">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0"
+                                    Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}" />
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Tick" Storyboard.TargetProperty="Fill">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}"/>
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Tick"
+                                Storyboard.TargetProperty="Fill">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0"
+                                    Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}" />
                             </ObjectAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="Disabled">
+                    <VisualState
+                        x:Name="Disabled">
                         <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentGrid" To="0.2" Duration="0:0:0"/>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                Storyboard.TargetName="ContentGrid"
+                                To="0.2"
+                                Duration="0:0:0" />
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="Normal"/>
+                    <VisualState
+                        x:Name="Normal" />
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="FocusStates">
-                    <VisualState x:Name="Unfocused"/>
-                    <VisualState x:Name="Focused"/>
+                <VisualStateGroup
+                    x:Name="FocusStates">
+                    <VisualState
+                        x:Name="Unfocused" />
+                    <VisualState
+                        x:Name="Focused" />
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="CheckedStates">
-                    <VisualState x:Name="Checked">
+                <VisualStateGroup
+                    x:Name="CheckedStates">
+                    <VisualState
+                        x:Name="Checked">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Tick" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Tick"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Visible</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Icon"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Collapsed</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
@@ -62,11 +119,17 @@
                             </ObjectAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="Unchecked"/>
-                    <VisualState x:Name="HideIcon">
+                    <VisualState
+                        x:Name="Unchecked" />
+                    <VisualState
+                        x:Name="HideIcon">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Icon"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Collapsed</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
@@ -75,26 +138,44 @@
                         </Storyboard>
                     </VisualState>
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="RoleStates">
-                    <VisualState x:Name="TopLevelItem">
+                <VisualStateGroup
+                    x:Name="RoleStates">
+                    <VisualState
+                        x:Name="TopLevelItem">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="ContentGrid" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="ContentGrid"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>1</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="PART_Popup" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="PART_Popup"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>0 0 3 3</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <DoubleAnimation To="1" Duration="0:0:0" Storyboard.TargetName="PART_Popup" Storyboard.TargetProperty="HorizontalOffset"/>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="IconHost" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <DoubleAnimation
+                                To="1"
+                                Duration="0:0:0"
+                                Storyboard.TargetName="PART_Popup"
+                                Storyboard.TargetProperty="HorizontalOffset" />
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="IconHost"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>-2 0 -7 0</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
@@ -102,25 +183,42 @@
                             </ObjectAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="TopLevelHeader">
+                    <VisualState
+                        x:Name="TopLevelHeader">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="ContentGrid" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="ContentGrid"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>1</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="PART_Popup" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="PART_Popup"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>0 0 3 3</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <DoubleAnimation To="1" Duration="0:0:0" Storyboard.TargetName="PART_Popup" Storyboard.TargetProperty="HorizontalOffset"/>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="IconHost" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <DoubleAnimation
+                                To="1"
+                                Duration="0:0:0"
+                                Storyboard.TargetName="PART_Popup"
+                                Storyboard.TargetProperty="HorizontalOffset" />
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="IconHost"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>-2 0 -7 0</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
@@ -128,11 +226,17 @@
                             </ObjectAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="SubmenuItem"/>
-                    <VisualState x:Name="SubmenuHeader">
+                    <VisualState
+                        x:Name="SubmenuItem" />
+                    <VisualState
+                        x:Name="SubmenuHeader">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandIcon" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="ExpandIcon"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Visible</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
@@ -140,29 +244,47 @@
                             </ObjectAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    <VisualState x:Name="Separator"/>
+                    <VisualState
+                        x:Name="Separator" />
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="OrientationStates">
-                    <VisualState x:Name="Horizontal"/>
-                    <VisualState x:Name="Vertical"/>
+                <VisualStateGroup
+                    x:Name="OrientationStates">
+                    <VisualState
+                        x:Name="Horizontal" />
+                    <VisualState
+                        x:Name="Vertical" />
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="ChildrenStates">
-                    <VisualState x:Name="HasChildren"/>
-                    <VisualState x:Name="NoChildren"/>
+                <VisualStateGroup
+                    x:Name="ChildrenStates">
+                    <VisualState
+                        x:Name="HasChildren" />
+                    <VisualState
+                        x:Name="NoChildren" />
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="HeaderStates">
-                    <VisualState x:Name="VisibleHeader"/>
-                    <VisualState x:Name="EmptyHeader">
+                <VisualStateGroup
+                    x:Name="HeaderStates">
+                    <VisualState
+                        x:Name="VisibleHeader" />
+                    <VisualState
+                        x:Name="EmptyHeader">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="Icon" Storyboard.TargetProperty="Margin">
-                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                            <ObjectAnimationUsingKeyFrames
+                                Duration="0:0:0"
+                                Storyboard.TargetName="Icon"
+                                Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Thickness>5 3 4 3</Thickness>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="Content"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Collapsed</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
@@ -171,12 +293,19 @@
                         </Storyboard>
                     </VisualState>
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="InputGestureTextStates">
-                    <VisualState x:Name="EmptyInputGestureText"/>
-                    <VisualState x:Name="VisibleInputGestureText">
+                <VisualStateGroup
+                    x:Name="InputGestureTextStates">
+                    <VisualState
+                        x:Name="EmptyInputGestureText" />
+                    <VisualState
+                        x:Name="VisibleInputGestureText">
                         <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_InputGestureText" Storyboard.TargetProperty="Visibility" Duration="0">
-                                <DiscreteObjectKeyFrame KeyTime="0">
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetName="PART_InputGestureText"
+                                Storyboard.TargetProperty="Visibility"
+                                Duration="0">
+                                <DiscreteObjectKeyFrame
+                                    KeyTime="0">
                                     <DiscreteObjectKeyFrame.Value>
                                         <Visibility>Visible</Visibility>
                                     </DiscreteObjectKeyFrame.Value>
@@ -186,66 +315,134 @@
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
-            <Grid x:Name="ContentGrid" Margin="1 0 1 1">
+            <Border
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" />
+            <Grid
+                x:Name="ContentGrid"
+                Margin="1 0 1 1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Rectangle x:Name="HighlightVisual"
-                        Grid.ColumnSpan="4"
-                        Opacity="0"
-                        Fill="#FF314c96"
-                        StrokeThickness="1"
-                        Stroke="#FF314c96"/>
-                <Grid x:Name="IconHost" Width="{TemplateBinding IconColumnWidth}" 
-                          Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, 
+                <Rectangle
+                    x:Name="HighlightVisual"
+                    Grid.ColumnSpan="4"
+                    Opacity="0"
+                    Fill="#FF314c96"
+                    StrokeThickness="1"
+                    Stroke="#FF314c96" />
+                <Grid
+                    x:Name="IconHost"
+                    Width="{TemplateBinding IconColumnWidth}"
+                    Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, 
                           Path=IsCheckable, 
-                          Converter={StaticResource BoolToVisibilityConverter}}"
-                          Margin="-2 0 -1 0">
-                    <Path x:Name="Tick"
-                            Margin="3 3 3 3"
-                            Visibility="Collapsed"
-                            FlowDirection="LeftToRight"
-                            Fill="{TemplateBinding Foreground}"
-                            Width="16"
-                            Height="16"
-                            Data="M 4,7.1 L 5.7,7.2 L 7.4,9.1 L 12,2.4 L 13.2,2 L 7.3,13.8 Z"/>
-                    <ContentPresenter x:Name="Icon" Margin="3 3 3 3" Content="{TemplateBinding Icon}" ContentTemplate="{TemplateBinding IconTemplate}"/>
+                          Converter={dh:BoolToVisibilityConverter}}"
+                    Margin="-2 0 -1 0">
+                    <Path
+                        x:Name="Tick"
+                        Margin="3 3 3 3"
+                        Visibility="Collapsed"
+                        FlowDirection="LeftToRight"
+                        Fill="{TemplateBinding Foreground}"
+                        Width="16"
+                        Height="16"
+                        Data="M 4,7.1 L 5.7,7.2 L 7.4,9.1 L 12,2.4 L 13.2,2 L 7.3,13.8 Z" />
+                    <ContentPresenter
+                        x:Name="Icon"
+                        Margin="3 3 3 3"
+                        Content="{TemplateBinding Icon}"
+                        ContentTemplate="{TemplateBinding IconTemplate}" />
                 </Grid>
-                <ContentPresenter x:Name="Content"
-                        Grid.Column="1"
-                        Margin="{TemplateBinding Padding}"
-                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                        RecognizesAccessKey="True"
-                        ContentSource="Header"/>
-                <telerik:SharedSizeContentPresenter x:Name="PART_InputGestureText" Grid.Column="2" Visibility="Collapsed" SharedSizeGroupWidth="IGTColumn" Margin="40 3 3 3" Content="{TemplateBinding InputGestureText}"/>
-                <telerik:SharedSizeContentPresenter HorizontalAlignment="Right" SharedSizeGroupWidth="ExpandIconColumn" Grid.Column="3">
-                    <Grid x:Name="ExpandIcon" Margin="0 0 2 0" Height="19" Width="16" Visibility="Collapsed">
-                        <Path x:Name="ExpandIconRight" Fill="{StaticResource ForegroundBrush}" Data="M0,0 L4,3 0,6z" Width="4" Height="6" Stretch="Uniform"/>
+                <ContentPresenter
+                    x:Name="Content"
+                    Grid.Column="1"
+                    Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    RecognizesAccessKey="True"
+                    ContentSource="Header" />
+                <telerik:SharedSizeContentPresenter
+                    x:Name="PART_InputGestureText"
+                    Grid.Column="2"
+                    Visibility="Collapsed"
+                    SharedSizeGroupWidth="IGTColumn"
+                    Margin="40 3 3 3"
+                    Content="{TemplateBinding InputGestureText}" />
+                <telerik:SharedSizeContentPresenter
+                    HorizontalAlignment="Right"
+                    SharedSizeGroupWidth="ExpandIconColumn"
+                    Grid.Column="3">
+                    <Grid
+                        x:Name="ExpandIcon"
+                        Margin="0 0 2 0"
+                        Height="19"
+                        Width="16"
+                        Visibility="Collapsed">
+                        <Path
+                            x:Name="ExpandIconRight"
+                            Fill="{StaticResource ForegroundBrush}"
+                            Data="M0,0 L4,3 0,6z"
+                            Width="4"
+                            Height="6"
+                            Stretch="Uniform" />
                     </Grid>
                 </telerik:SharedSizeContentPresenter>
             </Grid>
-            <Popup x:Name="PART_Popup" HorizontalOffset="-1" VerticalOffset="-1" IsOpen="{TemplateBinding IsSubmenuOpen}" Focusable="false" AllowsTransparency="true">
-                <Grid Width="{TemplateBinding DropDownWidth}" Height="{TemplateBinding DropDownHeight}">
-                    <Grid x:Name="PopupContentElement">
-                        <Grid Opacity="0.3">
-                            <Rectangle Margin="1 1 -1 -1" Opacity="0.05" Stroke="Black" StrokeThickness="1" RadiusX="4" RadiusY="3"/>
-                            <Rectangle Margin="1 1 0 0" Opacity="0.1" Stroke="Black" StrokeThickness="1" RadiusX="3" RadiusY="2"/>
-                            <Rectangle Margin="2 2 1 1" Fill="Black" RadiusX="2" RadiusY="1" Opacity="0.3" StrokeThickness="1"/>
+            <Popup
+                x:Name="PART_Popup"
+                HorizontalOffset="-1"
+                VerticalOffset="-1"
+                IsOpen="{TemplateBinding IsSubmenuOpen}"
+                Focusable="false"
+                AllowsTransparency="true">
+                <Grid
+                    Width="{TemplateBinding DropDownWidth}"
+                    Height="{TemplateBinding DropDownHeight}">
+                    <Grid
+                        x:Name="PopupContentElement">
+                        <Grid
+                            Opacity="0.3">
+                            <Rectangle
+                                Margin="1 1 -1 -1"
+                                Opacity="0.05"
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                RadiusX="4"
+                                RadiusY="3" />
+                            <Rectangle
+                                Margin="1 1 0 0"
+                                Opacity="0.1"
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                RadiusX="3"
+                                RadiusY="2" />
+                            <Rectangle
+                                Margin="2 2 1 1"
+                                Fill="Black"
+                                RadiusX="2"
+                                RadiusY="1"
+                                Opacity="0.3"
+                                StrokeThickness="1" />
                         </Grid>
                         <Border
-                                BorderThickness="1"
-                                BorderBrush="{telerik:VisualStudio2013Resource ResourceKey=BasicBrush}"
-                                Background="{telerik:VisualStudio2013Resource ResourceKey=AlternativeBrush}"
-                                Margin="0 0 2 2">
+                            BorderThickness="1"
+                            BorderBrush="{telerik:VisualStudio2013Resource ResourceKey=BasicBrush}"
+                            Background="{telerik:VisualStudio2013Resource ResourceKey=AlternativeBrush}"
+                            Margin="0 0 2 2">
                             <Grid>
-                                <ScrollViewer x:Name="PART_ScrollViewer" telerik:SharedSizeScope.IsSharedSizeScope="True">
+                                <ScrollViewer
+                                    x:Name="PART_ScrollViewer"
+                                    telerik:SharedSizeScope.IsSharedSizeScope="True">
                                     <Grid>
-                                        <ItemsPresenter/>
+                                        <ItemsPresenter />
                                     </Grid>
                                 </ScrollViewer>
                             </Grid>
@@ -256,11 +453,20 @@
         </Grid>
     </ControlTemplate>
 
-    <Style TargetType="telerik:RadMenuItem">
-        <Setter Property="Foreground" Value="White"></Setter>
-        <Setter Property="Background" Value="#181A1D"></Setter>
-        <Setter Property="IsCheckable" Value="False"></Setter>
-        <Setter Property="Template" Value="{StaticResource RadMenuItemTemplate}"/>
+    <Style
+        TargetType="telerik:RadMenuItem">
+        <Setter
+            Property="Foreground"
+            Value="White"></Setter>
+        <Setter
+            Property="Background"
+            Value="#181A1D"></Setter>
+        <Setter
+            Property="IsCheckable"
+            Value="False"></Setter>
+        <Setter
+            Property="Template"
+            Value="{StaticResource RadMenuItemTemplate}" />
     </Style>
-    
+
 </ResourceDictionary>
