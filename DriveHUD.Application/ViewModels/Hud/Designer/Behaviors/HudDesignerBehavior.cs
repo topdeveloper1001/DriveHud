@@ -23,6 +23,7 @@ using System.Windows.Interactivity;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
 using Microsoft.Practices.ServiceLocation;
+using System.Diagnostics;
 
 namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 {
@@ -65,12 +66,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         }
 
         private void OnUnloaded(object sender, RoutedEventArgs e)
-        {
-
+        {            
         }
 
         protected override void OnDetaching()
-        {
+        {         
             AssociatedObject.ViewportChanged -= OnViewportChanged;
             AssociatedObject.Unloaded -= OnUnloaded;
             AssociatedObject.Initialized -= OnInitialized;

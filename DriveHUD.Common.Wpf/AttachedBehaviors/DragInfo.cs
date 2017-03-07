@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudSaveFirstTimeNotificationViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="DragInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,29 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Mvvm;
-using ReactiveUI;
-using System;
+using System.Windows;
+using System.Windows.Input;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace DriveHUD.Common.Wpf.AttachedBehaviors
 {
-    public class HudSaveFirstTimeNotificationViewModel : ViewModelBase
+    public class DragInfo
     {
-        public HudSaveFirstTimeNotificationViewModel(Action close)
+        public DragInfo(object sender, MouseButtonEventArgs e)
         {
-            OkCommand = ReactiveCommand.Create();
-            OkCommand.Subscribe(x => close?.Invoke());
+            VisualSource = sender as UIElement;
+            DragStartPosition = e.GetPosition((IInputElement)sender);
         }
 
-        public ReactiveCommand<object> OkCommand { get; private set; }
+        public UIElement VisualSource
+        {
+            get;
+            private set;
+        }
+
+        public Point DragStartPosition
+        {
+            get;
+            private set;
+        }
     }
 }

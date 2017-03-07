@@ -387,6 +387,7 @@
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\Designer\Behaviors\DragAdorner.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />

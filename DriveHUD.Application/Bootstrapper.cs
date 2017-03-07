@@ -223,6 +223,7 @@ namespace DriveHUD.Application
 
             // HUD table configurators
             Container.RegisterType<ITableConfigurator, CommonTableConfigurator>();
+            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.CustomDesigned.ToString());
             Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.Plain.ToString());
             Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
             Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());

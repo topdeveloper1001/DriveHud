@@ -18,7 +18,7 @@
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
     xmlns:vd="clr-namespace:DriveHUD.Application.Views.Hud.Designer"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
-    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"   
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
@@ -611,9 +611,11 @@
 
                 <Button
                     Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
+                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"                    
                     Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}" />
+                    dh:DragDrop.IsDragSource="True"
+                    CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
+                </Button>
 
                 <Button
                     Style="{StaticResource HudDesignerToolButtonStyle}"

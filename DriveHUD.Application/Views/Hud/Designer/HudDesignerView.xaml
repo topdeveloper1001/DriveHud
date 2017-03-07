@@ -20,18 +20,23 @@
 
     <Grid>
 
-        <TextBlock
-            Text="Design your HUD:"
-            Foreground="White"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top" />
-
         <telerik:RadDiagram
+            dh:DragDrop.IsDragTarget="True"
             Style="{StaticResource HudTableDiagramStyle}">
             <i:Interaction.Behaviors>
                 <bhv:HudDesignerBehavior />
             </i:Interaction.Behaviors>
         </telerik:RadDiagram>
+
+        <TextBlock
+            Text="Design your HUD:"            
+            FontSize="16px"
+            FontWeight="Bold"
+            Margin="0,10,0,0"
+            Foreground="White"            
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+
     </Grid>
 
 </UserControl>
