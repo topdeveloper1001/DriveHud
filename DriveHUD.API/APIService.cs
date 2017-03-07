@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using System.Globalization;
+using System.ServiceModel.Web;
 
 namespace DriveHUD.API
 {
@@ -31,7 +32,7 @@ namespace DriveHUD.API
 
             if (!long.TryParse(id, out parsedId))
             {
-                throw new ArgumentException("Cannot parse hand id", nameof(id));
+                throw new WebFaultException<string>("Cannot parse hand id", System.Net.HttpStatusCode.BadRequest);
             }
 
             if (Enum.TryParse(pokerSite, out site))
@@ -46,7 +47,7 @@ namespace DriveHUD.API
             }
             else
             {
-                throw new ArgumentException($"Cannot recognise site {pokerSite}", nameof(pokerSite));
+                throw new WebFaultException<string>($"Cannot recognise site {pokerSite}", System.Net.HttpStatusCode.BadRequest);
             }
         }
 
@@ -71,7 +72,7 @@ namespace DriveHUD.API
 
             if (!Enum.TryParse(pokerSite, out site) || site == EnumPokerSites.Unknown)
             {
-                throw new ArgumentException($"Cannot recognise site {pokerSite}", nameof(pokerSite));
+                throw new WebFaultException<string>($"Cannot recognise site {pokerSite}", System.Net.HttpStatusCode.BadRequest);
             }
 
             var statistic = _dataService.GetPlayerStatisticFromFile(playerName, (short)site);
@@ -110,7 +111,7 @@ namespace DriveHUD.API
 
             if (!Enum.TryParse(pokerSite, out site) || site == EnumPokerSites.Unknown)
             {
-                throw new ArgumentException($"Cannot recognise site {pokerSite}", nameof(pokerSite));
+                throw new WebFaultException<string>($"Cannot recognise site {pokerSite}", System.Net.HttpStatusCode.BadRequest);
             }
 
             var statistic = _dataService.GetPlayerStatisticFromFile(playerName, (short)site);
