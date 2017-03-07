@@ -41,15 +41,20 @@ namespace DriveHud.Tests.UnitTests
         [SetUp]
         public void SetUp()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             unityContainer = new UnityContainer();
 
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
+            unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, BovadaConfigurationStub>(EnumPokerSites.Ignition.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
             unityContainer.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
             unityContainer.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IFileImporter, FileImporterStub>(new ContainerControlledLifetimeManager());
 
@@ -64,8 +69,8 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
         /// </summary>        
-        [Test]
-        [TestCase("bovada-MTT-moving")]
+        //[Test]
+        //[TestCase("bovada-MTT-moving")]
         public void TestProcessCommand(string testData)
         {
             // Read source

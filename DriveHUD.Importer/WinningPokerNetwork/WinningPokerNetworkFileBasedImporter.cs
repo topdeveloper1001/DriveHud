@@ -20,6 +20,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
+using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
@@ -80,7 +81,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
                 if (endIndex > startIndex)
                 {
-                    var tornamentNumber = file.Substring(startIndex, endIndex - startIndex);
+                    var tornamentNumber = file.Substring(startIndex + 1, endIndex - startIndex - 1);
                     return tornamentNumber;
                 }
             }
@@ -277,12 +278,12 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             if (string.IsNullOrWhiteSpace(tournamentNumber))
             {
                 tournamentNumber = GetTournamentNumber(windowTitleText);
+            }
 
-                if (!string.IsNullOrWhiteSpace(tournamentNumber))
-                {
-                    var totalBuyIn = GetTournamentBuyIn(windowTitleText);
-                    summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn.ToString(CultureInfo.InvariantCulture)}";
-                }
+            if (!string.IsNullOrWhiteSpace(tournamentNumber))
+            {
+                var totalBuyIn = GetTournamentBuyIn(windowTitleText);
+                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn.ToString(CultureInfo.InvariantCulture)}";
             }
 
             if (string.IsNullOrEmpty(summaryText))
@@ -380,18 +381,20 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         private decimal GetTournamentBuyIn(string title)
         {
-            if (string.IsNullOrWhiteSpace(title) || title.Contains("Freeroll"))
+            if (string.IsNullOrWhiteSpace(title) || title.IndexOf("Freeroll", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return 0m;
             }
 
-            if (title.Contains("Jackpot Poker"))
+            if (title.IndexOf("Jackpot Poker", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 var spaceIndex = title.IndexOf(' ');
+
                 if (spaceIndex != -1)
                 {
                     var buyIn = 0m;
-                    if (decimal.TryParse(title.Remove(spaceIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+
+                    if (ParserUtils.TryParseMoney(title.Remove(spaceIndex), out buyIn))
                     {
                         return buyIn;
                     }
@@ -399,11 +402,13 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
             else
             {
-                var endIndex = title.IndexOf(" -");
+                var endIndex = title.IndexOf(" -", StringComparison.OrdinalIgnoreCase);
+
                 if (endIndex != -1)
                 {
                     var buyIn = 0m;
-                    if (decimal.TryParse(title.Remove(endIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+
+                    if (ParserUtils.TryParseMoney(title.Remove(endIndex), out buyIn))
                     {
                         return buyIn;
                     }

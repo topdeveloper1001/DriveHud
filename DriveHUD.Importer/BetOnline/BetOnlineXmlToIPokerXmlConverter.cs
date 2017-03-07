@@ -10,21 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
 using Microsoft.Practices.ServiceLocation;
+using Model.Site;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using Model.Site;
-using Model.Enums;
-using DriveHUD.Common.Utils;
-using DriveHUD.Entities;
 
 namespace DriveHUD.Importers.BetOnline
 {
@@ -102,7 +100,7 @@ namespace DriveHUD.Importers.BetOnline
                     PokerSite = EnumPokerSites.BetOnline
                 };
 
-                sessionCode = BuildSessionCode();
+                sessionCode = BuildSessionCode();             
 
                 var handHistory = BuildHandHistory();
 

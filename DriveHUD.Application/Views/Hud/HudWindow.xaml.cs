@@ -24,6 +24,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows;
 using System.ComponentModel;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.Views
 {
@@ -127,7 +128,7 @@ namespace DriveHUD.Application.Views
                     playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
                 }
 
-                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudViewType);                
+                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudViewType);
 
                 dgCanvas.Children.Add(panel);
             }
@@ -330,5 +331,54 @@ namespace DriveHUD.Application.Views
             base.OnClosing(e);
         }
 
+        private List<RadMenuItem> GetSiblingGroupItems(RadMenuItem currentItem)
+        {
+            var parentItem = currentItem.ParentOfType<RadMenuItem>();
+
+            if (parentItem == null)
+            {
+                return null;
+            }
+
+            var items = new List<RadMenuItem>();
+
+            foreach (var item in parentItem.Items)
+            {
+                var container = parentItem.ItemContainerGenerator.ContainerFromItem(item) as RadMenuItem;
+
+                if (container == null || container.Tag == null)
+                {
+                    continue;
+                }
+
+                if (container.Tag.Equals(currentItem.Tag))
+                {
+                    items.Add(container);
+                }
+            }
+
+            return items;
+        }
+
+        private void OnRadMenuItemClick(object sender, RadRoutedEventArgs e)
+        {
+            var currentItem = e.OriginalSource as RadMenuItem;
+
+            if (currentItem.IsCheckable && currentItem.Tag != null)
+            {
+                var siblingItems = this.GetSiblingGroupItems(currentItem);
+
+                if (siblingItems != null)
+                {
+                    foreach (var item in siblingItems)
+                    {
+                        if (item != currentItem)
+                        {
+                            item.IsChecked = false;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -67,7 +67,7 @@ namespace DriveHUD.Common.Wpf.Converters
     }
 
     [ValueConversion(typeof(object), typeof(Visibility))]
-    public class EnumNotToVisibilityConverterCollapsedByDef : EnumToVisibilityConverter
+    public class EnumNotToVisibilityConverterCollapsedByDef : EnumNotToVisibilityConverter
     {
         public EnumNotToVisibilityConverterCollapsedByDef()
             : base()

@@ -32,6 +32,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Pacific\TestData";
 
+        [OneTimeSetUp]
+        public void Initialize()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory; 
+        }
+
         [Test]
         [TestCase("en-US")]
         [TestCase("hu-HU")]

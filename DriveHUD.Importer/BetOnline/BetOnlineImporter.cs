@@ -23,7 +23,7 @@ namespace DriveHUD.Importers.BetOnline
     {
         private const string site = "BetOnline";
 
-        private const uint bufferSize = 32768;
+        private const uint bufferSize = 65536;
 
         private const int pipeReadingTimeout = 5000;
 

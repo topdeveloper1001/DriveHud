@@ -38,6 +38,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase("zh-SG")]
         public void ParsingDoesNotThrowExceptions(string culture)
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             var cultureInfo = new CultureInfo(culture);
 
             Thread.CurrentThread.CurrentCulture = cultureInfo;

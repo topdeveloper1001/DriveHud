@@ -156,6 +156,7 @@
             <telerik:RadCartesianChart Grid.Row="2" HorizontalAlignment="Stretch" 
                                        VerticalAlignment="Stretch"
                                        MinHeight="65"
+                                       Foreground="White"
                                        Background="{StaticResource DotFillBrush}">
                 <telerik:RadCartesianChart.HorizontalAxis>
                     <telerik:CategoricalAxis ShowLabels="False" MajorTickStyle="{StaticResource TickStyle}"  LineStroke="Transparent"/>

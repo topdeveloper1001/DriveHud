@@ -152,7 +152,7 @@ namespace DriveHUD.Common.Utils
         /// </summary>
         /// <returns>Screen resolution</returns>
         public static SizeF GetScreenResolution()
-        {
+        {           
             return new SizeF
             {
                 Width = (float)SystemParameters.PrimaryScreenWidth,

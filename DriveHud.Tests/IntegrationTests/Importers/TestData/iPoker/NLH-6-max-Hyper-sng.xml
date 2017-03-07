@@ -1,0 +1,53 @@
+<session sessioncode="17138559758">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Table #1, 6 Player Sit n Go Hyper #37401</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-02-21 20:29:19</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>6 Player Sit n Go Hyper #37401</tournamentname>
+		<place>0</place>
+		<buyin>$1+$0.10</buyin>
+		<totalbuyin>$1.10</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="100706219">
+		<general>
+			<startdate>2017-02-21 20:29:19</startdate>
+			<players>
+				<player seat="2" name="Coeyeobert" chips="1120" dealer="0" win="0" bet="440" rebuy="0" addon="0" />
+				<player seat="3" name="KCATX22" chips="2300" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+				<player seat="5" name="Bulleto" chips="1100" dealer="1" win="1820" bet="1100" rebuy="0" addon="0" />
+				<player seat="6" name="IndigoKid" chips="1480" dealer="0" win="0" bet="240" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Coeyeobert" type="15" sum="40" cards="" />
+			<action no="2" player="KCATX22" type="15" sum="40" cards="" />
+			<action no="3" player="Bulleto" type="15" sum="40" cards="" />
+			<action no="4" player="IndigoKid" type="15" sum="40" cards="" />
+			<action no="5" player="IndigoKid" type="1" sum="200" cards="" />
+			<action no="6" player="Coeyeobert" type="2" sum="400" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Coeyeobert">X X</cards>
+			<cards type="Pocket" player="KCATX22">X X</cards>
+			<cards type="Pocket" player="Bulleto">X X</cards>
+			<cards type="Pocket" player="IndigoKid">X X</cards>
+			<action no="7" player="KCATX22" type="0" sum="0" cards="" />
+			<action no="8" player="Bulleto" type="23" sum="1060" cards="" />
+			<action no="9" player="IndigoKid" type="0" sum="0" cards="" />
+			<action no="10" player="Coeyeobert" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

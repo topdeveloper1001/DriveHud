@@ -1,16 +1,10 @@
 ﻿using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Log;
 using DriveHUD.HUD.Service;
-using Microsoft.Practices.ServiceLocation;
-using Model.Settings;
 using ProtoBuf;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.HUD.Services
 {
@@ -38,7 +32,7 @@ namespace DriveHUD.HUD.Services
         {
             try
             {
-                HudLayout hudLayout;
+                HudLayout hudLayout;                
 
                 using (var afterStream = new MemoryStream(data))
                 {
@@ -49,7 +43,7 @@ namespace DriveHUD.HUD.Services
 
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {
-                    HudPainter.UpdateHud(hudLayout);
+                    HudPainter.UpdateHud(hudLayout);                    
                 });
             }
             catch (Exception e)

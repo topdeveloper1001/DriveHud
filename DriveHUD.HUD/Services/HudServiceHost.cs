@@ -1,14 +1,8 @@
 ﻿using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using Prism.Events;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.HUD.Services
 {
@@ -30,7 +24,7 @@ namespace DriveHUD.HUD.Services
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error("Canno start HUD service.", ex);
+                LogProvider.Log.Error("Could not start HUD service.", ex);
                 ShutDown();
             }
         }

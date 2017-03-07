@@ -69,6 +69,7 @@ namespace DriveHUD.HUD
             unityContainer.RegisterType<IHandHistoryParserFactory, HandHistoryParserFactoryImpl>();
 
             UnityServicesBootstrapper.ConfigureContainer(unityContainer);
+            ModelBootstrapper.ConfigureContainer(unityContainer);
 
             var locator = new UnityServiceLocator(unityContainer);
 

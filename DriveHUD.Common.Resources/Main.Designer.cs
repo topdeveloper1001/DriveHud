@@ -244,5 +244,41 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Main_SiteSettingsMismatch_PokerStars", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apps.
+        /// </summary>
+        internal static string Main_TopMenu_Apps {
+            get {
+                return ResourceManager.GetString("Main_TopMenu_Apps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        internal static string Main_TopMenu_Dashboard {
+            get {
+                return ResourceManager.GetString("Main_TopMenu_Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD.
+        /// </summary>
+        internal static string Main_TopMenu_Hud {
+            get {
+                return ResourceManager.GetString("Main_TopMenu_Hud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tournament.
+        /// </summary>
+        internal static string Main_TopMenu_Tournament {
+            get {
+                return ResourceManager.GetString("Main_TopMenu_Tournament", resourceCulture);
+            }
+        }
     }
 }

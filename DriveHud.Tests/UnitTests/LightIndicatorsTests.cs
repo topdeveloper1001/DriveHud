@@ -14,15 +14,10 @@ using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Common.Resources;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
-using Model;
 using Model.Data;
 using Model.Settings;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -34,6 +29,8 @@ namespace DriveHud.Tests.UnitTests
         [SetUp]
         public void SetUp()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             ResourceRegistrator.Initialization();
 
             container = new UnityContainer();

@@ -278,6 +278,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         private const string summaryYouFinishedInText = "You finished in ";
         private const string summaryBuyInText = "Buy-In: ";
+        private const string summaryBuyInFreerollText = "Freeroll";
         private static readonly Regex summaryPlayerDataRegex = new Regex(@"\d+:\s(?<player>.*[^\]]+)(\s\[\d+\])?\s\([^\)]+\),(\s(?<won>[^\(]+).*)?", RegexOptions.Compiled);
 
         protected override HandHistory ParseSummaryHand(string[] handLines, HandHistory handHistory)
@@ -354,38 +355,47 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
 
                 // parse buyin
-                if (tournament.BuyIn == null && handLine.StartsWith(summaryBuyInText, StringComparison.InvariantCultureIgnoreCase))
+                if (tournament.BuyIn == null)
                 {
-                    // Buy-In: $24.55/$2.45 USD
-                    // Buy-In: 250 SC
-                    var buyInText = handLine.Substring(summaryBuyInText.Length);
-
-                    var indexOfLastSpace = buyInText.LastIndexOf(' ');
-
-                    if (indexOfLastSpace > 0)
+                    if (handLine.StartsWith(summaryBuyInText, StringComparison.InvariantCultureIgnoreCase))
                     {
-                        buyInText = buyInText.Substring(0, indexOfLastSpace);
-                    }
+                        // Buy-In: $24.55/$2.45 USD
+                        // Buy-In: 250 SC
+                        // Freeroll
+                        var buyInText = handLine.Substring(summaryBuyInText.Length);
 
-                    var buyInTextSplit = buyInText.Split('/');
+                        var indexOfLastSpace = buyInText.LastIndexOf(' ');
 
-                    if (buyInTextSplit.Length != 2)
-                    {
-                        tournament.BuyIn = Buyin.FromBuyinRake(0, 0, Currency.All);
+                        if (indexOfLastSpace > 0)
+                        {
+                            buyInText = buyInText.Substring(0, indexOfLastSpace);
+                        }
+
+                        var buyInTextSplit = buyInText.Split('/');
+
+                        if (buyInTextSplit.Length != 2)
+                        {
+                            tournament.BuyIn = Buyin.FromBuyinRake(0, 0, Currency.All);
+                            continue;
+                        }
+
+                        var currency = ParseCurrency(handLine, buyInText[0]);
+
+                        decimal buyIn = 0;
+                        decimal rake = 0;
+
+
+                        ParserUtils.TryParseMoney(buyInTextSplit[0], out buyIn);
+                        ParserUtils.TryParseMoney(buyInTextSplit[1], out rake);
+
+                        tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, Currency.USD);
                         continue;
                     }
-
-                    var currency = ParseCurrency(handLine, buyInText[0]);
-
-                    decimal buyIn = 0;
-                    decimal rake = 0;
-
-
-                    ParserUtils.TryParseMoney(buyInTextSplit[0], out buyIn);
-                    ParserUtils.TryParseMoney(buyInTextSplit[1], out rake);
-
-                    tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, Currency.USD);
-                    continue;
+                    else if (handLine.StartsWith(summaryBuyInFreerollText, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        tournament.BuyIn = Buyin.FromBuyinRake(0, 0, Currency.USD);
+                        continue;
+                    }
                 }
 
                 // parse player info
