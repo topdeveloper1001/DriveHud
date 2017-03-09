@@ -128,7 +128,9 @@
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
     <Compile Include="Actions\PopupWindowAction.cs" />
+    <Compile Include="AttachedBehaviors\DragAdorner.cs" />
     <Compile Include="AttachedBehaviors\DragDrop.cs" />
+    <Compile Include="AttachedBehaviors\DragInfo.cs" />
     <Compile Include="AttachedBehaviors\GridExtensions.cs" />
     <Compile Include="AttachedBehaviors\IgnoreMouseWheelBehavior.cs" />
     <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />

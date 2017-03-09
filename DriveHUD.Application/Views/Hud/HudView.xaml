@@ -18,7 +18,7 @@
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
     xmlns:vd="clr-namespace:DriveHUD.Application.Views.Hud.Designer"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
-    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"   
+    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
@@ -394,6 +394,19 @@
                 Value="Bold" />
         </Style>
 
+        <DataTemplate
+            x:Key="PlainTextAdornerTemplate">
+            <Border
+                BorderBrush="Red"
+                BorderThickness="1"
+                Width="100"
+                Height="30"                
+                Background="Transparent">
+                <TextBlock
+                    Text="Plain text" />
+            </Border>
+        </DataTemplate>
+
     </UserControl.Resources>
 
     <Grid
@@ -611,9 +624,10 @@
 
                 <Button
                     Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"                    
+                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
                     Command="{Binding DesignerToolCommand}"
                     dh:DragDrop.IsDragSource="True"
+                    dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
                 </Button>
 

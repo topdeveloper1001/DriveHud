@@ -146,7 +146,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         {
             var uiElement = sender as UIElement;
 
-            if (uiElement == null)
+            if (uiElement == null || dragInfo == null)
             {
                 return;
             }
@@ -171,12 +171,13 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         private static void OnDragGiveFeedback(object sender, GiveFeedbackEventArgs e)
-        {
+        {           
         }
 
         private static void OnDragDrop(object sender, DragEventArgs e)
         {
-
+            DragAdorner = null;
+            e.Handled = true;
         }
 
         private static void OnDragLeave(object sender, DragEventArgs e)
@@ -193,10 +194,20 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 return;
             }
 
-            if (DragAdorner == null)
+            if (DragAdorner == null && dragInfo != null)
             {
-                CreateDragAdorner(uiElement);
+                CreateDragAdorner(dragInfo.VisualSource);
             }
+
+            if (DragAdorner != null)
+            {
+                var adornerPos = e.GetPosition(DragAdorner.AdornedElement);
+              
+                DragAdorner.MousePosition = adornerPos;
+                DragAdorner.InvalidateVisual();
+            }
+
+            e.Handled = true;
         }
 
         private static void OnDragEnter(object sender, DragEventArgs e)
