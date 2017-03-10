@@ -103,6 +103,9 @@
     </DirectoryRef>
 
     <DirectoryRef Id="BIN">
+      <Component Id="DriveHUD.API.dll" Guid="{0A05C6C2-76F6-474C-912E-0EFD0F0F5403}">
+        <File Id="DriveHUD.API.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.API.dll" />
+      </Component>
       <Component Id="DriveHUD.Entities.dll" Guid="{53593C97-332F-431F-9D85-081EEAE0E246}">
         <File Id="DriveHUD.Entities.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Entities.dll" />
       </Component>
@@ -461,7 +464,8 @@
       <ComponentRef Id="DriveHUD.Updater.exe"/>
       <ComponentRef Id="DriveHUD.Updater.exe.config"/>
       <ComponentRef Id="DriveHUD.Updater.Core.dll"/>
-      <ComponentRef Id ="DriveHUD.Entities.dll" />
+      <ComponentRef Id="DriveHUD.Entities.dll" />
+      <ComponentRef Id="DriveHUD.API.dll" />
       <ComponentRef Id="clean_db.sql" />
       <ComponentRef Id="FluentMigrator.dll"/>
       <ComponentRef Id="FluentMigrator.Runner.dll"/>
