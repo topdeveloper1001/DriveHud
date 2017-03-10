@@ -386,6 +386,7 @@
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
@@ -619,7 +620,6 @@
     </Compile>
     <Compile Include="ValueConverters\BoolToggleConverter.cs" />
     <Compile Include="ValueConverters\BoolToTextConverter.cs" />
-    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\ColorToBrushConverter.cs" />
     <Compile Include="ValueConverters\ColorToChipsConverter.cs" />
     <Compile Include="ValueConverters\DecimalToPlayerPotConverter.cs" />
@@ -1106,6 +1106,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.API\DriveHUD.API.csproj">
+      <Project>{1a63378b-690b-46d3-96f3-0d0c941d43a9}</Project>
+      <Name>DriveHUD.API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
       <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
       <Name>DriveHUD.Common.Infrastructure</Name>

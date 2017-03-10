@@ -11,7 +11,9 @@ namespace HandHistories.Objects.Players
     public class Player
     {
         [DataMember]
+        [XmlIgnore]
         public int PlayerId { get; set; }
+
         [XmlAttribute]
         public string PlayerName { get; set; }
 

@@ -63,7 +63,7 @@
                                     Width="144"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Left"
-                                    Height="160"
+                                    MaxHeight="160"                                    
                                     ToolTip="{Binding ProductName}">
 
                                     <Image.Style>

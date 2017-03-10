@@ -109,6 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
+    <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
+    <Compile Include="AppStore\ITrainingAppStoreRepository.cs" />
+    <Compile Include="AppStore\TrainingAppStoreModel .cs" />
+    <Compile Include="AppStore\TrainingAppStoreRepository.cs" />
     <Compile Include="BoardTextureAnalyzers\BoardTextureAnalyzer.cs" />
     <Compile Include="BoardTextureAnalyzers\BoardTextureAnalyzerHelpers.cs" />
     <Compile Include="BoardTextureAnalyzers\CombinationTextureAnalyzer.cs" />

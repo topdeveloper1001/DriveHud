@@ -182,4 +182,16 @@
   <data name="SystemSettings_AppStoreRemoteProductRepo" xml:space="preserve">
     <value>http://drivehud.com/appstore/products.xml</value>
   </data>
+  <data name="SystemSettings_AppStoreLocalTempTrainingProductRepo" xml:space="preserve">
+    <value>training.tmp</value>
+  </data>
+  <data name="SystemSettings_AppStoreLocalTrainingProductRepo" xml:space="preserve">
+    <value>training.xml</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteTrainingProductHash" xml:space="preserve">
+    <value>http://drivehud.com/appstore/training.hash</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteTrainingProductRepo" xml:space="preserve">
+    <value>http://drivehud.com/appstore/training.xml</value>
+  </data>
 </root>

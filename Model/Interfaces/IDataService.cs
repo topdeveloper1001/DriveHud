@@ -38,6 +38,8 @@ namespace Model.Interfaces
 
         HandHistory GetGame(long gameNumber, short pokersiteId);
 
+        IList<HandHistory> GetGames(IEnumerable<long> gameNumbers, short pokersiteId);
+
         Handnotes GetHandNote(long gameNumber, short pokersiteId);
 
         Playernotes GetPlayerNote(string playerName, short pokersiteId);

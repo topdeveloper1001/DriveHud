@@ -17,6 +17,7 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Interfaces;
+using NHibernate.Criterion;
 using NHibernate.Linq;
 using ProtoBuf;
 using System;
@@ -228,11 +229,16 @@ namespace Model
             using (var session = ModelEntities.OpenSession())
             {
                 List<HandHistory> historyList = new List<HandHistory>();
-                var hh = session.Query<Handhistory>().Where(x => gameNumbers.Any(g => g == x.Gamenumber));
-                if (hh == null || hh.Count() == 0)
-                    return null;
 
-                foreach (var history in hh)
+                Disjunction restriction = Restrictions.Disjunction();
+                restriction.Add(Restrictions.Conjunction()
+                     .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(gameNumbers.ToList()))
+                     .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteId)));
+
+                var list = session.QueryOver<Handhistory>().Where(restriction)
+                        .List();
+
+                foreach (var history in list)
                 {
                     var result = handHistoryParser.ParseFullHandHistory(history.HandhistoryVal);
 
