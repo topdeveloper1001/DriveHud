@@ -31,6 +31,8 @@ namespace Model
             container.RegisterType<ISessionFactoryService, SessionFactoryService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
             container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
+            container.RegisterType<ITrainingAppStoreRepository, TrainingAppStoreRepository>();
+            container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();            
         }
     }
 }

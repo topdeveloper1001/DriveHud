@@ -24,11 +24,11 @@ namespace Model.AppStore
     {
         private static int WebRequestTimeout = 10000;
 
-        private readonly string storeDataFolder;
-        private readonly string storeLocalProductRepo;
-        private readonly string storeLocalTempProductRepo;
-        private readonly string storeRemoteProductRepo;
-        private readonly string storeRemoteProductHash;
+        protected string storeDataFolder;
+        protected string storeLocalProductRepo;
+        protected string storeLocalTempProductRepo;
+        protected string storeRemoteProductRepo;
+        protected string storeRemoteProductHash;
 
         public ProductAppStoreRepository()
         {

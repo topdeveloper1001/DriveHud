@@ -322,6 +322,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ICMizer Format.
+        /// </summary>
+        internal static string Enum_HandExport_ICMizer {
+            get {
+                return ResourceManager.GetString("Enum_HandExport_ICMizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plain Text.
         /// </summary>
         internal static string Enum_HandExport_PlainTextHandHistory {

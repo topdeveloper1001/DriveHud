@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ProductAppStoreViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="TrainingAppStoreViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,7 +14,7 @@ using Model.AppStore;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
-    public class ProductAppStoreViewModel : AppStoreViewModel<IProductAppStoreModel>
+    public class TrainingAppStoreViewModel : AppStoreViewModel<ITrainingAppStoreModel>
     {
         public override void Initialize()
         {

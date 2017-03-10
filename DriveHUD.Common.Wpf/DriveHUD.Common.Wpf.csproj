@@ -146,6 +146,7 @@
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\IsTournamentEnumGameTypeToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumNotToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Converters\EnumToVisiblityConverter.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Events\ReactiveOperation.cs" />
     <Compile Include="Events\WeakDelegateReference.cs" />
     <Compile Include="Events\WeakDelegatesManager.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Helpers\ColorsHelper.cs" />
     <Compile Include="Helpers\ResolutionSettings.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />

@@ -611,4 +611,7 @@
   <data name="Enum_Stat_PlayerInfoIcon" xml:space="preserve">
     <value>Player Info Icon</value>
   </data>
+  <data name="Enum_HandExport_ICMizer" xml:space="preserve">
+    <value>ICMizer Format</value>
+  </data>
 </root>
