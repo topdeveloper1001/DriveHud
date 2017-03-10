@@ -26,6 +26,8 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 {
     public class DragDrop
     {
+        public static DataFormat DataFormat { get; } = DataFormats.GetDataFormat("DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop");
+
         private static DragInfo dragInfo;
 
         #region Properties
@@ -67,6 +69,32 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public static void SetDragAdornerTemplate(UIElement target, DataTemplate value)
         {
             target.SetValue(DragAdornerTemplateProperty, value);
+        }
+
+        public static readonly DependencyProperty DragDropCommandProperty = DependencyProperty.RegisterAttached("DragDropCommand", typeof(ICommand),
+            typeof(DragDrop));
+
+        public static ICommand GetDragDropCommand(UIElement target)
+        {
+            return (ICommand)target.GetValue(DragDropCommandProperty);
+        }
+
+        public static void SetDragDropCommand(UIElement target, ICommand value)
+        {
+            target.SetValue(DragDropCommandProperty, value);
+        }
+
+        public static readonly DependencyProperty DragDropDataProperty = DependencyProperty.RegisterAttached("DragDropData", typeof(object),
+            typeof(DragDrop));
+
+        public static object GetDragDropData(UIElement target)
+        {
+            return target.GetValue(DragDropDataProperty);
+        }
+
+        public static void SetDragDropData(UIElement target, object value)
+        {
+            target.SetValue(DragDropDataProperty, value);
         }
 
         private static DragAdorner dragAdorner;
@@ -157,7 +185,9 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             if (e.LeftButton == MouseButtonState.Pressed && ((Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance) ||
                 (Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)))
             {
-                var dataObject = new DataObject("someFormat", new object());
+                var data = GetDragDropData(uiElement);
+
+                var dataObject = new DataObject(DataFormat.Name, data ?? new object());
 
                 try
                 {
@@ -171,11 +201,26 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         private static void OnDragGiveFeedback(object sender, GiveFeedbackEventArgs e)
-        {           
+        {
         }
 
         private static void OnDragDrop(object sender, DragEventArgs e)
         {
+            var uiElement = sender as UIElement;
+
+            if (uiElement == null)
+            {
+                return;
+            }
+
+            var dragDropCommand = GetDragDropCommand(uiElement);
+
+            if (dragDropCommand != null && e.Data.GetDataPresent(DataFormat.Name))
+            {
+                var dataObject = e.Data.GetData(DataFormat.Name);
+                dragDropCommand.Execute(dataObject);
+            }
+
             DragAdorner = null;
             e.Handled = true;
         }
@@ -202,7 +247,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             if (DragAdorner != null)
             {
                 var adornerPos = e.GetPosition(DragAdorner.AdornedElement);
-              
+
                 DragAdorner.MousePosition = adornerPos;
                 DragAdorner.InvalidateVisual();
             }

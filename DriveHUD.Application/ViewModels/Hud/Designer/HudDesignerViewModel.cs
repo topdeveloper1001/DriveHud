@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -26,8 +27,42 @@ namespace DriveHUD.Application.ViewModels.Hud
         public void Initialize(HudViewModel hudViewModel, HudDesignerToolType initialToolType)
         {
             this.hudViewModel = hudViewModel;
+
+            InitializeCommands();
         }
 
+        #region Commands
+
+        public ReactiveCommand<object> AddToolCommand { get; private set; }
+
+        #endregion
+
+        #region Infrastructure
+
+        private void InitializeCommands()
+        {
+            AddToolCommand = ReactiveCommand.Create();
+            AddToolCommand.Subscribe(x =>
+            {
+                if (x is HudDesignerToolType)
+                {
+                    AddTool((HudDesignerToolType)x);
+                }
+            });
+        }
+
+        private void AddTool(HudDesignerToolType toolType)
+        {
+
+
+        }
+
+        public bool CanAddTool(HudDesignerToolType toolType)
+        {
+            return true;
+        }
+
+        #endregion
 
     }
 }

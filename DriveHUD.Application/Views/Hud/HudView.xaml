@@ -628,6 +628,7 @@
                     Command="{Binding DesignerToolCommand}"
                     dh:DragDrop.IsDragSource="True"
                     dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
+                    dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
                 </Button>
 

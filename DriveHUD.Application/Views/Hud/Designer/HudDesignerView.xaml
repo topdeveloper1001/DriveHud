@@ -22,6 +22,7 @@
 
         <telerik:RadDiagram
             dh:DragDrop.IsDragTarget="True"
+            dh:DragDrop.DragDropCommand="{Binding AddToolCommand}"
             Style="{StaticResource HudTableDiagramStyle}">
             <i:Interaction.Behaviors>
                 <bhv:HudDesignerBehavior />
@@ -29,11 +30,11 @@
         </telerik:RadDiagram>
 
         <TextBlock
-            Text="Design your HUD:"            
+            Text="Design your HUD:"
             FontSize="16px"
             FontWeight="Bold"
             Margin="0,10,0,0"
-            Foreground="White"            
+            Foreground="White"
             HorizontalAlignment="Center"
             VerticalAlignment="Top" />
 
