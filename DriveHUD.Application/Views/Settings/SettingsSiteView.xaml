@@ -1,83 +1,149 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.Settings.SettingsSiteView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DriveHUD.Application.Views.Settings"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             mc:Ignorable="d" 
-             xmlns:control="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             d:DesignHeight="600" d:DesignWidth="660.625">
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.Settings.SettingsSiteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.Settings"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    xmlns:control="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    d:DesignHeight="600"
+    d:DesignWidth="660.625">
 
     <UserControl.Resources>
-        
-        <Style x:Key="PokersiteComboboxStyle" TargetType="{x:Type control:ComboBoxEx}" BasedOn="{StaticResource {x:Type control:ComboBoxEx}}">
-            <Setter Property="Margin" Value="0 5 0 0"/>
-            <Setter Property="MinWidth" Value="30"/>
-            <Setter Property="Height" Value="25" />
-            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
-            <Setter Property="ToggleButtonTemplate" Value="{StaticResource ComboBoxToggleButton}"/>
-            <Setter Property="ItemContainerStyle" Value="{StaticResource ComboboxItemContainerNormalStyle}"/>
-            <Setter Property="ItemsBackgroundColor" Value="{StaticResource BackgroundBrush2}" />
+
+        <Style
+            x:Key="PokersiteComboboxStyle"
+            TargetType="{x:Type control:ComboBoxEx}"
+            BasedOn="{StaticResource {x:Type control:ComboBoxEx}}">
+            <Setter
+                Property="Margin"
+                Value="0 5 0 0" />
+            <Setter
+                Property="MinWidth"
+                Value="30" />
+            <Setter
+                Property="Height"
+                Value="25" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource BackgroundBrush}" />
+            <Setter
+                Property="ToggleButtonTemplate"
+                Value="{StaticResource ComboBoxToggleButton}" />
+            <Setter
+                Property="ItemContainerStyle"
+                Value="{StaticResource ComboboxItemContainerNormalStyle}" />
+            <Setter
+                Property="ItemsBackgroundColor"
+                Value="{StaticResource BackgroundBrush2}" />
         </Style>
 
-        <Style TargetType="telerik:GridViewHeaderCell" BasedOn="{StaticResource {x:Type telerik:GridViewHeaderCell}}">
-            <Setter Property="Height" Value="35"/>
+        <Style
+            TargetType="telerik:GridViewHeaderCell"
+            BasedOn="{StaticResource {x:Type telerik:GridViewHeaderCell}}">
+            <Setter
+                Property="Height"
+                Value="35" />
         </Style>
 
-        <Style x:Key="PokerSiteRadDiagramStyle" TargetType="telerik:RadDiagram">
-            <Setter Property="AllowCopy" Value="False" />
-            <Setter Property="AllowCut" Value="False" />
-            <Setter Property="AllowDelete" Value="False" />
-            <Setter Property="AllowPaste" Value="False" />
-            <Setter Property="IsConnectorsManipulationEnabled" Value="False" />
-            <Setter Property="IsEditable" Value="False" />
-            <Setter Property="IsBackgroundSurfaceVisible" Value="True" />
-            <Setter Property="IsSnapToGridEnabled" Value="False" />
-            <Setter Property="IsSnapToItemsEnabled" Value="False"/>
-            <Setter Property="IsZoomEnabled" Value="False" />
-            <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Style
+            x:Key="PokerSiteRadDiagramStyle"
+            TargetType="telerik:RadDiagram">
+            <Setter
+                Property="AllowCopy"
+                Value="False" />
+            <Setter
+                Property="AllowCut"
+                Value="False" />
+            <Setter
+                Property="AllowDelete"
+                Value="False" />
+            <Setter
+                Property="AllowPaste"
+                Value="False" />
+            <Setter
+                Property="IsConnectorsManipulationEnabled"
+                Value="False" />
+            <Setter
+                Property="IsEditable"
+                Value="False" />
+            <Setter
+                Property="IsBackgroundSurfaceVisible"
+                Value="True" />
+            <Setter
+                Property="IsSnapToGridEnabled"
+                Value="False" />
+            <Setter
+                Property="IsSnapToItemsEnabled"
+                Value="False" />
+            <Setter
+                Property="IsZoomEnabled"
+                Value="False" />
+            <Setter
+                Property="HorizontalAlignment"
+                Value="Stretch" />
         </Style>
 
     </UserControl.Resources>
 
     <StackPanel>
 
-        <TextBlock Text="Move Processed Files to:" Style="{StaticResource Title_H1}" />
+        <TextBlock
+            Text="Move Processed Files to:"
+            Style="{StaticResource Title_H1}" />
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Column="0" IsReadOnly="True" Text="{Binding CustomProcessedDataLocation}" />
+            <TextBox
+                Grid.Column="0"
+                IsReadOnly="True"
+                Text="{Binding CustomProcessedDataLocation}" />
 
-            <Button Grid.Column="1" Width="50" Content="Select"
-                    Command="{Binding SelectDirectoryCommand}" />
+            <Button
+                Grid.Column="1"
+                Width="50"
+                Content="Select"
+                Command="{Binding SelectDirectoryCommand}" />
 
-            <CheckBox Grid.Column="2" 
-                      Margin="25 0 15 0"
-                      Content="Enable" 
-                      Width="80" 
-                      Style="{StaticResource CheckBoxRight}"
-                      IsChecked="{Binding IsCustomProcessedDataLocationEnabled}"/>
+            <CheckBox
+                Grid.Column="2"
+                Margin="25 0 15 0"
+                Content="Enable"
+                Width="80"
+                Style="{StaticResource CheckBoxRight}"
+                IsChecked="{Binding IsCustomProcessedDataLocationEnabled}" />
 
         </Grid>
 
-        <Separator Margin="5 15" />
+        <Separator
+            Margin="5 15" />
 
-        <control:ComboBoxEx HorizontalAlignment="Center" Width="230" 
-                            DisplayMemberPath="Value"
-                            ItemsSource="{Binding PokerSitesDictionary}"
-                            SelectedValue="{Binding SelectedSiteType}"
-                            SelectedValuePath="Key">
+        <control:ComboBoxEx
+            HorizontalAlignment="Center"
+            Width="230"
+            DisplayMemberPath="Value"
+            ItemsSource="{Binding PokerSitesDictionary}"
+            SelectedValue="{Binding SelectedSiteType}"
+            SelectedValuePath="Key">
             <control:ComboBoxEx.Style>
-                <Style TargetType="control:ComboBoxEx" BasedOn="{StaticResource PokersiteComboboxStyle}">
-                    <Setter Property="Watermark" Value="Select Poker Site Setup Options" />
+                <Style
+                    TargetType="control:ComboBoxEx"
+                    BasedOn="{StaticResource PokersiteComboboxStyle}">
+                    <Setter
+                        Property="Watermark"
+                        Value="Select Poker Site Setup Options" />
                 </Style>
             </control:ComboBoxEx.Style>
         </control:ComboBoxEx>
@@ -85,93 +151,127 @@
 
         <StackPanel>
             <StackPanel.Style>
-                <Style TargetType="StackPanel">
+                <Style
+                    TargetType="StackPanel">
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding SelectedSite}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Hidden" />
+                        <DataTrigger
+                            Binding="{Binding SelectedSite}"
+                            Value="{x:Null}">
+                            <Setter
+                                Property="Visibility"
+                                Value="Hidden" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
             </StackPanel.Style>
-            <telerik:RadGridView IsReadOnly="True"
-                             Margin="5 10"
-                             HorizontalAlignment="Stretch"
-                             CanUserResizeColumns="True" CanUserReorderColumns="True"
-                             RowHeight="35" Foreground="Red" SelectionMode="Single"
-                             EnableColumnVirtualization="True"
-                             ItemsSource="{Binding SelectedSite.HandHistoryLocationList}"
-                             SelectedItem="{Binding SelectedHandHistoryLocation}"
-                             EnableRowVirtualization="True" Height="148">
+            <telerik:RadGridView
+                IsReadOnly="True"
+                Margin="5 10"
+                HorizontalAlignment="Stretch"
+                CanUserResizeColumns="True"
+                CanUserReorderColumns="True"
+                RowHeight="35"
+                Foreground="Red"
+                SelectionMode="Single"
+                EnableColumnVirtualization="True"
+                ItemsSource="{Binding SelectedSite.HandHistoryLocationList}"
+                SelectedItem="{Binding SelectedHandHistoryLocation}"
+                EnableRowVirtualization="True"
+                Height="148">
 
                 <telerik:RadGridView.Columns>
 
-                    <telerik:GridViewDataColumn DataMemberBinding="{Binding}" Header="Hand History Location" Width="*" >
+                    <telerik:GridViewDataColumn
+                        DataMemberBinding="{Binding}"
+                        Header="Hand History Location"
+                        Width="*">
                     </telerik:GridViewDataColumn>
 
                 </telerik:RadGridView.Columns>
 
             </telerik:RadGridView>
 
-            <StackPanel HorizontalAlignment="Right"
-                    Orientation="Horizontal"
-                    Margin="5 10">
+            <StackPanel
+                HorizontalAlignment="Right"
+                Orientation="Horizontal"
+                Margin="5 10">
 
-                <Button Width="70" 
-                    Height="30" 
+                <Button
+                    Width="70"
+                    Height="30"
                     Margin="5 0"
                     Content="{ResX Key=Common_Add}"
-                    Command="{Binding AddHandHistoryLocationCommand}"/>
+                    Command="{Binding AddHandHistoryLocationCommand}" />
 
-                <Button Width="70"
+                <Button
+                    Width="70"
                     Height="30"
                     Margin="5 0"
                     Content="{ResX Key=Common_Delete}"
                     Command="{Binding DeleteHandHistoryLocationCommand}">
                     <Button.Style>
-                        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Style
+                            TargetType="Button"
+                            BasedOn="{StaticResource {x:Type Button}}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding SelectedHandHistoryLocation}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="False" />
+                                <DataTrigger
+                                    Binding="{Binding SelectedHandHistoryLocation}"
+                                    Value="{x:Null}">
+                                    <Setter
+                                        Property="IsEnabled"
+                                        Value="False" />
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
 
-                <Button Width="90"
+                <Button
+                    Width="90"
                     Height="30"
                     Margin="5 0"
-                    Content="{ResX Key=Common_AutoDetect}" 
-                    Command="{Binding AutoDetectHandHistoryLocationCommand}"/>
+                    Content="{ResX Key=Common_AutoDetect}"
+                    Command="{Binding AutoDetectHandHistoryLocationCommand}" />
 
             </StackPanel>
 
-            <Separator Margin="5 15" />
+            <Separator
+                Margin="5 15" />
 
-            <TextBlock Text="Preferred Seating:" Style="{StaticResource Title_H1}" 
-                       Visibility="{Binding IsPreferredSeatingVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <TextBlock
+                Text="Preferred Seating:"
+                Style="{StaticResource Title_H1}"
+                Visibility="{Binding IsPreferredSeatingVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
-            <Border CornerRadius="2" Margin="5" Background="{StaticResource BackgroundBrush3}" Height="275" 
-                    Visibility="{Binding IsPreferredSeatingVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Border
+                CornerRadius="2"
+                Margin="5"
+                Background="{StaticResource BackgroundBrush3}"
+                Height="275"
+                Visibility="{Binding IsPreferredSeatingVisible, Converter={dh:BoolToVisibilityConverter}}">
                 <Grid>
-                    <telerik:RadDiagram x:Name="diagram"
-									BorderThickness="0" AllowDrop="False"
-                                    HorizontalContentAlignment="Center"
-                                    VerticalContentAlignment="Center"
-									ViewportChanged="OnDiagramViewportChanged"
-                                    RequestBringIntoView="diagram_RequestBringIntoView"
-                                    Style="{StaticResource PokerSiteRadDiagramStyle}"
-                                    IsBackgroundSurfaceVisible="False">
+                    <telerik:RadDiagram
+                        x:Name="diagram"
+                        BorderThickness="0"
+                        AllowDrop="False"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        ViewportChanged="OnDiagramViewportChanged"
+                        RequestBringIntoView="diagram_RequestBringIntoView"
+                        Style="{StaticResource PokerSiteRadDiagramStyle}"
+                        IsBackgroundSurfaceVisible="False">
 
                     </telerik:RadDiagram>
 
-                    <control:ComboBoxEx HorizontalAlignment="Center"
-                                        VerticalAlignment="Top"
-                                        Width="150" Style="{StaticResource PokersiteComboboxStyle}"
-                                        DisplayMemberPath="Value"
-                                        ItemsSource="{Binding TableTypeDictionary}"
-                                        SelectedValue="{Binding SelectedTableType}"
-                                        SelectedValuePath="Key">
+                    <control:ComboBoxEx
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Width="150"
+                        Style="{StaticResource PokersiteComboboxStyle}"
+                        DisplayMemberPath="Value"
+                        ItemsSource="{Binding TableTypeDictionary}"
+                        SelectedValue="{Binding SelectedTableType}"
+                        SelectedValuePath="Key">
                     </control:ComboBoxEx>
                 </Grid>
             </Border>

@@ -38,6 +38,7 @@ using System.Threading.Tasks;
 using Model.Reports;
 using DriveHUD.Common.Log;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Common.Wpf.Converters;
 
 namespace DriveHUD.Application.Views
 {
@@ -96,7 +97,8 @@ namespace DriveHUD.Application.Views
             handsGridContextMenu = new RadContextMenu();
             tournamentsGridContextMenu = new RadContextMenu();
             /* Calculate equity item */
-            RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false, EquityCalcMenuItem_Click);
+            RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false, 
+                EquityCalcMenuItem_Click);
             Binding equityEnabledBinding = new Binding(nameof(ReportGadgetViewModel.IsEquityCalculatorEnabled)) { Source = this.reportGadgetViewModel };
             calculateEquityItem.SetBinding(RadMenuItem.IsEnabledProperty, equityEnabledBinding);
 
@@ -105,12 +107,23 @@ namespace DriveHUD.Application.Views
             RadMenuItem twoPlustTwoItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.TwoPlustTwoResourceString), false, GeneralExportItem_Click);
             RadMenuItem cardsChatItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CardsChatResourceString), false, GeneralExportItem_Click);
             RadMenuItem pokerStrategyItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PokerStrategyString), false, GeneralExportItem_Click);
+            RadMenuItem icmizerHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ICMizerHandHistory), false,
+                RawExportItem_Click, extraAction: item =>
+            {
+                var binding = new Binding(nameof(ReportGadgetViewModel.IsShowTournamentData));
+                binding.Source = reportGadgetViewModel;
+                binding.Converter = new BoolToVisibilityConverter();
+
+                item.SetBinding(VisibilityProperty, binding);
+            });
+
             RadMenuItem rawHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RawHandHistoryString), false, RawExportItem_Click);
             RadMenuItem plainTextHandHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlainTextHandHistoryString), false, PlainExportItem_Click);
 
             exportHandItem.Items.Add(twoPlustTwoItem);
             exportHandItem.Items.Add(cardsChatItem);
             exportHandItem.Items.Add(pokerStrategyItem);
+            exportHandItem.Items.Add(icmizerHistoryItem);
             exportHandItem.Items.Add(rawHistoryItem);
             exportHandItem.Items.Add(plainTextHandHistoryItem);
             /* Replay hand */
@@ -145,22 +158,28 @@ namespace DriveHUD.Application.Views
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
         }
 
-        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null)
+        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null)
         {
-            RadMenuItem item = new RadMenuItem();
-            item.Header = header;
-            item.IsCheckable = isCheckable;
-            item.Tag = tag;
+            var item = new RadMenuItem
+            {
+                Header = header,
+                IsCheckable = isCheckable,
+                Tag = tag
+            };
+
             if (clickAction != null)
             {
                 item.Click += clickAction;
             }
 
-            Style style = this.TryFindResource("HandGridMenuItemStyle") as Style;
+            var style = this.TryFindResource("HandGridMenuItemStyle") as Style;
+
             if (style != null)
             {
                 item.Style = style;
             }
+
+            extraAction?.Invoke(item);
 
             return item;
         }

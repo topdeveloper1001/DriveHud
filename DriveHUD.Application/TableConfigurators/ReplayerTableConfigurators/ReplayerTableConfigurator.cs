@@ -324,7 +324,7 @@ namespace DriveHUD.Application.TableConfigurators
                 throw new ArgumentNullException("playerLabel", "Cannot place card labels for player because player is null");
             }
 
-            Binding myBinding = new Binding(nameof(ReplayerPlayerViewModel.IsFinished)) { Source = player, Mode = BindingMode.TwoWay, Converter = new ValueConverters.BoolToVisibilityConverter(), ConverterParameter = "Inverse" };
+            Binding myBinding = new Binding(nameof(ReplayerPlayerViewModel.IsFinished)) { Source = player, Mode = BindingMode.TwoWay, Converter = new BoolToVisibilityConverter(), ConverterParameter = "Inverse" };
 
             for (int i = 0; i < cardsCount; i++)
             {
@@ -404,7 +404,7 @@ namespace DriveHUD.Application.TableConfigurators
                 IsEnabled = false,
             };
 
-            Binding myBinding = new Binding(nameof(ReplayerPlayerViewModel.IsDealer)) { Source = player, Mode = BindingMode.TwoWay, Converter = new ValueConverters.BoolToVisibilityConverter() };
+            Binding myBinding = new Binding(nameof(ReplayerPlayerViewModel.IsDealer)) { Source = player, Mode = BindingMode.TwoWay, Converter = new BoolToVisibilityConverter() };
             button.SetBinding(UIElement.VisibilityProperty, myBinding);
 
             return button;

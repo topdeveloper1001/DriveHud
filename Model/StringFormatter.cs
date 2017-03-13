@@ -107,9 +107,21 @@ namespace Model
             return Path.Combine(GetAppStoreDataFolder(), data);
         }
 
+        public static string GetAppStoreLocalTrainingProductRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTrainingRepo);
+            return Path.Combine(GetAppStoreDataFolder(), data);
+        }
+
         public static string GetAppStoreLocalTempProductRepo()
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTempProductRepo);
+            return Path.Combine(GetAppStoreDataFolder(), data);
+        }
+
+        public static string GetAppStoreLocalTempTrainingProductRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTempTrainingProductRepo);
             return Path.Combine(GetAppStoreDataFolder(), data);
         }
 
@@ -119,9 +131,21 @@ namespace Model
             return data;
         }
 
+        public static string GetAppStoreRemoteTrainingProductRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteTrainingProductRepo);
+            return data;
+        }
+
         public static string GetAppStoreRemoteProductHash()
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteProductHash);
+            return data;
+        }
+
+        public static string GetAppStoreRemoteTrainingProductHash()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteTrainingProductHash);
             return data;
         }
 

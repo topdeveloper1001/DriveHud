@@ -27,24 +27,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
             {
                 Model.Load();
             });
-        }
-
-        public override void Refresh(int pageNumber)
-        {
-            var start = ProductsPerPage * (pageNumber - 1);
-            Model.Refresh(start, ProductsPerPage);
-        }
-
-        public override void Search(string searchText)
-        {
-            Model.Search(searchText);
-            OnUpdated();
-        }
-
-        protected override void ModelInitialized()
-        {
-            OnUpdated();
-        }
+        }         
 
         protected override void OnAddToCart(object item)
         {

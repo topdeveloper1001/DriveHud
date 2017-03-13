@@ -221,6 +221,12 @@ namespace DriveHUD.Application.ViewModels
                     AppStoreViewModel.Initialize();
                     break;
 
+                case AppStoreType.Training:
+                    AppStoreViewModel = new TrainingAppStoreViewModel();
+                    AppStoreViewModel.Updated += OnAppStoreViewModelUpdated;
+                    AppStoreViewModel.Initialize();
+                    break;
+
                 default:
                     AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;

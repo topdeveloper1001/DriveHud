@@ -115,6 +115,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to training.tmp.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalTempTrainingProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalTempTrainingProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to training.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalTrainingProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalTrainingProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/appstore/products.hash.
         /// </summary>
         internal static string SystemSettings_AppStoreRemoteProductHash {
@@ -129,6 +147,24 @@ namespace DriveHUD.Common.Resources {
         internal static string SystemSettings_AppStoreRemoteProductRepo {
             get {
                 return ResourceManager.GetString("SystemSettings_AppStoreRemoteProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/training.hash.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteTrainingProductHash {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteTrainingProductHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/training.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteTrainingProductRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteTrainingProductRepo", resourceCulture);
             }
         }
         
