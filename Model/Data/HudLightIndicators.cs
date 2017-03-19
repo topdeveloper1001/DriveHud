@@ -1038,6 +1038,71 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto BetWhenCheckedToObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetWhenCheckedTo,
+                    Occured = Source.DidBetWhenCheckedToFlop + Source.DidBetWhenCheckedToTurn + Source.DidBetWhenCheckedToRiver,
+                    CouldOccured = Source.CanBetWhenCheckedToFlop + Source.CanBetWhenCheckedToTurn + Source.CanBetWhenCheckedToRiver,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToFlopRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopRaise,
+                    Occured = Source.FoldedFacedRaiseFlop,
+                    CouldOccured = Source.FacedRaiseFlop,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnRaise,
+                    Occured = Source.FoldedFacedRaiseTurn,
+                    CouldOccured = Source.FacedRaiseTurn,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToRiverCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToRiverCBet,
+                    Occured = Source.Foldedtorivercontinuationbet,
+                    CouldOccured = Source.Facingrivercontinuationbet
+                };
+            }
+        }
+
+        public virtual StatDto FoldToSqueezObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToSqueez,
+                    Occured = Source.FoldedFacedSqueez,
+                    CouldOccured = Source.FacedSqueez,
+                };
+            }
+        }
+
         #endregion
 
         #region Positional

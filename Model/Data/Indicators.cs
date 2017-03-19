@@ -869,6 +869,47 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal BetWhenCheckedTo
+        {
+            get
+            {
+                return GetPercentage(Source.DidBetWhenCheckedToFlop + Source.DidBetWhenCheckedToTurn + Source.DidBetWhenCheckedToRiver,
+                    Source.CanBetWhenCheckedToFlop + Source.CanBetWhenCheckedToTurn + Source.CanBetWhenCheckedToRiver);
+            }
+        }
+
+        public virtual decimal FoldToFlopRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFacedRaiseFlop, Source.FacedRaiseFlop);
+            }
+        }
+
+        public virtual decimal FoldToTurnRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFacedRaiseTurn, Source.FacedRaiseTurn);
+            }
+        }
+
+        public virtual decimal FoldToRiverCBet
+        {
+            get
+            {
+                return GetPercentage(Source.Foldedtorivercontinuationbet, Source.Facingrivercontinuationbet);
+            }
+        }
+
+        public virtual decimal FoldToSqueez
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFacedSqueez, Source.FacedSqueez);
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

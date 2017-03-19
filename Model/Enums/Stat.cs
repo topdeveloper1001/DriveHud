@@ -127,6 +127,11 @@ namespace Model.Enums
         PFRInBB,
         PFRInSB,
         PlayerInfoIcon,
-        LineBreak
+        LineBreak,
+        FoldToSqueez,
+        BetWhenCheckedTo,
+        FoldToFlopRaise,
+        FoldToTurnRaise,
+        FoldToRiverCBet,
     }
 }
