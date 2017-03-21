@@ -109,13 +109,24 @@ namespace DriveHUD.Application.ViewModels.AppStore
             InitializeCommands();
         }
 
-        public abstract void Refresh(int pageNumber);
+        public virtual void Refresh(int pageNumber)
+        {
+            var start = ProductsPerPage * (pageNumber - 1);
+            Model.Refresh(start, ProductsPerPage);
+        }
 
-        public abstract void Search(string searchText);
+        public virtual void Search(string searchText)
+        {
+            Model.Search(searchText);
+            OnUpdated();
+        }
 
         #endregion
 
-        protected abstract void ModelInitialized();
+        protected virtual void ModelInitialized()
+        {
+            OnUpdated();
+        }
 
         protected ReactiveOperation InitializeModelAsync(Action initializeModel)
         {

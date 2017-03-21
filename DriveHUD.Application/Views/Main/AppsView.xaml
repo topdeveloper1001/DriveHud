@@ -29,6 +29,11 @@
             </DataTemplate>
 
             <DataTemplate
+                DataType="{x:Type vm:TrainingAppStoreViewModel}">
+                <view:ProductAppStoreView />
+            </DataTemplate>
+
+            <DataTemplate
                 DataType="{x:Type vm:EmptyAppStoreViewModel}">
 
             </DataTemplate>

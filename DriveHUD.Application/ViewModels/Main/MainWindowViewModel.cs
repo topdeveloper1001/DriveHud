@@ -55,6 +55,7 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
+using DriveHUD.API;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -73,6 +74,8 @@ namespace DriveHUD.Application.ViewModels
         private IHudTransmitter hudTransmitter;
 
         private IFilterModelManagerService filterModelManager;
+
+        private IAPIHost apiHost;
 
         private bool isAdvancedLoggingEnabled = false;
 
@@ -112,6 +115,9 @@ namespace DriveHUD.Application.ViewModels
             PokerStarsDetectorSingletonService.Instance.Start();
 
             ConfigureResolutionDependentProperties();
+
+            apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
+            apiHost.StartAPIService();
         }
 
         private void InitializeData()
@@ -1238,6 +1244,8 @@ namespace DriveHUD.Application.ViewModels
             tournamentsCacheService.Flush();
 
             PokerStarsDetectorSingletonService.Instance.Stop();
+
+            apiHost.CloseAPIService();
 
             if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
             {

@@ -19,7 +19,7 @@ namespace Model.AppStore
 {
     internal class ProductAppStoreModel : BindableBase, IProductAppStoreModel
     {
-        private IProductAppStoreRepository repository;
+        protected IProductAppStoreRepository repository;
 
         private IList<AppStoreProduct> allItems = new List<AppStoreProduct>();
 

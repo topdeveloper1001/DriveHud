@@ -49,6 +49,7 @@ using System.Threading;
 using System.Windows;
 using DriveHUD.Application.TableConfigurators.PositionProviders;
 using Telerik.Windows.Controls;
+using DriveHUD.API;
 
 namespace DriveHUD.Application
 {
@@ -250,6 +251,9 @@ namespace DriveHUD.Application
 
             // Model services
             ModelBootstrapper.ConfigureContainer(Container);
+
+            // API services
+            APIServicesBootstrapper.ConfigureContainer(Container);
 
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());

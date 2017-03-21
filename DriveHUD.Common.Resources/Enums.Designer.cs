@@ -322,6 +322,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ICMizer Format.
+        /// </summary>
+        internal static string Enum_HandExport_ICMizer {
+            get {
+                return ResourceManager.GetString("Enum_HandExport_ICMizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plain Text.
         /// </summary>
         internal static string Enum_HandExport_PlainTextHandHistory {
@@ -579,6 +588,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_BetFoldFlopPfrRaiser {
             get {
                 return ResourceManager.GetString("Enum_Stat_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet When Checked To.
+        /// </summary>
+        internal static string Enum_Stat_BetWhenCheckedTo {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetWhenCheckedTo", resourceCulture);
             }
         }
         
@@ -925,11 +943,47 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold To Flop Raise.
+        /// </summary>
+        internal static string Enum_Stat_FoldToFlopRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToFlopRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To River  CBet.
+        /// </summary>
+        internal static string Enum_Stat_FoldToRiverCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToRiverCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To Squeez.
+        /// </summary>
+        internal static string Enum_Stat_FoldToSqueez {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToSqueez", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Steal%.
         /// </summary>
         internal static string Enum_Stat_FoldToSteal {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To Turn Raise.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTurnRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTurnRaise", resourceCulture);
             }
         }
         

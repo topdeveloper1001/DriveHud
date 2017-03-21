@@ -23,9 +23,13 @@ namespace DriveHUD.Common.Resources
         public static string AppDataFolder = "SystemSettings_AppDataFolder";
         public static string AppStoreDataFolder = "SystemSettings_AppStoreDataFolder";
         public static string AppStoreLocalProductRepo = "SystemSettings_AppStoreLocalProductRepo";
+        public static string AppStoreLocalTrainingRepo = "SystemSettings_AppStoreLocalTrainingProductRepo";
         public static string AppStoreLocalTempProductRepo = "SystemSettings_AppStoreLocalTempProductRepo";
+        public static string AppStoreLocalTempTrainingProductRepo = "SystemSettings_AppStoreLocalTempTrainingProductRepo";
         public static string AppStoreRemoteProductRepo = "SystemSettings_AppStoreRemoteProductRepo";
+        public static string AppStoreRemoteTrainingProductRepo = "SystemSettings_AppStoreRemoteTrainingProductRepo";
         public static string AppStoreRemoteProductHash = "SystemSettings_AppStoreRemoteProductHash";
+        public static string AppStoreRemoteTrainingProductHash = "SystemSettings_AppStoreRemoteTrainingProductHash";
         public static string DefaultPlayersFolderName = "SystemSettings_DefaultPlayersFolderName";
         public static string DefaultPlayerStatisticFolderName = "SystemSettings_DefaultPlayerStatisticFolderName";
         public static string DbFileName = "SystemSettings_DbFileName";
@@ -46,6 +50,7 @@ namespace DriveHUD.Common.Resources
         public static string CardsChatResourceString = "Enum_HandExport_CardsChat";
         public static string PokerStrategyString = "Enum_HandExport_PokerStrategy";
         public static string RawHandHistoryString = "Enum_HandExport_RawHandHistory";
+        public static string ICMizerHandHistory = "Enum_HandExport_ICMizer";
         public static string ExportHandResourceString = "Main_ContextMenu_ExportHand";
         public static string PlainTextHandHistoryString = "Enum_HandExport_PlainTextHandHistory";
 

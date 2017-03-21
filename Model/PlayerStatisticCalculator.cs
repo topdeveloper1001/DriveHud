@@ -232,9 +232,9 @@ namespace Model
 
             #region Squeeze
 
-            var squeeze = new Condition();
+            var squeezBet = new ConditionalBet();
             if (pfrOcurred)
-                CalculateSqueeze(squeeze, preflops, player);
+                CalculateSqueeze(squeezBet, preflops, player);
 
             #endregion
 
@@ -269,6 +269,30 @@ namespace Model
             {
                 CalculateDonkBet(donkBet, parsedHand.HandActions, player);
             }
+
+            #endregion
+
+            #region Raise Bet
+
+            ConditionalBet flopRaiseBet = new ConditionalBet();
+            ConditionalBet turnRaiseBet = new ConditionalBet();
+            ConditionalBet riverRaiseBet = new ConditionalBet();
+
+            CalculateRaiseBet(flopRaiseBet, parsedHand.Flop, player);
+            CalculateRaiseBet(turnRaiseBet, parsedHand.Turn, player);
+            CalculateRaiseBet(riverRaiseBet, parsedHand.River, player);
+
+            #endregion
+
+            #region Bet when checked to 
+
+            Condition flopBetWhenCheckedTo = new Condition();
+            Condition turnBetWhenCheckedTo = new Condition();
+            Condition riverBetWhenCheckedTo = new Condition();
+
+            CalculateBetWhenCheckedTo(flopBetWhenCheckedTo, parsedHand.Flop, player);
+            CalculateBetWhenCheckedTo(turnBetWhenCheckedTo, parsedHand.Turn, player);
+            CalculateBetWhenCheckedTo(riverBetWhenCheckedTo, parsedHand.River, player);
 
             #endregion
 
@@ -479,8 +503,8 @@ namespace Model
 
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
-            stat.Couldsqueeze = squeeze.Possible ? 1 : 0;
-            stat.Didsqueeze = squeeze.Made ? 1 : 0;
+            stat.Couldsqueeze = squeezBet.Possible ? 1 : 0;
+            stat.Didsqueeze = squeezBet.Made ? 1 : 0;
 
             stat.DidOpenRaise = isOpenRaise ? 1 : 0;
             stat.IsRaisedLimpers = isRaisedLimpers ? 1 : 0;
@@ -525,6 +549,35 @@ namespace Model
             stat.CheckFoldFlopPfrOop = pfr && isCheckedFlop && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.BetFlopCalled3BetPreflopIp = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
+
+            stat.FacedRaiseFlop = flopRaiseBet.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseFlop = flopRaiseBet.Folded ? 1 : 0;
+            stat.CalledFacedRaiseFlop = flopRaiseBet.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseFlop = flopRaiseBet.Raised ? 1 : 0;
+
+            stat.FacedRaiseTurn = turnRaiseBet.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseTurn = turnRaiseBet.Folded ? 1 : 0;
+            stat.CalledFacedRaiseTurn = turnRaiseBet.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseTurn = turnRaiseBet.Raised ? 1 : 0;
+
+            stat.FacedRaiseRiver = riverRaiseBet.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseRiver = riverRaiseBet.Folded ? 1 : 0;
+            stat.CalledFacedRaiseRiver = riverRaiseBet.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseRiver = riverRaiseBet.Raised ? 1 : 0;
+
+            stat.CanBetWhenCheckedToFlop = flopBetWhenCheckedTo.Possible ? 1 : 0;
+            stat.DidBetWhenCheckedToFlop = flopBetWhenCheckedTo.Made ? 1 : 0;
+
+            stat.CanBetWhenCheckedToTurn = turnBetWhenCheckedTo.Possible ? 1 : 0;
+            stat.DidBetWhenCheckedToTurn = turnBetWhenCheckedTo.Made ? 1 : 0;
+
+            stat.CanBetWhenCheckedToRiver = riverBetWhenCheckedTo.Possible ? 1 : 0;
+            stat.DidBetWhenCheckedToRiver = riverBetWhenCheckedTo.Made ? 1 : 0;
+
+            stat.FacedSqueez = squeezBet.Faced ? 1 : 0;
+            stat.FoldedFacedSqueez = squeezBet.Folded ? 1 : 0;
+            stat.CalledFacedSqueez = squeezBet.Called ? 1 : 0;
+            stat.ReraisedFacedSqueez = squeezBet.Raised ? 1 : 0;
 
             #region Additional
 
@@ -1053,9 +1106,9 @@ namespace Model
             }
         }
 
-        private static void CalculateSqueeze(Condition squeeze, IList<HandAction> preflops, string player)
+        private static void CalculateSqueeze(ConditionalBet squeezBet, IList<HandAction> preflops, string player)
         {
-            string squeezeStarter = null;
+            List<string> squeezePlayers = new List<string>();
             bool wasSqueezeRaise = false, wasSqueezeCall = false;
             foreach (var action in preflops)
             {
@@ -1063,38 +1116,68 @@ namespace Model
                 {
                     if (wasSqueezeCall)
                     {
-                        if (action.PlayerName == squeezeStarter)
-                            return;
+                        if (!squeezBet.Happened)
+                        {
+                            if (squeezePlayers.Contains(action.PlayerName))
+                                return;
 
-                        if (action.PlayerName != player && action.IsRaise())
-                            return;
+                            squeezBet.Happened = action.IsRaise();
 
-                        if (action.PlayerName != player)
-                            continue;
+                            if (action.PlayerName == player)
+                            {
+                                squeezBet.Possible = true;
+                                if (action.IsRaise())
+                                {
+                                    squeezBet.Made = true;
+                                }
 
-                        squeeze.Possible = true;
-                        if (action.IsRaise())
-                            squeeze.Made = true;
+                                return;
+                            }
+
+                            if (action.IsCall())
+                            {
+                                squeezePlayers.Add(action.PlayerName);
+                            }
+
+                            if (squeezBet.Happened)
+                            {
+                                // squuez bet happened, but player is not the one who did it. check if player is within squeezed list
+                                if (!squeezePlayers.Contains(player))
+                                {
+                                    return;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (action.PlayerName == player)
+                            {
+                                squeezBet.CheckAction(action);
+                                return;
+                            }
+                        }
                     }
                     else
                     {
-                        if (action.PlayerName == player)
+                        if (action.IsRaise())
+                        {
                             return;
+                        }
 
                         if (action.IsCall())
+                        {
                             wasSqueezeCall = true;
+                            squeezePlayers.Add(action.PlayerName);
+                        }
                     }
                 }
                 else
                 {
-                    if (action.PlayerName == player)
-                        return;
-
                     if (!action.IsRaise())
                         continue;
 
                     wasSqueezeRaise = true;
-                    squeezeStarter = action.PlayerName;
+                    squeezePlayers.Add(action.PlayerName);
                 }
             }
         }
@@ -1227,6 +1310,86 @@ namespace Model
                 // somebody raised before we had a chance to limp
                 if (action.IsRaise() && !limp.Made)
                 {
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Determines player's reply to raise action on a specific street
+        /// </summary>
+        /// <param name="raiseBet"></param>
+        /// <param name="streetActions"></param>
+        /// <param name="player"></param>
+        private static void CalculateRaiseBet(ConditionalBet raiseBet, IEnumerable<HandAction> streetActions, string player)
+        {
+            var wasBet = false;
+            foreach (var action in streetActions)
+            {
+                if (wasBet)
+                {
+                    if (action.PlayerName != player)
+                    {
+                        continue;
+                    }
+
+                    raiseBet.Faced = true;
+                    raiseBet.CheckAction(action);
+                }
+                else
+                {
+                    if (action.IsBet())
+                    {
+                        if (action.PlayerName == player)
+                        {
+                            return;
+                        }
+
+                        wasBet = true;
+                        continue;
+                    }
+
+                    if (action.PlayerName == player && action.IsFold)
+                    {
+                        return;
+                    }
+                }
+            }
+        }
+
+        private static void CalculateBetWhenCheckedTo(Condition betWhenCheckedTo, IEnumerable<HandAction> streetActions, string player)
+        {
+            bool wasCheck = false;
+            foreach (var action in streetActions)
+            {
+                if (!wasCheck)
+                {
+                    if (action.IsCheck)
+                    {
+                        wasCheck = true;
+                        continue;
+                    }
+
+                    if (action.IsBet() || action.PlayerName == player)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    if (action.IsBet())
+                    {
+                        return;
+                    }
+
+                    if (action.PlayerName != player)
+                    {
+                        continue;
+                    }
+
+                    betWhenCheckedTo.Possible = true;
+                    betWhenCheckedTo.Made = action.IsBet();
+
                     return;
                 }
             }
