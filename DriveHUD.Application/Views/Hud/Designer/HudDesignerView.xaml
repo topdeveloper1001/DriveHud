@@ -6,7 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-    xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud.Designer"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
+    xmlns:hvm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls"
@@ -16,6 +18,33 @@
 
     <UserControl.Resources>
 
+        <DataTemplate
+            x:Key="HudPlainStatBoxTemplate"
+            DataType="{x:Type hvm:HudPlainStatBoxViewModel}">
+            <local:HudPlainStatBox
+                DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type telerik:RadDiagramShape}, AncestorLevel=1}}" />
+        </DataTemplate>
+
+        <bhv:HudDesignerTableTemplateSelector
+            x:Key="HudDesignerTableTemplateSelector"
+            HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}"
+            PlayerPlaceTemplate="{StaticResource StructTemplate}" />
+
+        <Style
+            x:Key="HudDesignerTableDiagramStyle"
+            BasedOn="{StaticResource HudTableDiagramStyle}"
+            TargetType="{x:Type telerik:RadDiagram}">
+
+            <Setter
+                Property="ShapeTemplateSelector"
+                Value="{StaticResource HudDesignerTableTemplateSelector}" />
+
+            <Setter
+                Property="IsInformationAdornerVisible"
+                Value="False" />
+
+        </Style>
+
     </UserControl.Resources>
 
     <Grid>
@@ -23,9 +52,10 @@
         <telerik:RadDiagram
             dh:DragDrop.IsDragTarget="True"
             dh:DragDrop.DragDropCommand="{Binding AddToolCommand}"
-            Style="{StaticResource HudTableDiagramStyle}">
+            Style="{StaticResource HudDesignerTableDiagramStyle}">
             <i:Interaction.Behaviors>
-                <bhv:HudDesignerBehavior />
+                <bhv:HudDesignerBehavior
+                    DesignerTools="{Binding Tools}" />
             </i:Interaction.Behaviors>
         </telerik:RadDiagram>
 

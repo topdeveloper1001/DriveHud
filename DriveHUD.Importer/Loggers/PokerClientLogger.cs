@@ -114,7 +114,7 @@ namespace DriveHUD.Importers.Loggers
 
             try
             {
-#if DEBUG
+#if !DEBUG
                 streamWriter.WriteLine(message);
                 return;
 #endif

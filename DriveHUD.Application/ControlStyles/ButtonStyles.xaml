@@ -54,7 +54,7 @@
                                     x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
-                                            Storyboard.TargetName="Border"
+                                            Storyboard.TargetName="Border"                                            
                                             Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"

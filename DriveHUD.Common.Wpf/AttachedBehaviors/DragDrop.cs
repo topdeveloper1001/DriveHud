@@ -218,7 +218,14 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             if (dragDropCommand != null && e.Data.GetDataPresent(DataFormat.Name))
             {
                 var dataObject = e.Data.GetData(DataFormat.Name);
-                dragDropCommand.Execute(dataObject);
+
+                var dragDropDataObject = new DragDropDataObject
+                {
+                    Data = dataObject,
+                    Position = e.GetPosition(uiElement)
+                };
+
+                dragDropCommand.Execute(dragDropDataObject);
             }
 
             DragAdorner = null;

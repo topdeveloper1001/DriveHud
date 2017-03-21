@@ -131,6 +131,10 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> DesignerToolCommand { get; private set; }
 
+        public ReactiveCommand<object> SaveDesignCommand { get; private set; }
+
+        public ReactiveCommand<object> CancelDesignCommand { get; private set; }
+
         #endregion
 
         public HudViewModel()
@@ -389,16 +393,18 @@ namespace DriveHUD.Application.ViewModels
         {
             base.InitializeCommands();
 
-            DataSaveCommand = ReactiveCommand.Create();
+            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
+
+            DataSaveCommand = ReactiveCommand.Create(canUseDataCommands);
             DataSaveCommand.Subscribe(x => OpenDataSave());
 
-            DataDeleteCommand = ReactiveCommand.Create();
+            DataDeleteCommand = ReactiveCommand.Create(canUseDataCommands);
             DataDeleteCommand.Subscribe(x => DataDelete());
 
-            DataImportCommand = ReactiveCommand.Create();
+            DataImportCommand = ReactiveCommand.Create(canUseDataCommands);
             DataImportCommand.Subscribe(x => DataImport());
 
-            DataExportCommand = ReactiveCommand.Create();
+            DataExportCommand = ReactiveCommand.Create(canUseDataCommands);
             DataExportCommand.Subscribe(x => DataExport());
 
             SpliterAddCommand = ReactiveCommand.Create();
@@ -415,6 +421,13 @@ namespace DriveHUD.Application.ViewModels
 
             DesignerToolCommand = ReactiveCommand.Create();
             DesignerToolCommand.Subscribe(x => InitializeDesigner((HudDesignerToolType)x));
+
+            CancelDesignCommand = ReactiveCommand.Create();
+            CancelDesignCommand.Subscribe(x =>
+            {
+                IsInDesignMode = false;
+                HudDesignerViewModel = null;
+            });
         }
 
         private void InitializeObservables()
@@ -1154,10 +1167,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeDesigner(HudDesignerToolType toolType)
         {
+            if (IsInDesignMode)
+            {
+                return;
+            }
+
             HudDesignerViewModel = new HudDesignerViewModel();
             HudDesignerViewModel.Initialize(this, toolType);
 
-            IsInDesignMode = !IsInDesignMode;
+            IsInDesignMode = true;
         }
 
         #endregion
