@@ -507,6 +507,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\hud\drivehud-hudmenu.png" />
+    <EmbeddedResource Include="Layouts\DH 10-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 2-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 3-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 4-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 6-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 8-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max.xml" />
     <Content Include="Layouts\DH-6max-Basic.xml">
       <SubType>Designer</SubType>
     </Content>

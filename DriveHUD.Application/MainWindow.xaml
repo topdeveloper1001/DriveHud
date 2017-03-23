@@ -1440,7 +1440,7 @@
                         <telerik:RadContextMenu
                             BorderThickness="0"
                             Background="{StaticResource BackgroundBrush3}"
-                            Style="{StaticResource RadContextMenuStyle1}"
+                            Style="{StaticResource RadContextMenuStyle1}"                            
                             ItemsSource="{Binding Path=FilterTypeList}">
                             <telerik:RadContextMenu.ItemContainerStyle>
                                 <Style

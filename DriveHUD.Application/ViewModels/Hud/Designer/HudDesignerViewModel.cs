@@ -25,6 +25,9 @@ using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    /// <summary>
+    /// View model class for HUD designer
+    /// </summary>
     public class HudDesignerViewModel : ViewModelBase
     {
         private HudViewModel hudViewModel;
@@ -34,6 +37,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             tools = new ReactiveList<HudBaseToolViewModel>();
         }
 
+        /// <summary>
+        /// Initialize view model
+        /// </summary>
+        /// <param name="hudViewModel">HUD view model</param>
+        /// <param name="initialToolType">Type of tool which will be added on initializing</param>
         public void Initialize(HudViewModel hudViewModel, HudDesignerToolType initialToolType)
         {
             this.hudViewModel = hudViewModel;
@@ -63,6 +71,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region Infrastructure
 
+        /// <summary>
+        /// Initialize commands
+        /// </summary>
         private void InitializeCommands()
         {
             AddToolCommand = ReactiveCommand.Create();
@@ -84,6 +95,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             });
         }
 
+        /// <summary>
+        /// Add designer tool on table
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <param name="position">Position of tool</param>
         private void AddTool(HudDesignerToolType toolType, Point position)
         {
             var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
@@ -94,6 +110,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             Tools.Add(tool);
         }
 
+        /// <summary>
+        /// Check if tool can be added
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <returns>True if tool can be added, otherwise - false</returns>
         public bool CanAddTool(HudDesignerToolType toolType)
         {
             return true;

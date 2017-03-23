@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudLayoutMappings.cs" company="Ace Poker Solutions">
+// <copyright file="HudLayoutTool.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,30 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Hud;
 using System;
-using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
     /// <summary>
-    /// This class represents the mappings of the layout
+    /// This class represents base tool in hud layout
     /// </summary>
     [Serializable]
-    public class HudLayoutMappings
+    [XmlInclude(typeof(HudLayoutPlainBoxTool))]
+    [XmlInclude(typeof(HudLayoutTextBoxTool))]
+    public abstract class HudLayoutTool
     {
         /// <summary>
-        /// Gets or sets the list of <see cref="HudLayoutMapping"/> the mappings
+        /// Gets the type <see cref="HudDesignerToolType"/> of the tool
+        /// </summary>     
+        [XmlIgnore()]
+        public HudDesignerToolType ToolType { get; protected set; }
+
+        /// <summary>
+        /// Creates a copy of the current <see cref="HudLayoutTool"/> instance
         /// </summary>
-        public List<HudLayoutMapping> Mappings { get; set; } = new List<HudLayoutMapping>();
+        /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
+        public abstract HudLayoutTool Clone();
     }
 }
