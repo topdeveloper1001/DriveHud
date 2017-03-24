@@ -34,19 +34,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         private static StatInfo BlankStatInfo = new StatInfo { Caption = string.Empty, IsCaptionHidden = true };
 
         public HudElementViewModel()
-        {
-            statInfoCollection = new ObservableCollection<StatInfo>();         
-        }
-
-        public HudElementViewModel(IEnumerable<StatInfo> statInfos)
-        {
-            statInfoCollection = new ObservableCollection<StatInfo>(statInfos);
-            Init();
-        }
-
-        private void Init()
-        {
-            HudViewType = HudViewType.Vertical_1;
+        {          
+            tools = new ReactiveList<HudBaseToolViewModel>();
             Opacity = 100;
         }
 
@@ -187,7 +176,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private short pokerSiteId;
 
         /// <summary>
-        /// Pokersite Id
+        /// Poker site Id
         /// </summary>
         public short PokerSiteId
         {
@@ -217,37 +206,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref isRightOriented, value);
-            }
-        }
-
-        [ProtoMember(10)]
-        private HudViewType hudViewType;
-
-        /// <summary>
-        /// Determines rich Hud type
-        /// </summary>
-        public HudViewType HudViewType
-        {
-            get
-            {
-                return hudViewType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref hudViewType, value);
-                this.RaisePropertyChanged(nameof(IsVertical));
-            }
-        }
-
-        /// <summary>
-        /// Determines if rich Hud is vertical
-        /// </summary>
-        public bool IsVertical
-        {
-            get
-            {
-                return HudViewType == HudViewType.Vertical_1
-                    || HudViewType == HudViewType.Vertical_2;
             }
         }
 
@@ -356,6 +314,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private ReactiveList<HudBaseToolViewModel> tools;
+
+        public ReactiveList<HudBaseToolViewModel> Tools
+        {
+            get
+            {
+                return tools;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref tools, value);
+            }
+        }
+
         #region Rich HUD stats
 
         /// <summary>
@@ -438,23 +410,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [NonSerialized]
-        [ProtoMember(16)]
-        private ObservableCollection<StatInfo> statInfoCollection;
-
         [XmlIgnore]
         /// <summary>
         /// Collection of stats for current panel
         /// </summary>
-        public ObservableCollection<StatInfo> StatInfoCollection
+        public ReadOnlyObservableCollection<StatInfo> StatInfoCollection
         {
             get
             {
-                return statInfoCollection;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
+                if (tools == null)
+                {
+                    return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());
+                }
+
+                return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());                
             }
         }
 
@@ -523,28 +492,19 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(21)]
-        private HudType hudType;
-
-        public HudType HudType
-        {
-            get
-            {
-                return hudType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref hudType, value);
-            }
-        }
-
         [ProtoMember(22)]
-        private double _opacity;
+        private double opacity;
 
         public double Opacity
         {
-            get { return _opacity; }
-            set { this.RaiseAndSetIfChanged(ref _opacity, value); }
+            get
+            {
+                return opacity;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref opacity, value);
+            }
         }
 
         #endregion
@@ -559,10 +519,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Cloned object</returns>
         public HudElementViewModel Clone()
         {
-            var cloned = (HudElementViewModel)MemberwiseClone();
-
-            cloned.StatInfoCollection = new ObservableCollection<StatInfo>();
-
+            var cloned = (HudElementViewModel)MemberwiseClone();            
             return cloned;
         }
 

@@ -20,9 +20,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// Defines the service for initializing, loading, deleting layouts of the hud
     /// </summary>
     internal interface IHudLayoutsService
-    {
-        List<HudTableViewModel> HudTableViewModels { get; set; }
-
+    {        
         /// <summary>
         /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
         /// </summary>

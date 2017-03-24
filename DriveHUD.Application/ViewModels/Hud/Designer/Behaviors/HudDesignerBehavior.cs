@@ -28,6 +28,10 @@ using ReactiveUI;
 using Telerik.Windows.Controls.Diagrams;
 using System.Windows.Data;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
+using System.Windows.Navigation;
+using System.Reactive.Disposables;
 
 namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 {
@@ -35,11 +39,9 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
     {
         #region Dependency Properties
 
-        private IDisposable ActOnEveryObjectBehavior
-        {
-            get;
-            set;
-        }
+        private CompositeDisposable Disposables => new CompositeDisposable();
+
+        private List<IShape> RemovableShapes => new List<IShape>();
 
         public static DependencyProperty RecommendedAreaTemplateProperty = DependencyProperty.Register("RecommendedAreaTemplate", typeof(DataTemplate), typeof(HudDesignerBehavior));
 
@@ -55,37 +57,46 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             }
         }
 
-        public static DependencyProperty DesignerToolsProperty = DependencyProperty.Register("DesignerTools", typeof(ReactiveList<HudBaseToolViewModel>),
-            typeof(HudDesignerBehavior), new PropertyMetadata(new ReactiveList<HudBaseToolViewModel>(), OnDesignerToolsChanged));
+        public static DependencyProperty HudElementsProperty = DependencyProperty.Register("HudElements", typeof(ReactiveList<HudElementViewModel>),
+            typeof(HudDesignerBehavior), new PropertyMetadata(new ReactiveList<HudElementViewModel>(), OnHudElementsChanged));
 
-        public ReactiveList<HudBaseToolViewModel> DesignerTools
+        public ReactiveList<HudElementViewModel> HudElements
         {
             get
             {
-                return (ReactiveList<HudBaseToolViewModel>)GetValue(DesignerToolsProperty);
+                return (ReactiveList<HudElementViewModel>)GetValue(HudElementsProperty);
             }
             set
             {
-                SetValue(DesignerToolsProperty, value);
+                SetValue(HudElementsProperty, value);
             }
         }
 
-        private static void OnDesignerToolsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnHudElementsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var behavior = d as HudDesignerBehavior;
-            var toolsCollection = e.NewValue as ReactiveList<HudBaseToolViewModel>;
+            var hudElements = e.NewValue as ReactiveList<HudElementViewModel>;
 
-            if (behavior == null || toolsCollection == null)
+            if (behavior == null || hudElements == null || behavior.AssociatedObject == null)
             {
                 return;
             }
 
-            if (behavior.ActOnEveryObjectBehavior != null)
+            if (behavior.Disposables != null)
             {
-                behavior.ActOnEveryObjectBehavior.Dispose();
+                behavior.Disposables.Dispose();
             }
 
-            behavior.ActOnEveryObjectBehavior = toolsCollection.ActOnEveryObject(behavior.OnAddTool, behavior.RemoveAddTool);
+            behavior.ClearDiagram();
+
+            for (var seat = 0; seat < hudElements.Count; seat++)
+            {
+                // add player label
+                var playerLabel = CreatePlayerLabel(hudElements.Count, seat + 1);
+                behavior.AssociatedObject.AddShape(playerLabel);
+                behavior.RemovableShapes.Add(playerLabel);
+
+            }
         }
 
         #endregion
@@ -110,22 +121,21 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 return;
             }
 
-            var hudTableViewModel = new HudTableViewModel
-            {
-                HudViewType = HudViewType.CustomDesigned,
-                TableType = EnumTableType.HU,
-                GameType = EnumGameType.CashHoldem,
-                HudElements = new ObservableCollection<HudElementViewModel>()
-                {
-                    new HudElementViewModel
-                    {
-                         Seat = 1
-                    }
-                }
-            };
+            var table = CreateTableRadDiagramShape();
 
-            var tableConfigurator = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>();
-            tableConfigurator.ConfigureTable(diagram, hudTableViewModel, (int)EnumTableType.HU);
+            var tableBackgroundImage = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), HudDefaultSettings.TableBackgroundImage));
+
+            RenderOptions.SetBitmapScalingMode(tableBackgroundImage, BitmapScalingMode.HighQuality);
+            RenderOptions.SetEdgeMode(tableBackgroundImage, EdgeMode.Aliased);
+
+            table.Background = new ImageBrush(tableBackgroundImage);
+
+            diagram.AddShape(table);
+
+            table.X = DiagramActualWidth(diagram) / 2 - table.Width / 2;
+            table.Y = diagram.Height / 2 - table.Height / 2;
+
+            diagram.Group(HudDefaultSettings.TableRadDiagramGroup, diagram.Shapes.OfType<IGroupable>().ToArray());
         }
 
         private void OnUnloaded(object sender, RoutedEventArgs e)
@@ -134,9 +144,9 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         protected override void OnDetaching()
         {
-            if (ActOnEveryObjectBehavior != null)
+            if (Disposables != null)
             {
-                ActOnEveryObjectBehavior.Dispose();
+                Disposables.Dispose();
             }
 
             AssociatedObject.ViewportChanged -= OnViewportChanged;
@@ -160,9 +170,75 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         #endregion
 
-        #region Add/Remove tools 
+        #region Infrastructure
 
-        private void OnAddTool(HudBaseToolViewModel toolViewModel)
+        private static RadDiagramShape CreateTableRadDiagramShape()
+        {
+            var table = new RadDiagramShape()
+            {
+                Height = HudDefaultSettings.TableHeight,
+                Width = HudDefaultSettings.TableWidth,
+                StrokeThickness = 0,
+                IsEnabled = false,
+                SnapsToDevicePixels = true
+            };
+
+            return table;
+        }
+
+        /// <summary>
+        /// Creates <see cref="RadDiagramShape"/> for player based of seat
+        /// </summary>
+        /// <param name="seats">Total seats</param>
+        /// <param name="seat">Player seat</param>
+        /// <returns><see cref="RadDiagramShape"/></returns>
+        private static RadDiagramShape CreatePlayerLabel(int seats, int seat)
+        {
+            var label = new RadDiagramShape
+            {
+                DataContext = new HudPlayerViewModel
+                {
+                    Player = string.Format(HudDefaultSettings.TablePlayerNameFormat, seat),
+                    Bank = HudDefaultSettings.TablePlayerBank
+                },
+                Height = HudDefaultSettings.TablePlayerLabelHeight,
+                Width = HudDefaultSettings.TablePlayerLabelWidth,
+                StrokeThickness = 0,
+                BorderThickness = new Thickness(0),
+                IsEnabled = false,
+                IsHitTestVisible = false,
+                IsRotationEnabled = false,
+                X = HudDefaultSettings.TablePlayerLabelPositions[seats][seat - 1, 0],
+                Y = HudDefaultSettings.TablePlayerLabelPositions[seats][seat - 1, 1],
+                Background = System.Windows.Application.Current.Resources["HudPlayerBrush"] as VisualBrush
+            };
+
+            return label;
+        }
+
+        private void ClearDiagram()
+        {
+            if (AssociatedObject == null)
+            {
+                return;
+            }
+
+            foreach (var shape in RemovableShapes)
+            {
+                AssociatedObject.RemoveShape(shape);
+            }
+        }
+
+        #endregion
+
+        #region Add/Remove hud elements 
+
+        private void AddHudElement(HudElementViewModel hudElement)
+        {
+
+        }
+
+        private void AddTool(HudBaseToolViewModel toolViewModel)
         {
             var shape = new RadDiagramShape()
             {
@@ -185,10 +261,14 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             AssociatedObject.AddShape(shape);
         }
 
-        private void RemoveAddTool(HudBaseToolViewModel toolViewModel)
+        private void RemoveTool(HudElementViewModel hudElement)
         {
             Debug.WriteLine("Tool removed");
         }
+
+        #endregion
+
+        #region Helpers
 
         protected static void SetPositionBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)
         {
@@ -226,6 +306,16 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         protected static void SetShapeSize(RadDiagramShape shape)
         {
             shape.Height = double.NaN;
+        }
+
+        protected static double DiagramActualWidth(RadDiagram diagram)
+        {
+            return diagram.ActualWidth == 0 ? HudDefaultSettings.HudTableWidth : diagram.ActualWidth;
+        }
+
+        protected static double DiagramActualHeigth(RadDiagram diagram)
+        {
+            return diagram.ActualHeight == 0 ? HudDefaultSettings.HudTableHeight : diagram.ActualHeight;
         }
 
         #endregion

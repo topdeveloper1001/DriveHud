@@ -84,7 +84,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public abstract HudDesignerToolType ToolType
         {
             get;
-        }
+        }        
 
         #endregion
     }

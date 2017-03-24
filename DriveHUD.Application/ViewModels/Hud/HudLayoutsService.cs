@@ -66,9 +66,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
         /// </summary>
         public HudLayoutMappings HudLayoutMappings { get; set; }
-
-        public List<HudTableViewModel> HudTableViewModels { get; set; }
-
+  
         #endregion
 
         #region Implementation of IHudLayoutsService

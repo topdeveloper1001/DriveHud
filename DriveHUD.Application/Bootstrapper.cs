@@ -221,15 +221,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
             Container.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
-
-            // HUD table configurators
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>();
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.CustomDesigned.ToString());
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.Plain.ToString());
-            Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
-            Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());
-            Container.RegisterType<ITableConfigurator, CommonVertTwoTableConfiguration>(HudViewType.Vertical_2.ToString());
-
+    
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
 

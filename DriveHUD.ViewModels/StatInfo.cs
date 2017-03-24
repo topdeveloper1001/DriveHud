@@ -275,19 +275,7 @@ namespace DriveHUD.ViewModels
                 ValueSetColor(value);
             }
         }
-
-        [ProtoMember(12)]
-        public bool Settings_IsAvailable
-        {
-            get { return _settings_IsAvailable; }
-            set
-            {
-                if (value == _settings_IsAvailable) return;
-                _settings_IsAvailable = value;
-                OnPropertyChanged();
-            }
-        }
-
+    
         [ProtoMember(13)]
         public bool SettingsAppearance_IsChecked
         {
@@ -578,24 +566,7 @@ namespace DriveHUD.ViewModels
         [XmlIgnore]
         [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
-
-        [NonSerialized]
-        private bool isAvailable = true;
-
-        [XmlIgnore]
-        [ProtoMember(29)]
-        public virtual bool IsAvailable
-        {
-            get { return isAvailable; }
-            set
-            {
-                if (isAvailable == value)
-                    return;
-                isAvailable = value;
-                OnPropertyChanged();
-            }
-        }
-
+     
         #endregion
 
         #region Methods
@@ -680,15 +651,13 @@ namespace DriveHUD.ViewModels
             statInfoClone.Category = Category;
             statInfoClone.Format = Format;
             statInfoClone.PropertyName = PropertyName;
-            statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
-            statInfoClone.Settings_IsAvailable = Settings_IsAvailable;
+            statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;            
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
             statInfoClone.IsDuplicateSelected = IsDuplicateSelected;
             statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
                                                         new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
-                                                        StatInfoToolTipCollection;
-            statInfoClone.IsAvailable = IsAvailable;
+                                                        StatInfoToolTipCollection;            
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);
@@ -793,11 +762,7 @@ namespace DriveHUD.ViewModels
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion

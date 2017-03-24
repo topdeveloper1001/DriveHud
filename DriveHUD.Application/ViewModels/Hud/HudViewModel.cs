@@ -42,74 +42,275 @@ using System.Windows.Data;
 namespace DriveHUD.Application.ViewModels
 {
     /// <summary>
-    /// Class HUD View Model
+    /// Represents view model of hud screen
     /// </summary>
     public class HudViewModel : PopupViewModelBase
     {
-        private IHudLayoutsService _hudLayoutsSevice;
+        private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
         private ISettingsService SettingsService => ServiceLocator.Current.GetInstance<ISettingsService>();
 
-        private ObservableCollection<HudLayoutInfo> _layouts;
+        /// <summary>
+        /// Initializes a <see cref="HudViewModel"/> instance
+        /// </summary>
+        public HudViewModel()
+        {
+            NotificationRequest = new InteractionRequest<INotification>();
 
-        public ObservableCollection<HudLayoutInfo> Layouts
+            InitializeStatInfoCollection();
+            InitializeStatInfoCollectionObserved();
+            InitializeTableTypes();
+            InitializeCommands();
+            InitializeObservables();
+
+            PreviewHudElementViewModel = new HudElementViewModel
+            {
+                TiltMeter = 100,
+                Opacity = 100
+            };
+
+            CurrentTableType = TableTypes.FirstOrDefault();
+        }
+
+        #region Properties
+
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
+        private bool currentLayoutIsSwitching;
+
+        private EnumTableType currentTableType;
+
+        /// <summary>
+        /// Gets or sets the current <see cref="EnumTableType"/> table type 
+        /// </summary>
+        public EnumTableType CurrentTableType
         {
             get
             {
-                return _layouts;
+                return currentTableType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref currentTableType, value);
+
+                if (!currentLayoutIsSwitching)
+                {
+                    Layouts = new ObservableCollection<HudLayoutInfoV2>(HudLayoutsService.GetAllLayouts(CurrentTableType));
+                    CurrentLayout = Layouts.FirstOrDefault();
+                }
+            }
+        }
+
+        private ObservableCollection<HudLayoutInfoV2> layouts;
+
+        /// <summary>
+        /// Gets the collection of the <see cref="HudLayoutInfoV2"/> layouts
+        /// </summary>
+        public ObservableCollection<HudLayoutInfoV2> Layouts
+        {
+            get
+            {
+                return layouts;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref _layouts, value);
+                this.RaiseAndSetIfChanged(ref layouts, value);
             }
         }
 
-        private HudLayoutInfo _currentLayout;
+        private HudLayoutInfoV2 currentLayout;
 
-        public HudLayoutInfo CurrentLayout
+        /// <summary>
+        /// Gets or sets the current <see cref="HudLayoutInfoV2"/> layout
+        /// </summary>
+        public HudLayoutInfoV2 CurrentLayout
         {
-            get { return _currentLayout; }
+            get
+            {
+                return currentLayout;
+            }
             set
             {
-                if (CurrentLayout != null && _currentLayout != value)
+                this.RaiseAndSetIfChanged(ref currentLayout, value);
+
+                currentLayoutIsSwitching = true;
+
+                if (currentLayout != null)
                 {
-                    CurrentLayout.HudStats.Clear();
-                    CurrentLayout.HudStats.AddRange(StatInfoObserveCollection.Select(s =>
-                    {
-                        var statBreakInfo = s as StatInfoBreak;
-                        return statBreakInfo != null ? statBreakInfo.Clone() : s.Clone();
-                    }));
+                    CurrentTableType = TableTypes.FirstOrDefault(tableType => tableType == currentLayout.TableType);
                 }
 
-                _currentLayoutSwitching = true;
+                currentLayoutIsSwitching = false;
 
-                this.RaiseAndSetIfChanged(ref _currentLayout, value);
-
-                if (_currentLayout != null)
-                {
-                    previewHudElementViewModel.HudViewType = HudViewType;
-                    CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
-                }
-
-                var playerIcon = StatInfoCollectionView.SourceCollection.OfType<StatInfo>().FirstOrDefault(x => x.Stat == Stat.PlayerInfoIcon);
-
-                if (playerIcon != null)
-                {
-                    playerIcon.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-
-                playerIcon = StatInfoObserveCollection.FirstOrDefault(x => x.Stat == Stat.PlayerInfoIcon);
-
-                if (playerIcon != null)
-                {
-                    playerIcon.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-
-                // load data for selected layout
-                RaisePropertyChanged(() => HudViewType);
-                _currentLayoutSwitching = false;
-                DataLoad(true);
+                RefreshData();
             }
         }
+
+        private ObservableCollection<EnumTableType> tableTypes;
+
+        /// <summary>
+        /// Gets the collection of <see cref="EnumTableType"/> table types
+        /// </summary>
+        public ObservableCollection<EnumTableType> TableTypes
+        {
+            get
+            {
+                return tableTypes;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref tableTypes, value);
+            }
+        }
+
+        private ReactiveList<StatInfo> statInfoCollection;
+
+        /// <summary>
+        /// Gets the collection of the selected <see cref="StatInfo"/> stats
+        /// </summary>
+        public ReactiveList<StatInfo> StatInfoCollection
+        {
+            get
+            {
+                return statInfoCollection;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
+
+                var collectionViewSource = (CollectionView)CollectionViewSource.GetDefaultView(statInfoCollection);
+
+                collectionViewSource.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
+
+                collectionViewSource.SortDescriptions.Add(new SortDescription("GroupName", ListSortDirection.Ascending));
+                collectionViewSource.SortDescriptions.Add(new SortDescription("Caption", ListSortDirection.Ascending));
+
+                collectionViewSource.Filter = (item) =>
+                {
+                    var stat = item as StatInfo;
+
+                    if (stat == null)
+                    {
+                        return false;
+                    }
+
+                    return stat.IsListed && !stat.IsDuplicateSelected;
+                };
+
+                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
+
+                if (statFiltering.CanChangeLiveFiltering)
+                {
+                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
+                    statFiltering.IsLiveFiltering = true;
+                }
+
+                StatInfoCollectionView = collectionViewSource;
+            }
+        }
+
+        private CollectionView statInfoCollectionView;
+
+        /// <summary>
+        /// Gets or sets the <see cref="CollectionView"/> of stats
+        /// </summary>
+        public CollectionView StatInfoCollectionView
+        {
+            get
+            {
+                return statInfoCollectionView;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoCollectionView, value);
+            }
+        }
+
+        private ObservableCollection<StatInfo> statInfoObserveCollection;
+
+        public ObservableCollection<StatInfo> StatInfoObserveCollection
+        {
+            get
+            {
+                return statInfoObserveCollection;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoObserveCollection, value);
+            }
+        }
+
+        private StatInfo statInfoObserveSelectedItem;
+
+        public StatInfo StatInfoObserveSelectedItem
+        {
+            get
+            {
+                return statInfoObserveSelectedItem;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoObserveSelectedItem, value);
+            }
+        }
+
+        private HudElementViewModel previewHudElementViewModel;
+
+        public HudElementViewModel PreviewHudElementViewModel
+        {
+            get
+            {
+                return previewHudElementViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref previewHudElementViewModel, value);
+            }
+        }
+
+        private ReactiveList<HudElementViewModel> hudElements;
+
+        public ReactiveList<HudElementViewModel> HudElements
+        {
+            get
+            {
+                return hudElements;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref hudElements, value);
+            }
+        }
+
+        private bool isInDesignMode;
+
+        public bool IsInDesignMode
+        {
+            get
+            {
+                return isInDesignMode;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isInDesignMode, value);
+            }
+        }
+
+        private HudDesignerViewModel hudDesignerViewModel;
+
+        public HudDesignerViewModel HudDesignerViewModel
+        {
+            get
+            {
+                return hudDesignerViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref hudDesignerViewModel, value);
+            }
+        }
+
+        #endregion
 
         #region Commands
 
@@ -137,95 +338,48 @@ namespace DriveHUD.Application.ViewModels
 
         #endregion
 
-        public HudViewModel()
-        {
-            Initialize();
-        }
+        #region Infrastructure
 
         /// <summary>
-        /// Initialize view model
+        /// Initializes <see cref="HudElements"/> using <see cref="CurrentLayout"/>
         /// </summary>
-        private void Initialize()
-        {
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            eventAggregator.GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
-            eventAggregator.GetEvent<UpdateHudEvent>().Subscribe(OnUpdateHudRaised);
-
-            _hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
-            NotificationRequest = new InteractionRequest<INotification>();
-
-            InitializeStatInfoCollection();
-            InitializeStatInfoCollectionObserved();
-
-            InitializePlayerCollection();
-
-            InitializeTableLayouts();
-
-            hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
-
-            var settings = SettingsService.GetSettings();
-
-            PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100, Opacity = 100 };
-            PreviewHudElementViewModel.HudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
-
-            InitializeCommands();
-            InitializeObservables();
-
-            InitializeHudElements();
-
-            CurrentTableType = TableTypes.FirstOrDefault();
-        }
-
         private void InitializeHudElements()
         {
-            HudTableViewModels = new List<HudTableViewModel>();
-
-            foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
-            {
-                // generate hud table view model
-                var hudTableViewModel = new HudTableViewModel
-                {
-                    TableType = tableType
-                };
-
-                HudTableViewModels.Add(hudTableViewModel);
-
-                // initialize hud elements
-                InitializeHudTableHudElements(hudTableViewModel, tableType);
-            }
-        }
-
-        private void InitializeHudTableHudElements(HudTableViewModel hudTableViewModel, EnumTableType tableType)
-        {
-            if (hudTableViewModel == null)
+            if (CurrentLayout == null)
             {
                 return;
             }
 
-            var hudElements = new ObservableCollection<HudElementViewModel>();
+            // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
+            var layoutTools = CurrentLayout.LayoutTools.Where(x => x.ToolType == HudDesignerToolType.PlainStatBox).ToArray();
 
-            var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(HudViewType.ToString());
+            var seats = (int)CurrentLayout.TableType;
 
-            var hudElementViewModels = tableConfigurator.GenerateElements((int)tableType).ToArray();
-            hudElements.AddRange(hudElementViewModels);
+            var hudElementsToAdd = new List<HudElementViewModel>();
 
-            hudTableViewModel.HudElements = hudElements;
-        }
+            for (var seat = 1; seat <= seats; seat++)
+            {
+                var hudElement = new HudElementViewModel
+                {
 
-        private void InitializeTableLayouts()
-        {
-            var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
-            _configurations = configurationService.GetAll();
-            TableTypes =
-                new ObservableCollection<EnumTableTypeWrapper>(
-                    Enum.GetValues(typeof(EnumTableType))
-                        .OfType<EnumTableType>()
-                        .Select(t => new EnumTableTypeWrapper(t)));
+                };
+
+                hudElementsToAdd.Add(hudElement);
+            }
+
+            HudElements = new ReactiveList<HudElementViewModel>(hudElementsToAdd);
         }
 
         /// <summary>
-        /// Initialize stat collection
+        /// Initializes <see cref="TableTypes"/>
+        /// </summary>
+        private void InitializeTableTypes()
+        {
+            TableTypes = new ObservableCollection<EnumTableType>(Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>());
+        }
+
+        /// <summary>
+        /// Initializes stat collection
         /// </summary>
         private void InitializeStatInfoCollection()
         {
@@ -401,16 +555,17 @@ namespace DriveHUD.Application.ViewModels
             StatInfoCollection.ForEach(x => x.Initialize());
         }
 
+        /// <summary>
+        /// Initialize the collection of <see cref="StatInfo"/>
+        /// </summary>
         private void InitializeStatInfoCollectionObserved()
         {
-            StatInfoObserveCollection = new StatInfoObservableCollection<StatInfo> { AllowBreak = true, BreakCount = 4 };
+            StatInfoObserveCollection = new ObservableCollection<StatInfo>();
         }
 
-        private void InitializePlayerCollection()
-        {
-            PlayerCollection = new ObservableCollection<PlayerHudContent>();
-        }
-
+        /// <summary>
+        /// Initialize commands
+        /// </summary>
         protected override void InitializeCommands()
         {
             base.InitializeCommands();
@@ -457,261 +612,53 @@ namespace DriveHUD.Application.ViewModels
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
                 h => StatInfoObserveCollection.CollectionChanged += h,
                 h => StatInfoObserveCollection.CollectionChanged -= h).Subscribe(x =>
-            {
-                var statsCollection = x.Sender as ObservableCollection<StatInfo>;
-
-                if (statsCollection == null)
                 {
-                    return;
-                }
+                    var statsCollection = x.Sender as ObservableCollection<StatInfo>;
 
-                var statsToHide = StatInfoCollection.Where(s => statsCollection.Any(h => h != s && h.Stat == s.Stat && !(h is StatInfoBreak)));
-
-                StatInfoCollection.Where(s => s.IsDuplicateSelected && !statsToHide.Contains(s))
-                    .ForEach(s => s.IsDuplicateSelected = false);
-
-                statsToHide.ForEach(s => s.IsDuplicateSelected = true);
-
-                CurrentHudTableViewModel.HudElements.ForEach(o =>
-                {
-                    o.StatInfoCollection.Clear();
-                    o.StatInfoCollection.AddRange(statsCollection);
-                    o.UpdateMainStats();
-
-                });
-
-                if (PreviewHudElementViewModel != null)
-                {
-                    PreviewHudElementViewModel.StatInfoCollection.Clear();
-
-                    Random r = new Random();
-
-                    for (int i = 0; i < statsCollection.Count; i++)
+                    if (statsCollection == null)
                     {
-                        if (statsCollection[i] is StatInfoBreak)
+                        return;
+                    }
+
+                    var statsToHide = StatInfoCollection.Where(s => statsCollection.Any(h => h != s && h.Stat == s.Stat && !(h is StatInfoBreak)));
+
+                    StatInfoCollection.Where(s => s.IsDuplicateSelected && !statsToHide.Contains(s))
+                        .ForEach(s => s.IsDuplicateSelected = false);
+
+                    statsToHide.ForEach(s => s.IsDuplicateSelected = true);
+
+                    CurrentHudTableViewModel.HudElements.ForEach(o =>
+                    {
+                        o.StatInfoCollection.Clear();
+                        o.StatInfoCollection.AddRange(statsCollection);
+                        o.UpdateMainStats();
+
+                    });
+
+                    if (PreviewHudElementViewModel != null)
+                    {
+                        PreviewHudElementViewModel.StatInfoCollection.Clear();
+
+                        Random r = new Random();
+
+                        for (int i = 0; i < statsCollection.Count; i++)
                         {
-                            PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
-                            continue;
+                            if (statsCollection[i] is StatInfoBreak)
+                            {
+                                PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
+                                continue;
+                            }
+
+                            var stat = statsCollection[i].Clone();
+                            stat.CurrentValue = r.Next(0, 100);
+                            stat.Caption = string.Format(stat.Format, stat.CurrentValue);
+                            PreviewHudElementViewModel.StatInfoCollection.Add(stat);
                         }
 
-                        var stat = statsCollection[i].Clone();
-                        stat.CurrentValue = r.Next(0, 100);
-                        stat.Caption = string.Format(stat.Format, stat.CurrentValue);
-                        PreviewHudElementViewModel.StatInfoCollection.Add(stat);
+                        PreviewHudElementViewModel.UpdateMainStats();
                     }
-
-                    PreviewHudElementViewModel.UpdateMainStats();
-                }
-            });
+                });
         }
-
-        #region Properties
-
-        public InteractionRequest<INotification> NotificationRequest { get; private set; }
-        public event EventHandler TableUpdated;
-
-        private ObservableCollection<PlayerHudContent> playerCollection;
-
-        private ReactiveList<StatInfo> statInfoCollection;
-        private CollectionView statInfoCollectionView;
-
-        private StatInfoObservableCollection<StatInfo> statInfoObserveCollection;
-        private StatInfo statInfoObserveSelectedItem;
-
-        private EnumTableTypeWrapper _currentTableType;
-
-        public EnumTableTypeWrapper CurrentTableType
-        {
-            get
-            {
-                return _currentTableType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref _currentTableType, value);
-
-                if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
-                    Layouts = new ObservableCollection<HudLayoutInfo>(_hudLayoutsSevice.GetAllLayouts(CurrentTableType.TableType));
-                    CurrentLayout = Layouts.FirstOrDefault();
-                }
-            }
-        }
-
-        public ObservableCollection<EnumTableTypeWrapper> TableTypes
-        {
-            get
-            {
-                return _tableTypes;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref _tableTypes, value);
-            }
-        }
-
-        public ObservableCollection<PlayerHudContent> PlayerCollection
-        {
-            get
-            {
-                return playerCollection;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref playerCollection, value);
-            }
-        }
-
-        public ReactiveList<StatInfo> StatInfoCollection
-        {
-            get
-            {
-                return statInfoCollection;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
-
-                CollectionView collectionViewSource = (CollectionView)CollectionViewSource.GetDefaultView(statInfoCollection);
-
-                collectionViewSource.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
-
-                collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("GroupName", System.ComponentModel.ListSortDirection.Ascending));
-                collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("Caption", System.ComponentModel.ListSortDirection.Ascending));
-
-                collectionViewSource.Filter = (item) =>
-                {
-                    var stat = item as StatInfo;
-
-                    if (stat == null)
-                    {
-                        return false;
-                    }
-
-                    return stat.IsListed && !stat.IsDuplicateSelected;
-                };
-
-                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
-
-                if (statFiltering.CanChangeLiveFiltering)
-                {
-                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
-                    statFiltering.IsLiveFiltering = true;
-                }
-
-                StatInfoCollectionView = collectionViewSource;
-            }
-        }
-
-        public CollectionView StatInfoCollectionView
-        {
-            get
-            {
-                return statInfoCollectionView;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoCollectionView, value);
-            }
-        }
-
-        public StatInfoObservableCollection<StatInfo> StatInfoObserveCollection
-        {
-            get
-            {
-                return statInfoObserveCollection;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoObserveCollection, value);
-            }
-        }
-
-        public StatInfo StatInfoObserveSelectedItem
-        {
-            get
-            {
-                return statInfoObserveSelectedItem;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoObserveSelectedItem, value);
-            }
-        }
-
-        public List<HudTableViewModel> HudTableViewModels
-        {
-            get { return _hudLayoutsSevice.HudTableViewModels; }
-            set { _hudLayoutsSevice.HudTableViewModels = value; }
-        }
-
-        public HudTableViewModel CurrentHudTableViewModel { get; private set; }
-
-        public HudViewType HudViewType => _currentLayout?.HudViewType ?? HudViewType.Plain;
-
-        private ObservableCollection<HudViewType> hudViewTypes;
-
-        public ObservableCollection<HudViewType> HudViewTypes
-        {
-            get
-            {
-                return hudViewTypes;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref hudViewTypes, value);
-            }
-        }
-
-        private HudElementViewModel previewHudElementViewModel;
-
-        public HudElementViewModel PreviewHudElementViewModel
-        {
-            get
-            {
-                return previewHudElementViewModel;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref previewHudElementViewModel, value);
-            }
-        }
-
-        private bool isInDesignMode;
-
-        public bool IsInDesignMode
-        {
-            get
-            {
-                return isInDesignMode;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref isInDesignMode, value);
-            }
-        }
-
-        private HudDesignerViewModel hudDesignerViewModel;
-
-        public HudDesignerViewModel HudDesignerViewModel
-        {
-            get
-            {
-                return hudDesignerViewModel;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref hudDesignerViewModel, value);
-            }
-        }
-
-        private IEnumerable<ISiteConfiguration> _configurations;
-        private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
-        private bool _currentLayoutSwitching;
-
-        #endregion
-
-        #region Infrastructure
 
         private void OpenDataSave()
         {
@@ -747,7 +694,7 @@ namespace DriveHUD.Application.ViewModels
 
             ClosePopup();
 
-            var savedLayout = _hudLayoutsSevice.SaveAs(hudData);
+            var savedLayout = HudLayoutsService.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
@@ -769,10 +716,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void DataExport()
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "HUD Layouts (.xml)|*.xml"
+            };
 
             if (saveFileDialog.ShowDialog() == true)
-                _hudLayoutsSevice.Export(CurrentLayout, saveFileDialog.FileName);
+            {
+                HudLayoutsService.Export(CurrentLayout, saveFileDialog.FileName);
+            }
         }
 
         private void DataImport()
@@ -790,35 +742,13 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void DataLoad(bool disableLayoutSave)
+        /// <summary>
+        /// Refreshes stats and hud elements using <see cref="CurrentLayout"/>
+        /// </summary>
+        private void RefreshData()
         {
-            if (CurrentLayout == null)
-            {
-                return;
-            }
-
-            if (CurrentHudTableViewModel != null && !disableLayoutSave)
-            {
-                SaveLayoutChanged(CurrentLayout);
-            }
-
-            CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType);
-
-            if (CurrentHudTableViewModel == null)
-            {
-                return;
-            }
-
-            InitializeHudTableHudElements(CurrentHudTableViewModel, CurrentTableType.TableType);
-
-            CurrentHudTableViewModel.HudViewType = HudViewType;
-            CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
-            CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
-            CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-            //MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
-            UpdateLayout(CurrentLayout);
-
-            TableUpdated?.Invoke(this, EventArgs.Empty);
+            UpdateStatsCollections();
+            InitializeHudElements();
         }
 
         private void MergeLayouts(IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
@@ -843,7 +773,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void DataDelete()
         {
-            if (!_hudLayoutsSevice.Delete(CurrentLayout.Name))
+            if (HudLayoutsService.Delete(CurrentLayout.Name))
             {
                 return;
             }
@@ -869,9 +799,9 @@ namespace DriveHUD.Application.ViewModels
             }).ToList();
         }
 
-        private void UpdateLayout(HudLayoutInfo layout)
+        private void UpdateStatsCollections()
         {
-            if (layout == null)
+            if (CurrentLayout == null)
             {
                 return;
             }
@@ -884,11 +814,7 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                if (statInfo.Stat == Stat.PlayerInfoIcon)
-                {
-                    statInfo.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-                else
+                if (statInfo.Stat != Stat.PlayerInfoIcon)
                 {
                     statInfo.Reset();
                     statInfo.Initialize();
@@ -1157,34 +1083,9 @@ namespace DriveHUD.Application.ViewModels
             ClosePopup();
         }
 
-        private void OnPreferredSeatChanged(PreferredSeatChangedEventArgs obj)
-        {
-            if (obj == null)
-            {
-                return;
-            }
-
-            foreach (var seat in CurrentHudTableViewModel.TableSeatAreaCollection.Where(x => x.SeatNumber != obj.SeatNumber))
-            {
-                seat.IsPreferredSeat = false;
-            }
-        }
-
         internal void RefreshHudTable()
         {
             this.RaisePropertyChanged(nameof(CurrentTableType));
-        }
-
-        private void OnUpdateHudRaised(UpdateHudEventArgs obj)
-        {
-            if (obj == null)
-                return;
-
-            CurrentHudTableViewModel.HudElements.ForEach(x =>
-            {
-                x.Height = obj.Height;
-                x.Width = obj.Width;
-            });
         }
 
         private void InitializeDesigner(HudDesignerToolType toolType)

@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:bhv="clr-namespace:DriveHUD.Application.ViewModels.Hud.Designer.Behaviors"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
@@ -679,7 +680,7 @@
 
             </StackPanel>
 
-            <!-- Poker table -->
+            <!-- Poker table area -->
             <Grid
                 Grid.Row="1"
                 Grid.Column="1"
@@ -701,20 +702,17 @@
                         Height="*" />
                 </Grid.RowDefinitions>
 
-                <telerik:RadDiagram
-                    x:Name="diagram"
+                <telerik:RadDiagram                    
                     Grid.Row="1"
                     Grid.Column="1"
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                    ViewportChanged="OnDiagramViewportChanged"
-                    Style="{StaticResource HudTableDiagramStyle}" />
-
-                <ContentControl
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
-                    Content="{Binding HudDesignerViewModel}" />
-
+                    dh:DragDrop.IsDragTarget="True"                    
+                    Style="{StaticResource HudTableDiagramStyle}">
+                    <i:Interaction.Behaviors>
+                        <bhv:HudDesignerBehavior
+                            HudElements="{Binding HudElements}" />
+                    </i:Interaction.Behaviors>
+                </telerik:RadDiagram>
+         
                 <StackPanel                   
                     Grid.Row="1"
                     Grid.Column="2"

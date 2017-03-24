@@ -28,14 +28,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             HudStats = new List<StatInfo>();
             ListHUDPlayer = new List<PlayerHudContent>();
         }
-
-        public HudLayout(HudViewModel viewModel)
-        {            
-            TableType = viewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-            HudStats = viewModel.StatInfoObserveCollection.ToList();
-            ListHUDPlayer = viewModel.PlayerCollection.ToList();
-        }
-
+       
         public void Cleanup()
         {           
             ListHUDPlayer?.ForEach(x => x?.HudElement?.Cleanup());

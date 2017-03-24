@@ -10,23 +10,50 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Predefined hard-coded settings
+    /// Predefined internal hud settings
     /// </summary>
     internal static class HudDefaultSettings
     {
-        public static double BovadaRichHudElementWidth = 144;
+        public const double BovadaRichHudElementWidth = 144;
 
-        public static double BovadaRichHudElementHeight = 215;      
+        public const double BovadaRichHudElementHeight = 215;
 
-        public static double HudTableHeight = 568;
+        public const double HudTableHeight = 568;
 
-        public static double HudTableWidth = 812;
+        public const double HudTableWidth = 812;
 
-        public static HudViewType IgnitionDefaultHudViewType = HudViewType.Vertical_1;
+        public const int TableHeight = 320;
+
+        public const int TableWidth = 600;
+
+        public const string TableBackgroundImage = "/DriveHUD.Common.Resources;component/images/Table.png";
+
+        public const string TableRadDiagramGroup = "tableGroup";
+
+        public const int TablePlayerLabelWidth = 110;
+
+        public const int TablePlayerLabelHeight = 35;
+
+        public const string TablePlayerNameFormat = "Player {0}";
+
+        public const decimal TablePlayerBank = 10m;
+
+        public readonly static ReadOnlyDictionary<int, int[,]> TablePlayerLabelPositions = new ReadOnlyDictionary<int, int[,]>(new Dictionary<int, int[,]>
+        {
+            { 2, new int[,] { { 355, 118 }, { 355, 409 } } },
+            { 3, new int[,] { { 636, 262 }, { 355, 409 }, { 72, 262 } } },
+            { 4, new int[,] { { 355, 118 }, { 636, 262 }, { 355, 409 }, { 72, 262 } } },
+            { 5, new int[,] { { 490, 118 }, { 636, 318 }, { 355, 409 }, { 72, 318 }, { 220, 118 } } },
+            { 6, new int[,] { { 422, 118 }, { 636, 262 }, { 422, 409 }, { 264, 409 }, { 72, 262 }, { 264, 118 } } },
+            { 8, new int[,] { { 422, 118 }, { 636, 211 }, { 636, 318 }, { 422, 409 }, { 264, 409 }, { 72, 318 }, { 72, 211 }, { 264, 118 } } },
+            { 9, new int[,] { { 415, 118 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }, { 273, 118 }  } },
+            { 10, new int[,] { { 490, 118 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }, { 220, 118 }, { 355, 118 } } }
+        });
     }
 }
