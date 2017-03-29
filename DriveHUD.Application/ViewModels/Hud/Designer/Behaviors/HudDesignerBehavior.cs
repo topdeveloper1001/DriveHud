@@ -39,9 +39,9 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
     {
         #region Dependency Properties
 
-        private CompositeDisposable Disposables => new CompositeDisposable();
+        private readonly CompositeDisposable Disposables = new CompositeDisposable();
 
-        private List<IShape> RemovableShapes => new List<IShape>();
+        private readonly List<IShape> RemovableShapes = new List<IShape>();
 
         public static DependencyProperty RecommendedAreaTemplateProperty = DependencyProperty.Register("RecommendedAreaTemplate", typeof(DataTemplate), typeof(HudDesignerBehavior));
 
@@ -96,6 +96,10 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 behavior.AssociatedObject.AddShape(playerLabel);
                 behavior.RemovableShapes.Add(playerLabel);
 
+                foreach (var tool in hudElements[seat].Tools)
+                {
+                    behavior.AddTool(tool);
+                }
             }
         }
 
@@ -231,13 +235,12 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         #endregion
 
-        #region Add/Remove hud elements 
+        #region Add/Remove hud elements      
 
-        private void AddHudElement(HudElementViewModel hudElement)
-        {
-
-        }
-
+        /// <summary>
+        /// Adds new shape for <see cref="HudBaseToolViewModel"/> to shapes
+        /// </summary>
+        /// <param name="toolViewModel">ViewModel of tool to add</param>
         private void AddTool(HudBaseToolViewModel toolViewModel)
         {
             var shape = new RadDiagramShape()
@@ -259,11 +262,26 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             SetOpacityBinding(shape, toolViewModel);
 
             AssociatedObject.AddShape(shape);
+            RemovableShapes.Add(shape);
         }
 
-        private void RemoveTool(HudElementViewModel hudElement)
+        /// <summary>
+        /// Removes shape for <see cref="HudBaseToolViewModel"/> from shapes
+        /// </summary>
+        /// <param name="toolViewModel">ViewModel of tool to add</param>
+        private void RemoveTool(HudBaseToolViewModel toolViewModel)
         {
-            Debug.WriteLine("Tool removed");
+            if (AssociatedObject == null || toolViewModel == null)
+            {
+                return;
+            }
+
+            var shape = AssociatedObject.Shapes.OfType<RadDiagramShape>().FirstOrDefault(x => ReferenceEquals(x.DataContext, toolViewModel));
+
+            if (shape != null)
+            {
+                AssociatedObject.RemoveShape(shape);
+            }        
         }
 
         #endregion

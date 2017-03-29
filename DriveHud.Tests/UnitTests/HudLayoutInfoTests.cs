@@ -17,6 +17,7 @@ using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Enums;
 using NUnit.Framework;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,7 +33,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Method tests if <see cref="HudLayoutInfoV2"/> can be serialized with <seealso cref="XmlSerializer"/>
         /// </summary>
-        //[Test]
+        [Test]
         public void HudLayoutInfoCanBeSerialized()
         {
             var hudLayoutInfo = new HudLayoutInfoV2
@@ -53,13 +54,14 @@ namespace DriveHud.Tests.UnitTests
                                 new HudPositionInfo
                                 {
                                      Position = new System.Windows.Point(1,1),
-                                      Seat = 1
+                                     Seat = 1,
+                                     Width = 2
                                 }
                            },
                            PokerSite = EnumPokerSites.Bodog
                       }
                 },
-                Stats = new List<StatInfo>
+                Stats = new ReactiveList<StatInfo>
                 {
                     new StatInfo
                     {
@@ -90,7 +92,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// temp test
         /// </summary>
-        [Test]
+        //[Test]
         public void MigrateDefaultLayouts()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
@@ -124,7 +126,7 @@ namespace DriveHud.Tests.UnitTests
                 {
                     new HudLayoutPlainBoxTool
                     {
-                        Stats = layout.HudStats,
+                        Stats = new ReactiveList<StatInfo>(layout.HudStats),
                         Positions = layout.HudPositionsInfo,
                         UIPositions = layout.UiPositionsInfo.Select(x=>
                             new HudPositionInfo

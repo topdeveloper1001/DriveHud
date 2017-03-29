@@ -291,6 +291,9 @@
     <Compile Include="Controls\HudPanel.xaml.cs">
       <DependentUpon>HudPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudPlainBox.xaml.cs">
+      <DependentUpon>HudPlainBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
     </Compile>
@@ -382,6 +385,7 @@
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerTableTemplateSelector.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseToolViewModel.cs" />
@@ -719,6 +723,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\RadContextMenuTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -740,6 +748,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\HudPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlainBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

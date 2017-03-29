@@ -13,6 +13,8 @@
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.ViewModels;
 using System.Collections.Generic;
+using System;
+using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -32,7 +34,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <summary>
         /// Gets or sets the list of <see cref="StatInfo"/> stats of the plain box tool
         /// </summary>
-        public List<StatInfo> Stats { get; set; }
+        public ReactiveList<StatInfo> Stats { get; set; }
 
         /// <summary>
         /// Gets or sets the list of <see cref="HudPositionsInfo"/> positions of the plain box tool on hud
@@ -43,5 +45,24 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// Gets or sets the list of <see cref="HudPositionInfo"/> UI positions of the plain box tool
         /// </summary>
         public List<HudPositionInfo> UIPositions { get; set; }
+
+        /// <summary>
+        /// Creates a copy of the current <see cref="HudLayoutPlainBoxTool"/> instance
+        /// </summary>
+        /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
+        public override HudLayoutTool Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a view model of the current <see cref="HudLayoutPlainBoxTool"/> instance
+        /// </summary>
+        /// <returns>View model of the current <see cref="HudBaseToolViewModel"/> instance</returns>
+        public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
+        {
+            var viewModel = new HudPlainStatBoxViewModel(this, hudElement);
+            return viewModel;
+        }
     }
 }

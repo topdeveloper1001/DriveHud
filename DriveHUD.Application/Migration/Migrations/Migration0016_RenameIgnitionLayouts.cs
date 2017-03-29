@@ -40,41 +40,41 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Up()
         {
-            try
-            {
-                LogProvider.Log.Info($"Preparing migration #{MigrationNumber}");
+            //try
+            //{
+            //    LogProvider.Log.Info($"Preparing migration #{MigrationNumber}");
 
-                var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            //    var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-                // update layouts
-                foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
-                {
-                    foreach (var layout in hudLayoutService.GetAllLayouts(tableType))
-                    {
-                        if (layout.HudViewType == HudViewType.Plain || !layout.IsDefault || layout.Name.Contains(Suffix))
-                        {
-                            continue;
-                        }
+            //    // update layouts
+            //    foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
+            //    {
+            //        foreach (var layout in hudLayoutService.GetAllLayouts(tableType))
+            //        {
+            //            if (layout.HudViewType == HudViewType.Plain || !layout.IsDefault || layout.Name.Contains(Suffix))
+            //            {
+            //                continue;
+            //            }
 
-                        // mark old layout as non-default to be able to delete it
-                        layout.IsDefault = false;
-                        hudLayoutService.Save(layout);
+            //            // mark old layout as non-default to be able to delete it
+            //            layout.IsDefault = false;
+            //            hudLayoutService.Save(layout);
 
-                        var oldLayoutName = layout.Name;
-                        layout.Name = UpdateLayoutName(layout.Name);
-                        layout.IsDefault = true;
+            //            var oldLayoutName = layout.Name;
+            //            layout.Name = UpdateLayoutName(layout.Name);
+            //            layout.IsDefault = true;
 
-                        hudLayoutService.Save(layout);
-                        hudLayoutService.Delete(oldLayoutName);
-                    }
-                }
+            //            hudLayoutService.Save(layout);
+            //            hudLayoutService.Delete(oldLayoutName);
+            //        }
+            //    }
 
-                LogProvider.Log.Info($"Migration #{MigrationNumber} executed.");
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Migration #{MigrationNumber} failed.", e);
-            }
+            //    LogProvider.Log.Info($"Migration #{MigrationNumber} executed.");
+            //}
+            //catch (Exception e)
+            //{
+            //    LogProvider.Log.Error(this, $"Migration #{MigrationNumber} failed.", e);
+            //}
         }
 
         private string UpdateLayoutName(string name)

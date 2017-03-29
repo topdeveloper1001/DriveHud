@@ -15,7 +15,9 @@ using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
@@ -37,6 +39,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Windows;
 using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels
@@ -63,12 +66,6 @@ namespace DriveHUD.Application.ViewModels
             InitializeCommands();
             InitializeObservables();
 
-            PreviewHudElementViewModel = new HudElementViewModel
-            {
-                TiltMeter = 100,
-                Opacity = 100
-            };
-
             CurrentTableType = TableTypes.FirstOrDefault();
         }
 
@@ -77,6 +74,8 @@ namespace DriveHUD.Application.ViewModels
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         private bool currentLayoutIsSwitching;
+
+        private HudLayoutInfoV2 cachedCurrentLayout;
 
         private EnumTableType currentTableType;
 
@@ -296,17 +295,17 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private HudDesignerViewModel hudDesignerViewModel;
+        private HudElementViewModel designerHudElementViewModel;
 
-        public HudDesignerViewModel HudDesignerViewModel
+        public HudElementViewModel DesignerHudElementViewModel
         {
             get
             {
-                return hudDesignerViewModel;
+                return designerHudElementViewModel;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref hudDesignerViewModel, value);
+                this.RaiseAndSetIfChanged(ref designerHudElementViewModel, value);
             }
         }
 
@@ -336,6 +335,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> CancelDesignCommand { get; private set; }
 
+        public ReactiveCommand<object> AddToolCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -359,15 +360,24 @@ namespace DriveHUD.Application.ViewModels
 
             for (var seat = 1; seat <= seats; seat++)
             {
-                var hudElement = new HudElementViewModel
-                {
+                var hudElement = new HudElementViewModel(layoutTools);
+                hudElement.Seat = seat;
 
-                };
+                try
+                {
+                    hudElement.Tools.ForEach(x => x.SetPositions());
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not set positions on HUD view for {CurrentLayout.Name}", e);
+                }
 
                 hudElementsToAdd.Add(hudElement);
             }
 
             HudElements = new ReactiveList<HudElementViewModel>(hudElementsToAdd);
+
+            PreviewHudElementViewModel = new HudElementViewModel(layoutTools);
         }
 
         /// <summary>
@@ -556,7 +566,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
-        /// Initialize the collection of <see cref="StatInfo"/>
+        /// Initializes the collection of <see cref="StatInfo"/>
         /// </summary>
         private void InitializeStatInfoCollectionObserved()
         {
@@ -564,7 +574,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
-        /// Initialize commands
+        /// Initializes commands
         /// </summary>
         protected override void InitializeCommands()
         {
@@ -600,13 +610,30 @@ namespace DriveHUD.Application.ViewModels
             DesignerToolCommand.Subscribe(x => InitializeDesigner((HudDesignerToolType)x));
 
             CancelDesignCommand = ReactiveCommand.Create();
-            CancelDesignCommand.Subscribe(x =>
+            CancelDesignCommand.Subscribe(x => CloseDesigner());
+
+            AddToolCommand = ReactiveCommand.Create();
+            AddToolCommand.Subscribe(x =>
             {
-                IsInDesignMode = false;
-                HudDesignerViewModel = null;
+                var dragDropDataObject = x as DragDropDataObject;
+
+                if (dragDropDataObject == null)
+                {
+                    return;
+                }
+
+                var toolType = dragDropDataObject.Data as HudDesignerToolType?;
+
+                if (toolType.HasValue && CanAddTool(toolType.Value))
+                {
+                    AddTool(toolType.Value, dragDropDataObject.Position);
+                }
             });
         }
 
+        /// <summary>
+        /// Initializes observables
+        /// </summary>
         private void InitializeObservables()
         {
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
@@ -627,39 +654,58 @@ namespace DriveHUD.Application.ViewModels
 
                     statsToHide.ForEach(s => s.IsDuplicateSelected = true);
 
-                    CurrentHudTableViewModel.HudElements.ForEach(o =>
-                    {
-                        o.StatInfoCollection.Clear();
-                        o.StatInfoCollection.AddRange(statsCollection);
-                        o.UpdateMainStats();
+                    ReplaceToolStats(statsCollection);
 
-                    });
+                    //if (PreviewHudElementViewModel != null)
+                    //{
+                    //    PreviewHudElementViewModel.StatInfoCollection.Clear();
 
-                    if (PreviewHudElementViewModel != null)
-                    {
-                        PreviewHudElementViewModel.StatInfoCollection.Clear();
+                    //    Random r = new Random();
 
-                        Random r = new Random();
+                    //    for (int i = 0; i < statsCollection.Count; i++)
+                    //    {
+                    //        if (statsCollection[i] is StatInfoBreak)
+                    //        {
+                    //            PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
+                    //            continue;
+                    //        }
 
-                        for (int i = 0; i < statsCollection.Count; i++)
-                        {
-                            if (statsCollection[i] is StatInfoBreak)
-                            {
-                                PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
-                                continue;
-                            }
-
-                            var stat = statsCollection[i].Clone();
-                            stat.CurrentValue = r.Next(0, 100);
-                            stat.Caption = string.Format(stat.Format, stat.CurrentValue);
-                            PreviewHudElementViewModel.StatInfoCollection.Add(stat);
-                        }
-
-                        PreviewHudElementViewModel.UpdateMainStats();
-                    }
+                    //        var stat = statsCollection[i].Clone();
+                    //        stat.CurrentValue = r.Next(0, 100);
+                    //        stat.Caption = string.Format(stat.Format, stat.CurrentValue);
+                    //        PreviewHudElementViewModel.StatInfoCollection.Add(stat);
+                    //    }
+                    //}
                 });
         }
 
+        /// <summary>
+        /// Replaces <see cref="StatInfo"/> stats of all tools of <see cref="CurrentLayout"/> with the specified stats
+        /// </summary>
+        /// <param name="statsCollection">Collection of stats</param>
+        private void ReplaceToolStats(IEnumerable<StatInfo> statsCollection)
+        {
+            var hudElement = HudElements?.FirstOrDefault();
+
+            if (hudElement == null)
+            {
+                return;
+            }
+
+            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>().FirstOrDefault();
+
+            if (statTool == null)
+            {
+                return;
+            }
+
+            statTool.Stats.Clear();
+            statTool.Stats.AddRange(statsCollection);
+        }
+
+        /// <summary>
+        /// Opens popup to save data
+        /// </summary>
         private void OpenDataSave()
         {
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo
@@ -668,12 +714,16 @@ namespace DriveHUD.Application.ViewModels
                 Cancel = ClosePopup,
                 Save = DataSave,
                 IsSaveAsMode = true,
-                TableType = CurrentTableType.TableType
+                TableType = CurrentTableType
             };
+
             var hudSelectLayoutViewModel = new HudSelectLayoutViewModel(hudSelectLayoutViewModelInfo);
             OpenPopup(hudSelectLayoutViewModel);
         }
 
+        /// <summary>
+        /// Saves layout
+        /// </summary>
         private void DataSave()
         {
             var hudSelectLayoutViewModel = PopupViewModel as HudSelectLayoutViewModel;
@@ -687,7 +737,6 @@ namespace DriveHUD.Application.ViewModels
             var hudData = new HudSavedDataInfo
             {
                 Name = hudSelectLayoutViewModel.Name,
-                HudTable = CurrentHudTableViewModel,
                 Stats = StatInfoObserveCollection,
                 LayoutInfo = CurrentLayout
             };
@@ -714,6 +763,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        /// <summary>
+        /// Exports layout to file
+        /// </summary>
         private void DataExport()
         {
             var saveFileDialog = new SaveFileDialog
@@ -727,16 +779,22 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        /// <summary>
+        /// Imports layout from file
+        /// </summary>
         private void DataImport()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                var importedLayout = _hudLayoutsSevice.Import(openFileDialog.FileName);
+                var importedLayout = HudLayoutsService.Import(openFileDialog.FileName);
 
                 if (importedLayout == null)
+                {
                     return;
+                }
+
                 Layouts.Add(importedLayout);
                 CurrentLayout = importedLayout;
             }
@@ -751,26 +809,9 @@ namespace DriveHUD.Application.ViewModels
             InitializeHudElements();
         }
 
-        private void MergeLayouts(IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
-        {
-            Check.ArgumentNotNull(() => hudElementViewModels);
-            Check.ArgumentNotNull(() => layout);
-
-            foreach (var hudElementViewModel in hudElementViewModels)
-            {
-                var userDefinedPosition = layout.UiPositionsInfo.FirstOrDefault(p => p.Seat == hudElementViewModel.Seat);
-
-                if (userDefinedPosition == null)
-                {
-                    continue;
-                }
-
-                hudElementViewModel.Width = userDefinedPosition.Width;
-                hudElementViewModel.Height = userDefinedPosition.Height;
-                hudElementViewModel.Position = userDefinedPosition.Position;
-            }
-        }
-
+        /// <summary>
+        /// Deletes layout
+        /// </summary>
         private void DataDelete()
         {
             if (HudLayoutsService.Delete(CurrentLayout.Name))
@@ -779,24 +820,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             Layouts.Remove(CurrentLayout);
-            UpdateActiveLayout();
-        }
-
-        public void UpdateActiveLayout()
-        {
             CurrentLayout = Layouts.FirstOrDefault();
-        }
-
-        private void SaveLayoutChanged(HudLayoutInfo layoutToSave)
-        {
-            if (layoutToSave == null)
-                return;
-            layoutToSave.HudStats = StatInfoObserveCollection.Select(x =>
-            {
-                var statInfoBreak = x as StatInfoBreak;
-
-                return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
-            }).ToList();
         }
 
         private void UpdateStatsCollections()
@@ -825,7 +849,8 @@ namespace DriveHUD.Application.ViewModels
 
             StatInfoObserveCollection.Clear();
 
-            foreach (var hudStat in layout.HudStats)
+            // temp code
+            foreach (var hudStat in CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats))
             {
                 if (hudStat is StatInfoBreak)
                 {
@@ -833,9 +858,7 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                var existing =
-                    StatInfoCollection.FirstOrDefault(
-                        x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup.Name);
+                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup.Name);
 
                 if (existing != null)
                 {
@@ -846,13 +869,16 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        /// <summary>
+        /// Adds line break stat 
+        /// </summary>
         private void SpliterAdd()
         {
             StatInfoObserveCollection.Add(new StatInfoBreak());
         }
 
         /// <summary>
-        /// Open pop-up and initialize stat info settings
+        /// Opens pop-up and initialize stat info settings
         /// </summary>
         /// <param name="selectedStatInfo">Selected stat info</param>
         private void OpenStatsSettings(StatInfo selectedStatInfo)
@@ -861,7 +887,9 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
-            var opacity = CurrentLayout?.HudOpacity ?? 0;
+
+            var opacity = CurrentLayout?.Opacity ?? 0;
+
             var hudStatSettingsViewModelInfo = new HudStatSettingsViewModelInfo
             {
                 SelectedStatInfo = selectedStatInfo,
@@ -877,7 +905,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
-        /// Close pop-up and save data
+        /// Closes pop-up and save data
         /// </summary>
         private void SaveStatsSettings()
         {
@@ -891,7 +919,9 @@ namespace DriveHUD.Application.ViewModels
             var statInfoToMerge = (from item in hudStatSettings.Items
                                    join statInfo in StatInfoObserveCollection on item.Id equals statInfo.Id
                                    select new { NewItem = item, OldItem = statInfo }).ToArray();
-            CurrentLayout.HudOpacity = hudStatSettings.HudOpacity;
+
+            CurrentLayout.Opacity = hudStatSettings.HudOpacity;
+
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
@@ -900,19 +930,9 @@ namespace DriveHUD.Application.ViewModels
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
             }
-            CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
-            CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
 
-            if (CurrentLayout.IsDefault)
-            {
-                foreach (var table in HudTableViewModels.Where(t => t.TableType == CurrentTableType.TableType))
-                {
-                    table.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-                    table.Opacity = CurrentHudTableViewModel.Opacity;
-                }
-            }
+            HudElements.ForEach(e => e.Opacity = hudStatSettings.HudOpacity);
 
-            TableUpdated?.Invoke(this, EventArgs.Empty);
             ClosePopup();
         }
 
@@ -1095,10 +1115,56 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            HudDesignerViewModel = new HudDesignerViewModel();
-            HudDesignerViewModel.Initialize(this, toolType);
+            cachedCurrentLayout = CurrentLayout;
+            CurrentLayout = CurrentLayout.Clone();
 
             IsInDesignMode = true;
+        }
+
+        private void CloseDesigner()
+        {
+            DesignerHudElementViewModel = null;
+            CurrentLayout = cachedCurrentLayout;
+            cachedCurrentLayout = null;
+
+            IsInDesignMode = false;
+        }
+
+        /// <summary>
+        /// Add designer tool on table
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <param name="position">Position of tool</param>
+        private void AddTool(HudDesignerToolType toolType, Point position)
+        {
+            if (DesignerHudElementViewModel == null)
+            {
+                return;
+            }
+
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            var creationInfo = new HudToolCreationInfo
+            {
+                HudElement = DesignerHudElementViewModel,
+                Position = position,
+                TableType = CurrentTableType,
+                ToolType = toolType
+            };
+
+            var tool = factory.CreateTool(creationInfo);
+
+            DesignerHudElementViewModel.Tools.Add(tool);
+        }
+
+        /// <summary>
+        /// Check if tool can be added
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <returns>True if tool can be added, otherwise - false</returns>
+        public bool CanAddTool(HudDesignerToolType toolType)
+        {
+            return IsInDesignMode && DesignerHudElementViewModel != null;
         }
 
         #endregion

@@ -179,8 +179,7 @@
 
     <DataTemplate
         x:Key="RadListBoxItemTemplate_StatInfo">
-        <Grid
-            Visibility="{Binding Path=IsAvailable, Converter={dh:BoolToVisibilityConverter}}">
+        <Grid>
             <Grid
                 Background="#1d1e20"
                 Height="30"

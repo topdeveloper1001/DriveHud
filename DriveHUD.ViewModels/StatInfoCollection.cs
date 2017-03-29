@@ -17,7 +17,7 @@ namespace DriveHUD.ViewModels
             CategoryViewModel latest = new CategoryViewModel();
             latest.Caption = "Most Important";
 
-            StatInfoObservableCollection<StatInfo> animalList = new StatInfoObservableCollection<StatInfo>();
+            ObservableCollection<StatInfo> animalList = new ObservableCollection<StatInfo>();
             latest.Items.Add(new StatInfo() { Caption = "VPIP%", PropertyName = "VPIP%", Category = latest.Caption });
             latest.Items.Add(new StatInfo() { Caption = "PFR%", PropertyName = "PFR", Category = latest.Caption });
             latest.Items.Add(new StatInfo() { Caption = "3-bet%", PropertyName = "ThreeBet", Category = latest.Caption });
@@ -36,19 +36,11 @@ namespace DriveHUD.ViewModels
             latest.Items.Add(new StatInfo() { Caption = "River AGG%", PropertyName = "RiverAgg", Category = latest.Caption });
             latest.Items.Add(new StatInfo() { Caption = "Cold Call%", PropertyName = "ColdCall", Category = latest.Caption });
             latest.Items.Add(new StatInfo() { Caption = "Steal%", PropertyName = "Steal", Category = latest.Caption });
-            latest.Items.Add(new StatInfo() { Caption = "Fold to Steal%", PropertyName = "FoldSteal", Category = latest.Caption });
-
-            //CategoryViewModel highestRated = new CategoryViewModel();
-            //highestRated.Caption = "Highest Rated";
-            //highestRated.Items.Add(new StatInfo("Steasssssl%", "Stealqqq", highestRated.Caption));
-            //highestRated.Items.Add(new StatInfo("Fold ssssto Steal%", "FoldStealqqqq", highestRated.Caption));
-
+            latest.Items.Add(new StatInfo() { Caption = "Fold to Steal%", PropertyName = "FoldSteal", Category = latest.Caption });        
 
             ObservableCollection<CategoryViewModel> result = new ObservableCollection<CategoryViewModel>();
 
-            result.Add(latest);
-            //result.Add(highestRated);
-            //result.Add(value);
+            result.Add(latest);      
 
             return result;
         }

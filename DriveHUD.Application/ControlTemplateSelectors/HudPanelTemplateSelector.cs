@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ClassTemplateSelector.cs" company="Ace Poker Solutions">
+// <copyright file="HudPanelTemplateSelector.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,8 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Entities;
+using DriveHUD.Application.ViewModels.Hud;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls.Diagrams;
@@ -29,42 +28,23 @@ namespace DriveHUD.Application.ControlTemplateSelectors
                 return null;
             }
 
-            if (radItem.DataContext is ITableSeatArea)
+            var toolViewModel = radItem.DataContext as HudBaseToolViewModel;
+
+            if (toolViewModel != null)
             {
-                return null;
+                return HudPlainStatBoxTemplate;
             }
 
-            var classViewModel = radItem.DataContext as HudPlayerViewModel;
-
-            if (classViewModel == null)
+            if (radItem.DataContext is HudPlayerViewModel)
             {
-                var hudType = radItem.Tag as HudViewType?;
-
-                if (hudType == null)
-                {
-                    return null;
-                }
-
-                if (!hudType.HasValue)
-                {
-                    return PlayerPlaceTemplate;
-                }
-
-                if (hudType == HudViewType.Plain)
-                {
-                    return PlainHudTemplate;
-                }
-
-                return RichHudTemplate;
+                return PlayerPlaceTemplate;
             }
 
-            return PlayerPlaceTemplate;
+            return null;
         }
 
         public DataTemplate PlayerPlaceTemplate { get; set; }
 
-        public DataTemplate PlainHudTemplate { get; set; }
-
-        public DataTemplate RichHudTemplate { get; set; }
+        public DataTemplate HudPlainStatBoxTemplate { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudToolFactory.cs" company="Ace Poker Solutions">
+// <copyright file="HudToolCreationInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,34 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using System.Windows;
+
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Defines factory to create new hud tool
+    /// Defines data required to create new hud tool
     /// </summary>
-    internal interface IHudToolFactory
+    internal class HudToolCreationInfo
     {
         /// <summary>
-        /// Creates <see cref="HudBaseToolViewModel"/> based on the specified <see cref="HudToolCreationInfo"/>
+        /// Gets or sets <see cref="HudDesignerToolType"/>
         /// </summary>
-        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/> to create new hud tool</param>
-        /// <returns>Created <see cref="HudBaseToolViewModel"/></returns>
-        HudBaseToolViewModel CreateTool(HudToolCreationInfo creationInfo);
+        public HudDesignerToolType ToolType { get; set; }
+
+        /// <summary>
+        /// Gets or sets <see cref="HudElementViewModel"/>
+        /// </summary>
+        public HudElementViewModel HudElement { get; set; }
+
+        /// <summary>
+        /// Gets or sets <see cref="EnumTableType"/>
+        /// </summary>
+        public EnumTableType TableType { get; set; }
+
+        /// <summary>
+        /// Gets or sets <see cref="Point"/>
+        /// </summary>
+        public Point Position { get; set; }
     }
 }

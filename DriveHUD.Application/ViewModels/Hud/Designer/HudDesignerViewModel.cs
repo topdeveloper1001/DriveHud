@@ -102,12 +102,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="position">Position of tool</param>
         private void AddTool(HudDesignerToolType toolType, Point position)
         {
-            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
-
-            var tool = factory.CreateTool(toolType);
-            tool.Position = position;
-
-            Tools.Add(tool);
+            
         }
 
         /// <summary>

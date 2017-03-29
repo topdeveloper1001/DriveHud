@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using System.Collections.Generic;
+using System;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -42,5 +43,22 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// Gets or sets the text content of the text box tool
         /// </summary>
         public string Text { get; set; }
+
+        /// <summary>
+        /// Creates a copy of the current <see cref="HudLayoutTextBoxTool"/> instance
+        /// </summary>
+        /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
+        public override HudLayoutTool Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a view model of the current <see cref="HudBaseToolViewModel"/> instance
+        /// </summary>
+        public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

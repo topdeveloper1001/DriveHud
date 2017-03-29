@@ -66,7 +66,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
         /// </summary>
         public HudLayoutMappings HudLayoutMappings { get; set; }
-  
+
         #endregion
 
         #region Implementation of IHudLayoutsService
@@ -361,11 +361,12 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             // get total hands now to prevent enumeration in future
             var hudElementViewModels = hudElements as HudElementViewModel[] ?? hudElements.ToArray();
+
             var hudElementsTotalHands = (from hudElement in hudElementViewModels
                                          from stat in hudElement.StatInfoCollection
                                          where stat.Stat == Stat.TotalHands
-                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement,
-                x => x.TotalHands);
+                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement, x => x.TotalHands);
+
             // get match ratios by player
             var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
                                        from hudElement in hudElementViewModels
@@ -933,7 +934,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var fs = File.Open(layoutsFile, FileMode.Create))
                 {
-                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfoV2));
                     xmlSerializer.Serialize(fs, hudLayoutInfo);
                 }
             }

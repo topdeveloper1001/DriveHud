@@ -10,12 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Wpf.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DriveHUD.Entities;
 using ReactiveUI;
 using System.Windows;
 
@@ -67,6 +64,34 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private double offsetX;
+
+        public double OffsetX
+        {
+            get
+            {
+                return offsetX;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref offsetX, value);
+            }
+        }
+
+        private double offsetY;
+
+        public double OffsetY
+        {
+            get
+            {
+                return offsetY;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref offsetY, value);
+            }
+        }
+
         private double opacity;
 
         public double Opacity
@@ -84,8 +109,37 @@ namespace DriveHUD.Application.ViewModels.Hud
         public abstract HudDesignerToolType ToolType
         {
             get;
-        }        
+        }
+
+        private HudElementViewModel parent;
+
+        /// <summary>
+        /// Gets or sets the parent <see cref="HudElementViewModel"/> of the current tool
+        /// </summary>
+        public HudElementViewModel Parent
+        {
+            get
+            {
+                return parent;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref parent, value);
+            }
+        }
 
         #endregion
+
+        /// <summary>
+        /// Sets UI position and size for the current <see cref="HudBaseToolViewModel"/>
+        /// </summary>
+        /// <exception cref="DHBusinessException" />
+        public abstract void SetPositions();
+
+        /// <summary>
+        /// Sets position and size for the current <see cref="HudBaseToolViewModel"/> for the specified <see cref="EnumPokerSites"/> and <see cref="EnumGameType"/>
+        /// </summary>
+        /// <exception cref="DHBusinessException" />
+        public abstract void SetPositions(EnumPokerSites pokerSite, EnumGameType gameType);
     }
 }

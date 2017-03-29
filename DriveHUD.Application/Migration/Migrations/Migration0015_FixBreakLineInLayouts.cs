@@ -31,34 +31,34 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Up()
         {
-            try
-            {
-                LogProvider.Log.Info($"Preparing migration #{MigrationNumber}");
+            //try
+            //{
+            //    LogProvider.Log.Info($"Preparing migration #{MigrationNumber}");
 
-                var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            //    var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-                foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
-                {
-                    foreach (var layout in hudLayoutService.GetAllLayouts(tableType))
-                    {
-                        for (var i = 0; i < layout.HudStats.Count; i++)
-                        {
-                            if (string.IsNullOrWhiteSpace(layout.HudStats[i].PropertyName) && !(layout.HudStats[i] is StatInfoBreak))
-                            {
-                                layout.HudStats[i] = new StatInfoBreak();
-                            }
-                        }
+            //    foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
+            //    {
+            //        foreach (var layout in hudLayoutService.GetAllLayouts(tableType))
+            //        {
+            //            for (var i = 0; i < layout.HudStats.Count; i++)
+            //            {
+            //                if (string.IsNullOrWhiteSpace(layout.HudStats[i].PropertyName) && !(layout.HudStats[i] is StatInfoBreak))
+            //                {
+            //                    layout.HudStats[i] = new StatInfoBreak();
+            //                }
+            //            }
 
-                        hudLayoutService.Save(layout);
-                    }
-                }
+            //            hudLayoutService.Save(layout);
+            //        }
+            //    }
 
-                LogProvider.Log.Info($"Migration #{MigrationNumber} executed.");
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Migration #{MigrationNumber} failed.", e);
-            }
+            //    LogProvider.Log.Info($"Migration #{MigrationNumber} executed.");
+            //}
+            //catch (Exception e)
+            //{
+            //    LogProvider.Log.Error(this, $"Migration #{MigrationNumber} failed.", e);
+            //}
         }
     }
 }

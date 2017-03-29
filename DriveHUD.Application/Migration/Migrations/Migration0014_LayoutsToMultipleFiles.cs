@@ -32,6 +32,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
     using Model.Settings;
     using ViewModels.Hud;
 
+    #warning need to fix migration
     [Migration(14)]
     public class Migration0014_LayoutsToMultipleFiles : Migration
     {
@@ -56,7 +57,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
             var result = new List<HudLayoutInfo>();
             foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
             {
-                result.AddRange(hudLayoutsService.GetAllLayouts(tableType));
+
+                //result.AddRange(hudLayoutsService.GetAllLayouts(tableType));
             }
             return result;
         }
@@ -476,8 +478,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
                 if (first.GroupName != second.GroupName) return false;
                 if (first.PropertyName != second.PropertyName) return false;
-                if (first.CurrentColor != second.CurrentColor) return false;
-                if (first.Settings_IsAvailable != second.Settings_IsAvailable) return false;
+                if (first.CurrentColor != second.CurrentColor) return false;                
                 if (first.SettingsAppearance_IsChecked != second.SettingsAppearance_IsChecked) return false;
                 if (first.SettingsPlayerType_IsChecked != second.SettingsPlayerType_IsChecked) return false;
                 if (first.SettingsAppearanceFontBold_IsChecked != second.SettingsAppearanceFontBold_IsChecked) return false;

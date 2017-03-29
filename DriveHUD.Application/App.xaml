@@ -36,6 +36,8 @@
                 <ResourceDictionary
                     Source="ControlStyles/RadioButtonRightTemplate.xaml" />
                 <ResourceDictionary
+                    Source="ControlStyles/HudDataTemplates.xaml" />
+                <ResourceDictionary
                     Source="ControlStyles/RadDiagramStyles.xaml" />
                 <ResourceDictionary
                     Source="ControlStyles/ReportRadioButtonTemplate.xaml" />

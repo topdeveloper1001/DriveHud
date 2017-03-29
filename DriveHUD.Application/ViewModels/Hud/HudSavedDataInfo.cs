@@ -17,9 +17,7 @@ using System.Collections.Generic;
 namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class HudSavedDataInfo
-    {
-        public HudTableViewModel HudTable { get; set; }
-
+    {        
         public HudLayoutInfoV2 LayoutInfo { get; set; }
 
         public IEnumerable<StatInfo> Stats { get; set; }

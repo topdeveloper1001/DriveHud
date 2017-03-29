@@ -35,5 +35,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// </summary>
         /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
         public abstract HudLayoutTool Clone();
+
+        /// <summary>
+        /// Creates a view model of the current <see cref="HudBaseToolViewModel"/> instance
+        /// </summary>
+        /// <returns>View model of the current <see cref="HudBaseToolViewModel"/> instance</returns>
+        public abstract HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement);
     }
 }

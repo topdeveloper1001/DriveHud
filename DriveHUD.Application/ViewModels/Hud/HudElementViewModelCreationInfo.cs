@@ -18,9 +18,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudElementViewModelCreationInfo
     {        
-        public HudLayoutInfo HudLayoutInfo { get; set; }
-
-        public IEnumerable<HudElementViewModel> PreparedHudElements { get; set; }
+        public HudLayoutInfoV2 HudLayoutInfo { get; set; }        
 
         public int SeatNumber { get; set; }
 

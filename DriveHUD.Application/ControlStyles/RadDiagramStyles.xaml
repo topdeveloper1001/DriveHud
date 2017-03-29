@@ -3,75 +3,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:ts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
-    xmlns:v="clr-namespace:DriveHUD.Application.Views"
-    xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
-    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:hvm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams">
 
-    <!-- Template for element with Player name on table on HUD settings -->
-    <DataTemplate
-        x:Key="StructTemplate">
-        <Grid
-            Margin="-4">
-            <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-            </Grid.RowDefinitions>
-
-            <TextBlock
-                Text="{Binding DataContext.Player, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}"
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-
-            <TextBlock
-                Text="{Binding DataContext.Bank, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}, StringFormat={}${0}}"
-                Grid.Row="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-        </Grid>
-    </DataTemplate>
-
-    <!-- Template for plain hud element on table on HUD settings -->
-    <DataTemplate
-        x:Key="HudTemplate">
-        <ctl:HudPanel
-            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
-    </DataTemplate>
-
-    <!-- Template for DH hud element on table on HUD settings -->
-    <DataTemplate
-        x:Key="RichHudTemplate">
-        <ctl:HudRichPanel
-            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
-    </DataTemplate>
-
-    <ControlTemplate
-        x:Key="PreferredSeatControlTemplate">
-        <Border
-            Background="#242F41"
-            BorderBrush="#325398"
-            CornerRadius="2"
-            BorderThickness="2"
-            Visibility="{Binding DataContext.IsVisible, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}">
-            <TextBlock
-                Text="P"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Foreground="White"
-                FontSize="18"
-                FontWeight="Bold" />
-        </Border>
-    </ControlTemplate>
-
+    <!-- Selects template for RadDiagramShape based on content -->
     <ts:HudPanelTemplateSelector
         x:Key="HudPanelTemplateSelector"
         PlayerPlaceTemplate="{StaticResource StructTemplate}"
-        PlainHudTemplate="{StaticResource HudTemplate}"
-        RichHudTemplate="{StaticResource RichHudTemplate}" />
+        HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}" />
 
     <Style
         x:Key="RadDiagramStyle"

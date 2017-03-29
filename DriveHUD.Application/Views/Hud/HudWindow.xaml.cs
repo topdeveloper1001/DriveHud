@@ -274,7 +274,7 @@ namespace DriveHUD.Application.Views
                 return 0;
             }
 
-            return viewModel.Seat + (viewModel.HudType == HudType.Default ? 0 : 100);
+            return viewModel.Seat;
         }
 
         private void SaveHudPositions_Click(object sender, RadRoutedEventArgs e)
@@ -307,8 +307,7 @@ namespace DriveHUD.Application.Views
                     hudLayoutContract.HudPositions.Add(new HudPositionContract
                     {
                         Position = new Point(position.Item1, position.Item2),
-                        SeatNumber = hudPanel.Seat,
-                        HudViewType = hudPanel.HudViewType
+                        SeatNumber = hudPanel.Seat                        
                     });
                 }
 

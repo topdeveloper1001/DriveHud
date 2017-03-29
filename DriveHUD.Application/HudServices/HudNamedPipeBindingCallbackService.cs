@@ -25,6 +25,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.HudServices
 {
+#warning 
     internal class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
     {
         public void SaveHudLayout(HudLayoutContract hudLayoutContract)
@@ -45,7 +46,10 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            var existingHudPositions = existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
+            return;
+
+            HudPositionsInfo existingHudPositions = null;
+                //existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
 
             if (existingHudPositions == null)
             {
@@ -102,7 +106,7 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            hudLayoutsService.SetLayoutActive(hudToLoad, pokerSite, gameType, tableType);
+            hudLayoutsService.SetActiveLayout(hudToLoad, pokerSite, gameType, tableType);
         }
 
         public void TagHand(long gameNumber, short pokerSiteId, int tag)

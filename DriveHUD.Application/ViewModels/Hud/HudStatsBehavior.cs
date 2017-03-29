@@ -15,6 +15,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
 using DriveHUD.ViewModels;
 using Model.Enums;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -30,37 +31,18 @@ using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    /// <summary>
+    /// Behavior for <see cref="WrapPanel" /> which display specified stats
+    /// </summary>
     public class HudStatsBehavior : Behavior<WrapPanel>
     {
-        private const double VERTICAL_PANEL_GAP = 32;
-        private const double TOTAL_PANEL_WIDTH = 144;
+        private static DependencyProperty StatInfoSourceProperty = DependencyProperty.RegisterAttached("StatInfoSource", typeof(ReactiveList<StatInfo>), typeof(HudStatsBehavior), new PropertyMetadata(OnStatInfoSourcePropertyChanged));
 
-        private static readonly DependencyProperty IsVerticalProperty = DependencyProperty.Register("IsVertical", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(false));
-
-        public bool IsVertical
-        {
-            get { return (bool)GetValue(IsVerticalProperty); }
-            set { SetValue(IsVerticalProperty, value); }
-        }
-
-        private static readonly DependencyProperty IsMainStatsPanelEnabledProperty = DependencyProperty.RegisterAttached("IsMainStatsPanelEnabled", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(true));
-
-        public bool IsMainStatsPanelEnabled
-        {
-            get { return (bool)GetValue(IsMainStatsPanelEnabledProperty); }
-            set
-            {
-                SetValue(IsMainStatsPanelEnabledProperty, value);
-            }
-        }
-
-        private static DependencyProperty StatInfoSourceProperty = DependencyProperty.RegisterAttached("StatInfoSource", typeof(ObservableCollection<StatInfo>), typeof(HudStatsBehavior), new PropertyMetadata(OnStatInfoSourcePropertyChanged));
-
-        public ObservableCollection<StatInfo> StatInfoSource
+        public ReactiveList<StatInfo> StatInfoSource
         {
             get
             {
-                return (ObservableCollection<StatInfo>)GetValue(StatInfoSourceProperty);
+                return (ReactiveList<StatInfo>)GetValue(StatInfoSourceProperty);
             }
             set
             {
@@ -96,19 +78,38 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private static DependencyProperty DefaultImageStyleProperty = DependencyProperty.RegisterAttached("DefaultImageStyle", typeof(Style), typeof(HudStatsBehavior));
+
+        public Style DefaultImageStyle
+        {
+            get
+            {
+                return (Style)GetValue(DefaultImageStyleProperty);
+            }
+            set
+            {
+                SetValue(DefaultImageStyleProperty, value);
+            }
+        }
+
+        private static DependencyProperty SeparatorProperty = DependencyProperty.RegisterAttached("Separator", typeof(string), typeof(HudStatsBehavior));
+
+        public string Separator
+        {
+            get
+            {
+                return (string)GetValue(SeparatorProperty);
+            }
+            set
+            {
+                SetValue(SeparatorProperty, value);
+            }
+        }
+
         protected override void OnAttached()
         {
             base.OnAttached();
             AssociatedObject.Unloaded += AssociatedObject_Unloaded;
-            AssociatedObject.SizeChanged += AssociatedObject_SizeChanged;
-        }
-
-        private void AssociatedObject_SizeChanged(object sender, RoutedEventArgs e)
-        {
-            if (IsVertical)
-            {
-                ConfigureVerticalPanel();
-            }
         }
 
         protected override void OnDetaching()
@@ -152,8 +153,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var source = d as HudStatsBehavior;
 
-            var statInfoSource = e.NewValue as ObservableCollection<StatInfo>;
-            var oldInfoSource = e.OldValue as ObservableCollection<StatInfo>;
+            var statInfoSource = e.NewValue as ReactiveList<StatInfo>;
+            var oldInfoSource = e.OldValue as ReactiveList<StatInfo>;
 
             if (statInfoSource == null || source == null || source.AssociatedObject == null)
             {
@@ -176,31 +177,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             Update();
         }
 
-        internal void Update()
+        private void Update()
         {
-            var filteredStatInfo = new List<StatInfo>();
-
-            var counter = 0;
-
             if (StatInfoSource == null)
             {
                 return;
             }
 
-            foreach (var statInfo in StatInfoSource)
-            {
-                if (statInfo.IsNotVisible || (statInfo is StatInfoBreak && counter < 4 && IsMainStatsPanelEnabled))
-                {
-                    continue;
-                }
-
-                if (counter > 3 || !IsMainStatsPanelEnabled)
-                {
-                    filteredStatInfo.Add(statInfo);
-                }
-
-                counter++;
-            }
+            var filteredStatInfo = StatInfoSource.Where(x => !x.IsNotVisible).ToList();
 
             var statInfoGrouped = Split(filteredStatInfo);
 
@@ -214,8 +198,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 panel.Width = double.NaN;
                 panel.Height = double.NaN;
                 panel.Margin = new Thickness(2, 2, 2, 0);
-                panel.Orientation = IsVertical ? Orientation.Vertical : Orientation.Horizontal;
-                
+                panel.Orientation = Orientation.Horizontal;
+
                 foreach (var statInfo in statInfoGroup)
                 {
                     FrameworkElement block = null;
@@ -227,14 +211,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                             Width = 16,
                             Height = 16
                         };
+
                         if (IsDefaultImage)
                         {
-                            var style = AssociatedObject.FindResource("DefaultImage") as Style;
-                            block.Style = style;
+                            block.Style = DefaultImageStyle;
                         }
                         else
                         {
-                            ((Image) block).Source = PlayerIconSource;
+                            ((Image)block).Source = PlayerIconSource;
                         }
                     }
                     else
@@ -242,29 +226,18 @@ namespace DriveHUD.Application.ViewModels.Hud
                         block = CreateStatBlock(statInfo);
                     }
 
-                    if (IsVertical)
+                    panel.Children.Add(block);
+
+                    if (statInfo != statInfoGroup.Last())
                     {
-                        Border border = new Border();
-                        border.Child = block;
-
-                        if (statInfo != statInfoGroup.Last())
+                        var separator = new TextBlock
                         {
-                            border.BorderThickness = new Thickness(0, 0, 0, 1);
-                            border.Margin = new Thickness(0, 0, 5, 0);
-                            border.BorderBrush = Brushes.White;
-                        }
+                            Text = Separator,
+                            Foreground = new SolidColorBrush(Colors.White),
+                            VerticalAlignment = VerticalAlignment.Center
+                        };
 
-                        panel.Children.Add(border);
-                    }
-                    else
-                    {
-                        panel.Children.Add(block);
-
-                        if (statInfo != statInfoGroup.Last())
-                        {
-                            TextBlock separator = new TextBlock { Text = " | ", Foreground = new SolidColorBrush(Colors.White), VerticalAlignment = VerticalAlignment.Center };
-                            panel.Children.Add(separator);
-                        }
+                        panel.Children.Add(separator);
                     }
                 }
 
@@ -272,40 +245,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private void ConfigureVerticalPanel()
-        {
-            var vm = (AssociatedObject.DataContext as HudElementViewModel);
-            var border = AssociatedObject.ParentOfType<Border>();
-
-            if (vm == null || border == null)
-            {
-                return;
-            }
-
-            var topMargin = border.MinHeight < border.ActualHeight ? border.MinHeight - border.ActualHeight : 0d;
-
-            if (vm.IsRightOriented)
-            {
-                var width = border.ActualWidth;
-                if (width > VERTICAL_PANEL_GAP)
-                {
-                    var margin = VERTICAL_PANEL_GAP - width;
-                    border.Margin = new Thickness(margin, topMargin, Math.Abs(margin), Math.Abs(topMargin));
-                }
-            }
-            else
-            {
-                var margin = TOTAL_PANEL_WIDTH - VERTICAL_PANEL_GAP;
-
-                border.Margin = new Thickness(margin, topMargin, -margin, Math.Abs(topMargin));
-            }
-        }
-
         private static TextBlock CreateStatBlock(StatInfo statInfo)
         {
             var block = new TextBlock
             {
-                TextWrapping = System.Windows.TextWrapping.Wrap,
+                TextWrapping = TextWrapping.Wrap,
                 Foreground = new SolidColorBrush(statInfo.CurrentColor),
                 VerticalAlignment = VerticalAlignment.Bottom
             };
@@ -326,6 +270,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
             block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
 
+            // to remove
             if (statInfo.IsStatInfoToolTipAvailable)
             {
                 FrameworkElementFactory fef = new FrameworkElementFactory(typeof(HudStatToolTip));
@@ -373,12 +318,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 result[i].Add(item);
-
-                if (result[i].Count == 4 && IsVertical)
-                {
-                    result.Add(new List<StatInfo>());
-                    i++;
-                }
             }
 
             return result;
@@ -390,7 +329,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void Cleanup()
         {
-
             if (!isCleanedup)
             {
                 ClearChildrenBindings();
@@ -401,7 +339,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 AssociatedObject.Unloaded -= AssociatedObject_Unloaded;
-                AssociatedObject.SizeChanged -= AssociatedObject_SizeChanged;
 
                 isCleanedup = true;
             }

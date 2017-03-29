@@ -758,12 +758,12 @@
                         Margin="3,0,0,3"
                         VerticalAlignment="Top"
                         Orientation="Horizontal">
-                        <i:Interaction.Behaviors>
+                        <!--<i:Interaction.Behaviors>
                             <hud:HudStatsBehavior
                                 IsVertical="True"
                                 StatInfoSource="{Binding StatInfoCollection}"
                                 IsMainStatsPanelEnabled="True" />
-                        </i:Interaction.Behaviors>
+                        </i:Interaction.Behaviors>-->
                     </WrapPanel>
                     <Path
                         Style="{StaticResource PlayerNotePathStyle}"
@@ -1023,11 +1023,11 @@
                             Margin="3,0,0,3"
                             VerticalAlignment="Top"
                             Orientation="Vertical">
-                            <i:Interaction.Behaviors>
+                            <!--<i:Interaction.Behaviors>
                                 <hud:HudStatsBehavior
                                     StatInfoSource="{Binding StatInfoCollection}"
                                     IsMainStatsPanelEnabled="True" />
-                            </i:Interaction.Behaviors>
+                            </i:Interaction.Behaviors>-->
                         </WrapPanel>
                         <Border
                             Background="Transparent"

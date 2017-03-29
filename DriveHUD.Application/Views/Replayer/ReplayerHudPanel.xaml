@@ -87,12 +87,12 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">
-                    <i:Interaction.Behaviors>
+                    <!--<i:Interaction.Behaviors>
                         <hud:HudStatsBehavior
                             x:Name="hudStats"
                             StatInfoSource="{Binding StatInfoCollection}"
                             IsMainStatsPanelEnabled="False" />
-                    </i:Interaction.Behaviors>
+                    </i:Interaction.Behaviors>-->
                 </WrapPanel>
             </Grid>
         </Border>

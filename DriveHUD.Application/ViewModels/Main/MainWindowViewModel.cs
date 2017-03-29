@@ -56,6 +56,8 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
 using DriveHUD.API;
+using DriveHUD.Application.Views.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -342,8 +344,6 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-
-
                 var refreshTime = sw.ElapsedMilliseconds;
 
                 sw.Restart();
@@ -369,15 +369,11 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(activeLayout.HudViewType.ToString());
-                var preparedHudElements = tableConfigurator.GenerateElements(maxSeats);
-
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
-                    HudViewType = activeLayout.HudViewType,
                     TableType = gameInfo.TableType,
                     PokerSite = gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
@@ -387,10 +383,6 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
-
-                // TODO: Opponent Analysis report turned off
-                //var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
-                //topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
 
                 for (int i = 1; i <= maxSeats; i++)
                 {
@@ -455,7 +447,6 @@ namespace DriveHUD.Application.ViewModels
                         GameType = gameInfo.EnumGameType,
                         HudLayoutInfo = activeLayout,
                         PokerSite = gameInfo.PokerSite,
-                        PreparedHudElements = preparedHudElements,
                         SeatNumber = seatNumber
                     };
 
@@ -485,7 +476,8 @@ namespace DriveHUD.Application.ViewModels
                         : new ObservableCollection<string>(cardsCollection);
 
                     // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    var activeLayoutHudStats = activeLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
                         // remove prohibited for PS stats.
@@ -547,35 +539,35 @@ namespace DriveHUD.Application.ViewModels
                         }
 
                         // temporary
-                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                        //var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
 
-                        if (tooltipCollection != null)
-                        {
-                            foreach (var tooltip in tooltipCollection)
-                            {
-                                tooltip.CategoryStat.AssignStatInfoValues(item);
+                        //if (tooltipCollection != null)
+                        //{
+                        //    foreach (var tooltip in tooltipCollection)
+                        //    {
+                        //        tooltip.CategoryStat.AssignStatInfoValues(item);
 
-                                foreach (var stat in tooltip.StatsCollection)
-                                {
-                                    stat.AssignStatInfoValues(item);
-                                }
+                        //        foreach (var stat in tooltip.StatsCollection)
+                        //        {
+                        //            stat.AssignStatInfoValues(item);
+                        //        }
 
-                                if (tooltip.CardsList == null)
-                                {
-                                    continue;
-                                }
+                        //        if (tooltip.CardsList == null)
+                        //        {
+                        //            continue;
+                        //        }
 
-                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                        //        var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
 
-                                if (listObj != null)
-                                {
-                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                                }
-                            }
-                            statInfo.StatInfoToolTipCollection = tooltipCollection;
-                        }
+                        //        if (listObj != null)
+                        //        {
+                        //            tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                        //        }
+                        //    }
+                        //    statInfo.StatInfoToolTipCollection = tooltipCollection;
+                        //}
 
-                        playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
+                        // playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)

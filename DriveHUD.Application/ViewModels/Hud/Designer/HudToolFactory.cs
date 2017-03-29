@@ -10,23 +10,91 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Windows;
+
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Factory creates tool view model based on tool type
+    /// Defines factory to create new hud tool
     /// </summary>
     internal class HudToolFactory : IHudToolFactory
     {
-        public HudBaseToolViewModel CreateTool(HudDesignerToolType toopType)
+        /// <summary>
+        /// Creates <see cref="HudBaseToolViewModel"/> based on the specified <see cref="HudToolCreationInfo"/>
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/> to create new hud tool</param>
+        /// <returns>Created <see cref="HudBaseToolViewModel"/></returns>
+        public HudBaseToolViewModel CreateTool(HudToolCreationInfo creationInfo)
         {
-            var tool = new HudPlainStatBoxViewModel
+            Check.ArgumentNotNull(() => creationInfo);
+
+            switch (creationInfo.ToolType)
             {
-                Width = 135,
-                Height = 75,
-                Opacity = 100
+                case HudDesignerToolType.PlainStatBox:
+                    return CreatePlainStatBoxTool(creationInfo);
+                default:
+                    throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
+            }
+        }
+
+        private HudBaseToolViewModel CreatePlainStatBoxTool(HudToolCreationInfo creationInfo)
+        {
+            var layoutTool = new HudLayoutPlainBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>(),
+                Positions = GetHudPositions(),
+                UIPositions = GetHudUIPositions(creationInfo.TableType, creationInfo.Position)
             };
 
-            return tool;
+            layoutTool.UIPositions.ForEach(x =>
+            {
+                x.Width = HudDefaultSettings.PlainStatBoxWidth;
+                x.Height = HudDefaultSettings.PlainStatBoxHeight;
+            });
+
+            return layoutTool.CreateViewModel(creationInfo.HudElement);
+        }
+
+        private List<HudPositionsInfo> GetHudPositions()
+        {
+            return new List<HudPositionsInfo>();
+        }
+
+        private List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position)
+        {
+            var positions = new List<HudPositionInfo>();
+
+            var seats = (int)tableType;
+
+            var playerLabelPositions = HudDefaultSettings.TablePlayerLabelPositions[seats];
+
+            var playerLabelPositionX = playerLabelPositions[0, 0];
+            var playerLabelPositionY = playerLabelPositions[0, 1];
+
+            var deltaX = position.X - playerLabelPositionX;
+            var deltaY = position.Y - playerLabelPositionY;
+
+            for (var seat = 0; seat < seats; seat++)
+            {
+                playerLabelPositionX = playerLabelPositions[seat, 0];
+                playerLabelPositionY = playerLabelPositions[seat, 1];
+
+                var positionInfo = new HudPositionInfo
+                {
+                    Position = new Point(playerLabelPositionX + deltaX, playerLabelPositionY + deltaY),
+                };
+
+                positions.Add(positionInfo);
+            }
+
+            return positions;
         }
     }
 }

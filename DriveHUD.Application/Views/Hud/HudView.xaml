@@ -181,7 +181,7 @@
             DataType="{x:Type vm:HudDesignerViewModel}">
             <vd:HudDesignerView />
         </DataTemplate>
-
+        
         <DataTemplate
             DataType="{x:Type vm:HudSaveFirstTimeNotificationViewModel}">
             <hud:HudSaveFirstTimeNotificationView />
@@ -542,9 +542,14 @@
                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                    ItemsSource="{Binding TableTypes}"
-                    DisplayMemberPath="TableTypeText"
+                    ItemsSource="{Binding TableTypes}"                    
                     SelectedValue="{Binding Path=CurrentTableType}">
+                    <comboboxControl:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </comboboxControl:ComboBoxEx.ItemTemplate>
                 </comboboxControl:ComboBoxEx>
 
             </Grid>
@@ -705,7 +710,8 @@
                 <telerik:RadDiagram                    
                     Grid.Row="1"
                     Grid.Column="1"
-                    dh:DragDrop.IsDragTarget="True"                    
+                    dh:DragDrop.IsDragTarget="True"
+                    dh:DragDrop.DragDropCommand="{Binding AddToolCommand}"
                     Style="{StaticResource HudTableDiagramStyle}">
                     <i:Interaction.Behaviors>
                         <bhv:HudDesignerBehavior
@@ -803,7 +809,7 @@
                                     ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png" />
                             </Grid.Background>
 
-                            <controls:HudPanel
+                            <!--<controls:HudPanel
                                 DataContext="{Binding PreviewHudElementViewModel}"
                                 Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
                                 VerticalAlignment="Center"
@@ -825,7 +831,7 @@
                                             Value="0,0,0,-25" />
                                     </Style>
                                 </controls:HudRichPanel.Style>
-                            </controls:HudRichPanel>
+                            </controls:HudRichPanel>-->
 
                         </Grid>
                     </Grid>

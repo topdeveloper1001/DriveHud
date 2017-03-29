@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
 using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Layouts
@@ -30,6 +31,18 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// Gets or sets the coordinates of the position
         /// </summary>
         public Point Position { get; set; }
+
+        /// <summary>
+        /// Gets or sets the width
+        /// </summary>
+        [DefaultValue(0d)]
+        public double Width { get; set; }
+
+        /// <summary>
+        /// Gets or sets the height
+        /// </summary>
+        [DefaultValue(0d)]
+        public double Height { get; set; }
 
         /// <summary>
         /// Creates a copy of current <see cref="HudPositionInfo"/>

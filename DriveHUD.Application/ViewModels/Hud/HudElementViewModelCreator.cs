@@ -11,66 +11,38 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
-using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Creates HUD element based on elements on table
+    /// Defines methods to create <see cref="HudElementViewModel"/>
     /// </summary>
     internal class HudElementViewModelCreator : IHudElementViewModelCreator
     {
         /// <summary>
-        /// Create HUD element based on table settings
+        /// Creates <see cref="HudElementViewModel"/> based on the specific <see cref="HudElementViewModelCreationInfo"/>
         /// </summary>
         /// <param name="creationInfo">Creation Info</param>      
-        /// <returns>Hud panel element view model</returns>
+        /// <returns><see cref="HudElementViewModel"/></returns>
         public HudElementViewModel Create(HudElementViewModelCreationInfo creationInfo)
         {
             Check.ArgumentNotNull(() => creationInfo);
             Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo);
-            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo.UiPositionsInfo);
-            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo.HudPositionsInfo);
-            Check.ArgumentNotNull(() => creationInfo.PreparedHudElements);
 
-            var hudElementViewModel = creationInfo.PreparedHudElements.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
+            var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools);
+            hudElementViewModel.Seat = creationInfo.SeatNumber;
 
-            if (hudElementViewModel == null)
+            try
             {
-                LogProvider.Log.Error(this, $"Could not find data for seat {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
-                return null;
+                hudElementViewModel.Tools.ForEach(x => x.SetPositions(creationInfo.PokerSite, creationInfo.GameType));
             }
-
-            var positionInfo = creationInfo.HudLayoutInfo.HudPositionsInfo.FirstOrDefault(x => x.GameType == creationInfo.GameType && x.PokerSite == creationInfo.PokerSite);
-
-            if (positionInfo == null)
+            catch (DHBusinessException e)
             {
-                LogProvider.Log.Error(this, $"Could not find data for position info {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
-                return hudElementViewModel;
+                LogProvider.Log.Error(this, $"Could not configure positions for {creationInfo.HudLayoutInfo.Name}", e);
             }
-
-            var positions = positionInfo.HudPositions.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
-
-            if (positions == null)
-            {
-                LogProvider.Log.Error(this, $"Could not find data for positions {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
-                return hudElementViewModel;
-            }
-
-            hudElementViewModel.Position = positions.Position;
-
-            var uiPositions = creationInfo.HudLayoutInfo.UiPositionsInfo.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
-
-            if (uiPositions == null)
-            {
-                LogProvider.Log.Error(this, $"Could not find data for ui positions {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken. Default data will be used.");
-                return hudElementViewModel;
-            }
-
-            hudElementViewModel.Width = uiPositions.Width;
-            hudElementViewModel.Height = uiPositions.Height;
-            hudElementViewModel.Opacity = creationInfo.HudLayoutInfo.HudOpacity;
 
             return hudElementViewModel;
         }

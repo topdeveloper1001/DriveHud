@@ -118,7 +118,7 @@
                 Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-    
+
         <Border
             Grid.Column="0"
             Grid.Row="1"
@@ -136,8 +136,7 @@
                     <i:Interaction.Behaviors>
                         <hud:HudStatsBehavior
                             StatInfoSource="{Binding Stats}"
-                            IsDefaultImage="True"
-                            IsMainStatsPanelEnabled="False" />
+                            IsDefaultImage="True" />
                     </i:Interaction.Behaviors>
                 </WrapPanel>
 

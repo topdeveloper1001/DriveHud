@@ -1,5 +1,6 @@
 ﻿using DriveHUD.Application.ValueConverters;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views.Popups;
@@ -470,12 +471,14 @@ namespace DriveHUD.Application.TableConfigurators
         private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
             var activeLayout = hudLayoutsService.GetActiveLayout(pokerSite, tableType, gameType);
+
             if (activeLayout == null)
             {
                 LogProvider.Log.Error("Could not find active layout");
                 return null;
             }
-            return activeLayout.HudStats.ToArray();
+
+            return activeLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
         }
 
         private EnumPokerSites GetPokerSite(EnumPokerSites site)

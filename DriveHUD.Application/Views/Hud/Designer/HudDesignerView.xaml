@@ -53,10 +53,10 @@
             dh:DragDrop.IsDragTarget="True"
             dh:DragDrop.DragDropCommand="{Binding AddToolCommand}"
             Style="{StaticResource HudDesignerTableDiagramStyle}">
-            <i:Interaction.Behaviors>
+            <!--<i:Interaction.Behaviors>
                 <bhv:HudDesignerBehavior
                     DesignerTools="{Binding Tools}" />
-            </i:Interaction.Behaviors>
+            </i:Interaction.Behaviors>-->
         </telerik:RadDiagram>
 
         <TextBlock

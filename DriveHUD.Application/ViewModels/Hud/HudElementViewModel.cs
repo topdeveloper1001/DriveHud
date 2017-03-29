@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.Entities;
 using DriveHUD.ViewModels;
-using Model.Enums;
 using ProtoBuf;
 using ReactiveUI;
 using System;
@@ -27,24 +27,24 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     /// <summary>
-    /// This View Model represents size and position of Hud Elements (these black rectangles where stat block is)(not thread-safe)
+    /// Represents view model of hud element
     /// </summary>    
     public class HudElementViewModel : ViewModelBase, IHudWindowElement
     {
         private static StatInfo BlankStatInfo = new StatInfo { Caption = string.Empty, IsCaptionHidden = true };
 
         public HudElementViewModel()
-        {          
+        {
             tools = new ReactiveList<HudBaseToolViewModel>();
             Opacity = 100;
         }
 
-        public void UpdateMainStats()
+        public HudElementViewModel(IEnumerable<HudLayoutTool> initialTools)
         {
-            RaisePropertyChanged(() => Stat1);
-            RaisePropertyChanged(() => Stat2);
-            RaisePropertyChanged(() => Stat3);
-            RaisePropertyChanged(() => Stat4);
+            Check.ArgumentNotNull(() => initialTools);
+
+            tools = new ReactiveList<HudBaseToolViewModel>(initialTools.Select(x => x.CreateViewModel(this)));
+            Opacity = 100;
         }
 
         #region Properties
@@ -314,6 +314,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [NonSerialized]
+        [ProtoMember(16)]
         private ReactiveList<HudBaseToolViewModel> tools;
 
         public ReactiveList<HudBaseToolViewModel> Tools
@@ -325,88 +327,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref tools, value);
-            }
-        }
-
-        #region Rich HUD stats
-
-        /// <summary>
-        /// Second stat for block #2 in rich HUD
-        /// </summary>
-        public StatInfo Stat1
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 1)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[0];
-
-                return stat;
-            }
-        }
-
-        /// <summary>
-        /// Second stat for block #2 in rich HUD
-        /// </summary>
-        public StatInfo Stat2
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 2)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[1];
-
-                return stat;
-            }
-        }
-
-        /// <summary>
-        /// Third stat for block #3 in rich HUD
-        /// </summary>
-        public StatInfo Stat3
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 3)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[2];
-
-                return stat;
-            }
-        }
-
-        /// <summary>
-        /// Fourth stat for block #4 in rich HUD
-        /// </summary>
-        public StatInfo Stat4
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 4)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[3];
-
-                return stat;
             }
         }
 
@@ -423,7 +343,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());
                 }
 
-                return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());                
+                return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());
             }
         }
 
@@ -509,8 +429,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #endregion
 
-        #endregion
-
         #region Infrastructure
 
         /// <summary>
@@ -519,35 +437,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Cloned object</returns>
         public HudElementViewModel Clone()
         {
-            var cloned = (HudElementViewModel)MemberwiseClone();            
+            var cloned = (HudElementViewModel)MemberwiseClone();
             return cloned;
-        }
-
-        private List<StatInfo> GetMainStats()
-        {
-            var mainStats = new List<StatInfo>();
-
-            var counter = 0;
-
-            foreach (var statInfo in StatInfoCollection.Where(x => !x.IsNotVisible))
-            {
-                if (counter > 4)
-                {
-                    break;
-                }
-
-                if (statInfo is StatInfoBreak)
-                {
-                    continue;
-                }
-
-                mainStats.Add(statInfo);
-
-                counter++;
-            }
-
-            return mainStats;
-
         }
 
         public void Cleanup()
