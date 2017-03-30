@@ -342,8 +342,6 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-
-
                 var refreshTime = sw.ElapsedMilliseconds;
 
                 sw.Restart();

@@ -22,6 +22,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
 using DriveHUD.Common.Linq;
 using Model.Data;
+using HandHistories.Objects.GameDescription;
 
 namespace DriveHUD.Importers
 {
@@ -94,14 +95,12 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
-        /// Add specified player data or update it if data already exists
+        /// Stores specified player data in cache
         /// </summary>
-        /// <param name="session">Active session</param>
-        /// <param name="player">Specified player</param>
-        /// <param name="stats">Player stats</param>
-        public void AddOrUpdatePlayerStats(string session, PlayerCollectionItem player, Playerstatistic stats, bool isHero)
+        /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
+        public void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo)
         {
-            if (!isStarted || string.IsNullOrEmpty(session))
+            if (!isStarted || cacheInfo == null || string.IsNullOrEmpty(cacheInfo.Session))
             {
                 return;
             }
@@ -110,26 +109,29 @@ namespace DriveHUD.Importers
 
             try
             {
-                var sessionData = GetOrAddSessionData(session);
+                var sessionData = GetOrAddSessionData(cacheInfo.Session);
 
                 SessionCacheStatistic sessionCacheStatistic = null;
 
                 bool skipAdding = false;
 
-                if (sessionData.StatisticByPlayer.ContainsKey(player))
+                if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
                 {
-                    sessionCacheStatistic = sessionData.StatisticByPlayer[player];
+                    sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
                 }
                 else
                 {
                     // if not hero read data from storage
-                    if (isHero)
+                    if (cacheInfo.IsHero)
                     {
                         sessionCacheStatistic = new SessionCacheStatistic();
                     }
                     else
                     {
-                        var playerStatistic = dataService.GetPlayerStatisticFromFile(player.PlayerId, (short)player.PokerSite);
+                        var playerStatistic = dataService.GetPlayerStatisticFromFile(cacheInfo.Player.PlayerId, (short)cacheInfo.Player.PokerSite)
+                            .Where(x => x.IsTourney == cacheInfo.Stats.IsTourney &&
+                                    GameTypeUtils.CompareGameType((GameType)x.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId))
+                            .ToList();
 
                         sessionCacheStatistic = new SessionCacheStatistic();
 
@@ -138,12 +140,12 @@ namespace DriveHUD.Importers
                             // we don't have this data in the db so update it after loading from file
                             PlayerStatisticCalculator.CalculatePositionalData(x);
 
-                            var isCurrentGame = x.GameNumber == stats.GameNumber;
+                            var isCurrentGame = x.GameNumber == cacheInfo.Stats.GameNumber;
 
                             if (isCurrentGame)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
-                                x.SessionCode = session;
+                                x.SessionCode = cacheInfo.Session;
                             }
 
                             sessionCacheStatistic.PlayerData.AddStatistic(x);
@@ -162,16 +164,16 @@ namespace DriveHUD.Importers
                         skipAdding = true;
                     }
 
-                    sessionData.StatisticByPlayer.Add(player, sessionCacheStatistic);
+                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic);
                 }
 
-                if (sessionData.LastHandStatisticByPlayer.ContainsKey(player))
+                if (sessionData.LastHandStatisticByPlayer.ContainsKey(cacheInfo.Player))
                 {
-                    sessionData.LastHandStatisticByPlayer[player] = stats.Copy();
+                    sessionData.LastHandStatisticByPlayer[cacheInfo.Player] = cacheInfo.Stats.Copy();
                 }
                 else
                 {
-                    sessionData.LastHandStatisticByPlayer.Add(player, stats.Copy());
+                    sessionData.LastHandStatisticByPlayer.Add(cacheInfo.Player, cacheInfo.Stats.Copy());
                 }
 
                 if (skipAdding)
@@ -179,15 +181,15 @@ namespace DriveHUD.Importers
                     return;
                 }
 
-                sessionCacheStatistic.PlayerData.AddStatistic(stats);
-                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, stats);
-                InitSessionStatCollections(sessionCacheStatistic.PlayerData, stats);
+                sessionCacheStatistic.PlayerData.AddStatistic(cacheInfo.Stats);
+                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
+                InitSessionStatCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
 
-                if (stats.SessionCode == session)
+                if (cacheInfo.Stats.SessionCode == cacheInfo.Session)
                 {
-                    sessionCacheStatistic.SessionPlayerData.AddStatistic(stats);
-                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, stats);
-                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, stats);
+                    sessionCacheStatistic.SessionPlayerData.AddStatistic(cacheInfo.Stats);
+                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
+                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
                 }
             }
             finally

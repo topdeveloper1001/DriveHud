@@ -40,14 +40,12 @@ namespace DriveHUD.Importers
         /// <param name="player">Player which stats has to be retrieved</param>
         /// <returns>Player stats</returns>
         SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player);
-      
+
         /// <summary>
-        /// Store specified player data in cache
+        /// Stores specified player data in cache
         /// </summary>
-        /// <param name="session">Active session</param>
-        /// <param name="player">Player which stats has to be saved</param>
-        /// <param name="stats">Player stats</param>
-        void AddOrUpdatePlayerStats(string session, PlayerCollectionItem player, Playerstatistic stats, bool isHero);
+        /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
+        void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo);        
 
         /// <summary>
         /// Store hand history record in cache
