@@ -39,7 +39,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
     {
         #region Dependency Properties
 
-        private readonly CompositeDisposable Disposables = new CompositeDisposable();
+        private CompositeDisposable Disposables = new CompositeDisposable();
 
         private readonly List<IShape> RemovableShapes = new List<IShape>();
 
@@ -87,6 +87,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 behavior.Disposables.Dispose();
             }
 
+            behavior.Disposables = new CompositeDisposable();
+
             behavior.ClearDiagram();
 
             for (var seat = 0; seat < hudElements.Count; seat++)
@@ -100,6 +102,10 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 {
                     behavior.AddTool(tool);
                 }
+
+                var disposable = hudElements[seat].Tools.ActOnEveryObject(x => behavior.AddTool(x), x => behavior.RemoveTool(x));
+
+                behavior.Disposables.Add(disposable);
             }
         }
 
@@ -260,6 +266,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             SetHeightBinding(shape, toolViewModel);
             SetPositionBinding(shape, toolViewModel);
             SetOpacityBinding(shape, toolViewModel);
+            SetIsSelectedBinding(shape, toolViewModel);
 
             AssociatedObject.AddShape(shape);
             RemovableShapes.Add(shape);
@@ -281,7 +288,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             if (shape != null)
             {
                 AssociatedObject.RemoveShape(shape);
-            }        
+            }
         }
 
         #endregion
@@ -308,14 +315,19 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             SetBinding(shape, FrameworkElement.HeightProperty, viewModel, nameof(HudBaseToolViewModel.Height));
         }
 
-        protected static void SetBinding(FrameworkElement element, DependencyProperty dp, object source, string property)
+        protected static void SetIsSelectedBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)
+        {
+            SetBinding(shape, RadDiagramItem.IsSelectedProperty, viewModel, nameof(HudBaseToolViewModel.IsSelected), BindingMode.OneWayToSource);
+        }
+
+        protected static void SetBinding(FrameworkElement element, DependencyProperty dp, object source, string property, BindingMode bindingMode = BindingMode.TwoWay)
         {
             BindingOperations.ClearBinding(element, dp);
 
             var binding = new Binding(property)
             {
                 Source = source,
-                Mode = BindingMode.TwoWay
+                Mode = bindingMode
             };
 
             element.SetBinding(dp, binding);

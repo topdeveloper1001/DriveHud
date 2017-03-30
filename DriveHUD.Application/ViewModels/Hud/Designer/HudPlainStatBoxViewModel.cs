@@ -95,8 +95,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 throw new DHBusinessException(new NonLocalizableString($"Could not set UI positions {Parent.Seat}"));
             }
 
-            Width = HudDefaultSettings.PlainStatBoxWidth;
-            Height = HudDefaultSettings.PlainStatBoxHeight;
+            Width = uiPosition.Width != 0 ? uiPosition.Width : HudDefaultSettings.PlainStatBoxWidth;
+            Height = uiPosition.Height != 0 ? uiPosition.Height : HudDefaultSettings.PlainStatBoxHeight;
 
             Opacity = Parent.Opacity;
             Position = uiPosition.Position;

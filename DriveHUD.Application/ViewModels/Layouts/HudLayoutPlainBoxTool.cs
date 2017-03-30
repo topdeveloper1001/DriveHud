@@ -15,6 +15,7 @@ using DriveHUD.ViewModels;
 using System.Collections.Generic;
 using System;
 using ReactiveUI;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -52,7 +53,24 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
         public override HudLayoutTool Clone()
         {
-            throw new NotImplementedException();
+            var cloned = new HudLayoutPlainBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
+                {
+                    var statInfoBreak = x as StatInfoBreak;
+
+                    if (statInfoBreak != null)
+                    {
+                        return statInfoBreak.Clone();
+                    }
+
+                    return x.Clone();
+                })),
+                Positions = Positions.Select(x => x.Clone()).ToList(),
+                UIPositions = UIPositions.Select(x => x.Clone()).ToList()
+            };
+
+            return cloned;
         }
 
         /// <summary>

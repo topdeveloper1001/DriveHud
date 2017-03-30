@@ -638,6 +638,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Design your HUD:.
+        /// </summary>
+        internal static string Common_HudDesigner_Header {
+            get {
+                return ResourceManager.GetString("Common_HudDesigner_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Common_HudLayout_Cancel {

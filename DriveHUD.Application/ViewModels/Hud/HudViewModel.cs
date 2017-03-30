@@ -38,6 +38,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Windows;
 using System.Windows.Data;
@@ -52,6 +53,8 @@ namespace DriveHUD.Application.ViewModels
         private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
         private ISettingsService SettingsService => ServiceLocator.Current.GetInstance<ISettingsService>();
+
+        private CompositeDisposable designerDisposables = new CompositeDisposable();
 
         /// <summary>
         /// Initializes a <see cref="HudViewModel"/> instance
@@ -292,6 +295,7 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 this.RaiseAndSetIfChanged(ref isInDesignMode, value);
+                UpdateStatsCollections();
             }
         }
 
@@ -306,6 +310,20 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 this.RaiseAndSetIfChanged(ref designerHudElementViewModel, value);
+            }
+        }
+
+        private HudBaseToolViewModel selectedToolViewModel;
+
+        public HudBaseToolViewModel SelectedToolViewModel
+        {
+            get
+            {
+                return selectedToolViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref selectedToolViewModel, value);
             }
         }
 
@@ -656,6 +674,8 @@ namespace DriveHUD.Application.ViewModels
 
                     ReplaceToolStats(statsCollection);
 
+                    #region
+
                     //if (PreviewHudElementViewModel != null)
                     //{
                     //    PreviewHudElementViewModel.StatInfoCollection.Clear();
@@ -676,6 +696,8 @@ namespace DriveHUD.Application.ViewModels
                     //        PreviewHudElementViewModel.StatInfoCollection.Add(stat);
                     //    }
                     //}
+
+                    #endregion
                 });
         }
 
@@ -685,6 +707,12 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="statsCollection">Collection of stats</param>
         private void ReplaceToolStats(IEnumerable<StatInfo> statsCollection)
         {
+            // in design mode we can update only stats in selected tool
+            if (isInDesignMode && SelectedToolViewModel == null)
+            {
+                return;
+            }
+
             var hudElement = HudElements?.FirstOrDefault();
 
             if (hudElement == null)
@@ -692,7 +720,9 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>().FirstOrDefault();
+            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>()
+                            .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
+                                SelectedToolViewModel == null);
 
             if (statTool == null)
             {
@@ -830,6 +860,18 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
+            ReturnStatsToStatCollection();
+
+            if (StatInfoObserveCollection.Count > 0)
+            {
+                StatInfoObserveCollection.Clear();
+            }
+
+            AddStatsToSelectedStatCollection();
+        }
+
+        private void ReturnStatsToStatCollection()
+        {
             // Get all chosen stats back to list
             foreach (var statInfo in StatInfoObserveCollection)
             {
@@ -838,23 +880,31 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                if (statInfo.Stat != Stat.PlayerInfoIcon)
+                // we need to purge stat info from user changes before we return it to stat collection, 
+                // but we can't modify original stat, because it belongs to layout
+                var purgedStatInfo = statInfo.Clone();
+
+                if (purgedStatInfo.Stat != Stat.PlayerInfoIcon)
                 {
-                    statInfo.Reset();
-                    statInfo.Initialize();
+                    purgedStatInfo.Reset();
+                    purgedStatInfo.Initialize();
                 }
 
-                StatInfoCollection.Add(statInfo);
+                StatInfoCollection.Add(purgedStatInfo);
             }
+        }
 
-            StatInfoObserveCollection.Clear();
+        private void AddStatsToSelectedStatCollection()
+        {
+            var stats = GetSelectedStats();
 
-            // temp code
-            foreach (var hudStat in CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats))
+            var statsToAdd = new List<StatInfo>();
+
+            foreach (var hudStat in stats)
             {
                 if (hudStat is StatInfoBreak)
                 {
-                    StatInfoObserveCollection.Add(hudStat);
+                    statsToAdd.Add(hudStat);
                     continue;
                 }
 
@@ -863,10 +913,30 @@ namespace DriveHUD.Application.ViewModels
                 if (existing != null)
                 {
                     // we do not recover unexpected stats
-                    StatInfoObserveCollection.Add(hudStat);
+                    statsToAdd.Add(hudStat);
                     StatInfoCollection.Remove(existing);
                 }
             }
+
+            if (statsToAdd.Count > 0)
+            {
+                StatInfoObserveCollection.AddRange(statsToAdd);
+            }
+        }
+
+        private IEnumerable<StatInfo> GetSelectedStats()
+        {
+            if (IsInDesignMode)
+            {
+                if (SelectedToolViewModel != null && SelectedToolViewModel is HudPlainStatBoxViewModel)
+                {
+                    return (SelectedToolViewModel as HudPlainStatBoxViewModel).Stats.ToArray();
+                }
+
+                return new List<StatInfo>();
+            }
+
+            return CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
         }
 
         /// <summary>
@@ -1115,8 +1185,48 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
+            if (designerDisposables != null)
+            {
+                designerDisposables.Dispose();
+            }
+
+            designerDisposables = new CompositeDisposable();
+
             cachedCurrentLayout = CurrentLayout;
-            CurrentLayout = CurrentLayout.Clone();
+
+            var clonedLayout = CurrentLayout.Clone();
+            Layouts.Add(clonedLayout);
+            CurrentLayout = clonedLayout;
+
+            DesignerHudElementViewModel = HudElements.FirstOrDefault(x => x.Seat == HudDefaultSettings.DesignerDefaultSeat);
+
+            if (DesignerHudElementViewModel != null)
+            {
+                HudElements = new ReactiveList<HudElementViewModel>
+                {
+                    DesignerHudElementViewModel
+                };
+
+                DesignerHudElementViewModel.Tools.ChangeTrackingEnabled = true;
+
+                var disposable = DesignerHudElementViewModel.Tools.ItemChanged
+                        .Where(x => x.PropertyName.Equals(nameof(HudBaseToolViewModel.IsSelected)))
+                        .Subscribe(x =>
+                        {
+                            if (x.Sender.IsSelected)
+                            {
+                                SelectedToolViewModel = x.Sender;
+                            }
+                            else
+                            {
+                                SelectedToolViewModel = null;
+                            }
+
+                            UpdateStatsCollections();
+                        });
+
+                designerDisposables.Add(disposable);
+            }
 
             IsInDesignMode = true;
         }
@@ -1124,10 +1234,16 @@ namespace DriveHUD.Application.ViewModels
         private void CloseDesigner()
         {
             DesignerHudElementViewModel = null;
+
+            Layouts.Remove(CurrentLayout);
             CurrentLayout = cachedCurrentLayout;
             cachedCurrentLayout = null;
 
+            SelectedToolViewModel = null;
+
             IsInDesignMode = false;
+
+            designerDisposables.Dispose();
         }
 
         /// <summary>

@@ -128,6 +128,23 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private bool isSelected;
+
+        /// <summary>
+        /// Gets or sets whenever tool is selected
+        /// </summary>
+        public bool IsSelected
+        {
+            get
+            {
+                return isSelected;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isSelected, value);
+            }
+        }
+
         #endregion
 
         /// <summary>

@@ -629,7 +629,7 @@ namespace DriveHUD.ViewModels
         }
 
         public virtual StatInfo Clone()
-        {
+        {          
             var statInfoClone = new StatInfo();
 
             statInfoClone.MinSample = MinSample;

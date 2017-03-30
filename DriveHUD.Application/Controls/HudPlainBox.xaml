@@ -11,7 +11,8 @@
     xmlns:control="clr-namespace:DriveHUD.Application.Controls"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     mc:Ignorable="d"
-    MinWidth="50"
+    MinWidth="50"    
+    Width="{Binding Width}"
     Opacity="{Binding Opacity}">
     <UserControl.Resources>
 
@@ -88,7 +89,7 @@
             <Grid>
                 <WrapPanel
                     Margin="3,0,0,3"
-                    MinHeight="35"
+                    MinHeight="{x:Static hud:HudDefaultSettings.PlainStatBoxMinHeight}"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">

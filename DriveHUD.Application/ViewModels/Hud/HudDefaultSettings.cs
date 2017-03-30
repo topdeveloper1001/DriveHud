@@ -57,11 +57,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 10, new int[,] { { 490, 118 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }, { 220, 118 }, { 355, 118 } } }
         });
 
+        public const int DesignerDefaultSeat = 1;
+
         #region Tools sizes
 
         public const double PlainStatBoxWidth = 135d;
 
         public const double PlainStatBoxHeight = double.NaN;
+
+        public const double PlainStatBoxMinHeight = 35d;
 
         #endregion
     }

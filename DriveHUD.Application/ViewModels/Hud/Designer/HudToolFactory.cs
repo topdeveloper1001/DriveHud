@@ -59,7 +59,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                 x.Height = HudDefaultSettings.PlainStatBoxHeight;
             });
 
-            return layoutTool.CreateViewModel(creationInfo.HudElement);
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.SetPositions();
+
+            return toolViewModel;
         }
 
         private List<HudPositionsInfo> GetHudPositions()
@@ -89,6 +92,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var positionInfo = new HudPositionInfo
                 {
                     Position = new Point(playerLabelPositionX + deltaX, playerLabelPositionY + deltaY),
+                    Seat = seat + 1
                 };
 
                 positions.Add(positionInfo);

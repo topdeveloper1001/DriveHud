@@ -714,4 +714,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudLayout_GotIt" xml:space="preserve">
     <value>Got It!</value>
   </data>
+  <data name="Common_HudDesigner_Header" xml:space="preserve">
+    <value>Design your HUD:</value>
+  </data>
 </root>

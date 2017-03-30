@@ -73,6 +73,9 @@
             Property="primitives:BackgroundGrid.LineStroke"
             Value="#26282b" />
         <Setter
+            Property="IsInformationAdornerVisible"
+            Value="False" />
+        <Setter
             Property="Width"
             Value="{x:Static hvm:HudDefaultSettings.HudTableWidth}" />
         <Setter
