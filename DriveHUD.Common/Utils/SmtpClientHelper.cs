@@ -19,8 +19,7 @@ namespace DriveHUD.Common.Utils
 
         private static readonly string[] _advancedSupportEmails = new string[]
         {
-            "aleksander.v.danilov@gmail.com",
-            "john@acepokersolutions.com"
+            "devs@drivehud.com"            
         };
 
         private static readonly string _supportPassword = @"DHmexico121@";

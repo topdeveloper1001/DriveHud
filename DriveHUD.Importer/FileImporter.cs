@@ -449,7 +449,21 @@ namespace DriveHUD.Importers
                         var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
 
                         playerStatCopy.SessionCode = importerSession;
-                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { PlayerId = existingPlayer.PlayerId, Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
+
+                        var cacheInfo = new PlayerStatsSessionCacheInfo
+                        {
+                            Session = importerSession,
+                            Player = new PlayerCollectionItem
+                            {
+                                PlayerId = existingPlayer.PlayerId,
+                                Name = existingPlayer.Playername,
+                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
+                            },
+                            Stats = playerStatCopy,
+                            IsHero = isHero                         
+                        };
+
+                        importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 

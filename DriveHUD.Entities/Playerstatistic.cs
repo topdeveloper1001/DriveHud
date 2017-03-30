@@ -23,7 +23,7 @@ namespace DriveHUD.Entities
     [ProtoContract]
     public partial class Playerstatistic : INotifyPropertyChanged
     {
-        public virtual int CompiledplayerresultsId { get; set; }               
+        public virtual int CompiledplayerresultsId { get; set; }
         [Required, ProtoMember(232)]
         public virtual int PlayerId { get; set; }
         [Required, ProtoMember(1)]
@@ -665,6 +665,72 @@ namespace DriveHUD.Entities
         [ProtoMember(248)]
         public virtual decimal EVDiff { get; set; }
 
+        [ProtoMember(249)]
+        public int FacedRaiseFlop { get; set; }
+
+        [ProtoMember(250)]
+        public int FoldedFacedRaiseFlop { get; set; }
+
+        [ProtoMember(251)]
+        public int CalledFacedRaiseFlop { get; set; }
+
+        [ProtoMember(252)]
+        public int ReraisedFacedRaiseFlop { get; set; }
+
+        [ProtoMember(253)]
+        public int FacedRaiseTurn { get; set; }
+
+        [ProtoMember(254)]
+        public int FoldedFacedRaiseTurn { get; set; }
+
+        [ProtoMember(255)]
+        public int CalledFacedRaiseTurn { get; set; }
+
+        [ProtoMember(256)]
+        public int ReraisedFacedRaiseTurn { get; set; }
+
+        [ProtoMember(257)]
+        public int FacedRaiseRiver { get; set; }
+
+        [ProtoMember(258)]
+        public int FoldedFacedRaiseRiver { get; set; }
+
+        [ProtoMember(259)]
+        public int CalledFacedRaiseRiver { get; set; }
+
+        [ProtoMember(260)]
+        public int ReraisedFacedRaiseRiver { get; set; }
+
+        [ProtoMember(261)]
+        public int CanBetWhenCheckedToFlop { get; set; }
+
+        [ProtoMember(262)]
+        public int DidBetWhenCheckedToFlop { get; set; }
+
+        [ProtoMember(263)]
+        public int CanBetWhenCheckedToTurn { get; set; }
+
+        [ProtoMember(264)]
+        public int DidBetWhenCheckedToTurn { get; set; }
+
+        [ProtoMember(265)]
+        public int CanBetWhenCheckedToRiver { get; set; }
+
+        [ProtoMember(266)]
+        public int DidBetWhenCheckedToRiver { get; set; }
+
+        [ProtoMember(267)]
+        public int FacedSqueez { get; set; }
+
+        [ProtoMember(268)]
+        public int FoldedFacedSqueez { get; set; }
+
+        [ProtoMember(269)]
+        public int CalledFacedSqueez { get; set; }
+
+        [ProtoMember(270)]
+        public int ReraisedFacedSqueez { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -1022,6 +1088,29 @@ namespace DriveHUD.Entities
             PfrInSb += a.PfrInSb;
             PfrInBb += a.PfrInBb;
 
+            FacedRaiseFlop += a.FacedRaiseFlop;
+            FoldedFacedRaiseFlop += a.FoldedFacedRaiseFlop;
+            CalledFacedRaiseFlop += a.CalledFacedRaiseFlop;
+            ReraisedFacedRaiseFlop += a.ReraisedFacedRaiseFlop;
+            FacedRaiseTurn += a.FacedRaiseTurn;
+            FoldedFacedRaiseTurn += a.FoldedFacedRaiseTurn;
+            CalledFacedRaiseTurn += a.CalledFacedRaiseTurn;
+            ReraisedFacedRaiseTurn += a.ReraisedFacedRaiseTurn;
+            FacedRaiseRiver += a.FacedRaiseRiver;
+            FoldedFacedRaiseRiver += a.FoldedFacedRaiseRiver;
+            CalledFacedRaiseRiver += a.CalledFacedRaiseRiver;
+            ReraisedFacedRaiseRiver += a.ReraisedFacedRaiseRiver;
+            CanBetWhenCheckedToFlop += a.CanBetWhenCheckedToFlop;
+            DidBetWhenCheckedToFlop += a.DidBetWhenCheckedToFlop;
+            CanBetWhenCheckedToTurn += a.CanBetWhenCheckedToTurn;
+            DidBetWhenCheckedToTurn += a.DidBetWhenCheckedToTurn;
+            CanBetWhenCheckedToRiver += a.CanBetWhenCheckedToRiver;
+            DidBetWhenCheckedToRiver += a.DidBetWhenCheckedToRiver;
+            FacedSqueez += a.FacedSqueez;
+            FoldedFacedSqueez += a.FoldedFacedSqueez;
+            CalledFacedSqueez += a.CalledFacedSqueez;
+            ReraisedFacedSqueez += a.ReraisedFacedSqueez;
+
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
@@ -1332,12 +1421,35 @@ namespace DriveHUD.Entities
             r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
             r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
             r.PfrOop = a.PfrOop + b.PfrOop;
-            r.PfrInEp += a.PfrInEp + b.PfrInEp;
-            r.PfrInMp += a.PfrInMp + b.PfrInMp;
-            r.PfrInCo += a.PfrInCo + b.PfrInCo;
-            r.PfrInBtn += a.PfrInBtn + b.PfrInBtn;
-            r.PfrInSb += a.PfrInSb + b.PfrInSb;
-            r.PfrInBb += a.PfrInBb + b.PfrInBb;
+            r.PfrInEp = a.PfrInEp + b.PfrInEp;
+            r.PfrInMp = a.PfrInMp + b.PfrInMp;
+            r.PfrInCo = a.PfrInCo + b.PfrInCo;
+            r.PfrInBtn = a.PfrInBtn + b.PfrInBtn;
+            r.PfrInSb = a.PfrInSb + b.PfrInSb;
+            r.PfrInBb = a.PfrInBb + b.PfrInBb;
+
+            r.FacedRaiseFlop = a.FacedRaiseFlop + b.FacedRaiseFlop;
+            r.FoldedFacedRaiseFlop = a.FoldedFacedRaiseFlop + b.FoldedFacedRaiseFlop;
+            r.CalledFacedRaiseFlop = a.CalledFacedRaiseFlop + b.CalledFacedRaiseFlop;
+            r.ReraisedFacedRaiseFlop = a.ReraisedFacedRaiseFlop + b.ReraisedFacedRaiseFlop;
+            r.FacedRaiseTurn = a.FacedRaiseTurn + b.FacedRaiseTurn;
+            r.FoldedFacedRaiseTurn = a.FoldedFacedRaiseTurn + b.FoldedFacedRaiseTurn;
+            r.CalledFacedRaiseTurn = a.CalledFacedRaiseTurn + b.CalledFacedRaiseTurn;
+            r.ReraisedFacedRaiseTurn = a.ReraisedFacedRaiseTurn + b.ReraisedFacedRaiseTurn;
+            r.FacedRaiseRiver = a.FacedRaiseRiver + b.FacedRaiseRiver;
+            r.FoldedFacedRaiseRiver = a.FoldedFacedRaiseRiver + b.FoldedFacedRaiseRiver;
+            r.CalledFacedRaiseRiver = a.CalledFacedRaiseRiver + b.CalledFacedRaiseRiver;
+            r.ReraisedFacedRaiseRiver = a.ReraisedFacedRaiseRiver + b.ReraisedFacedRaiseRiver;
+            r.CanBetWhenCheckedToFlop = a.CanBetWhenCheckedToFlop + b.CanBetWhenCheckedToFlop;
+            r.DidBetWhenCheckedToFlop = a.DidBetWhenCheckedToFlop + b.DidBetWhenCheckedToFlop;
+            r.CanBetWhenCheckedToTurn = a.CanBetWhenCheckedToTurn + b.CanBetWhenCheckedToTurn;
+            r.DidBetWhenCheckedToTurn = a.DidBetWhenCheckedToTurn + b.DidBetWhenCheckedToTurn;
+            r.CanBetWhenCheckedToRiver = a.CanBetWhenCheckedToRiver + b.CanBetWhenCheckedToRiver;
+            r.DidBetWhenCheckedToRiver = a.DidBetWhenCheckedToRiver + b.DidBetWhenCheckedToRiver;
+            r.FacedSqueez = a.FacedSqueez + b.FacedSqueez;
+            r.FoldedFacedSqueez = a.FoldedFacedSqueez + b.FoldedFacedSqueez;
+            r.CalledFacedSqueez = a.CalledFacedSqueez + b.CalledFacedSqueez;
+            r.ReraisedFacedSqueez = a.ReraisedFacedSqueez + b.ReraisedFacedSqueez;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

@@ -614,4 +614,19 @@
   <data name="Enum_HandExport_ICMizer" xml:space="preserve">
     <value>ICMizer Format</value>
   </data>
+  <data name="Enum_Stat_BetWhenCheckedTo" xml:space="preserve">
+    <value>Bet When Checked To</value>
+  </data>
+  <data name="Enum_Stat_FoldToFlopRaise" xml:space="preserve">
+    <value>Fold To Flop Raise</value>
+  </data>
+  <data name="Enum_Stat_FoldToRiverCBet" xml:space="preserve">
+    <value>Fold To River  CBet</value>
+  </data>
+  <data name="Enum_Stat_FoldToSqueez" xml:space="preserve">
+    <value>Fold To Squeez</value>
+  </data>
+  <data name="Enum_Stat_FoldToTurnRaise" xml:space="preserve">
+    <value>Fold To Turn Raise</value>
+  </data>
 </root>
