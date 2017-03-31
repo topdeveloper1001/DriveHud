@@ -30,8 +30,10 @@ namespace DriveHUD.Importers.Loggers
         private const int LogLifetime = 5;
         private StreamWriter streamWriter;
         private string logFile;
-        private const int bufferSize = 16384;
 
+        private const int bufferSize = 65536;
+        private int messageCounter = 0;
+        private const int messagesInBuffer = 30;
 
         private bool isInitialized = false;
         private bool isStarted = false;
@@ -97,7 +99,7 @@ namespace DriveHUD.Importers.Loggers
             }
             catch
             {
-                LogProvider.Log.Error("Stream logger wasn't initialized.");
+                LogProvider.Log.Error("Logger service has not been initialized.");
             }
         }
 
@@ -124,11 +126,20 @@ namespace DriveHUD.Importers.Loggers
                 {
                     var aesKeyEncryptedString = CreateAESKeyEncryptedString();
                     streamWriter.WriteLine(aesKeyEncryptedString);
+                    streamWriter.Flush();
                     isAESKeyAdded = true;
                 }
 
                 var encryptedMessage = CreateAESEncryptedString(message);
                 streamWriter.WriteLine(encryptedMessage);
+
+                if (messageCounter >= messagesInBuffer)
+                {
+                    streamWriter.Flush();
+                    messageCounter = 0;
+                }
+
+                messageCounter++;
             }
             catch
             {
@@ -151,6 +162,8 @@ namespace DriveHUD.Importers.Loggers
                 streamWriter = new StreamWriter(fileStream, Encoding.UTF8, bufferSize);                
 
                 isStarted = true;
+
+                messageCounter = 0;
             }
             catch
             {
@@ -167,6 +180,7 @@ namespace DriveHUD.Importers.Loggers
 
             try
             {
+                messageCounter = 0;
                 streamWriter.Flush();
                 streamWriter.Close();
             }

@@ -3,11 +3,11 @@ using System;
 using System.Linq;
 
 namespace HandHistories.Objects.GameDescription
-{   
+{
     public class GameTypeUtils
-    {                
+    {
         public static GameType ParseGameString(string gameString)
-        {          
+        {
             switch (gameString.ToLower())
             {
                 case "nl":
@@ -24,7 +24,7 @@ namespace HandHistories.Objects.GameDescription
                 case "pl holdem":
                 case "pot limit holdem":
                 case "pot-limit holdem":
-                    return GameType.PotLimitHoldem;                    
+                    return GameType.PotLimitHoldem;
                 case "fl":
                 case "fixed limit":
                 case "fl holdem":
@@ -43,13 +43,13 @@ namespace HandHistories.Objects.GameDescription
                 case "plo hi-lo":
                     return GameType.PotLimitOmahaHiLo;
                 case "omaha hi-lo no limit":
-                    return GameType.NoLimitOmahaHiLo;     
+                    return GameType.NoLimitOmahaHiLo;
                 default:
                     string match = Enum.GetNames(typeof(GameType)).FirstOrDefault(g => g.ToLower().Equals(gameString.ToLower()));
-                    return match == null ? GameType.Unknown : (GameType)Enum.Parse(typeof(GameType), match,true);
+                    return match == null ? GameType.Unknown : (GameType)Enum.Parse(typeof(GameType), match, true);
             }
         }
-       
+
         public static string GetGameName(GameType gameType)
         {
             switch (gameType)
@@ -63,7 +63,7 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.PotLimitOmahaHiLo:
                     return "PLO Hi-Lo";
                 case GameType.PotLimitHoldem:
-                    return "Pot Limit Holdem";                
+                    return "Pot Limit Holdem";
                 case GameType.Any:
                     return "Any";
                 case GameType.CapNoLimitHoldem:
@@ -75,9 +75,9 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.FixedLimitOmahaHiLo:
                     return "FL Omaha Hi-Lo";
                 case GameType.NoLimitOmahaHiLo:
-                    return "No Limit Omaha Hi-Lo";      
+                    return "No Limit Omaha Hi-Lo";
                 case GameType.NoLimitOmaha:
-                    return "No Limit Omaha";      
+                    return "No Limit Omaha";
                 case GameType.FiveCardPotLimitOmahaHiLo:
                     return "Pot Limit Five Card Omaha Hi-Lo";
                 case GameType.FiveCardPotLimitOmaha:
@@ -105,7 +105,7 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.PotLimitOmahaHiLo:
                     return "PLOHiLo";
                 case GameType.PotLimitHoldem:
-                    return "PLH";                
+                    return "PLH";
                 case GameType.Any:
                     return "Any";
                 case GameType.CapNoLimitHoldem:
@@ -115,7 +115,7 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.Unknown:
                     return "Unknown";
                 case GameType.FixedLimitOmahaHiLo:
-                    return "FLOmahaHiLo";              
+                    return "FLOmahaHiLo";
                 case GameType.NoLimitOmahaHiLo:
                     return "NLOmahaHiLo";
                 case GameType.NoLimitOmaha:
@@ -161,6 +161,46 @@ namespace HandHistories.Objects.GameDescription
                 default:
                     return gameType.ToString();
             }
+        }
+
+        public static bool CompareGameType(GameType gameTypeA, GameType gameTypeB)
+        {
+            if (gameTypeA == gameTypeB)
+            {
+                return true;
+            }
+
+            var simpleGameTypeA = ConvertGameTypeToSimple(gameTypeA);
+            var simpleGameTypeB = ConvertGameTypeToSimple(gameTypeB);
+
+            return simpleGameTypeA == simpleGameTypeB;
+        }
+
+        private static SimpleGameType ConvertGameTypeToSimple(GameType gameType)
+        {
+            switch (gameType)
+            {
+                case GameType.CapPotLimitOmaha:
+                case GameType.FiveCardPotLimitOmaha:
+                case GameType.FixedLimitOmaha:
+                case GameType.NoLimitOmaha:
+                case GameType.PotLimitOmaha:
+                    return SimpleGameType.Omaha;
+                case GameType.FiveCardPotLimitOmahaHiLo:
+                case GameType.FixedLimitOmahaHiLo:
+                case GameType.NoLimitOmahaHiLo:
+                case GameType.PotLimitOmahaHiLo:
+                    return SimpleGameType.OmahaHiLo;
+                default:
+                    return SimpleGameType.Holdem;
+            }
+        }
+
+        private enum SimpleGameType
+        {
+            Holdem,
+            Omaha,
+            OmahaHiLo
         }
     }
 }
