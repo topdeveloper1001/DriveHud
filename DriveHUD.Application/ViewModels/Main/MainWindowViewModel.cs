@@ -114,7 +114,7 @@ namespace DriveHUD.Application.ViewModels
 
             PokerStarsDetectorSingletonService.Instance.Start();
 
-            ConfigureResolutionDependentProperties();            
+            ConfigureResolutionDependentProperties();
 
             apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
             apiHost.StartAPIService();
@@ -342,8 +342,6 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-
-
                 var refreshTime = sw.ElapsedMilliseconds;
 
                 sw.Restart();
@@ -536,7 +534,7 @@ namespace DriveHUD.Application.ViewModels
                         {
                             if (item.TotalHands < statInfo.MinSample)
                             {
-                                continue;
+                                statInfo.IsNotVisible = true;
                             }
 
                             statInfo.AssignStatInfoValues(item);
@@ -1115,7 +1113,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (isLowResolutionMode != value)
                 {
-                    isLowResolutionMode = value;         
+                    isLowResolutionMode = value;
                     OnPropertyChanged();
                 }
             }
