@@ -508,31 +508,12 @@ namespace DriveHUD.ViewModels
                 OnPropertyChanged();
             }
         }
-
-        [NonSerialized]
-        private bool isDuplicateSelected;
-
-        [XmlIgnore]
-        [ProtoMember(25)]
-        public bool IsDuplicateSelected
-        {
-            get
-            {
-                return isDuplicateSelected;
-            }
-            set
-            {
-                if (value == isDuplicateSelected) return;
-                isDuplicateSelected = value;
-                OnPropertyChanged();
-            }
-        }
-
+     
         [NonSerialized]
         private bool isListed;
 
         [XmlIgnore]
-        [ProtoMember(26)]
+        [ProtoMember(25)]
         public bool IsListed
         {
             get { return isListed; }
@@ -548,7 +529,7 @@ namespace DriveHUD.ViewModels
         private StatDto statDto;
 
         [XmlIgnore]
-        [ProtoMember(27)]
+        [ProtoMember(26)]
         public StatDto StatDto
         {
             get
@@ -564,7 +545,7 @@ namespace DriveHUD.ViewModels
         }
 
         [XmlIgnore]
-        [ProtoMember(28)]
+        [ProtoMember(27)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
      
         #endregion
@@ -653,8 +634,7 @@ namespace DriveHUD.ViewModels
             statInfoClone.PropertyName = PropertyName;
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;            
             statInfoClone.StatInfoGroup = StatInfoGroup;
-            statInfoClone.IsNotVisible = IsNotVisible;
-            statInfoClone.IsDuplicateSelected = IsDuplicateSelected;
+            statInfoClone.IsNotVisible = IsNotVisible;            
             statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
                                                         new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
                                                         StatInfoToolTipCollection;            

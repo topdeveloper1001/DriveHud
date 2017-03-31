@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
 using System.Windows;
 
@@ -39,5 +40,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets or sets <see cref="Point"/>
         /// </summary>
         public Point Position { get; set; }
+
+        /// <summary>
+        /// Gets or sets <see cref="HudLayoutInfoV2"/>
+        /// </summary>
+        public HudLayoutInfoV2 Layout { get; set; }
     }
 }

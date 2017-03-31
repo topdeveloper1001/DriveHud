@@ -56,6 +56,8 @@ namespace DriveHUD.Application.ViewModels
 
         private CompositeDisposable designerDisposables = new CompositeDisposable();
 
+        private bool skipOnStatInfoObserveCollectionChanged = false;
+
         /// <summary>
         /// Initializes a <see cref="HudViewModel"/> instance
         /// </summary>
@@ -196,14 +198,14 @@ namespace DriveHUD.Application.ViewModels
                         return false;
                     }
 
-                    return stat.IsListed && !stat.IsDuplicateSelected;
+                    return stat.IsListed && !stat.IsNotVisible;
                 };
 
                 var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
 
                 if (statFiltering.CanChangeLiveFiltering)
                 {
-                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
+                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsNotVisible));
                     statFiltering.IsLiveFiltering = true;
                 }
 
@@ -658,21 +660,18 @@ namespace DriveHUD.Application.ViewModels
                 h => StatInfoObserveCollection.CollectionChanged += h,
                 h => StatInfoObserveCollection.CollectionChanged -= h).Subscribe(x =>
                 {
-                    var statsCollection = x.Sender as ObservableCollection<StatInfo>;
-
-                    if (statsCollection == null)
+                    if (skipOnStatInfoObserveCollectionChanged)
                     {
                         return;
                     }
 
-                    var statsToHide = StatInfoCollection.Where(s => statsCollection.Any(h => h != s && h.Stat == s.Stat && !(h is StatInfoBreak)));
+                    var statsToAdd = x.EventArgs.NewItems?.OfType<StatInfo>().ToList();
+                    var statsToRemove = x.EventArgs.OldItems?.OfType<StatInfo>().ToList();
 
-                    StatInfoCollection.Where(s => s.IsDuplicateSelected && !statsToHide.Contains(s))
-                        .ForEach(s => s.IsDuplicateSelected = false);
+                    AddToolStats(statsToAdd, x.EventArgs.NewStartingIndex);
+                    RemoveToolStats(statsToRemove);
 
-                    statsToHide.ForEach(s => s.IsDuplicateSelected = true);
 
-                    ReplaceToolStats(statsCollection);
 
                     #region
 
@@ -702,35 +701,58 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
-        /// Replaces <see cref="StatInfo"/> stats of all tools of <see cref="CurrentLayout"/> with the specified stats
+        /// Add the list of <see cref="StatInfo"/> stats to the specific tool
         /// </summary>
-        /// <param name="statsCollection">Collection of stats</param>
-        private void ReplaceToolStats(IEnumerable<StatInfo> statsCollection)
+        /// <param name="statsCollection">List of stats</param>
+        private void AddToolStats(List<StatInfo> statsCollection, int startingIndex)
         {
             // in design mode we can update only stats in selected tool
-            if (isInDesignMode && SelectedToolViewModel == null)
+            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null))
             {
                 return;
             }
 
-            var hudElement = HudElements?.FirstOrDefault();
-
-            if (hudElement == null)
-            {
-                return;
-            }
-
-            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>()
-                            .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
-                                SelectedToolViewModel == null);
+            var statTool = GetToolToModifyStats();
 
             if (statTool == null)
             {
                 return;
             }
 
-            statTool.Stats.Clear();
-            statTool.Stats.AddRange(statsCollection);
+            if (startingIndex > statTool.Stats.Count)
+            {
+                startingIndex = statTool.Stats.Count;
+            }
+
+            statTool.Stats.InsertRange(startingIndex, statsCollection);
+        }
+
+        private void RemoveToolStats(List<StatInfo> statsCollection)
+        {
+            // in design mode we can update only stats in selected tool
+            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null))
+            {
+                return;
+            }
+
+            var statTool = GetToolToModifyStats();
+            statTool?.Stats.RemoveRange(statsCollection);
+        }
+
+        private HudPlainStatBoxViewModel GetToolToModifyStats()
+        {
+            var hudElement = HudElements?.FirstOrDefault();
+
+            if (hudElement == null)
+            {
+                return null;
+            }
+
+            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>()
+                            .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
+                                SelectedToolViewModel == null);
+
+            return statTool;
         }
 
         /// <summary>
@@ -860,14 +882,14 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            ReturnStatsToStatCollection();
-
             if (StatInfoObserveCollection.Count > 0)
             {
-                StatInfoObserveCollection.Clear();
+                ReturnStatsToStatCollection();
             }
 
             AddStatsToSelectedStatCollection();
+
+            HideStatsInStatCollection();
         }
 
         private void ReturnStatsToStatCollection()
@@ -892,10 +914,14 @@ namespace DriveHUD.Application.ViewModels
 
                 StatInfoCollection.Add(purgedStatInfo);
             }
+
+            StatInfoObserveCollection.Clear();
         }
 
         private void AddStatsToSelectedStatCollection()
         {
+            skipOnStatInfoObserveCollectionChanged = true;
+
             var stats = GetSelectedStats();
 
             var statsToAdd = new List<StatInfo>();
@@ -922,6 +948,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 StatInfoObserveCollection.AddRange(statsToAdd);
             }
+
+            skipOnStatInfoObserveCollectionChanged = false;
         }
 
         private IEnumerable<StatInfo> GetSelectedStats()
@@ -937,6 +965,16 @@ namespace DriveHUD.Application.ViewModels
             }
 
             return CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+        }
+
+        private void HideStatsInStatCollection()
+        {
+            var statsToHide = (from layoutStat in CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats)
+                               join statInfo in StatInfoCollection on layoutStat.Stat equals statInfo.Stat
+                               select statInfo).ToArray();
+
+            StatInfoCollection.Where(x => x.IsNotVisible).ForEach(x => x.IsNotVisible = false);
+            statsToHide.ForEach(x => x.IsNotVisible = true);
         }
 
         /// <summary>
@@ -1265,7 +1303,8 @@ namespace DriveHUD.Application.ViewModels
                 HudElement = DesignerHudElementViewModel,
                 Position = position,
                 TableType = CurrentTableType,
-                ToolType = toolType
+                ToolType = toolType,
+                Layout = CurrentLayout
             };
 
             var tool = factory.CreateTool(creationInfo);

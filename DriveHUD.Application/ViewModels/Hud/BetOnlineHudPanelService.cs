@@ -45,7 +45,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
+            Check.Require(window.Layout != null, "HudWindow.Layout must be set.");
 
             var maxSeats = (int)window.Layout.TableType;
 
@@ -77,7 +77,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
+            Check.Require(window.Layout != null, "HudWindow.Layout must be set.");
 
             var maxSeats = (int)window.Layout.TableType;
 

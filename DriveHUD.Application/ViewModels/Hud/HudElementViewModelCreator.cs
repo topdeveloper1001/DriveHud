@@ -30,7 +30,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public HudElementViewModel Create(HudElementViewModelCreationInfo creationInfo)
         {
             Check.ArgumentNotNull(() => creationInfo);
-            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo);
+            Check.Require(creationInfo.HudLayoutInfo != null, "HudLayoutInfo must be set.");
 
             var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools);
             hudElementViewModel.Seat = creationInfo.SeatNumber;

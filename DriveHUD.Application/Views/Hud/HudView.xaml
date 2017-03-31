@@ -824,30 +824,6 @@
                                     ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png" />
                             </Grid.Background>
 
-                            <!--<controls:HudPanel
-                                DataContext="{Binding PreviewHudElementViewModel}"
-                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                            </controls:HudPanel>
-
-                            <controls:HudRichPanel
-                                DataContext="{Binding PreviewHudElementViewModel}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Width="{x:Static vm:HudDefaultSettings.BovadaRichHudElementWidth}"
-                                Height="{x:Static vm:HudDefaultSettings.BovadaRichHudElementHeight}"
-                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}">
-                                <controls:HudRichPanel.Style>
-                                    <Style
-                                        TargetType="{x:Type controls:HudRichPanel}">
-                                        <Setter
-                                            Property="Margin"
-                                            Value="0,0,0,-25" />
-                                    </Style>
-                                </controls:HudRichPanel.Style>
-                            </controls:HudRichPanel>-->
-
                         </Grid>
                     </Grid>
                 </app:GadgetPanel>
@@ -1026,19 +1002,40 @@
                             Tag="Visible"
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
-                            BorderThickness="0"                            
+                            BorderThickness="0"
                             Background="#111315"
-                            Style="{StaticResource RadListBoxStyle_StatInfo}"
                             Padding="0,0,0,10"
                             SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
                             ItemsSource="{Binding Path=StatInfoObserveCollection}"
                             ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
+                            <telerik:RadListBox.Style>
+                                <Style
+                                    TargetType="{x:Type telerik:RadListBox}"
+                                    BasedOn="{StaticResource RadListBoxStyle_StatInfo}">
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition
+                                                    Binding="{Binding IsInDesignMode}"
+                                                    Value="True" />
+                                                <Condition
+                                                    Binding="{Binding SelectedToolViewModel, Converter={dh:NullToBoolConverter}}"
+                                                    Value="False" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter
+                                                Property="IsEnabled"
+                                                Value="False" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+
+                                </Style>
+                            </telerik:RadListBox.Style>
                             <telerik:RadListBox.DragVisualProvider>
                                 <telerik:ScreenshotDragVisualProvider />
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
-                                <controls:RadListBoxDragDropBehavior                                    
-                                    AllowReorder="True"                                     
+                                <controls:RadListBoxDragDropBehavior
+                                    AllowReorder="True"
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                         </telerik:RadListBox>

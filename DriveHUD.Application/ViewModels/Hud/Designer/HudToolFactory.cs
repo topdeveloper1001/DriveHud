@@ -46,6 +46,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private HudBaseToolViewModel CreatePlainStatBoxTool(HudToolCreationInfo creationInfo)
         {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Plain stat box has not been created.");
+
             var layoutTool = new HudLayoutPlainBoxTool
             {
                 Stats = new ReactiveList<StatInfo>(),
@@ -61,6 +63,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
             toolViewModel.SetPositions();
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
 
             return toolViewModel;
         }
