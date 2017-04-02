@@ -287,6 +287,8 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Site\TruePokerConfiguration.cs" />
+    <Compile Include="Site\YaPokerConfiguration.cs" />
     <Compile Include="StealAttempt.cs" />
     <Compile Include="PlayerStatisticCalculator.cs" />
     <Compile Include="StringFormatter.cs" />

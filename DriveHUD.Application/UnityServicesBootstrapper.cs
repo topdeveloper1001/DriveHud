@@ -39,6 +39,8 @@ namespace DriveHUD.Application
             container.RegisterType<IHudPanelService, Poker888HudPanelService>(EnumPokerSites.Poker888.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.AmericasCardroom.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.BlackChipPoker.ToString());
+            container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.TruePoker.ToString());
+            container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.YaPoker.ToString());
         }
     }
 }

@@ -377,7 +377,9 @@
     <Compile Include="TableConfigurators\SeatArea\ITableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
+    <Compile Include="TableConfigurators\TruePokerTableConfigurator.cs" />
     <Compile Include="TableConfigurators\WinningPokerNetworkTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\YaPokerTableConfigurator.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />

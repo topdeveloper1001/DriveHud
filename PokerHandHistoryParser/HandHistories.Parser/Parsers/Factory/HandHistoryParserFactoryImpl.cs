@@ -61,6 +61,8 @@ namespace HandHistories.Parser.Parsers.Factory
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
                 case EnumPokerSites.BlackChipPoker:
+                case EnumPokerSites.TruePoker:
+                case EnumPokerSites.YaPoker:
                     return new WinningPokerNetworkFastParserImpl();
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
