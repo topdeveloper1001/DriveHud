@@ -72,7 +72,8 @@ namespace DriveHUD.Importers.BetOnline
                 DateTimeFormat = "HH:mm:ss",
                 LogCleanupTemplate = "bol-games-*-*-*.log",
                 LogDirectory = "Logs",
-                LogTemplate = "bol-games-{0}.log"
+                LogTemplate = "bol-games-{0}.log",
+                MessagesInBuffer = 0
             };
 
             return logger;
