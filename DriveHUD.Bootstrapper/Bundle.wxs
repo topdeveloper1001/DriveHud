@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.0.9.1196" ?>
+  <?define ProductVersion = "1.0.9.1201" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
