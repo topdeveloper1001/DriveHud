@@ -68,11 +68,28 @@ namespace DriveHUD.Importers.BetOnline
         }
 
         /// <summary>
-        /// Convert betonline hand history xml to iPoker xml
+        /// Gets hand number
         /// </summary>
-        /// <param name="xml">Source</param>
-        /// <returns>Result of conversion</returns>
-        public ConvertedResult Convert(string xml)
+        public string HandNumber
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// Gets whenever converter is initialized
+        /// </summary>
+        public bool IsInitialized
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// Initializes converter  
+        /// </summary>
+        /// <param name="xml"></param>
+        public void Initialize(string xml)
         {
             try
             {
@@ -81,20 +98,49 @@ namespace DriveHUD.Importers.BetOnline
                 tableDetails = xDocument.GetFirstElement("TableDetails");
                 gameState = xDocument.GetFirstElement("GameState");
                 changes = xDocument.GetFirstElement("Changes");
-                relocationData = xDocument.Descendants("RelocationData").FirstOrDefault();
 
-                var handNumber = gameState.Attribute("hand").Value;
-
-                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
+                HandNumber = gameState.Attribute("hand").Value;
 
                 if (!IsFullHand())
                 {
                     var tableName = isTournament ? GetTournamentTableName() : GetTableName();
 
-                    LogProvider.Log.Info(this, string.Format("Hand {0} from '{1}' has been skipped, because it isn't full. [{2}]", handNumber, tableName, Identifier));
-                    return null;
+                    LogProvider.Log.Info(this, string.Format("Hand {0} from '{1}' has been skipped, because it isn't full. [{2}]", HandNumber, tableName, Identifier));
+                    return;
                 }
 
+                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);              
+
+                IsInitialized = true;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Converter has not been initialized. Data could not be parsed", e);
+            }
+        }
+
+        /// <summary>
+        /// Adds relocation data to converter
+        /// </summary>
+        /// <param name="relocationData"><see cref="XElement"/> of relocation data </param>
+        public void AddRelocationData(XElement relocationData)
+        {
+            this.relocationData = relocationData;
+        }
+
+        /// <summary>
+        /// Converts betonline hand history xml to iPoker xml
+        /// </summary>        
+        /// <returns>The result of conversion</returns>
+        public ConvertedResult Convert()
+        {
+            if (!IsInitialized)
+            {
+                return null;
+            }
+
+            try
+            {              
                 gameInfo = new GameInfo
                 {
                     PokerSite = EnumPokerSites.BetOnline
@@ -113,7 +159,7 @@ namespace DriveHUD.Importers.BetOnline
                     ConvertedXml = convertedXml,
                     TableName = isTournament ? string.Format("{0}, {1}", GetTableName(), GetTournamentName()) : handHistory.General.TableName,
                     TableId = tableDetails.Attribute("id").Value,
-                    HandNumber = handNumber,
+                    HandNumber = HandNumber,
                     Players = playersOnTable.Values.ToList(),
                     GameInfo = gameInfo
                 };
