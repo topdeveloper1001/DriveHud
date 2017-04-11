@@ -44,37 +44,13 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private HudBaseToolViewModel CreatePlainStatBoxTool(HudToolCreationInfo creationInfo)
-        {
-            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Plain stat box has not been created.");
-
-            var layoutTool = new HudLayoutPlainBoxTool
-            {
-                Stats = new ReactiveList<StatInfo>(),
-                Positions = GetHudPositions(),
-                UIPositions = GetHudUIPositions(creationInfo.TableType, creationInfo.Position)
-            };
-
-            layoutTool.UIPositions.ForEach(x =>
-            {
-                x.Width = HudDefaultSettings.PlainStatBoxWidth;
-                x.Height = HudDefaultSettings.PlainStatBoxHeight;
-            });
-
-            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
-            toolViewModel.SetPositions();
-
-            creationInfo.Layout.LayoutTools.Add(layoutTool);
-
-            return toolViewModel;
-        }
-
-        private List<HudPositionsInfo> GetHudPositions()
-        {
-            return new List<HudPositionsInfo>();
-        }
-
-        private List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position)
+        /// <summary>
+        /// Gets the list of <see cref="HudPositionInfo"/> related to base position in designer 
+        /// </summary>
+        /// <param name="tableType"><see cref="EnumTableType"/> of table</param>
+        /// <param name="position"><see cref="Point"/> position of base element</param>
+        /// <returns>The list of <see cref="HudPositionInfo"/></returns>
+        public List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position)
         {
             var positions = new List<HudPositionInfo>();
 
@@ -104,5 +80,35 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return positions;
         }
+
+        private HudBaseToolViewModel CreatePlainStatBoxTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Plain stat box has not been created.");
+
+            var layoutTool = new HudLayoutPlainBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>(),
+                Positions = GetHudPositions(),
+                UIPositions = GetHudUIPositions(creationInfo.TableType, creationInfo.Position)
+            };
+
+            layoutTool.UIPositions.ForEach(x =>
+            {
+                x.Width = HudDefaultSettings.PlainStatBoxWidth;
+                x.Height = HudDefaultSettings.PlainStatBoxHeight;
+            });
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.InitializePositions();
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        private List<HudPositionsInfo> GetHudPositions()
+        {
+            return new List<HudPositionsInfo>();
+        }        
     }
 }

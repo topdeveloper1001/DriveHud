@@ -35,6 +35,9 @@ using System.Reactive.Disposables;
 
 namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 {
+    /// <summary>
+    /// Behavior to display HUD tools
+    /// </summary>
     public class HudDesignerBehavior : Behavior<RadDiagram>
     {
         #region Dependency Properties

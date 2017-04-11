@@ -539,6 +539,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Stats.
+        /// </summary>
+        internal static string Common_Hud_AllStats {
+            get {
+                return ResourceManager.GetString("Common_Hud_AllStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Size to All.
         /// </summary>
         internal static string Common_Hud_ApplySizeToAll {
@@ -607,6 +616,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Load {
             get {
                 return ResourceManager.GetString("Common_Hud_Load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview.
+        /// </summary>
+        internal static string Common_Hud_Preview {
+            get {
+                return ResourceManager.GetString("Common_Hud_Preview", resourceCulture);
             }
         }
         

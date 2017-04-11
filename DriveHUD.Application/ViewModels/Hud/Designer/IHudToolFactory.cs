@@ -10,6 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Entities;
+using System.Collections.Generic;
+using System.Windows;
+
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
@@ -23,5 +28,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="creationInfo"><see cref="HudToolCreationInfo"/> to create new hud tool</param>
         /// <returns>Created <see cref="HudBaseToolViewModel"/></returns>
         HudBaseToolViewModel CreateTool(HudToolCreationInfo creationInfo);
+
+        /// <summary>
+        /// Gets the list of <see cref="HudPositionInfo"/> related to base position in designer 
+        /// </summary>
+        /// <param name="tableType"><see cref="EnumTableType"/> of table</param>
+        /// <param name="position"><see cref="Point"/> position of base element</param>
+        /// <returns>The list of <see cref="HudPositionInfo"/></returns>
+        List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position);
     }
 }

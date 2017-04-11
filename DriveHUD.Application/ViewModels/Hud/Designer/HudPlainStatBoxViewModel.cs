@@ -20,6 +20,7 @@ using System.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
+using System.Collections.Generic;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -86,7 +87,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #endregion
 
-        public override void SetPositions()
+        /// <summary>
+        /// Initializes UI position and size for the current <see cref="HudBaseToolViewModel"/>
+        /// </summary>
+        /// <exception cref="DHBusinessException" />
+        public override void InitializePositions()
         {
             var uiPosition = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
 
@@ -103,12 +108,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Sets position and size for the current <see cref="HudPlainStatBoxViewModel"/> for the specified <see cref="EnumPokerSites"/> and <see cref="EnumGameType"/>
+        /// Initializes position and size for the current <see cref="HudPlainStatBoxViewModel"/> for the specified <see cref="EnumPokerSites"/> and <see cref="EnumGameType"/>
         /// </summary>
         /// <param name="pokerSite"><see cref="EnumPokerSites"/></param>
         /// <param name="gameType"><see cref="EnumGameType"/></param>
         /// <exception cref="DHBusinessException" />
-        public override void SetPositions(EnumPokerSites pokerSite, EnumGameType gameType)
+        public override void InitializePositions(EnumPokerSites pokerSite, EnumGameType gameType)
         {
             var positionInfo = tool.Positions.FirstOrDefault(x => x.PokerSite == pokerSite && x.GameType == gameType);
 
@@ -130,6 +135,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             Opacity = Parent.Opacity;
             Width = 135;
             Height = 75;
+        }
+
+        /// <summary>
+        /// Sets <see cref="HudLayoutPlainBoxTool"/> positions for current tool
+        /// </summary>
+        /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
+        public override void SetPositions(List<HudPositionInfo> positions)
+        {
+            if (positions == null)
+            {
+                return;
+            }
+
+            tool.UIPositions = positions;
         }
     }
 }

@@ -37,7 +37,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             try
             {
-                hudElementViewModel.Tools.ForEach(x => x.SetPositions(creationInfo.PokerSite, creationInfo.GameType));
+                hudElementViewModel.Tools.ForEach(x => x.InitializePositions(creationInfo.PokerSite, creationInfo.GameType));
             }
             catch (DHBusinessException e)
             {

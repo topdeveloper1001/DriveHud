@@ -814,7 +814,7 @@
 
                         <TextBlock
                             Foreground="#93c940"
-                            Text="Preview"
+                            Text="{ResX Key=Common_Hud_Preview}"
                             FontSize="13" />
 
                         <Grid
@@ -855,7 +855,7 @@
                             Grid.Column="0"
                             Foreground="#93c940"
                             FontSize="13"
-                            Text="All Stats">
+                            Text="{ResX Key=Common_Hud_AllStats}">
                         </TextBlock>
 
                         <telerik:RadListBox

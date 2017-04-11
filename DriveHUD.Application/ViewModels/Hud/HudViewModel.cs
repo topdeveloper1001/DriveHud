@@ -385,7 +385,7 @@ namespace DriveHUD.Application.ViewModels
 
                 try
                 {
-                    hudElement.Tools.ForEach(x => x.SetPositions());
+                    hudElement.Tools.ForEach(x => x.InitializePositions());
                 }
                 catch (Exception e)
                 {
@@ -649,6 +649,9 @@ namespace DriveHUD.Application.ViewModels
                     AddTool(toolType.Value, dragDropDataObject.Position);
                 }
             });
+
+            SaveDesignCommand = ReactiveCommand.Create();
+            SaveDesignCommand.Subscribe(x => SaveDesign());
         }
 
         /// <summary>
@@ -1269,23 +1272,8 @@ namespace DriveHUD.Application.ViewModels
             IsInDesignMode = true;
         }
 
-        private void CloseDesigner()
-        {
-            DesignerHudElementViewModel = null;
-
-            Layouts.Remove(CurrentLayout);
-            CurrentLayout = cachedCurrentLayout;
-            cachedCurrentLayout = null;
-
-            SelectedToolViewModel = null;
-
-            IsInDesignMode = false;
-
-            designerDisposables.Dispose();
-        }
-
         /// <summary>
-        /// Add designer tool on table
+        /// Adds designer tool on table
         /// </summary>
         /// <param name="toolType">Type of tool</param>
         /// <param name="position">Position of tool</param>
@@ -1317,9 +1305,48 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         /// <param name="toolType">Type of tool</param>
         /// <returns>True if tool can be added, otherwise - false</returns>
-        public bool CanAddTool(HudDesignerToolType toolType)
+        private bool CanAddTool(HudDesignerToolType toolType)
         {
             return IsInDesignMode && DesignerHudElementViewModel != null;
+        }
+
+        /// <summary>
+        /// Saves current design
+        /// </summary>
+        private void SaveDesign()
+        {
+            // need to update all UI positions, because positions could be changed
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            foreach (var tool in DesignerHudElementViewModel.Tools)
+            {
+                var uiPositions = factory.GetHudUIPositions(CurrentTableType, tool.Position);
+                tool.SetPositions(uiPositions);
+            }
+
+            cachedCurrentLayout.HudPlayerTypes = CurrentLayout.HudPlayerTypes;
+            cachedCurrentLayout.HudBumperStickerTypes = CurrentLayout.HudBumperStickerTypes;
+            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;
+
+            CloseDesigner();
+        }
+
+        /// <summary>
+        /// Closes designer
+        /// </summary>
+        private void CloseDesigner()
+        {
+            DesignerHudElementViewModel = null;
+
+            Layouts.Remove(CurrentLayout);
+            CurrentLayout = cachedCurrentLayout;
+            cachedCurrentLayout = null;
+
+            SelectedToolViewModel = null;
+
+            IsInDesignMode = false;
+
+            designerDisposables.Dispose();
         }
 
         #endregion
