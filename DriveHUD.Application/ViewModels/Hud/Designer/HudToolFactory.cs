@@ -48,26 +48,29 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets the list of <see cref="HudPositionInfo"/> related to base position in designer 
         /// </summary>
         /// <param name="tableType"><see cref="EnumTableType"/> of table</param>
+        /// <param name="relativeTableType"><see cref="EnumTableType"/> to which position is set</param>
         /// <param name="position"><see cref="Point"/> position of base element</param>
         /// <returns>The list of <see cref="HudPositionInfo"/></returns>
-        public List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position)
+        public List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, EnumTableType relativeTableType, Point position)
         {
             var positions = new List<HudPositionInfo>();
 
             var seats = (int)tableType;
+            var relativeTableSeats = (int)relativeTableType;
 
             var playerLabelPositions = HudDefaultSettings.TablePlayerLabelPositions[seats];
+            var relativePlayerLabelPositions = HudDefaultSettings.TablePlayerLabelPositions[relativeTableSeats];
+        
+            var relativePlayerLabelPositionX = relativePlayerLabelPositions[0, 0];
+            var relativePlayerLabelPositionY = relativePlayerLabelPositions[0, 1];
 
-            var playerLabelPositionX = playerLabelPositions[0, 0];
-            var playerLabelPositionY = playerLabelPositions[0, 1];
-
-            var deltaX = position.X - playerLabelPositionX;
-            var deltaY = position.Y - playerLabelPositionY;
+            var deltaX = position.X - relativePlayerLabelPositionX;
+            var deltaY = position.Y - relativePlayerLabelPositionY;
 
             for (var seat = 0; seat < seats; seat++)
             {
-                playerLabelPositionX = playerLabelPositions[seat, 0];
-                playerLabelPositionY = playerLabelPositions[seat, 1];
+                var playerLabelPositionX = playerLabelPositions[seat, 0];
+                var playerLabelPositionY = playerLabelPositions[seat, 1];
 
                 var positionInfo = new HudPositionInfo
                 {
@@ -89,7 +92,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 Stats = new ReactiveList<StatInfo>(),
                 Positions = GetHudPositions(),
-                UIPositions = GetHudUIPositions(creationInfo.TableType, creationInfo.Position)
+                UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
             layoutTool.UIPositions.ForEach(x =>
@@ -109,6 +112,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         private List<HudPositionsInfo> GetHudPositions()
         {
             return new List<HudPositionsInfo>();
-        }        
+        }
     }
 }

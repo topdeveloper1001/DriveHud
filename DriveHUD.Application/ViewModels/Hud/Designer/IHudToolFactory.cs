@@ -33,8 +33,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets the list of <see cref="HudPositionInfo"/> related to base position in designer 
         /// </summary>
         /// <param name="tableType"><see cref="EnumTableType"/> of table</param>
+        /// <param name="relativeTableType"><see cref="EnumTableType"/> to which position is set</param>
         /// <param name="position"><see cref="Point"/> position of base element</param>
         /// <returns>The list of <see cref="HudPositionInfo"/></returns>
-        List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, Point position);
+        List<HudPositionInfo> GetHudUIPositions(EnumTableType tableType, EnumTableType relativeTableType, Point position);
     }
 }

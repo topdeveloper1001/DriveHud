@@ -824,6 +824,19 @@
                                     ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png" />
                             </Grid.Background>
 
+                            <!-- Preview -->
+                            <Viewbox>
+                                <Canvas
+                                    AllowDrop="False">
+                                    <i:Interaction.Behaviors>
+                                        <vm:HudPreviewBehavior
+                                            BaseWidth="210"
+                                            BaseHeight="195"
+                                            HudElement="{Binding PreviewHudElementViewModel}" />
+                                    </i:Interaction.Behaviors>
+                                </Canvas>
+                            </Viewbox>
+
                         </Grid>
                     </Grid>
                 </app:GadgetPanel>

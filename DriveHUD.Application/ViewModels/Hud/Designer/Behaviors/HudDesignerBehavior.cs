@@ -120,8 +120,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         {
             base.OnAttached();
 
-            AssociatedObject.ViewportChanged += OnViewportChanged;
-            AssociatedObject.Unloaded += OnUnloaded;
+            AssociatedObject.ViewportChanged += OnViewportChanged;            
             AssociatedObject.Initialized += OnInitialized;
         }
 
@@ -150,11 +149,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             diagram.Group(HudDefaultSettings.TableRadDiagramGroup, diagram.Shapes.OfType<IGroupable>().ToArray());
         }
-
-        private void OnUnloaded(object sender, RoutedEventArgs e)
-        {
-        }
-
+     
         protected override void OnDetaching()
         {
             if (Disposables != null)
@@ -162,8 +157,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 Disposables.Dispose();
             }
 
-            AssociatedObject.ViewportChanged -= OnViewportChanged;
-            AssociatedObject.Unloaded -= OnUnloaded;
+            AssociatedObject.ViewportChanged -= OnViewportChanged;            
             AssociatedObject.Initialized -= OnInitialized;
 
             base.OnDetaching();

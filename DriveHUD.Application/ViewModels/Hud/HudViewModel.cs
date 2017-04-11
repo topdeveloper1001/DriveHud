@@ -397,7 +397,7 @@ namespace DriveHUD.Application.ViewModels
 
             HudElements = new ReactiveList<HudElementViewModel>(hudElementsToAdd);
 
-            PreviewHudElementViewModel = new HudElementViewModel(layoutTools);
+            InitializePreview();
         }
 
         /// <summary>
@@ -655,6 +655,31 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
+        /// Initializes preview
+        /// </summary>
+        private void InitializePreview()
+        {
+            // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
+            var layoutTools = CurrentLayout.LayoutTools.Where(x => x.ToolType == HudDesignerToolType.PlainStatBox).ToArray();
+
+            var previewHudElementViewModel = new HudElementViewModel(layoutTools)
+            {
+                Seat = 1
+            };
+
+            try
+            {
+                previewHudElementViewModel.Tools.ForEach(x => x.InitializePositions());
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not set positions on HUD view for {CurrentLayout.Name}", e);
+            }
+
+            PreviewHudElementViewModel = previewHudElementViewModel;
+        }
+
+        /// <summary>
         /// Initializes observables
         /// </summary>
         private void InitializeObservables()
@@ -673,8 +698,6 @@ namespace DriveHUD.Application.ViewModels
 
                     AddToolStats(statsToAdd, x.EventArgs.NewStartingIndex);
                     RemoveToolStats(statsToRemove);
-
-
 
                     #region
 
@@ -1243,6 +1266,16 @@ namespace DriveHUD.Application.ViewModels
 
             if (DesignerHudElementViewModel != null)
             {
+                // need to update all UI positions, because positions could be changed
+                var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+                foreach (var tool in DesignerHudElementViewModel.Tools)
+                {
+                    var uiPositions = factory.GetHudUIPositions(EnumTableType.HU, CurrentTableType, tool.Position);
+                    tool.SetPositions(uiPositions);
+                    tool.InitializePositions();
+                }
+
                 HudElements = new ReactiveList<HudElementViewModel>
                 {
                     DesignerHudElementViewModel
@@ -1320,7 +1353,7 @@ namespace DriveHUD.Application.ViewModels
 
             foreach (var tool in DesignerHudElementViewModel.Tools)
             {
-                var uiPositions = factory.GetHudUIPositions(CurrentTableType, tool.Position);
+                var uiPositions = factory.GetHudUIPositions(CurrentTableType, EnumTableType.HU, tool.Position);
                 tool.SetPositions(uiPositions);
             }
 

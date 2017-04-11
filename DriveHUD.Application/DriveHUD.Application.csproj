@@ -393,6 +393,7 @@
     <Compile Include="ViewModels\Hud\Designer\HudToolFactory.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
