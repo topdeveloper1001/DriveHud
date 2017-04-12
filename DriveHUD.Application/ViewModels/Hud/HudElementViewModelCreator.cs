@@ -34,7 +34,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools);
             hudElementViewModel.Seat = creationInfo.SeatNumber;
-
+             
             try
             {
                 hudElementViewModel.Tools.ForEach(x => x.InitializePositions(creationInfo.PokerSite, creationInfo.GameType));

@@ -10,29 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Entities;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Interactivity;
-using Telerik.Windows.Controls;
-using Telerik.Windows.Diagrams.Core;
-using Microsoft.Practices.ServiceLocation;
-using System.Diagnostics;
-using ReactiveUI;
-using Telerik.Windows.Controls.Diagrams;
-using System.Windows.Data;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Reactive.Disposables;
 using DriveHUD.Application.Controls;
+using System;
+using System.Linq;
+using System.Reactive.Disposables;
+using System.Reactive.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Interactivity;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -41,6 +26,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     public class HudPreviewBehavior : Behavior<Canvas>
     {
+        private CompositeDisposable Disposables = new CompositeDisposable();
+
         public static DependencyProperty HudElementProperty = DependencyProperty.Register("HudElement", typeof(HudElementViewModel),
            typeof(HudPreviewBehavior), new PropertyMetadata(null, OnHudElementChanged));
 
@@ -87,6 +74,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             AssociatedObject.Loaded += OnLoaded;
         }
 
+        protected override void OnDetaching()
+        {
+            if (Disposables != null)
+            {
+                Disposables.Dispose();
+            }
+
+            AssociatedObject.Loaded -= OnLoaded;
+
+            base.OnDetaching();
+        }
+
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             ResizeCanvas();
@@ -101,6 +100,13 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return;
             }
+
+            if (behavior.Disposables != null)
+            {
+                behavior.Disposables.Dispose();
+            }
+
+            behavior.Disposables = new CompositeDisposable();
 
             if (behavior.AssociatedObject != null && behavior.AssociatedObject.Children != null)
             {
@@ -134,54 +140,106 @@ namespace DriveHUD.Application.ViewModels.Hud
                 Height = toolViewModel.Height
             };
 
+            var disposable = Observable.FromEventPattern<RoutedEventHandler, RoutedEventArgs>(
+                h => toolElement.Loaded += h,
+                h => toolElement.Loaded -= h).Subscribe(x => ResizeCanvas());
+
+            Disposables.Add(disposable);
+
             AssociatedObject.Children.Add(toolElement);
 
-            var position = GetToolPosition(toolViewModel);
+            //if (toolViewModel is HudPlainStatBoxViewModel)
+            //{
+            //    var statBoxViewModel = toolViewModel as HudPlainStatBoxViewModel;
 
-            Canvas.SetLeft(toolElement, position.X);
-            Canvas.SetTop(toolElement, position.Y);
+            //    disposable = statBoxViewModel.Stats.Changed.Subscribe(x => ResizeCanvas());
+            //    Disposables.Add(disposable);
+            //}
         }
 
         /// <summary>
-        /// Resizes canvas to new size based on content
+        /// Resizes canvas to new size based on content and adjusts tools positions
         /// </summary>
         private void ResizeCanvas()
         {
-            if (!AssociatedObject.IsLoaded)
+            if (!AssociatedObject.IsLoaded || HudElement == null || HudElement.Tools == null ||
+                HudElement.Tools.Count < 1 || AssociatedObject.Children == null ||
+                AssociatedObject.Children.OfType<FrameworkElement>().Any(x => !x.IsLoaded))
             {
                 return;
             }
 
+            // edges of area occupied by tools 
+            double top = double.MaxValue;
+            double left = double.MaxValue;
+            double right = 0;
+            double bottom = 0;
 
-        }
+            var toolsElements = AssociatedObject.Children.OfType<FrameworkElement>().ToArray();
 
-        private Point GetToolPosition(HudBaseToolViewModel toolViewModel)
-        {
-
-
-
-            return new Point(0, 0);
-        }
-
-        private static void AssociatedObject_Loaded(object sender, RoutedEventArgs e)
-        {
-            var canvas = sender as Canvas;
-
-            if (canvas == null)
+            // get edges positions
+            foreach (var toolElement in toolsElements)
             {
-                return;
-            }
+                var tool = toolElement.DataContext as HudBaseToolViewModel;
 
-            foreach (var child in canvas.Children.OfType<FrameworkElement>())
-            {
-                var left = Canvas.GetLeft(child);
-
-                if (left + child.ActualWidth > canvas.Width)
+                if (tool == null)
                 {
-                    var scale = (left + child.ActualWidth) / canvas.Width;
-                    canvas.Width *= scale;
-                    canvas.Height *= scale;
+                    continue;
                 }
+
+                if (tool.Position.X < left)
+                {
+                    left = tool.Position.X;
+                }
+
+                if (tool.Position.Y < top)
+                {
+                    top = tool.Position.Y;
+                }
+
+                if (tool.Position.X + toolElement.ActualWidth > right)
+                {
+                    right = tool.Position.X + toolElement.ActualWidth;
+                }
+
+                if (tool.Position.Y + toolElement.ActualHeight > bottom)
+                {
+                    bottom = tool.Position.Y + toolElement.ActualHeight;
+                }
+            }
+
+            var occupiedWidth = right - left;
+            var occupiedHeight = bottom - top;
+
+            AssociatedObject.Width = BaseWidth < occupiedWidth ? occupiedWidth : BaseWidth;
+            AssociatedObject.Height = BaseHeight < occupiedHeight ? occupiedHeight : BaseHeight;
+
+            // offsets to center elements
+            double offsetX = 0;
+            double offsetY = 0;
+
+            if (occupiedWidth < AssociatedObject.Width)
+            {
+                offsetX = (AssociatedObject.Width - occupiedWidth) / 2;
+            }
+
+            if (occupiedHeight < AssociatedObject.Height)
+            {
+                offsetY = (AssociatedObject.Height - occupiedHeight) / 2;
+            }
+
+            // center all elements inside canvas
+            foreach (var toolElement in toolsElements)
+            {
+                var tool = toolElement.DataContext as HudBaseToolViewModel;
+
+                if (tool == null)
+                {
+                    continue;
+                }
+
+                Canvas.SetLeft(toolElement, tool.Position.X - left + offsetX);
+                Canvas.SetTop(toolElement, tool.Position.Y - top + offsetY);
             }
         }
     }

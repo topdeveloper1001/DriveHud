@@ -662,10 +662,28 @@ namespace DriveHUD.Application.ViewModels
             // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
             var layoutTools = CurrentLayout.LayoutTools.Where(x => x.ToolType == HudDesignerToolType.PlainStatBox).ToArray();
 
-            var previewHudElementViewModel = new HudElementViewModel(layoutTools)
+            var random = new Random();
+
+            // set randomized data
+            var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x =>
             {
-                Seat = 1
-            };
+                var tool = x.Clone();
+
+                if (tool is HudLayoutPlainBoxTool)
+                {
+                    var plainBoxTool = tool as HudLayoutPlainBoxTool;
+
+                    plainBoxTool.Stats.ForEach(s =>
+                    {
+                        s.CurrentValue = random.Next(0, 100);
+                        s.Caption = string.Format(s.Format, s.CurrentValue);
+                    });
+                }
+
+                return tool;
+            }));
+
+            previewHudElementViewModel.Seat = 1;
 
             try
             {
@@ -699,30 +717,7 @@ namespace DriveHUD.Application.ViewModels
                     AddToolStats(statsToAdd, x.EventArgs.NewStartingIndex);
                     RemoveToolStats(statsToRemove);
 
-                    #region
-
-                    //if (PreviewHudElementViewModel != null)
-                    //{
-                    //    PreviewHudElementViewModel.StatInfoCollection.Clear();
-
-                    //    Random r = new Random();
-
-                    //    for (int i = 0; i < statsCollection.Count; i++)
-                    //    {
-                    //        if (statsCollection[i] is StatInfoBreak)
-                    //        {
-                    //            PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
-                    //            continue;
-                    //        }
-
-                    //        var stat = statsCollection[i].Clone();
-                    //        stat.CurrentValue = r.Next(0, 100);
-                    //        stat.Caption = string.Format(stat.Format, stat.CurrentValue);
-                    //        PreviewHudElementViewModel.StatInfoCollection.Add(stat);
-                    //    }
-                    //}
-
-                    #endregion
+                    InitializePreview();
                 });
         }
 

@@ -827,11 +827,12 @@
                             <!-- Preview -->
                             <Viewbox>
                                 <Canvas
+                                    Margin="5"
                                     AllowDrop="False">
                                     <i:Interaction.Behaviors>
                                         <vm:HudPreviewBehavior
-                                            BaseWidth="210"
-                                            BaseHeight="195"
+                                            BaseWidth="200"
+                                            BaseHeight="185"
                                             HudElement="{Binding PreviewHudElementViewModel}" />
                                     </i:Interaction.Behaviors>
                                 </Canvas>
