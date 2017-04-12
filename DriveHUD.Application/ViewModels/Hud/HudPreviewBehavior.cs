@@ -146,15 +146,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Disposables.Add(disposable);
 
-            AssociatedObject.Children.Add(toolElement);
-
-            //if (toolViewModel is HudPlainStatBoxViewModel)
-            //{
-            //    var statBoxViewModel = toolViewModel as HudPlainStatBoxViewModel;
-
-            //    disposable = statBoxViewModel.Stats.Changed.Subscribe(x => ResizeCanvas());
-            //    Disposables.Add(disposable);
-            //}
+            AssociatedObject.Children.Add(toolElement);      
         }
 
         /// <summary>
