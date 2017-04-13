@@ -31,17 +31,17 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudWindowViewModel : BaseViewModel
     {
-        private ReaderWriterLockSlim _readerWriterLock;
-        private long _gameNumber;
-        private EnumPokerSites _pokerSite;
+        private ReaderWriterLockSlim readerWriterLock;
+        private long gameNumber;
+        private EnumPokerSites pokerSite;
 
         internal HudWindowViewModel()
         {
-            _readerWriterLock = new ReaderWriterLockSlim();
+            readerWriterLock = new ReaderWriterLockSlim();
 
             NotificationRequest = new InteractionRequest<INotification>();
 
-            _layoutsCollection = new ObservableCollection<string>();
+            layoutsCollection = new ObservableCollection<string>();
 
             ExportHandCommand = new RelayCommand(ExportHand);
             TagHandCommand = new RelayCommand(TagHand);
@@ -54,6 +54,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         private EnumGameType? gameType;
+
         public EnumGameType? GameType
         {
             get
@@ -67,6 +68,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private EnumTableType tableType;
+
         public EnumTableType TableType
         {
             get
@@ -79,27 +81,28 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private string _layoutName;
+        private string layoutName;
+
         public string LayoutName
         {
-            get { return _layoutName; }
-            set { SetProperty(ref _layoutName, value); }
+            get { return layoutName; }
+            set { SetProperty(ref layoutName, value); }
         }
 
+        private string selectedLayout;
 
-        private string _selectedLayout;
         public string SelectedLayout
         {
-            get { return _selectedLayout; }
-            set { SetProperty(ref _selectedLayout, value); }
+            get { return selectedLayout; }
+            set { SetProperty(ref selectedLayout, value); }
         }
 
-        private ObservableCollection<string> _layoutsCollection;
+        private ObservableCollection<string> layoutsCollection;
 
         public ObservableCollection<string> LayoutsCollection
         {
-            get { return _layoutsCollection; }
-            set { SetProperty(ref _layoutsCollection, value); }
+            get { return layoutsCollection; }
+            set { SetProperty(ref layoutsCollection, value); }
         }
 
         #endregion
@@ -116,14 +119,16 @@ namespace DriveHUD.Application.ViewModels.Hud
         #region Methods
 
         internal void SetLayout(HudLayout layout)
-        {            
-            using (var write = _readerWriterLock.Write())
+        {
+            using (var write = readerWriterLock.Write())
             {
                 if (layout != null)
-                {                    
+                {
                     LayoutName = layout.LayoutName;
-                    _gameNumber = layout.GameNumber;
-                    _pokerSite = layout.PokerSite;
+                    gameNumber = layout.GameNumber;
+                    pokerSite = layout.PokerSite;
+                    GameType = layout.GameType;
+                    TableType = layout.TableType;
 
                     if (layout.AvailableLayouts != null)
                     {
@@ -150,7 +155,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
                     EnumHandTag tag = EnumHandTag.None;
 
@@ -159,9 +164,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                         return;
                     }
 
-                    LogProvider.Log.Info($"Tagging hand {_gameNumber} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Tagging hand {gameNumber} [{pokerSite}]");
 
-                    HudNamedPipeBindingService.TagHand(_gameNumber, (short)_pokerSite, (int)tag);
+                    HudNamedPipeBindingService.TagHand(gameNumber, (short)pokerSite, (int)tag);
                 }
             });
         }
@@ -177,11 +182,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Exporting hand {_gameNumber}, {exportType} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Exporting hand {gameNumber}, {exportType} [{pokerSite}]");
 
-                    ExportFunctions.ExportHand(_gameNumber, (short)_pokerSite, exportType, true);
+                    ExportFunctions.ExportHand(gameNumber, (short)pokerSite, exportType, true);
                     RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
             });
@@ -191,11 +196,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Replaying hand {_gameNumber} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Replaying hand {gameNumber} [{pokerSite}]");
 
-                    HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, (short)_pokerSite);
+                    HudNamedPipeBindingService.RaiseReplayHand(gameNumber, (short)pokerSite);
                 }
             });
         }
@@ -204,7 +209,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
                     var layoutName = obj?.ToString();
 
@@ -215,7 +220,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                     LayoutName = layoutName;
 
-                    HudNamedPipeBindingService.LoadLayout(layoutName, _pokerSite, GameType.Value, TableType);
+                    HudNamedPipeBindingService.LoadLayout(layoutName, pokerSite, GameType.Value, TableType);
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });

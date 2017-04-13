@@ -1090,7 +1090,7 @@
     </HudBumperStickerType>
   </HudBumperStickerTypes>
   <LayoutTools>
-    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool">
+    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="4d284a63-6c4b-43d0-8409-228d5a81368f">
       <Stats>
         <StatInfo>
           <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>

@@ -511,7 +511,9 @@
     <EmbeddedResource Include="Layouts\DH 2-max.xml" />
     <EmbeddedResource Include="Layouts\DH 3-max.xml" />
     <EmbeddedResource Include="Layouts\DH 4-max.xml" />
-    <EmbeddedResource Include="Layouts\DH 5-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layouts\DH 6-max.xml" />
     <EmbeddedResource Include="Layouts\DH 8-max.xml" />
     <EmbeddedResource Include="Layouts\DH 9-max.xml" />

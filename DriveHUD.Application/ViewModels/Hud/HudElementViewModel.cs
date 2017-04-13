@@ -29,7 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// <summary>
     /// Represents view model of hud element
     /// </summary>    
-    public class HudElementViewModel : ViewModelBase, IHudWindowElement
+    public class HudElementViewModel : ViewModelBase
     {
         private static StatInfo BlankStatInfo = new StatInfo { Caption = string.Empty, IsCaptionHidden = true };
 
@@ -50,93 +50,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         #region Properties
 
         [ProtoMember(1)]
-        private System.Windows.Point position;
-
-        /// <summary>
-        /// Position on table
-        /// </summary>
-        public System.Windows.Point Position
-        {
-            get
-            {
-                return position;
-            }
-            set
-            {
-                OffsetY = 0;
-                OffsetX = 0;
-
-                this.RaiseAndSetIfChanged(ref position, value);
-            }
-        }
-
-        [ProtoMember(2)]
-        private double height;
-
-        /// <summary>
-        /// Panel base height
-        /// </summary>
-        public double Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref height, value);
-            }
-        }
-
-        [ProtoMember(3)]
-        private double width;
-
-        /// <summary>
-        /// Panel base width
-        /// </summary>
-        public double Width
-        {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref width, value);
-            }
-        }
-
-        [ProtoMember(4)]
-        private double offsetX;
-
-        public double OffsetX
-        {
-            get
-            {
-                return offsetX;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref offsetX, value);
-            }
-        }
-
-        [ProtoMember(5)]
-        private double offsetY;
-
-        public double OffsetY
-        {
-            get
-            {
-                return offsetY;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref offsetY, value);
-            }
-        }
-
-        [ProtoMember(6)]
         private int seat;
 
         /// <summary>
@@ -154,7 +67,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(7)]
+        [ProtoMember(2)]
         private string playerName;
 
         /// <summary>
@@ -172,7 +85,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(8)]
+        [ProtoMember(3)]
         private short pokerSiteId;
 
         /// <summary>
@@ -191,25 +104,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(9)]
-        private bool isRightOriented;
-
-        /// <summary>
-        /// Determines rich HUD indicator and icon alignment
-        /// </summary>
-        public bool IsRightOriented
-        {
-            get
-            {
-                return isRightOriented;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isRightOriented, value);
-            }
-        }
-
-        [ProtoMember(11)]
+        [ProtoMember(4)]
         private decimal tiltMeter;
 
         /// <summary>
@@ -236,7 +131,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             get { return !string.IsNullOrWhiteSpace(noteToolTip); }
         }
 
-        [ProtoMember(12)]
+        [ProtoMember(5)]
         private string noteToolTip;
 
         public string NoteToolTip
@@ -264,7 +159,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(13)]
+        [ProtoMember(6)]
         private decimal? sessionHands;
 
         /// <summary>
@@ -279,7 +174,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(14)]
+        [ProtoMember(7)]
         private ObservableCollection<decimal> sessionMoneyWonCollection;
 
         public ObservableCollection<decimal> SessionMoneyWonCollection
@@ -299,7 +194,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             get { return SessionMoneyWonCollection?.Sum(); }
         }
 
-        [ProtoMember(15)]
+        [ProtoMember(8)]
         private ObservableCollection<string> cardsCollection;
 
         /// <summary>
@@ -315,7 +210,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         [NonSerialized]
-        [ProtoMember(16)]
+        [ProtoMember(9)]
         private ReactiveList<HudBaseToolViewModel> tools;
 
         public ReactiveList<HudBaseToolViewModel> Tools
@@ -330,25 +225,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [XmlIgnore]
-        /// <summary>
-        /// Collection of stats for current panel
-        /// </summary>
-        public ReadOnlyObservableCollection<StatInfo> StatInfoCollection
-        {
-            get
-            {
-                if (tools == null)
-                {
-                    return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());
-                }
-
-                return new ReadOnlyObservableCollection<StatInfo>(new ObservableCollection<StatInfo>());
-            }
-        }
-
         [NonSerialized]
-        [ProtoMember(17)]
+        [ProtoMember(10)]
         private ObservableCollection<HudBumperStickerType> stickers;
 
         public ObservableCollection<HudBumperStickerType> Stickers
@@ -379,7 +257,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         [NonSerialized]
-        [ProtoMember(19)]
+        [ProtoMember(11)]
         private string playerIconToolTip;
 
         [XmlIgnore]
@@ -396,7 +274,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         [NonSerialized]
-        [ProtoMember(20, IsRequired = true)]
+        [ProtoMember(12, IsRequired = true)]
         private bool isDefaultImage = true;
 
         [XmlIgnore]
@@ -412,7 +290,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        [ProtoMember(22)]
+        [ProtoMember(13)]
         private double opacity;
 
         public double Opacity
@@ -424,6 +302,16 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref opacity, value);
+            }
+        }
+
+        public IEnumerable<StatInfo> StatInfoCollection
+        {
+            get
+            {
+                return Tools != null ?
+                    Tools.OfType<HudPlainStatBoxViewModel>().SelectMany(x => x.Stats).ToArray() :
+                    new StatInfo[0];
             }
         }
 

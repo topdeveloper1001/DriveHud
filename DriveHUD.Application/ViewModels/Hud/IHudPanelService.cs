@@ -24,11 +24,11 @@ namespace DriveHUD.Application.ViewModels.Hud
     public interface IHudPanelService
     {
         /// <summary>
-        /// Create Hud Panel based on specified HUD element view model
+        /// Creates <see cref="FrameworkElement"/>  based on specified <see cref="HudBaseToolViewModel"/>
         /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <returns>HUD panel</returns>
-        FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType);
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/></param>
+        /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
+        FrameworkElement Create(HudBaseToolViewModel hudToolElement);
 
         /// <summary>
         /// Calculates hudElement position in window
@@ -36,7 +36,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window);
+        Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, HudWindow window);
 
         /// <summary>
         /// Converts offset values into position value
@@ -44,7 +44,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window);
+        Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindow window);
 
         /// <summary>
         /// Get handle of window on which hud has to be attached

@@ -11,8 +11,9 @@
     xmlns:control="clr-namespace:DriveHUD.Application.Controls"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     mc:Ignorable="d"
-    MinWidth="50"    
+    MinWidth="50"
     Width="{Binding Width}"
+    Height="{Binding Height}"
     Opacity="{Binding Opacity}">
     <UserControl.Resources>
 

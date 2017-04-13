@@ -1,4 +1,16 @@
-﻿using DriveHUD.Application.ViewModels;
+﻿//-----------------------------------------------------------------------
+// <copyright file="DragCanvas.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using System;
 using System.Windows;
@@ -338,20 +350,20 @@ namespace DriveHUD.Application.Controls
 
             var hudPanelBeingDragged = ElementBeingDragged as FrameworkElement;
 
-            IHudWindowElement hudElementViewModel = null;
+            HudBaseToolViewModel toolViewModel = null;
 
             if (hudPanelBeingDragged != null)
             {
-                hudElementViewModel = hudPanelBeingDragged.DataContext as IHudWindowElement;
+                toolViewModel = hudPanelBeingDragged.DataContext as HudBaseToolViewModel;
             }
 
             if (modifyLeftOffset)
             {
                 SetLeft(ElementBeingDragged, newHorizontalOffset);
 
-                if (hudElementViewModel != null)
+                if (toolViewModel != null)
                 {
-                    hudElementViewModel.OffsetX = newHorizontalOffset / XFraction;
+                    toolViewModel.OffsetX = newHorizontalOffset / XFraction;
                 }
             }
             else
@@ -363,9 +375,9 @@ namespace DriveHUD.Application.Controls
             {
                 SetTop(ElementBeingDragged, newVerticalOffset);
 
-                if (hudElementViewModel != null)
+                if (toolViewModel != null)
                 {
-                    hudElementViewModel.OffsetY = newVerticalOffset / YFraction;
+                    toolViewModel.OffsetY = newVerticalOffset / YFraction;
                 }
             }
             else

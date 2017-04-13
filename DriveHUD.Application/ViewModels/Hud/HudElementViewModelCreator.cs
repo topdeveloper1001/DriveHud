@@ -14,6 +14,7 @@ using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -32,9 +33,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => creationInfo);
             Check.Require(creationInfo.HudLayoutInfo != null, "HudLayoutInfo must be set.");
 
-            var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools);
+            var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools.Select(x => x.Clone()));
             hudElementViewModel.Seat = creationInfo.SeatNumber;
-             
+
             try
             {
                 hudElementViewModel.Tools.ForEach(x => x.InitializePositions(creationInfo.PokerSite, creationInfo.GameType));

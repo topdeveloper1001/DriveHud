@@ -10,9 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.Views;
-using DriveHUD.Common;
-using Model.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -39,65 +36,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             // done
             { 10, new int[,] { { 27, -66 }, { 24, -63 }, { 24, -62 }, { 27, -34}, { -17, -34 }, { -61, -34 }, { -39, -62 }, { -39, -63 }, { -61, -66 }, { -17, -66 } } }
         };
-
-        /// <summary>
-        /// Calculates hudElement position in window
-        /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
-        /// <returns>Item1 - X, Item2 - Y</returns>
-        public override Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window)
-        {
-            Check.ArgumentNotNull(() => hudElement);
-            Check.ArgumentNotNull(() => window);
-            Check.Require(window.Layout != null, "HudWindow.Layout must be set.");            
-
-            var maxSeats = (int)window.Layout.TableType;
-
-            var panelOffset = window.GetPanelOffset(hudElement);
-
-            if (!plainPositionsShifts.ContainsKey(maxSeats))
-            {
-                return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
-            }
-
-            var shifts = plainPositionsShifts[maxSeats];
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X + shifts[hudElement.Seat - 1, 0];
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y + shifts[hudElement.Seat - 1, 1];
-
-            return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
-        }
-
-        /// <summary>
-        /// Converts offset values into position value
-        /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
-        /// <returns>Item1 - X, Item2 - Y</returns>
-        public override Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
-        {
-            Check.ArgumentNotNull(() => hudElement);
-            Check.ArgumentNotNull(() => window);
-            Check.Require(window.Layout != null, "HudWindow.Layout must be set.");
-
-            var maxSeats = (int)window.Layout.TableType;
-
-            var panelOffset = window.GetPanelOffset(hudElement);
-
-            if (!plainPositionsShifts.ContainsKey(maxSeats))
-            {
-                return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
-            }
-
-            var shifts = plainPositionsShifts[maxSeats];
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X - shifts[hudElement.Seat - 1, 0] : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y - shifts[hudElement.Seat - 1, 1] : hudElement.Position.Y;
-
-            return new Tuple<double, double>(xPosition, yPosition);
-        }
-
+        
         /// <summary>
         /// Get initial table size 
         /// </summary>
@@ -105,11 +44,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         public override Tuple<double, double> GetInitialTableSize()
         {            
             return new Tuple<double, double>(810, 585);
-        }
-
-        public override Tuple<double, double> GetInitialTrackConditionMeterPosition()
-        {
-            return new Tuple<double, double>(220, 0);
-        }
+        }      
     }
 }

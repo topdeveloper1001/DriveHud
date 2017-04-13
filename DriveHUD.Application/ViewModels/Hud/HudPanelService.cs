@@ -34,17 +34,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window)
+        public virtual Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, HudWindow window)
         {
-            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => toolViewModel);
             Check.ArgumentNotNull(() => window);
 
-            var panelOffset = window.GetPanelOffset(hudElement);
+            var panelOffset = window.GetPanelOffset(toolViewModel);
 
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
 
-            return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
+            return new Tuple<double, double>(xPosition * window.ScaleX, yPosition * window.ScaleY);
         }
 
         /// <summary>
@@ -53,53 +53,45 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
+        public virtual Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindow window)
         {
-            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => toolViewModel);
             Check.ArgumentNotNull(() => window);
 
-            var maxSeats = (int)window.Layout.TableType;
+            var panelOffset = window.GetPanelOffset(toolViewModel);
 
-            var panelOffset = window.GetPanelOffset(hudElement);               
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
 
             return new Tuple<double, double>(xPosition, yPosition);
         }
 
         /// <summary>
-        /// Create Hud Panel based on specified HUD element view model
+        /// Creates <see cref="FrameworkElement"/>  based on specified <see cref="HudBaseToolViewModel"/>
         /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <returns>HUD panel</returns>
-        public virtual FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType)
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/></param>
+        /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
+        public virtual FrameworkElement Create(HudBaseToolViewModel hudToolElement)
         {
-            var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
-            contextMenu.EventName = "MouseRightButtonUp";
+            Check.Require(hudToolElement != null);
 
-            hudElement.Opacity = hudElement.Opacity / 100d;
+            hudToolElement.Opacity = hudToolElement.Opacity / 100d;
 
-            if (hudViewType == HudViewType.Plain)
+            FrameworkElement hudTool;
+
+            switch (hudToolElement.ToolType)
             {
-                var panel = new HudPanel
-                {
-                    DataContext = hudElement
-                };
-
-                RadContextMenu.SetContextMenu(panel, contextMenu);
-
-                return panel;
+                case HudDesignerToolType.PlainStatBox:
+                    hudTool = new HudPlainBox
+                    {
+                        DataContext = hudToolElement
+                    };
+                    break;
+                default:
+                    throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
             }
 
-            var richPanel = new HudRichPanel
-            {
-                DataContext = hudElement
-            };
-
-            RadContextMenu.SetContextMenu(richPanel, contextMenu);
-
-            return richPanel;
+            return hudTool;
         }
 
         /// <summary>

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseType.cs" />
+    <Compile Include="EntityUtils.cs" />
     <Compile Include="EnumFacingPreflop.cs" />
     <Compile Include="EnumGameType.cs" />
     <Compile Include="EnumHandTag.cs" />

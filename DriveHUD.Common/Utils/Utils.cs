@@ -225,6 +225,6 @@ namespace DriveHUD.Common.Utils
             {
                 return GetMD5HashFromFile(fileName);
             });
-        }
+        }        
     }
 }

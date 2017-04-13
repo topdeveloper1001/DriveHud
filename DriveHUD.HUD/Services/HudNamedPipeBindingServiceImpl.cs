@@ -37,7 +37,7 @@ namespace DriveHUD.HUD.Services
 
                 using (var afterStream = new MemoryStream(data))
                 {
-                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
+                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);                    
                 }
 
                 LogProvider.Log.Debug(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");

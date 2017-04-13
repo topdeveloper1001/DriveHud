@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
+using ProtoBuf;
 using System;
 using System.Xml.Serialization;
 
@@ -18,16 +19,32 @@ namespace DriveHUD.Application.ViewModels.Layouts
 {
     /// <summary>
     /// This class represents base tool in hud layout
-    /// </summary>
-    [Serializable]
+    /// </summary>        
+    [Serializable, ProtoContract]
     [XmlInclude(typeof(HudLayoutPlainBoxTool))]
     [XmlInclude(typeof(HudLayoutTextBoxTool))]
+    [ProtoInclude(30, typeof(HudLayoutPlainBoxTool))]
+    [ProtoInclude(31, typeof(HudLayoutTextBoxTool))]
     public abstract class HudLayoutTool
     {
+        public HudLayoutTool()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        [ProtoMember(1), XmlAttribute]        
+        /// <summary>
+        /// Gets the id of tool
+        /// </summary>
+        public Guid Id
+        {
+            get; set;
+        }
+
         /// <summary>
         /// Gets the type <see cref="HudDesignerToolType"/> of the tool
         /// </summary>     
-        [XmlIgnore()]
+        [XmlIgnore]
         public HudDesignerToolType ToolType { get; protected set; }
 
         /// <summary>

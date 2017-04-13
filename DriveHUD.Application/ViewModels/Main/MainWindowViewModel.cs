@@ -333,20 +333,12 @@ namespace DriveHUD.Application.ViewModels
                 // need to update UI info
                 RefreshData(e.GameInfo);
 
-                // if no handle available then we don't need to do anything with this data, because hud won't be up
+                // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
                     LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
                     return;
                 }
-
-                var sw = new Stopwatch();
-
-                sw.Start();
-
-                var refreshTime = sw.ElapsedMilliseconds;
-
-                sw.Restart();
 
                 var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
 
@@ -384,35 +376,25 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                for (int i = 1; i <= maxSeats; i++)
+                for (int seatNumber = 1; seatNumber <= maxSeats; seatNumber++)
                 {
-                    var playerName = string.Empty;
-                    var playerCollectionItem = new PlayerCollectionItem();
-                    var seatNumber = 0;
+                    var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
 
-                    foreach (var player in players)
-                    {
-                        if (player.SeatNumber == i)
-                        {
-                            if (!string.IsNullOrEmpty(player.PlayerName))
-                            {
-                                playerName = player.PlayerName;
-                                seatNumber = player.SeatNumber;
-                                playerCollectionItem = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.PlayerName, PokerSite = site };
-                            }
-
-                            break;
-                        }
-                    }
-
-                    if (string.IsNullOrEmpty(playerName))
+                    if (player == null || string.IsNullOrEmpty(player.PlayerName))
                     {
                         continue;
                     }
 
+                    var playerCollectionItem = new PlayerCollectionItem
+                    {
+                        PlayerId = player.PlayerId,
+                        Name = player.PlayerName,
+                        PokerSite = site
+                    };
+
                     var playerHudContent = new PlayerHudContent
                     {
-                        Name = playerName,
+                        Name = player.PlayerName,
                         SeatNumber = seatNumber
                     };
 
@@ -422,6 +404,9 @@ namespace DriveHUD.Application.ViewModels
 
                     var item = sessionCacheStatistic.PlayerData;
                     var sessionData = sessionCacheStatistic.SessionPlayerData;
+
+                    // need to do that for track meter tool
+                    #region track condition meter
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
@@ -439,6 +424,8 @@ namespace DriveHUD.Application.ViewModels
                             trackConditionsMeterData.TotalPotSize = sessionData.Source.TotalPot;
                         }
                     }
+
+                    #endregion
 
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
@@ -458,12 +445,10 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = playerName;
+                    playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
-                                                           string.Empty;
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
-
 
                     var sessionMoney = sessionData.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionData.MoneyWonCollection == null
@@ -475,54 +460,17 @@ namespace DriveHUD.Application.ViewModels
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
 
-                    // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = activeLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection;
 
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
                         // remove prohibited for PS stats.
                         activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToArray();
+                        activeLayoutHudStats.ForEach(x => x.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(
+                                x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3))));
                     }
 
-                    var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
-                                        {
-                                            var statInfoBreak = x as StatInfoBreak;
-
-                                            if (statInfoBreak != null)
-                                            {
-                                                return statInfoBreak.Clone();
-                                            }
-
-                                            return x.Clone();
-                                        }).ToArray();
-
-                    statsExceptActive.ForEach(x => x.IsNotVisible = true);
-
-                    var allStats = activeLayoutHudStats.Select(x =>
-                    {
-                        var statInfoBreak = x as StatInfoBreak;
-
-                        if (statInfoBreak != null)
-                        {
-                            return statInfoBreak.Clone();
-                        }
-
-                        if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
-                        {
-                            // for poker stars we take only 3 last color ranges.
-                            var clone = x.Clone();
-                            clone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3)));
-                            return clone;
-                        }
-                        else
-                        {
-                            return x.Clone();
-                        }
-
-                    }).Concat(statsExceptActive);
-
-                    foreach (var statInfo in allStats)
+                    foreach (var statInfo in activeLayoutHudStats)
                     {
                         if (!string.IsNullOrEmpty(statInfo.PropertyName))
                         {
@@ -537,6 +485,8 @@ namespace DriveHUD.Application.ViewModels
                         {
                             continue;
                         }
+
+                        #region tool tip (commented)
 
                         // temporary
                         //var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
@@ -567,6 +517,8 @@ namespace DriveHUD.Application.ViewModels
                         //    statInfo.StatInfoToolTipCollection = tooltipCollection;
                         //}
 
+                        #endregion
+
                         // playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
@@ -586,10 +538,6 @@ namespace DriveHUD.Application.ViewModels
 
                     ht.ListHUDPlayer.Add(playerHudContent);
                 }
-
-                sw.Stop();
-
-                Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars)
                 {

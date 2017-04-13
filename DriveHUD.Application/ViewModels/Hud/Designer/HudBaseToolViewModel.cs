@@ -11,19 +11,23 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
+using ProtoBuf;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    [ProtoContract]
+    [ProtoInclude(30, typeof(HudPlainStatBoxViewModel))]
     public abstract class HudBaseToolViewModel : ViewModelBase
     {
         #region Properties
 
+        [ProtoMember(1)]
         private double width;
 
         public double Width
@@ -38,6 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(2)]
         private double height;
 
         public double Height
@@ -52,6 +57,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(3)]
         private Point position;
 
         public Point Position
@@ -94,6 +100,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(4)]
         private double opacity;
 
         public double Opacity
@@ -109,6 +116,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         public abstract HudDesignerToolType ToolType
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Gets the id for the current tool
+        /// </summary>
+        public abstract Guid Id
         {
             get;
         }

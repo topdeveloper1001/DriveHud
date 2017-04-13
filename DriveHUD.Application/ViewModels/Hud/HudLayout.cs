@@ -11,11 +11,9 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Model.Interfaces;
 using ProtoBuf;
 using System.Collections.Generic;
-using System.Linq;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -24,50 +22,42 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudLayout : ICleanable
     {
         public HudLayout()
-        {            
-            HudStats = new List<StatInfo>();
+        {
             ListHUDPlayer = new List<PlayerHudContent>();
         }
-       
+
         public void Cleanup()
-        {           
+        {
             ListHUDPlayer?.ForEach(x => x?.HudElement?.Cleanup());
             ListHUDPlayer.Clear();
-            HudStats?.ForEach(x => x?.Reset());
-            HudStats.Clear();
         }
 
         [ProtoMember(1)]
         public EnumGameType GameType { get; set; }
 
         [ProtoMember(2)]
-        public List<StatInfo> HudStats { get; set; }
-
-        [ProtoMember(3)]
         public List<PlayerHudContent> ListHUDPlayer { get; set; }
 
-        [XmlIgnore, ProtoMember(4)]
+        // to remove
+        [XmlIgnore, ProtoMember(3)]
         public HudTrackConditionsViewModelInfo HudTrackConditionsMeter { get; set; }
 
-        [XmlIgnore, ProtoMember(5)]
+        [XmlIgnore, ProtoMember(4)]
         public int WindowId { get; set; }
 
-        [XmlIgnore, ProtoMember(6)]
-        public HudViewType HudViewType { get; set; }
-
-        [XmlIgnore, ProtoMember(7)]
+        [XmlIgnore, ProtoMember(5)]
         public EnumTableType TableType { get; set; }
 
-        [XmlIgnore, ProtoMember(8)]
+        [XmlIgnore, ProtoMember(6)]
         public long GameNumber { get; set; }
 
-        [XmlIgnore, ProtoMember(9)]
+        [XmlIgnore, ProtoMember(7)]
         public EnumPokerSites PokerSite { get; set; }
 
-        [XmlIgnore, ProtoMember(10)]
+        [XmlIgnore, ProtoMember(8)]
         public string LayoutName { get; set; }
 
-        [XmlIgnore, ProtoMember(11)]
+        [XmlIgnore, ProtoMember(9)]
         public IEnumerable<string> AvailableLayouts { get; set; }
     }
 }

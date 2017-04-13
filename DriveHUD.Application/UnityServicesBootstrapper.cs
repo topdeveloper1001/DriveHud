@@ -30,8 +30,8 @@ namespace DriveHUD.Application
             }
 
             container.RegisterType<IHudPanelService, HudPanelService>();
-            container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Ignition.ToString());
-            container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bodog.ToString());
+            container.RegisterType<IHudPanelService, HudPanelService>(EnumPokerSites.Ignition.ToString());
+            container.RegisterType<IHudPanelService, HudPanelService>(EnumPokerSites.Bodog.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.BetOnline.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.SportsBetting.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.TigerGaming.ToString());

@@ -124,9 +124,10 @@ namespace DriveHud.Tests
 
             var expected = XDocument.Load(GetTestDataFilePath(expectedXmlFile));
 
-            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();         
+            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();
+            betOnlineXmlToIPokerConverter.Initialize(source);
 
-            var convertedResult = betOnlineXmlToIPokerConverter.Convert(source);
+            var convertedResult = betOnlineXmlToIPokerConverter.Convert();
 
             Assert.IsNotNull(convertedResult);
 

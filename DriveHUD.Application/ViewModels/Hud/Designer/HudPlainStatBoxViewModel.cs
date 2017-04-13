@@ -21,15 +21,18 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using System.Collections.Generic;
+using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    [ProtoContract]
     /// <summary>
     /// Represents view model of plain stat box
     /// </summary>
     public class HudPlainStatBoxViewModel : HudBaseToolViewModel
     {
-        private readonly HudLayoutPlainBoxTool tool;
+        [ProtoMember(5)]
+        private HudLayoutPlainBoxTool tool;
 
         /// <summary>
         /// Initialize an instance of <see cref="HudPlainStatBoxViewModel"/>
@@ -71,6 +74,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return tool.ToolType;
+            }
+        }
+
+        /// <summary>
+        /// Gets the id for the current tool
+        /// </summary>
+        public override Guid Id
+        {
+            get
+            {
+                return tool.Id;
             }
         }
 
@@ -130,11 +144,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             Position = positions.Position;
-
-#warning remove hardcoded values
             Opacity = Parent.Opacity;
-            Width = 135;
-            Height = 75;
+
+            var uiPositions = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
+
+            Width = uiPositions != null && uiPositions.Width != 0 ? uiPositions.Width : HudDefaultSettings.PlainStatBoxWidth;
+            Height = uiPositions != null && uiPositions.Height != 0 ? uiPositions.Height : HudDefaultSettings.PlainStatBoxHeight;
         }
 
         /// <summary>

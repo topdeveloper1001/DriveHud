@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Controls;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Linq;
 using System.Reactive.Disposables;
@@ -133,12 +134,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            var toolElement = new HudPlainBox
+            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>();
+
+            var toolElement = hudPanelService.Create(toolViewModel);
+
+            if (toolElement == null)
             {
-                DataContext = toolViewModel,
-                Width = toolViewModel.Width,
-                Height = toolViewModel.Height
-            };
+                return;
+            }
 
             var disposable = Observable.FromEventPattern<RoutedEventHandler, RoutedEventArgs>(
                 h => toolElement.Loaded += h,
@@ -146,7 +149,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Disposables.Add(disposable);
 
-            AssociatedObject.Children.Add(toolElement);      
+            AssociatedObject.Children.Add(toolElement);
         }
 
         /// <summary>

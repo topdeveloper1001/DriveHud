@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,20 +21,20 @@ namespace DriveHUD.Application.ViewModels.Layouts
 {
     /// <summary>
     /// This class represents information about positions for specific poker site and game type
-    /// </summary>
+    /// </summary>    
     [Serializable]
     public class HudPositionsInfo
     {
         /// <summary>
         /// Gets or sets the <see cref="EnumPokerSites"/> poker site
         /// </summary>
-        [XmlAttribute]
+        [XmlAttribute]        
         public EnumPokerSites PokerSite { get; set; }
 
         /// <summary>
         /// Gets or sets the <see cref="EnumGameType"/> game type
         /// </summary>
-        [XmlAttribute]
+        [XmlAttribute]        
         public EnumGameType GameType { get; set; }
 
         /// <summary>
