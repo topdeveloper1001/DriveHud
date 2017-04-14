@@ -34,6 +34,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private ReaderWriterLockSlim readerWriterLock;
         private long gameNumber;
         private EnumPokerSites pokerSite;
+        private HudLayout layout;
 
         internal HudWindowViewModel()
         {
@@ -53,31 +54,19 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
-        private EnumGameType? gameType;
-
         public EnumGameType? GameType
         {
             get
             {
-                return gameType;
-            }
-            set
-            {
-                SetProperty(ref gameType, value);
+                return layout?.GameType;
             }
         }
 
-        private EnumTableType tableType;
-
-        public EnumTableType TableType
+        public EnumTableType? TableType
         {
             get
             {
-                return tableType;
-            }
-            set
-            {
-                SetProperty(ref tableType, value);
+                return layout?.TableType;
             }
         }
 
@@ -85,16 +74,28 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public string LayoutName
         {
-            get { return layoutName; }
-            set { SetProperty(ref layoutName, value); }
+            get
+            {
+                return layoutName;
+            }
+            set
+            {
+                SetProperty(ref layoutName, value);
+            }
         }
 
         private string selectedLayout;
 
         public string SelectedLayout
         {
-            get { return selectedLayout; }
-            set { SetProperty(ref selectedLayout, value); }
+            get
+            {
+                return selectedLayout;
+            }
+            set
+            {
+                SetProperty(ref selectedLayout, value);
+            }
         }
 
         private ObservableCollection<string> layoutsCollection;
@@ -109,10 +110,13 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region ICommand
 
-        public ICommand ExportHandCommand { get; set; }
-        public ICommand TagHandCommand { get; set; }
-        public ICommand ReplayLastHandCommand { get; set; }
-        public ICommand LoadLayoutCommand { get; set; }
+        public ICommand ExportHandCommand { get; private set; }
+
+        public ICommand TagHandCommand { get; private set; }
+
+        public ICommand ReplayLastHandCommand { get; private set; }
+
+        public ICommand LoadLayoutCommand { get; private set; }        
 
         #endregion
 
@@ -124,11 +128,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (layout != null)
                 {
+                    this.layout = layout;
                     LayoutName = layout.LayoutName;
-                    gameNumber = layout.GameNumber;
-                    pokerSite = layout.PokerSite;
-                    GameType = layout.GameType;
-                    TableType = layout.TableType;
 
                     if (layout.AvailableLayouts != null)
                     {
@@ -220,7 +221,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                     LayoutName = layoutName;
 
-                    HudNamedPipeBindingService.LoadLayout(layoutName, pokerSite, GameType.Value, TableType);
+                    HudNamedPipeBindingService.LoadLayout(layoutName, pokerSite, GameType.Value, TableType.Value);
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });

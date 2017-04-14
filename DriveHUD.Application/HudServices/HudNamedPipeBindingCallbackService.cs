@@ -46,37 +46,41 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            return;
-
             HudPositionsInfo existingHudPositions = null;
-                //existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
 
-            if (existingHudPositions == null)
+            var tools = existingHudLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().ToArray();
+
+            foreach (var tool in tools)
             {
-                existingHudPositions = new HudPositionsInfo
-                {
-                    GameType = hudLayoutContract.GameType,
-                    PokerSite = hudLayoutContract.PokerSite,
-                    HudPositions = new List<HudPositionInfo>()
-                };
-            }
+                existingHudPositions = tool.Positions.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
 
-            // update positions 
-            foreach (var hudPosition in hudLayoutContract.HudPositions)
-            {
-                var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
-
-                if (hudPositionForUpdate == null)
+                if (existingHudPositions == null)
                 {
-                    hudPositionForUpdate = new HudPositionInfo
+                    existingHudPositions = new HudPositionsInfo
                     {
-                        Seat = hudPosition.SeatNumber
+                        GameType = hudLayoutContract.GameType,
+                        PokerSite = hudLayoutContract.PokerSite,
+                        HudPositions = new List<HudPositionInfo>()
                     };
-
-                    existingHudPositions.HudPositions.Add(hudPositionForUpdate);
                 }
 
-                hudPositionForUpdate.Position = hudPosition.Position;
+                // update positions 
+                foreach (var hudPosition in hudLayoutContract.HudPositions.Where(x => x.Id == tool.Id))
+                {
+                    var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
+
+                    if (hudPositionForUpdate == null)
+                    {
+                        hudPositionForUpdate = new HudPositionInfo
+                        {
+                            Seat = hudPosition.SeatNumber
+                        };
+
+                        existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                    }
+
+                    hudPositionForUpdate.Position = hudPosition.Position;
+                }
             }
 
             hudLayoutsService.Save(existingHudLayout);
