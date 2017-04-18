@@ -97,6 +97,7 @@
                     <i:Interaction.Behaviors>
                         <hud:HudStatsBehavior
                             StatInfoSource="{Binding Stats}"
+                            HudElementViewModel="{Binding Parent}"
                             IsDefaultImage="{Binding Parent.IsDefaultImage}"
                             DefaultImageStyle="{StaticResource DefaultImageStyle}"
                             PlayerIconSource="{Binding Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}}"

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Diagnostics;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -22,6 +23,6 @@ namespace DriveHUD.Application
         public MainWindow()
         {
             InitializeComponent();
-        }
+        }      
     }
 }

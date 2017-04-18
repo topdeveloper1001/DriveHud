@@ -10,28 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Entities;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Interactivity;
-using Telerik.Windows.Controls;
-using Telerik.Windows.Diagrams.Core;
-using Microsoft.Practices.ServiceLocation;
-using System.Diagnostics;
-using ReactiveUI;
-using Telerik.Windows.Controls.Diagrams;
-using System.Windows.Data;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System.Windows.Navigation;
 using System.Reactive.Disposables;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Interactivity;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.Diagrams;
+using Telerik.Windows.Diagrams.Core;
 
 namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 {
@@ -46,6 +38,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         private readonly List<IShape> RemovableShapes = new List<IShape>();
 
+        private RadDiagramShape dragDropShape;
+
         public static DependencyProperty RecommendedAreaTemplateProperty = DependencyProperty.Register("RecommendedAreaTemplate", typeof(DataTemplate), typeof(HudDesignerBehavior));
 
         public DataTemplate RecommendedAreaTemplate
@@ -58,6 +52,33 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             {
                 SetValue(RecommendedAreaTemplateProperty, value);
             }
+        }
+
+        public static readonly DependencyProperty DragDropCommandProperty = DependencyProperty.Register("DragDropCommand", typeof(System.Windows.Input.ICommand),
+            typeof(HudDesignerBehavior), new PropertyMetadata(OnDragDropCommandChanged));
+
+        public System.Windows.Input.ICommand DragDropCommand
+        {
+            get
+            {
+                return (System.Windows.Input.ICommand)GetValue(DragDropCommandProperty);
+            }
+            set
+            {
+                SetValue(DragDropCommandProperty, value);
+            }
+        }
+
+        private static void OnDragDropCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var behavior = d as HudDesignerBehavior;
+
+            if (behavior == null || behavior.dragDropShape == null)
+            {
+                return;
+            }
+
+            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetDragDropCommand(behavior.dragDropShape, behavior.DragDropCommand);
         }
 
         public static DependencyProperty HudElementsProperty = DependencyProperty.Register("HudElements", typeof(ReactiveList<HudElementViewModel>),
@@ -120,7 +141,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         {
             base.OnAttached();
 
-            AssociatedObject.ViewportChanged += OnViewportChanged;            
+            AssociatedObject.ViewportChanged += OnViewportChanged;
             AssociatedObject.Initialized += OnInitialized;
         }
 
@@ -147,9 +168,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             table.X = DiagramActualWidth(diagram) / 2 - table.Width / 2;
             table.Y = diagram.Height / 2 - table.Height / 2;
 
-            diagram.Group(HudDefaultSettings.TableRadDiagramGroup, diagram.Shapes.OfType<IGroupable>().ToArray());
+            dragDropShape = CreateDragDropRadDiagramShape();
+            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetIsDragTarget(dragDropShape, true);
+            diagram.AddShape(dragDropShape);
         }
-     
+
         protected override void OnDetaching()
         {
             if (Disposables != null)
@@ -157,7 +180,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 Disposables.Dispose();
             }
 
-            AssociatedObject.ViewportChanged -= OnViewportChanged;            
+            AssociatedObject.ViewportChanged -= OnViewportChanged;
             AssociatedObject.Initialized -= OnInitialized;
 
             base.OnDetaching();
@@ -191,6 +214,29 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             };
 
             return table;
+        }
+
+        private static RadDiagramShape CreateDragDropRadDiagramShape()
+        {
+            var shape = new RadDiagramShape()
+            {
+                Height = HudDefaultSettings.HudTableHeight,
+                Width = HudDefaultSettings.HudTableWidth,
+                StrokeThickness = 0,
+                IsEnabled = true,
+                IsEditable = false,
+                IsManipulationEnabled = false,
+                IsResizingEnabled = false,
+                IsRotationEnabled = false,
+                IsDraggingEnabled = false,
+                IsConnectorsManipulationEnabled = false,
+                IsManipulationAdornerVisible = false,
+                IsInEditMode = false,
+                SnapsToDevicePixels = true,
+                Background = new SolidColorBrush(Colors.Transparent)
+            };
+
+            return shape;
         }
 
         /// <summary>

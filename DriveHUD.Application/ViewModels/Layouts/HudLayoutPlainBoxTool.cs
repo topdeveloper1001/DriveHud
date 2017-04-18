@@ -12,12 +12,11 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.ViewModels;
-using System.Collections.Generic;
-using System;
-using ReactiveUI;
-using System.Linq;
 using ProtoBuf;
-using System.Xml.Serialization;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {

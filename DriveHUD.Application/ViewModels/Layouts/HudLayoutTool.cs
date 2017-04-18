@@ -25,6 +25,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     [XmlInclude(typeof(HudLayoutTextBoxTool))]
     [ProtoInclude(30, typeof(HudLayoutPlainBoxTool))]
     [ProtoInclude(31, typeof(HudLayoutTextBoxTool))]
+    [ProtoInclude(32, typeof(HudLayoutGaugeIndicator))]
     public abstract class HudLayoutTool
     {
         public HudLayoutTool()

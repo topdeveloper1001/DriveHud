@@ -28,6 +28,7 @@
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
     xmlns:enums="clr-namespace:Model.Enums;assembly=Model"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:cts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -66,6 +67,101 @@
             DataType="{x:Type vm:AppsViewModel}">
             <v:AppsView />
         </DataTemplate>
+
+        <DataTemplate
+            x:Key="CommonFilterTemplate">
+            <telerik:RadMenuItem>
+                <telerik:RadMenuItem.Style>
+                    <Style
+                        TargetType="telerik:RadMenuItem"
+                        BasedOn="{StaticResource RadMenuItemStyle1}">
+                        <Setter
+                            Property="Header"
+                            Value="{Binding Path=Name}" />
+                        <Setter
+                            Property="Command"
+                            Value="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}" />
+                        <Setter
+                            Property="CommandParameter"
+                            Value="{Binding}" />
+                    </Style>
+                </telerik:RadMenuItem.Style>
+            </telerik:RadMenuItem>
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="CustomDateRangeFilterTemplate">
+            <telerik:RadMenuItem>
+                <telerik:RadMenuItem.Style>
+                    <Style
+                        TargetType="telerik:RadMenuItem"
+                        BasedOn="{StaticResource RadMenuItemStyle1}">
+                        <Setter
+                            Property="Header"
+                            Value="{Binding Path=Name}" />
+                    </Style>
+                </telerik:RadMenuItem.Style>
+                <telerik:RadMenuItem
+                    StaysOpenOnClick="True">
+                    <telerik:RadMenuItem.Style>
+                        <Style
+                            TargetType="telerik:RadMenuItem">
+                            <Setter
+                                Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Border
+                                            Padding="5"
+                                            Background="#34519c">
+
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition
+                                                        Width="210" />
+                                                    <ColumnDefinition
+                                                        Width="210" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBox
+                                                    x:Name="Date1"
+                                                    Grid.Column="0"
+                                                    Grid.Row="0"
+                                                    Text="01.01.2017" />
+
+                                                <telerik:RadCalendar                                                                                                        
+                                                    Grid.Column="0"
+                                                    Grid.Row="1" />
+
+                                                <TextBox
+                                                    Grid.Column="1"
+                                                    Grid.Row="0"
+                                                    Text="31.03.2017" />
+
+                                                <telerik:RadCalendar
+                                                    Grid.Column="1"
+                                                    Grid.Row="1" />
+
+                                            </Grid>
+
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </telerik:RadMenuItem.Style>
+                </telerik:RadMenuItem>
+            </telerik:RadMenuItem>
+        </DataTemplate>
+
+
+        <cts:FilterDropDownTemplateSelector
+            x:Key="FilterDropDownTemplateSelector"
+            CommonTemplate="{StaticResource CommonFilterTemplate}"
+            CustomDateRangeTemplate="{StaticResource CustomDateRangeFilterTemplate}" />
 
         <Style
             x:Key="RadComboBoxStyle1"
@@ -1370,7 +1466,7 @@
                     CommandParameter="{x:Static enums:EnumViewModelType.AppsViewModel}" />
 
             </StackPanel>
-      
+
             <!-- Version panel -->
             <StackPanel
                 Grid.Row="1"
@@ -1432,6 +1528,7 @@
                     VerticalAlignment="Stretch"
                     Margin="0"
                     Width="100"
+                    KeepOpen="True"
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
@@ -1440,9 +1537,10 @@
                         <telerik:RadContextMenu
                             BorderThickness="0"
                             Background="{StaticResource BackgroundBrush3}"
-                            Style="{StaticResource RadContextMenuStyle1}"                            
+                            Style="{StaticResource RadContextMenuStyle1}"
+                            ItemContainerTemplateSelector="{StaticResource FilterDropDownTemplateSelector}"
                             ItemsSource="{Binding Path=FilterTypeList}">
-                            <telerik:RadContextMenu.ItemContainerStyle>
+                            <!--<telerik:RadContextMenu.ItemContainerStyle>
                                 <Style
                                     TargetType="telerik:RadMenuItem"
                                     BasedOn="{StaticResource RadMenuItemStyle1}">
@@ -1456,7 +1554,7 @@
                                         Property="CommandParameter"
                                         Value="{Binding}" />
                                 </Style>
-                            </telerik:RadContextMenu.ItemContainerStyle>
+                            </telerik:RadContextMenu.ItemContainerStyle>-->
                         </telerik:RadContextMenu>
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>

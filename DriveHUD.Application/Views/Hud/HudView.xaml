@@ -436,6 +436,15 @@
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
+        <DataTemplate
+            x:Key="GaugeIndicatorAdornerTemplate">
+            <Border
+                Width="{x:Static vm:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static vm:HudDefaultSettings.PlainStatBoxHeight}"
+                MinHeight="35"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
     </UserControl.Resources>
 
     <Grid
@@ -644,6 +653,9 @@
                     Style="{StaticResource HudDesignerToolButtonStyle}"
                     Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
                     Command="{Binding DesignerToolCommand}"
+                    dh:DragDrop.IsDragSource="True"
+                    dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
+                    dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
 
                 <Button
@@ -713,11 +725,10 @@
                 <telerik:RadDiagram
                     Grid.Row="1"
                     Grid.Column="1"
-                    dh:DragDrop.IsDragTarget="True"
-                    dh:DragDrop.DragDropCommand="{Binding AddToolCommand}"
                     Style="{StaticResource HudTableDiagramStyle}">
                     <i:Interaction.Behaviors>
                         <bhv:HudDesignerBehavior
+                            DragDropCommand="{Binding AddToolCommand}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>
                 </telerik:RadDiagram>

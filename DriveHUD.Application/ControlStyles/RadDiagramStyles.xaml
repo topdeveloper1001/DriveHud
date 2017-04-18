@@ -9,7 +9,7 @@
     <!-- Selects template for RadDiagramShape based on content -->
     <ts:HudPanelTemplateSelector
         x:Key="HudPanelTemplateSelector"
-        PlayerPlaceTemplate="{StaticResource StructTemplate}"
+        PlayerPlaceTemplate="{StaticResource StructTemplate}"       
         HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}" />
 
     <Style

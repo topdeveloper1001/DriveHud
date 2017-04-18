@@ -34,6 +34,7 @@ namespace Model.Filters
                 new FilterDropDownModel("Filter This Month", EnumFilterDropDown.FilterThisMonth),
                 new FilterDropDownModel("Filter Last Month", EnumFilterDropDown.FilterLastMonth),
                 new FilterDropDownModel("Filter This Year", EnumFilterDropDown.FilterThisYear),
+                new FilterDropDownModel("Custom", EnumFilterDropDown.FilterCustomDates),
                 new FilterDropDownModel("Clear All Filters", EnumFilterDropDown.FilterAllStats)
             };
         }

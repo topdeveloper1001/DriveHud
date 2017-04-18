@@ -45,6 +45,6 @@ namespace DriveHUD.Application.ControlTemplateSelectors
 
         public DataTemplate PlayerPlaceTemplate { get; set; }
 
-        public DataTemplate HudPlainStatBoxTemplate { get; set; }
+        public DataTemplate HudPlainStatBoxTemplate { get; set; }        
     }
 }

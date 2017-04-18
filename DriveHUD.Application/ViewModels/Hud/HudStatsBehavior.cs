@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -103,6 +104,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 SetValue(SeparatorProperty, value);
+            }
+        }
+
+        private static DependencyProperty HudElementViewModelProperty = DependencyProperty.RegisterAttached("HudElementViewModel", typeof(HudElementViewModel), typeof(HudStatsBehavior));
+
+        public HudElementViewModel HudElementViewModel
+        {
+            get
+            {
+                return (HudElementViewModel)GetValue(HudElementViewModelProperty);
+            }
+            set
+            {
+                SetValue(HudElementViewModelProperty, value);
             }
         }
 
@@ -268,7 +283,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });
             block.SetBinding(TextBlock.FontWeightProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontBold)) { Source = statInfo });
             block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
-            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
+            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo }); 
 
             // to remove
             if (statInfo.IsStatInfoToolTipAvailable)

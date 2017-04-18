@@ -28,7 +28,8 @@ namespace Model.Enums
         FilterThisMonth,
         FilterLastMonth,
         FilterThisYear,
-        FilterAllStats
+        FilterAllStats,
+        FilterCustomDates
     }
 
 
