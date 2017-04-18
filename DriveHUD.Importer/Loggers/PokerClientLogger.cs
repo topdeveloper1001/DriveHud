@@ -33,7 +33,6 @@ namespace DriveHUD.Importers.Loggers
 
         private const int bufferSize = 65536;
         private int messageCounter = 0;
-        private const int messagesInBuffer = 30;
 
         private bool isInitialized = false;
         private bool isStarted = false;
@@ -118,6 +117,7 @@ namespace DriveHUD.Importers.Loggers
             {
 #if DEBUG
                 streamWriter.WriteLine(message);
+                streamWriter.Flush();
                 return;
 #endif
 
@@ -133,7 +133,7 @@ namespace DriveHUD.Importers.Loggers
                 var encryptedMessage = CreateAESEncryptedString(message);
                 streamWriter.WriteLine(encryptedMessage);
 
-                if (messageCounter >= messagesInBuffer)
+                if (messageCounter >= configuration.MessagesInBuffer)
                 {
                     streamWriter.Flush();
                     messageCounter = 0;
@@ -158,8 +158,8 @@ namespace DriveHUD.Importers.Loggers
                 var logId = DateTime.Now.ToString(configuration.DateFormat, CultureInfo.InvariantCulture);
                 logFile = Path.Combine(configuration.LogDirectory, string.Format(configuration.LogTemplate, logId));
 
-                var fileStream = new FileStream(logFile, FileMode.Append, FileAccess.Write, FileShare.Read);             
-                streamWriter = new StreamWriter(fileStream, Encoding.UTF8, bufferSize);                
+                var fileStream = new FileStream(logFile, FileMode.Append, FileAccess.Write, FileShare.Read);
+                streamWriter = new StreamWriter(fileStream, Encoding.UTF8, bufferSize);
 
                 isStarted = true;
 
