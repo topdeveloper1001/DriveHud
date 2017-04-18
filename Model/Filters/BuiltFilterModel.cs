@@ -635,47 +635,51 @@ namespace Model.Filters
             }
         }
 
-        #endregion
+		#endregion
 
-        #region Date Filter
+		#region Date Filter
 
-        private void SetDateItems()
-        {
-            if (DateModel == null)
-            {
-                return;
-            }
+		private void SetDateItems()
+		{
+			if (DateModel == null)
+			{
+				return;
+			}
 
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
-            switch (DateModel.DateFilterType)
-            {
-                case EnumDateFiter.Today:
-                    filterSectionItem.Name = "Today";
-                    filterSectionItem.IsActive = true;
-                    break;
-                case EnumDateFiter.ThisWeek:
-                    filterSectionItem.Name = "This Week";
-                    filterSectionItem.IsActive = true;
-                    break;
-                case EnumDateFiter.ThisMonth:
-                    filterSectionItem.Name = "This Month";
-                    filterSectionItem.IsActive = true;
-                    break;
-                case EnumDateFiter.LastMonth:
-                    filterSectionItem.Name = "Last Month";
-                    filterSectionItem.IsActive = true;
-                    break;
-                case EnumDateFiter.ThisYear:
-                    filterSectionItem.Name = "This Year";
-                    filterSectionItem.IsActive = true;
-                    break;
-                default:
-                    filterSectionItem.IsActive = false;
-                    break;
-            }
-        }
+			FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
+			switch (DateModel.DateFilterType.EnumDateRange)
+			{
+				case EnumDateFiterStruct.EnumDateFiter.Today:
+					filterSectionItem.Name = "Today";
+					filterSectionItem.IsActive = true;
+					break;
+				case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
+					filterSectionItem.Name = "This Week";
+					filterSectionItem.IsActive = true;
+					break;
+				case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
+					filterSectionItem.Name = "This Month";
+					filterSectionItem.IsActive = true;
+					break;
+				case EnumDateFiterStruct.EnumDateFiter.LastMonth:
+					filterSectionItem.Name = "Last Month";
+					filterSectionItem.IsActive = true;
+					break;
+				case EnumDateFiterStruct.EnumDateFiter.ThisYear:
+					filterSectionItem.Name = "This Year";
+					filterSectionItem.IsActive = true;
+					break;
+				case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
+					filterSectionItem.Name = "Custom Date Range";
+					filterSectionItem.IsActive = true;
+					break;
+				default:
+					filterSectionItem.IsActive = false;
+					break;
+			}
+		}
 
-        private void RemoveDateItem()
+		private void RemoveDateItem()
         {
             DateModel?.ResetFilter();
         }

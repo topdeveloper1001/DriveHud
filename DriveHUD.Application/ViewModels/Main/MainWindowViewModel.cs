@@ -132,7 +132,10 @@ namespace DriveHUD.Application.ViewModels
 
             ProgressViewModel = new ProgressViewModel();
 
-            StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
+			CalendarFrom = DateTime.Now;
+			CalendarTo = DateTime.Now;
+
+			StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
 
         private void InitializeBindings()
@@ -919,7 +922,23 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public Version Version
+		private DateTime _calendarFrom { get; set; }
+
+		public DateTime CalendarFrom
+		{
+			get { return _calendarFrom; }
+			set { _calendarFrom = value; OnPropertyChanged(); }
+		}
+
+		private DateTime _calendarTo { get; set; }
+
+		public DateTime CalendarTo
+		{
+			get { return _calendarTo; }
+			set { _calendarTo = value; OnPropertyChanged(); }
+		}
+
+		public Version Version
         {
             get
             {
@@ -1170,47 +1189,68 @@ namespace DriveHUD.Application.ViewModels
 
         public ICommand MenuItemPopupFilter_CommandClick { get; set; }
 
-        private void MenuItemPopupFilter_OnClick(object filterType)
-        {
-            var type = filterType as FilterDropDownModel;
-            if (type == null)
-            {
-                return;
-            }
+		private void MenuItemPopupFilter_OnClick(object filterType)
+		{
+			var type = filterType as FilterDropDownModel;
+			if (type == null)
+			{
+				return;
+			}
 
-            if (type.FilterType == EnumFilterDropDown.FilterCreate)
-            {
-                var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
-                PopupFiltersRequestExecute(filterTuple);
-                return;
-            }
+			if (type.FilterType == EnumFilterDropDown.FilterCreate)
+			{
+				var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
+				PopupFiltersRequestExecute(filterTuple);
+				return;
+			}
+			EnumDateFiterStruct enumDateFiterStruct = new EnumDateFiterStruct();
+			IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+			switch (type.FilterType)
+			{
+				case EnumFilterDropDown.FilterToday:
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.Today;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.Today));
+					break;
+				case EnumFilterDropDown.FilterThisWeek:
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisWeek;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisWeek));
+					break;
+				case EnumFilterDropDown.FilterThisMonth:
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisMonth;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisMonth));
+					break;
+				case EnumFilterDropDown.FilterLastMonth:
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.LastMonth;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.LastMonth));
+					break;
+				case EnumFilterDropDown.FilterThisYear:
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisYear;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisYear));
+					break;
+				case EnumFilterDropDown.FilterCustomDateRange:
+					eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
 
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            switch (type.FilterType)
-            {
-                case EnumFilterDropDown.FilterToday:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.Today));
-                    break;
-                case EnumFilterDropDown.FilterThisWeek:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisWeek));
-                    break;
-                case EnumFilterDropDown.FilterThisMonth:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisMonth));
-                    break;
-                case EnumFilterDropDown.FilterLastMonth:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.LastMonth));
-                    break;
-                case EnumFilterDropDown.FilterThisYear:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisYear));
-                    break;
-                case EnumFilterDropDown.FilterAllStats:
-                default:
-                    eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
-                    break;
-            }
-        }
+					enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
+					enumDateFiterStruct.DateFrom = CalendarFrom;
+					enumDateFiterStruct.DateTo = CalendarTo;
+					eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
 
-        public ICommand PurgeCommand { get; set; }
+					//eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.CustomDateRange));
+					break;
+				case EnumFilterDropDown.FilterAllStats:
+				default:
+					eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
+					break;
+			}
+
+		}
+
+		public ICommand PurgeCommand { get; set; }
         public ICommand ImportCommand { get; set; }
         public ICommand ImportFromFileCommand { get; set; }
         public ICommand ImportFromDirectoryCommand { get; set; }
