@@ -10,10 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Xml.Linq;
+
 namespace DriveHUD.Importers.BetOnline
 {
     internal interface IBetOnlineXmlConverter
     {
-        ConvertedResult Convert(string xml);
+        string HandNumber { get; }
+
+        bool IsInitialized { get; }
+
+        void Initialize(string xml);
+
+        void AddRelocationData(XElement relocationData);
+
+        ConvertedResult Convert();
     }
 }

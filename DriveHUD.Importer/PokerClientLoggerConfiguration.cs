@@ -28,5 +28,7 @@ namespace DriveHUD.Importers
         public string DateTimeFormat { get; set; }
 
         public string PublicKey { get; set; }
+
+        public int MessagesInBuffer { get; set; }
     }
 }
