@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Hud.Designer;
+using DriveHUD.ViewModels;
 using Model.Enums;
 using ProtoBuf;
 using ReactiveUI;
@@ -21,25 +23,26 @@ namespace DriveHUD.Application.ViewModels.Layouts
     /// <summary>
     /// This class represents the gauge indicator tool of the hud
     /// </summary>
-    [Serializable, ProtoContract]    
+    [Serializable, ProtoContract]
     public class HudLayoutGaugeIndicator : HudLayoutTool
     {
         public HudLayoutGaugeIndicator() : base()
         {
             ToolType = HudDesignerToolType.GaugeIndicator;
+            Stats = new ReactiveList<StatInfo>();
         }
 
         [ProtoMember(2)]
         /// <summary>
         /// Gets or sets the main stat to which indicator is attached
         /// </summary>
-        public Stat BaseStat { get; set; }
+        public StatInfo BaseStat { get; set; }
 
         [ProtoMember(3)]
         /// <summary>
-        /// Gets or sets the list of <see cref="Stat"/> stats of the gauge indicator
+        /// Gets or sets the list of <see cref="StatInfo"/> stats of the gauge indicator
         /// </summary>
-        public ReactiveList<Stat> Stats { get; set; }
+        public ReactiveList<StatInfo> Stats { get; set; }
 
         [ProtoMember(4)]
         /// <summary>
@@ -59,7 +62,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             {
                 Id = Id,
                 BaseStat = BaseStat,
-                Stats = new ReactiveList<Stat>(Stats),
+                Stats = new ReactiveList<StatInfo>(Stats),
                 IsVertical = IsVertical,
                 Text = Text
             };
@@ -69,7 +72,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            throw new NotImplementedException();
+            var toolViewModel = new HudGaugeIndicatorViewModel(this, hudElement);
+            return toolViewModel;
         }
     }
 }

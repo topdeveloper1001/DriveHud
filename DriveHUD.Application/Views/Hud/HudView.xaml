@@ -656,6 +656,7 @@
                     dh:DragDrop.IsDragSource="True"
                     dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
                     dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
+                    dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
 
                 <Button
@@ -677,6 +678,7 @@
                     dh:DragDrop.IsDragSource="True"
                     dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
                     dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
+                    dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
                 </Button>
 
@@ -727,7 +729,7 @@
                     Grid.Column="1"
                     Style="{StaticResource HudTableDiagramStyle}">
                     <i:Interaction.Behaviors>
-                        <bhv:HudDesignerBehavior
+                        <bhv:HudDesignerBehavior                            
                             DragDropCommand="{Binding AddToolCommand}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>

@@ -9,8 +9,9 @@
     <!-- Selects template for RadDiagramShape based on content -->
     <ts:HudPanelTemplateSelector
         x:Key="HudPanelTemplateSelector"
-        PlayerPlaceTemplate="{StaticResource StructTemplate}"       
-        HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}" />
+        PlayerPlaceTemplate="{StaticResource StructTemplate}"
+        HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}"
+        HudGaugeIndicatorTemplate="{StaticResource HudGaugeIndicatorTemplate}" />
 
     <Style
         x:Key="RadDiagramStyle"

@@ -646,7 +646,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (toolType.HasValue && CanAddTool(toolType.Value))
                 {
-                    AddTool(toolType.Value, dragDropDataObject.Position);
+                    AddTool(toolType.Value, dragDropDataObject.Position, dragDropDataObject.Source);
                 }
             });
 
@@ -760,7 +760,7 @@ namespace DriveHUD.Application.ViewModels
             statTool?.Stats.RemoveRange(statsCollection);
         }
 
-        private HudPlainStatBoxViewModel GetToolToModifyStats()
+        private IHudStatsToolViewModel GetToolToModifyStats()
         {
             var hudElement = HudElements?.FirstOrDefault();
 
@@ -769,7 +769,7 @@ namespace DriveHUD.Application.ViewModels
                 return null;
             }
 
-            var statTool = hudElement.Tools.OfType<HudPlainStatBoxViewModel>()
+            var statTool = hudElement.Tools.OfType<IHudStatsToolViewModel>()
                             .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
                                 SelectedToolViewModel == null);
 
@@ -977,9 +977,9 @@ namespace DriveHUD.Application.ViewModels
         {
             if (IsInDesignMode)
             {
-                if (SelectedToolViewModel != null && SelectedToolViewModel is HudPlainStatBoxViewModel)
+                if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel)
                 {
-                    return (SelectedToolViewModel as HudPlainStatBoxViewModel).Stats.ToArray();
+                    return (SelectedToolViewModel as IHudStatsToolViewModel).Stats.ToArray();
                 }
 
                 return new List<StatInfo>();
@@ -1305,7 +1305,7 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         /// <param name="toolType">Type of tool</param>
         /// <param name="position">Position of tool</param>
-        private void AddTool(HudDesignerToolType toolType, Point position)
+        private void AddTool(HudDesignerToolType toolType, Point position, object source)
         {
             if (DesignerHudElementViewModel == null)
             {
@@ -1320,7 +1320,8 @@ namespace DriveHUD.Application.ViewModels
                 Position = position,
                 TableType = CurrentTableType,
                 ToolType = toolType,
-                Layout = CurrentLayout
+                Layout = CurrentLayout,
+                Source = source
             };
 
             var tool = factory.CreateTool(creationInfo);

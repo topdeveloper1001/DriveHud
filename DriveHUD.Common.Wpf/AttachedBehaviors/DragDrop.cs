@@ -21,6 +21,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interactivity;
+using System.Windows.Media;
 
 namespace DriveHUD.Common.Wpf.AttachedBehaviors
 {
@@ -95,6 +96,18 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public static void SetDragDropData(UIElement target, object value)
         {
             target.SetValue(DragDropDataProperty, value);
+        }
+
+        public static readonly DependencyProperty GroupProperty = DependencyProperty.RegisterAttached("Group", typeof(string), typeof(DragDrop));
+
+        public static string GetGroupProperty(UIElement target)
+        {
+            return (string)target.GetValue(GroupProperty);
+        }
+
+        public static void SetGroupProperty(UIElement target, object value)
+        {
+            target.SetValue(GroupProperty, value);
         }
 
         private static DragAdorner dragAdorner;
@@ -222,7 +235,8 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 var dragDropDataObject = new DragDropDataObject
                 {
                     Data = dataObject,
-                    Position = e.GetPosition(uiElement)
+                    Position = e.GetPosition(uiElement),
+                    Source = (uiElement as FrameworkElement)?.DataContext
                 };
 
                 dragDropCommand.Execute(dragDropDataObject);
@@ -234,6 +248,13 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
         private static void OnDragLeave(object sender, DragEventArgs e)
         {
+            var textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush(Colors.Gray);
+            }
+
             DragAdorner = null;
         }
 
@@ -243,6 +264,15 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             if (uiElement == null)
             {
+                return;
+            }
+
+            var targetGroup = GetGroupProperty(uiElement);
+
+            if (!string.Equals(targetGroup, dragInfo.Group))
+            {
+                e.Effects = DragDropEffects.None;
+                e.Handled = true;
                 return;
             }
 
@@ -264,6 +294,13 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
         private static void OnDragEnter(object sender, DragEventArgs e)
         {
+            var textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush(Colors.White);
+            }
+
             OnDragOver(sender, e);
         }
 

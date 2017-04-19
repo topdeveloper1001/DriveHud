@@ -16,11 +16,8 @@ using DriveHUD.Common.Reflection;
 using DriveHUD.ViewModels;
 using Model.Enums;
 using ReactiveUI;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,7 +25,6 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Interactivity;
 using System.Windows.Media;
-using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -120,7 +116,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 SetValue(HudElementViewModelProperty, value);
             }
         }
-
+     
         protected override void OnAttached()
         {
             base.OnAttached();
@@ -260,13 +256,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private static TextBlock CreateStatBlock(StatInfo statInfo)
+        protected virtual TextBlock CreateStatBlock(StatInfo statInfo)
         {
             var block = new TextBlock
             {
                 TextWrapping = TextWrapping.Wrap,
                 Foreground = new SolidColorBrush(statInfo.CurrentColor),
-                VerticalAlignment = VerticalAlignment.Bottom
+                VerticalAlignment = VerticalAlignment.Bottom,
+                DataContext = statInfo
             };
 
             var label = new Run();
@@ -283,8 +280,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });
             block.SetBinding(TextBlock.FontWeightProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontBold)) { Source = statInfo });
             block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
-            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo }); 
-
+            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
+ 
             // to remove
             if (statInfo.IsStatInfoToolTipAvailable)
             {

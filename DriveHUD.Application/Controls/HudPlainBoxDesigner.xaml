@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="DriveHUD.Application.Controls.HudPlainBox"
+    x:Class="DriveHUD.Application.Controls.HudPlainBoxDesigner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -42,8 +42,9 @@
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">
                     <i:Interaction.Behaviors>
-                        <hud:HudStatsBehavior
-                            StatInfoSource="{Binding Stats}"                            
+                        <hud:HudStatsDesignerBehavior
+                            StatInfoSource="{Binding Stats}"
+                            DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                             HudElementViewModel="{Binding Parent}"
                             IsDefaultImage="{Binding Parent.IsDefaultImage}"
                             DefaultImageStyle="{StaticResource DefaultImageStyle}"

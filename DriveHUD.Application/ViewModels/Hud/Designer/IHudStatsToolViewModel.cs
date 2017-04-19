@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DragDropDataObject.cs" company="Ace Poker Solutions">
+// <copyright file="IHudStatsToolViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows;
+using DriveHUD.ViewModels;
+using ReactiveUI;
 
-namespace DriveHUD.Common.Wpf.AttachedBehaviors
+namespace DriveHUD.Application.ViewModels.Hud
 {
-    /// <summary>
-    /// Wrapper for data which is being drag & drop
-    /// </summary>
-    public class DragDropDataObject
+    public interface IHudStatsToolViewModel
     {
-        public object Data { get; set; }
-
-        public Point Position { get; set; }
-
-        public object Source { get; set; }
+        ReactiveList<StatInfo> Stats { get; }
     }
 }

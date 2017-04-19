@@ -40,7 +40,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 this.RaiseAndSetIfChanged(ref width, value);
             }
-        }        
+        }
 
         [ProtoMember(2)]
         private double height;
@@ -159,6 +159,23 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref isSelected, value);
+            }
+        }
+
+        private bool isVisible = true;
+
+        /// <summary>
+        /// Gets or sets whenever tool is visible
+        /// </summary>
+        public bool IsVisible
+        {
+            get
+            {
+                return isVisible;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isVisible, value);
             }
         }
 

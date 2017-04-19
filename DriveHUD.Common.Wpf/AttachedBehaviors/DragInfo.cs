@@ -20,6 +20,12 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public DragInfo(object sender, MouseButtonEventArgs e)
         {
             VisualSource = sender as UIElement;
+
+            if (VisualSource != null)
+            {
+                Group = DragDrop.GetGroupProperty(VisualSource);
+            }
+
             DragStartPosition = e.GetPosition((IInputElement)sender);
         }
 
@@ -30,6 +36,12 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         public Point DragStartPosition
+        {
+            get;
+            private set;
+        }
+
+        public string Group
         {
             get;
             private set;

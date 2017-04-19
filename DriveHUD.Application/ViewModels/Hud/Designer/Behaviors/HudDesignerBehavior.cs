@@ -170,6 +170,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             dragDropShape = CreateDragDropRadDiagramShape();
             DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetIsDragTarget(dragDropShape, true);
+            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetGroupProperty(dragDropShape, HudDragDropGroups.Common);
             diagram.AddShape(dragDropShape);
         }
 
@@ -310,6 +311,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             SetPositionBinding(shape, toolViewModel);
             SetOpacityBinding(shape, toolViewModel);
             SetIsSelectedBinding(shape, toolViewModel);
+            SetIsVisibleBinding(shape, toolViewModel);
 
             AssociatedObject.AddShape(shape);
             RemovableShapes.Add(shape);
@@ -363,7 +365,14 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             SetBinding(shape, RadDiagramItem.IsSelectedProperty, viewModel, nameof(HudBaseToolViewModel.IsSelected), BindingMode.OneWayToSource);
         }
 
-        protected static void SetBinding(FrameworkElement element, DependencyProperty dp, object source, string property, BindingMode bindingMode = BindingMode.TwoWay)
+        protected static void SetIsVisibleBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)
+        {
+            var converter = new BooleanToVisibilityConverter();
+            SetBinding(shape, UIElement.VisibilityProperty, viewModel, nameof(HudBaseToolViewModel.IsVisible), BindingMode.OneWay, converter);
+        }
+
+        protected static void SetBinding(FrameworkElement element, DependencyProperty dp, object source, string property,
+            BindingMode bindingMode = BindingMode.TwoWay, IValueConverter converter = null)
         {
             BindingOperations.ClearBinding(element, dp);
 
@@ -372,6 +381,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 Source = source,
                 Mode = bindingMode
             };
+
+            if (converter != null)
+            {
+                binding.Converter = converter;
+            }
 
             element.SetBinding(dp, binding);
         }

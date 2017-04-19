@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DragDropDataObject.cs" company="Ace Poker Solutions">
+// <copyright file="HudDragDropGroups.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows;
-
-namespace DriveHUD.Common.Wpf.AttachedBehaviors
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Wrapper for data which is being drag & drop
+    /// Contains group names for Drag & Drop behavior
     /// </summary>
-    public class DragDropDataObject
+    public static class HudDragDropGroups
     {
-        public object Data { get; set; }
+        public const string Popups = "Popups";
 
-        public Point Position { get; set; }
-
-        public object Source { get; set; }
+        public const string Common = "Common";
     }
 }

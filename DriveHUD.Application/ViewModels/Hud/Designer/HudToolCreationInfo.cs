@@ -45,5 +45,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets or sets <see cref="HudLayoutInfoV2"/>
         /// </summary>
         public HudLayoutInfoV2 Layout { get; set; }
+
+        /// <summary>
+        /// Gets or sets the source of drag and drop target
+        /// </summary>
+        public object Source { get; set; }
     }
 }

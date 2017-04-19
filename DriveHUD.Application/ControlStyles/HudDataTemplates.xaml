@@ -37,7 +37,14 @@
     <!-- Template for plain stat box inside RadDiagramShape on HudView -->
     <DataTemplate
         x:Key="HudPlainStatBoxTemplate">
-        <ctl:HudPlainBox
+        <ctl:HudPlainBoxDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+    <!-- Template for gauge indicator inside RadDiagramShape on HudView -->
+
+    <DataTemplate
+        x:Key="HudGaugeIndicatorTemplate">
+        <ctl:HudGaugeIndicatorDesigner
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 

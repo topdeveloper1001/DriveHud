@@ -29,13 +29,13 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// <summary>
     /// Represents view model of plain stat box
     /// </summary>
-    public class HudPlainStatBoxViewModel : HudBaseToolViewModel
+    public class HudPlainStatBoxViewModel : HudBaseToolViewModel, IHudStatsToolViewModel
     {
         [ProtoMember(5)]
         private HudLayoutPlainBoxTool tool;
 
         /// <summary>
-        /// Initialize an instance of <see cref="HudPlainStatBoxViewModel"/>
+        /// Initializes an instance of <see cref="HudPlainStatBoxViewModel"/>
         /// </summary>
         private HudPlainStatBoxViewModel()
         {

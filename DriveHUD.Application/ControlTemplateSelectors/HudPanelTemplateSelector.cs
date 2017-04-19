@@ -28,14 +28,15 @@ namespace DriveHUD.Application.ControlTemplateSelectors
                 return null;
             }
 
-            var toolViewModel = radItem.DataContext as HudBaseToolViewModel;
-
-            if (toolViewModel != null)
+            if (radItem.DataContext is HudPlainStatBoxViewModel)
             {
                 return HudPlainStatBoxTemplate;
             }
-
-            if (radItem.DataContext is HudPlayerViewModel)
+            else if (radItem.DataContext is HudGaugeIndicatorViewModel)
+            {
+                return HudGaugeIndicatorTemplate;
+            }
+            else if (radItem.DataContext is HudPlayerViewModel)
             {
                 return PlayerPlaceTemplate;
             }
@@ -45,6 +46,8 @@ namespace DriveHUD.Application.ControlTemplateSelectors
 
         public DataTemplate PlayerPlaceTemplate { get; set; }
 
-        public DataTemplate HudPlainStatBoxTemplate { get; set; }        
+        public DataTemplate HudPlainStatBoxTemplate { get; set; }
+
+        public DataTemplate HudGaugeIndicatorTemplate { get; set; }
     }
 }

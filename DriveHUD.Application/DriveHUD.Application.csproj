@@ -288,11 +288,17 @@
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudGaugeIndicatorDesigner.xaml.cs">
+      <DependentUpon>HudGaugeIndicatorDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudPanel.xaml.cs">
       <DependentUpon>HudPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\HudPlainBox.xaml.cs">
       <DependentUpon>HudPlainBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlainBoxDesigner.xaml.cs">
+      <DependentUpon>HudPlainBoxDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
@@ -386,16 +392,20 @@
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerTableTemplateSelector.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudPlainStatBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -729,6 +739,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudPlainBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\RadContextMenuTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -749,11 +763,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\HudGaugeIndicatorDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\HudPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudPlainBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlainBoxDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
