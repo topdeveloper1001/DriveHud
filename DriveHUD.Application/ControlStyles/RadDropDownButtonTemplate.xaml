@@ -2914,7 +2914,7 @@
 													Command="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}"
 													CommandParameter="{Binding}"
 													Height="13"
-													Margin="0 2 3 1">
+													Margin="0 2 3 1"> 
 											</Button>
 										</Grid>
 

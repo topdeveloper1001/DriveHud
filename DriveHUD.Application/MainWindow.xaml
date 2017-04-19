@@ -1327,7 +1327,7 @@
 								<Button
                                     Grid.Column="2"
                                     Width="40"
-                                    Background="#2a2d31"
+									Background="#2a2d31"
                                     HorizontalAlignment="Center"
                                     Visibility="{Binding Path=DataContext.IsHudRunning, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Visible}"
                                     Command="{Binding DataContext.StartHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
@@ -1446,12 +1446,14 @@
                     Foreground="White"
                     VerticalAlignment="Stretch"
                     Margin="0"
-                    Width="100"
-					KeepOpen="True"
+                    Width="100"	
+					KeepOpen="{Binding RadDropDownButtonFilterKeepOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+					IsOpen="{Binding RadDropDownButtonFilterIsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
+					<!--, RelativeSource={RelativeSource AncestorType=application:MainWindow-->
 
 					<telerik:RadRibbonDropDownButton.DropDownContent>
 						<telerik:RadContextMenu	x:Name="RadContextMenu"

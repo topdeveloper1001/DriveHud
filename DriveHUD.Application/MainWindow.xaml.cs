@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Windows;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
 
@@ -27,12 +28,10 @@ namespace DriveHUD.Application
 
 		private void MainWindow_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
-			if (RadRibbonDropDownButton.IsOpen && !RadRibbonDropDownButton.IsMouseOver)
-			{
-				RadRibbonDropDownButton.KeepOpen = false;
-				RadRibbonDropDownButton.IsOpen = false;
-				RadRibbonDropDownButton.KeepOpen = true;
-			}
+			if (!RadRibbonDropDownButton.IsOpen || RadRibbonDropDownButton.IsMouseOver) return;
+			RadRibbonDropDownButton.KeepOpen = false;
+			RadRibbonDropDownButton.IsOpen = false;
+			RadRibbonDropDownButton.KeepOpen = true;
 		}
-	}
+    }
 }
