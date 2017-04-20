@@ -25,6 +25,7 @@
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     mc:Ignorable="d"
     Foreground="White">
 
@@ -430,8 +431,8 @@
         <DataTemplate
             x:Key="PlainTextAdornerTemplate">
             <Border
-                Width="{x:Static vm:HudDefaultSettings.PlainStatBoxWidth}"
-                Height="{x:Static vm:HudDefaultSettings.PlainStatBoxHeight}"
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
                 MinHeight="35"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
@@ -439,8 +440,8 @@
         <DataTemplate
             x:Key="GaugeIndicatorAdornerTemplate">
             <Border
-                Width="{x:Static vm:HudDefaultSettings.PlainStatBoxWidth}"
-                Height="{x:Static vm:HudDefaultSettings.PlainStatBoxHeight}"
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
                 MinHeight="35"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>

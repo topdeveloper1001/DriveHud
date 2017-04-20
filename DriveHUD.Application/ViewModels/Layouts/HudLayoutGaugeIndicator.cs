@@ -12,6 +12,8 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Hud.Designer;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Resources;
 using DriveHUD.ViewModels;
 using Model.Enums;
 using ProtoBuf;
@@ -73,6 +75,10 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
             var toolViewModel = new HudGaugeIndicatorViewModel(this, hudElement);
+            toolViewModel.Width = HudDefaultSettings.GaugeIndicatorWidth;
+            toolViewModel.Height = HudDefaultSettings.GaugeIndicatorHeight;
+            toolViewModel.Opacity = 100;
+            toolViewModel.Stats.ForEach(x => x.StatInfoMeter = new StatInfoMeterModel());
             return toolViewModel;
         }
     }

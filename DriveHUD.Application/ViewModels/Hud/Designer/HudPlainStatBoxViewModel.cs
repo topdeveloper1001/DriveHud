@@ -99,6 +99,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the layout tool
+        /// </summary>
+        public override HudLayoutTool Tool
+        {
+            get
+            {
+                return tool;
+            }
+        }
+
         #endregion
 
         /// <summary>

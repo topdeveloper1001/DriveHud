@@ -10,20 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
-using ReactiveUI;
-using DriveHUD.Common;
-using System.Linq;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Exceptions;
-using DriveHUD.Common.Resources;
-using System.Collections.Generic;
 using ProtoBuf;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
-using DriveHUD.Common.Linq;
+using System.Linq;
+using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -31,7 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// Represents view model of gauge indicator
     /// </summary>
     [ProtoContract]
-    public class HudGaugeIndicatorViewModel : HudBaseToolViewModel, IHudStatsToolViewModel
+    public class HudGaugeIndicatorViewModel : HudBaseToolViewModel, IHudStatsToolViewModel, IHudBaseStatToolViewModel
     {
         [ProtoMember(5)]
         private HudLayoutGaugeIndicator tool;
@@ -57,6 +55,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;
             }
+
+            InitializeCommands();
         }
 
         /// <summary>
@@ -85,6 +85,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets the layout tool
+        /// </summary>
+        public override HudLayoutTool Tool
+        {
+            get
+            {
+                return tool;
+            }
+        }
+
+        /// <summary>
         /// Gets the id for the current tool
         /// </summary>
         public override Guid Id
@@ -95,6 +106,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets or sets text on the left side of gauge indicator
+        /// </summary>
         public string Text
         {
             get
@@ -108,6 +122,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the base stat to which gauge indicator is attached
+        /// </summary>
         public StatInfo BaseStat
         {
             get
@@ -116,6 +133,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the list of <see cref="StatInfo"/> of gauge indicator
+        /// </summary>
         public ReactiveList<StatInfo> Stats
         {
             get
@@ -124,12 +144,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the <see cref="BindingMode"/> for <see cref="HudBaseToolViewModel.IsSelected"/> property
+        /// </summary>
+        public override BindingMode IsSelectedBindingMode
+        {
+            get
+            {
+                return BindingMode.TwoWay;
+            }
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ReactiveCommand<object> SaveCommand { get; private set; }
+
         #endregion
 
         #region Implementation of HudBaseToolViewModel
 
         public override void InitializePositions()
         {
+            if (Parent == null)
+            {
+                return;
+            }
+
+            Opacity = Parent.Opacity;
         }
 
         public override void InitializePositions(EnumPokerSites pokerSite, EnumGameType gameType)
@@ -142,6 +185,22 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #endregion
 
+        /// <summary>
+        /// Initializes commands
+        /// </summary>
+        private void InitializeCommands()
+        {
+            SaveCommand = ReactiveCommand.Create();
+            SaveCommand.Subscribe(x =>
+            {
+                IsVisible = false;
+                IsSelected = false;
+            });
+        }
+
+        /// <summary>
+        /// Handles stats collection changed event
+        /// </summary>   
         private void OnStatsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.Action == NotifyCollectionChangedAction.Add && e.NewItems != null)
@@ -149,10 +208,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var random = new Random();
 
                 var addedStats = e.NewItems.OfType<StatInfo>().ToArray();
+
+                // adds random values
                 addedStats.ForEach(x =>
                 {
                     x.CurrentValue = random.Next(0, 100);
-                    //x.Caption = string.Format(x.Format, x.CurrentValue);
                     x.StatInfoMeter = new StatInfoMeterModel();
                 });
             }

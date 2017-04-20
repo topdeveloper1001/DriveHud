@@ -13,6 +13,7 @@
 using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
@@ -134,6 +135,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Check.Require(statInfo != null, "Source isn't defined. Gauge indicator has not been created.");
 
+            statInfo.HasAttachedTools = true;
+            statInfo.IsSelected = false;
+
             var layoutTool = new HudLayoutGaugeIndicator
             {
                 BaseStat = statInfo.Clone(),
@@ -141,10 +145,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             };
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
-            toolViewModel.Position = creationInfo.Position;
-            toolViewModel.Width = double.NaN;
-            toolViewModel.Height = double.NaN;
-            toolViewModel.Opacity = 100;
+            toolViewModel.Position = creationInfo.Position;       
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
 
             return toolViewModel;
         }

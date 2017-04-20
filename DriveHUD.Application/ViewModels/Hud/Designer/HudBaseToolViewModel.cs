@@ -18,11 +18,13 @@ using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     [ProtoInclude(30, typeof(HudPlainStatBoxViewModel))]
+    [ProtoInclude(31, typeof(HudGaugeIndicatorViewModel))]
     public abstract class HudBaseToolViewModel : ViewModelBase
     {
         #region Properties
@@ -162,6 +164,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the <see cref="BindingMode"/> for <see cref="IsSelected"/> property
+        /// </summary>
+        public virtual BindingMode IsSelectedBindingMode
+        {
+            get
+            {
+                return BindingMode.OneWayToSource;
+            }
+        }
+
         private bool isVisible = true;
 
         /// <summary>
@@ -177,6 +190,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 this.RaiseAndSetIfChanged(ref isVisible, value);
             }
+        }
+
+
+        /// <summary>
+        /// Gets the layout tool
+        /// </summary>
+        public abstract HudLayoutTool Tool
+        {
+            get;
         }
 
         #endregion

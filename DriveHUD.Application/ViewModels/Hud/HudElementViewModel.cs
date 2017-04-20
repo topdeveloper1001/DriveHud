@@ -43,7 +43,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => initialTools);
 
-            tools = new ReactiveList<HudBaseToolViewModel>(initialTools.Select(x => x.CreateViewModel(this)));
+            tools = new ReactiveList<HudBaseToolViewModel>(initialTools.Select(x =>
+            {
+                var toolViewModel = x.CreateViewModel(this);
+
+                if (toolViewModel is IHudBaseStatToolViewModel)
+                {
+                    toolViewModel.IsVisible = false;
+                }                
+
+                return toolViewModel;
+            }));
+
             Opacity = 100;
         }
 

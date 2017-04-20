@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.Application.ControlStyles">
-    
+
     <SolidColorBrush
         x:Key="BorderBrush"
         Color="#33519b" />
@@ -59,5 +60,51 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <DataTemplate
+        x:Key="StatTemplate">
+
+        <TextBlock
+            TextWrapping="Wrap"
+            Foreground="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+            FontFamily="{Binding SettingsAppearanceFontFamily}"
+            FontSize="{Binding SettingsAppearanceFontSize}"
+            FontWeight="{Binding SettingsAppearanceFontBold}"
+            FontStyle="{Binding SettingsAppearanceFontItalic}"
+            TextDecorations="{Binding SettingsAppearanceFontUnderline}"
+            ToolTip="{Binding ToolTip}"
+            VerticalAlignment="Bottom">           
+            <Run
+                Text="{Binding Label}" />
+            <Run
+                Text="{Binding Caption}" />
+        </TextBlock>
+
+    </DataTemplate>
+
+    <DataTemplate
+        x:Key="StatDesignTemplate">
+
+        <TextBlock
+            TextWrapping="Wrap"
+            FontFamily="{Binding SettingsAppearanceFontFamily}"
+            FontSize="{Binding SettingsAppearanceFontSize}"
+            FontWeight="{Binding SettingsAppearanceFontBold}"
+            FontStyle="{Binding SettingsAppearanceFontItalic}"
+            ToolTip="{Binding ToolTip}"
+            VerticalAlignment="Bottom">     
+            <Hyperlink
+                Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                CommandParameter="{Binding}"
+                Foreground="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneWay}"
+                TextDecorations="{Binding SettingsAppearanceFontUnderline}">                        
+                <Run
+                    Text="{Binding Label}" />
+                <Run
+                    Text="{Binding Caption}" />
+            </Hyperlink>
+        </TextBlock>
+
+    </DataTemplate>
 
 </ResourceDictionary>

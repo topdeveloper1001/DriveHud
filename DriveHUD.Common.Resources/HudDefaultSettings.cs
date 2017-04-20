@@ -12,13 +12,14 @@
 
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace DriveHUD.Common.Resources
 {
     /// <summary>
     /// Predefined internal hud settings
     /// </summary>
-    internal static class HudDefaultSettings
+    public static class HudDefaultSettings
     {
         public const double BovadaRichHudElementWidth = 144;
 
@@ -59,6 +60,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public const int DesignerDefaultSeat = 1;
 
+        public readonly static Color StatInfoDefaultColor = Colors.Gray;
+
+        public readonly static Color StatInfoActiveColor = Colors.White;
+
         #region Tools sizes
 
         public const double PlainStatBoxWidth = 135d;
@@ -66,6 +71,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         public const double PlainStatBoxHeight = double.NaN;
 
         public const double PlainStatBoxMinHeight = 35d;
+
+        public const double GaugeIndicatorWidth = double.NaN;
+
+        public const double GaugeIndicatorHeight = double.NaN;
 
         #endregion
     }

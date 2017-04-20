@@ -116,7 +116,21 @@ namespace DriveHUD.Application.ViewModels.Hud
                 SetValue(HudElementViewModelProperty, value);
             }
         }
-     
+
+        private static DependencyProperty StatDataTemplateProperty = DependencyProperty.RegisterAttached("StatDataTemplate", typeof(DataTemplate), typeof(HudStatsBehavior));
+
+        public DataTemplate StatDataTemplate
+        {
+            get
+            {
+                return (DataTemplate)GetValue(StatDataTemplateProperty);
+            }
+            set
+            {
+                SetValue(StatDataTemplateProperty, value);
+            }
+        }
+
         protected override void OnAttached()
         {
             base.OnAttached();
@@ -237,7 +251,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                         block = CreateStatBlock(statInfo);
                     }
 
-                    panel.Children.Add(block);
+                    if (block != null)
+                    {
+                        panel.Children.Add(block);
+                    }
 
                     if (statInfo != statInfoGroup.Last())
                     {
@@ -256,60 +273,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        protected virtual TextBlock CreateStatBlock(StatInfo statInfo)
+        protected virtual FrameworkElement CreateStatBlock(StatInfo statInfo)
         {
-            var block = new TextBlock
+            if (StatDataTemplate == null)
             {
-                TextWrapping = TextWrapping.Wrap,
-                Foreground = new SolidColorBrush(statInfo.CurrentColor),
-                VerticalAlignment = VerticalAlignment.Bottom,
-                DataContext = statInfo
+                return null;
+            }
+
+            var statBlock = new ContentControl
+            {
+                Content = statInfo,
+                DataContext = statInfo,
+                ContentTemplate = StatDataTemplate
             };
 
-            var label = new Run();
-            var caption = new Run();
-
-            label.SetBinding(Run.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Label)) { Source = statInfo });
-            caption.SetBinding(Run.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Caption)) { Source = statInfo });
-
-            block.Inlines.Add(label);
-            block.Inlines.Add(caption);
-
-            block.SetBinding(TextBlock.ForegroundProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.CurrentColor)) { Source = statInfo, Converter = new ValueConverters.ColorToBrushConverter() });
-            block.SetBinding(TextBlock.FontFamilyProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontFamily)) { Source = statInfo });
-            block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });
-            block.SetBinding(TextBlock.FontWeightProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontBold)) { Source = statInfo });
-            block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
-            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
- 
-            // to remove
-            if (statInfo.IsStatInfoToolTipAvailable)
-            {
-                FrameworkElementFactory fef = new FrameworkElementFactory(typeof(HudStatToolTip));
-                var datacontextBinding = new Binding() { Source = statInfo };
-                fef.SetBinding(FrameworkElement.DataContextProperty, datacontextBinding);
-
-                var template = new DataTemplate();
-                template.VisualTree = fef;
-                template.Seal();
-
-                var tooltip = new ToolTip();
-                tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
-                tooltip.Background = new SolidColorBrush(Colors.Transparent);
-                tooltip.ContentTemplate = template;
-
-                ToolTipService.SetInitialShowDelay(block, 1);
-                ToolTipService.SetShowDuration(block, 60000);
-                ToolTipService.SetVerticalOffset(block, -5.0);
-                ToolTipService.SetPlacement(block, System.Windows.Controls.Primitives.PlacementMode.Top);
-                ToolTipService.SetToolTip(block, tooltip);
-            }
-            else
-            {
-                block.SetBinding(TextBlock.ToolTipProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.ToolTip)) { Source = statInfo });
-            }
-
-            return block;
+            return statBlock;
         }
 
         private List<List<StatInfo>> Split(IList<StatInfo> source)

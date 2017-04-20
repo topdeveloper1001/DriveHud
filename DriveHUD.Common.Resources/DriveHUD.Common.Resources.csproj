@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Errors.resx</DependentUpon>
     </Compile>
+    <Compile Include="HudDefaultSettings.cs" />
     <Compile Include="Main.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

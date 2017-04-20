@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -248,13 +249,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
         private static void OnDragLeave(object sender, DragEventArgs e)
         {
-            var textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush(Colors.Gray);
-            }
-
+            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
             DragAdorner = null;
         }
 
@@ -294,13 +289,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
         private static void OnDragEnter(object sender, DragEventArgs e)
         {
-            var textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush(Colors.White);
-            }
-
+            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = true);
             OnDragOver(sender, e);
         }
 
@@ -317,6 +306,16 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             contentPresenter.ContentTemplate = template;
 
             DragAdorner = new DragAdorner(uiElement, contentPresenter);
+        }
+
+        private static void UpdateTagretDataContext<T>(object sender, Action<T> action) where T : class
+        {
+            var frameworkElement = sender as FrameworkElement;
+
+            if (frameworkElement != null && frameworkElement.DataContext != null && frameworkElement.DataContext is T)
+            {
+                action(frameworkElement.DataContext as T);
+            }
         }
     }
 }

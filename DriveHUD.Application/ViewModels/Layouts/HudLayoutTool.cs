@@ -23,6 +23,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     [Serializable, ProtoContract]
     [XmlInclude(typeof(HudLayoutPlainBoxTool))]
     [XmlInclude(typeof(HudLayoutTextBoxTool))]
+    [XmlInclude(typeof(HudLayoutGaugeIndicator))]
     [ProtoInclude(30, typeof(HudLayoutPlainBoxTool))]
     [ProtoInclude(31, typeof(HudLayoutTextBoxTool))]
     [ProtoInclude(32, typeof(HudLayoutGaugeIndicator))]

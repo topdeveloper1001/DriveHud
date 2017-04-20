@@ -4,6 +4,7 @@
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:ts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     xmlns:hvm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams">
 
     <!-- Selects template for RadDiagramShape based on content -->
@@ -78,10 +79,10 @@
             Value="False" />
         <Setter
             Property="Width"
-            Value="{x:Static hvm:HudDefaultSettings.HudTableWidth}" />
+            Value="{x:Static res:HudDefaultSettings.HudTableWidth}" />
         <Setter
             Property="Height"
-            Value="{x:Static hvm:HudDefaultSettings.HudTableHeight}" />
+            Value="{x:Static res:HudDefaultSettings.HudTableHeight}" />
         <Setter
             Property="ShapeTemplateSelector"
             Value="{StaticResource HudPanelTemplateSelector}" />

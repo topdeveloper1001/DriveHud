@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -111,6 +112,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 behavior.Disposables.Dispose();
             }
 
+            if (behavior.dragDropShape != null)
+            {
+                behavior.dragDropShape.IsSelected = false;
+            }
+
             behavior.Disposables = new CompositeDisposable();
 
             behavior.ClearDiagram();
@@ -121,11 +127,6 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 var playerLabel = CreatePlayerLabel(hudElements.Count, seat + 1);
                 behavior.AssociatedObject.AddShape(playerLabel);
                 behavior.RemovableShapes.Add(playerLabel);
-
-                foreach (var tool in hudElements[seat].Tools)
-                {
-                    behavior.AddTool(tool);
-                }
 
                 var disposable = hudElements[seat].Tools.ActOnEveryObject(x => behavior.AddTool(x), x => behavior.RemoveTool(x));
 
@@ -153,6 +154,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             {
                 return;
             }
+
+            diagram.SelectionMode = SelectionMode.Single;
 
             var table = CreateTableRadDiagramShape();
 
@@ -232,10 +235,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 IsDraggingEnabled = false,
                 IsConnectorsManipulationEnabled = false,
                 IsManipulationAdornerVisible = false,
-                IsInEditMode = false,
+                IsSelected = false,
+                IsInEditMode = false,                
                 SnapsToDevicePixels = true,
                 Background = new SolidColorBrush(Colors.Transparent)
-            };
+            };            
 
             return shape;
         }
@@ -281,6 +285,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             {
                 AssociatedObject.RemoveShape(shape);
             }
+
+            RemovableShapes.Clear();
         }
 
         #endregion
@@ -362,7 +368,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         protected static void SetIsSelectedBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)
         {
-            SetBinding(shape, RadDiagramItem.IsSelectedProperty, viewModel, nameof(HudBaseToolViewModel.IsSelected), BindingMode.OneWayToSource);
+            SetBinding(shape, RadDiagramItem.IsSelectedProperty, viewModel, nameof(HudBaseToolViewModel.IsSelected), viewModel.IsSelectedBindingMode);
         }
 
         protected static void SetIsVisibleBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)

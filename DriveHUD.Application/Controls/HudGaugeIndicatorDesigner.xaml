@@ -313,7 +313,7 @@
                 Command="{Binding SaveCommand}">
 
                 <Path
-                    SnapsToDevicePixels="True"                    
+                    SnapsToDevicePixels="True"
                     Width="8"
                     Height="8"
                     HorizontalAlignment="Center"
@@ -330,10 +330,11 @@
                 Margin="2,0,0,0"
                 Padding="0"
                 Background="{StaticResource CloseButtonBackground}"
-                Command="{Binding CancelCommand}">
+                Command="{Binding DataContext.RemoveToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                CommandParameter="{Binding}">
 
                 <Path
-                    SnapsToDevicePixels="True"                    
+                    SnapsToDevicePixels="True"
                     Width="8"
                     Height="8"
                     HorizontalAlignment="Center"

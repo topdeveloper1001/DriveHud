@@ -11,6 +11,7 @@
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:control="clr-namespace:DriveHUD.Application.Controls"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     mc:Ignorable="d"
     MinWidth="50"
     Width="{Binding Width}"
@@ -37,13 +38,14 @@
             <Grid>
                 <WrapPanel
                     Margin="3,0,0,3"
-                    MinHeight="{x:Static hud:HudDefaultSettings.PlainStatBoxMinHeight}"
+                    MinHeight="{x:Static res:HudDefaultSettings.PlainStatBoxMinHeight}"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">
                     <i:Interaction.Behaviors>
                         <hud:HudStatsDesignerBehavior
                             StatInfoSource="{Binding Stats}"
+                            StatDataTemplate="{StaticResource StatDesignTemplate}"
                             DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                             HudElementViewModel="{Binding Parent}"
                             IsDefaultImage="{Binding Parent.IsDefaultImage}"

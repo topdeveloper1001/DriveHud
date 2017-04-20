@@ -33,7 +33,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        protected override TextBlock CreateStatBlock(StatInfo statInfo)
+        public static readonly DependencyProperty StatClickCommandProperty = DependencyProperty.Register("StatClickCommand", typeof(ICommand), typeof(HudStatsBehavior));
+
+        public ICommand StatClickCommand
+        {
+            get
+            {
+                return (ICommand)GetValue(StatClickCommandProperty);
+            }
+            set
+            {
+                SetValue(StatClickCommandProperty, value);
+            }
+        }
+
+        protected override FrameworkElement CreateStatBlock(StatInfo statInfo)
         {
             var block = base.CreateStatBlock(statInfo);
 

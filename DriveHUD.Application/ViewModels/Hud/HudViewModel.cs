@@ -17,6 +17,7 @@ using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
@@ -357,6 +358,10 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> AddToolCommand { get; private set; }
 
+        public ReactiveCommand<object> RemoveToolCommand { get; private set; }
+
+        public ReactiveCommand<object> StatClickCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -372,7 +377,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
-            var layoutTools = CurrentLayout.LayoutTools.Where(x => x.ToolType == HudDesignerToolType.PlainStatBox).ToArray();
+            var layoutTools = CurrentLayout.LayoutTools.ToArray();
 
             var seats = (int)CurrentLayout.TableType;
 
@@ -650,6 +655,48 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
+            RemoveToolCommand = ReactiveCommand.Create();
+            RemoveToolCommand.Subscribe(x =>
+            {
+                var toolToRemove = x as HudBaseToolViewModel;
+
+                if (toolToRemove == null)
+                {
+                    return;
+                }
+
+                RemoveTool(toolToRemove);
+            });
+
+            var canUserStatClickCommand = this.WhenAny(x => x.IsInDesignMode, x => x.Value && DesignerHudElementViewModel != null);
+
+            StatClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
+            StatClickCommand.Subscribe(x =>
+            {
+                var statInfo = x as StatInfo;
+
+                if (statInfo == null)
+                {
+                    return;
+                }
+
+                var toolsToShow = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(s => s.BaseStat != null && s.BaseStat.Stat == statInfo.Stat)
+                    .OfType<HudBaseToolViewModel>()
+                    .ToArray();
+
+                if (toolsToShow.Length > 0)
+                {
+                    toolsToShow.ForEach(t =>
+                    {
+                        t.IsVisible = true;
+                        t.IsSelected = false;
+                    });
+                    toolsToShow.First(t => t.IsSelected = true);
+                }
+            });
+
             SaveDesignCommand = ReactiveCommand.Create();
             SaveDesignCommand.Subscribe(x => SaveDesign());
         }
@@ -758,6 +805,26 @@ namespace DriveHUD.Application.ViewModels
 
             var statTool = GetToolToModifyStats();
             statTool?.Stats.RemoveRange(statsCollection);
+
+            // removes all stat based tools 
+            foreach (var stat in statsCollection)
+            {
+                var toolViewModelsToRemove = (from hudElement in HudElements
+                                              from toolViewModel in hudElement.Tools.OfType<IHudBaseStatToolViewModel>()
+                                              where toolViewModel.BaseStat != null && toolViewModel.BaseStat.Stat == stat.Stat
+                                              select new { HudElement = hudElement, ToolViewModel = toolViewModel }).ToArray();
+
+                toolViewModelsToRemove.ForEach(x =>
+                {
+                    var toolViewModel = x.ToolViewModel as HudBaseToolViewModel;
+
+                    if (toolViewModel != null)
+                    {
+                        x.HudElement.Tools.Remove(toolViewModel);
+                        CurrentLayout.LayoutTools.Remove(toolViewModel.Tool);
+                    }
+                });
+            }
         }
 
         private IHudStatsToolViewModel GetToolToModifyStats()
@@ -1264,11 +1331,24 @@ namespace DriveHUD.Application.ViewModels
                 // need to update all UI positions, because positions could be changed
                 var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
 
+                var baseStats = DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>().Select(x => x.BaseStat.Stat).ToArray();
+
                 foreach (var tool in DesignerHudElementViewModel.Tools)
                 {
                     var uiPositions = factory.GetHudUIPositions(EnumTableType.HU, CurrentTableType, tool.Position);
                     tool.SetPositions(uiPositions);
                     tool.InitializePositions();
+
+                    if (tool is IHudStatsToolViewModel)
+                    {
+                        (tool as IHudStatsToolViewModel).Stats.ForEach(x =>
+                        {
+                            if (baseStats.Contains(x.Stat))
+                            {
+                                x.HasAttachedTools = true;
+                            }
+                        });
+                    }
                 }
 
                 HudElements = new ReactiveList<HudElementViewModel>
@@ -1327,6 +1407,8 @@ namespace DriveHUD.Application.ViewModels
             var tool = factory.CreateTool(creationInfo);
 
             DesignerHudElementViewModel.Tools.Add(tool);
+
+            tool.IsSelected = true;
         }
 
         /// <summary>
@@ -1337,6 +1419,46 @@ namespace DriveHUD.Application.ViewModels
         private bool CanAddTool(HudDesignerToolType toolType)
         {
             return IsInDesignMode && DesignerHudElementViewModel != null;
+        }
+
+        /// <summary>
+        /// Removes layout tool from table 
+        /// </summary>
+        /// <param name="toolViewModel">Tool to remove</param>
+        private void RemoveTool(HudBaseToolViewModel toolViewModel)
+        {
+            if (!IsInDesignMode || DesignerHudElementViewModel == null || CurrentLayout == null || toolViewModel == null)
+            {
+                return;
+            }
+
+            DesignerHudElementViewModel.Tools.Remove(toolViewModel);
+            CurrentLayout.LayoutTools.Remove(toolViewModel.Tool);
+
+            // updates all tools which might have stats linked to base stat of deleted tool
+            if (toolViewModel is IHudBaseStatToolViewModel)
+            {
+                var hudGaugeIndicatorViewModel = toolViewModel as IHudBaseStatToolViewModel;
+
+                if (hudGaugeIndicatorViewModel.BaseStat == null)
+                {
+                    return;
+                }
+
+                var remainingBaseStatTools = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(x => x.BaseStat != null && x.BaseStat.Stat == hudGaugeIndicatorViewModel.BaseStat.Stat)
+                    .Count();
+
+                if (remainingBaseStatTools > 0)
+                {
+                    return;
+                }
+
+                var statInfos = DesignerHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().SelectMany(x => x.Stats).ToArray();
+
+                statInfos.ForEach(x => x.HasAttachedTools = false);
+            }
         }
 
         /// <summary>
