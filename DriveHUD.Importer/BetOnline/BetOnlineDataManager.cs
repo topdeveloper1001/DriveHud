@@ -24,6 +24,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DriveHUD.Importers.BetOnline
 {
@@ -32,6 +33,10 @@ namespace DriveHUD.Importers.BetOnline
         private IPokerClientEncryptedLogger logger;
         private bool isLoggingEnabled;
         private IEventAggregator eventAggregator;
+        private const int delay = 2000;
+
+        private readonly List<RelocationData> relocationData = new List<RelocationData>();
+        private static object locker = new object();
 
         public BetOnlineDataManager(IEventAggregator eventAggregator)
         {
@@ -69,17 +74,38 @@ namespace DriveHUD.Importers.BetOnline
             {
                 var encryptedXml = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
 
+                var xml = Decrypt(encryptedXml);
+
+                if (logger != null && isLoggingEnabled)
+                {
+                    logger.Log(xml);
+                }
+
+                if (TryParseRelocationData(xml))
+                {
+                    return;
+                }
+
                 Task.Run(() =>
                 {
-                    var xml = Decrypt(encryptedXml);
-
-                    if (logger != null && isLoggingEnabled)
-                    {
-                        logger.Log(xml);
-                    }
+                    // wait for possible relocation data
+                    Task.Delay(delay).Wait();
 
                     var betOnlineXmlConverter = ServiceLocator.Current.GetInstance<IBetOnlineXmlConverter>();
-                    var convertedResult = betOnlineXmlConverter.Convert(xml);
+                    betOnlineXmlConverter.Initialize(xml);
+
+                    lock (locker)
+                    {
+                        var relocation = relocationData.FirstOrDefault(x => x.Hand == betOnlineXmlConverter.HandNumber);
+
+                        if (relocation != null && relocation.RelocationElement != null)
+                        {
+                            betOnlineXmlConverter.AddRelocationData(relocation.RelocationElement);
+                            relocationData.Remove(relocation);
+                        }
+                    }
+
+                    var convertedResult = betOnlineXmlConverter.Convert();
 
                     if (convertedResult == null)
                     {
@@ -166,6 +192,41 @@ namespace DriveHUD.Importers.BetOnline
             }
         }
 
+        private bool TryParseRelocationData(string xml)
+        {
+            if (string.IsNullOrWhiteSpace(xml) || !xml.StartsWith("<RelocationData", StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+
+            try
+            {
+                var xDocument = XDocument.Parse(xml);
+                var relocationElement = xDocument.Root;
+
+                var hand = relocationElement.Attribute("hand").Value;
+
+                var relocation = new RelocationData
+                {
+                    Hand = hand,
+                    RelocationElement = relocationElement
+                };
+
+                lock (locker)
+                {
+                    relocationData.Add(relocation);
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Relocation data has not been parsed.", e);
+            }
+
+            return false;
+        }
+
         #region IDisposable implementation
 
         public void Dispose()
@@ -173,5 +234,12 @@ namespace DriveHUD.Importers.BetOnline
         }
 
         #endregion
+
+        private class RelocationData
+        {
+            public string Hand { get; set; }
+
+            public XElement RelocationElement { get; set; }
+        }
     }
 }

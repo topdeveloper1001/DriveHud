@@ -57,7 +57,14 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)))
+                var stats = statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray();
+
+                if (stats.Length == 0)
+                {
+                    continue;
+                }
+
+                foreach (var playerstatistic in stats)
                 {
                     stat.AddStatistic(playerstatistic);
                 }

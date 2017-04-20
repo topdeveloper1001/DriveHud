@@ -73,7 +73,8 @@ namespace DriveHUD.Importers.Bovada
                 DateTimeFormat = "HH:mm:ss",
                 LogCleanupTemplate = "ign-games-*-*-*.log",
                 LogDirectory = "Logs",
-                LogTemplate = "ign-games-{0}.log"
+                LogTemplate = "ign-games-{0}.log",
+                MessagesInBuffer = 30
             };
 
             return logger;
