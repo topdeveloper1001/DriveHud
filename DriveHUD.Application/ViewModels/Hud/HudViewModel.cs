@@ -814,6 +814,12 @@ namespace DriveHUD.Application.ViewModels
             var statTool = GetToolToModifyStats();
             statTool?.Stats.RemoveRange(statsCollection);
 
+            // if selected tools is base stat tool then we don't delete any tool
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudBaseStatToolViewModel)
+            {
+                return;
+            }
+
             // removes all stat based tools 
             foreach (var stat in statsCollection)
             {
@@ -1067,10 +1073,20 @@ namespace DriveHUD.Application.ViewModels
         {
             if (SelectedToolViewModel != null && SelectedToolViewModel is IHudBaseStatToolViewModel)
             {
+                var statsSelectedToolViewModel = SelectedToolViewModel as IHudStatsToolViewModel;
+                HideStatsInStatCollection(statsSelectedToolViewModel.Stats);
+
                 return;
             }
 
-            var statsToHide = (from layoutStat in CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats)
+            var statsToHide = CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+
+            HideStatsInStatCollection(statsToHide);
+        }
+
+        private void HideStatsInStatCollection(IEnumerable<StatInfo> stats)
+        {
+            var statsToHide = (from layoutStat in stats
                                join statInfo in StatInfoCollection on layoutStat.Stat equals statInfo.Stat
                                select statInfo).ToArray();
 

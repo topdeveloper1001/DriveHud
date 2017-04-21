@@ -134,6 +134,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets the top stat of the gauge indicator
+        /// </summary>
+        public StatInfo TopStat
+        {
+            get
+            {
+                return tool.Stats.FirstOrDefault();
+            }
+        }
+
+        /// <summary>
         /// Gets the list of <see cref="StatInfo"/> of gauge indicator
         /// </summary>
         public ReactiveList<StatInfo> Stats
@@ -141,6 +152,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return tool.Stats;
+            }
+        }
+
+        /// <summary>
+        /// Gets the list of <see cref="StatInfo"/> of stats in main area of gauge indicator
+        /// </summary>
+        public ReactiveList<StatInfo> MainStats
+        {
+            get
+            {
+                return new ReactiveList<StatInfo>(tool.Stats.Skip(1));
             }
         }
 
@@ -185,7 +207,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         public override void SetPositions(List<HudPositionInfo> positions)
-        {            
+        {
         }
 
         /// <summary>
@@ -236,6 +258,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     x.StatInfoMeter = new StatInfoMeterModel();
                 });
             }
+
+            this.RaisePropertyChanged(nameof(TopStat));
+            this.RaisePropertyChanged(nameof(MainStats));
         }
     }
 }

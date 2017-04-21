@@ -201,7 +201,7 @@
             Background="{StaticResource BackgroundBrush1}">
             <TextBlock
                 HorizontalAlignment="Right"
-                Text="{Binding BaseStat.ToolTip}"
+                Text="{Binding TopStat.ToolTip}"
                 Style="{StaticResource HudToolTipTextBlockStyle}" />
         </Border>
 
@@ -248,7 +248,7 @@
                 <!-- Use separate items controls in order to properly size columns -->
                 <ItemsControl
                     Grid.Column="0"
-                    ItemsSource="{Binding Stats}"
+                    ItemsSource="{Binding MainStats}"
                     ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -265,7 +265,7 @@
 
                 <ItemsControl
                     Grid.Column="1"
-                    ItemsSource="{Binding Stats}"
+                    ItemsSource="{Binding MainStats}"
                     ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -280,7 +280,7 @@
 
                 <ItemsControl
                     Grid.Column="2"
-                    ItemsSource="{Binding Stats}"
+                    ItemsSource="{Binding MainStats}"
                     ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
