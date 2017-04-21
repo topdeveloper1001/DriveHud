@@ -489,34 +489,34 @@ namespace DriveHUD.Application.ViewModels
                         #region tool tip (commented)
 
                         // temporary
-                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                        //var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
 
-                        if (tooltipCollection != null)
-                        {
-                            foreach (var tooltip in tooltipCollection)
-                            {
-                                tooltip.CategoryStat.AssignStatInfoValues(item);
+                        //if (tooltipCollection != null)
+                        //{
+                        //    foreach (var tooltip in tooltipCollection)
+                        //    {
+                        //        tooltip.CategoryStat.AssignStatInfoValues(item);
 
-                                foreach (var stat in tooltip.StatsCollection)
-                                {
-                                    stat.AssignStatInfoValues(item);
-                                }
+                        //        foreach (var stat in tooltip.StatsCollection)
+                        //        {
+                        //            stat.AssignStatInfoValues(item);
+                        //        }
 
-                                if (tooltip.CardsList == null)
-                                {
-                                    continue;
-                                }
+                        //        if (tooltip.CardsList == null)
+                        //        {
+                        //            continue;
+                        //        }
 
-                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                        //        var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
 
-                                if (listObj != null)
-                                {
-                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                                }
-                            }
+                        //        if (listObj != null)
+                        //        {
+                        //            tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                        //        }
+                        //    }
 
-                            statInfo.StatInfoToolTipCollection = tooltipCollection;
-                        }
+                        //    statInfo.StatInfoToolTipCollection = tooltipCollection;
+                        //}
 
                         #endregion                        
                     }

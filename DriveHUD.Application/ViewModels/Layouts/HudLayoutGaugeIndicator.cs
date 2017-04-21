@@ -19,6 +19,7 @@ using Model.Enums;
 using ProtoBuf;
 using ReactiveUI;
 using System;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -58,15 +59,31 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// </summary>
         public string Text { get; set; }
 
+        /// <summary>
+        /// Gets or sets the position info of gauge indicator
+        /// </summary>        
+        public HudPositionInfo PositionInfo { get; set; }
+
         public override HudLayoutTool Clone()
         {
             var cloned = new HudLayoutGaugeIndicator
             {
                 Id = Id,
                 BaseStat = BaseStat,
-                Stats = new ReactiveList<StatInfo>(Stats),
+                Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
+                {
+                    var statInfoBreak = x as StatInfoBreak;
+
+                    if (statInfoBreak != null)
+                    {
+                        return statInfoBreak.Clone();
+                    }
+
+                    return x.Clone();
+                })),
                 IsVertical = IsVertical,
-                Text = Text
+                Text = Text,
+                PositionInfo = PositionInfo?.Clone()
             };
 
             return cloned;

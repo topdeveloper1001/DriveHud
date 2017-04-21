@@ -321,7 +321,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return Tools != null ?
-                    Tools.OfType<HudPlainStatBoxViewModel>().SelectMany(x => x.Stats).ToArray() :
+                    Tools.OfType<IHudStatsToolViewModel>().SelectMany(x => x.Stats).ToArray() :
                     new StatInfo[0];
             }
         }

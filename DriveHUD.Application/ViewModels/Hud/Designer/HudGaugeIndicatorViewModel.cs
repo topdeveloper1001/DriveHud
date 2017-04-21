@@ -173,6 +173,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             Opacity = Parent.Opacity;
+
+            if (tool != null && tool.PositionInfo != null)
+            {
+                Position = tool.PositionInfo.Position;
+            }
         }
 
         public override void InitializePositions(EnumPokerSites pokerSite, EnumGameType gameType)
@@ -180,7 +185,22 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         public override void SetPositions(List<HudPositionInfo> positions)
+        {            
+        }
+
+        /// <summary>
+        /// Saves <see cref="HudPositionInfo"/> positions for current tool
+        /// </summary>
+        /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
+        public override void SavePositions(List<HudPositionInfo> positions)
         {
+            if (tool != null)
+            {
+                tool.PositionInfo = new HudPositionInfo
+                {
+                    Position = Position
+                };
+            }
         }
 
         #endregion

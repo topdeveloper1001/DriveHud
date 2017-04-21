@@ -139,7 +139,10 @@ namespace DriveHUD.Application.Views
 
                     var panel = hudPanelService.Create(toolViewModel);
 
-                    dgCanvas.Children.Add(panel);
+                    if (panel != null)
+                    {
+                        dgCanvas.Children.Add(panel);
+                    }
                 }
             }
         }

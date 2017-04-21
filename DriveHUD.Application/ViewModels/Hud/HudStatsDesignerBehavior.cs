@@ -13,6 +13,7 @@
 using DriveHUD.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -56,6 +57,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetDragDropCommand(block, DragDropCommand);
 
             return block;
+        }
+
+        protected override void ConfigureToolTip(FrameworkElement element, StatInfo statInfo)
+        {
+            ConfigureSimpleToolTip(element, statInfo);
         }
     }
 }

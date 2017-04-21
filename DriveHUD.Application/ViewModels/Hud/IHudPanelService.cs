@@ -11,8 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Views;
-using DriveHUD.Entities;
-using Model.Enums;
 using System;
 using System.Windows;
 
@@ -29,6 +27,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/></param>
         /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
         FrameworkElement Create(HudBaseToolViewModel hudToolElement);
+
+        /// <summary>
+        /// Creates <see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" />
+        /// </summary>
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/> to create <see cref="FrameworkElementFactory"/></param>
+        /// <returns><see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" /></returns>
+        FrameworkElementFactory CreateFrameworkElementFactory(HudBaseToolViewModel hudToolElement);
 
         /// <summary>
         /// Calculates hudElement position in window

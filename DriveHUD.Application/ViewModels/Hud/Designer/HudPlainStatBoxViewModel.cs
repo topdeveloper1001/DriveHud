@@ -176,5 +176,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             tool.UIPositions = positions;
         }
+
+        /// <summary>
+        /// Saves <see cref="HudPositionInfo"/> positions for current tool
+        /// </summary>
+        /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
+        public override void SavePositions(List<HudPositionInfo> positions)
+        {
+            SetPositions(positions);
+        }
     }
 }

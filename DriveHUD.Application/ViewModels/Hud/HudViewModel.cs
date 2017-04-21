@@ -433,6 +433,8 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfoGroup { Name = "Continuation Bet" },
                 new StatInfoGroup { Name = "Limp" },
                 new StatInfoGroup { Name = "Advanced Stats" },
+                new StatInfoGroup { Name = "VPIP" },
+                new StatInfoGroup { Name = "Cold call" }
             };
 
             // Make a collection of StatInfo
@@ -530,7 +532,6 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBB) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldToSqueez,  PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToSqueez) },
 
-
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WSWSF) },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCheckRaise) },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCBet)},
@@ -584,6 +585,20 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.TrueAggression, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TrueAggression) },
                 new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DonkBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DonkBet) },
                 new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
+
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_EP, PropertyName = nameof(HudIndicators.VPIP_EP) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_MP, PropertyName = nameof(HudIndicators.VPIP_MP) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_CO, PropertyName = nameof(HudIndicators.VPIP_CO) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_BN, PropertyName = nameof(HudIndicators.VPIP_BN) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_SB, PropertyName = nameof(HudIndicators.VPIP_SB) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_BB, PropertyName = nameof(HudIndicators.VPIP_BB) },
+
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_EP, PropertyName = nameof(HudIndicators.ColdCall_EP) },
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_MP, PropertyName = nameof(HudIndicators.ColdCall_MP) },
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_CO, PropertyName = nameof(HudIndicators.ColdCall_CO) },
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BN, PropertyName = nameof(HudIndicators.ColdCall_BN) },
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_SB, PropertyName = nameof(HudIndicators.ColdCall_SB) },
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BB, PropertyName = nameof(HudIndicators.ColdCall_BB) }
             };
 
             // initialize stat info
@@ -707,28 +722,21 @@ namespace DriveHUD.Application.ViewModels
         private void InitializePreview()
         {
             // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
-            var layoutTools = CurrentLayout.LayoutTools.Where(x => x.ToolType == HudDesignerToolType.PlainStatBox).ToArray();
+            var layoutTools = CurrentLayout.LayoutTools.ToArray();
 
             var random = new Random();
 
             // set randomized data
-            var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x =>
+            var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x => x.Clone()));
+
+            previewHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().ForEach(tool =>
             {
-                var tool = x.Clone();
-
-                if (tool is HudLayoutPlainBoxTool)
+                tool.Stats.ForEach(s =>
                 {
-                    var plainBoxTool = tool as HudLayoutPlainBoxTool;
-
-                    plainBoxTool.Stats.ForEach(s =>
-                    {
-                        s.CurrentValue = random.Next(0, 100);
-                        s.Caption = string.Format(s.Format, s.CurrentValue);
-                    });
-                }
-
-                return tool;
-            }));
+                    s.CurrentValue = random.Next(0, 100);
+                    s.Caption = string.Format(s.Format, s.CurrentValue);
+                });
+            });
 
             previewHudElementViewModel.Seat = 1;
 
@@ -1057,6 +1065,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void HideStatsInStatCollection()
         {
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudBaseStatToolViewModel)
+            {
+                return;
+            }
+
             var statsToHide = (from layoutStat in CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats)
                                join statInfo in StatInfoCollection on layoutStat.Stat equals statInfo.Stat
                                select statInfo).ToArray();
@@ -1472,7 +1485,7 @@ namespace DriveHUD.Application.ViewModels
             foreach (var tool in DesignerHudElementViewModel.Tools)
             {
                 var uiPositions = factory.GetHudUIPositions(CurrentTableType, EnumTableType.HU, tool.Position);
-                tool.SetPositions(uiPositions);
+                tool.SavePositions(uiPositions);
             }
 
             cachedCurrentLayout.HudPlayerTypes = CurrentLayout.HudPlayerTypes;
@@ -1487,6 +1500,11 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void CloseDesigner()
         {
+            DesignerHudElementViewModel.Tools
+                .OfType<IHudStatsToolViewModel>()
+                .SelectMany(x => x.Stats)
+                .ForEach(x => x.HasAttachedTools = false);
+
             DesignerHudElementViewModel = null;
 
             Layouts.Remove(CurrentLayout);

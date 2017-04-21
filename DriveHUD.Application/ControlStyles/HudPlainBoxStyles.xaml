@@ -72,7 +72,6 @@
             FontWeight="{Binding SettingsAppearanceFontBold}"
             FontStyle="{Binding SettingsAppearanceFontItalic}"
             TextDecorations="{Binding SettingsAppearanceFontUnderline}"
-            ToolTip="{Binding ToolTip}"
             VerticalAlignment="Bottom">           
             <Run
                 Text="{Binding Label}" />
@@ -91,8 +90,7 @@
             FontSize="{Binding SettingsAppearanceFontSize}"
             FontWeight="{Binding SettingsAppearanceFontBold}"
             FontStyle="{Binding SettingsAppearanceFontItalic}"
-            ToolTip="{Binding ToolTip}"
-            VerticalAlignment="Bottom">     
+            VerticalAlignment="Bottom">         
             <Hyperlink
                 Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                 CommandParameter="{Binding}"

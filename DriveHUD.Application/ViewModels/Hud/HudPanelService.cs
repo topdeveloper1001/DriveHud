@@ -77,7 +77,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             hudToolElement.Opacity = hudToolElement.Opacity / 100d;
 
-            FrameworkElement hudTool;
+            FrameworkElement hudTool = null;
 
             switch (hudToolElement.ToolType)
             {
@@ -87,12 +87,36 @@ namespace DriveHUD.Application.ViewModels.Hud
                         DataContext = hudToolElement
                     };
                     break;
+                case HudDesignerToolType.GaugeIndicator:
+                    break;
                 default:
                     throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
             }
 
             return hudTool;
         }
+
+        /// <summary>
+        /// Creates <see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" />
+        /// </summary>
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/> to create <see cref="FrameworkElementFactory"/></param>
+        /// <returns><see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" /></returns>
+        public virtual FrameworkElementFactory CreateFrameworkElementFactory(HudBaseToolViewModel hudToolElement)
+        {
+            FrameworkElementFactory factory = null;
+
+            switch (hudToolElement.ToolType)
+            {
+                case HudDesignerToolType.GaugeIndicator:
+                    factory = new FrameworkElementFactory(typeof(HudGaugeIndicator));
+                    break;
+                default:
+                    break;
+            }
+
+            return factory;
+        }
+
 
         /// <summary>
         /// Get initial table size 

@@ -34,7 +34,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Method tests if <see cref="HudLayoutInfoV2"/> can be serialized with <seealso cref="XmlSerializer"/>
         /// </summary>
-        //[Test]
+        [Test]
         public void HudLayoutInfoCanBeSerialized()
         {
             var hudLayoutInfo = CreateHudLayoutInfo();
@@ -54,7 +54,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Method tests if <see cref="HudLayoutPlainBoxTool"/> can be serialized with <seealso cref="Serializer"/>
         /// </summary>
-        //[Test]
+        [Test]
         public void HudLayoutToolCanBeSerializedDeserializedWithProtobuf()
         {
             var hudLayoutToolExpected = new HudLayoutPlainBoxTool();
@@ -89,7 +89,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Method tests if <see cref="HudLayoutPlainBoxTool"/> can be serialized with <seealso cref="XmlSerializer"/>
         /// </summary>
-        //[Test]
+        [Test]
         public void HudLayoutToolCanBeSerializedDeserialized()
         {
             var hudLayoutExpected = CreateHudLayoutInfo();
@@ -130,7 +130,7 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// temp test
         /// </summary>
-        [Test]
+        //[Test]
         public void MigrateDefaultLayouts()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;

@@ -220,5 +220,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
         public abstract void SetPositions(List<HudPositionInfo> positions);
+
+        /// <summary>
+        /// Saves <see cref="HudPositionInfo"/> positions for current tool
+        /// </summary>
+        /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
+        public abstract void SavePositions(List<HudPositionInfo> positions);
     }
 }
