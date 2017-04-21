@@ -1487,7 +1487,23 @@ namespace DriveHUD.Application.ViewModels
                 var statInfos = DesignerHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().SelectMany(x => x.Stats).ToArray();
 
                 statInfos.ForEach(x => x.HasAttachedTools = false);
+
+                return;
             }
+
+            var statToolViewModel = toolViewModel as IHudStatsToolViewModel;
+
+            if (statToolViewModel == null)
+            {
+                return;
+            }
+
+            var baseStatToolsToDelete = (from stat in statToolViewModel.Stats
+                                         join baseStatTool in DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>()
+                                            on stat.Stat equals baseStatTool.BaseStat.Stat
+                                         select baseStatTool).ToArray();
+
+            baseStatToolsToDelete.ForEach(x => RemoveTool(x as HudBaseToolViewModel));
         }
 
         /// <summary>

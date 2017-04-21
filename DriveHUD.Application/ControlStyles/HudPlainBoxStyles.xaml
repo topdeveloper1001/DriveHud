@@ -8,6 +8,11 @@
         x:Key="BorderBrush"
         Color="#33519b" />
 
+    <SolidColorBrush
+        x:Key="CloseButtonBackground"
+        x:Shared="False"
+        Color="#191a1e" />
+
     <Style
         x:Key="BaseBorderStyle"
         TargetType="{x:Type Border}">
