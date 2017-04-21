@@ -665,70 +665,70 @@ namespace DriveHUD.Entities
         public virtual decimal EVDiff { get; set; }
 
         [ProtoMember(249)]
-        public int FacedRaiseFlop { get; set; }
+        public virtual int FacedRaiseFlop { get; set; }
 
         [ProtoMember(250)]
-        public int FoldedFacedRaiseFlop { get; set; }
+        public virtual int FoldedFacedRaiseFlop { get; set; }
 
         [ProtoMember(251)]
-        public int CalledFacedRaiseFlop { get; set; }
+        public virtual int CalledFacedRaiseFlop { get; set; }
 
         [ProtoMember(252)]
-        public int ReraisedFacedRaiseFlop { get; set; }
+        public virtual int ReraisedFacedRaiseFlop { get; set; }
 
         [ProtoMember(253)]
-        public int FacedRaiseTurn { get; set; }
+        public virtual int FacedRaiseTurn { get; set; }
 
         [ProtoMember(254)]
-        public int FoldedFacedRaiseTurn { get; set; }
+        public virtual int FoldedFacedRaiseTurn { get; set; }
 
         [ProtoMember(255)]
-        public int CalledFacedRaiseTurn { get; set; }
+        public virtual int CalledFacedRaiseTurn { get; set; }
 
         [ProtoMember(256)]
-        public int ReraisedFacedRaiseTurn { get; set; }
+        public virtual int ReraisedFacedRaiseTurn { get; set; }
 
         [ProtoMember(257)]
-        public int FacedRaiseRiver { get; set; }
+        public virtual int FacedRaiseRiver { get; set; }
 
         [ProtoMember(258)]
-        public int FoldedFacedRaiseRiver { get; set; }
+        public virtual int FoldedFacedRaiseRiver { get; set; }
 
         [ProtoMember(259)]
-        public int CalledFacedRaiseRiver { get; set; }
+        public virtual int CalledFacedRaiseRiver { get; set; }
 
         [ProtoMember(260)]
-        public int ReraisedFacedRaiseRiver { get; set; }
+        public virtual int ReraisedFacedRaiseRiver { get; set; }
 
         [ProtoMember(261)]
-        public int CanBetWhenCheckedToFlop { get; set; }
+        public virtual int CanBetWhenCheckedToFlop { get; set; }
 
         [ProtoMember(262)]
-        public int DidBetWhenCheckedToFlop { get; set; }
+        public virtual int DidBetWhenCheckedToFlop { get; set; }
 
         [ProtoMember(263)]
-        public int CanBetWhenCheckedToTurn { get; set; }
+        public virtual int CanBetWhenCheckedToTurn { get; set; }
 
         [ProtoMember(264)]
-        public int DidBetWhenCheckedToTurn { get; set; }
+        public virtual int DidBetWhenCheckedToTurn { get; set; }
 
         [ProtoMember(265)]
-        public int CanBetWhenCheckedToRiver { get; set; }
+        public virtual int CanBetWhenCheckedToRiver { get; set; }
 
         [ProtoMember(266)]
-        public int DidBetWhenCheckedToRiver { get; set; }
+        public virtual int DidBetWhenCheckedToRiver { get; set; }
 
         [ProtoMember(267)]
-        public int FacedSqueez { get; set; }
+        public virtual int FacedSqueez { get; set; }
 
         [ProtoMember(268)]
-        public int FoldedFacedSqueez { get; set; }
+        public virtual int FoldedFacedSqueez { get; set; }
 
         [ProtoMember(269)]
-        public int CalledFacedSqueez { get; set; }
+        public virtual int CalledFacedSqueez { get; set; }
 
         [ProtoMember(270)]
-        public int ReraisedFacedSqueez { get; set; }
+        public virtual int ReraisedFacedSqueez { get; set; }
 
         #region Additional properties (not for serialization)
 
