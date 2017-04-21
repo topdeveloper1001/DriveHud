@@ -575,6 +575,7 @@
                 Orientation="Vertical">
 
                 <Grid
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     Margin="0,0,0,5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
@@ -633,73 +634,95 @@
 
                 </Grid>
 
-                <TextBlock
-                    Margin="0,10,0,10"
-                    Style="{StaticResource HudDesignerTextBlockStyle}"
-                    Text="{ResX Key=Common_HudSideBar_Title}" />
-
+                <!-- Temp button -->
                 <Button
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_TextBoxTool}"
+                    Margin="0,20,0,0"
+                    Content="Designer"
                     Command="{Binding DesignerToolCommand}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_GraphTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.Graph}" />
+                <StackPanel
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
+                    Orientation="Vertical">
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    dh:DragDrop.IsDragSource="True"
-                    dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
-                    dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
-                    dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
+                    <TextBlock
+                        Margin="0,10,0,10"
+                        Style="{StaticResource HudDesignerTextBlockStyle}"
+                        Text="{ResX Key=Common_HudSideBar_Title}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_BumperStickersTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_TextBoxTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_GraphTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.Graph}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
-                    Command="{Binding DesignerToolCommand}"
-                    dh:DragDrop.IsDragSource="True"
-                    dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
-                    dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
-                    dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
-                </Button>
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
+                        Command="{Binding DesignerToolCommand}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_TiltMeterTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_BumperStickersTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
 
-                <Button
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Content="{ResX Key=Common_HudSideBar_HeatMapTool}"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
+                        Command="{Binding DesignerToolCommand}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
+                    </Button>
+
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+
+                    <Button
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Content="{ResX Key=Common_HudSideBar_HeatMapTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+
+                </StackPanel>
 
             </StackPanel>
 
@@ -730,7 +753,7 @@
                     Grid.Column="1"
                     Style="{StaticResource HudTableDiagramStyle}">
                     <i:Interaction.Behaviors>
-                        <bhv:HudDesignerBehavior                            
+                        <bhv:HudDesignerBehavior
                             DragDropCommand="{Binding AddToolCommand}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>
@@ -1063,7 +1086,7 @@
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
                                 <controls:RadListBoxDragDropBehavior
-                                    AllowReorder="True"                                    
+                                    AllowReorder="True"
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                         </telerik:RadListBox>

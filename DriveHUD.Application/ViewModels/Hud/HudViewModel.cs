@@ -968,7 +968,7 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void DataDelete()
         {
-            if (HudLayoutsService.Delete(CurrentLayout.Name))
+            if (!HudLayoutsService.Delete(CurrentLayout.Name))
             {
                 return;
             }
