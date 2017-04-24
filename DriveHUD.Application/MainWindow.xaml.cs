@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Windows;
+using System.Windows.Input;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -22,6 +24,14 @@ namespace DriveHUD.Application
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MainWindow_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (!RadRibbonDropDownButton.IsOpen || RadRibbonDropDownButton.IsMouseOver) return;
+            RadRibbonDropDownButton.KeepOpen = false;
+            RadRibbonDropDownButton.IsOpen = false;
+            RadRibbonDropDownButton.KeepOpen = true;
         }
     }
 }

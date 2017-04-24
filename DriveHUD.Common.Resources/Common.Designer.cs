@@ -142,6 +142,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_ApplyButtonForCalendars {
+            get {
+                return ResourceManager.GetString("Common_ApplyButtonForCalendars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto Detect.
         /// </summary>
         internal static string Common_AutoDetect {

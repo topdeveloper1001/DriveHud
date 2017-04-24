@@ -124,7 +124,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             var dateFilter = FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault();
             if (dateFilter != null)
             {
-                if (dateFilter.DateFilterType != EnumDateFiter.ThisWeek)
+                if (dateFilter.DateFilterType.EnumDateRange != EnumDateFiterStruct.EnumDateFiter.ThisWeek)
                 {
                     return;
                 }
