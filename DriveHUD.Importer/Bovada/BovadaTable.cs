@@ -663,14 +663,15 @@ namespace DriveHUD.Importers.Bovada
                     handModel.GameLimit = GameLimit;
                     handModel.GameFormat = GameFormat;
 
+                    var configuration = configurationService.Get("Bovada");
+
                     TryToFixCommunityCardsCommands(handModel);
+                    UpdatePlayersOnTable(handModel, configuration);
 
                     if (handModel.CashOrTournament == CashOrTournament.Tournament && !TournamentsAndPlayers.Keys.Contains(handModel.TournamentNumber))
                     {
                         TournamentsAndPlayers.Add(handModel.TournamentNumber, new Dictionary<int, string>());
                     }
-
-                    var configuration = configurationService.Get("Bovada");
 
                     UpdatePlayersAddedRemoved(handModel, configuration, true);
 
@@ -1443,6 +1444,19 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        private void UpdatePlayersOnTable(HandModel2 handModel, ISiteConfiguration configuration)
+        {
+            if (handModel.HeroSeat < 1)
+            {
+                return;
+            }
+
+            if (PlayersOnTable != null && PlayersOnTable.ContainsKey(handModel.HeroSeat))
+            {
+                PlayersOnTable[handModel.HeroSeat] = configuration.HeroName;
+            }
+        }
+
         private void ParseTableState(int tableState)
         {
             tableState = BovadaConverters.ConvertTableState(tableState);
@@ -1458,7 +1472,7 @@ namespace DriveHUD.Importers.Bovada
 
         #endregion
 
-        #region Players Handling (Temporary)
+        #region Players Handling
 
         private static Dictionary<long, Dictionary<int, string>> TournamentsAndPlayers = new Dictionary<long, Dictionary<int, string>>();
 
