@@ -27,9 +27,9 @@
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
     xmlns:enums="clr-namespace:Model.Enums;assembly=Model"
-	xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
-	xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
-	xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
+    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -41,110 +41,110 @@
     mc:Ignorable="d"
     Width="{Binding WindowMinWidth}"
     MinWidth="{Binding WindowMinWidth}"
-	PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown">
+    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown">
 
 
-	<telerik:RadWindow.Resources>
+    <telerik:RadWindow.Resources>
 
 
 
-		<DataTemplate
+        <DataTemplate
             DataType="{x:Type vm:DashboardViewModel}">
-			<v:DashboardView />
-		</DataTemplate>
+            <v:DashboardView />
+        </DataTemplate>
 
-		<DataTemplate
+        <DataTemplate
             DataType="{x:Type vm:TournamentViewModel}">
-			<v:TournamentView />
-		</DataTemplate>
+            <v:TournamentView />
+        </DataTemplate>
 
-		<DataTemplate
+        <DataTemplate
             DataType="{x:Type vm:HudViewModel}">
-			<v:HudView />
-		</DataTemplate>
+            <v:HudView />
+        </DataTemplate>
 
-		<DataTemplate
+        <DataTemplate
             DataType="{x:Type vm:ReportGadgetViewModel}">
-			<v:ReportGadgetView />
-		</DataTemplate>
+            <v:ReportGadgetView />
+        </DataTemplate>
 
-		<DataTemplate
+        <DataTemplate
             DataType="{x:Type vm:AppsViewModel}">
-			<v:AppsView/>
-		</DataTemplate>
+            <v:AppsView/>
+        </DataTemplate>
 
-		<Style
+        <Style
             x:Key="RadComboBoxStyle1"
             TargetType="{x:Type telerik:RadComboBox}">
-			<!--<Setter Property="telerik:ScrollingSettingsBehavior.IsEnabled" Value="True"/>-->
-			<Setter
+            <!--<Setter Property="telerik:ScrollingSettingsBehavior.IsEnabled" Value="True"/>-->
+            <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollAreaPadding"
                 Value="30" />
-			<Setter
+            <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollStep"
                 Value="24" />
-			<Setter
+            <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollStepTime"
                 Value="00:00:00.05" />
-			<Setter
+            <Setter
                 Property="BorderThickness"
                 Value="1" />
-			<Setter
+            <Setter
                 Property="BorderBrush"
                 Value="{telerik:VisualStudio2013Resource ResourceKey=BasicBrush}" />
-			<Setter
+            <Setter
                 Property="Background"
                 Value="{telerik:VisualStudio2013Resource ResourceKey=AlternativeBrush}" />
-			<Setter
+            <Setter
                 Property="Foreground"
                 Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}" />
-			<Setter
+            <Setter
                 Property="FontFamily"
                 Value="{telerik:VisualStudio2013Resource ResourceKey=FontFamily}" />
-			<Setter
+            <Setter
                 Property="FontSize"
                 Value="{telerik:VisualStudio2013Resource ResourceKey=FontSize}" />
-			<Setter
+            <Setter
                 Property="ScrollViewer.VerticalScrollBarVisibility"
                 Value="Auto" />
-			<Setter
+            <Setter
                 Property="ScrollViewer.HorizontalScrollBarVisibility"
                 Value="Auto" />
-			<Setter
+            <Setter
                 Property="ScrollViewer.CanContentScroll"
                 Value="True" />
-			<Setter
+            <Setter
                 Property="Template">
-				<Setter.Value>
-					<ControlTemplate
+                <Setter.Value>
+                    <ControlTemplate
                         TargetType="{x:Type telerik:RadComboBox}">
-						<Grid
+                        <Grid
                             x:Name="VisualRoot">
-							<VisualStateManager.VisualStateGroups>
-								<VisualStateGroup
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup
                                     x:Name="CommonStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Disabled" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Normal" />
-									<VisualState
+                                    <VisualState
                                         x:Name="MouseOver" />
-									<VisualState
+                                    <VisualState
                                         x:Name="DropDownOpen" />
-								</VisualStateGroup>
-								<VisualStateGroup
+                                </VisualStateGroup>
+                                <VisualStateGroup
                                     x:Name="FocusStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Focused" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Unfocused" />
-								</VisualStateGroup>
-							</VisualStateManager.VisualStateGroups>
-							<Border
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border
                                 Background="{TemplateBinding Background}"
                                 CornerRadius="1"
                                 IsHitTestVisible="False" />
-							<telerik:RadToggleButton
+                            <telerik:RadToggleButton
                                 x:Name="PART_DropDownButton"
                                 ClickMode="Press"
                                 Foreground="{TemplateBinding Foreground}"
@@ -152,26 +152,26 @@
                                 InnerCornerRadius="0"
                                 Margin="0"
                                 Padding="0">
-								<telerik:StyleManager.Theme>
-									<telerik:Office_BlackTheme />
-								</telerik:StyleManager.Theme>
-								<telerik:RadToggleButton.Template>
-									<ControlTemplate
+                                <telerik:StyleManager.Theme>
+                                    <telerik:Office_BlackTheme />
+                                </telerik:StyleManager.Theme>
+                                <telerik:RadToggleButton.Template>
+                                    <ControlTemplate
                                         TargetType="{x:Type telerik:RadToggleButton}">
-										<ContentPresenter
+                                        <ContentPresenter
                                             ContentTemplate="{TemplateBinding ContentTemplate}"
                                             Content="{TemplateBinding Content}"
                                             ContentStringFormat="{TemplateBinding ContentStringFormat}" />
-									</ControlTemplate>
-								</telerik:RadToggleButton.Template>
-								<Grid>
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition
+                                    </ControlTemplate>
+                                </telerik:RadToggleButton.Template>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
                                             Width="*" />
-										<ColumnDefinition
+                                        <ColumnDefinition
                                             Width="Auto" />
-									</Grid.ColumnDefinitions>
-									<Border
+                                    </Grid.ColumnDefinitions>
+                                    <Border
                                         x:Name="DisabledBorder"
                                         BorderBrush="#FF989898"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -179,7 +179,7 @@
                                         CornerRadius="1"
                                         IsHitTestVisible="False"
                                         Opacity="0" />
-									<Chromes:ButtonChrome
+                                    <Chromes:ButtonChrome
                                         x:Name="ButtonChrome"
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -189,28 +189,28 @@
                                         RenderPressed="{TemplateBinding IsDropDownOpen}"
                                         RenderFocused="{TemplateBinding IsFocused}"
                                         RenderEnabled="{TemplateBinding IsEnabled}">
-										<telerik:StyleManager.Theme>
-											<telerik:Office_BlackTheme />
-										</telerik:StyleManager.Theme>
-									</Chromes:ButtonChrome>
-									<Border
+                                        <telerik:StyleManager.Theme>
+                                            <telerik:Office_BlackTheme />
+                                        </telerik:StyleManager.Theme>
+                                    </Chromes:ButtonChrome>
+                                    <Border
                                         Background="{TemplateBinding Background}"
                                         Grid.ColumnSpan="2"
                                         CornerRadius="1"
                                         IsHitTestVisible="False"
                                         Margin="1" />
-									<ContentControl
+                                    <ContentControl
                                         x:Name="DropDownIcon"
                                         Background="White"
                                         Grid.Column="1"
                                         Foreground="Black"
                                         IsTabStop="False">
-										<ContentControl.Template>
-											<ControlTemplate
+                                        <ContentControl.Template>
+                                            <ControlTemplate
                                                 TargetType="{x:Type ContentControl}">
-												<Grid
+                                                <Grid
                                                     Margin="5,0">
-													<Path
+                                                    <Path
                                                         x:Name="BackgroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Background}"
@@ -218,7 +218,7 @@
                                                         Margin="0,2,0,0"
                                                         Stretch="Fill"
                                                         Width="5" />
-													<Path
+                                                    <Path
                                                         x:Name="ForegroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Foreground}"
@@ -226,11 +226,11 @@
                                                         Margin="0,1"
                                                         Stretch="Fill"
                                                         Width="5" />
-												</Grid>
-											</ControlTemplate>
-										</ContentControl.Template>
-									</ContentControl>
-									<ContentPresenter
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ContentControl.Template>
+                                    </ContentControl>
+                                    <ContentPresenter
                                         x:Name="Content"
                                         ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                                         Content="{TemplateBinding SelectionBoxItem}"
@@ -238,13 +238,13 @@
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-								</Grid>
-							</telerik:RadToggleButton>
-							<Popup
+                                </Grid>
+                            </telerik:RadToggleButton>
+                            <Popup
                                 x:Name="PART_Popup">
-								<Grid
+                                <Grid
                                     x:Name="PopupRoot">
-									<Border
+                                    <Border
                                         x:Name="PART_ResizeBorder"
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -252,26 +252,26 @@
                                         CornerRadius="1"
                                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                         MinWidth="{TemplateBinding MinDropDownWidth}">
-										<Grid>
-											<Grid.RowDefinitions>
-												<RowDefinition
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
                                                     Height="Auto" />
-												<RowDefinition
+                                                <RowDefinition
                                                     Height="*" />
-											</Grid.RowDefinitions>
-											<telerik:RadButton
+                                            </Grid.RowDefinitions>
+                                            <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
                                                 InnerCornerRadius="0"
                                                 Margin="-1,-1,-1,0"
                                                 Grid.Row="0"
                                                 Visibility="{TemplateBinding ClearSelectionButtonVisibility}">
-												<telerik:StyleManager.Theme>
-													<telerik:Office_BlackTheme />
-												</telerik:StyleManager.Theme>
-											</telerik:RadButton>
+                                                <telerik:StyleManager.Theme>
+                                                    <telerik:Office_BlackTheme />
+                                                </telerik:StyleManager.Theme>
+                                            </telerik:RadButton>
 
-											<ScrollViewer
+                                            <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
                                                 IsTabStop="False"
@@ -281,82 +281,82 @@
                                                 VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                                 Padding="0,1,0,0"
                                                 Grid.Row="1">
-												<ScrollViewer.InputBindings>
-													<KeyBinding
+                                                <ScrollViewer.InputBindings>
+                                                    <KeyBinding
                                                         Command="telerikPrimitives:ListControl.SelectAllCommand"
                                                         Key="A"
                                                         Modifiers="Control" />
-												</ScrollViewer.InputBindings>
-												<ItemsPresenter />
-											</ScrollViewer>
-										</Grid>
-									</Border>
-								</Grid>
-							</Popup>
-						</Grid>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-			<Setter
+                                                </ScrollViewer.InputBindings>
+                                                <ItemsPresenter />
+                                            </ScrollViewer>
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter
                 Property="EditableTemplate">
-				<Setter.Value>
-					<ControlTemplate
+                <Setter.Value>
+                    <ControlTemplate
                         TargetType="{x:Type telerik:RadComboBox}">
-						<Grid
+                        <Grid
                             x:Name="VisualRoot">
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
                                     Width="*" />
-								<ColumnDefinition
+                                <ColumnDefinition
                                     Width="Auto" />
-							</Grid.ColumnDefinitions>
-							<VisualStateManager.VisualStateGroups>
-								<VisualStateGroup
+                            </Grid.ColumnDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup
                                     x:Name="CommonStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Disabled" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Normal" />
-									<VisualState
+                                    <VisualState
                                         x:Name="MouseOver" />
-									<VisualState
+                                    <VisualState
                                         x:Name="DropDownOpen" />
-								</VisualStateGroup>
-								<VisualStateGroup
+                                </VisualStateGroup>
+                                <VisualStateGroup
                                     x:Name="FocusStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Focused" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Unfocused" />
-								</VisualStateGroup>
-								<VisualStateGroup
+                                </VisualStateGroup>
+                                <VisualStateGroup
                                     x:Name="WatermarkStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="WatermarkVisible" />
-									<VisualState
+                                    <VisualState
                                         x:Name="WatermarkInvisible" />
-								</VisualStateGroup>
-							</VisualStateManager.VisualStateGroups>
-							<Border
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border
                                 x:Name="Background"
                                 Background="{TemplateBinding Background}"
                                 Grid.Column="0"
                                 CornerRadius="1,0,0,1"
                                 IsHitTestVisible="False" />
-							<Border
+                            <Border
                                 Background="{TemplateBinding Background}"
                                 Grid.ColumnSpan="2"
                                 CornerRadius="1"
                                 IsHitTestVisible="False"
                                 Margin="1" />
-							<Border
+                            <Border
                                 x:Name="Border"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Grid.ColumnSpan="2"
                                 CornerRadius="1"
                                 IsHitTestVisible="False" />
-							<Border
+                            <Border
                                 x:Name="MouseOverVisual"
                                 BorderBrush="{StaticResource BackgroundBrush4}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
@@ -365,8 +365,8 @@
                                 IsHitTestVisible="False"
                                 Opacity="0"
                                 Visibility="Collapsed" />
-							<Grid>
-								<TextBox
+                            <Grid>
+                                <TextBox
                                     x:Name="PART_EditableTextBox"
                                     Foreground="{TemplateBinding Foreground}"
                                     Grid.Column="0"
@@ -376,25 +376,25 @@
                                     Padding="{TemplateBinding Padding}"
                                     VerticalAlignment="Stretch"
                                     VerticalContentAlignment="Center">
-									<TextBox.Style>
-										<Style
+                                    <TextBox.Style>
+                                        <Style
                                             TargetType="{x:Type TextBox}">
-											<Setter
+                                            <Setter
                                                 Property="BorderThickness"
                                                 Value="0" />
-											<Setter
+                                            <Setter
                                                 Property="BorderBrush"
                                                 Value="Transparent" />
-											<Setter
+                                            <Setter
                                                 Property="Background"
                                                 Value="Transparent" />
-										</Style>
-									</TextBox.Style>
-									<TextBox.Template>
-										<ControlTemplate
+                                        </Style>
+                                    </TextBox.Style>
+                                    <TextBox.Template>
+                                        <ControlTemplate
                                             TargetType="{x:Type TextBox}">
-											<Grid>
-												<ScrollViewer
+                                            <Grid>
+                                                <ScrollViewer
                                                     x:Name="PART_ContentHost"
                                                     BorderBrush="{TemplateBinding BorderBrush}"
                                                     BorderThickness="{TemplateBinding BorderThickness}"
@@ -403,21 +403,21 @@
                                                     Padding="{TemplateBinding Padding}"
                                                     VerticalScrollBarVisibility="Auto"
                                                     VerticalContentAlignment="Stretch">
-													<telerik:StyleManager.Theme>
-														<telerik:Office_BlackTheme />
-													</telerik:StyleManager.Theme>
-												</ScrollViewer>
-											</Grid>
-										</ControlTemplate>
-									</TextBox.Template>
-								</TextBox>
-								<TextBlock
+                                                    <telerik:StyleManager.Theme>
+                                                        <telerik:Office_BlackTheme />
+                                                    </telerik:StyleManager.Theme>
+                                                </ScrollViewer>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
+                                <TextBlock
                                     Text="{Binding Path=StorageModel.PlayerSelectedItem.PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
                                     HorizontalAlignment="Right"
                                     Margin="0 0 5 0"
                                     Style="{StaticResource Title_H2}" />
-							</Grid>
-							<Border
+                            </Grid>
+                            <Border
                                 x:Name="FocusVisual"
                                 BorderBrush="{StaticResource BackgroundBrush4}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
@@ -425,12 +425,12 @@
                                 CornerRadius="1"
                                 IsHitTestVisible="False"
                                 Visibility="Collapsed">
-								<Border
+                                <Border
                                     BorderBrush="Transparent"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="0" />
-							</Border>
-							<telerik:RadToggleButton
+                            </Border>
+                            <telerik:RadToggleButton
                                 x:Name="PART_DropDownButton"
                                 ClickMode="Press"
                                 Grid.Column="1"
@@ -438,37 +438,37 @@
                                 InnerCornerRadius="0"
                                 Margin="0"
                                 Padding="0">
-								<telerik:StyleManager.Theme>
-									<telerik:Office_BlackTheme />
-								</telerik:StyleManager.Theme>
-								<telerik:RadToggleButton.Template>
-									<ControlTemplate
+                                <telerik:StyleManager.Theme>
+                                    <telerik:Office_BlackTheme />
+                                </telerik:StyleManager.Theme>
+                                <telerik:RadToggleButton.Template>
+                                    <ControlTemplate
                                         TargetType="{x:Type telerik:RadToggleButton}">
-										<ContentPresenter
+                                        <ContentPresenter
                                             ContentTemplate="{TemplateBinding ContentTemplate}"
                                             Content="{TemplateBinding Content}"
                                             ContentStringFormat="{TemplateBinding ContentStringFormat}" />
-									</ControlTemplate>
-								</telerik:RadToggleButton.Template>
-								<Grid>
-									<Chromes:ButtonChrome
+                                    </ControlTemplate>
+                                </telerik:RadToggleButton.Template>
+                                <Grid>
+                                    <Chromes:ButtonChrome
                                         x:Name="ButtonChrome"
                                         Background="{TemplateBinding BorderBrush}"
                                         BorderThickness="0"
                                         CornerRadius="0,1,1,0"
                                         RenderEnabled="{TemplateBinding IsEnabled}" />
-									<ContentControl
+                                    <ContentControl
                                         x:Name="DropDownIcon"
                                         Background="White"
                                         Grid.Column="1"
                                         Foreground="{TemplateBinding Foreground}"
                                         IsTabStop="False">
-										<ContentControl.Template>
-											<ControlTemplate
+                                        <ContentControl.Template>
+                                            <ControlTemplate
                                                 TargetType="{x:Type ContentControl}">
-												<Grid
+                                                <Grid
                                                     Margin="5,0">
-													<Path
+                                                    <Path
                                                         x:Name="BackgroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Background}"
@@ -476,7 +476,7 @@
                                                         Margin="0,2,0,0"
                                                         Stretch="Fill"
                                                         Width="5" />
-													<Path
+                                                    <Path
                                                         x:Name="ForegroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Foreground}"
@@ -484,13 +484,13 @@
                                                         Margin="0,1"
                                                         Stretch="Fill"
                                                         Width="5" />
-												</Grid>
-											</ControlTemplate>
-										</ContentControl.Template>
-									</ContentControl>
-								</Grid>
-							</telerik:RadToggleButton>
-							<TextBlock
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ContentControl.Template>
+                                    </ContentControl>
+                                </Grid>
+                            </telerik:RadToggleButton>
+                            <TextBlock
                                 x:Name="Watermark"
                                 HorizontalAlignment="Left"
                                 IsHitTestVisible="False"
@@ -499,11 +499,11 @@
                                 Text="{TemplateBinding EmptyText}"
                                 Visibility="Collapsed"
                                 VerticalAlignment="Center" />
-							<Popup
+                            <Popup
                                 x:Name="PART_Popup">
-								<Grid
+                                <Grid
                                     x:Name="PopupRoot">
-									<Border
+                                    <Border
                                         x:Name="PART_ResizeBorder"
                                         Height="150"
                                         BorderBrush="Red"
@@ -512,25 +512,25 @@
                                         CornerRadius="1"
                                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                         MinWidth="{TemplateBinding MinDropDownWidth}">
-										<Grid>
-											<Grid.RowDefinitions>
-												<RowDefinition
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
                                                     Height="Auto" />
-												<RowDefinition
+                                                <RowDefinition
                                                     Height="*" />
-											</Grid.RowDefinitions>
-											<telerik:RadButton
+                                            </Grid.RowDefinitions>
+                                            <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
                                                 InnerCornerRadius="0"
                                                 Margin="-1,-1,-1,0"
                                                 Grid.Row="0"
                                                 Visibility="{TemplateBinding ClearSelectionButtonVisibility}">
-												<telerik:StyleManager.Theme>
-													<telerik:Office_BlackTheme />
-												</telerik:StyleManager.Theme>
-											</telerik:RadButton>
-											<ScrollViewer
+                                                <telerik:StyleManager.Theme>
+                                                    <telerik:Office_BlackTheme />
+                                                </telerik:StyleManager.Theme>
+                                            </telerik:RadButton>
+                                            <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
                                                 IsTabStop="False"
@@ -540,54 +540,54 @@
                                                 VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                                 Padding="0,1,0,0"
                                                 Grid.Row="1">
-												<ScrollViewer.InputBindings>
-													<KeyBinding
+                                                <ScrollViewer.InputBindings>
+                                                    <KeyBinding
                                                         Command="telerikPrimitives:ListControl.SelectAllCommand"
                                                         Key="A"
                                                         Modifiers="Control" />
-												</ScrollViewer.InputBindings>
-												<ItemsPresenter />
-											</ScrollViewer>
-										</Grid>
-									</Border>
-								</Grid>
-							</Popup>
-						</Grid>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-			<Setter
+                                                </ScrollViewer.InputBindings>
+                                                <ItemsPresenter />
+                                            </ScrollViewer>
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter
                 Property="NonEditableTemplate">
-				<Setter.Value>
-					<ControlTemplate
+                <Setter.Value>
+                    <ControlTemplate
                         TargetType="{x:Type telerik:RadComboBox}">
-						<Grid
+                        <Grid
                             x:Name="VisualRoot">
-							<VisualStateManager.VisualStateGroups>
-								<VisualStateGroup
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup
                                     x:Name="CommonStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Disabled" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Normal" />
-									<VisualState
+                                    <VisualState
                                         x:Name="MouseOver" />
-									<VisualState
+                                    <VisualState
                                         x:Name="DropDownOpen" />
-								</VisualStateGroup>
-								<VisualStateGroup
+                                </VisualStateGroup>
+                                <VisualStateGroup
                                     x:Name="FocusStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Focused" />
-									<VisualState
+                                    <VisualState
                                         x:Name="Unfocused" />
-								</VisualStateGroup>
-							</VisualStateManager.VisualStateGroups>
-							<Border
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border
                                 Background="{TemplateBinding Background}"
                                 CornerRadius="1"
                                 IsHitTestVisible="False" />
-							<telerik:RadToggleButton
+                            <telerik:RadToggleButton
                                 x:Name="PART_DropDownButton"
                                 ClickMode="Press"
                                 Foreground="{TemplateBinding Foreground}"
@@ -595,26 +595,26 @@
                                 InnerCornerRadius="0"
                                 Margin="0"
                                 Padding="0">
-								<telerik:StyleManager.Theme>
-									<telerik:Office_BlackTheme />
-								</telerik:StyleManager.Theme>
-								<telerik:RadToggleButton.Template>
-									<ControlTemplate
+                                <telerik:StyleManager.Theme>
+                                    <telerik:Office_BlackTheme />
+                                </telerik:StyleManager.Theme>
+                                <telerik:RadToggleButton.Template>
+                                    <ControlTemplate
                                         TargetType="{x:Type telerik:RadToggleButton}">
-										<ContentPresenter
+                                        <ContentPresenter
                                             ContentTemplate="{TemplateBinding ContentTemplate}"
                                             Content="{TemplateBinding Content}"
                                             ContentStringFormat="{TemplateBinding ContentStringFormat}" />
-									</ControlTemplate>
-								</telerik:RadToggleButton.Template>
-								<Grid>
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition
+                                    </ControlTemplate>
+                                </telerik:RadToggleButton.Template>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
                                             Width="*" />
-										<ColumnDefinition
+                                        <ColumnDefinition
                                             Width="Auto" />
-									</Grid.ColumnDefinitions>
-									<Border
+                                    </Grid.ColumnDefinitions>
+                                    <Border
                                         x:Name="DisabledBorder"
                                         BorderBrush="#FF989898"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -622,7 +622,7 @@
                                         CornerRadius="1"
                                         IsHitTestVisible="False"
                                         Opacity="0" />
-									<Chromes:ButtonChrome
+                                    <Chromes:ButtonChrome
                                         x:Name="ButtonChrome"
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -632,28 +632,28 @@
                                         RenderPressed="{TemplateBinding IsDropDownOpen}"
                                         RenderFocused="{TemplateBinding IsFocused}"
                                         RenderEnabled="{TemplateBinding IsEnabled}">
-										<telerik:StyleManager.Theme>
-											<telerik:Office_BlackTheme />
-										</telerik:StyleManager.Theme>
-									</Chromes:ButtonChrome>
-									<Border
+                                        <telerik:StyleManager.Theme>
+                                            <telerik:Office_BlackTheme />
+                                        </telerik:StyleManager.Theme>
+                                    </Chromes:ButtonChrome>
+                                    <Border
                                         Background="{TemplateBinding Background}"
                                         Grid.ColumnSpan="2"
                                         CornerRadius="1"
                                         IsHitTestVisible="False"
                                         Margin="1" />
-									<ContentControl
+                                    <ContentControl
                                         x:Name="DropDownIcon"
                                         Background="White"
                                         Grid.Column="1"
                                         Foreground="Black"
                                         IsTabStop="False">
-										<ContentControl.Template>
-											<ControlTemplate
+                                        <ContentControl.Template>
+                                            <ControlTemplate
                                                 TargetType="{x:Type ContentControl}">
-												<Grid
+                                                <Grid
                                                     Margin="5,0">
-													<Path
+                                                    <Path
                                                         x:Name="BackgroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Background}"
@@ -661,7 +661,7 @@
                                                         Margin="0,2,0,0"
                                                         Stretch="Fill"
                                                         Width="5" />
-													<Path
+                                                    <Path
                                                         x:Name="ForegroundIcon"
                                                         Data="M0,0L2,0 1,1z"
                                                         Fill="{TemplateBinding Foreground}"
@@ -669,11 +669,11 @@
                                                         Margin="0,1"
                                                         Stretch="Fill"
                                                         Width="5" />
-												</Grid>
-											</ControlTemplate>
-										</ContentControl.Template>
-									</ContentControl>
-									<ContentPresenter
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ContentControl.Template>
+                                    </ContentControl>
+                                    <ContentPresenter
                                         x:Name="Content"
                                         ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                                         Content="{TemplateBinding SelectionBoxItem}"
@@ -681,13 +681,13 @@
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-								</Grid>
-							</telerik:RadToggleButton>
-							<Popup
+                                </Grid>
+                            </telerik:RadToggleButton>
+                            <Popup
                                 x:Name="PART_Popup">
-								<Grid
+                                <Grid
                                     x:Name="PopupRoot">
-									<Border
+                                    <Border
                                         x:Name="PART_ResizeBorder"
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -695,25 +695,25 @@
                                         CornerRadius="1"
                                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                         MinWidth="{TemplateBinding MinDropDownWidth}">
-										<Grid>
-											<Grid.RowDefinitions>
-												<RowDefinition
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
                                                     Height="Auto" />
-												<RowDefinition
+                                                <RowDefinition
                                                     Height="*" />
-											</Grid.RowDefinitions>
-											<telerik:RadButton
+                                            </Grid.RowDefinitions>
+                                            <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
                                                 InnerCornerRadius="0"
                                                 Margin="-1,-1,-1,0"
                                                 Grid.Row="0"
                                                 Visibility="{TemplateBinding ClearSelectionButtonVisibility}">
-												<telerik:StyleManager.Theme>
-													<telerik:Office_BlackTheme />
-												</telerik:StyleManager.Theme>
-											</telerik:RadButton>
-											<ScrollViewer
+                                                <telerik:StyleManager.Theme>
+                                                    <telerik:Office_BlackTheme />
+                                                </telerik:StyleManager.Theme>
+                                            </telerik:RadButton>
+                                            <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
                                                 IsTabStop="False"
@@ -723,154 +723,154 @@
                                                 VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                                 Padding="0,1,0,0"
                                                 Grid.Row="1">
-												<ScrollViewer.InputBindings>
-													<KeyBinding
+                                                <ScrollViewer.InputBindings>
+                                                    <KeyBinding
                                                         Command="telerikPrimitives:ListControl.SelectAllCommand"
                                                         Key="A"
                                                         Modifiers="Control" />
-												</ScrollViewer.InputBindings>
-												<ItemsPresenter />
-											</ScrollViewer>
-										</Grid>
-									</Border>
-								</Grid>
-							</Popup>
-						</Grid>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-			<Setter
+                                                </ScrollViewer.InputBindings>
+                                                <ItemsPresenter />
+                                            </ScrollViewer>
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter
                 Property="HorizontalContentAlignment"
                 Value="Stretch" />
-			<Setter
+            <Setter
                 Property="VerticalContentAlignment"
                 Value="Center" />
-			<Setter
+            <Setter
                 Property="MinHeight"
                 Value="22" />
-			<Setter
+            <Setter
                 Property="Padding"
                 Value="4,0" />
-			<Setter
+            <Setter
                 Property="Background"
                 Value="Transparent" />
-			<Setter
+            <Setter
                 Property="Foreground"
                 Value="Black" />
-			<Setter
+            <Setter
                 Property="BorderBrush"
                 Value="#FF848484" />
-			<Setter
+            <Setter
                 Property="BorderThickness"
                 Value="1" />
-			<Setter
+            <Setter
                 Property="ScrollViewer.VerticalScrollBarVisibility"
                 Value="Auto" />
-			<Setter
+            <Setter
                 Property="ScrollViewer.HorizontalScrollBarVisibility"
                 Value="Auto" />
-			<Setter
+            <Setter
                 Property="SnapsToDevicePixels"
                 Value="True" />
-			<Setter
+            <Setter
                 Property="FocusVisualStyle"
                 Value="{x:Null}" />
-			<Setter
+            <Setter
                 Property="Validation.ErrorTemplate">
-				<Setter.Value>
-					<ControlTemplate />
-				</Setter.Value>
-			</Setter>
-		</Style>
+                <Setter.Value>
+                    <ControlTemplate />
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadComboBoxItemStyle1"
             TargetType="{x:Type telerik:RadComboBoxItem}">
-			<Setter
+            <Setter
                 Property="MinHeight"
                 Value="19" />
-			<Setter
+            <Setter
                 Property="Margin"
                 Value="0,-1,0,0" />
-			<Setter
+            <Setter
                 Property="BorderThickness"
                 Value="1" />
-			<Setter
+            <Setter
                 Property="BorderBrush"
                 Value="Transparent" />
-			<Setter
+            <Setter
                 Property="Background"
                 Value="Transparent" />
-			<Setter
+            <Setter
                 Property="Padding"
                 Value="3,2" />
-			<Setter
+            <Setter
                 Property="HorizontalContentAlignment"
                 Value="Stretch" />
-			<Setter
+            <Setter
                 Property="VerticalContentAlignment"
                 Value="Center" />
-			<Setter
+            <Setter
                 Property="FocusVisualStyle"
                 Value="{x:Null}" />
-			<Setter
+            <Setter
                 Property="Template">
-				<Setter.Value>
-					<ControlTemplate
+                <Setter.Value>
+                    <ControlTemplate
                         TargetType="{x:Type telerik:RadComboBoxItem}">
-						<Border
+                        <Border
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}">
-							<VisualStateManager.VisualStateGroups>
-								<VisualStateGroup
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup
                                     x:Name="CommonStates">
-									<VisualState
+                                    <VisualState
                                         x:Name="Normal" />
-									<VisualState
+                                    <VisualState
                                         x:Name="MouseOver">
-										<Storyboard>
-											<ObjectAnimationUsingKeyFrames
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames
                                                 Storyboard.TargetProperty="Visibility"
                                                 Storyboard.TargetName="HighlightVisual">
-												<DiscreteObjectKeyFrame
+                                                <DiscreteObjectKeyFrame
                                                     KeyTime="0">
-													<DiscreteObjectKeyFrame.Value>
-														<Visibility>Visible</Visibility>
-													</DiscreteObjectKeyFrame.Value>
-												</DiscreteObjectKeyFrame>
-											</ObjectAnimationUsingKeyFrames>
-										</Storyboard>
-									</VisualState>
-									<VisualState
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState
                                         x:Name="Disabled">
-										<Storyboard>
-											<DoubleAnimationUsingKeyFrames
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames
                                                 Storyboard.TargetProperty="Opacity"
                                                 Storyboard.TargetName="Content">
-												<DiscreteDoubleKeyFrame
+                                                <DiscreteDoubleKeyFrame
                                                     KeyTime="0"
                                                     Value="0.33" />
-											</DoubleAnimationUsingKeyFrames>
-										</Storyboard>
-									</VisualState>
-								</VisualStateGroup>
-							</VisualStateManager.VisualStateGroups>
-							<Grid>
-								<Border
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid>
+                                <Border
                                     x:Name="HighlightVisual"
                                     Background="{StaticResource BackgroundBrush4}"
                                     BorderBrush="{StaticResource BackgroundBrush4}"
                                     BorderThickness="1"
                                     CornerRadius="1"
                                     Visibility="Collapsed">
-									<Border
+                                    <Border
                                         BorderBrush="White"
                                         BorderThickness="0"
                                         CornerRadius="0" />
-								</Border>
-								<Grid>
-									<ContentPresenter
+                                </Border>
+                                <Grid>
+                                    <ContentPresenter
                                         x:Name="Content"
                                         ContentTemplate="{TemplateBinding ContentTemplate}"
                                         Content="{Binding DecodedName}"
@@ -878,368 +878,368 @@
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-									<TextBlock
+                                    <TextBlock
                                         Text="{Binding Path=PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
                                         HorizontalAlignment="Right"
                                         Margin="0 0 5 0"
                                         Style="{StaticResource Title_H2}" />
-								</Grid>
-							</Grid>
-						</Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
 
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-		<DataTemplate
+        <DataTemplate
             x:Key="IconTemplate">
-			<Image
+            <Image
                 Height="25"
                 Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
                 Stretch="Uniform" />
-		</DataTemplate>
+        </DataTemplate>
 
-		<Style
+        <Style
             x:Key="RadioButtonLeftLowRes"
             BasedOn="{StaticResource RadioButtonLeft}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="136" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonLeftHighRes"
             BasedOn="{StaticResource RadioButtonLeft}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="180" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonMiddleLowRes"
             BasedOn="{StaticResource RadioButtonMiddle}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="116" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonHudHighRes"
             BasedOn="{StaticResource RadioButtonMiddle}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="180" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonHudLowRes"
             BasedOn="{StaticResource RadioButtonMiddle}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="106" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonMiddleHighRes"
             BasedOn="{StaticResource RadioButtonMiddle}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="180" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonRightLowRes"
             BasedOn="{StaticResource RadioButtonLowResRight}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="106" />
-		</Style>
+        </Style>
 
-		<Style
+        <Style
             x:Key="RadioButtonRightHighRes"
             BasedOn="{StaticResource RadioButtonRight}"
             TargetType="{x:Type RadioButton}">
-			<Setter
+            <Setter
                 Property="Width"
                 Value="180" />
 
 
-		</Style>
+        </Style>
 
-	</telerik:RadWindow.Resources>
+    </telerik:RadWindow.Resources>
 
-	<telerik:RadWindow.IconTemplate>
-		<DataTemplate>
-			<Image
+    <telerik:RadWindow.IconTemplate>
+        <DataTemplate>
+            <Image
                 Height="25"
                 Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
                 Stretch="Uniform" />
-		</DataTemplate>
-	</telerik:RadWindow.IconTemplate>
+        </DataTemplate>
+    </telerik:RadWindow.IconTemplate>
 
-	<i:Interaction.Triggers>
-		<i:EventTrigger
+    <i:Interaction.Triggers>
+        <i:EventTrigger
             EventName="PreviewClosed">
-			<ia:CallMethodAction
+            <ia:CallMethodAction
                 MethodName="MainWindow_PreviewClosed"
                 TargetObject="{Binding}" />
-		</i:EventTrigger>
+        </i:EventTrigger>
 
-		<prism:InteractionRequestTrigger
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
-			<infra:PopupTelerikWindowAction
+            <infra:PopupTelerikWindowAction
                 IsModal="True"
                 WindowContent="{StaticResource NotificationWindowContentTemplate}">
-				<infra:PopupTelerikWindowAction.WindowStyle>
-					<Style
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
                         TargetType="{x:Type telerik:RadWindow}"
                         BasedOn="{StaticResource NotificationWindowStyle}">
-						<Setter
+                        <Setter
                             Property="Width"
                             Value="500" />
-						<Setter
+                        <Setter
                             Property="MinHeight"
                             Value="200" />
-						<Setter
+                        <Setter
                             Property="Height"
                             Value="Auto" />
-						<Setter
+                        <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-					</Style>
-				</infra:PopupTelerikWindowAction.WindowStyle>
-			</infra:PopupTelerikWindowAction>
-		</prism:InteractionRequestTrigger>
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
 
-		<prism:InteractionRequestTrigger
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupSupportRequest, Mode=OneWay}">
-			<infra:PopupTelerikWindowAction>
-				<infra:PopupTelerikWindowAction.WindowStyle>
-					<Style
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
                         TargetType="{x:Type telerik:RadWindow}">
-						<Setter
+                        <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
-						<Setter
+                        <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-						<Setter
+                        <Setter
                             Property="Height"
                             Value="550" />
-						<Setter
+                        <Setter
                             Property="MinHeight"
                             Value="550" />
-						<Setter
+                        <Setter
                             Property="Width"
                             Value="500" />
-						<Setter
+                        <Setter
                             Property="MinWidth"
                             Value="500" />
-						<Setter
+                        <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-						<Setter
+                        <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />
-					</Style>
-				</infra:PopupTelerikWindowAction.WindowStyle>
-				<infra:PopupTelerikWindowAction.IsModal>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.IsModal>
-				<infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-				<infra:PopupTelerikWindowAction.WindowContent>
-					<vp:PopupContainerSupportView />
-				</infra:PopupTelerikWindowAction.WindowContent>
-			</infra:PopupTelerikWindowAction>
-		</prism:InteractionRequestTrigger>
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerSupportView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
 
-		<prism:InteractionRequestTrigger
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupSettingsRequest, Mode=OneWay}">
-			<infra:PopupTelerikWindowAction>
-				<infra:PopupTelerikWindowAction.WindowStyle>
-					<Style
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
                         TargetType="{x:Type telerik:RadWindow}">
-						<Setter
+                        <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
-						<Setter
+                        <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-						<Setter
+                        <Setter
                             Property="Height"
                             Value="650" />
-						<Setter
+                        <Setter
                             Property="MinHeight"
                             Value="650" />
-						<Setter
+                        <Setter
                             Property="Width"
                             Value="550" />
-						<Setter
+                        <Setter
                             Property="MinWidth"
                             Value="550" />
-						<Setter
+                        <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-						<Setter
+                        <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />
-					</Style>
-				</infra:PopupTelerikWindowAction.WindowStyle>
-				<infra:PopupTelerikWindowAction.IsModal>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.IsModal>
-				<infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-				<infra:PopupTelerikWindowAction.WindowContent>
-					<vp:PopupContainerSettingsView />
-				</infra:PopupTelerikWindowAction.WindowContent>
-			</infra:PopupTelerikWindowAction>
-		</prism:InteractionRequestTrigger>
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerSettingsView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
 
-		<prism:InteractionRequestTrigger
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
-			<infra:PopupTelerikWindowAction>
-				<infra:PopupTelerikWindowAction.WindowStyle>
-					<Style
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
                         TargetType="{x:Type telerik:RadWindow}">
-						<Setter
+                        <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
-						<Setter
+                        <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-						<Setter
+                        <Setter
                             Property="Height"
                             Value="750" />
-						<Setter
+                        <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-						<Setter
+                        <Setter
                             Property="MaxWidth"
                             Value="1000" />
-						<Setter
+                        <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />
-					</Style>
-				</infra:PopupTelerikWindowAction.WindowStyle>
-				<infra:PopupTelerikWindowAction.IsModal>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.IsModal>
-				<infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-				<infra:PopupTelerikWindowAction.WindowContent>
-					<vp:PopupContainerFiltersView>
-						<vp:PopupContainerFiltersView.DataContext>
-							<vmp:PopupContainerFiltersViewModel />
-						</vp:PopupContainerFiltersView.DataContext>
-					</vp:PopupContainerFiltersView>
-				</infra:PopupTelerikWindowAction.WindowContent>
-			</infra:PopupTelerikWindowAction>
-		</prism:InteractionRequestTrigger>
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerFiltersView>
+                        <vp:PopupContainerFiltersView.DataContext>
+                            <vmp:PopupContainerFiltersViewModel />
+                        </vp:PopupContainerFiltersView.DataContext>
+                    </vp:PopupContainerFiltersView>
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
 
-		<prism:InteractionRequestTrigger
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding RegistrationViewRequest,Mode=OneWay}">
-			<infra:PopupWindowAction>
-				<infra:PopupWindowAction.WindowStyle>
-					<Style
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
+                    <Style
                         TargetType="{x:Type Window}">
-						<Setter
+                        <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
-						<Setter
+                        <Setter
                             Property="Background"
                             Value="{StaticResource PopupBackground}" />
-						<Setter
+                        <Setter
                             Property="Height"
                             Value="320" />
-						<Setter
+                        <Setter
                             Property="ResizeMode"
                             Value="NoResize" />
-						<Setter
+                        <Setter
                             Property="Width"
                             Value="560" />
-						<Setter
+                        <Setter
                             Property="ShowInTaskbar"
                             Value="False" />
-					</Style>
-				</infra:PopupWindowAction.WindowStyle>
-				<infra:PopupWindowAction.IsModal>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupWindowAction.IsModal>
-				<infra:PopupWindowAction.CenterOverAssociatedObject>
-					<system:Boolean>True</system:Boolean>
-				</infra:PopupWindowAction.CenterOverAssociatedObject>
-				<infra:PopupWindowAction.WindowContent>
-					<v:RegistrationView />
-				</infra:PopupWindowAction.WindowContent>
-				<infra:PopupWindowAction.HasBorder>
-					<system:Boolean>False</system:Boolean>
-				</infra:PopupWindowAction.HasBorder>
-			</infra:PopupWindowAction>
-		</prism:InteractionRequestTrigger>
+                    </Style>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.WindowContent>
+                    <v:RegistrationView />
+                </infra:PopupWindowAction.WindowContent>
+                <infra:PopupWindowAction.HasBorder>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+            </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
 
-	</i:Interaction.Triggers>
+    </i:Interaction.Triggers>
 
 
-	<Grid
+    <Grid
         x:Name="LayoutRoot"
         dh:GridExtensions.IsBlurEnabled="{Binding IsActive, Converter={dh:BoolNotConverter}}">
-		<Grid.RowDefinitions>
-			<RowDefinition
+        <Grid.RowDefinitions>
+            <RowDefinition
                 Height="Auto" />
-			<RowDefinition
+            <RowDefinition
                 Height="10" />
-			<RowDefinition
+            <RowDefinition
                 Height="*" />
-			<RowDefinition
+            <RowDefinition
                 Height="Auto"
                 MinHeight="20" />
-		</Grid.RowDefinitions>
+        </Grid.RowDefinitions>
 
-		<!-- ************************************************************************************ -->
-		<!-- VIEW SELECTOR TABS ***************************************************************** -->
-		<!-- ************************************************************************************ -->
-		<Grid
+        <!-- ************************************************************************************ -->
+        <!-- VIEW SELECTOR TABS ***************************************************************** -->
+        <!-- ************************************************************************************ -->
+        <Grid
             x:Name="HeaderArea"
             Grid.Row="0">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
                     Width="10" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="Auto" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="*" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="40" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="420" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="10" />
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition
                     Height="5" />
-				<RowDefinition
+                <RowDefinition
                     Height="25" />
-				<RowDefinition
+                <RowDefinition
                     Height="40" />
-				<RowDefinition
+                <RowDefinition
                     Height="*" />
-			</Grid.RowDefinitions>
+            </Grid.RowDefinitions>
 
-			<Rectangle
+            <Rectangle
                 Grid.ColumnSpan="2"
                 Grid.Row="1"
                 StrokeThickness="30"
@@ -1247,13 +1247,13 @@
                 Fill="{StaticResource BackgroundBrush1}"
                 Stretch="Fill"
                 VerticalAlignment="Top" />
-			<Border
+            <Border
                 BorderBrush="{StaticResource BackgroundBrush2}"
                 BorderThickness="1"
                 VerticalAlignment="Bottom"
                 CornerRadius="0 1 0 0"
                 Height="1" />
-			<Border
+            <Border
                 Grid.Column="2"
                 Grid.ColumnSpan="3"
                 BorderBrush="{StaticResource BackgroundBrush2}"
@@ -1262,7 +1262,7 @@
                 CornerRadius="1 0 0 0"
                 Height="1" />
 
-			<StackPanel
+            <StackPanel
                 Grid.Column="1"
                 Grid.Row="1"
                 Grid.RowSpan="2"
@@ -1270,7 +1270,7 @@
                 Orientation="Horizontal"
                 VerticalAlignment="Top">
 
-				<RadioButton
+                <RadioButton
                     Content="{ResX Key=Main_TopMenu_Dashboard}"
                     GroupName="RadioGroupTab"
                     Height="63"
@@ -1282,7 +1282,7 @@
                     Command="{Binding Path=RadioGroupTab_CommandClick}"
                     CommandParameter="{x:Static enums:EnumViewModelType.DashboardViewModel}" />
 
-				<RadioButton
+                <RadioButton
                     Content="{ResX Key=Main_TopMenu_Tournament}"
                     GroupName="RadioGroupTab"
                     Height="63"
@@ -1294,7 +1294,7 @@
                     Command="{Binding Path=RadioGroupTab_CommandClick}"
                     CommandParameter="{x:Static enums:EnumViewModelType.TournamentViewModel}" />
 
-				<RadioButton
+                <RadioButton
                     GroupName="RadioGroupTab"
                     Height="63"
                     FontSize="15"
@@ -1304,70 +1304,70 @@
                     IsChecked="{Binding Path=HudViewModel.IsActive}"
                     Command="{Binding Path=RadioGroupTab_CommandClick}"
                     CommandParameter="{x:Static enums:EnumViewModelType.HudViewModel}">
-					<RadioButton.ContentTemplate>
+                    <RadioButton.ContentTemplate>
 
-						<DataTemplate>
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
                                         Width="*" />
-									<ColumnDefinition
+                                    <ColumnDefinition
                                         Width="15" />
-									<ColumnDefinition
+                                    <ColumnDefinition
                                         Width="*" />
-								</Grid.ColumnDefinitions>
+                                </Grid.ColumnDefinitions>
 
-								<TextBlock
+                                <TextBlock
                                     Margin="0"
                                     Text="{ResX Key=Main_TopMenu_Hud}"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     FontSize="15" />
 
-								<Button
+                                <Button
                                     Grid.Column="2"
                                     Width="40"
-									Background="#2a2d31"
+                                    Background="#2a2d31"
                                     HorizontalAlignment="Center"
                                     Visibility="{Binding Path=DataContext.IsHudRunning, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Visible}"
                                     Command="{Binding DataContext.StartHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
-									<Button.Content>
-										<Path
+                                    <Button.Content>
+                                        <Path
                                             Visibility="Visible"
                                             Data="M0,0 L9.501,4.7503333 0,9.5 z">
-											<Path.Fill>
-												<SolidColorBrush
+                                            <Path.Fill>
+                                                <SolidColorBrush
                                                     Color="{StaticResource BackgroundBrushColor4}" />
-											</Path.Fill>
-										</Path>
-									</Button.Content>
-								</Button>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Button.Content>
+                                </Button>
 
-								<Button
+                                <Button
                                     Grid.Column="2"
                                     Width="40"
                                     Background="#2a2d31"
                                     HorizontalAlignment="Center"
                                     Visibility="{Binding Path=DataContext.IsHudRunning, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                                     Command="{Binding DataContext.StopHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
-									<Button.Content>
-										<Path
+                                    <Button.Content>
+                                        <Path
                                             Visibility="Visible"
                                             Data="M0,0 L9.5,0 L9.5,9.5 L0,9.5 z">
-											<Path.Fill>
-												<SolidColorBrush
+                                            <Path.Fill>
+                                                <SolidColorBrush
                                                     Color="{StaticResource BackgroundBrushColor4}" />
-											</Path.Fill>
-										</Path>
-									</Button.Content>
-								</Button>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Button.Content>
+                                </Button>
 
-							</Grid>
-						</DataTemplate>
-					</RadioButton.ContentTemplate>
-				</RadioButton>
+                            </Grid>
+                        </DataTemplate>
+                    </RadioButton.ContentTemplate>
+                </RadioButton>
 
-				<RadioButton
+                <RadioButton
                     Content="{ResX Key=Main_TopMenu_Apps}"
                     GroupName="RadioGroupTab"
                     Height="63"
@@ -1379,97 +1379,97 @@
                     Command="{Binding Path=RadioGroupTab_CommandClick}"
                     CommandParameter="{x:Static enums:EnumViewModelType.AppsViewModel}" />
 
-			</StackPanel>
+            </StackPanel>
 
-			<!-- Version panel -->
-			<StackPanel
+            <!-- Version panel -->
+            <StackPanel
                 Grid.Row="1"
                 Grid.Column="4"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
 
-				<TextBlock>
-					<TextBlock.Text>
-						<ResX
+                <TextBlock>
+                    <TextBlock.Text>
+                        <ResX
                             Key="Common_Main_Version">
-							<ResXParam
+                            <ResXParam
                                 Path="Version" />
-						</ResX>
-					</TextBlock.Text>
+                        </ResX>
+                    </TextBlock.Text>
 
-				</TextBlock>
+                </TextBlock>
 
-				<TextBlock
+                <TextBlock
                     Text="{ResX Key=Common_Main_Trial}"
                     Visibility="{Binding IsTrial, Converter={dh:BoolToVisibilityConverter}}"
                     Margin="3,0,0,0" />
 
-				<TextBlock
+                <TextBlock
                     Text=" - " />
 
-				<Button
+                <Button
                     Margin="0,0,0,-1"
                     Style="{StaticResource SimpleButtonStyle}"
                     Content="{ResX Common_Main_Purchase}"
                     Command="{Binding PurchaseCommand}" />
 
-				<TextBlock
+                <TextBlock
                     Text=" - "
                     Visibility="{Binding IsUpgradable, Converter={dh:BoolToVisibilityConverter}}" />
 
-				<Button
+                <Button
                     Margin="0,0,10,-1"
                     Style="{StaticResource SimpleButtonStyle}"
                     Content="{ResX Common_Main_Upgrade}"
                     Command="{Binding UpgradeCommand}"
                     Visibility="{Binding IsUpgradable, Converter={dh:BoolToVisibilityConverter}}" />
 
-			</StackPanel>
+            </StackPanel>
 
-			<!-- ************************************************************************************ -->
-			<!-- COMMANDS PANEL ********************************************************************* -->
-			<!-- ************************************************************************************ -->
+            <!-- ************************************************************************************ -->
+            <!-- COMMANDS PANEL ********************************************************************* -->
+            <!-- ************************************************************************************ -->
 
 
 
-			<StackPanel
+            <StackPanel
                 x:Name="UserPanel"
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="3"
-				
+                
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 application:MarginSetter.Margin="10 0 0 0">
 
-				<telerik:RadRibbonDropDownButton x:Name="RadRibbonDropDownButton"
+                <telerik:RadRibbonDropDownButton x:Name="RadRibbonDropDownButton"
                     Foreground="White"
                     VerticalAlignment="Stretch"
                     Margin="0"
-                    Width="100"	
-					KeepOpen="{Binding RadDropDownButtonFilterKeepOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-					IsOpen="{Binding RadDropDownButtonFilterIsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Width="100"    
+                    KeepOpen="{Binding RadDropDownButtonFilterKeepOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    IsOpen="{Binding RadDropDownButtonFilterIsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
-					<!--, RelativeSource={RelativeSource AncestorType=application:MainWindow-->
+                    <!--, RelativeSource={RelativeSource AncestorType=application:MainWindow-->
 
-					<telerik:RadRibbonDropDownButton.DropDownContent>
-						<telerik:RadContextMenu	x:Name="RadContextMenu"
-												BorderThickness="0"
-												DataContext="{Binding}"
-												Background="{StaticResource BackgroundBrush3}"
-												ItemsSource="{Binding Path=FilterTypeList}"
-												Style="{StaticResource RadContextMenuStyle1}"
-												ItemContainerTemplateSelector="{StaticResource FilterTemplateSelector}">
+                    <telerik:RadRibbonDropDownButton.DropDownContent>
+                        <telerik:RadContextMenu    x:Name="RadContextMenu"
+                                                BorderThickness="0"
+                                                DataContext="{Binding}"
+                                                Background="{StaticResource BackgroundBrush3}"
+                                                ItemsSource="{Binding Path=FilterTypeList}"
+                                                Style="{StaticResource RadContextMenuStyle1}"
+                                                ItemContainerTemplateSelector="{StaticResource FilterTemplateSelector}">
 
-						</telerik:RadContextMenu>
+                        </telerik:RadContextMenu>
 
-					</telerik:RadRibbonDropDownButton.DropDownContent>
-				</telerik:RadRibbonDropDownButton>
+                    </telerik:RadRibbonDropDownButton.DropDownContent>
+                </telerik:RadRibbonDropDownButton>
 
-				<telerik:RadComboBox
+                <telerik:RadComboBox
                     MinWidth="150"
                     IsEditable="True"
                     Foreground="White"
@@ -1480,13 +1480,13 @@
                     ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
                     Style="{StaticResource RadComboBoxStyle1}"
                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
-					<telerik:RadComboBox.ItemsPanel>
-						<ItemsPanelTemplate>
-							<VirtualizingStackPanel />
-						</ItemsPanelTemplate>
-					</telerik:RadComboBox.ItemsPanel>
-				</telerik:RadComboBox>
-				<telerik:RadRibbonDropDownButton
+                    <telerik:RadComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </telerik:RadComboBox.ItemsPanel>
+                </telerik:RadComboBox>
+                <telerik:RadRibbonDropDownButton
                     Foreground="White"
                     VerticalAlignment="Stretch"
                     Text="Import"
@@ -1495,124 +1495,124 @@
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
-					<telerik:RadRibbonDropDownButton.DropDownContent>
-						<telerik:RadContextMenu
+                    <telerik:RadRibbonDropDownButton.DropDownContent>
+                        <telerik:RadContextMenu
                             BorderThickness="0"
                             Background="{StaticResource BackgroundBrush3}"
                             Style="{StaticResource RadContextMenuStyle1}">
-							<telerik:RadMenuItem
+                            <telerik:RadMenuItem
                                 Header="Import from file"
                                 Command="{Binding ImportFromFileCommand}" />
-							<telerik:RadMenuItem
+                            <telerik:RadMenuItem
                                 Header="Import from directory"
                                 Command="{Binding ImportFromDirectoryCommand}" />
-						</telerik:RadContextMenu>
-					</telerik:RadRibbonDropDownButton.DropDownContent>
-				</telerik:RadRibbonDropDownButton>
-				<Button
+                        </telerik:RadContextMenu>
+                    </telerik:RadRibbonDropDownButton.DropDownContent>
+                </telerik:RadRibbonDropDownButton>
+                <Button
                     Name="btnPurge"
                     Width="40"
                     Background="#2a2d31"
                     Visibility="Collapsed"
                     Command="{Binding PurgeCommand}">
-					<Path
+                    <Path
                         Visibility="Visible"
                         Data="F1M16,5.317C16,5.317 11.414,9.904 11.414,9.904 10.632,10.685 9.367,10.685 8.585,9.904 8.585,9.904 3.999,5.319 3.999,5.319 3.999,5.319 3.999,11.999 3.999,11.999 3.999,12.552 4.447,12.999 4.999,12.999 4.999,12.999 14.999,12.999 14.999,12.999 15.552,12.999 16,12.552 16,11.999 16,11.999 16,5.317 16,5.317z M5.508,3.999C5.508,3.999 9.292,7.783 9.292,7.783 9.683,8.174 10.316,8.174 10.706,7.783 10.706,7.783 14.491,3.999 14.491,3.999 14.491,3.999 5.508,3.999 5.508,3.999z M3.999,1.999C3.999,1.999 16,1.999 16,1.999 17.104,1.999 17.999,2.895 17.999,3.999 17.999,3.999 17.999,12.999 17.999,12.999 17.999,14.103 17.104,14.999 16,14.999 16,14.999 3.999,14.999 3.999,14.999 2.895,14.999 1.999,14.103 1.999,12.999 1.999,12.999 1.999,3.999 1.999,3.999 1.999,2.895 2.895,1.999 3.999,1.999z">
-						<Path.Fill>
-							<SolidColorBrush
+                        <Path.Fill>
+                            <SolidColorBrush
                                 Color="{StaticResource BackgroundBrushColor4}" />
-						</Path.Fill>
-					</Path>
-				</Button>
-				<Button
+                        </Path.Fill>
+                    </Path>
+                </Button>
+                <Button
                     Width="40"
                     Background="#2a2d31"
                     Command="{Binding SettingsCommand}">
-					<Path
+                    <Path
                         Visibility="Visible"
                         Data="F1M9,7.999C10.104,7.999 11,8.895 11,9.999 11,11.104 10.104,11.999 9,11.999 7.895,11.999 7,11.104 7,9.999 7,8.895 7.895,7.999 9,7.999z M9,5.999C6.791,5.999 5,7.79 5,9.999 5,12.208 6.791,13.999 9,13.999 11.209,13.999 13,12.208 13,9.999 13,7.79 11.209,5.999 9,5.999z M9,1.999C10.104,1.999 11,2.895 11,3.999 11,3.999 11,4.367 11,4.367 11.663,4.602 12.264,4.95 12.797,5.389 12.797,5.389 12.971,5.284 12.971,5.284 12.971,5.284 12.975,5.291 12.975,5.291 13.275,5.11 13.623,4.999 14,4.999 15.104,4.999 16,5.895 16,6.999 16,7.727 15.607,8.358 15.025,8.708 15.025,8.708 15.029,8.714 15.029,8.714 15.029,8.714 14.879,8.804 14.879,8.804 14.957,9.19 15,9.59 15,9.999 15,10.409 14.957,10.808 14.879,11.195 14.879,11.195 15.029,11.284 15.029,11.284 15.029,11.284 15.025,11.29 15.025,11.29 15.607,11.64 16,12.271 16,12.999 16,14.104 15.104,14.999 14,14.999 13.623,14.999 13.275,14.889 12.975,14.708 12.975,14.708 12.971,14.714 12.971,14.714 12.971,14.714 12.797,14.61 12.797,14.61 12.264,15.049 11.663,15.396 11,15.632 11,15.632 11,15.999 11,15.999 11,17.104 10.104,17.999 9,17.999 7.895,17.999 7,17.104 7,15.999 7,15.999 7,15.632 7,15.632 6.337,15.396 5.735,15.049 5.203,14.61 5.203,14.61 5.029,14.714 5.029,14.714 5.029,14.714 5.025,14.708 5.025,14.708 4.724,14.889 4.376,14.999 4,14.999 2.895,14.999 2,14.104 2,12.999 2,12.271 2.393,11.64 2.975,11.29 2.975,11.29 2.971,11.284 2.971,11.284 2.971,11.284 3.12,11.195 3.12,11.195 3.042,10.808 3,10.409 3,9.999 3,9.59 3.042,9.19 3.12,8.804 3.12,8.804 2.971,8.714 2.971,8.714 2.971,8.714 2.975,8.708 2.975,8.708 2.393,8.358 2,7.727 2,6.999 2,5.895 2.895,4.999 4,4.999 4.376,4.999 4.724,5.11 5.025,5.291 5.025,5.291 5.029,5.284 5.029,5.284 5.029,5.284 5.203,5.389 5.203,5.389 5.735,4.95 6.337,4.602 7,4.367 7,4.367 7,3.999 7,3.999 7,2.895 7.895,1.999 9,1.999z">
-						<Path.Fill>
-							<SolidColorBrush
+                        <Path.Fill>
+                            <SolidColorBrush
                                 Color="{StaticResource BackgroundBrushColor4}" />
-						</Path.Fill>
-					</Path>
-				</Button>
-				<Button
+                        </Path.Fill>
+                    </Path>
+                </Button>
+                <Button
                     Width="40"
                     Background="#2a2d31"
                     Command="{Binding SupportCommand}">
-					<Path
+                    <Path
                         Visibility="Visible"
                         Stretch="Uniform"
                         Margin="0 1 0 0"
                         Width="20"
                         Data="F1M61.7078,307.2166C62.5448,304.0326,63.2838,300.8186,64.2348,297.6686C69.1768,281.3086,79.0558,268.7586,93.8078,260.1896C96.5038,258.6226,97.9128,256.8346,98.5758,253.8376C117.2438,169.4216,185.7508,102.3776,271.1878,85.1466C324.6178,74.3706,375.4048,81.8006,422.2988,109.9076C474.9528,141.4666,506.8248,188.3606,520.4338,247.9206C521.1668,251.1306,522.2938,252.5696,525.6168,253.3876C553.0888,260.1476,573.2488,285.5096,573.5718,313.8546C573.8178,335.5146,573.7978,357.1796,573.5928,378.8406C573.3808,401.2556,563.7918,418.9336,545.4318,431.6956C542.6088,433.6586,541.5968,435.5466,541.5938,438.9086C541.5798,455.7096,542.3228,472.5376,538.7638,489.1816C532.3218,519.3106,514.5758,536.0686,483.9418,538.0986C462.2008,539.5396,440.3238,539.0416,418.5058,539.1626C392.0218,539.3096,365.5358,539.1976,339.8178,539.1976C336.1948,544.7246,333.4138,550.1286,329.5688,554.6226C315.6188,570.9296,292.9498,575.7036,273.6738,566.8416C254.6758,558.1086,243.0878,537.2416,246.0068,517.0206C249.1318,495.3696,265.1738,479.1136,286.8798,475.6016C307.0518,472.3366,327.7038,483.4406,336.8178,502.7856C338.3798,506.1016,340.0038,507.3096,343.7768,507.2936C384.9338,507.1216,426.0908,507.2646,467.2478,507.0956C474.2008,507.0676,481.2208,506.4036,488.0808,505.2586C497.0838,503.7546,503.1068,498.0256,505.6388,489.3906C507.4498,483.2136,508.7258,476.7436,509.1558,470.3316C509.7438,461.5616,509.3028,452.7226,509.3028,443.7606C504.3848,442.9426,499.2848,442.4276,494.3548,441.2186C465.9388,434.2536,445.9438,409.0636,445.6928,379.8046C445.5098,358.4776,445.6068,337.1486,445.6348,315.8196C445.6708,288.2116,462.4978,264.4726,488.6178,255.0806C489.5488,254.7456,490.4658,254.3716,492.5108,253.5836C489.5588,244.3026,487.2128,234.8016,483.5728,225.8246C459.5658,166.6296,417.1208,127.2896,354.4148,113.9576C283.6048,98.9026,222.8548,120.5766,172.8258,172.2856C152.7268,193.0596,138.8248,217.7906,130.4188,245.5196C129.8948,247.2476,129.4528,249.0006,128.9678,250.7606C135.4058,252.3396,141.8928,253.2616,147.8788,255.5136C173.6608,265.2116,189.5278,288.3696,189.6668,316.0306C189.7718,336.8586,189.7628,357.6886,189.6708,378.5166C189.5218,412.5266,164.4528,439.9996,130.9348,443.0206C98.1508,445.9766,68.6038,422.8146,62.5808,389.4656C62.4398,388.6856,62.0048,387.9586,61.7078,387.2066z">
-						<Path.Fill>
-							<SolidColorBrush
+                        <Path.Fill>
+                            <SolidColorBrush
                                 Color="{StaticResource BackgroundBrushColor4}" />
-						</Path.Fill>
-					</Path>
-				</Button>
-			</StackPanel>
+                        </Path.Fill>
+                    </Path>
+                </Button>
+            </StackPanel>
 
-		</Grid>
+        </Grid>
 
-		<!-- ************************************************************************************ -->
-		<!-- CURRENT VIEW *********************************************************************** -->
-		<!-- ************************************************************************************ -->
-		<!-- REPORT GADGET ********************************************************************** -->
-		<!-- ************************************************************************************ -->
-		<ScrollViewer
+        <!-- ************************************************************************************ -->
+        <!-- CURRENT VIEW *********************************************************************** -->
+        <!-- ************************************************************************************ -->
+        <!-- REPORT GADGET ********************************************************************** -->
+        <!-- ************************************************************************************ -->
+        <ScrollViewer
             Grid.Row="2"
             Margin="0 0 10 0"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Disabled">
-			<i:Interaction.Behaviors>
-				<dh:MainScrollBarBehavior
+            <i:Interaction.Behaviors>
+                <dh:MainScrollBarBehavior
                     ThresholdHeight="600"
                     ContentContainer="{Binding ElementName=ReportGrid}" />
-			</i:Interaction.Behaviors>
-			<Grid>
-				<Grid.RowDefinitions>
-					<RowDefinition
+            </i:Interaction.Behaviors>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
                         Height="Auto" />
-					<RowDefinition
+                    <RowDefinition
                         Height="*" />
-				</Grid.RowDefinitions>
+                </Grid.RowDefinitions>
 
-				<Grid
+                <Grid
                     Name="ViewContainer"
                     Grid.Row="0"
                     VerticalAlignment="Top">
-					<ContentPresenter
+                    <ContentPresenter
                         Content="{Binding Path=CurrentViewModel}">
-						<ContentPresenter.Style>
-							<Style
+                        <ContentPresenter.Style>
+                            <Style
                                 TargetType="ContentPresenter">
-								<Setter
+                                <Setter
                                     Property="Visibility"
                                     Value="Visible" />
-								<Style.Triggers>
-									<DataTrigger
+                                <Style.Triggers>
+                                    <DataTrigger
                                         Binding="{Binding ElementName=ViewContainer, Path=DataContext.IsShowEquityCalculator}"
                                         Value="True">
-										<Setter
+                                        <Setter
                                             Property="Visibility"
                                             Value="Collapsed" />
-									</DataTrigger>
-								</Style.Triggers>
-							</Style>
-						</ContentPresenter.Style>
-					</ContentPresenter>
-					<StackPanel
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ContentPresenter.Style>
+                    </ContentPresenter>
+                    <StackPanel
                         Visibility="{Binding IsShowEquityCalculator, Converter={dh:BoolToVisibilityConverter}}"
                         Background="#181A1D">
-						<Button
+                        <Button
                             Command="{Binding HideEquityCalculatorCommand}">
-							<Button.Template>
-								<ControlTemplate
+                            <Button.Template>
+                                <ControlTemplate
                                     TargetType="{x:Type Button}">
-									<Path
+                                    <Path
                                         Data="M0,0 L1,1 M0,1 L1,0"
                                         Margin="0 20 20 0"
                                         Cursor="Hand"
@@ -1622,52 +1622,52 @@
                                         Stretch="Fill"
                                         Stroke="#2a2d31"
                                         StrokeThickness="3">
-									</Path>
-								</ControlTemplate>
-							</Button.Template>
-						</Button>
+                                    </Path>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
 
-						<equityCalculator:EquityCalculatorView
+                        <equityCalculator:EquityCalculatorView
                             Margin="20 0" />
-					</StackPanel>
-				</Grid>
+                    </StackPanel>
+                </Grid>
 
-				<Grid
+                <Grid
                     Name="ReportGrid"
                     Grid.Row="1"
                     VerticalAlignment="Top"
                     MaxHeight="600"
                     Visibility="{Binding Path=ReportGadgetView_IsVisible, Converter={dh:BoolToVisibilityConverter}, Mode=TwoWay}">
-					<ContentPresenter
+                    <ContentPresenter
                         Content="{Binding Path=ReportGadgetViewModel}" />
-				</Grid>
-			</Grid>
-		</ScrollViewer>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
 
-		<!-- ************************************************************************************ -->
-		<!-- PROGRESS BAR *********************************************************************** -->
-		<!-- ************************************************************************************ -->
-		<Grid
+        <!-- ************************************************************************************ -->
+        <!-- PROGRESS BAR *********************************************************************** -->
+        <!-- ************************************************************************************ -->
+        <Grid
             Grid.Row="3">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
                     Width="80" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="Auto" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="*" />
-				<ColumnDefinition
+                <ColumnDefinition
                     Width="88" />
-			</Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
 
-			<TextBlock
+            <TextBlock
                 Grid.Column="1"
                 Text="{Binding ProgressViewModel.Text}"
                 Visibility="{Binding ProgressViewModel.IsActive, Converter={cnv:BoolToVisibilityConverter}, Mode=OneWay}"
                 TextAlignment="Center"
                 VerticalAlignment="Center" />
 
-			<pb:ProgressBarEx
+            <pb:ProgressBarEx
                 x:Name="MainProgress"
                 Grid.Column="2"
                 IsIndeterminate="True"
@@ -1678,7 +1678,7 @@
                 Maximum="100"
                 Style="{StaticResource ProgressBarExStyle1}" />
 
-			<Button
+            <Button
                 Grid.Column="3"
                 Background="#2a2d31"
                 Margin="5"
@@ -1688,19 +1688,19 @@
                 HorizontalAlignment="Right"
                 Visibility="{Binding ProgressViewModel.IsActive, Converter={cnv:BoolToVisibilityConverter}, Mode=OneWay}"
                 Command="{Binding ProgressViewModel.StopCommand}">
-				<Button.Content>
-					<Path
+                <Button.Content>
+                    <Path
                         Visibility="Visible"
                         Data="M0,0 L9.5,0 L9.5,9.5 L0,9.5 z">
-						<Path.Fill>
-							<SolidColorBrush
+                        <Path.Fill>
+                            <SolidColorBrush
                                 Color="{StaticResource BackgroundBrushColor4}" />
-						</Path.Fill>
-					</Path>
-				</Button.Content>
-			</Button>
+                        </Path.Fill>
+                    </Path>
+                </Button.Content>
+            </Button>
 
-		</Grid>
+        </Grid>
 
-	</Grid>
+    </Grid>
 </telerik:RadWindow>

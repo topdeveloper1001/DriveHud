@@ -20,20 +20,20 @@ namespace Model.Enums
         EqualTo
     }
 
-	public enum EnumFilterDropDown
-	{
-		FilterCreate = 0,
-		FilterToday = 1,
-		FilterThisWeek = 2,
-		FilterThisMonth = 3,
-		FilterLastMonth = 4,
-		FilterThisYear = 5,
-		FilterCustomDateRange = 6,
-		FilterAllStats = 7
-	}
+    public enum EnumFilterDropDown
+    {
+        FilterCreate = 0,
+        FilterToday = 1,
+        FilterThisWeek = 2,
+        FilterThisMonth = 3,
+        FilterLastMonth = 4,
+        FilterThisYear = 5,
+        FilterCustomDateRange = 6,
+        FilterAllStats = 7
+    }
 
 
-	public enum EnumFilterModelType
+    public enum EnumFilterModelType
     {
         FilterBoardTextureModel,
         FilterHandActionModel,
@@ -76,27 +76,27 @@ namespace Model.Enums
         QuickFilterItem,
     }
 
-	public struct EnumDateFiterStruct
+    public struct EnumDateFiterStruct
 
-	{
-		public EnumDateFiter EnumDateRange;//{ get; set; }
-		public DateTime DateFrom { get; set; }
-		public DateTime DateTo { get; set; }
+    {
+        public EnumDateFiter EnumDateRange;//{ get; set; }
+        public DateTime DateFrom { get; set; }
+        public DateTime DateTo { get; set; }
 
-		public enum EnumDateFiter
-		{
-			None,
-			Custom,
-			Today,
-			ThisWeek,
-			ThisMonth,
-			LastMonth,
-			ThisYear,
-			CustomDateRange
-		}
-	}
+        public enum EnumDateFiter
+        {
+            None,
+            Custom,
+            Today,
+            ThisWeek,
+            ThisMonth,
+            LastMonth,
+            ThisYear,
+            CustomDateRange
+        }
+    }
 
-	public enum EnumHandValuesFastFilterType
+    public enum EnumHandValuesFastFilterType
     {
         TPTK,
         TPGK,

@@ -9,8 +9,8 @@ namespace DriveHUD.EquityCalculator.Base.Calculations
     {
         internal static long[] maskLookup = new long[]{
     0,
-	//2	    3       4       5        6      7        8       9       10     J         Q       K     
-	1,      2,      4,      8,      16,     32,     64,     128,    256,    512,    1024,   2048,       4096,
+    //2        3       4       5        6      7        8       9       10     J         Q       K     
+    1,      2,      4,      8,      16,     32,     64,     128,    256,    512,    1024,   2048,       4096,
     1<<16,  2<<16,  4<<16,  8<<16,  16<<16, 32<<16, 64<<16, 128<<16,256<<16,512<<16,1024<<16,2048<<16,  4096<<16,
     0x100000000,    0x200000000,    0x400000000,    0x800000000,    0x1000000000,   0x2000000000,   0x4000000000,   0x8000000000,   0x10000000000,  0x20000000000,  0x40000000000,  0x80000000000,      0x100000000000,
     0x1000000000000,    0x2000000000000,    0x4000000000000,    0x8000000000000,    0x10000000000000,   0x20000000000000,   0x40000000000000,   0x80000000000000,   0x100000000000000,  0x200000000000000,  0x400000000000000,  0x800000000000000,      0x1000000000000000,
@@ -600,7 +600,7 @@ namespace DriveHUD.EquityCalculator.Base.Calculations
                 if (subString.Equals(""))
                 {
                     FlagWeight(pWTbl, rank11, rank12, suit11, suit12, suited1);
-                    //add all weights with rank11 rank12		
+                    //add all weights with rank11 rank12        
                 }
                 else if (subString[0] == '+')
                 {
@@ -871,12 +871,12 @@ namespace DriveHUD.EquityCalculator.Base.Calculations
             int index;
             Weight pWt = mPlayer[0].mHoleTable.GetWeight(mask0);
             if (pWt == null)
-                return -10000000;	//error
+                return -10000000;    //error
             int index0 = mPlayer[0].mHoleTable.mWeights.IndexOf(pWt);// pWt.mWeight - mPlayer[0].mHoleTable.mWeights[0].mWeight; //ATT
 
             pWt = mPlayer[0].mHoleTable.GetWeight(mask1);
             if (pWt == null)
-                return -10000000;	//error
+                return -10000000;    //error
 
             int index1 = mPlayer[0].mHoleTable.mWeights.IndexOf(pWt);//ATT
 

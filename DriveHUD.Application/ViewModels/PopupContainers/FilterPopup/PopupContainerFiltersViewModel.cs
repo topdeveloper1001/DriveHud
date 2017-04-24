@@ -114,30 +114,30 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             Apply_OnClick(null);
         }
 
-		private void OnSettingsUpdated(SettingsUpdatedEventArgs obj)
-		{
-			if (CurrentlyBuiltFilter?.FilterSectionCollection == null || !CurrentlyBuiltFilter.FilterSectionCollection.Any(x => x.ItemType == EnumFilterSectionItemType.Date && x.IsActive))
-			{
-				return;
-			}
+        private void OnSettingsUpdated(SettingsUpdatedEventArgs obj)
+        {
+            if (CurrentlyBuiltFilter?.FilterSectionCollection == null || !CurrentlyBuiltFilter.FilterSectionCollection.Any(x => x.ItemType == EnumFilterSectionItemType.Date && x.IsActive))
+            {
+                return;
+            }
 
-			var dateFilter = FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault();
-			if (dateFilter != null)
-			{
-				if (dateFilter.DateFilterType.EnumDateRange != EnumDateFiterStruct.EnumDateFiter.ThisWeek)
-				{
-					return;
-				}
+            var dateFilter = FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault();
+            if (dateFilter != null)
+            {
+                if (dateFilter.DateFilterType.EnumDateRange != EnumDateFiterStruct.EnumDateFiter.ThisWeek)
+                {
+                    return;
+                }
 
-				var firstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
-				if (firstDayOfWeek != dateFilter.FirstDayOfWeek)
-				{
-					UpdateDateFilter(new DateFilterChangedEventArgs(dateFilter.DateFilterType));
-				}
-			}
-		}
+                var firstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
+                if (firstDayOfWeek != dateFilter.FirstDayOfWeek)
+                {
+                    UpdateDateFilter(new DateFilterChangedEventArgs(dateFilter.DateFilterType));
+                }
+            }
+        }
 
-		private void UpdateDateFilter(DateFilterChangedEventArgs obj)
+        private void UpdateDateFilter(DateFilterChangedEventArgs obj)
         {
             if (CurrentlyBuiltFilter == null || FilterViewCollection == null)
             {

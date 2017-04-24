@@ -11,21 +11,21 @@ using Model.Filters;
 
 namespace DriveHUD.Application.ControlTemplateSelectors
 {
-	public class FilterTemplateSelector : DataTemplateSelector
-	{
-		public TemplateCollection Templates { get; set; }
-		public override DataTemplate SelectTemplate(object item, DependencyObject container)
-		{
-			FilterDropDownModel itemFilterDropDownModel = item as FilterDropDownModel;
+    public class FilterTemplateSelector : DataTemplateSelector
+    {
+        public TemplateCollection Templates { get; set; }
+        public override DataTemplate SelectTemplate(object item, DependencyObject container)
+        {
+            FilterDropDownModel itemFilterDropDownModel = item as FilterDropDownModel;
 
-			if (itemFilterDropDownModel?.FilterType == EnumFilterDropDown.FilterCustomDateRange)
-				return Templates.FirstOrDefault(x => x.Value.Equals(EnumFilterDropDown.FilterCustomDateRange)).DataTemplate;
-
-
-			return Templates.FirstOrDefault(x => x.Value.Equals("standardTemplate")).DataTemplate;
-		}
+            if (itemFilterDropDownModel?.FilterType == EnumFilterDropDown.FilterCustomDateRange)
+                return Templates.FirstOrDefault(x => x.Value.Equals(EnumFilterDropDown.FilterCustomDateRange)).DataTemplate;
 
 
-	}
+            return Templates.FirstOrDefault(x => x.Value.Equals("standardTemplate")).DataTemplate;
+        }
+
+
+    }
 }
 
