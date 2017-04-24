@@ -300,6 +300,7 @@
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlTemplateSelectors\FilterTemplateSelector.cs" />
     <Compile Include="HudServices\HudNamedPipeBindingCallbackService.cs" />
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />

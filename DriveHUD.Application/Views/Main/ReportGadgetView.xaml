@@ -1773,7 +1773,7 @@
                             <Border
                                 ToolTip="{Binding Path=Name}"
                                 Height="30"
-                                Width="100"
+                                Width="Auto"
                                 Background="{StaticResource BackgroundBrush3}"
                                 Margin="3"
                                 Visibility="{Binding Path=IsActive, Mode=TwoWay, Converter={dh:BoolToVisibilityConverter}}">
