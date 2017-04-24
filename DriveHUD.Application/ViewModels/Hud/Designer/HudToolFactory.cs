@@ -43,14 +43,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 case HudDesignerToolType.PlainStatBox:
                     return CreatePlainStatBoxTool(creationInfo);
+                case HudDesignerToolType.FourStatBox:
+                    return CreateFourStatBoxTool(creationInfo);
                 case HudDesignerToolType.GaugeIndicator:
                     return CreateGaugeIndicatorTool(creationInfo);
                 default:
                     throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
             }
         }
-
-
 
         /// <summary>
         /// Gets the list of <see cref="HudPositionInfo"/> related to base position in designer 
@@ -123,6 +123,36 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Creates 4-stat box view model
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
+        /// <returns>4-stat box view model</returns>
+        private HudBaseToolViewModel CreateFourStatBoxTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
+
+            var layoutTool = new HudLayoutFourStatsBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>(),
+                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+                UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
+            };
+
+            layoutTool.UIPositions.ForEach(x =>
+            {
+                x.Width = HudDefaultSettings.FourStatBoxWidth;
+                x.Height = HudDefaultSettings.FourStatBoxHeight;
+            });
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.InitializePositions();
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        /// <summary>
         /// Creates gauge indicator view model
         /// </summary>
         /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
@@ -145,7 +175,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             };
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
-            toolViewModel.Position = creationInfo.Position;       
+            toolViewModel.Position = creationInfo.Position;
 
             creationInfo.Layout.LayoutTools.Add(layoutTool);
 

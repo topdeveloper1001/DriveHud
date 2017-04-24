@@ -32,6 +32,10 @@ namespace DriveHUD.Application.ControlTemplateSelectors
             {
                 return HudPlainStatBoxTemplate;
             }
+            else if (radItem.DataContext is HudFourStatsBoxViewModel)
+            {
+                return HudFourStatBoxTemplate;
+            }
             else if (radItem.DataContext is HudGaugeIndicatorViewModel)
             {
                 return HudGaugeIndicatorTemplate;
@@ -47,6 +51,8 @@ namespace DriveHUD.Application.ControlTemplateSelectors
         public DataTemplate PlayerPlaceTemplate { get; set; }
 
         public DataTemplate HudPlainStatBoxTemplate { get; set; }
+
+        public DataTemplate HudFourStatBoxTemplate { get; set; }
 
         public DataTemplate HudGaugeIndicatorTemplate { get; set; }
     }

@@ -78,6 +78,10 @@ namespace DriveHUD.Common.Resources
 
         public const double FourStatBoxWidth = 144d;
 
+        public const double FourStatBoxHeight = double.NaN;
+
+        public const double FourStatBoxMinHeight = 26d;
+
         #endregion
     }
 }

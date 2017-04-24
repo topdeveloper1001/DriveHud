@@ -87,6 +87,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                         DataContext = hudToolElement
                     };
                     break;
+                case HudDesignerToolType.FourStatBox:
+                    hudTool = new HudFourStatsBoxDesigner
+                    {
+                        DataContext = hudToolElement
+                    };
+                    break;
                 case HudDesignerToolType.GaugeIndicator:
                     break;
                 default:

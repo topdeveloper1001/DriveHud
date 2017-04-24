@@ -12,6 +12,7 @@
         x:Key="HudPanelTemplateSelector"
         PlayerPlaceTemplate="{StaticResource StructTemplate}"
         HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}"
+        HudFourStatBoxTemplate="{StaticResource HudFourStatBoxTemplate}"
         HudGaugeIndicatorTemplate="{StaticResource HudGaugeIndicatorTemplate}" />
 
     <Style

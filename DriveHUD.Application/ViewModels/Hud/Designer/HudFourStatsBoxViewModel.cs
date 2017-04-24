@@ -22,17 +22,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DriveHUD.Application.ViewModels.Hud.Designer
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Represents view model of 4-stat box
     /// </summary>
     [ProtoContract]
     public class HudFourStatsBoxViewModel : HudPlainStatBoxViewModel
-    {
-        [ProtoMember(5)]
-        private HudLayoutFourStatsBoxTool tool;
-
+    {      
         /// <summary>
         /// Initializes an instance of <see cref="HudFourStatsBoxViewModel"/>
         /// </summary>
@@ -62,7 +59,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer
 
             Parent = parent;
         }
-
+        
         /// <summary>
         /// Gets the default width of the tool
         /// </summary>

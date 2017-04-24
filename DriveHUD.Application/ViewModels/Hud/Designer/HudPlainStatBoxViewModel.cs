@@ -31,7 +31,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudPlainStatBoxViewModel : HudBaseToolViewModel, IHudStatsToolViewModel
     {
         [ProtoMember(5)]
-        private HudLayoutPlainBoxTool tool;
+        protected HudLayoutPlainBoxTool tool;
 
         /// <summary>
         /// Initializes an instance of <see cref="HudPlainStatBoxViewModel"/>
@@ -139,6 +139,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <exception cref="DHBusinessException" />
         public override void InitializePositions()
         {
+            var tool = Tool as HudLayoutPlainBoxTool;
+
+            if (tool == null)
+            {
+                return;
+            }
+
             var uiPosition = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
 
             if (uiPosition == null)

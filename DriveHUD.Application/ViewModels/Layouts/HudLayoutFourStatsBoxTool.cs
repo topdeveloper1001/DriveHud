@@ -68,7 +68,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <returns>View model of the current <see cref="HudBaseToolViewModel"/> instance</returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            throw new NotImplementedException();
+            var viewModel = new HudFourStatsBoxViewModel(this, hudElement);
+            return viewModel;
         }
 
         #endregion

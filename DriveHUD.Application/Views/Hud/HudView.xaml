@@ -429,13 +429,23 @@
         </Style>
 
         <DataTemplate
-            x:Key="PlainTextAdornerTemplate">
+            x:Key="PlainStatBoxAdornerTemplate">
             <Border
                 Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
                 Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
-                MinHeight="35"
+                MinHeight="{x:Static res:HudDefaultSettings.PlainStatBoxMinHeight}"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
+
+        <DataTemplate
+            x:Key="FourStatBoxAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.FourStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.FourStatBoxHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.FourStatBoxMinHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
 
         <DataTemplate
             x:Key="GaugeIndicatorAdornerTemplate">
@@ -688,7 +698,10 @@
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
-                        IsEnabled="False"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         Command="{Binding DesignerToolCommand}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
 
@@ -697,7 +710,7 @@
                         Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
                         Command="{Binding DesignerToolCommand}"
                         dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlainTextAdornerTemplate}"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
                         dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
