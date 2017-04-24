@@ -259,7 +259,7 @@ namespace Model.Importer
 					//OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
 					//var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
 
-					//equity = (decimal)eq[targetPlayerIndex].TotalEq / 100;
+					//equity = (decimal)eq[targetPlayerIndex].TotalEq / 100;   
 				}
 
 			}
