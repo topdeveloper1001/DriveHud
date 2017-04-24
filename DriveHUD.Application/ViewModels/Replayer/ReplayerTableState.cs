@@ -1,11 +1,8 @@
-﻿using HandHistories.Objects.Actions;
+﻿using DriveHUD.Entities;
+using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using Model.Importer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -16,9 +13,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             ActivePlayer.IsActive = true;
             ActivePlayer.ActionString = Converter.ActionToString(action.HandActionType);
             ActivePlayer.OldBank = ActivePlayer.Bank;
-            ActivePlayer.OldAmount = ActivePlayer.ActiveAmount;
+			ActivePlayer.OldAmount = ActivePlayer.ActiveAmount;
 
-            if (ActivePlayer.CurrentStreet != action.Street)
+			if (ActivePlayer.CurrentStreet != action.Street)
             {
                 ActivePlayer.ActiveAmount = 0;
             }
@@ -62,8 +59,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private decimal _actionAmount;
         private decimal _currentPotValue;
         private decimal _totalPotValue;
+	    private HandAction _currrentAction;
 
-        internal Street CurrentStreet
+	    internal HandAction CurrentAction
+	    {
+			get { return _currrentAction; }
+			set { _currrentAction = value; }
+		}
+
+		internal Street CurrentStreet
         {
             get { return _currentStreet; }
             set { _currentStreet = value; }
@@ -81,7 +85,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set { _isStreetChangedAction = value; }
         }
 
-        internal decimal ActionAmount
+		internal decimal ActionAmount
         {
             get { return _actionAmount; }
             set { _actionAmount = value; }
