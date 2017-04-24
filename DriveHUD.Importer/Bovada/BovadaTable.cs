@@ -366,6 +366,12 @@ namespace DriveHUD.Importers.Bovada
                 TableId = tableId;
 
                 TableName = HttpUtility.UrlDecode(tableNameText);
+
+                // DHUD-261 fix for ignition update
+                if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
+                {
+                    TableName = $"Table{TableId}";
+                }
             }
             catch
             {
