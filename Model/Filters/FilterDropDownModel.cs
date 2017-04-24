@@ -34,8 +34,8 @@ namespace Model.Filters
                 new FilterDropDownModel("Filter This Month", EnumFilterDropDown.FilterThisMonth),
                 new FilterDropDownModel("Filter Last Month", EnumFilterDropDown.FilterLastMonth),
                 new FilterDropDownModel("Filter This Year", EnumFilterDropDown.FilterThisYear),
-				new FilterDropDownModel("Custom Date Range", EnumFilterDropDown.FilterCustomDateRange),
-				new FilterDropDownModel("Clear All Filters", EnumFilterDropDown.FilterAllStats)
+                new FilterDropDownModel("Custom Date Range", EnumFilterDropDown.FilterCustomDateRange),
+                new FilterDropDownModel("Clear All Filters", EnumFilterDropDown.FilterAllStats)
             };
         }
     }
