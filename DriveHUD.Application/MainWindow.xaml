@@ -42,11 +42,8 @@
     Width="{Binding WindowMinWidth}"
     MinWidth="{Binding WindowMinWidth}"
     PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown">
-
-
+    
     <telerik:RadWindow.Resources>
-
-
 
         <DataTemplate
             DataType="{x:Type vm:DashboardViewModel}">
@@ -70,13 +67,12 @@
 
         <DataTemplate
             DataType="{x:Type vm:AppsViewModel}">
-            <v:AppsView/>
+            <v:AppsView />
         </DataTemplate>
 
         <Style
             x:Key="RadComboBoxStyle1"
             TargetType="{x:Type telerik:RadComboBox}">
-            <!--<Setter Property="telerik:ScrollingSettingsBehavior.IsEnabled" Value="True"/>-->
             <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollAreaPadding"
                 Value="30" />
@@ -1437,32 +1433,32 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="3"
-                
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 application:MarginSetter.Margin="10 0 0 0">
 
-                <telerik:RadRibbonDropDownButton x:Name="RadRibbonDropDownButton"
+                <telerik:RadRibbonDropDownButton
+                    x:Name="RadRibbonDropDownButton"
                     Foreground="White"
                     VerticalAlignment="Stretch"
                     Margin="0"
-                    Width="100"    
+                    Width="100"
                     KeepOpen="{Binding RadDropDownButtonFilterKeepOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     IsOpen="{Binding RadDropDownButtonFilterIsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
-                    <!--, RelativeSource={RelativeSource AncestorType=application:MainWindow-->
-
+                    
                     <telerik:RadRibbonDropDownButton.DropDownContent>
-                        <telerik:RadContextMenu    x:Name="RadContextMenu"
-                                                BorderThickness="0"
-                                                DataContext="{Binding}"
-                                                Background="{StaticResource BackgroundBrush3}"
-                                                ItemsSource="{Binding Path=FilterTypeList}"
-                                                Style="{StaticResource RadContextMenuStyle1}"
-                                                ItemContainerTemplateSelector="{StaticResource FilterTemplateSelector}">
+                        <telerik:RadContextMenu
+                            x:Name="RadContextMenu"
+                            BorderThickness="0"
+                            DataContext="{Binding}"
+                            Background="{StaticResource BackgroundBrush3}"
+                            ItemsSource="{Binding Path=FilterTypeList}"
+                            Style="{StaticResource RadContextMenuStyle1}"
+                            ItemContainerTemplateSelector="{StaticResource FilterTemplateSelector}">
 
                         </telerik:RadContextMenu>
 

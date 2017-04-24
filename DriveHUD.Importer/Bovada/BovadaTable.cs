@@ -454,10 +454,7 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "CO_TABLE_STATE":
-                    var tableState = BovadaConverters.ConvertTableState(cmdObj.tableState);
-                    ValidateTableState(tableState);
-                    TableState = (BovadaTableState)tableState;
-                    AddHandPhaseV2Command(tableState);
+                    ParseTableState(cmdObj.tableState);
                     break;
 
                 case "CO_DEALER_SEAT":
@@ -592,6 +589,8 @@ namespace DriveHUD.Importers.Bovada
 
                         seatsPlayerIds[seat] = regSeatNo[i];
                     }
+
+                    ParseTableState(cmdObj.tableState);
 
                     break;
 
@@ -1191,7 +1190,7 @@ namespace DriveHUD.Importers.Bovada
 
             var newTableState = (BovadaTableState)tableState;
 
-            if (TableState == BovadaTableState.Unknown && newTableState != BovadaTableState.Initializing)
+            if (TableState == BovadaTableState.Unknown && newTableState != BovadaTableState.Initializing && newTableState != BovadaTableState.Preparing)
             {
                 IsInvalid = true;
                 return;
@@ -1442,6 +1441,14 @@ namespace DriveHUD.Importers.Bovada
                     handModel.RiverCommands.InsertRange(1, communityCardsCommands.Skip(4).Take(1));
                 }
             }
+        }
+
+        private void ParseTableState(int tableState)
+        {
+            tableState = BovadaConverters.ConvertTableState(tableState);
+            ValidateTableState(tableState);
+            TableState = (BovadaTableState)tableState;
+            AddHandPhaseV2Command(tableState);
         }
 
         private decimal ConvertStack(int stack)
