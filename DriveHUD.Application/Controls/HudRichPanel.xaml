@@ -746,6 +746,7 @@
         <Grid
             VerticalAlignment="Center">
 
+            <!-- Vertical (left, top) stickers -->
             <Border
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
@@ -833,6 +834,7 @@
                         Width="144" />
                 </Grid.ColumnDefinitions>
 
+                <!-- Icon + tilt meter -->
                 <Grid
                     Grid.Row="1"
                     Grid.Column="0">
@@ -871,6 +873,7 @@
                         </Border>
                     </Border>
 
+                    <!-- Player icon -->
                     <Border
                         Style="{StaticResource IconBorderStyle}">
                         <Border
@@ -925,6 +928,7 @@
 
                 </Grid>
 
+                <!-- Horizontal stat box -->
                 <Border
                     Grid.Row="2"
                     Grid.Column="0"
@@ -1012,6 +1016,7 @@
 
                 </Border>
 
+                <!-- Stickers -->
                 <Border
                     Grid.Row="3"
                     Grid.Column="0"
@@ -1082,6 +1087,7 @@
                     </Grid>
                 </Border>
 
+                <!-- Vertical stat box -->
                 <Border
                     Grid.Row="0"
                     Grid.Column="0"

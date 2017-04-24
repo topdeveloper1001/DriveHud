@@ -15,6 +15,7 @@
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
     xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
+    xmlns:hvm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers">
 
@@ -180,7 +181,8 @@
     <DataTemplate
         x:Key="RadListBoxItemTemplate_StatInfo">
         <Grid>
-            <Grid
+            <Grid                
+                dh:DragDrop.GroupProperty="{x:Static hvm:HudDragDropGroups.Common}"
                 Background="#1d1e20"
                 Height="30"
                 Visibility="{Binding Path=., Mode=OneWay,Converter={StaticResource StatTypeToVisibilityConverter},ConverterParameter=StatInfo}">

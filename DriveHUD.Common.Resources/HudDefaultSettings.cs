@@ -76,6 +76,8 @@ namespace DriveHUD.Common.Resources
 
         public const double GaugeIndicatorHeight = double.NaN;
 
+        public const double FourStatBoxWidth = 144d;
+
         #endregion
     }
 }

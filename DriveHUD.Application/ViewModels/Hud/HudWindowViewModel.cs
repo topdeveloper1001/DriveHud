@@ -32,11 +32,9 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudWindowViewModel : BaseViewModel
     {
         private ReaderWriterLockSlim readerWriterLock;
-        private long gameNumber;
-        private EnumPokerSites pokerSite;
         private HudLayout layout;
 
-        internal HudWindowViewModel()
+        public HudWindowViewModel()
         {
             readerWriterLock = new ReaderWriterLockSlim();
 
@@ -116,7 +114,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public ICommand ReplayLastHandCommand { get; private set; }
 
-        public ICommand LoadLayoutCommand { get; private set; }        
+        public ICommand LoadLayoutCommand { get; private set; }
 
         #endregion
 
@@ -154,6 +152,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void TagHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
                 using (var readToken = readerWriterLock.Read())
@@ -165,15 +168,20 @@ namespace DriveHUD.Application.ViewModels.Hud
                         return;
                     }
 
-                    LogProvider.Log.Info($"Tagging hand {gameNumber} [{pokerSite}]");
+                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} [{layout.PokerSite}]");
 
-                    HudNamedPipeBindingService.TagHand(gameNumber, (short)pokerSite, (int)tag);
+                    HudNamedPipeBindingService.TagHand(layout.GameNumber, (short)layout.PokerSite, (int)tag);
                 }
             });
         }
 
         private async void ExportHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             EnumExportType exportType = EnumExportType.Raw;
 
             if (obj == null || !Enum.TryParse(obj.ToString(), out exportType))
@@ -185,9 +193,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Exporting hand {gameNumber}, {exportType} [{pokerSite}]");
+                    LogProvider.Log.Info($"Exporting hand {layout.GameNumber}, {exportType} [{layout.PokerSite}]");
 
-                    ExportFunctions.ExportHand(gameNumber, (short)pokerSite, exportType, true);
+                    ExportFunctions.ExportHand(layout.GameNumber, (short)layout.PokerSite, exportType, true);
                     RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
             });
@@ -195,19 +203,29 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void ReplayLastHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
                 using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Replaying hand {gameNumber} [{pokerSite}]");
+                    LogProvider.Log.Info($"Replaying hand {layout.GameNumber} [{layout.PokerSite}]");
 
-                    HudNamedPipeBindingService.RaiseReplayHand(gameNumber, (short)pokerSite);
+                    HudNamedPipeBindingService.RaiseReplayHand(layout.GameNumber, (short)layout.PokerSite);
                 }
             });
         }
 
         private async void LoadLayout(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
                 using (var readToken = readerWriterLock.Read())
@@ -221,7 +239,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                     LayoutName = layoutName;
 
-                    HudNamedPipeBindingService.LoadLayout(layoutName, pokerSite, GameType.Value, TableType.Value);
+                    HudNamedPipeBindingService.LoadLayout(layoutName, layout.PokerSite, GameType.Value, TableType.Value);
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });

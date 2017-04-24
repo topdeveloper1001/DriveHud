@@ -720,8 +720,7 @@ namespace DriveHUD.Application.ViewModels
         /// Initializes preview
         /// </summary>
         private void InitializePreview()
-        {
-            // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
+        {            
             var layoutTools = CurrentLayout.LayoutTools.ToArray();
 
             var random = new Random();
@@ -1438,6 +1437,8 @@ namespace DriveHUD.Application.ViewModels
             DesignerHudElementViewModel.Tools.Add(tool);
 
             tool.IsSelected = true;
+
+            InitializePreview();
         }
 
         /// <summary>
@@ -1463,6 +1464,8 @@ namespace DriveHUD.Application.ViewModels
 
             DesignerHudElementViewModel.Tools.Remove(toolViewModel);
             CurrentLayout.LayoutTools.Remove(toolViewModel.Tool);
+
+            InitializePreview();
 
             // updates all tools which might have stats linked to base stat of deleted tool
             if (toolViewModel is IHudBaseStatToolViewModel)

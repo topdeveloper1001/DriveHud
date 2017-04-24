@@ -264,7 +264,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             var targetGroup = GetGroupProperty(uiElement);
 
-            if (!string.Equals(targetGroup, dragInfo.Group))
+            if (dragInfo == null || !string.Equals(targetGroup, dragInfo.Group))
             {
                 e.Effects = DragDropEffects.None;
                 e.Handled = true;

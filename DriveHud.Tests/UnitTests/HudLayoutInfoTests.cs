@@ -250,7 +250,35 @@ namespace DriveHud.Tests.UnitTests
                 Text = "Test"
             };
 
-            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool };
+            var fourStatBoxTool = new HudLayoutFourStatsBoxTool
+            {
+                Positions = new List<HudPositionsInfo>
+                {
+                      new HudPositionsInfo
+                      {
+                           GameType = EnumGameType.CashHoldem,
+                           HudPositions = new List<HudPositionInfo>
+                           {
+                                new HudPositionInfo
+                                {
+                                     Position = new System.Windows.Point(1,1),
+                                     Seat = 1,
+                                     Width = 2
+                                }
+                           },
+                           PokerSite = EnumPokerSites.Bodog
+                      }
+                },
+                Stats = new ReactiveList<StatInfo>
+                {
+                    new StatInfo
+                    {
+                        Stat = Stat.VPIP
+                    }
+                }
+            };
+
+            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool };
 
             return hudLayoutInfo;
         }

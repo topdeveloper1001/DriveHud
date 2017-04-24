@@ -10,18 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Entities;
-using DriveHUD.ViewModels;
-using ReactiveUI;
 using DriveHUD.Common;
-using System.Linq;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
-using System.Collections.Generic;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
 using ProtoBuf;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -37,7 +36,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Initializes an instance of <see cref="HudPlainStatBoxViewModel"/>
         /// </summary>
-        private HudPlainStatBoxViewModel()
+        protected HudPlainStatBoxViewModel()
         {
         }
 
@@ -45,7 +44,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Initialize an instance of <see cref="HudPlainStatBoxViewModel"/>
         /// </summary>
         /// <param name="tool"><see cref="HudLayoutPlainBoxTool"/> to initialize an instance</param>
-        private HudPlainStatBoxViewModel(HudLayoutPlainBoxTool tool)
+        protected HudPlainStatBoxViewModel(HudLayoutPlainBoxTool tool)
         {
             Check.ArgumentNotNull(() => tool);
 
@@ -110,6 +109,28 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the default width of the tool
+        /// </summary>
+        public virtual double DefaultWidth
+        {
+            get
+            {
+                return HudDefaultSettings.PlainStatBoxWidth;
+            }
+        }
+
+        /// <summary>
+        /// Gets the default height of the tool
+        /// </summary>
+        public virtual double DefaultHeight
+        {
+            get
+            {
+                return HudDefaultSettings.PlainStatBoxHeight;
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -125,8 +146,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 throw new DHBusinessException(new NonLocalizableString($"Could not set UI positions {Parent.Seat}"));
             }
 
-            Width = uiPosition.Width != 0 ? uiPosition.Width : HudDefaultSettings.PlainStatBoxWidth;
-            Height = uiPosition.Height != 0 ? uiPosition.Height : HudDefaultSettings.PlainStatBoxHeight;
+            Width = uiPosition.Width != 0 ? uiPosition.Width : DefaultWidth;
+            Height = uiPosition.Height != 0 ? uiPosition.Height : DefaultHeight;
 
             Opacity = Parent.Opacity;
             Position = uiPosition.Position;
@@ -159,8 +180,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var uiPositions = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
 
-            Width = uiPositions != null && uiPositions.Width != 0 ? uiPositions.Width : HudDefaultSettings.PlainStatBoxWidth;
-            Height = uiPositions != null && uiPositions.Height != 0 ? uiPositions.Height : HudDefaultSettings.PlainStatBoxHeight;
+            Width = uiPositions != null && uiPositions.Width != 0 ? uiPositions.Width : DefaultWidth;
+            Height = uiPositions != null && uiPositions.Height != 0 ? uiPositions.Height : DefaultHeight;
         }
 
         /// <summary>

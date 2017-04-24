@@ -638,12 +638,14 @@
                 <Button
                     Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     Style="{StaticResource HudDesignerToolButtonStyle}"
+                    Width="185"
                     Margin="0,20,0,0"
                     Content="Designer"
                     Command="{Binding DesignerToolCommand}"
                     CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
 
                 <StackPanel
+                    Width="185"
                     Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
                     Orientation="Vertical">
 
