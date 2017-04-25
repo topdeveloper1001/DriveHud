@@ -53,6 +53,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
             return new HudPositionInfo
             {
                 Position = new Point(Position.X, Position.Y),
+                Width = Width,
+                Height = Height,
                 Seat = Seat
             };
         }

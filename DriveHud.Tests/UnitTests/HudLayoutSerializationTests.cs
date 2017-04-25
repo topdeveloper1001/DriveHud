@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudLayoutInfoTests.cs" company="Ace Poker Solutions">
+// <copyright file="HudLayoutSerializationTests.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Surrogates;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Resources;
@@ -18,6 +20,7 @@ using DriveHUD.ViewModels;
 using Model.Enums;
 using NUnit.Framework;
 using ProtoBuf;
+using ProtoBuf.Meta;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -29,8 +32,16 @@ using System.Xml.Serialization;
 namespace DriveHud.Tests.UnitTests
 {
     [TestFixture]
-    public class HudLayoutInfoTests
+    public class HudLayoutSerializationTests
     {
+        [OneTimeSetUp]
+        public void SetUp()
+        {
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.Color), false).SetSurrogate(typeof(ColorDto));
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+        }
+
         /// <summary>
         /// Method tests if <see cref="HudLayoutInfoV2"/> can be serialized with <seealso cref="XmlSerializer"/>
         /// </summary>
@@ -55,9 +66,15 @@ namespace DriveHud.Tests.UnitTests
         /// Method tests if <see cref="HudLayoutPlainBoxTool"/> can be serialized with <seealso cref="Serializer"/>
         /// </summary>
         [Test]
-        public void HudLayoutToolCanBeSerializedDeserializedWithProtobuf()
+        public void HudLayoutPlainBoxToolCanBeSerializedDeserializedWithProtobuf()
         {
-            var hudLayoutToolExpected = new HudLayoutPlainBoxTool();
+            var hudLayoutToolExpected = new HudLayoutPlainBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>
+                {
+                    new StatInfo { Stat = Stat.VPIP }
+                }
+            };            
 
             byte[] data = null;
 
@@ -84,6 +101,116 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudLayoutToolActual);
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
+            Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
+            Assert.That(hudLayoutToolActual.Stats.FirstOrDefault().Stat, Is.EqualTo(hudLayoutToolExpected.Stats.FirstOrDefault().Stat));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudLayoutFourStatsBoxTool"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudLayoutFourStatsBoxToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutFourStatsBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>
+                {
+                    new StatInfo { Stat = Stat.VPIP },
+                    new StatInfo { Stat = Stat.PFR },
+                    new StatInfo { Stat = Stat.S3Bet },
+                    new StatInfo { Stat = Stat.ColdCall }
+                }
+            };
+
+            byte[] data = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, hudLayoutToolExpected);
+                    data = msTestString.ToArray();
+                }
+            });
+
+            Assert.IsNotNull(data);
+
+            HudLayoutFourStatsBoxTool hudLayoutToolActual = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var afterStream = new MemoryStream(data))
+                {
+                    hudLayoutToolActual = Serializer.Deserialize<HudLayoutFourStatsBoxTool>(afterStream);
+                }
+            });
+
+            Assert.IsNotNull(hudLayoutToolActual);
+            Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
+            Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
+            Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudFourStatsBoxViewModel"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudFourStatsBoxVewModelToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutFourStatsBoxTool
+            {
+                Stats = new ReactiveList<StatInfo>
+                {
+                    new StatInfo { Stat = Stat.VPIP },
+                    new StatInfo { Stat = Stat.PFR },
+                    new StatInfo { Stat = Stat.S3Bet },
+                    new StatInfo { Stat = Stat.ColdCall }
+                }
+            };
+
+            var hudElement = new HudElementViewModel
+            {
+                Seat = 1,
+            };
+
+            var hudFourStatsBoxViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudFourStatsBoxViewModel;
+
+            Assert.IsNotNull(hudFourStatsBoxViewModelExpected);
+
+            byte[] data = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, hudFourStatsBoxViewModelExpected);
+                    data = msTestString.ToArray();
+                }
+            });
+
+            Assert.IsNotNull(data);
+
+            HudFourStatsBoxViewModel hudFourStatsBoxViewModelActual = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var afterStream = new MemoryStream(data))
+                {
+                    hudFourStatsBoxViewModelActual = Serializer.Deserialize<HudFourStatsBoxViewModel>(afterStream);
+                }
+            });
+
+            Assert.IsNotNull(hudFourStatsBoxViewModelActual);
+            Assert.That(hudFourStatsBoxViewModelActual.Id, Is.EqualTo(hudFourStatsBoxViewModelExpected.Id));
+            Assert.That(hudFourStatsBoxViewModelActual.ToolType, Is.EqualTo(hudFourStatsBoxViewModelExpected.ToolType));
+            Assert.That(hudFourStatsBoxViewModelActual.Stats.Count, Is.EqualTo(hudFourStatsBoxViewModelExpected.Stats.Count));
+            Assert.That(hudFourStatsBoxViewModelActual.Stat1.Stat, Is.EqualTo(hudFourStatsBoxViewModelExpected.Stat1.Stat));
+            Assert.That(hudFourStatsBoxViewModelActual.Stat2.Stat, Is.EqualTo(hudFourStatsBoxViewModelExpected.Stat2.Stat));
+            Assert.That(hudFourStatsBoxViewModelActual.Stat3.Stat, Is.EqualTo(hudFourStatsBoxViewModelExpected.Stat3.Stat));
+            Assert.That(hudFourStatsBoxViewModelActual.Stat4.Stat, Is.EqualTo(hudFourStatsBoxViewModelExpected.Stat4.Stat));
+            Assert.That(hudFourStatsBoxViewModelActual.Width, Is.EqualTo(hudFourStatsBoxViewModelExpected.Width));
+            Assert.That(hudFourStatsBoxViewModelActual.Height, Is.EqualTo(hudFourStatsBoxViewModelExpected.Height));
+            Assert.That(hudFourStatsBoxViewModelActual.Position, Is.EqualTo(hudFourStatsBoxViewModelExpected.Position));
         }
 
         /// <summary>

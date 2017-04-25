@@ -32,7 +32,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// <summary>
     /// Behavior for <see cref="WrapPanel" /> which display specified stats
     /// </summary>
-    public class HudStatsBehavior : Behavior<WrapPanel>
+    public class HudStatsBehavior : HudBaseToolTipBehavior<WrapPanel>
     {
         private static DependencyProperty StatInfoSourceProperty = DependencyProperty.RegisterAttached("StatInfoSource", typeof(ReactiveList<StatInfo>), typeof(HudStatsBehavior), new PropertyMetadata(OnStatInfoSourcePropertyChanged));
 
@@ -102,21 +102,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 SetValue(SeparatorProperty, value);
             }
-        }
-
-        private static DependencyProperty HudElementViewModelProperty = DependencyProperty.RegisterAttached("HudElementViewModel", typeof(HudElementViewModel), typeof(HudStatsBehavior));
-
-        public HudElementViewModel HudElementViewModel
-        {
-            get
-            {
-                return (HudElementViewModel)GetValue(HudElementViewModelProperty);
-            }
-            set
-            {
-                SetValue(HudElementViewModelProperty, value);
-            }
-        }
+        }     
 
         private static DependencyProperty StatDataTemplateProperty = DependencyProperty.RegisterAttached("StatDataTemplate", typeof(DataTemplate), typeof(HudStatsBehavior));
 
@@ -292,70 +278,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return statBlock;
         }
-
-        protected virtual void ConfigureSimpleToolTip(FrameworkElement element, StatInfo statInfo)
-        {
-            if (statInfo == null)
-            {
-                return;
-            }
-
-            var toolTipBinding = new Binding(nameof(StatInfo.ToolTip))
-            {
-                Source = statInfo,
-                Mode = BindingMode.OneWay
-            };
-
-            element.SetBinding(FrameworkElement.ToolTipProperty, toolTipBinding);
-        }
-
-        protected virtual void ConfigureToolTip(FrameworkElement element, StatInfo statInfo)
-        {
-            if (HudElementViewModel == null)
-            {
-                return;
-            }
-
-            var baseStatViewModels = HudElementViewModel.Tools
-                .OfType<IHudBaseStatToolViewModel>()
-                .Where(x => x.BaseStat != null && x.BaseStat.Stat == statInfo.Stat)
-                .OfType<HudBaseToolViewModel>()
-                .ToArray();
-
-            if (baseStatViewModels.Length <= 0)
-            {
-                ConfigureSimpleToolTip(element, statInfo);
-                return;
-            }
-
-            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>();
-
-            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(baseStatViewModels.First());
-
-            if (frameworkElementFactory == null)
-            {
-                return;
-            }
-
-            var dataContextBinding = new Binding { Source = baseStatViewModels };
-            frameworkElementFactory.SetBinding(FrameworkElement.DataContextProperty, dataContextBinding);
-
-            var template = new DataTemplate();
-            template.VisualTree = frameworkElementFactory;
-            template.Seal();
-
-            var tooltip = new ToolTip();
-            tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
-            tooltip.Background = new SolidColorBrush(Colors.Transparent);
-            tooltip.ContentTemplate = template;
-
-            ToolTipService.SetInitialShowDelay(element, 1);
-            ToolTipService.SetShowDuration(element, 60000);
-            ToolTipService.SetVerticalOffset(element, -5.0);
-            ToolTipService.SetPlacement(element, System.Windows.Controls.Primitives.PlacementMode.Top);
-            ToolTipService.SetToolTip(element, tooltip);
-        }
-
+        
         private List<List<StatInfo>> Split(IList<StatInfo> source)
         {
             var result = new List<List<StatInfo>>();

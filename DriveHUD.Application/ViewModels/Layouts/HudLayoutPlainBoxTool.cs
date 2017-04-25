@@ -21,6 +21,7 @@ using System.Linq;
 namespace DriveHUD.Application.ViewModels.Layouts
 {
     [Serializable, ProtoContract]
+    [ProtoInclude(33, typeof(HudLayoutFourStatsBoxTool))]
     /// <summary>
     /// This class represents the plain box tool of the hud
     /// </summary>

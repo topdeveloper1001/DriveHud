@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudDesignerView.cs" company="Ace Poker Solutions">
+// <copyright file="HudFourStatsBoxToolTipBehavior.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,28 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
+using DriveHUD.ViewModels;
+using System.Windows;
 
-namespace DriveHUD.Application.Views.Hud.Designer
+namespace DriveHUD.Application.ViewModels.Hud
 {
-    /// <summary>
-    /// Interaction logic for HudDesignerView.xaml
-    /// </summary>
-    public partial class HudDesignerView : UserControl
+    public class HudFourStatsBoxToolTipBehavior : HudBaseToolTipBehavior<FrameworkElement>
     {
-        public HudDesignerView()
+        protected override void OnHudElementViewModelChanged()
         {
-            InitializeComponent();
-        }     
+            if (AssociatedObject == null)
+            {
+                return;
+            }
+
+            var statInfo = AssociatedObject.DataContext as StatInfo;
+
+            if (statInfo == null)
+            {
+                return;
+            }
+
+            ConfigureToolTip(AssociatedObject, statInfo);
+        }
     }
 }

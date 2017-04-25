@@ -983,7 +983,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Layout could not be loaded.", e);
             }
 
             return null;

@@ -16,8 +16,7 @@
     xmlns:m="clr-namespace:Model.Enums;assembly=Model"
     xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
     xmlns:app="clr-namespace:DriveHUD.Application"
-    xmlns:v="clr-namespace:DriveHUD.Application.Views"
-    xmlns:vd="clr-namespace:DriveHUD.Application.Views.Hud.Designer"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"    
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:prism="http://www.codeplex.com/prism"
@@ -177,12 +176,7 @@
             DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
-
-        <DataTemplate
-            DataType="{x:Type vm:HudDesignerViewModel}">
-            <vd:HudDesignerView />
-        </DataTemplate>
-
+     
         <DataTemplate
             DataType="{x:Type vm:HudSaveFirstTimeNotificationViewModel}">
             <hud:HudSaveFirstTimeNotificationView />

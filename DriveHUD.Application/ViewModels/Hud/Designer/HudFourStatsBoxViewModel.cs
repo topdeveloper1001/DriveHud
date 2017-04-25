@@ -29,7 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     [ProtoContract]
     public class HudFourStatsBoxViewModel : HudPlainStatBoxViewModel
-    {      
+    {
         /// <summary>
         /// Initializes an instance of <see cref="HudFourStatsBoxViewModel"/>
         /// </summary>
@@ -46,6 +46,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => tool);
 
             this.tool = tool;
+
+            if (Stats != null)
+            {
+                Stats.Changed.Subscribe(x => RefreshStats());
+            }
         }
 
         /// <summary>
@@ -59,7 +64,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Parent = parent;
         }
-        
+
         /// <summary>
         /// Gets the default width of the tool
         /// </summary>
@@ -68,6 +73,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return HudDefaultSettings.FourStatBoxWidth;
+            }
+        }
+
+        /// <summary>
+        /// Gets the default height of the tool
+        /// </summary>
+        public override double DefaultHeight
+        {
+            get
+            {
+                return HudDefaultSettings.FourStatBoxHeight;
             }
         }
 
@@ -113,6 +129,34 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return Stats.Count > 3 ? Stats[3] : null;
             }
+        }
+
+        private bool isVertical;
+
+        /// <summary>
+        /// Gets or sets whenever four stats box is vertical
+        /// </summary>
+        public bool IsVertical
+        {
+            get
+            {
+                return isVertical;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isVertical, value);
+            }
+        }
+
+        /// <summary>
+        /// Raise property change event on each of four stats
+        /// </summary>
+        private void RefreshStats()
+        {
+            this.RaisePropertyChanged(nameof(Stat1));
+            this.RaisePropertyChanged(nameof(Stat2));
+            this.RaisePropertyChanged(nameof(Stat3));
+            this.RaisePropertyChanged(nameof(Stat4));
         }
     }
 }

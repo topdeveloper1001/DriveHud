@@ -397,7 +397,6 @@
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
-    <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerTableTemplateSelector.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
@@ -409,8 +408,10 @@
     <Compile Include="ViewModels\Hud\Designer\IHudBaseStatToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\HudBaseToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
@@ -467,12 +468,6 @@
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Hud\Designer\HudDesignerView.xaml.cs">
-      <DependentUpon>HudDesignerView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Hud\Designer\HudPlainStatBox.xaml.cs">
-      <DependentUpon>HudPlainStatBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
       <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
@@ -747,6 +742,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudFourStatsBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\HudPlainBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -819,14 +818,6 @@
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Hud\Designer\HudDesignerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Hud\Designer\HudPlainStatBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml">
       <SubType>Designer</SubType>

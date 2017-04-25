@@ -1525,7 +1525,7 @@ namespace DriveHUD.Application.ViewModels
 
             cachedCurrentLayout.HudPlayerTypes = CurrentLayout.HudPlayerTypes;
             cachedCurrentLayout.HudBumperStickerTypes = CurrentLayout.HudBumperStickerTypes;
-            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;
+            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;            
 
             CloseDesigner();
         }

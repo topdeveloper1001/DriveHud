@@ -25,6 +25,7 @@ using System.Linq;
 namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
+    [ProtoInclude(32, typeof(HudFourStatsBoxViewModel))]
     /// <summary>
     /// Represents view model of plain stat box
     /// </summary>
@@ -202,6 +203,17 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
+            var uiPosition = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
+
+            if (uiPosition != null)
+            {
+                positions.ForEach(x =>
+                {
+                    x.Width = uiPosition.Width;
+                    x.Height = uiPosition.Height;
+                });
+            }
+
             tool.UIPositions = positions;
         }
 
@@ -211,7 +223,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
         public override void SavePositions(List<HudPositionInfo> positions)
         {
-            SetPositions(positions);
+            // Set width and height
+            positions.ForEach(x =>
+            {
+                x.Width = Width;
+                x.Height = Height;
+            });
+
+            tool.UIPositions = positions;
         }
     }
 }

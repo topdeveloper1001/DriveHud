@@ -22,7 +22,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     /// <summary>
     /// This class represents the 4-stat box tool of the hud
     /// </summary>
-    [Serializable, ProtoContract]
+    [Serializable, ProtoContract]    
     public class HudLayoutFourStatsBoxTool : HudLayoutPlainBoxTool
     {
         /// <summary>

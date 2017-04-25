@@ -28,13 +28,13 @@ namespace DriveHUD.Application.ControlTemplateSelectors
                 return null;
             }
 
-            if (radItem.DataContext is HudPlainStatBoxViewModel)
-            {
-                return HudPlainStatBoxTemplate;
-            }
-            else if (radItem.DataContext is HudFourStatsBoxViewModel)
+            if (radItem.DataContext is HudFourStatsBoxViewModel)
             {
                 return HudFourStatBoxTemplate;
+            }
+            else if (radItem.DataContext is HudPlainStatBoxViewModel)
+            {
+                return HudPlainStatBoxTemplate;
             }
             else if (radItem.DataContext is HudGaugeIndicatorViewModel)
             {
