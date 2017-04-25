@@ -241,10 +241,7 @@ namespace Model.Importer
                     CurrentBoard = hand.CommunityCards.ToArray();//todo the_weeknd 9J268
                     CurrentBoardCards = hand.CommunityCardsString;
                     break;
-            }
-
-            
-
+            }  
             try
             {
                 GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
@@ -265,7 +262,6 @@ namespace Model.Importer
                         equity = Math.Round((decimal)(wins[targetPlayerIndex] * 100) / totalhands, 2) ;
                     }
                 }
-
                 //gameType = GeneralGameTypeEnum.Omaha;
                 //cards[0] = HoleCards.ForOmaha(HandHistories.Objects.Cards.Card.Parse("Qd"), 
                 //                              HandHistories.Objects.Cards.Card.Parse("9d"), 
@@ -276,9 +272,6 @@ namespace Model.Importer
                 //                              HandHistories.Objects.Cards.Card.Parse("Qc"),
                 //                              HandHistories.Objects.Cards.Card.Parse("8d"));   
                 //string[][] t = cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray();
-
-
-
                 else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && currentPlayer?.HoleCards?.Count > 0)
                 {
                     OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);

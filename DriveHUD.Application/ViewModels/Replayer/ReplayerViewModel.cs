@@ -279,7 +279,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
                             if (replayerTableState.CurrentAction != null && player != null)
                             {
                                 replayerTableState.ActivePlayer.EquityWin = Converter.CalculateEquity(replayerTableState.CurrentAction,
-                                    CurrentGame, replayerTableState.ActivePlayer.Name);
+                                                                                                      CurrentGame, 
+                                                                                                      replayerTableState.ActivePlayer.Name);
                                 ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, player);
                             }
                         }
