@@ -366,6 +366,12 @@ namespace DriveHUD.Importers.Bovada
                 TableId = tableId;
 
                 TableName = HttpUtility.UrlDecode(tableNameText);
+
+                // DHUD-261 fix for ignition update
+                if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
+                {
+                    TableName = $"Table{TableId}";
+                }
             }
             catch
             {
@@ -448,10 +454,7 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "CO_TABLE_STATE":
-                    var tableState = BovadaConverters.ConvertTableState(cmdObj.tableState);
-                    ValidateTableState(tableState);
-                    TableState = (BovadaTableState)tableState;
-                    AddHandPhaseV2Command(tableState);
+                    ParseTableState(cmdObj.tableState);
                     break;
 
                 case "CO_DEALER_SEAT":
@@ -587,6 +590,8 @@ namespace DriveHUD.Importers.Bovada
                         seatsPlayerIds[seat] = regSeatNo[i];
                     }
 
+                    ParseTableState(cmdObj.tableState);
+
                     break;
 
                 case "TCO_ANTE_INFO_ALL":
@@ -658,14 +663,15 @@ namespace DriveHUD.Importers.Bovada
                     handModel.GameLimit = GameLimit;
                     handModel.GameFormat = GameFormat;
 
+                    var configuration = configurationService.Get("Bovada");
+
                     TryToFixCommunityCardsCommands(handModel);
+                    UpdatePlayersOnTable(handModel, configuration);
 
                     if (handModel.CashOrTournament == CashOrTournament.Tournament && !TournamentsAndPlayers.Keys.Contains(handModel.TournamentNumber))
                     {
                         TournamentsAndPlayers.Add(handModel.TournamentNumber, new Dictionary<int, string>());
                     }
-
-                    var configuration = configurationService.Get("Bovada");
 
                     UpdatePlayersAddedRemoved(handModel, configuration, true);
 
@@ -1185,7 +1191,7 @@ namespace DriveHUD.Importers.Bovada
 
             var newTableState = (BovadaTableState)tableState;
 
-            if (TableState == BovadaTableState.Unknown && newTableState != BovadaTableState.Initializing)
+            if (TableState == BovadaTableState.Unknown && newTableState != BovadaTableState.Initializing && newTableState != BovadaTableState.Preparing)
             {
                 IsInvalid = true;
                 return;
@@ -1438,6 +1444,27 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        private void UpdatePlayersOnTable(HandModel2 handModel, ISiteConfiguration configuration)
+        {
+            if (handModel.HeroSeat < 1)
+            {
+                return;
+            }
+
+            if (PlayersOnTable != null && PlayersOnTable.ContainsKey(handModel.HeroSeat))
+            {
+                PlayersOnTable[handModel.HeroSeat] = configuration.HeroName;
+            }
+        }
+
+        private void ParseTableState(int tableState)
+        {
+            tableState = BovadaConverters.ConvertTableState(tableState);
+            ValidateTableState(tableState);
+            TableState = (BovadaTableState)tableState;
+            AddHandPhaseV2Command(tableState);
+        }
+
         private decimal ConvertStack(int stack)
         {
             return ((decimal)stack) / 100m;
@@ -1445,7 +1472,7 @@ namespace DriveHUD.Importers.Bovada
 
         #endregion
 
-        #region Players Handling (Temporary)
+        #region Players Handling
 
         private static Dictionary<long, Dictionary<int, string>> TournamentsAndPlayers = new Dictionary<long, Dictionary<int, string>>();
 
