@@ -13,6 +13,7 @@ using DriveHUD.Entities;
 using Model.Extensions;
 using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Players;
+using Card = HandHistories.Objects.Cards.Card;
 
 namespace Model.Importer
 {
@@ -195,6 +196,8 @@ namespace Model.Importer
         }
 
         public static string CurrentBoardCards { get; set; }
+        public static HandHistories.Objects.Cards.Card[] CurrentBoard { get; set; }
+
         public static Player[] ActivePlayerHasHoleCard { get; set;}
 
         public static decimal CalculateEquity(HandAction action, HandHistory hand, string name)
@@ -205,34 +208,42 @@ namespace Model.Importer
             if (ActivePlayerHasHoleCard == null)
                 ActivePlayerHasHoleCard = hand.Players.Where(player => player.hasHoleCards).ToArray();
 
-            switch (action.Street)
-            {
-                case Street.Preflop:
-                    CurrentBoardCards = string.Empty;
-                    break;
-                case Street.Flop:
-                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(6).ToArray());
-                    break;
-                case Street.Turn:
-                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(8).ToArray());
-                    break;
-                case Street.River:
-                    CurrentBoardCards = hand.CommunityCardsString;
-                    break;
-                case Street.Showdown:
-                    CurrentBoardCards = hand.CommunityCardsString;
-                    break;
-                case Street.Summary:                                   //todo the_weeknd 9J268
-                    CurrentBoardCards = hand.CommunityCardsString;
-                    break;
-            }
-
             HoleCards[] cards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray();
             Player currentPlayer = ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == name);
 
             int count = cards.Count();
             decimal equity = 0;
-            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer?.HoleCards); 
+            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer?.HoleCards);
+
+            switch (action.Street)
+            {
+                case Street.Preflop:
+                    CurrentBoard = new HandHistories.Objects.Cards.Card[] {};
+                    CurrentBoardCards = string.Empty;
+                    break;
+                case Street.Flop:
+                    CurrentBoard = hand.CommunityCards.Take(3).ToArray();
+                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(6).ToArray());
+                    break;
+                case Street.Turn:
+                    CurrentBoard = hand.CommunityCards.Take(4).ToArray();
+                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(8).ToArray());
+                    break;
+                case Street.River:
+                    CurrentBoard = hand.CommunityCards.ToArray();
+                    CurrentBoardCards = hand.CommunityCardsString;
+                    break;
+                case Street.Showdown:
+                    CurrentBoard = hand.CommunityCards.ToArray();
+                    CurrentBoardCards = hand.CommunityCardsString;
+                    break;
+                case Street.Summary:
+                    CurrentBoard = hand.CommunityCards.ToArray();//todo the_weeknd 9J268
+                    CurrentBoardCards = hand.CommunityCardsString;
+                    break;
+            }
+
+            
 
             try
             {
@@ -254,12 +265,29 @@ namespace Model.Importer
                         equity = Math.Round((decimal)(wins[targetPlayerIndex] * 100) / totalhands, 2) ;
                     }
                 }
-                else if (gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo)
-                {
-                    //OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
-                    //var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
 
-                    //equity = (decimal)eq[targetPlayerIndex].TotalEq / 100;   
+                //gameType = GeneralGameTypeEnum.Omaha;
+                //cards[0] = HoleCards.ForOmaha(HandHistories.Objects.Cards.Card.Parse("Qd"), 
+                //                              HandHistories.Objects.Cards.Card.Parse("9d"), 
+                //                              HandHistories.Objects.Cards.Card.Parse("9s"), 
+                //                              HandHistories.Objects.Cards.Card.Parse("7s")); 
+                //cards[1] = HoleCards.ForOmaha(HandHistories.Objects.Cards.Card.Parse("5h"),
+                //                              HandHistories.Objects.Cards.Card.Parse("Tc"),
+                //                              HandHistories.Objects.Cards.Card.Parse("Qc"),
+                //                              HandHistories.Objects.Cards.Card.Parse("8d"));   
+                //string[][] t = cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray();
+
+
+
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && currentPlayer?.HoleCards?.Count > 0)
+                {
+                    OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
+                    MEquity[] eq = calc.Equity(CurrentBoard.Select(x => x.ToString()).ToArray(),
+                                         cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(),
+                                         new string[] { },
+                                         0);
+
+                    equity = Math.Round((decimal)eq[targetPlayerIndex].TotalEq, 2);
                 }
 
             }

@@ -248,7 +248,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void UpdatePlayersEquityWin(ReplayerTableState state)
         {
-            if (state.IsStreetChangedAction || state.CurrentAction.IsBlinds || state.CurrentAction.IsWinningsAction)
+            if (state.IsStreetChangedAction || state.CurrentAction.ToString().ToLower().Contains("small_blind") || state.CurrentAction.IsWinningsAction)
             {
                 List<ReplayerTableState> actionByStreetValue = new List<ReplayerTableState>();
                 switch (state.CurrentAction.Street)
@@ -484,7 +484,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             ResetPlayersPot(PlayersCollection);
             PlayersCollection.Where(x => !x.IsFinished && TableStateList.Any(t => t.ActivePlayer.Name == x.Name && t.ActivePlayer.IsFinished)).ForEach(x => x.IsFinished = true);
             StateIndex = TableStateList.Count - 1;
-            UpdatePlayersEquityWin(TableStateList.FirstOrDefault(x => x.CurrentStreet == Street.River)); //added in order to update equity state for winning actions when we go to the end of TableStateList
+
+            ReplayerTableState replayerTableStateBeforeSummary = TableStateList.FirstOrDefault(x => x.CurrentStreet == Street.Summary);
+            UpdatePlayersEquityWin(replayerTableStateBeforeSummary); //added in order to update equity state for winning actions when we go to the end of TableStateList
         }
 
         private void NextStep(object obj)
@@ -543,9 +545,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
                         PlayersCollection.Where(x => x.IsFinished && TableStateList.Any(t => t.ActivePlayer.Name == x.Name)).ForEach(x => x.IsFinished = false);
                     }
                     StateIndex = TableStateList.IndexOf(streetState);
+                    UpdatePlayersEquityWin(TableStateList.FirstOrDefault(x => x.CurrentStreet == outStreet)); //update equity win property of all players
                 }
             }
-            UpdatePlayersEquityWin(TableStateList.FirstOrDefault(x => x.CurrentStreet == outStreet)); //update equity win property of all players
+            
         }
 
         private void FacebookOAuthCommandHandler()
