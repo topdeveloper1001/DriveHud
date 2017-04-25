@@ -200,20 +200,28 @@ namespace Model.Importer
 
         public static Player[] ActivePlayerHasHoleCard { get; set; }
 
-        public static decimal CalculateEquity(HandAction action, HandHistory hand, string name)
+        public static decimal CalculateEquity(HandAction action, HandHistory hand)
         {
+            Player activePlayer = hand.Players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
 
-            if (action.IsFold || !hand.Players.FirstOrDefault(x => x.PlayerName == name).hasHoleCards)     //todo make for dead cards, for exmaple when guy folds with known hole cards
+            if (activePlayer == null || action.IsFold || !activePlayer.hasHoleCards)  //this step return -1 to all players not having hole cards/isFold/not existing for current hand
                 return -1;
+
             if (ActivePlayerHasHoleCard == null)
                 ActivePlayerHasHoleCard = hand.Players.Where(player => player.hasHoleCards).ToArray();
 
             HoleCards[] cards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray();
-            Player currentPlayer = ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == name);
+            Player activePlayerHoleCards = ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == action.PlayerName);
 
             int count = cards.Count();
             decimal equity = 0;
-            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer?.HoleCards);
+            int targetPlayerIndex = cards.ToList().IndexOf(activePlayerHoleCards?.HoleCards);
+            if (targetPlayerIndex == -1)
+            {
+                LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquity method. Check why targetPlayerIndex = -1 in this part of code");
+                return -1;
+            }
+                
 
             switch (action.Street)
             {
@@ -246,23 +254,23 @@ namespace Model.Importer
             {
                 GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
 
-                if (gameType == GeneralGameTypeEnum.Holdem && currentPlayer?.HoleCards?.Count > 0)
+                if (gameType == GeneralGameTypeEnum.Holdem && activePlayerHoleCards?.HoleCards?.Count > 0)
                 {
                     long[] wins = new long[count];
                     long[] losses = new long[count];
                     long[] ties = new long[count];
                     long totalhands = 0;
 
-                    List<string> strList = new List<string>();
+                    List<string> cardList = new List<string>();
                     foreach (var card in cards.Where(card => card?.Count > 0))
-                        strList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
-                    Hand.HandWinOdds(strList.ToArray(), CurrentBoardCards, string.Empty, wins, ties, losses, ref totalhands);
+                        cardList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
+                    Hand.HandWinOdds(cardList.ToArray(), CurrentBoardCards, string.Empty, wins, ties, losses, ref totalhands);
                     if (totalhands != 0)
                     {
                         equity = Math.Round((decimal)(wins[targetPlayerIndex] * 100) / totalhands, 2);
                     }
                 }
-                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && currentPlayer?.HoleCards?.Count > 0)
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && activePlayerHoleCards?.HoleCards?.Count > 0)
                 {
                     OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
                     MEquity[] eq = calc.Equity(CurrentBoard.Select(x => x.ToString()).ToArray(),
@@ -276,7 +284,7 @@ namespace Model.Importer
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(ex);
+                LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquity method of Converter class", ex);
             }
 
             return equity;

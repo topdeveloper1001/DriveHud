@@ -250,44 +250,42 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             if (state.IsStreetChangedAction || state.CurrentAction.ToString().ToLower().Contains("small_blind") || state.CurrentAction.IsWinningsAction)
             {
-                List<ReplayerTableState> actionByStreetValue = new List<ReplayerTableState>();
+                List<ReplayerTableState> actionsByStreetValue = new List<ReplayerTableState>();
                 switch (state.CurrentAction.Street)
                 {
                     case Street.Preflop:
-                        actionByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Preflop).ToList();
+                        actionsByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Preflop).ToList();
                         break;
                     case Street.Flop:
-                        actionByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Flop).ToList();
+                        actionsByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Flop).ToList();
                         break;
                     case Street.Turn:
-                        actionByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Turn).ToList();
+                        actionsByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Turn).ToList();
                         break;
                     case Street.River:
-                        actionByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.River).ToList();
+                        actionsByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.River).ToList();
                         break;
                     case Street.Summary:
-                        actionByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Summary).ToList();
+                        actionsByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Summary).ToList();
                         break;
                 }
-                if (actionByStreetValue.Count > 0)
+                if (actionsByStreetValue.Count > 0)
                 {
-                    foreach (var replayerTableState in actionByStreetValue)
+                    ReplayerPlayerViewModel player;
+                    foreach (var replayerTableState in actionsByStreetValue)
                     {
                         try
                         {
-                            ReplayerPlayerViewModel player = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
+                            player = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
                             if (replayerTableState.CurrentAction != null && player != null)
                             {
-                                replayerTableState.ActivePlayer.EquityWin = Converter.CalculateEquity(replayerTableState.CurrentAction,
-                                                                                                      CurrentGame, 
-                                                                                                      replayerTableState.ActivePlayer.Name);
+                                replayerTableState.ActivePlayer.EquityWin = Converter.CalculateEquity(replayerTableState.CurrentAction, CurrentGame);
                                 ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, player);
                             }
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine(ex);
-                            throw;
+                            LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection.", ex); 
                         }
 
                     }
