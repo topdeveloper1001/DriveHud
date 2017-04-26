@@ -13,7 +13,8 @@
         PlayerPlaceTemplate="{StaticResource StructTemplate}"
         HudPlainStatBoxTemplate="{StaticResource HudPlainStatBoxTemplate}"
         HudFourStatBoxTemplate="{StaticResource HudFourStatBoxTemplate}"
-        HudGaugeIndicatorTemplate="{StaticResource HudGaugeIndicatorTemplate}" />
+        HudGaugeIndicatorTemplate="{StaticResource HudGaugeIndicatorTemplate}"
+        HudTiltMeterTemplate="{StaticResource HudTiltMeterTemplate}" />
 
     <Style
         x:Key="RadDiagramStyle"

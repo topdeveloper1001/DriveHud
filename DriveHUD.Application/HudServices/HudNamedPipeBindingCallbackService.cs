@@ -48,7 +48,7 @@ namespace DriveHUD.Application.HudServices
 
             HudPositionsInfo existingHudPositions = null;
 
-            var tools = existingHudLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().ToArray();
+            var tools = existingHudLayout.LayoutTools.OfType<HudLayoutNonPopupTool>().ToArray();
 
             foreach (var tool in tools)
             {

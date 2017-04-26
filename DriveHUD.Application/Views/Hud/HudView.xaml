@@ -16,7 +16,7 @@
     xmlns:m="clr-namespace:Model.Enums;assembly=Model"
     xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
     xmlns:app="clr-namespace:DriveHUD.Application"
-    xmlns:v="clr-namespace:DriveHUD.Application.Views"    
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:prism="http://www.codeplex.com/prism"
@@ -176,7 +176,7 @@
             DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
-     
+
         <DataTemplate
             DataType="{x:Type vm:HudSaveFirstTimeNotificationViewModel}">
             <hud:HudSaveFirstTimeNotificationView />
@@ -440,6 +440,14 @@
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
+        <DataTemplate
+            x:Key="TiltMeterAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.TiltMeterWidth}"
+                Height="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
 
         <DataTemplate
             x:Key="GaugeIndicatorAdornerTemplate">
@@ -713,8 +721,10 @@
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_TiltMeterTool}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
 
                     <Button
@@ -763,6 +773,7 @@
                     Style="{StaticResource HudTableDiagramStyle}">
                     <i:Interaction.Behaviors>
                         <bhv:HudDesignerBehavior
+                            IsReadOnly="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
                             DragDropCommand="{Binding AddToolCommand}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>

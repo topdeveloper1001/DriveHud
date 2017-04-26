@@ -288,6 +288,9 @@
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudFourStatsBox.xaml.cs">
+      <DependentUpon>HudFourStatsBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudFourStatsBoxDesigner.xaml.cs">
       <DependentUpon>HudFourStatsBoxDesigner.xaml</DependentUpon>
     </Compile>
@@ -311,6 +314,12 @@
     </Compile>
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTiltMeter.xaml.cs">
+      <DependentUpon>HudTiltMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTiltMeterDesigner.xaml.cs">
+      <DependentUpon>HudTiltMeterDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
@@ -397,8 +406,10 @@
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudTiltMeterViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerViewModel.cs" />
@@ -434,7 +445,9 @@
     <Compile Include="ViewModels\Layouts\HudLayoutInfoV2.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutPlainBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutTextBoxTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutTiltMeterTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutNonPopupTool.cs" />
     <Compile Include="ViewModels\Layouts\UiPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutMapping.cs" />
@@ -750,6 +763,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudTiltMeterStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\RadContextMenuTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -769,6 +786,10 @@
     <Page Include="Controls\DropDownMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\HudFourStatsBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudFourStatsBoxDesigner.xaml">
       <SubType>Designer</SubType>
@@ -799,6 +820,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudStatToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTiltMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTiltMeterDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

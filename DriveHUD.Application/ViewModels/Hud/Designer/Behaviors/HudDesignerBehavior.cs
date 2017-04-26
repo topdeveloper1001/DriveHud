@@ -14,6 +14,7 @@ using DriveHUD.Common.Resources;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Windows;
@@ -53,6 +54,32 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             {
                 SetValue(RecommendedAreaTemplateProperty, value);
             }
+        }
+
+        public static DependencyProperty IsReadOnlyProperty = DependencyProperty.Register("IsReadOnly", typeof(bool), typeof(HudDesignerBehavior), new PropertyMetadata(IsReadOnlyChanged));
+
+        public bool IsReadOnly
+        {
+            get
+            {
+                return (bool)GetValue(IsReadOnlyProperty);
+            }
+            set
+            {
+                SetValue(IsReadOnlyProperty, value);
+            }
+        }
+
+        private static void IsReadOnlyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var behavior = d as HudDesignerBehavior;
+
+            if (behavior == null)
+            {
+                return;
+            }
+
+            behavior.RemovableShapes.ForEach(x => behavior.SetReadOnly(x as RadDiagramShape, (bool)e.NewValue));
         }
 
         public static readonly DependencyProperty DragDropCommandProperty = DependencyProperty.Register("DragDropCommand", typeof(System.Windows.Input.ICommand),
@@ -236,10 +263,10 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 IsConnectorsManipulationEnabled = false,
                 IsManipulationAdornerVisible = false,
                 IsSelected = false,
-                IsInEditMode = false,                
+                IsInEditMode = false,
                 SnapsToDevicePixels = true,
                 Background = new SolidColorBrush(Colors.Transparent)
-            };            
+            };
 
             return shape;
         }
@@ -312,6 +339,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 ZIndex = 100
             };
 
+            SetReadOnly(shape, IsReadOnly);
+
             SetWidthBinding(shape, toolViewModel);
             SetHeightBinding(shape, toolViewModel);
             SetPositionBinding(shape, toolViewModel);
@@ -321,6 +350,25 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             AssociatedObject.AddShape(shape);
             RemovableShapes.Add(shape);
+        }
+
+        /// <summary>
+        /// Makes shape with tool read only
+        /// </summary>
+        /// <param name="shape">Shape</param>
+        /// <param name="isReadOnly"></param>
+        private void SetReadOnly(RadDiagramShape shape, bool isReadOnly)
+        {
+            if (shape == null)
+            {
+                return;
+            }
+
+            shape.IsEditable = !isReadOnly;            
+            shape.IsResizingEnabled = !isReadOnly;
+            shape.IsDraggingEnabled = !isReadOnly;
+            shape.IsConnectorsManipulationEnabled = !isReadOnly;
+            shape.IsManipulationAdornerVisible = !isReadOnly;                       
         }
 
         /// <summary>

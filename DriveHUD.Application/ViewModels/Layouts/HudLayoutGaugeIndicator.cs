@@ -11,11 +11,9 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Application.ViewModels.Hud.Designer;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
 using DriveHUD.ViewModels;
-using Model.Enums;
 using ProtoBuf;
 using ReactiveUI;
 using System;

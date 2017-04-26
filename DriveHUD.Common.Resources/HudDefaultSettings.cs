@@ -82,6 +82,12 @@ namespace DriveHUD.Common.Resources
 
         public const double FourStatBoxMinHeight = 19d;
 
+        public const double TiltMeterWidth = 13d;
+
+        public const double TiltMeterHeight = 27d;
+
+        public const decimal TiltMeterDesignerValue = 100m;
+
         #endregion
     }
 }

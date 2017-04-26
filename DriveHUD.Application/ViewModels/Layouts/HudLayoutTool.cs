@@ -21,13 +21,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
     /// This class represents base tool in hud layout
     /// </summary>        
     [Serializable, ProtoContract]
-    [XmlInclude(typeof(HudLayoutPlainBoxTool))]
-    [XmlInclude(typeof(HudLayoutTextBoxTool))]
-    [XmlInclude(typeof(HudLayoutGaugeIndicator))]
-    [XmlInclude(typeof(HudLayoutFourStatsBoxTool))]
-    [ProtoInclude(30, typeof(HudLayoutPlainBoxTool))]
-    [ProtoInclude(31, typeof(HudLayoutTextBoxTool))]
-    [ProtoInclude(32, typeof(HudLayoutGaugeIndicator))]    
+    [XmlInclude(typeof(HudLayoutNonPopupTool)), ProtoInclude(29, typeof(HudLayoutNonPopupTool))]
+    [XmlInclude(typeof(HudLayoutGaugeIndicator)), ProtoInclude(32, typeof(HudLayoutGaugeIndicator))]
     public abstract class HudLayoutTool
     {
         public HudLayoutTool()
@@ -35,7 +30,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             Id = Guid.NewGuid();
         }
 
-        [ProtoMember(1), XmlAttribute]        
+        [ProtoMember(1), XmlAttribute]
         /// <summary>
         /// Gets the id of tool
         /// </summary>

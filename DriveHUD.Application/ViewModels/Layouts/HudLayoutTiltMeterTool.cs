@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudLayoutPlainBoxTool.cs" company="Ace Poker Solutions">
+// <copyright file="HudLayoutTiltMeter.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,57 +11,36 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.ViewModels;
 using ProtoBuf;
-using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
-    [Serializable, ProtoContract]
-    [XmlInclude(typeof(HudLayoutFourStatsBoxTool)), ProtoInclude(33, typeof(HudLayoutFourStatsBoxTool))]
     /// <summary>
-    /// This class represents the plain box tool of the hud
+    /// This class represent the tilt meter tool of the hud
     /// </summary>
-    public class HudLayoutPlainBoxTool : HudLayoutNonPopupTool
+    [Serializable, ProtoContract]
+    public class HudLayoutTiltMeterTool : HudLayoutNonPopupTool
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HudLayoutPlainBoxTool"/> class
+        /// Initializes a new instance of the <see cref="HudLayoutTiltMeterTool"/> class
         /// </summary>
-        public HudLayoutPlainBoxTool() : base()
+        public HudLayoutTiltMeterTool() : base()
         {
-            ToolType = HudDesignerToolType.PlainStatBox;
+            ToolType = HudDesignerToolType.TiltMeter;
         }
 
-        [ProtoMember(2)]
-        /// <summary>
-        /// Gets or sets the list of <see cref="StatInfo"/> stats of the plain box tool
-        /// </summary>
-        public ReactiveList<StatInfo> Stats { get; set; }
-    
         /// <summary>
         /// Creates a copy of the current <see cref="HudLayoutPlainBoxTool"/> instance
         /// </summary>
         /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
         public override HudLayoutTool Clone()
         {
-            var cloned = new HudLayoutPlainBoxTool
+            var cloned = new HudLayoutTiltMeterTool
             {
                 Id = Id,
-                Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
-                {
-                    var statInfoBreak = x as StatInfoBreak;
-
-                    if (statInfoBreak != null)
-                    {
-                        return statInfoBreak.Clone();
-                    }
-
-                    return x.Clone();
-                })),
                 Positions = Positions.Select(x => x.Clone()).ToList(),
                 UIPositions = UIPositions.Select(x => x.Clone()).ToList()
             };
@@ -70,13 +49,13 @@ namespace DriveHUD.Application.ViewModels.Layouts
         }
 
         /// <summary>
-        /// Creates a view model of the current <see cref="HudLayoutPlainBoxTool"/> instance
+        /// Creates a view model of the current <see cref="HudLayoutTiltMeterTool"/> instance
         /// </summary>
         /// <returns>View model of the current <see cref="HudBaseToolViewModel"/> instance</returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            var viewModel = new HudPlainStatBoxViewModel(this, hudElement);
-            return viewModel;
+            var toolViewModel = new HudTiltMeterViewModel(this, hudElement);
+            return toolViewModel;
         }
     }
 }

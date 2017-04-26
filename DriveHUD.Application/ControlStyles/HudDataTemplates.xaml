@@ -55,4 +55,11 @@
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
+    <!-- Template for tilt meter inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudTiltMeterTemplate">
+        <ctl:HudTiltMeterDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
 </ResourceDictionary>

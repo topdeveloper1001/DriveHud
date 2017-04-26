@@ -386,6 +386,7 @@ namespace DriveHUD.Application.ViewModels
             for (var seat = 1; seat <= seats; seat++)
             {
                 var hudElement = new HudElementViewModel(layoutTools);
+                hudElement.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
                 hudElement.Seat = seat;
 
                 try
@@ -720,13 +721,14 @@ namespace DriveHUD.Application.ViewModels
         /// Initializes preview
         /// </summary>
         private void InitializePreview()
-        {            
+        {
             var layoutTools = CurrentLayout.LayoutTools.ToArray();
 
             var random = new Random();
 
             // set randomized data
             var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x => x.Clone()));
+            previewHudElementViewModel.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
 
             previewHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().ForEach(tool =>
             {
@@ -1525,7 +1527,7 @@ namespace DriveHUD.Application.ViewModels
 
             cachedCurrentLayout.HudPlayerTypes = CurrentLayout.HudPlayerTypes;
             cachedCurrentLayout.HudBumperStickerTypes = CurrentLayout.HudBumperStickerTypes;
-            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;            
+            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;
 
             CloseDesigner();
         }

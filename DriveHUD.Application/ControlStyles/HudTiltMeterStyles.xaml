@@ -1,0 +1,241 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <SolidColorBrush
+        x:Key="BorderBrush"
+        Color="#33519b" />
+
+    <SolidColorBrush
+        x:Key="StatFirstBackgroundBrush"
+        Color="#FFFFFF00" />
+    <SolidColorBrush
+        x:Key="StatFirstBorderBrush"
+        Color="#FFFFFF66" />
+
+    <SolidColorBrush
+        x:Key="StatSecondBackgroundBrush"
+        Color="#FFFFA500" />
+    <SolidColorBrush
+        x:Key="StatSecondBorderBrush"
+        Color="#FFFFC966" />
+
+    <SolidColorBrush
+        x:Key="StatThirdBackgroundBrush"
+        Color="#FFFF8C00" />
+    <SolidColorBrush
+        x:Key="StatThirdBorderBrush"
+        Color="#FFFFBA66" />
+
+    <SolidColorBrush
+        x:Key="StatFourthBackgroundBrush"
+        Color="#FFFF0000" />
+    <SolidColorBrush
+        x:Key="StatFourthBorderBrush"
+        Color="#FFFF6666" />
+
+    <SolidColorBrush
+        x:Key="StatFifthBackgroundBrush"
+        Color="#FF8B0000" />
+    <SolidColorBrush
+        x:Key="StatFifthBorderBrush"
+        Color="#FFB96666" />
+
+    <Style
+        x:Key="BaseBorderStyle"
+        TargetType="{x:Type Border}">
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource BorderBrush}" />
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Stretch" />
+    </Style>
+
+    <Style
+        x:Key="TopLeftBorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource BaseBorderStyle}">
+        <Setter
+            Property="CornerRadius"
+            Value="2,0,0,0" />
+        <Setter
+            Property="BorderThickness"
+            Value="1" />
+        <Setter
+            Property="Width"
+            Value="13" />
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Left" />
+        <Setter
+            Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush
+                    EndPoint="0,1">
+                    <GradientStop
+                        Color="#1b1c1e"
+                        Offset="1" />
+                    <GradientStop
+                        Color="#323335"
+                        Offset="0" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="Padding"
+            Value="0,0,0,2" />
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding IsRightOriented}"
+                Value="True">
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Right" />
+            </DataTrigger>
+            <DataTrigger
+                Binding="{Binding IsVertical}"
+                Value="True">
+                <Setter
+                    Property="CornerRadius"
+                    Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="InnerGlowBaseBorderStyle"
+        TargetType="{x:Type Border}">
+        <Setter
+            Property="Background"
+            Value="Transparent" />
+        <Setter
+            Property="BorderBrush"
+            Value="#88898a" />
+        <Setter
+            Property="VerticalAlignment"
+            Value="Stretch" />
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Stretch" />
+        <Setter
+            Property="BorderThickness"
+            Value="0,0.75,0,0" />
+    </Style>
+
+    <Style
+        x:Key="InnerGlowBorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource InnerGlowBaseBorderStyle}">
+        <Setter
+            Property="CornerRadius"
+            Value="2,0,0,0" />
+        <Setter
+            Property="Margin"
+            Value="0,-0.25,0,0" />
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding IsVertical}"
+                Value="True">
+                <Setter
+                    Property="CornerRadius"
+                    Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="LevelBaseBorderStyle"
+        TargetType="{x:Type Border}">
+        <Setter
+            Property="BorderThickness"
+            Value="0,1,0,0" />
+        <Setter
+            Property="Width"
+            Value="9" />
+        <Setter
+            Property="Height"
+            Value="4" />
+        <Setter
+            Property="Margin"
+            Value="0,0,0,1" />
+        <Setter
+            Property="VerticalAlignment"
+            Value="Bottom" />
+    </Style>
+
+    <Style
+        x:Key="Level1BorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource LevelBaseBorderStyle}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource StatFirstBackgroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StatFirstBorderBrush}" />
+    </Style>
+
+    <Style
+        x:Key="Level2BorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource LevelBaseBorderStyle}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource StatSecondBackgroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StatSecondBorderBrush}" />
+    </Style>
+
+    <Style
+        x:Key="Level3BorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource LevelBaseBorderStyle}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource StatThirdBackgroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StatThirdBorderBrush}" />
+    </Style>
+
+    <Style
+        x:Key="Level4BorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource LevelBaseBorderStyle}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource StatFourthBackgroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StatFourthBorderBrush}" />
+    </Style>
+
+    <Style
+        x:Key="Level5BorderStyle"
+        TargetType="{x:Type Border}"
+        BasedOn="{StaticResource LevelBaseBorderStyle}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource StatFifthBackgroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StatFifthBorderBrush}" />
+        <Setter
+            Property="CornerRadius"
+            Value="2,0,0,0" />
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding IsVertical}"
+                Value="True">
+                <Setter
+                    Property="CornerRadius"
+                    Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

@@ -46,10 +46,6 @@
                             dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <i:Interaction.Behaviors>
-                                <vm:HudFourStatsBoxToolTipBehavior
-                                    HudElementViewModel="{Binding DataContext.Parent, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                            </i:Interaction.Behaviors>
                             <TextBlock
                                 Style="{StaticResource StatTextBlockStyle}"
                                 Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
@@ -77,9 +73,19 @@
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <TextBlock
-                                Text="{Binding Caption}"
                                 Style="{StaticResource StatTextBlockStyle}"
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                <Hyperlink
+                                    Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                    CommandParameter="{Binding}"
+                                    TextDecorations="{x:Null}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                    <Run
+                                        Text="{Binding Caption}" />
+                                    
+                                </Hyperlink>
+                            </TextBlock>
                         </Border>
 
                         <!-- Stat #3 -->
@@ -92,9 +98,19 @@
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <TextBlock
-                                Text="{Binding Caption}"
                                 Style="{StaticResource StatTextBlockStyle}"
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                <Hyperlink
+                                    Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                    CommandParameter="{Binding}"
+                                    TextDecorations="{x:Null}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                    <Run
+                                        Text="{Binding Caption}" />
+                                    
+                                </Hyperlink>
+                            </TextBlock>
                         </Border>
 
                         <!-- Stat #4 -->
@@ -107,9 +123,19 @@
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <TextBlock
-                                Text="{Binding Caption}"
                                 Style="{StaticResource StatTextBlockStyle}"
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                <Hyperlink
+                                    Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                    CommandParameter="{Binding}"
+                                    TextDecorations="{x:Null}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                    <Run
+                                        Text="{Binding Caption}" />
+                                    
+                                </Hyperlink>
+                            </TextBlock>
                         </Border>
 
                     </StackPanel>

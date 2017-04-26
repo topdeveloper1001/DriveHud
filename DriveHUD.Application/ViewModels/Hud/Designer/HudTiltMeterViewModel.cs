@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudPlainStatBoxViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="HudTiltMeterViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -13,35 +13,29 @@
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Resources;
-using DriveHUD.ViewModels;
 using ProtoBuf;
-using ReactiveUI;
 using System;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
-    [ProtoInclude(32, typeof(HudFourStatsBoxViewModel))]
-    /// <summary>
-    /// Represents view model of plain stat box
-    /// </summary>
-    public class HudPlainStatBoxViewModel : HudBaseNonPopupToolViewModel<HudLayoutPlainBoxTool>, IHudStatsToolViewModel
+    public class HudTiltMeterViewModel : HudBaseNonPopupToolViewModel<HudLayoutTiltMeterTool>
     {
         [ProtoMember(5)]
-        protected HudLayoutPlainBoxTool tool;
+        protected HudLayoutTiltMeterTool tool;
 
         /// <summary>
-        /// Initializes an instance of <see cref="HudPlainStatBoxViewModel"/>
+        /// Initializes an instance of <see cref="HudTiltMeterViewModel"/>
         /// </summary>
-        protected HudPlainStatBoxViewModel()
+        protected HudTiltMeterViewModel()
         {
         }
 
         /// <summary>
-        /// Initialize an instance of <see cref="HudPlainStatBoxViewModel"/>
+        /// Initialize an instance of <see cref="HudTiltMeterViewModel"/>
         /// </summary>
-        /// <param name="tool"><see cref="HudLayoutPlainBoxTool"/> to initialize an instance</param>
-        protected HudPlainStatBoxViewModel(HudLayoutPlainBoxTool tool)
+        /// <param name="tool"><see cref="HudLayoutTiltMeterTool"/> to initialize an instance</param>
+        protected HudTiltMeterViewModel(HudLayoutTiltMeterTool tool)
         {
             Check.ArgumentNotNull(() => tool);
 
@@ -49,11 +43,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        ///  Initialize an instance of <see cref="HudPlainStatBoxViewModel"/>
+        ///  Initialize an instance of <see cref="HudTiltMeterViewModel"/>
         /// </summary>
-        /// <param name="tool"><see cref="HudLayoutPlainBoxTool"/> to initialize an instance</param>
+        /// <param name="tool"><see cref="HudLayoutTiltMeterTool"/> to initialize an instance</param>
         /// <param name="parent">Parent <see cref="HudElementViewModel"/> to initialize an instance</param>
-        public HudPlainStatBoxViewModel(HudLayoutPlainBoxTool tool, HudElementViewModel parent) : this(tool)
+        public HudTiltMeterViewModel(HudLayoutTiltMeterTool tool, HudElementViewModel parent) : this(tool)
         {
             Check.ArgumentNotNull(() => parent);
 
@@ -85,17 +79,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Gets the list of <see cref="StatInfo"/> of the current tool
-        /// </summary>
-        public ReactiveList<StatInfo> Stats
-        {
-            get
-            {
-                return tool.Stats;
-            }
-        }
-
-        /// <summary>
         /// Gets the layout tool
         /// </summary>
         public override HudLayoutTool Tool
@@ -113,7 +96,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return HudDefaultSettings.PlainStatBoxWidth;
+                return HudDefaultSettings.TiltMeterWidth;
             }
         }
 
@@ -124,10 +107,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return HudDefaultSettings.PlainStatBoxHeight;
+                return HudDefaultSettings.TiltMeterHeight;
             }
         }
 
-        #endregion       
+        #endregion  
     }
 }
