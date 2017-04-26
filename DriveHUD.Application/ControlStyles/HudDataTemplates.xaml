@@ -62,4 +62,11 @@
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
+    <!-- Template for player icon inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudPlayerIconTemplate">
+        <ctl:HudPlayerIcon
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
 </ResourceDictionary>

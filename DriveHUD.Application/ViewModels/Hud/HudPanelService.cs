@@ -15,7 +15,6 @@ using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Application.Views;
 using DriveHUD.Application.Views.Popups;
 using DriveHUD.Common;
-using DriveHUD.Entities;
 using System;
 using System.Windows;
 using System.Windows.Data;
@@ -95,6 +94,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                     break;
                 case HudDesignerToolType.TiltMeter:
                     hudTool = new HudTiltMeter
+                    {
+                        DataContext = hudToolElement
+                    };
+                    break;
+                case HudDesignerToolType.PlayerProfileIcon:
+                    hudTool = new HudPlayerIcon
                     {
                         DataContext = hudToolElement
                     };

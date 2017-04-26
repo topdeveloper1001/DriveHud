@@ -24,6 +24,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     [XmlInclude(typeof(HudLayoutPlainBoxTool)), ProtoInclude(30, typeof(HudLayoutPlainBoxTool))]
     [XmlInclude(typeof(HudLayoutTextBoxTool)), ProtoInclude(31, typeof(HudLayoutTextBoxTool))]
     [XmlInclude(typeof(HudLayoutTiltMeterTool)), ProtoInclude(34, typeof(HudLayoutTiltMeterTool))]
+    [XmlInclude(typeof(HudLayoutPlayerIconTool)), ProtoInclude(35, typeof(HudLayoutPlayerIconTool))]
     public abstract class HudLayoutNonPopupTool : HudLayoutTool
     {
         /// <summary>

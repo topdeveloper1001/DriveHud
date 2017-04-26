@@ -450,6 +450,15 @@
         </DataTemplate>
 
         <DataTemplate
+            x:Key="PlayerIconAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlayerIconWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlayerIconHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.PlayerIconHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
             x:Key="GaugeIndicatorAdornerTemplate">
             <Border
                 Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
@@ -726,12 +735,14 @@
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}"
                         dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
-
+                    
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"                        
                         CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
 
                     <Button

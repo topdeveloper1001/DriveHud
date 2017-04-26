@@ -14,6 +14,7 @@ using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// <summary>
     /// Base class for non-popup tools
     /// </summary>
+    [ProtoContract]
     public abstract class HudBaseNonPopupToolViewModel<T> : HudBaseToolViewModel where T : HudLayoutNonPopupTool
     {
         /// <summary>

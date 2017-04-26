@@ -164,6 +164,10 @@ namespace DriveHud.Tests.UnitTests
             };
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudPlainStatBoxViewModel;
+            hudToolViewModelExpected.Width = 100;
+            hudToolViewModelExpected.Height = 150;
+            hudToolViewModelExpected.Position = new System.Windows.Point(10, 10);
+            hudToolViewModelExpected.Opacity = 50;
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
@@ -197,6 +201,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
         }
 
         /// <summary>
@@ -361,7 +366,7 @@ namespace DriveHud.Tests.UnitTests
         /// Method tests if <see cref="HudFourStatsBoxViewModel"/> can be serialized with <seealso cref="Serializer"/>
         /// </summary>
         [Test]
-        public void HudLayoutFourStatsBoxViewModelToolCanBeSerializedDeserializedWithProtobuf()
+        public void HudFourStatsBoxViewModelToolCanBeSerializedDeserializedWithProtobuf()
         {
             var hudLayoutToolExpected = new HudLayoutFourStatsBoxTool
             {
@@ -380,6 +385,10 @@ namespace DriveHud.Tests.UnitTests
             };
 
             var hudFourStatsBoxViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudFourStatsBoxViewModel;
+            hudFourStatsBoxViewModelExpected.Width = 100;
+            hudFourStatsBoxViewModelExpected.Height = 150;
+            hudFourStatsBoxViewModelExpected.Position = new System.Windows.Point(5, 5);
+            hudFourStatsBoxViewModelExpected.Opacity = 50;
 
             Assert.IsNotNull(hudFourStatsBoxViewModelExpected);
 
@@ -417,13 +426,14 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudFourStatsBoxViewModelActual.Width, Is.EqualTo(hudFourStatsBoxViewModelExpected.Width));
             Assert.That(hudFourStatsBoxViewModelActual.Height, Is.EqualTo(hudFourStatsBoxViewModelExpected.Height));
             Assert.That(hudFourStatsBoxViewModelActual.Position, Is.EqualTo(hudFourStatsBoxViewModelExpected.Position));
+            Assert.That(hudFourStatsBoxViewModelActual.Opacity, Is.EqualTo(hudFourStatsBoxViewModelExpected.Opacity));
         }
 
         /// <summary>
         /// Method tests if <see cref="HudLayoutTiltMeterTool"/> can be serialized with <seealso cref="Serializer"/>
         /// </summary>
         [Test]
-        public void HudTiltMeterViewModelCanBeSerializedDeserializedWithProtobuf()
+        public void HudLayoutTiltMeterToolCanBeSerializedDeserializedWithProtobuf()
         {
             var hudLayoutToolExpected = new HudLayoutTiltMeterTool();
 
@@ -459,7 +469,7 @@ namespace DriveHud.Tests.UnitTests
         /// Method tests if <see cref="HudTiltMeterViewModel"/> can be serialized with <seealso cref="Serializer"/>
         /// </summary>
         [Test]
-        public void HudTitlMeterViewModelToolCanBeSerializedDeserializedWithProtobuf()
+        public void HudTiltMeterViewModelToolCanBeSerializedDeserializedWithProtobuf()
         {
             var hudLayoutToolExpected = new HudLayoutTiltMeterTool();
 
@@ -469,6 +479,10 @@ namespace DriveHud.Tests.UnitTests
             };
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudTiltMeterViewModel;
+            hudToolViewModelExpected.Width = 100;
+            hudToolViewModelExpected.Height = 75;
+            hudToolViewModelExpected.Position = new System.Windows.Point(5, 5);
+            hudToolViewModelExpected.Opacity = 60;
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
@@ -501,6 +515,96 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudLayoutPlayerIconTool"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudLayoutPlayerIconToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutPlayerIconTool();
+
+            byte[] data = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, hudLayoutToolExpected);
+                    data = msTestString.ToArray();
+                }
+            });
+
+            Assert.IsNotNull(data);
+
+            HudLayoutPlayerIconTool hudLayoutToolActual = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var afterStream = new MemoryStream(data))
+                {
+                    hudLayoutToolActual = Serializer.Deserialize<HudLayoutPlayerIconTool>(afterStream);
+                }
+            });
+
+            Assert.IsNotNull(hudLayoutToolActual);
+            Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
+            Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudPlayerIconViewModel"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudPlayerIconViewModelToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutPlayerIconTool();
+
+            var hudElement = new HudElementViewModel
+            {
+                Seat = 1,
+            };
+
+            var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudPlayerIconViewModel;
+            hudToolViewModelExpected.Width = 100;
+            hudToolViewModelExpected.Height = 75;
+            hudToolViewModelExpected.Position = new System.Windows.Point(5, 5);
+            hudToolViewModelExpected.Opacity = 60;
+
+            Assert.IsNotNull(hudToolViewModelExpected);
+
+            byte[] data = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, hudToolViewModelExpected);
+                    data = msTestString.ToArray();
+                }
+            });
+
+            Assert.IsNotNull(data);
+
+            HudPlayerIconViewModel hudToolViewModelActual = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var afterStream = new MemoryStream(data))
+                {
+                    hudToolViewModelActual = Serializer.Deserialize<HudPlayerIconViewModel>(afterStream);
+                }
+            });
+
+            Assert.IsNotNull(hudToolViewModelActual);
+            Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
+            Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
+            Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
+            Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
+            Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
         }
 
         /// <summary>
@@ -641,7 +745,9 @@ namespace DriveHud.Tests.UnitTests
 
             var tiltMeterTool = new HudLayoutTiltMeterTool();
 
-            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool };
+            var playerIconTool = new HudLayoutPlayerIconTool();
+
+            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool, playerIconTool };
 
             return hudLayoutInfo;
         }

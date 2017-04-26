@@ -88,6 +88,10 @@ namespace DriveHUD.Common.Resources
 
         public const decimal TiltMeterDesignerValue = 100m;
 
+        public const double PlayerIconWidth = 28d;
+
+        public const double PlayerIconHeight = 27d;
+
         #endregion
     }
 }
