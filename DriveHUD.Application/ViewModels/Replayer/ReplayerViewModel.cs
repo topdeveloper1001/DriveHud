@@ -100,13 +100,11 @@ namespace DriveHUD.Application.ViewModels.Replayer
             SetPlayersDefaults();
             TotalPotChipsContainer = new ReplayerChipsContainer();
             CommunityCards = new List<ReplayerCardViewModel>();
-            Converter.AllDeadCards = new List<HoleCards>();
 
             if (CurrentGame == null)
             {
                 return;
             }
-            Converter.ActivePlayerHasHoleCard = null;  //need once initialize list of players who has hole cards, every time when we load game
             SetCommunityCards(CurrentGame.CommunityCards);
 
             decimal anteAmount = Math.Abs(CurrentGame.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).Sum(x => x.Amount));
@@ -247,108 +245,123 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
         }
 
+        public List<Player> ActivePlayerHasHoleCard { get; set; }
+        public List<Player> ActivePlayerHasHoleCardFolded { get; set; }
 
-        List<ReplayerTableState> statesByStreetValue = new List<ReplayerTableState>();
-        List<ReplayerTableState> specialPoints = new List<ReplayerTableState>();
+        public List<HoleCards> AllDeadCards = new List<HoleCards>();
+        public string AllDeadCardsString = string.Empty;  
+
+        public string CurrentBoardCards { get; set; }
+        public Card[] CurrentBoard { get; set; }
+
         private void UpdatePlayersEquityWin(ReplayerTableState state)
         {
-            if (state.IsStreetChangedAction || state.CurrentAction.ToString().ToLower().Contains("small_blind")
-                                            || state.CurrentAction.IsWinningsAction
-                                            || statesByStreetValue.FirstOrDefault(x => x == state) == null)
+            //preparing for formula Card on the Board in dependence of street in current state
+            switch (state.CurrentAction.Street)
             {
-                statesByStreetValue = new List<ReplayerTableState>();
-
-                switch (state.CurrentAction.Street)
-                {
-                    case Street.Preflop:
-                        foreach (ReplayerTableState st in TableStateList.Where(x => x.CurrentAction.Street == Street.Preflop))
-                        {
-                            if (CurrentGame.Players.FirstOrDefault(x => x.PlayerName == st.CurrentAction.PlayerName).hasHoleCards
-                                                                                                            && st.CurrentAction.IsFold
-                                                                                                            && !st.DeadCardFlag)
-                            {
-                                TableStateList.FirstOrDefault(x => x == st).DeadCardFlag = true; 
-                                break;
-                            }
-                            statesByStreetValue.Add(st);
-                        }
-                        break;
-                    case Street.Flop:
-                        statesByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Flop).ToList();
-                        break;
-                    case Street.Turn:
-                        statesByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Turn).ToList();
-                        break;
-                    case Street.River:
-                        statesByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.River).ToList();
-                        break;
-                    case Street.Summary:
-                        statesByStreetValue = TableStateList.Where(x => x.CurrentAction.Street == Street.Summary).ToList();
-                        break;
-                }    
-
-                if (statesByStreetValue.Count > 0)
-                {
-                    List<ReplayerPlayerViewModel> activePlayersWithHoleCards = new List<ReplayerPlayerViewModel>();
-                    List<ReplayerTableState> foldedPlayersWithHoleCards = new List<ReplayerTableState>();
-                    ReplayerPlayerViewModel player;
-
-                    foreach (var replayerTableState in TableStateList.Where(st => st.CurrentStreet == state.CurrentStreet)) 
-                    {
-                        try
-                        {
-                            player = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
-                            if (replayerTableState.CurrentAction != null && player != null)
-                            {
-                                replayerTableState.ActivePlayer.EquityWin = Converter.CalculateEquity(replayerTableState.CurrentAction, CurrentGame);
-                                ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, player);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection.", ex);
-                        }
-                    }
-
-
-
-                    Converter.AllDeadCards = new List<HoleCards>();
-                    Converter.AllDeadCardsString = "";
-                   
-                    foreach (var replayerTableState in statesByStreetValue)   //searching for deadcards and dead players
-                    {
-                        if (replayerTableState.CurrentAction.IsFold
-                            &&
-                            CurrentGame.Players.FirstOrDefault(
-                                x => x.PlayerName == replayerTableState.CurrentAction.PlayerName).hasHoleCards)
-                        {
-                            Converter.AllDeadCards.Add(CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName).HoleCards);
-                            Converter.AllDeadCardsString +=
-                                CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName).Cards;
-                            foldedPlayersWithHoleCards.Add(replayerTableState);
-                        }
-                    }
-                    foreach (var replayerTableState in statesByStreetValue)
-                    {
-                        try
-                        {
-                            player = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
-                            if (replayerTableState.CurrentAction != null && player != null)
-                            {
-                                replayerTableState.ActivePlayer.EquityWin = Converter.CalculateEquity(replayerTableState.CurrentAction, CurrentGame);
-                                ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, player);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection.", ex);
-                        }
-
-                    }
-                }
-
+                case Street.Preflop:
+                    CurrentBoard = new Card[] { };
+                    CurrentBoardCards = string.Empty;
+                    break;
+                case Street.Flop:
+                    CurrentBoard = CurrentGame.CommunityCards.Take(3).ToArray();
+                    CurrentBoardCards = new string(CurrentGame.CommunityCardsString.Take(6).ToArray());
+                    break;
+                case Street.Turn:
+                    CurrentBoard = CurrentGame.CommunityCards.Take(4).ToArray();
+                    CurrentBoardCards = new string(CurrentGame.CommunityCardsString.Take(8).ToArray());
+                    break;
+                case Street.River:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
+                case Street.Showdown:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
+                case Street.Summary:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();//todo the_weeknd 9J268
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
             }
 
+
+            //finding all players having hole cards  
+            ActivePlayerHasHoleCard = CurrentGame.Players.Where(pl => pl.hasHoleCards).ToList();
+
+            //searching for deadcards and removing this player from list of ActivePlayerHasHoleCard 
+            ActivePlayerHasHoleCardFolded = new List<Player>();
+            foreach (ReplayerTableState replayerTableState in TableStateList)
+            {
+                Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
+                if (playerInTableState != null 
+                    && TableStateList.IndexOf(replayerTableState) <= TableStateList.IndexOf(state) 
+                    && replayerTableState.CurrentAction.IsFold 
+                    && playerInTableState.hasHoleCards)
+                    {
+                        ActivePlayerHasHoleCardFolded.Add(playerInTableState);
+                        ActivePlayerHasHoleCard.Remove(playerInTableState);
+                        AllDeadCards.Add(playerInTableState.HoleCards);
+                        AllDeadCardsString += playerInTableState.Cards;
+                    }  
+            }
+
+            //calculation of probabilities
+            List<decimal> equities;
+            if (TableStateList.IndexOf(state) + 1 >= 0 && TableStateList.IndexOf(state) + 1 < TableStateList.Count)
+            {
+                equities = Converter.CalculateEquity(CurrentGame,
+                    ActivePlayerHasHoleCard,
+                    AllDeadCards,
+                    AllDeadCardsString,
+                    CurrentBoardCards,
+                    CurrentBoard);
+
+
+
+                //updating states in replayer view 
+                RefreshBoard(equities, state.CurrentStreet);
+            }
+
+            //case of last state. Needed for All-in before River for some cases
+            if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
+            {     
+                //calculation of probabilities
+                equities = Converter.CalculateEquity(CurrentGame,
+                                                                                      ActivePlayerHasHoleCard,
+                                                                                      AllDeadCards,
+                                                                                      AllDeadCardsString,
+                                                                                      CurrentBoardCards,
+                                                                                      CurrentBoard);
+                //updating states in replayer view
+                RefreshBoard(equities, Street.Preflop);  
+            } 
+        }
+
+        private ReplayerPlayerViewModel _playerInState { get; set; }
+        private void RefreshBoard(List<decimal> equities, Street street)
+        {  
+            foreach (ReplayerTableState replayerTableState in TableStateList.Where(st => st.CurrentStreet == street))
+            {
+                try
+                {
+                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
+                    if (_playerInState != null
+                        && ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName) != null
+                        && replayerTableState.CurrentAction != null
+                        && ActivePlayerHasHoleCard.Count > 1)
+                        replayerTableState.ActivePlayer.EquityWin = equities[ActivePlayerHasHoleCard.IndexOf(ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName))];
+                    else
+                        replayerTableState.ActivePlayer.EquityWin = -1;
+
+
+                    ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, _playerInState);
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
+                }
+            }
         }
 
         private void LoadState(int stateIndex)
