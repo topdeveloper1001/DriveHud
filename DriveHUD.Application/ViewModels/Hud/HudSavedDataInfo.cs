@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using System.Collections.Generic;
 
 namespace DriveHUD.Application.ViewModels.Hud

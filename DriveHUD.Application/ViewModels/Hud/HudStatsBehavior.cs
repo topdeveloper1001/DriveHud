@@ -10,12 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.Controls;
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Reflection;
-using DriveHUD.ViewModels;
-using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Stats;
 using ReactiveUI;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -23,8 +20,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Interactivity;
 using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels.Hud

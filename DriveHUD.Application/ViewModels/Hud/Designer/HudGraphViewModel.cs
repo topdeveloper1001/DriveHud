@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudGaugeIndicatorViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="HudGraphViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -12,7 +12,6 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
-using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Stats;
@@ -27,48 +26,49 @@ using System.Windows.Data;
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Represents view model of gauge indicator
+    /// Represents view model of graph tool
     /// </summary>
     [ProtoContract]
-    public class HudGaugeIndicatorViewModel : HudBaseToolViewModel, IHudStatsToolViewModel, IHudBaseStatToolViewModel
+    public class HudGraphViewModel : HudBaseToolViewModel, IHudBaseStatToolViewModel, IHudStatsToolViewModel
     {
         [ProtoMember(5)]
-        private HudLayoutGaugeIndicator tool;
+        private HudLayoutGraphTool tool;
 
         /// <summary>
-        /// Initializes an instance of <see cref="HudGaugeIndicatorViewModel"/>
+        /// Initializes an instance of <see cref="HudGraphViewModel"/>
         /// </summary>
-        private HudGaugeIndicatorViewModel()
+        private HudGraphViewModel()
         {
         }
 
         /// <summary>
-        /// Initialize an instance of <see cref="HudGaugeIndicatorViewModel"/>
+        /// Initialize an instance of <see cref="HudGraphViewModel"/>
         /// </summary>
-        /// <param name="tool"><see cref="HudLayoutGaugeIndicator"/> to initialize an instance</param>
-        private HudGaugeIndicatorViewModel(HudLayoutGaugeIndicator tool)
+        /// <param name="tool"><see cref="HudLayoutGraphTool"/> to initialize an instance</param>
+        private HudGraphViewModel(HudLayoutGraphTool tool)
         {
             Check.ArgumentNotNull(() => tool);
 
             this.tool = tool;
+            Opacity = 100;
 
             if (Stats != null)
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;
             }
 
+
             InitializeCommands();
         }
 
         /// <summary>
-        ///  Initialize an instance of <see cref="HudGaugeIndicatorViewModel"/>
+        ///  Initialize an instance of <see cref="HudGraphViewModel"/>
         /// </summary>
-        /// <param name="tool"><see cref="HudLayoutGaugeIndicator"/> to initialize an instance</param>
+        /// <param name="tool"><see cref="HudLayoutGraphTool"/> to initialize an instance</param>
         /// <param name="parent">Parent <see cref="HudElementViewModel"/> to initialize an instance</param>
-        public HudGaugeIndicatorViewModel(HudLayoutGaugeIndicator tool, HudElementViewModel parent) : this(tool)
+        public HudGraphViewModel(HudLayoutGraphTool tool, HudElementViewModel parent) : this(tool)
         {
             Check.ArgumentNotNull(() => parent);
-
             Parent = parent;
         }
 
@@ -108,22 +108,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Gets or sets text on the left side of gauge indicator
-        /// </summary>
-        public string Text
-        {
-            get
-            {
-                return tool.Text;
-            }
-            set
-            {
-                tool.Text = value;
-                this.RaisePropertyChanged(nameof(Text));
-            }
-        }
-
-        /// <summary>
         /// Gets the base stat to which gauge indicator is attached
         /// </summary>
         public StatInfo BaseStat
@@ -135,9 +119,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Gets the top stat of the gauge indicator
+        /// Gets the parent tool id 
         /// </summary>
-        public StatInfo TopStat
+        public Guid ParentToolId
+        {
+            get
+            {
+                return tool.ParentId;
+            }
+        }
+
+        /// <summary>
+        /// Gets the top stat of the graph
+        /// </summary>
+        public StatInfo MainStat
         {
             get
             {
@@ -146,24 +141,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Gets the list of <see cref="StatInfo"/> of gauge indicator
+        /// Gets the list of <see cref="StatInfo"/> of the graph
         /// </summary>
         public ReactiveList<StatInfo> Stats
         {
             get
             {
                 return tool.Stats;
-            }
-        }
-
-        /// <summary>
-        /// Gets the list of <see cref="StatInfo"/> of stats in main area of gauge indicator
-        /// </summary>
-        public ReactiveList<StatInfo> MainStats
-        {
-            get
-            {
-                return new ReactiveList<StatInfo>(tool.Stats.Skip(1));
             }
         }
 
@@ -175,6 +159,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return BindingMode.TwoWay;
+            }
+        }
+
+        [ProtoMember(6)]
+        private ReactiveList<decimal> statSessionCollection;
+
+        public ReactiveList<decimal> StatSessionCollection
+        {
+            get
+            {
+                return statSessionCollection;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statSessionCollection, value);
             }
         }
 
@@ -194,8 +193,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return;
             }
-
-            Opacity = Parent.Opacity;
 
             if (tool != null && tool.PositionInfo != null)
             {
@@ -246,22 +243,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>   
         private void OnStatsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (e.Action == NotifyCollectionChangedAction.Add && e.NewItems != null)
-            {
-                var random = new Random();
-
-                var addedStats = e.NewItems.OfType<StatInfo>().ToArray();
-
-                // adds random values
-                addedStats.ForEach(x =>
-                {
-                    x.CurrentValue = random.Next(0, 100);
-                    x.StatInfoMeter = new StatInfoMeterModel();
-                });
-            }
-
-            this.RaisePropertyChanged(nameof(TopStat));
-            this.RaisePropertyChanged(nameof(MainStats));
+            this.RaisePropertyChanged(nameof(MainStat));
         }
     }
 }

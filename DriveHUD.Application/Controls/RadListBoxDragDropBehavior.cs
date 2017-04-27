@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using Model.Stats;
 using System.Collections.Generic;
 using System.Linq;
 using Telerik.Windows.DragDrop.Behaviors;

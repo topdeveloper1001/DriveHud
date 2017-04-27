@@ -23,6 +23,7 @@ using Model.Interfaces;
 using DriveHUD.Common.Linq;
 using Model.Data;
 using HandHistories.Objects.GameDescription;
+using Model.Enums;
 
 namespace DriveHUD.Importers
 {
@@ -115,6 +116,7 @@ namespace DriveHUD.Importers
 
                 bool skipAdding = false;
 
+                // get or initialize new session 
                 if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
                 {
                     sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
@@ -449,10 +451,10 @@ namespace DriveHUD.Importers
 
         private void InitSessionStatCollections(HudLightIndicators playerData, Playerstatistic stats)
         {
-            if (playerData.MoneyWonCollection == null)
+            if (playerData.StatsSessionCollection == null)
             {
-                playerData.MoneyWonCollection = new List<decimal>();
-                playerData.MoneyWonCollection.Add(stats.NetWon);
+                playerData.StatsSessionCollection = new Dictionary<Stat, IList<decimal>>();
+                playerData.AddStatsToSession(stats);
             }
 
             if (playerData.RecentAggList == null)

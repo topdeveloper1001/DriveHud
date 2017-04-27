@@ -27,7 +27,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     [ProtoInclude(31, typeof(HudGaugeIndicatorViewModel))]
     [ProtoInclude(33, typeof(HudTiltMeterViewModel))]
     [ProtoInclude(34, typeof(HudPlayerIconViewModel))]
-    public abstract class HudBaseToolViewModel : ViewModelBase
+    [ProtoInclude(35, typeof(HudGraphViewModel))]
+    public abstract class HudBaseToolViewModel : ViewModelBase, IHudWindowElement
     {
         #region Properties
 

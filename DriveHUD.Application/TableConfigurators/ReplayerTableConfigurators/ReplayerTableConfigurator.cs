@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Interfaces;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;

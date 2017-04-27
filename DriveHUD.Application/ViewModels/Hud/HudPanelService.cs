@@ -105,6 +105,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     };
                     break;
                 case HudDesignerToolType.GaugeIndicator:
+                case HudDesignerToolType.Graph:
                     break;
                 default:
                     throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
@@ -126,6 +127,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 case HudDesignerToolType.GaugeIndicator:
                     factory = new FrameworkElementFactory(typeof(HudGaugeIndicator));
+                    break;
+                case HudDesignerToolType.Graph:
+                    factory = new FrameworkElementFactory(typeof(HudGraph));
                     break;
                 default:
                     break;

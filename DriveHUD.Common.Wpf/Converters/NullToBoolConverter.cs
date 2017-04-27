@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Wpf.Converters
     public class NullToBoolConverter : MarkupExtensionConverterBase
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
+        {          
             return value != null;
         }
 

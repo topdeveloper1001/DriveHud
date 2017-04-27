@@ -165,13 +165,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RangeSelector\PreDefinedRangesViewModel.cs" />
-    <Compile Include="StatInfoMeterModel.cs" />
-    <Compile Include="StatInfo.cs" />
-    <Compile Include="StatInfoBreak.cs" />
-    <Compile Include="StatInfoCollection.cs" />
-    <Compile Include="StatInfoGroup.cs" />
-    <Compile Include="StatInfoOptionValueRange.cs" />
-    <Compile Include="StatInfoToolTip.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

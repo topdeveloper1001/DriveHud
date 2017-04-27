@@ -445,7 +445,7 @@
             <Border
                 Width="{x:Static res:HudDefaultSettings.TiltMeterWidth}"
                 Height="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
-                MinHeight="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.TiltMeterMinHeight}"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
@@ -454,12 +454,21 @@
             <Border
                 Width="{x:Static res:HudDefaultSettings.PlayerIconWidth}"
                 Height="{x:Static res:HudDefaultSettings.PlayerIconHeight}"
-                MinHeight="{x:Static res:HudDefaultSettings.PlayerIconHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.PlayerIconMinHeight}"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
         <DataTemplate
             x:Key="GaugeIndicatorAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
+                MinHeight="35"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="GraphAdornerTemplate">
             <Border
                 Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
                 Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
@@ -685,26 +694,31 @@
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_GraphTool}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.Graph}" />
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.Graph}">
+                        <dh:DragDrop.GroupProperty>
+                            <x:Static
+                                Member="vm:HudDragDropGroups.Popups" />
+                        </dh:DragDrop.GroupProperty>
+                    </Button>
 
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
-                        Command="{Binding DesignerToolCommand}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
                         dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
 
-                    <Button
+                    <!--<Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_BumperStickersTool}"
                         IsEnabled="False"
                         Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />
+                        CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />-->
 
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -735,22 +749,22 @@
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}"
                         dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
-                    
+
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"                        
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
 
-                    <Button
+                    <!--<Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_HeatMapTool}"
                         IsEnabled="False"
                         Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />-->
 
                 </StackPanel>
 
@@ -1101,7 +1115,7 @@
                                                     Binding="{Binding IsInDesignMode}"
                                                     Value="True" />
                                                 <Condition
-                                                    Binding="{Binding SelectedToolViewModel, Converter={dh:NullToBoolConverter}}"
+                                                    Binding="{Binding CanAddStats}"
                                                     Value="False" />
                                             </MultiDataTrigger.Conditions>
                                             <Setter
@@ -1117,7 +1131,7 @@
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
                                 <controls:RadListBoxDragDropBehavior
-                                    AllowReorder="True"
+                                    AllowReorder="True"                                     
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                         </telerik:RadListBox>

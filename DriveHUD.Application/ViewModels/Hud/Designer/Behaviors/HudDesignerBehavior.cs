@@ -336,6 +336,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 IsRotationEnabled = false,
                 Padding = new Thickness(0),
                 IsDraggingEnabled = true,
+                IsConnectorsManipulationEnabled = false,
                 ZIndex = 100
             };
 
@@ -366,8 +367,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             shape.IsEditable = !isReadOnly;            
             shape.IsResizingEnabled = !isReadOnly;
-            shape.IsDraggingEnabled = !isReadOnly;
-            shape.IsConnectorsManipulationEnabled = !isReadOnly;
+            shape.IsDraggingEnabled = !isReadOnly;            
             shape.IsManipulationAdornerVisible = !isReadOnly;                       
         }
 

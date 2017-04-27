@@ -2,14 +2,10 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
-using System;
-using System.Collections.Generic;
+using Model.Stats;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace DriveHUD.Application.ViewModels.Replayer

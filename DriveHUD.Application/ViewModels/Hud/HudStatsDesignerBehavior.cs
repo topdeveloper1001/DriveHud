@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using Model.Stats;
 using System.Windows;
 using System.Windows.Input;
 

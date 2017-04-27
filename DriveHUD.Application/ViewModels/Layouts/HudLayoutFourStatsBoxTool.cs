@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;

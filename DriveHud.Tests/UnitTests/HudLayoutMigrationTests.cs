@@ -11,23 +11,18 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Surrogates;
-using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
-using Model.Enums;
+using Model.Stats;
 using NUnit.Framework;
-using ProtoBuf;
 using ProtoBuf.Meta;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Windows.Media;
 using System.Xml.Serialization;
 
 namespace DriveHud.Tests.UnitTests

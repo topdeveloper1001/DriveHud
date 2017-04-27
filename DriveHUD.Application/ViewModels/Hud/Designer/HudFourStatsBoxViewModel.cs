@@ -16,6 +16,7 @@ using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;

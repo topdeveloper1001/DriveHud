@@ -30,9 +30,10 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     using Model.Settings;
+    using Model.Stats;
     using ViewModels.Hud;
 
-    #warning need to fix migration
+#warning need to fix migration
     [Migration(14)]
     public class Migration0014_LayoutsToMultipleFiles : Migration
     {

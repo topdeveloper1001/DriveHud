@@ -109,6 +109,13 @@ namespace DriveHUD.Application.Views
                     panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
                 }
 
+                var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
+
+                if (hudTrackConditionsViewModel != null)
+                {
+                    trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
+                }
+
                 dgCanvas.Children.Remove(panel);
             }
 
@@ -145,6 +152,8 @@ namespace DriveHUD.Application.Views
                     }
                 }
             }
+
+            BuildTrackConditionsMeter(layout.HudTrackConditionsMeter);
         }
 
         public void Refresh()
@@ -162,6 +171,20 @@ namespace DriveHUD.Application.Views
 
             foreach (var hudPanel in dgCanvas.Children.OfType<FrameworkElement>())
             {
+                if (hudPanel is TrackConditionsMeterView && trackerConditionsMeterPosition != null)
+                {
+                    var hudElementViewModel = hudPanel.DataContext as IHudWindowElement;
+
+                    trackerConditionsMeterPositionOffset = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
+
+                    var trackerXPosition = trackerConditionsMeterPositionOffset.X != 0 ? trackerConditionsMeterPositionOffset.X : trackerConditionsMeterPosition.Value.X;
+                    var trackerYPosition = trackerConditionsMeterPositionOffset.Y != 0 ? trackerConditionsMeterPositionOffset.Y : trackerConditionsMeterPosition.Value.Y;
+
+                    Canvas.SetLeft(hudPanel, trackerXPosition * ScaleX);
+                    Canvas.SetTop(hudPanel, trackerYPosition * ScaleY);
+                    continue;
+                }
+
                 var toolViewModel = hudPanel.DataContext as HudBaseToolViewModel;
 
                 var toolKey = HudToolKey.BuildKey(toolViewModel);

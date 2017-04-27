@@ -1,6 +1,6 @@
 ﻿using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;

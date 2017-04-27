@@ -300,6 +300,12 @@
     <Compile Include="Controls\HudGaugeIndicatorDesigner.xaml.cs">
       <DependentUpon>HudGaugeIndicatorDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudGraph.xaml.cs">
+      <DependentUpon>HudGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudGraphDesigner.xaml.cs">
+      <DependentUpon>HudGraphDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudPanel.xaml.cs">
       <DependentUpon>HudPanel.xaml</DependentUpon>
     </Compile>
@@ -311,6 +317,9 @@
     </Compile>
     <Compile Include="Controls\HudPlayerIcon.xaml.cs">
       <DependentUpon>HudPlayerIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlayerIconDesigner.xaml.cs">
+      <DependentUpon>HudPlayerIconDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
@@ -409,6 +418,7 @@
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
@@ -446,6 +456,7 @@
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutFourStatsBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGaugeIndicator.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutGraphTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfoV2.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutPlainBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutPlayerIconTool.cs" />
@@ -453,6 +464,7 @@
     <Compile Include="ViewModels\Layouts\HudLayoutTiltMeterTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutNonPopupTool.cs" />
+    <Compile Include="ViewModels\Layouts\IHudLayoutStats.cs" />
     <Compile Include="ViewModels\Layouts\UiPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutMapping.cs" />
@@ -764,6 +776,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudGraphStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\HudPlainBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -808,6 +824,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\HudGraph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudGraphDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\HudPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -821,6 +845,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudPlayerIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlayerIconDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

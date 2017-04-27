@@ -1033,6 +1033,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Enum_Stat_NetWon {
+            get {
+                return ResourceManager.GetString("Enum_Stat_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PFR%.
         /// </summary>
         internal static string Enum_Stat_PFR {

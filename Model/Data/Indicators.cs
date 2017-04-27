@@ -854,7 +854,6 @@ namespace Model.Data
             }
         }
 
-
         public virtual decimal EVBB
         {
             get
@@ -907,6 +906,14 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.FoldedFacedSqueez, Source.FacedSqueez);
+            }
+        }
+
+        public virtual decimal NetWon
+        {
+            get
+            {
+                return Statistics.Sum(x => x.NetWon);
             }
         }
 

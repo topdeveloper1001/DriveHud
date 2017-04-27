@@ -152,12 +152,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return scores;
         }
-
-        public void Cleanup()
-        {
-
-        }
-
+    
         #region Properties
 
         public decimal PotScores

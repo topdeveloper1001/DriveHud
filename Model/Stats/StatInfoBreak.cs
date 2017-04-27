@@ -14,7 +14,7 @@ using Model.Enums;
 using ProtoBuf;
 using System;
 
-namespace DriveHUD.ViewModels
+namespace Model.Stats
 {
     [ProtoContract]
     [Serializable]

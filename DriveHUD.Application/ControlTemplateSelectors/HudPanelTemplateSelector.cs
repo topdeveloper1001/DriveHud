@@ -48,6 +48,10 @@ namespace DriveHUD.Application.ControlTemplateSelectors
             {
                 return HudPlayerIconTemplate;
             }
+            else if (radItem.DataContext is HudGraphViewModel)
+            {
+                return HudGraphTemplate;
+            }
             else if (radItem.DataContext is HudPlayerViewModel)
             {
                 return PlayerPlaceTemplate;
@@ -67,5 +71,7 @@ namespace DriveHUD.Application.ControlTemplateSelectors
         public DataTemplate HudTiltMeterTemplate { get; set; }
 
         public DataTemplate HudPlayerIconTemplate { get; set; }
+
+        public DataTemplate HudGraphTemplate { get; set; }
     }
 }

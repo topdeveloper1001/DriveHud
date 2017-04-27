@@ -17,13 +17,21 @@
     </UserControl.Resources>
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+
         <Viewbox
             x:Name="vbMain"
             Stretch="Uniform">
 
             <Border
                 Grid.Row="0"
-                Height="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                Height="{x:Static res:HudDefaultSettings.TiltMeterMinHeight}"
                 Style="{StaticResource TopLeftBorderStyle}"
                 Padding="0">
                 <Border
@@ -50,5 +58,36 @@
             </Border>
 
         </Viewbox>
+
+        <StackPanel
+            Grid.Row="1"
+            Visibility="{Binding DataContext.IsInDesignMode, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}, Converter={dh:BoolToVisibilityConverter}}"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+
+            <Button
+                Width="13"
+                Height="13"
+                MinHeight="13"
+                MinWidth="13"
+                Background="#191a1e"
+                Command="{Binding DataContext.RemoveToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                CommandParameter="{Binding}">
+
+                <Path
+                    SnapsToDevicePixels="True"
+                    Width="8"
+                    Height="8"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Stretch="Fill"
+                    Fill="#b81d1d"
+                    Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
+
+            </Button>
+
+        </StackPanel>
+
     </Grid>
 </UserControl>

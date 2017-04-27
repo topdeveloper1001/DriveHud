@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.API;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
-using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
@@ -30,7 +30,6 @@ using DriveHUD.Common.Wpf.Helpers;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
@@ -38,9 +37,11 @@ using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
 using Model.Settings;
+using Model.Stats;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ProtoBuf;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -55,9 +56,6 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
-using DriveHUD.API;
-using DriveHUD.Application.Views.Hud;
-using DriveHUD.Application.ViewModels.Layouts;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -139,7 +137,7 @@ namespace DriveHUD.Application.ViewModels
 
             RadDropDownButtonFilterIsOpen = false;
             RadDropDownButtonFilterKeepOpen = true;
-            
+
 
             StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
@@ -457,10 +455,21 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
 
-                    var sessionMoney = sessionData.MoneyWonCollection;
-                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionData.MoneyWonCollection == null
-                        ? new ObservableCollection<decimal>()
-                        : new ObservableCollection<decimal>(sessionMoney);
+                    // configure data for graph tool
+                    var sessionStats = sessionData.StatsSessionCollection;
+
+                    var graphTools = playerHudContent.HudElement.Tools.OfType<HudGraphViewModel>().ToArray();
+
+                    foreach (var graphTool in graphTools)
+                    {
+                        if (graphTool.MainStat == null || !sessionStats.ContainsKey(graphTool.MainStat.Stat))
+                        {
+                            graphTool.StatSessionCollection = new ReactiveList<decimal>();
+                            continue;
+                        }
+
+                        graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
+                    }
 
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
@@ -468,6 +477,8 @@ namespace DriveHUD.Application.ViewModels
                         : new ObservableCollection<string>(cardsCollection);
 
                     var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection;
+
+                    StatInfoHelper.UpdateStats(activeLayoutHudStats);
 
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
@@ -491,7 +502,7 @@ namespace DriveHUD.Application.ViewModels
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {
                             continue;
-                        }                       
+                        }
                     }
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
@@ -847,7 +858,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get { return _radDropDownButtonFilterIsOpen; }
             set { _radDropDownButtonFilterIsOpen = value; OnPropertyChanged(); }
-        }      
+        }
 
         private DateTime _calendarFrom { get; set; }
 
@@ -1160,7 +1171,7 @@ namespace DriveHUD.Application.ViewModels
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;
                     enumDateFiterStruct.DateTo = CalendarTo;
-                    
+
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
 
                     RadDropDownButtonFilterKeepOpen = false;

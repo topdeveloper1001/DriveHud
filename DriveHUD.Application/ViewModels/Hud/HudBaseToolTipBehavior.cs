@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
+using Model.Stats;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;

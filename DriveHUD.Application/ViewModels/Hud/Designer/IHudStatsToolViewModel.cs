@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using Model.Stats;
 using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Hud

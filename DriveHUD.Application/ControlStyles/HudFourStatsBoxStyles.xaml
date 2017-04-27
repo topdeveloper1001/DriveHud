@@ -302,4 +302,9 @@
         </Style.Triggers>
     </Style>
 
+    <SolidColorBrush
+        x:Key="CloseButtonBackground"
+        x:Shared="False"
+        Color="#191a1e" />
+
 </ResourceDictionary>

@@ -65,7 +65,14 @@
     <!-- Template for player icon inside RadDiagramShape on HudView -->
     <DataTemplate
         x:Key="HudPlayerIconTemplate">
-        <ctl:HudPlayerIcon
+        <ctl:HudPlayerIconDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
+    <!-- Template for graph inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudGraphTemplate">
+        <ctl:HudGraphDesigner
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 

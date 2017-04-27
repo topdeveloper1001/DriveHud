@@ -45,6 +45,14 @@ namespace Model.Data
             }
         }
 
+        public override decimal NetWon
+        {
+            get
+            {
+                return netWon;
+            }
+        }
+
         public override string SessionStart
         {
             get

@@ -15,8 +15,8 @@ using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
+using Model.Stats;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -51,6 +51,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return CreateTiltMeterTool(creationInfo);
                 case HudDesignerToolType.PlayerProfileIcon:
                     return CreatePlayerIconTool(creationInfo);
+                case HudDesignerToolType.Graph:
+                    return CreateGraphTool(creationInfo);
                 default:
                     throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
             }
@@ -239,6 +241,36 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 BaseStat = statInfo.Clone(),
                 Text = statInfo.ToolTip
+            };
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.Position = creationInfo.Position;
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        /// <summary>
+        /// Creates graph view model
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
+        /// <returns>Graph view model</returns>
+        private HudBaseToolViewModel CreateGraphTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Graph has not been created.");
+
+            var statInfo = creationInfo.Source as StatInfo;
+
+            Check.Require(statInfo != null, "Source isn't defined. Graph has not been created.");
+
+            statInfo.HasAttachedTools = true;
+            statInfo.IsSelected = false;
+
+            var layoutTool = new HudLayoutGraphTool
+            {
+                BaseStat = statInfo.Clone(),
+                Stats = new ReactiveList<StatInfo> { statInfo.Clone() }
             };
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);

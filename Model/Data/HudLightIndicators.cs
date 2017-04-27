@@ -10,13 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Model.Enums;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using DriveHUD.Common.Utils;
 
 namespace Model.Data
 {
@@ -1655,28 +1656,9 @@ namespace Model.Data
             }
         }
 
-        private IList<decimal> moneyWonCollection;
-
-        public virtual IList<decimal> MoneyWonCollection
-        {
-            get
-            {
-                return moneyWonCollection;
-            }
-            set
-            {
-                if (ReferenceEquals(moneyWonCollection, value))
-                {
-                    return;
-                }
-
-                moneyWonCollection = value;
-            }
-        }
-
         #endregion
 
-        #region Recent Agg
+        #region Recent Aggressive
 
         public virtual decimal RecentAggPr
         {
@@ -1704,6 +1686,29 @@ namespace Model.Data
 
         #endregion
 
+        #region  Session stats 
+
+        private Dictionary<Stat, IList<decimal>> statsSessionCollection;
+
+        public Dictionary<Stat, IList<decimal>> StatsSessionCollection
+        {
+            get
+            {
+                return statsSessionCollection;
+            }
+            set
+            {
+                if (ReferenceEquals(statsSessionCollection, value))
+                {
+                    return;
+                }
+
+                statsSessionCollection = value;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -1712,25 +1717,62 @@ namespace Model.Data
         {
             base.AddStatistic(statistic);
 
+            AddCards(statistic);
+            AddThreeBetCards(statistic);
+            AddStatsToSession(statistic);
+            AddRecentAgg(statistic);
+        }
+
+        protected virtual void AddCards(Playerstatistic statistic)
+        {
             if (CardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards))
             {
                 CardsList.Add(statistic.Cards);
             }
+        }
 
+        protected virtual void AddThreeBetCards(Playerstatistic statistic)
+        {
             if (threeBetCardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards) && statistic.Didthreebet != 0)
             {
                 threeBetCardsList.Add(statistic.Cards);
             }
+        }
 
-            if (moneyWonCollection != null)
-            {
-                moneyWonCollection.Add(statistic.NetWon);
-            }
-
+        protected virtual void AddRecentAgg(Playerstatistic statistic)
+        {
             if (recentAggList != null)
             {
                 recentAggList.Add(new Tuple<int, int>(statistic.Totalbets, statistic.Totalpostflopstreetsplayed));
             }
+        }
+
+        public virtual void AddStatsToSession(Playerstatistic statistic)
+        {
+            if (statsSessionCollection == null)
+            {
+                return;
+            }
+
+            var allStats = StatInfoHelper.GetAllStats();
+
+            foreach (var statInfo in allStats)
+            {
+                if (string.IsNullOrEmpty(statInfo.PropertyName))
+                {
+                    continue;
+                }
+
+                if (!statsSessionCollection.ContainsKey(statInfo.Stat))
+                {
+                    statsSessionCollection.Add(statInfo.Stat, new List<decimal>());
+                }
+
+                var statValue = (decimal)ReflectionHelper.GetMemberValue(this, statInfo.PropertyName);
+
+                statsSessionCollection[statInfo.Stat].Add(statValue);
+            }
+
         }
 
         #endregion

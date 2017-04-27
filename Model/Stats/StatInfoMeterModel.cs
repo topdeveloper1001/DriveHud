@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Media;
 using DriveHUD.Common.Linq;
 
-namespace DriveHUD.ViewModels
+namespace Model.Stats
 {
     [ProtoContract]
     public class StatInfoMeterModel : INotifyPropertyChanged

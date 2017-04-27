@@ -19,12 +19,12 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
+using Model.Stats;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -978,6 +978,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     x?.InitializeFilterPredicate();
                 });
+
+                var layoutStats = layout.LayoutTools.OfType<IHudLayoutStats>().SelectMany(x => x.Stats).ToArray();
+                StatInfoHelper.UpdateStats(layoutStats);
 
                 return layout;
             }

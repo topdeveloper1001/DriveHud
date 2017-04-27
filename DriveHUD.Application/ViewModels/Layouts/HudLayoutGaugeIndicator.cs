@@ -13,7 +13,7 @@
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
@@ -25,8 +25,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
     /// This class represents the gauge indicator tool of the hud
     /// </summary>
     [Serializable, ProtoContract]
-    public class HudLayoutGaugeIndicator : HudLayoutTool
+    public class HudLayoutGaugeIndicator : HudLayoutTool, IHudLayoutStats
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="HudLayoutGaugeIndicator" />
+        /// </summary>
         public HudLayoutGaugeIndicator() : base()
         {
             ToolType = HudDesignerToolType.GaugeIndicator;

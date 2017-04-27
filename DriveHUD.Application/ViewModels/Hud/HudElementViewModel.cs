@@ -14,7 +14,7 @@ using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
@@ -183,27 +183,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 this.RaiseAndSetIfChanged(ref sessionHands, value);
             }
-        }
-
-        [ProtoMember(7)]
-        private ObservableCollection<decimal> sessionMoneyWonCollection;
-
-        public ObservableCollection<decimal> SessionMoneyWonCollection
-        {
-            get { return sessionMoneyWonCollection; }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref sessionMoneyWonCollection, value);
-            }
-        }
-
-        /// <summary>
-        /// Money won for current session
-        /// </summary>
-        public decimal? SessionMoneyWon
-        {
-            get { return SessionMoneyWonCollection?.Sum(); }
-        }
+        } 
 
         [ProtoMember(8)]
         private ObservableCollection<string> cardsCollection;

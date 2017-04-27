@@ -12,8 +12,8 @@
 
 using DriveHUD.Common;
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.ViewModels;
 using Model.Enums;
+using Model.Stats;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;

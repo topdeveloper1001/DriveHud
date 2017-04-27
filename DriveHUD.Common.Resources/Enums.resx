@@ -629,4 +629,7 @@
   <data name="Enum_Stat_FoldToTurnRaise" xml:space="preserve">
     <value>Fold To Turn Raise</value>
   </data>
+  <data name="Enum_Stat_NetWon" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
 </root>

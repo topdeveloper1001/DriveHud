@@ -350,11 +350,11 @@ namespace DriveHUD.Application.Controls
 
             var hudPanelBeingDragged = ElementBeingDragged as FrameworkElement;
 
-            HudBaseToolViewModel toolViewModel = null;
+            IHudWindowElement toolViewModel = null;
 
             if (hudPanelBeingDragged != null)
             {
-                toolViewModel = hudPanelBeingDragged.DataContext as HudBaseToolViewModel;
+                toolViewModel = hudPanelBeingDragged.DataContext as IHudWindowElement;
             }
 
             if (modifyLeftOffset)

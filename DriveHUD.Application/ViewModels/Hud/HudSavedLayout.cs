@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
 using Model.Enums;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;

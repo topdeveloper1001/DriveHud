@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudLayoutPlainBoxTool.cs" company="Ace Poker Solutions">
+// <copyright file="HudLayoutGraphTool.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,45 +11,68 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Resources;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Linq;
-using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
-    [Serializable, ProtoContract]
-    [XmlInclude(typeof(HudLayoutFourStatsBoxTool)), ProtoInclude(33, typeof(HudLayoutFourStatsBoxTool))]
     /// <summary>
-    /// This class represents the plain box tool of the hud
+    /// This class represents the graph tool of the hud
     /// </summary>
-    public class HudLayoutPlainBoxTool : HudLayoutNonPopupTool, IHudLayoutStats
+    [Serializable, ProtoContract]
+    public class HudLayoutGraphTool : HudLayoutTool, IHudLayoutStats
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HudLayoutPlainBoxTool"/> class
+        /// Initializes a new instance of <see cref="HudLayoutGraphTool" />
         /// </summary>
-        public HudLayoutPlainBoxTool() : base()
+        public HudLayoutGraphTool() : base()
         {
-            ToolType = HudDesignerToolType.PlainStatBox;
+            ToolType = HudDesignerToolType.Graph;
+            Stats = new ReactiveList<StatInfo>();
         }
 
-        [ProtoMember(2)]
         /// <summary>
-        /// Gets or sets the list of <see cref="StatInfo"/> stats of the plain box tool
+        /// Gets or sets the main stat of graph tool
+        /// </summary>
+        [ProtoMember(2)]
+        public StatInfo BaseStat { get; set; }
+
+        [ProtoMember(3)]
+        /// <summary>
+        /// Gets or sets the list of <see cref="StatInfo"/> stats of the gauge indicator
         /// </summary>
         public ReactiveList<StatInfo> Stats { get; set; }
-    
+
         /// <summary>
-        /// Creates a copy of the current <see cref="HudLayoutPlainBoxTool"/> instance
+        /// Gets or sets whenever indicator is vertical 
         /// </summary>
-        /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
+        [ProtoMember(4)]
+        public bool IsVertical { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parent of the graph tool 
+        /// </summary>
+        [ProtoMember(5)]
+        public Guid ParentId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position info of gauge indicator
+        /// </summary>        
+        public HudPositionInfo PositionInfo { get; set; }
+
         public override HudLayoutTool Clone()
         {
-            var cloned = new HudLayoutPlainBoxTool
+            var cloned = new HudLayoutGraphTool
             {
                 Id = Id,
+                BaseStat = BaseStat,
+                IsVertical = IsVertical,
+                ParentId = ParentId,
+                PositionInfo = PositionInfo?.Clone(),
                 Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
                 {
                     var statInfoBreak = x as StatInfoBreak;
@@ -60,22 +83,21 @@ namespace DriveHUD.Application.ViewModels.Layouts
                     }
 
                     return x.Clone();
-                })),
-                Positions = Positions.Select(x => x.Clone()).ToList(),
-                UIPositions = UIPositions.Select(x => x.Clone()).ToList()
+                }))
             };
 
             return cloned;
         }
 
-        /// <summary>
-        /// Creates a view model of the current <see cref="HudLayoutPlainBoxTool"/> instance
-        /// </summary>
-        /// <returns>View model of the current <see cref="HudBaseToolViewModel"/> instance</returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            var viewModel = new HudPlainStatBoxViewModel(this, hudElement);
-            return viewModel;
+            var toolViewModel = new HudGraphViewModel(this, hudElement)
+            {
+                Width = HudDefaultSettings.GraphWidth,
+                Height = HudDefaultSettings.GraphHeight
+            };
+
+            return toolViewModel;
         }
     }
 }

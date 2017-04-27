@@ -27,7 +27,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
 
-namespace DriveHUD.ViewModels
+namespace Model.Stats
 {
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable]
@@ -101,8 +101,7 @@ namespace DriveHUD.ViewModels
         private bool settingsAppearanceFontUnderline_IsChecked;
 
         private ObservableCollection<StatInfoOptionValueRange> settingsAppearanceValueRangeCollection;
-
-        private bool settings_IsAvailable;
+        
         private bool settingsAppearance_IsChecked;
         private bool settingsPlayerType_IsChecked;
 
@@ -679,6 +678,30 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [NonSerialized]
+        [ProtoMember(28)]
+        private string graphToolIconSource;
+
+        /// <summary>
+        /// Gets or sets path to icon which is shown on graph tool 
+        /// </summary>
+        [XmlIgnore]
+        public string GraphToolIconSource
+        {
+            get
+            {
+                return graphToolIconSource;
+            }
+            set
+            {
+                if (graphToolIconSource != value)
+                {
+                    graphToolIconSource = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -766,6 +789,7 @@ namespace DriveHUD.ViewModels
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
+            statInfoClone.GraphToolIconSource = GraphToolIconSource;
             statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
                                                         new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
                                                         StatInfoToolTipCollection;
