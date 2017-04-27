@@ -308,8 +308,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             //calculation of probabilities
             List<decimal> equities;
-            if (TableStateList.IndexOf(state) + 1 >= 0 && TableStateList.IndexOf(state) + 1 < TableStateList.Count)
-            {
+            
                 equities = Converter.CalculateEquity(CurrentGame,
                     ActivePlayerHasHoleCard,
                     AllDeadCards,
@@ -321,7 +320,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
                 //updating states in replayer view 
                 RefreshBoard(equities, state.CurrentStreet);
-            }
+            
 
             //case of last state. Needed for All-in before River for some cases
             if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
