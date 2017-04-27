@@ -229,7 +229,7 @@ namespace Model.Importer
                 else if (gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo)
                 {
                     OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
-                    MEquity[] eq = calc.Equity(currentBoardString.Select(x => x.ToString()).ToArray(),
+                    MEquity[] eq = calc.Equity(currentBoardArray.Select(x => x.ToString()).ToArray(),
                                          holeCards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(),
                                          new string[] { },
                                          0);
