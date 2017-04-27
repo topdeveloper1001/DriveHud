@@ -6,6 +6,7 @@ using HandHistories.Objects.Hand;
 using HoldemHand;
 using Model.Enums;
 using System.Collections.Generic;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using Model.Settings;
 using Microsoft.Practices.ServiceLocation;
@@ -197,31 +198,37 @@ namespace Model.Importer
 
         public static string CurrentBoardCards { get; set; }
         public static HandHistories.Objects.Cards.Card[] CurrentBoard { get; set; }
+        public static List<HoleCards> AllDeadCards = new List<HoleCards>();
+        public static string AllDeadCardsString = string.Empty;
 
         public static Player[] ActivePlayerHasHoleCard { get; set; }
 
-        public static decimal CalculateEquity(HandAction action, HandHistory hand)
+        public static decimal CalculateEquity(HandAction action, HandHistory currentGame)
         {
-            Player activePlayer = hand.Players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+            decimal equity = 0;
 
+            Player activePlayer = currentGame.Players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+                                                      
             if (activePlayer == null || action.IsFold || !activePlayer.hasHoleCards)  //this step return -1 to all players not having hole cards/isFold/not existing for current hand
                 return -1;
 
             if (ActivePlayerHasHoleCard == null)
-                ActivePlayerHasHoleCard = hand.Players.Where(player => player.hasHoleCards).ToArray();
+                ActivePlayerHasHoleCard = currentGame.Players.Where(player => player.hasHoleCards).ToArray();
 
-            HoleCards[] cards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray();
-            Player activePlayerHoleCards = ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+            List<HoleCards> cards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToList(); 
+
+            cards.RemoveRange(AllDeadCards);
+
+            Player activePlayerWithHoleCards = ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == action.PlayerName);
 
             int count = cards.Count();
-            decimal equity = 0;
-            int targetPlayerIndex = cards.ToList().IndexOf(activePlayerHoleCards?.HoleCards);
+
+            int targetPlayerIndex = cards.IndexOf(activePlayerWithHoleCards?.HoleCards);
             if (targetPlayerIndex == -1)
             {
                 LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquity method. Check why targetPlayerIndex = -1 in this part of code");
                 return -1;
-            }
-                
+            }  
 
             switch (action.Street)
             {
@@ -230,31 +237,31 @@ namespace Model.Importer
                     CurrentBoardCards = string.Empty;
                     break;
                 case Street.Flop:
-                    CurrentBoard = hand.CommunityCards.Take(3).ToArray();
-                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(6).ToArray());
+                    CurrentBoard = currentGame.CommunityCards.Take(3).ToArray();
+                    CurrentBoardCards = new string(currentGame.CommunityCardsString.Take(6).ToArray());
                     break;
                 case Street.Turn:
-                    CurrentBoard = hand.CommunityCards.Take(4).ToArray();
-                    CurrentBoardCards = new string(hand.CommunityCardsString.Take(8).ToArray());
+                    CurrentBoard = currentGame.CommunityCards.Take(4).ToArray();
+                    CurrentBoardCards = new string(currentGame.CommunityCardsString.Take(8).ToArray());
                     break;
                 case Street.River:
-                    CurrentBoard = hand.CommunityCards.ToArray();
-                    CurrentBoardCards = hand.CommunityCardsString;
+                    CurrentBoard = currentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = currentGame.CommunityCardsString;
                     break;
                 case Street.Showdown:
-                    CurrentBoard = hand.CommunityCards.ToArray();
-                    CurrentBoardCards = hand.CommunityCardsString;
+                    CurrentBoard = currentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = currentGame.CommunityCardsString;
                     break;
                 case Street.Summary:
-                    CurrentBoard = hand.CommunityCards.ToArray();//todo the_weeknd 9J268
-                    CurrentBoardCards = hand.CommunityCardsString;
+                    CurrentBoard = currentGame.CommunityCards.ToArray();//todo the_weeknd 9J268
+                    CurrentBoardCards = currentGame.CommunityCardsString;
                     break;
             }
             try
             {
-                GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
+                GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(currentGame.GameDescription.GameType);
 
-                if (gameType == GeneralGameTypeEnum.Holdem && activePlayerHoleCards?.HoleCards?.Count > 0)
+                if (gameType == GeneralGameTypeEnum.Holdem && activePlayerWithHoleCards?.HoleCards?.Count > 0)
                 {
                     long[] wins = new long[count];
                     long[] losses = new long[count];
@@ -264,13 +271,13 @@ namespace Model.Importer
                     List<string> cardList = new List<string>();
                     foreach (var card in cards.Where(card => card?.Count > 0))
                         cardList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
-                    Hand.HandWinOdds(cardList.ToArray(), CurrentBoardCards, string.Empty, wins, ties, losses, ref totalhands);
+                    Hand.HandWinOdds(cardList.ToArray(), CurrentBoardCards, AllDeadCardsString, wins, ties, losses, ref totalhands);
                     if (totalhands != 0)
                     {
                         equity = Math.Round((decimal)(wins[targetPlayerIndex] * 100) / totalhands, 2);
                     }
                 }
-                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && activePlayerHoleCards?.HoleCards?.Count > 0)
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && activePlayerWithHoleCards?.HoleCards?.Count > 0)
                 {
                     OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
                     MEquity[] eq = calc.Equity(CurrentBoard.Select(x => x.ToString()).ToArray(),

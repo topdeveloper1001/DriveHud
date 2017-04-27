@@ -55,6 +55,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #region Properties
         private Street _currentStreet;
         private ReplayerPlayerViewModel _activePlayer;
+        private bool _deadCardFlag;
         private bool _isStreetChangedAction;
         private decimal _actionAmount;
         private decimal _currentPotValue;
@@ -71,6 +72,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             get { return _currentStreet; }
             set { _currentStreet = value; }
+        }
+
+        internal bool DeadCardFlag
+        {
+            get { return _deadCardFlag; }
+            set { _deadCardFlag = value; }
         }
 
         internal ReplayerPlayerViewModel ActivePlayer

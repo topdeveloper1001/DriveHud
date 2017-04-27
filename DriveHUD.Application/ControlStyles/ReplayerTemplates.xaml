@@ -8,7 +8,7 @@
     <!-- Rad Diagram -->
     <DataTemplate x:Key="PlayerPanelTemplate">
         <Grid>
-            <TextBlock Margin="0 -80 0 0" FontWeight="Bold" Foreground="#fff" Width="120"  TextAlignment="Right" x:Name="TextBlockEquityWin">
+            <TextBlock Margin="0 -75 0 0" Foreground="#fff" Width="120" FontSize="9"  TextAlignment="Right" x:Name="TextBlockEquityWin">
                 <Run Text="{ResX Key=Common_WinPercent}"></Run>
                 <Run Text="{Binding DataContext.EquityWin, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}, UpdateSourceTrigger=PropertyChanged}"></Run>
                 <Run Text="{ResX Key=Common_PercentSign}"></Run>
