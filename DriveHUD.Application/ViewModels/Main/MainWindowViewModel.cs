@@ -137,7 +137,7 @@ namespace DriveHUD.Application.ViewModels
 
             RadDropDownButtonFilterIsOpen = false;
             RadDropDownButtonFilterKeepOpen = true;
-            
+
 
             StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
@@ -850,7 +850,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void OpenSettingsMenu(object obj)
         {
-            PopupSettingsRequest_Execute(new PubSubMessage());
+            PubSubMessage pubSubMessage = new PubSubMessage();
+            if (obj?.ToString() == "Preferred Seating")
+                pubSubMessage.Parameter = "Preferred Seating";
+
+            PopupSettingsRequest_Execute(pubSubMessage);
         }
 
         private void Upgrade()
@@ -940,7 +944,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get { return _radDropDownButtonFilterIsOpen; }
             set { _radDropDownButtonFilterIsOpen = value; OnPropertyChanged(); }
-        }      
+        }
 
         private DateTime _calendarFrom { get; set; }
 
@@ -1253,7 +1257,7 @@ namespace DriveHUD.Application.ViewModels
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;
                     enumDateFiterStruct.DateTo = CalendarTo;
-                    
+
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
 
                     RadDropDownButtonFilterKeepOpen = false;
@@ -1334,6 +1338,9 @@ namespace DriveHUD.Application.ViewModels
 
             notification.Title = "Settings";
             notification.PubSubMessage = pubSubMessage;
+            notification.Parameter = pubSubMessage?.Parameter;
+            
+
 
             this.PopupSettingsRequest.Raise(notification,
                 returned =>

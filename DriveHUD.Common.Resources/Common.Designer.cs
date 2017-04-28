@@ -1045,6 +1045,15 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Preferred Seating.
         /// </summary>
+        internal static string Common_Preferred_Seating_Button {
+            get {
+                return ResourceManager.GetString("Common_Preferred_Seating_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferred Seating.
+        /// </summary>
         internal static string Common_PreferredSeating {
             get {
                 return ResourceManager.GetString("Common_PreferredSeating", resourceCulture);
