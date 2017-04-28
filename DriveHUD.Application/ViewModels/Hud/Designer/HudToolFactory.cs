@@ -234,7 +234,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Check.Require(statInfo != null, "Source isn't defined. Gauge indicator has not been created.");
 
-            statInfo.HasAttachedTools = true;
             statInfo.IsSelected = false;
 
             var layoutTool = new HudLayoutGaugeIndicator
@@ -263,8 +262,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var statInfo = creationInfo.Source as StatInfo;
 
             Check.Require(statInfo != null, "Source isn't defined. Graph has not been created.");
-
-            statInfo.HasAttachedTools = true;
+            
             statInfo.IsSelected = false;
 
             var layoutTool = new HudLayoutGraphTool

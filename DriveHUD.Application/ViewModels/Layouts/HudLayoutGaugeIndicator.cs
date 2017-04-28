@@ -60,11 +60,21 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// </summary>
         public string Text { get; set; }
 
+        [ProtoMember(6)]
+        /// <summary>
+        /// Gets or sets the header text on gauge indicator
+        /// </summary>
+        public string HeaderText { get; set; }
+
         /// <summary>
         /// Gets or sets the position info of gauge indicator
         /// </summary>        
         public HudPositionInfo PositionInfo { get; set; }
 
+        /// <summary>
+        /// Clones the current <see cref="HudLayoutGaugeIndicator" />
+        /// </summary>
+        /// <returns>Cloned <see cref="HudLayoutGaugeIndicator" /></returns>
         public override HudLayoutTool Clone()
         {
             var cloned = new HudLayoutGaugeIndicator
@@ -84,19 +94,28 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 })),
                 IsVertical = IsVertical,
                 Text = Text,
+                HeaderText = HeaderText,
                 PositionInfo = PositionInfo?.Clone()
             };
 
             return cloned;
         }
 
+        /// <summary>
+        /// Creates the view model of the current <see cref="HudLayoutGaugeIndicator" />
+        /// </summary>
+        /// <param name="hudElement"><see cref="HudElementViewModel"/> to create view model</param>
+        /// <returns>The view model of the current <see cref="HudLayoutGaugeIndicator" /></returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            var toolViewModel = new HudGaugeIndicatorViewModel(this, hudElement);
-            toolViewModel.Width = HudDefaultSettings.GaugeIndicatorWidth;
-            toolViewModel.Height = HudDefaultSettings.GaugeIndicatorHeight;
-            toolViewModel.Opacity = 100;
+            var toolViewModel = new HudGaugeIndicatorViewModel(this, hudElement)
+            {
+                Width = HudDefaultSettings.GaugeIndicatorWidth,
+                Height = HudDefaultSettings.GaugeIndicatorHeight
+            };
+
             toolViewModel.Stats.ForEach(x => x.StatInfoMeter = new StatInfoMeterModel());
+
             return toolViewModel;
         }
     }

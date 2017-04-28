@@ -324,7 +324,6 @@
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\HudRadDiagramShape.cs" />
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
     </Compile>
@@ -778,6 +777,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlStyles\HudFourStatsBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudGaugeIndicatorStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

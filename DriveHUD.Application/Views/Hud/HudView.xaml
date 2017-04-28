@@ -604,8 +604,7 @@
                 HorizontalAlignment="Left"
                 Orientation="Vertical">
 
-                <Grid
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                <Grid                    
                     Margin="0,0,0,5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
@@ -664,19 +663,8 @@
 
                 </Grid>
 
-                <!-- Temp button -->
-                <Button
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                    Style="{StaticResource HudDesignerToolButtonStyle}"
-                    Width="185"
-                    Margin="0,20,0,0"
-                    Content="Designer"
-                    Command="{Binding DesignerToolCommand}"
-                    CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
-
                 <StackPanel
                     Width="185"
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
                     Orientation="Vertical">
 
                     <TextBlock
@@ -733,12 +721,10 @@
                     <Button
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Content="{ResX Key=Common_HudSideBar_PlainStatBox}"
-                        Command="{Binding DesignerToolCommand}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.PlainStatBox}">
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}">
                     </Button>
 
                     <Button
@@ -800,22 +786,11 @@
                         <bhv:HudDesignerBehavior
                             IsReadOnly="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
                             DragDropCommand="{Binding AddToolCommand}"
+                            SelectionChangedCommand="{Binding DesignerToolCommand}"
                             ToolbarTemplate="{StaticResource HudToolBarControlTemplate}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>
                 </telerik:RadDiagram>
-
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="{ResX Key=Common_HudDesigner_Header}"
-                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}"
-                    FontSize="16px"
-                    FontWeight="Bold"
-                    Margin="0,10,0,0"
-                    Foreground="White"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top" />
 
                 <StackPanel
                     Grid.Row="1"

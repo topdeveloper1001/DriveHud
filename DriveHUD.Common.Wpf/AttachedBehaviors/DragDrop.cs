@@ -220,6 +220,8 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 return;
             }
 
+            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
+
             var dragDropCommand = GetDragDropCommand(uiElement);
 
             if (dragDropCommand != null && e.Data.GetDataPresent(DataFormat.Name))

@@ -780,7 +780,7 @@ namespace Model.Stats
             statInfoClone.GroupName = GroupName;
             statInfoClone.Id = Id;
             statInfoClone.CurrentValue = CurrentValue;
-            statInfoClone.CurrentColor = CurrentColor;
+            statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
             statInfoClone.Category = Category;

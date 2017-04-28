@@ -104,6 +104,21 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             }
         }
 
+        public static readonly DependencyProperty SelectionChangedCommandProperty = DependencyProperty.Register("SelectionChangedCommand", typeof(System.Windows.Input.ICommand),
+            typeof(HudDesignerBehavior));
+
+        public System.Windows.Input.ICommand SelectionChangedCommand
+        {
+            get
+            {
+                return (System.Windows.Input.ICommand)GetValue(SelectionChangedCommandProperty);
+            }
+            set
+            {
+                SetValue(SelectionChangedCommandProperty, value);
+            }
+        }
+
         private static void OnDragDropCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var behavior = d as HudDesignerBehavior;
@@ -190,6 +205,21 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             }
 
             diagram.SelectionMode = Telerik.Windows.Diagrams.Core.SelectionMode.Single;
+            diagram.SelectionChanged += (s, args) =>
+            {
+                if (args.AddedItems != null)
+                {
+                    var selectedShapes = args.AddedItems
+                        .OfType<RadDiagramShape>()
+                        .Where(x => x.DataContext is HudBaseToolViewModel)
+                        .ToArray();
+
+                    if (selectedShapes.Length > 0 && SelectionChangedCommand != null && SelectionChangedCommand.CanExecute(null))
+                    {
+                        SelectionChangedCommand.Execute(null);
+                    }
+                }
+            };
 
             var table = CreateTableRadDiagramShape();
 
@@ -378,7 +408,6 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             shape.IsEditable = !isReadOnly;
             shape.IsResizingEnabled = toolViewModel.IsResizable && !isReadOnly;
             shape.IsDraggingEnabled = !isReadOnly;
-            shape.IsManipulationAdornerVisible = !isReadOnly;
         }
 
         /// <summary>

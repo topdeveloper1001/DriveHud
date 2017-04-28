@@ -691,7 +691,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Tilt Meter</value>
   </data>
   <data name="Common_HudSideBar_Title" xml:space="preserve">
-    <value>HUD Designer Tools</value>
+    <value>Design Elements:</value>
   </data>
   <data name="Common_HudSideBar_PlainStatBox" xml:space="preserve">
     <value>Plain Stat Box</value>
@@ -713,9 +713,6 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_HudLayout_GotIt" xml:space="preserve">
     <value>Got It!</value>
-  </data>
-  <data name="Common_HudDesigner_Header" xml:space="preserve">
-    <value>Design your HUD:</value>
   </data>
   <data name="Common_Hud_AllStats" xml:space="preserve">
     <value>All Stats</value>

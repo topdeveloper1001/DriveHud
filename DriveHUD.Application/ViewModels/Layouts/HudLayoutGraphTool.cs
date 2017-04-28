@@ -64,6 +64,10 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// </summary>        
         public HudPositionInfo PositionInfo { get; set; }
 
+        /// <summary>
+        /// Clones the current object
+        /// </summary>
+        /// <returns>Cloned <see cref="HudLayoutGraphTool" /></returns>
         public override HudLayoutTool Clone()
         {
             var cloned = new HudLayoutGraphTool
@@ -89,6 +93,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
             return cloned;
         }
 
+        /// <summary>
+        /// Creates the view model of the current <see cref="HudLayoutGraphTool" />
+        /// </summary>
+        /// <param name="hudElement"><see cref="HudElementViewModel"/> to create view model</param>
+        /// <returns>The view model of the current <see cref="HudLayoutGraphTool" /></returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
             var toolViewModel = new HudGraphViewModel(this, hudElement)

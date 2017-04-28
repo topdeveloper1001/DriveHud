@@ -12,16 +12,11 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
-using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
-using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -132,8 +127,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private bool isVertical;
-
         /// <summary>
         /// Gets or sets whenever four stats box is vertical
         /// </summary>
@@ -141,11 +134,21 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return isVertical;
+                var tool = this.tool as HudLayoutFourStatsBoxTool;
+                return tool != null && tool.IsVertical;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref isVertical, value);
+                var tool = this.tool as HudLayoutFourStatsBoxTool;
+
+                if (tool == null)
+                {
+                    return;
+                }
+
+                tool.IsVertical = value;
+
+                this.RaisePropertyChanged(nameof(IsVertical));
             }
         }
 
@@ -158,6 +161,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             this.RaisePropertyChanged(nameof(Stat2));
             this.RaisePropertyChanged(nameof(Stat3));
             this.RaisePropertyChanged(nameof(Stat4));
-        }     
+        }
     }
 }

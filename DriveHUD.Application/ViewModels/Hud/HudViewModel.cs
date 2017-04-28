@@ -470,7 +470,7 @@ namespace DriveHUD.Application.ViewModels
             BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
 
             DesignerToolCommand = ReactiveCommand.Create();
-            DesignerToolCommand.Subscribe(x => InitializeDesigner((HudDesignerToolType)x));
+            DesignerToolCommand.Subscribe(x => InitializeDesigner());
 
             CancelDesignCommand = ReactiveCommand.Create();
             CancelDesignCommand.Subscribe(x => CloseDesigner());
@@ -483,6 +483,11 @@ namespace DriveHUD.Application.ViewModels
                 if (dragDropDataObject == null)
                 {
                     return;
+                }
+
+                if (!IsInDesignMode)
+                {
+                    InitializeDesigner();
                 }
 
                 var toolType = dragDropDataObject.Data as HudDesignerToolType?;
@@ -1157,7 +1162,7 @@ namespace DriveHUD.Application.ViewModels
             this.RaisePropertyChanged(nameof(CurrentTableType));
         }
 
-        private void InitializeDesigner(HudDesignerToolType toolType)
+        private void InitializeDesigner()
         {
             if (IsInDesignMode)
             {
@@ -1257,11 +1262,25 @@ namespace DriveHUD.Application.ViewModels
                 Source = source
             };
 
-            var tool = factory.CreateTool(creationInfo);
+            var toolViewModel = factory.CreateTool(creationInfo);
 
-            DesignerHudElementViewModel.Tools.Add(tool);
+            DesignerHudElementViewModel.Tools.Add(toolViewModel);
 
-            tool.IsSelected = true;
+            toolViewModel.IsSelected = true;
+
+            if (toolViewModel is IHudBaseStatToolViewModel)
+            {
+                var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
+
+                var statsToUpdate = DesignerHudElementViewModel.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .Where(x => !(x is IHudBaseStatToolViewModel))
+                    .SelectMany(x => x.Stats)
+                    .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                    .ToArray();
+
+                statsToUpdate.ForEach(x => x.HasAttachedTools = true);
+            }
 
             InitializePreview();
         }
@@ -1367,7 +1386,11 @@ namespace DriveHUD.Application.ViewModels
             DesignerHudElementViewModel.Tools
                 .OfType<IHudStatsToolViewModel>()
                 .SelectMany(x => x.Stats)
-                .ForEach(x => x.HasAttachedTools = false);
+                .ForEach(x =>
+                {
+                    x.HasAttachedTools = false;
+                    x.IsSelected = false;
+                });
 
             DesignerHudElementViewModel = null;
 

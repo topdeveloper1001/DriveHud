@@ -38,19 +38,19 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         private HudGraphViewModel()
         {
+            Opacity = 100;
         }
 
         /// <summary>
         /// Initialize an instance of <see cref="HudGraphViewModel"/>
         /// </summary>
         /// <param name="tool"><see cref="HudLayoutGraphTool"/> to initialize an instance</param>
-        private HudGraphViewModel(HudLayoutGraphTool tool)
+        private HudGraphViewModel(HudLayoutGraphTool tool) : this()
         {
             Check.ArgumentNotNull(() => tool);
 
             this.tool = tool;
-            Opacity = 100;
-
+            
             if (Stats != null)
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;

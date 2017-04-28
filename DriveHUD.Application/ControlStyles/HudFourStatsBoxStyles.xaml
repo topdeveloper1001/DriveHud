@@ -51,6 +51,7 @@
     <SolidColorBrush
         x:Key="StatFifthBackgroundBrush"
         Color="#FF8B0000" />
+    
     <SolidColorBrush
         x:Key="StatFifthBorderBrush"
         Color="#FFB96666" />
@@ -115,15 +116,6 @@
         <Setter
             Property="HorizontalAlignment"
             Value="Left" />
-        <Style.Triggers>
-            <DataTrigger
-                Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext.IsRightOriented}"
-                Value="True">
-                <Setter
-                    Property="HorizontalAlignment"
-                    Value="Right" />
-            </DataTrigger>
-        </Style.Triggers>
     </Style>
 
     <Style

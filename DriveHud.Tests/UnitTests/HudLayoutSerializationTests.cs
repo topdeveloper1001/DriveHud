@@ -175,6 +175,7 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.VPIP }
                 },
                 Text = "Test",
+                HeaderText = "HeaderText",
                 IsVertical = true
             };
 
@@ -182,6 +183,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.Text, Is.EqualTo(hudLayoutToolExpected.Text));
+            Assert.That(hudLayoutToolActual.HeaderText, Is.EqualTo(hudLayoutToolExpected.HeaderText));
             Assert.That(hudLayoutToolActual.IsVertical, Is.EqualTo(hudLayoutToolExpected.IsVertical));
             Assert.That(hudLayoutToolActual.BaseStat.Stat, Is.EqualTo(hudLayoutToolExpected.BaseStat.Stat));
             Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
@@ -205,7 +207,8 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.ColdCall }
                 },
                 Text = "test",
-                IsVertical = true
+                IsVertical = true,
+                HeaderText = "HeaderText"
             };
 
             var hudElement = new HudElementViewModel
@@ -223,6 +226,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.BaseStat.Stat, Is.EqualTo(hudToolViewModelExpected.BaseStat.Stat));
             Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
             Assert.That(hudToolViewModelActual.Text, Is.EqualTo(hudToolViewModelExpected.Text));
+            Assert.That(hudToolViewModelActual.HeaderText, Is.EqualTo(hudToolViewModelExpected.HeaderText));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
         }
@@ -241,13 +245,15 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.PFR },
                     new StatInfo { Stat = Stat.S3Bet },
                     new StatInfo { Stat = Stat.ColdCall }
-                }
+                },
+                IsVertical = true
             };
 
             var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
+            Assert.That(hudLayoutToolActual.IsVertical, Is.EqualTo(hudLayoutToolExpected.IsVertical));
             Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
         }
 
@@ -265,7 +271,8 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.PFR },
                     new StatInfo { Stat = Stat.S3Bet },
                     new StatInfo { Stat = Stat.ColdCall }
-                }
+                },
+                IsVertical = true
             };
 
             var hudElement = new HudElementViewModel
@@ -294,6 +301,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
             Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
+            Assert.That(hudToolViewModelActual.IsVertical, Is.EqualTo(hudToolViewModelExpected.IsVertical));
         }
 
         /// <summary>

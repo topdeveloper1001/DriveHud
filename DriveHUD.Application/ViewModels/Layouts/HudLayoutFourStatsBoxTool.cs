@@ -22,7 +22,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     /// <summary>
     /// This class represents the 4-stat box tool of the hud
     /// </summary>
-    [Serializable, ProtoContract]    
+    [Serializable, ProtoContract]
     public class HudLayoutFourStatsBoxTool : HudLayoutPlainBoxTool
     {
         /// <summary>
@@ -32,6 +32,12 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             ToolType = HudDesignerToolType.FourStatBox;
         }
+
+        /// <summary>
+        /// Gets or sets whenever indicator is vertical 
+        /// </summary>
+        [ProtoMember(3)]
+        public bool IsVertical { get; set; }
 
         #region Implementation of HudLayoutTool
 
@@ -56,7 +62,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
                     return x.Clone();
                 })),
                 Positions = Positions.Select(x => x.Clone()).ToList(),
-                UIPositions = UIPositions.Select(x => x.Clone()).ToList()
+                UIPositions = UIPositions.Select(x => x.Clone()).ToList(),
+                IsVertical = IsVertical
             };
 
             return cloned;

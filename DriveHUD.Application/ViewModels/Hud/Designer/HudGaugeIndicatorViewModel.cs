@@ -14,7 +14,6 @@ using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
@@ -22,7 +21,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -40,13 +38,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         private HudGaugeIndicatorViewModel()
         {
+            Opacity = 100;
         }
 
         /// <summary>
         /// Initialize an instance of <see cref="HudGaugeIndicatorViewModel"/>
         /// </summary>
         /// <param name="tool"><see cref="HudLayoutGaugeIndicator"/> to initialize an instance</param>
-        private HudGaugeIndicatorViewModel(HudLayoutGaugeIndicator tool)
+        private HudGaugeIndicatorViewModel(HudLayoutGaugeIndicator tool) : this()
         {
             Check.ArgumentNotNull(() => tool);
 
@@ -124,6 +123,22 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets or sets text on the left side of gauge indicator
+        /// </summary>
+        public string HeaderText
+        {
+            get
+            {
+                return tool.HeaderText;
+            }
+            set
+            {
+                tool.HeaderText = value;
+                this.RaisePropertyChanged(nameof(HeaderText));
+            }
+        }
+
+        /// <summary>
         /// Gets the base stat to which gauge indicator is attached
         /// </summary>
         public StatInfo BaseStat
@@ -133,18 +148,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return tool.BaseStat;
             }
         }
-
-        /// <summary>
-        /// Gets the top stat of the gauge indicator
-        /// </summary>
-        public StatInfo TopStat
-        {
-            get
-            {
-                return tool.Stats.FirstOrDefault();
-            }
-        }
-
+       
         /// <summary>
         /// Gets the list of <see cref="StatInfo"/> of gauge indicator
         /// </summary>
@@ -154,30 +158,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return tool.Stats;
             }
-        }
-
-        /// <summary>
-        /// Gets the list of <see cref="StatInfo"/> of stats in main area of gauge indicator
-        /// </summary>
-        public ReactiveList<StatInfo> MainStats
-        {
-            get
-            {
-                return new ReactiveList<StatInfo>(tool.Stats.Skip(1));
-            }
-        }
-
-        /// <summary>
-        /// Gets the <see cref="BindingMode"/> for <see cref="HudBaseToolViewModel.IsSelected"/> property
-        /// </summary>
-        public override BindingMode IsSelectedBindingMode
-        {
-            get
-            {
-                return BindingMode.TwoWay;
-            }
-        }
-
+        }    
+      
         #endregion    
 
         #region Implementation of HudBaseToolViewModel
@@ -275,9 +257,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                     x.StatInfoMeter = new StatInfoMeterModel();
                 });
             }
-
-            this.RaisePropertyChanged(nameof(TopStat));
-            this.RaisePropertyChanged(nameof(MainStats));
         }
     }
 }
