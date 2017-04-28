@@ -1189,7 +1189,10 @@ namespace DriveHUD.Application.ViewModels
                 // need to update all UI positions, because positions could be changed
                 var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
 
-                var baseStats = DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>().Select(x => x.BaseStat.Stat).ToArray();
+                var baseStats = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(x => x.BaseStat != null)
+                    .Select(x => x.BaseStat.Stat).ToArray();
 
                 foreach (var tool in DesignerHudElementViewModel.Tools)
                 {
@@ -1358,7 +1361,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             var baseStatToolsToDelete = (from stat in statToolViewModel.Stats
-                                         join baseStatTool in DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>()
+                                         join baseStatTool in DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>().Where(x => x.BaseStat != null)
                                             on stat.Stat equals baseStatTool.BaseStat.Stat
                                          select baseStatTool).ToArray();
 
