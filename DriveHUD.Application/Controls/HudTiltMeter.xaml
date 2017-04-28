@@ -19,11 +19,10 @@
     <Grid>
         <Viewbox
             x:Name="vbMain"
-            Stretch="Uniform">
+            Stretch="Fill">
 
             <Border
-                Grid.Row="0"
-                Height="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                Grid.Row="0"                
                 Style="{StaticResource TopLeftBorderStyle}"
                 Padding="0">
                 <Border

@@ -419,7 +419,9 @@ namespace DriveHud.Tests.UnitTests
             var hudLayoutToolExpected = new HudLayoutGraphTool
             {
                 BaseStat = new StatInfo { Stat = Stat.CBet },
-                IsVertical = true
+                IsVertical = true,
+                Stats = new ReactiveList<StatInfo> { new StatInfo { Stat = Stat.AGG } },
+                ParentId = Guid.NewGuid()
             };
 
             var hudElement = new HudElementViewModel
@@ -437,6 +439,8 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.Stats.Count, Is.EqualTo(hudToolViewModelExpected.Stats.Count));
+            Assert.That(hudToolViewModelActual.Stats.First().Stat, Is.EqualTo(hudToolViewModelExpected.Stats.First().Stat));
         }
 
         /// <summary>

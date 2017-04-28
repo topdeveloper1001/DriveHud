@@ -324,6 +324,7 @@
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudRadDiagramShape.cs" />
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
     </Compile>
@@ -332,6 +333,9 @@
     </Compile>
     <Compile Include="Controls\HudTiltMeterDesigner.xaml.cs">
       <DependentUpon>HudTiltMeterDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudToolBar.xaml.cs">
+      <DependentUpon>HudToolBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
@@ -418,6 +422,7 @@
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
@@ -784,6 +789,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudPlayerIconStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\HudTiltMeterStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -865,6 +874,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudTiltMeterDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudToolBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

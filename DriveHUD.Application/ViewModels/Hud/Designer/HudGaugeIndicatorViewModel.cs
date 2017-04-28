@@ -178,13 +178,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        #endregion
-
-        #region Commands
-
-        public ReactiveCommand<object> SaveCommand { get; private set; }
-
-        #endregion
+        #endregion    
 
         #region Implementation of HudBaseToolViewModel
 
@@ -226,6 +220,28 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets whenever tools is re-sizable
+        /// </summary>
+        public override bool IsResizable
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets whenever save button is visible on toolbox
+        /// </summary>
+        public override bool IsSaveVisible
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -234,7 +250,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private void InitializeCommands()
         {
             SaveCommand = ReactiveCommand.Create();
-            SaveCommand.Subscribe(x =>
+            (SaveCommand as ReactiveCommand<object>).Subscribe(x =>
             {
                 IsVisible = false;
                 IsSelected = false;

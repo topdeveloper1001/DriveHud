@@ -800,6 +800,7 @@
                         <bhv:HudDesignerBehavior
                             IsReadOnly="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
                             DragDropCommand="{Binding AddToolCommand}"
+                            ToolbarTemplate="{StaticResource HudToolBarControlTemplate}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>
                 </telerik:RadDiagram>
@@ -1131,7 +1132,7 @@
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
                                 <controls:RadListBoxDragDropBehavior
-                                    AllowReorder="True"                                     
+                                    AllowReorder="True"
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                         </telerik:RadListBox>

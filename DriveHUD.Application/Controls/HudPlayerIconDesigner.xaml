@@ -12,96 +12,12 @@
     Opacity="{Binding Opacity}">
 
     <UserControl.Resources>
-
-        <SolidColorBrush
-            x:Key="BorderBrush"
-            Color="#33519b" />
-
-        <SolidColorBrush
-            x:Key="BlackBackgroundBrush"
-            Color="#1b1c1e" />
-
-        <Style
-            x:Key="BaseBorderStyle"
-            TargetType="{x:Type Border}">
-            <Setter
-                Property="BorderBrush"
-                Value="{StaticResource BorderBrush}" />
-            <Setter
-                Property="HorizontalAlignment"
-                Value="Stretch" />
-        </Style>
-
-        <Style
-            x:Key="IconBorderStyle"
-            TargetType="{x:Type Border}"
-            BasedOn="{StaticResource BaseBorderStyle}">
-            <Setter
-                Property="CornerRadius"
-                Value="3,3,0,0" />
-            <Setter
-                Property="HorizontalAlignment"
-                Value="Left" />
-            <Setter
-                Property="Margin"
-                Value="0,0,0,0" />
-            <Setter
-                Property="Width"
-                Value="28" />
-            <Setter
-                Property="Height"
-                Value="27" />
-            <Setter
-                Property="BorderThickness"
-                Value="1" />
-            <Setter
-                Property="Background"
-                Value="{StaticResource BlackBackgroundBrush}" />
-        </Style>
-
-        <Style
-            x:Key="InnerGlowBaseBorderStyle"
-            TargetType="{x:Type Border}">
-            <Setter
-                Property="Background"
-                Value="Transparent" />
-            <Setter
-                Property="BorderBrush"
-                Value="#88898a" />
-            <Setter
-                Property="VerticalAlignment"
-                Value="Stretch" />
-            <Setter
-                Property="HorizontalAlignment"
-                Value="Stretch" />
-            <Setter
-                Property="BorderThickness"
-                Value="0,0.75,0,0" />
-        </Style>
-
-        <Style
-            x:Key="IconInnerGlowBorderStyle"
-            TargetType="{x:Type Border}"
-            BasedOn="{StaticResource InnerGlowBaseBorderStyle}">
-            <Setter
-                Property="CornerRadius"
-                Value="2,2,0,0" />
-            <Setter
-                Property="Margin"
-                Value="0,-0.25,0,0" />
-        </Style>
-
+        <ResourceDictionary
+            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudPlayerIconStyles.xaml" />
     </UserControl.Resources>
 
     <Grid>
-
-        <Grid.RowDefinitions>
-            <RowDefinition
-                Height="Auto" />
-            <RowDefinition
-                Height="Auto" />
-        </Grid.RowDefinitions>
-
+    
         <Viewbox
             x:Name="vbMain"
             Stretch="Uniform">
@@ -158,36 +74,6 @@
             </Border>
 
         </Viewbox>
-
-        <StackPanel
-            Grid.Row="1"
-            Visibility="{Binding DataContext.IsInDesignMode, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}, Converter={dh:BoolToVisibilityConverter}}"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Right"
-            Orientation="Horizontal">
-
-            <Button
-                Width="13"
-                Height="13"
-                MinHeight="13"
-                MinWidth="13"
-                Background="#191a1e"
-                Command="{Binding DataContext.RemoveToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
-                CommandParameter="{Binding}">
-
-                <Path
-                    SnapsToDevicePixels="True"
-                    Width="8"
-                    Height="8"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Stretch="Fill"
-                    Fill="#b81d1d"
-                    Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
-
-            </Button>
-
-        </StackPanel>
-
+      
     </Grid>
 </UserControl>

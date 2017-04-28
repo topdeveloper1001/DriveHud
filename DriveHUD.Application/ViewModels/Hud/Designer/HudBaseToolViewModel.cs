@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -28,7 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     [ProtoInclude(33, typeof(HudTiltMeterViewModel))]
     [ProtoInclude(34, typeof(HudPlayerIconViewModel))]
     [ProtoInclude(35, typeof(HudGraphViewModel))]
-    public abstract class HudBaseToolViewModel : ViewModelBase, IHudWindowElement
+    public abstract class HudBaseToolViewModel : ViewModelBase, IHudWindowElement, IHudToolBar
     {
         #region Properties
 
@@ -174,7 +175,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return BindingMode.OneWayToSource;
+                return BindingMode.TwoWay;
             }
         }
 
@@ -195,6 +196,16 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets whenever tools is re-sizable
+        /// </summary>
+        public virtual bool IsResizable
+        {
+            get
+            {
+                return true;
+            }
+        }
 
         /// <summary>
         /// Gets the layout tool
@@ -229,5 +240,37 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="positions">The list of <see cref="HudPositionInfo"/></param>
         public abstract void SavePositions(List<HudPositionInfo> positions);
+
+        #region IHudToolBar Implementation
+    
+        public virtual bool IsSaveVisible
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public virtual bool IsRotateVisible
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public virtual ICommand SaveCommand
+        {
+            get;
+            protected set;
+        }
+
+        public virtual ICommand RotateCommand
+        {
+            get;
+            protected set;
+        }
+
+        #endregion
     }
 }

@@ -17,6 +17,7 @@ using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -126,8 +127,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return HudDefaultSettings.PlainStatBoxHeight;
             }
-        }
+        }        
 
-        #endregion       
+        #endregion
     }
 }

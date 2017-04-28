@@ -78,13 +78,13 @@ namespace DriveHUD.Common.Resources
 
         public const double FourStatBoxWidth = 142d;
 
-        public const double FourStatBoxHeight = double.NaN;
+        public const double FourStatBoxHeight = 19d;
 
         public const double FourStatBoxMinHeight = 19d;
 
         public const double TiltMeterWidth = 13d;
 
-        public const double TiltMeterHeight = double.NaN;
+        public const double TiltMeterHeight = 27d;
 
         public const double TiltMeterMinHeight = 27d;
 
@@ -92,7 +92,7 @@ namespace DriveHUD.Common.Resources
 
         public const double PlayerIconWidth = 28d;
 
-        public const double PlayerIconHeight = double.NaN;
+        public const double PlayerIconHeight = 27d;
 
         public const double PlayerIconMinHeight = 27d;
 

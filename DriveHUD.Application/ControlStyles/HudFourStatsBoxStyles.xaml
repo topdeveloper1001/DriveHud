@@ -83,6 +83,9 @@
             Property="Margin"
             Value="-1,0,-1,0" />
         <Setter
+            Property="Padding" 
+            Value="0,0,2,0" />
+        <Setter
             Property="VerticalAlignment"
             Value="Top" />
         <Setter
@@ -301,10 +304,5 @@
 
         </Style.Triggers>
     </Style>
-
-    <SolidColorBrush
-        x:Key="CloseButtonBackground"
-        x:Shared="False"
-        Color="#191a1e" />
-
+   
 </ResourceDictionary>

@@ -665,6 +665,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Apply {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Delete {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Design your HUD:.
         /// </summary>
         internal static string Common_HudDesigner_Header {

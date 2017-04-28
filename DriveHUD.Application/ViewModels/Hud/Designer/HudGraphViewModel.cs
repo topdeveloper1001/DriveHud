@@ -13,7 +13,6 @@
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
@@ -177,11 +176,28 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        #endregion
 
-        #region Commands
+        /// <summary>
+        /// Gets whenever tools is re-sizable
+        /// </summary>
+        public override bool IsResizable
+        {
+            get
+            {
+                return false;
+            }
+        }
 
-        public ReactiveCommand<object> SaveCommand { get; private set; }
+        /// <summary>
+        /// Gets whenever save button is visible on toolbox
+        /// </summary>
+        public override bool IsSaveVisible
+        {
+            get
+            {
+                return true;
+            }
+        }
 
         #endregion
 
@@ -231,7 +247,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private void InitializeCommands()
         {
             SaveCommand = ReactiveCommand.Create();
-            SaveCommand.Subscribe(x =>
+            (SaveCommand as ReactiveCommand<object>).Subscribe(x =>
             {
                 IsVisible = false;
                 IsSelected = false;

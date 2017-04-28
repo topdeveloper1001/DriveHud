@@ -158,6 +158,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             this.RaisePropertyChanged(nameof(Stat2));
             this.RaisePropertyChanged(nameof(Stat3));
             this.RaisePropertyChanged(nameof(Stat4));
-        }
+        }     
     }
 }

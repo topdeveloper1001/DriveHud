@@ -726,4 +726,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_ApplyButtonForCalendars" xml:space="preserve">
     <value>Apply</value>
   </data>
+  <data name="Common_Hud_ToolBar_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Common_Hud_ToolBar_Delete" xml:space="preserve">
+    <value>Remove</value>
+  </data>
 </root>

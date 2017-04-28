@@ -11,13 +11,16 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Converters;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Disposables;
+using System.Reactive.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Interactivity;
 using System.Windows.Media;
@@ -42,17 +45,17 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         private RadDiagramShape dragDropShape;
 
-        public static DependencyProperty RecommendedAreaTemplateProperty = DependencyProperty.Register("RecommendedAreaTemplate", typeof(DataTemplate), typeof(HudDesignerBehavior));
+        public static DependencyProperty ToolbarTemplateProperty = DependencyProperty.Register("ToolbarTemplate", typeof(ControlTemplate), typeof(HudDesignerBehavior));
 
-        public DataTemplate RecommendedAreaTemplate
+        public ControlTemplate ToolbarTemplate
         {
             get
             {
-                return (DataTemplate)GetValue(RecommendedAreaTemplateProperty);
+                return (ControlTemplate)GetValue(ToolbarTemplateProperty);
             }
             set
             {
-                SetValue(RecommendedAreaTemplateProperty, value);
+                SetValue(ToolbarTemplateProperty, value);
             }
         }
 
@@ -79,7 +82,11 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 return;
             }
 
-            behavior.RemovableShapes.ForEach(x => behavior.SetReadOnly(x as RadDiagramShape, (bool)e.NewValue));
+            behavior.RemovableShapes.ForEach(x =>
+            {
+                var shape = x as RadDiagramShape;
+                behavior.SetReadOnly(shape, (bool)e.NewValue, shape.DataContext as HudBaseToolViewModel);
+            });
         }
 
         public static readonly DependencyProperty DragDropCommandProperty = DependencyProperty.Register("DragDropCommand", typeof(System.Windows.Input.ICommand),
@@ -182,7 +189,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 return;
             }
 
-            diagram.SelectionMode = SelectionMode.Single;
+            diagram.SelectionMode = Telerik.Windows.Diagrams.Core.SelectionMode.Single;
 
             var table = CreateTableRadDiagramShape();
 
@@ -335,12 +342,15 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 Background = null,
                 IsRotationEnabled = false,
                 Padding = new Thickness(0),
+                IsManipulationEnabled = false,
                 IsDraggingEnabled = true,
                 IsConnectorsManipulationEnabled = false,
                 ZIndex = 100
             };
 
-            SetReadOnly(shape, IsReadOnly);
+            AttachToolBar(shape, toolViewModel as IHudToolBar);
+
+            SetReadOnly(shape, IsReadOnly, toolViewModel);
 
             SetWidthBinding(shape, toolViewModel);
             SetHeightBinding(shape, toolViewModel);
@@ -358,17 +368,17 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         /// </summary>
         /// <param name="shape">Shape</param>
         /// <param name="isReadOnly"></param>
-        private void SetReadOnly(RadDiagramShape shape, bool isReadOnly)
+        private void SetReadOnly(RadDiagramShape shape, bool isReadOnly, HudBaseToolViewModel toolViewModel)
         {
-            if (shape == null)
+            if (shape == null || toolViewModel == null)
             {
                 return;
             }
 
-            shape.IsEditable = !isReadOnly;            
-            shape.IsResizingEnabled = !isReadOnly;
-            shape.IsDraggingEnabled = !isReadOnly;            
-            shape.IsManipulationAdornerVisible = !isReadOnly;                       
+            shape.IsEditable = !isReadOnly;
+            shape.IsResizingEnabled = toolViewModel.IsResizable && !isReadOnly;
+            shape.IsDraggingEnabled = !isReadOnly;
+            shape.IsManipulationAdornerVisible = !isReadOnly;
         }
 
         /// <summary>
@@ -382,12 +392,8 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 return;
             }
 
-            var shape = AssociatedObject.Shapes.OfType<RadDiagramShape>().FirstOrDefault(x => ReferenceEquals(x.DataContext, toolViewModel));
-
-            if (shape != null)
-            {
-                AssociatedObject.RemoveShape(shape);
-            }
+            var shapes = AssociatedObject.Shapes.OfType<RadDiagramShape>().Where(x => ReferenceEquals(x.DataContext, toolViewModel)).ToArray();
+            shapes.ForEach(shape => AssociatedObject.RemoveShape(shape));
         }
 
         #endregion
@@ -421,7 +427,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
         protected static void SetIsVisibleBinding(RadDiagramShape shape, HudBaseToolViewModel viewModel)
         {
-            var converter = new BooleanToVisibilityConverter();
+            var converter = new BoolToVisibilityConverter();
             SetBinding(shape, UIElement.VisibilityProperty, viewModel, nameof(HudBaseToolViewModel.IsVisible), BindingMode.OneWay, converter);
         }
 
@@ -457,6 +463,56 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
         protected static double DiagramActualHeigth(RadDiagram diagram)
         {
             return diagram.ActualHeight == 0 ? HudDefaultSettings.HudTableHeight : diagram.ActualHeight;
+        }
+
+        #endregion
+
+        #region Tool bar
+
+        private void AttachToolBar(RadDiagramShape shape, IHudToolBar toolBar)
+        {
+            if (toolBar == null || shape == null)
+            {
+                return;
+            }
+
+            var toolbarShape = new RadDiagramShape()
+            {
+                DataContext = toolBar,
+                Height = double.NaN,
+                Width = double.NaN,
+                StrokeThickness = 0,
+                IsEnabled = true,
+                IsEditable = false,
+                IsManipulationEnabled = false,
+                IsResizingEnabled = false,
+                IsRotationEnabled = false,
+                IsDraggingEnabled = false,
+                IsConnectorsManipulationEnabled = false,
+                IsManipulationAdornerVisible = false,
+                IsSelected = false,
+                IsInEditMode = false,
+                SnapsToDevicePixels = true,
+                Template = ToolbarTemplate,
+                Background = new SolidColorBrush(Colors.Transparent),
+                ZIndex = 101
+            };
+
+            var disposable = Observable.FromEventPattern<PropertyEventArgs>(
+                h => shape.PropertyChanged += h,
+                h => shape.PropertyChanged -= h).Subscribe(x =>
+                {
+                    if (x.EventArgs.PropertyName == nameof(RadDiagramShape.Bounds))
+                    {
+                        toolbarShape.X = shape.X + shape.ActualWidth - toolbarShape.ActualWidth;
+                        toolbarShape.Y = shape.Y + shape.ActualHeight + 1;
+                    }
+                });
+
+            AssociatedObject.AddShape(toolbarShape);
+            RemovableShapes.Add(toolbarShape);
+
+            Disposables.Add(disposable);
         }
 
         #endregion

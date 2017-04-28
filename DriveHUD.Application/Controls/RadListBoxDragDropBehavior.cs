@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using Model.Stats;
-using System.Collections.Generic;
 using System.Linq;
 using Telerik.Windows.DragDrop.Behaviors;
 
@@ -21,16 +20,11 @@ namespace DriveHUD.Application.Controls
     {
         public RadListBoxDragDropBehavior()
             : base()
-        {            
-        }
-
-        protected override IEnumerable<object> CopyDraggedItems(DragDropState state)
-        {            
-            return base.CopyDraggedItems(state);
+        {
         }
 
         public override void Drop(DragDropState state)
-        {            
+        {
             if (!state.IsSameControl && state.DraggedItems.Cast<StatInfo>().All(x => x is StatInfoBreak))
             {
                 base.DragDropCanceled(state);
@@ -38,10 +32,10 @@ namespace DriveHUD.Application.Controls
             }
 
             base.Drop(state);
-        }        
+        }
 
         public override void DragDropCanceled(DragDropState state)
-        {            
+        {
             if (!state.DraggedItems.Cast<StatInfo>().All(x => x is StatInfoBreak))
             {
                 base.DragDropCanceled(state);
@@ -53,7 +47,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public override void DragDropCompleted(DragDropState state)
-        {           
+        {
             base.DragDropCompleted(state);
         }
     }

@@ -22,8 +22,7 @@
             x:Name="vbMain"
             Stretch="Uniform">
 
-            <Grid
-                Width="{x:Static res:HudDefaultSettings.FourStatBoxWidth}"
+            <Grid                
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
 
