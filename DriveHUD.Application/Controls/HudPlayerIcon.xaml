@@ -68,6 +68,10 @@
                                 </Style.Triggers>
                             </Style>
                         </Image.Style>
+                        <i:Interaction.Behaviors>
+                            <vm:HudPlayerIconToolTipBehavior
+                                HudElementViewModel="{Binding Parent}" />
+                        </i:Interaction.Behaviors>
                     </Image>
                 </Border>
             </Border>

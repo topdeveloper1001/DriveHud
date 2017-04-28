@@ -58,61 +58,90 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
         }
 
-        protected virtual void ConfigureSimpleToolTip(FrameworkElement element, StatInfo statInfo)
+        protected virtual void ConfigureSimpleToolTip(FrameworkElement element, object toolTipSource, string path)
         {
-            if (statInfo == null)
+            if (toolTipSource == null)
             {
                 return;
             }
 
-            var toolTipBinding = new Binding(nameof(StatInfo.ToolTip))
+            var toolTipBinding = new Binding(path)
             {
-                Source = statInfo,
+                Source = toolTipSource,
                 Mode = BindingMode.OneWay
             };
 
             element.SetBinding(FrameworkElement.ToolTipProperty, toolTipBinding);
         }
 
-        protected virtual void ConfigureToolTip(FrameworkElement element, StatInfo statInfo)
+        protected virtual void ConfigureSimpleToolTip(FrameworkElement element, object toolTipSource)
+        {
+            var statInfo = toolTipSource as StatInfo;
+
+            if (statInfo != null)
+            {
+                ConfigureSimpleToolTip(element, toolTipSource, nameof(StatInfo.ToolTip));
+            }
+        }
+
+        protected virtual HudBaseToolViewModel[] GetToolTipViewModels(object toolTipSource)
+        {
+            var statInfo = toolTipSource as StatInfo;
+
+            if (statInfo == null)
+            {
+                return new HudBaseToolViewModel[0];
+            }
+
+            var toolTipViewModels = HudElementViewModel.Tools
+              .OfType<IHudBaseStatToolViewModel>()
+              .Where(x => x.BaseStat != null && x.BaseStat.Stat == statInfo.Stat)
+              .OfType<HudBaseToolViewModel>()
+              .ToArray();
+
+            return toolTipViewModels;
+        }
+
+        protected virtual void ConfigureToolTip(FrameworkElement element, object toolTipSource)
         {
             if (HudElementViewModel == null)
             {
                 return;
             }
 
-            var baseStatViewModels = HudElementViewModel.Tools
-                .OfType<IHudBaseStatToolViewModel>()
-                .Where(x => x.BaseStat != null && x.BaseStat.Stat == statInfo.Stat)
-                .OfType<HudBaseToolViewModel>()
-                .ToArray();
+            var toolTipViewModels = GetToolTipViewModels(toolTipSource);
 
-            if (baseStatViewModels.Length <= 0)
+            if (toolTipViewModels.Length <= 0)
             {
-                ConfigureSimpleToolTip(element, statInfo);
+                ConfigureSimpleToolTip(element, toolTipSource);
                 return;
             }
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>();
 
-            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(baseStatViewModels.First());
+            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(toolTipViewModels.First());
 
             if (frameworkElementFactory == null)
             {
                 return;
             }
 
-            var dataContextBinding = new Binding { Source = baseStatViewModels };
+            var dataContextBinding = new Binding { Source = toolTipViewModels };
             frameworkElementFactory.SetBinding(FrameworkElement.DataContextProperty, dataContextBinding);
 
             var template = new DataTemplate();
             template.VisualTree = frameworkElementFactory;
             template.Seal();
 
+            AttachToolTip(element, template);
+        }
+
+        protected virtual void AttachToolTip(FrameworkElement element, DataTemplate toolTipContentTemplate)
+        {
             var tooltip = new ToolTip();
             tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
             tooltip.Background = new SolidColorBrush(Colors.Transparent);
-            tooltip.ContentTemplate = template;
+            tooltip.ContentTemplate = toolTipContentTemplate;
 
             ToolTipService.SetInitialShowDelay(element, 1);
             ToolTipService.SetShowDuration(element, 60000);

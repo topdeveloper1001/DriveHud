@@ -232,7 +232,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var statInfo = creationInfo.Source as StatInfo;
 
-            Check.Require(statInfo != null, "Source isn't defined. Gauge indicator has not been created.");
+            if (statInfo == null)
+            {
+                return null;
+            }
 
             statInfo.IsSelected = false;
 
@@ -261,15 +264,32 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var statInfo = creationInfo.Source as StatInfo;
 
-            Check.Require(statInfo != null, "Source isn't defined. Graph has not been created.");
-            
-            statInfo.IsSelected = false;
+            HudLayoutGraphTool layoutTool = null;
 
-            var layoutTool = new HudLayoutGraphTool
+            if (statInfo != null)
             {
-                BaseStat = statInfo.Clone(),
-                Stats = new ReactiveList<StatInfo> { statInfo.Clone() }
-            };
+                statInfo.IsSelected = false;
+
+                layoutTool = new HudLayoutGraphTool
+                {
+                    BaseStat = statInfo.Clone(),
+                    Stats = new ReactiveList<StatInfo> { statInfo.Clone() }
+                };
+            }
+            else
+            {
+                var parentTool = creationInfo.Source as HudBaseToolViewModel;
+
+                if (parentTool == null)
+                {
+                    return null;
+                }
+
+                layoutTool = new HudLayoutGraphTool
+                {
+                    ParentId = parentTool.Tool.Id
+                };
+            }
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
             toolViewModel.Position = creationInfo.Position;

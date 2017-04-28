@@ -1264,6 +1264,11 @@ namespace DriveHUD.Application.ViewModels
 
             var toolViewModel = factory.CreateTool(creationInfo);
 
+            if (toolViewModel == null)
+            {
+                return;
+            }
+
             DesignerHudElementViewModel.Tools.Add(toolViewModel);
 
             toolViewModel.IsSelected = true;
@@ -1272,14 +1277,17 @@ namespace DriveHUD.Application.ViewModels
             {
                 var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
 
-                var statsToUpdate = DesignerHudElementViewModel.Tools
-                    .OfType<IHudStatsToolViewModel>()
-                    .Where(x => !(x is IHudBaseStatToolViewModel))
-                    .SelectMany(x => x.Stats)
-                    .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
-                    .ToArray();
+                if (hudBaseStatToolViewModel.BaseStat != null)
+                {
+                    var statsToUpdate = DesignerHudElementViewModel.Tools
+                        .OfType<IHudStatsToolViewModel>()
+                        .Where(x => !(x is IHudBaseStatToolViewModel))
+                        .SelectMany(x => x.Stats)
+                        .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                        .ToArray();
 
-                statsToUpdate.ForEach(x => x.HasAttachedTools = true);
+                    statsToUpdate.ForEach(x => x.HasAttachedTools = true);
+                }
             }
 
             InitializePreview();

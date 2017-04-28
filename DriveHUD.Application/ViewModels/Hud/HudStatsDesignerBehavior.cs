@@ -57,7 +57,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             return block;
         }
 
-        protected override void ConfigureToolTip(FrameworkElement element, StatInfo statInfo)
+        protected override void ConfigureToolTip(FrameworkElement element, object statInfo)
         {
             ConfigureSimpleToolTip(element, statInfo);
         }
