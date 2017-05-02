@@ -139,7 +139,7 @@ namespace DriveHUD.Common.Wpf.Actions
                     SetWindowPosition(wrapperWindow, left, top);
                 };
 
-                wrapperWindow.SizeChanged += sizeHandler;
+                wrapperWindow.SizeChanged += sizeHandler;             
             }
 
             Show(wrapperWindow);
@@ -225,7 +225,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 }
             }
 
-            interactionAware.Notification = notification;
+            interactionAware.Notification = notification; 
             interactionAware.FinishInteraction = () => CloseWindow(wrapperWindow);
         }
 
