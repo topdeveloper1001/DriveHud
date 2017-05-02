@@ -998,6 +998,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to %.
+        /// </summary>
+        internal static string Common_PercentSign {
+            get {
+                return ResourceManager.GetString("Common_PercentSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Place.
         /// </summary>
         internal static string Common_Place {
@@ -1715,6 +1724,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_UpdateQuestion {
             get {
                 return ResourceManager.GetString("Common_UpdateQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win%: .
+        /// </summary>
+        internal static string Common_WinPercent {
+            get {
+                return ResourceManager.GetString("Common_WinPercent", resourceCulture);
             }
         }
         
