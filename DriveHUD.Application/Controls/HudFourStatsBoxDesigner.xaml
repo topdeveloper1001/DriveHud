@@ -17,12 +17,12 @@
     </UserControl.Resources>
 
     <Grid>
-       
+
         <Viewbox
             x:Name="vbMain"
             Stretch="Uniform">
 
-            <Grid                                
+            <Grid
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
 
@@ -141,9 +141,121 @@
 
                 </Border>
 
+                <!-- Vertical box -->
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource VerticalBorderStyle}"
+                    Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
+                    <Border
+                        Style="{StaticResource InnerGlowVerticalBorderStyle}">
+                        <StackPanel
+                            Orientation="Vertical">
+
+                            <Border
+                                DataContext="{Binding Stat1}"
+                                Style="{StaticResource StatFirstVerticalBorderStyle}"
+                                dh:DragDrop.IsDragTarget="True"
+                                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                                dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                    <Hyperlink
+                                        Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                        CommandParameter="{Binding}"
+                                        TextDecorations="{x:Null}"
+                                        Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                        <Run
+                                            Text="{Binding Caption}" />
+                                    
+                                    </Hyperlink>
+                                </TextBlock>
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat2}"
+                                Style="{StaticResource StatSecondVerticalBorderStyle}"
+                                dh:DragDrop.IsDragTarget="True"
+                                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                                dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                    <Hyperlink
+                                        Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                        CommandParameter="{Binding}"
+                                        TextDecorations="{x:Null}"
+                                        Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                        <Run
+                                            Text="{Binding Caption}" />
+                                    
+                                    </Hyperlink>
+                                </TextBlock>
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat3}"
+                                Style="{StaticResource StatThirdVerticalBorderStyle}"
+                                dh:DragDrop.IsDragTarget="True"
+                                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                                dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                    <Hyperlink
+                                        Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                        CommandParameter="{Binding}"
+                                        TextDecorations="{x:Null}"
+                                        Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                        <Run
+                                            Text="{Binding Caption}" />
+                                    
+                                    </Hyperlink>
+                                </TextBlock>
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat4}"
+                                Style="{StaticResource StatFourthVerticalBorderStyle}"
+                                dh:DragDrop.IsDragTarget="True"
+                                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                                dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}">                                
+                                    <Hyperlink
+                                        Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                        CommandParameter="{Binding}"
+                                        TextDecorations="{x:Null}"
+                                        Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
+                                    
+                                        <Run
+                                            Text="{Binding Caption}" />
+                                    
+                                    </Hyperlink>
+                                </TextBlock>
+                            </Border>
+
+                        </StackPanel>
+                    </Border>
+
+                </Border>
+
             </Grid>
 
         </Viewbox>
-        
+
     </Grid>
 </UserControl>

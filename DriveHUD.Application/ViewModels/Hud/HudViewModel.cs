@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -30,11 +31,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Windows;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -357,7 +360,7 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> CancelDesignCommand { get; private set; }
 
-        public ReactiveCommand<object> AddToolCommand { get; private set; }
+        public ICommand AddToolCommand { get; private set; }
 
         public ReactiveCommand<object> RemoveToolCommand { get; private set; }
 
@@ -475,8 +478,7 @@ namespace DriveHUD.Application.ViewModels
             CancelDesignCommand = ReactiveCommand.Create();
             CancelDesignCommand.Subscribe(x => CloseDesigner());
 
-            AddToolCommand = ReactiveCommand.Create();
-            AddToolCommand.Subscribe(x =>
+            AddToolCommand = new RelayCommand(x =>
             {
                 var dragDropDataObject = x as DragDropDataObject;
 
@@ -490,12 +492,69 @@ namespace DriveHUD.Application.ViewModels
                     InitializeDesigner();
                 }
 
-                var toolType = dragDropDataObject.Data as HudDesignerToolType?;
+                if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
+                {
+                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+
+                    var statInfo = statInfoList.OfType<StatInfo>().FirstOrDefault();
+
+                    if (statInfo == null)
+                    {
+                        return;
+                    }
+
+                    var targetToolViewModel = dragDropDataObject.Source as HudBaseToolViewModel;
+
+                    if (targetToolViewModel == null)
+                    {
+                        return;
+                    }
+
+                    targetToolViewModel = DesignerHudElementViewModel.Tools.FirstOrDefault(t => t.Id == targetToolViewModel.Id);
+
+                    SelectedToolViewModel = targetToolViewModel;
+
+                    UpdateStatsCollections();
+
+                    StatInfoObserveCollection.Add(statInfo);
+
+                    return;
+                }
+
+                var dataObject = dragDropDataObject.DragEventArgs.Data.GetData(DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.DataFormat.Name);
+
+                var toolType = dataObject as HudDesignerToolType?;
 
                 if (toolType.HasValue && CanAddTool(toolType.Value))
                 {
                     AddTool(toolType.Value, dragDropDataObject.Position, dragDropDataObject.Source);
                 }
+            }, x =>
+            {
+                var dragEventArgs = x as DragEventArgs;
+
+                if (dragEventArgs == null)
+                {
+                    return false;
+                }
+
+                var statInfoList = dragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+
+                var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
+
+                if (statInfo == null)
+                {
+                    return false;
+                }
+
+                var dragTarget = dragEventArgs.Source as FrameworkElement;
+
+                if (dragTarget == null || dragTarget.DataContext == null)
+                {
+                    return false;
+                }
+
+                return dragTarget.DataContext is HudFourStatsBoxViewModel || dragTarget.DataContext is HudPlainStatBoxViewModel;
             });
 
             RemoveToolCommand = ReactiveCommand.Create();
@@ -1229,7 +1288,7 @@ namespace DriveHUD.Application.ViewModels
                             }
                             else
                             {
-                                SelectedToolViewModel = null;
+                                SelectedToolViewModel = null;                                
                             }
 
                             UpdateStatsCollections();

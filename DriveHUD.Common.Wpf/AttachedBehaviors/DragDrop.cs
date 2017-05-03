@@ -13,6 +13,7 @@
 using DriveHUD.Common.Log;
 using Model.Stats;
 using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -198,7 +199,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
                 try
                 {
-                    System.Windows.DragDrop.DoDragDrop(uiElement, dataObject, DragDropEffects.Move);
+                    System.Windows.DragDrop.DoDragDrop(uiElement, dataObject, DragDropEffects.Move | DragDropEffects.Copy);
                 }
                 catch (Exception ex)
                 {
@@ -224,13 +225,11 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             var dragDropCommand = GetDragDropCommand(uiElement);
 
-            if (dragDropCommand != null && e.Data.GetDataPresent(DataFormat.Name))
+            if (dragDropCommand != null)
             {
-                var dataObject = e.Data.GetData(DataFormat.Name);
-
                 var dragDropDataObject = new DragDropDataObject
                 {
-                    Data = dataObject,
+                    DragEventArgs = e,
                     Position = e.GetPosition(uiElement),
                     Source = (uiElement as FrameworkElement)?.DataContext
                 };
@@ -259,8 +258,17 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             var targetGroup = GetGroupProperty(uiElement);
 
-            if (dragInfo == null || !string.Equals(targetGroup, dragInfo.Group))
+            var dragDropCommand = GetDragDropCommand(uiElement);
+
+            if (dragDropCommand != null && dragDropCommand.CanExecute(e))
             {
+                e.Effects = DragDropEffects.Copy;
+                e.Handled = true;
+                return;
+            }
+
+            if (dragInfo == null || !string.Equals(targetGroup, dragInfo.Group))
+            {                
                 e.Effects = DragDropEffects.None;
                 e.Handled = true;
                 return;
@@ -283,7 +291,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         private static void OnDragEnter(object sender, DragEventArgs e)
-        {
+        {            
             UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = true);
             OnDragOver(sender, e);
         }

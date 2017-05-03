@@ -84,6 +84,10 @@ namespace DriveHUD.Common.Resources
 
         public const double FourStatBoxHeight = 19d;
 
+        public const double FourStatVerticalBoxWidth = 30d;
+
+        public const double FourStatVerticalBoxHeight = 63d;
+
         public const double FourStatBoxMinHeight = 19d;
 
         public const double TiltMeterWidth = 13d;

@@ -17,7 +17,8 @@
 
     </UserControl.Resources>
 
-    <Grid
+    <Grid      
+        Width="50"
         Visibility="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}">
 
         <StackPanel
@@ -32,8 +33,26 @@
                 MinWidth="16"
                 MinHeight="16"
                 Padding="0"
+                ToolTip="Rotate"
+                Visibility="{Binding IsRotateVisible, Converter={dh:BoolToVisibilityConverter}}"
+                Background="{StaticResource ButtonBackground}"
+                Command="{Binding RotateCommand, TargetNullValue={x:Null}}">
+
+                <Image
+                    Source="/DriveHUD.Common.Resources;Component/images/icons/rotate-icon-w.png"
+                    Width="8"
+                    Height="8" />
+
+            </Button>
+            
+            <Button
+                Width="16"
+                Height="16"
+                MinWidth="16"
+                MinHeight="16"
+                Padding="0"
                 ToolTip="{ResX Key=Common_Hud_ToolBar_Apply}"
-                Visibility="{Binding IsSaveVisible, Converter={dh:BoolToVisibilityConverterHiddenByDef}}"
+                Visibility="{Binding IsSaveVisible, Converter={dh:BoolToVisibilityConverter}}"
                 Background="{StaticResource ButtonBackground}"
                 Command="{Binding SaveCommand, TargetNullValue={x:Null}}">
 

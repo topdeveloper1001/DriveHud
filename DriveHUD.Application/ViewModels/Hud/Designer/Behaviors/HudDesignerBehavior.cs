@@ -539,7 +539,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 });
 
             AssociatedObject.AddShape(toolbarShape);
-            RemovableShapes.Add(toolbarShape);
+            RemovableShapes.Add(toolbarShape);            
 
             Disposables.Add(disposable);
         }

@@ -22,7 +22,7 @@
             x:Name="vbMain"
             Stretch="Uniform">
 
-            <Grid                
+            <Grid
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
 
@@ -39,7 +39,7 @@
                         <!-- Stat #1 -->
                         <Border
                             DataContext="{Binding Stat1}"
-                            Style="{StaticResource StatFirstBorderStyle}"                           
+                            Style="{StaticResource StatFirstBorderStyle}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <i:Interaction.Behaviors>
@@ -56,7 +56,7 @@
                         <!-- Stat #2 -->
                         <Border
                             DataContext="{Binding Stat2}"
-                            Style="{StaticResource StatSecondBorderStyle}"                          
+                            Style="{StaticResource StatSecondBorderStyle}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <i:Interaction.Behaviors>
@@ -72,7 +72,7 @@
                         <!-- Stat #3 -->
                         <Border
                             DataContext="{Binding Stat3}"
-                            Style="{StaticResource StatThirdBorderStyle}"                          
+                            Style="{StaticResource StatThirdBorderStyle}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <i:Interaction.Behaviors>
@@ -88,7 +88,7 @@
                         <!-- Stat #4 -->
                         <Border
                             DataContext="{Binding Stat4}"
-                            Style="{StaticResource StatFourthBorderStyle}"                           
+                            Style="{StaticResource StatFourthBorderStyle}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
                             <i:Interaction.Behaviors>
@@ -102,6 +102,66 @@
                         </Border>
 
                     </StackPanel>
+
+                </Border>
+
+                <!-- Vertical box -->
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource VerticalBorderStyle}"
+                    Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
+                    <Border
+                        Style="{StaticResource InnerGlowVerticalBorderStyle}">
+                        <StackPanel
+                            Orientation="Vertical">
+
+                            <Border
+                                DataContext="{Binding Stat1}"
+                                Style="{StaticResource StatFirstVerticalBorderStyle}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Text="{Binding Caption}"
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat2}"
+                                Style="{StaticResource StatSecondVerticalBorderStyle}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Text="{Binding Caption}"
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat3}"
+                                Style="{StaticResource StatThirdVerticalBorderStyle}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Text="{Binding Caption}"
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                            </Border>
+
+                            <Border
+                                DataContext="{Binding Stat4}"
+                                Style="{StaticResource StatFourthVerticalBorderStyle}"
+                                BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
+                                Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock
+                                    Text="{Binding Caption}"
+                                    Style="{StaticResource StatTextBlockStyle}"
+                                    Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}" />
+                            </Border>
+
+                        </StackPanel>
+                    </Border>
 
                 </Border>
 

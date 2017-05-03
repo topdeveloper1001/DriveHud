@@ -59,6 +59,23 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => parent);
 
             Parent = parent;
+
+            RotateCommand = ReactiveCommand.Create();
+            (RotateCommand as ReactiveCommand<object>).Subscribe(x =>
+            {
+                IsVertical = !IsVertical;
+
+                if (IsVertical)
+                {                 
+                    Height = HudDefaultSettings.FourStatVerticalBoxHeight;
+                    Width = HudDefaultSettings.FourStatVerticalBoxWidth;
+                }
+                else
+                {
+                    Height = HudDefaultSettings.FourStatBoxHeight;
+                    Width = HudDefaultSettings.FourStatBoxWidth;
+                }
+            });
         }
 
         /// <summary>
@@ -149,6 +166,17 @@ namespace DriveHUD.Application.ViewModels.Hud
                 tool.IsVertical = value;
 
                 this.RaisePropertyChanged(nameof(IsVertical));
+            }
+        }
+
+        /// <summary>
+        /// Gets whenever rotate button is visible
+        /// </summary>
+        public override bool IsRotateVisible
+        {
+            get
+            {
+                return true;
             }
         }
 

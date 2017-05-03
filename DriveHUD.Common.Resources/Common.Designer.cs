@@ -946,9 +946,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Plain Stat Box.
         /// </summary>
-        internal static string Common_HudSideBar_PlainStatBox {
+        internal static string Common_HudSideBar_PlainStatBoxTool {
             get {
-                return ResourceManager.GetString("Common_HudSideBar_PlainStatBox", resourceCulture);
+                return ResourceManager.GetString("Common_HudSideBar_PlainStatBoxTool", resourceCulture);
             }
         }
         
@@ -980,7 +980,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Design Elements:.
+        ///   Looks up a localized string similar to HUD Design Elements.
         /// </summary>
         internal static string Common_HudSideBar_Title {
             get {

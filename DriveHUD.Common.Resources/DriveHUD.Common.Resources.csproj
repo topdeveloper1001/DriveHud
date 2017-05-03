@@ -518,6 +518,17 @@
     <EmbeddedResource Include="Layouts\DH 6-max.xml" />
     <EmbeddedResource Include="Layouts\DH 8-max.xml" />
     <EmbeddedResource Include="Layouts\DH 9-max.xml" />
+    <Resource Include="images\icons\4-stat.png" />
+    <Resource Include="images\icons\break line.png" />
+    <Resource Include="images\icons\bumpers.png" />
+    <Resource Include="images\icons\gauge.png" />
+    <Resource Include="images\icons\graph.png" />
+    <Resource Include="images\icons\heatmap.png" />
+    <Resource Include="images\icons\plain stat box.png" />
+    <Resource Include="images\icons\profile.png" />
+    <Resource Include="images\icons\textbox.png" />
+    <Resource Include="images\icons\tilt.meter.png" />
+    <Resource Include="images\icons\rotate-icon-w.png" />
     <Content Include="Layouts\DH-6max-Basic.xml">
       <SubType>Designer</SubType>
     </Content>

@@ -255,7 +255,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return true;
+                return false;
             }
         }
 

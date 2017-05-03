@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
     /// </summary>
     public class DragDropDataObject
     {
-        public object Data { get; set; }
+        public DragEventArgs DragEventArgs { get; set; }
 
         public Point Position { get; set; }
 
