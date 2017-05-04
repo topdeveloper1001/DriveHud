@@ -11,37 +11,30 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
-using System.Collections.Generic;
+using ProtoBuf;
 using System;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
     /// <summary>
     /// This class represents the text box tool of the hud
     /// </summary>
-    public class HudLayoutTextBoxTool : HudLayoutTool
+    [Serializable, ProtoContract]
+    public class HudLayoutTextBoxTool : HudLayoutNonPopupTool
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HudLayoutTextBoxTool"/> class
         /// </summary>
-        public HudLayoutTextBoxTool()
+        public HudLayoutTextBoxTool() : base()
         {
             ToolType = HudDesignerToolType.TextBox;
         }
 
         /// <summary>
-        /// Gets or sets the list of <see cref="HudPositionsInfo"/> positions of the text box tool on hud
-        /// </summary>
-        public List<HudPositionsInfo> Positions { get; set; }
-
-        /// <summary>
-        /// Gets or sets the list of <see cref="HudPositionInfo"/> UI positions of the plain box tool
-        /// </summary>
-        public List<HudPositionInfo> UIPositions { get; set; }
-
-        /// <summary>
         /// Gets or sets the text content of the text box tool
         /// </summary>
+        [ProtoMember(2)]
         public string Text { get; set; }
 
         /// <summary>
@@ -50,7 +43,15 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
         public override HudLayoutTool Clone()
         {
-            throw new NotImplementedException();
+            var clone = new HudLayoutTextBoxTool
+            {
+                Id = Id,
+                Text = Text,
+                Positions = Positions.Select(x => x.Clone()).ToList(),
+                UIPositions = UIPositions.Select(x => x.Clone()).ToList()
+            };
+
+            return clone;
         }
 
         /// <summary>
@@ -58,7 +59,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// </summary>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            throw new NotImplementedException();
+            var toolViewModel = new HudTextBoxViewModel(this, hudElement);
+            return toolViewModel;            
         }
     }
 }

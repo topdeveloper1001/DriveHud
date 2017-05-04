@@ -81,34 +81,30 @@ namespace DriveHUD.Application.ViewModels.Hud
             switch (hudToolElement.ToolType)
             {
                 case HudDesignerToolType.PlainStatBox:
-                    hudTool = new HudPlainBox
-                    {
-                        DataContext = hudToolElement
-                    };
+                    hudTool = new HudPlainBox();
                     break;
                 case HudDesignerToolType.FourStatBox:
-                    hudTool = new HudFourStatsBox
-                    {
-                        DataContext = hudToolElement
-                    };
+                    hudTool = new HudFourStatsBox();
                     break;
                 case HudDesignerToolType.TiltMeter:
-                    hudTool = new HudTiltMeter
-                    {
-                        DataContext = hudToolElement
-                    };
+                    hudTool = new HudTiltMeter();
                     break;
                 case HudDesignerToolType.PlayerProfileIcon:
-                    hudTool = new HudPlayerIcon
-                    {
-                        DataContext = hudToolElement
-                    };
+                    hudTool = new HudPlayerIcon();
+                    break;
+                case HudDesignerToolType.TextBox:
+                    hudTool = new HudTextBox();
                     break;
                 case HudDesignerToolType.GaugeIndicator:
                 case HudDesignerToolType.Graph:
                     break;
                 default:
                     throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
+            }
+
+            if (hudTool != null)
+            {
+                hudTool.DataContext = hudToolElement;
             }
 
             return hudTool;

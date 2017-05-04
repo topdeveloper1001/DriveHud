@@ -452,6 +452,57 @@ namespace DriveHud.Tests.UnitTests
         }
 
         /// <summary>
+        /// Method tests if <see cref="HudLayoutTextBoxTool"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudLayoutTextBoxToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutTextBoxTool
+            {
+                Text = "Test"
+            };
+
+            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+
+            Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
+            Assert.That(hudLayoutToolActual.Text, Is.EqualTo(hudLayoutToolExpected.Text));
+            Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudTextBoxViewModel"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudTextBoxViewModelToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutTextBoxTool();
+
+            var hudElement = new HudElementViewModel
+            {
+                Seat = 1,
+            };
+
+            var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudTextBoxViewModel;
+            hudToolViewModelExpected.Width = 100;
+            hudToolViewModelExpected.Height = 75;
+            hudToolViewModelExpected.Position = new System.Windows.Point(5, 5);
+            hudToolViewModelExpected.Opacity = 60;
+            hudToolViewModelExpected.Text = "Test";
+
+            Assert.IsNotNull(hudToolViewModelExpected);
+
+            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+
+            Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
+            Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
+            Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
+            Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
+            Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
+            Assert.That(hudToolViewModelActual.Text, Is.EqualTo(hudToolViewModelExpected.Text));
+        }
+
+        /// <summary>
         /// Method tests if <see cref="Color"/> can be serialized/deserialized with <seealso cref="Serializer"/>
         /// </summary>
         [Test]

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudPlayerIconToolTipBehavior.cs" company="Ace Poker Solutions">
+// <copyright file="HudToolTipBehavior.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Microsoft.Practices.ServiceLocation;
 using System.Linq;
 using System.Windows;
-using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HudPlayerIconToolTipBehavior : HudBaseToolTipBehavior<FrameworkElement>
+    public class HudToolTipBehavior : HudBaseToolTipBehavior<FrameworkElement>
     {
         protected override void OnHudElementViewModelChanged()
         {
@@ -26,28 +24,28 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            var playerIconViewModel = AssociatedObject.DataContext as HudPlayerIconViewModel;
+            var toolViewModel = AssociatedObject.DataContext as HudBaseToolViewModel;
 
-            if (playerIconViewModel == null)
+            if (toolViewModel == null)
             {
                 return;
             }
 
-            ConfigureToolTip(AssociatedObject, playerIconViewModel);
+            ConfigureToolTip(AssociatedObject, toolViewModel);
         }
 
         protected override HudBaseToolViewModel[] GetToolTipViewModels(object toolTipSource)
         {
-            var playerIconViewModel = toolTipSource as HudPlayerIconViewModel;
+            var toolViewModel = toolTipSource as HudBaseToolViewModel;
 
-            if (playerIconViewModel == null)
+            if (toolViewModel == null)
             {
                 return new HudBaseToolViewModel[0];
             }
 
             var toolTipViewModels = HudElementViewModel.Tools
                .OfType<HudGraphViewModel>()
-               .Where(x => x.ParentToolId != null && x.ParentToolId == playerIconViewModel.Id)
+               .Where(x => x.ParentToolId != null && x.ParentToolId == toolViewModel.Id)
                .OfType<HudBaseToolViewModel>()
                .ToArray();
 

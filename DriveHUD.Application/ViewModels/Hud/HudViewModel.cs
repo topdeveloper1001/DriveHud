@@ -366,6 +366,10 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> StatClickCommand { get; private set; }
 
+        public ReactiveCommand<object> ToolClickCommand { get; private set; }
+
+        public ReactiveCommand<object> DuplicateCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -459,6 +463,9 @@ namespace DriveHUD.Application.ViewModels
 
             DataExportCommand = ReactiveCommand.Create(canUseDataCommands);
             DataExportCommand.Subscribe(x => DataExport());
+
+            DuplicateCommand = ReactiveCommand.Create(canUseDataCommands);
+            DuplicateCommand.Subscribe(x => { });
 
             SpliterAddCommand = ReactiveCommand.Create();
             SpliterAddCommand.Subscribe(x => SpliterAdd());
@@ -588,19 +595,50 @@ namespace DriveHUD.Application.ViewModels
                     .OfType<HudBaseToolViewModel>()
                     .ToArray();
 
-                if (toolsToShow.Length > 0)
+                ShowTools(toolsToShow);
+            });
+
+            ToolClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
+            ToolClickCommand.Subscribe(x =>
+            {
+                var toolViewModel = x as HudBaseToolViewModel;
+
+                if (toolViewModel == null)
                 {
-                    toolsToShow.ForEach(t =>
-                    {
-                        t.IsVisible = true;
-                        t.IsSelected = false;
-                    });
-                    toolsToShow.First(t => t.IsSelected = true);
+                    return;
                 }
+
+                var toolsToShow = DesignerHudElementViewModel.Tools
+                    .OfType<HudGraphViewModel>()
+                    .Where(t => t.ParentToolId != null && t.ParentToolId == toolViewModel.Id)
+                    .OfType<HudBaseToolViewModel>()
+                    .ToArray();
+
+                ShowTools(toolsToShow);
             });
 
             SaveDesignCommand = ReactiveCommand.Create();
             SaveDesignCommand.Subscribe(x => SaveDesign());
+        }
+
+        /// <summary>
+        /// Shows the specified <see cref="HudBaseToolViewModel"/> tools
+        /// </summary>
+        /// <param name="toolsToShow">Tools to show</param>
+        private void ShowTools(HudBaseToolViewModel[] toolsToShow)
+        {
+            if (toolsToShow.Length < 1)
+            {
+                return;
+            }
+
+            toolsToShow.ForEach(t =>
+            {
+                t.IsVisible = true;
+                t.IsSelected = false;
+            });
+
+            toolsToShow.First(t => t.IsSelected = true);
         }
 
         /// <summary>
@@ -1288,7 +1326,8 @@ namespace DriveHUD.Application.ViewModels
                             }
                             else
                             {
-                                SelectedToolViewModel = null;                                
+                                SelectedToolViewModel = null;
+                                InitializePreview();
                             }
 
                             UpdateStatsCollections();

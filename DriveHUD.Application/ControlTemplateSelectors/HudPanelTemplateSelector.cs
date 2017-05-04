@@ -48,6 +48,10 @@ namespace DriveHUD.Application.ControlTemplateSelectors
             {
                 return HudPlayerIconTemplate;
             }
+            else if (radItem.DataContext is HudTextBoxViewModel)
+            {
+                return HudTextBoxTemplate;
+            }
             else if (radItem.DataContext is HudGraphViewModel)
             {
                 return HudGraphTemplate;
@@ -73,5 +77,7 @@ namespace DriveHUD.Application.ControlTemplateSelectors
         public DataTemplate HudPlayerIconTemplate { get; set; }
 
         public DataTemplate HudGraphTemplate { get; set; }
+
+        public DataTemplate HudTextBoxTemplate { get; set; }
     }
 }

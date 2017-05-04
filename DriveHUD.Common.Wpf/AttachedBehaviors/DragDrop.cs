@@ -255,9 +255,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             {
                 return;
             }
-
-            var targetGroup = GetGroupProperty(uiElement);
-
+                        
             var dragDropCommand = GetDragDropCommand(uiElement);
 
             if (dragDropCommand != null && dragDropCommand.CanExecute(e))
@@ -266,6 +264,8 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 e.Handled = true;
                 return;
             }
+
+            var targetGroup = GetGroupProperty(uiElement);
 
             if (dragInfo == null || !string.Equals(targetGroup, dragInfo.Group))
             {                

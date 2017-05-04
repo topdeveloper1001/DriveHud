@@ -29,6 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     [ProtoInclude(33, typeof(HudTiltMeterViewModel))]
     [ProtoInclude(34, typeof(HudPlayerIconViewModel))]
     [ProtoInclude(35, typeof(HudGraphViewModel))]
+    [ProtoInclude(36, typeof(HudTextBoxViewModel))]
     public abstract class HudBaseToolViewModel : ViewModelBase, IHudWindowElement, IHudToolBar
     {
         #region Properties

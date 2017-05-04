@@ -432,6 +432,14 @@
         </DataTemplate>
 
         <DataTemplate
+            x:Key="TextBoxAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.TextBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.TextBoxHeight}"                
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
             x:Key="FourStatBoxAdornerTemplate">
             <Border
                 Width="{x:Static res:HudDefaultSettings.FourStatBoxWidth}"
@@ -672,8 +680,9 @@
                         Width="95"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
-                        Style="{StaticResource ControlButtonStyle}"                        
-                        Content="Duplicate">
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DuplicateCommand}"
+                        Content="{ResX Key=Common_Hud_Duplicate}">
                     </Button>
 
                     <Button
@@ -713,8 +722,10 @@
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
                         ToolTip="{ResX Key=Common_HudSideBar_TextBoxTool}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"                        
                         CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
 
                     <controls:ImageButton
@@ -773,7 +784,7 @@
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                        ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
                         IsEnabled="False"
                         Command="{Binding DesignerToolCommand}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />

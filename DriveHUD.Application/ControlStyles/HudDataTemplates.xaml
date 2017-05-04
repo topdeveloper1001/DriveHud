@@ -76,7 +76,14 @@
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
-    <!-- Template for HudToolBar -->  
+    <!-- Template for text box inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudTextBoxTemplate">
+        <ctl:HudTextBoxDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
+    <!-- Template for HudToolBar -->
     <ControlTemplate
         x:Key="HudToolBarControlTemplate"
         TargetType="{x:Type telerik:RadDiagramShape}">

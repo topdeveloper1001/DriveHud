@@ -37,14 +37,14 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <returns>Copy of the current <see cref="HudLayoutTool"/> instance</returns>
         public override HudLayoutTool Clone()
         {
-            var cloned = new HudLayoutTiltMeterTool
+            var clone = new HudLayoutTiltMeterTool
             {
                 Id = Id,
                 Positions = Positions.Select(x => x.Clone()).ToList(),
                 UIPositions = UIPositions.Select(x => x.Clone()).ToList()
             };
 
-            return cloned;
+            return clone;
         }
 
         /// <summary>

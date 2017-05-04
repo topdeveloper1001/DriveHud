@@ -584,6 +584,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duplicate.
+        /// </summary>
+        internal static string Common_Hud_Duplicate {
+            get {
+                return ResourceManager.GetString("Common_Hud_Duplicate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
         internal static string Common_Hud_Export {
@@ -679,6 +688,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_ToolBar_Delete {
             get {
                 return ResourceManager.GetString("Common_Hud_ToolBar_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotate.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Rotate {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Rotate", resourceCulture);
             }
         }
         
@@ -904,6 +922,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudSideBar_4StatDHBoxTool {
             get {
                 return ResourceManager.GetString("Common_HudSideBar_4StatDHBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Break Line.
+        /// </summary>
+        internal static string Common_HudSideBar_BreakLine {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BreakLine", resourceCulture);
             }
         }
         

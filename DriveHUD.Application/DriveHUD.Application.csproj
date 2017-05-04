@@ -327,6 +327,12 @@
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudTextBox.xaml.cs">
+      <DependentUpon>HudTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTextBoxDesigner.xaml.cs">
+      <DependentUpon>HudTextBoxDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudTiltMeter.xaml.cs">
       <DependentUpon>HudTiltMeter.xaml</DependentUpon>
     </Compile>
@@ -428,6 +434,7 @@
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudPlayerIconViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudTextBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudTiltMeterViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
@@ -441,7 +448,7 @@
     <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
-    <Compile Include="ViewModels\Hud\HudPlayerIconToolTipBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
@@ -870,6 +877,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudStatToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTextBoxDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

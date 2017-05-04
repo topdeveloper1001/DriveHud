@@ -69,7 +69,7 @@
                             </Style>
                         </Image.Style>
                         <i:Interaction.Behaviors>
-                            <vm:HudPlayerIconToolTipBehavior
+                            <vm:HudToolTipBehavior
                                 HudElementViewModel="{Binding Parent}" />
                         </i:Interaction.Behaviors>
                     </Image>

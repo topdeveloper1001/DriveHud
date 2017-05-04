@@ -108,6 +108,10 @@ namespace DriveHUD.Common.Resources
 
         public const double GraphHeight = double.NaN;
 
+        public const double TextBoxWidth = 25d;
+
+        public const double TextBoxHeight = 25d;
+
         #endregion
     }
 }

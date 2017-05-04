@@ -33,15 +33,15 @@
                 MinWidth="16"
                 MinHeight="16"
                 Padding="0"
-                ToolTip="Rotate"
+                ToolTip="{ResX Key=Common_Hud_ToolBar_Rotate}"
                 Visibility="{Binding IsRotateVisible, Converter={dh:BoolToVisibilityConverter}}"
                 Background="{StaticResource ButtonBackground}"
                 Command="{Binding RotateCommand, TargetNullValue={x:Null}}">
 
                 <Image
                     Source="/DriveHUD.Common.Resources;Component/images/icons/rotate-icon-w.png"
-                    Width="8"
-                    Height="8" />
+                    Width="10"
+                    Height="10" />
 
             </Button>
             

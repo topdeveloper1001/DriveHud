@@ -16,7 +16,8 @@
         HudGaugeIndicatorTemplate="{StaticResource HudGaugeIndicatorTemplate}"
         HudTiltMeterTemplate="{StaticResource HudTiltMeterTemplate}"
         HudPlayerIconTemplate="{StaticResource HudPlayerIconTemplate}"
-        HudGraphTemplate="{StaticResource HudGraphTemplate}" />
+        HudGraphTemplate="{StaticResource HudGraphTemplate}"
+        HudTextBoxTemplate="{StaticResource HudTextBoxTemplate}" />
 
     <Style
         x:Key="RadDiagramStyle"

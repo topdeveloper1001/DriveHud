@@ -17,6 +17,7 @@ using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -65,15 +66,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 IsVertical = !IsVertical;
 
-                if (IsVertical)
-                {                 
-                    Height = HudDefaultSettings.FourStatVerticalBoxHeight;
-                    Width = HudDefaultSettings.FourStatVerticalBoxWidth;
-                }
-                else
+                Height = DefaultHeight;
+                Width = DefaultWidth;
+
+                var uiPositions = tool.UIPositions.FirstOrDefault(p => p.Seat == Parent.Seat);
+
+                if (uiPositions != null)
                 {
-                    Height = HudDefaultSettings.FourStatBoxHeight;
-                    Width = HudDefaultSettings.FourStatBoxWidth;
+                    uiPositions.Width = Width;
+                    uiPositions.Height = Height;
                 }
             });
         }
@@ -85,7 +86,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return HudDefaultSettings.FourStatBoxWidth;
+                return IsVertical ? HudDefaultSettings.FourStatVerticalBoxWidth : HudDefaultSettings.FourStatBoxWidth;
             }
         }
 
@@ -96,7 +97,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return HudDefaultSettings.FourStatBoxHeight;
+                return IsVertical ? HudDefaultSettings.FourStatVerticalBoxHeight : HudDefaultSettings.FourStatBoxHeight;
             }
         }
 

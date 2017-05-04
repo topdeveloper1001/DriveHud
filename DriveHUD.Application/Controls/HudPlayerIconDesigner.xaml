@@ -29,7 +29,8 @@
                 Style="{StaticResource IconBorderStyle}">
                 <Border
                     Style="{StaticResource IconInnerGlowBorderStyle}">
-                    <Image                        
+                    <Image
+                        Cursor="Hand"
                         Width="22"
                         Height="22">
                         <Image.Style>
@@ -72,6 +73,12 @@
                                 </Style.Triggers>
                             </Style>
                         </Image.Style>
+                        <Image.InputBindings>
+                            <MouseBinding
+                                MouseAction="LeftDoubleClick"
+                                Command="{Binding DataContext.ToolClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                CommandParameter="{Binding}" />
+                        </Image.InputBindings>
                     </Image>
                 </Border>
             </Border>

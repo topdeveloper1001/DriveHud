@@ -53,6 +53,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return CreatePlayerIconTool(creationInfo);
                 case HudDesignerToolType.Graph:
                     return CreateGraphTool(creationInfo);
+                case HudDesignerToolType.TextBox:
+                    return CreateTextBoxTool(creationInfo);
                 default:
                     throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
             }
@@ -211,6 +213,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 x.Width = HudDefaultSettings.PlayerIconWidth;
                 x.Height = HudDefaultSettings.PlayerIconHeight;
+            });
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.InitializePositions();
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        /// <summary>
+        /// Creates text box view model
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
+        /// <returns>Text box view model</returns>
+        private HudBaseToolViewModel CreateTextBoxTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
+
+            var layoutTool = new HudLayoutTextBoxTool
+            {
+                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+                UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
+            };
+
+            layoutTool.UIPositions.ForEach(x =>
+            {
+                x.Width = HudDefaultSettings.TextBoxWidth;
+                x.Height = HudDefaultSettings.TextBoxHeight;
             });
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
