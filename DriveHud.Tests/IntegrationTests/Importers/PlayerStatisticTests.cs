@@ -57,7 +57,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"PokerStars\HH20100723 No Limit Hold'em - DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
         public void DidColdCallIpIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName)
         {
-            using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculated"))
+            using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculatруed"))
             {
                 Playerstatistic playerstatistic = null;
 
