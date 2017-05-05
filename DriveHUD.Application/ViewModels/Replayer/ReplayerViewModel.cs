@@ -346,7 +346,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 try
                 {
-                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
+                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.CurrentAction.PlayerName);
                     if (_playerInState != null
                         && ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName) != null
                         && replayerTableState.CurrentAction != null
@@ -360,7 +360,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
+                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.CurrentAction.PlayerName}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
                 }
             }
         }
