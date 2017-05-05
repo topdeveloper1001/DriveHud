@@ -55,19 +55,13 @@ namespace DriveHUD.Application.ViewModels.Hud
             SaveCommand = ReactiveCommand.Create();
             SaveCommand.Subscribe(x =>
             {
-                if (viewModelInfo.Save != null)
-                {
-                    viewModelInfo.Save();
-                }
+                viewModelInfo.Save?.Invoke();
             });
 
             CancelCommand = ReactiveCommand.Create();
             CancelCommand.Subscribe(x =>
             {
-                if (viewModelInfo.Cancel != null)
-                {
-                    viewModelInfo.Cancel();
-                }
+                viewModelInfo.Cancel?.Invoke();
             });
 
             SelectColorCommand = ReactiveCommand.Create();
@@ -107,10 +101,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        public int HudOpacity
+        private double hudOpacity;
+
+        public double HudOpacity
         {
-            get { return _hudOpacity; }
-            set { this.RaiseAndSetIfChanged(ref _hudOpacity, value); }
+            get
+            {
+                return hudOpacity;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref hudOpacity, value);
+            }
         }
 
         private StatInfo selectedItem;
@@ -156,7 +158,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
-        private int _hudOpacity;
 
         private void SelectColor(StatInfoOptionValueRange statInfoValueRange)
         {

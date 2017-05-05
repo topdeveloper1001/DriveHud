@@ -46,7 +46,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <summary>
         /// Gets or sets the opacity of the layout
         /// </summary>
-        public int Opacity { get; set; }
+        public double Opacity { get; set; }
 
         /// <summary>
         /// Gets or sets the list of <see cref="HudPlayerType"/> player types of the layout

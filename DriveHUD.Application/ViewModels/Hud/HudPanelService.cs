@@ -72,9 +72,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
         public virtual FrameworkElement Create(HudBaseToolViewModel hudToolElement)
         {
-            Check.Require(hudToolElement != null);
-
-            hudToolElement.Opacity = hudToolElement.Opacity / 100d;
+            Check.Require(hudToolElement != null);            
 
             FrameworkElement hudTool = null;
 

@@ -38,7 +38,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         private HudGaugeIndicatorViewModel()
         {
-            Opacity = 100;
+            Opacity = 1;
         }
 
         /// <summary>

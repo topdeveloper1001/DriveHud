@@ -38,7 +38,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         private HudGraphViewModel()
         {
-            Opacity = 100;
+            Opacity = 1;
         }
 
         /// <summary>
@@ -55,7 +55,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;
             }
-
 
             InitializeCommands();
         }

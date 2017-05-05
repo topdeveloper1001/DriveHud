@@ -397,6 +397,7 @@ namespace DriveHUD.Application.ViewModels
                 hudElement.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
                 hudElement.Seat = seat;
                 hudElement.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, seat);
+                hudElement.Opacity = CurrentLayout.Opacity;
 
                 try
                 {
@@ -652,6 +653,7 @@ namespace DriveHUD.Application.ViewModels
 
             // set randomized data
             var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x => x.Clone()));
+            previewHudElementViewModel.Opacity = CurrentLayout.Opacity;
             previewHudElementViewModel.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
 
             previewHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().ForEach(tool =>
@@ -1083,6 +1085,8 @@ namespace DriveHUD.Application.ViewModels
             }
 
             HudElements.ForEach(e => e.Opacity = hudStatSettings.HudOpacity);
+
+            InitializePreview();
 
             ClosePopup();
         }

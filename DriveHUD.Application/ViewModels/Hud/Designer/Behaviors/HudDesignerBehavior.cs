@@ -384,8 +384,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             SetWidthBinding(shape, toolViewModel);
             SetHeightBinding(shape, toolViewModel);
-            SetPositionBinding(shape, toolViewModel);
-            SetOpacityBinding(shape, toolViewModel);
+            SetPositionBinding(shape, toolViewModel);            
             SetIsSelectedBinding(shape, toolViewModel);
             SetIsVisibleBinding(shape, toolViewModel);
 

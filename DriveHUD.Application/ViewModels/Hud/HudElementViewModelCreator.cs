@@ -35,6 +35,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools.Select(x => x.Clone()));
             hudElementViewModel.Seat = creationInfo.SeatNumber;
+            hudElementViewModel.Opacity = creationInfo.HudLayoutInfo.Opacity;
 
             try
             {

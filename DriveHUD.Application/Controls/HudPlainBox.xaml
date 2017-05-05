@@ -16,7 +16,7 @@
     MinWidth="50"
     Width="{Binding Width}"
     Height="{Binding Height}"
-    Opacity="{Binding Opacity}">
+    Opacity="{Binding Parent.Opacity}">
 
     <UserControl.Resources>
         <ResourceDictionary

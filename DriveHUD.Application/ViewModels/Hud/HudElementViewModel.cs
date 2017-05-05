@@ -36,7 +36,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public HudElementViewModel()
         {
             tools = new ReactiveList<HudBaseToolViewModel>();
-            Opacity = 100;
+            Opacity = 1;
         }
 
         public HudElementViewModel(IEnumerable<HudLayoutTool> initialTools)
@@ -55,7 +55,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return toolViewModel;
             }));
 
-            Opacity = 100;
+            Opacity = 1;
         }
 
         #region Properties

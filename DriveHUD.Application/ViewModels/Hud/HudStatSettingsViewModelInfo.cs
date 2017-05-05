@@ -24,7 +24,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public StatInfo SelectedStatInfo { get; set; }
 
         public IEnumerable<StatInfo> SelectedStatInfoCollection { get; set; }
-        public int HudOpacity { get; set; }
+
+        public double HudOpacity { get; set; }
 
         public Action Save { get; set; }
 

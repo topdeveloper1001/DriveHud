@@ -10,9 +10,9 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
-                    Source="pack://application:,,,/DriveHUD.Application;component/Resources.xaml" />
-                <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/Resources.xaml" />
                 <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/DataTemplates.xaml" />
                 <ResourceDictionary
