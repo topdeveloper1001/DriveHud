@@ -26,7 +26,7 @@ namespace DriveHud.Tests
 {
     [TestFixture]
     public class BetOnlineXmlToIPokerXmlConverterTests
-    {      
+    {
         private const int SessionCode = 7777777;
 
         private class TableServiceStub : IBetOnlineTableService

@@ -768,7 +768,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void OpenSettingsMenu(object obj)
         {
-            PopupSettingsRequest_Execute(new PubSubMessage());
+            PubSubMessage pubSubMessage = new PubSubMessage();
+            if (obj?.ToString() == "Preferred Seating")
+                pubSubMessage.Parameter = "Preferred Seating";
+
+            PopupSettingsRequest_Execute(pubSubMessage);
         }
 
         private void Upgrade()
@@ -1252,6 +1256,9 @@ namespace DriveHUD.Application.ViewModels
 
             notification.Title = "Settings";
             notification.PubSubMessage = pubSubMessage;
+            notification.Parameter = pubSubMessage?.Parameter;
+            
+
 
             this.PopupSettingsRequest.Raise(notification,
                 returned =>

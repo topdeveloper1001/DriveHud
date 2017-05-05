@@ -42,8 +42,9 @@
     mc:Ignorable="d"
     Width="{Binding WindowMinWidth}"
     MinWidth="{Binding WindowMinWidth}"
-    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown">
-
+    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown"
+    x:Name="RadMainWindow">
+    
     <telerik:RadWindow.Resources>
 
         <DataTemplate
@@ -1471,7 +1472,7 @@
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
-
+                    
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu
                             x:Name="RadContextMenu"
