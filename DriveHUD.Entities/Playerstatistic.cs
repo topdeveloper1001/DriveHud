@@ -365,6 +365,12 @@ namespace DriveHUD.Entities
         [ProtoMember(145)]
         public virtual int DidColdCallInBb { get; set; }
 
+        [ProtoMember(277)]
+        public virtual int DidColdCallInEp { get; set; }
+
+        [ProtoMember(278)]
+        public virtual int DidColdCallThreeBet { get; set; }
+
         [ProtoMember(148)]
         public virtual int DidDonkBet { get; set; }
 
@@ -489,6 +495,20 @@ namespace DriveHUD.Entities
 
         [ProtoMember(189)]
         public virtual int LimpReraised { get; set; }
+
+        [ProtoMember(271)]
+        public virtual int LimpBtn { get; set; }
+        [ProtoMember(272)]
+        public virtual int LimpEp { get; set; }
+        [ProtoMember(273)]
+        public virtual int LimpMp { get; set; }
+        [ProtoMember(274)]
+        public virtual int LimpCo { get; set; }
+        [ProtoMember(275)]
+        public virtual int LimpSb { get; set; }
+        [ProtoMember(276)]
+        public virtual int LimpCall { get; set; }
+   
 
         [ProtoMember(190)]
         public virtual decimal MRatio { get; set; }
@@ -869,6 +889,12 @@ namespace DriveHUD.Entities
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
+            LimpBtn += a.LimpBtn;
+            LimpEp  += a.LimpEp;
+            LimpMp += a.LimpMp;
+            LimpCo += a.LimpCo;
+            LimpSb += a.LimpSb;
+            LimpCall += a.LimpCall;
 
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
@@ -1034,6 +1060,7 @@ namespace DriveHUD.Entities
             DidColdCallInCo += a.DidColdCallInCo;
             DidColdCallInMp += a.DidColdCallInMp;
             DidColdCallInSb += a.DidColdCallInSb;
+            DidColdCallInEp += a.DidColdCallInEp;
 
             FirstRaiser += a.FirstRaiser;
 
@@ -1179,7 +1206,13 @@ namespace DriveHUD.Entities
             r.PokergametypeId = b.PokergametypeId;
             r.TotalPot = a.TotalPot + b.TotalPot;
             r.TotalPotInBB = a.TotalPotInBB + b.TotalPotInBB;
-
+            r.LimpBtn = a.LimpBtn + b.LimpBtn;
+            r.LimpBtn = a.LimpBtn + b.LimpBtn;
+            r.LimpEp = a.LimpEp + b.LimpEp;
+            r.LimpMp = a.LimpMp + b.LimpMp;
+            r.LimpCo = a.LimpCo + b.LimpCo;
+            r.LimpSb = a.LimpSb + b.LimpSb;
+            r.LimpCall = a.LimpCall + b.LimpCall;
             r.Sawshowdown = a.Sawshowdown + b.Sawshowdown;
             r.Sawflop = a.Sawflop + b.Sawflop;
             r.SawTurn = a.SawTurn + b.SawTurn;
@@ -1369,6 +1402,7 @@ namespace DriveHUD.Entities
             r.DidColdCallInCo += a.DidColdCallInCo + b.DidColdCallInCo;
             r.DidColdCallInMp += a.DidColdCallInMp + b.DidColdCallInMp;
             r.DidColdCallInSb += a.DidColdCallInSb + b.DidColdCallInSb;
+            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp;
 
             r.FirstRaiser = a.FirstRaiser + b.FirstRaiser;
 

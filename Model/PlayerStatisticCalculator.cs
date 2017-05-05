@@ -22,6 +22,7 @@ using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NHibernate.Cfg.MappingSchema;
 
 namespace Model
 {
@@ -35,7 +36,7 @@ namespace Model
             var parsedHand = result.Source;
             var player = u.Playername;
 
-            var stat = new Playerstatistic
+            Playerstatistic stat = new Playerstatistic
             {
                 PlayerName = player,
                 Numberofplayers = (short)parsedHand.NumPlayersActive,
@@ -48,7 +49,7 @@ namespace Model
             stat.CurrencyId = (short)parsedHand.GameDescription.Limit.Currency;
             stat.PokergametypeId = (short)(parsedHand.GameDescription.GameType);
 
-            var playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
+            HandAction[] playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
 
             int call = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street > Street.Preflop);
             int bet = playerHandActions.Count(handAction => handAction.IsBet() && handAction.Street > Street.Preflop);
@@ -115,6 +116,8 @@ namespace Model
 
             bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Preflop);
             bool isRagPreflop = IsRag(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
+
+            stat.Position = Converter.ToPosition(parsedHand, stat);
 
             var numberOfActivePlayerOnFlop = parsedHand.NumPlayersActive - parsedHand.PreFlop.Count(x => x.IsFold);
             #region cbet
@@ -184,9 +187,9 @@ namespace Model
             #region 3bet
 
             ConditionalBet threeBet = new ConditionalBet();
-            if (pfrOcurred)
+            if (pfrOcurred)    //prefoldraiseOccured
             {
-                var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
+                string raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
                 Calculate3Bet(threeBet, preflops, player, raiser);
             }
 
@@ -330,7 +333,7 @@ namespace Model
             Dictionary<Street, bool> checkRaisedOnStreetDictionary = GetCheckRaisedOnStreets(parsedHand.HandActions, player);
 
             stat.IsRelativePosition = IsRelativePosition(parsedHand.HandActions, player);
-            stat.IsRelative3BetPosition = IsRelative3BetPosition(parsedHand.HandActions, player);
+            stat.IsRelative3BetPosition = IsRelative3BetPosition(parsedHand.HandActions, player, stat.Position);
 
             #region True Aggression
 
@@ -601,9 +604,56 @@ namespace Model
             stat.Allin = Converter.ToAllin(parsedHand, stat);
             stat.Action = Converter.ToAction(stat);
             stat.Equity = Converter.CalculateAllInEquity(parsedHand, stat);
-            stat.Position = Converter.ToPosition(parsedHand, stat);
+            
             stat.PositionString = Converter.ToPositionString(stat.Position);
             stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
+
+            //int countLimpByPlayer = parsedHand.HandActions.TakeWhile(handAction => !handAction.IsRaise && handAction.Street == Street.Preflop)
+            //    .Count(handAction => (handAction.IsCall || handAction.IsCheck)
+            //                                    && !handAction.IsBlinds
+            //                                    && !handAction.IsFold
+            //                                    && handAction.PlayerName == player);
+
+            //if (countLimpByPlayer != 0)
+            switch (stat.Position)
+            {
+                case EnumPosition.BTN:
+                    {
+                        stat.LimpBtn = stat.LimpMade; //countLimpByPlayer;
+                                                      //stat.LimpBtn = playerHandActions.Count();
+                        break;
+                    }
+                case EnumPosition.EP:
+                case EnumPosition.UTG:
+                case EnumPosition.UTG_1:
+                case EnumPosition.UTG_2:
+                    {
+                        stat.LimpEp = stat.LimpMade; //countLimpByPlayer;
+                        stat.DidColdCallInEp = stat.Didcoldcall;
+                        break;
+                    }
+                case EnumPosition.MP:
+                case EnumPosition.MP1:
+                case EnumPosition.MP2:
+                case EnumPosition.MP3:
+                    {
+                        stat.LimpMp = stat.LimpMade; //countLimpByPlayer;
+                     
+                        break;
+                    }
+                case EnumPosition.CO:
+                    {
+                        stat.LimpCo = stat.LimpMade; //countLimpByPlayer;
+                        break;
+                    }
+                case EnumPosition.SB:
+                    {
+                        stat.LimpSb = stat.LimpMade; //countLimpByPlayer;
+                        break;
+                    }
+                default:
+                    break;
+            }
 
             if (stat.Equity > 0)
             {
@@ -616,8 +666,7 @@ namespace Model
 
             if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
-                stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind,
-                    parsedHand.GameDescription.Limit.BigBlind, parsedHand.GameDescription.GameType);
+                stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind, parsedHand.GameDescription.Limit.BigBlind, parsedHand.GameDescription.GameType);
             }
             else
             {
@@ -682,9 +731,9 @@ namespace Model
 
         internal static bool IsUnopened(Playerstatistic stat)
         {
-            return (stat.FacingPreflop == EnumFacingPreflop.Unopened
-                || stat.FacingPreflop == EnumFacingPreflop.Limper
-                || stat.FacingPreflop == EnumFacingPreflop.MultipleLimpers);
+            return (stat.FacingPreflop == EnumFacingPreflop.Unopened 
+                    || stat.FacingPreflop == EnumFacingPreflop.Limper
+                    || stat.FacingPreflop == EnumFacingPreflop.MultipleLimpers);
         }
 
         public static void CalculatePositionalData(Playerstatistic stat)
@@ -791,7 +840,7 @@ namespace Model
                 return false;
             }
 
-            return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL)
+            return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL) 
                 && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
         }
 
@@ -805,8 +854,8 @@ namespace Model
             var boardCards = communityCards.GetBoardOnStreet(street);
             var hand = new HoldemHand.Hand(holeCards.ToString(), boardCards.ToString());
 
-            return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL)
-              && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
+            return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL) 
+                && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
         }
 
         private bool IsMonotone(BoardCards communityCards, Street street)
@@ -948,7 +997,7 @@ namespace Model
 
         private static void CalculateCoRaise(StealAttempt stealAtempt, HandHistory parsedHand, string player)
         {
-            if (parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName !=
+            if (parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName != 
                 player)
                 return;
 
@@ -1060,8 +1109,8 @@ namespace Model
                         if (action.PlayerName == player)
                             break;
                         if (!action.IsRaise() &&
-                            (action.PlayerName == raisers[0].PlayerName ||
-                             action.PlayerName == raisers[1].PlayerName))
+                            (action.PlayerName == raisers[0].PlayerName || 
+                            action.PlayerName == raisers[1].PlayerName))
                         {
                             break;
                         }
@@ -1182,7 +1231,10 @@ namespace Model
             }
         }
 
-        private static void Calculate3Bet(ConditionalBet threeBet, IList<HandAction> actions, string player, string raiser)
+        private static void Calculate3Bet(ConditionalBet threeBet, 
+                                                    IList<HandAction> actions, 
+                                                    string player, 
+                                                    string raiser)
         {
             bool start3Bet = false;
             foreach (var action in actions)
@@ -1510,15 +1562,15 @@ namespace Model
         private static Player GetInPositionPlayer(HandHistory hand, Street street)
         {
             var actions = hand.HandActions.Street(street)
-                .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
-                    && x.HandActionType != HandActionType.ANTE)
-                .ToList();
+                .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName) 
+            && x.HandActionType != HandActionType.ANTE)
+            .ToList();
 
             if (actions.Any(x => x.IsBlinds))
             {
                 // in case we have 2 or more bb
-                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND)
-                    ? actions.Skip(2).ToList()
+                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND) 
+                    ? actions.Skip(2).ToList() 
                     : actions.Skip(1).ToList();
             }
 

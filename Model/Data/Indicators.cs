@@ -659,6 +659,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal ColdCallInEP
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallInEp, Source.Couldcoldcall);
+            }
+        }
+
         public virtual decimal ColdCallInSB
         {
             get
@@ -797,6 +805,41 @@ namespace Model.Data
             get { return GetPercentage(Source.LimpMade, Source.LimpPossible); }
         }
 
+        public virtual decimal Limp
+        {
+            get { return GetPercentage(Source.LimpMade, TotalHands); }
+        }
+
+        public virtual decimal LimpEp
+        {
+            get { return GetPercentage(Source.LimpEp , TotalHands); }
+        }
+
+        public virtual decimal LimpMp
+        {
+            get { return GetPercentage(Source.LimpMp, TotalHands); }
+        }
+
+        public virtual decimal LimpCo
+        {
+            get { return GetPercentage(Source.LimpCo, TotalHands); }
+        }
+
+        public virtual decimal LimpBtn
+        {
+            get { return GetPercentage(Source.LimpBtn , TotalHands); }
+        }
+
+        public virtual decimal LimpSb
+        {
+            get { return GetPercentage(Source.LimpSb, TotalHands); }
+        }
+
+        public virtual decimal LimpCall
+        {
+            get { return GetPercentage(Source.LimpCalled, TotalHands); }
+        }
+
         public virtual decimal DidLimpCall
         {
             get { return GetPercentage(Source.LimpCalled, Source.LimpFaced); }
@@ -810,8 +853,8 @@ namespace Model.Data
         public virtual decimal DidLimpReraise
         {
             get { return GetPercentage(Source.LimpReraised, Source.LimpFaced); }
-        }
-
+        } 
+       
         #endregion
 
         public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);
