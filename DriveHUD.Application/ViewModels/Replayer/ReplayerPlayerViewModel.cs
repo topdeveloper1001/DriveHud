@@ -4,6 +4,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using HandHistories.Objects.Cards;
 using Model.Stats;
+using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Web;
@@ -20,7 +21,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         internal void Reset(bool keepCards = false)
         {
             ChipsContainer = new ReplayerChipsContainer();
-            StatInfoCollection = new ObservableCollection<StatInfo>();
+            StatInfoCollection = new ReactiveList<StatInfo>();
 
             if (Cards == null)
             {
@@ -141,7 +142,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private string _actionString;
         private ReplayerChipsContainer _chipsContainer;
         private Street _currentStreet;
-        private ObservableCollection<StatInfo> _statInfoCollection;
+        private ReactiveList<StatInfo> _statInfoCollection;
 
         public string Name
         {
@@ -239,7 +240,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set { _currentStreet = value; }
         }
 
-        public ObservableCollection<StatInfo> StatInfoCollection
+        public ReactiveList<StatInfo> StatInfoCollection
         {
             get { return _statInfoCollection; }
             set { SetProperty(ref _statInfoCollection, value); }

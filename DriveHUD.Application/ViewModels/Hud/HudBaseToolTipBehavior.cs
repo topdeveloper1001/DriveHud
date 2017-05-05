@@ -88,7 +88,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var statInfo = toolTipSource as StatInfo;
 
-            if (statInfo == null)
+            if (statInfo == null || HudElementViewModel == null)
             {
                 return new HudBaseToolViewModel[0];
             }
@@ -104,11 +104,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual void ConfigureToolTip(FrameworkElement element, object toolTipSource)
         {
-            if (HudElementViewModel == null)
-            {
-                return;
-            }
-
             var toolTipViewModels = GetToolTipViewModels(toolTipSource);
 
             if (toolTipViewModels.Length <= 0)

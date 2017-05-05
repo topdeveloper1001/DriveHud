@@ -38,7 +38,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var toolViewModel = toolTipSource as HudBaseToolViewModel;
 
-            if (toolViewModel == null)
+            if (toolViewModel == null || HudElementViewModel == null)
             {
                 return new HudBaseToolViewModel[0];
             }
