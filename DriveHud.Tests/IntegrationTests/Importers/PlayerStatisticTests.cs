@@ -53,11 +53,23 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         #endregion
 
+        protected override string TestDataFolder
+        {
+            get
+            {
+                return @"..\..\IntegrationTests\Importers\TestData\PokerStars\PlayerStatistic";
+            }
+        }
+
         [Test]
-        [TestCase(@"PokerStars\HH20100723 No Limit Hold'em - DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-CO-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-CO-DidColdCallIp-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-BB-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-MP-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-BTN-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
         public void DidColdCallIpIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName)
         {
-            using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculatруed"))
+            using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculated"))
             {
                 Playerstatistic playerstatistic = null;
 
@@ -72,7 +84,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [Test]
-        [TestCase(@"PokerStars\HH20100723 No Limit Hold'em - DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(@"DURKADURDUR-CO-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR")]      
         public void DidColdCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName)
         {
             using (var perfScope = new PerformanceMonitor("DidColdCallIsCalculated"))
@@ -97,26 +109,6 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             if (p.PlayerName.Equals(playerName))
             {
                 playerstatistic = p;
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        /// Gets combined player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
-        /// </summary>     
-        protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
-        {
-            if (p.PlayerName.Equals(playerName))
-            {
-                if (playerstatistic == null)
-                {
-                    playerstatistic = p;
-                }
-                else
-                {
-                    playerstatistic += p;
-                }
             }
 
             return true;

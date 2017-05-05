@@ -1,0 +1,37 @@
+PokerStars Game #47185775756:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:57:01 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 2: TODO ADENTR0 ($236 in chips) 
+Seat 3: leukehond ($203 in chips) 
+Seat 4: hellokittery ($200 in chips) 
+Seat 5: MooMooTin ($116.05 in chips) 
+Seat 6: DURKADURDUR ($382.20 in chips) 
+TODO ADENTR0: posts small blind $1
+leukehond: posts big blind $2
+*** HOLE CARDS ***
+hellokittery: folds 
+MooMooTin: raises $4 to $6
+DURKADURDUR: calls $6
+TODO ADENTR0: calls $5
+leukehond: folds 
+*** FLOP *** [4s 5d 6h]
+TODO ADENTR0: bets $12
+MooMooTin: calls $12
+DURKADURDUR: folds 
+*** TURN *** [4s 5d 6h] [Jc]
+TODO ADENTR0: checks 
+MooMooTin: checks 
+*** RIVER *** [4s 5d 6h Jc] [4c]
+TODO ADENTR0: checks 
+MooMooTin: checks 
+*** SHOW DOWN ***
+TODO ADENTR0: shows [7s Ts] (a pair of Fours)
+MooMooTin: shows [7c 7d] (two pair, Sevens and Fours)
+MooMooTin collected $42 from pot
+*** SUMMARY ***
+Total pot $44 | Rake $2 
+Board [4s 5d 6h Jc 4c]
+Seat 2: TODO ADENTR0 (small blind) showed [7s Ts] and lost with a pair of Fours
+Seat 3: leukehond (big blind) folded before Flop
+Seat 4: hellokittery folded before Flop (didn't bet)
+Seat 5: MooMooTin showed [7c 7d] and won ($42) with two pair, Sevens and Fours
+Seat 6: DURKADURDUR (button) folded on the Flop

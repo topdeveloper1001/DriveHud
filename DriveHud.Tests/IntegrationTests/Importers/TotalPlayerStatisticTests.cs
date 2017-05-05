@@ -24,8 +24,36 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// Total playerStatistic integration tests
     /// </summary>
     [TestFixture]
-    class TotalPlayerStatisticTests : PlayerStatisticTests
+    class TotalPlayerStatisticTests : BaseDatabaseTest
     {
+        #region SetUp
+
+        /// <summary>
+        /// Initialize environment for test
+        /// </summary>
+        [OneTimeSetUp]
+        public virtual void SetUp()
+        {
+            Initalize();
+        }
+
+        /// <summary>
+        /// Freeing resources
+        /// </summary>
+        [OneTimeTearDown]
+        public virtual void TearDown()
+        {
+            RemoveDatabase();
+        }
+
+        [TearDown]
+        public virtual void TestTearDown()
+        {
+            CleanUpDatabase();
+        }
+
+        #endregion
+
         protected override string TestDataFolder
         {
             get
@@ -64,6 +92,26 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(playerstatistic.DidColdCallIp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallIp));
                 Assert.That(playerstatistic.Vpiphands, Is.EqualTo(35), nameof(playerstatistic.Vpiphands));
             }
+        }
+
+        /// <summary>
+        /// Gets combined player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
+        /// </summary>     
+        protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
+        {
+            if (p.PlayerName.Equals(playerName))
+            {
+                if (playerstatistic == null)
+                {
+                    playerstatistic = p;
+                }
+                else
+                {
+                    playerstatistic += p;
+                }
+            }
+
+            return true;
         }
     }
 }

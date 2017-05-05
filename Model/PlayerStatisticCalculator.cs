@@ -105,7 +105,7 @@ namespace Model
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
-            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
+            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Flop);
             var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player;
 
             bool isBluffPreflop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
@@ -153,7 +153,7 @@ namespace Model
             }
 
             ConditionalBet turnIpPassFlopCbet = new ConditionalBet();
-            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop);
+            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
 
             var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
 
@@ -165,7 +165,9 @@ namespace Model
             }
 
             ConditionalBet riverIpPassFlopCbet = new ConditionalBet();
-            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
+
+            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.River);
+
             if (positionRiverPlayer != null && positionRiverPlayer.PlayerName == player && turnCBet.Passed)
             {
                 var action = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
@@ -1513,15 +1515,7 @@ namespace Model
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
                     && x.HandActionType != HandActionType.ANTE)
                 .ToList();
-
-            if (actions.Any(x => x.IsBlinds))
-            {
-                // in case we have 2 or more bb
-                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND)
-                    ? actions.Skip(2).ToList()
-                    : actions.Skip(1).ToList();
-            }
-
+         
             var players = new List<string>();
 
             foreach (var action in actions)
@@ -1539,7 +1533,6 @@ namespace Model
                 var ipPlayer = players.LastOrDefault();
                 return hand.Players.FirstOrDefault(x => x.PlayerName == ipPlayer);
             }
-
 
             return null;
         }
