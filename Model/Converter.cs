@@ -207,6 +207,8 @@ namespace Model.Importer
         {
             List<decimal> equity = new List<decimal>();
             int count = playersHasHoleCards.Count;
+            if (count == 0)
+                return null; //no players with hole cards in this game for this action left
             List<HoleCards> holeCards = playersHasHoleCards.Select(x => x.HoleCards).ToList();
             try
             {
