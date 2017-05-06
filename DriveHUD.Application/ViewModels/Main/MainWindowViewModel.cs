@@ -1219,6 +1219,9 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
+                RadDropDownButtonFilterKeepOpen = false;
+                RadDropDownButtonFilterIsOpen = false;
+                RadDropDownButtonFilterKeepOpen = true;
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
