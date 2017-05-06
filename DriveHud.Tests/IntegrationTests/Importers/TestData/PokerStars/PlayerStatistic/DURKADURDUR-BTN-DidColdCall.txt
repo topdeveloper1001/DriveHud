@@ -1,0 +1,43 @@
+PokerStars Game #47154601161:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 10:05:28 ET
+Table 'Siri III' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($237.75 in chips) 
+Seat 2: fakker11 ($200 in chips) 
+Seat 3: stopme10 ($210.65 in chips) 
+Seat 5: xxxmagicxxx ($448.20 in chips) 
+Seat 6: MasterSilviu ($200 in chips) 
+fakker11: posts small blind $1
+stopme10: posts big blind $2
+twinpsych: sits out 
+*** HOLE CARDS ***
+xxxmagicxxx: raises $4 to $6
+MasterSilviu: folds 
+DURKADURDUR: calls $6
+fakker11: folds 
+stopme10: folds 
+*** FLOP *** [As 4s 5d]
+xxxmagicxxx: bets $8
+DURKADURDUR: calls $8
+*** TURN *** [As 4s 5d] [5s]
+xxxmagicxxx: bets $20
+DURKADURDUR: calls $20
+*** RIVER *** [As 4s 5d 5s] [6d]
+xxxmagicxxx: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+xxxmagicxxx: shows [9s 9h] (two pair, Nines and Fives)
+DURKADURDUR: shows [Qs Ah] (two pair, Aces and Fives)
+DURKADURDUR collected $69 from pot
+*** SUMMARY ***
+Total pot $71 | Rake $2 
+Board [As 4s 5d 5s 6d]
+Seat 1: DURKADURDUR (button) showed [Qs Ah] and won ($69) with two pair, Aces and Fives
+Seat 2: fakker11 (small blind) folded before Flop
+Seat 3: stopme10 (big blind) folded before Flop
+Seat 5: xxxmagicxxx showed [9s 9h] and lost with two pair, Nines and Fives
+Seat 6: MasterSilviu folded before Flop (didn't bet)
+
+
+
+
+
+
