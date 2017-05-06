@@ -37,25 +37,25 @@ namespace Model.Filters
                 new QuickFilterItem() { Name = "3-Bet premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.PremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet w/ non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop) },
-                new QuickFilterItem() { Name = "3-Bet bluff from Blinds", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidthreebetBluffInBlinds) },
-                new QuickFilterItem() { Name = "3-Bet bluff from SB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidthreebetBluffInSb) },
-                new QuickFilterItem() { Name = "3-Bet bluff from BB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidthreebetBluffInBb) },
+                new QuickFilterItem() { Name = "3-Bet bluff from Blinds", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterPosition = Enums.QuickFilterPositionEnum.Blinds, QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
+                new QuickFilterItem() { Name = "3-Bet bluff from SB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterPosition = Enums.QuickFilterPositionEnum.Small, QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
+                new QuickFilterItem() { Name = "3-Bet bluff from BB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterPosition = Enums.QuickFilterPositionEnum.Big, QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
                 new QuickFilterItem() { Name = "Squeezed Pre-flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didsqueeze), NoPropertyName = nameof(Playerstatistic.Couldsqueeze) },
                 new QuickFilterItem() { Name = "Squeezed w/ bluff range", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didsqueeze), NoPropertyName = nameof(Playerstatistic.Couldsqueeze) , QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
-                new QuickFilterItem() { Name = "4-Bet Bluff", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidfourbetBluff) },
-                new QuickFilterItem() { Name = "4-Bet Bluff from BTN", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidFourBetBluffInBtn) },
+                new QuickFilterItem() { Name = "4-Bet Bluff", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didfourbet), NoPropertyName = nameof(Playerstatistic.Couldfourbet), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
+                new QuickFilterItem() { Name = "4-Bet Bluff from BTN", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didfourbet), NoPropertyName = nameof(Playerstatistic.Couldfourbet), QuickFilterPosition = Enums.QuickFilterPositionEnum.BTN, QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange  },
                 new QuickFilterItem() { Name = "4-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didfourbet) , NoPropertyName = nameof(Playerstatistic.Couldfourbet) },
                 new QuickFilterItem() { Name = "Saw Flop HU’s", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FacedHandsUpOnFlop),  NoPropertyName = nameof(Playerstatistic.FacedMultiWayOnFlop) },
                 new QuickFilterItem() { Name = "Saw Flop MW", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FacedMultiWayOnFlop), NoPropertyName = nameof(Playerstatistic.FacedHandsUpOnFlop) },
-                new QuickFilterItem() { Name = "Float Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.PlayedFloatFlop) },
+                new QuickFilterItem() { Name = "Float Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.PlayedFloatFlop), NoPropertyName = nameof(Playerstatistic.Facingflopcontinuationbet), QuickFilterHandType =  QuickFilterHandTypeEnum.BluffRange },
                 new QuickFilterItem() { Name = "Delayed C-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidDelayedTurnCBet), NoPropertyName = nameof(Playerstatistic.CouldDelayedTurnCBet) },
                 new QuickFilterItem() { Name = "Check Flop w/ TP or Better", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidCheckFlop), NoPropertyName = nameof(Playerstatistic.LimpMade) , QuickFilterHandType = QuickFilterHandTypeEnum.FlopTPOrBetter },
                 new QuickFilterItem() { Name = "Cold Call IP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidColdCallIp) },
                 new QuickFilterItem() { Name = "Cold Call OOP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidColdCallOop) },
                 new QuickFilterItem() { Name = "Saw Turn", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawTurn) },
-                new QuickFilterItem() { Name = "Double Barrel w/ Air", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.TurnContinuationBetWithAirMade) },
+                new QuickFilterItem() { Name = "Double Barrel w/ Air", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.TurnContinuationBetWithAirMade), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible), QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
                 new QuickFilterItem() { Name = "Saw River", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawRiver) },
-                new QuickFilterItem() { Name = "Bluffed River", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidBluffedRiver) },
+                new QuickFilterItem() { Name = "Bluffed River", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidBluffedRiver), NoPropertyName = nameof(Playerstatistic.SawRiver) },
                 new QuickFilterItem() { Name = "Triple Barrel w/ less than mid pair", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Rivercontinuationbetmade), NoPropertyName = nameof(Playerstatistic.Rivercontinuationbetpossible), QuickFilterHandType = QuickFilterHandTypeEnum.LessThanMidPairOnRiver },
                 new QuickFilterItem() { Name = "Flush Draw on Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop), QuickFilterHandType = QuickFilterHandTypeEnum.FlushDrawOnFlop },
                 new QuickFilterItem() { Name = "Straight Draw on Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop), QuickFilterHandType = QuickFilterHandTypeEnum.StraightDrawOnFlop },
@@ -157,12 +157,37 @@ namespace Model.Filters
                     }
                 }
 
+                if (stat.QuickFilterPosition.HasValue)
+                {
+                    predicate =  predicate.And(GetPositionPredicate(stat.QuickFilterPosition.Value));
+                }
+
                 if (stat.QuickFilterHandType != QuickFilterHandTypeEnum.None)
                 {
                     predicate = predicate.And(GetHandPredicate(stat.QuickFilterHandType));
                 }
             }
             return predicate;
+        }
+
+        private static Expression<Func<Playerstatistic, bool>> GetPositionPredicate(Enums.QuickFilterPositionEnum value)
+        {
+            switch (value)
+            {
+                case Enums.QuickFilterPositionEnum.Blinds:
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BB || x.Position == EnumPosition.SB);
+                case Enums.QuickFilterPositionEnum.Small:
+                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.SB);
+                    break;
+                case Enums.QuickFilterPositionEnum.Big:
+                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BB);
+                    break;
+                case Enums.QuickFilterPositionEnum.BTN:
+                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BTN);
+                    break;
+            }
+
+            return PredicateBuilder.True<Playerstatistic>();
         }
 
         private Expression<Func<Playerstatistic, bool>> GetHandPredicate(QuickFilterHandTypeEnum handType)
@@ -232,6 +257,11 @@ namespace Model.Filters
         }
 
         #endregion
+
+        private enum QuickFilterPositionEnum
+        {
+            Blinds, Small, Big
+        }
     }
 
     [Serializable]
@@ -250,6 +280,7 @@ namespace Model.Filters
         private string _isPossiblePropertyName;
         private TriStateItem _triStateSelectedItem;
         private QuickFilterHandTypeEnum _quickFilterHandType;
+        private QuickFilterPositionEnum? _quickFilterPosition;
 
         public string YesPropertyName
         {
@@ -287,6 +318,12 @@ namespace Model.Filters
 
                 OnPropertyChanged(nameof(QuickFilterHandType));
             }
+        }
+
+        public QuickFilterPositionEnum? QuickFilterPosition
+        {
+            get { return _quickFilterPosition; }
+            set { _quickFilterPosition = value; }
         }
     }
 }
