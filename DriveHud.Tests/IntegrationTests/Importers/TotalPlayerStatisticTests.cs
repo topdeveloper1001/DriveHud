@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -17,6 +18,7 @@ using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
 using System.IO;
+using Model.Data;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -38,7 +40,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// This test is supposed to test all <see cref="Playerstatistic"/> properties after long hh is imported        
         /// </summary>            
         [Test]
-        [TestCase(EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(EnumPokerSites.PokerStars, "PLR_2961194VK")]
         public void PlayerStatisticIsCalculated(EnumPokerSites pokerSite, string playerName)
         {
             using (var perfScope = new PerformanceMonitor("PlayerStatisticIsCalculated"))
@@ -59,11 +61,9 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
 
-                // add asserts to validate properties here 
-                // current values are for demo purpose, need to import same hh to HM2, then use stats from HM2 as expected values
-                Assert.That(playerstatistic.DidColdCallIp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallIp));
-                Assert.That(playerstatistic.Vpiphands, Is.EqualTo(35), nameof(playerstatistic.Vpiphands));
+
+                Assert.That(Math.Round((decimal) 100*playerstatistic.Didthreebet/playerstatistic.Couldthreebet,1), Is.EqualTo(10.6), nameof(playerstatistic.DidColdCallIp));  
             }
-        }
+        }   
     }
 }
