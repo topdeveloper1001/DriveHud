@@ -18,6 +18,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
     {
         internal ReplayerPlayerViewModel()
         {
+            EquityWin = -1;
         }
 
         internal void Reset(bool keepCards = false)
@@ -94,6 +95,11 @@ namespace DriveHUD.Application.ViewModels.Replayer
             this.ChipsContainer.UpdateChips(this.ActiveAmount);
         }
 
+        internal static void CopyEquityWin(ReplayerPlayerViewModel from, ReplayerPlayerViewModel to)
+        {
+            to.EquityWin = from.EquityWin;
+        }
+
         internal static void Copy(ReplayerPlayerViewModel from, ReplayerPlayerViewModel to)
         {
             if (to == null || from == null)
@@ -111,7 +117,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             to.IsFinished = from.IsFinished;
             to.IsDealer = from.IsDealer;
             to.IsWin = from.IsWin;
-
+            to.EquityWin = from.EquityWin; 
             to.Bank = from.Bank;
             to.OldBank = from.OldBank;
             to.ActiveAmount = from.ActiveAmount;
@@ -131,6 +137,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private bool _isDealer;
         private bool _isWin;
         private decimal _bank;
+        private decimal _equityWin;     
         private decimal _oldBank;
         private decimal _activeAmount;
         private decimal _oldAmount;
@@ -159,6 +166,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             get { return _isActive; }
             set { SetProperty(ref _isActive, value); }
+        }
+
+        public decimal EquityWin
+        {
+            get { return _equityWin; }
+            set { SetProperty(ref _equityWin, value);}
         }
 
         public decimal Bank

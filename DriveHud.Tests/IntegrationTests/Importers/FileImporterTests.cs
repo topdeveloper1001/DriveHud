@@ -15,11 +15,15 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
+using HandHistories.Parser.Parsers;
+using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Interfaces;
 using NHibernate.Linq;
 using NSubstitute;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -30,14 +34,14 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// </summary>
     [TestFixture]
     public class FileImporterTests : BaseDatabaseTest
-    {        
+    {
         /// <summary>
         /// Initialize environment for test
         /// </summary>
         [OneTimeSetUp]
         public void SetUp()
         {
-            Initalize();            
+            Initalize();
             FillDatabase();
         }
 
@@ -196,9 +200,9 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                       .Log(Arg.Any<Type>(), Arg.Any<object>(), Arg.Any<Exception>(),
                               Arg.Is<LogMessageType>(x => x == LogMessageType.Error));
         }
-
+     
         /// <summary>
-        /// Fill database with data from test hand history files
+        /// Fills database with data from test hand history files
         /// </summary>
         protected virtual void FillDatabase()
         {
@@ -208,28 +212,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 foreach (var testCase in TestCaseDataSet)
                 {
-                    var fileImporter = new FileImporter();
-
-                    var handHistoryFileFullName = Path.Combine(TestDataFolder, testCase.Item1);
-
-                    var handHistoryFileInfo = new FileInfo(handHistoryFileFullName);
-
-                    Assert.That(handHistoryFileInfo.Exists, $"{handHistoryFileFullName} doesn't exists. Please check.");
-
-                    var handHistoryText = File.ReadAllText(handHistoryFileInfo.FullName);
-
-                    var gameInfo = new GameInfo
-                    {
-                        PokerSite = testCase.Item2,
-                        FileName = handHistoryFileInfo.FullName
-                    };
-
-                    fileImporter.Import(handHistoryText, progress, gameInfo);
+                    FillDatabaseFromSingleFile(testCase.Item1, testCase.Item2);
                 }
             }
-        }
-  
-        private const string TestDataFolder = @"..\..\IntegrationTests\Importers\TestData";
+        }             
 
         /// <summary>
         /// Set of hh files to fill DB, summaries must follow normal hh, summary data must be added for WPN hh
@@ -240,7 +226,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
-            Tuple.Create( @"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown)
+            Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown)
         };
     }
 }

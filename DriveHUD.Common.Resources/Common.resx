@@ -687,4 +687,13 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_ApplyButtonForCalendars" xml:space="preserve">
     <value>Apply</value>
   </data>
+  <data name="Common_Preferred_Seating_Button" xml:space="preserve">
+    <value>Preferred Seating</value>
+  </data>
+  <data name="Common_PercentSign" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="Common_WinPercent" xml:space="preserve">
+    <value>Win%: </value>
+  </data>
 </root>
