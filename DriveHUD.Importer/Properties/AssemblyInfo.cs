@@ -25,6 +25,7 @@ using System.Runtime.InteropServices;
 #if DEBUG
 
 [assembly: InternalsVisibleTo("DriveHud.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 #endif
 
