@@ -64,9 +64,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase(@"DURKADURDUR-CO-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-CO-DidColdCallIp-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CO-DidColdCallIp-AllIn.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BB-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-MP-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BTN-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-SB-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-SB-DidColdCallIp-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]        
         public void DidColdCallIpIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculated"))
@@ -85,9 +88,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [Test]
         [TestCase(@"DURKADURDUR-CO-DidColdCallIp.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CO-DidColdCallIp-AllIn.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BTN-DidNotColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-BTN-DidNotColdCall-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-BB-DidColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-BB-DidColdCall-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-MP-DidColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-CO-DidColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BTN-DidColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
@@ -104,6 +109,24 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
                 Assert.That(playerstatistic.Didcoldcall, Is.EqualTo(expected));
+            }
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-SB-PfrOop-2-max.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]      
+        public void PfrOopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            using (var perfScope = new PerformanceMonitor("PfrOopIsCalculated"))
+            {
+                Playerstatistic playerstatistic = null;
+
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+
+                FillDatabaseFromSingleFile(fileName, pokerSite);
+
+                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
+                Assert.That(playerstatistic.PfrOop, Is.EqualTo(expected));
             }
         }
 
