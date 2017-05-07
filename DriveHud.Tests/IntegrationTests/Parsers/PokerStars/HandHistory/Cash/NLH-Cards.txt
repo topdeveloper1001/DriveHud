@@ -1,0 +1,39 @@
+PokerStars Game #46878160995:  Hold'em No Limit ($1/$2 USD) - 2010/07/17 3:36:57 CT [2010/07/17 4:36:57 ET]
+Table 'Markab' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($226.45 in chips) 
+Seat 2: Pairofnothin ($209 in chips) 
+Seat 3: ledzep6028 ($217.30 in chips) 
+Seat 4: P1ngPoNgPr0 ($534.15 in chips) 
+Seat 5: TimK0123 ($282.20 in chips) 
+Seat 6: madwar ($457.95 in chips) 
+Pairofnothin: posts small blind $1
+ledzep6028: posts big blind $2
+*** HOLE CARDS ***
+P1ngPoNgPr0: folds 
+TimK0123: folds 
+madwar: raises $4 to $6
+DURKADURDUR: calls $6
+Pairofnothin: folds 
+ledzep6028: folds 
+*** FLOP *** [6c As Kh]
+madwar: bets $10
+DURKADURDUR: calls $10
+*** TURN *** [6c As Kh] [4d]
+madwar: bets $20
+DURKADURDUR: calls $20
+*** RIVER *** [6c As Kh 4d] [Kd]
+madwar: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+madwar: shows [Qd Ad] (two pair, Aces and Kings)
+DURKADURDUR: mucks hand 
+madwar collected $72 from pot
+*** SUMMARY ***
+Total pot $75 | Rake $3 
+Board [6c As Kh 4d Kd]
+Seat 1: DURKADURDUR (button) mucked [Ac Jh]
+Seat 2: Pairofnothin (small blind) folded before Flop
+Seat 3: ledzep6028 (big blind) folded before Flop
+Seat 4: P1ngPoNgPr0 folded before Flop (didn't bet)
+Seat 5: TimK0123 folded before Flop (didn't bet)
+Seat 6: madwar showed [Qd Ad] and won ($72) with two pair, Aces and Kings

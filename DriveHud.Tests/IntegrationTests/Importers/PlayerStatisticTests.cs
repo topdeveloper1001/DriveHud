@@ -130,6 +130,24 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-BTN-Cards.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "AcJh")]
+        public void CardsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expected)
+        {
+            using (var perfScope = new PerformanceMonitor("CardsAreImported"))
+            {
+                Playerstatistic playerstatistic = null;
+
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+
+                FillDatabaseFromSingleFile(fileName, pokerSite);
+
+                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
+                Assert.That(playerstatistic.Cards, Is.EqualTo(expected));
+            }
+        }             
+
         /// <summary>
         /// Gets player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
         /// </summary>     

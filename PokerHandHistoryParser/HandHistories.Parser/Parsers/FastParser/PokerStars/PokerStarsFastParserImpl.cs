@@ -1521,6 +1521,47 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
             }
 
+            if (summaryIndex != -1)
+            {                
+                for (int i = handLines.Length - 1; i > summaryIndex; i--)
+                {
+                    string line = handLines[i];
+
+                    if (line.Contains("mucked ["))
+                    {
+                        var nameStartIndex = line.IndexOf(":") + 2;
+
+                        var muckedIndex = line.IndexOf("mucked [");
+
+                        var nameEndIndex = -1;
+
+                        // DURKADURDUR (button) mucked [Ac Jh]
+                        if (line[muckedIndex - 2] == ')')
+                        {
+                            nameEndIndex = line.LastIndexOf('(') - 1;
+                        }
+                        else
+                        {
+                            nameEndIndex = muckedIndex - 1;
+                        }
+
+                        if (nameEndIndex == -1 || (nameEndIndex - nameStartIndex) < 1)
+                        {
+                            continue;
+                        }
+
+                        var playerName = line.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
+
+                        var cardsStartIndex = muckedIndex + 8;
+                        var cardsEndIndex = line.IndexOf(']', cardsStartIndex);
+
+                        var cards = line.Substring(cardsStartIndex, cardsEndIndex - cardsStartIndex);
+
+                        playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    }                  
+                }
+            }
+
             return playerList;
         }
 

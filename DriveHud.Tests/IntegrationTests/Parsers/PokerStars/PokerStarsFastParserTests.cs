@@ -362,6 +362,17 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         }
 
         [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cards.txt", "DURKADURDUR", "AcJh")]
+        public void PlayerHoleCardsIsParsedTest(string handHistoryFile, string playerName, string holeCards)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            var player = handHistory.Players.FirstOrDefault(x => x.PlayerName == playerName);
+            Assert.IsNotNull(player);
+            Assert.IsNotNull(player.HoleCards);
+            Assert.That(player.HoleCards.ToString(), Is.EqualTo(holeCards));
+        }
+
+        [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 1500)]
         public void HeroStartingStackIsParsedTest(string handHistoryFile, decimal startingStack)
         {
