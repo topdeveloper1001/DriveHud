@@ -194,4 +194,13 @@
   <data name="SystemSettings_AppStoreRemoteTrainingProductRepo" xml:space="preserve">
     <value>http://drivehud.com/appstore/training.xml</value>
   </data>
+  <data name="SystemSettings_DefaultPlayerStatisticExtension" xml:space="preserve">
+    <value>.stat</value>
+  </data>
+  <data name="SystemSettings_PlayerStatisticBackupFolderName" xml:space="preserve">
+    <value>Database_Backup</value>
+  </data>
+  <data name="SystemSettings_PlayerStatisticTempFolderName" xml:space="preserve">
+    <value>Database_Temp</value>
+  </data>
 </root>

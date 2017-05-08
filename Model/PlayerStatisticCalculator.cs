@@ -1099,13 +1099,7 @@ namespace Model
                 if (wasColdRaise)
                 {
                     if (action.PlayerName != player)
-                    {
-                        // DHUD-273 if player before Hero makes cold call, then Hero's call isn't a cold call
-                        if (action.IsCall())
-                        {
-                            return;
-                        }
-
+                    {                       
                         continue;
                     }
 
