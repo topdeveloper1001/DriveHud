@@ -363,6 +363,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cards.txt", "DURKADURDUR", "AcJh")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cards-2.txt", "ledzep6028", "5d4s")]
         public void PlayerHoleCardsIsParsedTest(string handHistoryFile, string playerName, string holeCards)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

@@ -10,26 +10,24 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
-using ProtoBuf;
-using System.Diagnostics;
+using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Interfaces;
 using NHibernate.Linq;
-using DriveHUD.Common.Linq;
-using HandHistories.Parser.Parsers.Factory;
-using HandHistories.Parser.Parsers;
-using DriveHUD.Common.Utils;
+using ProtoBuf;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace DriveHUD.Importers
 {
@@ -38,23 +36,33 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class PlayerStatisticReImporter : IPlayerStatisticReImporter
     {
-
         private readonly string playerStatisticDataFolder;
         private readonly string playerStatisticTempDataFolder;
         private readonly string playerStatisticBackupDataFolder;
         private readonly IHandHistoryParserFactory handHistoryParserFactory;
+        private readonly IDataService dataService;
         private const int handHistoryRowsPerQuery = 1000;
         private Dictionary<HandPokerSiteKey, string> sessionDictionary;
+        private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
 
         /// <summary>
         /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
         /// </summary>
-        public PlayerStatisticReImporter()
+        protected PlayerStatisticReImporter(string playerStatisticDataFolder, string playerStatisticTempDataFolder, string playerStatisticBackupDataFolder)
         {
-            playerStatisticDataFolder = StringFormatter.GetPlayerStatisticDataFolderPath();
-            playerStatisticTempDataFolder = StringFormatter.GetPlayerStatisticDataTempFolderPath();
-            playerStatisticBackupDataFolder = StringFormatter.GetPlayerStatisticDataBackupFolderPath();
+            this.playerStatisticDataFolder = playerStatisticDataFolder;
+            this.playerStatisticTempDataFolder = playerStatisticTempDataFolder;
+            this.playerStatisticBackupDataFolder = playerStatisticBackupDataFolder;
             handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+        }
+
+        /// <summary>
+        /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
+        /// </summary>
+        public PlayerStatisticReImporter() : this(StringFormatter.GetPlayerStatisticDataFolderPath(),
+            StringFormatter.GetPlayerStatisticDataTempFolderPath(), StringFormatter.GetPlayerStatisticDataBackupFolderPath())
+        {
         }
 
         /// <summary>
@@ -65,12 +73,18 @@ namespace DriveHUD.Importers
             try
             {
                 BuildSessionDictionary();
+                BuildPlayersDictonary();
                 PrepareTemporaryPlayerStatisticData();
                 ImportHandHistories();
+                ReplaceOriginalPlayerstatistic();
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Re-import of player statistic failed.", e);
+            }
+            finally
+            {
+                dataService?.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
             }
         }
 
@@ -127,6 +141,29 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
+        /// Builds players dictionary
+        /// </summary>
+        private void BuildPlayersDictonary()
+        {
+            playersDictionary = new Dictionary<PlayerPokerSiteKey, Players>();
+
+            using (var session = ModelEntities.OpenStatelessSession())
+            {
+                var players = session.Query<Players>().ToArray();
+
+                players.ForEach(player =>
+                {
+                    var playerPokerSiteKey = new PlayerPokerSiteKey(player.Playername, player.PokersiteId);
+
+                    if (!playersDictionary.ContainsKey(playerPokerSiteKey))
+                    {
+                        playersDictionary.Add(playerPokerSiteKey, player);
+                    }
+                });
+            }
+        }
+
+        /// <summary>
         /// Prepares temporary folder for re-imported player statistic data
         /// </summary>
         private void PrepareTemporaryPlayerStatisticData()
@@ -138,7 +175,6 @@ namespace DriveHUD.Importers
 
             Directory.CreateDirectory(playerStatisticTempDataFolder);
 
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
             dataService.SetPlayerStatisticPath(playerStatisticTempDataFolder);
         }
 
@@ -169,7 +205,13 @@ namespace DriveHUD.Importers
 
                         if (parsingResult != null)
                         {
-
+                            parsingResult.Players.ForEach(player =>
+                            {
+                                if (player.PlayerId != 0)
+                                {
+                                    BuildPlayerStatistic(parsingResult, player);
+                                }
+                            });
                         }
                     });
 
@@ -209,10 +251,20 @@ namespace DriveHUD.Importers
                 Tablesize = (short)parsedHand.GameDescription.SeatType.MaxPlayers
             };
 
-            var players = parsedHand.Players.Select(player => new Players
+            var players = parsedHand.Players.Select(player =>
             {
-                Playername = player.PlayerName,
-                PokersiteId = handHistory.PokersiteId
+                var playerPokerSiteKey = new PlayerPokerSiteKey(player.PlayerName, (int)pokerSite);
+
+                if (playersDictionary.ContainsKey(playerPokerSiteKey))
+                {
+                    return playersDictionary[playerPokerSiteKey];
+                }
+
+                return new Players
+                {
+                    Playername = player.PlayerName,
+                    PokersiteId = (short)pokerSite
+                };
             }).ToList();
 
             var parsingResult = new ParsingResult
@@ -224,6 +276,37 @@ namespace DriveHUD.Importers
             };
 
             return parsingResult;
+        }
+
+        /// <summary>
+        /// Builds player statistic
+        /// </summary>
+        /// <param name="handHistory"></param>
+        /// <param name="player"></param>
+        private void BuildPlayerStatistic(ParsingResult handHistory, Players player)
+        {
+            var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
+
+            var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+
+            var handPokerSiteKey = new HandPokerSiteKey(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId);
+
+            var session = sessionDictionary.ContainsKey(handPokerSiteKey) ?
+                sessionDictionary[handPokerSiteKey] :
+                string.Empty;
+
+            playerStat.SessionCode = session;
+
+            dataService.Store(playerStat);
+        }
+
+        /// <summary>
+        /// Replaces original player statistic with re-imported player statistic
+        /// </summary>
+        private void ReplaceOriginalPlayerstatistic()
+        {
+            Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+            Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
         }
 
         #region Class helpers
@@ -267,6 +350,48 @@ namespace DriveHUD.Importers
                 }
 
                 return Hand == obj.Hand && PokerSite == obj.PokerSite;
+            }
+        }
+
+        /// <summary>
+        /// Represents the combined key of the player and the poker site
+        /// </summary>
+        private class PlayerPokerSiteKey
+        {
+            public PlayerPokerSiteKey(string playerName, int pokerSite)
+            {
+                PlayerName = playerName;
+                PokerSite = pokerSite;
+            }
+
+            public string PlayerName { get; set; }
+
+            public int PokerSite { get; set; }
+
+            public override int GetHashCode()
+            {
+                var hashcode = 23;
+                hashcode = (hashcode * 31) + PlayerName.GetHashCode();
+                hashcode = (hashcode * 31) + PokerSite;
+
+                return hashcode;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var playerKey = obj as PlayerPokerSiteKey;
+
+                return Equals(playerKey);
+            }
+
+            public bool Equals(PlayerPokerSiteKey obj)
+            {
+                if (obj == null)
+                {
+                    return false;
+                }
+
+                return PlayerName == obj.PlayerName && PokerSite == obj.PokerSite;
             }
         }
 

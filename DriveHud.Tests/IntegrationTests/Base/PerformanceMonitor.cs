@@ -37,8 +37,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
                 stopwatch.Stop();
             }
 
-            Debug.WriteLine($"{message} (Duration): {stopwatch.ElapsedMilliseconds}ms");
-            Debug.WriteLine($"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}");
+            Console.WriteLine($"{message} (Duration): {stopwatch.ElapsedMilliseconds}ms");
+            Console.WriteLine($"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}");
         }
     }
 }
