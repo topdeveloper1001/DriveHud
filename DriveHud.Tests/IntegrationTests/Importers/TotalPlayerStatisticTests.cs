@@ -87,20 +87,31 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 }
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpCalled/playerstatistic.LimpFaced,1), Is.EqualTo(100));
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpSb/playerstatistic.LimpPossible,1), Is.EqualTo(9.1));
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpEp/playerstatistic.LimpPossible,1), Is.EqualTo(36.4));
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpMp/playerstatistic.LimpPossible,1), Is.EqualTo(9.1));
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpCo/playerstatistic.LimpPossible,1), Is.EqualTo(0));
-                Assert.That(Math.Round((decimal)100*playerstatistic.LimpBtn/playerstatistic.LimpPossible,1), Is.EqualTo(0));
 
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInSb / playerstatistic.Couldcoldcall, 1), Is.EqualTo(0));
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInBb / playerstatistic.Couldcoldcall, 1), Is.EqualTo(0));
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInEp / playerstatistic.Couldcoldcall, 1), Is.EqualTo(23.1));
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInMp / playerstatistic.Couldcoldcall, 1), Is.EqualTo(7.7));
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInCo / playerstatistic.Couldcoldcall, 1), Is.EqualTo(0));
-                Assert.That(Math.Round((decimal)100 * playerstatistic.DidColdCallInBtn / playerstatistic.Couldcoldcall, 1), Is.EqualTo(7.7));
-                
+                Assert.That(playerstatistic.LimpCalled, Is.EqualTo(3),nameof(playerstatistic.LimpCalled));
+
+                Assert.That(playerstatistic.LimpSb, Is.EqualTo(1),nameof(playerstatistic.LimpSb));
+                Assert.That(playerstatistic.LimpEp, Is.EqualTo(4), nameof(playerstatistic.LimpEp));
+                Assert.That(playerstatistic.LimpMp, Is.EqualTo(1), nameof(playerstatistic.LimpMp));
+                Assert.That(playerstatistic.LimpCo, Is.EqualTo(0), nameof(playerstatistic.LimpCo));
+                Assert.That(playerstatistic.LimpBtn, Is.EqualTo(0), nameof(playerstatistic.LimpBtn));
+                Assert.That(playerstatistic.LimpPossible, Is.EqualTo(11), nameof(playerstatistic.LimpPossible));
+
+                Assert.That(playerstatistic.DidColdCallInSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInSb));
+                Assert.That(playerstatistic.DidColdCallInBb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInBb));
+                Assert.That(playerstatistic.DidColdCallInEp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallInEp));
+                Assert.That(playerstatistic.DidColdCallInMp, Is.EqualTo(1), nameof(playerstatistic.DidColdCallInMp));
+                Assert.That(playerstatistic.DidColdCallInCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInCo));
+                Assert.That(playerstatistic.DidColdCallInBtn, Is.EqualTo(1), nameof(playerstatistic.DidColdCallInBtn));
+                Assert.That(playerstatistic.Couldcoldcall, Is.EqualTo(13), nameof(playerstatistic.Couldcoldcall));
+
+
+                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallThreeBet));
+                Assert.That(playerstatistic.DidColdCallFourBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallFourBet));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseSb));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseCo));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseBtn, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseBtn));
+
             }
         }
 
