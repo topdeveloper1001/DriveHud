@@ -22,12 +22,10 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
 using NHibernate.Linq;
-using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace DriveHUD.Importers
 {
@@ -41,8 +39,7 @@ namespace DriveHUD.Importers
         private readonly string playerStatisticBackupDataFolder;
         private readonly IHandHistoryParserFactory handHistoryParserFactory;
         private readonly IDataService dataService;
-        private const int handHistoryRowsPerQuery = 1000;
-        private Dictionary<HandPokerSiteKey, string> sessionDictionary;
+        private const int handHistoryRowsPerQuery = 1000;        
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
 
         /// <summary>
@@ -71,8 +68,7 @@ namespace DriveHUD.Importers
         public void ReImport()
         {
             try
-            {
-                BuildSessionDictionary();
+            {               
                 BuildPlayersDictonary();
                 PrepareTemporaryPlayerStatisticData();
                 ImportHandHistories();
@@ -81,65 +77,14 @@ namespace DriveHUD.Importers
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Re-import of player statistic failed.", e);
+                throw new DHBusinessException(new NonLocalizableString("Player statistic rebuilding failed"));
             }
             finally
             {
                 dataService?.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
             }
         }
-
-        /// <summary>
-        /// Builds session dictionary for hand id, poker site
-        /// </summary>
-        private void BuildSessionDictionary()
-        {
-            var playerStatisticDataDirectoryInfo = new DirectoryInfo(playerStatisticDataFolder);
-
-            if (!playerStatisticDataDirectoryInfo.Exists)
-            {
-                throw new DHBusinessException(new NonLocalizableString($"Directory '{playerStatisticDataFolder}' doesn't exist"));
-            }
-
-            sessionDictionary = new Dictionary<HandPokerSiteKey, string>();
-
-            var playerStatisticFiles = playerStatisticDataDirectoryInfo.GetFiles($"*{StringFormatter.GetPlayerStatisticExtension()}", SearchOption.AllDirectories);
-
-            foreach (var playerStatisticFile in playerStatisticFiles)
-            {
-                BuildSessionDictionary(playerStatisticFile);
-            }
-        }
-
-        /// <summary>
-        /// Builds session dictionary for hand id, poker site using the specified player statistic file
-        /// </summary>
-        private void BuildSessionDictionary(FileInfo playerStatisticFile)
-        {
-            using (var streamReader = new StreamReader(playerStatisticFile.FullName, Encoding.UTF8))
-            {
-                string line;
-
-                while ((line = streamReader.ReadLine()) != null)
-                {
-                    var statBytes = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
-
-                    using (var memoryStream = new MemoryStream(statBytes))
-                    {
-                        var stat = Serializer.Deserialize<Playerstatistic>(memoryStream);
-
-                        var handPokerSiteKey = new HandPokerSiteKey(stat.GameNumber, stat.PokersiteId);
-
-                        if (sessionDictionary.ContainsKey(handPokerSiteKey))
-                        {
-                            continue;
-                        }
-
-                        sessionDictionary.Add(handPokerSiteKey, stat.SessionCode);
-                    }
-                }
-            }
-        }
-
+        
         /// <summary>
         /// Builds players dictionary
         /// </summary>
@@ -288,15 +233,7 @@ namespace DriveHUD.Importers
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
             var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
-
-            var handPokerSiteKey = new HandPokerSiteKey(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId);
-
-            var session = sessionDictionary.ContainsKey(handPokerSiteKey) ?
-                sessionDictionary[handPokerSiteKey] :
-                string.Empty;
-
-            playerStat.SessionCode = session;
-
+         
             dataService.Store(playerStat);
         }
 
@@ -310,49 +247,7 @@ namespace DriveHUD.Importers
         }
 
         #region Class helpers
-
-        /// <summary>
-        /// Represents the combined key of the hand number and the poker site
-        /// </summary>
-        private class HandPokerSiteKey
-        {
-            public HandPokerSiteKey(long hand, int pokerSite)
-            {
-                Hand = hand;
-                PokerSite = pokerSite;
-            }
-
-            public long Hand { get; set; }
-
-            public int PokerSite { get; set; }
-
-            public override int GetHashCode()
-            {
-                var hashcode = 23;
-                hashcode = (hashcode * 31) + Hand.GetHashCode();
-                hashcode = (hashcode * 31) + PokerSite;
-
-                return hashcode;
-            }
-
-            public override bool Equals(object obj)
-            {
-                var playerKey = obj as HandPokerSiteKey;
-
-                return Equals(playerKey);
-            }
-
-            public bool Equals(HandPokerSiteKey obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                return Hand == obj.Hand && PokerSite == obj.PokerSite;
-            }
-        }
-
+     
         /// <summary>
         /// Represents the combined key of the player and the poker site
         /// </summary>

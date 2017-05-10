@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.IntegrationTests.Base;
-using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using Microsoft.Practices.ServiceLocation;
@@ -21,10 +20,8 @@ using Model.Data;
 using Model.Interfaces;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -51,8 +48,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         {
             using (var perfScope = new PerformanceMonitor("PlayerStatisticReImporterTests.SetUp"))
             {
-                Clear();
                 Initalize();
+                Clear();
             }
         }
 
@@ -92,8 +89,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [Test]
-        [TestCase("drivehud.zip", "Database.zip")]
-        public void ReImportTest(string databaseZipFile, string playerStatisticZipFile)
+        //[TestCase("drivehud-old.zip", "Database-old.zip", "Hero", EnumPokerSites.Ignition)]
+        //[TestCase("drivehud-sessions.zip", "Database-sessions.zip", "Hero", EnumPokerSites.Ignition)]
+        [TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
+        public void ReImportTest(string databaseZipFile, string playerStatisticZipFile, string playerName, EnumPokerSites pokerSite)
         {
             PlayerStatisticReImporterTests.databaseZipFile = databaseZipFile;
             PlayerStatisticReImporterTests.playerStatisticZipFile = playerStatisticZipFile;
@@ -108,25 +107,15 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
             using (var assertsPerfScope = new PerformanceMonitor("ReImportTest.Asserts"))
             {
-                var playerName = "DURKADURDUR";
-
-                var expectedIndicatorsBySession = GetIndicatorsBySession(playerName, EnumPokerSites.PokerStars, playerStatisticBackup);
+                var expectedIndicators = GetIndicators(playerName, pokerSite, playerStatisticBackup);
 
                 GC.Collect();
 
-                var actualIndicatorsBySession = GetIndicatorsBySession(playerName, EnumPokerSites.PokerStars, playerStatisticFolder);
+                var actualIndicators = GetIndicators(playerName, pokerSite, playerStatisticFolder);
 
                 GC.Collect();
 
-                CollectionAssert.AreEquivalent(expectedIndicatorsBySession.Keys, actualIndicatorsBySession.Keys);
-
-                foreach (var session in actualIndicatorsBySession.Keys)
-                {
-                    var actualIndicators = actualIndicatorsBySession[session];
-                    var expectedIndicators = expectedIndicatorsBySession[session];
-
-                    AssertThatIndicatorsAreEqual(actualIndicators, expectedIndicators);
-                }
+                AssertThatIndicatorsAreEqual(actualIndicators, expectedIndicators);
             }
         }
 
@@ -137,21 +126,16 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <param name="pokerSite"></param>
         /// <param name="playerStatisticFolder"></param>
         /// <returns></returns>
-        private Dictionary<string, HudLightIndicators> GetIndicatorsBySession(string playerName, EnumPokerSites pokerSite, string playerStatisticFolder)
+        private HudLightIndicators GetIndicators(string playerName, EnumPokerSites pokerSite, string playerStatisticFolder)
         {
             var dataService = ServiceLocator.Current.GetInstance<IDataService>();
             dataService.SetPlayerStatisticPath(playerStatisticFolder);
 
-            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)EnumPokerSites.PokerStars);
+            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);
 
-            playerStatistic.Where(x => string.IsNullOrEmpty(x.SessionCode)).ForEach(x => x.SessionCode = string.Empty);
+            var indicators = new HudLightIndicators(playerStatistic);
 
-            var indicatorsBySession = playerStatistic
-                .GroupBy(x => x.SessionCode)
-                .Select(x => new { SessionCode = x.Key, Indicators = new HudLightIndicators(x) })
-                .ToDictionary(x => x.SessionCode, x => x.Indicators);
-
-            return indicatorsBySession;
+            return indicators;
         }
 
         /// <summary>
