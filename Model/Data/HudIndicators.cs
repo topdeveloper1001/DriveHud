@@ -865,6 +865,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto ColdCallInEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallInEP,
+                    Occured = Source.DidColdCallInEp,
+                    CouldOccured = Source.Couldcoldcall
+                };
+            }
+        }
+
         public virtual StatDto ColdCallInSBObject
         {
             get
@@ -874,6 +887,71 @@ namespace Model.Data
                     Value = ColdCallInSB,
                     Occured = Source.DidColdCallInSb,
                     CouldOccured = Source.Couldcoldcall
+                };
+            }
+        }
+
+        public virtual StatDto ColdCallThreeBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallThreeBet,
+                    Occured = Source.DidColdCallThreeBet,
+                    CouldOccured = Source.CouldColdCallThreeBet
+                };
+            }
+        }
+
+        public virtual StatDto ColdCallFourBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallFourBet,
+                    Occured = Source.DidColdCallFourBet,
+                    CouldOccured = Source.CouldColdCallFourBet
+                };
+            }
+        }
+
+        public virtual StatDto ColdCallVsBtnOpenObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallVsBtnOpen,
+                    Occured = Source.DidColdCallVsOpenRaiseBtn,
+                    CouldOccured = Source.CouldColdCallVsOpenRaiseBtn
+                };
+            }
+        }
+
+        public virtual StatDto ColdCallVsCoOpenObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallVsCoOpen,
+                    Occured = Source.DidColdCallVsOpenRaiseCo,
+                    CouldOccured = Source.CouldColdCallVsOpenRaiseCo
+                };
+            }
+        }
+
+        public virtual StatDto ColdCallVsSbOpenObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCallVsSbOpen,
+                    Occured = Source.DidColdCallVsOpenRaiseSb,
+                    CouldOccured = Source.CouldColdCallVsOpenRaiseSb
                 };
             }
         }
@@ -983,6 +1061,72 @@ namespace Model.Data
                 };
             }
         }
+
+        public virtual StatDto LimpEpObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpEp,
+                    Occured = Source.LimpEp,
+                    CouldOccured = Source.LimpPossible
+                };
+            }
+        }
+
+        public virtual StatDto LimpMpObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpMp,
+                    Occured = Source.LimpMp,
+                    CouldOccured = Source.LimpPossible
+                };
+            }
+        }
+
+        public virtual StatDto LimpCoObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpCo,
+                    Occured = Source.LimpCo,
+                    CouldOccured = Source.LimpPossible
+                };
+            }
+        }
+
+        public virtual StatDto LimpBtnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpBtn,
+                    Occured = Source.LimpBtn,
+                    CouldOccured = Source.LimpPossible
+                };
+            }
+        }
+
+        public virtual StatDto LimpSbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpSb,
+                    Occured = Source.LimpSb,
+                    CouldOccured = Source.LimpPossible
+                };
+            }
+        }
+
 
         public virtual StatDto DidLimpCallObject
         {

@@ -62,8 +62,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
 
 
-                Assert.That(Math.Round((decimal) 100*playerstatistic.Didthreebet/playerstatistic.Couldthreebet,1), Is.EqualTo(10.6), nameof(playerstatistic.DidColdCallIp));  
+                Assert.That(Math.Round((decimal)100 * playerstatistic.Didthreebet / playerstatistic.Couldthreebet, 1), Is.EqualTo(10.6), nameof(playerstatistic.DidColdCallIp));
+
+                //Assert.That(Math.Round((decimal) 100*playerstatistic.LimpMade/playerstatistic.LimpPossible,1), Is.EqualTo(50), nameof(playerstatistic.DidColdCallIp));  
             }
-        }   
+        }
     }
 }

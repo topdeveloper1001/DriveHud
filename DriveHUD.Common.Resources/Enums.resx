@@ -286,9 +286,27 @@
   </data>
   <data name="Enum_Stat_ColdCallMP" xml:space="preserve">
     <value>Cold Call MP%</value>
+  </data> 
+    <data name="Enum_Stat_ColdCallEP" xml:space="preserve">
+    <value>Cold Call EP%</value>
   </data>
   <data name="Enum_Stat_ColdCallSB" xml:space="preserve">
     <value>Cold Call SB%</value>
+  </data>
+    <data name="Enum_Stat_ColdCallThreeBet" xml:space="preserve">
+    <value>Cold Call 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallFourBet" xml:space="preserve">
+    <value>Cold Call 4-Bet%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallVsOpenRaiseBTN" xml:space="preserve">
+    <value>Cold Call vs BTN open%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallVsOpenRaiseCO" xml:space="preserve">
+    <value>Cold Call vs CO open%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallVsOpenRaiseSB" xml:space="preserve">
+    <value>Cold Call vs SB open%</value>
   </data>
   <data name="Enum_Stat_ColdCall_BB" xml:space="preserve">
     <value>BB Cold Call%</value>
@@ -340,6 +358,21 @@
   </data>
   <data name="Enum_Stat_Limp" xml:space="preserve">
     <value>Limp%</value>
+  </data>
+  <data name="Enum_Stat_LimpEp" xml:space="preserve">
+    <value>Limp EP%</value>
+  </data>
+  <data name="Enum_Stat_LimpMp" xml:space="preserve">
+    <value>Limp MP%</value>
+  </data>
+  <data name="Enum_Stat_LimpCo" xml:space="preserve">
+    <value>Limp CO%</value>
+  </data>
+  <data name="Enum_Stat_LimpBtn" xml:space="preserve">
+    <value>Limp BTN%</value>
+  </data>
+  <data name="Enum_Stat_LimpSb" xml:space="preserve">
+    <value>Limp SB%</value>
   </data>
   <data name="Enum_Stat_LimpCall" xml:space="preserve">
     <value>Limp Call%</value>
