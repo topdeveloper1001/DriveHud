@@ -146,6 +146,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
       <Private>True</Private>
@@ -190,6 +191,7 @@
     <Compile Include="IntegrationTests\Base\DatabaseHelper.cs" />
     <Compile Include="IntegrationTests\Base\PerformanceMonitor.cs" />
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
     <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />

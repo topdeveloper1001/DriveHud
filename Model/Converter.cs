@@ -53,14 +53,15 @@ namespace Model.Importer
                 return null;
             }
 
+            var actionStings = hand.HandActions
+                .Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
+                .Select(ActionToString).ToArray();
+
             var record = new HandHistoryRecord
             {
                 Time = hand.DateOfHandUtc,
                 Cards = player.HoleCards == null ? string.Empty : player.HoleCards.ToString(),
-                Line = hand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
-                    .Select(ActionToString)
-                    .Aggregate((x, y) => x + y).Trim(','),
-
+                Line = actionStings.Length > 0 ? actionStings.Aggregate((x, y) => x + y).Trim(',') : string.Empty,
                 Board = hand.CommunityCards.ToString(),
                 NetWonInCents = stat.Totalamountwonincents,
                 BBinCents = stat.Totalamountwonincents / stat.BigBlind,
@@ -207,6 +208,8 @@ namespace Model.Importer
         {
             List<decimal> equity = new List<decimal>();
             int count = playersHasHoleCards.Count;
+            if (count == 0)
+                return null; //no players with hole cards in this game for this action left
             List<HoleCards> holeCards = playersHasHoleCards.Select(x => x.HoleCards).ToList();
             try
             {
@@ -224,7 +227,7 @@ namespace Model.Importer
                         cardList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
                     Hand.HandWinOdds(cardList.ToArray(), currentBoardString, deadCardsString, wins, ties, losses, ref totalhands);
                     if (totalhands != 0)
-                        equity = wins.Select(x => Math.Round((decimal)x * 100 / totalhands, 2)).ToList();    
+                        equity = wins.Select(x => Math.Round((decimal)x * 100 / totalhands, 2)).ToList();
                 }
                 else if (gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo)
                 {
@@ -234,15 +237,15 @@ namespace Model.Importer
                                          new string[] { },
                                          0);
 
-                    equity = eq.Select(x => Math.Round((decimal) x.TotalEq, 2)).ToList();
+                    equity = eq.Select(x => Math.Round((decimal)x.TotalEq, 2)).ToList();
                 }
             }
             catch (Exception ex)
             {
                 LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquityForListOfPlayers method of Converter class", ex);
-            } 
+            }
             return equity;
-        } 
+        }
 
         public static decimal CalculateAllInEquity(HandHistory hand, Playerstatistic stat)
         {

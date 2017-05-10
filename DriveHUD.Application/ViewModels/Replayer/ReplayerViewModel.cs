@@ -249,7 +249,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public List<Player> ActivePlayerHasHoleCardFolded { get; set; }
 
         public List<HoleCards> AllDeadCards = new List<HoleCards>();
-        public string AllDeadCardsString = string.Empty;  
+        public string AllDeadCardsString = string.Empty;
 
         public string CurrentBoardCards { get; set; }
         public Card[] CurrentBoard { get; set; }
@@ -294,37 +294,38 @@ namespace DriveHUD.Application.ViewModels.Replayer
             foreach (ReplayerTableState replayerTableState in TableStateList)
             {
                 Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
-                if (playerInTableState != null 
-                    && TableStateList.IndexOf(replayerTableState) <= TableStateList.IndexOf(state) 
-                    && replayerTableState.CurrentAction.IsFold 
+                if (playerInTableState != null
+                    && TableStateList.IndexOf(replayerTableState) <= TableStateList.IndexOf(state)
+                    && replayerTableState.CurrentAction.IsFold
                     && playerInTableState.hasHoleCards)
-                    {
-                        ActivePlayerHasHoleCardFolded.Add(playerInTableState);
-                        ActivePlayerHasHoleCard.Remove(playerInTableState);
-                        AllDeadCards.Add(playerInTableState.HoleCards);
-                        AllDeadCardsString += playerInTableState.Cards;
-                    }  
+                {
+                    ActivePlayerHasHoleCardFolded.Add(playerInTableState);
+                    ActivePlayerHasHoleCard.Remove(playerInTableState);
+                    AllDeadCards.Add(playerInTableState.HoleCards);
+                    AllDeadCardsString += playerInTableState.Cards;
+                }
             }
 
             //calculation of probabilities
             List<decimal> equities;
-            
-                equities = Converter.CalculateEquity(CurrentGame,
-                    ActivePlayerHasHoleCard,
-                    AllDeadCards,
-                    AllDeadCardsString,
-                    CurrentBoardCards,
-                    CurrentBoard);
+
+            equities = Converter.CalculateEquity(CurrentGame,
+                ActivePlayerHasHoleCard,
+                AllDeadCards,
+                AllDeadCardsString,
+                CurrentBoardCards,
+                CurrentBoard);
 
 
 
-                //updating states in replayer view 
+            //updating states in replayer view 
+            if (equities != null) //if equity was returned null, it means that there were no players to whome we need to calcualte, for example there was one player with holecards in the game and he was folded in some step
                 RefreshBoard(equities, state.CurrentStreet);
-            
+
 
             //case of last state. Needed for All-in before River for some cases
             if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
-            {     
+            {
                 //calculation of probabilities
                 equities = Converter.CalculateEquity(CurrentGame,
                                                                                       ActivePlayerHasHoleCard,
@@ -333,18 +334,19 @@ namespace DriveHUD.Application.ViewModels.Replayer
                                                                                       CurrentBoardCards,
                                                                                       CurrentBoard);
                 //updating states in replayer view
-                RefreshBoard(equities, Street.Preflop);  
-            } 
+                if (equities != null)
+                    RefreshBoard(equities, Street.Preflop);
+            }
         }
 
         private ReplayerPlayerViewModel _playerInState { get; set; }
         private void RefreshBoard(List<decimal> equities, Street street)
-        {  
+        {
             foreach (ReplayerTableState replayerTableState in TableStateList.Where(st => st.CurrentStreet == street))
             {
                 try
                 {
-                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.ActivePlayer.Name);
+                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.CurrentAction.PlayerName);
                     if (_playerInState != null
                         && ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName) != null
                         && replayerTableState.CurrentAction != null
@@ -358,7 +360,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.ActivePlayer.Name}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
+                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.CurrentAction.PlayerName}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
                 }
             }
         }

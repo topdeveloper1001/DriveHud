@@ -1223,6 +1223,9 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
+                RadDropDownButtonFilterKeepOpen = false;
+                RadDropDownButtonFilterIsOpen = false;
+                RadDropDownButtonFilterKeepOpen = true;
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
@@ -1289,27 +1292,34 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            if (importerService.IsStarted)
+            try
             {
-                importerService.StopImport();
+                if (importerService.IsStarted)
+                {
+                    importerService.StopImport();
+                }
+
+                hudTransmitter.Dispose();
+                importerSessionCacheService.End();
+
+                dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+
+                // flush betonline cash
+                var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
+                tournamentsCacheService.Flush();
+
+                PokerStarsDetectorSingletonService.Instance.Stop();
+
+                apiHost.CloseAPIService();
+
+                if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+                {
+                    eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                }
             }
-
-            hudTransmitter.Dispose();
-            importerSessionCacheService.End();
-
-            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
-
-            // flush betonline cash
-            var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
-            tournamentsCacheService.Flush();
-
-            PokerStarsDetectorSingletonService.Instance.Stop();
-
-            apiHost.CloseAPIService();
-
-            if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+            catch (Exception ex)
             {
-                eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                LogProvider.Log.Error(this, ex);
             }
         }
 
@@ -1339,7 +1349,7 @@ namespace DriveHUD.Application.ViewModels
             notification.Title = "Settings";
             notification.PubSubMessage = pubSubMessage;
             notification.Parameter = pubSubMessage?.Parameter;
-            
+
 
 
             this.PopupSettingsRequest.Raise(notification,

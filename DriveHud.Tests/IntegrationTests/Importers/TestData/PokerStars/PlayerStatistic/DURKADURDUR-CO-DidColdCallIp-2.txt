@@ -1,0 +1,46 @@
+PokerStars Game #47144309276:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:57:58 ET
+Table 'Malabar III' 6-max Seat #1 is the button
+Seat 1: Desateur ($203 in chips) 
+Seat 2: twinpsych ($386.50 in chips) 
+Seat 3: pablostar ($375.40 in chips) 
+Seat 4: Jinn_Rooh ($202.45 in chips) 
+Seat 5: ROBERTJON ($275.90 in chips) 
+Seat 6: DURKADURDUR ($409.20 in chips) 
+twinpsych: posts small blind $1
+pablostar: posts big blind $2
+*** HOLE CARDS ***
+Jinn_Rooh: raises $4.95 to $6.95
+ROBERTJON: folds 
+DURKADURDUR: calls $6.95
+Desateur: folds 
+twinpsych: folds 
+pablostar: folds 
+*** FLOP *** [2h Jh 5h]
+Jinn_Rooh: checks 
+DURKADURDUR: bets $11
+Jinn_Rooh: calls $11
+*** TURN *** [2h Jh 5h] [8s]
+Jinn_Rooh: checks 
+DURKADURDUR: bets $26
+Jinn_Rooh: raises $158.50 to $184.50 and is all-in
+DURKADURDUR: calls $158.50
+*** RIVER *** [2h Jh 5h 8s] [9h]
+*** SHOW DOWN ***
+Jinn_Rooh: shows [Js Jc] (three of a kind, Jacks)
+DURKADURDUR: mucks hand 
+Jinn_Rooh collected $404.90 from pot
+*** SUMMARY ***
+Total pot $407.90 | Rake $3 
+Board [2h Jh 5h 8s 9h]
+Seat 1: Desateur (button) folded before Flop (didn't bet)
+Seat 2: twinpsych (small blind) folded before Flop
+Seat 3: pablostar (big blind) folded before Flop
+Seat 4: Jinn_Rooh showed [Js Jc] and won ($404.90) with three of a kind, Jacks
+Seat 5: ROBERTJON folded before Flop (didn't bet)
+Seat 6: DURKADURDUR mucked
+
+
+
+
+
+

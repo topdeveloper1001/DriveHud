@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -18,7 +17,6 @@ using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
 using System.IO;
-using Model.Data;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -26,8 +24,36 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// Total playerStatistic integration tests
     /// </summary>
     [TestFixture]
-    class TotalPlayerStatisticTests : PlayerStatisticTests
+    class TotalPlayerStatisticTests : BaseDatabaseTest
     {
+        #region SetUp
+
+        /// <summary>
+        /// Initialize environment for test
+        /// </summary>
+        [OneTimeSetUp]
+        public virtual void SetUp()
+        {
+            Initalize();
+        }
+
+        /// <summary>
+        /// Freeing resources
+        /// </summary>
+        [OneTimeTearDown]
+        public virtual void TearDown()
+        {
+            RemoveDatabase();
+        }
+
+        [TearDown]
+        public virtual void TestTearDown()
+        {
+            CleanUpDatabase();
+        }
+
+        #endregion
+
         protected override string TestDataFolder
         {
             get
@@ -40,7 +66,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// This test is supposed to test all <see cref="Playerstatistic"/> properties after long hh is imported        
         /// </summary>            
         [Test]
-        [TestCase(EnumPokerSites.PokerStars, "PLR_2961194VK")]
+        [TestCase(EnumPokerSites.PokerStars, "DURKADURDUR")]
         public void PlayerStatisticIsCalculated(EnumPokerSites pokerSite, string playerName)
         {
             using (var perfScope = new PerformanceMonitor("PlayerStatisticIsCalculated"))
@@ -61,11 +87,31 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
 
-
-                Assert.That(Math.Round((decimal)100 * playerstatistic.Didthreebet / playerstatistic.Couldthreebet, 1), Is.EqualTo(10.6), nameof(playerstatistic.DidColdCallIp));
-
-                //Assert.That(Math.Round((decimal) 100*playerstatistic.LimpMade/playerstatistic.LimpPossible,1), Is.EqualTo(50), nameof(playerstatistic.DidColdCallIp));  
+                // add asserts to validate properties here 
+                // current values are for demo purpose, need to import same hh to HM2, then use stats from HM2 as expected values
+                Assert.That(playerstatistic.DidColdCallIp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallIp));
+                Assert.That(playerstatistic.Vpiphands, Is.EqualTo(35), nameof(playerstatistic.Vpiphands));
             }
+        }
+
+        /// <summary>
+        /// Gets combined player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
+        /// </summary>     
+        protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
+        {
+            if (p.PlayerName.Equals(playerName))
+            {
+                if (playerstatistic == null)
+                {
+                    playerstatistic = p;
+                }
+                else
+                {
+                    playerstatistic += p;
+                }
+            }
+
+            return true;
         }
     }
 }

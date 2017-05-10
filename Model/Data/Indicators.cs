@@ -335,15 +335,16 @@ namespace Model.Data
 
         #region Session
 
-        public virtual string SessionStart
+        public virtual DateTime? SessionStart
         {
             get
             {
                 if (Statistics == null || !Statistics.Any())
                 {
-                    return "";
+                    return null;
                 }
-                return StringFormatter.GetDateTimeString(Statistics.Min(x => x.Time));
+
+                return Statistics.Min(x => x.Time);
             }
         }
 
@@ -353,10 +354,11 @@ namespace Model.Data
             {
                 if (Statistics == null || !Statistics.Any())
                 {
-                    return "";
+                    return string.Empty;
                 }
+
                 var length = Statistics.Max(x => x.Time) - Statistics.Min(x => x.Time);
-                return String.Format("{0}:{1:00}", (int)length.TotalHours, (int)length.Minutes);
+                return string.Format("{0}:{1:00}", (int)length.TotalHours, length.Minutes);
             }
         }
 
@@ -847,7 +849,7 @@ namespace Model.Data
 
         public virtual decimal LimpEp
         {
-            get { return GetPercentage(Source.LimpEp , Source.LimpPossible); }
+            get { return GetPercentage(Source.LimpEp, Source.LimpPossible); }
         }
 
         public virtual decimal LimpMp
@@ -862,7 +864,7 @@ namespace Model.Data
 
         public virtual decimal LimpBtn
         {
-            get { return GetPercentage(Source.LimpBtn , Source.LimpPossible); }
+            get { return GetPercentage(Source.LimpBtn, Source.LimpPossible); }
         }
 
         public virtual decimal LimpSb
@@ -870,7 +872,6 @@ namespace Model.Data
             get { return GetPercentage(Source.LimpSb, Source.LimpPossible); }
         }
 
-       
         public virtual decimal DidLimpCall
         {
             get { return GetPercentage(Source.LimpCalled, Source.LimpFaced); }
@@ -884,8 +885,8 @@ namespace Model.Data
         public virtual decimal DidLimpReraise
         {
             get { return GetPercentage(Source.LimpReraised, Source.LimpFaced); }
-        } 
-       
+        }
+
         #endregion
 
         public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);

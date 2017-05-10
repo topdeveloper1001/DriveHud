@@ -125,6 +125,12 @@ namespace Model.Enums
         BluffRange,
     }
 
+    public enum QuickFilterPositionEnum
+    {
+        Any, BTN, Blinds, Small, Big, IP, OOP
+    }
+
+
     public enum EnumFilterType
     {
         Cash,

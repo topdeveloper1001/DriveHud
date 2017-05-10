@@ -21,8 +21,11 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         private readonly string message;
 
+        private readonly long initialMemory;
+
         public PerformanceMonitor(string message)
         {
+            initialMemory = GC.GetTotalMemory(false);
             this.message = message;
             stopwatch.Start();
         }
@@ -34,7 +37,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
                 stopwatch.Stop();
             }
 
-            Debug.WriteLine($"{message}: {stopwatch.ElapsedMilliseconds}ms");
+            Console.WriteLine($"{message} (Duration): {stopwatch.ElapsedMilliseconds}ms");
+            Console.WriteLine($"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}");
         }
     }
 }

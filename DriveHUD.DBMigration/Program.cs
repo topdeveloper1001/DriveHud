@@ -297,7 +297,7 @@ namespace DriveHUD.DBMigration
             {
                 var playerKey = obj as PlayersKey;
 
-                return Equals(obj);
+                return Equals(playerKey);
             }
 
             public bool Equals(PlayersKey obj)
