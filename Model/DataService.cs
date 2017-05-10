@@ -219,7 +219,7 @@ namespace Model
 
                 var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
 
-                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId);
+                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId, hh.HandhistoryVal);
 
                 var result = handHistoryParser.ParseFullHandHistory(hh.HandhistoryVal);
 

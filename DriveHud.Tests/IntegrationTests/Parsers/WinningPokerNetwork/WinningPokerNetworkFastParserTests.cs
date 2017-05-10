@@ -19,6 +19,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Parsers.Factory;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using Model;
 using NUnit.Framework;
@@ -60,16 +61,14 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
-
-            var parser = new WinningPokerNetworkFastParserImpl();
-
+            
             var succeded = 0;
             var total = 0;
 
             foreach (var handHistoryFile in handHistoryFiles)
             {
                 if (handHistoryFile.FullName.Contains("Unfinished") ||
-                    handHistoryFile.FullName.Contains("InValid") ||                    
+                    handHistoryFile.FullName.Contains("InValid") ||
                     handHistoryFile.FullName.Contains("5-10 PM Hold`em 5-10 6-max - 3 (Hold'em) - 2016-11-08.txt") ||
                     handHistoryFile.FullName.Contains("HH20161109 T6627313-G36855146.txt"))
                 {
@@ -77,6 +76,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
                 }
 
                 var handHistory = File.ReadAllText(handHistoryFile.FullName);
+
+                var parserFactory = new HandHistoryParserFactoryImpl();
+
+                var parser = parserFactory.GetFullHandHistoryParser(handHistory);
 
                 var hands = parser.SplitUpMultipleHands(handHistory).ToArray();
 
@@ -124,6 +127,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_2.txt", true)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_1.txt", false)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_2.txt", false)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", true)]
         public void ValidHandTest(string handHistoryFile, bool isValid)
         {
             if (isValid)
@@ -141,6 +145,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Flop.txt", "Qs 6h Kh")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "Ah 5h Js 5d")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-River.txt", "Th 7c Ks 8d 8h")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Ts 7c 5c 3d Qc")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", "4h 6c 9h 4d 7s")]
         public void ParseCommunityCardsTest(string handHistoryFile, string expectedBoard)
         {
             BoardCards expectedCards = BoardCards.FromCards(expectedBoard);
@@ -150,11 +156,13 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt", "2016/11/8 17:44:41")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt", "2016/11/8 14:44:41")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "2017/05/08 08:32:30")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", "2017/05/08 09:06:37")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture).ToUniversalTime();
+            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture);
 
             Assert.AreEqual(handHistory.DateOfHandUtc, dateTime);
         }
@@ -162,6 +170,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt", 6)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Flop.txt", 5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", 9)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 4)]
         public void ParseDealerPositionTest(string handHistoryFile, int expectedPosition)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -173,6 +183,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt", GameType.NoLimitHoldem)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt", GameType.PotLimitOmaha)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt", GameType.PotLimitOmahaHiLo)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", GameType.NoLimitHoldem)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", GameType.NoLimitHoldem)]
         public void ParseGameTypeTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -184,6 +196,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt", 764153469)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt", 765368106)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt", 763785106)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", 12908866)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 12909872)]
         public void ParseHandIdTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -193,6 +207,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt", "Hero")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Peon_84")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", "Peon_84")]
         public void ParseHeroNameTest(string handHistoryFile, string heroName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -204,6 +220,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt", 0.05, 0.1, Currency.USD)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt", 0.5, 1, Currency.USD)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt", 25, 50, Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", 10, 20, Currency.All)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 100, 200, Currency.All)]
         public void ParseLimitTest(string handHistoryFile, decimal smallBlind, decimal bigBlind, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -233,6 +251,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "$10 Freeroll - On Demand, Table 26")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt", "(PRR) Ki-Lin - 2")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "1")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", "1")]
         public void ParseTableNameTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -249,6 +269,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", 1040, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "01123581321", -0.20, HandActionType.BET, Street.Flop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "needmorefppp", -0.20, HandActionType.CALL, Street.Flop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain4", -1500, HandActionType.RAISE, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", -1500, HandActionType.CALL, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain1", -10, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain2", -20, HandActionType.BIG_BLIND, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithBets.txt", "Villain5", -300, HandActionType.BET, Street.Turn, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -258,6 +283,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", -490, HandActionType.RAISE, Street.Preflop, true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain4", -1500, HandActionType.RAISE, Street.Preflop, true)]
         public void AllInIsParsed(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, bool isAllin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -267,6 +293,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 10)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 25)]
         public void ParseAnteTest(string handHistoryFile, decimal ante)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -418,9 +445,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {
-            var parser = new WinningPokerNetworkFastParserImpl();
-
             var handHistoryText = File.ReadAllText(handHistoryFile);
+
+            var parserFactory = new HandHistoryParserFactoryImpl();
+
+            var parser = parserFactory.GetFullHandHistoryParser(handHistoryText);
 
             var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
 
@@ -433,9 +462,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private IEnumerable<Player> GetParsedPlayers(string handHistoryFile)
         {
-            var parser = new WinningPokerNetworkFastParserImpl();
-
             var handHistoryText = File.ReadAllText(handHistoryFile);
+
+            var parserFactory = new HandHistoryParserFactoryImpl();
+
+            var parser = parserFactory.GetFullHandHistoryParser(handHistoryText);
 
             var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
 
