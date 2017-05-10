@@ -731,6 +731,12 @@ namespace DriveHUD.Entities
         [ProtoMember(270)]
         public virtual int ReraisedFacedSqueez { get; set; }
 
+        [ProtoMember(271)]
+        public virtual int PreflopIP { get; set; }
+
+        [ProtoMember(272)]
+        public virtual int PreflopOOP { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -1143,6 +1149,9 @@ namespace DriveHUD.Entities
             StackInBBs = a.StackInBBs;
             EVDiff = a.EVDiff;
 
+            PreflopIP = a.PreflopIP;
+            PreflopOOP = a.PreflopOOP;
+
             #region tilt meter 
 
             CalculateTiltMeterValue(this, a);
@@ -1463,6 +1472,9 @@ namespace DriveHUD.Entities
             r.StackInBBs = b.StackInBBs;
 
             r.EVDiff = a.EVDiff + b.EVDiff;
+
+            r.PreflopIP = a.PreflopIP + b.PreflopIP;
+            r.PreflopOOP = a.PreflopOOP + b.PreflopOOP;
 
             #region tilt meter
 

@@ -656,6 +656,9 @@ namespace Model
             stat.MRatio = CalculateMRatio(stat);
             CalculatePositionalData(stat);
 
+            stat.PreflopIP = preflopInPosition ? 1 : 0;
+            stat.PreflopOOP = !preflopInPosition ? 1 : 0;
+
             #endregion
 
             return stat;

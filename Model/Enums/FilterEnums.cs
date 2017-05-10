@@ -127,7 +127,7 @@ namespace Model.Enums
 
     public enum QuickFilterPositionEnum
     {
-        Any, BTN, Blinds, Small, Big
+        Any, BTN, Blinds, Small, Big, IP, OOP
     }
 
 

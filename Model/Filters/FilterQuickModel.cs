@@ -50,8 +50,8 @@ namespace Model.Filters
                 new QuickFilterItem() { Name = "Float Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.PlayedFloatFlop), NoPropertyName = nameof(Playerstatistic.Facingflopcontinuationbet), QuickFilterHandType =  QuickFilterHandTypeEnum.BluffRange },
                 new QuickFilterItem() { Name = "Delayed C-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidDelayedTurnCBet), NoPropertyName = nameof(Playerstatistic.CouldDelayedTurnCBet) },
                 new QuickFilterItem() { Name = "Check Flop w/ TP or Better", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidCheckFlop), NoPropertyName = nameof(Playerstatistic.LimpMade) , QuickFilterHandType = QuickFilterHandTypeEnum.FlopTPOrBetter },
-                new QuickFilterItem() { Name = "Cold Call IP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidColdCallIp) },
-                new QuickFilterItem() { Name = "Cold Call OOP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidColdCallOop) },
+                new QuickFilterItem() { Name = "Cold Call IP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didcoldcall), NoPropertyName = nameof(Playerstatistic.Couldcoldcall),  QuickFilterPosition = Enums.QuickFilterPositionEnum.IP },
+                new QuickFilterItem() { Name = "Cold Call OOP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didcoldcall), NoPropertyName = nameof(Playerstatistic.Couldcoldcall), QuickFilterPosition = Enums.QuickFilterPositionEnum.OOP },
                 new QuickFilterItem() { Name = "Saw Turn", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawTurn) },
                 new QuickFilterItem() { Name = "Double Barrel w/ Air", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.TurnContinuationBetWithAirMade), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible), QuickFilterHandType = QuickFilterHandTypeEnum.BluffRange },
                 new QuickFilterItem() { Name = "Saw River", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawRiver) },
@@ -177,14 +177,15 @@ namespace Model.Filters
                 case Enums.QuickFilterPositionEnum.Blinds:
                     return PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BB || x.Position == EnumPosition.SB);
                 case Enums.QuickFilterPositionEnum.Small:
-                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.SB);
-                    break;
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.SB);
                 case Enums.QuickFilterPositionEnum.Big:
-                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BB);
-                    break;
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BB);
                 case Enums.QuickFilterPositionEnum.BTN:
-                    PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BTN);
-                    break;
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.Position == EnumPosition.BTN);
+                case Enums.QuickFilterPositionEnum.IP:
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.PreflopIP == 1);
+                case Enums.QuickFilterPositionEnum.OOP:
+                    return PredicateBuilder.Create<Playerstatistic>(x => x.PreflopOOP == 1);
             }
 
             return PredicateBuilder.True<Playerstatistic>();
