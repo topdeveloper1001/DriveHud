@@ -61,7 +61,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
-            
+
             var succeded = 0;
             var total = 0;
 
@@ -269,11 +269,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", 1040, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "01123581321", -0.20, HandActionType.BET, Street.Flop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "needmorefppp", -0.20, HandActionType.CALL, Street.Flop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain4", -1500, HandActionType.RAISE, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", -1500, HandActionType.CALL, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", -1500, HandActionType.RAISE, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain6", -1500, HandActionType.CALL, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain1", -10, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain2", -20, HandActionType.BIG_BLIND, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithBets.txt", "Villain5", -300, HandActionType.BET, Street.Turn, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithBets.txt", "Villain9", -300, HandActionType.BET, Street.Turn, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -283,7 +283,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", -490, HandActionType.RAISE, Street.Preflop, true)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain4", -1500, HandActionType.RAISE, Street.Preflop, true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", -1500, HandActionType.RAISE, Street.Preflop, true)]
         public void AllInIsParsed(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, bool isAllin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -298,6 +298,16 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
+        }
+
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-HeroLost.txt", "Peon_84")]
+        public void PlayerIsLostTest(string handHistoryFile, string playerName)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            var player = handHistory.Players.FirstOrDefault(x => x.PlayerName == playerName);
+
+            Assert.IsTrue(player.IsLost);
         }
 
         [Test]

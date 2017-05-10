@@ -24,6 +24,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using HandHistories.Objects.Hand;
+using DriveHUD.Common.Linq;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
@@ -1213,7 +1215,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         /// <summary>
         /// Parses miscellaneous showdown lines
         /// </summary>        
-        public HandAction ParseMiscShowdownLine(string actionLine, GameType gameType = GameType.Unknown)
+        private HandAction ParseMiscShowdownLine(string actionLine, GameType gameType = GameType.Unknown)
         {
             var actionIndex = -1;
             HandActionType actionType;
@@ -1235,9 +1237,33 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 throw new HandActionException(actionLine, "ParseMiscShowdownLine: Unrecognized line '" + actionLine + "'");
             }
 
-            var playerName = actionLine.Substring(0, actionIndex - 2);
+            var playerName = actionLine.Substring(0, actionIndex - 1);
 
             return new HandAction(playerName, actionType, Street.Showdown);
+        }
+
+        protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
+        {
+            var handHistory = handHistorySummary as HandHistory;
+
+            if (handHistory == null)
+            {
+                return;
+            };
+
+            var players = handHistory.Players
+                .Where(x => (handHistory.Hero == null) || x.SeatNumber != handHistory.Hero.SeatNumber)
+                .Select(x => new { OldPlayerName = x.PlayerName, NewPlayerName = $"Villain{x.SeatNumber}" })
+                .ToDictionary(x => x.OldPlayerName, x => x.NewPlayerName);
+
+            if (handHistory.Hero != null)
+            {
+                players.Add(handHistory.Hero.PlayerName, handHistory.Hero.PlayerName);
+            }
+
+            handHistory.Players.ForEach(x => x.PlayerName = players[x.PlayerName]);
+
+            handHistory.HandActions.ForEach(x => x.PlayerName = players[x.PlayerName]);
         }
     }
 }
