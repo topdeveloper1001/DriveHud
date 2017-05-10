@@ -88,9 +88,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
-        [Test]
-        //[TestCase("drivehud-old.zip", "Database-old.zip", "Hero", EnumPokerSites.Ignition)]
-        //[TestCase("drivehud-sessions.zip", "Database-sessions.zip", "Hero", EnumPokerSites.Ignition)]
+        [Test]      
         [TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
         public void ReImportTest(string databaseZipFile, string playerStatisticZipFile, string playerName, EnumPokerSites pokerSite)
         {
