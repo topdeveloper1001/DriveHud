@@ -55,7 +55,7 @@ namespace Model
             int call = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street > Street.Preflop);
             int bet = playerHandActions.Count(handAction => handAction.IsBet() && handAction.Street > Street.Preflop);
             int raises = playerHandActions.Count(handAction => handAction.IsRaise() && handAction.Street > Street.Preflop);
-            
+
             stat.TotalbetsFlop = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Flop);
             stat.TotalbetsTurn = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Turn);
             stat.TotalbetsRiver = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.River);
@@ -241,11 +241,13 @@ namespace Model
 
             //calculation of cold call after open raise at BTN position
             ConditionalBet coldCallVsBtnOpen = new ConditionalBet();
-            ColdCallafterPositionalOpenRaise(coldCallVsBtnOpen, preflops, player, dealer.PlayerName);
+            if (dealer != null)
+                ColdCallafterPositionalOpenRaise(coldCallVsBtnOpen, preflops, player, dealer.PlayerName);
 
             //calculation of cold call after open raise at Sb position
             ConditionalBet coldCallVsSbOpen = new ConditionalBet();
-            ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
+            if (parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND) != null)
+            ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
 
             //calculation of cold call after open raise at Co position
             ConditionalBet coldCallVsCoOpen = new ConditionalBet();
@@ -570,7 +572,7 @@ namespace Model
 
             stat.DidCheckFlop = isCheckedFlop ? 1 : 0;
 
-           stat.LimpPossible = limp.Possible ? 1 : 0;
+            stat.LimpPossible = limp.Possible ? 1 : 0;
             stat.LimpMade = limp.Made ? 1 : 0;
             stat.LimpFaced = limp.Faced ? 1 : 0;
             stat.LimpCalled = limp.Called ? 1 : 0;
@@ -890,41 +892,41 @@ namespace Model
             {
                 case "EP":
                     stat.PfrInEp = stat.Pfrhands;
-                    stat.LimpEp = stat.LimpMade;        
-                    stat.DidColdCallInEp = stat.Didcoldcall;  
+                    stat.LimpEp = stat.LimpMade;
+                    stat.DidColdCallInEp = stat.Didcoldcall;
                     break;
                 case "MP":
                     stat.DidThreeBetInMp = stat.Didthreebet;
                     stat.DidFourBetInMp = stat.Didfourbet;
-                    stat.DidColdCallInMp = stat.Didcoldcall;   
-                    stat.LimpMp = stat.LimpMade;            
+                    stat.DidColdCallInMp = stat.Didcoldcall;
+                    stat.LimpMp = stat.LimpMade;
                     stat.PfrInMp = stat.Pfrhands;
                     return;
                 case "CO":
                     stat.DidThreeBetInCo = stat.Didthreebet;
                     stat.DidFourBetInCo = stat.Didfourbet;
-                    stat.DidColdCallInCo = stat.Didcoldcall;    
-                    stat.LimpCo = stat.LimpMade;               
+                    stat.DidColdCallInCo = stat.Didcoldcall;
+                    stat.LimpCo = stat.LimpMade;
                     stat.PfrInCo = stat.Pfrhands;
                     return;
                 case "BTN":
                     stat.DidThreeBetInBtn = stat.Didthreebet;
                     stat.DidFourBetInBtn = stat.Didfourbet;
-                    stat.DidColdCallInBtn = stat.Didcoldcall;     
-                    stat.LimpBtn = stat.LimpMade;               
+                    stat.DidColdCallInBtn = stat.Didcoldcall;
+                    stat.LimpBtn = stat.LimpMade;
                     stat.PfrInBtn = stat.Pfrhands;
                     return;
                 case "SB":
                     stat.DidThreeBetInSb = stat.Didthreebet;
                     stat.DidFourBetInSb = stat.Didfourbet;
-                    stat.DidColdCallInSb = stat.Didcoldcall;      
-                    stat.LimpSb = stat.LimpMade;                
+                    stat.DidColdCallInSb = stat.Didcoldcall;
+                    stat.LimpSb = stat.LimpMade;
                     stat.PfrInSb = stat.Pfrhands;
                     return;
                 case "BB":
                     stat.DidThreeBetInBb = stat.Didthreebet;
                     stat.DidFourBetInBb = stat.Didfourbet;
-                    stat.DidColdCallInBb = stat.Didcoldcall;        
+                    stat.DidColdCallInBb = stat.Didcoldcall;
                     stat.PfrInBb = stat.Pfrhands;
                     return;
                 default:
@@ -1091,12 +1093,12 @@ namespace Model
             var raisers = new List<string>();
 
             bool canThreeBet = false;
-            bool wasThreeBet = false; 
+            bool wasThreeBet = false;
 
             foreach (var action in preflops)
             {
                 if (wasThreeBet)
-                { 
+                {
                     if (action.PlayerName == player)
                         coldCall3Bet.Possible = true;
 
@@ -1150,8 +1152,8 @@ namespace Model
                     if (!action.IsCall() || action.PlayerName != player)
                         continue;
 
-                   coldCall4Bet.Made = true;
-                   return;
+                    coldCall4Bet.Made = true;
+                    return;
                 }
                 else if (wasThreeBet)
                 {
@@ -1329,9 +1331,9 @@ namespace Model
             }
         }
 
-        private static void Calculate3Bet(ConditionalBet threeBet, 
-                                          IList<HandAction> actions, 
-                                          string player,   
+        private static void Calculate3Bet(ConditionalBet threeBet,
+                                          IList<HandAction> actions,
+                                          string player,
                                           string raiser)
         {
             bool start3Bet = false;
