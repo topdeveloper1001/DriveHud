@@ -45,16 +45,16 @@ namespace Model.Data
             }
         }
 
-        public override string SessionStart
+        public override DateTime? SessionStart
         {
             get
             {
                 if (statisticCount == 0)
                 {
-                    return string.Empty;
+                    return null;
                 }
 
-                return StringFormatter.GetDateTimeString(sessionStartTime);
+                return sessionStartTime;
             }
         }
 

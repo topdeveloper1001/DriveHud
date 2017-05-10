@@ -31,15 +31,7 @@ namespace Model.Data
         public virtual int TableSize { get; set; }
 
         public virtual DateTime Started { get; set; }
-
-        public virtual string StartedString
-        {
-            get
-            {
-                return StringFormatter.GetDateTimeString(Started);
-            }
-        }
-
+    
         public virtual decimal ROI
         {
             get

@@ -26,23 +26,29 @@ namespace DriveHUD.Application.ReportsLayout
             return Add(name, member, new GridViewLength(0));
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible)
+        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible, IValueConverter converter = null)
         {
-            return Add(name, member, new GridViewLength(0), isVisible);
+            return Add(name, member, new GridViewLength(0), isVisible, converter);
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width)
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, IValueConverter converter = null)
         {
-            return Add(name, member, width, true);
+            return Add(name, member, width, true, converter);
         }
 
-
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible)
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible, IValueConverter converter)
         {
-            GridViewDataColumn column = new GridViewDataColumn
+            var binding = new Binding(member);
+
+            if (converter != null)
+            {
+                binding.Converter = converter;
+            }
+
+            var column = new GridViewDataColumn
             {
                 Header = name,
-                DataMemberBinding = new Binding(member),
+                DataMemberBinding = binding,
                 Width = width.Value == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 UniqueName = member,
                 IsVisible = isVisible
