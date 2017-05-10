@@ -1,0 +1,32 @@
+PokerStars Game #47148439865:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:00:42 ET
+Table 'Burgi' 6-max Seat #5 is the button
+Seat 1: DURKADURDUR ($272.90 in chips) 
+Seat 2: pobolero ($200 in chips) 
+Seat 3: tristyle ($314.75 in chips) 
+Seat 4: IhavBestHand ($203 in chips) 
+Seat 5: iLeftFTP ($236.40 in chips) 
+Seat 6: TimK0123 ($236.75 in chips) 
+TimK0123: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+pobolero: folds 
+tristyle: folds 
+IhavBestHand: folds 
+iLeftFTP: folds 
+TimK0123: raises $5 to $7
+DURKADURDUR: calls $5
+*** FLOP *** [6c Tc 2c]
+TimK0123: bets $10
+DURKADURDUR: folds 
+Uncalled bet ($10) returned to TimK0123
+TimK0123 collected $13.30 from pot
+TimK0123: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0.70 
+Board [6c Tc 2c]
+Seat 1: DURKADURDUR (big blind) folded on the Flop
+Seat 2: pobolero folded before Flop (didn't bet)
+Seat 3: tristyle folded before Flop (didn't bet)
+Seat 4: IhavBestHand folded before Flop (didn't bet)
+Seat 5: iLeftFTP (button) folded before Flop (didn't bet)
+Seat 6: TimK0123 (small blind) collected ($13.30)

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
@@ -165,7 +166,9 @@ namespace Model
             }
 
             ConditionalBet riverIpPassFlopCbet = new ConditionalBet();
+
             var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
+
             if (positionRiverPlayer != null && positionRiverPlayer.PlayerName == player && turnCBet.Passed)
             {
                 var action = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
@@ -1084,28 +1087,44 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Determines if player did cold call
+        /// </summary>
+        /// <param name="coldCall">Cold call <see cref="Condition"/></param>
+        /// <param name="preflops">Preflop <see cref="HandAction"/> actions</param>
+        /// <param name="player">Player</param>
         private static void CalculateColdCall(Condition coldCall, IList<HandAction> preflops, string player)
         {
             bool wasColdRaise = false;
+
             foreach (var action in preflops)
             {
                 if (wasColdRaise)
                 {
                     if (action.PlayerName != player)
+                    {                       
                         continue;
+                    }
 
                     coldCall.Possible = true;
+
                     if (action.IsCall())
+                    {
                         coldCall.Made = true;
+                    }
 
                     return;
                 }
 
                 if (action.PlayerName == player && action.IsRaise())
+                {
                     return;
+                }
 
                 if (action.IsRaise())
+                {
                     wasColdRaise = true;
+                }
             }
         }
 
@@ -1515,14 +1534,22 @@ namespace Model
             var actions = hand.HandActions.Street(street)
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
                     && x.HandActionType != HandActionType.ANTE)
-                .ToList();
+                .ToArray();
 
-            if (actions.Any(x => x.IsBlinds))
+            var sbAction = actions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND);
+
+            // DHUD-273: if only 2 players are playing. there is a possible case when SB is a dealer, then he will be in position even if his action was first
+            if (hand.Players.Count == 2)
             {
-                // in case we have 2 or more bb
-                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND)
-                    ? actions.Skip(2).ToList()
-                    : actions.Skip(1).ToList();
+                if (sbAction != null)
+                {
+                    var sbPlayer = hand.Players.FirstOrDefault(x => x.PlayerName == sbAction.PlayerName);
+
+                    if (sbPlayer != null && sbPlayer.SeatNumber == hand.DealerButtonPosition)
+                    {
+                        return sbPlayer;
+                    }
+                }
             }
 
             var players = new List<string>();
@@ -1537,12 +1564,22 @@ namespace Model
                 players.Add(action.PlayerName);
             }
 
-            if (players.Any())
+            // DHUD-273: remove players who folded from the list
+            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
+            foldedPlayers.ForEach(x => players.Remove(x));
+
+            if (players.Count > 0)
             {
                 var ipPlayer = players.LastOrDefault();
+
+                // DHUD-273: SB can't be in position if he isn't a dealer
+                if (sbAction != null && ipPlayer == sbAction.PlayerName)
+                {
+                    return null;
+                }
+
                 return hand.Players.FirstOrDefault(x => x.PlayerName == ipPlayer);
             }
-
 
             return null;
         }

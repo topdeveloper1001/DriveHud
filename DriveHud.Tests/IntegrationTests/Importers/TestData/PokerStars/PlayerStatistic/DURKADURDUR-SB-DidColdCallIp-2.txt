@@ -1,0 +1,31 @@
+PokerStars Game #47151472666:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:15:54 ET
+Table 'Gormeisa' 6-max Seat #6 is the button
+Seat 1: DURKADURDUR ($326.50 in chips)
+Seat 2: Chojjasd ($200 in chips)
+Seat 3: stopme10 ($209 in chips)
+Seat 4: de schonne ($206.75 in chips)
+Seat 5: twinpsych ($415.25 in chips)
+Seat 6: Bosas2 ($303.80 in chips)
+DURKADURDUR: posts small blind $1
+Chojjasd: posts big blind $2
+*** HOLE CARDS ***
+stopme10: folds
+de schonne: folds
+twinpsych: raises $4 to $6
+Bosas2: folds
+DURKADURDUR: calls $5
+Chojjasd: raises $20 to $26
+twinpsych: folds
+DURKADURDUR: raises $300.50 to $326.50 and is all-in
+Chojjasd: folds
+Uncalled bet ($300.50) returned to DURKADURDUR
+DURKADURDUR collected $58 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $58 | Rake $0
+Seat 1: DURKADURDUR (small blind) collected ($58)
+Seat 2: Chojjasd (big blind) folded before Flop
+Seat 3: stopme10 folded before Flop (didn't bet)
+Seat 4: de schonne folded before Flop (didn't bet)
+Seat 5: twinpsych folded before Flop
+Seat 6: Bosas2 (button) folded before Flop (didn't bet)

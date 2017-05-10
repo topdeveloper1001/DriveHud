@@ -7,13 +7,13 @@ using System.Runtime.CompilerServices;
 
 namespace Model.Extensions
 {
-    public class ComparableCardsStatistic  : INotifyPropertyChanged
+    public class ComparableCardsStatistic : INotifyPropertyChanged
     {
         public ComparableCardsStatistic(Playerstatistic stat)
         {
-            this.Statistic = stat;
-            this.PlayerCards = new ComparableCard(stat.Cards);
-            this.BoardCards = new ComparableCard(stat.Board);
+            Statistic = stat;
+            PlayerCards = new ComparableCard(stat.Cards);
+            BoardCards = new ComparableCard(stat.Board);
         }
 
         public void UpdateHandNoteText()
@@ -22,6 +22,7 @@ namespace Model.Extensions
         }
 
         #region Properties
+
         public virtual string HandNoteText
         {
             get
@@ -40,14 +41,11 @@ namespace Model.Extensions
         #endregion
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         [NotifyPropertyChangedInvocator]
         public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
@@ -57,7 +55,7 @@ namespace Model.Extensions
 
         public ComparableCard(string cards)
         {
-            this.Cards = cards;
+            Cards = cards;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -82,6 +80,7 @@ namespace Model.Extensions
             for (int i = 0; i < length; i++)
             {
                 int result = CardHelper.GetCardRank(currentCards[i]) - CardHelper.GetCardRank(otherCards[i]);
+
                 if (result != 0)
                 {
                     return result;

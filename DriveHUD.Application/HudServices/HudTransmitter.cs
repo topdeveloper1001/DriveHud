@@ -16,7 +16,7 @@ namespace DriveHUD.Application.HudServices
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
         private const string hudProcessName = "DriveHUD.HUD";
-             
+
         private const double delayMS = 1000;
 
         private Process hudClient;
@@ -216,38 +216,45 @@ namespace DriveHUD.Application.HudServices
 
         private void Close()
         {
-            if (_initializeTask != null && _initializeTask.Status != TaskStatus.RanToCompletion)
+            try
             {
-                try
+                if (_initializeTask != null && _initializeTask.Status != TaskStatus.RanToCompletion)
                 {
-                    _cancellationTokenSource.Cancel();
-                    _initializeTask.Wait();
+                    try
+                    {
+                        _cancellationTokenSource.Cancel();
+                        _initializeTask.Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, ex);
+                    }
                 }
-                catch (Exception ex)
+
+                isInitialized = false;
+
+                _initializeTask = null;
+                _cancellationTokenSource = null;
+
+                if (_namedPipeBindingFactory != null)
                 {
-                    LogProvider.Log.Error(this, ex);
+                    _namedPipeBindingFactory.Faulted -= Pipe_Faulted;
+                    _namedPipeBindingFactory.Opened -= Pipe_Opened;
+                    _namedPipeBindingFactory.Abort();
+
+                    _namedPipeBindingFactory = null;
+                    _namedPipeBindingProxy = null;
+                    _callbackService = null;
+                }
+
+                if (hudClient != null && !hudClient.HasExited)
+                {
+                    hudClient.Kill();
                 }
             }
-
-            isInitialized = false;
-
-            _initializeTask = null;
-            _cancellationTokenSource = null;
-
-            if (_namedPipeBindingFactory != null)
+            catch (Exception e)
             {
-                _namedPipeBindingFactory.Faulted -= Pipe_Faulted;
-                _namedPipeBindingFactory.Opened -= Pipe_Opened;
-                _namedPipeBindingFactory.Abort();
-
-                _namedPipeBindingFactory = null;
-                _namedPipeBindingProxy = null;
-                _callbackService = null;
-            }
-
-            if (hudClient != null && !hudClient.HasExited)
-            {
-                hudClient.Kill();
+                LogProvider.Log.Error(this, "HUD transmitter could not be stopped.", e);
             }
         }
 
