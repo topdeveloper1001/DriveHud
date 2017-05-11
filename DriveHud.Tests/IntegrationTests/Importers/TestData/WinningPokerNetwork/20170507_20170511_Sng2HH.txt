@@ -3462,3 +3462,603 @@ Seat 4: Peon_84 (big blind) showed [8s 8c] and lost with a pair of Eights [8s 8c
 Seat 9: Villain2 (button) folded on the Pre-Flop
 
 --------------------------------------------------------------------
+<Game Information>
+Title: SNG 2.0 $5.50
+Entry #: 4137703
+Begin Time: 2017/05/11 06:36:45 UTC
+Buyin to Payout: Real To Real
+Play Type: Sit & Go
+Game Type: Hold’em
+Bet Limit Type: No Limit
+
+<Hand History>
+Game Hand #13112177 - Tournament #8043170 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/11 06:37:28 UTC
+Table '1' 9-max Seat #4 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1500.00)
+Seat 4: Villain3 (1500.00)
+Seat 5: Villain4 (1500.00)
+Seat 6: Villain5 (1500.00)
+Seat 7: Villain6 (1500.00)
+Seat 8: Villain7 (1500.00)
+Seat 9: Villain8 (1500.00)
+Dealt to Peon_84 [9h]
+Dealt to Villain5 [5h]
+Dealt to Villain1 [6s]
+Dealt to Villain6 [7d]
+Dealt to Villain2 [3h]
+Dealt to Villain7 [9s]
+Dealt to Villain3 [As]
+Dealt to Villain8 [5c]
+Dealt to Villain4 [7h]
+Villain4 posts the small blind 10.00
+Villain5 posts the big blind 20.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [6c 5c]
+Villain6 raises 40.00 to 40.00
+Villain7 folds
+Villain8 folds
+Peon_84 folds
+Villain1 folds
+Villain2 calls 40.00
+Villain3 folds
+Villain4 folds
+Villain5 folds
+*** FLOP *** [Kh Jh 2c]
+Main pot 110.00
+Villain6 bets 100.00
+Villain2 folds
+Uncalled bet (100.00) returned to Villain6
+Villain6 does not show
+*** SUMMARY ***
+Total pot 110.00 | Rake 0.00
+Board [Kh Jh 2c]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 3: Villain2 folded on the Flop
+Seat 4: Villain3 (button) folded on the Pre-Flop
+Seat 5: Villain4 (small blind) folded on the Pre-Flop
+Seat 6: Villain5 (big blind) folded on the Pre-Flop
+Seat 7: Villain6 did not show and won 110.00
+Seat 8: Villain7 folded on the Pre-Flop and did not bet
+Seat 9: Villain8 folded on the Pre-Flop and did not bet
+
+Game Hand #13112243 - Tournament #8043170 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/11 06:39:03 UTC
+Table '1' 9-max Seat #5 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1460.00)
+Seat 4: Villain3 (1500.00)
+Seat 5: Villain4 (1490.00)
+Seat 6: Villain5 (1480.00)
+Seat 7: Villain6 (1570.00)
+Seat 8: Villain7 (1500.00)
+Seat 9: Villain8 (1500.00)
+Villain5 posts the small blind 10.00
+Villain6 posts the big blind 20.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [Qd 4c]
+Villain7 folds
+Villain8 folds
+Peon_84 folds
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 raises 40.00 to 40.00
+Villain5 calls 30.00
+Villain6 calls 20.00
+*** FLOP *** [3s Ks Jc]
+Main pot 120.00
+Villain5 checks
+Villain6 checks
+Villain4 checks
+*** TURN *** [3s Ks Jc] [Qs]
+Main pot 120.00
+Villain5 checks
+Villain6 bets 120.00
+Villain4 folds
+Villain5 folds
+Uncalled bet (120.00) returned to Villain6
+Villain6 does not show
+*** SUMMARY ***
+Total pot 120.00 | Rake 0.00
+Board [3s Ks Jc Qs]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 3: Villain2 folded on the Pre-Flop and did not bet
+Seat 4: Villain3 folded on the Pre-Flop and did not bet
+Seat 5: Villain4 (button) folded on the Turn
+Seat 6: Villain5 (small blind) folded on the Turn
+Seat 7: Villain6 did not show and won 120.00
+Seat 8: Villain7 folded on the Pre-Flop and did not bet
+Seat 9: Villain8 folded on the Pre-Flop and did not bet
+
+Game Hand #13112298 - Tournament #8043170 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/11 06:40:25 UTC
+Table '1' 9-max Seat #6 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1460.00)
+Seat 4: Villain3 (1500.00)
+Seat 5: Villain4 (1450.00)
+Seat 6: Villain5 (1440.00)
+Seat 7: Villain6 (1650.00)
+Seat 8: Villain7 (1500.00)
+Seat 9: Villain8 (1500.00)
+Villain6 posts the small blind 10.00
+Villain7 posts the big blind 20.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [8h Js]
+Villain8 folds
+Peon_84 folds
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 folds
+Villain5 calls 20.00
+Villain6 calls 10.00
+Villain7 checks
+*** FLOP *** [3c 9h 8c]
+Main pot 60.00
+Villain6 checks
+Villain7 bets 30.00
+Villain5 folds
+Villain6 folds
+Uncalled bet (30.00) returned to Villain7
+Villain7 does not show
+*** SUMMARY ***
+Total pot 60.00 | Rake 0.00
+Board [3c 9h 8c]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 3: Villain2 folded on the Pre-Flop and did not bet
+Seat 4: Villain3 folded on the Pre-Flop and did not bet
+Seat 5: Villain4 folded on the Pre-Flop and did not bet
+Seat 6: Villain5 (button) folded on the Flop
+Seat 7: Villain6 (small blind) folded on the Flop
+Seat 8: Villain7 did not show and won 60.00
+Seat 9: Villain8 folded on the Pre-Flop and did not bet
+
+Game Hand #13112345 - Tournament #8043170 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/11 06:41:37 UTC
+Table '1' 9-max Seat #7 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1460.00)
+Seat 4: Villain3 (1500.00)
+Seat 5: Villain4 (1450.00)
+Seat 6: Villain5 (1420.00)
+Seat 7: Villain6 (1630.00)
+Seat 8: Villain7 (1540.00)
+Seat 9: Villain8 (1500.00)
+Villain7 posts the small blind 10.00
+Villain8 posts the big blind 20.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [4d 2s]
+Peon_84 folds
+Villain1 folds
+Villain2 folds
+Villain3 raises 60.00 to 60.00
+Villain4 folds
+Villain5 calls 60.00
+Villain6 calls 60.00
+Villain7 folds
+Villain8 folds
+*** FLOP *** [Jd 3d Qd]
+Main pot 210.00
+Villain3 bets 1440.00 and is all-in
+Villain5 folds
+Villain6 folds
+Uncalled bet (1440.00) returned to Villain3
+Villain3 does not show
+*** SUMMARY ***
+Total pot 210.00 | Rake 0.00
+Board [Jd 3d Qd]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 3: Villain2 folded on the Pre-Flop and did not bet
+Seat 4: Villain3 did not show and won 210.00
+Seat 5: Villain4 folded on the Pre-Flop and did not bet
+Seat 6: Villain5 folded on the Flop
+Seat 7: Villain6 (button) folded on the Flop
+Seat 8: Villain7 (small blind) folded on the Pre-Flop
+Seat 9: Villain8 (big blind) folded on the Pre-Flop
+
+Game Hand #13112376 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:42:22 UTC
+Table '1' 9-max Seat #8 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1460.00)
+Seat 4: Villain3 (1650.00)
+Seat 5: Villain4 (1450.00)
+Seat 6: Villain5 (1360.00)
+Seat 7: Villain6 (1570.00)
+Seat 8: Villain7 (1530.00)
+Seat 9: Villain8 (1480.00)
+Villain8 posts the small blind 15.00
+Peon_84 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [3c 4d]
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 folds
+Villain5 calls 30.00
+Villain6 raises 120.00 to 120.00
+Villain7 folds
+Villain8 folds
+Peon_84 folds
+Villain5 calls 90.00
+*** FLOP *** [8d Qs 5d]
+Main pot 285.00
+Villain5 bets 285.00
+Villain6 raises 570.00 to 570.00
+Villain5 raises 955.00 to 1240.00 and is all-in
+Villain6 calls 670.00
+*** TURN *** [8d Qs 5d] [Th]
+Main pot 2765.00
+*** RIVER *** [8d Qs 5d Th] [3s]
+Main pot 2765.00
+*** SHOW DOWN ***
+Main pot 2765.00
+Villain5 shows [9c Qc] (a pair of Queens [Qs Qc Th 9c 8d])
+Villain6 shows [Kd Kh] (a pair of Kings [Kh Kd Qs Th 8d])
+Villain6 collected 2765.00 from main pot
+*** SUMMARY ***
+Total pot 2765.00 | Rake 0.00
+Board [8d Qs 5d Th 3s]
+Seat 1: Peon_84 (big blind) folded on the Pre-Flop
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 3: Villain2 folded on the Pre-Flop and did not bet
+Seat 4: Villain3 folded on the Pre-Flop and did not bet
+Seat 5: Villain4 folded on the Pre-Flop and did not bet
+Seat 6: Villain5 showed [9c Qc] and lost with a pair of Queens [Qs Qc Th 9c 8d]
+Seat 7: Villain6 showed [Kd Kh] and won 2765.00 with a pair of Kings [Kh Kd Qs Th 8d]
+Seat 8: Villain7 (button) folded on the Pre-Flop
+Seat 9: Villain8 (small blind) folded on the Pre-Flop
+
+Game Hand #13112401 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:43:05 UTC
+Table '1' 9-max Seat #9 is the button
+Seat 1: Peon_84 (1470.00)
+Seat 2: Villain1 (1500.00)
+Seat 3: Villain2 (1460.00)
+Seat 4: Villain3 (1650.00)
+Seat 5: Villain4 (1450.00)
+Seat 7: Villain5 (2975.00)
+Seat 8: Villain6 (1530.00)
+Seat 9: Villain7 (1465.00)
+Peon_84 posts the small blind 15.00
+Villain1 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [6c 6s]
+Villain2 raises 1460.00 to 1460.00 and is all-in
+Villain3 folds
+Villain4 folds
+Villain5 folds
+Villain6 folds
+Villain7 folds
+Peon_84 folds
+Villain1 folds
+Uncalled bet (1430.00) returned to Villain2
+Villain2 does not show
+*** SUMMARY ***
+Total pot 75.00 | Rake 0.00
+Seat 1: Peon_84 (small blind) folded on the Pre-Flop
+Seat 2: Villain1 (big blind) folded on the Pre-Flop
+Seat 3: Villain2 did not show and won 75.00
+Seat 4: Villain3 folded on the Pre-Flop and did not bet
+Seat 5: Villain4 folded on the Pre-Flop and did not bet
+Seat 7: Villain5 folded on the Pre-Flop and did not bet
+Seat 8: Villain6 folded on the Pre-Flop and did not bet
+Seat 9: Villain7 (button) folded on the Pre-Flop
+
+Game Hand #13112416 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:43:39 UTC
+Table '1' 9-max Seat #1 is the button
+Seat 1: Peon_84 (1455.00)
+Seat 2: Villain1 (1470.00)
+Seat 3: Villain2 (1505.00)
+Seat 4: Villain3 (1650.00)
+Seat 5: Villain4 (1450.00)
+Seat 7: Villain5 (2975.00)
+Seat 8: Villain6 (1530.00)
+Seat 9: Villain7 (1465.00)
+Villain1 posts the small blind 15.00
+Villain2 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [7d Jc]
+Villain3 raises 90.00 to 90.00
+Villain4 folds
+Villain5 folds
+Villain6 folds
+Villain7 folds
+Peon_84 folds
+Villain1 folds
+Villain2 raises 1475.00 to 1505.00 and is all-in
+Villain3 calls 1415.00
+*** FLOP *** [9c 8s Js]
+Main pot 3025.00
+*** TURN *** [9c 8s Js] [6h]
+Main pot 3025.00
+*** RIVER *** [9c 8s Js 6h] [Jd]
+Main pot 3025.00
+*** SHOW DOWN ***
+Main pot 3025.00
+Villain2 shows [2d Kh] (a pair of Jacks [Js Jd Kh 9c 8s])
+Villain3 shows [Ad Qc] (a pair of Jacks [Js Jd Ad Qc 9c])
+Villain3 collected 3025.00 from main pot
+*** SUMMARY ***
+Total pot 3025.00 | Rake 0.00
+Board [9c 8s Js 6h Jd]
+Seat 1: Peon_84 (button) folded on the Pre-Flop
+Seat 2: Villain1 (small blind) folded on the Pre-Flop
+Seat 3: Villain2 (big blind) showed [2d Kh] and lost with a pair of Jacks [Js Jd Kh 9c 8s]
+Seat 4: Villain3 showed [Ad Qc] and won 3025.00 with a pair of Jacks [Js Jd Ad Qc 9c]
+Seat 5: Villain4 folded on the Pre-Flop and did not bet
+Seat 7: Villain5 folded on the Pre-Flop and did not bet
+Seat 8: Villain6 folded on the Pre-Flop and did not bet
+Seat 9: Villain7 folded on the Pre-Flop and did not bet
+
+Game Hand #13112446 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:44:25 UTC
+Table '1' 9-max Seat #2 is the button
+Seat 1: Peon_84 (1455.00)
+Seat 2: Villain1 (1455.00)
+Seat 4: Villain2 (3170.00)
+Seat 5: Villain3 (1450.00)
+Seat 7: Villain4 (2975.00)
+Seat 8: Villain5 (1530.00)
+Seat 9: Villain6 (1465.00)
+Villain2 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [2s 8s]
+Villain3 folds
+Villain4 folds
+Villain5 folds
+Villain6 folds
+Peon_84 folds
+Villain1 raises 90.00 to 90.00
+Villain2 folds
+Uncalled bet (60.00) returned to Villain1
+Villain1 does not show
+*** SUMMARY ***
+Total pot 60.00 | Rake 0.00
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 did not show and won 60.00
+Seat 4: Villain2 (big blind) folded on the Pre-Flop
+Seat 5: Villain3 folded on the Pre-Flop and did not bet
+Seat 7: Villain4 folded on the Pre-Flop and did not bet
+Seat 8: Villain5 folded on the Pre-Flop and did not bet
+Seat 9: Villain6 folded on the Pre-Flop and did not bet
+
+Game Hand #13112472 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:45:22 UTC
+Table '1' 9-max Seat #3 is the button
+Seat 1: Peon_84 (1455.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3140.00)
+Seat 5: Villain3 (1450.00)
+Seat 7: Villain4 (2975.00)
+Seat 8: Villain5 (1530.00)
+Seat 9: Villain6 (1465.00)
+Villain2 posts the small blind 15.00
+Villain3 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [2c 6h]
+Villain4 folds
+Villain5 folds
+Villain6 folds
+Peon_84 folds
+Villain1 folds
+Villain2 raises 75.00 to 90.00
+Villain3 calls 60.00
+*** FLOP *** [Ad 7h Th]
+Main pot 180.00
+Villain2 bets 90.00
+Villain3 calls 90.00
+*** TURN *** [Ad 7h Th] [6d]
+Main pot 360.00
+Villain2 checks
+Villain3 checks
+*** RIVER *** [Ad 7h Th 6d] [Jc]
+Main pot 360.00
+Villain2 checks
+Villain3 checks
+*** SHOW DOWN ***
+Main pot 360.00
+Villain2 shows [Qh Qd] (a pair of Queens [Qh Qd Ad Jc Th])
+Villain3 mucks hand
+Villain2 collected 360.00 from main pot
+*** SUMMARY ***
+Total pot 360.00 | Rake 0.00
+Board [Ad 7h Th 6d Jc]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Villain2 (small blind) showed [Qh Qd] and won 360.00 with a pair of Queens [Qh Qd Ad Jc Th]
+Seat 5: Villain3 mucked
+Seat 7: Villain4 folded on the Pre-Flop and did not bet
+Seat 8: Villain5 folded on the Pre-Flop and did not bet
+Seat 9: Villain6 folded on the Pre-Flop and did not bet
+
+Game Hand #13112514 - Tournament #8043170 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2017/05/11 06:46:25 UTC
+Table '1' 9-max Seat #4 is the button
+Seat 1: Peon_84 (1455.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3320.00)
+Seat 5: Villain3 (1270.00)
+Seat 7: Villain4 (2975.00)
+Seat 8: Villain5 (1530.00)
+Seat 9: Villain6 (1465.00)
+Villain3 posts the small blind 15.00
+Villain4 posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [Tc Ts]
+Villain5 folds
+Villain6 folds
+Peon_84 raises 120.00 to 120.00
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 folds
+Uncalled bet (90.00) returned to Peon_84
+Peon_84 does not show
+*** SUMMARY ***
+Total pot 75.00 | Rake 0.00
+Seat 1: Peon_84 did not show and won 75.00
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Villain2 (button) folded on the Pre-Flop
+Seat 5: Villain3 (small blind) folded on the Pre-Flop
+Seat 7: Villain4 (big blind) folded on the Pre-Flop
+Seat 8: Villain5 folded on the Pre-Flop and did not bet
+Seat 9: Villain6 folded on the Pre-Flop and did not bet
+
+Game Hand #13112539 - Tournament #8043170 - Holdem(No Limit) - Level 3 (25.00/50.00)- 2017/05/11 06:47:02 UTC
+Table '1' 9-max Seat #5 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3320.00)
+Seat 5: Villain3 (1255.00)
+Seat 7: Villain4 (2945.00)
+Seat 8: Villain5 (1530.00)
+Seat 9: Villain6 (1465.00)
+Villain4 posts the small blind 25.00
+Villain5 posts the big blind 50.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [2c 3s]
+Villain6 folds
+Peon_84 folds
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 calls 25.00
+Villain5 checks
+*** FLOP *** [Ah Js 5d]
+Main pot 100.00
+Villain4 bets 100.00
+Villain5 folds
+Uncalled bet (100.00) returned to Villain4
+Villain4 does not show
+*** SUMMARY ***
+Total pot 100.00 | Rake 0.00
+Board [Ah Js 5d]
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Villain2 folded on the Pre-Flop and did not bet
+Seat 5: Villain3 (button) folded on the Pre-Flop
+Seat 7: Villain4 did not show and won 100.00
+Seat 8: Villain5 (big blind) folded on the Flop
+Seat 9: Villain6 folded on the Pre-Flop and did not bet
+
+Game Hand #13112562 - Tournament #8043170 - Holdem(No Limit) - Level 3 (25.00/50.00)- 2017/05/11 06:47:38 UTC
+Table '1' 9-max Seat #7 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3320.00)
+Seat 5: Villain3 (1255.00)
+Seat 7: Villain4 (2995.00)
+Seat 8: Villain5 (1480.00)
+Seat 9: Villain6 (1465.00)
+Villain5 posts the small blind 25.00
+Villain6 posts the big blind 50.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [6h Td]
+Peon_84 folds
+Villain1 folds
+Villain2 folds
+Villain3 folds
+Villain4 raises 150.00 to 150.00
+Villain5 folds
+Villain6 folds
+Uncalled bet (100.00) returned to Villain4
+Villain4 does not show
+*** SUMMARY ***
+Total pot 125.00 | Rake 0.00
+Seat 1: Peon_84 folded on the Pre-Flop and did not bet
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Villain2 folded on the Pre-Flop and did not bet
+Seat 5: Villain3 folded on the Pre-Flop and did not bet
+Seat 7: Villain4 did not show and won 125.00
+Seat 8: Villain5 (small blind) folded on the Pre-Flop
+Seat 9: Villain6 (big blind) folded on the Pre-Flop
+
+Game Hand #13112580 - Tournament #8043170 - Holdem(No Limit) - Level 3 (25.00/50.00)- 2017/05/11 06:48:13 UTC
+Table '1' 9-max Seat #8 is the button
+Seat 1: Peon_84 (1500.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3320.00)
+Seat 5: Villain3 (1255.00)
+Seat 7: Villain4 (3070.00)
+Seat 8: Villain5 (1455.00)
+Seat 9: Villain6 (1415.00)
+Villain6 posts the small blind 25.00
+Peon_84 posts the big blind 50.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [Qh 2c]
+Villain1 folds
+Villain2 folds
+Villain3 raises 100.00 to 100.00
+Villain4 folds
+Villain5 folds
+Villain6 folds
+Peon_84 folds
+Uncalled bet (50.00) returned to Villain3
+Villain3 does not show
+*** SUMMARY ***
+Total pot 125.00 | Rake 0.00
+Seat 1: Peon_84 (big blind) folded on the Pre-Flop
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Villain2 folded on the Pre-Flop and did not bet
+Seat 5: Villain3 did not show and won 125.00
+Seat 7: Villain4 folded on the Pre-Flop and did not bet
+Seat 8: Villain5 (button) folded on the Pre-Flop
+Seat 9: Villain6 (small blind) folded on the Pre-Flop
+
+Game Hand #13112598 - Tournament #8043170 - Holdem(No Limit) - Level 3 (25.00/50.00)- 2017/05/11 06:48:42 UTC
+Table '1' 9-max Seat #9 is the button
+Seat 1: Peon_84 (1450.00)
+Seat 2: Villain1 (1485.00)
+Seat 4: Villain2 (3320.00)
+Seat 5: Villain3 (1330.00)
+Seat 7: Villain4 (3070.00)
+Seat 8: Villain5 (1455.00)
+Seat 9: Villain6 (1390.00)
+Peon_84 posts the small blind 25.00
+Villain1 posts the big blind 50.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [Kd 9d]
+Villain2 folds
+Villain3 folds
+Villain4 calls 50.00
+Villain5 folds
+Villain6 folds
+Peon_84 calls 25.00
+Villain1 checks
+*** FLOP *** [Ks Jc 6h]
+Main pot 150.00
+Peon_84 bets 250.00
+Villain1 folds
+Villain4 calls 250.00
+*** TURN *** [Ks Jc 6h] [6s]
+Main pot 650.00
+Peon_84 checks
+Villain4 bets 325.00
+Peon_84 calls 325.00
+*** RIVER *** [Ks Jc 6h 6s] [3s]
+Main pot 1300.00
+Peon_84 checks
+Villain4 bets 1300.00
+Peon_84 calls 825.00 and is all-in
+Uncalled bet (475.00) returned to Villain4
+*** SHOW DOWN ***
+Main pot 2950.00
+Peon_84 shows [Kd 9d] (two pair, Kings and Sixs [Ks Kd 6s 6h Jc])
+Villain4 shows [8h 6d] (three of a kind, Set of Sixs [6s 6h 6d Ks Jc])
+Villain4 collected 2950.00 from main pot
+*** SUMMARY ***
+Total pot 2950.00 | Rake 0.00
+Board [Ks Jc 6h 6s 3s]
+Seat 1: Peon_84 (small blind) showed [Kd 9d] and lost with two pair, Kings and Sixs [Ks Kd 6s 6h Jc]
+Seat 2: Villain1 (big blind) folded on the Flop
+Seat 4: Villain2 folded on the Pre-Flop and did not bet
+Seat 5: Villain3 folded on the Pre-Flop and did not bet
+Seat 7: Villain4 showed [8h 6d] and won 2950.00 with three of a kind, Set of Sixs [6s 6h 6d Ks Jc]
+Seat 8: Villain5 folded on the Pre-Flop and did not bet
+Seat 9: Villain6 (button) folded on the Pre-Flop
+
+--------------------------------------------------------------------

@@ -51,6 +51,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase("6995792", 9)]
         [TestCase("8034884", 9)]
+        [TestCase("8043170", 9)]
         [TestCase("5944035303", 6)]
         [TestCase("5569123611", 10)]
         public void TournamentsAreImportedForEachPlayer(string tournamentNumber, int expectedCount)
@@ -71,6 +72,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase("6995792", "Peon_84", 7)]
         [TestCase("8034884", "Peon_84", 3)]
+        [TestCase("8043170", "Peon_84", 7)]
         [TestCase("6995792", "pkslcd13", 9)]
         [TestCase("6995792", "Maschris", 8)]
         [TestCase("5944035303", "WhiteRiderT", 1)]
@@ -126,6 +128,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase("6995792", "Peon_84", 150)]
         [TestCase("8034884", "Peon_84", 500)]
+        [TestCase("8043170", "Peon_84", 500)]
         [TestCase("5944035303", "BOLL1X", 10)]
         [TestCase("5569123611", "yako70", 20)]
         [TestCase("1705825174", "Peon347", 0)]
@@ -149,6 +152,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase("6995792", "Peon_84", 15)]
         [TestCase("8034884", "Peon_84", 50)]
+        [TestCase("8043170", "Peon_84", 50)]
         [TestCase("5944035303", "BOLL1X", 2)]
         [TestCase("5569123611", "yako70", 4)]
         [TestCase("1705825174", "Peon347", 0)]
@@ -172,6 +176,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase("6995792", "Peon_84", 1500)]
         [TestCase("8034884", "Peon_84", 1500)]
+        [TestCase("8043170", "Peon_84", 1500)]
         [TestCase("5944035303", "BOLL1X", 1500)]
         [TestCase("5569123611", "yako70", 1500)]
         [TestCase("1705825174", "Peon347", 1000)]
@@ -226,7 +231,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
-            Tuple.Create(@"WinningPokerNetwork\20170508_20170508_Sng2HH.txt", EnumPokerSites.Unknown)
+            Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)
         };
     }
 }

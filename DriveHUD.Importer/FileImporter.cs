@@ -400,7 +400,7 @@ namespace DriveHUD.Importers
                                 }
                             }
 
-                            ProcessTournamentData(tournamentsData, parsingResult, session);
+                            ProcessTournaments(tournamentsData, parsingResult, session);
 
                             transaction.Commit();
 
@@ -460,7 +460,7 @@ namespace DriveHUD.Importers
                                 PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
                             },
                             Stats = playerStatCopy,
-                            IsHero = isHero                         
+                            IsHero = isHero
                         };
 
                         importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
@@ -731,9 +731,44 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
+        /// Processes tournaments data
+        /// </summary>
+        /// <param name="tournaments">List of tournaments</param>
+        /// <param name="parsingResult">Results of parsing of hh </param>
+        /// <param name="session">DB session</param>
+        private void ProcessTournaments(List<Tournaments> tournaments, List<ParsingResult> parsingResult, IStatelessSession session)
+        {
+            // if hh file contains data about several tournaments we need to group them
+            var tournamentsDataGrouped = tournaments
+                .GroupBy(x => x.Tourneynumber)
+                .Select(x => new { TournamentId = x.Key, Tournaments = x.ToList() })
+                .ToDictionary(x => x.TournamentId, x => x.Tournaments);
+
+            var parsingResultGrouped = parsingResult
+                .Where(x => x.Source.GameDescription != null && x.Source.GameDescription.IsTournament)
+                .GroupBy(x => x.Source.GameDescription.Tournament.TournamentId)
+                .Select(x => new { TournamentId = x.Key, Tournaments = x.ToList() })
+                .ToDictionary(x => x.TournamentId, x => x.Tournaments);
+
+            foreach (var tournamentData in tournamentsDataGrouped)
+            {
+                // that should never happen, but who knows :)
+                if (!parsingResultGrouped.ContainsKey(tournamentData.Key))
+                {
+                    LogProvider.Log.Error(this, $"Inconsistent data. Couldn't find '{tournamentData.Key}' in parsing results. Tournament processing has been skipped.");
+                    continue;
+                }
+
+                var tournamentParsingResult = parsingResultGrouped[tournamentData.Key];
+                ProcessTournamentData(tournamentData.Value, tournamentParsingResult, session);
+            }
+        }
+
+        /// <summary>
         /// Process tournament data
         /// </summary>
         /// <param name="tournaments">List of tournaments</param>
+        /// <param name="parsingResult">Results of parsing of hh </param>
         /// <param name="session">DB session</param>
         private void ProcessTournamentData(List<Tournaments> tournaments, List<ParsingResult> parsingResult, IStatelessSession session)
         {
