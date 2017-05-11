@@ -60,6 +60,6 @@ namespace HandHistories.Parser.Parsers.Base
         /// <param name="handText"></param>
         /// <param name="isCancelled"></param>
         /// <returns>True if the hand is valid, false if not. Outs the canceled state.</returns>
-        bool IsValidOrCancelledHand(string handText, out bool isCancelled);
+        bool IsValidOrCanceledHand(string handText, out bool isCancelled);
     }
 }

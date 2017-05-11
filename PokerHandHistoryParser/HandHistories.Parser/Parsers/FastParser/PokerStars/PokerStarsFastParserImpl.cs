@@ -699,10 +699,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         public override bool IsValidHand(string[] handLines)
         {
             bool isCancelled; // in this case eat it
-            return IsValidOrCancelledHand(handLines, out isCancelled);
+            return IsValidOrCanceledHand(handLines, out isCancelled);
         }
 
-        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        public override bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
 
