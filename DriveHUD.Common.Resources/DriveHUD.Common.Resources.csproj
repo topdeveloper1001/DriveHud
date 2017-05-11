@@ -54,8 +54,8 @@
       <DependentUpon>Common.resx</DependentUpon>
     </Compile>
     <Compile Include="Enums.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Enums.resx</DependentUpon>
     </Compile>
     <Compile Include="Errors.Designer.cs">
