@@ -11,6 +11,7 @@ namespace Model.Data
     /// <summary>
     /// This class holds all the indicators for displaying HUD data
     /// </summary>
+    [Obsolete("Сlass HudIndicators is deprecated, please use class LightHudIndicators instead.")]
     public class HudIndicators : Indicators
     {
         public HudIndicators() : base()

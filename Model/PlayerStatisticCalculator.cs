@@ -543,8 +543,8 @@ namespace Model
             stat.DidColdCallOop = coldCall.Made && !preflopInPosition ? 1 : 0;
             stat.DidColdCallThreeBet = coldCall3Bet.Made ? 1 : 0;
             stat.CouldColdCallThreeBet = coldCall3Bet.Possible ? 1 : 0;
-            stat.DidColdCallThreeBet = coldCall4Bet.Made ? 1 : 0;
-            stat.CouldColdCallThreeBet = coldCall4Bet.Possible ? 1 : 0;
+            stat.DidColdCallFourBet = coldCall4Bet.Made ? 1 : 0;
+            stat.CouldColdCallFourBet = coldCall4Bet.Possible ? 1 : 0;
             stat.DidColdCallVsOpenRaiseBtn = coldCallVsBtnOpen.Made ? 1 : 0;
             stat.CouldColdCallVsOpenRaiseBtn = coldCallVsBtnOpen.Possible ? 1 : 0;
             stat.DidColdCallVsOpenRaiseSb = coldCallVsSbOpen.Made ? 1 : 0;
