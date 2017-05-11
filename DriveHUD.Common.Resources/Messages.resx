@@ -117,93 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SystemSettings_ActivePlayerFileName" xml:space="preserve">
-    <value>CurrentPlayer.txt</value>
+  <data name="Message_Migration0017_Cancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="SystemSettings_AddActivationLink" xml:space="preserve">
-    <value>http://drivehud.com</value>
+  <data name="Message_Migration0017_Rebuild" xml:space="preserve">
+    <value>Rebuild stats</value>
   </data>
-  <data name="SystemSettings_AppDataFolder" xml:space="preserve">
-    <value>DriveHUD</value>
+  <data name="Message_Migration0017_Status" xml:space="preserve">
+    <value>Rebuilding stats</value>
   </data>
-  <data name="SystemSettings_DefaultPlayersFolderName" xml:space="preserve">
-    <value>Players</value>
-  </data>
-  <data name="SystemSettings_DefaultPlayerStatisticFolderName" xml:space="preserve">
-    <value>Database</value>
-  </data>
-  <data name="SystemSettings_ForumsLink" xml:space="preserve">
-    <value>http://drivehud.com/blog/forums/</value>
-  </data>
-  <data name="SystemSettings_HeroName" xml:space="preserve">
-    <value>Hero</value>
-  </data>
-  <data name="SystemSettings_KnowledgeBase" xml:space="preserve">
-    <value>http://drivehud.com/blog/knowledgebase/</value>
-  </data>
-  <data name="SystemSettings_OnlineManual" xml:space="preserve">
-    <value>http://drivehud.com/blog/manual/</value>
-  </data>
-  <data name="SystemSettings_PricingLink" xml:space="preserve">
-    <value>http://drivehud.com/pricing</value>
-  </data>
-  <data name="SystemSettings_RenewLicenseLink" xml:space="preserve">
-    <value>http://www.acepokersolutions.com/index.php?route=checkout/renewal&amp;code={0}</value>
-  </data>
-  <data name="SystemSettings_SiteSetup_PokerStars" xml:space="preserve">
-    <value>http://drivehud.com/blog/manual/#document-21</value>
-  </data>
-  <data name="SystemSettings_SupportEmail" xml:space="preserve">
-    <value>support@drivehud.com</value>
-  </data>
-  <data name="SystemSettings_SupportMessageBody" xml:space="preserve">
-    <value>From {0}
+  <data name="Message_Migration0017_Text" xml:space="preserve">
+    <value>New stats has been added, you need to rebuild your stats to see the proper values of new stats. This operation might take some time, but it isn't mandatory to perform it. You can skip it by clicking on Cancel. Later you can run the rebuild command from the settings. 
 
-{1}</value>
+New stats:
+
+LIMP
+
+    Limp%
+    Limp EP%
+    Limp MP%
+    Limp CO%
+    Limp BTN%
+    Limp SB%
+    Limp/Call%
+
+COLD CALL
+
+    Cold Call EP%
+    Cold Call MP%
+    Cold Call CO%
+    Call Call BTN%
+    Cold Call SB%
+    Cold Call BB%
+    Cold Call 3-Bet%
+    Cold Call 4-Bet%
+    Cold Call vs BTN open%
+    Cold Call vs SB open%
+    Cold Call vs CO open%</value>
   </data>
-  <data name="SystemSettings_TargetDatabaseVersion" xml:space="preserve">
-    <value>9.5.3</value>
-  </data>
-  <data name="SystemSettings_DbFileName" xml:space="preserve">
-    <value>drivehud.db</value>
-  </data>
-  <data name="SystemSettings_AppStoreDataFolder" xml:space="preserve">
-    <value>AppStore</value>
-  </data>
-  <data name="SystemSettings_AppStoreLocalProductRepo" xml:space="preserve">
-    <value>products.xml</value>
-  </data>
-  <data name="SystemSettings_AppStoreLocalTempProductRepo" xml:space="preserve">
-    <value>products.tmp</value>
-  </data>
-  <data name="SystemSettings_AppStoreRemoteProductHash" xml:space="preserve">
-    <value>http://drivehud.com/appstore/products.hash</value>
-  </data>
-  <data name="SystemSettings_AppStoreRemoteProductRepo" xml:space="preserve">
-    <value>http://drivehud.com/appstore/products.xml</value>
-  </data>
-  <data name="SystemSettings_AppStoreLocalTempTrainingProductRepo" xml:space="preserve">
-    <value>training.tmp</value>
-  </data>
-  <data name="SystemSettings_AppStoreLocalTrainingProductRepo" xml:space="preserve">
-    <value>training.xml</value>
-  </data>
-  <data name="SystemSettings_AppStoreRemoteTrainingProductHash" xml:space="preserve">
-    <value>http://drivehud.com/appstore/training.hash</value>
-  </data>
-  <data name="SystemSettings_AppStoreRemoteTrainingProductRepo" xml:space="preserve">
-    <value>http://drivehud.com/appstore/training.xml</value>
-  </data>
-  <data name="SystemSettings_DefaultPlayerStatisticExtension" xml:space="preserve">
-    <value>.stat</value>
-  </data>
-  <data name="SystemSettings_PlayerStatisticBackupFolderName" xml:space="preserve">
-    <value>Database-backup</value>
-  </data>
-  <data name="SystemSettings_PlayerStatisticTempFolderName" xml:space="preserve">
-    <value>Database-temp</value>
-  </data>
-  <data name="SystemSettings_PlayerStatisticOldFolderName" xml:space="preserve">
-    <value>Database-old</value>
+  <data name="Message_Migration0017_Title" xml:space="preserve">
+    <value>DriveHUD: Action is required</value>
   </data>
 </root>

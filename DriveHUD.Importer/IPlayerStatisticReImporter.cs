@@ -18,5 +18,7 @@ namespace DriveHUD.Importers
     public interface IPlayerStatisticReImporter
     {
         void ReImport();
+
+        void Recover();
     }
 }

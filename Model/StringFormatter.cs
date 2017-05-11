@@ -57,6 +57,11 @@ namespace Model
             return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlayerStatisticBackupFolderName));
         }
 
+        public static string GetPlayerStatisticDataOldFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlayerStatisticOldFolderName));
+        }
+
         public static string GetPlayerStatisticExtension()
         {
             return CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayerStatisticExtension);

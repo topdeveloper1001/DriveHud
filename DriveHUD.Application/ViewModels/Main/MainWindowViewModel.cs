@@ -879,6 +879,58 @@ namespace DriveHUD.Application.ViewModels
             OnPropertyChanged(nameof(AppStartupHeader));
         }
 
+        internal async void RebuildStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new NonLocalizableString("Rebuilding statistic"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.ReImport();
+
+                    RefreshData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Rebuilding statistic failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void RecoverStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new NonLocalizableString("Recovering statistic"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.Recover();
+
+                    RefreshData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Recovering statistic failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
         #endregion
 
         #region Properties
@@ -1193,6 +1245,24 @@ namespace DriveHUD.Application.ViewModels
                 if (windowWidth != value)
                 {
                     windowWidth = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private bool isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            private set
+            {
+                if (isEnabled != value)
+                {
+                    isEnabled = value;
                     OnPropertyChanged();
                 }
             }

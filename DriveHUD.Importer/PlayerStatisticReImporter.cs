@@ -37,19 +37,21 @@ namespace DriveHUD.Importers
         private readonly string playerStatisticDataFolder;
         private readonly string playerStatisticTempDataFolder;
         private readonly string playerStatisticBackupDataFolder;
+        private readonly string playerStatisticOldDataFolder;
         private readonly IHandHistoryParserFactory handHistoryParserFactory;
         private readonly IDataService dataService;
-        private const int handHistoryRowsPerQuery = 1000;        
+        private const int handHistoryRowsPerQuery = 1000;
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
 
         /// <summary>
         /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
         /// </summary>
-        protected PlayerStatisticReImporter(string playerStatisticDataFolder, string playerStatisticTempDataFolder, string playerStatisticBackupDataFolder)
+        protected PlayerStatisticReImporter(string playerStatisticDataFolder, string playerStatisticTempDataFolder, string playerStatisticBackupDataFolder, string playerStatisticOldDataFolder)
         {
             this.playerStatisticDataFolder = playerStatisticDataFolder;
             this.playerStatisticTempDataFolder = playerStatisticTempDataFolder;
             this.playerStatisticBackupDataFolder = playerStatisticBackupDataFolder;
+            this.playerStatisticOldDataFolder = playerStatisticOldDataFolder;
             handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
         }
@@ -58,7 +60,7 @@ namespace DriveHUD.Importers
         /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
         /// </summary>
         public PlayerStatisticReImporter() : this(StringFormatter.GetPlayerStatisticDataFolderPath(),
-            StringFormatter.GetPlayerStatisticDataTempFolderPath(), StringFormatter.GetPlayerStatisticDataBackupFolderPath())
+            StringFormatter.GetPlayerStatisticDataTempFolderPath(), StringFormatter.GetPlayerStatisticDataBackupFolderPath(), StringFormatter.GetPlayerStatisticDataOldFolderPath())
         {
         }
 
@@ -68,7 +70,7 @@ namespace DriveHUD.Importers
         public void ReImport()
         {
             try
-            {               
+            {
                 BuildPlayersDictonary();
                 PrepareTemporaryPlayerStatisticData();
                 ImportHandHistories();
@@ -84,7 +86,42 @@ namespace DriveHUD.Importers
                 dataService?.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
             }
         }
-        
+
+        /// <summary>
+        /// Recovers player statistic data from backup
+        /// </summary>
+        public void Recover()
+        {
+            try
+            {
+                if (!Directory.Exists(playerStatisticBackupDataFolder))
+                {
+                    LogProvider.Log.Info("Folder with player statistic backup data has not been found");
+                    return;
+                }
+
+                var newPlayerStatisticOldDataFolder = playerStatisticOldDataFolder;
+                var backupFolderIndex = 1;
+
+                while (Directory.Exists(newPlayerStatisticOldDataFolder))
+                {
+                    newPlayerStatisticOldDataFolder = $"{playerStatisticOldDataFolder}{backupFolderIndex++}";
+                }
+
+                if (newPlayerStatisticOldDataFolder != playerStatisticOldDataFolder)
+                {
+                    Directory.Move(playerStatisticOldDataFolder, newPlayerStatisticOldDataFolder);
+                }
+
+                Directory.Move(playerStatisticDataFolder, playerStatisticOldDataFolder);
+                Directory.Move(playerStatisticBackupDataFolder, playerStatisticDataFolder);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Recovering of player statistic failed.", e);
+            }
+        }
+
         /// <summary>
         /// Builds players dictionary
         /// </summary>
@@ -233,7 +270,7 @@ namespace DriveHUD.Importers
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
             var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
-         
+
             dataService.Store(playerStat);
         }
 
@@ -242,12 +279,25 @@ namespace DriveHUD.Importers
         /// </summary>
         private void ReplaceOriginalPlayerstatistic()
         {
+            var newPlayerStatisticBackupDataFolder = playerStatisticBackupDataFolder;
+            var backupFolderIndex = 1;
+
+            while (Directory.Exists(newPlayerStatisticBackupDataFolder))
+            {
+                newPlayerStatisticBackupDataFolder = $"{playerStatisticBackupDataFolder}{backupFolderIndex++}";
+            }
+
+            if (newPlayerStatisticBackupDataFolder != playerStatisticBackupDataFolder)
+            {
+                Directory.Move(playerStatisticBackupDataFolder, newPlayerStatisticBackupDataFolder);
+            }
+
             Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
             Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
         }
 
         #region Class helpers
-     
+
         /// <summary>
         /// Represents the combined key of the player and the poker site
         /// </summary>
