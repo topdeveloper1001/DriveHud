@@ -333,6 +333,7 @@
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\Migrations\Migration0015_FixBreakLineInLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0016_RenameIgnitionLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0017_RebuildPlayerStatistic.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -341,6 +342,10 @@
     <Compile Include="Services\PokerStarsDetectorService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
+    <Compile Include="SplashScreen\NotificationViewModel.cs" />
+    <Compile Include="SplashScreen\NotificationWindow.xaml.cs">
+      <DependentUpon>NotificationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
@@ -759,6 +764,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="SplashScreen\NotificationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SplashScreen\SplashWindow.xaml">
       <SubType>Designer</SubType>

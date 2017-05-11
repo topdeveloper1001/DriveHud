@@ -35,6 +35,7 @@ namespace DriveHUD.Common.Resources
         public static string DefaultPlayerStatisticExtension = "SystemSettings_DefaultPlayerStatisticExtension";
         public static string PlayerStatisticTempFolderName = "SystemSettings_PlayerStatisticTempFolderName";
         public static string PlayerStatisticBackupFolderName = "SystemSettings_PlayerStatisticBackupFolderName";
+        public static string PlayerStatisticOldFolderName = "SystemSettings_PlayerStatisticOldFolderName";
         public static string DbFileName = "SystemSettings_DbFileName";
         public static string HeroName = "SystemSettings_HeroName";
 

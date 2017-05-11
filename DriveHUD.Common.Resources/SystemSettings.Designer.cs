@@ -241,7 +241,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Database_Backup.
+        ///   Looks up a localized string similar to Database-backup.
         /// </summary>
         internal static string SystemSettings_PlayerStatisticBackupFolderName {
             get {
@@ -250,7 +250,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Database_Temp.
+        ///   Looks up a localized string similar to Database-old.
+        /// </summary>
+        internal static string SystemSettings_PlayerStatisticOldFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_PlayerStatisticOldFolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database-temp.
         /// </summary>
         internal static string SystemSettings_PlayerStatisticTempFolderName {
             get {
