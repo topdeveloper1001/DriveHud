@@ -102,7 +102,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 bool isCancelled;
 
-                if (IsValidOrCancelledHand(lines, out isCancelled) == false)
+                if (IsValidOrCanceledHand(lines, out isCancelled) == false)
                 {
                     throw new InvalidHandException(handText ?? "NULL");
                 }
@@ -158,7 +158,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             // do nothing
         }
 
-        public HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false)
+        public virtual HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false)
         {
             var handHistory = new HandHistory();
 
@@ -176,7 +176,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 bool isCancelled;
 
-                if (!IsValidOrCancelledHand(handLines, out isCancelled))
+                if (!IsValidOrCanceledHand(handLines, out isCancelled))
                 {
                     throw new InvalidHandException(handText ?? "NULL");
                 }
@@ -188,7 +188,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 if (handHistory.GameDescription.PokerFormat == PokerFormat.Tournament)
                 {
                     handHistory.GameDescription.Tournament = ParseTournament(handLines);
-
                 }
 
                 handHistory.HandId = ParseHandId(handLines);
@@ -269,8 +268,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     throw new ExtraHandParsingAction(handLines[0]);
                 }
-
-
 
                 // remove inactive players
                 var players = handHistory.HandActions.Where(x => x.Street == Street.Preflop).Select(x => x.PlayerName).ToList();
@@ -499,12 +496,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         public abstract bool IsValidHand(string[] handLines);
 
-        public bool IsValidOrCancelledHand(string handText, out bool isCancelled)
+        public bool IsValidOrCanceledHand(string handText, out bool isCancelled)
         {
-            return IsValidOrCancelledHand(SplitHandsLines(handText), out isCancelled);
+            return IsValidOrCanceledHand(SplitHandsLines(handText), out isCancelled);
         }
 
-        public abstract bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled);
+        public abstract bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled);
 
         public List<HandAction> ParseHandActions(string handText)
         {

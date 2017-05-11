@@ -1,0 +1,41 @@
+PokerStars Game #47153512447:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:28:44 ET
+Table 'Siri III' 6-max Seat #5 is the button
+Seat 1: DURKADURDUR ($278.25 in chips) 
+Seat 2: ewagenvo ($197 in chips) 
+Seat 3: stopme10 ($206 in chips) 
+Seat 4: twinpsych ($203.85 in chips) 
+Seat 5: xxxmagicxxx ($428.65 in chips) 
+Seat 6: MasterSilviu ($247.45 in chips) 
+MasterSilviu: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+ewagenvo: raises $2 to $4
+stopme10: folds 
+twinpsych: raises $12 to $16
+xxxmagicxxx: calls $16
+MasterSilviu: folds 
+DURKADURDUR: calls $14
+ewagenvo: folds 
+*** FLOP *** [Kc 9s 3s]
+DURKADURDUR: checks 
+twinpsych: bets $33.20
+xxxmagicxxx: folds 
+DURKADURDUR: folds 
+Uncalled bet ($33.20) returned to twinpsych
+twinpsych collected $50.35 from pot
+twinpsych: doesn't show hand 
+*** SUMMARY ***
+Total pot $53 | Rake $2.65 
+Board [Kc 9s 3s]
+Seat 1: DURKADURDUR (big blind) folded on the Flop
+Seat 2: ewagenvo folded before Flop
+Seat 3: stopme10 folded before Flop (didn't bet)
+Seat 4: twinpsych collected ($50.35)
+Seat 5: xxxmagicxxx (button) folded on the Flop
+Seat 6: MasterSilviu (small blind) folded before Flop
+
+
+
+
+
+

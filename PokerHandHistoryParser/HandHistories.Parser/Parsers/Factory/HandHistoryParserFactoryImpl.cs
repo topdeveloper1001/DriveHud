@@ -35,14 +35,14 @@ namespace HandHistories.Parser.Parsers.Factory
             {
                 LastSelected = siteName;
 
-                var parser = GetFullHandHistoryParser(siteName);
+                var parser = GetFullHandHistoryParser(siteName, handText);
                 return parser;
             }
 
             throw new DHBusinessException(new NonLocalizableString("Unknown hand format"));
         }
 
-        public IHandHistoryParser GetFullHandHistoryParser(EnumPokerSites siteName)
+        public IHandHistoryParser GetFullHandHistoryParser(EnumPokerSites siteName, string handText = null)
         {
             switch (siteName)
             {
@@ -61,6 +61,14 @@ namespace HandHistories.Parser.Parsers.Factory
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
                 case EnumPokerSites.BlackChipPoker:
+
+                    if (handText != null &&
+                        (handText.StartsWith("<Game Information>", StringComparison.OrdinalIgnoreCase) ||
+                            handText.StartsWith("Game Hand", StringComparison.OrdinalIgnoreCase)))
+                    {
+                        return new WinningPokerSnG2FastParserImpl();
+                    }
+
                     return new WinningPokerNetworkFastParserImpl();
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);

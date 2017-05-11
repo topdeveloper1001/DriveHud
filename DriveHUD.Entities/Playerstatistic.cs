@@ -350,21 +350,6 @@ namespace DriveHUD.Entities
         [ProtoMember(140)]
         public virtual int DidFourBetInBb { get; set; }
 
-        [ProtoMember(141)]
-        public virtual int DidColdCallInMp { get; set; }
-
-        [ProtoMember(142)]
-        public virtual int DidColdCallInCo { get; set; }
-
-        [ProtoMember(143)]
-        public virtual int DidColdCallInBtn { get; set; }
-
-        [ProtoMember(144)]
-        public virtual int DidColdCallInSb { get; set; }
-
-        [ProtoMember(145)]
-        public virtual int DidColdCallInBb { get; set; }
-
         [ProtoMember(148)]
         public virtual int DidDonkBet { get; set; }
 
@@ -731,6 +716,75 @@ namespace DriveHUD.Entities
         [ProtoMember(270)]
         public virtual int ReraisedFacedSqueez { get; set; }
 
+        [ProtoMember(271)]
+        public virtual int LimpBtn { get; set; }
+
+        [ProtoMember(272)]
+        public virtual int LimpEp { get; set; }
+
+        [ProtoMember(273)]
+        public virtual int LimpMp { get; set; }
+
+        [ProtoMember(274)]
+        public virtual int LimpCo { get; set; }
+
+        [ProtoMember(275)]
+        public virtual int LimpSb { get; set; }
+        
+        [ProtoMember(141)]
+        public virtual int DidColdCallInMp { get; set; }
+
+        [ProtoMember(142)]
+        public virtual int DidColdCallInCo { get; set; }
+
+        [ProtoMember(143)]
+        public virtual int DidColdCallInBtn { get; set; }
+
+        [ProtoMember(144)]
+        public virtual int DidColdCallInSb { get; set; }
+
+        [ProtoMember(145)]
+        public virtual int DidColdCallInBb { get; set; }
+
+        [ProtoMember(276)]
+        public virtual int DidColdCallInEp { get; set; }  
+        
+        [ProtoMember(277)]
+        public virtual int DidColdCallThreeBet { get; set; }
+
+        [ProtoMember(278)]
+        public virtual int CouldColdCallThreeBet { get; set; }
+
+        [ProtoMember(279)]
+        public virtual int DidColdCallFourBet { get; set; }
+
+        [ProtoMember(280)]
+        public virtual int CouldColdCallFourBet { get; set; }
+
+        [ProtoMember(281)]
+        public virtual int DidColdCallVsOpenRaiseBtn { get; set; }
+
+        [ProtoMember(282)]
+        public virtual int DidColdCallVsOpenRaiseCo { get; set; }
+
+        [ProtoMember(283)]
+        public virtual int DidColdCallVsOpenRaiseSb { get; set; }
+
+        [ProtoMember(284)]
+        public virtual int CouldColdCallVsOpenRaiseBtn { get; set; }
+
+        [ProtoMember(285)]
+        public virtual int CouldColdCallVsOpenRaiseCo { get; set; }
+
+        [ProtoMember(286)]
+        public virtual int CouldColdCallVsOpenRaiseSb { get; set; }
+
+        [ProtoMember(287)]
+        public virtual int PreflopIP { get; set; }
+
+        [ProtoMember(288)]
+        public virtual int PreflopOOP { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -869,7 +923,7 @@ namespace DriveHUD.Entities
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
-
+            
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
             Totalbets += a.Totalbets;
@@ -1034,6 +1088,17 @@ namespace DriveHUD.Entities
             DidColdCallInCo += a.DidColdCallInCo;
             DidColdCallInMp += a.DidColdCallInMp;
             DidColdCallInSb += a.DidColdCallInSb;
+            DidColdCallInEp += a.DidColdCallInEp;
+            DidColdCallThreeBet += a.DidColdCallThreeBet;
+            CouldColdCallThreeBet += a.CouldColdCallThreeBet;
+            DidColdCallFourBet += a.DidColdCallFourBet;
+            CouldColdCallFourBet += a.CouldColdCallFourBet;
+            DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn;
+            DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo;
+            DidColdCallVsOpenRaiseSb += a.DidColdCallVsOpenRaiseSb;
+            CouldColdCallVsOpenRaiseBtn += a.CouldColdCallVsOpenRaiseBtn;
+            CouldColdCallVsOpenRaiseCo += a.CouldColdCallVsOpenRaiseCo;
+            CouldColdCallVsOpenRaiseSb += a.CouldColdCallVsOpenRaiseSb;
 
             FirstRaiser += a.FirstRaiser;
 
@@ -1063,6 +1128,11 @@ namespace DriveHUD.Entities
             LimpCalled += a.LimpCalled;
             LimpFolded += a.LimpFolded;
             LimpReraised += a.LimpReraised;
+            LimpBtn += a.LimpBtn;
+            LimpEp += a.LimpEp;
+            LimpMp += a.LimpMp;
+            LimpCo += a.LimpCo;
+            LimpSb += a.LimpSb;  
 
             TotalbetsFlop += a.TotalbetsFlop;
             TotalbetsTurn += a.TotalbetsTurn;
@@ -1143,6 +1213,9 @@ namespace DriveHUD.Entities
             StackInBBs = a.StackInBBs;
             EVDiff = a.EVDiff;
 
+            PreflopIP = a.PreflopIP;
+            PreflopOOP = a.PreflopOOP;
+
             #region tilt meter 
 
             CalculateTiltMeterValue(this, a);
@@ -1179,7 +1252,11 @@ namespace DriveHUD.Entities
             r.PokergametypeId = b.PokergametypeId;
             r.TotalPot = a.TotalPot + b.TotalPot;
             r.TotalPotInBB = a.TotalPotInBB + b.TotalPotInBB;
-
+            r.LimpBtn = a.LimpBtn + b.LimpBtn;
+            r.LimpEp = a.LimpEp + b.LimpEp;
+            r.LimpMp = a.LimpMp + b.LimpMp;
+            r.LimpCo = a.LimpCo + b.LimpCo;
+            r.LimpSb = a.LimpSb + b.LimpSb;
             r.Sawshowdown = a.Sawshowdown + b.Sawshowdown;
             r.Sawflop = a.Sawflop + b.Sawflop;
             r.SawTurn = a.SawTurn + b.SawTurn;
@@ -1369,6 +1446,17 @@ namespace DriveHUD.Entities
             r.DidColdCallInCo += a.DidColdCallInCo + b.DidColdCallInCo;
             r.DidColdCallInMp += a.DidColdCallInMp + b.DidColdCallInMp;
             r.DidColdCallInSb += a.DidColdCallInSb + b.DidColdCallInSb;
+            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp; 
+            r.DidColdCallThreeBet += a.DidColdCallThreeBet + b.DidColdCallThreeBet; 
+            r.CouldColdCallThreeBet += a.CouldColdCallThreeBet + b.CouldColdCallThreeBet;
+            r.DidColdCallFourBet += a.DidColdCallFourBet + b.DidColdCallFourBet; 
+            r.CouldColdCallFourBet += a.CouldColdCallFourBet + b.CouldColdCallFourBet;
+            r.DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn + b.DidColdCallVsOpenRaiseBtn;
+            r.DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo + b.DidColdCallVsOpenRaiseCo;
+            r.DidColdCallVsOpenRaiseSb += a.DidColdCallVsOpenRaiseSb + b.DidColdCallVsOpenRaiseSb;
+            r.CouldColdCallVsOpenRaiseBtn += a.CouldColdCallVsOpenRaiseBtn + b.CouldColdCallVsOpenRaiseBtn;
+            r.CouldColdCallVsOpenRaiseCo += a.CouldColdCallVsOpenRaiseCo + b.CouldColdCallVsOpenRaiseCo;
+            r.CouldColdCallVsOpenRaiseSb += a.CouldColdCallVsOpenRaiseSb + b.CouldColdCallVsOpenRaiseSb;
 
             r.FirstRaiser = a.FirstRaiser + b.FirstRaiser;
 
@@ -1463,6 +1551,9 @@ namespace DriveHUD.Entities
             r.StackInBBs = b.StackInBBs;
 
             r.EVDiff = a.EVDiff + b.EVDiff;
+
+            r.PreflopIP = a.PreflopIP + b.PreflopIP;
+            r.PreflopOOP = a.PreflopOOP + b.PreflopOOP;
 
             #region tilt meter
 

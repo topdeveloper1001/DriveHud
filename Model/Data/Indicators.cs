@@ -335,15 +335,16 @@ namespace Model.Data
 
         #region Session
 
-        public virtual string SessionStart
+        public virtual DateTime? SessionStart
         {
             get
             {
                 if (Statistics == null || !Statistics.Any())
                 {
-                    return "";
+                    return null;
                 }
-                return StringFormatter.GetDateTimeString(Statistics.Min(x => x.Time));
+
+                return Statistics.Min(x => x.Time);
             }
         }
 
@@ -353,10 +354,11 @@ namespace Model.Data
             {
                 if (Statistics == null || !Statistics.Any())
                 {
-                    return "";
+                    return string.Empty;
                 }
+
                 var length = Statistics.Max(x => x.Time) - Statistics.Min(x => x.Time);
-                return String.Format("{0}:{1:00}", (int)length.TotalHours, (int)length.Minutes);
+                return string.Format("{0}:{1:00}", (int)length.TotalHours, length.Minutes);
             }
         }
 
@@ -659,11 +661,59 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal ColdCallInEP
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallInEp, Source.Couldcoldcall);
+            }
+        }
+
         public virtual decimal ColdCallInSB
         {
             get
             {
                 return GetPercentage(Source.DidColdCallInSb, Source.Couldcoldcall);
+            }
+        }
+
+        public virtual decimal ColdCallThreeBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallThreeBet, Source.CouldColdCallThreeBet);
+            }
+        }
+
+        public virtual decimal ColdCallFourBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallFourBet, Source.CouldColdCallFourBet);
+            }
+        }
+
+        public virtual decimal ColdCallVsBtnOpen
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallVsOpenRaiseBtn, Source.CouldColdCallVsOpenRaiseBtn);
+            }
+        }
+
+        public virtual decimal ColdCallVsCoOpen
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallVsOpenRaiseCo, Source.CouldColdCallVsOpenRaiseCo);
+            }
+        }
+
+        public virtual decimal ColdCallVsSbOpen
+        {
+            get
+            {
+                return GetPercentage(Source.DidColdCallVsOpenRaiseSb, Source.CouldColdCallVsOpenRaiseSb);
             }
         }
 
@@ -795,6 +845,31 @@ namespace Model.Data
         public virtual decimal DidLimp
         {
             get { return GetPercentage(Source.LimpMade, Source.LimpPossible); }
+        }
+
+        public virtual decimal LimpEp
+        {
+            get { return GetPercentage(Source.LimpEp, Source.LimpPossible); }
+        }
+
+        public virtual decimal LimpMp
+        {
+            get { return GetPercentage(Source.LimpMp, Source.LimpPossible); }
+        }
+
+        public virtual decimal LimpCo
+        {
+            get { return GetPercentage(Source.LimpCo, Source.LimpPossible); }
+        }
+
+        public virtual decimal LimpBtn
+        {
+            get { return GetPercentage(Source.LimpBtn, Source.LimpPossible); }
+        }
+
+        public virtual decimal LimpSb
+        {
+            get { return GetPercentage(Source.LimpSb, Source.LimpPossible); }
         }
 
         public virtual decimal DidLimpCall

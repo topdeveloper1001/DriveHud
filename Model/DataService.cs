@@ -37,17 +37,30 @@ namespace Model
 
         protected virtual string playersPath
         {
-            get { return StringFormatter.GetPlayerStatisticDataFolderPath(); }
+            get;
+            set;
         }
 
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
 
         public DataService()
         {
+            playersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
+
             if (!Directory.Exists(dataPath))
             {
                 Directory.CreateDirectory(dataPath);
             }
+
+            if (!Directory.Exists(playersPath))
+            {
+                Directory.CreateDirectory(playersPath);
+            }
+        }
+
+        public void SetPlayerStatisticPath(string path)
+        {
+            playersPath = path;
 
             if (!Directory.Exists(playersPath))
             {
@@ -169,7 +182,6 @@ namespace Model
             }
         }
 
-
         public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -207,7 +219,7 @@ namespace Model
 
                 var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
 
-                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId);
+                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId, hh.HandhistoryVal);
 
                 var result = handHistoryParser.ParseFullHandHistory(hh.HandhistoryVal);
 

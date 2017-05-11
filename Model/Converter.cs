@@ -6,12 +6,15 @@ using HandHistories.Objects.Hand;
 using HoldemHand;
 using Model.Enums;
 using System.Collections.Generic;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using Model.Settings;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Entities;
 using Model.Extensions;
 using DriveHUD.EquityCalculator.Base.OmahaCalculations;
+using HandHistories.Objects.Players;
+using Card = HandHistories.Objects.Cards.Card;
 
 namespace Model.Importer
 {
@@ -50,14 +53,15 @@ namespace Model.Importer
                 return null;
             }
 
+            var actionStings = hand.HandActions
+                .Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
+                .Select(ActionToString).ToArray();
+
             var record = new HandHistoryRecord
             {
                 Time = hand.DateOfHandUtc,
                 Cards = player.HoleCards == null ? string.Empty : player.HoleCards.ToString(),
-                Line = hand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
-                    .Select(ActionToString)
-                    .Aggregate((x, y) => x + y).Trim(','),
-
+                Line = actionStings.Length > 0 ? actionStings.Aggregate((x, y) => x + y).Trim(',') : string.Empty,
                 Board = hand.CommunityCards.ToString(),
                 NetWonInCents = stat.Totalamountwonincents,
                 BBinCents = stat.Totalamountwonincents / stat.BigBlind,
@@ -191,6 +195,56 @@ namespace Model.Importer
                 return string.Empty;
 
             return wasAllinAction.Street.ToString();
+        }
+
+
+
+        public static List<decimal> CalculateEquity(HandHistory currentGame,
+                                                    List<Player> playersHasHoleCards,
+                                                    List<HoleCards> listDeadCards,
+                                                    string deadCardsString,
+                                                    string currentBoardString,
+                                                    HandHistories.Objects.Cards.Card[] currentBoardArray)
+        {
+            List<decimal> equity = new List<decimal>();
+            int count = playersHasHoleCards.Count;
+            if (count == 0)
+                return null; //no players with hole cards in this game for this action left
+            List<HoleCards> holeCards = playersHasHoleCards.Select(x => x.HoleCards).ToList();
+            try
+            {
+                GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(currentGame.GameDescription.GameType);
+
+                if (gameType == GeneralGameTypeEnum.Holdem)
+                {
+                    long[] wins = new long[count];
+                    long[] losses = new long[count];
+                    long[] ties = new long[count];
+                    long totalhands = 0;
+
+                    List<string> cardList = new List<string>();
+                    foreach (var card in holeCards.Where(card => card?.Count > 0))
+                        cardList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
+                    Hand.HandWinOdds(cardList.ToArray(), currentBoardString, deadCardsString, wins, ties, losses, ref totalhands);
+                    if (totalhands != 0)
+                        equity = wins.Select(x => Math.Round((decimal)x * 100 / totalhands, 2)).ToList();
+                }
+                else if (gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo)
+                {
+                    OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
+                    MEquity[] eq = calc.Equity(currentBoardArray.Select(x => x.ToString()).ToArray(),
+                                         holeCards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(),
+                                         new string[] { },
+                                         0);
+
+                    equity = eq.Select(x => Math.Round((decimal)x.TotalEq, 2)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquityForListOfPlayers method of Converter class", ex);
+            }
+            return equity;
         }
 
         public static decimal CalculateAllInEquity(HandHistory hand, Playerstatistic stat)

@@ -27,7 +27,7 @@
     xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     mc:Ignorable="d"
     Foreground="White">
-
+   
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
@@ -39,7 +39,7 @@
     </i:Interaction.Triggers>
 
     <UserControl.Resources>
-
+        
         <DataTemplate
             x:Key="IconTemplate">
             <Image
@@ -428,7 +428,7 @@
                     <ColumnDefinition
                         Width="295" />
                     <ColumnDefinition
-                        Width="295" />
+                        Width="260" />
                     <ColumnDefinition
                         Width="*" />
                 </Grid.ColumnDefinitions>
@@ -473,7 +473,7 @@
                 <comboboxControl:ComboBoxEx
                     Grid.Row="1"
                     Grid.Column="2"
-                    Margin="0,0,40,0"
+                    Margin="0,0,5,0"
                     MaxWidth="285"
                     Height="35"
                     PopupMaxWidth="255"
@@ -487,6 +487,14 @@
                     DisplayMemberPath="TableTypeText"
                     SelectedValue="{Binding Path=CurrentTableType}">
                 </comboboxControl:ComboBoxEx>
+
+                <Button Grid.Row="1" 
+                        Grid.Column="4"
+                        HorizontalAlignment="Left"
+                        Padding="5 0 5 0"
+                        Command="{Binding ElementName=RadMainWindow, Path=DataContext.SettingsCommand}"
+                        CommandParameter="Preferred Seating"
+                        Content="{ResX Key=Common_Preferred_Seating_Button}"/>
 
             </Grid>
 
@@ -554,7 +562,7 @@
                     <RowDefinition
                         Height="*" />
                 </Grid.RowDefinitions>
-              
+
                 <telerik:RadDiagram
                     x:Name="diagram"
                     Grid.Row="1"
@@ -585,7 +593,7 @@
                         Text="{ResX Key=Common_Hud_IgnWarning}" />
 
                 </Border>
-                
+
             </Grid>
 
             <Grid

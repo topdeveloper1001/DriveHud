@@ -26,23 +26,29 @@ namespace DriveHUD.Application.ReportsLayout
             return Add(name, member, new GridViewLength(0));
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible)
+        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible, IValueConverter converter = null)
         {
-            return Add(name, member, new GridViewLength(0), isVisible);
+            return Add(name, member, new GridViewLength(0), isVisible, converter);
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width)
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, IValueConverter converter = null)
         {
-            return Add(name, member, width, true);
+            return Add(name, member, width, true, converter);
         }
 
-
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible)
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible, IValueConverter converter)
         {
-            GridViewDataColumn column = new GridViewDataColumn
+            var binding = new Binding(member);
+
+            if (converter != null)
+            {
+                binding.Converter = converter;
+            }
+
+            var column = new GridViewDataColumn
             {
                 Header = name,
-                DataMemberBinding = new Binding(member),
+                DataMemberBinding = binding,
                 Width = width.Value == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 UniqueName = member,
                 IsVisible = isVisible
@@ -226,7 +232,13 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Cold Call BTN%", nameof(Indicators.ColdCallInBTN), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Cold Call CO%", nameof(Indicators.ColdCallInCO), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Cold Call MP%", nameof(Indicators.ColdCallInMP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call EP%", nameof(Indicators.ColdCallInEP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Cold Call SB%", nameof(Indicators.ColdCallInSB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call 3-Bet%", nameof(Indicators.ColdCallThreeBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call 4-Bet%", nameof(Indicators.ColdCallFourBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call vs BTN open%", nameof(Indicators.ColdCallVsBtnOpen), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call vs SB open%", nameof(Indicators.ColdCallVsSbOpen), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Cold Call vs CO open%", nameof(Indicators.ColdCallVsCoOpen), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Float Flop%", nameof(Indicators.FloatFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Flop Check-Raise%", nameof(Indicators.FlopCheckRaise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Raise Flop%", nameof(Indicators.RaiseFlop), ColumnType.Percentile),
@@ -243,6 +255,11 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Limp Fold%", nameof(Indicators.DidLimpFold), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Limp Reraise%", nameof(Indicators.DidLimpReraise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Limp%", nameof(Indicators.DidLimp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp EP%", nameof(Indicators.LimpEp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp MP%", nameof(Indicators.LimpMp), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp CO%", nameof(Indicators.LimpCo), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp BTN%", nameof(Indicators.LimpBtn), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Limp SB%", nameof(Indicators.LimpSb), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Donk Bet%", nameof(Indicators.DonkBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Raise Frequency Factor%", nameof(Indicators.RaiseFrequencyFactor), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("True Aggression% (TAP)", nameof(Indicators.TrueAggression), ColumnType.Percentile),

@@ -781,6 +781,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cold Call EP%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Call 4-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallFourBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallFourBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cold Call MP%.
         /// </summary>
         internal static string Enum_Stat_ColdCallMP {
@@ -795,6 +813,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_ColdCallSB {
             get {
                 return ResourceManager.GetString("Enum_Stat_ColdCallSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Call 3-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallThreeBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallThreeBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Call vs BTN open%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallVsOpenRaiseBTN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallVsOpenRaiseBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Call vs CO open%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallVsOpenRaiseCO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallVsOpenRaiseCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Call vs SB open%.
+        /// </summary>
+        internal static string Enum_Stat_ColdCallVsOpenRaiseSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ColdCallVsOpenRaiseSB", resourceCulture);
             }
         }
         
@@ -997,11 +1051,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp BTN%.
+        /// </summary>
+        internal static string Enum_Stat_LimpBtn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Call%.
         /// </summary>
         internal static string Enum_Stat_LimpCall {
             get {
                 return ResourceManager.GetString("Enum_Stat_LimpCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp CO%.
+        /// </summary>
+        internal static string Enum_Stat_LimpCo {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpCo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp EP%.
+        /// </summary>
+        internal static string Enum_Stat_LimpEp {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpEp", resourceCulture);
             }
         }
         
@@ -1015,11 +1096,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp MP%.
+        /// </summary>
+        internal static string Enum_Stat_LimpMp {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpMp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Reraise%.
         /// </summary>
         internal static string Enum_Stat_LimpReraise {
             get {
                 return ResourceManager.GetString("Enum_Stat_LimpReraise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp SB%.
+        /// </summary>
+        internal static string Enum_Stat_LimpSb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpSb", resourceCulture);
             }
         }
         

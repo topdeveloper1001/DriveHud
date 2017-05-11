@@ -13,9 +13,12 @@
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.Loggers;
+using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -24,6 +27,7 @@ using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DriveHud.Tests.IntegrationTests.Base
@@ -31,6 +35,16 @@ namespace DriveHud.Tests.IntegrationTests.Base
     public class BaseDatabaseTest
     {
         protected IDHLog customLogger;
+
+        private const string testDataFolder = @"..\..\IntegrationTests\Importers\TestData";
+
+        protected virtual string TestDataFolder
+        {
+            get
+            {
+                return testDataFolder;
+            }
+        }
 
         protected virtual void Initalize()
         {
@@ -53,6 +67,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeFileImporterLogger(unityContainer);
             InitializeLicenseService(unityContainer);
             InitializeSessionService(unityContainer);
+            InitializeResources();
 
             var locator = new UnityServiceLocator(unityContainer);
 
@@ -121,6 +136,38 @@ namespace DriveHud.Tests.IntegrationTests.Base
             LogProvider.SetCustomLogger(customLogger);
         }
 
+        /// <summary>        
+        /// Fills the database with the data from the specified hand history file
+        /// </summary>        
+        /// <param name="fileName">File with hh</param>
+        /// <param name="pokerSite">Site</param>
+        /// <returns>The result of importing</returns>
+        protected virtual IEnumerable<ParsingResult> FillDatabaseFromSingleFile(string fileName, EnumPokerSites pokerSite)
+        {
+            using (var perfScope = new PerformanceMonitor("FillDatabaseFromSingleFile"))
+            {
+                var progress = Substitute.For<IDHProgress>();
+
+                var fileImporter = new FileImporter();
+
+                var handHistoryFileFullName = Path.Combine(TestDataFolder, fileName);
+
+                var handHistoryFileInfo = new FileInfo(handHistoryFileFullName);
+
+                Assert.That(handHistoryFileInfo.Exists, $"{handHistoryFileFullName} doesn't exists. Please check.");
+
+                var handHistoryText = File.ReadAllText(handHistoryFileInfo.FullName);
+
+                var gameInfo = new GameInfo
+                {
+                    PokerSite = pokerSite,
+                    FileName = handHistoryFileInfo.FullName
+                };
+
+                return fileImporter.Import(handHistoryText, progress, gameInfo);
+            }
+        }
+
         #region Initializers
 
         protected virtual void InitializeImporterSessionCacheService(UnityContainer unityContainer)
@@ -171,6 +218,11 @@ namespace DriveHud.Tests.IntegrationTests.Base
             userSession.IsMatch(Arg.Any<GameMatchInfo>()).Returns(true);
 
             sessionService.GetUserSession().Returns(userSession);
+        }
+
+        protected virtual void InitializeResources()
+        {
+            ResourceRegistrator.Initialization();
         }
 
         #endregion

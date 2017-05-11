@@ -57,6 +57,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IImporterSessionCacheService, ImporterSessionCacheService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IFileImporter, FileImporter>();
             container.RegisterType<IFileImporterLogger, FileImporterLogger>();
+            container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());

@@ -1,0 +1,43 @@
+<Game Information>
+Title: SNG 2.0 $5.50
+Entry #: 4073583
+Begin Time: 2017/05/08 08:31:47 UTC
+Buyin to Payout: Real To Real
+Play Type: Sit & Go
+Game Type: Hold’em
+Bet Limit Type: No Limit
+
+Game Hand #12910112 - Tournament #8034884 - Holdem(No Limit) - Level 10 (250.00/500.00)- 2017/05/08 09:18:04 UTC
+Table '1' 9-max Seat #9 is the button
+Seat 2: Villain1 (1885.00)
+Seat 4: Peon_84 (903.00)
+Seat 9: Villain2 (10712.00)
+Villain1 posts ante 25.00
+Peon_84 posts ante 25.00
+Villain2 posts ante 25.00
+Villain1 posts the small blind 250.00
+Peon_84 posts the big blind 500.00
+*** HOLE CARDS ***
+Main pot 75.00
+Dealt to Peon_84 [8s 8c]
+Villain2 folds
+Villain1 raises 750.00 to 1000.00
+Peon_84 calls 378.00 and is all-in
+Uncalled bet (122.00) returned to Villain1
+*** FLOP *** [5s 9d Td]
+Main pot 1831.00
+*** TURN *** [5s 9d Td] [6h]
+Main pot 1831.00
+*** RIVER *** [5s 9d Td 6h] [Ad]
+Main pot 1831.00
+*** SHOW DOWN ***
+Main pot 1831.00
+Villain1 shows [Ks 9h] (a pair of Nines [9h 9d Ad Ks Td])
+Peon_84 shows [8s 8c] (a pair of Eights [8s 8c Ad Td 9d])
+Villain1 collected 1831.00 from main pot
+*** SUMMARY ***
+Total pot 1831.00 | Rake 0.00
+Board [5s 9d Td 6h Ad]
+Seat 2: Villain1 (small blind) showed [Ks 9h] and won 1831.00 with a pair of Nines [9h 9d Ad Ks Td]
+Seat 4: Peon_84 (big blind) showed [8s 8c] and lost with a pair of Eights [8s 8c Ad Td 9d]
+Seat 9: Villain2 (button) folded on the Pre-Flop

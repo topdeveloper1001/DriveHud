@@ -41,8 +41,9 @@
     mc:Ignorable="d"
     Width="{Binding WindowMinWidth}"
     MinWidth="{Binding WindowMinWidth}"
-    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown">
-    
+    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown"
+    x:Name="RadMainWindow">
+
     <telerik:RadWindow.Resources>
 
         <DataTemplate
@@ -1209,6 +1210,7 @@
         <!-- ************************************************************************************ -->
         <Grid
             x:Name="HeaderArea"
+            IsEnabled="{Binding IsEnabled}"
             Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -1449,7 +1451,7 @@
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
-                    
+
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu
                             x:Name="RadContextMenu"
@@ -1558,9 +1560,12 @@
         <!-- ************************************************************************************ -->
         <!-- REPORT GADGET ********************************************************************** -->
         <!-- ************************************************************************************ -->
-        <ScrollViewer
+        <ScrollViewer            
             Grid.Row="2"
             Margin="0 0 10 0"
+            PreviewMouseDown="ScrollViewer_PreviewMouseDown"
+            PreviewMouseLeftButtonDown="ScrollViewer_PreviewMouseDown"
+            PreviewMouseRightButtonUp="ScrollViewer_PreviewMouseDown"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Disabled">
             <i:Interaction.Behaviors>
@@ -1568,7 +1573,8 @@
                     ThresholdHeight="600"
                     ContentContainer="{Binding ElementName=ReportGrid}" />
             </i:Interaction.Behaviors>
-            <Grid>
+            <Grid                
+                dh:GridExtensions.IsBlurEnabled="{Binding IsEnabled, Converter={dh:BoolNotConverter}}">
                 <Grid.RowDefinitions>
                     <RowDefinition
                         Height="Auto" />
@@ -1682,6 +1688,7 @@
                 Width="20"
                 ToolTip="{ResX Key=Progress_Stop}"
                 HorizontalAlignment="Right"
+                IsEnabled="{Binding IsEnabled}"
                 Visibility="{Binding ProgressViewModel.IsActive, Converter={cnv:BoolToVisibilityConverter}, Mode=OneWay}"
                 Command="{Binding ProgressViewModel.StopCommand}">
                 <Button.Content>
