@@ -398,6 +398,9 @@ namespace DriveHUD.Application.ViewModels
                 hudElement.Seat = seat;
                 hudElement.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, seat);
                 hudElement.Opacity = CurrentLayout.Opacity;
+                hudElement.Stickers = new ObservableCollection<HudBumperStickerType>(CurrentLayout
+                    .HudBumperStickerTypes
+                    .Select(x => x.Clone()));
 
                 try
                 {
@@ -655,6 +658,9 @@ namespace DriveHUD.Application.ViewModels
             var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x => x.Clone()));
             previewHudElementViewModel.Opacity = CurrentLayout.Opacity;
             previewHudElementViewModel.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
+            previewHudElementViewModel.Stickers = new ObservableCollection<HudBumperStickerType>(CurrentLayout
+                .HudBumperStickerTypes
+                .Select(x => x.Clone()));
 
             previewHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().ForEach(tool =>
             {

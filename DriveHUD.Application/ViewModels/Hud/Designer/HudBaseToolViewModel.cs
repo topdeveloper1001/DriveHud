@@ -30,6 +30,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     [ProtoInclude(34, typeof(HudPlayerIconViewModel))]
     [ProtoInclude(35, typeof(HudGraphViewModel))]
     [ProtoInclude(36, typeof(HudTextBoxViewModel))]
+    [ProtoInclude(37, typeof(HudBumperStickersViewModel))]
     public abstract class HudBaseToolViewModel : ViewModelBase, IHudWindowElement, IHudToolBar
     {
         #region Properties
@@ -243,7 +244,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public abstract void SavePositions(List<HudPositionInfo> positions);
 
         #region IHudToolBar Implementation
-    
+
         public virtual bool IsSaveVisible
         {
             get

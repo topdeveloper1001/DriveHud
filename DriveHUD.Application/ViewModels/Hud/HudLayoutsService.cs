@@ -447,15 +447,19 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics,
-            string layoutName)
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, string layoutName)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
+
             var layout = GetLayout(layoutName);
+
             if (layout == null || stickersStatistics == null)
+            {
                 return;
+            }
+
             foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
             {
                 if (!stickersStatistics.ContainsKey(sticker.Name))
@@ -464,6 +468,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 var statistics = new HudIndicators(new[] { stickersStatistics[sticker.Name] });
+
                 if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;

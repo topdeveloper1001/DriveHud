@@ -17,7 +17,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         TextBox,
         Graph,
         GaugeIndicator,
-        BumperSticker,
+        BumperStickers,
         FourStatBox,
         PlainStatBox,
         TiltMeter,

@@ -20,6 +20,7 @@ using Model.Stats;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 
@@ -55,6 +56,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return CreateGraphTool(creationInfo);
                 case HudDesignerToolType.TextBox:
                     return CreateTextBoxTool(creationInfo);
+                case HudDesignerToolType.BumperStickers:
+                    return CreateBumperStickersTool(creationInfo);
                 default:
                     throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
             }
@@ -246,6 +249,40 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
             toolViewModel.InitializePositions();
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        /// <summary>
+        /// Creates bumper stickers view model
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
+        /// <returns>Tilt meter view model</returns>
+        private HudBaseToolViewModel CreateBumperStickersTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Bumper stickers have not been created.");
+
+            var layoutTool = new HudLayoutBumperStickersTool
+            {
+                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+                UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
+            };
+
+            layoutTool.UIPositions.ForEach(x =>
+            {
+                x.Width = HudDefaultSettings.BumperStickersWidth;
+                x.Height = HudDefaultSettings.BumperStickersHeight;
+            });
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.InitializePositions();
+
+            if (toolViewModel.Parent != null)
+            {
+                toolViewModel.Parent.Stickers = new ObservableCollection<HudBumperStickerType>(creationInfo.Layout.HudBumperStickerTypes.Select(x => x.Clone()));
+            }
 
             creationInfo.Layout.LayoutTools.Add(layoutTool);
 

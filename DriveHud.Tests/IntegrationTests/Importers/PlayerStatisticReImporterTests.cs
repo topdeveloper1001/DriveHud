@@ -32,6 +32,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         private const string playerStatisticFolder = "Database";
         private const string playerStatisticTempFolder = "Database-temp";
         private const string playerStatisticBackup = "Database-backup";
+        private const string playerStatisticOld = "Database-old";
 
         private static string databaseZipFile;
         private static string playerStatisticZipFile;
@@ -88,7 +89,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
-        [Test]      
+        [Test]
         [TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
         public void ReImportTest(string databaseZipFile, string playerStatisticZipFile, string playerName, EnumPokerSites pokerSite)
         {
@@ -320,7 +321,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         private class PlayerStatisticTestReImporter : PlayerStatisticReImporter
         {
             public PlayerStatisticTestReImporter() : base(playerStatisticFolder,
-                playerStatisticTempFolder, playerStatisticBackup)
+                playerStatisticTempFolder, playerStatisticBackup, playerStatisticOld)
             {
             }
         }

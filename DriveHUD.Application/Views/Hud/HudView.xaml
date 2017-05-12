@@ -27,7 +27,7 @@
     xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     mc:Ignorable="d"
     Foreground="White">
-   
+
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
@@ -39,7 +39,7 @@
     </i:Interaction.Triggers>
 
     <UserControl.Resources>
-        
+
         <DataTemplate
             x:Key="IconTemplate">
             <Image
@@ -435,7 +435,7 @@
             x:Key="TextBoxAdornerTemplate">
             <Border
                 Width="{x:Static res:HudDefaultSettings.TextBoxWidth}"
-                Height="{x:Static res:HudDefaultSettings.TextBoxHeight}"                
+                Height="{x:Static res:HudDefaultSettings.TextBoxHeight}"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
@@ -483,6 +483,16 @@
                 MinHeight="35"
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
+
+        <DataTemplate
+            x:Key="BumperStickersAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.BumperStickersWidth}"
+                Height="{x:Static res:HudDefaultSettings.BumperStickersHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.BumperStickersHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
 
         <Style
             x:Key="ControlButtonStyle"
@@ -616,13 +626,15 @@
                     </comboboxControl:ComboBoxEx.ItemTemplate>
                 </comboboxControl:ComboBoxEx>
 
-                <Button Grid.Row="1" 
-                        Grid.Column="4"
-                        HorizontalAlignment="Left"
-                        Padding="5 0 5 0"
-                        Command="{Binding ElementName=RadMainWindow, Path=DataContext.SettingsCommand}"
-                        CommandParameter="Preferred Seating"
-                        Content="{ResX Key=Common_Preferred_Seating_Button}"/>
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    HorizontalAlignment="Left"
+                    Padding="5 0 5 0"
+                    MinHeight="34"
+                    Command="{Binding ElementName=RadMainWindow, Path=DataContext.SettingsCommand}"
+                    CommandParameter="Preferred Seating"
+                    Content="{ResX Key=Common_Preferred_Seating_Button}" />
 
             </Grid>
 
@@ -633,8 +645,7 @@
                 HorizontalAlignment="Left"
                 Orientation="Vertical">
 
-                <Grid                    
-                    >
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition
                             Height="Auto" />
@@ -659,7 +670,7 @@
                         Command="{Binding DataSaveCommand}"
                         Content="{ResX Key=Common_Hud_Save}">
                     </Button>
-                    
+
                     <Button
                         Grid.Column="0"
                         Grid.Row="1"
@@ -684,7 +695,7 @@
 
                     <Button
                         Grid.Column="0"
-                        Grid.Row="2"                        
+                        Grid.Row="2"
                         Width="95"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
@@ -695,7 +706,7 @@
 
                     <Button
                         Grid.Column="1"
-                        Grid.Row="2"                        
+                        Grid.Row="2"
                         Width="95"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
@@ -733,7 +744,7 @@
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"                        
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
                         CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
 
                     <controls:ImageButton
@@ -811,9 +822,10 @@
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"
                         ToolTip="{ResX Key=Common_HudSideBar_BumperStickersTool}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.BumperSticker}" />
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}" />
 
                 </UniformGrid>
 

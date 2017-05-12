@@ -83,6 +83,13 @@
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
+    <!-- Template for bumper stickers inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudBumperStickersTemplate">
+        <ctl:HudBumperStickersDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
     <!-- Template for HudToolBar -->
     <ControlTemplate
         x:Key="HudToolBarControlTemplate"

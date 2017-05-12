@@ -112,6 +112,10 @@ namespace DriveHUD.Common.Resources
 
         public const double TextBoxHeight = 25d;
 
+        public const double BumperStickersWidth = 100d;
+
+        public const double BumperStickersHeight = 13d;
+
         #endregion
     }
 }

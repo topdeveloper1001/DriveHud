@@ -11,7 +11,7 @@ namespace Model.Data
     /// <summary>
     /// This class holds all the indicators for displaying HUD data
     /// </summary>
-    [Obsolete("Сlass HudIndicators is deprecated, please use class LightHudIndicators instead.")]
+    [Obsolete("Сlass HudIndicators is deprecated, please use class HudLightIndicators instead.")]
     public class HudIndicators : Indicators
     {
         public HudIndicators() : base()
@@ -1469,7 +1469,7 @@ namespace Model.Data
             }
         }
 
-        public  virtual StatDto FoldToRiverCBetObject
+        public virtual StatDto FoldToRiverCBetObject
         {
             get
             {

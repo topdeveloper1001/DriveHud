@@ -72,7 +72,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
         public virtual FrameworkElement Create(HudBaseToolViewModel hudToolElement)
         {
-            Check.Require(hudToolElement != null);            
+            Check.Require(hudToolElement != null);
 
             FrameworkElement hudTool = null;
 
@@ -92,6 +92,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     break;
                 case HudDesignerToolType.TextBox:
                     hudTool = new HudTextBox();
+                    break;
+                case HudDesignerToolType.BumperStickers:
+                    hudTool = new HudBumperStickers();
                     break;
                 case HudDesignerToolType.GaugeIndicator:
                 case HudDesignerToolType.Graph:

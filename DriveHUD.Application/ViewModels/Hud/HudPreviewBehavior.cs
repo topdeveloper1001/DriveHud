@@ -143,12 +143,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            var disposable = Observable.FromEventPattern<RoutedEventHandler, RoutedEventArgs>(
-                h => toolElement.Loaded += h,
-                h => toolElement.Loaded -= h).Subscribe(x => ResizeCanvas());
+            Disposables.Add(Observable.FromEventPattern<SizeChangedEventHandler, SizeChangedEventArgs>(
+                h => toolElement.SizeChanged += h,
+                h => toolElement.SizeChanged -= h).Subscribe(x => ResizeCanvas()));
 
-            Disposables.Add(disposable);
-
+            Disposables.Add(Observable.FromEventPattern<RoutedEventHandler, RoutedEventArgs>(
+              h => toolElement.Loaded += h,
+              h => toolElement.Loaded -= h).Subscribe(x => ResizeCanvas()));
+      
             AssociatedObject.Children.Add(toolElement);
         }
 
@@ -174,7 +176,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             // get edges positions
             foreach (var toolElement in toolsElements)
-            {
+            {               
                 var tool = toolElement.DataContext as HudBaseToolViewModel;
 
                 if (tool == null)
