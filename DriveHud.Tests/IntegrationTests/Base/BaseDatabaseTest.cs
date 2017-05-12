@@ -67,6 +67,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeFileImporterLogger(unityContainer);
             InitializeLicenseService(unityContainer);
             InitializeSessionService(unityContainer);
+            InitializeResources();
 
             var locator = new UnityServiceLocator(unityContainer);
 
@@ -217,6 +218,11 @@ namespace DriveHud.Tests.IntegrationTests.Base
             userSession.IsMatch(Arg.Any<GameMatchInfo>()).Returns(true);
 
             sessionService.GetUserSession().Returns(userSession);
+        }
+
+        protected virtual void InitializeResources()
+        {
+            ResourceRegistrator.Initialization();
         }
 
         #endregion

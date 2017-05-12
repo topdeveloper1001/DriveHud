@@ -699,10 +699,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         public override bool IsValidHand(string[] handLines)
         {
             bool isCancelled; // in this case eat it
-            return IsValidOrCancelledHand(handLines, out isCancelled);
+            return IsValidOrCanceledHand(handLines, out isCancelled);
         }
 
-        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        public override bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
 
@@ -1517,6 +1517,52 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     else
                     {
                         break;
+                    }
+                }
+            }
+
+            if (summaryIndex != -1)
+            {
+                for (int i = handLines.Length - 1; i > summaryIndex; i--)
+                {
+                    string line = handLines[i];
+
+                    if (line.Contains("mucked ["))
+                    {
+                        var muckedIndex = line.IndexOf("mucked [");
+                    
+                        // Seat 1: DURKADURDUR (button) mucked [Ac Jh]
+                        // Seat 6: ledzep6028 (button) (small blind) mucked [5d 4s]
+                        var seatStartIndex = line.IndexOf(' ') + 1;
+                        var seatEndIndex = line.IndexOf(":");
+
+                        if (seatStartIndex <= 0 || seatEndIndex < 0 || (seatEndIndex - seatStartIndex) < 1)
+                        {
+                            continue;
+                        }
+
+                        var seatText = line.Substring(seatStartIndex, seatEndIndex - seatStartIndex);
+
+                        int seat;
+
+                        if (!int.TryParse(seatText, out seat))
+                        {
+                            continue;
+                        }
+
+                        var player = playerList.FirstOrDefault(x => x.SeatNumber == seat);
+
+                        if (player == null)
+                        {
+                            continue;
+                        }
+
+                        var cardsStartIndex = muckedIndex + 8;
+                        var cardsEndIndex = line.IndexOf(']', cardsStartIndex);
+
+                        var cards = line.Substring(cardsStartIndex, cardsEndIndex - cardsStartIndex);
+
+                        player.HoleCards = HoleCards.FromCards(cards);
                     }
                 }
             }

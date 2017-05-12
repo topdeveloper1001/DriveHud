@@ -97,11 +97,22 @@ namespace Model.Stats
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetSB, PropertyName = nameof(Indicators.FourBetInSB) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetBB, PropertyName = nameof(Indicators.FourBetInBB) },
 
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpEp, PropertyName = nameof(Indicators.LimpEp) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpMp, PropertyName = nameof(Indicators.LimpMp) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpCo, PropertyName = nameof(Indicators.LimpCo) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpBtn, PropertyName = nameof(Indicators.LimpBtn) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = nameof(Indicators.LimpSb) },
+
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallMP, PropertyName = nameof(Indicators.ColdCallInMP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallCO, PropertyName = nameof(Indicators.ColdCallInCO) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBTN, PropertyName = nameof(Indicators.ColdCallInBTN) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallSB, PropertyName = nameof(Indicators.ColdCallInSB) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBB, PropertyName = nameof(Indicators.ColdCallInBB) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseBTN, PropertyName = nameof(Indicators.ColdCallVsBtnOpen) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseCO, PropertyName = nameof(Indicators.ColdCallVsCoOpen) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseSB, PropertyName = nameof(Indicators.ColdCallVsSbOpen) },
+
+
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInEP, PropertyName = nameof(Indicators.PFRInEP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInMP, PropertyName = nameof(Indicators.PFRInMP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInCO, PropertyName = nameof(Indicators.PFRInCO) },
@@ -131,6 +142,8 @@ namespace Model.Stats
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromFourBetPot) },
 
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3Bet, PropertyName = nameof(Indicators.ThreeBet) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.ColdCallThreeBet, PropertyName = nameof(Indicators.ColdCallThreeBet) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.ColdCallFourBet, PropertyName = nameof(Indicators.ColdCallFourBet) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetMP, PropertyName = nameof(Indicators.ThreeBetInMP) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetCO, PropertyName = nameof(Indicators.ThreeBetInCO) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetBTN, PropertyName = nameof(Indicators.ThreeBetInBTN) },
@@ -144,7 +157,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBTN, PropertyName = nameof(Indicators.FourBetInBTN) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetSB, PropertyName = nameof(Indicators.FourBetInSB) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBB, PropertyName = nameof(Indicators.FourBetInBB) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldToSqueez,  PropertyName = nameof(Indicators.FoldToSqueez) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldToSqueez, PropertyName = nameof(Indicators.FoldToSqueez) },
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF, PropertyName = nameof(Indicators.WSWSF) },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise, PropertyName = nameof(Indicators.FlopCheckRaise) },

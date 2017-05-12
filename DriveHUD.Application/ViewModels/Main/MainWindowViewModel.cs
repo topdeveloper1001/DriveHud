@@ -797,6 +797,58 @@ namespace DriveHUD.Application.ViewModels
             OnPropertyChanged(nameof(AppStartupHeader));
         }
 
+        internal async void RebuildStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new NonLocalizableString("Rebuilding statistic"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.ReImport();
+
+                    RefreshData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Rebuilding statistic failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void RecoverStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new NonLocalizableString("Recovering statistic"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.Recover();
+
+                    RefreshData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Recovering statistic failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
         #endregion
 
         #region Properties
@@ -1116,6 +1168,24 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            private set
+            {
+                if (isEnabled != value)
+                {
+                    isEnabled = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -1141,6 +1211,9 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
+                RadDropDownButtonFilterKeepOpen = false;
+                RadDropDownButtonFilterIsOpen = false;
+                RadDropDownButtonFilterKeepOpen = true;
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
@@ -1207,27 +1280,34 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            if (importerService.IsStarted)
+            try
             {
-                importerService.StopImport();
+                if (importerService.IsStarted)
+                {
+                    importerService.StopImport();
+                }
+
+                hudTransmitter.Dispose();
+                importerSessionCacheService.End();
+
+                dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+
+                // flush betonline cash
+                var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
+                tournamentsCacheService.Flush();
+
+                PokerStarsDetectorSingletonService.Instance.Stop();
+
+                apiHost.CloseAPIService();
+
+                if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+                {
+                    eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                }
             }
-
-            hudTransmitter.Dispose();
-            importerSessionCacheService.End();
-
-            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
-
-            // flush betonline cash
-            var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
-            tournamentsCacheService.Flush();
-
-            PokerStarsDetectorSingletonService.Instance.Stop();
-
-            apiHost.CloseAPIService();
-
-            if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+            catch (Exception ex)
             {
-                eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                LogProvider.Log.Error(this, ex);
             }
         }
 
@@ -1257,7 +1337,7 @@ namespace DriveHUD.Application.ViewModels
             notification.Title = "Settings";
             notification.PubSubMessage = pubSubMessage;
             notification.Parameter = pubSubMessage?.Parameter;
-            
+
 
 
             this.PopupSettingsRequest.Raise(notification,

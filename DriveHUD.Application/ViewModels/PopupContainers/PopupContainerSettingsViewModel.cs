@@ -60,7 +60,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 ViewModelCollection = new List<ISettingsViewModel>()
                 {
-                    new SettingsGeneralViewModel(name: "General"),
+                    new SettingsGeneralViewModel(name: "General", parent: this),
                     new SettingsSiteViewModel(name: "Site Settings"),
                     new SettingsCurrencyViewModel(name: "Currency"),
                     new SettingsRakeBackViewModel(name: "RakeBack"),
@@ -88,7 +88,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                         SelectedViewModel = vm;
                     }
                     else
-                        SelectedViewModel = viewModel;  
+                        SelectedViewModel = viewModel;
                 }
             }
         }

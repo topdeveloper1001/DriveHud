@@ -54,8 +54,8 @@
       <DependentUpon>Common.resx</DependentUpon>
     </Compile>
     <Compile Include="Enums.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Enums.resx</DependentUpon>
     </Compile>
     <Compile Include="Errors.Designer.cs">
@@ -68,6 +68,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
     </Compile>
     <Compile Include="ProgressMessages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +126,10 @@
     <EmbeddedResource Include="Main.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Main.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>

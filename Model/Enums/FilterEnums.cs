@@ -79,7 +79,7 @@ namespace Model.Enums
     public struct EnumDateFiterStruct
 
     {
-        public EnumDateFiter EnumDateRange;//{ get; set; }
+        public EnumDateFiter EnumDateRange{ get; set; }
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
 
@@ -124,6 +124,12 @@ namespace Model.Enums
         NonPremiumHand,
         BluffRange,
     }
+
+    public enum QuickFilterPositionEnum
+    {
+        Any, BTN, Blinds, Small, Big, IP, OOP
+    }
+
 
     public enum EnumFilterType
     {

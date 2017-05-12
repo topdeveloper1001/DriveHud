@@ -16,6 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
@@ -114,8 +115,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             }
             return false;
         }
-
-        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        
+        public override bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
 

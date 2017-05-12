@@ -22,6 +22,8 @@ using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DriveHUD.Common.Linq;
+using NHibernate.Cfg.MappingSchema;
 
 namespace Model
 {
@@ -32,10 +34,10 @@ namespace Model
     {
         public Playerstatistic CalculateStatistic(ParsingResult result, Players u)
         {
-            var parsedHand = result.Source;
+            HandHistory parsedHand = result.Source;
             var player = u.Playername;
 
-            var stat = new Playerstatistic
+            Playerstatistic stat = new Playerstatistic
             {
                 PlayerName = player,
                 Numberofplayers = (short)parsedHand.NumPlayersActive,
@@ -48,7 +50,7 @@ namespace Model
             stat.CurrencyId = (short)parsedHand.GameDescription.Limit.Currency;
             stat.PokergametypeId = (short)(parsedHand.GameDescription.GameType);
 
-            var playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
+            HandAction[] playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
 
             int call = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street > Street.Preflop);
             int bet = playerHandActions.Count(handAction => handAction.IsBet() && handAction.Street > Street.Preflop);
@@ -115,6 +117,9 @@ namespace Model
 
             bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Preflop);
             bool isRagPreflop = IsRag(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
+
+            Player cutoff = GetCutOffPlayer(parsedHand);
+            Player dealer = GetDealerPlayer(parsedHand);
 
             var numberOfActivePlayerOnFlop = parsedHand.NumPlayersActive - parsedHand.PreFlop.Count(x => x.IsFold);
             #region cbet
@@ -228,6 +233,27 @@ namespace Model
             if (pfrOcurred)
                 CalculateColdCall(coldCall, preflops, player);
 
+            ConditionalBet coldCall3Bet = new ConditionalBet();
+            CalculateColdCall3Bet(coldCall3Bet, preflops, player);
+
+            ConditionalBet coldCall4Bet = new ConditionalBet();
+            CalculateColdCall4Bet(coldCall4Bet, preflops, player);
+
+            //calculation of cold call after open raise at BTN position
+            ConditionalBet coldCallVsBtnOpen = new ConditionalBet();
+            if (dealer != null)
+                ColdCallafterPositionalOpenRaise(coldCallVsBtnOpen, preflops, player, dealer.PlayerName);
+
+            //calculation of cold call after open raise at Sb position
+            ConditionalBet coldCallVsSbOpen = new ConditionalBet();
+            if (parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND) != null)
+            ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
+
+            //calculation of cold call after open raise at Co position
+            ConditionalBet coldCallVsCoOpen = new ConditionalBet();
+            if (cutoff != null)
+                ColdCallafterPositionalOpenRaise(coldCallVsCoOpen, preflops, player, cutoff.PlayerName);
+
             #endregion
 
             #region Squeeze
@@ -310,8 +336,6 @@ namespace Model
                     limped = false;
             }
 
-            var cutoff = GetCutOffPlayer(parsedHand);
-            var dealer = GetDealerPlayer(parsedHand);
 
             stat.SmallBlind = Math.Abs(parsedHand.GameDescription.Limit.SmallBlind);
             stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);
@@ -517,6 +541,16 @@ namespace Model
             stat.Didcoldcall = coldCall.Made ? 1 : 0;
             stat.DidColdCallIp = coldCall.Made && preflopInPosition ? 1 : 0;
             stat.DidColdCallOop = coldCall.Made && !preflopInPosition ? 1 : 0;
+            stat.DidColdCallThreeBet = coldCall3Bet.Made ? 1 : 0;
+            stat.CouldColdCallThreeBet = coldCall3Bet.Possible ? 1 : 0;
+            stat.DidColdCallFourBet = coldCall4Bet.Made ? 1 : 0;
+            stat.CouldColdCallFourBet = coldCall4Bet.Possible ? 1 : 0;
+            stat.DidColdCallVsOpenRaiseBtn = coldCallVsBtnOpen.Made ? 1 : 0;
+            stat.CouldColdCallVsOpenRaiseBtn = coldCallVsBtnOpen.Possible ? 1 : 0;
+            stat.DidColdCallVsOpenRaiseSb = coldCallVsSbOpen.Made ? 1 : 0;
+            stat.CouldColdCallVsOpenRaiseSb = coldCallVsSbOpen.Possible ? 1 : 0;
+            stat.DidColdCallVsOpenRaiseCo = coldCallVsCoOpen.Made ? 1 : 0;
+            stat.CouldColdCallVsOpenRaiseCo = coldCallVsCoOpen.Possible ? 1 : 0;
 
             stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
             stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && playedTurn ? 1 : 0;
@@ -616,8 +650,7 @@ namespace Model
 
             if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
-                stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind,
-                    parsedHand.GameDescription.Limit.BigBlind, parsedHand.GameDescription.GameType);
+                stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind, parsedHand.GameDescription.Limit.BigBlind, parsedHand.GameDescription.GameType);
             }
             else
             {
@@ -656,6 +689,9 @@ namespace Model
             stat.MRatio = CalculateMRatio(stat);
             CalculatePositionalData(stat);
 
+            stat.PreflopIP = preflopInPosition ? 1 : 0;
+            stat.PreflopOOP = !preflopInPosition ? 1 : 0;
+
             #endregion
 
             return stat;
@@ -683,8 +719,8 @@ namespace Model
         internal static bool IsUnopened(Playerstatistic stat)
         {
             return (stat.FacingPreflop == EnumFacingPreflop.Unopened
-                || stat.FacingPreflop == EnumFacingPreflop.Limper
-                || stat.FacingPreflop == EnumFacingPreflop.MultipleLimpers);
+                    || stat.FacingPreflop == EnumFacingPreflop.Limper
+                    || stat.FacingPreflop == EnumFacingPreflop.MultipleLimpers);
         }
 
         public static void CalculatePositionalData(Playerstatistic stat)
@@ -806,7 +842,7 @@ namespace Model
             var hand = new HoldemHand.Hand(holeCards.ToString(), boardCards.ToString());
 
             return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL)
-              && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
+                && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
         }
 
         private bool IsMonotone(BoardCards communityCards, Street street)
@@ -856,29 +892,35 @@ namespace Model
             {
                 case "EP":
                     stat.PfrInEp = stat.Pfrhands;
+                    stat.LimpEp = stat.LimpMade;
+                    stat.DidColdCallInEp = stat.Didcoldcall;
                     break;
                 case "MP":
                     stat.DidThreeBetInMp = stat.Didthreebet;
                     stat.DidFourBetInMp = stat.Didfourbet;
                     stat.DidColdCallInMp = stat.Didcoldcall;
+                    stat.LimpMp = stat.LimpMade;
                     stat.PfrInMp = stat.Pfrhands;
                     return;
                 case "CO":
                     stat.DidThreeBetInCo = stat.Didthreebet;
                     stat.DidFourBetInCo = stat.Didfourbet;
                     stat.DidColdCallInCo = stat.Didcoldcall;
+                    stat.LimpCo = stat.LimpMade;
                     stat.PfrInCo = stat.Pfrhands;
                     return;
                 case "BTN":
                     stat.DidThreeBetInBtn = stat.Didthreebet;
                     stat.DidFourBetInBtn = stat.Didfourbet;
                     stat.DidColdCallInBtn = stat.Didcoldcall;
+                    stat.LimpBtn = stat.LimpMade;
                     stat.PfrInBtn = stat.Pfrhands;
                     return;
                 case "SB":
                     stat.DidThreeBetInSb = stat.Didthreebet;
                     stat.DidFourBetInSb = stat.Didfourbet;
                     stat.DidColdCallInSb = stat.Didcoldcall;
+                    stat.LimpSb = stat.LimpMade;
                     stat.PfrInSb = stat.Pfrhands;
                     return;
                 case "BB":
@@ -1045,6 +1087,97 @@ namespace Model
             }
         }
 
+
+        private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
+        {
+            var raisers = new List<string>();
+
+            bool canThreeBet = false;
+            bool wasThreeBet = false;
+
+            foreach (var action in preflops)
+            {
+                if (wasThreeBet)
+                {
+                    if (action.PlayerName == player)
+                        coldCall3Bet.Possible = true;
+
+                    if (action.IsRaise)
+                        return;
+
+                    if (!action.IsCall() || action.PlayerName != player)
+                        continue;
+
+                    coldCall3Bet.Made = true;
+                    return;
+                }
+                else if (canThreeBet)
+                {
+                    if (action.IsRaise())
+                    {
+                        if (action.PlayerName == player)
+                            return;
+
+                        wasThreeBet = true;
+                    }
+                }
+                else
+                {
+                    if (action.IsRaise())
+                    {
+                        canThreeBet = true;
+                    }
+                }
+            }
+        }
+
+        private static void CalculateColdCall4Bet(ConditionalBet coldCall4Bet, List<HandAction> preflops, string player)
+        {
+            var raisers = new List<string>();
+
+            bool canThreeBet = false;
+            bool wasThreeBet = false;
+            bool wasFourBet = false;
+
+            foreach (var action in preflops)
+            {
+                if (wasFourBet)
+                {
+                    if (action.PlayerName == player)
+                        coldCall4Bet.Possible = true;
+
+                    if (action.IsRaise)
+                        return;
+
+                    if (!action.IsCall() || action.PlayerName != player)
+                        continue;
+
+                    coldCall4Bet.Made = true;
+                    return;
+                }
+                else if (wasThreeBet)
+                {
+                    if (action.IsRaise())
+                    {
+                        if (action.PlayerName == player)
+                            return;
+
+                        wasFourBet = true;
+                    }
+                }
+                else if (canThreeBet)
+                {
+                    if (action.IsRaise())
+                        wasThreeBet = true;
+                }
+                else
+                {
+                    if (action.IsRaise())
+                        canThreeBet = true;
+                }
+            }
+        }
+
         private static void Calculate2PreflopRaisers(ConditionalBet twoPfr, List<HandAction> preflops, string player)
         {
             var raisers = preflops.Where(x => x.IsRaise()).ToList();
@@ -1061,7 +1194,7 @@ namespace Model
                             break;
                         if (!action.IsRaise() &&
                             (action.PlayerName == raisers[0].PlayerName ||
-                             action.PlayerName == raisers[1].PlayerName))
+                            action.PlayerName == raisers[1].PlayerName))
                         {
                             break;
                         }
@@ -1081,28 +1214,44 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Determines if player did cold call
+        /// </summary>
+        /// <param name="coldCall">Cold call <see cref="Condition"/></param>
+        /// <param name="preflops">Preflop <see cref="HandAction"/> actions</param>
+        /// <param name="player">Player</param>
         private static void CalculateColdCall(Condition coldCall, IList<HandAction> preflops, string player)
         {
             bool wasColdRaise = false;
+
             foreach (var action in preflops)
             {
                 if (wasColdRaise)
                 {
                     if (action.PlayerName != player)
+                    {
                         continue;
+                    }
 
                     coldCall.Possible = true;
+
                     if (action.IsCall())
+                    {
                         coldCall.Made = true;
+                    }
 
                     return;
                 }
 
                 if (action.PlayerName == player && action.IsRaise())
+                {
                     return;
+                }
 
                 if (action.IsRaise())
+                {
                     wasColdRaise = true;
+                }
             }
         }
 
@@ -1182,7 +1331,10 @@ namespace Model
             }
         }
 
-        private static void Calculate3Bet(ConditionalBet threeBet, IList<HandAction> actions, string player, string raiser)
+        private static void Calculate3Bet(ConditionalBet threeBet,
+                                          IList<HandAction> actions,
+                                          string player,
+                                          string raiser)
         {
             bool start3Bet = false;
             foreach (var action in actions)
@@ -1224,6 +1376,57 @@ namespace Model
                         start3Bet = true;
                     }
                 }
+            }
+        }
+
+
+        private static void ColdCallafterPositionalOpenRaise(ConditionalBet coldCallVsBtnOpen,
+                                                             IList<HandAction> preflops,
+                                                             string player,
+                                                             string playerPositionalOpenRaiseName)
+        {
+            bool btnOpen = false;
+
+            foreach (var action in preflops.Where(act => !act.IsBlinds))
+            {
+                if (btnOpen)
+                {
+                    if (action.IsCall() && action.PlayerName != player)
+                    {
+                        coldCallVsBtnOpen.Happened = true;
+                        continue;
+                    }
+                    if (action.IsRaise() && action.PlayerName != player)
+                        if (coldCallVsBtnOpen.Happened)
+                            return;
+                        else
+                            continue;
+
+                    if (action.PlayerName == player)
+                        coldCallVsBtnOpen.Possible = true;
+
+
+                    if (action.IsFold && action.PlayerName == player)
+                        return;
+
+                    if (action.IsCall && action.PlayerName == player)
+                    {
+                        coldCallVsBtnOpen.Made = true;
+                        return;
+                    }
+                }
+                else
+                {
+                    if (!action.IsFold && !action.IsRaise)
+                        return;
+                    if (action.IsRaise && action.PlayerName == playerPositionalOpenRaiseName)
+                        btnOpen = true;
+                    if (action.IsRaise && action.PlayerName != playerPositionalOpenRaiseName)
+                        return;
+                    if (action.IsFold && action.PlayerName == player)
+                        return;
+                }
+
             }
         }
 
@@ -1512,14 +1715,22 @@ namespace Model
             var actions = hand.HandActions.Street(street)
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
                     && x.HandActionType != HandActionType.ANTE)
-                .ToList();
+                .ToArray();
 
-            if (actions.Any(x => x.IsBlinds))
+            var sbAction = actions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND);
+
+            // DHUD-273: if only 2 players are playing. there is a possible case when SB is a dealer, then he will be in position even if his action was first
+            if (hand.Players.Count == 2)
             {
-                // in case we have 2 or more bb
-                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND)
-                    ? actions.Skip(2).ToList()
-                    : actions.Skip(1).ToList();
+                if (sbAction != null)
+                {
+                    var sbPlayer = hand.Players.FirstOrDefault(x => x.PlayerName == sbAction.PlayerName);
+
+                    if (sbPlayer != null && sbPlayer.SeatNumber == hand.DealerButtonPosition)
+                    {
+                        return sbPlayer;
+                    }
+                }
             }
 
             var players = new List<string>();
@@ -1534,12 +1745,22 @@ namespace Model
                 players.Add(action.PlayerName);
             }
 
-            if (players.Any())
+            // DHUD-273: remove players who folded from the list
+            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
+            foldedPlayers.ForEach(x => players.Remove(x));
+
+            if (players.Count > 0)
             {
                 var ipPlayer = players.LastOrDefault();
+
+                // DHUD-273: SB can't be in position if he isn't a dealer
+                if (sbAction != null && ipPlayer == sbAction.PlayerName)
+                {
+                    return null;
+                }
+
                 return hand.Players.FirstOrDefault(x => x.PlayerName == ipPlayer);
             }
-
 
             return null;
         }

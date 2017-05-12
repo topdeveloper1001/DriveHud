@@ -283,7 +283,7 @@ namespace DriveHUD.Application.TableConfigurators
             replayerPlayer.StatInfoCollection.Clear();
 
             var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
-            var hudIndicators = new HudIndicators(statisticCollection);
+            var hudIndicators = new HudLightIndicators(statisticCollection);
 
             if (hudIndicators != null)
             {

@@ -102,49 +102,56 @@ namespace DriveHUD.Application
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
             LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
 
-            if (IsUninstall())
+            try
             {
-                LogProvider.Log.Info(this, "Uninstalling all user's data...");
-                DataRemoverViewModel dr = new DataRemoverViewModel();
-                dr.UninstallCommand.Execute(null);
-            }
-            else
-            {
-                mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                ((RadWindow)this.Shell).DataContext = mainWindowViewModel;
-
-                ((RadWindow)this.Shell).Activated += MainWindow_Activated;
-
-                ((RadWindow)this.Shell).IsTopmost = true;
-                ((RadWindow)this.Shell).Show();
-                ((RadWindow)this.Shell).IsTopmost = false;
-
-                App.SplashScreen.CloseSplashScreen();
-
-                var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
-
-                if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
+                if (IsUninstall())
                 {
-                    var registrationViewModel = new RegistrationViewModel(false);
-                    mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
-                    mainWindowViewModel.UpdateHeader();
+                    LogProvider.Log.Info(this, "Uninstalling all user's data...");
+                    DataRemoverViewModel dr = new DataRemoverViewModel();
+                    dr.UninstallCommand.Execute(null);
                 }
-
-                if (!licenseService.IsRegistered)
+                else
                 {
+                    mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
+                    ((RadWindow)this.Shell).DataContext = mainWindowViewModel;
+
+                    ((RadWindow)this.Shell).Activated += MainWindow_Activated;
+
+                    ((RadWindow)this.Shell).IsTopmost = true;
+                    ((RadWindow)this.Shell).Show();
+                    ((RadWindow)this.Shell).IsTopmost = false;
+
+                    App.SplashScreen.CloseSplashScreen();
+
+                    var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+                    if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
+                    {
+                        var registrationViewModel = new RegistrationViewModel(false);
+                        mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
+                        mainWindowViewModel.UpdateHeader();
+                    }
+
+                    if (!licenseService.IsRegistered)
+                    {
 #if !DEBUG
                          System.Windows.Application.Current.Shutdown();
 #endif
+                    }
+
+                    mainWindowViewModel.IsTrial = licenseService.IsTrial;
+                    mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
+
+                    mainWindowViewModel.IsActive = true;
+
+                    mainWindowViewModel.StartHudCommand.Execute(null);
+
+                    ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
                 }
-
-                mainWindowViewModel.IsTrial = licenseService.IsTrial;
-                mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
-
-                mainWindowViewModel.IsActive = true;
-
-                mainWindowViewModel.StartHudCommand.Execute(null);
-
-                ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
             }
         }
 

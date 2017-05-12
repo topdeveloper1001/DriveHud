@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -24,8 +25,36 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// Total playerStatistic integration tests
     /// </summary>
     [TestFixture]
-    class TotalPlayerStatisticTests : PlayerStatisticTests
+    class TotalPlayerStatisticTests : BaseDatabaseTest
     {
+        #region SetUp
+
+        /// <summary>
+        /// Initialize environment for test
+        /// </summary>
+        [OneTimeSetUp]
+        public virtual void SetUp()
+        {
+            Initalize();
+        }
+
+        /// <summary>
+        /// Freeing resources
+        /// </summary>
+        [OneTimeTearDown]
+        public virtual void TearDown()
+        {
+            RemoveDatabase();
+        }
+
+        [TearDown]
+        public virtual void TestTearDown()
+        {
+            CleanUpDatabase();
+        }
+
+        #endregion
+
         protected override string TestDataFolder
         {
             get
@@ -38,7 +67,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// This test is supposed to test all <see cref="Playerstatistic"/> properties after long hh is imported        
         /// </summary>            
         [Test]
-        [TestCase(EnumPokerSites.PokerStars, "DURKADURDUR")]
+        [TestCase(EnumPokerSites.PokerStars, "PLR_2527293KW")]
         public void PlayerStatisticIsCalculated(EnumPokerSites pokerSite, string playerName)
         {
             using (var perfScope = new PerformanceMonitor("PlayerStatisticIsCalculated"))
@@ -59,11 +88,51 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
 
-                // add asserts to validate properties here 
-                // current values are for demo purpose, need to import same hh to HM2, then use stats from HM2 as expected values
-                Assert.That(playerstatistic.DidColdCallIp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallIp));
-                Assert.That(playerstatistic.Vpiphands, Is.EqualTo(35), nameof(playerstatistic.Vpiphands));
+                Assert.That(playerstatistic.LimpCalled, Is.EqualTo(3),nameof(playerstatistic.LimpCalled));
+
+                Assert.That(playerstatistic.LimpSb, Is.EqualTo(1),nameof(playerstatistic.LimpSb));
+                Assert.That(playerstatistic.LimpEp, Is.EqualTo(4), nameof(playerstatistic.LimpEp));
+                Assert.That(playerstatistic.LimpMp, Is.EqualTo(1), nameof(playerstatistic.LimpMp));
+                Assert.That(playerstatistic.LimpCo, Is.EqualTo(0), nameof(playerstatistic.LimpCo));
+                Assert.That(playerstatistic.LimpBtn, Is.EqualTo(0), nameof(playerstatistic.LimpBtn));
+                Assert.That(playerstatistic.LimpPossible, Is.EqualTo(11), nameof(playerstatistic.LimpPossible));
+
+                Assert.That(playerstatistic.DidColdCallInSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInSb));
+                Assert.That(playerstatistic.DidColdCallInBb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInBb));
+                Assert.That(playerstatistic.DidColdCallInEp, Is.EqualTo(3), nameof(playerstatistic.DidColdCallInEp));
+                Assert.That(playerstatistic.DidColdCallInMp, Is.EqualTo(1), nameof(playerstatistic.DidColdCallInMp));
+                Assert.That(playerstatistic.DidColdCallInCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallInCo));
+                Assert.That(playerstatistic.DidColdCallInBtn, Is.EqualTo(1), nameof(playerstatistic.DidColdCallInBtn));
+                Assert.That(playerstatistic.Couldcoldcall, Is.EqualTo(13), nameof(playerstatistic.Couldcoldcall));
+
+
+                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallThreeBet));
+                Assert.That(playerstatistic.DidColdCallFourBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallFourBet));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseSb));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseCo));
+                Assert.That(playerstatistic.DidColdCallVsOpenRaiseBtn, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseBtn));
+
             }
+        }
+
+        /// <summary>
+        /// Gets combined player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
+        /// </summary>     
+        protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
+        {
+            if (p.PlayerName.Equals(playerName))
+            {
+                if (playerstatistic == null)
+                {
+                    playerstatistic = p;
+                }
+                else
+                {
+                    playerstatistic += p;
+                }
+            }
+
+            return true;
         }
     }
 }
