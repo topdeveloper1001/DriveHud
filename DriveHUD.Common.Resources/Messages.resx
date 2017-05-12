@@ -127,7 +127,7 @@
     <value>Rebuilding stats</value>
   </data>
   <data name="Message_Migration0017_Text" xml:space="preserve">
-    <value>New stats has been added, you need to rebuild your stats to see the proper values of new stats. This operation might take some time, but it isn't mandatory to perform it. You can skip it by clicking on Cancel. Later you can run the rebuild command from the settings. 
+    <value>New stats have been added to DriveHUD. You'll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 6 minutes depending on database size), but it isn't mandatory to perform. You can skip it by clicking on Cancel. You can run the rebuild stats function at a later time from the settings menu.
 
 New stats:
 
