@@ -10,14 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -76,7 +79,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="pokerSite"><see cref="EnumPokerSites"/></param>
         /// <param name="gameType"><see cref="EnumGameType"/></param>
         /// <exception cref="DHBusinessException" />
-        public override void InitializePositions(EnumPokerSites pokerSite, EnumGameType gameType)
+        public override void InitializePositions(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
         {
             var tool = Tool as T;
 
@@ -85,27 +88,48 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
+            var seats = (int)tableType;
+            var currentSeat = Parent.Seat - 1;
+
+            var uiPosition = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
+
+            if (uiPosition == null)
+            {
+                throw new DHBusinessException(new NonLocalizableString($"Could not find UI positions for {pokerSite}, {gameType}, {Parent.Seat}"));
+            }
+
             var positionInfo = tool.Positions.FirstOrDefault(x => x.PokerSite == pokerSite && x.GameType == gameType);
 
-            if (positionInfo == null)
+            var hudPositionInfo = positionInfo?.HudPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
+
+            if (hudPositionInfo == null)
             {
-                throw new DHBusinessException(new NonLocalizableString($"Could not find data for position info {Parent.Seat}"));
+                var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(pokerSite.ToString()) as CommonPositionProvider;
+
+                if (!positionProvider.Positions.ContainsKey(seats))
+                {
+                    throw new DHBusinessException(new NonLocalizableString($"Could not find predefined positions for {pokerSite}, {gameType}, {Parent.Seat}"));
+                }
+
+                var playerLabelClientPosition = positionProvider.Positions[seats];
+
+                var playerLabelPosition = HudDefaultSettings.TablePlayerLabelPositions[seats];
+
+                var offsetX = playerLabelClientPosition[currentSeat, 0] - playerLabelPosition[currentSeat, 0];
+                var offsetY = playerLabelClientPosition[currentSeat, 1] - playerLabelPosition[currentSeat, 1] + positionProvider.PlayerLabelHeight - HudDefaultSettings.TablePlayerLabelHeight;
+
+                hudPositionInfo = new HudPositionInfo
+                {
+                    Seat = Parent.Seat,
+                    Position = new Point(uiPosition.Position.X + offsetX, uiPosition.Position.Y + offsetY)
+                };
             }
 
-            var positions = positionInfo.HudPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
-
-            if (positions == null)
-            {
-                throw new DHBusinessException(new NonLocalizableString($"Could not find data for positions {Parent.Seat}"));
-            }
-
-            Position = positions.Position;
+            Position = hudPositionInfo.Position;
             Opacity = Parent.Opacity;
 
-            var uiPositions = tool.UIPositions.FirstOrDefault(x => x.Seat == Parent.Seat);
-
-            Width = uiPositions != null && uiPositions.Width != 0 ? uiPositions.Width : DefaultWidth;
-            Height = uiPositions != null && uiPositions.Height != 0 ? uiPositions.Height : DefaultHeight;
+            Width = uiPosition != null && uiPosition.Width != 0 ? uiPosition.Width : DefaultWidth;
+            Height = uiPosition != null && uiPosition.Height != 0 ? uiPosition.Height : DefaultHeight;
         }
 
         /// <summary>

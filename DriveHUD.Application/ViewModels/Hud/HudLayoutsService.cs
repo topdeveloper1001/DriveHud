@@ -1198,35 +1198,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return hudPlayerTypes;
         }
-
-        private List<HudPositionInfo> GeneratePositions(EnumPokerSites pokerSite, HudViewType hudViewType, EnumTableType tableType)
-        {
-            var positionsProvider =
-                ServiceLocator.Current.GetInstance<IPositionProvider>(
-                    PositionConfiguratorHelper.GetServiceName(pokerSite, hudViewType));
-            if (!positionsProvider.Positions.ContainsKey((int)tableType))
-                return null;
-            var result = new List<HudPositionInfo>();
-            for (var i = 0; i < (int)tableType; i++)
-            {
-                result.Add(new HudPositionInfo
-                {
-                    Position =
-                        new Point
-                        {
-                            X =
-                                positionsProvider.Positions[(int)tableType][i, 0] +
-                                positionsProvider.GetOffsetX((int)tableType, i + 1),
-                            Y =
-                                positionsProvider.Positions[(int)tableType][i, 1] +
-                                positionsProvider.GetOffsetY((int)tableType, i + 1)
-                        },
-                    Seat = i + 1
-                });
-            }
-            return result;
-        }
-
+      
         private static string GetLayoutFileName(string layoutName)
         {
             return $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}";

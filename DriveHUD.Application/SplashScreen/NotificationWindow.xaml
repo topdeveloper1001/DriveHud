@@ -30,7 +30,7 @@
                 <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
                 <ResourceDictionary
-                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/ButtonTemplate.xaml" />
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/ButtonStyles.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
 

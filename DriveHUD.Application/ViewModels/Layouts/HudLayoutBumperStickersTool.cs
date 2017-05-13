@@ -40,7 +40,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             var clone = new HudLayoutBumperStickersTool
             {
                 Id = Id,
-                Positions = Positions.Select(x => x.Clone()).ToList(),
+                Positions = Positions?.Select(x => x.Clone()).ToList(),
                 UIPositions = UIPositions.Select(x => x.Clone()).ToList()
             };
 

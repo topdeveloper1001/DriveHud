@@ -115,7 +115,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             var layoutTool = new HudLayoutPlainBoxTool
             {
                 Stats = new ReactiveList<StatInfo>(),
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -144,8 +143,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var layoutTool = new HudLayoutFourStatsBoxTool
             {
-                Stats = new ReactiveList<StatInfo>(),
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+                Stats = new ReactiveList<StatInfo>(),                
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -173,8 +171,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
 
             var layoutTool = new HudLayoutTiltMeterTool
-            {
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+            {                
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -208,7 +205,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var layoutTool = new HudLayoutPlayerIconTool
             {
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -236,8 +232,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
 
             var layoutTool = new HudLayoutTextBoxTool
-            {
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+            {                
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -265,8 +260,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. Bumper stickers have not been created.");
 
             var layoutTool = new HudLayoutBumperStickersTool
-            {
-                Positions = GetHudPositions(creationInfo.TableType, creationInfo.Position),
+            {                
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 

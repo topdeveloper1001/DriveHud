@@ -179,7 +179,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        public override void InitializePositions(EnumPokerSites pokerSite, EnumGameType gameType)
+        public override void InitializePositions(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
         {
         }
 

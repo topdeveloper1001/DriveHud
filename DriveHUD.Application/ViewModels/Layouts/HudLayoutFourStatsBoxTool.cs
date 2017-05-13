@@ -61,7 +61,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
                     return x.Clone();
                 })),
-                Positions = Positions.Select(x => x.Clone()).ToList(),
+                Positions = Positions?.Select(x => x.Clone()).ToList(),
                 UIPositions = UIPositions.Select(x => x.Clone()).ToList(),
                 IsVertical = IsVertical
             };
