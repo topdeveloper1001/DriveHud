@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Message_Migration0017_Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Don't Rebuild Now</value>
   </data>
   <data name="Message_Migration0017_Rebuild" xml:space="preserve">
     <value>Rebuild stats</value>
@@ -127,7 +127,7 @@
     <value>Rebuilding stats</value>
   </data>
   <data name="Message_Migration0017_Text" xml:space="preserve">
-    <value>New stats have been added to DriveHUD. You'll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 6 minutes depending on database size), but it isn't mandatory to perform. You can skip it by clicking on Cancel. You can run the rebuild stats function at a later time from the settings menu.
+    <value>New stats have been added to DriveHUD. You'll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 10 minutes depending on database size), but it isn't mandatory to perform. You can skip it by clicking on Don't Rebuild Now. You can run the rebuild stats function at a later time from the settings menu.
 
 New stats:
 

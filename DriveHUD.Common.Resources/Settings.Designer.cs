@@ -277,7 +277,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rebuild players statistic (import must be stopped, before executing).
+        ///   Looks up a localized string similar to Rebuild players statistics (Import must be stopped, before executing. Click the STOP button on the HUD tab).
         /// </summary>
         internal static string Settings_RebuildTitle {
             get {
@@ -295,7 +295,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recover players statistic from backup (import must be stopped, before executing).
+        ///   Looks up a localized string similar to Recover players statistics from backup (Import must be stopped, before executing. Click the STOP button on the HUD tab).
         /// </summary>
         internal static string Settings_RecoverTitle {
             get {

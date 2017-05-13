@@ -190,13 +190,13 @@
     <value>Rebuild</value>
   </data>
   <data name="Settings_RebuildTitle" xml:space="preserve">
-    <value>Rebuild players statistic (import must be stopped, before executing)</value>
+    <value>Rebuild players statistics (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
   </data>
   <data name="Settings_RecoverStats" xml:space="preserve">
     <value>Recover</value>
   </data>
   <data name="Settings_RecoverTitle" xml:space="preserve">
-    <value>Recover players statistic from backup (import must be stopped, before executing)</value>
+    <value>Recover players statistics from backup (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
   </data>
   <data name="Settings_RenewLicense" xml:space="preserve">
     <value>Renew License</value>

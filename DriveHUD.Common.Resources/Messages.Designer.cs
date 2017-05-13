@@ -61,7 +61,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancel.
+        ///   Looks up a localized string similar to Don&apos;t Rebuild Now.
         /// </summary>
         internal static string Message_Migration0017_Cancel {
             get {
@@ -88,7 +88,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New stats have been added to DriveHUD. You&apos;ll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 6 minutes depending on database size), but it isn&apos;t mandatory to perform. You can skip it by clicking on Cancel. You can run the rebuild stats function at a later time from the settings menu.
+        ///   Looks up a localized string similar to New stats have been added to DriveHUD. You&apos;ll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 10 minutes depending on database size), but it isn&apos;t mandatory to perform. You can skip it by clicking on Don&apos;t Rebuild Now. You can run the rebuild stats function at a later time from the settings menu.
         ///
         ///New stats:
         ///
@@ -104,8 +104,7 @@ namespace DriveHUD.Common.Resources {
         ///
         ///COLD CALL
         ///
-        ///    Cold Call EP%
-        ///    C [rest of string was truncated]&quot;;.
+        ///    Cold Cal [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Message_Migration0017_Text {
             get {

@@ -292,7 +292,11 @@ namespace DriveHUD.Importers
                 Directory.Move(playerStatisticBackupDataFolder, newPlayerStatisticBackupDataFolder);
             }
 
-            Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+            if (Directory.Exists(playerStatisticDataFolder))
+            {
+                Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+            }
+
             Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
         }
 

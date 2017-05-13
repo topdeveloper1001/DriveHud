@@ -887,16 +887,20 @@ namespace DriveHUD.Application.ViewModels
             {
                 try
                 {
-                    ProgressViewModel.Progress.Report(new NonLocalizableString("Rebuilding statistic"));
+                    LogProvider.Log.Info("Executing statistics rebuild");
+
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RebuildingStatistics"));
 
                     var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
                     playerStatisticReImporter.ReImport();
 
-                    RefreshData();
+                    LogProvider.Log.Info("Statistics rebuild has been completed.");
+
+                    Load();
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, "Rebuilding statistic failed.", e);
+                    LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
                 }
             });
 
@@ -913,16 +917,20 @@ namespace DriveHUD.Application.ViewModels
             {
                 try
                 {
-                    ProgressViewModel.Progress.Report(new NonLocalizableString("Recovering statistic"));
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RecoveringStatistics"));
+
+                    LogProvider.Log.Info("Executing statistics recovering");
 
                     var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
                     playerStatisticReImporter.Recover();
 
-                    RefreshData();
+                    LogProvider.Log.Info("Statistics recovering has been completed.");
+
+                    Load();
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, "Recovering statistic failed.", e);
+                    LogProvider.Log.Error(this, "Statistics recovering failed.", e);
                 }
             });
 
