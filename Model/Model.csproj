@@ -134,6 +134,7 @@
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />
+    <Compile Include="Data\TimeSessionIndicators.cs" />
     <Compile Include="Data\TournamentReportRecord.cs" />
     <Compile Include="Enums\BoardTextures.cs" />
     <Compile Include="Enums\Enums.cs" />

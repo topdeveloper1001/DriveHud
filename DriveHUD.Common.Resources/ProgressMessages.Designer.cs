@@ -79,6 +79,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rebuilding statistics.
+        /// </summary>
+        internal static string Progress_RebuildingStatistics {
+            get {
+                return ResourceManager.GetString("Progress_RebuildingStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recovering statistics.
+        /// </summary>
+        internal static string Progress_RecoveringStatistics {
+            get {
+                return ResourceManager.GetString("Progress_RecoveringStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scanning folder.
         /// </summary>
         internal static string Progress_ScanningFolder {

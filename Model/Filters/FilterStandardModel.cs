@@ -115,7 +115,7 @@ namespace Model.Filters
                         new CurrencyItem() { Name = "USD", Value = Currency.USD, IsChecked = true },
                         new CurrencyItem() { Name = "CAD", Value = Currency.CAD, IsChecked = true },
                         new CurrencyItem() { Name = "YUAN", Value = Currency.YUAN, IsChecked = true },
-                        new CurrencyItem() { Name = "EUR", Value = Currency.EURO, IsChecked = true },
+                        new CurrencyItem() { Name = "EUR", Value = Currency.EURO, IsChecked = true }
                     }
                 );
         }
@@ -422,10 +422,14 @@ namespace Model.Filters
         {
             var curPredicate = PredicateBuilder.False<Playerstatistic>();
             var checkedCurrency = CurrencyCollection.Where(x => x.IsChecked);
+
             foreach (var state in checkedCurrency)
             {
                 curPredicate = curPredicate.Or(x => x.CurrencyId == (short)state.Value);
             }
+
+            curPredicate = curPredicate.Or(x => x.CurrencyId == (short)Currency.All);
+
             return curPredicate;
         }
 

@@ -1,9 +1,21 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="SessionsReportCreator.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
+using Model.Data;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Model.Data;
-using DriveHUD.Entities;
-using System;
 
 namespace Model.Reports
 {
@@ -18,35 +30,37 @@ namespace Model.Reports
                 return report;
             }
 
-            Indicators stat = new Indicators();
-            List<string> gametypes = new List<string>();
-            
+            var stat = new TimeSessionIndicators();
+            var gametypes = new List<string>();
+
             foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).OrderByDescending(x => x.Time))
             {
-                if (stat.Statistics == null || stat.Statistics.Count == 0)
+                if (stat.Statistics == null || stat.StatisticsCount == 0)
                 {
                     gametypes.Add(playerstatistic.GameType);
                     stat.AddStatistic(playerstatistic);
                 }
-                else if (stat.Statistics.Any(x => Math.Abs((x.Time - playerstatistic.Time).TotalMinutes) < TimeSpan.FromMinutes(30).TotalMinutes))
+                else if (stat.StatisticsTimeCollection.Any(time => Math.Abs((time - playerstatistic.Time).TotalMinutes) < TimeSpan.FromMinutes(30).TotalMinutes))
                 {
-                    if(!gametypes.Contains(playerstatistic.GameType))
+                    if (!gametypes.Contains(playerstatistic.GameType))
                     {
                         gametypes.Add(playerstatistic.GameType);
                     }
+
                     stat.AddStatistic(playerstatistic);
                 }
                 else
                 {
                     stat.GameType = string.Join(",", gametypes);
                     report.Add(stat);
-                    stat = new Indicators();
+                    stat = new TimeSessionIndicators();
                     gametypes.Clear();
                     stat.AddStatistic(playerstatistic);
                     gametypes.Add(playerstatistic.GameType);
                 }
             }
-            if (stat.Statistics != null && stat.Statistics.Count > 0)
+
+            if (stat.Statistics != null && stat.StatisticsCount > 0)
             {
                 stat.GameType = string.Join(",", gametypes);
                 report.Add(stat);

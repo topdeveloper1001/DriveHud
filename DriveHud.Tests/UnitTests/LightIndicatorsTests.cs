@@ -34,13 +34,13 @@ namespace DriveHud.Tests.UnitTests
             ResourceRegistrator.Initialization();
 
             container = new UnityContainer();
-         
+
             container.RegisterType<ISettingsService, SettingsServiceStub>();
-         
+
             UnityServiceLocator locator = new UnityServiceLocator(container);
-            ServiceLocator.SetLocatorProvider(() => locator);            
+            ServiceLocator.SetLocatorProvider(() => locator);
         }
-        
+
         [Test]
         [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
         public void TestLightIndicators(string file)
@@ -60,6 +60,29 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(lightIndicators.UO_PFR_SB, Is.EqualTo(indicators.UO_PFR_SB));
             Assert.That(lightIndicators.UO_PFR_BB, Is.EqualTo(indicators.UO_PFR_BB));
             Assert.That(lightIndicators.HourOfHand, Is.EqualTo(indicators.HourOfHand));
+        }
+
+        [Test]
+        [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
+        public void TestTimeSessionIndicators(string file)
+        {
+            var playerStatistic = DataServiceHelper.GetPlayerStatisticFromFile(file);
+
+            var indicators = new Indicators(playerStatistic);
+            var lightIndicators = new TimeSessionIndicators(playerStatistic);
+
+            Assert.That(lightIndicators.BB, Is.EqualTo(indicators.BB));
+            Assert.That(lightIndicators.SessionStart, Is.EqualTo(indicators.SessionStart));
+            Assert.That(lightIndicators.SessionLength, Is.EqualTo(indicators.SessionLength));
+            Assert.That(lightIndicators.UO_PFR_EP, Is.EqualTo(indicators.UO_PFR_EP));
+            Assert.That(lightIndicators.UO_PFR_MP, Is.EqualTo(indicators.UO_PFR_MP));
+            Assert.That(lightIndicators.UO_PFR_CO, Is.EqualTo(indicators.UO_PFR_CO));
+            Assert.That(lightIndicators.UO_PFR_BN, Is.EqualTo(indicators.UO_PFR_BN));
+            Assert.That(lightIndicators.UO_PFR_SB, Is.EqualTo(indicators.UO_PFR_SB));
+            Assert.That(lightIndicators.UO_PFR_BB, Is.EqualTo(indicators.UO_PFR_BB));
+            Assert.That(lightIndicators.HourOfHand, Is.EqualTo(indicators.HourOfHand));
+
+            CollectionAssert.AreEquivalent(indicators.StatisticsTimeCollection, lightIndicators.StatisticsTimeCollection);
         }
 
         private class SettingsServiceStub : ISettingsService
