@@ -93,23 +93,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [Test]
-        public void Test()
-        {
-            databaseFile = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\drivehud.db";
-
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-
-            var stats = dataService.GetPlayerStatisticFromFile("mhdishere", 7);
-
-            var tournamentStats = stats.Where(x => x.Time >= DateTime.Now.FirstDayOfMonth() && x.IsTourney).ToArray();
-
-            Assert.That(tournamentStats.Length, Is.GreaterThan(0));
-
-            databaseFile = "drivehud-importer.db";
-        }
-
-        //[Test]      
-        //[TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
+        [TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
         public void ReImportTest(string databaseZipFile, string playerStatisticZipFile, string playerName, EnumPokerSites pokerSite)
         {
             PlayerStatisticReImporterTests.databaseZipFile = databaseZipFile;
