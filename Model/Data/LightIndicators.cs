@@ -36,6 +36,14 @@ namespace Model.Data
 
         #region overridden properties
 
+        public override int StatisticsCount
+        {
+            get
+            {
+                return statisticCount;
+            }
+        }
+
         public override decimal BB
         {
             get
@@ -71,7 +79,7 @@ namespace Model.Data
 
                 return string.Format("{0}:{1:00}", (int)length.TotalHours, length.Minutes);
             }
-        }
+        }   
 
         private int UnopenedEPPositionCount;
 

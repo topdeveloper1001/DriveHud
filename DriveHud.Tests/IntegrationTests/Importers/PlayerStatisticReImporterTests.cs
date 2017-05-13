@@ -11,8 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
+using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
@@ -22,16 +24,18 @@ using NUnit.Framework;
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
     [TestFixture]
     class PlayerStatisticReImporterTests : BaseDatabaseTest
     {
-        private const string databaseFile = "drivehud-reimporter.db";
+        private static string databaseFile = "drivehud-reimporter.db";
         private const string playerStatisticFolder = "Database";
         private const string playerStatisticTempFolder = "Database-temp";
         private const string playerStatisticBackup = "Database-backup";
+        private const string playerStatisticOld = "Database-old";
 
         private static string databaseZipFile;
         private static string playerStatisticZipFile;
@@ -88,8 +92,24 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
-        [Test]      
-        [TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
+        [Test]
+        public void Test()
+        {
+            databaseFile = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\drivehud.db";
+
+            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+            var stats = dataService.GetPlayerStatisticFromFile("mhdishere", 7);
+
+            var tournamentStats = stats.Where(x => x.Time >= DateTime.Now.FirstDayOfMonth() && x.IsTourney).ToArray();
+
+            Assert.That(tournamentStats.Length, Is.GreaterThan(0));
+
+            databaseFile = "drivehud-importer.db";
+        }
+
+        //[Test]      
+        //[TestCase("drivehud.zip", "Database.zip", "DURKADURDUR", EnumPokerSites.PokerStars)]
         public void ReImportTest(string databaseZipFile, string playerStatisticZipFile, string playerName, EnumPokerSites pokerSite)
         {
             PlayerStatisticReImporterTests.databaseZipFile = databaseZipFile;
@@ -320,7 +340,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         private class PlayerStatisticTestReImporter : PlayerStatisticReImporter
         {
             public PlayerStatisticTestReImporter() : base(playerStatisticFolder,
-                playerStatisticTempFolder, playerStatisticBackup)
+                playerStatisticTempFolder, playerStatisticBackup, playerStatisticOld)
             {
             }
         }

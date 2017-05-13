@@ -319,11 +319,13 @@ namespace DriveHUD.Importers
 
             public override int GetHashCode()
             {
-                var hashcode = 23;
-                hashcode = (hashcode * 31) + PlayerName.GetHashCode();
-                hashcode = (hashcode * 31) + PokerSite;
-
-                return hashcode;
+                unchecked
+                {
+                    var hashcode = 23;
+                    hashcode = (hashcode * 31) + PlayerName.GetHashCode();
+                    hashcode = (hashcode * 31) + PokerSite;
+                    return hashcode;
+                }
             }
 
             public override bool Equals(object obj)

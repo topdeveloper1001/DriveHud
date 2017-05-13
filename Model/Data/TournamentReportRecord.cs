@@ -4,12 +4,14 @@ using System;
 
 namespace Model.Data
 {
-    public class TournamentReportRecord : Indicators
+    public class TournamentReportRecord : LightIndicators
     {
         public virtual string PlayerName { get; set; }
+
         public virtual string TournamentId { get; set; }
 
         public virtual int TournamentsPlayed { get; set; }
+
         public virtual int TournamentsInPrizes { get; set; }
 
         /// <summary>
@@ -20,18 +22,27 @@ namespace Model.Data
         /// Holds the total amount spent on BuyIns
         /// </summary>
         public virtual decimal TotalBuyIn { get; set; }
+
         public virtual decimal Rake { get; set; }
+
         public virtual string TableType { get; set; }
+
         public virtual string TournamentSpeed { get; set; }
+
         public virtual string TournamentLength { get; set; }
+
         public virtual int FinishPosition { get; set; }
+
         public virtual int FinalTables { get; set; }
+
         public virtual decimal Rebuy { get; set; }
+
         public virtual decimal Won { get; set; }
+
         public virtual int TableSize { get; set; }
 
         public virtual DateTime Started { get; set; }
-    
+
         public virtual decimal ROI
         {
             get
@@ -122,7 +133,7 @@ namespace Model.Data
         {
             this.GameType = string.Empty;
             GameType gametype;
-            if(Enum.TryParse(pokergametypeId.ToString(), out gametype))
+            if (Enum.TryParse(pokergametypeId.ToString(), out gametype))
             {
                 this.GameType = gametype.ToString();
             }
@@ -135,10 +146,12 @@ namespace Model.Data
         }
 
         /* Do not inherit this method from the Indicators because TotalHands might be 0 for this container */
-        private decimal GetPercentage(decimal actual, decimal possible)
+        protected override decimal GetPercentage(decimal actual, decimal possible)
         {
             if (possible == 0)
+            {
                 return 0;
+            }
 
             return (actual / possible) * 100;
         }
