@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -148,7 +149,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             {
                 var progress = Substitute.For<IDHProgress>();
 
-                var fileImporter = new FileImporter();
+                var fileImporter = new TestFileImporter();
 
                 var handHistoryFileFullName = Path.Combine(TestDataFolder, fileName);
 
@@ -226,5 +227,14 @@ namespace DriveHud.Tests.IntegrationTests.Base
         }
 
         #endregion
+
+        private class TestFileImporter : FileImporter
+        {
+            protected override void StorePlayerStatistic(Playerstatistic playerStat, string session)
+            {
+                session = "TestData";
+                base.StorePlayerStatistic(playerStat, session);
+            }
+        }
     }
 }

@@ -36,6 +36,14 @@ namespace Model.Data
 
         #region overridden properties
 
+        public override int StatisticsCount
+        {
+            get
+            {
+                return statisticCount;
+            }
+        }
+
         public override decimal BB
         {
             get
@@ -63,6 +71,19 @@ namespace Model.Data
                 }
 
                 return sessionStartTime;
+            }
+        }
+
+        public virtual DateTime? SessionEnd
+        {
+            get
+            {
+                if (statisticCount == 0)
+                {
+                    return null;
+                }
+
+                return sessionEndTime;
             }
         }
 
@@ -207,11 +228,7 @@ namespace Model.Data
                 }
             }
         }
-
-        public override void UpdateSource(IList<Playerstatistic> statistics)
-        {
-        }
-
+       
         #endregion
     }
 }

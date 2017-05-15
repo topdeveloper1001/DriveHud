@@ -10,9 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
+using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
@@ -22,13 +25,14 @@ using NUnit.Framework;
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
     [TestFixture]
     class PlayerStatisticReImporterTests : BaseDatabaseTest
     {
-        private const string databaseFile = "drivehud-reimporter.db";
+        private static string databaseFile = "drivehud-reimporter.db";
         private const string playerStatisticFolder = "Database";
         private const string playerStatisticTempFolder = "Database-temp";
         private const string playerStatisticBackup = "Database-backup";

@@ -22,6 +22,11 @@ namespace DriveHUD.Entities
     [ProtoContract]
     public partial class Playerstatistic : INotifyPropertyChanged
     {
+        public override string ToString()
+        {
+            return $"Tournament: {TournamentId} Time:{Time} HandNumber:{GameNumber} Currency: {CurrencyId}";
+        }
+
         public virtual int CompiledplayerresultsId { get; set; }
         [Required, ProtoMember(232)]
         public virtual int PlayerId { get; set; }
@@ -729,7 +734,7 @@ namespace DriveHUD.Entities
 
         [ProtoMember(275)]
         public virtual int LimpSb { get; set; }
-        
+
         [ProtoMember(141)]
         public virtual int DidColdCallInMp { get; set; }
 
@@ -746,8 +751,8 @@ namespace DriveHUD.Entities
         public virtual int DidColdCallInBb { get; set; }
 
         [ProtoMember(276)]
-        public virtual int DidColdCallInEp { get; set; }  
-        
+        public virtual int DidColdCallInEp { get; set; }
+
         [ProtoMember(277)]
         public virtual int DidColdCallThreeBet { get; set; }
 
@@ -922,7 +927,7 @@ namespace DriveHUD.Entities
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
-            
+
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
             Totalbets += a.Totalbets;
@@ -1131,7 +1136,7 @@ namespace DriveHUD.Entities
             LimpEp += a.LimpEp;
             LimpMp += a.LimpMp;
             LimpCo += a.LimpCo;
-            LimpSb += a.LimpSb;  
+            LimpSb += a.LimpSb;
 
             TotalbetsFlop += a.TotalbetsFlop;
             TotalbetsTurn += a.TotalbetsTurn;
@@ -1445,10 +1450,10 @@ namespace DriveHUD.Entities
             r.DidColdCallInCo += a.DidColdCallInCo + b.DidColdCallInCo;
             r.DidColdCallInMp += a.DidColdCallInMp + b.DidColdCallInMp;
             r.DidColdCallInSb += a.DidColdCallInSb + b.DidColdCallInSb;
-            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp; 
-            r.DidColdCallThreeBet += a.DidColdCallThreeBet + b.DidColdCallThreeBet; 
+            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp;
+            r.DidColdCallThreeBet += a.DidColdCallThreeBet + b.DidColdCallThreeBet;
             r.CouldColdCallThreeBet += a.CouldColdCallThreeBet + b.CouldColdCallThreeBet;
-            r.DidColdCallFourBet += a.DidColdCallFourBet + b.DidColdCallFourBet; 
+            r.DidColdCallFourBet += a.DidColdCallFourBet + b.DidColdCallFourBet;
             r.CouldColdCallFourBet += a.CouldColdCallFourBet + b.CouldColdCallFourBet;
             r.DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn + b.DidColdCallVsOpenRaiseBtn;
             r.DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo + b.DidColdCallVsOpenRaiseCo;

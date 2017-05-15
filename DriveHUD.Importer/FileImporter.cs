@@ -570,14 +570,7 @@ namespace DriveHUD.Importers
 
                 playerStat.SessionCode = session;
 
-                if (string.IsNullOrEmpty(session))
-                {
-                    Task.Run(() => dataService.Store(playerStat));
-                }
-                else
-                {
-                    dataService.Store(playerStat);
-                }
+                StorePlayerStatistic(playerStat, session);
 
                 return playerStat;
             }
@@ -586,6 +579,22 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Error(e);
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Stores player statistics
+        /// </summary>
+        /// <param name="playerStat"></param>
+        /// <param name="session"></param>
+        protected virtual void StorePlayerStatistic(Playerstatistic playerStat, string session)
+        {
+            if (string.IsNullOrEmpty(session))
+            {
+                Task.Run(() => dataService.Store(playerStat));
+                return;
+            }
+
+            dataService.Store(playerStat);
         }
 
         /// <summary>

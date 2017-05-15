@@ -112,8 +112,14 @@ namespace Model
                 {
                     try
                     {
+                        if (string.IsNullOrWhiteSpace(line))
+                        {
+                            LogProvider.Log.Warn(this, $"Empty line in {file}");
+                            continue;
+                        }
+
                         /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
+                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
 
                         using (MemoryStream afterStream = new MemoryStream(byteAfter64))
                         {
@@ -411,7 +417,7 @@ namespace Model
                 using (var msTestString = new MemoryStream())
                 {
                     Serializer.Serialize(msTestString, statistic);
-                    data = Convert.ToBase64String(msTestString.ToArray());
+                    data = Convert.ToBase64String(msTestString.ToArray()).Trim();
                 }
 
                 File.AppendAllLines(fileName, new[] { data });
@@ -476,7 +482,7 @@ namespace Model
                         using (var msTestString = new MemoryStream())
                         {
                             Serializer.Serialize(msTestString, stat);
-                            var data = Convert.ToBase64String(msTestString.ToArray());
+                            var data = Convert.ToBase64String(msTestString.ToArray()).Trim();
 
                             statisticStringsToAppend.Add(data);
                         }

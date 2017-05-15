@@ -292,7 +292,11 @@ namespace DriveHUD.Importers
                 Directory.Move(playerStatisticBackupDataFolder, newPlayerStatisticBackupDataFolder);
             }
 
-            Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+            if (Directory.Exists(playerStatisticDataFolder))
+            {
+                Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+            }
+
             Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
         }
 
@@ -315,11 +319,13 @@ namespace DriveHUD.Importers
 
             public override int GetHashCode()
             {
-                var hashcode = 23;
-                hashcode = (hashcode * 31) + PlayerName.GetHashCode();
-                hashcode = (hashcode * 31) + PokerSite;
-
-                return hashcode;
+                unchecked
+                {
+                    var hashcode = 23;
+                    hashcode = (hashcode * 31) + PlayerName.GetHashCode();
+                    hashcode = (hashcode * 31) + PokerSite;
+                    return hashcode;
+                }
             }
 
             public override bool Equals(object obj)

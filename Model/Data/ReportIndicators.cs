@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IReportCreator.cs" company="Ace Poker Solutions">
+// <copyright file="ReportIndicators.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,14 +11,24 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using Model.Data;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
-namespace Model.Reports
+namespace Model.Data
 {
-    public interface IReportCreator
+    public class ReportIndicators : LightIndicators
     {
-        ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics);
+        public ReportIndicators() : base()
+        {
+        }
+
+        public ReportIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
+        {
+        }
+
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            base.AddStatistic(statistic);
+            Statistics.Add(statistic);
+        }
     }
 }

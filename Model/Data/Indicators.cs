@@ -1,4 +1,16 @@
-﻿using DriveHUD.Common.Linq;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Indicators.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using Model.Importer;
 using System;
@@ -28,7 +40,7 @@ namespace Model.Data
 
         public List<Playerstatistic> Statistics { get; private set; }
 
-        protected decimal GetPercentage(decimal actual, decimal possible)
+        protected virtual decimal GetPercentage(decimal actual, decimal possible)
         {
             if (TotalHands == 0)
                 return 0;
@@ -48,6 +60,22 @@ namespace Model.Data
                 return 0;
 
             return (actual / possible);
+        }
+
+        public virtual int StatisticsCount
+        {
+            get
+            {
+                return Statistics != null ? Statistics.Count : 0;
+            }
+        }
+
+        public virtual List<DateTime> StatisticsTimeCollection
+        {
+            get
+            {
+                return Statistics != null ? Statistics.Select(x => x.Time).ToList() : new List<DateTime>();
+            }
         }
 
         public virtual decimal BB
