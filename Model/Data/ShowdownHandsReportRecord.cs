@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace Model.Data
 {
-    public class ShowdownHandsReportRecord : LightIndicators
+    public class ShowdownHandsReportRecord : ReportIndicators
     {
         public ShowdownHands ShowdownHand { get; set; }
 

@@ -33,7 +33,6 @@ namespace Model.Extensions
 
         public Playerstatistic Statistic { get; set; }
 
-
         public ComparableCard PlayerCards { get; set; }
 
         public ComparableCard BoardCards { get; set; }

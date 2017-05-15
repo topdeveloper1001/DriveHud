@@ -33,10 +33,12 @@ namespace Model.Reports
 
             var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
 
-            var s = statistics.Where(x => !string.IsNullOrEmpty(x.Cards) &&
-                Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
-                !string.IsNullOrEmpty(x.Board) &&
-                Cards.BoardCards.FromCards(x.Board).Count == 5);
+            var s = statistics
+                .Where(x => !string.IsNullOrEmpty(x.Cards) &&
+                    Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
+                    !string.IsNullOrEmpty(x.Board) &&
+                    Cards.BoardCards.FromCards(x.Board).Count == 5)
+                .ToArray();
 
             var hands = s.Where(x => !x.IsTourney)
                 .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))
@@ -78,10 +80,12 @@ namespace Model.Reports
             var report = new ObservableCollection<Indicators>();
             var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
 
-            var s = statistics.Where(x => !string.IsNullOrEmpty(x.Cards) &&
-                Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
-                !string.IsNullOrEmpty(x.Board) &&
-                Cards.BoardCards.FromCards(x.Board).Count == 5);
+            var s = statistics
+                .Where(x => !string.IsNullOrEmpty(x.Cards) &&
+                    Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
+                    !string.IsNullOrEmpty(x.Board) &&
+                    Cards.BoardCards.FromCards(x.Board).Count == 5)
+                .ToArray();
 
             var hands = s.Where(x => x.IsTourney)
                 .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))

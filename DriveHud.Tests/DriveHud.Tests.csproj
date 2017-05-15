@@ -189,7 +189,6 @@
   <ItemGroup>
     <Compile Include="IntegrationTests\Base\BaseDatabaseTest.cs" />
     <Compile Include="IntegrationTests\Base\DatabaseHelper.cs" />
-    <Compile Include="IntegrationTests\Base\PerformanceMonitor.cs" />
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
@@ -234,6 +233,7 @@
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
+    <Compile Include="UnitTests\ReportCreatorTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>

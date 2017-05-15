@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Data;
 using System;
@@ -30,17 +32,17 @@ namespace Model.Reports
                 return report;
             }
 
-            var stat = new TimeSessionIndicators();
+            var stat = new ReportIndicators();
             var gametypes = new List<string>();
 
-            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).OrderByDescending(x => x.Time))
+            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).OrderByDescending(x => x.Time).ToArray())
             {
                 if (stat.Statistics == null || stat.StatisticsCount == 0)
                 {
                     gametypes.Add(playerstatistic.GameType);
                     stat.AddStatistic(playerstatistic);
                 }
-                else if (stat.StatisticsTimeCollection.Any(time => Math.Abs((time - playerstatistic.Time).TotalMinutes) < TimeSpan.FromMinutes(30).TotalMinutes))
+                else if (Utils.IsDateInDateRange(playerstatistic.Time, stat.SessionStart, stat.SessionEnd, TimeSpan.FromMinutes(30)))
                 {
                     if (!gametypes.Contains(playerstatistic.GameType))
                     {
@@ -53,7 +55,7 @@ namespace Model.Reports
                 {
                     stat.GameType = string.Join(",", gametypes);
                     report.Add(stat);
-                    stat = new TimeSessionIndicators();
+                    stat = new ReportIndicators();
                     gametypes.Clear();
                     stat.AddStatistic(playerstatistic);
                     gametypes.Add(playerstatistic.GameType);

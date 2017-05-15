@@ -991,7 +991,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case '9':
                 case 's':
                     if (IsJoinTableLine(line))
+                    {
                         return false;
+                    }
+
+                    if (line.StartsWith("Table deposit", StringComparison.OrdinalIgnoreCase))
+                    {
+                        return false;
+                    }
 
                     break;
 
@@ -999,7 +1006,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 // matze1987: raises $8.94 to $10.94 and is all-in
                 // PLR_3866114TO: Re-join
                 case 'n':
-                    if (line.EndsWith("on", StringComparison.Ordinal) || line.EndsWith("oin", StringComparison.Ordinal))
+                    if (line.EndsWith("on", StringComparison.Ordinal) || line.EndsWith("oin", StringComparison.Ordinal) || line.EndsWith("own", StringComparison.Ordinal))
                     {
                         return false;
                     }
@@ -1530,7 +1537,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     if (line.Contains("mucked ["))
                     {
                         var muckedIndex = line.IndexOf("mucked [");
-                    
+
                         // Seat 1: DURKADURDUR (button) mucked [Ac Jh]
                         // Seat 6: ledzep6028 (button) (small blind) mucked [5d 4s]
                         var seatStartIndex = line.IndexOf(' ') + 1;
@@ -1703,8 +1710,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         return lineNumber + 1;
                     }
                 }
-                catch
+                catch (Exception e)
                 {
+                    LogProvider.Log.Error(this, handLine, e);
+
                     continue;
                 }
             }

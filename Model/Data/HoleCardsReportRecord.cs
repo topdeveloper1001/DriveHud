@@ -18,7 +18,7 @@ namespace Model.Data
     /// <summary>
     /// Extended indicator for Hole Cards Report
     /// </summary>
-    public class HoleCardsReportRecord : LightIndicators
+    public class HoleCardsReportRecord : ReportIndicators
     {
         public virtual decimal WonHandProc
         {

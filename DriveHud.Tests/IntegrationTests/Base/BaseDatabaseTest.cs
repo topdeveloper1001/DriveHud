@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;

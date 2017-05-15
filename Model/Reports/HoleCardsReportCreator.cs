@@ -33,7 +33,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.Cards.ToCards()))
+            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.Cards.ToCards()).ToArray())
             {
                 var stat = new HoleCardsReportRecord();
 
@@ -67,7 +67,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.Cards.ToCards()))
+            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.Cards.ToCards()).ToArray())
             {
                 var stat = new HoleCardsReportRecord();
 

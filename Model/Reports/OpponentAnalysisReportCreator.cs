@@ -29,9 +29,9 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PlayerName).OrderByDescending(x => x.Sum(p => p.NetWon)))
+            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PlayerName).OrderByDescending(x => x.Sum(p => p.NetWon)).ToArray())
             {
-                var stat = new LightIndicators();
+                var stat = new ReportIndicators();
 
                 foreach (var playerstatistic in group)
                 {

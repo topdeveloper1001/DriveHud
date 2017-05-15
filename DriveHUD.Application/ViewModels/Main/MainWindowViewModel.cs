@@ -81,6 +81,8 @@ namespace DriveHUD.Application.ViewModels
 
         private bool isSetPlayerIdMessageShown = false;
 
+        private const int ImportFileUpdateDelay = 750;
+
         #endregion
 
         #region Constructor
@@ -688,14 +690,13 @@ namespace DriveHUD.Application.ViewModels
             await Task.Run(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
+                Task.Delay(ImportFileUpdateDelay).Wait();
                 RefreshData();
             });
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
             ProgressViewModel.Reset();
-
-            CreatePositionReport();
         }
 
         internal async void ImportFromDirectory()
@@ -726,14 +727,13 @@ namespace DriveHUD.Application.ViewModels
             await Task.Factory.StartNew(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
+                Task.Delay(ImportFileUpdateDelay).Wait();
                 RefreshData();
             });
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
             ProgressViewModel.Reset();
-
-            CreatePositionReport();
         }
 
         private void RefreshCommandsCanExecute()

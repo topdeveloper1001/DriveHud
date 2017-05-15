@@ -35,7 +35,7 @@ namespace Model.Reports
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
             var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => GetMRatio(x)))
+            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => GetMRatio(x)).ToArray())
             {
                 var stat = new MRatioReportRecord();
 
