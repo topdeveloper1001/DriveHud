@@ -1015,7 +1015,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Squeez.
+        ///   Looks up a localized string similar to Fold To Squeeze.
         /// </summary>
         internal static string Enum_Stat_FoldToSqueez {
             get {
@@ -1195,7 +1195,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Player Info Icon.
+        ///   Looks up a localized string similar to Player Profile Icon.
         /// </summary>
         internal static string Enum_Stat_PlayerInfoIcon {
             get {
