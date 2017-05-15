@@ -14,7 +14,7 @@ using Model.Enums;
 
 namespace Model.Data
 {
-    public class MRatioReportRecord : Indicators
+    public class MRatioReportRecord : ReportIndicators
     {
         public new EnumMRatio MRatio { get; set; }
     }

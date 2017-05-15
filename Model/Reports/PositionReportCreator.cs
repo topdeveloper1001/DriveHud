@@ -32,9 +32,9 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PositionString))
+            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PositionString).ToArray())
             {
-                var stat = new LightIndicators();
+                var stat = new ReportIndicators();
 
                 foreach (var playerstatistic in group)
                 {
@@ -59,9 +59,9 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.PositionString))
+            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.PositionString).ToArray())
             {
-                var stat = new LightIndicators();
+                var stat = new ReportIndicators();
 
                 foreach (var playerstatistic in group)
                 {

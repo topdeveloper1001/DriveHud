@@ -31,9 +31,9 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PokersiteId))
+            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PokersiteId).ToArray())
             {
-                var stat = new LightIndicators();
+                var stat = new ReportIndicators();
 
                 foreach (var playerstatistic in group)
                 {
@@ -65,7 +65,7 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)))
+                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray())
                 {
                     stat.AddStatistic(playerstatistic);
                 }

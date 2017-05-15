@@ -52,6 +52,7 @@ namespace Model
         public void TryLoadHeroPlayer()
         {
             var heroName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.HeroName);
+
             if (PlayerCollection.Any(x => x.Name == heroName))
             {
                 PlayerSelectedItem = PlayerCollection.Where(x => x.Name == heroName).OrderBy(x => x.PokerSite).FirstOrDefault();

@@ -35,9 +35,9 @@ namespace Model.Reports
                 return report;
             }
 
-            var stat = new LightIndicators();
+            var stat = new ReportIndicators();
 
-            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney))
+            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).ToArray())
             {
                 stat.AddStatistic(playerstatistic);
             }

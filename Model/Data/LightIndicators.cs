@@ -66,6 +66,19 @@ namespace Model.Data
             }
         }
 
+        public virtual DateTime? SessionEnd
+        {
+            get
+            {
+                if (statisticCount == 0)
+                {
+                    return null;
+                }
+
+                return sessionEndTime;
+            }
+        }
+
         public override string SessionLength
         {
             get
@@ -79,7 +92,7 @@ namespace Model.Data
 
                 return string.Format("{0}:{1:00}", (int)length.TotalHours, length.Minutes);
             }
-        }   
+        }
 
         private int UnopenedEPPositionCount;
 
@@ -207,11 +220,7 @@ namespace Model.Data
                 }
             }
         }
-
-        public override void UpdateSource(IList<Playerstatistic> statistics)
-        {
-        }
-
+       
         #endregion
     }
 }
