@@ -286,14 +286,14 @@
   </data>
   <data name="Enum_Stat_ColdCallMP" xml:space="preserve">
     <value>Cold Call MP%</value>
-  </data> 
-    <data name="Enum_Stat_ColdCallEP" xml:space="preserve">
+  </data>
+  <data name="Enum_Stat_ColdCallEP" xml:space="preserve">
     <value>Cold Call EP%</value>
   </data>
   <data name="Enum_Stat_ColdCallSB" xml:space="preserve">
     <value>Cold Call SB%</value>
   </data>
-    <data name="Enum_Stat_ColdCallThreeBet" xml:space="preserve">
+  <data name="Enum_Stat_ColdCallThreeBet" xml:space="preserve">
     <value>Cold Call 3-Bet%</value>
   </data>
   <data name="Enum_Stat_ColdCallFourBet" xml:space="preserve">
@@ -642,7 +642,7 @@
     <value>Plain Text</value>
   </data>
   <data name="Enum_Stat_PlayerInfoIcon" xml:space="preserve">
-    <value>Player Info Icon</value>
+    <value>Player Profile Icon</value>
   </data>
   <data name="Enum_HandExport_ICMizer" xml:space="preserve">
     <value>ICMizer Format</value>
@@ -657,7 +657,7 @@
     <value>Fold To River  CBet</value>
   </data>
   <data name="Enum_Stat_FoldToSqueez" xml:space="preserve">
-    <value>Fold To Squeez</value>
+    <value>Fold To Squeeze</value>
   </data>
   <data name="Enum_Stat_FoldToTurnRaise" xml:space="preserve">
     <value>Fold To Turn Raise</value>
