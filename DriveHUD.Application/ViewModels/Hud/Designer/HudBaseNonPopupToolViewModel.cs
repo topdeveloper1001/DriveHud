@@ -104,7 +104,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             if (hudPositionInfo == null)
             {
-                var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(pokerSite.ToString()) as CommonPositionProvider;
+                var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(pokerSite.ToString());
 
                 if (!positionProvider.Positions.ContainsKey(seats))
                 {
@@ -116,7 +116,13 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var playerLabelPosition = HudDefaultSettings.TablePlayerLabelPositions[seats];
 
                 var offsetX = playerLabelClientPosition[currentSeat, 0] - playerLabelPosition[currentSeat, 0];
-                var offsetY = playerLabelClientPosition[currentSeat, 1] - playerLabelPosition[currentSeat, 1] + positionProvider.PlayerLabelHeight - HudDefaultSettings.TablePlayerLabelHeight;
+                var offsetY = playerLabelClientPosition[currentSeat, 1] - playerLabelPosition[currentSeat, 1];
+
+                // do not change position if element is inside or above player label
+                if (uiPosition.Position.Y > playerLabelPosition[currentSeat, 1] + HudDefaultSettings.TablePlayerLabelActualHeight)
+                {
+                    offsetY += positionProvider.PlayerLabelHeight - HudDefaultSettings.TablePlayerLabelHeight;
+                }
 
                 hudPositionInfo = new HudPositionInfo
                 {

@@ -43,7 +43,33 @@ namespace DriveHUD.Application.ViewModels.Hud
             var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
 
-            return new Tuple<double, double>(xPosition * window.ScaleX, yPosition * window.ScaleY);
+            var scaledXPosition = xPosition * window.ScaleX;
+            var scaledYPosition = yPosition * window.ScaleY;
+
+            if (scaledXPosition < 0)
+            {
+                scaledXPosition = 0;
+            }
+
+            if (scaledYPosition < 0)
+            {
+                scaledYPosition = 0;
+            }
+
+            var toolWidth = !double.IsNaN(toolViewModel.Width) ? toolViewModel.Width : 0;
+            var toolHeight = !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height : 0;
+
+            if (scaledXPosition > window.Width - toolWidth)
+            {
+                scaledXPosition = window.Width - toolWidth;
+            }
+
+            if (scaledYPosition > window.Height - toolHeight)
+            {
+                scaledYPosition = window.Height - toolHeight;
+            }
+
+            return new Tuple<double, double>(scaledXPosition, scaledYPosition);
         }
 
         /// <summary>

@@ -2121,42 +2121,42 @@
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
-            <X>410</X>
+            <X>440</X>
             <Y>156</Y>
           </Position>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
-            <X>624</X>
+            <X>654</X>
             <Y>300</Y>
           </Position>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>3</Seat>
           <Position>
-            <X>410</X>
+            <X>440</X>
             <Y>447</Y>
           </Position>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>4</Seat>
           <Position>
-            <X>252</X>
+            <X>282</X>
             <Y>447</Y>
           </Position>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>5</Seat>
           <Position>
-            <X>60</X>
+            <X>90</X>
             <Y>300</Y>
           </Position>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>6</Seat>
           <Position>
-            <X>252</X>
+            <X>282</X>
             <Y>156</Y>
           </Position>
         </HudPositionInfo>

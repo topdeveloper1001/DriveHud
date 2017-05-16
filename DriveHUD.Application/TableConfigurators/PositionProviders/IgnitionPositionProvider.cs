@@ -1,66 +1,66 @@
+//-----------------------------------------------------------------------
+// <copyright file="IgnitionPositionProvider.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
+    /// <summary>
+    /// Provides positions and other specific data for Ignition based clients
+    /// </summary>
     public class IgnitionPositionProvider : IPositionProvider
     {
-        public Dictionary<int, int[,]> Positions { get; }
-
         public IgnitionPositionProvider()
         {
             Positions = new Dictionary<int, int[,]>
             {
-                {2, new[,] {{338, 142}, {342, 484}}},
-                {6, new[,] {{338, 142}, {639, 229}, {639, 415}, {342, 494}, {47, 416}, {38, 227}}},
+                {
+                    2,
+                    new[,]
+                    {
+                        { 331, 78 }, { 331, 422 }
+                    }
+                },
+                {
+                    6,
+                    new[,]
+                    {
+                        { 331, 78 }, { 627, 164 }, { 627, 352 }, { 331, 430 }, { 30, 352 }, { 30, 164 }
+                    }
+                },
                 {
                     9,
                     new[,]
                     {
-                        {455, 142}, {639, 213}, {648, 362}, {524, 481}, {340, 493}, {156, 481}, {29, 361}, {41, 214},
-                        {225, 146}
+                        { 446, 78 }, { 627, 148 }, { 641, 295 }, { 519, 416 }, { 331, 430 }, { 144, 416 }, { 19, 295 }, { 35, 148 }, { 225, 78 }
                     }
                 }
             };
+
+            PlayerLabelHeight = 37;
+            PlayerLabelWidth = 153;
         }
 
-        public int GetOffsetX(int seats, int seat)
-        {
-            return 0;
-        }
-
-        public int GetOffsetY(int seats, int seat)
-        {
-            return 0;
-        }
-    }
-
-    public class IgnitionRichPositionProvider : IPositionProvider
-    {
         public Dictionary<int, int[,]> Positions { get; }
 
-        public IgnitionRichPositionProvider()
+        public int PlayerLabelHeight
         {
-            Positions = new Dictionary<int, int[,]>
-            {
-                { 2, new int[,] { { 334, 45 }, { 334, 389 } } },
-                { 6, new int[,] { { 334, 45 }, { 631, 131 }, { 631, 319 }, { 334, 399 }, { 36, 319 }, { 36, 131 } } },
-                { 9, new int[,] { { 451, 45 }, { 632, 116 }, { 645, 263 }, { 524, 384 }, { 333, 398 }, { 148, 384 }, { 22, 263 }, { 38, 116 }, { 218, 45 } } }
-            };
+            get;
         }
 
-        private bool IsRightOriented(int seats, int seat)
+        public int PlayerLabelWidth
         {
-            return (seats > 6 && seat < 5) || (seats < 7 && seats > 2 && seat < 3) || (seats < 3 && seat < 1);
-        }
-
-        public int GetOffsetX(int seats, int seat)
-        {
-            return 0;
-        }
-
-        public int GetOffsetY(int seats, int seat)
-        {
-            return 0;
+            get;
         }
     }
 }

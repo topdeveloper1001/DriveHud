@@ -41,6 +41,8 @@ namespace DriveHUD.Common.Resources
 
         public const int TablePlayerLabelHeight = 35;
 
+        public const int TablePlayerLabelActualHeight = 28;
+
         public const string TablePlayerNameFormat = "Player {0}";
 
         public const decimal TablePlayerBank = 10m;
