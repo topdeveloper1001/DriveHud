@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Views;
+using DriveHUD.Entities;
 using System;
 using System.Windows;
 
@@ -68,5 +69,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <returns>Item1 - X, Item2 - Y</returns>
         Tuple<double, double> GetInitialTrackConditionMeterPosition();
+
+        /// <summary>
+        /// Gets the shift for the specified table type and seat
+        /// </summary>
+        /// <param name="tableType"></param>
+        /// <param name="seat"></param>
+        /// <returns></returns>
+        Point GetPositionShift(EnumTableType tableType, int seat);
     }
 }

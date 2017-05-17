@@ -19,6 +19,7 @@ using System;
 using System.Windows;
 using System.Windows.Data;
 using Telerik.Windows.Controls;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -217,6 +218,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             radMenu.Items.Add(item);
 
             return radMenu;
+        }
+
+        public virtual Point GetPositionShift(EnumTableType tableType, int seat)
+        {
+            return new Point(0, 0);
         }
     }
 }

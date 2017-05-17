@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -38,6 +40,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         public override Tuple<double, double> GetInitialTableSize()
         {
             return new Tuple<double, double>(816, 631);
+        }
+
+        public override Point GetPositionShift(EnumTableType tableType, int seat)
+        {
+            var tableSize = (int)tableType;
+
+            if (!plainPositionsShifts.ContainsKey(tableSize))
+            {
+                return base.GetPositionShift(tableType, seat);
+            }
+
+            var shift = plainPositionsShifts[tableSize];
+
+            return new Point(shift[seat - 1, 0], shift[seat - 1, 1]);
         }
     }
 }

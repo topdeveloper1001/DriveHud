@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Application;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Resources;
 using Microsoft.Practices.Unity;
@@ -32,6 +33,7 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         protected override void InitializeContainer(UnityContainer unityContainer)
         {
             unityContainer.RegisterType<IHudLayoutsService, HudLayoutsService>();
+            UnityServicesBootstrapper.ConfigureContainer(unityContainer);
             ResourceRegistrator.Initialization();
         }
     }

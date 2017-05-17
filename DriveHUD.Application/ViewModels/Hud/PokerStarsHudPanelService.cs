@@ -10,24 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class PokerStarsHudPanelService : HudPanelService
     {
-        private readonly Dictionary<int, int[,]> positionsShifts = new Dictionary<int, int[,]>
-        {
-            { 2, new int[,] { { 7, -29 }, { 7, -4 } } },
-            { 3, new int[,] { { 7, -29 }, { 19, -4 }, { -8, -4 } } },
-            { 4, new int[,] { { 10, -41 }, { 10, -33 }, { -27, -33 }, { -21, -41 } } },
-            { 6, new int[,] { { 0, -45 }, { -25, -66 }, { -25, -25 }, { 0, -44 }, { 30, -25 }, { 30, -66} } },
-            { 8, new int[,] { { 13, -44 }, { -17, -15 }, { 0, -27 }, { -17, -72 }, { 13, -42}, { 21, -72 }, { 13, -27 }, { 21, -15 } } },
-            { 9, new int[,] { { 28, -29 }, { -17, -29 }, { 10, -41 }, { 10, -33 }, { 19, -4 }, { 7, -4}, { -8, -4 }, { -27, -33 }, { -21, -41 } } },
-            { 10, new int[,] { { 13, -44 }, { -17, -15 }, { 0, -27 }, { 0, -64 }, { -17, -72 }, { 13, -42}, { 21, -72 }, { 13, -64 }, { 13, -27 }, { 21, -15 } } }
-        };
-
         private readonly Dictionary<int, int[,]> plainPositionsShifts = new Dictionary<int, int[,]>
         {
             { 2, new int[,] { { -5, -40 }, { -8, -38}  } },
@@ -38,7 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 9, new int[,] { { -79, -49 }, { -52, -83 }, { -8, -112 }, { 29, -76}, { -6, -23 }, { -41, -76 }, { -12, -112 }, { 31, -83 }, { 66, -49 } } },
             { 10, new int[,] { { -32, -40 }, { -21, -37 }, { -26, -53 }, { -12, -43}, { -29, -46 }, { -11, -46 }, { 5, -43 }, { 13, -53 }, { -13, -37 }, { -8, -40 } } }
         };
-        
+
         /// <summary>
         /// Get initial table size 
         /// </summary>
@@ -46,6 +37,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         public override Tuple<double, double> GetInitialTableSize()
         {
             return new Tuple<double, double>(808, 585);
+        }
+
+        public override Point GetPositionShift(EnumTableType tableType, int seat)
+        {
+            var tableSize = (int)tableType;
+
+            if (!plainPositionsShifts.ContainsKey(tableSize))
+            {
+                return base.GetPositionShift(tableType, seat);
+            }
+
+            var shift = plainPositionsShifts[tableSize];
+
+            return new Point(shift[seat - 1, 0], shift[seat - 1, 1]);
         }
     }
 }

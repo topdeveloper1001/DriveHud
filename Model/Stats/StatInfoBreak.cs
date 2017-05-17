@@ -25,6 +25,17 @@ namespace Model.Stats
             Stat = Stat.LineBreak;
         }
 
+        public override Stat Stat
+        {
+            get
+            {
+                return base.Stat;
+            }
+            set
+            {
+            }
+        }
+
         public override StatInfo Clone()
         {
             return new StatInfoBreak();

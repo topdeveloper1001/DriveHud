@@ -173,7 +173,7 @@ namespace Model.Stats
         private Stat stat;
 
         [ProtoMember(4)]
-        public Stat Stat
+        public virtual Stat Stat
         {
             get
             {
