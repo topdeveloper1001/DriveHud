@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SessionFactoryService.cs" company="Ace Poker Solutions">
+// <copyright file="BaseDatabaseTest.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -13,7 +13,6 @@
 using DriveHud.Common.Log;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
@@ -21,25 +20,21 @@ using DriveHUD.Importers;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
-using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
 using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace DriveHud.Tests.IntegrationTests.Base
 {
-    public class BaseDatabaseTest
+    class BaseDatabaseTest : BaseIntegrationTest
     {
-        protected IDHLog customLogger;
-
         private const string testDataFolder = @"..\..\IntegrationTests\Importers\TestData";
 
-        protected virtual string TestDataFolder
+        protected override string TestDataFolder
         {
             get
             {
@@ -47,19 +42,14 @@ namespace DriveHud.Tests.IntegrationTests.Base
             }
         }
 
-        protected virtual void Initalize()
+        protected override void Initalize()
         {
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
-
+            base.Initalize();
             InitializeDatabase();
-            InitializeEnvironment();
-            ConfigureCustomLogger();
         }
 
-        protected virtual void InitializeEnvironment()
+        protected override void InitializeContainer(UnityContainer unityContainer)
         {
-            var unityContainer = new UnityContainer();
-
             InitializeImporterSessionCacheService(unityContainer);
             InitializeDataService(unityContainer);
             InitializeSessionFactoryService(unityContainer);
@@ -69,10 +59,6 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeLicenseService(unityContainer);
             InitializeSessionService(unityContainer);
             InitializeResources();
-
-            var locator = new UnityServiceLocator(unityContainer);
-
-            ServiceLocator.SetLocatorProvider(() => locator);
         }
 
         protected virtual void InitializeDatabase()
@@ -129,13 +115,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     }
                 }
             }
-        }
-
-        protected virtual void ConfigureCustomLogger()
-        {
-            customLogger = Substitute.For<IDHLog>();
-            LogProvider.SetCustomLogger(customLogger);
-        }
+        }      
 
         /// <summary>        
         /// Fills the database with the data from the specified hand history file

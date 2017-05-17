@@ -13,14 +13,17 @@
 using DHCRegistration;
 using DHHRegistration;
 using DHORegistration;
+using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
+using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
@@ -47,9 +50,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
 using Telerik.Windows.Controls;
-using DriveHUD.API;
 
 namespace DriveHUD.Application
 {
@@ -200,7 +201,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
-            RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);            
+            RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
@@ -208,6 +209,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
+            RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
