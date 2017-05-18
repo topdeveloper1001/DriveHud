@@ -842,7 +842,9 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName);
+                var isHero = lastParsingResult.Source.Hero != null && lastParsingResult.Source.Hero.PlayerName != null ?
+                    lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName) :
+                    false;
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
                     Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :

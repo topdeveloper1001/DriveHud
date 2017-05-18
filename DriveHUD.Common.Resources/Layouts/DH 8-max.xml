@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Default 8-max" IsDefault="true" TableType="Eight">
+<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 8-max" IsDefault="true" TableType="Eight">
   <Opacity>1</Opacity>
   <HudPlayerTypes>
     <HudPlayerType>
@@ -1090,7 +1090,81 @@
     </HudBumperStickerType>
   </HudBumperStickerTypes>
   <LayoutTools>
-    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="4d284a63-6c4b-43d0-8409-228d5a81368f">
+    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="5a9600db-0fa7-4bbc-b667-e454db1b4a5d">      
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>440</X>
+            <Y>156</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>654</X>
+            <Y>249</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
+          <Position>
+            <X>654</X>
+            <Y>356</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>440</X>
+            <Y>447</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>282</X>
+            <Y>447</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>6</Seat>
+          <Position>
+            <X>90</X>
+            <Y>356</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>7</Seat>
+          <Position>
+            <X>90</X>
+            <Y>249</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>8</Seat>
+          <Position>
+            <X>282</X>
+            <Y>156</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+      </UIPositions>
       <Stats>
         <StatInfo>
           <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>
@@ -1101,16 +1175,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>VPIP</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1229,16 +1293,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>PFR</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1357,16 +1411,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>ThreeBet</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>true</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1485,16 +1529,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>AggPr</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1613,16 +1647,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>FlopCBet</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1741,16 +1765,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>FoldCBet</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1869,16 +1883,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>WWSF</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -1997,16 +2001,6 @@
           </StatInfoGroup>
           <GroupName>One</GroupName>
           <PropertyName>TotalHands</PropertyName>
-          <CurrentColor>
-            <A>255</A>
-            <R>128</R>
-            <G>128</G>
-            <B>128</B>
-            <ScA>1</ScA>
-            <ScR>0.2158605</ScR>
-            <ScG>0.2158605</ScG>
-            <ScB>0.2158605</ScB>
-          </CurrentColor>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
@@ -2116,65 +2110,778 @@
           </SettingsAppearanceValueRangeCollection>
           <StatInfoToolTipCollection />
         </StatInfo>
-      </Stats>      
+      </Stats>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="353684f7-0942-4b51-90ec-bf63fb7d5f68">      
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
             <X>440</X>
-            <Y>156</Y>
+            <Y>143</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
             <X>654</X>
-            <Y>249</Y>
+            <Y>236</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>3</Seat>
           <Position>
             <X>654</X>
-            <Y>356</Y>
+            <Y>343</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>4</Seat>
           <Position>
             <X>440</X>
-            <Y>447</Y>
+            <Y>434</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>5</Seat>
           <Position>
             <X>282</X>
-            <Y>447</Y>
+            <Y>434</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>6</Seat>
           <Position>
             <X>90</X>
-            <Y>356</Y>
+            <Y>343</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>7</Seat>
           <Position>
             <X>90</X>
-            <Y>249</Y>
+            <Y>236</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>8</Seat>
           <Position>
             <X>282</X>
-            <Y>156</Y>
+            <Y>143</Y>
           </Position>
+          <Width>100</Width>
+          <Height>13</Height>
         </HudPositionInfo>
       </UIPositions>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="5776d223-ceed-4834-a84c-7c312783ef98">
+      <BaseStat>
+        <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
+        <Caption>VPIP%</Caption>
+        <Stat>VPIP</Stat>
+        <StatInfoGroup>
+          <Name>Most Popular</Name>
+        </StatInfoGroup>
+        <GroupName>1</GroupName>
+        <PropertyName>VPIP</PropertyName>
+        <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+        <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+        <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+        <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+        <SettingsAppearanceFontBold />
+        <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+        <SettingsAppearanceFontItalic />
+        <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+        <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+        <SettingsAppearanceValueRangeCollection />
+      </BaseStat>
+      <Stats>
+        <StatInfo>
+          <Id>cb24fa16-0394-4de1-bce8-9be1fba21828</Id>
+          <Caption>EP VPIP%</Caption>
+          <Stat>VPIP_EP</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_EP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>2280d94a-4523-4bcf-82a2-5d1f7a6d2101</Id>
+          <Caption>MP VPIP%</Caption>
+          <Stat>VPIP_MP</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_MP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>889205fa-2c98-4773-bb23-ca4359d9bc07</Id>
+          <Caption>CO VPIP%</Caption>
+          <Stat>VPIP_CO</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_CO</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>3d9be773-83a3-4bd9-a4e0-2e4f0e3d008c</Id>
+          <Caption>BN VPIP%</Caption>
+          <Stat>VPIP_BN</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_BN</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>23e5c668-7d46-44c1-9aca-0be3c12e6b4f</Id>
+          <Caption>SB VPIP%</Caption>
+          <Stat>VPIP_SB</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_SB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>eafdbf56-e504-4217-bac3-04bb3a155e98</Id>
+          <Caption>BB VPIP%</Caption>
+          <Stat>VPIP_BB</Stat>
+          <StatInfoGroup>
+            <Name>VPIP</Name>
+          </StatInfoGroup>
+          <GroupName>94</GroupName>
+          <PropertyName>VPIP_BB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <Text>TOTAL</Text>
+      <HeaderText>VPIP</HeaderText>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="bbbec2c8-bf5a-40db-b44f-36a3df3b094e">
+      <BaseStat>
+        <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
+        <Caption>VPIP%</Caption>
+        <Stat>VPIP</Stat>
+        <StatInfoGroup>
+          <Name>Most Popular</Name>
+        </StatInfoGroup>
+        <GroupName>1</GroupName>
+        <PropertyName>VPIP</PropertyName>
+        <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+        <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+        <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+        <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+        <SettingsAppearanceFontBold />
+        <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+        <SettingsAppearanceFontItalic />
+        <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+        <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+        <SettingsAppearanceValueRangeCollection />
+      </BaseStat>
+      <Stats>
+        <StatInfo>
+          <Id>c844360b-5012-4447-a5f9-d0fbf022bf9e</Id>
+          <Caption>EP Cold Call%</Caption>
+          <Stat>ColdCall_EP</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_EP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>e2e98026-f4e4-4591-96ef-1dfddaed761e</Id>
+          <Caption>MP Cold Call%</Caption>
+          <Stat>ColdCall_MP</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_MP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>a6e7fbc2-7397-4d8f-b698-1f90ce23857f</Id>
+          <Caption>CO Cold Call%</Caption>
+          <Stat>ColdCall_CO</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_CO</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>556c5a68-e838-48e6-a90a-f508d01c8eb7</Id>
+          <Caption>BN Cold Call%</Caption>
+          <Stat>ColdCall_BN</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_BN</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>d410abcf-c952-46eb-b9f7-bb5f2b4f95e6</Id>
+          <Caption>SB Cold Call%</Caption>
+          <Stat>ColdCall_SB</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_SB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>299f271c-aded-4a53-b531-46240eab5b65</Id>
+          <Caption>BB Cold Call%</Caption>
+          <Stat>ColdCall_BB</Stat>
+          <StatInfoGroup>
+            <Name>Cold call</Name>
+          </StatInfoGroup>
+          <GroupName>95</GroupName>
+          <PropertyName>ColdCall_BB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <Text>COLD CALL</Text>
+      <HeaderText>Cold Call</HeaderText>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="91034310-0ba8-4cd3-a0f1-b02b59268555">
+      <BaseStat>
+        <Id>3d914c4a-fe53-47a9-82e4-3142aab3863a</Id>
+        <Caption>PFR%</Caption>
+        <Stat>PFR</Stat>
+        <StatInfoGroup>
+          <Name>Most Popular</Name>
+        </StatInfoGroup>
+        <GroupName>1</GroupName>
+        <PropertyName>PFR</PropertyName>
+        <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+        <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+        <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+        <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+        <SettingsAppearanceFontBold />
+        <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+        <SettingsAppearanceFontItalic />
+        <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+        <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+        <SettingsAppearanceValueRangeCollection />
+      </BaseStat>
+      <Stats>
+        <StatInfo>
+          <Id>87706683-b221-4789-a432-3bdc3dc3f714</Id>
+          <Caption>UO-PFR EP</Caption>
+          <Stat>UO_PFR_EP</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>UO_PFR_EP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>9b1abc8a-5771-4c36-9dcb-4f8706bb89a3</Id>
+          <Caption>UO-PFR MP</Caption>
+          <Stat>UO_PFR_MP</Stat>
+          <StatInfoGroup>
+            <Name>PFR</Name>
+          </StatInfoGroup>
+          <GroupName>96</GroupName>
+          <PropertyName>UO_PFR_MP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>0c7024fc-d22d-4b65-975d-0b7820256e64</Id>
+          <Caption>UO-PFR CO</Caption>
+          <Stat>UO_PFR_CO</Stat>
+          <StatInfoGroup>
+            <Name>PFR</Name>
+          </StatInfoGroup>
+          <GroupName>96</GroupName>
+          <PropertyName>UO_PFR_CO</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>0b6ecbe5-5bc8-46c2-a173-814009d432fe</Id>
+          <Caption>UO-PFR BN</Caption>
+          <Stat>UO_PFR_BN</Stat>
+          <StatInfoGroup>
+            <Name>PFR</Name>
+          </StatInfoGroup>
+          <GroupName>96</GroupName>
+          <PropertyName>UO_PFR_BN</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>676d5140-8ac2-41ab-b447-5d4365d317d9</Id>
+          <Caption>UO-PFR SB</Caption>
+          <Stat>UO_PFR_SB</Stat>
+          <StatInfoGroup>
+            <Name>PFR</Name>
+          </StatInfoGroup>
+          <GroupName>96</GroupName>
+          <PropertyName>UO_PFR_SB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>872edb2d-15cf-443f-b6c9-45c56448b268</Id>
+          <Caption>UO-PFR BB</Caption>
+          <Stat>UO_PFR_BB</Stat>
+          <StatInfoGroup>
+            <Name>PFR</Name>
+          </StatInfoGroup>
+          <GroupName>96</GroupName>
+          <PropertyName>UO_PFR_BB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <Text>UNOPENED</Text>
+      <HeaderText>PFR</HeaderText>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="96ec91f4-6777-4ba1-af0f-5490d7b06df4">
+      <BaseStat>
+        <Id>81451605-e856-4418-bd1c-aaaf5e99899f</Id>
+        <Caption>3-bet%</Caption>
+        <Stat>S3Bet</Stat>
+        <StatInfoGroup>
+          <Name>Most Popular</Name>
+        </StatInfoGroup>
+        <GroupName>1</GroupName>
+        <PropertyName>ThreeBet</PropertyName>
+        <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+        <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+        <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+        <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+        <SettingsAppearanceFontBold />
+        <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+        <SettingsAppearanceFontItalic />
+        <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+        <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+        <SettingsAppearanceValueRangeCollection />
+      </BaseStat>
+      <Stats>
+        <StatInfo>
+          <Id>e1731694-6c82-4ced-ab59-13416e10ca6c</Id>
+          <Caption>3-Bet EP%</Caption>
+          <Stat>ThreeBet_EP</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_EP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>9d48f2c0-2d93-4683-810b-b147693e49d0</Id>
+          <Caption>3-Bet MP%</Caption>
+          <Stat>ThreeBet_MP</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_MP</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>605d9ca6-3a73-4525-b948-e90acaec1ebc</Id>
+          <Caption>3-Bet CO%</Caption>
+          <Stat>ThreeBet_CO</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_CO</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>4f037a65-a363-42b1-9f70-ca9ccd418e5e</Id>
+          <Caption>3-Bet BN%</Caption>
+          <Stat>ThreeBet_BN</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_BN</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>84d32959-1644-4608-807e-8866f581061a</Id>
+          <Caption>3-Bet SB%</Caption>
+          <Stat>ThreeBet_SB</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_SB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>e69e7920-853c-445d-beac-7ee5c91033a5</Id>
+          <Caption>3-Bet BB%</Caption>
+          <Stat>ThreeBet_BB</Stat>
+          <StatInfoGroup>
+            <Name>3-Bet</Name>
+          </StatInfoGroup>
+          <GroupName>3</GroupName>
+          <PropertyName>ThreeBet_BB</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <Text>TOTAL</Text>
+      <HeaderText>3-bet%</HeaderText>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="c1c5ccfb-8d99-4660-922f-834d34291cca">
+      <BaseStat>
+        <Id>453f682a-4df0-4f30-a14b-c4658908e4ce</Id>
+        <Caption>AGG%</Caption>
+        <Stat>AGG</Stat>
+        <StatInfoGroup>
+          <Name>Most Popular</Name>
+        </StatInfoGroup>
+        <GroupName>1</GroupName>
+        <PropertyName>AggPr</PropertyName>
+        <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+        <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+        <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+        <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+        <SettingsAppearanceFontBold />
+        <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+        <SettingsAppearanceFontItalic />
+        <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+        <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+        <SettingsAppearanceValueRangeCollection />
+      </BaseStat>
+      <Stats>
+        <StatInfo>
+          <Id>51dd4e70-e1e5-4b89-b792-f4457c382fc0</Id>
+          <Caption>Flop AGG%</Caption>
+          <Stat>FlopAGG</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>FlopAgg</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>c07f99d9-ec3a-4a13-bd89-3033e6533952</Id>
+          <Caption>Turn AGG%</Caption>
+          <Stat>TurnAGG</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>TurnAgg</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>3b957b39-0544-4e90-9a9a-7900beffbb11</Id>
+          <Caption>River AGG%</Caption>
+          <Stat>RiverAGG</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>RiverAgg</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+        <StatInfo>
+          <Id>29613609-9db0-443e-9848-534b83cae0d3</Id>
+          <Caption>Recent AGG%</Caption>
+          <Stat>RecentAgg</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>RecentAggPr</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <Text>TOTAL</Text>
+      <HeaderText>AGG%</HeaderText>
     </HudLayoutTool>
   </LayoutTools>
 </HudLayoutInfoV2>

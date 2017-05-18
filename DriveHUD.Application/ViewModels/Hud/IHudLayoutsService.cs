@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -137,5 +138,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Saves the mapping of the layout to the file on the default path
         /// </summary>
         void SaveLayoutMappings();
+
+        /// <summary>
+        /// Gets the path to the directory with layouts
+        /// </summary>
+        /// <returns>Directory</returns>
+        DirectoryInfo GetLayoutsDirectory();
     }
 }

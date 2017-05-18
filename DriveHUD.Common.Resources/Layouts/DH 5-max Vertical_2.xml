@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 5-max" IsDefault="true" TableType="Five">
+<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 5-max Vertical_2" IsDefault="false" TableType="Five">
   <Opacity>1</Opacity>
   <HudPlayerTypes>
     <HudPlayerType>
@@ -1090,52 +1090,53 @@
     </HudBumperStickerType>
   </HudBumperStickerTypes>
   <LayoutTools>
-    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="585b9ffd-b42d-4f15-be45-b110ae5dcd23">      
+    <HudLayoutTool xsi:type="HudLayoutFourStatsBoxTool" Id="13da7b57-e6c8-49c2-bf9c-a47a8472974a">
+      <Positions />
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
-            <X>508</X>
-            <Y>156</Y>
+            <X>592</X>
+            <Y>59</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
-            <X>654</X>
-            <Y>356</Y>
+            <X>738</X>
+            <Y>259</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>3</Seat>
           <Position>
-            <X>373</X>
-            <Y>447</Y>
+            <X>457</X>
+            <Y>350</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>4</Seat>
           <Position>
-            <X>90</X>
-            <Y>356</Y>
+            <X>60</X>
+            <Y>259</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>5</Seat>
           <Position>
-            <X>238</X>
-            <Y>156</Y>
+            <X>208</X>
+            <Y>59</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
       </UIPositions>
       <Stats>
@@ -1611,6 +1612,59 @@
           </SettingsAppearanceValueRangeCollection>
           <StatInfoToolTipCollection />
         </StatInfo>
+      </Stats>
+      <IsVertical>true</IsVertical>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="097dcdb5-0c24-472b-bd60-c3b9df8ae491">
+      <Positions />
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>478</X>
+            <Y>174</Y>
+          </Position>
+          <Width>142</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>374</Y>
+          </Position>
+          <Width>142</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
+          <Position>
+            <X>343</X>
+            <Y>465</Y>
+          </Position>
+          <Width>142</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>374</Y>
+          </Position>
+          <Width>142</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>174</Y>
+          </Position>
+          <Width>142</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+      </UIPositions>
+      <Stats>
         <StatInfo>
           <Id>954ded7e-353d-4617-b601-e745aa58228b</Id>
           <Caption>C-bet%</Caption>
@@ -2085,13 +2139,140 @@
         </StatInfo>
       </Stats>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="a1fe90ce-5fde-46f6-b40e-a5a6b088027c">      
+    <HudLayoutTool xsi:type="HudLayoutTiltMeterTool" Id="8c19f3a1-9a83-4030-8ad1-fe373f2e2f9d">
+      <Positions />
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
-            <X>508</X>
-            <Y>143</Y>
+            <X>610</X>
+            <Y>121</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>756</X>
+            <Y>321</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
+          <Position>
+            <X>475</X>
+            <Y>412</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+      </UIPositions>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutPlayerIconTool" Id="2435cc67-bbba-44ca-a936-e33b1f4873a9">
+      <Positions />
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>582</X>
+            <Y>121</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>728</X>
+            <Y>321</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
+          <Position>
+            <X>447</X>
+            <Y>412</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>73</X>
+            <Y>321</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>221</X>
+            <Y>121</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+      </UIPositions>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGraphTool" Id="43b76afd-20e2-46cb-add7-a8ce5fd71fef">
+      <Stats>
+        <StatInfo>
+          <Id>f3d154a5-f6b5-4010-a820-fefc336d724a</Id>
+          <Caption>Net Won</Caption>
+          <Stat>NetWon</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>NetWon</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <ParentId>2435cc67-bbba-44ca-a936-e33b1f4873a9</ParentId>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="535f7ef4-de9e-4c38-99f9-238d34d15e3a">
+      <Positions />
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>478</X>
+            <Y>164</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
@@ -2099,8 +2280,8 @@
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
-            <X>654</X>
-            <Y>343</Y>
+            <X>624</X>
+            <Y>364</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
@@ -2108,8 +2289,8 @@
         <HudPositionInfo>
           <Seat>3</Seat>
           <Position>
-            <X>373</X>
-            <Y>434</Y>
+            <X>343</X>
+            <Y>455</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
@@ -2117,8 +2298,8 @@
         <HudPositionInfo>
           <Seat>4</Seat>
           <Position>
-            <X>90</X>
-            <Y>343</Y>
+            <X>60</X>
+            <Y>364</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
@@ -2126,15 +2307,15 @@
         <HudPositionInfo>
           <Seat>5</Seat>
           <Position>
-            <X>238</X>
-            <Y>143</Y>
+            <X>208</X>
+            <Y>164</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
         </HudPositionInfo>
       </UIPositions>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="012aa6ce-b1ec-4564-a695-0863fc5e8dd2">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="47a14167-9b91-4d44-88f8-6704e5c5ebda">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
         <Caption>VPIP%</Caption>
@@ -2281,7 +2462,7 @@
       <Text>TOTAL</Text>
       <HeaderText>VPIP</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="6e8c1c03-68f6-4c50-b0be-d3bfefc4a09a">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="deeb6fbd-2138-4bb6-adc1-91efa2ad07ad">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
         <Caption>VPIP%</Caption>
@@ -2428,7 +2609,7 @@
       <Text>COLD CALL</Text>
       <HeaderText>Cold Call</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="a0323388-2d2f-433c-99a0-22f70c7c6fe0">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="4600ae5b-3a60-482e-9135-2258fabe2d03">
       <BaseStat>
         <Id>3d914c4a-fe53-47a9-82e4-3142aab3863a</Id>
         <Caption>PFR%</Caption>
@@ -2575,7 +2756,7 @@
       <Text>UNOPENED</Text>
       <HeaderText>PFR</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="5549c3e8-3ba5-4669-b7fb-34c7f2eedf24">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="d56a8fcf-6dba-452a-9784-bb864a9bc334">
       <BaseStat>
         <Id>81451605-e856-4418-bd1c-aaaf5e99899f</Id>
         <Caption>3-bet%</Caption>
@@ -2722,7 +2903,7 @@
       <Text>TOTAL</Text>
       <HeaderText>3-bet%</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="d965a92d-7171-4b5a-b473-0344ce0ed8f1">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="f055441c-a9e4-486c-a005-289df2c3b485">
       <BaseStat>
         <Id>453f682a-4df0-4f30-a14b-c4658908e4ce</Id>
         <Caption>AGG%</Caption>

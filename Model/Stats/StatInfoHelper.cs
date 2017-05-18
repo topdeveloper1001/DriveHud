@@ -43,16 +43,13 @@ namespace Model.Stats
                 new StatInfoGroup { Name = "Tournament" },
                 new StatInfoGroup { Name = "Continuation Bet" },
                 new StatInfoGroup { Name = "Limp" },
-                new StatInfoGroup { Name = "Advanced Stats" },
-                new StatInfoGroup { Name = "VPIP" },
                 new StatInfoGroup { Name = "Cold call" },
-                new StatInfoGroup { Name = "PFR" }
+                new StatInfoGroup { Name = "Advanced Stats" },                                                
             };
 
             // Make a collection of StatInfo
             var statsCollection = new[]
-            {
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.UO_PFR_EP, PropertyName = nameof(Indicators.UO_PFR_EP), IsListed = false },
+            {                
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PlayerInfoIcon },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = nameof(Indicators.VPIP) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = nameof(Indicators.PFR)},
@@ -99,17 +96,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpMp, PropertyName = nameof(Indicators.LimpMp) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpCo, PropertyName = nameof(Indicators.LimpCo) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpBtn, PropertyName = nameof(Indicators.LimpBtn) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = nameof(Indicators.LimpSb) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallMP, PropertyName = nameof(Indicators.ColdCallInMP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallCO, PropertyName = nameof(Indicators.ColdCallInCO) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBTN, PropertyName = nameof(Indicators.ColdCallInBTN) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallSB, PropertyName = nameof(Indicators.ColdCallInSB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBB, PropertyName = nameof(Indicators.ColdCallInBB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseBTN, PropertyName = nameof(Indicators.ColdCallVsBtnOpen) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseCO, PropertyName = nameof(Indicators.ColdCallVsCoOpen) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseSB, PropertyName = nameof(Indicators.ColdCallVsSbOpen) },
-
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = nameof(Indicators.LimpSb) },           
 
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInEP, PropertyName = nameof(Indicators.PFRInEP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInMP, PropertyName = nameof(Indicators.PFRInMP) },
@@ -118,6 +105,20 @@ namespace Model.Stats
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInSB, PropertyName = nameof(Indicators.PFRInSB) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInBB, PropertyName = nameof(Indicators.PFRInBB) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.BTNDefendCORaise, PropertyName = nameof(Indicators.BTNDefendCORaise) },
+
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_EP, PropertyName = nameof(HudLightIndicators.VPIP_EP) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_MP, PropertyName = nameof(HudLightIndicators.VPIP_MP) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_CO, PropertyName = nameof(HudLightIndicators.VPIP_CO) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_BN, PropertyName = nameof(HudLightIndicators.VPIP_BN) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_SB, PropertyName = nameof(HudLightIndicators.VPIP_SB) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.VPIP_BB, PropertyName = nameof(HudLightIndicators.VPIP_BB) },
+
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_EP, PropertyName = nameof(HudLightIndicators.UO_PFR_EP) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_MP, PropertyName = nameof(HudLightIndicators.UO_PFR_MP) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_CO, PropertyName = nameof(HudLightIndicators.UO_PFR_CO) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_BN, PropertyName = nameof(HudLightIndicators.UO_PFR_BN) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_SB, PropertyName = nameof(HudLightIndicators.UO_PFR_SB) },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.UO_PFR_BB, PropertyName = nameof(HudLightIndicators.UO_PFR_BB) },
 
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetIP, PropertyName = nameof(Indicators.ThreeBetIP) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetOOP, PropertyName = nameof(Indicators.ThreeBetOOP) },
@@ -213,31 +214,25 @@ namespace Model.Stats
                 new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpFold, PropertyName = nameof(Indicators.DidLimpFold) },
                 new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpReraise, PropertyName = nameof(Indicators.DidLimpReraise) },
 
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.RaiseFrequencyFactor, PropertyName = nameof(Indicators.RaiseFrequencyFactor) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.TrueAggression, PropertyName = nameof(Indicators.TrueAggression) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DonkBet, PropertyName = nameof(Indicators.DonkBet) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DelayedTurnCBet, PropertyName = nameof(Indicators.DidDelayedTurnCBet) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallMP, PropertyName = nameof(Indicators.ColdCallInMP) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallCO, PropertyName = nameof(Indicators.ColdCallInCO) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallBTN, PropertyName = nameof(Indicators.ColdCallInBTN) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallSB, PropertyName = nameof(Indicators.ColdCallInSB) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallBB, PropertyName = nameof(Indicators.ColdCallInBB) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallVsOpenRaiseBTN, PropertyName = nameof(Indicators.ColdCallVsBtnOpen) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallVsOpenRaiseCO, PropertyName = nameof(Indicators.ColdCallVsCoOpen) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallVsOpenRaiseSB, PropertyName = nameof(Indicators.ColdCallVsSbOpen) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_EP, PropertyName = nameof(HudLightIndicators.ColdCall_EP) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_MP, PropertyName = nameof(HudLightIndicators.ColdCall_MP) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_CO, PropertyName = nameof(HudLightIndicators.ColdCall_CO) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_BN, PropertyName = nameof(HudLightIndicators.ColdCall_BN) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_SB, PropertyName = nameof(HudLightIndicators.ColdCall_SB) },
+                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCall_BB, PropertyName = nameof(HudLightIndicators.ColdCall_BB) },
 
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_EP, PropertyName = nameof(HudLightIndicators.VPIP_EP) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_MP, PropertyName = nameof(HudLightIndicators.VPIP_MP) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_CO, PropertyName = nameof(HudLightIndicators.VPIP_CO) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_BN, PropertyName = nameof(HudLightIndicators.VPIP_BN) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_SB, PropertyName = nameof(HudLightIndicators.VPIP_SB) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.VPIP_BB, PropertyName = nameof(HudLightIndicators.VPIP_BB) },
-
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_EP, PropertyName = nameof(HudLightIndicators.ColdCall_EP) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_MP, PropertyName = nameof(HudLightIndicators.ColdCall_MP) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_CO, PropertyName = nameof(HudLightIndicators.ColdCall_CO) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BN, PropertyName = nameof(HudLightIndicators.ColdCall_BN) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_SB, PropertyName = nameof(HudLightIndicators.ColdCall_SB) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BB, PropertyName = nameof(HudLightIndicators.ColdCall_BB) },
-
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_EP, PropertyName = nameof(HudLightIndicators.UO_PFR_EP) },
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_MP, PropertyName = nameof(HudLightIndicators.UO_PFR_MP) },
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_CO, PropertyName = nameof(HudLightIndicators.UO_PFR_CO) },
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_BN, PropertyName = nameof(HudLightIndicators.UO_PFR_BN) },
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_SB, PropertyName = nameof(HudLightIndicators.UO_PFR_SB) },
-                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_BB, PropertyName = nameof(HudLightIndicators.UO_PFR_BB) }
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.RaiseFrequencyFactor, PropertyName = nameof(Indicators.RaiseFrequencyFactor) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.TrueAggression, PropertyName = nameof(Indicators.TrueAggression) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DonkBet, PropertyName = nameof(Indicators.DonkBet) },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet, PropertyName = nameof(Indicators.DidDelayedTurnCBet) }                            
             };
 
             return statsCollection;

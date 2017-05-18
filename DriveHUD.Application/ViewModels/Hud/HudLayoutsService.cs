@@ -43,11 +43,10 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal class HudLayoutsService : IHudLayoutsService
     {
-        // move to Globals.cs
-        private const string LayoutsFolderName = "Layouts";
-        private const string LayoutFileExtension = ".xml";
-        private const string MappingsFileName = "Mappings";
+        private string LayoutFileExtension;
+        private string MappingsFileName;
         private const string PathToImages = @"data\PlayerTypes";
+        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Vertical_1", "Vertical_2", "Horizontal" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private IEventAggregator eventAggregator;
@@ -57,6 +56,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         public HudLayoutsService()
         {
+            LayoutFileExtension = StringFormatter.GetLayoutsExtension();
+            MappingsFileName = StringFormatter.GetLayoutsMappings();
             Initialize();
         }
 
@@ -628,6 +629,29 @@ namespace DriveHUD.Application.ViewModels.Hud
             return result.OrderBy(l => l.TableType).ToList();
         }
 
+        /// <summary>
+        /// Gets the path to the directory with layouts
+        /// </summary>
+        /// <returns>Directory</returns>
+        public DirectoryInfo GetLayoutsDirectory()
+        {
+            var layoutsDirectory = new DirectoryInfo(StringFormatter.GetLayoutsFolderPath());
+
+            if (!layoutsDirectory.Exists)
+            {
+                try
+                {
+                    layoutsDirectory.Create();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Directory '{layoutsDirectory.FullName}' for layouts has not been created.", e);
+                }
+            }
+
+            return layoutsDirectory;
+        }
+
         #endregion
 
         #region Infrastructure
@@ -649,32 +673,34 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
                 {
-                    var defaultLayoutInfo = GetPredefinedLayout(tableType);
-
-                    if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
+                    foreach (var predefinedPostfix in PredefinedLayoutPostfixes)
                     {
-                        continue;
-                    }
+                        var defaultLayoutInfo = GetPredefinedLayout(tableType, predefinedPostfix);
 
-                    var fileName = InternalSave(defaultLayoutInfo);
-
-                    var existingMapping = HudLayoutMappings.Mappings.FirstOrDefault(x => x.TableType == tableType &&
-                                                x.Name == defaultLayoutInfo.Name &&
-                                                x.IsDefault);
-
-                    if (existingMapping == null)
-                    {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                        if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
                         {
-                            TableType = tableType,
-                            Name = defaultLayoutInfo.Name,
-                            IsDefault = true,
-                            FileName = Path.GetFileName(fileName)
-                        });
-                    }
-                    else
-                    {
-                        existingMapping.FileName = Path.GetFileName(fileName);
+                            continue;
+                        }
+
+                        var fileName = InternalSave(defaultLayoutInfo);
+
+                        var existingMapping = HudLayoutMappings.Mappings.FirstOrDefault(x => x.TableType == tableType &&
+                                                    x.Name == defaultLayoutInfo.Name);
+
+                        if (existingMapping == null)
+                        {
+                            HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                            {
+                                TableType = tableType,
+                                Name = defaultLayoutInfo.Name,
+                                IsDefault = string.IsNullOrEmpty(predefinedPostfix),
+                                FileName = Path.GetFileName(fileName)
+                            });
+                        }
+                        else
+                        {
+                            existingMapping.FileName = Path.GetFileName(fileName);
+                        }
                     }
                 }
 
@@ -810,13 +836,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="tableType">Table type</param>
         /// <returns>Predefined <see cref="HudLayoutInfoV2"/> layout</returns>
-        private HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType)
+        private HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
             try
             {
-                var resourceName = $"DriveHUD.Common.Resources.Layouts.DH {CommonResourceManager.Instance.GetEnumResource(tableType)}.xml";
+                if (!string.IsNullOrEmpty(postfix))
+                {
+                    postfix = $" {postfix}";
+                }
+
+                var resourceName = $"DriveHUD.Common.Resources.Layouts.DH {CommonResourceManager.Instance.GetEnumResource(tableType)}{postfix}.xml";
 
                 using (var stream = resourcesAssembly.GetManifestResourceStream(resourceName))
                 {
@@ -895,29 +926,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return true;
-        }
-
-        /// <summary>
-        /// Gets the path to the directory with layouts
-        /// </summary>
-        /// <returns>Directory</returns>
-        private DirectoryInfo GetLayoutsDirectory()
-        {
-            var layoutsDirectory = new DirectoryInfo(Path.Combine(StringFormatter.GetAppDataFolderPath(), LayoutsFolderName));
-
-            if (!layoutsDirectory.Exists)
-            {
-                try
-                {
-                    layoutsDirectory.Create();
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, $"Directory '{layoutsDirectory.FullName}' for layouts has not been created.", e);
-                }
-            }
-
-            return layoutsDirectory;
         }
 
         /// <summary>
@@ -1198,8 +1206,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return hudPlayerTypes;
         }
-      
-        private static string GetLayoutFileName(string layoutName)
+
+        private string GetLayoutFileName(string layoutName)
         {
             return $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}";
         }

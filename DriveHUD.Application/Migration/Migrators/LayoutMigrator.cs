@@ -480,7 +480,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
             return statInfo;
         }
-
+      
         private Point GetOffset(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType, int seat)
         {
             if (pokerSite == EnumPokerSites.Ignition || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Bodog)

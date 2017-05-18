@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 5-max" IsDefault="true" TableType="Five">
+<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 2-max Vertical_1" IsDefault="false" TableType="HU">
   <Opacity>1</Opacity>
   <HudPlayerTypes>
     <HudPlayerType>
@@ -1090,52 +1090,243 @@
     </HudBumperStickerType>
   </HudBumperStickerTypes>
   <LayoutTools>
-    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="585b9ffd-b42d-4f15-be45-b110ae5dcd23">      
+    <HudLayoutTool xsi:type="HudLayoutFourStatsBoxTool" Id="d8fc542c-7b64-4102-933c-086165b0c9e2">
+      <Positions>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>448</X>
+                <Y>18</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>362</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
-            <X>508</X>
-            <Y>156</Y>
+            <X>457</X>
+            <Y>59</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
-            <X>654</X>
-            <Y>356</Y>
+            <X>343</X>
+            <Y>350</Y>
           </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>3</Seat>
-          <Position>
-            <X>373</X>
-            <Y>447</Y>
-          </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>4</Seat>
-          <Position>
-            <X>90</X>
-            <Y>356</Y>
-          </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>5</Seat>
-          <Position>
-            <X>238</X>
-            <Y>156</Y>
-          </Position>
-          <Width>144</Width>
-          <Height>NaN</Height>
+          <Width>30</Width>
+          <Height>63</Height>
         </HudPositionInfo>
       </UIPositions>
       <Stats>
@@ -1611,6 +1802,249 @@
           </SettingsAppearanceValueRangeCollection>
           <StatInfoToolTipCollection />
         </StatInfo>
+      </Stats>
+      <IsVertical>true</IsVertical>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="aef92210-3463-428a-ac22-13df7540c5cd">
+      <Positions>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>10</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>354</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>273</X>
+            <Y>51</Y>
+          </Position>
+          <Width>101</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>455</X>
+            <Y>342</Y>
+          </Position>
+          <Width>101</Width>
+          <Height>NaN</Height>
+        </HudPositionInfo>
+      </UIPositions>
+      <Stats>
         <StatInfo>
           <Id>954ded7e-353d-4617-b601-e745aa58228b</Id>
           <Caption>C-bet%</Caption>
@@ -2085,13 +2519,737 @@
         </StatInfo>
       </Stats>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="a1fe90ce-5fde-46f6-b40e-a5a6b088027c">      
+    <HudLayoutTool xsi:type="HudLayoutTiltMeterTool" Id="b2c6fe3e-45c8-4216-a2d5-04908f8775ba">
+      <Positions>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>466</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>334</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
           <Position>
-            <X>508</X>
-            <Y>143</Y>
+            <X>475</X>
+            <Y>121</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>343</X>
+            <Y>412</Y>
+          </Position>
+          <Width>13</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+      </UIPositions>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutPlayerIconTool" Id="ea886648-a54c-4bc1-b488-a47281fed23d">
+      <Positions>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>80</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>347</X>
+                <Y>424</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>447</X>
+            <Y>121</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>2</Seat>
+          <Position>
+            <X>356</X>
+            <Y>412</Y>
+          </Position>
+          <Width>28</Width>
+          <Height>27</Height>
+        </HudPositionInfo>
+      </UIPositions>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutGraphTool" Id="32d57ebb-2742-421a-a7fe-b5dcc14942f2">
+      <Stats>
+        <StatInfo>
+          <Id>f3d154a5-f6b5-4010-a820-fefc336d724a</Id>
+          <Caption>Net Won</Caption>
+          <Stat>NetWon</Stat>
+          <StatInfoGroup>
+            <Name>Most Popular</Name>
+          </StatInfoGroup>
+          <GroupName>1</GroupName>
+          <PropertyName>NetWon</PropertyName>
+          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
+          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
+          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
+          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold />
+          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
+          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
+          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
+          <SettingsAppearanceValueRangeCollection />
+        </StatInfo>
+      </Stats>
+      <IsVertical>false</IsVertical>
+      <ParentId>ea886648-a54c-4bc1-b488-a47281fed23d</ParentId>
+    </HudLayoutTool>
+    <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="12919aa1-b5c7-4106-b3ee-ed7f86b42272">
+      <Positions>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="CashOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="MTTOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="Bodog" GameType="SNGOmaha">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>264</X>
+                <Y>0</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>446</X>
+                <Y>344</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
+      <UIPositions>
+        <HudPositionInfo>
+          <Seat>1</Seat>
+          <Position>
+            <X>273</X>
+            <Y>41</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
@@ -2099,42 +3257,15 @@
         <HudPositionInfo>
           <Seat>2</Seat>
           <Position>
-            <X>654</X>
-            <Y>343</Y>
-          </Position>
-          <Width>100</Width>
-          <Height>13</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>3</Seat>
-          <Position>
-            <X>373</X>
-            <Y>434</Y>
-          </Position>
-          <Width>100</Width>
-          <Height>13</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>4</Seat>
-          <Position>
-            <X>90</X>
-            <Y>343</Y>
-          </Position>
-          <Width>100</Width>
-          <Height>13</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>5</Seat>
-          <Position>
-            <X>238</X>
-            <Y>143</Y>
+            <X>455</X>
+            <Y>332</Y>
           </Position>
           <Width>100</Width>
           <Height>13</Height>
         </HudPositionInfo>
       </UIPositions>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="012aa6ce-b1ec-4564-a695-0863fc5e8dd2">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="09de2c68-1d0c-42ae-81b1-1700247e16b7">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
         <Caption>VPIP%</Caption>
@@ -2281,7 +3412,7 @@
       <Text>TOTAL</Text>
       <HeaderText>VPIP</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="6e8c1c03-68f6-4c50-b0be-d3bfefc4a09a">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="43ecb13d-3ba4-4e48-8dc2-ba8ab4bccd28">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
         <Caption>VPIP%</Caption>
@@ -2428,7 +3559,7 @@
       <Text>COLD CALL</Text>
       <HeaderText>Cold Call</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="a0323388-2d2f-433c-99a0-22f70c7c6fe0">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="a15cb518-1b6c-41c8-9539-8a8b83056dce">
       <BaseStat>
         <Id>3d914c4a-fe53-47a9-82e4-3142aab3863a</Id>
         <Caption>PFR%</Caption>
@@ -2575,7 +3706,7 @@
       <Text>UNOPENED</Text>
       <HeaderText>PFR</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="5549c3e8-3ba5-4669-b7fb-34c7f2eedf24">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="08d8752f-a97e-4843-b8ab-4fc0a424ac95">
       <BaseStat>
         <Id>81451605-e856-4418-bd1c-aaaf5e99899f</Id>
         <Caption>3-bet%</Caption>
@@ -2722,7 +3853,7 @@
       <Text>TOTAL</Text>
       <HeaderText>3-bet%</HeaderText>
     </HudLayoutTool>
-    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="d965a92d-7171-4b5a-b473-0344ce0ed8f1">
+    <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="2b0ca5a1-d6fb-4c8b-9d48-535d6896bb09">
       <BaseStat>
         <Id>453f682a-4df0-4f30-a14b-c4658908e4ce</Id>
         <Caption>AGG%</Caption>

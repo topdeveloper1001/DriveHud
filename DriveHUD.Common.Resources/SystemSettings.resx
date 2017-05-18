@@ -206,4 +206,13 @@
   <data name="SystemSettings_PlayerStatisticOldFolderName" xml:space="preserve">
     <value>Database-old</value>
   </data>
+  <data name="SystemSettings_LayoutsFolder" xml:space="preserve">
+    <value>Layouts</value>
+  </data>
+  <data name="SystemSettings_LayoutsExtension" xml:space="preserve">
+    <value>.xml</value>
+  </data>
+  <data name="SystemSettings_LayoutsMappings" xml:space="preserve">
+    <value>Mappings</value>
+  </data>
 </root>

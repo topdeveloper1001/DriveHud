@@ -730,7 +730,7 @@ namespace DriveHUD.Application.ViewModels
         private void AddToolStats(List<StatInfo> statsCollection, int startingIndex)
         {
             // in design mode we can update only stats in selected tool
-            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null) || !(SelectedToolViewModel is IHudStatsToolViewModel))
+            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null) || (SelectedToolViewModel != null && !(SelectedToolViewModel is IHudStatsToolViewModel)))
             {
                 return;
             }
@@ -797,8 +797,10 @@ namespace DriveHUD.Application.ViewModels
                 return null;
             }
 
-            var statTool = hudElement.Tools.OfType<IHudStatsToolViewModel>()
-                            .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
+            var statTool = hudElement.Tools
+                .Where(x => x.ToolType == HudDesignerToolType.PlainStatBox)
+                .OfType<IHudStatsToolViewModel>()
+                .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
                                 SelectedToolViewModel == null);
 
             return statTool;
