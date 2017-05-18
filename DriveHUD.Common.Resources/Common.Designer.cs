@@ -944,7 +944,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gauge Indicator.
+        ///   Looks up a localized string similar to Line Bar Graphs.
         /// </summary>
         internal static string Common_HudSideBar_GaugeIndicatorTool {
             get {

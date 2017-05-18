@@ -544,8 +544,7 @@
 
             <Grid
                 Grid.Row="0"
-                Grid.Column="1"
-                Grid.ColumnSpan="2">
+                Grid.Column="1">
 
                 <Grid.RowDefinitions>
                     <RowDefinition
@@ -627,6 +626,7 @@
                 </comboboxControl:ComboBoxEx>
 
                 <Button
+                    Visibility="Collapsed"
                     Grid.Row="1"
                     Grid.Column="4"
                     HorizontalAlignment="Left"
@@ -720,6 +720,7 @@
                 <TextBlock
                     Margin="0,5,0,0"
                     Style="{StaticResource HudDesignerTextBlockStyle}"
+                    HorizontalAlignment="Center"
                     Text="{ResX Key=Common_HudSideBar_Title}" />
 
                 <UniformGrid

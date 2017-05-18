@@ -797,11 +797,21 @@ namespace DriveHUD.Application.ViewModels
                 return null;
             }
 
-            var statTool = hudElement.Tools
-                .Where(x => x.ToolType == HudDesignerToolType.PlainStatBox)
-                .OfType<IHudStatsToolViewModel>()
-                .FirstOrDefault(x => (SelectedToolViewModel != null && ReferenceEquals(x, SelectedToolViewModel)) ||
-                                SelectedToolViewModel == null);
+            IHudStatsToolViewModel statTool;
+
+            if (SelectedToolViewModel != null)
+            {
+                statTool = hudElement.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .FirstOrDefault(x => ReferenceEquals(x, SelectedToolViewModel));
+            }
+            else
+            {
+                statTool = hudElement.Tools
+                   .Where(x => x.ToolType == HudDesignerToolType.PlainStatBox)
+                   .OfType<IHudStatsToolViewModel>()
+                   .FirstOrDefault();
+            }
 
             return statTool;
         }

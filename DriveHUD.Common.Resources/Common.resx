@@ -673,7 +673,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Bumper Stickers</value>
   </data>
   <data name="Common_HudSideBar_GaugeIndicatorTool" xml:space="preserve">
-    <value>Gauge Indicator</value>
+    <value>Line Bar Graphs</value>
   </data>
   <data name="Common_HudSideBar_GraphTool" xml:space="preserve">
     <value>Graph</value>
