@@ -809,6 +809,12 @@ namespace DriveHUD.Importers
 
             var tournamentName = firstParsingResult.Source.GameDescription.Tournament.TournamentName;
 
+#warning temp
+            if (tournamentBase == null)
+            {
+                LogProvider.Log.Error("tournamentBase is null");
+            }
+
             var initialStackSize = (tournamentBase.Startingstacksizeinchips != 0) ? tournamentBase.Startingstacksizeinchips : GetInitialStackSize(tournamentName, parsingResult);
 
             // get hands grouped by player name

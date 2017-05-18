@@ -10,22 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Application.MigrationService.Migrators;
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common.Extensions;
+using DriveHUD.Entities;
+using Model.Enums;
+using Model.Stats;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Practices.Unity;
 using System.IO;
-using DriveHUD.Application.MigrationService.Migrators;
-using DriveHUD.Application.ViewModels.Layouts;
+using System.Linq;
 using System.Xml.Serialization;
-using DriveHUD.Application.ViewModels.Hud;
-using Model.Stats;
-using DriveHUD.Entities;
-using Model.Enums;
 
 namespace DriveHud.Tests.IntegrationTests.Migrations
 {
@@ -77,6 +74,41 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
             }
 
             Assert.That(migratedLayoutsV2.Count, Is.EqualTo(layoutFiles.Length));
+        }
+
+        [OneTimeTearDown]
+        public void SaveMigratedLayouts()
+        {
+            var migratedLayoutsDirectory = new DirectoryInfo("MigratedLayouts");
+
+            if (migratedLayoutsDirectory.Exists)
+            {
+                migratedLayoutsDirectory.Delete(true);
+            }
+
+            migratedLayoutsDirectory.Create();
+
+            foreach (var migratedLayoutV2 in migratedLayoutsV2)
+            {
+                var sourceLayoutFile = new FileInfo(migratedLayoutV2.Key);
+                var directoryName = sourceLayoutFile.Directory.Name;
+
+                var layoutFileName = $"{migratedLayoutV2.Value.Result.Name.RemoveInvalidFileNameChars()}.xml";
+                var layoutFilePath = Path.Combine(migratedLayoutsDirectory.FullName, directoryName, layoutFileName);
+
+                var layoutFileInfo = new FileInfo(layoutFilePath);
+
+                if (!layoutFileInfo.Directory.Exists)
+                {
+                    layoutFileInfo.Directory.Create();
+                }
+
+                using (var fs = File.Open(layoutFileInfo.FullName, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfoV2));
+                    xmlSerializer.Serialize(fs, migratedLayoutV2.Value.Result);
+                }
+            }
         }
 
         [Test]
@@ -170,20 +202,30 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         }
 
         [Test]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 1, 440, 156, 144, 75)]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 2, 654, 300, 144, 75)]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 3, 440, 447, 144, 75)]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 4, 282, 447, 144, 75)]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 5, 90, 300, 144, 75)]
-        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 156, 144, 75)]
-
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 1, 440, 156, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 2, 654, 300, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 3, 440, 447, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 4, 282, 447, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 5, 90, 300, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 156, 144, double.NaN)]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 271, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 364, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 148, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 2, 554, 292, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 4, 364, 439, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s4)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 292, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s5)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 271, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 5, 60, 415, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s6)")]
         public void LayoutV2ToolsPlainBoxUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);
 
             Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
 
-            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutPlainBoxTool>().FirstOrDefault();
+            var layoutTool = migrationResult.Result.LayoutTools
+                .Where(p => p.ToolType == HudDesignerToolType.PlainStatBox)
+                .Cast<HudLayoutPlainBoxTool>()
+                .FirstOrDefault();
 
             Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
 
@@ -195,10 +237,10 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
 
                 Assert.IsNotNull(uiPosition, "UiPosition not found in migrated layout");
 
-                Assert.That(uiPosition.Position.X, Is.EqualTo(x));
-                Assert.That(uiPosition.Position.Y, Is.EqualTo(y));
-                Assert.That(uiPosition.Width, Is.EqualTo(width));
-                Assert.That(uiPosition.Height, Is.EqualTo(height));
+                Assert.That(uiPosition.Position.X, Is.EqualTo(x), "X");
+                Assert.That(uiPosition.Position.Y, Is.EqualTo(y), "Y");
+                Assert.That(uiPosition.Width, Is.EqualTo(width), "Width");
+                Assert.That(uiPosition.Height, Is.EqualTo(height), "Height");
             });
         }
 
@@ -241,13 +283,120 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.PokerStars, EnumGameType.CashHoldem, 1, 334, 96)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.Poker888, EnumGameType.CashHoldem, 2, 648, 248)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.AmericasCardroom, EnumGameType.CashHoldem, 6, 43, 252)]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 451, 133, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-horiz-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 632, 204, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-horiz-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 264, 10, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 561, 96, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 4, 446, 364, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s4)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 148, 284, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s5)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 334, 133, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert2-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 36, 407, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert2-s6)")]
         public void LayoutV2ToolsPlainBoxPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
         {
             var migrationResult = GetMigrationV2Result(file);
 
             Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
 
-            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutPlainBoxTool>().FirstOrDefault();
+            var layoutTool = migrationResult.Result.LayoutTools
+                .Where(p => p.ToolType == HudDesignerToolType.PlainStatBox)
+                .Cast<HudLayoutPlainBoxTool>()
+                .FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+            Assert.IsNotNull(layoutTool.Positions, "Tool positions not found in migrated layout");
+
+            var positions = layoutTool.Positions.FirstOrDefault(p => p.PokerSite == pokerSite && p.GameType == gameType);
+
+            Assert.IsNotNull(positions, "Tool positions for specified site, game type not found in migrated layout");
+
+            var seatPosition = positions.HudPositions.FirstOrDefault(p => p.Seat == seat);
+
+            Assert.IsNotNull(seatPosition, "Tool positions for specified seat not found in migrated layout");
+
+            Assert.That(seatPosition.Position.X, Is.EqualTo(x));
+            Assert.That(seatPosition.Position.Y, Is.EqualTo(y));
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 245, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 3, 624, 445, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s3")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 536, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 524, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 524, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
+        public void LayoutV2Tool4StatBoxUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height, bool isVertical)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutFourStatsBoxTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(layoutTool.IsVertical, Is.EqualTo(isVertical));
+
+                Assert.That(layoutTool.UIPositions.Count, Is.EqualTo((int)migrationResult.Source.TableType));
+
+                var uiPosition = layoutTool.UIPositions.FirstOrDefault(p => p.Seat == seat);
+
+                Assert.IsNotNull(uiPosition, "UiPosition not found in migrated layout");
+
+                Assert.That(uiPosition.Position.X, Is.EqualTo(x));
+                Assert.That(uiPosition.Position.Y, Is.EqualTo(y));
+                Assert.That(uiPosition.Width, Is.EqualTo(width));
+                Assert.That(uiPosition.Height, Is.EqualTo(height));
+            });
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml")]
+        public void LayoutV2Tools4StatBoxStatsAreMigrated(string file)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutFourStatsBoxTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+            Assert.IsNotNull(layoutTool.Stats, "Tool stats not found");
+
+            Assert.That(layoutTool.Stats.Count, Is.LessThanOrEqualTo(4), "Stats.Count");
+
+            Assert.Multiple(() =>
+            {
+                for (var i = 0; i < migrationResult.Source.HudStats.Count; i++)
+                {
+                    var expectedStat = migrationResult.Source.HudStats[i];
+                    var actualStat = layoutTool.Stats[i];
+
+                    AssertThatStatsAreEqual(actualStat, expectedStat);
+
+                    if (i == 3)
+                    {
+                        break;
+                    }
+                }
+            });
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 451, 107)]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 632, 178)]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 9, 218, 107)]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 448, 18)]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 4, 334, 372)]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 36, 292)]
+        public void LayoutV2Tools4StatBoxPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutFourStatsBoxTool>().FirstOrDefault();
 
             Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
             Assert.IsNotNull(layoutTool.Positions, "Tool positions not found in migrated layout");
@@ -357,7 +506,11 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 4, 282, 434, 100, 13)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 5, 90, 287, 100, 13)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 143, 100, 13)]
-
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 261, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 354, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 138, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 282, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 261, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert2-s2)")]
         public void LayoutV2ToolsBumperStickersUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -395,6 +548,11 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.PokerStars, EnumGameType.CashHoldem, 1, 334, 83)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.Poker888, EnumGameType.CashHoldem, 2, 648, 235)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.AmericasCardroom, EnumGameType.CashHoldem, 6, 43, 239)]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 451, 123, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-horiz-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 632, 194, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-horiz-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 264, 0, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 148, 274, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert1-s5)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 334, 123, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert2-s1)")]
         public void LayoutV2ToolsBumperStickersPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -402,6 +560,126 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
             Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
 
             var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutBumperStickersTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+            Assert.IsNotNull(layoutTool.Positions, "Tool positions not found in migrated layout");
+
+            var positions = layoutTool.Positions.FirstOrDefault(p => p.PokerSite == pokerSite && p.GameType == gameType);
+
+            Assert.IsNotNull(positions, "Tool positions for specified site, game type not found in migrated layout");
+
+            var seatPosition = positions.HudPositions.FirstOrDefault(p => p.Seat == seat);
+
+            Assert.IsNotNull(seatPosition, "Tool positions for specified seat not found in migrated layout");
+
+            Assert.That(seatPosition.Position.X, Is.EqualTo(x));
+            Assert.That(seatPosition.Position.Y, Is.EqualTo(y));
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 535, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 509, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 542, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 756, 362, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert2-s2)")]
+        public void LayoutV2ToolsTiltMeterUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutTiltMeterTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(layoutTool.UIPositions.Count, Is.EqualTo((int)migrationResult.Source.TableType));
+
+                var uiPosition = layoutTool.UIPositions.FirstOrDefault(p => p.Seat == seat);
+
+                Assert.IsNotNull(uiPosition, "UiPosition not found in migrated layout");
+
+                Assert.That(uiPosition.Position.X, Is.EqualTo(x));
+                Assert.That(uiPosition.Position.Y, Is.EqualTo(y));
+                Assert.That(uiPosition.Width, Is.EqualTo(width));
+                Assert.That(uiPosition.Height, Is.EqualTo(height));
+            });
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 583, 80, TestName = "LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 6, 148, 419, TestName = "LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 466, 80, TestName = "LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 6, 36, 166, TestName = "LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 763, 166, TestName = "LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(6-max-vert2-s2)")]
+        public void LayoutV2ToolsToolsTiltMeterPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutTiltMeterTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+            Assert.IsNotNull(layoutTool.Positions, "Tool positions not found in migrated layout");
+
+            var positions = layoutTool.Positions.FirstOrDefault(p => p.PokerSite == pokerSite && p.GameType == gameType);
+
+            Assert.IsNotNull(positions, "Tool positions for specified site, game type not found in migrated layout");
+
+            var seatPosition = positions.HudPositions.FirstOrDefault(p => p.Seat == seat);
+
+            Assert.IsNotNull(seatPosition, "Tool positions for specified seat not found in migrated layout");
+
+            Assert.That(seatPosition.Position.X, Is.EqualTo(x));
+            Assert.That(seatPosition.Position.Y, Is.EqualTo(y));
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 507, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 221, 509, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 514, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 265, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 728, 362, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert2-s2)")]
+        public void LayoutV2ToolsPlayerIconUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutPlayerIconTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(layoutTool.UIPositions.Count, Is.EqualTo((int)migrationResult.Source.TableType));
+
+                var uiPosition = layoutTool.UIPositions.FirstOrDefault(p => p.Seat == seat);
+
+                Assert.IsNotNull(uiPosition, "UiPosition not found in migrated layout");
+
+                Assert.That(uiPosition.Position.X, Is.EqualTo(x));
+                Assert.That(uiPosition.Position.Y, Is.EqualTo(y));
+                Assert.That(uiPosition.Width, Is.EqualTo(width));
+                Assert.That(uiPosition.Height, Is.EqualTo(height));
+            });
+        }
+
+        [Test]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 555, 80, TestName = "LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 6, 161, 419, TestName = "LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 438, 80, TestName = "LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 6, 49, 166, TestName = "LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 735, 166, TestName = "LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(6-max-vert2-s2)")]
+        public void LayoutV2ToolsToolsPlayerIconPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutPlayerIconTool>().FirstOrDefault();
 
             Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
             Assert.IsNotNull(layoutTool.Positions, "Tool positions not found in migrated layout");
