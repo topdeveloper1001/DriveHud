@@ -208,14 +208,14 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 4, 282, 447, 144, double.NaN)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 5, 90, 300, 144, double.NaN)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 156, 144, double.NaN)]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 271, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 364, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s2)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 148, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 2, 554, 292, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s2)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 4, 364, 439, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s4)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 292, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s5)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 271, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 5, 60, 415, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 174, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 267, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 51, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 2, 554, 195, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 4, 364, 342, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s4)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 195, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s5)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 174, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 5, 60, 318, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s6)")]
         public void LayoutV2ToolsPlainBoxUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -318,12 +318,12 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         }
 
         [Test]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 245, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 3, 624, 445, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s3")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 536, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s6")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 524, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s6)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 524, 156, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 148, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 3, 624, 348, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s3")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 439, 142, 19, false, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 524, 59, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 59, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 524, 59, 30, 63, true, TestName = "LayoutV2Tool4StatBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
         public void LayoutV2Tool4StatBoxUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height, bool isVertical)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -506,11 +506,11 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 4, 282, 434, 100, 13)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 5, 90, 287, 100, 13)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 143, 100, 13)]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 261, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 354, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s6")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 138, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 282, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s6)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 261, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert2-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 164, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 257, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 41, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 185, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 164, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert2-s2)")]
         public void LayoutV2ToolsBumperStickersUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -577,11 +577,11 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         }
 
         [Test]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 535, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 509, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s6")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 542, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 218, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s6)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 756, 362, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert2-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 535, 121, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 208, 412, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 542, 121, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 252, 121, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 756, 265, 13, 27, TestName = "LayoutV2ToolsTiltMeterUiPositionsAreMigrated(6-max-vert2-s2)")]
         public void LayoutV2ToolsTiltMeterUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);
@@ -637,11 +637,11 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         }
 
         [Test]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 507, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 221, 509, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s6")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 514, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 265, 218, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s6)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 728, 362, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert2-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 507, 121, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 6, 221, 412, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(9-max-horizontal-s6")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 514, 121, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 6, 265, 121, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert1-s6)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 2, 728, 265, 28, 27, TestName = "LayoutV2ToolsPlayerIconUiPositionsAreMigrated(6-max-vert2-s2)")]
         public void LayoutV2ToolsPlayerIconUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
         {
             var migrationResult = GetMigrationV2Result(file);

@@ -11,14 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Reflection;
 using Model.Data;
 using Model.Enums;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.Stats
 {
@@ -49,7 +45,8 @@ namespace Model.Stats
                 new StatInfoGroup { Name = "Limp" },
                 new StatInfoGroup { Name = "Advanced Stats" },
                 new StatInfoGroup { Name = "VPIP" },
-                new StatInfoGroup { Name = "Cold call" }
+                new StatInfoGroup { Name = "Cold call" },
+                new StatInfoGroup { Name = "PFR" }
             };
 
             // Make a collection of StatInfo
@@ -74,6 +71,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FlopAGG, PropertyName = nameof(Indicators.FlopAgg) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.TurnAGG, PropertyName = nameof(Indicators.TurnAgg) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.RiverAGG, PropertyName = nameof(Indicators.RiverAgg) },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.RecentAgg, PropertyName = nameof(HudLightIndicators.RecentAggPr) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.ColdCall, PropertyName = nameof(Indicators.ColdCall)},
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.Steal, PropertyName = nameof(Indicators.Steal) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldToSteal, PropertyName = nameof(Indicators.BlindsFoldSteal) },
@@ -132,6 +130,13 @@ namespace Model.Stats
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBetVsSteal, PropertyName = nameof(Indicators.ThreeBetVsSteal) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.CBetInThreeBetPot, PropertyName = nameof(Indicators.FlopCBetInThreeBetPot) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromThreeBetPot) },
+
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_EP, PropertyName = nameof(HudLightIndicators.ThreeBet_EP) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_MP, PropertyName = nameof(HudLightIndicators.ThreeBet_MP) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_CO, PropertyName = nameof(HudLightIndicators.ThreeBet_CO) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_BN, PropertyName = nameof(HudLightIndicators.ThreeBet_BN) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_SB, PropertyName = nameof(HudLightIndicators.ThreeBet_SB) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBet_BB, PropertyName = nameof(HudLightIndicators.ThreeBet_BB) },
 
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetMP, PropertyName = nameof(Indicators.FourBetInMP) },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetCO, PropertyName = nameof(Indicators.FourBetInCO) },
@@ -225,7 +230,14 @@ namespace Model.Stats
                 new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_CO, PropertyName = nameof(HudLightIndicators.ColdCall_CO) },
                 new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BN, PropertyName = nameof(HudLightIndicators.ColdCall_BN) },
                 new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_SB, PropertyName = nameof(HudLightIndicators.ColdCall_SB) },
-                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BB, PropertyName = nameof(HudLightIndicators.ColdCall_BB) }
+                new StatInfo { GroupName = "95", StatInfoGroup = statInfoGroups[13], Stat = Stat.ColdCall_BB, PropertyName = nameof(HudLightIndicators.ColdCall_BB) },
+
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_EP, PropertyName = nameof(HudLightIndicators.UO_PFR_EP) },
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_MP, PropertyName = nameof(HudLightIndicators.UO_PFR_MP) },
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_CO, PropertyName = nameof(HudLightIndicators.UO_PFR_CO) },
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_BN, PropertyName = nameof(HudLightIndicators.UO_PFR_BN) },
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_SB, PropertyName = nameof(HudLightIndicators.UO_PFR_SB) },
+                new StatInfo { GroupName = "96", StatInfoGroup = statInfoGroups[14], Stat = Stat.UO_PFR_BB, PropertyName = nameof(HudLightIndicators.UO_PFR_BB) }
             };
 
             return statsCollection;

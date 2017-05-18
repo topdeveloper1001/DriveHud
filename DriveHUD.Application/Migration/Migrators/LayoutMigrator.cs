@@ -25,6 +25,7 @@ using Model.Stats;
 using ReactiveUI;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using DriveHUD.Common.Exceptions;
 
 namespace DriveHUD.Application.MigrationService.Migrators
 {
@@ -47,6 +48,15 @@ namespace DriveHUD.Application.MigrationService.Migrators
         private const double uiPlayerIconRightOrientedShiftX = 104;
         private const double uiPlayerIconShiftX = 13;
         private const double uiBumperStickerShiftY = -10;
+
+        private const double uiExtraShiftY = -97;
+
+        private readonly IEnumerable<StatInfo> availableStats;
+
+        public LayoutMigrator()
+        {
+            availableStats = StatInfoHelper.GetAllStats();
+        }
 
         public HudLayoutInfoV2 Migrate(HudLayoutInfo layout)
         {
@@ -158,7 +168,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                select new HudPositionInfo
                                {
                                    Seat = seat,
-                                   Position = new Point(x, y),
+                                   Position = new Point(x, y + uiExtraShiftY),
                                    Width = width,
                                    Height = height,
                                }).ToList(),
@@ -198,7 +208,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                select new HudPositionInfo
                                {
                                    Seat = seat,
-                                   Position = new Point(x, y),
+                                   Position = new Point(x, y + uiExtraShiftY),
                                    Width = width,
                                    Height = height
                                }).ToList(),
@@ -239,7 +249,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                select new HudPositionInfo
                                {
                                    Seat = seat,
-                                   Position = new Point(x, y),
+                                   Position = new Point(x, y + uiExtraShiftY),
                                    Width = width,
                                    Height = height
                                }).ToList(),
@@ -275,7 +285,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                select new HudPositionInfo
                                {
                                    Seat = seat,
-                                   Position = new Point(x, y),
+                                   Position = new Point(x, y + uiExtraShiftY),
                                    Width = width,
                                    Height = height
                                }).ToList(),
@@ -300,7 +310,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
             var hudLayoutGraphTool = new HudLayoutGraphTool
             {
                 ParentId = hudLayoutPlayerIconTool.Id,
-                Stats = new ReactiveList<StatInfo> { new StatInfo { Stat = Stat.NetWon } }
+                Stats = new ReactiveList<StatInfo> { CreateStatInfo(Stat.NetWon) }
             };
 
             // bumper stickers
@@ -318,7 +328,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                select new HudPositionInfo
                                {
                                    Seat = seat,
-                                   Position = new Point(x, y),
+                                   Position = new Point(x, y + uiExtraShiftY),
                                    Width = width,
                                    Height = height
                                }).ToList(),
@@ -352,33 +362,33 @@ namespace DriveHUD.Application.MigrationService.Migrators
             {
                 var hudLayoutVPIPGaugeIndicatorTool = new HudLayoutGaugeIndicator
                 {
-                    BaseStat = new StatInfo { Stat = Stat.VPIP },
+                    BaseStat = CreateStatInfo(Stat.VPIP),
                     Text = "TOTAL",
                     HeaderText = "VPIP",
                     Stats = new ReactiveList<StatInfo>
                     {
-                        new StatInfo { Stat = Stat.VPIP_EP },
-                        new StatInfo { Stat = Stat.VPIP_MP },
-                        new StatInfo { Stat = Stat.VPIP_CO },
-                        new StatInfo { Stat = Stat.VPIP_BN },
-                        new StatInfo { Stat = Stat.VPIP_SB },
-                        new StatInfo { Stat = Stat.VPIP_BB },
+                        CreateStatInfo(Stat.VPIP_EP),
+                        CreateStatInfo(Stat.VPIP_MP),
+                        CreateStatInfo(Stat.VPIP_CO),
+                        CreateStatInfo(Stat.VPIP_BN),
+                        CreateStatInfo(Stat.VPIP_SB),
+                        CreateStatInfo(Stat.VPIP_BB),
                     }
                 };
 
                 var hudLayoutColdCallGaugeIndicatorTool = new HudLayoutGaugeIndicator
                 {
-                    BaseStat = new StatInfo { Stat = Stat.VPIP },
+                    BaseStat = CreateStatInfo(Stat.VPIP),
                     Text = "COLD CALL",
                     HeaderText = "Cold Call",
                     Stats = new ReactiveList<StatInfo>
                     {
-                        new StatInfo { Stat = Stat.ColdCall_EP },
-                        new StatInfo { Stat = Stat.ColdCall_MP },
-                        new StatInfo { Stat = Stat.ColdCall_CO },
-                        new StatInfo { Stat = Stat.ColdCall_BN },
-                        new StatInfo { Stat = Stat.ColdCall_SB },
-                        new StatInfo { Stat = Stat.ColdCall_BB },
+                        CreateStatInfo(Stat.ColdCall_EP),
+                        CreateStatInfo(Stat.ColdCall_MP),
+                        CreateStatInfo(Stat.ColdCall_CO),
+                        CreateStatInfo(Stat.ColdCall_BN),
+                        CreateStatInfo(Stat.ColdCall_SB),
+                        CreateStatInfo(Stat.ColdCall_BB),
                     }
                 };
 
@@ -390,17 +400,17 @@ namespace DriveHUD.Application.MigrationService.Migrators
             {
                 var hudLayoutPFRGaugeIndicatorTool = new HudLayoutGaugeIndicator
                 {
-                    BaseStat = new StatInfo { Stat = Stat.PFR },
+                    BaseStat = CreateStatInfo(Stat.PFR),
                     Text = "UNOPENED",
                     HeaderText = "PFR",
                     Stats = new ReactiveList<StatInfo>
                     {
-                        new StatInfo { Stat = Stat.UO_PFR_EP },
-                        new StatInfo { Stat = Stat.UO_PFR_MP },
-                        new StatInfo { Stat = Stat.UO_PFR_CO },
-                        new StatInfo { Stat = Stat.UO_PFR_BN },
-                        new StatInfo { Stat = Stat.UO_PFR_SB },
-                        new StatInfo { Stat = Stat.UO_PFR_BB },
+                        CreateStatInfo(Stat.UO_PFR_EP),
+                        CreateStatInfo(Stat.UO_PFR_MP),
+                        CreateStatInfo(Stat.UO_PFR_CO),
+                        CreateStatInfo(Stat.UO_PFR_BN),
+                        CreateStatInfo(Stat.UO_PFR_SB),
+                        CreateStatInfo(Stat.UO_PFR_BB),
                     }
                 };
 
@@ -411,17 +421,17 @@ namespace DriveHUD.Application.MigrationService.Migrators
             {
                 var hudLayout3BetGaugeIndicatorTool = new HudLayoutGaugeIndicator
                 {
-                    BaseStat = new StatInfo { Stat = Stat.S3Bet },
+                    BaseStat = CreateStatInfo(Stat.S3Bet),
                     Text = "TOTAL",
                     HeaderText = "3-bet%",
                     Stats = new ReactiveList<StatInfo>
                     {
-                        new StatInfo { Stat = Stat.ThreeBet_EP },
-                        new StatInfo { Stat = Stat.ThreeBet_MP },
-                        new StatInfo { Stat = Stat.ThreeBet_CO },
-                        new StatInfo { Stat = Stat.ThreeBet_BN },
-                        new StatInfo { Stat = Stat.ThreeBet_SB },
-                        new StatInfo { Stat = Stat.ThreeBet_BB },
+                        CreateStatInfo(Stat.ThreeBet_EP),
+                        CreateStatInfo(Stat.ThreeBet_MP),
+                        CreateStatInfo(Stat.ThreeBet_CO),
+                        CreateStatInfo(Stat.ThreeBet_BN),
+                        CreateStatInfo(Stat.ThreeBet_SB),
+                        CreateStatInfo(Stat.ThreeBet_BB),
                     }
                 };
 
@@ -432,15 +442,15 @@ namespace DriveHUD.Application.MigrationService.Migrators
             {
                 var hudLayoutAggGaugeIndicatorTool = new HudLayoutGaugeIndicator
                 {
-                    BaseStat = new StatInfo { Stat = Stat.AGG },
+                    BaseStat = CreateStatInfo(Stat.AGG),
                     Text = "TOTAL",
                     HeaderText = "AGG%",
                     Stats = new ReactiveList<StatInfo>
                     {
-                        new StatInfo { Stat = Stat.FlopAGG },
-                        new StatInfo { Stat = Stat.TurnAGG },
-                        new StatInfo { Stat = Stat.RiverAGG },
-                        new StatInfo { Stat = Stat.RecentAgg }
+                        CreateStatInfo(Stat.FlopAGG),
+                        CreateStatInfo(Stat.TurnAGG),
+                        CreateStatInfo(Stat.RiverAGG),
+                        CreateStatInfo(Stat.RecentAgg)
                     }
                 };
 
@@ -451,12 +461,24 @@ namespace DriveHUD.Application.MigrationService.Migrators
             {
                 var hudLayoutGraphTool = new HudLayoutGraphTool
                 {
-                    BaseStat = new StatInfo { Stat = Stat.PlayerInfoIcon },
-                    Stats = new ReactiveList<StatInfo> { new StatInfo { Stat = Stat.NetWon } }
+                    BaseStat = CreateStatInfo(Stat.PlayerInfoIcon),
+                    Stats = new ReactiveList<StatInfo> { CreateStatInfo(Stat.NetWon) }
                 };
 
                 layoutInfoV2.LayoutTools.Add(hudLayoutGraphTool);
             }
+        }
+
+        private StatInfo CreateStatInfo(Stat stat)
+        {
+            var statInfo = availableStats.FirstOrDefault(x => x.Stat == stat);
+
+            if (statInfo == null)
+            {
+                throw new DHBusinessException(new NonLocalizableString($"Stat {stat} has not been found."));
+            }
+
+            return statInfo;
         }
 
         private Point GetOffset(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType, int seat)

@@ -391,6 +391,8 @@ namespace DriveHUD.Application.ViewModels
 
             var hudElementsToAdd = new List<HudElementViewModel>();
 
+            var random = new Random();
+
             for (var seat = 1; seat <= seats; seat++)
             {
                 var hudElement = new HudElementViewModel(layoutTools);
@@ -404,7 +406,18 @@ namespace DriveHUD.Application.ViewModels
 
                 try
                 {
-                    hudElement.Tools.ForEach(x => x.InitializePositions());
+                    hudElement.Tools.ForEach(x =>
+                    {
+                        x.InitializePositions();
+
+                        if (x is IHudStatsToolViewModel && x is IHudBaseStatToolViewModel)
+                        {
+                            (x as IHudStatsToolViewModel).Stats.ForEach(s =>
+                            {
+                                s.CurrentValue = random.Next(0, 100);
+                            });
+                        }
+                    });
                 }
                 catch (Exception e)
                 {
@@ -970,7 +983,7 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup.Name);
+                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup?.Name);
 
                 if (existing != null)
                 {
