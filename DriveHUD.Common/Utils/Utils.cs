@@ -152,7 +152,7 @@ namespace DriveHUD.Common.Utils
         /// </summary>
         /// <returns>Screen resolution</returns>
         public static SizeF GetScreenResolution()
-        {           
+        {
             return new SizeF
             {
                 Width = (float)SystemParameters.PrimaryScreenWidth,
@@ -225,6 +225,31 @@ namespace DriveHUD.Common.Utils
             {
                 return GetMD5HashFromFile(fileName);
             });
+        }
+
+        /// <summary>
+        /// Determines whenever date is in date range
+        /// </summary>
+        /// <returns></returns>
+        public static bool IsDateInDateRange(DateTime date, DateTime? startDate, DateTime? endDate, TimeSpan rangeExtension)
+        {
+            var start = startDate.HasValue ? startDate.Value : DateTime.MinValue;
+            var end = endDate.HasValue ? endDate.Value : DateTime.MaxValue;
+
+            var rangeExtensionInMinutes = Math.Abs(rangeExtension.TotalMinutes);
+
+            if (rangeExtensionInMinutes > 0)
+            {
+                start = DateTime.MinValue.AddMinutes(rangeExtensionInMinutes) < start ?
+                    start.AddMinutes(-rangeExtensionInMinutes) :
+                    DateTime.MinValue;
+
+                end = DateTime.MaxValue.AddMinutes(-rangeExtensionInMinutes) > end ?
+                    end.AddMinutes(rangeExtensionInMinutes) :
+                    DateTime.MaxValue;
+            }
+
+            return date >= start && date <= end;
         }
     }
 }

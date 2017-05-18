@@ -26,21 +26,21 @@ namespace DriveHud.Tests.UnitTests
     {
         IUnityContainer container;
 
-        [SetUp]
-        public void SetUp()
+        [OneTimeSetUp]
+        public virtual void SetUp()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
 
             ResourceRegistrator.Initialization();
 
             container = new UnityContainer();
-         
+
             container.RegisterType<ISettingsService, SettingsServiceStub>();
-         
+
             UnityServiceLocator locator = new UnityServiceLocator(container);
-            ServiceLocator.SetLocatorProvider(() => locator);            
+            ServiceLocator.SetLocatorProvider(() => locator);
         }
-        
+
         [Test]
         [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
         public void TestLightIndicators(string file)
@@ -62,7 +62,29 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(lightIndicators.HourOfHand, Is.EqualTo(indicators.HourOfHand));
         }
 
-        private class SettingsServiceStub : ISettingsService
+        [Test]
+        [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
+        public void TestReportIndicators(string file)
+        {
+            var playerStatistic = DataServiceHelper.GetPlayerStatisticFromFile(file);
+
+            var indicators = new Indicators(playerStatistic);
+            var reportIndicator = new ReportIndicators(playerStatistic);
+
+            Assert.That(reportIndicator.BB, Is.EqualTo(indicators.BB));
+            Assert.That(reportIndicator.SessionStart, Is.EqualTo(indicators.SessionStart));
+            Assert.That(reportIndicator.SessionLength, Is.EqualTo(indicators.SessionLength));
+            Assert.That(reportIndicator.UO_PFR_EP, Is.EqualTo(indicators.UO_PFR_EP));
+            Assert.That(reportIndicator.UO_PFR_MP, Is.EqualTo(indicators.UO_PFR_MP));
+            Assert.That(reportIndicator.UO_PFR_CO, Is.EqualTo(indicators.UO_PFR_CO));
+            Assert.That(reportIndicator.UO_PFR_BN, Is.EqualTo(indicators.UO_PFR_BN));
+            Assert.That(reportIndicator.UO_PFR_SB, Is.EqualTo(indicators.UO_PFR_SB));
+            Assert.That(reportIndicator.UO_PFR_BB, Is.EqualTo(indicators.UO_PFR_BB));
+            Assert.That(reportIndicator.HourOfHand, Is.EqualTo(indicators.HourOfHand));
+            Assert.That(reportIndicator.Statistics.Count, Is.EqualTo(playerStatistic.Count));
+        }
+
+        protected class SettingsServiceStub : ISettingsService
         {
             public SettingsModel GetSettings()
             {

@@ -123,6 +123,12 @@
   <data name="Progress_ReadingFile" xml:space="preserve">
     <value>Reading {0}</value>
   </data>
+  <data name="Progress_RebuildingStatistics" xml:space="preserve">
+    <value>Rebuilding statistics</value>
+  </data>
+  <data name="Progress_RecoveringStatistics" xml:space="preserve">
+    <value>Recovering statistics</value>
+  </data>
   <data name="Progress_ScanningFolder" xml:space="preserve">
     <value>Scanning folder</value>
   </data>

@@ -132,6 +132,7 @@
     <Compile Include="Data\Indicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
+    <Compile Include="Data\ReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />
     <Compile Include="Data\TournamentReportRecord.cs" />

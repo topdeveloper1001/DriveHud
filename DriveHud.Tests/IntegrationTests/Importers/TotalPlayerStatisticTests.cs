@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -106,12 +106,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(playerstatistic.Couldcoldcall, Is.EqualTo(13), nameof(playerstatistic.Couldcoldcall));
 
 
-                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallThreeBet));
+                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(1), nameof(playerstatistic.DidColdCallThreeBet));
                 Assert.That(playerstatistic.DidColdCallFourBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallFourBet));
                 Assert.That(playerstatistic.DidColdCallVsOpenRaiseSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseSb));
                 Assert.That(playerstatistic.DidColdCallVsOpenRaiseCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseCo));
                 Assert.That(playerstatistic.DidColdCallVsOpenRaiseBtn, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseBtn));
-
             }
         }
 

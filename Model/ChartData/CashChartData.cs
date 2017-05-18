@@ -1,134 +1,212 @@
-﻿using DriveHUD.Common.Linq;
+﻿//-----------------------------------------------------------------------
+// <copyright file="DayChartData.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Entities;
 using Model.Data;
-using Model.Importer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Model.ChartData
 {
-    public class DayChartData : ICashChartData
+    public abstract class BaseChardData : ICashChartData
     {
-        public IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
+        public virtual IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new List<Indicators>();
-            if (statistics == null || statistics.Count() == 0)
-                return report;
 
-            var newStat = statistics.Select(x => x.Copy());
-            newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
-
-            var firstDate = newStat.Max(x => x.Time).AddDays(-1);
-            Indicators stat = new Indicators();
-            foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day, x.Time.Hour }))
+            if (statistics == null || statistics.Count == 0)
             {
-                var clone = new Indicators();
-                stat.Statistics.ForEach(x => clone.AddStatistic(x));
+                return report;
+            }
+
+            var firstDate = GetFirstDate(statistics.Max(x => x.Time));
+
+            var aggregatingStats = new LightIndicators();
+
+            var groupedStatistics = statistics
+               .Where(x => x.Time >= firstDate)
+               .OrderBy(x => x.Time)
+               .GroupBy(x => BuildGroupedDateKey(x));
+
+            foreach (var group in groupedStatistics)
+            {
+                var aggregatingStatsSourceCopy = aggregatingStats.Source.Copy();
+
+                var stat = new LightIndicators(new[] { aggregatingStatsSourceCopy });
 
                 foreach (var playerstatistic in group)
                 {
-                    clone.AddStatistic(playerstatistic);
                     stat.AddStatistic(playerstatistic);
+                    aggregatingStats.AddStatistic(playerstatistic);
                 }
-                var now = System.DateTime.Now;
-                clone.Source.Time = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day, group.Key.Hour, 0, 0);
-                report.Add(clone);
+
+                stat.Source.Time = CreateDateTimeFromDateKey(group.Key);
+
+                report.Add(stat);
             }
 
             return report;
         }
-    }
 
-    public class WeekChartData : ICashChartData
-    {
-        public IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
+        protected abstract DateTime GetFirstDate(DateTime maxDateTime);
+
+        protected abstract GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic);
+
+        protected abstract DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey);
+
+        protected class GroupedDateKey
         {
-            var report = new List<Indicators>();
-            if (statistics == null || statistics.Count() == 0)
-                return report;
+            public int Year { get; set; }
 
-            var newStat = statistics.Select(x => x.Copy());
-            newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
+            public int Month { get; set; }
 
-            var firstDate = newStat.Max(x => x.Time).AddDays(-7);
-            Indicators stat = new Indicators();
-            foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day }))
+            public int Day { get; set; }
+
+            public int Hour { get; set; }
+
+            public override bool Equals(object obj)
             {
-                var clone = new Indicators();
-                stat.Statistics.ForEach(x => clone.AddStatistic(x));
+                var dateKey = obj as GroupedDateKey;
 
-                foreach (var playerstatistic in group)
+                if (dateKey == null)
                 {
-                    clone.AddStatistic(playerstatistic);
-                    stat.AddStatistic(playerstatistic);
+                    return false;
                 }
-                clone.Source.Time = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day);
-                report.Add(clone);
+
+                return Equals(dateKey);
             }
 
-            return report;
+            public override int GetHashCode()
+            {
+                unchecked
+                {
+                    var hashcode = 23;
+                    hashcode = (hashcode * 31) + Year;
+                    hashcode = (hashcode * 31) + Month;
+                    hashcode = (hashcode * 31) + Day;
+                    hashcode = (hashcode * 31) + Hour;
+                    return hashcode;
+                }
+            }
+
+            private bool Equals(GroupedDateKey dateKey)
+            {
+                return Year == dateKey.Year && Month == dateKey.Month && Day == dateKey.Day && Hour == dateKey.Hour;
+            }
         }
     }
 
-    public class MonthChartData : ICashChartData
+    public class DayChartData : BaseChardData, ICashChartData
     {
-        public IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
-            var report = new List<Indicators>();
-            if (statistics == null || statistics.Count() == 0)
-                return report;
+            return maxDateTime.AddDays(-1);
+        }
 
-            var newStat = statistics.Select(x => x.Copy());
-            newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
-
-            var firstDate = newStat.Max(x => x.Time).AddMonths(-1);
-            Indicators stat = new Indicators();
-            foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day }))
+        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        {
+            var dateKey = new GroupedDateKey
             {
-                var clone = new Indicators();
-                stat.Statistics.ForEach(x => clone.AddStatistic(x));
+                Year = statistic.Time.Year,
+                Month = statistic.Time.Month,
+                Day = statistic.Time.Day,
+                Hour = statistic.Time.Hour
+            };
 
-                foreach (var playerstatistic in group)
-                {
-                    clone.AddStatistic(playerstatistic);
-                    stat.AddStatistic(playerstatistic);
-                }
-                clone.Source.Time = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day);
-                report.Add(clone);
-            }
+            return dateKey;
+        }
 
-            return report;
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day, dateKey.Hour, 0, 0);
+            return dateTime;
         }
     }
 
-    public class YearChartData : ICashChartData
+    public class WeekChartData : BaseChardData, ICashChartData
     {
-        public IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
-            var report = new List<Indicators>();
-            if (statistics == null || statistics.Count() == 0)
-                return report;
+            return maxDateTime.AddDays(-7);
+        }
 
-            var newStat = statistics.Select(x => x.Copy());
-            newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
-
-            var firstDate = newStat.Max(x => x.Time).AddYears(-1);
-            Indicators stat = new Indicators();
-            foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month }))
+        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        {
+            var dateKey = new GroupedDateKey
             {
-                var clone = new Indicators();
-                stat.Statistics.ForEach(x => clone.AddStatistic(x));
+                Year = statistic.Time.Year,
+                Month = statistic.Time.Month,
+                Day = statistic.Time.Day
+            };
 
-                foreach (var playerstatistic in group)
-                {
-                    clone.AddStatistic(playerstatistic);
-                    stat.AddStatistic(playerstatistic);
-                }
-                clone.Source.Time = new System.DateTime(group.Key.Year, group.Key.Month, 1);
-                report.Add(clone);
-            }
+            return dateKey;
+        }
 
-            return report;
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day);
+            return dateTime;
+        }
+    }
+
+    public class MonthChartData : BaseChardData, ICashChartData
+    {
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        {
+            return maxDateTime.AddMonths(-1);
+        }
+
+        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        {
+            var dateKey = new GroupedDateKey
+            {
+                Year = statistic.Time.Year,
+                Month = statistic.Time.Month,
+                Day = statistic.Time.Day
+            };
+
+            return dateKey;
+        }
+
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day);
+            return dateTime;
+        }
+    }
+
+    public class YearChartData : BaseChardData, ICashChartData
+    {
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        {
+            return maxDateTime.AddYears(-1);
+        }
+
+        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        {
+            var dateKey = new GroupedDateKey
+            {
+                Year = statistic.Time.Year,
+                Month = statistic.Time.Month
+            };
+
+            return dateKey;
+        }
+
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, 1);
+            return dateTime;
         }
     }
 }
