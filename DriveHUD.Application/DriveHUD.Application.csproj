@@ -373,6 +373,7 @@
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\Migrations\Migration0017_RebuildPlayerStatistic.cs" />
     <Compile Include="Migration\Migrations\Migration0018_MigrationToHUD_V2.cs" />
+    <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />

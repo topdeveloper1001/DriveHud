@@ -80,7 +80,15 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     File.Copy(mappingsFilePath, mappingsFileTempPath);
                 }
 
-                layoutsDirectory.MoveTo(layoutsBackupDirectoryPath);
+                var newLayoutsBackupDirectoryPath = layoutsBackupDirectoryPath;
+                var backupFolderIndex = 1;
+
+                while (Directory.Exists(newLayoutsBackupDirectoryPath))
+                {
+                    newLayoutsBackupDirectoryPath = $"{newLayoutsBackupDirectoryPath}{backupFolderIndex++}";
+                }
+
+                layoutsDirectory.MoveTo(newLayoutsBackupDirectoryPath);
                 Directory.Move(layoutsTempDirectoryPath, layoutsDirectoryPath);
 
                 LogProvider.Log.Info("Migration #18 executed.");

@@ -43,21 +43,22 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal class HudLayoutsService : IHudLayoutsService
     {
-        private string LayoutFileExtension;
-        private string MappingsFileName;
+        protected string LayoutFileExtension;
+        protected string MappingsFileName;
         private const string PathToImages = @"data\PlayerTypes";
         private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Vertical_1", "Vertical_2", "Horizontal" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private IEventAggregator eventAggregator;
-
+      
         /// <summary>
         /// Initializes an instance of <see cref="HudLayoutsService"/>
-        /// </summary>
+        /// </summary>        
         public HudLayoutsService()
         {
             LayoutFileExtension = StringFormatter.GetLayoutsExtension();
             MappingsFileName = StringFormatter.GetLayoutsMappings();
+
             Initialize();
         }
 
@@ -717,7 +718,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="fileName">File with layout</param>
         /// <returns>Mappings of layout</returns>
-        private HudLayoutMappings LoadLayoutMappings(string fileName)
+        protected HudLayoutMappings LoadLayoutMappings(string fileName)
         {
             if (!File.Exists(fileName))
             {
@@ -752,7 +753,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="fileName">The file to save to</param>
         /// <param name="mappings">The mappings of layout to save to the file</param>
-        private void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
+        protected void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
         {
             locker.EnterWriteLock();
 
@@ -1207,7 +1208,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             return hudPlayerTypes;
         }
 
-        private string GetLayoutFileName(string layoutName)
+        protected string GetLayoutFileName(string layoutName)
         {
             return $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}";
         }
