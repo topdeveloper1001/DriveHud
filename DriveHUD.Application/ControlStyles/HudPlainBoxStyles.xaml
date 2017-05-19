@@ -39,32 +39,24 @@
             Value="{StaticResource HudElementPlayerBrush}" />
     </Style>
 
-    <Style
-        x:Key="DefaultImageStyle"
-        TargetType="{x:Type Image}">
-        <Setter
-            Property="Source">
-            <Setter.Value>
-                <DrawingImage>
-                    <DrawingImage.Drawing>
-                        <DrawingGroup>
-                            <DrawingGroup.Children>
-                                <GeometryDrawing
-                                    Brush="#FFEEEEEE"
-                                    Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z " />
-                                <GeometryDrawing
-                                    Brush="#FFEEEEEE"
-                                    Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z " />
-                                <GeometryDrawing
-                                    Brush="#FFEEEEEE"
-                                    Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z " />
-                            </DrawingGroup.Children>
-                        </DrawingGroup>
-                    </DrawingImage.Drawing>
-                </DrawingImage>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    <DrawingImage
+        x:Key="DefaultImageSource">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing
+                        Brush="#FFEEEEEE"
+                        Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z " />
+                    <GeometryDrawing
+                        Brush="#FFEEEEEE"
+                        Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z " />
+                    <GeometryDrawing
+                        Brush="#FFEEEEEE"
+                        Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z " />
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
 
     <DataTemplate
         x:Key="StatTemplate">
@@ -87,6 +79,37 @@
     </DataTemplate>
 
     <DataTemplate
+        x:Key="PlayerIconTemplate">
+
+        <Image
+            Width="16"
+            Height="16">
+            <Image.Style>
+                <Style
+                    TargetType="{x:Type Image}">
+                    <Style.Triggers>
+                        <DataTrigger
+                            Binding="{Binding DataContext.Parent.IsDefaultImage, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                            Value="True">
+                            <Setter
+                                Property="Source"
+                                Value="{StaticResource DefaultImageSource}" />
+                        </DataTrigger>
+                        <DataTrigger
+                            Binding="{Binding DataContext.Parent.IsDefaultImage, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                            Value="False">
+                            <Setter
+                                Property="Source"
+                                Value="{Binding DataContext.Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+
+    </DataTemplate>
+
+    <DataTemplate
         x:Key="StatDesignTemplate">
 
         <TextBlock
@@ -105,6 +128,45 @@
                     Text="{Binding Label}" />
                 <Run
                     Text="{Binding Caption}" />
+            </Hyperlink>
+        </TextBlock>
+
+    </DataTemplate>
+
+    <DataTemplate
+        x:Key="PlayerIconDesignTemplate">
+
+        <TextBlock
+            VerticalAlignment="Bottom">
+            <Hyperlink
+                Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                TextDecorations="{x:Null}"
+                CommandParameter="{Binding}">
+                <Image
+                    Width="16"
+                    Height="16">
+                    <Image.Style>
+                        <Style
+                            TargetType="{x:Type Image}">
+                            <Style.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding DataContext.Parent.IsDefaultImage, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                    Value="True">
+                                    <Setter
+                                        Property="Source"
+                                        Value="{StaticResource DefaultImageSource}" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    Binding="{Binding DataContext.Parent.IsDefaultImage, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                    Value="False">
+                                    <Setter
+                                        Property="Source"
+                                        Value="{Binding DataContext.Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
             </Hyperlink>
         </TextBlock>
 

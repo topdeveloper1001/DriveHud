@@ -16,6 +16,7 @@ using DriveHUD.Common;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
 using Model.Stats;
 using ReactiveUI;
 using System;
@@ -143,7 +144,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var layoutTool = new HudLayoutFourStatsBoxTool
             {
-                Stats = new ReactiveList<StatInfo>(),                
+                Stats = new ReactiveList<StatInfo>(),
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -171,7 +172,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
 
             var layoutTool = new HudLayoutTiltMeterTool
-            {                
+            {
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -232,7 +233,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. 4-stat box has not been created.");
 
             var layoutTool = new HudLayoutTextBoxTool
-            {                
+            {
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -260,7 +261,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.Require(creationInfo.Layout != null, "Layout isn't defined. Bumper stickers have not been created.");
 
             var layoutTool = new HudLayoutBumperStickersTool
-            {                
+            {
                 UIPositions = GetHudUIPositions(EnumTableType.HU, EnumTableType.HU, creationInfo.Position)
             };
 
@@ -332,10 +333,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 statInfo.IsSelected = false;
 
+                var initialStat = statInfo.Stat == Stat.PlayerInfoIcon ?
+                    StatInfoHelper.GetStat(Stat.NetWon) :
+                    statInfo.Clone();
+
                 layoutTool = new HudLayoutGraphTool
                 {
                     BaseStat = statInfo.Clone(),
-                    Stats = new ReactiveList<StatInfo> { statInfo.Clone() }
+                    Stats = new ReactiveList<StatInfo> { initialStat }
                 };
             }
             else

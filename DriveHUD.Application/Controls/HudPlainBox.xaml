@@ -46,10 +46,8 @@
                         <hud:HudStatsBehavior
                             StatInfoSource="{Binding Stats}"
                             StatDataTemplate="{StaticResource StatTemplate}"
-                            HudElementViewModel="{Binding Parent}"
-                            IsDefaultImage="{Binding Parent.IsDefaultImage}"
-                            DefaultImageStyle="{StaticResource DefaultImageStyle}"
-                            PlayerIconSource="{Binding Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}}"
+                            PlayerIconDataTemplate="{StaticResource PlayerIconTemplate}"
+                            HudElementViewModel="{Binding Parent}"                         
                             Separator=" | " />
                     </i:Interaction.Behaviors>
                 </WrapPanel>

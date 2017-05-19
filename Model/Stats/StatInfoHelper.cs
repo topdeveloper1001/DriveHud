@@ -44,12 +44,12 @@ namespace Model.Stats
                 new StatInfoGroup { Name = "Continuation Bet" },
                 new StatInfoGroup { Name = "Limp" },
                 new StatInfoGroup { Name = "Cold call" },
-                new StatInfoGroup { Name = "Advanced Stats" },                                                
+                new StatInfoGroup { Name = "Advanced Stats" },
             };
 
             // Make a collection of StatInfo
             var statsCollection = new[]
-            {                
+            {
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PlayerInfoIcon },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = nameof(Indicators.VPIP) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = nameof(Indicators.PFR)},
@@ -96,7 +96,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpMp, PropertyName = nameof(Indicators.LimpMp) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpCo, PropertyName = nameof(Indicators.LimpCo) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpBtn, PropertyName = nameof(Indicators.LimpBtn) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = nameof(Indicators.LimpSb) },           
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = nameof(Indicators.LimpSb) },
 
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInEP, PropertyName = nameof(Indicators.PFRInEP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInMP, PropertyName = nameof(Indicators.PFRInMP) },
@@ -232,10 +232,20 @@ namespace Model.Stats
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.RaiseFrequencyFactor, PropertyName = nameof(Indicators.RaiseFrequencyFactor) },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.TrueAggression, PropertyName = nameof(Indicators.TrueAggression) },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DonkBet, PropertyName = nameof(Indicators.DonkBet) },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet, PropertyName = nameof(Indicators.DidDelayedTurnCBet) }                            
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet, PropertyName = nameof(Indicators.DidDelayedTurnCBet) }
             };
 
             return statsCollection;
+        }
+
+        /// <summary>
+        /// Gets <see cref="StatInfo"/> for the specified <see cref="Stat"/>
+        /// </summary>
+        /// <param name="stat"></param>
+        /// <returns></returns>
+        public static StatInfo GetStat(Stat stat)
+        {
+            return GetAllStats().FirstOrDefault(x => x.Stat == stat);
         }
 
         public static void UpdateStats(IEnumerable<StatInfo> stats)

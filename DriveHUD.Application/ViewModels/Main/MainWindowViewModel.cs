@@ -237,11 +237,18 @@ namespace DriveHUD.Application.ViewModels
 
             System.Windows.Application.Current?.Dispatcher.Invoke(() =>
             {
-                // update data after hud is stopped
-                CreatePositionReport();
-                UpdateCurrentView();
+                try
+                {
+                    // update data after hud is stopped
+                    CreatePositionReport();
+                    UpdateCurrentView();
 
-                RefreshCommandsCanExecute();
+                    RefreshCommandsCanExecute();
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, ex);
+                }
             });
 
             GC.Collect();

@@ -102,7 +102,7 @@
                             x:Name="hudStats"
                             StatInfoSource="{Binding StatInfoCollection}"
                             StatDataTemplate="{StaticResource StatTemplate}"
-                            IsDefaultImage="True"
+                            PlayerIconDataTemplate="{StaticResource PlayerIconTemplate}"
                             Separator=" | " />
                     </i:Interaction.Behaviors>
                 </WrapPanel>

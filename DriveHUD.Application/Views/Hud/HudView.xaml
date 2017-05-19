@@ -1047,7 +1047,7 @@
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
                                 <controls:RadListBoxDragDropBehavior
-                                    AllowReorder="True"
+                                    AllowReorder="True"                                     
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                             <telerik:RadListBox.GroupStyle>

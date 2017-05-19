@@ -56,7 +56,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual void OnHudElementViewModelChanged()
         {
-        }
+        }        
 
         protected virtual void ConfigureSimpleToolTip(FrameworkElement element, object toolTipSource, string path)
         {

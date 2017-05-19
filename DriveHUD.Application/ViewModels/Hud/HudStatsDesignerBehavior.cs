@@ -50,6 +50,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var block = base.CreateStatBlock(statInfo);
 
+            if (block == null)
+            {
+                return block;
+            }
+
             DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetIsDragTarget(block, true);
             DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetGroupProperty(block, HudDragDropGroups.Popups);
             DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetDragDropCommand(block, DragDropCommand);

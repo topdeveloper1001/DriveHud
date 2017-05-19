@@ -101,7 +101,7 @@ namespace Model.Stats
         private bool settingsAppearanceFontUnderline_IsChecked;
 
         private ObservableCollection<StatInfoOptionValueRange> settingsAppearanceValueRangeCollection;
-        
+
         private bool settingsAppearance_IsChecked;
         private bool settingsPlayerType_IsChecked;
 
@@ -122,7 +122,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(2)]
+        [XmlIgnore, ProtoMember(2)]
         public string Caption
         {
             get
@@ -216,7 +216,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(6)]
+        [XmlIgnore]
         public StatInfoGroup StatInfoGroup
         {
             get
@@ -231,7 +231,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(7)]
+        [XmlIgnore]
         public string GroupName
         {
             get
@@ -246,22 +246,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(8)]
-        public string Category
-        {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                if (value == category) return;
-                category = value;
-                OnPropertyChanged();
-            }
-        }
-
-        [ProtoMember(9)]
+        [ProtoMember(7)]
         public string PropertyName
         {
             get
@@ -276,7 +261,7 @@ namespace Model.Stats
             }
         }
 
-        [XmlIgnore, ProtoMember(10)]
+        [XmlIgnore, ProtoMember(8)]
         public Color CurrentColor
         {
             get
@@ -296,7 +281,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(11), DefaultValue(-1)]
+        [ProtoMember(9), DefaultValue(-1)]
         public decimal CurrentValue
         {
             get
@@ -313,7 +298,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(13)]
+        [ProtoMember(10)]
         public bool SettingsAppearance_IsChecked
         {
             get
@@ -330,7 +315,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(14)]
+        [ProtoMember(11)]
         public bool SettingsPlayerType_IsChecked
         {
             get
@@ -347,7 +332,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(15)]
+        [ProtoMember(12)]
         public string SettingsAppearanceFontSource
         {
             get
@@ -388,7 +373,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(16)]
+        [ProtoMember(13)]
         public int SettingsAppearanceFontSize
         {
             get
@@ -403,6 +388,7 @@ namespace Model.Stats
             }
         }
 
+        [XmlIgnore]
         public FontWeight SettingsAppearanceFontBold
         {
             get
@@ -417,7 +403,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(17)]
+        [ProtoMember(14)]
         public bool SettingsAppearanceFontBold_IsChecked
         {
             get
@@ -434,6 +420,7 @@ namespace Model.Stats
             }
         }
 
+        [XmlIgnore]
         public FontStyle SettingsAppearanceFontItalic
         {
             get
@@ -448,7 +435,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(18)]
+        [ProtoMember(15)]
         public bool SettingsAppearanceFontItalic_IsChecked
         {
             get
@@ -479,7 +466,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(19)]
+        [ProtoMember(16)]
         public bool SettingsAppearanceFontUnderline_IsChecked
         {
             get
@@ -497,7 +484,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(20)]
+        [ProtoMember(17)]
         public ObservableCollection<StatInfoOptionValueRange> SettingsAppearanceValueRangeCollection
         {
             get
@@ -520,7 +507,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(21)]
+        [ProtoMember(18)]
         public ObservableCollection<StatInfoToolTip> StatInfoToolTipCollection
         {
             get
@@ -537,7 +524,7 @@ namespace Model.Stats
 
         private int minSample = 1;
 
-        [ProtoMember(22), DefaultValue(1)]
+        [ProtoMember(19), DefaultValue(1)]
         public int MinSample
         {
             get
@@ -554,7 +541,7 @@ namespace Model.Stats
 
         private string label;
 
-        [ProtoMember(23)]
+        [ProtoMember(20)]
         public string Label
         {
             get
@@ -573,7 +560,7 @@ namespace Model.Stats
         private bool isNotVisible;
 
         [XmlIgnore]
-        [ProtoMember(24)]
+        [ProtoMember(21)]
         public bool IsNotVisible
         {
             get
@@ -592,7 +579,7 @@ namespace Model.Stats
         private bool isListed;
 
         [XmlIgnore]
-        [ProtoMember(25)]
+        [ProtoMember(22)]
         public bool IsListed
         {
             get
@@ -611,7 +598,7 @@ namespace Model.Stats
         private StatDto statDto;
 
         [XmlIgnore]
-        [ProtoMember(26)]
+        [ProtoMember(23)]
         public StatDto StatDto
         {
             get
@@ -627,7 +614,7 @@ namespace Model.Stats
         }
 
         [XmlIgnore]
-        [ProtoMember(27)]
+        [ProtoMember(24)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
         [NonSerialized]
@@ -783,7 +770,6 @@ namespace Model.Stats
             statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
-            statInfoClone.Category = Category;
             statInfoClone.Format = Format;
             statInfoClone.PropertyName = PropertyName;
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;

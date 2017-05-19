@@ -518,9 +518,9 @@ namespace DriveHUD.Application.ViewModels
 
                 if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
                 {
-                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;              
 
-                    var statInfo = statInfoList.OfType<StatInfo>().FirstOrDefault();
+                    var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
 
                     if (statInfo == null)
                     {
@@ -719,7 +719,57 @@ namespace DriveHUD.Application.ViewModels
                     AddToolStats(statsToAdd, x.EventArgs.NewStartingIndex);
                     RemoveToolStats(statsToRemove);
 
+                    HideStatsInStatCollection();
+
                     InitializePreview();
+                });
+
+            Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
+                h => StatInfoCollection.CollectionChanged += h,
+                h => StatInfoCollection.CollectionChanged -= h).Subscribe(x =>
+                {
+                    if (x.EventArgs.Action != NotifyCollectionChangedAction.Add)
+                    {
+                        return;
+                    }
+
+                    var addedStats = x.EventArgs.NewItems?.OfType<StatInfo>().ToArray();
+
+                    if (addedStats == null)
+                    {
+                        return;
+                    }
+
+                    var allStats = StatInfoHelper.GetAllStats();
+
+                    // remove invalid stats
+                    var validStats = (from addedStat in addedStats
+                                      join stat in allStats on new
+                                      {
+                                          Stat = addedStat.Stat,
+                                          GroupName = addedStat.GroupName,
+                                          StatInfoGroup = (addedStat.StatInfoGroup != null ? addedStat.StatInfoGroup.Name : null)
+                                      }
+                                      equals new
+                                      {
+                                          Stat = stat.Stat,
+                                          GroupName = stat.GroupName,
+                                          StatInfoGroup = stat.StatInfoGroup.Name
+                                      }
+                                      select addedStat).ToArray();
+
+                    var invalidStats = addedStats.Except(validStats).ToArray();
+                    StatInfoCollection.RemoveAll(invalidStats);
+
+                    // remove duplicates
+                    var duplicates = (from stat in StatInfoCollection
+                                      group stat by new { stat.Stat, stat.GroupName, stat.StatInfoGroup.Name } into grouped
+                                      where grouped.Count() > 1
+                                      from duplicateStat in grouped
+                                      join validStat in validStats on duplicateStat equals validStat
+                                      select duplicateStat).ToArray();
+
+                    StatInfoCollection.RemoveAll(duplicates);
                 });
         }
 
@@ -995,13 +1045,12 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup?.Name);
+                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat);
 
                 if (existing != null)
                 {
                     // we do not recover unexpected stats
                     statsToAdd.Add(hudStat);
-                    StatInfoCollection.Remove(existing);
                 }
             }
 
@@ -1051,6 +1100,7 @@ namespace DriveHUD.Application.ViewModels
 
             StatInfoCollection.Where(x => x.IsNotVisible).ForEach(x => x.IsNotVisible = false);
             statsToHide.ForEach(x => x.IsNotVisible = true);
+            stats.ForEach(x => x.IsNotVisible = false);
         }
 
         /// <summary>
@@ -1129,10 +1179,17 @@ namespace DriveHUD.Application.ViewModels
         private void OpenPlayerTypeStats(StatInfo selectedStatInfo)
         {
             if (StatInfoObserveCollection.Count == 0)
+            {
                 return;
+            }
+
             var hudPlayerTypes = CurrentLayout?.HudPlayerTypes;
+
             if (hudPlayerTypes == null)
+            {
                 return;
+            }
+
             var hudPlayerSettingsViewModelInfo = new HudPlayerSettingsViewModelInfo
             {
                 PlayerTypes = hudPlayerTypes.Select(x => x.Clone()),

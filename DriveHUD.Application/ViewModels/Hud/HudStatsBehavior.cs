@@ -43,48 +43,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private static DependencyProperty PlayerIconSourceProperty = DependencyProperty.RegisterAttached("PlayerIconSource", typeof(ImageSource), typeof(HudStatsBehavior), new PropertyMetadata(OnPlayerIconSourcePropertyChanged));
-
-        public ImageSource PlayerIconSource
-        {
-            get
-            {
-                return (ImageSource)GetValue(PlayerIconSourceProperty);
-            }
-            set
-            {
-                SetValue(PlayerIconSourceProperty, value);
-            }
-        }
-
-        private static DependencyProperty IsDefaultImageProperty = DependencyProperty.RegisterAttached("IsDefaultImage", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(OnIsDefaultImagePropertyChanged));
-
-        public bool IsDefaultImage
-        {
-            get
-            {
-                return (bool)GetValue(IsDefaultImageProperty);
-            }
-            set
-            {
-                SetValue(IsDefaultImageProperty, value);
-            }
-        }
-
-        private static DependencyProperty DefaultImageStyleProperty = DependencyProperty.RegisterAttached("DefaultImageStyle", typeof(Style), typeof(HudStatsBehavior));
-
-        public Style DefaultImageStyle
-        {
-            get
-            {
-                return (Style)GetValue(DefaultImageStyleProperty);
-            }
-            set
-            {
-                SetValue(DefaultImageStyleProperty, value);
-            }
-        }
-
         private static DependencyProperty SeparatorProperty = DependencyProperty.RegisterAttached("Separator", typeof(string), typeof(HudStatsBehavior));
 
         public string Separator
@@ -97,7 +55,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 SetValue(SeparatorProperty, value);
             }
-        }     
+        }
 
         private static DependencyProperty StatDataTemplateProperty = DependencyProperty.RegisterAttached("StatDataTemplate", typeof(DataTemplate), typeof(HudStatsBehavior));
 
@@ -110,6 +68,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 SetValue(StatDataTemplateProperty, value);
+            }
+        }
+
+
+        private static DependencyProperty PlayerIconDataTemplateProperty = DependencyProperty.RegisterAttached("PlayerIconDataTemplate", typeof(DataTemplate), typeof(HudStatsBehavior));
+
+        public DataTemplate PlayerIconDataTemplate
+        {
+            get
+            {
+                return (DataTemplate)GetValue(PlayerIconDataTemplateProperty);
+            }
+            set
+            {
+                SetValue(PlayerIconDataTemplateProperty, value);
             }
         }
 
@@ -184,9 +157,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             Update();
         }
 
+        protected override void OnHudElementViewModelChanged()
+        {
+            base.OnHudElementViewModelChanged();
+            Update();
+        }
+
         private void Update()
         {
-            if (StatInfoSource == null)
+            if (StatInfoSource == null || HudElementViewModel == null)
             {
                 return;
             }
@@ -209,29 +188,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 foreach (var statInfo in statInfoGroup)
                 {
-                    FrameworkElement block = null;
-
-                    if (statInfo.Stat == Stat.PlayerInfoIcon)
-                    {
-                        block = new Image
-                        {
-                            Width = 16,
-                            Height = 16
-                        };
-
-                        if (IsDefaultImage)
-                        {
-                            block.Style = DefaultImageStyle;
-                        }
-                        else
-                        {
-                            ((Image)block).Source = PlayerIconSource;
-                        }
-                    }
-                    else
-                    {
-                        block = CreateStatBlock(statInfo);
-                    }
+                    var block = CreateStatBlock(statInfo);
 
                     if (block != null)
                     {
@@ -257,7 +214,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual FrameworkElement CreateStatBlock(StatInfo statInfo)
         {
-            if (StatDataTemplate == null)
+            var contentTemplate = statInfo.Stat == Stat.PlayerInfoIcon ? PlayerIconDataTemplate : StatDataTemplate;
+
+            if (contentTemplate == null)
             {
                 return null;
             }
@@ -266,14 +225,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 Content = statInfo,
                 DataContext = statInfo,
-                ContentTemplate = StatDataTemplate
+                ContentTemplate = contentTemplate
             };
 
             ConfigureToolTip(statBlock, statInfo);
 
             return statBlock;
         }
-        
+
         private List<List<StatInfo>> Split(IList<StatInfo> source)
         {
             var result = new List<List<StatInfo>>();

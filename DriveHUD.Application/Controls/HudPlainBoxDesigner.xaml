@@ -39,10 +39,8 @@
                             StatInfoSource="{Binding Stats}"
                             StatDataTemplate="{StaticResource StatDesignTemplate}"
                             DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
-                            HudElementViewModel="{Binding Parent}"
-                            IsDefaultImage="{Binding Parent.IsDefaultImage}"
-                            DefaultImageStyle="{StaticResource DefaultImageStyle}"
-                            PlayerIconSource="{Binding Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}}"
+                            PlayerIconDataTemplate="{StaticResource PlayerIconDesignTemplate}"
+                            HudElementViewModel="{Binding Parent}"                          
                             Separator=" | " />
                     </i:Interaction.Behaviors>
                 </WrapPanel>
