@@ -215,4 +215,7 @@
   <data name="SystemSettings_LayoutsMappings" xml:space="preserve">
     <value>Mappings</value>
   </data>
+  <data name="SystemSettings_LayoutsV2Folder" xml:space="preserve">
+    <value>LayoutsV2</value>
+  </data>
 </root>

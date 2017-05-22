@@ -160,6 +160,7 @@
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
     <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
     <Compile Include="Converters\NullToBoolConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
     <Compile Include="Converters\PokerSiteToShortStringConverter.cs" />

@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.SplashScreen;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -25,6 +27,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
     [Migration(18)]
     public class Migration0018_MigrationToHUD_V2 : Migration
     {
+        private const int delayBeforeMovingFolders = 2000;
+
         public override void Down()
         {
         }
@@ -33,69 +37,107 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             LogProvider.Log.Info("Preparing migration #18");
 
-            try
+            var skipMigration = false;
+            var shutdown = false;
+
+            while (!skipMigration)
             {
-                var layoutsDirectoryPath = StringFormatter.GetLayoutsFolderPath();
-                var layoutsDirectory = new DirectoryInfo(layoutsDirectoryPath);
-                var layoutsTempDirectoryPath = $"{StringFormatter.GetLayoutsFolderPath()}-temp";
-                var layoutsBackupDirectoryPath = $"{StringFormatter.GetLayoutsFolderPath()}-backup";
-                var layoutsExt = StringFormatter.GetLayoutsExtension();
-                var mappingsFile = $"{StringFormatter.GetLayoutsMappings()}{layoutsExt}";
-
-                var searchPattern = $"*{layoutsExt}";
-
-                if (Directory.Exists(layoutsTempDirectoryPath))
+                if (shutdown)
                 {
-                    Directory.Delete(layoutsTempDirectoryPath, true);
+                    continue;
                 }
 
-                Directory.CreateDirectory(layoutsTempDirectoryPath);
-
-                var layoutsFiles = layoutsDirectory.GetFiles(searchPattern).Where(x => x.Name != mappingsFile).ToArray();
-
-                var layoutMigrator = ServiceLocator.Current.GetInstance<Migrators.ILayoutMigrator>();
-
-                foreach (var layoutFile in layoutsFiles)
+                try
                 {
-                    try
+                    var layoutsDirectoryPath = StringFormatter.GetLayoutsFolderPath();
+                    var layoutsDirectory = new DirectoryInfo(layoutsDirectoryPath);
+                    var layoutsV2DirectoryPath = StringFormatter.GetLayoutsV2FolderPath();
+                    var layoutsExt = StringFormatter.GetLayoutsExtension();
+                    var mappingsFile = $"{StringFormatter.GetLayoutsMappings()}{layoutsExt}";
+
+                    var searchPattern = $"*{layoutsExt}";
+
+                    if (Directory.Exists(layoutsV2DirectoryPath))
                     {
-                        var layout = ReadLayoutInfo(layoutFile.FullName);
-
-                        var migratedLayout = layoutMigrator.Migrate(layout);
-                        var migratedLayoutFile = Path.Combine(layoutsTempDirectoryPath, layoutFile.Name);
-
-                        SaveLayoutInfo(migratedLayoutFile, migratedLayout);
+                        Directory.Delete(layoutsV2DirectoryPath, true);
                     }
-                    catch (Exception e)
+
+                    Directory.CreateDirectory(layoutsV2DirectoryPath);
+
+                    var layoutsFiles = layoutsDirectory.GetFiles(searchPattern).Where(x => x.Name != mappingsFile).ToArray();
+
+                    var layoutMigrator = ServiceLocator.Current.GetInstance<Migrators.ILayoutMigrator>();
+
+                    foreach (var layoutFile in layoutsFiles)
                     {
-                        LogProvider.Log.Error(this, $"{layoutFile.FullName} has not been migrated.", e);
+                        try
+                        {
+                            var layout = ReadLayoutInfo(layoutFile.FullName);
+
+                            var migratedLayout = layoutMigrator.Migrate(layout);
+                            var migratedLayoutFile = Path.Combine(layoutsV2DirectoryPath, layoutFile.Name);
+
+                            SaveLayoutInfo(migratedLayoutFile, migratedLayout);
+
+                            LogProvider.Log.Info($"{layoutFile.FullName} has been successfully migrated.");
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, $"{layoutFile.FullName} has not been migrated.", e);
+                        }
                     }
+
+                    var mappingsFilePath = Path.Combine(layoutsDirectoryPath, mappingsFile);
+
+                    if (File.Exists(mappingsFilePath))
+                    {
+                        var mappingsFileTempPath = Path.Combine(layoutsV2DirectoryPath, mappingsFile);
+                        File.Copy(mappingsFilePath, mappingsFileTempPath);
+                    }
+
+                    LogProvider.Log.Info("Migration #18 executed.");
+                    return;
                 }
-
-                var mappingsFilePath = Path.Combine(layoutsDirectoryPath, mappingsFile);
-
-                if (File.Exists(mappingsFilePath))
+                catch (Exception ex)
                 {
-                    var mappingsFileTempPath = Path.Combine(layoutsTempDirectoryPath, mappingsFile);
-                    File.Copy(mappingsFilePath, mappingsFileTempPath);
+                    LogProvider.Log.Error(this, $"Migration #18 failed.", ex);
+
+                    App.SplashScreen.Dispatcher.Invoke(() =>
+                    {
+                        var notificationViewModel = new NotificationViewModel
+                        {
+                            Title = CommonResourceManager.Instance.GetResourceString("Message_Migration0019_Title"),
+                            Message = CommonResourceManager.Instance.GetResourceString("Message_Migration0019_Text"),
+                            Button1Text = CommonResourceManager.Instance.GetResourceString("Message_Migration0019_Retry"),
+                            Button1Action = () => App.SplashScreen.DataContext.CloseNotification(),
+                            Button2Text = CommonResourceManager.Instance.GetResourceString("Message_Migration0019_Skip"),
+                            Button2Action = () =>
+                            {
+                                skipMigration = true;
+                                LogProvider.Log.Info("Migration #19 has been skipped.");
+                                App.SplashScreen.DataContext.CloseNotification();
+                            },
+                            Button3Text = CommonResourceManager.Instance.GetResourceString("Message_Migration0019_Exit"),
+                            Button3Action = () =>
+                            {
+                                try
+                                {
+                                    shutdown = true;
+                                    App.SplashScreen.DataContext.CloseNotification();
+                                    App.SplashScreen.CloseSplashScreen();
+                                    LogProvider.Log.Info("DriveHUD exited.");
+                                    Environment.Exit(0);
+                                }
+                                catch (Exception e)
+                                {
+                                    LogProvider.Log.Error(this, e);
+                                }
+                            }
+                        };
+
+                        App.SplashScreen.DataContext.ShowNotification(notificationViewModel);
+                    });
                 }
-
-                var newLayoutsBackupDirectoryPath = layoutsBackupDirectoryPath;
-                var backupFolderIndex = 1;
-
-                while (Directory.Exists(newLayoutsBackupDirectoryPath))
-                {
-                    newLayoutsBackupDirectoryPath = $"{newLayoutsBackupDirectoryPath}{backupFolderIndex++}";
-                }
-
-                layoutsDirectory.MoveTo(newLayoutsBackupDirectoryPath);
-                Directory.Move(layoutsTempDirectoryPath, layoutsDirectoryPath);
-
-                LogProvider.Log.Info("Migration #18 executed.");
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, $"Migration #18 failed.", ex);
             }
         }
 

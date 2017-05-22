@@ -32,6 +32,11 @@ namespace Model
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), appdata);
         }
 
+        public static string GetLayoutsV2FolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsV2Folder));
+        }
+
         public static string GetLayoutsFolderPath()
         {
             return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsFolder));

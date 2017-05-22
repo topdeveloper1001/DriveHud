@@ -636,7 +636,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Directory</returns>
         public DirectoryInfo GetLayoutsDirectory()
         {
-            var layoutsDirectory = new DirectoryInfo(StringFormatter.GetLayoutsFolderPath());
+            var layoutsDirectory = new DirectoryInfo(StringFormatter.GetLayoutsV2FolderPath());
 
             if (!layoutsDirectory.Exists)
             {
