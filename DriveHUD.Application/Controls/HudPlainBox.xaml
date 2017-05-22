@@ -19,11 +19,51 @@
     Opacity="{Binding Parent.Opacity}">
 
     <UserControl.Resources>
-        <ResourceDictionary
-            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudPlainBoxStyles.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudPlainBoxStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+        </ResourceDictionary>
+
     </UserControl.Resources>
 
     <Grid>
+
+        <Grid.Style>
+            <Style
+                TargetType="Grid">
+                <Setter
+                    Property="ToolTipService.InitialShowDelay"
+                    Value="1" />
+                <Setter
+                    Property="ToolTipService.ShowDuration"
+                    Value="60000" />
+                <Setter
+                    Property="ToolTipService.VerticalOffset"
+                    Value="-5" />
+                <Setter
+                    Property="ToolTipService.Placement"
+                    Value="Top" />
+                <Setter
+                    Property="ToolTipService.ToolTip">
+                    <Setter.Value>
+                        <ToolTip
+                            BorderThickness="0"
+                            Background="Transparent">
+                            <ToolTip.ContentTemplate>
+                                <DataTemplate>
+                                    <control:HudPlayerToolTip
+                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext.Parent}" />
+                                </DataTemplate>
+                            </ToolTip.ContentTemplate>
+                        </ToolTip>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Style>
 
         <Grid.RowDefinitions>
             <RowDefinition
@@ -47,7 +87,7 @@
                             StatInfoSource="{Binding Stats}"
                             StatDataTemplate="{StaticResource StatTemplate}"
                             PlayerIconDataTemplate="{StaticResource PlayerIconTemplate}"
-                            HudElementViewModel="{Binding Parent}"                         
+                            HudElementViewModel="{Binding Parent}"
                             Separator=" | " />
                     </i:Interaction.Behaviors>
                 </WrapPanel>

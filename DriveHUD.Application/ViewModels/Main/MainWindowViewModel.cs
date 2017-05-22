@@ -485,6 +485,10 @@ namespace DriveHUD.Application.ViewModels
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
 
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionStats.ContainsKey(Stat.NetWon) ?
+                        new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
+                        new ObservableCollection<decimal>();
+
                     var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection;
 
                     StatInfoHelper.UpdateStats(activeLayoutHudStats);

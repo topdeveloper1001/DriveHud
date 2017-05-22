@@ -50,7 +50,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 if (toolViewModel is IHudBaseStatToolViewModel)
                 {
                     toolViewModel.IsVisible = false;
-                }                
+                }
 
                 return toolViewModel;
             }));
@@ -183,7 +183,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 this.RaiseAndSetIfChanged(ref sessionHands, value);
             }
-        } 
+        }
 
         [ProtoMember(8)]
         private ObservableCollection<string> cardsCollection;
@@ -294,6 +294,32 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 this.RaiseAndSetIfChanged(ref opacity, value);
             }
+        }
+
+        [ProtoMember(14)]
+        private ObservableCollection<decimal> sessionMoneyWonCollection;
+
+        /// <summary>
+        /// Collection of won money
+        /// </summary>
+        public ObservableCollection<decimal> SessionMoneyWonCollection
+        {
+            get
+            {
+                return sessionMoneyWonCollection;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref sessionMoneyWonCollection, value);
+            }
+        }
+
+        /// <summary>
+        /// Money won for current session
+        /// </summary>
+        public decimal? SessionMoneyWon
+        {
+            get { return SessionMoneyWonCollection?.Sum(); }
         }
 
         public IEnumerable<StatInfo> StatInfoCollection

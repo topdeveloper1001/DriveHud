@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Entities;
+using Model.Enums;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
@@ -50,7 +51,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => tool);
 
             this.tool = tool;
-            
+
             if (Stats != null)
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;
@@ -175,6 +176,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        public string MainStatValue
+        {
+            get
+            {
+                return MainStat != null && MainStat.Stat == Stat.NetWon ?
+                    string.Format(MainStat.Format, StatSessionCollection?.Sum()) :
+                    MainStat.Caption;
+            }
+        }
 
         /// <summary>
         /// Gets whenever tools is re-sizable

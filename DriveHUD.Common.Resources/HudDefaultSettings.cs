@@ -106,7 +106,7 @@ namespace DriveHUD.Common.Resources
 
         public const double PlayerIconMinHeight = 27d;
 
-        public const double GraphWidth = 250;
+        public const double GraphWidth = double.NaN;
 
         public const double GraphHeight = double.NaN;
 

@@ -831,7 +831,7 @@ namespace Model.Stats
                 }
             }
             else
-            {
+            {                
                 propValue = ReflectionHelper.GetPropertyValue(source, PropertyName);
             }
 
