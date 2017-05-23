@@ -28,7 +28,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// Base class for non-popup tools
     /// </summary>
     [ProtoContract]
-    public abstract class HudBaseNonPopupToolViewModel<T> : HudBaseToolViewModel where T : HudLayoutNonPopupTool
+    public abstract class HudBaseNonPopupToolViewModel<T> : HudBaseToolViewModel, IHudNonPopupToolViewModel
+        where T : HudLayoutNonPopupTool
     {
         /// <summary>
         /// Gets the default width of the tool

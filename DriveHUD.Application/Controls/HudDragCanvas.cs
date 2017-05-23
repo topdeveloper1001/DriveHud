@@ -18,21 +18,26 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
+using System.Linq;
+using DriveHUD.Common.Linq;
+using System.Collections.Generic;
 
 namespace DriveHUD.Application.Controls
 {
     /// <summary> 
     /// A Canvas which manages dragging of the UIElements it contains.   
     /// </summary>   
-    public class DragCanvas : Canvas
+    public class HudDragCanvas : Canvas
     {
         #region Data 
 
-        private UIElement elementBeingDragged;
+        private DragElement elementBeingDragged;
+        private List<DragElement> elementsInDragGroup;
+
         private Point origCursorLocation;
-        private double origHorizOffset, origVertOffset;
-        private bool modifyLeftOffset, modifyTopOffset;
+
         private bool isDragInProgress;
+        private bool isGroupDragInProgress;
 
         internal double XFraction { get; set; }
 
@@ -48,24 +53,24 @@ namespace DriveHUD.Application.Controls
 
         #region Static Constructor 
 
-        static DragCanvas()
+        static HudDragCanvas()
         {
             AllowDraggingProperty = DependencyProperty.Register(
                 "AllowDragging",
                 typeof(bool),
-                typeof(DragCanvas),
+                typeof(HudDragCanvas),
                 new PropertyMetadata(true));
 
             AllowDragOutOfViewProperty = DependencyProperty.Register(
                 "AllowDragOutOfView",
                 typeof(bool),
-                typeof(DragCanvas),
+                typeof(HudDragCanvas),
                 new UIPropertyMetadata(false));
 
             CanBeDraggedProperty = DependencyProperty.RegisterAttached(
                 "CanBeDragged",
                 typeof(bool),
-                typeof(DragCanvas),
+                typeof(HudDragCanvas),
                 new UIPropertyMetadata(true));
         }
 
@@ -73,7 +78,7 @@ namespace DriveHUD.Application.Controls
 
         #region Constructor 
 
-        public DragCanvas()
+        public HudDragCanvas()
         {
         }
 
@@ -116,11 +121,11 @@ namespace DriveHUD.Application.Controls
         {
             get
             {
-                return (bool)base.GetValue(AllowDraggingProperty);
+                return (bool)GetValue(AllowDraggingProperty);
             }
             set
             {
-                base.SetValue(AllowDraggingProperty, value);
+                SetValue(AllowDraggingProperty, value);
             }
         }
 
@@ -148,19 +153,19 @@ namespace DriveHUD.Application.Controls
 
         public void BringToFront(UIElement element)
         {
-            this.UpdateZOrder(element, true);
+            UpdateZOrder(element, true);
         }
 
         public void SendToBack(UIElement element)
         {
-            this.UpdateZOrder(element, false);
+            UpdateZOrder(element, false);
         }
 
         #endregion
 
         #region ElementBeingDragged 
 
-        public UIElement ElementBeingDragged
+        internal DragElement ElementBeingDragged
         {
             get
             {
@@ -170,14 +175,14 @@ namespace DriveHUD.Application.Controls
                 }
                 else
                 {
-                    return this.elementBeingDragged;
+                    return elementBeingDragged;
                 }
             }
-            protected set
+            private set
             {
                 if (elementBeingDragged != null)
                 {
-                    elementBeingDragged.ReleaseMouseCapture();
+                    elementBeingDragged.Element.ReleaseMouseCapture();
                 }
 
                 if (!AllowDragging)
@@ -186,10 +191,10 @@ namespace DriveHUD.Application.Controls
                 }
                 else
                 {
-                    if (GetCanBeDragged(value))
+                    if (value != null && GetCanBeDragged(value.Element))
                     {
                         elementBeingDragged = value;
-                        elementBeingDragged.CaptureMouse();
+                        elementBeingDragged.Element.CaptureMouse();
                     }
                     else
                     {
@@ -251,32 +256,86 @@ namespace DriveHUD.Application.Controls
         protected override void OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)
         {
             base.OnPreviewMouseRightButtonDown(e);
-            isDragInProgress = false;
-            OrigCursorLocation = e.GetPosition(this);
+            isGroupDragInProgress = false;
+            InitializeDragProgress(e);
+        }
 
-            ElementBeingDragged = this.FindCanvasChild(e.Source as DependencyObject);
+        protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnPreviewMouseLeftButtonDown(e);
+            InitializeDragProgress(e);
 
-            if (ElementBeingDragged == null)
+            isGroupDragInProgress = false;
+
+            if (ElementBeingDragged.DataContext == null)
             {
                 return;
             }
 
-            double left = GetLeft(ElementBeingDragged);
-            double right = GetRight(ElementBeingDragged);
-            double top = GetTop(ElementBeingDragged);
-            double bottom = GetBottom(ElementBeingDragged);
+            var nonPopupTools = ElementBeingDragged.DataContext.Parent.Tools
+                   .OfType<IHudNonPopupToolViewModel>()
+                   .ToArray();
 
-            origHorizOffset = ResolveOffset(left, right, out modifyLeftOffset);
-            origVertOffset = ResolveOffset(top, bottom, out modifyTopOffset);
+            var toolViews = (from child in Children.OfType<FrameworkElement>()
+                             let childViewModel = child.DataContext as IHudNonPopupToolViewModel
+                             where childViewModel != null
+                             select new { FrameworkElement = child, DataContext = childViewModel }).ToArray();
+
+            elementsInDragGroup = (from toolView in toolViews
+                                   join nonPopupTool in nonPopupTools on toolView.DataContext equals nonPopupTool
+                                   select CreateDragElement(toolView.FrameworkElement)).ToList();
+
+            isGroupDragInProgress = true;
+        }
+
+        private void InitializeDragProgress(MouseButtonEventArgs e)
+        {
+            isDragInProgress = false;
+            OrigCursorLocation = e.GetPosition(this);
+
+            var uiElementBeingDragged = FindCanvasChild(e.Source as DependencyObject) as FrameworkElement;
+
+            if (uiElementBeingDragged == null)
+            {
+                return;
+            }
+
+            ElementBeingDragged = CreateDragElement(uiElementBeingDragged);
 
             e.Handled = true;
 
             isDragInProgress = true;
         }
 
+        private DragElement CreateDragElement(FrameworkElement element)
+        {
+            bool modifyLeftOffset, modifyTopOffset;
+
+            double left = GetLeft(element);
+            double right = GetRight(element);
+            double top = GetTop(element);
+            double bottom = GetBottom(element);
+
+            var origHorizOffset = ResolveOffset(left, right, out modifyLeftOffset);
+            var origVertOffset = ResolveOffset(top, bottom, out modifyTopOffset);
+
+            var dragElement = new DragElement
+            {
+                Element = element,
+                DataContext = element.DataContext as IHudNonPopupToolViewModel,
+                OrigHorizOffset = origHorizOffset,
+                OrigVertOffset = origVertOffset,
+                ModifyLeftOffset = modifyLeftOffset,
+                ModifyTopOffset = modifyTopOffset
+            };
+
+            return dragElement;
+        }
+
         #endregion
 
         #region OnPreviewMouseMove 
+
         protected override void OnPreviewMouseMove(MouseEventArgs e)
         {
             base.OnPreviewMouseMove(e);
@@ -288,46 +347,61 @@ namespace DriveHUD.Application.Controls
 
             Point cursorLocation = e.GetPosition(this);
 
+            var shiftX = cursorLocation.X - this.OrigCursorLocation.X;
+            var shiftY = cursorLocation.Y - this.OrigCursorLocation.Y;
+
+            #region Move Drag Element          
+
+            SetElementPosition(ElementBeingDragged, shiftX, shiftY);
+
+            if (isGroupDragInProgress)
+            {
+                elementsInDragGroup.ForEach(x => SetElementPosition(x, shiftX, shiftY));
+            }
+
+            #endregion
+        }
+
+        private void SetElementPosition(DragElement element, double shiftX, double shiftY)
+        {
             double newHorizontalOffset, newVerticalOffset;
 
             #region Calculate Offsets 
 
-            if (modifyLeftOffset)
+            if (element.ModifyLeftOffset)
             {
-                newHorizontalOffset = this.origHorizOffset + (cursorLocation.X - this.OrigCursorLocation.X);
+                newHorizontalOffset = element.OrigHorizOffset + shiftX;
             }
             else
             {
-                newHorizontalOffset = this.origHorizOffset - (cursorLocation.X - this.OrigCursorLocation.X);
+                newHorizontalOffset = element.OrigHorizOffset - shiftX;
             }
 
-            if (modifyTopOffset)
+            if (element.ModifyTopOffset)
             {
-                newVerticalOffset = this.origVertOffset + (cursorLocation.Y - this.OrigCursorLocation.Y);
+                newVerticalOffset = element.OrigVertOffset + shiftY;
             }
             else
             {
-                newVerticalOffset = this.origVertOffset - (cursorLocation.Y - this.OrigCursorLocation.Y);
+                newVerticalOffset = element.OrigVertOffset - shiftY;
             }
-
-            #endregion
 
             if (!AllowDragOutOfView)
             {
                 #region Verify Drag Element Location 
 
-                Rect elemRect = this.CalculateDragElementRect(newHorizontalOffset, newVerticalOffset);
+                Rect elemRect = CalculateDragElementRect(element, newHorizontalOffset, newVerticalOffset);
 
                 bool leftAlign = elemRect.Left < 0;
-                bool rightAlign = elemRect.Right > this.ActualWidth;
+                bool rightAlign = elemRect.Right > ActualWidth;
 
                 if (leftAlign)
                 {
-                    newHorizontalOffset = modifyLeftOffset ? 0 : ActualWidth - elemRect.Width;
+                    newHorizontalOffset = element.ModifyLeftOffset ? 0 : ActualWidth - elemRect.Width;
                 }
                 else if (rightAlign)
                 {
-                    newHorizontalOffset = modifyLeftOffset ? ActualWidth - elemRect.Width : 0;
+                    newHorizontalOffset = element.ModifyLeftOffset ? ActualWidth - elemRect.Width : 0;
                 }
 
                 bool topAlign = elemRect.Top < 0;
@@ -336,56 +410,45 @@ namespace DriveHUD.Application.Controls
 
                 if (topAlign)
                 {
-                    newVerticalOffset = modifyTopOffset ? 0 : ActualHeight - elemRect.Height;
+                    newVerticalOffset = element.ModifyTopOffset ? 0 : ActualHeight - elemRect.Height;
                 }
                 else if (bottomAlign)
                 {
-                    newVerticalOffset = modifyTopOffset ? ActualHeight - elemRect.Height : 0;
+                    newVerticalOffset = element.ModifyTopOffset ? ActualHeight - elemRect.Height : 0;
                 }
 
                 #endregion
             }
 
-            #region Move Drag Element 
-
-            var hudPanelBeingDragged = ElementBeingDragged as FrameworkElement;
-
-            IHudWindowElement toolViewModel = null;
-
-            if (hudPanelBeingDragged != null)
-            {
-                toolViewModel = hudPanelBeingDragged.DataContext as IHudWindowElement;
-            }
-
-            if (modifyLeftOffset)
-            {
-                SetLeft(ElementBeingDragged, newHorizontalOffset);
-
-                if (toolViewModel != null)
-                {
-                    toolViewModel.OffsetX = newHorizontalOffset / XFraction;
-                }
-            }
-            else
-            {
-                SetRight(ElementBeingDragged, newHorizontalOffset);
-            }
-
-            if (modifyTopOffset)
-            {
-                SetTop(ElementBeingDragged, newVerticalOffset);
-
-                if (toolViewModel != null)
-                {
-                    toolViewModel.OffsetY = newVerticalOffset / YFraction;
-                }
-            }
-            else
-            {
-                SetBottom(ElementBeingDragged, newVerticalOffset);
-            }
-
             #endregion
+
+            if (element.ModifyLeftOffset)
+            {
+                SetLeft(element.Element, newHorizontalOffset);
+
+                if (element.DataContext != null)
+                {
+                    element.DataContext.OffsetX = newHorizontalOffset / XFraction;
+                }
+            }
+            else
+            {
+                SetRight(element.Element, newHorizontalOffset);
+            }
+
+            if (element.ModifyTopOffset)
+            {
+                SetTop(element.Element, newVerticalOffset);
+
+                if (element.DataContext != null)
+                {
+                    element.DataContext.OffsetY = newVerticalOffset / YFraction;
+                }
+            }
+            else
+            {
+                SetBottom(element.Element, newVerticalOffset);
+            }
         }
 
         #endregion
@@ -395,11 +458,14 @@ namespace DriveHUD.Application.Controls
         protected override void OnPreviewMouseUp(MouseButtonEventArgs e)
         {
             base.OnPreviewMouseUp(e);
+
             if (isDragInProgress)
             {
-                DragEnded?.Invoke(this.ElementBeingDragged, new EventArgs());
+                DragEnded?.Invoke(ElementBeingDragged.Element, new EventArgs());
             }
-            this.ElementBeingDragged = null;
+
+            ElementBeingDragged = null;
+            elementsInDragGroup = null;
         }
 
         #endregion
@@ -410,18 +476,18 @@ namespace DriveHUD.Application.Controls
 
         #region CalculateDragElementRect 
 
-        private Rect CalculateDragElementRect(double newHorizOffset, double newVertOffset)
+        private Rect CalculateDragElementRect(DragElement element, double newHorizOffset, double newVertOffset)
         {
             if (ElementBeingDragged == null)
             {
                 throw new InvalidOperationException("ElementBeingDragged is null.");
             }
 
-            Size elemSize = ElementBeingDragged.RenderSize;
+            Size elemSize = element.Element.RenderSize;
 
             double x, y;
 
-            if (modifyLeftOffset)
+            if (element.ModifyLeftOffset)
             {
                 x = newHorizOffset;
             }
@@ -430,7 +496,7 @@ namespace DriveHUD.Application.Controls
                 x = ActualWidth - newHorizOffset - elemSize.Width;
             }
 
-            if (modifyTopOffset)
+            if (element.ModifyTopOffset)
             {
                 y = newVertOffset;
             }
@@ -545,5 +611,20 @@ namespace DriveHUD.Application.Controls
         #endregion
 
         #endregion
+
+        internal class DragElement
+        {
+            public FrameworkElement Element { get; set; }
+
+            public IHudNonPopupToolViewModel DataContext { get; set; }
+
+            public double OrigHorizOffset { get; set; }
+
+            public double OrigVertOffset { get; set; }
+
+            public bool ModifyLeftOffset { get; set; }
+
+            public bool ModifyTopOffset { get; set; }
+        }
     }
 }

@@ -152,7 +152,7 @@
         <Border
             Grid.Row="1"
             BorderThickness="0">
-            <ctrl:DragCanvas
+            <ctrl:HudDragCanvas
                 x:Name="dgCanvas"
                 AllowDragging="True"
                 AllowDragOutOfView="True"

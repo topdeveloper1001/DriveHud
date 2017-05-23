@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.1.0.1364, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.1.0.1366, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.1.0.1364, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.1.0.1366, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.1.0.1364, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.1.0.1366, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -377,6 +377,7 @@
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
+    <Compile Include="Migration\Migrators\MigrationUtils.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -446,6 +447,7 @@
     <Compile Include="ViewModels\Hud\Designer\HudPlainStatBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudToolFactory.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudBaseStatToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
     <Compile Include="ViewModels\Hud\HudBaseToolTipBehavior.cs" />
@@ -456,6 +458,7 @@
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -552,7 +555,7 @@
     <Compile Include="Views\Popups\DataRemoverView.xaml.cs">
       <DependentUpon>DataRemoverView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DragCanvas.cs" />
+    <Compile Include="Controls\HudDragCanvas.cs" />
     <Compile Include="Controls\HudRichPanel.xaml.cs">
       <DependentUpon>HudRichPanel.xaml</DependentUpon>
     </Compile>
