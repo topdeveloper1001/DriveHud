@@ -10,8 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Extensions;
@@ -33,7 +31,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using System.Windows;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -50,7 +47,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private IEventAggregator eventAggregator;
-      
+
         /// <summary>
         /// Initializes an instance of <see cref="HudLayoutsService"/>
         /// </summary>        
@@ -364,10 +361,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             // get total hands now to prevent enumeration in future
             var hudElementViewModels = hudElements as HudElementViewModel[] ?? hudElements.ToArray();
 
-            var hudElementsTotalHands = (from hudElement in hudElementViewModels
-                                         from stat in hudElement.StatInfoCollection
-                                         where stat.Stat == Stat.TotalHands
-                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement, x => x.TotalHands);
+            var hudElementsTotalHands = hudElementViewModels
+                .Select(hudElement =>
+                {
+                    var totalHandsStatInfo = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == Stat.TotalHands);
+
+                    return new
+                    {
+                        HudElement = hudElement,
+                        TotalHands = totalHandsStatInfo != null ? totalHandsStatInfo.CurrentValue : default(decimal)
+                    };
+                })
+                .ToDictionary(x => x.HudElement, x => x.TotalHands);
 
             // get match ratios by player
             var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
@@ -706,6 +711,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
+                RemoveNotExistingLayouts(layoutsDirectory.FullName);
             }
             catch (Exception e)
             {
@@ -729,6 +735,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             try
             {
+                var layoutsFolder = GetLayoutsDirectory();
+
                 using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
@@ -746,6 +754,36 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return new HudLayoutMappings();
+        }
+
+        /// <summary>
+        /// Removes not-existing layouts from mappings
+        /// </summary>
+        protected void RemoveNotExistingLayouts(string layoutsDirectory)
+        {
+            locker.EnterReadLock();
+
+            try
+            {
+                foreach (var mapping in HudLayoutMappings.Mappings.ToArray())
+                {
+                    var layoutFile = Path.Combine(layoutsDirectory, mapping.FileName);
+
+                    if (!File.Exists(layoutFile))
+                    {
+                        HudLayoutMappings.Mappings.Remove(mapping);
+                        LogProvider.Log.Warn($"Layout '{mapping.Name}' (default={mapping.IsDefault}) has not been found at '{layoutFile}' and will be skipped.");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+            finally
+            {
+                locker.ExitReadLock();
+            }
         }
 
         /// <summary>

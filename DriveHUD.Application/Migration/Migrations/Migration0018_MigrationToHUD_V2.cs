@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.SplashScreen;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
@@ -66,12 +67,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                     var layoutsFiles = layoutsDirectory.GetFiles(searchPattern).Where(x => x.Name != mappingsFile).ToArray();
 
-                    var layoutMigrator = ServiceLocator.Current.GetInstance<Migrators.ILayoutMigrator>();
+                    var layoutMigrator = ServiceLocator.Current.GetInstance<ILayoutMigrator>();
 
                     foreach (var layoutFile in layoutsFiles)
                     {
                         try
-                        {
+                        {                           
                             var layout = ReadLayoutInfo(layoutFile.FullName);
 
                             var migratedLayout = layoutMigrator.Migrate(layout);
@@ -83,7 +84,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         }
                         catch (Exception e)
                         {
-                            LogProvider.Log.Error(this, $"{layoutFile.FullName} has not been migrated.", e);
+                            LogProvider.Log.Error("Migration", $"{ layoutFile.FullName} has not been migrated.", e);
                         }
                     }
 
@@ -100,7 +101,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(this, $"Migration #18 failed.", ex);
+                    LogProvider.Log.Error("Migration", $"Migration #18 failed.", ex);
 
                     App.SplashScreen.Dispatcher.Invoke(() =>
                     {

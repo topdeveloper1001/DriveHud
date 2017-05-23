@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.SplashScreen;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
@@ -19,8 +20,6 @@ using Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
@@ -131,7 +130,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(this, $"Migration #19 failed.", ex);
+                    LogProvider.Log.Error("Migration", $"Migration #19 failed.", ex);
 
                     App.SplashScreen.Dispatcher.Invoke(() =>
                     {
@@ -181,12 +180,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             try
             {
-                var canDeserialize = CanDeserialize<HudLayoutInfoV2>(fileName);
+                var canDeserialize = MigrationUtils.CanDeserialize<HudLayoutInfoV2>(fileName);
                 return canDeserialize;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Layout (v2) has not been loaded on the '{fileName}' path.", e);
+                LogProvider.Log.Error("Migration", $"Layout (v2) has not been loaded on the '{fileName}' path.", e);
             }
 
             return false;
@@ -201,12 +200,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             try
             {
-                var canDeserialize = CanDeserialize<HudLayoutInfo>(fileName);
+                var canDeserialize = MigrationUtils.CanDeserialize<HudLayoutInfo>(fileName);
                 return canDeserialize;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Layout (v1) has not been loaded on the '{fileName}' path.", e);
+                LogProvider.Log.Error("Migration", $"Layout (v1) has not been loaded on the '{fileName}' path.", e);
             }
 
             return false;
@@ -226,31 +225,15 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             try
             {
-                var canDeserialize = CanDeserialize<HudLayoutMappings>(fileName);
+                var canDeserialize = MigrationUtils.CanDeserialize<HudLayoutMappings>(fileName);
                 return canDeserialize;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Mappings has not been loaded on the '{fileName}' path.", e);
+                LogProvider.Log.Error("Migration", $"Mappings has not been loaded on the '{fileName}' path.", e);
             }
 
             return false;
-        }
-
-        /// <summary>
-        ///  Determines whenever the specified file is a serialized <see cref="{T}"/> 
-        /// </summary>
-        /// <typeparam name="T">Type of serialized object</typeparam>
-        /// <param name="fileName">Path to the specified file</param>
-        /// <returns>True if file is a serialized <see cref="{T}"/>, otherwise - false</returns>
-        private static bool CanDeserialize<T>(string fileName)
-        {
-            using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
-            {
-                var reader = new XmlTextReader(stream);
-                var xmlSerializer = new XmlSerializer(typeof(T));
-                return xmlSerializer.CanDeserialize(reader);
-            }
         }
     }
 }

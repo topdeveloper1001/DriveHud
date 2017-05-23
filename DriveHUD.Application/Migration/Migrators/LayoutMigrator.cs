@@ -10,22 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
-using DriveHUD.Entities;
-using System.Windows;
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
-using Model.Stats;
-using ReactiveUI;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
-using DriveHUD.Common.Exceptions;
+using Model.Stats;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 
 namespace DriveHUD.Application.MigrationService.Migrators
 {
