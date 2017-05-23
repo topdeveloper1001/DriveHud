@@ -62,6 +62,8 @@ namespace DriveHUD.Application.HudServices
                         PokerSite = hudLayoutContract.PokerSite,
                         HudPositions = new List<HudPositionInfo>()
                     };
+
+                    tool.Positions.Add(existingHudPositions);
                 }
 
                 // update positions 

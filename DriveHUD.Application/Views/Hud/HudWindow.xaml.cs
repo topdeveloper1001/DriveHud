@@ -85,7 +85,15 @@ namespace DriveHUD.Application.Views
 
             Layout = layout;
 
-            ViewModel?.SetLayout(layout);
+            if (ViewModel != null)
+            {
+                ViewModel.SetLayout(layout);
+
+                if (ViewModel.RefreshHud == null)
+                {
+                    ViewModel.RefreshHud = Refresh;
+                }
+            }
 
             // set parents for tools
             Layout.ListHUDPlayer.Select(x => x.HudElement).ForEach(h => h.Tools.ForEach(t => t.Parent = h));
@@ -198,7 +206,7 @@ namespace DriveHUD.Application.Views
                 hudPanel.Height = toolViewModel.Height != double.NaN ? toolViewModel.Height * ScaleY : double.NaN;
 
                 var positions = hudPanelService.CalculatePositions(toolViewModel, this);
-                
+
                 Canvas.SetLeft(hudPanel, positions.Item1);
                 Canvas.SetTop(hudPanel, positions.Item2);
             }

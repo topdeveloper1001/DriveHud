@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -27,5 +28,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         HudDesignerToolType ToolType { get; }
 
         HudElementViewModel Parent { get; set; }
+
+        Guid Id { get; }
     }
 }

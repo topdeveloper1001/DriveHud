@@ -120,6 +120,12 @@
   <data name="Main_ContextMenu_All" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="Main_ContextMenu_ApplyPositions" xml:space="preserve">
+    <value>Set All HUDs Same As</value>
+  </data>
+  <data name="Main_ContextMenu_ApplyPositionsAsSeat" xml:space="preserve">
+    <value>Seat #{0}</value>
+  </data>
   <data name="Main_ContextMenu_CalculateEquity" xml:space="preserve">
     <value>Calculate Equity</value>
   </data>

@@ -231,20 +231,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
 
             // HUD designer 
-            Container.RegisterType<IHudToolFactory, HudToolFactory>();
-
-            //Position Providers
-            Container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.Unknown.ToString());
-            Container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.BetOnline.ToString());
-            Container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.TigerGaming.ToString());
-            Container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.SportsBetting.ToString());
-            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(EnumPokerSites.Ignition.ToString());
-            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(EnumPokerSites.Bodog.ToString());
-            Container.RegisterType<IPositionProvider, Poker888PositionProvider>(EnumPokerSites.Poker888.ToString());
-            Container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(EnumPokerSites.PokerStars.ToString());
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.WinningPokerNetwork.ToString());
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.AmericasCardroom.ToString());
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.BlackChipPoker.ToString());
+            Container.RegisterType<IHudToolFactory, HudToolFactory>();          
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);

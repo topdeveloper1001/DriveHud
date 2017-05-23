@@ -10,14 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
+using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Prism.Interactivity.InteractionRequest;
 using System;
@@ -25,6 +28,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -46,6 +50,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             TagHandCommand = new RelayCommand(TagHand);
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
+            ApplyPositionsCommand = new RelayCommand(ApplyPositions);
         }
 
         #region Properties
@@ -104,6 +109,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             set { SetProperty(ref layoutsCollection, value); }
         }
 
+        public ObservableCollection<int> Seats
+        {
+            get
+            {
+                return layout != null ? new ObservableCollection<int>(Enumerable.Range(1, (int)layout.TableType)) : null;
+            }
+        }
+
+        public Action RefreshHud
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region ICommand
@@ -115,6 +134,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ICommand ReplayLastHandCommand { get; private set; }
 
         public ICommand LoadLayoutCommand { get; private set; }
+
+        public ICommand ApplyPositionsCommand { get; private set; }
 
         #endregion
 
@@ -243,6 +264,61 @@ namespace DriveHUD.Application.ViewModels.Hud
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });
+        }
+
+        private void ApplyPositions(object obj)
+        {
+            var seat = obj as int?;
+
+            if (!seat.HasValue || layout == null)
+            {
+                return;
+            }
+
+            var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(layout.PokerSite.ToString());
+
+            if (!positionProvider.Positions.ContainsKey((int)layout.TableType))
+            {
+                return;
+            }
+
+            var seatsPositions = positionProvider.Positions[(int)layout.TableType];
+
+            var baseHUDPlayer = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == seat.Value);
+
+            if (baseHUDPlayer == null)
+            {
+                return;
+            }
+
+            var baseSeatPosition = new Point(seatsPositions[seat.Value - 1, 0], seatsPositions[seat.Value - 1, 1]);
+
+            var nonPopupToolViewModels = baseHUDPlayer.HudElement.Tools.OfType<IHudNonPopupToolViewModel>();
+
+            var toolOffsetsDictionary = (from nonPopupToolViewModel in nonPopupToolViewModels
+                                         let toolOffsetX = nonPopupToolViewModel.OffsetX != 0 ? nonPopupToolViewModel.OffsetX : nonPopupToolViewModel.Position.X
+                                         let toolOffsetY = nonPopupToolViewModel.OffsetY != 0 ? nonPopupToolViewModel.OffsetY : nonPopupToolViewModel.Position.Y
+                                         let shiftX = toolOffsetX - baseSeatPosition.X
+                                         let shiftY = toolOffsetY - baseSeatPosition.Y
+                                         select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);
+
+            var elementsToUpdate = layout.ListHUDPlayer.Where(x => x.SeatNumber != seat.Value).Select(x => x.HudElement).ToArray();
+
+            elementsToUpdate.ForEach(element =>
+            {
+                element.Tools.OfType<IHudNonPopupToolViewModel>().ForEach(tool =>
+                {
+                    if (toolOffsetsDictionary.ContainsKey(tool.Id))
+                    {
+                        var seatPosition = new Point(seatsPositions[element.Seat - 1, 0], seatsPositions[element.Seat - 1, 1]);
+
+                        tool.OffsetX = seatPosition.X + toolOffsetsDictionary[tool.Id].ShiftX;
+                        tool.OffsetY = seatPosition.Y + toolOffsetsDictionary[tool.Id].ShiftY;
+                    }
+                });
+            });
+
+            RefreshHud?.Invoke();
         }
 
         private void RaiseNotification(string content, string title)
