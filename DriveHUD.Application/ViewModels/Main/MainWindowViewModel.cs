@@ -1261,8 +1261,7 @@ namespace DriveHUD.Application.ViewModels
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisYear;
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
-                case EnumFilterDropDown.FilterCustomDateRange:
-                    eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
+                case EnumFilterDropDown.FilterCustomDateRange:                    
 
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;
