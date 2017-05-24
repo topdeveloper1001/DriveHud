@@ -24,7 +24,7 @@ using DriveHUD.Entities;
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Creates Hud Panels 
+    /// Determines service to create HUD tools
     /// </summary>
     internal class HudPanelService : IHudPanelService
     {
@@ -107,6 +107,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 case HudDesignerToolType.PlainStatBox:
                     hudTool = new HudPlainBox();
+                    AttachContextMenu(hudToolElement, hudTool);
                     break;
                 case HudDesignerToolType.FourStatBox:
                     hudTool = new HudFourStatsBox();
@@ -186,38 +187,47 @@ namespace DriveHUD.Application.ViewModels.Hud
             return handle;
         }
 
-        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName, HudElementViewModel datacontext)
+        /// <summary>
+        /// Attaches context menu to the specified <see cref="FrameworkElement"/>
+        /// </summary>
+        /// <param name="hudToolViewModel"></param>
+        /// <param name="hudTool"></param>
+        protected virtual void AttachContextMenu(HudBaseToolViewModel hudToolViewModel, FrameworkElement hudTool)
         {
-            RadContextMenu radMenu = new RadContextMenu();
-
-            var item = new RadMenuItem();
-
-            var binding = new Binding(nameof(HudElementViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
-            item.SetBinding(RadMenuItem.HeaderProperty, binding);
-
-            item.Click += (s, e) =>
+            if (hudToolViewModel == null || hudToolViewModel.Parent == null || hudTool == null)
             {
-                PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
-                var frm = new PlayerNoteView(viewModel);
-                frm.ShowDialog();
+                return;
+            }
 
-                if (viewModel.PlayerNoteEntity == null)
-                {
-                    return;
-                }
+            var menuItem = new RadMenuItem();
 
-                var clickedItem = s as FrameworkElement;
-                if (clickedItem == null || !(clickedItem.DataContext is HudElementViewModel))
-                {
-                    return;
-                }
-
-                var hudElement = clickedItem.DataContext as HudElementViewModel;
-                hudElement.NoteToolTip = viewModel.Note;
+            var binding = new Binding(nameof(HudElementViewModel.NoteMenuItemText))
+            {
+                Source = hudToolViewModel.Parent,
+                Mode = BindingMode.OneWay
             };
-            radMenu.Items.Add(item);
 
-            return radMenu;
+            menuItem.SetBinding(RadMenuItem.HeaderProperty, binding);
+
+            menuItem.Click += (s, e) =>
+            {
+                var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PokerSiteId, hudToolViewModel.Parent.PlayerName);
+
+                var playerNoteView = new PlayerNoteView(playerNoteViewModel);
+
+                playerNoteView.ShowDialog();
+
+                if (playerNoteViewModel.PlayerNoteEntity == null)
+                {
+                    return;
+                }
+
+                hudToolViewModel.Parent.NoteToolTip = playerNoteViewModel.Note;
+            };
+
+            var contextMenu = new RadContextMenu();
+            contextMenu.Items.Add(menuItem);
+            RadContextMenu.SetContextMenu(hudTool, contextMenu);
         }
 
         public virtual Point GetPositionShift(EnumTableType tableType, int seat)
