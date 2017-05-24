@@ -206,6 +206,31 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
+        [TestCase(@"Hero-Position-EP-1.xml", EnumPokerSites.IPoker, "Peon84", false)]
+        [TestCase(@"Hero-Position-EP-2.xml", EnumPokerSites.IPoker, "Peon84", false)]
+        [TestCase(@"Hero-Position-MP-1.xml", EnumPokerSites.IPoker, "Peon84", false)]
+        [TestCase(@"Hero-Position-MP-2.xml", EnumPokerSites.IPoker, "Peon84", false)]
+        [TestCase(@"Hero-Position-MP-3.xml", EnumPokerSites.IPoker, "Peon84", false)]
+        [TestCase(@"DURKADURDUR-CO-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", true)]
+        [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", false)]
+        public void IsCutoffImported(string fileName, EnumPokerSites pokerSite, string playerName, bool expected)
+        {
+            using (var perfScope = new PerformanceMonitor("PositionsAreImported"))
+            {
+                Playerstatistic playerstatistic = null;
+
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+
+                FillDatabaseFromSingleFile(fileName, pokerSite);
+
+                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
+
+                Assert.That(playerstatistic.IsCutoff, Is.EqualTo(expected));
+            }
+        }
+
         /// <summary>
         /// Gets player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
         /// </summary>     

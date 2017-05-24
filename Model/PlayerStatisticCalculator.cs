@@ -247,7 +247,7 @@ namespace Model
             //calculation of cold call after open raise at Sb position
             ConditionalBet coldCallVsSbOpen = new ConditionalBet();
             if (parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND) != null)
-            ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
+                ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
 
             //calculation of cold call after open raise at Co position
             ConditionalBet coldCallVsCoOpen = new ConditionalBet();
@@ -1695,13 +1695,42 @@ namespace Model
         private static Player GetCutOffPlayer(HandHistory hand)
         {
             if (hand.Players.Count == 2)
+            {
+                return null;
+            }
+
+            try
+            {
+
+                var players = hand.Players.ToList();
+
+                var button = players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
+
+                var orderedPlayers = players.OrderBy(x => x.SeatNumber).ToArray();
+
+                var btnPlayerIndex = orderedPlayers.FindIndex(x => x.SeatNumber == hand.DealerButtonPosition);
+
+                if (btnPlayerIndex < 0)
+                {
+                    var co = hand.HandActions
+                        .Select(h => h.PlayerName)
+                        .Distinct()
+                        .Where(x => x != button?.PlayerName)
+                        .LastOrDefault();
+
+                    return hand.Players.FirstOrDefault(x => x.PlayerName == co);
+                }
+
+                var coPlayer = btnPlayerIndex == 0 ? orderedPlayers.Last() : orderedPlayers[btnPlayerIndex - 1];
+
+                return coPlayer;
+            }
+            catch(Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
                 return null;
 
-            var players = hand.Players.ToList();
-            var button = players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
-            var co = hand.HandActions.Select(h => h.PlayerName).Distinct().Where(x => x != button?.PlayerName).LastOrDefault();
-
-            return hand.Players.FirstOrDefault(x => x.PlayerName == co);
+            }
         }
 
         private static Player GetDealerPlayer(HandHistory hand)
