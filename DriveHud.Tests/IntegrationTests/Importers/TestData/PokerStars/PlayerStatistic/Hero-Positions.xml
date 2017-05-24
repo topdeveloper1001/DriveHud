@@ -1,0 +1,1124 @@
+<session sessioncode="206953723">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Table #4, $0.10 NL [R+A]</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-05-24 11:14:13</startdate>
+		<currency>USD</currency>
+		<nickname>Peon84</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>$0.10 NL [R+A]</tournamentname>
+		<place>28</place>
+		<buyin>$0.10+$0.01</buyin>
+		<totalbuyin>$0.11</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="147194979">
+		<general>
+			<startdate>2017-05-24 11:14:13</startdate>
+			<players>
+				<player seat="1" name="xluckyx17" chips="1880" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="2" name="Fumblruski" chips="1928" dealer="0" win="0" bet="240" rebuy="0" addon="0" />
+				<player seat="3" name="BoMax" chips="30" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="talaverajl" chips="600" dealer="0" win="960" bet="600" rebuy="0" addon="0" />
+				<player seat="5" name="Adam Rose" chips="1910" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1000" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="7" name="Gotnoace" chips="920" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Gotnoace" type="1" sum="40" cards="" />
+			<action no="2" player="xluckyx17" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="BoMax">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="Peon84">H7 S3</cards>
+			<cards type="Pocket" player="Gotnoace">X X</cards>
+			<action no="3" player="Fumblruski" type="23" sum="160" cards="" />
+			<action no="4" player="BoMax" type="0" sum="0" cards="" />
+			<action no="5" player="talaverajl" type="23" sum="240" cards="" />
+			<action no="6" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="7" player="Peon84" type="0" sum="0" cards="" />
+			<action no="8" player="Gotnoace" type="0" sum="0" cards="" />
+			<action no="9" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="10" player="Fumblruski" type="3" sum="80" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HA D6 D10</cards>
+			<action no="11" player="Fumblruski" type="4" sum="0" cards="" />
+			<action no="12" player="talaverajl" type="5" sum="360" cards="" />
+			<action no="13" player="Fumblruski" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147195525">
+		<general>
+			<startdate>2017-05-24 11:17:31</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2980" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="2730" dealer="0" win="6780" bet="2730" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3440" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="7220" dealer="1" win="0" bet="2730" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1160" dealer="0" win="0" bet="1160" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="735" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="5730" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="scotiaman" type="1" sum="40" cards="" />
+			<action no="2" player="szakipapaone" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">SQ DQ</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">D10 S9</cards>
+			<cards type="Pocket" player="scotiaman">CJ DA</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">H6 D7</cards>
+			<action no="3" player="kmbwpa" type="3" sum="80" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="6" player="JJB420" type="23" sum="2730" cards="" />
+			<action no="7" player="contrademon" type="0" sum="0" cards="" />
+			<action no="8" player="peternaw" type="3" sum="2730" cards="" />
+			<action no="9" player="scotiaman" type="3" sum="1120" cards="" />
+			<action no="10" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="11" player="kmbwpa" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H5 S4 S10</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D6</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H4</cards>
+		</round>
+	</game>
+	<game gamecode="147195805">
+		<general>
+			<startdate>2017-05-24 11:19:17</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2980" dealer="0" win="0" bet="160" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="6780" dealer="0" win="5400" bet="2560" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3440" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="4490" dealer="0" win="0" bet="2560" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="2000" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="655" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="5650" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="szakipapaone" type="1" sum="40" cards="" />
+			<action no="2" player="kmbwpa" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">SJ D8</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">D5 H9</cards>
+			<action no="3" player="Peon84" type="0" sum="0" cards="" />
+			<action no="4" player="BlueSandz" type="3" sum="80" cards="" />
+			<action no="5" player="JJB420" type="3" sum="80" cards="" />
+			<action no="6" player="contrademon" type="0" sum="0" cards="" />
+			<action no="7" player="peternaw" type="23" sum="160" cards="" />
+			<action no="8" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="9" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="10" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="11" player="BlueSandz" type="3" sum="80" cards="" />
+			<action no="12" player="JJB420" type="3" sum="80" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DJ D9 S2</cards>
+			<action no="13" player="BlueSandz" type="4" sum="0" cards="" />
+			<action no="14" player="JJB420" type="5" sum="600" cards="" />
+			<action no="15" player="peternaw" type="3" sum="600" cards="" />
+			<action no="16" player="BlueSandz" type="0" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DK</cards>
+			<action no="17" player="JJB420" type="4" sum="0" cards="" />
+			<action no="18" player="peternaw" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">S8</cards>
+			<action no="19" player="JJB420" type="5" sum="1800" cards="" />
+			<action no="20" player="peternaw" type="3" sum="1800" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196019">
+		<general>
+			<startdate>2017-05-24 11:20:33</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2820" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9620" dealer="0" win="9990" bet="9620" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3440" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="1930" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="2000" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="615" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="5570" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="920" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="kmbwpa" type="1" sum="50" cards="" />
+			<action no="10" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">H3 C9</cards>
+			<action no="11" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="12" player="JJB420" type="3" sum="100" cards="" />
+			<action no="13" player="contrademon" type="0" sum="0" cards="" />
+			<action no="14" player="peternaw" type="3" sum="100" cards="" />
+			<action no="15" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="16" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="17" player="kmbwpa" type="3" sum="50" cards="" />
+			<action no="18" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D5 D8 SK</cards>
+			<action no="19" player="kmbwpa" type="4" sum="0" cards="" />
+			<action no="20" player="Peon84" type="4" sum="0" cards="" />
+			<action no="21" player="JJB420" type="5" sum="9510" cards="" />
+			<action no="22" player="peternaw" type="0" sum="0" cards="" />
+			<action no="23" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="24" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196179">
+		<general>
+			<startdate>2017-05-24 11:21:33</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2810" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9990" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3430" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="1820" dealer="0" win="2290" bet="1040" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1990" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="605" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="5460" dealer="1" win="0" bet="1040" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="810" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="Peon84" type="1" sum="50" cards="" />
+			<action no="10" player="BlueSandz" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">CA D10</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">S8 S6</cards>
+			<cards type="Pocket" player="Peon84">H8 C4</cards>
+			<action no="11" player="JJB420" type="0" sum="0" cards="" />
+			<action no="12" player="contrademon" type="0" sum="0" cards="" />
+			<action no="13" player="peternaw" type="3" sum="100" cards="" />
+			<action no="14" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="15" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="16" player="kmbwpa" type="3" sum="100" cards="" />
+			<action no="17" player="Peon84" type="0" sum="0" cards="" />
+			<action no="18" player="BlueSandz" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 D9 D7</cards>
+			<action no="19" player="BlueSandz" type="4" sum="0" cards="" />
+			<action no="20" player="peternaw" type="4" sum="0" cards="" />
+			<action no="21" player="kmbwpa" type="5" sum="430" cards="" />
+			<action no="22" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="23" player="peternaw" type="3" sum="430" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+			<action no="24" player="peternaw" type="4" sum="0" cards="" />
+			<action no="25" player="kmbwpa" type="5" sum="500" cards="" />
+			<action no="26" player="peternaw" type="3" sum="500" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">HJ</cards>
+			<action no="27" player="peternaw" type="4" sum="0" cards="" />
+			<action no="28" player="kmbwpa" type="4" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196348">
+		<general>
+			<startdate>2017-05-24 11:22:36</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2700" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9980" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3420" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="3070" dealer="0" win="4890" bet="3070" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1980" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="595" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="4420" dealer="0" win="0" bet="1610" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="750" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="BlueSandz" type="1" sum="50" cards="" />
+			<action no="10" player="JJB420" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">H6 H9</cards>
+			<action no="11" player="contrademon" type="0" sum="0" cards="" />
+			<action no="12" player="peternaw" type="23" sum="200" cards="" />
+			<action no="13" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="14" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="15" player="kmbwpa" type="23" sum="900" cards="" />
+			<action no="16" player="Peon84" type="0" sum="0" cards="" />
+			<action no="17" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="18" player="JJB420" type="0" sum="0" cards="" />
+			<action no="19" player="peternaw" type="23" sum="1600" cards="" />
+			<action no="20" player="kmbwpa" type="3" sum="700" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SA CJ DK</cards>
+			<action no="21" player="peternaw" type="5" sum="1460" cards="" />
+			<action no="22" player="kmbwpa" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196483">
+		<general>
+			<startdate>2017-05-24 11:23:33</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2640" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9870" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3410" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="4890" dealer="0" win="0" bet="610" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1970" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="585" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="2810" dealer="0" win="2480" bet="1610" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="JJB420" type="1" sum="50" cards="" />
+			<action no="10" player="contrademon" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">S3 H9</cards>
+			<action no="11" player="peternaw" type="3" sum="100" cards="" />
+			<action no="12" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="13" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="14" player="kmbwpa" type="3" sum="100" cards="" />
+			<action no="15" player="Peon84" type="0" sum="0" cards="" />
+			<action no="16" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="17" player="JJB420" type="3" sum="50" cards="" />
+			<action no="18" player="contrademon" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 C9 D8</cards>
+			<action no="19" player="JJB420" type="4" sum="0" cards="" />
+			<action no="20" player="contrademon" type="4" sum="0" cards="" />
+			<action no="21" player="peternaw" type="4" sum="0" cards="" />
+			<action no="22" player="kmbwpa" type="5" sum="500" cards="" />
+			<action no="23" player="JJB420" type="0" sum="0" cards="" />
+			<action no="24" player="contrademon" type="0" sum="0" cards="" />
+			<action no="25" player="peternaw" type="3" sum="500" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SQ</cards>
+			<action no="26" player="peternaw" type="4" sum="0" cards="" />
+			<action no="27" player="kmbwpa" type="5" sum="1000" cards="" />
+			<action no="28" player="peternaw" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196684">
+		<general>
+			<startdate>2017-05-24 11:24:59</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2630" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9760" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3300" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="4280" dealer="0" win="0" bet="730" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1960" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="575" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="3680" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="730" dealer="0" win="1570" bet="730" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="contrademon" type="1" sum="50" cards="" />
+			<action no="10" player="peternaw" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">CQ D10</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">CA HA</cards>
+			<action no="11" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="12" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="13" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="14" player="Peon84" type="23" sum="320" cards="" />
+			<action no="15" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="16" player="JJB420" type="0" sum="0" cards="" />
+			<action no="17" player="contrademon" type="0" sum="0" cards="" />
+			<action no="18" player="peternaw" type="3" sum="220" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H5 H10 D8</cards>
+			<action no="19" player="peternaw" type="4" sum="0" cards="" />
+			<action no="20" player="Peon84" type="5" sum="400" cards="" />
+			<action no="21" player="peternaw" type="3" sum="400" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H6</cards>
+		</round>
+	</game>
+	<game gamecode="147196803">
+		<general>
+			<startdate>2017-05-24 11:25:44</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2620" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9750" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3240" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="3550" dealer="0" win="480" bet="210" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1950" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="565" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="3670" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1570" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="peternaw" type="1" sum="50" cards="" />
+			<action no="10" player="scotiaman" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">D4 CQ</cards>
+			<action no="11" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="12" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="13" player="Peon84" type="0" sum="0" cards="" />
+			<action no="14" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="15" player="JJB420" type="3" sum="100" cards="" />
+			<action no="16" player="contrademon" type="0" sum="0" cards="" />
+			<action no="17" player="peternaw" type="3" sum="50" cards="" />
+			<action no="18" player="scotiaman" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S2 S9 D10</cards>
+			<action no="19" player="peternaw" type="4" sum="0" cards="" />
+			<action no="20" player="scotiaman" type="4" sum="0" cards="" />
+			<action no="21" player="JJB420" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C10</cards>
+			<action no="22" player="peternaw" type="4" sum="0" cards="" />
+			<action no="23" player="scotiaman" type="4" sum="0" cards="" />
+			<action no="24" player="JJB420" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">C7</cards>
+			<action no="25" player="peternaw" type="5" sum="100" cards="" />
+			<action no="26" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="27" player="JJB420" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147196951">
+		<general>
+			<startdate>2017-05-24 11:26:42</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2610" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9640" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3230" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="3820" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1840" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="555" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="3660" dealer="0" win="680" bet="460" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1560" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="scotiaman" type="1" sum="50" cards="" />
+			<action no="10" player="szakipapaone" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">S6 DJ</cards>
+			<action no="11" player="kmbwpa" type="23" sum="450" cards="" />
+			<action no="12" player="Peon84" type="0" sum="0" cards="" />
+			<action no="13" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="14" player="JJB420" type="0" sum="0" cards="" />
+			<action no="15" player="contrademon" type="0" sum="0" cards="" />
+			<action no="16" player="peternaw" type="0" sum="0" cards="" />
+			<action no="17" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="18" player="szakipapaone" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147197030">
+		<general>
+			<startdate>2017-05-24 11:27:16</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="2600" dealer="0" win="5310" bet="2600" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9630" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3220" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="3810" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1780" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="445" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="3880" dealer="0" win="180" bet="2780" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1550" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="szakipapaone" type="1" sum="50" cards="" />
+			<action no="10" player="kmbwpa" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">H4 DA</cards>
+			<cards type="Pocket" player="JJB420">X X</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">X X</cards>
+			<cards type="Pocket" player="scotiaman">X X</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">H2 S3</cards>
+			<cards type="Pocket" player="Peon84">D10 CJ</cards>
+			<action no="11" player="Peon84" type="0" sum="0" cards="" />
+			<action no="12" player="BlueSandz" type="3" sum="100" cards="" />
+			<action no="13" player="JJB420" type="0" sum="0" cards="" />
+			<action no="14" player="contrademon" type="0" sum="0" cards="" />
+			<action no="15" player="peternaw" type="0" sum="0" cards="" />
+			<action no="16" player="scotiaman" type="0" sum="0" cards="" />
+			<action no="17" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="18" player="kmbwpa" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H7 D5 D4</cards>
+			<action no="19" player="kmbwpa" type="5" sum="780" cards="" />
+			<action no="20" player="BlueSandz" type="3" sum="780" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SJ</cards>
+			<action no="21" player="kmbwpa" type="5" sum="1890" cards="" />
+			<action no="22" player="BlueSandz" type="3" sum="1710" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">D8</cards>
+		</round>
+	</game>
+	<game gamecode="147197203">
+		<general>
+			<startdate>2017-05-24 11:28:35</startdate>
+			<players>
+				<player seat="7" name="BlueSandz" chips="5310" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="JJB420" chips="9620" dealer="0" win="15390" bet="9620" rebuy="0" addon="0" />
+				<player seat="9" name="contrademon" chips="3210" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="10" name="peternaw" chips="3800" dealer="0" win="0" bet="3800" rebuy="0" addon="0" />
+				<player seat="1" name="scotiaman" chips="1770" dealer="0" win="0" bet="1770" rebuy="0" addon="0" />
+				<player seat="4" name="szakipapaone" chips="385" dealer="1" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="kmbwpa" chips="1280" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1540" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BlueSandz" type="15" sum="10" cards="" />
+			<action no="2" player="JJB420" type="15" sum="10" cards="" />
+			<action no="3" player="contrademon" type="15" sum="10" cards="" />
+			<action no="4" player="peternaw" type="15" sum="10" cards="" />
+			<action no="5" player="scotiaman" type="15" sum="10" cards="" />
+			<action no="6" player="szakipapaone" type="15" sum="10" cards="" />
+			<action no="7" player="kmbwpa" type="15" sum="10" cards="" />
+			<action no="8" player="Peon84" type="15" sum="10" cards="" />
+			<action no="9" player="kmbwpa" type="1" sum="50" cards="" />
+			<action no="10" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="BlueSandz">X X</cards>
+			<cards type="Pocket" player="JJB420">SA DA</cards>
+			<cards type="Pocket" player="contrademon">X X</cards>
+			<cards type="Pocket" player="peternaw">D5 H2</cards>
+			<cards type="Pocket" player="scotiaman">CA SK</cards>
+			<cards type="Pocket" player="szakipapaone">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<cards type="Pocket" player="Peon84">DQ C7</cards>
+			<action no="11" player="BlueSandz" type="0" sum="0" cards="" />
+			<action no="12" player="JJB420" type="23" sum="9610" cards="" />
+			<action no="13" player="contrademon" type="0" sum="0" cards="" />
+			<action no="14" player="peternaw" type="3" sum="3790" cards="" />
+			<action no="15" player="scotiaman" type="3" sum="1760" cards="" />
+			<action no="16" player="szakipapaone" type="0" sum="0" cards="" />
+			<action no="17" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="18" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 C10 H7</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CQ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D10</cards>
+		</round>
+	</game>
+	<game gamecode="147197432">
+		<general>
+			<startdate>2017-05-24 11:30:10</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1920" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1916" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="4250" dealer="0" win="0" bet="1220" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1880" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2870" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="652" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1430" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1245" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="1220" dealer="1" win="2770" bet="1220" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="xluckyx17" type="1" sum="75" cards="" />
+			<action no="11" player="Fumblruski" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">D2 SA</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">D9 H10</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">CK D4</cards>
+			<action no="12" player="talaverajl" type="3" sum="150" cards="" />
+			<action no="13" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="14" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="15" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="16" player="Peon84" type="0" sum="0" cards="" />
+			<action no="17" player="Caissus" type="0" sum="0" cards="" />
+			<action no="18" player="kmbwpa" type="23" sum="750" cards="" />
+			<action no="19" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="20" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="21" player="talaverajl" type="3" sum="600" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK C2 CQ</cards>
+			<action no="22" player="talaverajl" type="4" sum="0" cards="" />
+			<action no="23" player="kmbwpa" type="5" sum="455" cards="" />
+			<action no="24" player="talaverajl" type="3" sum="455" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C7</cards>
+		</round>
+	</game>
+	<game gamecode="147197568">
+		<general>
+			<startdate>2017-05-24 11:31:07</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1830" dealer="1" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1751" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="3030" dealer="0" win="0" bet="765" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1865" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2855" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="637" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1415" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1230" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="2770" dealer="0" win="3420" bet="2475" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="Fumblruski" type="1" sum="75" cards="" />
+			<action no="11" player="talaverajl" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">C7 H6</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<action no="12" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="13" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="14" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="15" player="Peon84" type="0" sum="0" cards="" />
+			<action no="16" player="Caissus" type="0" sum="0" cards="" />
+			<action no="17" player="kmbwpa" type="23" sum="750" cards="" />
+			<action no="18" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="19" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="20" player="talaverajl" type="3" sum="600" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SQ H8 H3</cards>
+			<action no="21" player="talaverajl" type="4" sum="0" cards="" />
+			<action no="22" player="kmbwpa" type="5" sum="1710" cards="" />
+			<action no="23" player="talaverajl" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147197689">
+		<general>
+			<startdate>2017-05-24 11:32:00</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1815" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1661" dealer="1" win="885" bet="540" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2265" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1850" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2840" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="622" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1400" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1215" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="3715" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="talaverajl" type="1" sum="75" cards="" />
+			<action no="11" player="ReallyFolks" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">CQ D6</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<action no="12" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="13" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="14" player="Peon84" type="0" sum="0" cards="" />
+			<action no="15" player="Caissus" type="0" sum="0" cards="" />
+			<action no="16" player="kmbwpa" type="0" sum="0" cards="" />
+			<action no="17" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="18" player="Fumblruski" type="23" sum="525" cards="" />
+			<action no="19" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="20" player="ReallyFolks" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147197740">
+		<general>
+			<startdate>2017-05-24 11:32:25</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1800" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="2006" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2175" dealer="1" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1685" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2825" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="607" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1385" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1200" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="3700" dealer="0" win="1260" bet="915" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="ReallyFolks" type="1" sum="75" cards="" />
+			<action no="11" player="Adam Rose" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">H9 HQ</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<action no="12" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="13" player="Peon84" type="0" sum="0" cards="" />
+			<action no="14" player="Caissus" type="0" sum="0" cards="" />
+			<action no="15" player="kmbwpa" type="23" sum="900" cards="" />
+			<action no="16" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="17" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="18" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="19" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="20" player="Adam Rose" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147197784">
+		<general>
+			<startdate>2017-05-24 11:32:47</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1785" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1991" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2160" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1595" dealer="1" win="3520" bet="1595" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2660" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="592" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1370" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1185" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="4045" dealer="0" win="0" bet="1595" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="Adam Rose" type="1" sum="75" cards="" />
+			<action no="11" player="XO.........OX" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">HK CA</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">C8 H6</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">SJ DK</cards>
+			<action no="12" player="Peon84" type="0" sum="0" cards="" />
+			<action no="13" player="Caissus" type="0" sum="0" cards="" />
+			<action no="14" player="kmbwpa" type="23" sum="999" cards="" />
+			<action no="15" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="16" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="17" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="18" player="ReallyFolks" type="23" sum="1580" cards="" />
+			<action no="19" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="20" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="21" player="kmbwpa" type="3" sum="581" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 S8 S7</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CQ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">SK</cards>
+		</round>
+	</game>
+	<game gamecode="147197860">
+		<general>
+			<startdate>2017-05-24 11:33:22</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1770" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1976" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2145" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="3520" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2570" dealer="1" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="427" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1355" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1170" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="2450" dealer="0" win="1509" bet="1164" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="XO.........OX" type="1" sum="75" cards="" />
+			<action no="11" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">D10 D3</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<action no="12" player="Caissus" type="0" sum="0" cards="" />
+			<action no="13" player="kmbwpa" type="3" sum="150" cards="" />
+			<action no="14" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="15" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="16" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="17" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="18" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="19" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="20" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DQ HQ H6</cards>
+			<action no="21" player="Peon84" type="4" sum="0" cards="" />
+			<action no="22" player="kmbwpa" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HA</cards>
+			<action no="23" player="Peon84" type="4" sum="0" cards="" />
+			<action no="24" player="kmbwpa" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">S5</cards>
+			<action no="25" player="Peon84" type="4" sum="0" cards="" />
+			<action no="26" player="kmbwpa" type="5" sum="999" cards="" />
+			<action no="27" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147197974">
+		<general>
+			<startdate>2017-05-24 11:34:11</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1755" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1961" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2130" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="3505" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2555" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="337" dealer="1" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1190" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1155" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="2795" dealer="0" win="3140" bet="2795" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="Peon84" type="1" sum="75" cards="" />
+			<action no="11" player="Caissus" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">C9 S8</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">X X</cards>
+			<action no="12" player="kmbwpa" type="23" sum="2780" cards="" />
+			<action no="13" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="14" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="15" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="16" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="17" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="18" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="19" player="Peon84" type="0" sum="0" cards="" />
+			<action no="20" player="Caissus" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="147198047">
+		<general>
+			<startdate>2017-05-24 11:34:41</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1740" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1946" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="2115" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="3490" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2540" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="322" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1100" dealer="1" win="0" bet="1100" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="990" dealer="0" win="3060" bet="990" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="3140" dealer="0" win="220" bet="1100" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="Caissus" type="1" sum="75" cards="" />
+			<action no="11" player="kmbwpa" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">X X</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">DQ SA</cards>
+			<cards type="Pocket" player="Caissus">DK HK</cards>
+			<cards type="Pocket" player="kmbwpa">S5 H6</cards>
+			<action no="12" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="13" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="14" player="talaverajl" type="0" sum="0" cards="" />
+			<action no="15" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="16" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="17" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="18" player="Peon84" type="23" sum="300" cards="" />
+			<action no="19" player="Caissus" type="23" sum="975" cards="" />
+			<action no="20" player="kmbwpa" type="3" sum="825" cards="" />
+			<action no="21" player="Peon84" type="23" sum="1085" cards="" />
+			<action no="22" player="kmbwpa" type="3" sum="110" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S8 C4 S9</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C5</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C2</cards>
+		</round>
+	</game>
+</session>
