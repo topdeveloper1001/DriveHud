@@ -125,8 +125,7 @@ namespace Model
                         {
                             var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
                             if (!pokersiteId.HasValue || (stat.PokersiteId == pokersiteId))
-                            {
-                                stat.CalculatePositionalStats();                                
+                            {                                
                                 result.Add(stat);
                             }
                         }

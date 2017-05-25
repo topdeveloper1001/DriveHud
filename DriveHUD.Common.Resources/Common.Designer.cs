@@ -719,6 +719,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select table type:.
+        /// </summary>
+        internal static string Common_HudLayout_DuplicateHeader {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_DuplicateHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Important! In order to make your new HUD active on your poker table, you&apos;ll need to do the following on your poker site table:.
         /// </summary>
         internal static string Common_HudLayout_FirstSaveNotifyHeader {

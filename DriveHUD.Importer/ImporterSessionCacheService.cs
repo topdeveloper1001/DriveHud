@@ -345,7 +345,7 @@ namespace DriveHUD.Importers
                 {
                     if (playerStickersDictionary.ContainsKey(item.Key))
                     {
-                        playerStickersDictionary[item.Key].Add(item.Value);
+                        playerStickersDictionary[item.Key] += item.Value;
                     }
                     else
                     {

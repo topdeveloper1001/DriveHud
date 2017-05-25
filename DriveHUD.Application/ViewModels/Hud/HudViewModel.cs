@@ -482,7 +482,7 @@ namespace DriveHUD.Application.ViewModels
             DataExportCommand.Subscribe(x => DataExport());
 
             DuplicateCommand = ReactiveCommand.Create(canUseDataCommands);
-            DuplicateCommand.Subscribe(x => { });
+            DuplicateCommand.Subscribe(x => OpenDuplicate());
 
             SpliterAddCommand = ReactiveCommand.Create();
             SpliterAddCommand.Subscribe(x => SpliterAdd());
@@ -518,7 +518,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
                 {
-                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;              
+                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
 
                     var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
 
@@ -924,6 +924,52 @@ namespace DriveHUD.Application.ViewModels
                 settings.GeneralSettings.IsHudSavedAtFirstTime = false;
                 SettingsService.SaveSettings(settings);
             }
+        }
+
+        /// <summary>
+        /// Opens popup to duplicate data
+        /// </summary>
+        private void OpenDuplicate()
+        {
+            var hudDuplicateLayoutViewModelInfo = new HudDuplicateLayoutViewModelInfo
+            {
+                LayoutName = CurrentLayout.Name,
+                Cancel = ClosePopup,
+                Save = DuplicateLayout
+            };
+
+            var hudDuplicateLayoutViewModel = new HudDuplicateLayoutViewModel(hudDuplicateLayoutViewModelInfo);
+            OpenPopup(hudDuplicateLayoutViewModel);
+        }
+
+        /// <summary>
+        /// Duplicates the selected layout
+        /// </summary>
+        private void DuplicateLayout()
+        {
+            var hudDuplicateLayoutViewModel = PopupViewModel as HudDuplicateLayoutViewModel;
+
+            if (hudDuplicateLayoutViewModel == null || !hudDuplicateLayoutViewModel.SelectedTableType.HasValue)
+            {
+                ClosePopup();
+                return;
+            }
+
+            var duplicatedLayout = HudLayoutsService.DuplicateLayout(hudDuplicateLayoutViewModel.SelectedTableType.Value, hudDuplicateLayoutViewModel.Name, CurrentLayout);
+
+            if (duplicatedLayout != null)
+            {
+                CurrentTableType = duplicatedLayout.TableType;
+
+                var layout = Layouts.FirstOrDefault(x => x.Name == duplicatedLayout.Name);
+
+                if (layout != null)
+                {
+                    CurrentLayout = layout;
+                }
+            }
+
+            ClosePopup();
         }
 
         /// <summary>

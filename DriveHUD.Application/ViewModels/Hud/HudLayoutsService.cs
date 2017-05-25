@@ -220,22 +220,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 var pokerSites = Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>().Where(p => p != EnumPokerSites.Unknown);
 
-                foreach (var pokerSite in pokerSites)
+                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
                 {
-                    foreach (EnumGameType gameType in Enum.GetValues(typeof(EnumGameType)))
-                    {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                        {
-                            FileName = Path.GetFileName(fileName),
-                            Name = layout.Name,
-                            GameType = gameType,
-                            PokerSite = pokerSite,
-                            TableType = layout.TableType,
-                            IsSelected = false,
-                            IsDefault = false
-                        });
-                    }
-                }
+                    FileName = Path.GetFileName(fileName),
+                    Name = layout.Name,
+                    TableType = layout.TableType,
+                    IsSelected = false,
+                    IsDefault = false
+                });
 
                 SaveLayoutMappings();
             }
@@ -317,22 +309,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 var fileName = InternalSave(importedHudLayout);
 
-                foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
+                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
                 {
-                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                    {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                        {
-                            FileName = Path.GetFileName(fileName),
-                            Name = importedHudLayout.Name,
-                            GameType = gameType,
-                            PokerSite = pokerSite,
-                            TableType = importedHudLayout.TableType,
-                            IsSelected = false,
-                            IsDefault = false
-                        });
-                    }
-                }
+                    FileName = Path.GetFileName(fileName),
+                    Name = importedHudLayout.Name,
+                    TableType = importedHudLayout.TableType,
+                    IsSelected = false,
+                    IsDefault = false
+                });
 
                 SaveLayoutMappings();
 
@@ -656,6 +640,90 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return layoutsDirectory;
+        }
+
+
+        /// <summary>
+        /// Duplicates the specified <see cref="HudLayoutInfoV2" />
+        /// </summary>
+        /// <param name="tableType">Table type of the duplicated layout</param>
+        /// <param name="layoutName">Name of the duplicated layout</param>
+        /// <param name="layoutToDuplicate">Layout to duplicate</param>
+        /// <returns>The duplicated layout</returns>
+        public HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate)
+        {
+            if (layoutToDuplicate == null)
+            {
+                return null;
+            }
+
+            layoutName = layoutName ?? layoutToDuplicate.Name;
+
+            var currentTableTypeText = CommonResourceManager.Instance.GetEnumResource(layoutToDuplicate.TableType);
+            var duplicateTableTypeText = CommonResourceManager.Instance.GetEnumResource(tableType);
+
+            // rename n-max to k-max in table name
+            layoutName = layoutName.Replace(currentTableTypeText, duplicateTableTypeText);
+
+            var layouts = GetAllLayouts(tableType);
+
+            var copyIndex = 1;
+
+            // name is busy
+            while (layouts.Any(x => x.Name == layoutName))
+            {
+                layoutName = $"{layoutName} ({copyIndex++})";
+            }
+
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            var duplicateLayout = layoutToDuplicate.Clone();
+            duplicateLayout.TableType = tableType;
+            duplicateLayout.Name = layoutName;
+            duplicateLayout.IsDefault = false;
+
+            foreach (var layoutTool in duplicateLayout.LayoutTools.OfType<HudLayoutNonPopupTool>())
+            {
+                layoutTool.Positions = new List<HudPositionsInfo>();
+
+                var position = layoutTool.UIPositions.FirstOrDefault(x => x.Seat == 1);
+
+                if (position == null)
+                {
+                    LogProvider.Log.Error($"{layoutToDuplicate.Name} could not be duplicated. Position for seat #1 has not been found");
+                    return null;
+                }
+
+                var uiPositions = factory.GetHudUIPositions(tableType, layoutToDuplicate.TableType, position.Position);
+                layoutTool.UIPositions = uiPositions;
+            }
+
+            var duplicateLayoutFile = InternalSave(duplicateLayout);
+
+            if (!File.Exists(duplicateLayoutFile))
+            {
+                return null;
+            }
+
+            if (HudLayoutMappings.Mappings.Any(x => x.Name == layoutName))
+            {
+                return duplicateLayout;
+            }
+
+            var mapping = new HudLayoutMapping
+            {
+                FileName = Path.GetFileName(duplicateLayoutFile),
+                IsDefault = false,
+                IsSelected = false,
+                Name = layoutName,
+                TableType = tableType
+            };
+
+            HudLayoutMappings.Mappings.Add(mapping);
+
+            SaveLayoutMappings();
+
+            return duplicateLayout;
         }
 
         #endregion
