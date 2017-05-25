@@ -747,4 +747,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Hud_Duplicate" xml:space="preserve">
     <value>Duplicate</value>
   </data>
+  <data name="Common_HudLayout_DuplicateHeader" xml:space="preserve">
+    <value>Select table type:</value>
+  </data>
 </root>

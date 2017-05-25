@@ -700,7 +700,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BB Cold Call%.
+        ///   Looks up a localized string similar to Cold Call BB %.
         /// </summary>
         internal static string Enum_Stat_ColdCall_BB {
             get {
@@ -709,7 +709,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BTN Cold Call%.
+        ///   Looks up a localized string similar to Cold Call BTN%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_BN {
             get {
@@ -718,7 +718,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CO Cold Call%.
+        ///   Looks up a localized string similar to Cold Call CO%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_CO {
             get {
@@ -727,7 +727,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EP Cold Call%.
+        ///   Looks up a localized string similar to Cold Call EP%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_EP {
             get {
@@ -736,7 +736,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MP Cold Call%.
+        ///   Looks up a localized string similar to Cold Call MP%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_MP {
             get {
@@ -745,7 +745,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SB Cold Call%.
+        ///   Looks up a localized string similar to Cold Call SB%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_SB {
             get {
@@ -1618,7 +1618,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BB VPIP%.
+        ///   Looks up a localized string similar to VPIP BB%.
         /// </summary>
         internal static string Enum_Stat_VPIP_BB {
             get {
@@ -1627,7 +1627,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BTN VPIP%.
+        ///   Looks up a localized string similar to VPIP BTN%.
         /// </summary>
         internal static string Enum_Stat_VPIP_BN {
             get {
@@ -1636,7 +1636,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CO VPIP%.
+        ///   Looks up a localized string similar to VPIP CO%.
         /// </summary>
         internal static string Enum_Stat_VPIP_CO {
             get {
@@ -1645,7 +1645,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EP VPIP%.
+        ///   Looks up a localized string similar to VPIP EP%.
         /// </summary>
         internal static string Enum_Stat_VPIP_EP {
             get {
@@ -1654,7 +1654,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MP VPIP%.
+        ///   Looks up a localized string similar to VPIP MP%.
         /// </summary>
         internal static string Enum_Stat_VPIP_MP {
             get {
@@ -1663,7 +1663,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SB VPIP%.
+        ///   Looks up a localized string similar to VPIP SB%.
         /// </summary>
         internal static string Enum_Stat_VPIP_SB {
             get {

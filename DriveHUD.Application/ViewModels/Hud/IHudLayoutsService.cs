@@ -21,7 +21,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// Defines the service for initializing, loading, deleting layouts of the hud
     /// </summary>
     internal interface IHudLayoutsService
-    {        
+    {
         /// <summary>
         /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
         /// </summary>
@@ -144,5 +144,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <returns>Directory</returns>
         DirectoryInfo GetLayoutsDirectory();
+
+        /// <summary>
+        /// Duplicates the specified <see cref="HudLayoutInfoV2" />
+        /// </summary>
+        /// <param name="tableType">Table type of the duplicated layout</param>
+        /// <param name="layoutName">Name of the duplicated layout</param>
+        /// <param name="layoutToDuplicate">Layout to duplicate</param>
+        /// <returns>The duplicated layout</returns>
+        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
     }
 }

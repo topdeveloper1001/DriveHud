@@ -379,6 +379,8 @@ namespace Model.Data
 
         public override void AddStatistic(Playerstatistic statistic)
         {
+            statistic.CalculatePositionalStats();
+
             Source += statistic;
 
             statisticCount++;
