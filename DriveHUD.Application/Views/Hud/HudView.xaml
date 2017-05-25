@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:bhv="clr-namespace:DriveHUD.Application.ViewModels.Hud.Designer.Behaviors"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
@@ -16,18 +17,17 @@
     xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
     xmlns:app="clr-namespace:DriveHUD.Application"
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
-    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
-    xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
-    xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     mc:Ignorable="d"
     Foreground="White">
-   
+
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
@@ -39,7 +39,7 @@
     </i:Interaction.Triggers>
 
     <UserControl.Resources>
-        
+
         <DataTemplate
             x:Key="IconTemplate">
             <Image
@@ -63,7 +63,7 @@
         </ObjectDataProvider>
 
         <Style
-            x:Key="add_splitter"
+            x:Key="AddSplitterStyle"
             TargetType="{x:Type Button}">
             <Setter
                 Property="Template">
@@ -154,6 +154,7 @@
 
         <SolidColorBrush
             x:Key="CloseButtonBackground"
+            x:Shared="False"
             Color="#191a1e" />
 
         <DataTemplate
@@ -376,6 +377,136 @@
             </Setter>
         </Style>
 
+        <Style
+            x:Key="HudDesignerTextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+
+            <Setter
+                Property="FontSize"
+                Value="17" />
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFFFF" />
+            <Setter
+                Property="FontWeight"
+                Value="Bold" />
+        </Style>
+
+        <SolidColorBrush
+            x:Key="BorderBrush"
+            Color="#33519b" />
+
+        <Style
+            x:Key="BaseBorderStyle"
+            TargetType="{x:Type Border}">
+            <Setter
+                Property="BorderBrush"
+                Value="{StaticResource BorderBrush}" />
+            <Setter
+                Property="HorizontalAlignment"
+                Value="Stretch" />
+        </Style>
+
+        <Style
+            x:Key="BottomBorderStyle"
+            TargetType="{x:Type Border}"
+            BasedOn="{StaticResource BaseBorderStyle}">
+            <Setter
+                Property="BorderThickness"
+                Value="0,0,0,0" />
+            <Setter
+                Property="CornerRadius"
+                Value="0,0,2,2" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource HudElementPlayerBrush}" />
+        </Style>
+
+        <DataTemplate
+            x:Key="PlainStatBoxAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.PlainStatBoxMinHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="TextBoxAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.TextBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.TextBoxHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="FourStatBoxAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.FourStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.FourStatBoxHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.FourStatBoxMinHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="TiltMeterAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.TiltMeterWidth}"
+                Height="{x:Static res:HudDefaultSettings.TiltMeterHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.TiltMeterMinHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="PlayerIconAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlayerIconWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlayerIconHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.PlayerIconMinHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="GaugeIndicatorAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
+                MinHeight="35"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="GraphAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.PlainStatBoxWidth}"
+                Height="{x:Static res:HudDefaultSettings.PlainStatBoxHeight}"
+                MinHeight="35"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="BumperStickersAdornerTemplate">
+            <Border
+                Width="{x:Static res:HudDefaultSettings.BumperStickersWidth}"
+                Height="{x:Static res:HudDefaultSettings.BumperStickersHeight}"
+                MinHeight="{x:Static res:HudDefaultSettings.BumperStickersHeight}"
+                Style="{StaticResource BottomBorderStyle}" />
+        </DataTemplate>
+
+
+        <Style
+            x:Key="ControlButtonStyle"
+            TargetType="{x:Type Button}"
+            BasedOn="{StaticResource ButtonStyle}">
+            <Setter
+                Property="Background"
+                Value="#34519c" />
+            <Setter
+                Property="Margin"
+                Value="0,0,0,10" />
+
+        </Style>
+
     </UserControl.Resources>
 
     <Grid
@@ -413,8 +544,7 @@
 
             <Grid
                 Grid.Row="0"
-                Grid.Column="1"
-                Grid.ColumnSpan="2">
+                Grid.Column="1">
 
                 <Grid.RowDefinitions>
                     <RowDefinition
@@ -452,6 +582,7 @@
                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Stretch"
+                    IsEnabled="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
@@ -480,21 +611,30 @@
                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Stretch"
+                    IsEnabled="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
                     ItemsSource="{Binding TableTypes}"
-                    DisplayMemberPath="TableTypeText"
                     SelectedValue="{Binding Path=CurrentTableType}">
+                    <comboboxControl:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </comboboxControl:ComboBoxEx.ItemTemplate>
                 </comboboxControl:ComboBoxEx>
 
-                <Button Grid.Row="1" 
-                        Grid.Column="4"
-                        HorizontalAlignment="Left"
-                        Padding="5 0 5 0"
-                        Command="{Binding ElementName=RadMainWindow, Path=DataContext.SettingsCommand}"
-                        CommandParameter="Preferred Seating"
-                        Content="{ResX Key=Common_Preferred_Seating_Button}"/>
+                <Button
+                    Visibility="Collapsed"
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    HorizontalAlignment="Left"
+                    Padding="5 0 5 0"
+                    MinHeight="34"
+                    Command="{Binding ElementName=RadMainWindow, Path=DataContext.SettingsCommand}"
+                    CommandParameter="Preferred Seating"
+                    Content="{ResX Key=Common_Preferred_Seating_Button}" />
 
             </Grid>
 
@@ -502,46 +642,197 @@
             <StackPanel
                 Grid.Row="1"
                 Grid.Column="2"
+                HorizontalAlignment="Left"
                 Orientation="Vertical">
 
-                <Button
-                    Margin="0,21,0,5"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DataSaveCommand}"
-                    Content="{ResX Key=Common_Hud_Save}">
-                </Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                <Button
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DataDeleteCommand}"
-                    Content="{ResX Key=Common_Hud_Delete}">
-                </Button>
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Width="199"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DataSaveCommand}"
+                        Content="{ResX Key=Common_Hud_Save}">
+                    </Button>
 
-                <Button
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DataImportCommand}"
-                    Content="{ResX Key=Common_Hud_Import}">
-                </Button>
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Width="95"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DataImportCommand}"
+                        Content="{ResX Key=Common_Hud_Import}">
+                    </Button>
 
-                <Button
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DataExportCommand}"
-                    Content="{ResX Key=Common_Hud_Export}">
-                </Button>
+                    <Button
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Width="95"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DataExportCommand}"
+                        Content="{ResX Key=Common_Hud_Export}">
+                    </Button>
+
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Width="95"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DuplicateCommand}"
+                        Content="{ResX Key=Common_Hud_Duplicate}">
+                    </Button>
+
+                    <Button
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Width="95"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Style="{StaticResource ControlButtonStyle}"
+                        Command="{Binding DataDeleteCommand}"
+                        Content="{ResX Key=Common_Hud_Delete}">
+                    </Button>
+
+                </Grid>
+
+                <TextBlock
+                    Margin="0,5,0,0"
+                    Style="{StaticResource HudDesignerTextBlockStyle}"
+                    HorizontalAlignment="Center"
+                    Text="{ResX Key=Common_HudSideBar_Title}" />
+
+                <UniformGrid
+                    Width="185"
+                    Margin="0,15,0,0"
+                    Columns="2">
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/gauge.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_TextBoxTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_GraphTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.Graph}">
+                        <dh:DragDrop.GroupProperty>
+                            <x:Static
+                                Member="vm:HudDragDropGroups.Popups" />
+                        </dh:DragDrop.GroupProperty>
+                    </controls:ImageButton>
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
+                        IsEnabled="False"
+                        Command="{Binding DesignerToolCommand}"
+                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/plain stat box.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_PlainStatBoxTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}">
+                    </controls:ImageButton>
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_BumperStickersTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}"
+                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}" />
+
+                </UniformGrid>
 
             </StackPanel>
 
+            <!-- Poker table area -->
             <Grid
                 Grid.Row="1"
                 Grid.Column="1"
@@ -564,35 +855,67 @@
                 </Grid.RowDefinitions>
 
                 <telerik:RadDiagram
-                    x:Name="diagram"
                     Grid.Row="1"
                     Grid.Column="1"
-                    Width="{x:Static vm:HudDefaultSettings.HudTableWidth}"
-                    Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
-                    BorderThickness="0"
-                    AllowDrop="False"
-                    primitives:BackgroundGrid.CellSize="10,10"
-                    primitives:BackgroundGrid.LineStroke="#26282b"
-                    ViewportChanged="OnDiagramViewportChanged"
-                    Style="{StaticResource ClassDiagramStyle}" />
+                    Style="{StaticResource HudTableDiagramStyle}">
+                    <i:Interaction.Behaviors>
+                        <bhv:HudDesignerBehavior
+                            IsReadOnly="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
+                            DragDropCommand="{Binding AddToolCommand}"
+                            SelectionChangedCommand="{Binding DesignerToolCommand}"
+                            ToolbarTemplate="{StaticResource HudToolBarControlTemplate}"
+                            HudElements="{Binding HudElements}" />
+                    </i:Interaction.Behaviors>
+                </telerik:RadDiagram>
 
-                <Border
-                    Width="110"                    
+                <StackPanel
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Visibility="{Binding HudViewType, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
+                    Grid.Column="2"
+                    VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Top"                    
-                    BorderThickness="1"
-                    Margin="0,3,0,0"
-                    Padding="2"
-                    BorderBrush="White">
+                    Orientation="Vertical"
+                    Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}">
 
-                    <TextBlock                                                                        
-                        TextWrapping="Wrap"
-                        Text="{ResX Key=Common_Hud_IgnWarning}" />
+                    <Button
+                        Width="40"
+                        Height="40"
+                        Background="{StaticResource CloseButtonBackground}"
+                        Command="{Binding SaveDesignCommand}">
 
-                </Border>
+                        <Path
+                            SnapsToDevicePixels="True"
+                            ToolTip="Close"
+                            Width="11"
+                            Height="11"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Stretch="Fill"
+                            Fill="#FFFFFF"
+                            Data="F1M17.414,5.414C17.414,5.414 15.414,7.414 15.414,7.414 15.414,7.414 9.414,13.414 9.414,13.414 9.052,13.775 8.552,13.999 8,13.999 7.447,13.999 6.947,13.775 6.585,13.414 6.585,13.414 2.585,9.414 2.585,9.414 2.224,9.052 2,8.552 2,7.999 2,6.895 2.895,5.999 4,5.999 4.552,5.999 5.052,6.223 5.414,6.585 5.414,6.585 8,9.171 8,9.171 8,9.171 12.586,4.585 12.586,4.585 12.586,4.585 14.585,2.585 14.585,2.585 14.947,2.223 15.447,1.999 16,1.999 17.104,1.999 18,2.895 18,3.999 18,4.552 17.776,5.052 17.414,5.414z" />
+
+                    </Button>
+
+                    <Button
+                        Width="40"
+                        Height="40"
+                        Margin="0,2,0,0"
+                        Background="{StaticResource CloseButtonBackground}"
+                        Command="{Binding CancelDesignCommand}">
+
+                        <Path
+                            SnapsToDevicePixels="True"
+                            ToolTip="Close"
+                            Width="11"
+                            Height="11"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Stretch="Fill"
+                            Fill="#FFFFFF"
+                            Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
+
+                    </Button>
+
+                </StackPanel>
 
             </Grid>
 
@@ -625,7 +948,7 @@
 
                         <TextBlock
                             Foreground="#93c940"
-                            Text="Preview"
+                            Text="{ResX Key=Common_Hud_Preview}"
                             FontSize="13" />
 
                         <Grid
@@ -635,29 +958,19 @@
                                     ImageSource="/DriveHUD.Common.Resources;component/images/Preview.png" />
                             </Grid.Background>
 
-                            <controls:HudPanel
-                                DataContext="{Binding PreviewHudElementViewModel}"
-                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                            </controls:HudPanel>
-
-                            <controls:HudRichPanel
-                                DataContext="{Binding PreviewHudElementViewModel}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Width="{x:Static vm:HudDefaultSettings.BovadaRichHudElementWidth}"
-                                Height="{x:Static vm:HudDefaultSettings.BovadaRichHudElementHeight}"
-                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}">
-                                <controls:HudRichPanel.Style>
-                                    <Style
-                                        TargetType="{x:Type controls:HudRichPanel}">
-                                        <Setter
-                                            Property="Margin"
-                                            Value="0,0,0,-25" />
-                                    </Style>
-                                </controls:HudRichPanel.Style>
-                            </controls:HudRichPanel>
+                            <!-- Preview -->
+                            <Viewbox>
+                                <Canvas
+                                    Margin="5"
+                                    AllowDrop="False">
+                                    <i:Interaction.Behaviors>
+                                        <vm:HudPreviewBehavior
+                                            BaseWidth="200"
+                                            BaseHeight="185"
+                                            HudElement="{Binding PreviewHudElementViewModel}" />
+                                    </i:Interaction.Behaviors>
+                                </Canvas>
+                            </Viewbox>
 
                         </Grid>
                     </Grid>
@@ -690,7 +1003,7 @@
                             Grid.Column="0"
                             Foreground="#93c940"
                             FontSize="13"
-                            Text="All Stats">
+                            Text="{ResX Key=Common_Hud_AllStats}">
                         </TextBlock>
 
                         <telerik:RadListBox
@@ -734,7 +1047,7 @@
                             </telerik:RadListBox.DragVisualProvider>
                             <telerik:RadListBox.DragDropBehavior>
                                 <controls:RadListBoxDragDropBehavior
-                                    AllowReorder="True"
+                                    AllowReorder="True"                                     
                                     telerik:DragDropManager.TouchDragTrigger="TapAndHold" />
                             </telerik:RadListBox.DragDropBehavior>
                             <telerik:RadListBox.GroupStyle>
@@ -760,7 +1073,7 @@
                             HorizontalAlignment="Center"
                             Width="40"
                             Height="40"
-                            Style="{StaticResource add_splitter}"
+                            Style="{StaticResource AddSplitterStyle}"
                             Command="{Binding SpliterAddCommand}">
                             <Path
                                 Data="F1M13.573,359.345C13.573,359.345 392.425,359.345 392.425,359.345 399.368,359.345 404.997,364.969
@@ -839,11 +1152,32 @@
                             HorizontalAlignment="Stretch"
                             BorderThickness="0"
                             Background="#111315"
-                            Style="{StaticResource RadListBoxStyle_StatInfo}"
                             Padding="0,0,0,10"
                             SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
                             ItemsSource="{Binding Path=StatInfoObserveCollection}"
                             ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
+                            <telerik:RadListBox.Style>
+                                <Style
+                                    TargetType="{x:Type telerik:RadListBox}"
+                                    BasedOn="{StaticResource RadListBoxStyle_StatInfo}">
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition
+                                                    Binding="{Binding IsInDesignMode}"
+                                                    Value="True" />
+                                                <Condition
+                                                    Binding="{Binding CanAddStats}"
+                                                    Value="False" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter
+                                                Property="IsEnabled"
+                                                Value="False" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+
+                                </Style>
+                            </telerik:RadListBox.Style>
                             <telerik:RadListBox.DragVisualProvider>
                                 <telerik:ScreenshotDragVisualProvider />
                             </telerik:RadListBox.DragVisualProvider>

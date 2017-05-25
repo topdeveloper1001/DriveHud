@@ -39,14 +39,14 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 {
                     Title = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Title"),
                     Message = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Text"),
-                    ConfirmButtonText = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Rebuild"),
-                    ConfirmButtonAction = () =>
+                    Button2Text = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Rebuild"),
+                    Button2Action = () =>
                     {
                         doMigration = true;
                         App.SplashScreen.DataContext.CloseNotification();
                     },
-                    CancelButtonText = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Cancel"),
-                    CancelButtonAction = () => App.SplashScreen.DataContext.CloseNotification()
+                    Button3Text = CommonResourceManager.Instance.GetResourceString("Message_Migration0017_Cancel"),
+                    Button3Action = () => App.SplashScreen.DataContext.CloseNotification()
                 };
 
                 App.SplashScreen.DataContext.ShowNotification(notificationViewModel);

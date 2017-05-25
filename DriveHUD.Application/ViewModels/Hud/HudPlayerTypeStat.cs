@@ -10,11 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Enums;
-using ReactiveUI;
 using System;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Hud player type stat range
@@ -22,5 +20,37 @@ namespace DriveHUD.Application.ViewModels
     [Serializable]
     public class HudPlayerTypeStat : BaseHudRangeStat
     {
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 23;
+                hash = (hash * 31) + Low.GetHashCode();
+                hash = (hash * 31) + High.GetHashCode();
+                hash = (hash * 31) + Stat.GetHashCode();
+                return hash;
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            var hudPlayerTypeStat = obj as HudPlayerTypeStat;
+
+            if (hudPlayerTypeStat == null)
+            {
+                return false;
+            }
+
+            return Equals(hudPlayerTypeStat);
+        }
+
+        private bool Equals(HudPlayerTypeStat hudPlayerTypeStat)
+        {
+            var result = ((Low.HasValue && hudPlayerTypeStat.Low == Low) || (!Low.HasValue && !hudPlayerTypeStat.Low.HasValue)) &&
+                ((High.HasValue && hudPlayerTypeStat.High == High) || (!High.HasValue && !hudPlayerTypeStat.High.HasValue)) &&
+                hudPlayerTypeStat.Stat == Stat;
+
+            return result;
+        }
     }
 }

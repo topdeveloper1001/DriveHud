@@ -13,7 +13,7 @@
 namespace DriveHUD.Entities
 {
     public enum EnumTableType : byte
-    {
+    {        
         HU = 2,
         Three = 3,
         Four = 4,

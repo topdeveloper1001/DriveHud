@@ -312,7 +312,7 @@
     <value>BB Cold Call%</value>
   </data>
   <data name="Enum_Stat_ColdCall_BN" xml:space="preserve">
-    <value>BN Cold Call%</value>
+    <value>BTN Cold Call%</value>
   </data>
   <data name="Enum_Stat_ColdCall_CO" xml:space="preserve">
     <value>CO Cold Call%</value>
@@ -480,7 +480,7 @@
     <value>UO-PFR BB</value>
   </data>
   <data name="Enum_Stat_UO_PFR_BN" xml:space="preserve">
-    <value>UO-PFR BN</value>
+    <value>UO-PFR BTN</value>
   </data>
   <data name="Enum_Stat_UO_PFR_CO" xml:space="preserve">
     <value>UO-PFR CO</value>
@@ -501,7 +501,7 @@
     <value>BB VPIP%</value>
   </data>
   <data name="Enum_Stat_VPIP_BN" xml:space="preserve">
-    <value>BN VPIP%</value>
+    <value>BTN VPIP%</value>
   </data>
   <data name="Enum_Stat_VPIP_CO" xml:space="preserve">
     <value>CO VPIP%</value>
@@ -540,7 +540,7 @@
     <value>3-Bet BB%</value>
   </data>
   <data name="Enum_Stat_ThreeBet_BN" xml:space="preserve">
-    <value>3-Bet BN%</value>
+    <value>3-Bet BTN%</value>
   </data>
   <data name="Enum_Stat_ThreeBet_CO" xml:space="preserve">
     <value>3-Bet CO%</value>
@@ -661,5 +661,11 @@
   </data>
   <data name="Enum_Stat_FoldToTurnRaise" xml:space="preserve">
     <value>Fold To Turn Raise</value>
+  </data>
+  <data name="Enum_Stat_NetWon" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
+  <data name="Enum_Stat_S4BetEP" xml:space="preserve">
+    <value>4-Bet EP%</value>
   </data>
 </root>

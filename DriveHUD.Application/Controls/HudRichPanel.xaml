@@ -746,6 +746,7 @@
         <Grid
             VerticalAlignment="Center">
 
+            <!-- Vertical (left, top) stickers -->
             <Border
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
@@ -758,12 +759,12 @@
                         Margin="3,0,0,3"
                         VerticalAlignment="Top"
                         Orientation="Horizontal">
-                        <i:Interaction.Behaviors>
+                        <!--<i:Interaction.Behaviors>
                             <hud:HudStatsBehavior
                                 IsVertical="True"
                                 StatInfoSource="{Binding StatInfoCollection}"
                                 IsMainStatsPanelEnabled="True" />
-                        </i:Interaction.Behaviors>
+                        </i:Interaction.Behaviors>-->
                     </WrapPanel>
                     <Path
                         Style="{StaticResource PlayerNotePathStyle}"
@@ -833,6 +834,7 @@
                         Width="144" />
                 </Grid.ColumnDefinitions>
 
+                <!-- Icon + tilt meter -->
                 <Grid
                     Grid.Row="1"
                     Grid.Column="0">
@@ -871,6 +873,7 @@
                         </Border>
                     </Border>
 
+                    <!-- Player icon -->
                     <Border
                         Style="{StaticResource IconBorderStyle}">
                         <Border
@@ -925,6 +928,7 @@
 
                 </Grid>
 
+                <!-- Horizontal stat box -->
                 <Border
                     Grid.Row="2"
                     Grid.Column="0"
@@ -1012,6 +1016,7 @@
 
                 </Border>
 
+                <!-- Stickers -->
                 <Border
                     Grid.Row="3"
                     Grid.Column="0"
@@ -1023,11 +1028,11 @@
                             Margin="3,0,0,3"
                             VerticalAlignment="Top"
                             Orientation="Vertical">
-                            <i:Interaction.Behaviors>
+                            <!--<i:Interaction.Behaviors>
                                 <hud:HudStatsBehavior
                                     StatInfoSource="{Binding StatInfoCollection}"
                                     IsMainStatsPanelEnabled="True" />
-                            </i:Interaction.Behaviors>
+                            </i:Interaction.Behaviors>-->
                         </WrapPanel>
                         <Border
                             Background="Transparent"
@@ -1082,6 +1087,7 @@
                     </Grid>
                 </Border>
 
+                <!-- Vertical stat box -->
                 <Border
                     Grid.Row="0"
                     Grid.Column="0"

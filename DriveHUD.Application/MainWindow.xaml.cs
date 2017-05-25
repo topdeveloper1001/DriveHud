@@ -25,7 +25,7 @@ namespace DriveHUD.Application
         public MainWindow()
         {
             InitializeComponent();
-        }
+        }      
 
         private void MainWindow_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

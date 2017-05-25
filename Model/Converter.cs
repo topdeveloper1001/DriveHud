@@ -119,23 +119,26 @@ namespace Model.Importer
             {
                 return EnumPosition.BB;
             }
-            else if (stat.IsCutoff)
-            {
-                return EnumPosition.CO;
-            }
 
-            var firstPlayerAction = hand.HandActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+            var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
+
+            var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
+
+            var handActions = hand.HandActions.Where(x => x.HandActionType != HandActionType.ANTE).ToList();
+
+            var firstPlayerAction = handActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+
+            int firstPlayerActionIndex;
+
             if (firstPlayerAction != null)
             {
-                int firstPlayerActionIndex = hand.HandActions.ToList().IndexOf(firstPlayerAction) - hand.HandActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - hand.HandActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
+                var blindActionsCount = handActions
+                    .Where(x => x.HandActionType == HandActionType.SMALL_BLIND ||
+                        x.HandActionType == HandActionType.BIG_BLIND ||
+                        x.HandActionType == HandActionType.POSTS)
+                    .Count();
 
-                /* Conver size in case if there are not 2 blind actions (only bb, multiple bb etc.) */
-                var blinds = hand.HandActions.Take(2);
-                int blindSize = (hand.HandActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0)
-                    + (hand.HandActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0);
-
-                int tableSize = hand.Players.Where(p => !p.IsSittingOut).Count() - blindSize + 2; // PositionList contains 2 blind positions
-                var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
+                firstPlayerActionIndex = handActions.IndexOf(firstPlayerAction) - blindActionsCount;
 
                 if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
                 {
@@ -143,7 +146,17 @@ namespace Model.Importer
                 }
             }
 
-            // determine position based on distance from dealer
+            // check ante
+            var handAnteActions = hand.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).ToList();
+
+            firstPlayerAction = handAnteActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+
+            firstPlayerActionIndex = handAnteActions.IndexOf(firstPlayerAction) - handActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - handActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
+
+            if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
+            {
+                return table[firstPlayerActionIndex];
+            }
 
             return EnumPosition.Undefined;
         }

@@ -49,7 +49,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         #region Constructor
 
-        internal ReplayerViewModel()
+        public ReplayerViewModel()
         {
             _dataService = ServiceLocator.Current.GetInstance<IDataService>();
 

@@ -54,6 +54,7 @@
             <telerik:RadContextMenu.ContextMenu>
                 <telerik:RadContextMenu
                     ItemClick="OnRadMenuItemClick">
+                    <!-- Tag last hand -->
                     <telerik:RadMenuItem
                         Header="{ResX Main_ContextMenu_TagLastHand}">
                         <telerik:RadMenuItem
@@ -73,6 +74,7 @@
                             CommandParameter="{x:Static enum:EnumHandTag.BigFold}"
                             Command="{Binding TagHandCommand}" />
                     </telerik:RadMenuItem>
+                    <!-- Export last hand -->
                     <telerik:RadMenuItem
                         Header="{ResX Main_ContextMenu_ExportLastHand}">
                         <telerik:RadMenuItem
@@ -101,12 +103,15 @@
                             CommandParameter="{x:Static enum2:EnumExportType.PlainText}"
                             Command="{Binding ExportHandCommand}" />
                     </telerik:RadMenuItem>
+                    <!-- Replay last hand -->
                     <telerik:RadMenuItem
                         Header="{ResX Main_ContextMenu_ReplayLastHand}"
                         Command="{Binding ReplayLastHandCommand}" />
+                    <!-- Save hud positions -->
                     <telerik:RadMenuItem
                         Header="{ResX Main_ContextMenu_SaveHudPosition}"
                         Click="SaveHudPositions_Click" />
+                    <!-- Load HUD -->
                     <telerik:RadMenuItem
                         Header="{ResX Main_ContextMenu_LoadHud}"
                         ItemsSource="{Binding LayoutsCollection}">
@@ -146,13 +151,39 @@
                             </Style>
                         </telerik:RadMenuItem.ItemContainerStyle>
                     </telerik:RadMenuItem>
+                    <telerik:RadMenuItem
+                        Header="{ResX Main_ContextMenu_ApplyPositions}"
+                        ItemsSource="{Binding Seats}">
+                        <telerik:RadMenuItem.ItemContainerStyle>
+                            <Style
+                                TargetType="telerik:RadMenuItem"
+                                BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
+                                <Setter
+                                    Property="Header">
+                                    <Setter.Value>
+                                        <ResX
+                                            Key="Main_ContextMenu_ApplyPositionsAsSeat">
+                                            <ResXParam
+                                                Path="." />
+                                        </ResX>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter
+                                    Property="Command"
+                                    Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type telerik:RadMenuItem}}, Path=DataContext.ApplyPositionsCommand}" />
+                                <Setter
+                                    Property="CommandParameter"
+                                    Value="{Binding}" />
+                            </Style>
+                        </telerik:RadMenuItem.ItemContainerStyle>
+                    </telerik:RadMenuItem>
                 </telerik:RadContextMenu>
             </telerik:RadContextMenu.ContextMenu>
         </Image>
         <Border
             Grid.Row="1"
             BorderThickness="0">
-            <ctrl:DragCanvas
+            <ctrl:HudDragCanvas
                 x:Name="dgCanvas"
                 AllowDragging="True"
                 AllowDragOutOfView="True"

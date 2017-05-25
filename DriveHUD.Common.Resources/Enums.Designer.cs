@@ -709,7 +709,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BN Cold Call%.
+        ///   Looks up a localized string similar to BTN Cold Call%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_BN {
             get {
@@ -1132,6 +1132,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Enum_Stat_NetWon {
+            get {
+                return ResourceManager.GetString("Enum_Stat_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PFR%.
         /// </summary>
         internal static string Enum_Stat_PFR {
@@ -1393,6 +1402,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_S4BetEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_S4BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-Bet MP%.
         /// </summary>
         internal static string Enum_Stat_S4BetMP {
@@ -1438,7 +1456,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3-Bet BN%.
+        ///   Looks up a localized string similar to 3-Bet BTN%.
         /// </summary>
         internal static string Enum_Stat_ThreeBet_BN {
             get {
@@ -1546,7 +1564,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UO-PFR BN.
+        ///   Looks up a localized string similar to UO-PFR BTN.
         /// </summary>
         internal static string Enum_Stat_UO_PFR_BN {
             get {
@@ -1609,7 +1627,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BN VPIP%.
+        ///   Looks up a localized string similar to BTN VPIP%.
         /// </summary>
         internal static string Enum_Stat_VPIP_BN {
             get {

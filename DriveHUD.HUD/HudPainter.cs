@@ -10,10 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using ManagedWinapi.Windows;
@@ -29,7 +27,7 @@ using System.Windows.Interop;
 namespace DriveHUD.HUD
 {
     /// <summary>
-    /// This class is responsible for drawing om Bovada table. It listens Win Events and manages size, position changes and also window close event
+    /// This class is responsible for drawing HUD on table. It listens Win Events and manages size, position changes and also window close event
     /// </summary>
     internal static class HudPainter
     {
@@ -56,7 +54,7 @@ namespace DriveHUD.HUD
         private static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
         {
             return SetWinEventHook(eventId, eventId, IntPtr.Zero, callback, idProcess, 0, WINEVENT_OUTOFCONTEXT);
-        }        
+        }
 
         public static string GetText(IntPtr hWnd)
         {
@@ -122,10 +120,8 @@ namespace DriveHUD.HUD
 
         #endregion
 
-        public static bool IsStarted { get; set; }
-
         public static void UpdateHud(HudLayout hudLayout)
-        {            
+        {
             if (hudLayout == null)
             {
                 return;
@@ -140,8 +136,8 @@ namespace DriveHUD.HUD
 
             if (windows.ContainsKey(hwnd))
             {
-                windows[hwnd].Window.Init(hudLayout);
-                windows[hwnd].Window.Update();                
+                windows[hwnd].Window.Initialize(hudLayout);
+                windows[hwnd].Window.Refresh();
 
                 return;
             }
@@ -161,7 +157,7 @@ namespace DriveHUD.HUD
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
 
-            var window = new HudWindow();            
+            var window = new HudWindow();
             var windowHandle = hudPanelService.GetWindowHandle(hwnd);
 
             var windowItem = new HudWindowItem
@@ -177,7 +173,7 @@ namespace DriveHUD.HUD
                 Owner = windowHandle
             };
 
-            window.Init(hudLayout);
+            window.Initialize(hudLayout);
 
             window.Show();
 
@@ -198,23 +194,7 @@ namespace DriveHUD.HUD
             window.Height = rect.Height * scale.Height;
             window.Width = rect.Width * scale.Width;
 
-            window.Update();
-        }
-
-        public static void ReleaseHook()
-        {
-            IsStarted = false;
-
-            UnhookWinEvent(moveHook);
-            UnhookWinEvent(closeHook);
-            UnhookWinEvent(createHook);
-
-            foreach (var windowItem in windows.Values)
-            {
-                windowItem.Window.Close();
-            }
-
-            windows.Clear();
+            window.Refresh();
         }
 
         #region Infrastructure
@@ -244,9 +224,9 @@ namespace DriveHUD.HUD
             }
 
             var window = windows[hwnd];
-            windows.Remove(hwnd);            
+            windows.Remove(hwnd);
             window.Window.Close();
-            window.Window.Dispose();            
+            window.Window.Dispose();
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)
@@ -275,7 +255,7 @@ namespace DriveHUD.HUD
             windowItem.Window.Height = rect.Height * scale.Height;
             windowItem.Window.Width = rect.Width * scale.Width;
 
-            windowItem.Window.Update();
+            windowItem.Window.Refresh();
         }
 
         private class HudWindowItem

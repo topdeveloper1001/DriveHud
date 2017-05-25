@@ -383,7 +383,7 @@
             Grid.Row="0"
             Value="{Binding HudOpacity}"
             Orientation="Horizontal"
-            Maximum="100"
+            Maximum="1"
             Minimum="0"
             VerticalAlignment="Center"
             Interval="10" />

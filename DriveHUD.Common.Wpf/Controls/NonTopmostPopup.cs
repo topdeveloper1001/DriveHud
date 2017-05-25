@@ -84,14 +84,11 @@ namespace DriveHUD.Common.Wpf.Controls
 
         void OnParentWindowActivated(object sender, EventArgs e)
         {
-            Debug.WriteLine("Parent Window Activated");
             SetTopmostState(true);
         }
 
         void OnParentWindowDeactivated(object sender, EventArgs e)
         {
-            Debug.WriteLine("Parent Window Deactivated");
-
             if (IsTopmost == false)
             {
                 SetTopmostState(IsTopmost);

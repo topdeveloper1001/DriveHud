@@ -10,105 +10,331 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Reflection;
-using DriveHUD.ViewModels;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.AttachedBehaviors;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
 using Model.Enums;
-using Prism.Events;
+using Model.Filters;
+using Model.Settings;
+using Model.Stats;
+using Prism.Interactivity.InteractionRequest;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Data;
-using ReactiveUI;
-using System.Reactive.Linq;
-using Model.Data;
-using DriveHUD.Application.TableConfigurators;
 using System.Collections.Specialized;
-using DriveHUD.Application.ViewModels.Hud;
-using Model.Site;
-using Prism.Interactivity.InteractionRequest;
-using Model.Settings;
-using Model.Events;
-using DriveHUD.Entities;
 using System.ComponentModel;
-using Model.Filters;
-using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Common;
-using Microsoft.Win32;
+using System.Diagnostics;
+using System.Linq;
+using System.Reactive.Disposables;
+using System.Reactive.Linq;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
     /// <summary>
-    /// Class HUD View Model
+    /// Represents view model of hud screen
     /// </summary>
     public class HudViewModel : PopupViewModelBase
     {
-        private IHudLayoutsService _hudLayoutsSevice;
+        private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
         private ISettingsService SettingsService => ServiceLocator.Current.GetInstance<ISettingsService>();
 
-        private ObservableCollection<HudLayoutInfo> _layouts;
+        private CompositeDisposable designerDisposables = new CompositeDisposable();
 
-        public ObservableCollection<HudLayoutInfo> Layouts
+        private bool skipOnStatInfoObserveCollectionChanged = false;
+
+        /// <summary>
+        /// Initializes a <see cref="HudViewModel"/> instance
+        /// </summary>
+        public HudViewModel()
+        {
+            NotificationRequest = new InteractionRequest<INotification>();
+
+            InitializeStatInfoCollection();
+            InitializeStatInfoCollectionObserved();
+            InitializeTableTypes();
+            InitializeCommands();
+            InitializeObservables();
+
+            CurrentTableType = TableTypes.FirstOrDefault();
+        }
+
+        #region Properties
+
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
+        private bool currentLayoutIsSwitching;
+
+        private HudLayoutInfoV2 cachedCurrentLayout;
+
+        private EnumTableType currentTableType;
+
+        /// <summary>
+        /// Gets or sets the current <see cref="EnumTableType"/> table type 
+        /// </summary>
+        public EnumTableType CurrentTableType
         {
             get
             {
-                return _layouts;
+                return currentTableType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref currentTableType, value);
+
+                if (!currentLayoutIsSwitching)
+                {
+                    Layouts = new ObservableCollection<HudLayoutInfoV2>(HudLayoutsService.GetAllLayouts(CurrentTableType));
+                    CurrentLayout = Layouts.FirstOrDefault();
+                }
+            }
+        }
+
+        private ObservableCollection<HudLayoutInfoV2> layouts;
+
+        /// <summary>
+        /// Gets the collection of the <see cref="HudLayoutInfoV2"/> layouts
+        /// </summary>
+        public ObservableCollection<HudLayoutInfoV2> Layouts
+        {
+            get
+            {
+                return layouts;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref _layouts, value);
+                this.RaiseAndSetIfChanged(ref layouts, value);
             }
         }
 
-        private HudLayoutInfo _currentLayout;
+        private HudLayoutInfoV2 currentLayout;
 
-        public HudLayoutInfo CurrentLayout
+        /// <summary>
+        /// Gets or sets the current <see cref="HudLayoutInfoV2"/> layout
+        /// </summary>
+        public HudLayoutInfoV2 CurrentLayout
         {
-            get { return _currentLayout; }
+            get
+            {
+                return currentLayout;
+            }
             set
             {
-                if (CurrentLayout != null && _currentLayout != value)
+                this.RaiseAndSetIfChanged(ref currentLayout, value);
+
+                currentLayoutIsSwitching = true;
+
+                if (currentLayout != null)
                 {
-                    CurrentLayout.HudStats.Clear();
-                    CurrentLayout.HudStats.AddRange(StatInfoObserveCollection.Select(s =>
-                    {
-                        var statBreakInfo = s as StatInfoBreak;
-                        return statBreakInfo != null ? statBreakInfo.Clone() : s.Clone();
-                    }));
+                    CurrentTableType = TableTypes.FirstOrDefault(tableType => tableType == currentLayout.TableType);
                 }
 
-                _currentLayoutSwitching = true;
+                currentLayoutIsSwitching = false;
 
-                this.RaiseAndSetIfChanged(ref _currentLayout, value);
-
-                if (_currentLayout != null)
-                {
-                    previewHudElementViewModel.HudViewType = HudViewType;
-                    CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
-                }
-
-                var playerIcon = StatInfoCollectionView.SourceCollection.OfType<StatInfo>().FirstOrDefault(x => x.Stat == Stat.PlayerInfoIcon);
-
-                if (playerIcon != null)
-                {
-                    playerIcon.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-
-                playerIcon = StatInfoObserveCollection.FirstOrDefault(x => x.Stat == Stat.PlayerInfoIcon);
-
-                if (playerIcon != null)
-                {
-                    playerIcon.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-
-                // load data for selected layout
-                RaisePropertyChanged(() => HudViewType);
-                _currentLayoutSwitching = false;
-                DataLoad(true);
+                RefreshData();
             }
         }
+
+        private ObservableCollection<EnumTableType> tableTypes;
+
+        /// <summary>
+        /// Gets the collection of <see cref="EnumTableType"/> table types
+        /// </summary>
+        public ObservableCollection<EnumTableType> TableTypes
+        {
+            get
+            {
+                return tableTypes;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref tableTypes, value);
+            }
+        }
+
+        private ReactiveList<StatInfo> statInfoCollection;
+
+        /// <summary>
+        /// Gets the collection of the selected <see cref="StatInfo"/> stats
+        /// </summary>
+        public ReactiveList<StatInfo> StatInfoCollection
+        {
+            get
+            {
+                return statInfoCollection;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
+
+                var collectionViewSource = (CollectionView)CollectionViewSource.GetDefaultView(statInfoCollection);
+
+                collectionViewSource.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
+
+                collectionViewSource.SortDescriptions.Add(new SortDescription("GroupName", ListSortDirection.Ascending));
+                collectionViewSource.SortDescriptions.Add(new SortDescription("Caption", ListSortDirection.Ascending));
+
+                collectionViewSource.Filter = (item) =>
+                {
+                    var stat = item as StatInfo;
+
+                    if (stat == null)
+                    {
+                        return false;
+                    }
+
+                    return stat.IsListed && !stat.IsNotVisible;
+                };
+
+                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
+
+                if (statFiltering.CanChangeLiveFiltering)
+                {
+                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsNotVisible));
+                    statFiltering.IsLiveFiltering = true;
+                }
+
+                StatInfoCollectionView = collectionViewSource;
+            }
+        }
+
+        private CollectionView statInfoCollectionView;
+
+        /// <summary>
+        /// Gets or sets the <see cref="CollectionView"/> of stats
+        /// </summary>
+        public CollectionView StatInfoCollectionView
+        {
+            get
+            {
+                return statInfoCollectionView;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoCollectionView, value);
+            }
+        }
+
+        private ObservableCollection<StatInfo> statInfoObserveCollection;
+
+        public ObservableCollection<StatInfo> StatInfoObserveCollection
+        {
+            get
+            {
+                return statInfoObserveCollection;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoObserveCollection, value);
+            }
+        }
+
+        private StatInfo statInfoObserveSelectedItem;
+
+        public StatInfo StatInfoObserveSelectedItem
+        {
+            get
+            {
+                return statInfoObserveSelectedItem;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoObserveSelectedItem, value);
+            }
+        }
+
+        private HudElementViewModel previewHudElementViewModel;
+
+        public HudElementViewModel PreviewHudElementViewModel
+        {
+            get
+            {
+                return previewHudElementViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref previewHudElementViewModel, value);
+            }
+        }
+
+        private ReactiveList<HudElementViewModel> hudElements;
+
+        public ReactiveList<HudElementViewModel> HudElements
+        {
+            get
+            {
+                return hudElements;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref hudElements, value);
+            }
+        }
+
+        private bool isInDesignMode;
+
+        public bool IsInDesignMode
+        {
+            get
+            {
+                return isInDesignMode;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isInDesignMode, value);
+                UpdateStatsCollections();
+            }
+        }
+
+        private HudElementViewModel designerHudElementViewModel;
+
+        public HudElementViewModel DesignerHudElementViewModel
+        {
+            get
+            {
+                return designerHudElementViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref designerHudElementViewModel, value);
+            }
+        }
+
+        private HudBaseToolViewModel selectedToolViewModel;
+
+        public HudBaseToolViewModel SelectedToolViewModel
+        {
+            get
+            {
+                return selectedToolViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref selectedToolViewModel, value);
+                this.RaisePropertyChanged(nameof(CanAddStats));
+            }
+        }
+
+        public bool CanAddStats
+        {
+            get
+            {
+                return !IsInDesignMode || (IsInDesignMode && SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel);
+            }
+        }
+
+        #endregion
 
         #region Commands
 
@@ -128,310 +354,135 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> BumperStickersCommand { get; private set; }
 
+        public ReactiveCommand<object> DesignerToolCommand { get; private set; }
+
+        public ReactiveCommand<object> SaveDesignCommand { get; private set; }
+
+        public ReactiveCommand<object> CancelDesignCommand { get; private set; }
+
+        public ICommand AddToolCommand { get; private set; }
+
+        public ReactiveCommand<object> RemoveToolCommand { get; private set; }
+
+        public ReactiveCommand<object> StatClickCommand { get; private set; }
+
+        public ReactiveCommand<object> ToolClickCommand { get; private set; }
+
+        public ReactiveCommand<object> DuplicateCommand { get; private set; }
+
         #endregion
 
-        public HudViewModel()
-        {
-            Initialize();
-        }
+        #region Infrastructure
 
         /// <summary>
-        /// Initialize view model
+        /// Initializes <see cref="HudElements"/> using <see cref="CurrentLayout"/>
         /// </summary>
-        private void Initialize()
-        {
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            eventAggregator.GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
-            eventAggregator.GetEvent<UpdateHudEvent>().Subscribe(OnUpdateHudRaised);
-
-            _hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
-            NotificationRequest = new InteractionRequest<INotification>();
-
-            InitializeStatInfoCollection();
-            InitializeStatInfoCollectionObserved();
-
-            InitializePlayerCollection();
-
-            InitializeTableLayouts();
-
-            hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
-
-            var settings = SettingsService.GetSettings();
-
-            PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100, Opacity = 100 };
-            PreviewHudElementViewModel.HudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
-
-            InitializeCommands();
-            InitializeObservables();
-
-            InitializeHudElements();
-
-            CurrentTableType = TableTypes.FirstOrDefault();
-        }
-
         private void InitializeHudElements()
         {
-            HudTableViewModels = new List<HudTableViewModel>();
-
-            foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
-            {
-                // generate hud table view model
-                var hudTableViewModel = new HudTableViewModel
-                {
-                    TableType = tableType
-                };
-
-                HudTableViewModels.Add(hudTableViewModel);
-
-                // initialize hud elements
-                InitializeHudTableHudElements(hudTableViewModel, tableType);
-            }
-        }
-
-        private void InitializeHudTableHudElements(HudTableViewModel hudTableViewModel, EnumTableType tableType)
-        {
-            if (hudTableViewModel == null)
+            if (CurrentLayout == null)
             {
                 return;
             }
 
-            var hudElements = new ObservableCollection<HudElementViewModel>();
+            // add extension to HudDesignerToolType to select only visible elements (pop ups are hidden)
+            var layoutTools = CurrentLayout.LayoutTools.ToArray();
 
-            var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(HudViewType.ToString());
+            var seats = (int)CurrentLayout.TableType;
 
-            var hudElementViewModels = tableConfigurator.GenerateElements((int)tableType).ToArray();
-            hudElements.AddRange(hudElementViewModels);
+            var hudElementsToAdd = new List<HudElementViewModel>();
 
-            hudTableViewModel.HudElements = hudElements;
-        }
+            var random = new Random();
 
-        private void InitializeTableLayouts()
-        {
-            var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
-            _configurations = configurationService.GetAll();
-            TableTypes =
-                new ObservableCollection<EnumTableTypeWrapper>(
-                    Enum.GetValues(typeof(EnumTableType))
-                        .OfType<EnumTableType>()
-                        .Select(t => new EnumTableTypeWrapper(t)));
+            for (var seat = 1; seat <= seats; seat++)
+            {
+                var hudElement = new HudElementViewModel(layoutTools);
+                hudElement.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
+                hudElement.Seat = seat;
+                hudElement.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, seat);
+                hudElement.Opacity = CurrentLayout.Opacity;
+                hudElement.Stickers = new ObservableCollection<HudBumperStickerType>(CurrentLayout
+                    .HudBumperStickerTypes
+                    .Select(x => x.Clone()));
+
+                try
+                {
+                    hudElement.Tools.ForEach(x =>
+                    {
+                        x.InitializePositions();
+
+                        if (x is IHudStatsToolViewModel && x is IHudBaseStatToolViewModel)
+                        {
+                            (x as IHudStatsToolViewModel).Stats.ForEach(s =>
+                            {
+                                s.CurrentValue = random.Next(0, 100);
+                            });
+                        }
+                    });
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not set positions on HUD view for {CurrentLayout.Name}", e);
+                }
+
+                hudElementsToAdd.Add(hudElement);
+            }
+
+            HudElements = new ReactiveList<HudElementViewModel>(hudElementsToAdd);
+
+            InitializePreview();
         }
 
         /// <summary>
-        /// Initialize stat collection
+        /// Initializes <see cref="TableTypes"/>
+        /// </summary>
+        private void InitializeTableTypes()
+        {
+            TableTypes = new ObservableCollection<EnumTableType>(Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>());
+        }
+
+        /// <summary>
+        /// Initializes <see cref="StatInfoCollection"/>
         /// </summary>
         private void InitializeStatInfoCollection()
         {
-            // Make a list of StatInfoGroups
-            var statInfoGroups = new[]
-            {
-                new StatInfoGroup { Name = "Most Popular" },
-                new StatInfoGroup { Name = "Positional" },
-                new StatInfoGroup { Name = "3-Bet" },
-                new StatInfoGroup { Name = "4-Bet" },
-                new StatInfoGroup { Name = "Preflop" },
-                new StatInfoGroup { Name = "Flop" },
-                new StatInfoGroup { Name = "Turn" },
-                new StatInfoGroup { Name = "River" },
-                new StatInfoGroup { Name = "Tournament" },
-                new StatInfoGroup { Name = "Continuation Bet" },
-                new StatInfoGroup { Name = "Limp" },
-                new StatInfoGroup { Name = "Advanced Stats" },
-            };
+            // Create a list of StatInfo
+            StatInfoCollection = new ReactiveList<StatInfo>(StatInfoHelper.GetAllStats());
 
-            // Make a collection of StatInfo
-            StatInfoCollection = new ReactiveList<StatInfo>
-            {
-                new StatInfo { IsListed = false, GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.UO_PFR_EP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.UO_PFR_EP)},
-
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PlayerInfoIcon },
-
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.VPIP) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFR)},
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S3Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBet) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.AF, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.Agg) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.AGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.AggPr) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCBet)},
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WTSD, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WTSD) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WSSD, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WSSD) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WWSF, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WSWSF) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.TotalHands, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TotalHands) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldToCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldCBet) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldTo3Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToThreeBet)},
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S4Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBet) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldTo4Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToFourBet) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FlopAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopAgg) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.TurnAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnAgg) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.RiverAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RiverAgg) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.ColdCall, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCall)},
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.Steal, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.Steal) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldToSteal, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BlindsFoldSteal) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.Squeeze, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.Squeeze) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckRaise) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.BetWhenCheckedTo, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetWhenCheckedTo) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetIP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetOOP) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S3BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInMP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S3BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInCO) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S3BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBTN) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S3BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInSB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S3BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBB) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInMP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInCO) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBTN) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInSB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.S4BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBB) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpEp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.LimpEp) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpMp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.LimpMp) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpCo, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.LimpCo) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpBtn, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.LimpBtn) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.LimpSb, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.LimpSb) },
-                
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInMP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallEP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInEP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInCO) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInBTN) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInSB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInBB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallVsBtnOpen) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallVsCoOpen) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallVsOpenRaiseSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallVsSbOpen) },
-
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInEP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInEP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInMP) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInCO) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInBTN) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInSB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.PFRInBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFRInBB) },
-                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.BTNDefendCORaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BTNDefendCORaise) },
-
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetIP) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetOOP) },
-
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInMP) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInCO) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBTN) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInSB) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBB) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBetVsSteal, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetVsSteal) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.CBetInThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInThreeBetPot) },
-                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromThreeBetPot) },
-
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInMP) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInCO) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBTN) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInSB) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBB) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.CBetInFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInFourBetPot) },
-                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromFourBetPot) },
-
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBet) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.ColdCallThreeBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallThreeBet) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.ColdCallFourBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallFourBet) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInMP) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInCO) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBTN) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInSB) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBB) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetIP) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S3BetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetOOP) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBet) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInMP) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInCO) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBTN) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInSB) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBB) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldToSqueez,  PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToSqueez) },
-
-
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WSWSF) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCheckRaise) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCBet)},
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FloatFlop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FloatFlop)},
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopAgg) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.RaiseFlop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseFlop) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CheckFoldFlopPfrOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlopPfrOop) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CheckFoldFlop3BetOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlop3BetOop) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.BetFoldFlopPfrRaiser, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFoldFlopPfrRaiser) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.BetFlopCalled3BetPreflopIp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFlopCalled3BetPreflopIp) },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToFlopRaise) },
-
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnCheckRaise) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.RaiseTurn, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseTurn) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnAgg) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnSeen, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnSeen) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DoubleBarrel, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnCBet) },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToTurnRaise) },
-
-                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RaiseRiver, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseRiver) },
-                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RiverAgg) },
-                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverSeen, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RiverSeen) },
-                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CheckRiverOnBXLine, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckRiverOnBXLine) },
-                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.FoldToRiverCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldToRiverCBet) },
-
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.MRatio, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.MRatio) },
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.BBs, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.StackInBBs) },
-
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.CBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCBet) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FoldToCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldCBet) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.CBetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetIP) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.CBetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetOOP) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.CBetInThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInThreeBetPot) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.CBetInFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInFourBetPot) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FlopCBetVsOneOpp, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetVsOneOpp) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FlopCBetVsTwoOpp, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetVsTwoOpp) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FlopCBetMW, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetMW) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FlopCBetMonotone, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetMonotone) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FlopCBetRag, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetRag) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromThreeBetPot) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromFourBetPot) },
-                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.RaiseCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseCBet) },
-
-                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.Limp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimp) },
-                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpCall, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpCall) },
-                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpFold, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpFold) },
-                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpReraise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpReraise) },
-
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.RaiseFrequencyFactor, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseFrequencyFactor) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.TrueAggression, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TrueAggression) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DonkBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DonkBet) },
-                new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
-            };
-
-            // initialize stat info
+            // Initialize stat info
             StatInfoCollection.ForEach(x => x.Initialize());
         }
 
+        /// <summary>
+        /// Initializes the collection of <see cref="StatInfo"/>
+        /// </summary>
         private void InitializeStatInfoCollectionObserved()
         {
-            StatInfoObserveCollection = new StatInfoObservableCollection<StatInfo> { AllowBreak = true, BreakCount = 4 };
+            StatInfoObserveCollection = new ObservableCollection<StatInfo>();
         }
 
-        private void InitializePlayerCollection()
-        {
-            PlayerCollection = new ObservableCollection<PlayerHudContent>();
-        }
-
+        /// <summary>
+        /// Initializes commands
+        /// </summary>
         protected override void InitializeCommands()
         {
             base.InitializeCommands();
 
-            DataSaveCommand = ReactiveCommand.Create();
+            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
+
+            DataSaveCommand = ReactiveCommand.Create(canUseDataCommands);
             DataSaveCommand.Subscribe(x => OpenDataSave());
 
-            DataDeleteCommand = ReactiveCommand.Create();
+            DataDeleteCommand = ReactiveCommand.Create(canUseDataCommands);
             DataDeleteCommand.Subscribe(x => DataDelete());
 
-            DataImportCommand = ReactiveCommand.Create();
+            DataImportCommand = ReactiveCommand.Create(canUseDataCommands);
             DataImportCommand.Subscribe(x => DataImport());
 
-            DataExportCommand = ReactiveCommand.Create();
+            DataExportCommand = ReactiveCommand.Create(canUseDataCommands);
             DataExportCommand.Subscribe(x => DataExport());
+
+            DuplicateCommand = ReactiveCommand.Create(canUseDataCommands);
+            DuplicateCommand.Subscribe(x => { });
 
             SpliterAddCommand = ReactiveCommand.Create();
             SpliterAddCommand.Subscribe(x => SpliterAdd());
@@ -444,241 +495,380 @@ namespace DriveHUD.Application.ViewModels
 
             BumperStickersCommand = ReactiveCommand.Create();
             BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
+
+            DesignerToolCommand = ReactiveCommand.Create();
+            DesignerToolCommand.Subscribe(x => InitializeDesigner());
+
+            CancelDesignCommand = ReactiveCommand.Create();
+            CancelDesignCommand.Subscribe(x => CloseDesigner());
+
+            AddToolCommand = new RelayCommand(x =>
+            {
+                var dragDropDataObject = x as DragDropDataObject;
+
+                if (dragDropDataObject == null)
+                {
+                    return;
+                }
+
+                if (!IsInDesignMode)
+                {
+                    InitializeDesigner();
+                }
+
+                if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
+                {
+                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;              
+
+                    var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
+
+                    if (statInfo == null)
+                    {
+                        return;
+                    }
+
+                    var targetToolViewModel = dragDropDataObject.Source as HudBaseToolViewModel;
+
+                    if (targetToolViewModel == null)
+                    {
+                        return;
+                    }
+
+                    targetToolViewModel = DesignerHudElementViewModel.Tools.FirstOrDefault(t => t.Id == targetToolViewModel.Id);
+
+                    SelectedToolViewModel = targetToolViewModel;
+
+                    UpdateStatsCollections();
+
+                    StatInfoObserveCollection.Add(statInfo);
+
+                    return;
+                }
+
+                var dataObject = dragDropDataObject.DragEventArgs.Data.GetData(DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.DataFormat.Name);
+
+                var toolType = dataObject as HudDesignerToolType?;
+
+                if (toolType.HasValue && CanAddTool(toolType.Value))
+                {
+                    AddTool(toolType.Value, dragDropDataObject.Position, dragDropDataObject.Source);
+                }
+            }, x =>
+            {
+                var dragEventArgs = x as DragEventArgs;
+
+                if (dragEventArgs == null)
+                {
+                    return false;
+                }
+
+                var statInfoList = dragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+
+                var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
+
+                if (statInfo == null)
+                {
+                    return false;
+                }
+
+                var dragTarget = dragEventArgs.Source as FrameworkElement;
+
+                if (dragTarget == null || dragTarget.DataContext == null)
+                {
+                    return false;
+                }
+
+                return dragTarget.DataContext is HudFourStatsBoxViewModel || dragTarget.DataContext is HudPlainStatBoxViewModel;
+            });
+
+            RemoveToolCommand = ReactiveCommand.Create();
+            RemoveToolCommand.Subscribe(x =>
+            {
+                var toolToRemove = x as HudBaseToolViewModel;
+
+                if (toolToRemove == null)
+                {
+                    return;
+                }
+
+                RemoveTool(toolToRemove);
+            });
+
+            var canUserStatClickCommand = this.WhenAny(x => x.IsInDesignMode, x => x.Value && DesignerHudElementViewModel != null);
+
+            StatClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
+            StatClickCommand.Subscribe(x =>
+            {
+                var statInfo = x as StatInfo;
+
+                if (statInfo == null)
+                {
+                    return;
+                }
+
+                var toolsToShow = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(s => s.BaseStat != null && s.BaseStat.Stat == statInfo.Stat)
+                    .OfType<HudBaseToolViewModel>()
+                    .ToArray();
+
+                ShowTools(toolsToShow);
+            });
+
+            ToolClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
+            ToolClickCommand.Subscribe(x =>
+            {
+                var toolViewModel = x as HudBaseToolViewModel;
+
+                if (toolViewModel == null)
+                {
+                    return;
+                }
+
+                var toolsToShow = DesignerHudElementViewModel.Tools
+                    .OfType<HudGraphViewModel>()
+                    .Where(t => t.ParentToolId != null && t.ParentToolId == toolViewModel.Id)
+                    .OfType<HudBaseToolViewModel>()
+                    .ToArray();
+
+                ShowTools(toolsToShow);
+            });
+
+            SaveDesignCommand = ReactiveCommand.Create();
+            SaveDesignCommand.Subscribe(x => SaveDesign());
         }
 
+        /// <summary>
+        /// Shows the specified <see cref="HudBaseToolViewModel"/> tools
+        /// </summary>
+        /// <param name="toolsToShow">Tools to show</param>
+        private void ShowTools(HudBaseToolViewModel[] toolsToShow)
+        {
+            if (toolsToShow.Length < 1)
+            {
+                return;
+            }
+
+            toolsToShow.ForEach(t =>
+            {
+                t.IsVisible = true;
+                t.IsSelected = false;
+            });
+
+            toolsToShow.First(t => t.IsSelected = true);
+        }
+
+        /// <summary>
+        /// Initializes preview
+        /// </summary>
+        private void InitializePreview()
+        {
+            var layoutTools = CurrentLayout.LayoutTools.ToArray();
+
+            var random = new Random();
+
+            // set randomized data
+            var previewHudElementViewModel = new HudElementViewModel(layoutTools.Select(x => x.Clone()));
+            previewHudElementViewModel.Opacity = CurrentLayout.Opacity;
+            previewHudElementViewModel.TiltMeter = HudDefaultSettings.TiltMeterDesignerValue;
+            previewHudElementViewModel.Stickers = new ObservableCollection<HudBumperStickerType>(CurrentLayout
+                .HudBumperStickerTypes
+                .Select(x => x.Clone()));
+
+            previewHudElementViewModel.Tools.OfType<IHudStatsToolViewModel>().ForEach(tool =>
+            {
+                tool.Stats.ForEach(s =>
+                {
+                    s.CurrentValue = random.Next(0, 100);
+                    s.Caption = string.Format(s.Format, s.CurrentValue);
+                });
+            });
+
+            previewHudElementViewModel.Seat = 1;
+            previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
+
+            try
+            {
+                previewHudElementViewModel.Tools.ForEach(x => x.InitializePositions());
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not set positions on HUD view for {CurrentLayout.Name}", e);
+            }
+
+            PreviewHudElementViewModel = previewHudElementViewModel;
+        }
+
+        /// <summary>
+        /// Initializes observables
+        /// </summary>
         private void InitializeObservables()
         {
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
                 h => StatInfoObserveCollection.CollectionChanged += h,
                 h => StatInfoObserveCollection.CollectionChanged -= h).Subscribe(x =>
-            {
-                var statsCollection = x.Sender as ObservableCollection<StatInfo>;
-
-                if (statsCollection == null)
                 {
-                    return;
-                }
+                    if (skipOnStatInfoObserveCollectionChanged)
+                    {
+                        return;
+                    }
 
-                var statsToHide = StatInfoCollection.Where(s => statsCollection.Any(h => h != s && h.Stat == s.Stat && !(h is StatInfoBreak)));
+                    var statsToAdd = x.EventArgs.NewItems?.OfType<StatInfo>().ToList();
+                    var statsToRemove = x.EventArgs.OldItems?.OfType<StatInfo>().ToList();
 
-                StatInfoCollection.Where(s => s.IsDuplicateSelected && !statsToHide.Contains(s))
-                    .ForEach(s => s.IsDuplicateSelected = false);
+                    AddToolStats(statsToAdd, x.EventArgs.NewStartingIndex);
+                    RemoveToolStats(statsToRemove);
 
-                statsToHide.ForEach(s => s.IsDuplicateSelected = true);
+                    HideStatsInStatCollection();
 
-                CurrentHudTableViewModel.HudElements.ForEach(o =>
-                {
-                    o.StatInfoCollection.Clear();
-                    o.StatInfoCollection.AddRange(statsCollection);
-                    o.UpdateMainStats();
-
+                    InitializePreview();
                 });
 
-                if (PreviewHudElementViewModel != null)
+            Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
+                h => StatInfoCollection.CollectionChanged += h,
+                h => StatInfoCollection.CollectionChanged -= h).Subscribe(x =>
                 {
-                    PreviewHudElementViewModel.StatInfoCollection.Clear();
-
-                    Random r = new Random();
-
-                    for (int i = 0; i < statsCollection.Count; i++)
+                    if (x.EventArgs.Action != NotifyCollectionChangedAction.Add)
                     {
-                        if (statsCollection[i] is StatInfoBreak)
-                        {
-                            PreviewHudElementViewModel.StatInfoCollection.Add((statsCollection[i] as StatInfoBreak).Clone());
-                            continue;
-                        }
-
-                        var stat = statsCollection[i].Clone();
-                        stat.CurrentValue = r.Next(0, 100);
-                        stat.Caption = string.Format(stat.Format, stat.CurrentValue);
-                        PreviewHudElementViewModel.StatInfoCollection.Add(stat);
+                        return;
                     }
 
-                    PreviewHudElementViewModel.UpdateMainStats();
-                }
-            });
-        }
+                    var addedStats = x.EventArgs.NewItems?.OfType<StatInfo>().ToArray();
 
-        #region Properties
-
-        public InteractionRequest<INotification> NotificationRequest { get; private set; }
-        public event EventHandler TableUpdated;
-
-        private ObservableCollection<PlayerHudContent> playerCollection;
-
-        private ReactiveList<StatInfo> statInfoCollection;
-        private CollectionView statInfoCollectionView;
-
-        private StatInfoObservableCollection<StatInfo> statInfoObserveCollection;
-        private StatInfo statInfoObserveSelectedItem;
-
-        private EnumTableTypeWrapper _currentTableType;
-
-        public EnumTableTypeWrapper CurrentTableType
-        {
-            get
-            {
-                return _currentTableType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref _currentTableType, value);
-
-                if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
-                    Layouts = new ObservableCollection<HudLayoutInfo>(_hudLayoutsSevice.GetAllLayouts(CurrentTableType.TableType));
-                    CurrentLayout = Layouts.FirstOrDefault();
-                }
-            }
-        }
-
-        public ObservableCollection<EnumTableTypeWrapper> TableTypes
-        {
-            get
-            {
-                return _tableTypes;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref _tableTypes, value);
-            }
-        }
-
-        public ObservableCollection<PlayerHudContent> PlayerCollection
-        {
-            get
-            {
-                return playerCollection;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref playerCollection, value);
-            }
-        }
-
-        public ReactiveList<StatInfo> StatInfoCollection
-        {
-            get
-            {
-                return statInfoCollection;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
-
-                CollectionView collectionViewSource = (CollectionView)CollectionViewSource.GetDefaultView(statInfoCollection);
-
-                collectionViewSource.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
-
-                collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("GroupName", System.ComponentModel.ListSortDirection.Ascending));
-                collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("Caption", System.ComponentModel.ListSortDirection.Ascending));
-
-                collectionViewSource.Filter = (item) =>
-                {
-                    var stat = item as StatInfo;
-
-                    if (stat == null)
+                    if (addedStats == null)
                     {
-                        return false;
+                        return;
                     }
 
-                    return stat.IsListed && !stat.IsDuplicateSelected;
-                };
+                    var allStats = StatInfoHelper.GetAllStats();
 
-                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
+                    // remove invalid stats
+                    var validStats = (from addedStat in addedStats
+                                      join stat in allStats on new
+                                      {
+                                          Stat = addedStat.Stat,
+                                          GroupName = addedStat.GroupName,
+                                          StatInfoGroup = (addedStat.StatInfoGroup != null ? addedStat.StatInfoGroup.Name : null)
+                                      }
+                                      equals new
+                                      {
+                                          Stat = stat.Stat,
+                                          GroupName = stat.GroupName,
+                                          StatInfoGroup = stat.StatInfoGroup.Name
+                                      }
+                                      select addedStat).ToArray();
 
-                if (statFiltering.CanChangeLiveFiltering)
+                    var invalidStats = addedStats.Except(validStats).ToArray();
+                    StatInfoCollection.RemoveAll(invalidStats);
+
+                    // remove duplicates
+                    var duplicates = (from stat in StatInfoCollection
+                                      group stat by new { stat.Stat, stat.GroupName, stat.StatInfoGroup.Name } into grouped
+                                      where grouped.Count() > 1
+                                      from duplicateStat in grouped
+                                      join validStat in validStats on duplicateStat equals validStat
+                                      select duplicateStat).ToArray();
+
+                    StatInfoCollection.RemoveAll(duplicates);
+                });
+        }
+
+        /// <summary>
+        /// Add the list of <see cref="StatInfo"/> stats to the specific tool
+        /// </summary>
+        /// <param name="statsCollection">List of stats</param>
+        private void AddToolStats(List<StatInfo> statsCollection, int startingIndex)
+        {
+            // in design mode we can update only stats in selected tool
+            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null) || (SelectedToolViewModel != null && !(SelectedToolViewModel is IHudStatsToolViewModel)))
+            {
+                return;
+            }
+
+            var statTool = GetToolToModifyStats();
+
+            if (statTool == null)
+            {
+                return;
+            }
+
+            if (startingIndex > statTool.Stats.Count)
+            {
+                startingIndex = statTool.Stats.Count;
+            }
+
+            statTool.Stats.InsertRange(startingIndex, statsCollection);
+        }
+
+        private void RemoveToolStats(List<StatInfo> statsCollection)
+        {
+            // in design mode we can update only stats in selected tool
+            if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null))
+            {
+                return;
+            }
+
+            var statTool = GetToolToModifyStats();
+            statTool?.Stats.RemoveRange(statsCollection);
+
+            // if selected tools is base stat tool then we don't delete any tool
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudBaseStatToolViewModel)
+            {
+                return;
+            }
+
+            // removes all stat based tools 
+            foreach (var stat in statsCollection)
+            {
+                var toolViewModelsToRemove = (from hudElement in HudElements
+                                              from toolViewModel in hudElement.Tools.OfType<IHudBaseStatToolViewModel>()
+                                              where toolViewModel.BaseStat != null && toolViewModel.BaseStat.Stat == stat.Stat
+                                              select new { HudElement = hudElement, ToolViewModel = toolViewModel }).ToArray();
+
+                toolViewModelsToRemove.ForEach(x =>
                 {
-                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
-                    statFiltering.IsLiveFiltering = true;
-                }
+                    var toolViewModel = x.ToolViewModel as HudBaseToolViewModel;
 
-                StatInfoCollectionView = collectionViewSource;
+                    if (toolViewModel != null)
+                    {
+                        x.HudElement.Tools.Remove(toolViewModel);
+                        CurrentLayout.LayoutTools.Remove(toolViewModel.Tool);
+                    }
+                });
             }
         }
 
-        public CollectionView StatInfoCollectionView
+        private IHudStatsToolViewModel GetToolToModifyStats()
         {
-            get
+            var hudElement = HudElements?.FirstOrDefault();
+
+            if (hudElement == null)
             {
-                return statInfoCollectionView;
+                return null;
             }
-            set
+
+            IHudStatsToolViewModel statTool;
+
+            if (SelectedToolViewModel != null)
             {
-                this.RaiseAndSetIfChanged(ref statInfoCollectionView, value);
+                statTool = hudElement.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .FirstOrDefault(x => ReferenceEquals(x, SelectedToolViewModel));
             }
+            else
+            {
+                statTool = hudElement.Tools
+                   .Where(x => x.ToolType == HudDesignerToolType.PlainStatBox)
+                   .OfType<IHudStatsToolViewModel>()
+                   .FirstOrDefault();
+            }
+
+            return statTool;
         }
 
-        public StatInfoObservableCollection<StatInfo> StatInfoObserveCollection
-        {
-            get
-            {
-                return statInfoObserveCollection;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoObserveCollection, value);
-            }
-        }
-
-        public StatInfo StatInfoObserveSelectedItem
-        {
-            get
-            {
-                return statInfoObserveSelectedItem;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoObserveSelectedItem, value);
-            }
-        }
-
-        public List<HudTableViewModel> HudTableViewModels
-        {
-            get { return _hudLayoutsSevice.HudTableViewModels; }
-            set { _hudLayoutsSevice.HudTableViewModels = value; }
-        }
-
-        public HudTableViewModel CurrentHudTableViewModel { get; private set; }
-
-        public HudViewType HudViewType => _currentLayout?.HudViewType ?? HudViewType.Plain;
-
-        private ObservableCollection<HudViewType> hudViewTypes;
-
-        public ObservableCollection<HudViewType> HudViewTypes
-        {
-            get
-            {
-                return hudViewTypes;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref hudViewTypes, value);
-            }
-        }
-
-        private HudElementViewModel previewHudElementViewModel;
-
-        public HudElementViewModel PreviewHudElementViewModel
-        {
-            get
-            {
-                return previewHudElementViewModel;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref previewHudElementViewModel, value);
-            }
-        }
-
-        private IEnumerable<ISiteConfiguration> _configurations;
-        private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
-        private bool _currentLayoutSwitching;
-
-        #endregion
-
-        #region Infrastructure
-
+        /// <summary>
+        /// Opens popup to save data
+        /// </summary>
         private void OpenDataSave()
         {
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo
@@ -687,12 +877,16 @@ namespace DriveHUD.Application.ViewModels
                 Cancel = ClosePopup,
                 Save = DataSave,
                 IsSaveAsMode = true,
-                TableType = CurrentTableType.TableType
+                TableType = CurrentTableType
             };
+
             var hudSelectLayoutViewModel = new HudSelectLayoutViewModel(hudSelectLayoutViewModelInfo);
             OpenPopup(hudSelectLayoutViewModel);
         }
 
+        /// <summary>
+        /// Saves layout
+        /// </summary>
         private void DataSave()
         {
             var hudSelectLayoutViewModel = PopupViewModel as HudSelectLayoutViewModel;
@@ -706,14 +900,13 @@ namespace DriveHUD.Application.ViewModels
             var hudData = new HudSavedDataInfo
             {
                 Name = hudSelectLayoutViewModel.Name,
-                HudTable = CurrentHudTableViewModel,
                 Stats = StatInfoObserveCollection,
                 LayoutInfo = CurrentLayout
             };
 
             ClosePopup();
 
-            var savedLayout = _hudLayoutsSevice.SaveAs(hudData);
+            var savedLayout = HudLayoutsService.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
@@ -733,115 +926,85 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        /// <summary>
+        /// Exports layout to file
+        /// </summary>
         private void DataExport()
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "HUD Layouts (.xml)|*.xml"
+            };
 
             if (saveFileDialog.ShowDialog() == true)
-                _hudLayoutsSevice.Export(CurrentLayout, saveFileDialog.FileName);
+            {
+                HudLayoutsService.Export(CurrentLayout, saveFileDialog.FileName);
+            }
         }
 
+        /// <summary>
+        /// Imports layout from file
+        /// </summary>
         private void DataImport()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                var importedLayout = _hudLayoutsSevice.Import(openFileDialog.FileName);
+                var importedLayout = HudLayoutsService.Import(openFileDialog.FileName);
 
                 if (importedLayout == null)
+                {
                     return;
+                }
+
                 Layouts.Add(importedLayout);
                 CurrentLayout = importedLayout;
             }
         }
 
-        private void DataLoad(bool disableLayoutSave)
+        /// <summary>
+        /// Refreshes stats and hud elements using <see cref="CurrentLayout"/>
+        /// </summary>
+        private void RefreshData()
+        {
+            UpdateStatsCollections();
+            InitializeHudElements();
+        }
+
+        /// <summary>
+        /// Deletes layout
+        /// </summary>
+        private void DataDelete()
+        {
+            if (!HudLayoutsService.Delete(CurrentLayout.Name))
+            {
+                return;
+            }
+
+            Layouts.Remove(CurrentLayout);
+            CurrentLayout = Layouts.FirstOrDefault();
+        }
+
+        private void UpdateStatsCollections()
         {
             if (CurrentLayout == null)
             {
                 return;
             }
 
-            if (CurrentHudTableViewModel != null && !disableLayoutSave)
+            if (StatInfoObserveCollection.Count > 0)
             {
-                SaveLayoutChanged(CurrentLayout);
+                ReturnStatsToStatCollection();
             }
 
-            CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType);
+            AddStatsToSelectedStatCollection();
 
-            if (CurrentHudTableViewModel == null)
-            {
-                return;
-            }
-
-            InitializeHudTableHudElements(CurrentHudTableViewModel, CurrentTableType.TableType);
-
-            CurrentHudTableViewModel.HudViewType = HudViewType;
-            CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
-            CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
-            CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-            //MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
-            UpdateLayout(CurrentLayout);
-
-            TableUpdated?.Invoke(this, EventArgs.Empty);
+            HideStatsInStatCollection();
         }
 
-        private void MergeLayouts(IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
+        private void ReturnStatsToStatCollection()
         {
-            Check.ArgumentNotNull(() => hudElementViewModels);
-            Check.ArgumentNotNull(() => layout);
-
-            foreach (var hudElementViewModel in hudElementViewModels)
-            {
-                var userDefinedPosition = layout.UiPositionsInfo.FirstOrDefault(p => p.Seat == hudElementViewModel.Seat);
-
-                if (userDefinedPosition == null)
-                {
-                    continue;
-                }
-
-                hudElementViewModel.Width = userDefinedPosition.Width;
-                hudElementViewModel.Height = userDefinedPosition.Height;
-                hudElementViewModel.Position = userDefinedPosition.Position;
-            }
-        }
-
-        private void DataDelete()
-        {
-            if (!_hudLayoutsSevice.Delete(CurrentLayout.Name))
-            {
-                return;
-            }
-
-            Layouts.Remove(CurrentLayout);
-            UpdateActiveLayout();
-        }
-
-        public void UpdateActiveLayout()
-        {
-            CurrentLayout = Layouts.FirstOrDefault();
-        }
-
-        private void SaveLayoutChanged(HudLayoutInfo layoutToSave)
-        {
-            if (layoutToSave == null)
-                return;
-            layoutToSave.HudStats = StatInfoObserveCollection.Select(x =>
-            {
-                var statInfoBreak = x as StatInfoBreak;
-
-                return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
-            }).ToList();
-        }
-
-        private void UpdateLayout(HudLayoutInfo layout)
-        {
-            if (layout == null)
-            {
-                return;
-            }
-
             // Get all chosen stats back to list
             foreach (var statInfo in StatInfoObserveCollection)
             {
@@ -850,49 +1013,106 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                if (statInfo.Stat == Stat.PlayerInfoIcon)
+                // we need to purge stat info from user changes before we return it to stat collection, 
+                // but we can't modify original stat, because it belongs to layout
+                var purgedStatInfo = statInfo.Clone();
+
+                if (purgedStatInfo.Stat != Stat.PlayerInfoIcon)
                 {
-                    statInfo.IsAvailable = HudViewType == HudViewType.Plain;
-                }
-                else
-                {
-                    statInfo.Reset();
-                    statInfo.Initialize();
+                    purgedStatInfo.Reset();
+                    purgedStatInfo.Initialize();
                 }
 
-                StatInfoCollection.Add(statInfo);
+                StatInfoCollection.Add(purgedStatInfo);
             }
 
             StatInfoObserveCollection.Clear();
+        }
 
-            foreach (var hudStat in layout.HudStats)
+        private void AddStatsToSelectedStatCollection()
+        {
+            skipOnStatInfoObserveCollectionChanged = true;
+
+            var stats = GetSelectedStats();
+
+            var statsToAdd = new List<StatInfo>();
+
+            foreach (var hudStat in stats)
             {
                 if (hudStat is StatInfoBreak)
                 {
-                    StatInfoObserveCollection.Add(hudStat);
+                    statsToAdd.Add(hudStat);
                     continue;
                 }
 
-                var existing =
-                    StatInfoCollection.FirstOrDefault(
-                        x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup.Name);
+                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat);
 
                 if (existing != null)
                 {
                     // we do not recover unexpected stats
-                    StatInfoObserveCollection.Add(hudStat);
-                    StatInfoCollection.Remove(existing);
+                    statsToAdd.Add(hudStat);
                 }
             }
+
+            if (statsToAdd.Count > 0)
+            {
+                StatInfoObserveCollection.AddRange(statsToAdd);
+            }
+
+            skipOnStatInfoObserveCollectionChanged = false;
         }
 
+        private IEnumerable<StatInfo> GetSelectedStats()
+        {
+            if (IsInDesignMode)
+            {
+                if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel)
+                {
+                    return (SelectedToolViewModel as IHudStatsToolViewModel).Stats.ToArray();
+                }
+
+                return new List<StatInfo>();
+            }
+
+            return CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+        }
+
+        private void HideStatsInStatCollection()
+        {
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel)
+            {
+                var statsSelectedToolViewModel = SelectedToolViewModel as IHudStatsToolViewModel;
+                HideStatsInStatCollection(statsSelectedToolViewModel.Stats);
+
+                return;
+            }
+
+            var statsToHide = CurrentLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
+
+            HideStatsInStatCollection(statsToHide);
+        }
+
+        private void HideStatsInStatCollection(IEnumerable<StatInfo> stats)
+        {
+            var statsToHide = (from layoutStat in stats
+                               join statInfo in StatInfoCollection on layoutStat.Stat equals statInfo.Stat
+                               select statInfo).ToArray();
+
+            StatInfoCollection.Where(x => x.IsNotVisible).ForEach(x => x.IsNotVisible = false);
+            statsToHide.ForEach(x => x.IsNotVisible = true);
+            stats.ForEach(x => x.IsNotVisible = false);
+        }
+
+        /// <summary>
+        /// Adds line break stat 
+        /// </summary>
         private void SpliterAdd()
         {
             StatInfoObserveCollection.Add(new StatInfoBreak());
         }
 
         /// <summary>
-        /// Open pop-up and initialize stat info settings
+        /// Opens pop-up and initialize stat info settings
         /// </summary>
         /// <param name="selectedStatInfo">Selected stat info</param>
         private void OpenStatsSettings(StatInfo selectedStatInfo)
@@ -901,7 +1121,9 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
-            var opacity = CurrentLayout?.HudOpacity ?? 0;
+
+            var opacity = CurrentLayout?.Opacity ?? 0;
+
             var hudStatSettingsViewModelInfo = new HudStatSettingsViewModelInfo
             {
                 SelectedStatInfo = selectedStatInfo,
@@ -917,7 +1139,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
-        /// Close pop-up and save data
+        /// Closes pop-up and save data
         /// </summary>
         private void SaveStatsSettings()
         {
@@ -931,7 +1153,9 @@ namespace DriveHUD.Application.ViewModels
             var statInfoToMerge = (from item in hudStatSettings.Items
                                    join statInfo in StatInfoObserveCollection on item.Id equals statInfo.Id
                                    select new { NewItem = item, OldItem = statInfo }).ToArray();
-            CurrentLayout.HudOpacity = hudStatSettings.HudOpacity;
+
+            CurrentLayout.Opacity = hudStatSettings.HudOpacity;
+
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
@@ -940,19 +1164,11 @@ namespace DriveHUD.Application.ViewModels
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
             }
-            CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
-            CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
 
-            if (CurrentLayout.IsDefault)
-            {
-                foreach (var table in HudTableViewModels.Where(t => t.TableType == CurrentTableType.TableType))
-                {
-                    table.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-                    table.Opacity = CurrentHudTableViewModel.Opacity;
-                }
-            }
+            HudElements.ForEach(e => e.Opacity = hudStatSettings.HudOpacity);
 
-            TableUpdated?.Invoke(this, EventArgs.Empty);
+            InitializePreview();
+
             ClosePopup();
         }
 
@@ -963,10 +1179,17 @@ namespace DriveHUD.Application.ViewModels
         private void OpenPlayerTypeStats(StatInfo selectedStatInfo)
         {
             if (StatInfoObserveCollection.Count == 0)
+            {
                 return;
+            }
+
             var hudPlayerTypes = CurrentLayout?.HudPlayerTypes;
+
             if (hudPlayerTypes == null)
+            {
                 return;
+            }
+
             var hudPlayerSettingsViewModelInfo = new HudPlayerSettingsViewModelInfo
             {
                 PlayerTypes = hudPlayerTypes.Select(x => x.Clone()),
@@ -1123,35 +1346,264 @@ namespace DriveHUD.Application.ViewModels
             ClosePopup();
         }
 
-        private void OnPreferredSeatChanged(PreferredSeatChangedEventArgs obj)
-        {
-            if (obj == null)
-            {
-                return;
-            }
-
-            foreach (var seat in CurrentHudTableViewModel.TableSeatAreaCollection.Where(x => x.SeatNumber != obj.SeatNumber))
-            {
-                seat.IsPreferredSeat = false;
-            }
-        }
-
         internal void RefreshHudTable()
         {
             this.RaisePropertyChanged(nameof(CurrentTableType));
         }
 
-
-        private void OnUpdateHudRaised(UpdateHudEventArgs obj)
+        private void InitializeDesigner()
         {
-            if (obj == null)
-                return;
-
-            CurrentHudTableViewModel.HudElements.ForEach(x =>
+            if (IsInDesignMode)
             {
-                x.Height = obj.Height;
-                x.Width = obj.Width;
-            });
+                return;
+            }
+
+            if (designerDisposables != null)
+            {
+                designerDisposables.Dispose();
+            }
+
+            designerDisposables = new CompositeDisposable();
+
+            cachedCurrentLayout = CurrentLayout;
+
+            var clonedLayout = CurrentLayout.Clone();
+            Layouts.Add(clonedLayout);
+            CurrentLayout = clonedLayout;
+
+            DesignerHudElementViewModel = HudElements.FirstOrDefault(x => x.Seat == HudDefaultSettings.DesignerDefaultSeat);
+
+            if (DesignerHudElementViewModel != null)
+            {
+                // need to update all UI positions, because positions could be changed
+                var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+                var baseStats = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(x => x.BaseStat != null)
+                    .Select(x => x.BaseStat.Stat).ToArray();
+
+                foreach (var tool in DesignerHudElementViewModel.Tools)
+                {
+                    var uiPositions = factory.GetHudUIPositions(EnumTableType.HU, CurrentTableType, tool.Position);
+                    tool.SetPositions(uiPositions);
+                    tool.InitializePositions();
+
+                    if (tool is IHudStatsToolViewModel)
+                    {
+                        (tool as IHudStatsToolViewModel).Stats.ForEach(x =>
+                        {
+                            if (baseStats.Contains(x.Stat))
+                            {
+                                x.HasAttachedTools = true;
+                            }
+                        });
+                    }
+                }
+
+                HudElements = new ReactiveList<HudElementViewModel>
+                {
+                    DesignerHudElementViewModel
+                };
+
+                DesignerHudElementViewModel.Tools.ChangeTrackingEnabled = true;
+
+                var disposable = DesignerHudElementViewModel.Tools.ItemChanged
+                        .Where(x => x.PropertyName.Equals(nameof(HudBaseToolViewModel.IsSelected)))
+                        .Subscribe(x =>
+                        {
+                            if (x.Sender.IsSelected)
+                            {
+                                SelectedToolViewModel = x.Sender;
+                            }
+                            else
+                            {
+                                SelectedToolViewModel = null;
+                                InitializePreview();
+                            }
+
+                            UpdateStatsCollections();
+                        });
+
+                designerDisposables.Add(disposable);
+            }
+
+            IsInDesignMode = true;
+        }
+
+        /// <summary>
+        /// Adds designer tool on table
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <param name="position">Position of tool</param>
+        private void AddTool(HudDesignerToolType toolType, Point position, object source)
+        {
+            if (DesignerHudElementViewModel == null)
+            {
+                return;
+            }
+
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            var creationInfo = new HudToolCreationInfo
+            {
+                HudElement = DesignerHudElementViewModel,
+                Position = position,
+                TableType = CurrentTableType,
+                ToolType = toolType,
+                Layout = CurrentLayout,
+                Source = source
+            };
+
+            var toolViewModel = factory.CreateTool(creationInfo);
+
+            if (toolViewModel == null)
+            {
+                return;
+            }
+
+            DesignerHudElementViewModel.Tools.Add(toolViewModel);
+
+            toolViewModel.IsSelected = true;
+
+            if (toolViewModel is IHudBaseStatToolViewModel)
+            {
+                var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
+
+                if (hudBaseStatToolViewModel.BaseStat != null)
+                {
+                    var statsToUpdate = DesignerHudElementViewModel.Tools
+                        .OfType<IHudStatsToolViewModel>()
+                        .Where(x => !(x is IHudBaseStatToolViewModel))
+                        .SelectMany(x => x.Stats)
+                        .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                        .ToArray();
+
+                    statsToUpdate.ForEach(x => x.HasAttachedTools = true);
+                }
+            }
+
+            InitializePreview();
+        }
+
+        /// <summary>
+        /// Check if tool can be added
+        /// </summary>
+        /// <param name="toolType">Type of tool</param>
+        /// <returns>True if tool can be added, otherwise - false</returns>
+        private bool CanAddTool(HudDesignerToolType toolType)
+        {
+            return IsInDesignMode && DesignerHudElementViewModel != null;
+        }
+
+        /// <summary>
+        /// Removes layout tool from table 
+        /// </summary>
+        /// <param name="toolViewModel">Tool to remove</param>
+        private void RemoveTool(HudBaseToolViewModel toolViewModel)
+        {
+            if (!IsInDesignMode || DesignerHudElementViewModel == null || CurrentLayout == null || toolViewModel == null)
+            {
+                return;
+            }
+
+            DesignerHudElementViewModel.Tools.Remove(toolViewModel);
+            CurrentLayout.LayoutTools.Remove(toolViewModel.Tool);
+
+            InitializePreview();
+
+            // updates all tools which might have stats linked to base stat of deleted tool
+            if (toolViewModel is IHudBaseStatToolViewModel)
+            {
+                var hudGaugeIndicatorViewModel = toolViewModel as IHudBaseStatToolViewModel;
+
+                if (hudGaugeIndicatorViewModel.BaseStat == null)
+                {
+                    return;
+                }
+
+                var remainingBaseStatTools = DesignerHudElementViewModel.Tools
+                    .OfType<IHudBaseStatToolViewModel>()
+                    .Where(x => x.BaseStat != null && x.BaseStat.Stat == hudGaugeIndicatorViewModel.BaseStat.Stat)
+                    .Count();
+
+                if (remainingBaseStatTools > 0)
+                {
+                    return;
+                }
+
+                var statInfos = DesignerHudElementViewModel.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .SelectMany(x => x.Stats)
+                    .Where(x => x.Stat == hudGaugeIndicatorViewModel.BaseStat.Stat)
+                    .ToArray();
+
+                statInfos.ForEach(x => x.HasAttachedTools = false);
+
+                return;
+            }
+
+            var statToolViewModel = toolViewModel as IHudStatsToolViewModel;
+
+            if (statToolViewModel == null)
+            {
+                return;
+            }
+
+            var baseStatToolsToDelete = (from stat in statToolViewModel.Stats
+                                         join baseStatTool in DesignerHudElementViewModel.Tools.OfType<IHudBaseStatToolViewModel>().Where(x => x.BaseStat != null)
+                                            on stat.Stat equals baseStatTool.BaseStat.Stat
+                                         select baseStatTool).ToArray();
+
+            baseStatToolsToDelete.ForEach(x => RemoveTool(x as HudBaseToolViewModel));
+        }
+
+        /// <summary>
+        /// Saves current design
+        /// </summary>
+        private void SaveDesign()
+        {
+            // need to update all UI positions, because positions could be changed
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            foreach (var tool in DesignerHudElementViewModel.Tools)
+            {
+                var uiPositions = factory.GetHudUIPositions(CurrentTableType, EnumTableType.HU, tool.Position);
+                tool.SavePositions(uiPositions);
+            }
+
+            cachedCurrentLayout.HudPlayerTypes = CurrentLayout.HudPlayerTypes;
+            cachedCurrentLayout.HudBumperStickerTypes = CurrentLayout.HudBumperStickerTypes;
+            cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;
+
+            CloseDesigner();
+        }
+
+        /// <summary>
+        /// Closes designer
+        /// </summary>
+        private void CloseDesigner()
+        {
+            DesignerHudElementViewModel.Tools
+                .OfType<IHudStatsToolViewModel>()
+                .SelectMany(x => x.Stats)
+                .ForEach(x =>
+                {
+                    x.HasAttachedTools = false;
+                    x.IsSelected = false;
+                });
+
+            DesignerHudElementViewModel = null;
+
+            Layouts.Remove(CurrentLayout);
+            CurrentLayout = cachedCurrentLayout;
+            cachedCurrentLayout = null;
+
+            SelectedToolViewModel = null;
+
+            IsInDesignMode = false;
+
+            designerDisposables.Dispose();
         }
 
         #endregion

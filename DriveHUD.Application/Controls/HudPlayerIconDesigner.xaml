@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Controls.HudPlayerIconDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
+    Width="{Binding Width}"
+    Height="{Binding Height}"
+    Opacity="{Binding Opacity}">
+
+    <UserControl.Resources>
+        <ResourceDictionary
+            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudPlayerIconStyles.xaml" />
+    </UserControl.Resources>
+
+    <Grid>
+
+        <Viewbox
+            x:Name="vbMain"
+            Stretch="Uniform">
+
+            <Border
+                dh:DragDrop.IsDragTarget="True"
+                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                Style="{StaticResource IconBorderStyle}">
+                <Border
+                    Style="{StaticResource IconInnerGlowBorderStyle}">
+                    <Image
+                        Cursor="Hand"
+                        Width="22"
+                        Height="22">
+                        <Image.Style>
+                            <Style
+                                TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding Parent.IsDefaultImage}"
+                                        Value="true">
+                                        <Setter
+                                            Property="Source">
+                                            <Setter.Value>
+                                                <DrawingImage>
+                                                    <DrawingImage.Drawing>
+                                                        <DrawingGroup>
+                                                            <DrawingGroup.Children>
+                                                                <GeometryDrawing
+                                                                    Brush="#FFEEEEEE"
+                                                                    Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z " />
+                                                                <GeometryDrawing
+                                                                    Brush="#FFEEEEEE"
+                                                                    Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z " />
+                                                                <GeometryDrawing
+                                                                    Brush="#FFEEEEEE"
+                                                                    Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z " />
+                                                            </DrawingGroup.Children>
+                                                        </DrawingGroup>
+                                                    </DrawingImage.Drawing>
+                                                </DrawingImage>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger
+                                        Binding="{Binding Parent.IsDefaultImage}"
+                                        Value="false">
+                                        <Setter
+                                            Property="Source"
+                                            Value="{Binding Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                        <Image.InputBindings>
+                            <MouseBinding
+                                MouseAction="LeftDoubleClick"
+                                Command="{Binding DataContext.ToolClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+                                CommandParameter="{Binding}" />
+                        </Image.InputBindings>
+                    </Image>
+                </Border>
+            </Border>
+
+        </Viewbox>
+
+    </Grid>
+</UserControl>

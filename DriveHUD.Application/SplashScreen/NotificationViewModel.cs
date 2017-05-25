@@ -24,8 +24,9 @@ namespace DriveHUD.Application.SplashScreen
     {
         public NotificationViewModel()
         {
-            ConfirmCommand = new RelayCommand(() => ConfirmButtonAction?.Invoke());
-            CancelCommand = new RelayCommand(() => CancelButtonAction?.Invoke());
+            Button1Command = new RelayCommand(() => Button1Action?.Invoke());
+            Button2Command = new RelayCommand(() => Button2Action?.Invoke());
+            Button3Command = new RelayCommand(() => Button3Action?.Invoke());
         }
 
         #region Properties
@@ -70,82 +71,122 @@ namespace DriveHUD.Application.SplashScreen
             }
         }
 
-        private string confirmButtonText;
+        private string button1Text;
 
-        public string ConfirmButtonText
+        public string Button1Text
         {
             get
             {
-                return confirmButtonText;
+                return button1Text;
             }
             set
             {
-                if (confirmButtonText == value)
+                if (button1Text == value)
                 {
                     return;
                 }
 
-                confirmButtonText = value;
+                button1Text = value;
                 OnPropertyChanged();
             }
         }
 
-        private Action confirmButtonAction;
+        private Action button1Action;
 
-        public Action ConfirmButtonAction
+        public Action Button1Action
         {
             get
             {
-                return confirmButtonAction;
+                return button1Action;
             }
             set
             {
-                if (confirmButtonAction == value)
+                if (button1Action == value)
                 {
                     return;
                 }
 
-                confirmButtonAction = value;
+                button1Action = value;
                 OnPropertyChanged();
             }
         }
 
-        private string cancelButtonText;
+        private string button2Text;
 
-        public string CancelButtonText
+        public string Button2Text
         {
             get
             {
-                return cancelButtonText;
+                return button2Text;
             }
             set
             {
-                if (cancelButtonText == value)
+                if (button2Text == value)
                 {
                     return;
                 }
 
-                cancelButtonText = value;
+                button2Text = value;
                 OnPropertyChanged();
             }
         }
 
-        private Action cancelButtonAction;
+        private Action button2Action;
 
-        public Action CancelButtonAction
+        public Action Button2Action
         {
             get
             {
-                return cancelButtonAction;
+                return button2Action;
             }
             set
             {
-                if (confirmButtonAction == value)
+                if (button2Action == value)
                 {
                     return;
                 }
 
-                cancelButtonAction = value;
+                button2Action = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string button3Text;
+
+        public string Button3Text
+        {
+            get
+            {
+                return button3Text;
+            }
+            set
+            {
+                if (button3Text == value)
+                {
+                    return;
+                }
+
+                button3Text = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Action button3Action;
+
+        public Action Button3Action
+        {
+            get
+            {
+                return button3Action;
+            }
+            set
+            {
+                if (button3Action == value)
+                {
+                    return;
+                }
+
+                button3Action = value;
                 OnPropertyChanged();
             }
         }
@@ -154,9 +195,11 @@ namespace DriveHUD.Application.SplashScreen
 
         #region Commands
 
-        public ICommand ConfirmCommand { get; private set; }
+        public ICommand Button1Command { get; private set; }
 
-        public ICommand CancelCommand { get; private set; }
+        public ICommand Button2Command { get; private set; }
+
+        public ICommand Button3Command { get; private set; }
 
         #endregion
     }

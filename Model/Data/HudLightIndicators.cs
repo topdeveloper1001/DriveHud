@@ -10,13 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Model.Enums;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using DriveHUD.Common.Utils;
 
 namespace Model.Data
 {
@@ -696,71 +697,6 @@ namespace Model.Data
             }
         }
 
-        public virtual StatDto ThreeBetInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInBB,
-                    Occured = Source.DidThreeBetInBb,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInBTN,
-                    Occured = Source.DidThreeBetInBtn,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInCO,
-                    Occured = Source.DidThreeBetInCo,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInMP,
-                    Occured = Source.DidThreeBetInMp,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInSB,
-                    Occured = Source.DidThreeBetInSb,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
         public virtual StatDto FourBetInBBObject
         {
             get
@@ -1237,55 +1173,7 @@ namespace Model.Data
 
         #endregion
 
-        #region Vpip
-
-        public virtual decimal VPIP_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.EP, Source.PositionTotal?.EP);
-            }
-        }
-
-        public virtual decimal VPIP_MP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.MP, Source.PositionTotal?.MP);
-            }
-        }
-
-        public virtual decimal VPIP_CO
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.CO, Source.PositionTotal?.CO);
-            }
-        }
-
-        public virtual decimal VPIP_BN
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.BN, Source.PositionTotal?.BN);
-            }
-        }
-
-        public virtual decimal VPIP_SB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.SB, Source.PositionTotal?.SB);
-            }
-        }
-
-        public virtual decimal VPIP_BB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.BB, Source.PositionTotal?.BB);
-            }
-        }
+        #region Positional VPIP
 
         public virtual StatDto VPIP_EPObject
         {
@@ -1367,50 +1255,7 @@ namespace Model.Data
 
         #endregion
 
-        #region ColdCall
-
-        public virtual decimal ColdCall_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.EP, Source.PositionCouldColdCall?.EP);
-            }
-        }
-        public virtual decimal ColdCall_MP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.MP, Source.PositionCouldColdCall?.MP);
-            }
-        }
-        public virtual decimal ColdCall_CO
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.CO, Source.PositionCouldColdCall?.CO);
-            }
-        }
-        public virtual decimal ColdCall_BN
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.BN, Source.PositionCouldColdCall?.BN);
-            }
-        }
-        public virtual decimal ColdCall_SB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.SB, Source.PositionCouldColdCall?.SB);
-            }
-        }
-        public virtual decimal ColdCall_BB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.BB, Source.PositionCouldColdCall?.BB);
-            }
-        }
+        #region Positional Cold Call
 
         public virtual StatDto ColdCall_EPObject
         {
@@ -1424,6 +1269,7 @@ namespace Model.Data
                 };
             }
         }
+
         public virtual StatDto ColdCall_MPObject
         {
             get
@@ -1436,6 +1282,7 @@ namespace Model.Data
                 };
             }
         }
+
         public virtual StatDto ColdCall_COObject
         {
             get
@@ -1448,6 +1295,7 @@ namespace Model.Data
                 };
             }
         }
+
         public virtual StatDto ColdCall_BNObject
         {
             get
@@ -1460,6 +1308,7 @@ namespace Model.Data
                 };
             }
         }
+
         public virtual StatDto ColdCall_SBObject
         {
             get
@@ -1472,6 +1321,7 @@ namespace Model.Data
                 };
             }
         }
+
         public virtual StatDto ColdCall_BBObject
         {
             get
@@ -1484,85 +1334,7 @@ namespace Model.Data
                 };
             }
         }
-
-        public virtual StatDto ColdCallInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInBB,
-                    Occured = Source.DidColdCallInBb,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInBTN,
-                    Occured = Source.DidColdCallInBtn,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInCO,
-                    Occured = Source.DidColdCallInCo,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInMP,
-                    Occured = Source.DidColdCallInMp,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInEPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInEP,
-                    Occured = Source.DidColdCallInEp,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInSB,
-                    Occured = Source.DidColdCallInSb,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
+        
         public virtual StatDto ColdCallThreeBetObject
         {
             get
@@ -1630,35 +1402,7 @@ namespace Model.Data
 
         #endregion
 
-        #region 3Bet
-
-        public virtual decimal ThreeBet_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidThreeBet?.EP, Source.PositionCouldColdCall?.EP);
-            }
-        }
-        public virtual decimal ThreeBet_MP
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.MP, Source.PositionCouldThreeBet?.MP); }
-        }
-        public virtual decimal ThreeBet_CO
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.CO, Source.PositionCouldThreeBet?.CO); }
-        }
-        public virtual decimal ThreeBet_BN
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.BN, Source.PositionCouldThreeBet?.BN); }
-        }
-        public virtual decimal ThreeBet_SB
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.SB, Source.PositionCouldThreeBet?.SB); }
-        }
-        public virtual decimal ThreeBet_BB
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.BB, Source.PositionCouldThreeBet?.BB); }
-        }
+        #region Positional 3-Bet
 
         public virtual StatDto ThreeBet_EPObject
         {
@@ -1798,28 +1542,9 @@ namespace Model.Data
             }
         }
 
-        private IList<decimal> moneyWonCollection;
-
-        public virtual IList<decimal> MoneyWonCollection
-        {
-            get
-            {
-                return moneyWonCollection;
-            }
-            set
-            {
-                if (ReferenceEquals(moneyWonCollection, value))
-                {
-                    return;
-                }
-
-                moneyWonCollection = value;
-            }
-        }
-
         #endregion
 
-        #region Recent Agg
+        #region Recent Aggressive
 
         public virtual decimal RecentAggPr
         {
@@ -1847,6 +1572,29 @@ namespace Model.Data
 
         #endregion
 
+        #region  Session stats 
+
+        private Dictionary<Stat, IList<decimal>> statsSessionCollection;
+
+        public Dictionary<Stat, IList<decimal>> StatsSessionCollection
+        {
+            get
+            {
+                return statsSessionCollection;
+            }
+            set
+            {
+                if (ReferenceEquals(statsSessionCollection, value))
+                {
+                    return;
+                }
+
+                statsSessionCollection = value;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -1855,42 +1603,64 @@ namespace Model.Data
         {
             base.AddStatistic(statistic);
 
+            AddCards(statistic);
+            AddThreeBetCards(statistic);
+            AddStatsToSession(statistic);
+            AddRecentAgg(statistic);
+        }
+
+        protected virtual void AddCards(Playerstatistic statistic)
+        {
             if (CardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards))
             {
                 CardsList.Add(statistic.Cards);
             }
+        }
 
+        protected virtual void AddThreeBetCards(Playerstatistic statistic)
+        {
             if (threeBetCardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards) && statistic.Didthreebet != 0)
             {
                 threeBetCardsList.Add(statistic.Cards);
             }
+        }
 
-            if (moneyWonCollection != null)
-            {
-                moneyWonCollection.Add(statistic.NetWon);
-            }
-
+        protected virtual void AddRecentAgg(Playerstatistic statistic)
+        {
             if (recentAggList != null)
             {
                 recentAggList.Add(new Tuple<int, int>(statistic.Totalbets, statistic.Totalpostflopstreetsplayed));
             }
         }
 
-        #endregion
-
-        #region Help methods
-
-        protected decimal GetPercentage(decimal? actual, decimal? possible)
+        public virtual void AddStatsToSession(Playerstatistic statistic)
         {
-            if (TotalHands == 0)
-                return 0;
+            if (statsSessionCollection == null)
+            {
+                return;
+            }
 
-            if (!possible.HasValue || !actual.HasValue || possible == 0)
-                return 0;
+            var allStats = StatInfoHelper.GetAllStats();
 
-            return (actual.Value / possible.Value) * 100;
+            foreach (var statInfo in allStats)
+            {
+                if (string.IsNullOrEmpty(statInfo.PropertyName))
+                {
+                    continue;
+                }
+
+                if (!statsSessionCollection.ContainsKey(statInfo.Stat))
+                {
+                    statsSessionCollection.Add(statInfo.Stat, new List<decimal>());
+                }
+
+                var statValue = (decimal)ReflectionHelper.GetMemberValue(this, statInfo.PropertyName);
+
+                statsSessionCollection[statInfo.Stat].Add(statValue);
+            }
+
         }
 
-        #endregion
+        #endregion       
     }
 }

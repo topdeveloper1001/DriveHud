@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Entities;
 using Microsoft.Practices.Unity;
@@ -29,9 +30,10 @@ namespace DriveHUD.Application
                 throw new ArgumentNullException(nameof(container));
             }
 
+            // Panel services
             container.RegisterType<IHudPanelService, HudPanelService>();
-            container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Ignition.ToString());
-            container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bodog.ToString());
+            container.RegisterType<IHudPanelService, HudPanelService>(EnumPokerSites.Ignition.ToString());
+            container.RegisterType<IHudPanelService, HudPanelService>(EnumPokerSites.Bodog.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.BetOnline.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.SportsBetting.ToString());
             container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.TigerGaming.ToString());
@@ -39,6 +41,20 @@ namespace DriveHUD.Application
             container.RegisterType<IHudPanelService, Poker888HudPanelService>(EnumPokerSites.Poker888.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.AmericasCardroom.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.BlackChipPoker.ToString());
+            container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.WinningPokerNetwork.ToString());
+
+            // Position Providers
+            container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.Unknown.ToString());
+            container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.BetOnline.ToString());
+            container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.TigerGaming.ToString());
+            container.RegisterType<IPositionProvider, CommonPositionProvider>(EnumPokerSites.SportsBetting.ToString());
+            container.RegisterType<IPositionProvider, IgnitionPositionProvider>(EnumPokerSites.Ignition.ToString());
+            container.RegisterType<IPositionProvider, IgnitionPositionProvider>(EnumPokerSites.Bodog.ToString());
+            container.RegisterType<IPositionProvider, Poker888PositionProvider>(EnumPokerSites.Poker888.ToString());
+            container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(EnumPokerSites.PokerStars.ToString());
+            container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.WinningPokerNetwork.ToString());
+            container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.AmericasCardroom.ToString());
+            container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.BlackChipPoker.ToString());
         }
     }
 }

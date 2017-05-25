@@ -548,6 +548,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Stats.
+        /// </summary>
+        internal static string Common_Hud_AllStats {
+            get {
+                return ResourceManager.GetString("Common_Hud_AllStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Size to All.
         /// </summary>
         internal static string Common_Hud_ApplySizeToAll {
@@ -571,6 +580,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Delete {
             get {
                 return ResourceManager.GetString("Common_Hud_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate.
+        /// </summary>
+        internal static string Common_Hud_Duplicate {
+            get {
+                return ResourceManager.GetString("Common_Hud_Duplicate", resourceCulture);
             }
         }
         
@@ -620,6 +638,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Preview.
+        /// </summary>
+        internal static string Common_Hud_Preview {
+            get {
+                return ResourceManager.GetString("Common_Hud_Preview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string Common_Hud_Save {
@@ -643,6 +670,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_TableLayout {
             get {
                 return ResourceManager.GetString("Common_Hud_TableLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Apply {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Delete {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotate.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Rotate {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Rotate", resourceCulture);
             }
         }
         
@@ -859,6 +913,105 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudPlayerType_StatsEditPlayer {
             get {
                 return ResourceManager.GetString("Common_HudPlayerType_StatsEditPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-Stat DH Box.
+        /// </summary>
+        internal static string Common_HudSideBar_4StatDHBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_4StatDHBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Break Line.
+        /// </summary>
+        internal static string Common_HudSideBar_BreakLine {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BreakLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bumper Stickers.
+        /// </summary>
+        internal static string Common_HudSideBar_BumperStickersTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BumperStickersTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line Bar Graphs.
+        /// </summary>
+        internal static string Common_HudSideBar_GaugeIndicatorTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GaugeIndicatorTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graph.
+        /// </summary>
+        internal static string Common_HudSideBar_GraphTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GraphTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Map.
+        /// </summary>
+        internal static string Common_HudSideBar_HeatMapTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_HeatMapTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plain Stat Box.
+        /// </summary>
+        internal static string Common_HudSideBar_PlainStatBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlainStatBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player Profile Icon.
+        /// </summary>
+        internal static string Common_HudSideBar_PlayerProfileIconTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlayerProfileIconTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Box.
+        /// </summary>
+        internal static string Common_HudSideBar_TextBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TextBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tilt Meter.
+        /// </summary>
+        internal static string Common_HudSideBar_TiltMeterTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TiltMeterTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Design Elements.
+        /// </summary>
+        internal static string Common_HudSideBar_Title {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_Title", resourceCulture);
             }
         }
         

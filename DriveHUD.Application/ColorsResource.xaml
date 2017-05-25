@@ -47,9 +47,13 @@
     <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
 
     <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
+    <Color x:Key="PopupBackgroundColor">#191a1e</Color>
+
+    <Color x:Key="XButtonColor">#b81d1d</Color>
+    <SolidColorBrush x:Key="XButtonColorBrush" Color="{StaticResource XButtonColor}" />
 
     <!-- Popup colors -->
-    <SolidColorBrush x:Key="PopupBackground" Color="#191a1e" />
+    <SolidColorBrush x:Key="PopupBackground" Color="{StaticResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="MouseOverForegroundBrush" Color="{StaticResource MouseOverForegroundColor}" />
 
     <!--Control-specific resources.-->

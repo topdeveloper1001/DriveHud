@@ -25,6 +25,7 @@ using System.Windows.Controls;
 using Telerik.Windows;
 using System.ComponentModel;
 using Telerik.Windows.Controls;
+using DriveHUD.Common.Linq;
 
 namespace DriveHUD.Application.Views
 {
@@ -33,70 +34,87 @@ namespace DriveHUD.Application.Views
     /// </summary>
     public partial class HudWindow : Window, IDisposable
     {
-        private IHudPanelService hudPanelCreator;
+        private IHudPanelService hudPanelService;
 
-        private Dictionary<int, Point> panelOffsets;
+        private Dictionary<HudToolKey, Point> panelOffsets;
 
         private Point? trackerConditionsMeterPosition;
         private Point trackerConditionsMeterPositionOffset;
 
         private HudWindowViewModel ViewModel
         {
-            get { return DataContext as HudWindowViewModel; }
+            get
+            {
+                return DataContext as HudWindowViewModel;
+            }
         }
 
         public HudWindow()
         {
             InitializeComponent();
 
-            panelOffsets = new Dictionary<int, Point>();
+            panelOffsets = new Dictionary<HudToolKey, Point>();
             dgCanvas.DragEnded += DgCanvas_DragEnded;
         }
 
         public HudLayout Layout { get; set; }
 
-        public double InitWidth { get; set; }
+        public double BaseWidth { get; set; }
 
-        public double InitHeight { get; set; }
+        public double BaseHeight { get; set; }
 
-        public double XFraction
+        public double ScaleX
         {
-            get { return Width / InitWidth; }
+            get { return Width / BaseWidth; }
         }
 
-        public double YFraction
+        public double ScaleY
         {
-            get { return Height / InitHeight; }
+            get { return Height / BaseHeight; }
         }
 
-        public void Init(HudLayout layout)
+        public void Initialize(HudLayout layout)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
+            // clean old data
             Layout?.Cleanup();
+
             Layout = layout;
-            ViewModel?.SetLayout(layout);
 
             if (ViewModel != null)
             {
-                ViewModel.GameType = layout.GameType;
-                ViewModel.TableType = layout.TableType;
+                ViewModel.SetLayout(layout);
+
+                if (ViewModel.RefreshHud == null)
+                {
+                    ViewModel.RefreshHud = Refresh;
+                }
             }
 
-            if (layout != null)
+            // set parents for tools
+            Layout.ListHUDPlayer.Select(x => x.HudElement).ForEach(h => h.Tools.ForEach(t => t.Parent = h));
+
+            if (hudPanelService == null)
             {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.PokerSite.ToString());
-            }
-            else
-            {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>();
+                hudPanelService = layout != null ?
+                    ServiceLocator.Current.GetInstance<IHudPanelService>(layout.PokerSite.ToString()) :
+                    ServiceLocator.Current.GetInstance<IHudPanelService>();
             }
 
+            // remove old elements, but remember positions
             foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
             {
-                var hudElementViewModel = panel.DataContext as HudElementViewModel;
+                var toolViewModel = panel.DataContext as HudBaseToolViewModel;
 
-                if (hudElementViewModel != null)
+                var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+                if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
                 {
-                    panelOffsets[GetPanelOffsetsKey(hudElementViewModel)] = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
+                    panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
                 }
 
                 var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
@@ -111,29 +129,87 @@ namespace DriveHUD.Application.Views
 
             dgCanvas.UpdateLayout();
 
+            // add new elements
             foreach (var playerHudContent in Layout.ListHUDPlayer)
             {
-                if (playerHudContent.HudElement == null || string.IsNullOrEmpty(playerHudContent.Name))
+                if (playerHudContent.HudElement == null || string.IsNullOrEmpty(playerHudContent.Name) ||
+                    playerHudContent.HudElement.Tools == null || playerHudContent.HudElement.Tools.Count < 1)
                 {
                     continue;
                 }
 
-                if (!panelOffsets.ContainsKey(GetPanelOffsetsKey(playerHudContent.HudElement)))
+                foreach (var toolViewModel in playerHudContent.HudElement.Tools)
                 {
-                    panelOffsets.Add(GetPanelOffsetsKey(playerHudContent.HudElement), new Point(0, 0));
-                }
-                else
-                {
-                    playerHudContent.HudElement.OffsetX = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].X;
-                    playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
-                }
+                    var toolKey = HudToolKey.BuildKey(toolViewModel);
 
-                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudViewType);
+                    if (!panelOffsets.ContainsKey(toolKey))
+                    {
+                        panelOffsets.Add(toolKey, new Point(0, 0));
+                    }
+                    else
+                    {
+                        toolViewModel.OffsetX = panelOffsets[toolKey].X;
+                        toolViewModel.OffsetY = panelOffsets[toolKey].Y;
+                    }
 
-                dgCanvas.Children.Add(panel);
+                    var panel = hudPanelService.Create(toolViewModel);
+
+                    if (panel != null)
+                    {
+                        dgCanvas.Children.Add(panel);
+                    }
+                }
             }
 
             BuildTrackConditionsMeter(layout.HudTrackConditionsMeter);
+        }
+
+        public void Refresh()
+        {
+            if (BaseHeight == 0 || BaseWidth == 0)
+            {
+                var initialSizes = hudPanelService.GetInitialTableSize();
+
+                BaseWidth = initialSizes.Item1;
+                BaseHeight = initialSizes.Item2;
+            }
+
+            dgCanvas.XFraction = ScaleX;
+            dgCanvas.YFraction = ScaleY;
+
+            foreach (var hudPanel in dgCanvas.Children.OfType<FrameworkElement>())
+            {
+                if (hudPanel is TrackConditionsMeterView && trackerConditionsMeterPosition != null)
+                {
+                    var hudElementViewModel = hudPanel.DataContext as IHudWindowElement;
+
+                    trackerConditionsMeterPositionOffset = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
+
+                    var trackerXPosition = trackerConditionsMeterPositionOffset.X != 0 ? trackerConditionsMeterPositionOffset.X : trackerConditionsMeterPosition.Value.X;
+                    var trackerYPosition = trackerConditionsMeterPositionOffset.Y != 0 ? trackerConditionsMeterPositionOffset.Y : trackerConditionsMeterPosition.Value.Y;
+
+                    Canvas.SetLeft(hudPanel, trackerXPosition * ScaleX);
+                    Canvas.SetTop(hudPanel, trackerYPosition * ScaleY);
+                    continue;
+                }
+
+                var toolViewModel = hudPanel.DataContext as HudBaseToolViewModel;
+
+                var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+                if (toolViewModel != null)
+                {
+                    panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+                }
+
+                hudPanel.Width = toolViewModel.Width * ScaleX;
+                hudPanel.Height = toolViewModel.Height != double.NaN ? toolViewModel.Height * ScaleY : double.NaN;
+
+                var positions = hudPanelService.CalculatePositions(toolViewModel, this);
+
+                Canvas.SetLeft(hudPanel, positions.Item1);
+                Canvas.SetTop(hudPanel, positions.Item2);
+            }
         }
 
         public void Dispose()
@@ -153,74 +229,13 @@ namespace DriveHUD.Application.Views
             GC.Collect();
         }
 
-        public void Update()
+        public Point GetPanelOffset(HudBaseToolViewModel toolViewModel)
         {
-            if (InitHeight == 0 || InitWidth == 0)
+            var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
             {
-                var initialSizes = hudPanelCreator.GetInitialTableSize();
-
-                InitWidth = initialSizes.Item1;
-                InitHeight = initialSizes.Item2;
-            }
-
-            dgCanvas.XFraction = XFraction;
-            dgCanvas.YFraction = YFraction;
-
-            foreach (var hudPanel in dgCanvas.Children.OfType<FrameworkElement>())
-            {
-                if (hudPanel is TrackConditionsMeterView && trackerConditionsMeterPosition != null)
-                {
-                    var hudElementViewModel = hudPanel.DataContext as IHudWindowElement;
-
-                    trackerConditionsMeterPositionOffset = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
-
-                    var trackerXPosition = trackerConditionsMeterPositionOffset.X != 0 ? trackerConditionsMeterPositionOffset.X : trackerConditionsMeterPosition.Value.X;
-                    var trackerYPosition = trackerConditionsMeterPositionOffset.Y != 0 ? trackerConditionsMeterPositionOffset.Y : trackerConditionsMeterPosition.Value.Y;
-
-                    Canvas.SetLeft(hudPanel, trackerXPosition * XFraction);
-                    Canvas.SetTop(hudPanel, trackerYPosition * YFraction);
-                    continue;
-                }
-
-                var viewModel = hudPanel.DataContext as HudElementViewModel;
-
-                if (viewModel != null)
-                {
-                    panelOffsets[GetPanelOffsetsKey(viewModel)] = new Point(viewModel.OffsetX, viewModel.OffsetY);
-                }
-
-                if (hudPanel is HudRichPanel)
-                {
-                    var hudRichPanel = hudPanel as HudRichPanel;
-
-                    hudRichPanel.Height = double.NaN;
-                    hudRichPanel.Width = viewModel.Width * XFraction;
-
-                    hudRichPanel.vbMain.Height = double.NaN;
-                    hudRichPanel.vbMain.Width = viewModel.Width * XFraction;
-                    hudRichPanel.Opacity = viewModel.Opacity;
-                }
-
-                if (hudPanel is HudPanel)
-                {
-                    hudPanel.Height = double.NaN;
-                    hudPanel.Width = viewModel.Width * XFraction;
-                    hudPanel.Opacity = viewModel.Opacity;
-                }
-
-                var positions = hudPanelCreator.CalculatePositions(viewModel, this);
-
-
-                Canvas.SetLeft(hudPanel, positions.Item1);
-                Canvas.SetTop(hudPanel, positions.Item2);
-            }
-        }
-
-        public Point GetPanelOffset(HudElementViewModel viewModel)
-        {
-            if (viewModel != null && panelOffsets.ContainsKey(GetPanelOffsetsKey(viewModel)))
-            {
-                return panelOffsets[GetPanelOffsetsKey(viewModel)];
+                return panelOffsets[toolKey];
             }
 
             return new Point(0, 0);
@@ -257,7 +272,7 @@ namespace DriveHUD.Application.Views
             }
             else
             {
-                var positions = hudPanelCreator.GetInitialTrackConditionMeterPosition();
+                var positions = hudPanelService.GetInitialTrackConditionMeterPosition();
 
                 Canvas.SetLeft(trackConditionView, positions.Item1);
                 Canvas.SetTop(trackConditionView, positions.Item2);
@@ -274,7 +289,7 @@ namespace DriveHUD.Application.Views
                 return 0;
             }
 
-            return viewModel.Seat + (viewModel.HudType == HudType.Default ? 0 : 100);
+            return viewModel.Seat;
         }
 
         private void SaveHudPositions_Click(object sender, RadRoutedEventArgs e)
@@ -295,20 +310,21 @@ namespace DriveHUD.Application.Views
                     HudPositions = new List<HudPositionContract>()
                 };
 
-                var hudPanels = dgCanvas.Children.OfType<FrameworkElement>()
-                    .Where(x => x != null && !(x is TrackConditionsMeterView) && (x.DataContext is HudElementViewModel))
-                    .Select(x => (x.DataContext as HudElementViewModel).Clone())
+                // clone is needed
+                var toolViewModels = dgCanvas.Children.OfType<FrameworkElement>()
+                    .Where(x => x != null && (x.DataContext is HudBaseToolViewModel))
+                    .Select(x => (x.DataContext as HudBaseToolViewModel))
                     .ToList();
 
-                foreach (var hudPanel in hudPanels)
+                foreach (var toolViewModel in toolViewModels)
                 {
-                    var position = hudPanelCreator.GetOffsetPosition(hudPanel, this);
+                    var position = hudPanelService.GetOffsetPosition(toolViewModel, this);
 
                     hudLayoutContract.HudPositions.Add(new HudPositionContract
                     {
+                        Id = toolViewModel.Id,
                         Position = new Point(position.Item1, position.Item2),
-                        SeatNumber = hudPanel.Seat,
-                        HudViewType = hudPanel.HudViewType
+                        SeatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1
                     });
                 }
 
@@ -322,7 +338,7 @@ namespace DriveHUD.Application.Views
 
         private void DgCanvas_DragEnded(object sender, EventArgs e)
         {
-            this.Update();
+            Refresh();
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -378,6 +394,52 @@ namespace DriveHUD.Application.Views
                         }
                     }
                 }
+            }
+        }
+
+        private class HudToolKey
+        {
+            public Guid Id { get; set; }
+
+            public int Seat { get; set; }
+
+            public static HudToolKey BuildKey(HudBaseToolViewModel toolViewModel)
+            {
+                if (toolViewModel == null)
+                {
+                    return null;
+                }
+
+                var seat = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                var toolKey = new HudToolKey
+                {
+                    Id = toolViewModel.Id,
+                    Seat = seat
+                };
+
+                return toolKey;
+            }
+
+            public override int GetHashCode()
+            {
+                var hash = 23;
+                hash = hash * 31 + Id.GetHashCode();
+                hash = hash * 31 + Seat;
+
+                return hash;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var toolKey = obj as HudToolKey;
+
+                if (toolKey == null)
+                {
+                    return false;
+                }
+
+                return toolKey.Id == Id && toolKey.Seat == Seat;
             }
         }
     }

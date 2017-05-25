@@ -158,4 +158,19 @@ COLD CALL
   <data name="Message_Migration0017_Title" xml:space="preserve">
     <value>DriveHUD: Action is required</value>
   </data>
+  <data name="Message_Migration0019_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Message_Migration0019_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Message_Migration0019_Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Message_Migration0019_Text" xml:space="preserve">
+    <value>HUDs have not been migrated. Migration failed. That error might cause an unexpected issues with HUDs. Please retry to run migration again. You can also skip migration, in this case default HUDs will be created.</value>
+  </data>
+  <data name="Message_Migration0019_Title" xml:space="preserve">
+    <value>Migration error</value>
+  </data>
 </root>

@@ -809,6 +809,12 @@ namespace DriveHUD.Importers
 
             var tournamentName = firstParsingResult.Source.GameDescription.Tournament.TournamentName;
 
+#warning temp
+            if (tournamentBase == null)
+            {
+                LogProvider.Log.Error("tournamentBase is null");
+            }
+
             var initialStackSize = (tournamentBase.Startingstacksizeinchips != 0) ? tournamentBase.Startingstacksizeinchips : GetInitialStackSize(tournamentName, parsingResult);
 
             // get hands grouped by player name
@@ -836,7 +842,9 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName);
+                var isHero = lastParsingResult.Source.Hero != null && lastParsingResult.Source.Hero.PlayerName != null ?
+                    lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName) :
+                    false;
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
                     Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :

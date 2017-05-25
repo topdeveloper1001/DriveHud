@@ -1,43 +1,83 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="WinningPositionProvider.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
     public class WinningPositionProvider : IPositionProvider
     {
-        public Dictionary<int, int[,]> Positions { get; }
-
         public WinningPositionProvider()
         {
             Positions = new Dictionary<int, int[,]>
             {
-                {2, new int[,] {{355, 118}, {355, 409}}},
-                {3, new int[,] {{636, 211}, {355, 409}, {72, 211}}},
-                {4, new int[,] {{352, 105}, {638, 180}, {352, 411}, {96, 180}}},
-                {6, new int[,] {{352, 105}, {638, 180}, {638, 353}, {352, 411}, {96, 353}, {96, 180}}},
+                {
+                    2,
+                    new int[,]
+                    {
+                        { 400, 105 }, { 400, 547 }
+                    }
+                },
+                {
+                    3,
+                    new int[,]
+                    {
+                        { 636, 211 }, { 355, 409 }, { 72, 211 }
+                    }
+                },
+                {
+                    4,
+                    new int[,]
+                    {
+                        { 352, 105 }, { 638, 180 }, { 352, 411 }, { 96, 180 }
+                    }
+                },
+                {
+                    6,
+                    new int[,]
+                    {
+                        { 400, 105 }, { 761, 184 }, { 794, 471 }, { 400, 547 }, { 5, 471 }, { 38, 184 }
+                    }
+                },
                 {
                     8,
                     new int[,]
-                        {{352, 105}, {636, 211}, {636, 318}, {490, 409}, {355, 409}, {220, 409}, {72, 318}, {72, 211}}
+                    {
+                        { 352, 105 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }
+                    }
                 },
                 {
                     9,
                     new int[,]
                     {
-                        {415, 118}, {636, 211}, {636, 318}, {490, 409}, {355, 409}, {220, 409}, {72, 318}, {72, 211},
-                        {273, 118}
+                        { 534, 105 }, { 761, 184 }, { 794, 343 }, { 658, 500 }, { 400, 547 }, { 141, 500 }, { 5, 343 }, { 38, 184 }, { 262, 105 }
                     }
                 },
             };
+
+            PlayerLabelWidth = 205;
+            PlayerLabelHeight = 60;
         }
 
-        public int GetOffsetX(int seats, int seat)
+        public Dictionary<int, int[,]> Positions { get; }
+
+        public int PlayerLabelHeight
         {
-            return -(25 / 2);
+            get;
         }
 
-        public int GetOffsetY(int seats, int seat)
+        public int PlayerLabelWidth
         {
-            return 38;
+            get;
         }
     }
 }

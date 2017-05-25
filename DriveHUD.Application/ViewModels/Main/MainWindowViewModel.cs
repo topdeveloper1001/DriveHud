@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.API;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
-using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
@@ -30,7 +30,6 @@ using DriveHUD.Common.Wpf.Helpers;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
@@ -38,9 +37,11 @@ using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
 using Model.Settings;
+using Model.Stats;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ProtoBuf;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -55,7 +56,6 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
-using DriveHUD.API;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -237,11 +237,18 @@ namespace DriveHUD.Application.ViewModels
 
             System.Windows.Application.Current?.Dispatcher.Invoke(() =>
             {
-                // update data after hud is stopped
-                CreatePositionReport();
-                UpdateCurrentView();
+                try
+                {
+                    // update data after hud is stopped
+                    CreatePositionReport();
+                    UpdateCurrentView();
 
-                RefreshCommandsCanExecute();
+                    RefreshCommandsCanExecute();
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, ex);
+                }
             });
 
             GC.Collect();
@@ -340,20 +347,12 @@ namespace DriveHUD.Application.ViewModels
                 // need to update UI info
                 RefreshData(e.GameInfo);
 
-                // if no handle available then we don't need to do anything with this data, because hud won't be up
+                // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
                     LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
                     return;
                 }
-
-                var sw = new Stopwatch();
-
-                sw.Start();
-
-                var refreshTime = sw.ElapsedMilliseconds;
-
-                sw.Restart();
 
                 var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
 
@@ -376,15 +375,11 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(activeLayout.HudViewType.ToString());
-                var preparedHudElements = tableConfigurator.GenerateElements(maxSeats);
-
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
-                    HudViewType = activeLayout.HudViewType,
                     TableType = gameInfo.TableType,
                     PokerSite = gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
@@ -395,39 +390,25 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                // TODO: Opponent Analysis report turned off
-                //var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
-                //topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
-
-                for (int i = 1; i <= maxSeats; i++)
+                for (int seatNumber = 1; seatNumber <= maxSeats; seatNumber++)
                 {
-                    var playerName = string.Empty;
-                    var playerCollectionItem = new PlayerCollectionItem();
-                    var seatNumber = 0;
+                    var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
 
-                    foreach (var player in players)
-                    {
-                        if (player.SeatNumber == i)
-                        {
-                            if (!string.IsNullOrEmpty(player.PlayerName))
-                            {
-                                playerName = player.PlayerName;
-                                seatNumber = player.SeatNumber;
-                                playerCollectionItem = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.PlayerName, PokerSite = site };
-                            }
-
-                            break;
-                        }
-                    }
-
-                    if (string.IsNullOrEmpty(playerName))
+                    if (player == null || string.IsNullOrEmpty(player.PlayerName))
                     {
                         continue;
                     }
 
+                    var playerCollectionItem = new PlayerCollectionItem
+                    {
+                        PlayerId = player.PlayerId,
+                        Name = player.PlayerName,
+                        PokerSite = site
+                    };
+
                     var playerHudContent = new PlayerHudContent
                     {
-                        Name = playerName,
+                        Name = player.PlayerName,
                         SeatNumber = seatNumber
                     };
 
@@ -437,6 +418,9 @@ namespace DriveHUD.Application.ViewModels
 
                     var item = sessionCacheStatistic.PlayerData;
                     var sessionData = sessionCacheStatistic.SessionPlayerData;
+
+                    // need to do that for track meter tool
+                    #region track condition meter
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
@@ -455,6 +439,8 @@ namespace DriveHUD.Application.ViewModels
                         }
                     }
 
+                    #endregion
+
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
                     var hudElementCreationInfo = new HudElementViewModelCreationInfo
@@ -462,7 +448,6 @@ namespace DriveHUD.Application.ViewModels
                         GameType = gameInfo.EnumGameType,
                         HudLayoutInfo = activeLayout,
                         PokerSite = gameInfo.PokerSite,
-                        PreparedHudElements = preparedHudElements,
                         SeatNumber = seatNumber
                     };
 
@@ -474,70 +459,49 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = playerName;
+                    playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
-                                                           string.Empty;
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
 
+                    // configure data for graph tool
+                    var sessionStats = sessionData.StatsSessionCollection;
 
-                    var sessionMoney = sessionData.MoneyWonCollection;
-                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionData.MoneyWonCollection == null
-                        ? new ObservableCollection<decimal>()
-                        : new ObservableCollection<decimal>(sessionMoney);
+                    var graphTools = playerHudContent.HudElement.Tools.OfType<HudGraphViewModel>().ToArray();
+
+                    foreach (var graphTool in graphTools)
+                    {
+                        if (graphTool.MainStat == null || !sessionStats.ContainsKey(graphTool.MainStat.Stat))
+                        {
+                            graphTool.StatSessionCollection = new ReactiveList<decimal>();
+                            continue;
+                        }
+
+                        graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
+                    }
 
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
 
-                    // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionStats.ContainsKey(Stat.NetWon) ?
+                        new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
+                        new ObservableCollection<decimal>();
+
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection;
+
+                    StatInfoHelper.UpdateStats(activeLayoutHudStats);
+
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
                         // remove prohibited for PS stats.
                         activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToArray();
+                        activeLayoutHudStats.ForEach(x => x.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(
+                                x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3))));
                     }
 
-                    var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
-                                        {
-                                            var statInfoBreak = x as StatInfoBreak;
-
-                                            if (statInfoBreak != null)
-                                            {
-                                                return statInfoBreak.Clone();
-                                            }
-
-                                            return x.Clone();
-                                        }).ToArray();
-
-                    statsExceptActive.ForEach(x => x.IsNotVisible = true);
-
-                    var allStats = activeLayoutHudStats.Select(x =>
-                    {
-                        var statInfoBreak = x as StatInfoBreak;
-
-                        if (statInfoBreak != null)
-                        {
-                            return statInfoBreak.Clone();
-                        }
-
-                        if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
-                        {
-                            // for poker stars we take only 3 last color ranges.
-                            var clone = x.Clone();
-                            clone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3)));
-                            return clone;
-                        }
-                        else
-                        {
-                            return x.Clone();
-                        }
-
-                    }).Concat(statsExceptActive);
-
-                    foreach (var statInfo in allStats)
+                    foreach (var statInfo in activeLayoutHudStats)
                     {
                         if (!string.IsNullOrEmpty(statInfo.PropertyName))
                         {
@@ -552,37 +516,6 @@ namespace DriveHUD.Application.ViewModels
                         {
                             continue;
                         }
-
-                        // temporary
-                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
-
-                        if (tooltipCollection != null)
-                        {
-                            foreach (var tooltip in tooltipCollection)
-                            {
-                                tooltip.CategoryStat.AssignStatInfoValues(item);
-
-                                foreach (var stat in tooltip.StatsCollection)
-                                {
-                                    stat.AssignStatInfoValues(item);
-                                }
-
-                                if (tooltip.CardsList == null)
-                                {
-                                    continue;
-                                }
-
-                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
-
-                                if (listObj != null)
-                                {
-                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                                }
-                            }
-                            statInfo.StatInfoToolTipCollection = tooltipCollection;
-                        }
-
-                        playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
@@ -601,10 +534,6 @@ namespace DriveHUD.Application.ViewModels
 
                     ht.ListHUDPlayer.Add(playerHudContent);
                 }
-
-                sw.Stop();
-
-                Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars)
                 {
@@ -1332,8 +1261,7 @@ namespace DriveHUD.Application.ViewModels
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisYear;
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
-                case EnumFilterDropDown.FilterCustomDateRange:
-                    eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
+                case EnumFilterDropDown.FilterCustomDateRange:                    
 
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;

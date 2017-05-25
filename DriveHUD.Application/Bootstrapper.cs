@@ -13,14 +13,17 @@
 using DHCRegistration;
 using DHHRegistration;
 using DHORegistration;
+using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
+using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
@@ -47,9 +50,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
 using Telerik.Windows.Controls;
-using DriveHUD.API;
 
 namespace DriveHUD.Application
 {
@@ -201,7 +202,6 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
-            RegisterTypeIfMissing(typeof(IHudPanelService), typeof(HudPanelService), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
@@ -209,6 +209,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
+            RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
@@ -229,25 +230,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
 
-            // HUD table configurators
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>();
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.Plain.ToString());
-            Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
-            Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());
-            Container.RegisterType<ITableConfigurator, CommonVertTwoTableConfiguration>(HudViewType.Vertical_2.ToString());
-
-            //Position Providers
-            Container.RegisterType<IPositionProvider, CommonPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, CommonRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Horizontal));
-            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Horizontal));
-            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Bodog, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Bodog, HudViewType.Horizontal));
-            Container.RegisterType<IPositionProvider, Poker888PositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.WinningPokerNetwork, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudViewType.Plain));
+            // HUD designer 
+            Container.RegisterType<IHudToolFactory, HudToolFactory>();          
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);

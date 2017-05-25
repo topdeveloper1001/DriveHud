@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
@@ -25,6 +25,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.HudServices
 {
+#warning 
     internal class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
     {
         public void SaveHudLayout(HudLayoutContract hudLayoutContract)
@@ -45,34 +46,43 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            var existingHudPositions = existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
+            HudPositionsInfo existingHudPositions = null;
 
-            if (existingHudPositions == null)
+            var tools = existingHudLayout.LayoutTools.OfType<HudLayoutNonPopupTool>().ToArray();
+
+            foreach (var tool in tools)
             {
-                existingHudPositions = new HudPositionsInfo
-                {
-                    GameType = hudLayoutContract.GameType,
-                    PokerSite = hudLayoutContract.PokerSite,
-                    HudPositions = new List<HudPositionInfo>()
-                };
-            }
+                existingHudPositions = tool.Positions.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
 
-            // update positions 
-            foreach (var hudPosition in hudLayoutContract.HudPositions)
-            {
-                var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
-
-                if (hudPositionForUpdate == null)
+                if (existingHudPositions == null)
                 {
-                    hudPositionForUpdate = new HudPositionInfo
+                    existingHudPositions = new HudPositionsInfo
                     {
-                        Seat = hudPosition.SeatNumber
+                        GameType = hudLayoutContract.GameType,
+                        PokerSite = hudLayoutContract.PokerSite,
+                        HudPositions = new List<HudPositionInfo>()
                     };
 
-                    existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                    tool.Positions.Add(existingHudPositions);
                 }
 
-                hudPositionForUpdate.Position = hudPosition.Position;
+                // update positions 
+                foreach (var hudPosition in hudLayoutContract.HudPositions.Where(x => x.Id == tool.Id))
+                {
+                    var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
+
+                    if (hudPositionForUpdate == null)
+                    {
+                        hudPositionForUpdate = new HudPositionInfo
+                        {
+                            Seat = hudPosition.SeatNumber
+                        };
+
+                        existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                    }
+
+                    hudPositionForUpdate.Position = hudPosition.Position;
+                }
             }
 
             hudLayoutsService.Save(existingHudLayout);
@@ -102,7 +112,7 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            hudLayoutsService.SetLayoutActive(hudToLoad, pokerSite, gameType, tableType);
+            hudLayoutsService.SetActiveLayout(hudToLoad, pokerSite, gameType, tableType);
         }
 
         public void TagHand(long gameNumber, short pokerSiteId, int tag)

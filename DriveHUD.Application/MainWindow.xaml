@@ -30,6 +30,7 @@
     xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:cts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -69,6 +70,27 @@
         <DataTemplate
             DataType="{x:Type vm:AppsViewModel}">
             <v:AppsView />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="CommonFilterTemplate">
+            <telerik:RadMenuItem>
+                <telerik:RadMenuItem.Style>
+                    <Style
+                        TargetType="telerik:RadMenuItem"
+                        BasedOn="{StaticResource RadMenuItemStyle1}">
+                        <Setter
+                            Property="Header"
+                            Value="{Binding Path=Name}" />
+                        <Setter
+                            Property="Command"
+                            Value="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}" />
+                        <Setter
+                            Property="CommandParameter"
+                            Value="{Binding}" />
+                    </Style>
+                </telerik:RadMenuItem.Style>
+            </telerik:RadMenuItem>
         </DataTemplate>
 
         <Style
