@@ -309,22 +309,22 @@
     <value>Cold Call vs SB open%</value>
   </data>
   <data name="Enum_Stat_ColdCall_BB" xml:space="preserve">
-    <value>BB Cold Call%</value>
+    <value>Cold Call BB %</value>
   </data>
   <data name="Enum_Stat_ColdCall_BN" xml:space="preserve">
-    <value>BTN Cold Call%</value>
+    <value>Cold Call BTN%</value>
   </data>
   <data name="Enum_Stat_ColdCall_CO" xml:space="preserve">
-    <value>CO Cold Call%</value>
+    <value>Cold Call CO%</value>
   </data>
   <data name="Enum_Stat_ColdCall_EP" xml:space="preserve">
-    <value>EP Cold Call%</value>
+    <value>Cold Call EP%</value>
   </data>
   <data name="Enum_Stat_ColdCall_MP" xml:space="preserve">
-    <value>MP Cold Call%</value>
+    <value>Cold Call MP%</value>
   </data>
   <data name="Enum_Stat_ColdCall_SB" xml:space="preserve">
-    <value>SB Cold Call%</value>
+    <value>Cold Call SB%</value>
   </data>
   <data name="Enum_Stat_DelayedTurnCBet" xml:space="preserve">
     <value>Delayed Turn C-bet%</value>
@@ -498,22 +498,22 @@
     <value>VPIP%</value>
   </data>
   <data name="Enum_Stat_VPIP_BB" xml:space="preserve">
-    <value>BB VPIP%</value>
+    <value>VPIP BB%</value>
   </data>
   <data name="Enum_Stat_VPIP_BN" xml:space="preserve">
-    <value>BTN VPIP%</value>
+    <value>VPIP BTN%</value>
   </data>
   <data name="Enum_Stat_VPIP_CO" xml:space="preserve">
-    <value>CO VPIP%</value>
+    <value>VPIP CO%</value>
   </data>
   <data name="Enum_Stat_VPIP_EP" xml:space="preserve">
-    <value>EP VPIP%</value>
+    <value>VPIP EP%</value>
   </data>
   <data name="Enum_Stat_VPIP_MP" xml:space="preserve">
-    <value>MP VPIP%</value>
+    <value>VPIP MP%</value>
   </data>
   <data name="Enum_Stat_VPIP_SB" xml:space="preserve">
-    <value>SB VPIP%</value>
+    <value>VPIP SB%</value>
   </data>
   <data name="Enum_Stat_WSSD" xml:space="preserve">
     <value>W$SD</value>

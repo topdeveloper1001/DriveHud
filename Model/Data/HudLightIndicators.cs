@@ -697,71 +697,6 @@ namespace Model.Data
             }
         }
 
-        public virtual StatDto FourBetInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInBB,
-                    Occured = Source.DidFourBetInBb,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInBTN,
-                    Occured = Source.DidFourBetInBtn,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInCO,
-                    Occured = Source.DidFourBetInCo,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInMP,
-                    Occured = Source.DidFourBetInMp,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInSB,
-                    Occured = Source.DidFourBetInSb,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
         public virtual StatDto DonkBetObject
         {
             get
@@ -1334,7 +1269,7 @@ namespace Model.Data
                 };
             }
         }
-        
+
         public virtual StatDto ColdCallThreeBetObject
         {
             get
@@ -1473,6 +1408,88 @@ namespace Model.Data
                     Value = ThreeBet_BB,
                     Occured = Source.PositionDidThreeBet?.BB ?? 0,
                     CouldOccured = Source.PositionCouldThreeBet?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional 4-Bet
+
+        public virtual StatDto FourBetInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInBB,
+                    Occured = Source.PositionDidFourBet?.BB ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.BB ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInBTN,
+                    Occured = Source.PositionDidFourBet?.BN ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.BN ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInCO,
+                    Occured = Source.PositionDidFourBet?.CO ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.CO ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInMP,
+                    Occured = Source.PositionDidFourBet?.MP ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.MP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInMP,
+                    Occured = Source.PositionDidFourBet?.EP ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.EP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInSB,
+                    Occured = Source.PositionDidFourBet?.SB ?? 0,
+                    CouldOccured = Source.PositionCouldFourBet?.SB ?? 0,
                 };
             }
         }
