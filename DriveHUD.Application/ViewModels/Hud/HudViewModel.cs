@@ -12,10 +12,12 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -59,7 +61,7 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         public HudViewModel()
         {
-            NotificationRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<PopupBaseNotification>();
 
             InitializeStatInfoCollection();
             InitializeStatInfoCollectionObserved();
@@ -72,7 +74,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Properties
 
-        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+        public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
 
         private bool currentLayoutIsSwitching;
 
@@ -1023,6 +1025,31 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void DataDelete()
         {
+            var deleteLayout = false;
+
+            var notification = new PopupBaseNotification()
+            {
+                Title = "Delete HUD",
+                CancelButtonCaption = "Cancel",
+                ConfirmButtonCaption = "Yes",
+                Content = "Are you sure you want to delete this HUD?",
+                IsDisplayH1Text = true
+            };
+
+            NotificationRequest.Raise(notification,
+                  confirmation =>
+                  {
+                      if (confirmation.Confirmed)
+                      {
+                          deleteLayout = true;
+                      }
+                  });
+
+            if (!deleteLayout)
+            {
+                return;
+            }
+
             if (!HudLayoutsService.Delete(CurrentLayout.Name))
             {
                 return;

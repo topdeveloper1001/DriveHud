@@ -25,6 +25,7 @@
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
     xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
+    xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     mc:Ignorable="d"
     Foreground="White">
 
@@ -33,8 +34,11 @@
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction
                 IsModal="True"
-                WindowStyle="{StaticResource NotificationWindowStyle}"
-                WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+                WindowStyle="{StaticResource NotificationWindowStyle}">
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerBaseNotificationView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 
