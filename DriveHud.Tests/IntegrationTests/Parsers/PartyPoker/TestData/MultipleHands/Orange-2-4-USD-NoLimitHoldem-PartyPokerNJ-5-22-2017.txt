@@ -1,0 +1,3769 @@
+***** Hand History for Game 169499783 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:12:51 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $372 USD )
+Seat 5: thin_white_duke ( $427.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO raises [$6 USD]
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $12 USD
+
+
+***** Hand History for Game 169499798 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:13:00 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $376 USD )
+Seat 5: thin_white_duke ( $423.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$10 USD]
+JAGTERAHO calls [$8 USD]
+** Dealing Flop ** [ As, Kd, 8c ]
+JAGTERAHO checks
+thin_white_duke checks
+** Dealing Turn ** [ 4h ]
+JAGTERAHO checks
+thin_white_duke checks
+** Dealing River ** [ 5c ]
+JAGTERAHO checks
+thin_white_duke checks
+JAGTERAHO shows [ 8s, 9s ]a pair of Eights.
+thin_white_duke doesn't show [ Jc, Qh ]high card Ace.
+JAGTERAHO wins $23.50 USD from the main pot with a pair of Eights.
+
+
+***** Hand History for Game 169499846 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:13:29 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $387.50 USD )
+Seat 5: thin_white_duke ( $411.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169499857 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:13:36 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $385.50 USD )
+Seat 5: thin_white_duke ( $413.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$10 USD]
+JAGTERAHO raises [$32 USD]
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $48 USD
+
+
+***** Hand History for Game 169499886 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:13:57 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $397.50 USD )
+Seat 5: thin_white_duke ( $401.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169499907 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:14:06 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $395.50 USD )
+Seat 5: thin_white_duke ( $403.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$10 USD]
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $16 USD
+
+
+***** Hand History for Game 169499927 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:14:15 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $391.50 USD )
+Seat 5: thin_white_duke ( $407.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO raises [$10 USD]
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $16 USD
+
+
+***** Hand History for Game 169499955 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:14:31 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $395.50 USD )
+Seat 5: thin_white_duke ( $403.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $6 USD
+
+
+***** Hand History for Game 169499967 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:14:37 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $397.50 USD )
+Seat 5: thin_white_duke ( $401.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169499978 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:14:46 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $395.50 USD )
+Seat 5: thin_white_duke ( $403.50 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$10 USD]
+JAGTERAHO calls [$8 USD]
+** Dealing Flop ** [ 7c, Th, Ks ]
+JAGTERAHO checks
+thin_white_duke bets [$11.75 USD]
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $35.25 USD
+
+
+***** Hand History for Game 169500023 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:15:10 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $383.50 USD )
+Seat 5: thin_white_duke ( $415 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169500033 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:15:18 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $381.50 USD )
+Seat 5: thin_white_duke ( $417 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $6 USD
+
+
+***** Hand History for Game 169500049 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:15:27 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $383.50 USD )
+Seat 5: thin_white_duke ( $415 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO raises [$6 USD]
+thin_white_duke raises [$24 USD]
+JAGTERAHO calls [$20 USD]
+** Dealing Flop ** [ 4c, 6h, Tc ]
+thin_white_duke bets [$27.75 USD]
+JAGTERAHO calls [$27.75 USD]
+** Dealing Turn ** [ Kc ]
+thin_white_duke checks
+JAGTERAHO checks
+** Dealing River ** [ 5d ]
+thin_white_duke bets [$80 USD]
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $191 USD
+
+
+***** Hand History for Game 169500135 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:16:23 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $327.75 USD )
+Seat 5: thin_white_duke ( $470.25 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $6 USD
+
+
+***** Hand History for Game 169500147 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:16:31 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $329.75 USD )
+Seat 5: thin_white_duke ( $468.25 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169500158 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:16:39 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $327.75 USD )
+Seat 5: thin_white_duke ( $470.25 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $6 USD
+
+
+***** Hand History for Game 169500192 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:16:58 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $329.75 USD )
+Seat 5: thin_white_duke ( $468.25 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169500203 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:17:04 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $327.75 USD )
+Seat 5: thin_white_duke ( $470.25 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$6 USD]
+JAGTERAHO calls [$4 USD]
+** Dealing Flop ** [ Ah, Kd, 5d ]
+JAGTERAHO checks
+thin_white_duke bets [$11.62 USD]
+JAGTERAHO calls [$11.62 USD]
+** Dealing Turn ** [ 3h ]
+JAGTERAHO checks
+thin_white_duke checks
+** Dealing River ** [ Tc ]
+JAGTERAHO bets [$32 USD]
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $70.74 USD
+
+
+***** Hand History for Game 169500247 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:17:36 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $346.87 USD )
+Seat 5: thin_white_duke ( $450.63 USD )
+Seat 2: wheels4920 ( $400 USD )
+JAGTERAHO posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169500262 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:17:42 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $344.87 USD )
+Seat 5: thin_white_duke ( $452.63 USD )
+Seat 2: wheels4920 ( $400 USD )
+thin_white_duke posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $6 USD
+wheels4920 has left the table.
+
+
+***** Hand History for Game 169500825 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:24:07 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 3: JAGTERAHO ( $360.84 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $536.13 USD )
+JAGTERAHO posts small blind [$2 USD].
+hannahhunt posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+JAGTERAHO raises [$14 USD]
+hannahhunt calls [$12 USD]
+** Dealing Flop ** [ 2s, As, 8s ]
+JAGTERAHO checks
+Jonuzi has joined the table.
+hannahhunt checks
+** Dealing Turn ** [ 5s ]
+JAGTERAHO checks
+hannahhunt checks
+** Dealing River ** [ 2d ]
+JAGTERAHO checks
+hannahhunt checks
+JAGTERAHO shows [ Td, Ac ]two pairs, Aces and Twos.
+hannahhunt doesn't show [ Jh, 5h ]two pairs, Fives and Twos.
+JAGTERAHO wins $30.23 USD from the main pot with two pairs, Aces and Twos.
+
+
+***** Hand History for Game 169500872 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:24:46 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 3: JAGTERAHO ( $375.07 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $536.13 USD )
+hannahhunt posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO raises [$8 USD]
+hannahhunt folds
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $14 USD
+
+
+***** Hand History for Game 169500885 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:24:58 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 4/6
+Seat 3: JAGTERAHO ( $381.07 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $532.13 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+hannahhunt raises [$10 USD]
+thin_white_duke folds
+Jonuzi folds
+hannahhunt does not show cards.
+hannahhunt wins $16 USD
+
+
+***** Hand History for Game 169500910 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:25:10 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: JAGTERAHO ( $381.07 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 4: hannahhunt ( $406 USD )
+Seat 5: thin_white_duke ( $530.13 USD )
+Jonuzi posts small blind [$2 USD].
+JAGTERAHO posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life has joined the table.
+hannahhunt raises [$10 USD]
+thin_white_duke calls [$10 USD]
+Jonuzi folds
+JAGTERAHO calls [$6 USD]
+** Dealing Flop ** [ 4h, Jd, 9h ]
+JAGTERAHO checks
+hannahhunt bets [$20.15 USD]
+thin_white_duke raises [$68.01 USD]
+JAGTERAHO calls [$68.01 USD]
+hannahhunt will be using their time bank for this hand.
+hannahhunt raises [$155.36 USD]
+thin_white_duke folds
+JAGTERAHO is all-In  [$303.06 USD]
+hannahhunt calls [$195.56 USD]
+** Dealing Turn ** [ 3d ]
+** Dealing River ** [ 4d ]
+BigBaller1 has joined the table.
+hannahhunt shows [ 7h, Jh ]two pairs, Jacks and Fours.
+JAGTERAHO shows [ 6s, Js ]two pairs, Jacks and Fours.
+JAGTERAHO wins $420.08 USD from the main pot with two pairs, Jacks and Fours.
+hannahhunt wins $420.07 USD from the main pot with two pairs, Jacks and Fours.
+
+
+***** Hand History for Game 169501000 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:26:29 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $400 USD )
+Seat 3: JAGTERAHO ( $420.08 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $445 USD )
+Seat 5: thin_white_duke ( $452.12 USD )
+JAGTERAHO posts small blind [$2 USD].
+hannahhunt posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+JAGTERAHO folds
+hannahhunt calls [$8 USD]
+** Dealing Flop ** [ 2s, 7c, 8d ]
+hannahhunt checks
+thin_white_duke bets [$12.28 USD]
+hannahhunt raises [$44.93 USD]
+thin_white_duke calls [$32.65 USD]
+** Dealing Turn ** [ 5s ]
+hannahhunt bets [$81.90 USD]
+thin_white_duke calls [$81.90 USD]
+** Dealing River ** [ 4c ]
+hannahhunt is all-In  [$306.17 USD]
+thin_white_duke calls [$306.17 USD]
+hannahhunt shows [ 7h, 8h ]two pairs, Eights and Sevens.
+thin_white_duke shows [ 8s, 8c ]three of a kind, Eights.
+thin_white_duke wins $890 USD from the main pot with three of a kind, Eights.
+
+
+***** Hand History for Game 169501105 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:27:44 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $400 USD )
+Seat 3: JAGTERAHO ( $418.08 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $897.12 USD )
+hannahhunt posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+JAGTERAHO raises [$12 USD]
+hannahhunt folds
+thin_white_duke folds
+JAGTERAHO does not show cards.
+JAGTERAHO wins $18 USD
+nice stretch
+
+
+***** Hand History for Game 169501133 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:27:58 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $400 USD )
+Seat 3: JAGTERAHO ( $424.08 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $893.12 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+hannahhunt raises [$10 USD]
+thin_white_duke folds
+Jonuzi folds
+hannahhunt does not show cards.
+hannahhunt wins $16 USD
+
+
+***** Hand History for Game 169501161 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:28:15 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $400 USD )
+Seat 3: JAGTERAHO ( $424.08 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $406 USD )
+Seat 5: thin_white_duke ( $891.12 USD )
+Jonuzi posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO folds
+hannahhunt folds
+thin_white_duke raises [$8 USD]
+Jonuzi folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $14 USD
+
+
+***** Hand History for Game 169501258 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:29:16 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $394 USD )
+Seat 3: JAGTERAHO ( $436.08 USD )
+Seat 6: Jonuzi ( $400 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $897.12 USD )
+JAGTERAHO posts small blind [$2 USD].
+hannahhunt posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi raises [$12 USD]
+BigBaller1 raises [$40 USD]
+Moose4Life calls [$40 USD]
+JAGTERAHO folds
+hannahhunt folds
+Jonuzi will be using their time bank for this hand.
+Jonuzi is all-In  [$388 USD]
+BigBaller1 is all-In  [$354 USD]
+Moose4Life folds
+** Dealing Flop ** [ 8c, 4s, 2d ]
+** Dealing Turn ** [ Ks ]
+** Dealing River ** [ Kh ]
+BigBaller1 shows [ Ac, As ]two pairs, Aces and Kings.
+Jonuzi shows [ Kd, Ah ]three of a kind, Kings.
+Jonuzi wins $6 USD from the side pot 1 with three of a kind, Kings.
+Jonuzi wins $831 USD from the main pot with three of a kind, Kings.
+
+
+***** Hand History for Game 169501359 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:30:22 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $0 USD )
+Seat 3: JAGTERAHO ( $434.08 USD )
+Seat 6: Jonuzi ( $837 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $897.12 USD )
+hannahhunt posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life: so bad uzi
+Moose4Life folds
+Jonuzi: MOOOOOOOOSE
+JAGTERAHO folds
+hannahhunt folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+coulda told u he had AA
+
+
+***** Hand History for Game 169501410 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:30:55 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 1: BigBaller1 ( $0 USD )
+Seat 3: JAGTERAHO ( $434.08 USD )
+Seat 6: Jonuzi ( $850 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $897.12 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO raises [$8 USD]
+Jonuzi: MOOOOOOOOSE
+BigBaller1 has left the table.
+hannahhunt folds
+Moose4Life: had Js
+thin_white_duke raises [$36 USD]
+Moose4Life: run better
+Jonuzi raises [$103 USD]
+Moose4Life folds
+JAGTERAHO is all-In  [$426.08 USD]
+thin_white_duke folds
+Jonuzi calls [$329.08 USD]
+** Dealing Flop ** [ 8h, 7h, Ac ]
+** Dealing Turn ** [ 4h ]
+** Dealing River ** [ Td ]
+Jonuzi shows [ Qc, Qd ]a pair of Queens.
+JAGTERAHO doesn't show [ 3s, 3h ]a pair of Threes.
+Jonuzi wins $905.16 USD from the main pot with a pair of Queens.
+
+
+***** Hand History for Game 169501486 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:31:47 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 3: JAGTERAHO ( $0 USD )
+Seat 6: Jonuzi ( $1,321.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $861.12 USD )
+Moose4Life posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+JAGTERAHO has left the table.
+Jonuzi: MOOOOOOOOOOOOOOOOOO
+Jonuzi: OOOOOOOOSE
+Jonuzi folds
+Moose4Life: fml
+Moose4Life: ive lost every hanbd vs him in the past 2 weeks
+Moose4Life folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169501512 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:32:08 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 4/6
+Seat 6: Jonuzi ( $1,321.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 4: hannahhunt ( $400 USD )
+Seat 5: thin_white_duke ( $863.12 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+thin_white_duke folds
+Jonuzi does not show cards.
+Jonuzi wins $6 USD
+hannahhunt has left the table.
+
+
+***** Hand History for Game 169501528 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:32:19 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,323.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $861.12 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi raises [$10 USD]
+Moose4Life folds
+Jonuzi does not show cards.
+Jonuzi wins $16 USD
+
+
+***** Hand History for Game 169501547 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:32:34 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,327.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $861.12 USD )
+Moose4Life posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169501559 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:32:44 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,327.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $863.12 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+thin_white_duke will be using their time bank for this hand.
+thin_white_duke folds
+Jonuzi does not show cards.
+Jonuzi wins $6 USD
+
+
+***** Hand History for Game 169501597 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:33:10 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,329.08 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $861.12 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$8 USD]
+Jonuzi folds
+Moose4Life raises [$24 USD]
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $38 USD
+
+
+***** Hand History for Game 169501627 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:33:29 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,327.08 USD )
+Seat 2: Moose4Life ( $410 USD )
+Seat 5: thin_white_duke ( $853.12 USD )
+Moose4Life posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life raises [$10 USD]
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $16 USD
+
+
+***** Hand History for Game 169501659 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:33:53 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 3/6
+Seat 6: Jonuzi ( $1,327.08 USD )
+Seat 2: Moose4Life ( $414 USD )
+Seat 5: thin_white_duke ( $849.12 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 has joined the table.
+Moose4Life raises [$11 USD]
+thin_white_duke folds
+Jonuzi calls [$7 USD]
+** Dealing Flop ** [ Qs, 7s, 9c ]
+Jonuzi checks
+Moose4Life checks
+** Dealing Turn ** [ 3d ]
+Jonuzi bets [$15.11 USD]
+Moose4Life folds
+Jonuzi does not show cards.
+Jonuzi wins $37.78 USD
+
+
+***** Hand History for Game 169501714 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:34:32 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $400 USD )
+Seat 6: Jonuzi ( $1,338.75 USD )
+Seat 2: Moose4Life ( $403 USD )
+Seat 5: thin_white_duke ( $847.12 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 checks
+thin_white_duke raises [$16 USD]
+Jonuzi folds
+Moose4Life folds
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $26 USD
+
+
+***** Hand History for Game 169501737 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:34:48 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $396 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $857.12 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+Moose4Life folds
+Grubah51994 does not show cards.
+Grubah51994 wins $6 USD
+
+
+***** Hand History for Game 169501756 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:34:59 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $398 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $857.12 USD )
+Grubah51994 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life raises [$11 USD]
+Grubah51994 folds
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $17 USD
+
+
+***** Hand History for Game 169501779 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:35:18 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $396 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $406 USD )
+Seat 5: thin_white_duke ( $853.12 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 folds
+thin_white_duke folds
+Jonuzi does not show cards.
+Jonuzi wins $6 USD
+
+
+***** Hand History for Game 169501803 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:35:30 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $396 USD )
+Seat 6: Jonuzi ( $1,338.75 USD )
+Seat 2: Moose4Life ( $406 USD )
+Seat 5: thin_white_duke ( $851.12 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+thin_white_duke folds
+Jonuzi raises [$10 USD]
+Moose4Life raises [$36 USD]
+Jonuzi folds
+Moose4Life does not show cards.
+Moose4Life wins $52 USD
+
+
+***** Hand History for Game 169501831 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:35:46 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $396 USD )
+Seat 6: Jonuzi ( $1,326.75 USD )
+Seat 2: Moose4Life ( $418 USD )
+Seat 5: thin_white_duke ( $851.12 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+Moose4Life raises [$10 USD]
+Grubah51994 folds
+Moose4Life does not show cards.
+Moose4Life wins $16 USD
+
+
+***** Hand History for Game 169501863 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:36:07 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $392 USD )
+Seat 6: Jonuzi ( $1,326.75 USD )
+Seat 2: Moose4Life ( $422 USD )
+Seat 5: thin_white_duke ( $851.12 USD )
+Grubah51994 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life folds
+Grubah51994 calls [$2 USD]
+thin_white_duke checks
+** Dealing Flop ** [ Jc, 6s, 5d ]
+Grubah51994 bets [$4 USD]
+thin_white_duke calls [$4 USD]
+** Dealing Turn ** [ Tc ]
+Grubah51994 checks
+thin_white_duke bets [$16 USD]
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $31.12 USD
+
+
+***** Hand History for Game 169502001 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:37:39 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: Grubah51994 ( $368 USD )
+Seat 6: Jonuzi ( $1,320.75 USD )
+Seat 2: Moose4Life ( $424 USD )
+Seat 5: thin_white_duke ( $876.24 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi raises [$10 USD]
+Moose4Life folds
+Grubah51994 calls [$6 USD]
+** Dealing Flop ** [ 2s, Qd, 4h ]
+Grubah51994 checks
+Jonuzi checks
+** Dealing Turn ** [ 9s ]
+Grubah51994 checks
+Jonuzi bets [$12 USD]
+BigBaller1 has joined the table.
+Grubah51994 will be using their time bank for this hand.
+Grubah51994 calls [$12 USD]
+** Dealing River ** [ 3h ]
+Grubah51994 checks
+Jonuzi bets [$60 USD]
+Grubah51994 folds
+Jonuzi does not show cards.
+Jonuzi wins $104 USD
+
+
+***** Hand History for Game 169502126 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:38:59 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $400 USD )
+Seat 3: Grubah51994 ( $346 USD )
+Seat 6: Jonuzi ( $1,342.75 USD )
+Seat 2: Moose4Life ( $422 USD )
+Seat 5: thin_white_duke ( $876.24 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+Moose4Life folds
+Grubah51994 calls [$2 USD]
+BigBaller1 checks
+** Dealing Flop ** [ 4c, As, Ah ]
+Grubah51994 bets [$4 USD]
+BigBaller1 folds
+Grubah51994 does not show cards.
+Grubah51994 wins $11.56 USD
+
+
+***** Hand History for Game 169502168 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:39:27 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $396 USD )
+Seat 3: Grubah51994 ( $349.56 USD )
+Seat 6: Jonuzi ( $1,342.75 USD )
+Seat 2: Moose4Life ( $422 USD )
+Seat 5: thin_white_duke ( $876.24 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169502191 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:39:40 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $398 USD )
+Seat 3: Grubah51994 ( $349.56 USD )
+Seat 6: Jonuzi ( $1,342.75 USD )
+Seat 2: Moose4Life ( $428 USD )
+Seat 5: thin_white_duke ( $872.24 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169502211 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:39:52 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $400 USD )
+Seat 3: Grubah51994 ( $349.56 USD )
+Seat 6: Jonuzi ( $1,338.75 USD )
+Seat 2: Moose4Life ( $434 USD )
+Seat 5: thin_white_duke ( $870.24 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+Jonuzi folds
+Moose4Life folds
+BigBaller1 does not show cards.
+BigBaller1 wins $18 USD
+
+
+***** Hand History for Game 169502255 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:40:22 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $406 USD )
+Seat 3: Grubah51994 ( $349.56 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $430 USD )
+Seat 5: thin_white_duke ( $870.24 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+FATDAN44 has joined the table.
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+Moose4Life folds
+Grubah51994 calls [$8 USD]
+** Dealing Flop ** [ Qd, 5c, Kd ]
+Grubah51994 checks
+thin_white_duke bets [$12.28 USD]
+Grubah51994 calls [$12.28 USD]
+** Dealing Turn ** [ Jd ]
+Grubah51994 checks
+thin_white_duke bets [$27 USD]
+Grubah51994 calls [$27 USD]
+** Dealing River ** [ Ah ]
+Grubah51994 checks
+thin_white_duke bets [$50.78 USD]
+Grubah51994 raises [$126.95 USD]
+thin_white_duke calls [$76.17 USD]
+Grubah51994 shows [ Td, As ]a straight, Ten to Ace.
+thin_white_duke shows [ Ad, Ts ]a straight, Ten to Ace.
+Grubah51994 wins $177.73 USD from the main pot with a straight, Ten to Ace.
+thin_white_duke wins $177.73 USD from the main pot with a straight, Ten to Ace.
+
+
+***** Hand History for Game 169502345 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:41:27 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $406 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $349.06 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $428 USD )
+Seat 5: thin_white_duke ( $869.74 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $18 USD
+
+
+***** Hand History for Game 169502374 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:41:42 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $402 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $347.06 USD )
+Seat 6: Jonuzi ( $1,336.75 USD )
+Seat 2: Moose4Life ( $428 USD )
+Seat 5: thin_white_duke ( $875.74 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 raises [$10 USD]
+thin_white_duke folds
+BigBaller1 does not show cards.
+BigBaller1 wins $16 USD
+
+
+***** Hand History for Game 169502542 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:43:36 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $702.57 USD )
+Seat 6: Jonuzi ( $1,330.75 USD )
+Seat 2: Moose4Life ( $424 USD )
+Seat 5: thin_white_duke ( $875.74 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$8 USD]
+** Dealing Flop ** [ Jd, 4s, As ]
+Grubah51994 checks
+thin_white_duke checks
+** Dealing Turn ** [ 8c ]
+Grubah51994 bets [$4 USD]
+thin_white_duke calls [$4 USD]
+** Dealing River ** [ 3c ]
+Grubah51994 checks
+thin_white_duke checks
+Grubah51994 shows [ Td, Qc ]high card Ace.
+thin_white_duke shows [ Qd, Qs ]a pair of Queens.
+thin_white_duke wins $32.12 USD from the main pot with a pair of Queens.
+
+
+***** Hand History for Game 169502598 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:44:11 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $686.57 USD )
+Seat 6: Jonuzi ( $1,330.75 USD )
+Seat 2: Moose4Life ( $422 USD )
+Seat 5: thin_white_duke ( $891.86 USD )
+Grubah51994 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169502617 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:44:24 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $684.57 USD )
+Seat 6: Jonuzi ( $1,330.75 USD )
+Seat 2: Moose4Life ( $422 USD )
+Seat 5: thin_white_duke ( $893.86 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+thin_white_duke raises [$38 USD]
+Jonuzi folds
+Moose4Life folds
+thin_white_duke does not show cards.
+thin_white_duke wins $56 USD
+
+
+***** Hand History for Game 169502653 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:44:54 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $684.57 USD )
+Seat 6: Jonuzi ( $1,326.75 USD )
+Seat 2: Moose4Life ( $410 USD )
+Seat 5: thin_white_duke ( $909.86 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Grubah51994 calls [$8 USD]
+** Dealing Flop ** [ 6h, Jd, 3c ]
+Grubah51994 checks
+thin_white_duke bets [$21.25 USD]
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $49.59 USD
+
+
+***** Hand History for Game 169502705 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:45:26 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $672.57 USD )
+Seat 6: Jonuzi ( $1,324.75 USD )
+Seat 2: Moose4Life ( $410 USD )
+Seat 5: thin_white_duke ( $926.20 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life checks
+** Dealing Flop ** [ 9c, Ad, 5c ]
+Moose4Life bets [$4.72 USD]
+Grubah51994 calls [$4.72 USD]
+** Dealing Turn ** [ 5h ]
+Moose4Life bets [$9.18 USD]
+Grubah51994 calls [$9.18 USD]
+** Dealing River ** [ 7d ]
+Moose4Life checks
+Grubah51994 checks
+Moose4Life shows [ 7c, 8c ]two pairs, Sevens and Fives.
+Grubah51994 shows [ 9h, Jd ]two pairs, Nines and Fives.
+Grubah51994 wins $35.70 USD from the main pot with two pairs, Nines and Fives.
+
+
+***** Hand History for Game 169502759 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:46:02 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $690.37 USD )
+Seat 6: Jonuzi ( $1,324.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $926.20 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$12 USD]
+Moose4Life folds
+Grubah51994 folds
+** Dealing Flop ** [ Jc, 3h, Ac ]
+thin_white_duke bets [$18 USD]
+FATDAN44 raises [$60 USD]
+thin_white_duke calls [$42 USD]
+** Dealing Turn ** [ 6c ]
+thin_white_duke checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+** Dealing River ** [ 2c ]
+thin_white_duke bets [$81 USD]
+FATDAN44 calls [$81 USD]
+thin_white_duke shows [ 9c, Kc ]a flush, Ace high.
+FATDAN44 doesn't show [ Jd, Ah ]two pairs, Aces and Jacks.
+thin_white_duke wins $309 USD from the main pot with a flush, Ace high.
+BigBaller1 has joined the table.
+
+
+***** Hand History for Game 169502878 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:47:35 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $400 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $686.37 USD )
+Seat 6: Jonuzi ( $1,324.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $1,082.20 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 raises [$6 USD]
+BigBaller1 raises [$32 USD]
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $44 USD
+
+
+***** Hand History for Game 169502919 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:48:04 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $408 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $678.37 USD )
+Seat 6: Jonuzi ( $1,324.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $1,082.20 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 raises [$12 USD]
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+FATDAN44 does not show cards.
+FATDAN44 wins $18 USD
+
+
+***** Hand History for Game 169503032 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:49:21 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $441.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $666.37 USD )
+Seat 6: Jonuzi ( $1,312.75 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $1,076.20 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 calls [$12 USD]
+thin_white_duke calls [$12 USD]
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$8 USD]
+** Dealing Flop ** [ 4c, 3s, 7h ]
+FATDAN44 checks
+Moose4Life bets [$23.61 USD]
+BigBaller1 folds
+thin_white_duke folds
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $70.84 USD
+
+
+***** Hand History for Game 169503102 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:50:02 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $429.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $666.37 USD )
+Seat 6: Jonuzi ( $1,310.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,064.20 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+BigBaller1 folds
+thin_white_duke raises [$16 USD]
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 will be using their time bank for this hand.
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $26 USD
+
+
+***** Hand History for Game 169503168 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:50:45 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $429.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $662.37 USD )
+Seat 6: Jonuzi ( $1,310.75 USD )
+Seat 2: Moose4Life ( $431.23 USD )
+Seat 5: thin_white_duke ( $1,074.20 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi raises [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+Jonuzi does not show cards.
+Jonuzi wins $18 USD
+
+
+***** Hand History for Game 169503190 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:50:58 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $429.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $658.37 USD )
+Seat 6: Jonuzi ( $1,316.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,074.20 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life raises [$11 USD]
+Grubah51994 folds
+BigBaller1 folds
+Moose4Life does not show cards.
+Moose4Life wins $17 USD
+
+
+***** Hand History for Game 169503220 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:51:20 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $425.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $656.37 USD )
+Seat 6: Jonuzi ( $1,316.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,074.20 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 folds
+thin_white_duke checks
+** Dealing Flop ** [ 5h, Qd, Jc ]
+thin_white_duke checks
+Grubah51994 bets [$4 USD]
+thin_white_duke folds
+Grubah51994 does not show cards.
+Grubah51994 wins $13.45 USD
+
+
+***** Hand History for Game 169503281 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:52:00 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $423.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $661.82 USD )
+Seat 6: Jonuzi ( $1,316.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,070.20 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+Jonuzi folds
+BigBaller1 does not show cards.
+BigBaller1 wins $18 USD
+
+
+***** Hand History for Game 169503328 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:52:30 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $429.23 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $661.82 USD )
+Seat 6: Jonuzi ( $1,312.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,068.20 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi raises [$10 USD]
+FATDAN44 calls [$8 USD]
+** Dealing Flop ** [ Tc, 2h, 2c ]
+Jonuzi bets [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$42 USD]
+Jonuzi folds
+FATDAN44 does not show cards.
+FATDAN44 wins $75.34 USD
+
+
+***** Hand History for Game 169503384 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:53:11 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $429.23 USD )
+Seat 1: FATDAN44 ( $421.34 USD )
+Seat 3: Grubah51994 ( $661.82 USD )
+Seat 6: Jonuzi ( $1,288.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,068.20 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+BigBaller1 raises [$32 USD]
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$28 USD]
+** Dealing Flop ** [ Qh, 6d, 3d ]
+Grubah51994 checks
+BigBaller1 bets [$50.25 USD]
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $117.25 USD
+
+
+***** Hand History for Game 169503441 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:53:51 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $464.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $629.82 USD )
+Seat 6: Jonuzi ( $1,288.75 USD )
+Seat 2: Moose4Life ( $431.23 USD )
+Seat 5: thin_white_duke ( $1,068.20 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke raises [$8 USD]
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $14 USD
+
+
+***** Hand History for Game 169503468 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:54:11 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $464.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $625.82 USD )
+Seat 6: Jonuzi ( $1,288.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,074.20 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life raises [$11 USD]
+Grubah51994 folds
+BigBaller1 folds
+Moose4Life does not show cards.
+Moose4Life wins $17 USD
+
+
+***** Hand History for Game 169503595 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:55:31 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $458.23 USD )
+Seat 1: FATDAN44 ( $425.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,284.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,068.20 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi raises [$10 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Jonuzi does not show cards.
+Jonuzi wins $16 USD
+
+
+***** Hand History for Game 169503633 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:55:58 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $458.23 USD )
+Seat 1: FATDAN44 ( $421.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,288.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,068.20 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke raises [$12 USD]
+Jonuzi calls [$12 USD]
+FATDAN44 folds
+Moose4Life folds
+** Dealing Flop ** [ Ks, 3d, 3s ]
+thin_white_duke checks
+Jonuzi checks
+** Dealing Turn ** [ 5d ]
+thin_white_duke bets [$18 USD]
+Jonuzi folds
+thin_white_duke does not show cards.
+thin_white_duke wins $46.34 USD
+
+
+***** Hand History for Game 169503706 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:56:56 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $458.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $431.23 USD )
+Seat 5: thin_white_duke ( $1,084.54 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 does not show cards.
+Grubah51994 wins $6 USD
+
+
+***** Hand History for Game 169503730 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:57:14 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $458.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $631.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,084.54 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 raises [$12 USD]
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $18 USD
+
+
+***** Hand History for Game 169503766 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:57:36 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $454.23 USD )
+Seat 1: FATDAN44 ( $425.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,084.54 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169503781 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:57:48 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $452.23 USD )
+Seat 1: FATDAN44 ( $425.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,086.54 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi does not show cards.
+Jonuzi wins $6 USD
+
+
+***** Hand History for Game 169503811 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:58:11 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $452.23 USD )
+Seat 1: FATDAN44 ( $425.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,278.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,084.54 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169503838 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:58:33 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $452.23 USD )
+Seat 1: FATDAN44 ( $421.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $435.23 USD )
+Seat 5: thin_white_duke ( $1,084.54 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke raises [$12 USD]
+Jonuzi folds
+FATDAN44 folds
+Moose4Life folds
+thin_white_duke does not show cards.
+thin_white_duke wins $18 USD
+
+
+***** Hand History for Game 169503864 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:58:49 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $452.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $629.27 USD )
+Seat 6: Jonuzi ( $1,276.75 USD )
+Seat 2: Moose4Life ( $431.23 USD )
+Seat 5: thin_white_duke ( $1,090.54 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+Jonuzi raises [$40 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 calls [$28 USD]
+** Dealing Flop ** [ Jh, 2s, 5c ]
+BigBaller1 checks
+Jonuzi bets [$30 USD]
+BigBaller1 raises [$86.50 USD]
+Jonuzi folds
+BigBaller1 does not show cards.
+BigBaller1 wins $199.50 USD
+
+
+***** Hand History for Game 169503946 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:59:48 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $525.23 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $625.27 USD )
+Seat 6: Jonuzi ( $1,206.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,090.54 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$2 USD]
+BigBaller1 checks
+** Dealing Flop ** [ 3c, 5c, 2s ]
+Grubah51994 checks
+BigBaller1 bets [$5.67 USD]
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $13.23 USD
+
+
+***** Hand History for Game 169503987 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:00:18 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $528.79 USD )
+Seat 1: FATDAN44 ( $419.34 USD )
+Seat 3: Grubah51994 ( $621.27 USD )
+Seat 6: Jonuzi ( $1,206.75 USD )
+Seat 2: Moose4Life ( $429.23 USD )
+Seat 5: thin_white_duke ( $1,090.54 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169504566 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:05:58 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $655.39 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $762.22 USD )
+Seat 6: Jonuzi ( $1,111.49 USD )
+Seat 2: Moose4Life ( $423.23 USD )
+Seat 5: thin_white_duke ( $970.04 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169504594 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:06:11 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $653.39 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $762.22 USD )
+Seat 6: Jonuzi ( $1,111.49 USD )
+Seat 2: Moose4Life ( $423.23 USD )
+Seat 5: thin_white_duke ( $972.04 USD )
+thin_white_duke posts small blind [$2 USD].
+Jonuzi posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi does not show cards.
+Jonuzi wins $6 USD
+
+
+***** Hand History for Game 169504621 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:06:30 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $653.39 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $762.22 USD )
+Seat 6: Jonuzi ( $1,113.49 USD )
+Seat 2: Moose4Life ( $423.23 USD )
+Seat 5: thin_white_duke ( $970.04 USD )
+Jonuzi posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 does not show cards.
+FATDAN44 wins $6 USD
+
+
+***** Hand History for Game 169504646 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:06:43 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $653.39 USD )
+Seat 1: FATDAN44 ( $402 USD )
+Seat 3: Grubah51994 ( $762.22 USD )
+Seat 6: Jonuzi ( $1,111.49 USD )
+Seat 2: Moose4Life ( $423.23 USD )
+Seat 5: thin_white_duke ( $970.04 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 folds
+Moose4Life calls [$8 USD]
+** Dealing Flop ** [ 3s, Ks, 4s ]
+Moose4Life checks
+BigBaller1 bets [$16.37 USD]
+Moose4Life calls [$16.37 USD]
+** Dealing Turn ** [ Td ]
+Moose4Life checks
+BigBaller1 bets [$27.87 USD]
+Moose4Life calls [$27.87 USD]
+** Dealing River ** [ 8h ]
+Moose4Life bets [$88 USD]
+BigBaller1 calls [$88 USD]
+Moose4Life shows [ 4c, Kc ]two pairs, Kings and Fours.
+BigBaller1 doesn't show [ Ac, Kh ]a pair of Kings.
+Moose4Life wins $287.48 USD from the main pot with two pairs, Kings and Fours.
+
+
+***** Hand History for Game 169504702 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:07:16 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $509.15 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $762.22 USD )
+Seat 6: Jonuzi ( $1,111.49 USD )
+Seat 2: Moose4Life ( $566.47 USD )
+Seat 5: thin_white_duke ( $970.04 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 calls [$4 USD]
+thin_white_duke folds
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 checks
+** Dealing Flop ** [ Kh, Ad, Jd ]
+Grubah51994 checks
+BigBaller1 bets [$7.08 USD]
+Grubah51994 calls [$7.08 USD]
+** Dealing Turn ** [ 3s ]
+Grubah51994 checks
+BigBaller1 bets [$29 USD]
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $51.82 USD
+
+
+***** Hand History for Game 169504819 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:08:22 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $520.89 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 3: Grubah51994 ( $751.14 USD )
+Seat 6: Jonuzi ( $1,111.49 USD )
+Seat 2: Moose4Life ( $564.47 USD )
+Seat 5: thin_white_duke ( $970.04 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+Jonuzi raises [$12 USD]
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+Jonuzi does not show cards.
+Jonuzi wins $18 USD
+
+
+***** Hand History for Game 169506009 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:18:47 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $689.49 USD )
+Seat 1: FATDAN44 ( $501 USD )
+Seat 3: Grubah51994 ( $817.09 USD )
+Seat 6: Jonuzi ( $1,089.72 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $814.60 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$8 USD]
+Jonuzi folds
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$6 USD]
+BigBaller1 calls [$4 USD]
+** Dealing Flop ** [ Th, Qs, 5d ]
+Grubah51994 checks
+BigBaller1 checks
+thin_white_duke bets [$11.33 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $34 USD
+
+
+***** Hand History for Game 169506080 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:19:19 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $681.49 USD )
+Seat 1: FATDAN44 ( $501 USD )
+Seat 3: Grubah51994 ( $809.09 USD )
+Seat 6: Jonuzi ( $1,089.72 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $829.27 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+Jonuzi folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $6 USD
+
+
+***** Hand History for Game 169506098 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:19:31 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $679.49 USD )
+Seat 1: FATDAN44 ( $501 USD )
+Seat 3: Grubah51994 ( $809.09 USD )
+Seat 6: Jonuzi ( $1,089.72 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $831.27 USD )
+thin_white_duke posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+Jonuzi has left the table.
+thin_white_duke raises [$10 USD]
+FATDAN44 folds
+thin_white_duke does not show cards.
+thin_white_duke wins $16 USD
+
+
+***** Hand History for Game 169506125 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:19:47 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $679.49 USD )
+Seat 1: FATDAN44 ( $497 USD )
+Seat 3: Grubah51994 ( $809.09 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 5: thin_white_duke ( $835.27 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life calls [$8 USD]
+** Dealing Flop ** [ 3h, 4c, 7s ]
+Moose4Life checks
+BigBaller1 bets [$12.28 USD]
+Moose4Life raises [$42 USD]
+BigBaller1 calls [$29.72 USD]
+** Dealing Turn ** [ Ad ]
+Moose4Life bets [$78 USD]
+BigBaller1 folds
+Moose4Life does not show cards.
+Moose4Life wins $185 USD
+
+
+***** Hand History for Game 169506224 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:20:36 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $625.49 USD )
+Seat 1: FATDAN44 ( $495 USD )
+Seat 3: Grubah51994 ( $809.09 USD )
+Seat 2: Moose4Life ( $453 USD )
+Seat 5: thin_white_duke ( $835.27 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+Grubah51994 calls [$6 USD]
+** Dealing Flop ** [ Qs, Js, 5h ]
+Grubah51994 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$14 USD]
+nopants has joined the table.
+Grubah51994 calls [$14 USD]
+** Dealing Turn ** [ 9c ]
+Grubah51994 bets [$23.61 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Grubah51994 does not show cards.
+Grubah51994 wins $70.84 USD
+
+
+***** Hand History for Game 169506288 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:21:09 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $625.49 USD )
+Seat 1: FATDAN44 ( $471 USD )
+Seat 3: Grubah51994 ( $832.32 USD )
+Seat 2: Moose4Life ( $451 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $835.27 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+FATDAN44 raises [$12 USD]
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 calls [$8 USD]
+** Dealing Flop ** [ 6c, 2s, Jd ]
+BigBaller1 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+** Dealing Turn ** [ Js ]
+BigBaller1 bets [$16.37 USD]
+FATDAN44 calls [$16.37 USD]
+** Dealing River ** [ 5d ]
+BigBaller1 bets [$27.87 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$100 USD]
+BigBaller1 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $183.61 USD
+
+
+***** Hand History for Game 169506365 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:21:49 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $569.25 USD )
+Seat 1: FATDAN44 ( $526.24 USD )
+Seat 3: Grubah51994 ( $830.32 USD )
+Seat 2: Moose4Life ( $451 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $835.27 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 raises [$10 USD]
+thin_white_duke folds
+BigBaller1 does not show cards.
+BigBaller1 wins $16 USD
+
+
+***** Hand History for Game 169506410 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:22:08 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $573.25 USD )
+Seat 1: FATDAN44 ( $526.24 USD )
+Seat 3: Grubah51994 ( $830.32 USD )
+Seat 2: Moose4Life ( $451 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $831.27 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 raises [$32 USD]
+thin_white_duke folds
+nopants folds
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $42 USD
+
+
+***** Hand History for Game 169506465 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:22:31 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $583.25 USD )
+Seat 1: FATDAN44 ( $526.24 USD )
+Seat 3: Grubah51994 ( $826.32 USD )
+Seat 2: Moose4Life ( $451 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $829.27 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 checks
+** Dealing Flop ** [ 2d, Kd, 7d ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$4 USD]
+Grubah51994 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $13.45 USD
+
+
+***** Hand History for Game 169506531 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:23:03 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $583.25 USD )
+Seat 1: FATDAN44 ( $531.69 USD )
+Seat 3: Grubah51994 ( $822.32 USD )
+Seat 2: Moose4Life ( $451 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $829.27 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+BigBaller1 calls [$4 USD]
+thin_white_duke folds
+nopants raises [$16 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life calls [$12 USD]
+Grubah51994 calls [$12 USD]
+BigBaller1 calls [$12 USD]
+** Dealing Flop ** [ 3s, 7d, 4c ]
+Moose4Life checks
+Grubah51994 checks
+BigBaller1 checks
+nopants checks
+** Dealing Turn ** [ 4h ]
+Moose4Life checks
+Grubah51994 checks
+BigBaller1 bets [$47.25 USD]
+nopants folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $110.25 USD
+
+
+***** Hand History for Game 169506658 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:24:01 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $630.25 USD )
+Seat 1: FATDAN44 ( $529.69 USD )
+Seat 3: Grubah51994 ( $806.32 USD )
+Seat 2: Moose4Life ( $435 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $829.27 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 calls [$4 USD]
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life calls [$2 USD]
+Grubah51994 raises [$12 USD]
+BigBaller1 calls [$12 USD]
+Moose4Life calls [$12 USD]
+** Dealing Flop ** [ 6s, 7h, 4c ]
+Moose4Life checks
+Grubah51994 bets [$22.67 USD]
+BigBaller1 folds
+Moose4Life raises [$66 USD]
+Grubah51994 will be using their time bank for this hand.
+Grubah51994 folds
+Moose4Life does not show cards.
+Moose4Life wins $133.67 USD
+
+
+***** Hand History for Game 169506825 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:25:21 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $614.25 USD )
+Seat 1: FATDAN44 ( $529.69 USD )
+Seat 3: Grubah51994 ( $767.65 USD )
+Seat 2: Moose4Life ( $486.67 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $829.27 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+nopants calls [$12 USD]
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+** Dealing Flop ** [ 9h, Js, 8h ]
+thin_white_duke checks
+nopants bets [$21.25 USD]
+thin_white_duke calls [$21.25 USD]
+** Dealing Turn ** [ 6c ]
+thin_white_duke checks
+nopants bets [$52.12 USD]
+thin_white_duke folds
+nopants does not show cards.
+nopants wins $121.62 USD
+
+
+***** Hand History for Game 169506950 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:26:22 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $610.25 USD )
+Seat 1: FATDAN44 ( $529.69 USD )
+Seat 3: Grubah51994 ( $765.65 USD )
+Seat 2: Moose4Life ( $486.67 USD )
+Seat 6: nopants ( $436.25 USD )
+Seat 5: thin_white_duke ( $796.02 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants raises [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke calls [$8 USD]
+** Dealing Flop ** [ 7s, 8s, 4h ]
+thin_white_duke checks
+nopants bets [$18.42 USD]
+thin_white_duke calls [$18.42 USD]
+** Dealing Turn ** [ Ts ]
+thin_white_duke checks
+nopants checks
+** Dealing River ** [ Td ]
+thin_white_duke checks
+nopants bets [$20 USD]
+thin_white_duke raises [$85 USD]
+nopants folds
+thin_white_duke does not show cards.
+thin_white_duke wins $164.84 USD
+
+
+***** Hand History for Game 169507112 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:27:53 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $608.25 USD )
+Seat 1: FATDAN44 ( $529.69 USD )
+Seat 3: Grubah51994 ( $765.65 USD )
+Seat 2: Moose4Life ( $486.67 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $845.44 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke calls [$10 USD]
+nopants folds
+** Dealing Flop ** [ 7s, Th, 9s ]
+thin_white_duke checks
+Moose4Life checks
+** Dealing Turn ** [ 6d ]
+thin_white_duke bets [$13.22 USD]
+Moose4Life calls [$13.22 USD]
+** Dealing River ** [ 2c ]
+thin_white_duke bets [$38.58 USD]
+Moose4Life calls [$38.58 USD]
+thin_white_duke shows [ Ah, Qs ]high card Ace.
+Moose4Life shows [ 9c, 8c ]a straight, Six to Ten.
+Moose4Life wins $128.60 USD from the main pot with a straight, Six to Ten.
+
+
+***** Hand History for Game 169507218 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:28:53 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $608.25 USD )
+Seat 1: FATDAN44 ( $529.69 USD )
+Seat 3: Grubah51994 ( $765.65 USD )
+Seat 2: Moose4Life ( $551.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $781.64 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 folds
+thin_white_duke raises [$16 USD]
+nopants folds
+FATDAN44 folds
+Grubah51994 calls [$12 USD]
+** Dealing Flop ** [ Kd, 4s, Td ]
+Grubah51994 checks
+thin_white_duke bets [$13 USD]
+Grubah51994 calls [$13 USD]
+** Dealing Turn ** [ Th ]
+Grubah51994 bets [$30.50 USD]
+thin_white_duke calls [$30.50 USD]
+** Dealing River ** [ Kh ]
+Grubah51994 checks
+thin_white_duke checks
+Grubah51994 shows [ 3c, 3s ]two pairs, Kings and Tens.
+thin_white_duke shows [ Ac, Qs ]two pairs, Kings and Tens with Ace kicker.
+thin_white_duke wins $122 USD from the main pot with two pairs, Kings and Tens with Ace kicker.
+
+
+***** Hand History for Game 169507314 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:29:51 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $608.25 USD )
+Seat 1: FATDAN44 ( $525.69 USD )
+Seat 3: Grubah51994 ( $706.15 USD )
+Seat 2: Moose4Life ( $551.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $844.14 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$2 USD]
+Moose4Life checks
+** Dealing Flop ** [ 5c, 2h, 6s ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$8 USD]
+Moose4Life folds
+Grubah51994 calls [$8 USD]
+** Dealing Turn ** [ 9h ]
+FATDAN44 checks
+Grubah51994 checks
+** Dealing River ** [ 8c ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+Grubah51994 checks
+FATDAN44 shows [ 4h, 6h ]a pair of Sixes.
+Grubah51994 doesn't show [ 3d, 3c ]a pair of Threes.
+FATDAN44 wins $26.45 USD from the main pot with a pair of Sixes.
+
+
+***** Hand History for Game 169507359 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:30:15 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $608.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $694.15 USD )
+Seat 2: Moose4Life ( $547.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $844.14 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+Grubah51994 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169507397 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:30:33 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $608.25 USD )
+Seat 1: FATDAN44 ( $546.14 USD )
+Seat 3: Grubah51994 ( $690.15 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $844.14 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants raises [$12 USD]
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$10 USD]
+BigBaller1 calls [$8 USD]
+** Dealing Flop ** [ Kh, Ah, 3h ]
+Grubah51994 bets [$17 USD]
+BigBaller1 calls [$17 USD]
+nopants calls [$17 USD]
+** Dealing Turn ** [ 2c ]
+Grubah51994 checks
+BigBaller1 bets [$63 USD]
+nopants folds
+Grubah51994 calls [$63 USD]
+** Dealing River ** [ 4c ]
+Grubah51994 checks
+BigBaller1 bets [$157.50 USD]
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $367.50 USD
+
+
+***** Hand History for Game 169507466 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:31:18 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $726.25 USD )
+Seat 1: FATDAN44 ( $546.14 USD )
+Seat 3: Grubah51994 ( $598.15 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $844.14 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 calls [$2 USD]
+thin_white_duke checks
+** Dealing Flop ** [ 9s, 6s, Ac ]
+BigBaller1 checks
+thin_white_duke checks
+Grubah51994 checks
+** Dealing Turn ** [ Ad ]
+BigBaller1 checks
+thin_white_duke checks
+Grubah51994 bets [$5.67 USD]
+BigBaller1 folds
+thin_white_duke folds
+Grubah51994 does not show cards.
+Grubah51994 wins $17.01 USD
+
+
+***** Hand History for Game 169507568 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:32:20 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $722.25 USD )
+Seat 1: FATDAN44 ( $546.14 USD )
+Seat 3: Grubah51994 ( $605.49 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $840.14 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169507600 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:32:44 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $722.25 USD )
+Seat 1: FATDAN44 ( $546.14 USD )
+Seat 3: Grubah51994 ( $605.49 USD )
+Seat 2: Moose4Life ( $551.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $838.14 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Grubah51994 calls [$4 USD]
+BigBaller1 calls [$4 USD]
+thin_white_duke folds
+nopants raises [$18 USD]
+FATDAN44 folds
+Grubah51994 calls [$16 USD]
+BigBaller1 calls [$16 USD]
+** Dealing Flop ** [ 8s, Kc, Qc ]
+nopants checks
+Grubah51994 bets [$30.50 USD]
+BigBaller1 calls [$30.50 USD]
+nopants folds
+** Dealing Turn ** [ 6d ]
+Grubah51994 bets [$91.50 USD]
+BigBaller1 calls [$91.50 USD]
+** Dealing River ** [ 6s ]
+Grubah51994 is all-In  [$463.49 USD]
+BigBaller1 folds
+Grubah51994 does not show cards.
+Grubah51994 wins $768.49 USD
+
+
+***** Hand History for Game 169507692 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:33:44 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $580.25 USD )
+Seat 1: FATDAN44 ( $542.14 USD )
+Seat 3: Grubah51994 ( $768.49 USD )
+Seat 2: Moose4Life ( $551.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $838.14 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 calls [$4 USD]
+BigBaller1 raises [$16 USD]
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $26 USD
+
+
+***** Hand History for Game 169507753 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:34:18 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $590.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $764.49 USD )
+Seat 2: Moose4Life ( $547.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $838.14 USD )
+Moose4Life posts small blind [$2 USD].
+Grubah51994 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 does not show cards.
+Grubah51994 wins $6 USD
+
+
+***** Hand History for Game 169507793 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:34:42 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $590.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $766.49 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $838.14 USD )
+Grubah51994 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 raises [$6 USD]
+BigBaller1 folds
+Grubah51994 does not show cards.
+Grubah51994 wins $12 USD
+
+
+***** Hand History for Game 169507841 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:35:08 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $586.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $770.49 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $400 USD )
+Seat 5: thin_white_duke ( $838.14 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants raises [$12 USD]
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke calls [$8 USD]
+** Dealing Flop ** [ 8h, Jc, Qc ]
+thin_white_duke checks
+nopants bets [$18.42 USD]
+thin_white_duke calls [$18.42 USD]
+** Dealing Turn ** [ 3h ]
+thin_white_duke checks
+nopants bets [$44.88 USD]
+thin_white_duke folds
+nopants does not show cards.
+nopants wins $104.72 USD
+
+
+***** Hand History for Game 169507920 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:35:50 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $584.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $770.49 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $429.42 USD )
+Seat 5: thin_white_duke ( $807.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Grubah51994 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+nopants folds
+BigBaller1 does not show cards.
+BigBaller1 wins $18 USD
+
+
+***** Hand History for Game 169507955 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:36:10 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $590.25 USD )
+Seat 1: FATDAN44 ( $540.14 USD )
+Seat 3: Grubah51994 ( $770.49 USD )
+Seat 2: Moose4Life ( $545.47 USD )
+Seat 6: nopants ( $425.42 USD )
+Seat 5: thin_white_duke ( $805.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$12 USD]
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169507986 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:36:27 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $590.25 USD )
+Seat 1: FATDAN44 ( $536.14 USD )
+Seat 3: Grubah51994 ( $770.49 USD )
+Seat 2: Moose4Life ( $551.47 USD )
+Seat 6: nopants ( $423.42 USD )
+Seat 5: thin_white_duke ( $805.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Grubah51994 folds
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+Grubah51994 has left the table.
+
+
+***** Hand History for Game 169508025 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:36:50 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $590.25 USD )
+Seat 1: FATDAN44 ( $534.14 USD )
+Seat 2: Moose4Life ( $553.47 USD )
+Seat 6: nopants ( $423.42 USD )
+Seat 5: thin_white_duke ( $805.72 USD )
+Moose4Life posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$10 USD]
+BigBaller1 calls [$8 USD]
+** Dealing Flop ** [ 2d, 8c, Ad ]
+Moose4Life checks
+BigBaller1 bets [$17 USD]
+Moose4Life calls [$17 USD]
+** Dealing Turn ** [ Qd ]
+Moose4Life checks
+BigBaller1 checks
+** Dealing River ** [ Tc ]
+Moose4Life checks
+BigBaller1 bets [$41.25 USD]
+Moose4Life folds
+BigBaller1 does not show cards.
+BigBaller1 wins $96.25 USD
+
+
+***** Hand History for Game 169508097 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:37:23 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $616.25 USD )
+Seat 1: FATDAN44 ( $534.14 USD )
+Seat 2: Moose4Life ( $524.47 USD )
+Seat 6: nopants ( $423.42 USD )
+Seat 5: thin_white_duke ( $805.72 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$12 USD]
+BigBaller1 folds
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169508145 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:37:48 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $614.25 USD )
+Seat 1: FATDAN44 ( $534.14 USD )
+Seat 2: Moose4Life ( $530.47 USD )
+Seat 6: nopants ( $423.42 USD )
+Seat 5: thin_white_duke ( $801.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+Moose4Life folds
+BigBaller1 folds
+thin_white_duke raises [$10 USD]
+nopants raises [$28 USD]
+thin_white_duke calls [$20 USD]
+** Dealing Flop ** [ Ts, 8h, As ]
+thin_white_duke checks
+nopants bets [$28 USD]
+thin_white_duke calls [$28 USD]
+** Dealing Turn ** [ 9h ]
+thin_white_duke checks
+nopants checks
+** Dealing River ** [ 5d ]
+thin_white_duke checks
+nopants checks
+thin_white_duke shows [ 4s, 6s ]high card Ace.
+nopants shows [ 6c, Kc ]high card Ace with King kicker.
+nopants wins $117 USD from the main pot with high card, Ace with King kicker.
+
+
+***** Hand History for Game 169508303 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:39:14 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $614.25 USD )
+Seat 1: FATDAN44 ( $534.14 USD )
+Seat 2: Moose4Life ( $530.47 USD )
+Seat 6: nopants ( $480.42 USD )
+Seat 5: thin_white_duke ( $741.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+BigBaller1 raises [$8 USD]
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $14 USD
+
+
+***** Hand History for Game 169508325 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:39:27 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $620.25 USD )
+Seat 1: FATDAN44 ( $530.14 USD )
+Seat 2: Moose4Life ( $530.47 USD )
+Seat 6: nopants ( $478.42 USD )
+Seat 5: thin_white_duke ( $741.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants raises [$12 USD]
+FATDAN44 raises [$36 USD]
+Moose4Life folds
+nopants calls [$26 USD]
+** Dealing Flop ** [ 9c, 2s, 2c ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$50 USD]
+nopants calls [$50 USD]
+** Dealing Turn ** [ Ac ]
+FATDAN44 bets [$116 USD]
+nopants calls [$116 USD]
+** Dealing River ** [ 7h ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+nopants is all-In  [$274.42 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$274.42 USD]
+FATDAN44 shows [ As, Ks ]two pairs, Aces and Twos.
+nopants shows [ 9s, 9d ]a full house, Nines full of Twos.
+nopants wins $957.84 USD from the main pot with a full house, Nines full of Twos.
+
+
+***** Hand History for Game 169508901 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:44:54 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $603.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $555.92 USD )
+Seat 6: nopants ( $1,110.51 USD )
+Seat 5: thin_white_duke ( $595.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169508931 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:45:08 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $603.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $557.92 USD )
+Seat 6: nopants ( $1,110.51 USD )
+Seat 5: thin_white_duke ( $595.72 USD )
+Moose4Life posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke raises [$12 USD]
+nopants folds
+FATDAN44 folds
+Moose4Life raises [$38 USD]
+BigBaller1 folds
+thin_white_duke folds
+Moose4Life does not show cards.
+Moose4Life wins $56 USD
+
+
+***** Hand History for Game 169508963 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:45:28 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $599.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $573.92 USD )
+Seat 6: nopants ( $1,110.51 USD )
+Seat 5: thin_white_duke ( $583.72 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$8 USD]
+BigBaller1 calls [$6 USD]
+thin_white_duke folds
+** Dealing Flop ** [ 4s, As, 5d ]
+BigBaller1 checks
+Moose4Life checks
+** Dealing Turn ** [ Ks ]
+BigBaller1 checks
+Moose4Life checks
+** Dealing River ** [ Qd ]
+BigBaller1 checks
+Moose4Life bets [$11 USD]
+BigBaller1 folds
+Moose4Life does not show cards.
+Moose4Life wins $29.89 USD
+
+
+***** Hand History for Game 169509047 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:46:19 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $591.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,110.51 USD )
+Seat 5: thin_white_duke ( $579.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+Moose4Life folds
+BigBaller1 raises [$16 USD]
+thin_white_duke raises [$50 USD]
+nopants raises [$108 USD]
+BigBaller1 folds
+thin_white_duke calls [$60 USD]
+** Dealing Flop ** [ Jd, 5h, 2h ]
+thin_white_duke checks
+nopants checks
+** Dealing Turn ** [ Ks ]
+thin_white_duke checks
+nopants checks
+** Dealing River ** [ Qs ]
+thin_white_duke checks
+nopants checks
+thin_white_duke shows [ Ah, 7h ]high card Ace.
+nopants shows [ 8d, 8s ]a pair of Eights.
+nopants wins $237 USD from the main pot with a pair of Eights.
+
+
+***** Hand History for Game 169509189 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:47:39 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $575.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $467.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+BigBaller1 folds
+thin_white_duke folds
+nopants raises [$10 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+nopants does not show cards.
+nopants wins $16 USD
+
+
+***** Hand History for Game 169509234 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:48:06 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $575.25 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,239.51 USD )
+Seat 5: thin_white_duke ( $467.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke raises [$12 USD]
+nopants folds
+FATDAN44 raises [$36 USD]
+Moose4Life folds
+thin_white_duke calls [$26 USD]
+** Dealing Flop ** [ 5s, Qd, 8s ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$50 USD]
+thin_white_duke folds
+FATDAN44 does not show cards.
+FATDAN44 wins $127 USD
+
+
+***** Hand History for Game 169509321 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:48:58 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $575.25 USD )
+Seat 1: FATDAN44 ( $439 USD )
+Seat 2: Moose4Life ( $580.81 USD )
+Seat 6: nopants ( $1,239.51 USD )
+Seat 5: thin_white_duke ( $429.72 USD )
+Moose4Life posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants folds
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+BigBaller1 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169509369 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:49:21 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $571.25 USD )
+Seat 1: FATDAN44 ( $445 USD )
+Seat 2: Moose4Life ( $578.81 USD )
+Seat 6: nopants ( $1,239.51 USD )
+Seat 5: thin_white_duke ( $429.72 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants raises [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+BigBaller1 folds
+thin_white_duke folds
+nopants does not show cards.
+nopants wins $18 USD
+
+
+***** Hand History for Game 169509401 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:49:41 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: BigBaller1 ( $569.25 USD )
+Seat 1: FATDAN44 ( $445 USD )
+Seat 2: Moose4Life ( $578.81 USD )
+Seat 6: nopants ( $1,245.51 USD )
+Seat 5: thin_white_duke ( $425.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Darrenthegr81 has joined the table.
+BigBaller1 raises [$8 USD]
+thin_white_duke folds
+nopants calls [$4 USD]
+** Dealing Flop ** [ Ad, Jd, 2d ]
+nopants checks
+BigBaller1 checks
+** Dealing Turn ** [ As ]
+nopants checks
+BigBaller1 bets [$8.50 USD]
+nopants folds
+BigBaller1 does not show cards.
+BigBaller1 wins $25.50 USD
+
+
+***** Hand History for Game 169509492 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:50:21 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $578.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $445 USD )
+Seat 2: Moose4Life ( $578.81 USD )
+Seat 6: nopants ( $1,237.51 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$12 USD]
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $18 USD
+
+
+***** Hand History for Game 169509528 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:50:40 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $578.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $441 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169509551 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:50:51 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $578.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $439 USD )
+Seat 2: Moose4Life ( $586.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+Moose4Life posts small blind [$2 USD].
+Darrenthegr81 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 calls [$4 USD]
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$16 USD]
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 calls [$12 USD]
+** Dealing Flop ** [ 7s, Ah, 6d ]
+BigBaller1 checks
+FATDAN44 checks
+** Dealing Turn ** [ 4s ]
+BigBaller1 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$24 USD]
+BigBaller1 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $59.89 USD
+
+
+***** Hand History for Game 169509602 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:51:26 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $562.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $458.89 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+Darrenthegr81 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169509635 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:51:43 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $558.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $464.89 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants folds
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 folds
+thin_white_duke folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169509664 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:51:58 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $470.89 USD )
+Seat 2: Moose4Life ( $584.81 USD )
+Seat 6: nopants ( $1,235.51 USD )
+Seat 5: thin_white_duke ( $419.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life raises [$12 USD]
+Darrenthegr81 folds
+BigBaller1 folds
+thin_white_duke calls [$10 USD]
+nopants calls [$8 USD]
+** Dealing Flop ** [ 4d, 8s, Ad ]
+thin_white_duke checks
+nopants checks
+Moose4Life checks
+** Dealing Turn ** [ 6s ]
+thin_white_duke bets [$25.50 USD]
+nopants folds
+Moose4Life folds
+thin_white_duke does not show cards.
+thin_white_duke wins $59.50 USD
+
+
+***** Hand History for Game 169509740 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:52:43 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $470.89 USD )
+Seat 2: Moose4Life ( $572.81 USD )
+Seat 6: nopants ( $1,223.51 USD )
+Seat 5: thin_white_duke ( $441.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 does not show cards.
+FATDAN44 wins $6 USD
+
+
+***** Hand History for Game 169509775 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:52:58 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $472.89 USD )
+Seat 2: Moose4Life ( $572.81 USD )
+Seat 6: nopants ( $1,221.51 USD )
+Seat 5: thin_white_duke ( $441.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Darrenthegr81 raises [$12 USD]
+BigBaller1 folds
+thin_white_duke calls [$12 USD]
+nopants raises [$56 USD]
+FATDAN44 folds
+Moose4Life folds
+Darrenthegr81 folds
+thin_white_duke folds
+nopants does not show cards.
+nopants wins $86 USD
+
+
+***** Hand History for Game 169509833 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:53:23 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $470.89 USD )
+Seat 2: Moose4Life ( $568.81 USD )
+Seat 6: nopants ( $1,251.51 USD )
+Seat 5: thin_white_duke ( $429.72 USD )
+Moose4Life posts small blind [$2 USD].
+Darrenthegr81 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants raises [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$12 USD]
+Moose4Life calls [$10 USD]
+Darrenthegr81 calls [$8 USD]
+** Dealing Flop ** [ 4h, 5s, 4d ]
+Moose4Life checks
+Darrenthegr81 checks
+nopants bets [$34 USD]
+FATDAN44 calls [$34 USD]
+Moose4Life folds
+Darrenthegr81 folds
+** Dealing Turn ** [ 5d ]
+nopants bets [$84.75 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$84.75 USD]
+** Dealing River ** [ 7h ]
+nopants is all-In  [$1,120.76 USD]
+FATDAN44 folds
+nopants does not show cards.
+nopants wins $1,403.26 USD
+
+
+***** Hand History for Game 169510031 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:55:00 EDT 2017
+Table Orange (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $556.81 USD )
+Seat 6: nopants ( $1,403.26 USD )
+Seat 5: thin_white_duke ( $429.72 USD )
+Darrenthegr81 posts small blind [$2 USD].
+BigBaller1 posts big blind [$4 USD].
+** Dealing down cards **
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 does not show cards.
+BigBaller1 wins $6 USD
+
+
+***** Hand History for Game 169510061 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:55:14 EDT 2017
+Table Orange (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $558.25 USD )
+Seat 3: Darrenthegr81 ( $400 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $556.81 USD )
+Seat 6: nopants ( $1,403.26 USD )
+Seat 5: thin_white_duke ( $429.72 USD )
+BigBaller1 posts small blind [$2 USD].
+thin_white_duke posts big blind [$4 USD].
+** Dealing down cards **
+nopants folds
+FATDAN44 raises [$10 USD]
+Moose4Life folds
+Darrenthegr81 raises [$36 USD]
+BigBaller1 folds
+thin_white_duke folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Darrenthegr81 does not show cards.
+Darrenthegr81 wins $52 USD
+
+
+***** Hand History for Game 169510107 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:55:38 EDT 2017
+Table Orange (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $556.25 USD )
+Seat 3: Darrenthegr81 ( $416 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $556.81 USD )
+Seat 6: nopants ( $1,403.26 USD )
+Seat 5: thin_white_duke ( $425.72 USD )
+thin_white_duke posts small blind [$2 USD].
+nopants posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+Moose4Life folds
+Darrenthegr81 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+nopants calls [$8 USD]
+** Dealing Flop ** [ Qd, Ts, 8s ]
+nopants checks
+BigBaller1 bets [$16.37 USD]
+nopants raises [$64 USD]
+BigBaller1 calls [$47.63 USD]
+** Dealing Turn ** [ Js ]
+nopants checks
+BigBaller1 checks
+** Dealing River ** [ Tc ]
+nopants checks
+BigBaller1 checks
+nopants shows [ Kh, Jc ]two pairs, Jacks and Tens.
+BigBaller1 shows [ Qc, Ks ]two pairs, Queens and Tens.
+BigBaller1 wins $151 USD from the main pot with two pairs, Queens and Tens.
+
+
+***** Hand History for Game 169510218 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:56:36 EDT 2017
+Table Orange (Real Money)
+Seat 5 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $631.25 USD )
+Seat 3: Darrenthegr81 ( $416 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $556.81 USD )
+Seat 6: nopants ( $1,327.26 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+nopants posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Darrenthegr81 raises [$12 USD]
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$8 USD]
+** Dealing Flop ** [ 3d, Qs, Td ]
+FATDAN44 checks
+Darrenthegr81 checks
+** Dealing Turn ** [ 3h ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+Darrenthegr81 checks
+** Dealing River ** [ Qd ]
+FATDAN44 checks
+Darrenthegr81 bets [$12.28 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$12.28 USD]
+Darrenthegr81 shows [ Jc, Js ]two pairs, Queens and Jacks.
+FATDAN44 doesn't show [ Th, Kh ]two pairs, Queens and Tens.
+Darrenthegr81 wins $47.76 USD from the main pot with two pairs, Queens and Jacks.
+
+
+***** Hand History for Game 169510359 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:57:43 EDT 2017
+Table Orange (Real Money)
+Seat 6 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $631.25 USD )
+Seat 3: Darrenthegr81 ( $439.48 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $556.81 USD )
+Seat 6: nopants ( $1,325.26 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Darrenthegr81 folds
+BigBaller1 raises [$12 USD]
+thin_white_duke folds
+nopants folds
+FATDAN44 folds
+Moose4Life folds
+BigBaller1 does not show cards.
+BigBaller1 wins $18 USD
+
+
+***** Hand History for Game 169510390 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 19:57:58 EDT 2017
+Table Orange (Real Money)
+Seat 1 is the button
+Total number of players : 6/6
+Seat 4: BigBaller1 ( $637.25 USD )
+Seat 3: Darrenthegr81 ( $439.48 USD )
+Seat 1: FATDAN44 ( $400 USD )
+Seat 2: Moose4Life ( $552.81 USD )
+Seat 6: nopants ( $1,325.26 USD )
+Seat 5: thin_white_duke ( $423.72 USD )
+Moose4Life posts small blind [$2 USD].
+Darrenthegr81 posts big blind [$4 USD].
+** Dealing down cards **
+BigBaller1 folds
+thin_white_duke folds
+nopants folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life folds
+Darrenthegr81 does not show cards.
+Darrenthegr81 wins $6 USD
+
+

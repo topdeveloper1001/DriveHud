@@ -53,6 +53,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase))
+            {
+                siteName = EnumPokerSites.PartyPoker;
+                return true;
+            }
+
             if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase) ||
                 handText.StartsWith("<Game Information>", StringComparison.InvariantCultureIgnoreCase))
             {
