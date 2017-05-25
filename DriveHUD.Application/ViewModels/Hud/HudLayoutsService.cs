@@ -474,7 +474,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var statistics = new HudIndicators(new[] { stickersStatistics[sticker.Name] });
+                var statistics = new HudLightIndicators(new[] { stickersStatistics[sticker.Name] });
 
                 if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
@@ -931,7 +931,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, HudIndicators source)
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
             {

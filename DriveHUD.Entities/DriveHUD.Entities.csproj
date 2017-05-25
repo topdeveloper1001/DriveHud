@@ -81,6 +81,7 @@
     <Compile Include="PlayerNotes.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Playerstatistic.cs" />
+    <Compile Include="PositionalStat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TournamentEnums.cs" />
     <Compile Include="Tournaments.cs" />

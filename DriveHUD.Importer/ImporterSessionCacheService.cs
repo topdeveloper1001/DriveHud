@@ -139,14 +139,11 @@ namespace DriveHUD.Importers
 
                         playerStatistic.ForEach(x =>
                         {
-                            // we don't have this data in the db so update it after loading from file
-                            PlayerStatisticCalculator.CalculatePositionalData(x);
-
                             var isCurrentGame = x.GameNumber == cacheInfo.Stats.GameNumber;
 
                             if (isCurrentGame)
                             {
-                                PlayerStatisticCalculator.CalculateTotalPotValues(x);
+                                x.CalculateTotalPot();
                                 x.SessionCode = cacheInfo.Session;
                             }
 

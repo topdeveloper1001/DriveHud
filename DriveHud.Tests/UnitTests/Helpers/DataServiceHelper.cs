@@ -43,6 +43,8 @@ namespace DriveHud.Tests.UnitTests.Helpers
                 {
                     var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
 
+                    stat.CalculatePositionalStats();
+
                     if (filter != null)
                     {
                         if (filter(stat))

@@ -1402,6 +1402,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_S4BetEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_S4BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-Bet MP%.
         /// </summary>
         internal static string Enum_Stat_S4BetMP {

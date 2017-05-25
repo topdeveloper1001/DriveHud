@@ -665,4 +665,7 @@
   <data name="Enum_Stat_NetWon" xml:space="preserve">
     <value>Net Won</value>
   </data>
+  <data name="Enum_Stat_S4BetEP" xml:space="preserve">
+    <value>4-Bet EP%</value>
+  </data>
 </root>
