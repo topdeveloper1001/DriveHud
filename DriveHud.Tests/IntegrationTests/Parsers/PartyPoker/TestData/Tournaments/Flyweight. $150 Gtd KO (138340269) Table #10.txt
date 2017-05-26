@@ -1,0 +1,1615 @@
+Game #16120222405 starts.
+
+#Game No : 16120222405 
+***** Hand History for Game 16120222405 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:00:06 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 4: Bust1985 ( 30,000 )
+Seat 1: EverSoNice ( 30,000 )
+Seat 7: Figarootoo ( 30,000 )
+Seat 6: PokerJensen ( 30,000 )
+Seat 5: StackMagnet ( 30,000 )
+Seat 2: kudesnik2012 ( 30,000 )
+Seat 3: memphisino ( 30,000 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Bust1985 posts small blind [75].
+StackMagnet posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  2d 9d ]
+PokerJensen folds
+Figarootoo folds
+EverSoNice will be using their time bank for this hand.
+Opa_Claus has joined the table.
+EverSoNice did not respond in time
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [75]
+StackMagnet checks
+** Dealing Flop ** [ 9s, 5h, 5s ]
+Bust1985 checks
+StackMagnet checks
+** Dealing Turn ** [ 6s ]
+Bust1985 bets [356]
+StackMagnet calls [356]
+** Dealing River ** [ Ks ]
+Bust1985 checks
+StackMagnet bets [890]
+Bust1985 calls [890]
+StackMagnet shows [ 7d, 3s ]a flush, King high.
+Bust1985 shows [ 9h, 4s ]a flush, King high with Four kicker.
+Bust1985 wins 2,967 chips from the main pot with a flush, King high with Four kicker.
+Game #16120225616 starts.
+
+#Game No : 16120225616 
+***** Hand History for Game 16120225616 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:01:37 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 31,546 )
+Seat 1: EverSoNice ( 29,975 )
+Seat 7: Figarootoo ( 29,975 )
+Seat 8: Opa_Claus ( 30,000 )
+Seat 6: PokerJensen ( 29,975 )
+Seat 5: StackMagnet ( 28,579 )
+Seat 2: kudesnik2012 ( 29,975 )
+Seat 3: memphisino ( 29,975 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+StackMagnet posts small blind [75].
+PokerJensen posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  3s Td ]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino raises [300]
+Bust1985 calls [300]
+StackMagnet folds
+PokerJensen calls [150]
+** Dealing Flop ** [ 2d, 2s, 4h ]
+PokerJensen checks
+memphisino bets [300]
+Bust1985 calls [300]
+PokerJensen folds
+** Dealing Turn ** [ 7c ]
+memphisino checks
+Bust1985 bets [1,331]
+memphisino folds
+Bust1985 does not show cards.
+Bust1985 wins 3,106 chips
+Game #16120227763 starts.
+
+#Game No : 16120227763 
+***** Hand History for Game 16120227763 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:02:27 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 32,696 )
+Seat 1: EverSoNice ( 29,950 )
+Seat 7: Figarootoo ( 29,950 )
+Seat 8: Opa_Claus ( 29,975 )
+Seat 6: PokerJensen ( 29,650 )
+Seat 5: StackMagnet ( 28,479 )
+Seat 2: kudesnik2012 ( 29,950 )
+Seat 3: memphisino ( 29,350 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+PokerJensen posts small blind [75].
+Figarootoo posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Ac 8c ]
+Opa_Claus calls [150]
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [150]
+StackMagnet folds
+PokerJensen calls [75]
+Figarootoo raises [600]
+Opa_Claus folds
+Bust1985 calls [600]
+PokerJensen folds
+** Dealing Flop ** [ Kc, 3h, 5d ]
+Figarootoo checks
+Bust1985 checks
+** Dealing Turn ** [ 4d ]
+Figarootoo bets [1,333]
+Bust1985 calls [1,333]
+** Dealing River ** [ 6h ]
+Figarootoo checks
+Bust1985 is all-In  [30,588]
+Figarootoo folds
+Bust1985 does not show cards.
+Bust1985 wins 35,254 chips
+Game #16120233069 starts.
+
+#Game No : 16120233069 
+***** Hand History for Game 16120233069 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:04:02 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 35,254 )
+Seat 1: EverSoNice ( 29,925 )
+Seat 7: Figarootoo ( 27,842 )
+Seat 8: Opa_Claus ( 29,800 )
+Seat 6: PokerJensen ( 29,475 )
+Seat 5: StackMagnet ( 28,454 )
+Seat 2: kudesnik2012 ( 29,925 )
+Seat 3: memphisino ( 29,325 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Figarootoo posts small blind [75].
+Opa_Claus posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Kd 3d ]
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [150]
+StackMagnet calls [150]
+PokerJensen folds
+Figarootoo calls [75]
+Opa_Claus checks
+** Dealing Flop ** [ 5d, 6s, 5h ]
+Figarootoo checks
+Opa_Claus checks
+Bust1985 checks
+StackMagnet checks
+** Dealing Turn ** [ 8s ]
+Figarootoo checks
+Opa_Claus checks
+Bust1985 checks
+StackMagnet checks
+** Dealing River ** [ 5c ]
+Figarootoo checks
+Opa_Claus checks
+Bust1985 checks
+StackMagnet checks
+Figarootoo shows [ Kd, 3d ]three of a kind, Fives.
+Opa_Claus shows [ 7h, 7d ]a full house, Fives full of Sevens.
+Bust1985 doesn't show [ 2d, 4c ]three of a kind, Fives.
+StackMagnet doesn't show [ 9d, Ah ]three of a kind, Fives with Ace kicker.
+Opa_Claus wins 800 chips from the main pot with a full house, Fives full of Sevens.
+Game #16120237612 starts.
+
+#Game No : 16120237612 
+***** Hand History for Game 16120237612 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:05:22 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 35,079 )
+Seat 1: EverSoNice ( 29,900 )
+Seat 7: Figarootoo ( 27,667 )
+Seat 8: Opa_Claus ( 30,425 )
+Seat 6: PokerJensen ( 29,450 )
+Seat 5: StackMagnet ( 28,279 )
+Seat 2: kudesnik2012 ( 29,900 )
+Seat 3: memphisino ( 29,300 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Opa_Claus posts small blind [75].
+EverSoNice posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  3s As ]
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [150]
+StackMagnet raises [600]
+PokerJensen calls [600]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+Bust1985 calls [450]
+** Dealing Flop ** [ 2d, Ac, 4s ]
+Bust1985 checks
+StackMagnet bets [1,668]
+PokerJensen folds
+Bust1985 calls [1,668]
+** Dealing Turn ** [ 9h ]
+Bust1985 checks
+StackMagnet checks
+** Dealing River ** [ 3d ]
+Bust1985 bets [4,170]
+StackMagnet folds
+Bust1985 does not show cards.
+Bust1985 wins 9,731 chips
+Game #16120240149 starts.
+
+#Game No : 16120240149 
+***** Hand History for Game 16120240149 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:06:07 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 38,347 )
+Seat 1: EverSoNice ( 29,725 )
+Seat 7: Figarootoo ( 27,642 )
+Seat 8: Opa_Claus ( 30,325 )
+Seat 6: PokerJensen ( 28,825 )
+Seat 5: StackMagnet ( 25,986 )
+Seat 2: kudesnik2012 ( 29,875 )
+Seat 3: memphisino ( 29,275 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+EverSoNice posts small blind [75].
+kudesnik2012 posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  7s Ah ]
+memphisino raises [300]
+Bust1985 calls [300]
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+** Dealing Flop ** [ Kh, 4s, 7d ]
+memphisino checks
+Bust1985 checks
+** Dealing Turn ** [ 4d ]
+memphisino bets [300]
+Bust1985 folds
+memphisino does not show cards.
+memphisino wins 1,325 chips
+Game #16120243871 starts.
+
+#Game No : 16120243871 
+***** Hand History for Game 16120243871 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:07:04 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 38,022 )
+Seat 1: EverSoNice ( 29,625 )
+Seat 7: Figarootoo ( 27,617 )
+Seat 8: Opa_Claus ( 30,300 )
+Seat 6: PokerJensen ( 28,800 )
+Seat 5: StackMagnet ( 25,961 )
+Seat 2: kudesnik2012 ( 29,700 )
+Seat 3: memphisino ( 29,975 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+kudesnik2012 posts small blind [75].
+memphisino posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  9d 7c ]
+Bust1985 calls [150]
+StackMagnet raises [450]
+PokerJensen calls [450]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [300]
+** Dealing Flop ** [ 2h, Js, 5h ]
+Bust1985 checks
+StackMagnet checks
+PokerJensen checks
+** Dealing Turn ** [ 3h ]
+Bust1985 checks
+StackMagnet checks
+PokerJensen checks
+** Dealing River ** [ 2d ]
+Bust1985 checks
+StackMagnet checks
+PokerJensen checks
+Bust1985 shows [ 5c, 8c ]two pairs, Fives and Twos.
+StackMagnet doesn't show [ 3d, Ad ]two pairs, Threes and Twos.
+PokerJensen doesn't show [ Qs, Td ]a pair of Twos.
+Bust1985 wins 1,775 chips from the main pot with two pairs, Fives and Twos.
+Game #16120247358 starts.
+
+#Game No : 16120247358 
+***** Hand History for Game 16120247358 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:08:05 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 39,322 )
+Seat 1: EverSoNice ( 29,600 )
+Seat 7: Figarootoo ( 27,592 )
+Seat 8: Opa_Claus ( 30,275 )
+Seat 6: PokerJensen ( 28,325 )
+Seat 5: StackMagnet ( 25,486 )
+Seat 2: kudesnik2012 ( 29,600 )
+Seat 3: memphisino ( 29,800 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+memphisino posts small blind [75].
+Bust1985 posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  5c Kc ]
+StackMagnet folds
+PokerJensen calls [150]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 calls [150]
+memphisino calls [75]
+Bust1985 will be using their time bank for this hand.
+Bust1985 checks
+** Dealing Flop ** [ 6s, Ts, Jd ]
+memphisino checks
+Bust1985 checks
+PokerJensen bets [400]
+kudesnik2012 folds
+memphisino calls [400]
+Bust1985 folds
+** Dealing Turn ** [ 8d ]
+memphisino checks
+PokerJensen bets [150]
+memphisino calls [150]
+** Dealing River ** [ Jc ]
+memphisino checks
+PokerJensen checks
+memphisino shows [ Js, 4d ]three of a kind, Jacks.
+PokerJensen doesn't show [ Kh, Qs ]a pair of Jacks.
+memphisino wins 1,900 chips from the main pot with three of a kind, Jacks.
+Game #16120252719 starts.
+
+#Game No : 16120252719 
+***** Hand History for Game 16120252719 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:09:25 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 39,147 )
+Seat 1: EverSoNice ( 29,575 )
+Seat 7: Figarootoo ( 27,567 )
+Seat 8: Opa_Claus ( 30,250 )
+Seat 6: PokerJensen ( 27,600 )
+Seat 5: StackMagnet ( 25,461 )
+Seat 2: kudesnik2012 ( 29,425 )
+Seat 3: memphisino ( 30,975 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Bust1985 posts small blind [75].
+StackMagnet posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  3h 7d ]
+PokerJensen folds
+Figarootoo folds
+Opa_Claus calls [150]
+EverSoNice folds
+kudesnik2012 folds
+memphisino calls [150]
+Bust1985 calls [75]
+StackMagnet checks
+** Dealing Flop ** [ Kc, 8c, Td ]
+Bust1985 bets [150]
+StackMagnet calls [150]
+Opa_Claus folds
+memphisino raises [525]
+Bust1985 calls [375]
+StackMagnet calls [375]
+** Dealing Turn ** [ 3s ]
+Bust1985 checks
+StackMagnet bets [1,781]
+memphisino calls [1,781]
+Bust1985 folds
+** Dealing River ** [ 9s ]
+StackMagnet checks
+memphisino bets [2,968]
+StackMagnet folds
+memphisino does not show cards.
+memphisino wins 8,905 chips
+Game #16120258536 starts.
+
+#Game No : 16120258536 
+***** Hand History for Game 16120258536 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:11:11 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 38,447 )
+Seat 1: EverSoNice ( 29,550 )
+Seat 7: Figarootoo ( 27,542 )
+Seat 8: Opa_Claus ( 30,075 )
+Seat 6: PokerJensen ( 27,575 )
+Seat 5: StackMagnet ( 22,980 )
+Seat 2: kudesnik2012 ( 29,400 )
+Seat 3: memphisino ( 34,431 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+StackMagnet posts small blind [100].
+PokerJensen posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  4s Tc ]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice did not respond in time
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [200]
+StackMagnet raises [700]
+PokerJensen calls [600]
+Bust1985 calls [600]
+** Dealing Flop ** [ Qd, 7s, Js ]
+StackMagnet bets [2,600]
+PokerJensen folds
+Bust1985 calls [2,600]
+** Dealing Turn ** [ 9d ]
+StackMagnet is all-In  [19,555]
+Bust1985 folds
+StackMagnet does not show cards.
+StackMagnet wins 27,355 chips
+Game #16120261650 starts.
+
+#Game No : 16120261650 
+***** Hand History for Game 16120261650 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:12:08 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 35,022 )
+Seat 1: EverSoNice ( 29,525 )
+Seat 7: Figarootoo ( 27,517 )
+Seat 8: Opa_Claus ( 30,050 )
+Seat 6: PokerJensen ( 26,750 )
+Seat 5: StackMagnet ( 27,355 )
+Seat 2: kudesnik2012 ( 29,375 )
+Seat 3: memphisino ( 34,406 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+PokerJensen posts small blind [100].
+Figarootoo posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Qs 9d ]
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [200]
+StackMagnet folds
+PokerJensen folds
+Figarootoo checks
+** Dealing Flop ** [ 3c, Qd, 5d ]
+Figarootoo checks
+Bust1985 checks
+** Dealing Turn ** [ 3d ]
+Figarootoo bets [466]
+Bust1985 calls [466]
+** Dealing River ** [ Ks ]
+Figarootoo checks
+Bust1985 checks
+Figarootoo shows [ Qs, 9d ]two pairs, Queens and Threes.
+Bust1985 doesn't show [ 4h, 8d ]a pair of Threes.
+Figarootoo wins 1,632 chips from the main pot with two pairs, Queens and Threes.
+Game #16120264269 starts.
+
+#Game No : 16120264269 
+***** Hand History for Game 16120264269 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:12:55 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 34,331 )
+Seat 1: EverSoNice ( 29,500 )
+Seat 7: Figarootoo ( 28,458 )
+Seat 8: Opa_Claus ( 30,025 )
+Seat 6: PokerJensen ( 26,625 )
+Seat 5: StackMagnet ( 27,330 )
+Seat 2: kudesnik2012 ( 29,350 )
+Seat 3: memphisino ( 34,381 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Figarootoo posts small blind [100].
+Opa_Claus posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Qc Qh ]
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 will be using their time bank for this hand.
+Bust1985 did not respond in time
+Bust1985 folds
+StackMagnet folds
+PokerJensen calls [200]
+Figarootoo raises [600]
+Opa_Claus folds
+PokerJensen calls [500]
+** Dealing Flop ** [ Kh, 7h, 7d ]
+Figarootoo checks
+PokerJensen checks
+** Dealing Turn ** [ Ah ]
+Figarootoo checks
+PokerJensen bets [200]
+Figarootoo calls [200]
+** Dealing River ** [ Qs ]
+Figarootoo bets [2,200]
+PokerJensen raises [4,400]
+Figarootoo calls [2,200]
+PokerJensen shows [ 9h, Ad ]two pairs, Aces and Sevens.
+Figarootoo shows [ Qc, Qh ]a full house, Queens full of Sevens.
+Figarootoo wins 11,000 chips from the main pot with a full house, Queens full of Sevens.
+Game #16120272566 starts.
+
+#Game No : 16120272566 
+***** Hand History for Game 16120272566 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:15:16 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 34,306 )
+Seat 1: EverSoNice ( 29,475 )
+Seat 7: Figarootoo ( 34,133 )
+Seat 8: Opa_Claus ( 29,800 )
+Seat 6: PokerJensen ( 21,300 )
+Seat 5: StackMagnet ( 27,305 )
+Seat 2: kudesnik2012 ( 29,325 )
+Seat 3: memphisino ( 34,356 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Opa_Claus posts small blind [100].
+EverSoNice posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  9h 2s ]
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [200]
+StackMagnet raises [800]
+PokerJensen folds
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+Bust1985 calls [600]
+** Dealing Flop ** [ Tc, 8d, 9s ]
+Bust1985 checks
+StackMagnet bets [2,100]
+Bust1985 folds
+StackMagnet does not show cards.
+StackMagnet wins 4,200 chips
+Game #16120274500 starts.
+
+#Game No : 16120274500 
+***** Hand History for Game 16120274500 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:15:50 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 33,481 )
+Seat 1: EverSoNice ( 29,250 )
+Seat 7: Figarootoo ( 34,108 )
+Seat 8: Opa_Claus ( 29,675 )
+Seat 6: PokerJensen ( 21,275 )
+Seat 5: StackMagnet ( 28,580 )
+Seat 2: kudesnik2012 ( 29,300 )
+Seat 3: memphisino ( 34,331 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+EverSoNice posts small blind [100].
+kudesnik2012 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  7h 6c ]
+memphisino folds
+Bust1985 calls [200]
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Opa_Claus folds
+EverSoNice calls [100]
+kudesnik2012 checks
+** Dealing Flop ** [ Jc, 3c, Qh ]
+EverSoNice checks
+kudesnik2012 checks
+Bust1985 checks
+** Dealing Turn ** [ 4d ]
+EverSoNice checks
+kudesnik2012 checks
+Bust1985 checks
+** Dealing River ** [ 5h ]
+EverSoNice checks
+kudesnik2012 checks
+Bust1985 checks
+EverSoNice shows [ Ad, 7d ]high card Ace.
+kudesnik2012 shows [ Jh, Tc ]a pair of Jacks.
+Bust1985 doesn't show [ 2c, Kc ]high card King.
+kudesnik2012 wins 800 chips from the main pot with a pair of Jacks.
+Game #16120281320 starts.
+
+#Game No : 16120281320 
+***** Hand History for Game 16120281320 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:17:37 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 33,256 )
+Seat 1: EverSoNice ( 29,025 )
+Seat 7: Figarootoo ( 34,083 )
+Seat 8: Opa_Claus ( 29,650 )
+Seat 6: PokerJensen ( 21,250 )
+Seat 5: StackMagnet ( 28,555 )
+Seat 2: kudesnik2012 ( 29,875 )
+Seat 3: memphisino ( 34,306 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+kudesnik2012 posts small blind [100].
+memphisino posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  6s 9d ]
+Bust1985 folds
+StackMagnet raises [400]
+PokerJensen calls [400]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino calls [200]
+** Dealing Flop ** [ 7s, 9h, Ks ]
+memphisino checks
+StackMagnet bets [1,125]
+PokerJensen is all-In  [20,825]
+memphisino folds
+StackMagnet folds
+PokerJensen does not show cards.
+PokerJensen wins 23,450 chips
+Game #16120284964 starts.
+
+#Game No : 16120284964 
+***** Hand History for Game 16120284964 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:18:35 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 33,231 )
+Seat 1: EverSoNice ( 29,000 )
+Seat 7: Figarootoo ( 34,058 )
+Seat 8: Opa_Claus ( 29,625 )
+Seat 6: PokerJensen ( 23,450 )
+Seat 5: StackMagnet ( 27,005 )
+Seat 2: kudesnik2012 ( 29,750 )
+Seat 3: memphisino ( 33,881 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+memphisino posts small blind [100].
+Bust1985 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  8c 3d ]
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Opa_Claus calls [200]
+EverSoNice folds
+kudesnik2012 raises [800]
+memphisino folds
+Bust1985 folds
+Opa_Claus folds
+kudesnik2012 does not show cards.
+kudesnik2012 wins 1,500 chips
+Game #16120286254 starts.
+
+#Game No : 16120286254 
+***** Hand History for Game 16120286254 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:18:59 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 33,006 )
+Seat 1: EverSoNice ( 28,975 )
+Seat 7: Figarootoo ( 34,033 )
+Seat 8: Opa_Claus ( 29,400 )
+Seat 6: PokerJensen ( 23,425 )
+Seat 5: StackMagnet ( 26,980 )
+Seat 2: kudesnik2012 ( 30,425 )
+Seat 3: memphisino ( 33,756 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Bust1985 posts small blind [100].
+StackMagnet posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  5d 9d ]
+PokerJensen calls [200]
+Figarootoo folds
+Opa_Claus calls [200]
+EverSoNice calls [200]
+kudesnik2012 folds
+memphisino folds
+Bust1985 folds
+StackMagnet checks
+** Dealing Flop ** [ 4h, 8d, Tc ]
+StackMagnet checks
+PokerJensen checks
+Opa_Claus checks
+EverSoNice bets [792]
+StackMagnet folds
+PokerJensen calls [792]
+Opa_Claus calls [792]
+** Dealing Turn ** [ 6d ]
+PokerJensen checks
+Opa_Claus checks
+EverSoNice checks
+** Dealing River ** [ As ]
+PokerJensen checks
+Opa_Claus checks
+EverSoNice checks
+PokerJensen shows [ 7d, 7c ]a pair of Sevens.
+Opa_Claus doesn't show [ Qh, 9h ]high card Ace.
+EverSoNice doesn't show [ Jh, 5h ]high card Ace.
+PokerJensen wins 3,476 chips from the main pot with a pair of Sevens.
+Game #16120290577 starts.
+
+#Game No : 16120290577 
+***** Hand History for Game 16120290577 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:20:19 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 32,881 )
+Seat 1: EverSoNice ( 27,958 )
+Seat 7: Figarootoo ( 34,008 )
+Seat 8: Opa_Claus ( 28,383 )
+Seat 6: PokerJensen ( 25,884 )
+Seat 5: StackMagnet ( 26,755 )
+Seat 2: kudesnik2012 ( 30,400 )
+Seat 3: memphisino ( 33,731 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+StackMagnet posts small blind [150].
+PokerJensen posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  5d 4h ]
+Figarootoo folds
+Opa_Claus folds
+EverSoNice raises [660]
+kudesnik2012 folds
+memphisino folds
+Bust1985 folds
+StackMagnet calls [510]
+PokerJensen folds
+** Dealing Flop ** [ 9s, 7s, Jc ]
+StackMagnet checks
+EverSoNice checks
+** Dealing Turn ** [ 5h ]
+StackMagnet checks
+EverSoNice checks
+** Dealing River ** [ 3h ]
+StackMagnet checks
+EverSoNice checks
+StackMagnet shows [ As, 3s ]a pair of Threes.
+EverSoNice doesn't show [ Ad, Ts ]high card Ace.
+StackMagnet wins 1,820 chips from the main pot with a pair of Threes.
+Game #16120294209 starts.
+
+#Game No : 16120294209 
+***** Hand History for Game 16120294209 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:21:28 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 32,856 )
+Seat 1: EverSoNice ( 27,273 )
+Seat 7: Figarootoo ( 33,983 )
+Seat 8: Opa_Claus ( 28,358 )
+Seat 6: PokerJensen ( 25,559 )
+Seat 5: StackMagnet ( 27,890 )
+Seat 2: kudesnik2012 ( 30,375 )
+Seat 3: memphisino ( 33,706 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+PokerJensen posts small blind [150].
+Figarootoo posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  6s Qh ]
+Opa_Claus calls [300]
+EverSoNice raises [990]
+kudesnik2012 folds
+memphisino folds
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Opa_Claus calls [690]
+** Dealing Flop ** [ Ts, 9h, 5c ]
+Opa_Claus bets [2,630]
+EverSoNice raises [8,310]
+Opa_Claus calls [5,680]
+** Dealing Turn ** [ Kc ]
+Opa_Claus checks
+EverSoNice checks
+** Dealing River ** [ Kd ]
+Opa_Claus checks
+EverSoNice bets [6,750]
+Opa_Claus calls [6,750]
+EverSoNice shows [ Ac, Th ]two pairs, Kings and Tens with Ace kicker.
+Opa_Claus doesn't show [ Td, Jd ]two pairs, Kings and Tens.
+EverSoNice wins 32,750 chips from the main pot with two pairs, Kings and Tens with Ace kicker.
+Game #16120298583 starts.
+
+#Game No : 16120298583 
+***** Hand History for Game 16120298583 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:22:41 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 32,831 )
+Seat 1: EverSoNice ( 43,948 )
+Seat 7: Figarootoo ( 33,658 )
+Seat 8: Opa_Claus ( 12,283 )
+Seat 6: PokerJensen ( 25,384 )
+Seat 5: StackMagnet ( 27,865 )
+Seat 2: kudesnik2012 ( 30,350 )
+Seat 3: memphisino ( 33,681 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+Figarootoo posts small blind [150].
+Opa_Claus posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  3s Kc ]
+EverSoNice folds
+kudesnik2012 raises [600]
+memphisino calls [600]
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Opa_Claus calls [300]
+** Dealing Flop ** [ Ad, 4c, Ac ]
+Opa_Claus checks
+kudesnik2012 checks
+memphisino bets [600]
+Opa_Claus is all-In  [11,658]
+kudesnik2012 folds
+memphisino calls [11,058]
+** Dealing Turn ** [ 2c ]
+** Dealing River ** [ 8s ]
+memphisino shows [ 5s, 5h ]two pairs, Aces and Fives.
+Opa_Claus shows [ Js, 4d ]two pairs, Aces and Fours.
+memphisino wins 25,466 chips from the main pot with two pairs, Aces and Fives.
+Player Opa_Claus finished in 139.
+memphisino has knocked out Opa_Claus and won a $0.10 USD bounty prize.
+Game #16120301810 starts.
+
+#Game No : 16120301810 
+***** Hand History for Game 16120301810 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:23:45 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 7 is the button
+Total number of players : 7/8 
+Seat 4: Bust1985 ( 32,806 )
+Seat 1: EverSoNice ( 43,923 )
+Seat 7: Figarootoo ( 33,483 )
+Seat 6: PokerJensen ( 25,359 )
+Seat 5: StackMagnet ( 27,840 )
+Seat 2: kudesnik2012 ( 29,725 )
+Seat 3: memphisino ( 46,864 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+There is no Small Blind in this hand as the Big Blind of the previous hand left the table.
+EverSoNice posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  Qc Jd ]
+kudesnik2012 folds
+memphisino folds
+Bust1985 folds
+StackMagnet folds
+PokerJensen raises [600]
+Aleksander1610 has joined the table.
+Figarootoo calls [600]
+EverSoNice raises [2,100]
+PokerJensen calls [1,800]
+Figarootoo folds
+** Dealing Flop ** [ Ah, Kc, Jh ]
+EverSoNice bets [2,700]
+PokerJensen folds
+EverSoNice does not show cards.
+EverSoNice wins 8,275 chips
+Game #16120305220 starts.
+
+#Game No : 16120305220 
+***** Hand History for Game 16120305220 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:24:49 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 30,000 )
+Seat 4: Bust1985 ( 32,781 )
+Seat 1: EverSoNice ( 47,073 )
+Seat 7: Figarootoo ( 32,858 )
+Seat 6: PokerJensen ( 22,934 )
+Seat 5: StackMagnet ( 27,815 )
+Seat 2: kudesnik2012 ( 29,700 )
+Seat 3: memphisino ( 46,839 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+EverSoNice posts small blind [150].
+kudesnik2012 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  2h 5d ]
+memphisino folds
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 does not show cards.
+kudesnik2012 wins 650 chips
+Game #16120306640 starts.
+
+#Game No : 16120306640 
+***** Hand History for Game 16120306640 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:25:18 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 29,975 )
+Seat 4: Bust1985 ( 32,756 )
+Seat 1: EverSoNice ( 46,898 )
+Seat 7: Figarootoo ( 32,833 )
+Seat 6: PokerJensen ( 22,909 )
+Seat 5: StackMagnet ( 27,790 )
+Seat 2: kudesnik2012 ( 30,025 )
+Seat 3: memphisino ( 46,814 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+kudesnik2012 posts small blind [150].
+memphisino posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  4s 4d ]
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo raises [600]
+Aleksander1610 calls [600]
+EverSoNice folds
+kudesnik2012 folds
+memphisino calls [300]
+** Dealing Flop ** [ 6c, Th, As ]
+memphisino checks
+Figarootoo checks
+Aleksander1610 bets [300]
+memphisino raises [750]
+Figarootoo folds
+Aleksander1610 raises [4,100]
+memphisino calls [3,650]
+** Dealing Turn ** [ 4h ]
+memphisino checks
+Aleksander1610 bets [10,950]
+memphisino raises [21,900]
+Aleksander1610 is all-In  [14,000]
+memphisino calls [3,050]
+** Dealing River ** [ 2c ]
+memphisino shows [ Ah, Td ]two pairs, Aces and Tens.
+Aleksander1610 shows [ Ts, Ac ]two pairs, Aces and Tens.
+Aleksander1610 wins 30,425 chips from the main pot with two pairs, Aces and Tens.
+memphisino wins 30,425 chips from the main pot with two pairs, Aces and Tens.
+Game #16120311473 starts.
+
+#Game No : 16120311473 
+***** Hand History for Game 16120311473 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:26:42 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 30,425 )
+Seat 4: Bust1985 ( 32,731 )
+Seat 1: EverSoNice ( 46,873 )
+Seat 7: Figarootoo ( 32,208 )
+Seat 6: PokerJensen ( 22,884 )
+Seat 5: StackMagnet ( 27,765 )
+Seat 2: kudesnik2012 ( 29,850 )
+Seat 3: memphisino ( 47,264 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+memphisino posts small blind [150].
+Bust1985 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  Ks 3h ]
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino raises [600]
+Bust1985 folds
+memphisino does not show cards.
+memphisino wins 1,250 chips
+Game #16120312836 starts.
+
+#Game No : 16120312836 
+***** Hand History for Game 16120312836 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:27:09 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 2 is the button
+Total number of players : 7/8 
+Seat 8: Aleksander1610 ( 30,400 )
+Seat 4: Bust1985 ( 32,406 )
+Seat 1: EverSoNice ( 46,848 )
+Seat 7: Figarootoo ( 32,183 )
+Seat 6: PokerJensen ( 22,859 )
+Seat 5: StackMagnet ( 27,740 )
+Seat 2: kudesnik2012 ( 29,825 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+Bust1985 posts small blind [150].
+StackMagnet posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  3d Qd ]
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 calls [300]
+EverSoNice folds
+kudesnik2012 folds
+Bust1985 folds
+StackMagnet raises [900]
+Aleksander1610 folds
+StackMagnet does not show cards.
+StackMagnet wins 1,825 chips
+DieterR55 has joined the table.
+Game #16120315433 starts.
+
+#Game No : 16120315433 
+***** Hand History for Game 16120315433 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:27:50 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 30,075 )
+Seat 4: Bust1985 ( 32,231 )
+Seat 3: DieterR55 ( 30,000 )
+Seat 1: EverSoNice ( 46,823 )
+Seat 7: Figarootoo ( 32,158 )
+Seat 6: PokerJensen ( 22,834 )
+Seat 5: StackMagnet ( 28,340 )
+Seat 2: kudesnik2012 ( 29,800 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+DieterR55 posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+StackMagnet posts small blind [150].
+PokerJensen posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  9d 6d ]
+Figarootoo folds
+Aleksander1610 calls [300]
+EverSoNice folds
+kudesnik2012 calls [300]
+DieterR55 calls [300]
+Bust1985 folds
+StackMagnet folds
+PokerJensen checks
+** Dealing Flop ** [ 4h, Qd, Kc ]
+PokerJensen checks
+Aleksander1610 checks
+kudesnik2012 bets [775]
+DieterR55 folds
+PokerJensen folds
+Aleksander1610 calls [775]
+** Dealing Turn ** [ Ah ]
+Aleksander1610 checks
+kudesnik2012 bets [1,550]
+Aleksander1610 folds
+kudesnik2012 does not show cards.
+kudesnik2012 wins 4,650 chips
+Game #16120318544 starts.
+
+#Game No : 16120318544 
+***** Hand History for Game 16120318544 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:28:51 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 28,975 )
+Seat 4: Bust1985 ( 32,206 )
+Seat 3: DieterR55 ( 29,675 )
+Seat 1: EverSoNice ( 46,798 )
+Seat 7: Figarootoo ( 32,133 )
+Seat 6: PokerJensen ( 22,509 )
+Seat 5: StackMagnet ( 28,165 )
+Seat 2: kudesnik2012 ( 31,800 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+DieterR55 posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+PokerJensen posts small blind [150].
+Figarootoo posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  2d 9c ]
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+DieterR55 folds
+Bust1985 folds
+StackMagnet raises [900]
+PokerJensen folds
+Figarootoo folds
+StackMagnet does not show cards.
+StackMagnet wins 1,550 chips
+Game #16120320512 starts.
+
+#Game No : 16120320512 
+***** Hand History for Game 16120320512 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:29:22 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 28,950 )
+Seat 4: Bust1985 ( 32,181 )
+Seat 3: DieterR55 ( 29,650 )
+Seat 1: EverSoNice ( 46,773 )
+Seat 7: Figarootoo ( 31,808 )
+Seat 6: PokerJensen ( 22,334 )
+Seat 5: StackMagnet ( 28,790 )
+Seat 2: kudesnik2012 ( 31,775 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+DieterR55 posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+Figarootoo posts small blind [150].
+Aleksander1610 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  3h 7h ]
+EverSoNice folds
+kudesnik2012 folds
+DieterR55 folds
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 does not show cards.
+Aleksander1610 wins 650 chips
+Game #16120321776 starts.
+
+#Game No : 16120321776 
+***** Hand History for Game 16120321776 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:29:46 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 29,275 )
+Seat 4: Bust1985 ( 32,156 )
+Seat 3: DieterR55 ( 29,625 )
+Seat 1: EverSoNice ( 46,748 )
+Seat 7: Figarootoo ( 31,633 )
+Seat 6: PokerJensen ( 22,309 )
+Seat 5: StackMagnet ( 28,765 )
+Seat 2: kudesnik2012 ( 31,750 )
+Trny:138340269 Level:3 
+Blinds-Antes(150/300 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+DieterR55 posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Aleksander1610 posts ante [25]
+Aleksander1610 posts small blind [150].
+EverSoNice posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  Js 8s ]
+kudesnik2012 folds
+DieterR55 folds
+Bust1985 folds
+StackMagnet folds
+PokerJensen folds
+Figarootoo raises [600]
+Aleksander1610 calls [450]
+EverSoNice raises [2,100]
+Figarootoo calls [1,800]
+Aleksander1610 calls [1,800]
+** Dealing Flop ** [ 5h, 6h, Tc ]
+Aleksander1610 checks
+EverSoNice bets [4,350]
+Figarootoo folds
+Aleksander1610 calls [4,350]
+** Dealing Turn ** [ Ah ]
+Aleksander1610 bets [8,050]
+EverSoNice folds
+Aleksander1610 does not show cards.
+Aleksander1610 wins 24,150 chips
+Game #16120326438 starts.
+
+#Game No : 16120326438 
+***** Hand History for Game 16120326438 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:31:23 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 38,600 )
+Seat 4: Bust1985 ( 32,131 )
+Seat 3: DieterR55 ( 29,600 )
+Seat 1: EverSoNice ( 39,973 )
+Seat 7: Figarootoo ( 29,208 )
+Seat 6: PokerJensen ( 22,284 )
+Seat 5: StackMagnet ( 28,740 )
+Seat 2: kudesnik2012 ( 31,725 )
+Trny:138340269 Level:4 
+Blinds-Antes(200/400 -50)
+EverSoNice posts ante [50]
+kudesnik2012 posts ante [50]
+DieterR55 posts ante [50]
+Bust1985 posts ante [50]
+StackMagnet posts ante [50]
+PokerJensen posts ante [50]
+Figarootoo posts ante [50]
+Aleksander1610 posts ante [50]
+EverSoNice posts small blind [200].
+kudesnik2012 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  Ac As ]
+DieterR55 folds
+Bust1985 folds
+StackMagnet raises [1,600]
+PokerJensen folds
+Figarootoo raises [3,200]
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+StackMagnet is all-In  [27,090]
+Figarootoo calls [25,490]
+** Dealing Flop ** [ 2s, 5s, 2h ]
+** Dealing Turn ** [ Kh ]
+** Dealing River ** [ Kd ]
+Figarootoo shows [ Ac, As ]two pairs, Aces and Kings.
+StackMagnet shows [ Ad, Ks ]a full house, Kings full of Twos.
+StackMagnet wins 58,380 chips from the main pot with a full house, Kings full of Twos.
+Game #16120328671 starts.
+
+#Game No : 16120328671 
+***** Hand History for Game 16120328671 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:32:08 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 38,550 )
+Seat 4: Bust1985 ( 32,081 )
+Seat 3: DieterR55 ( 29,550 )
+Seat 1: EverSoNice ( 39,723 )
+Seat 7: Figarootoo ( 468 )
+Seat 6: PokerJensen ( 22,234 )
+Seat 5: StackMagnet ( 58,380 )
+Seat 2: kudesnik2012 ( 31,275 )
+Trny:138340269 Level:4 
+Blinds-Antes(200/400 -50)
+EverSoNice posts ante [50]
+kudesnik2012 posts ante [50]
+DieterR55 posts ante [50]
+Bust1985 posts ante [50]
+StackMagnet posts ante [50]
+PokerJensen posts ante [50]
+Figarootoo posts ante [50]
+Aleksander1610 posts ante [50]
+kudesnik2012 posts small blind [200].
+DieterR55 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  9c 7h ]
+Bust1985 folds
+StackMagnet raises [1,600]
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 calls [1,400]
+DieterR55 folds
+** Dealing Flop ** [ 8h, 7s, 6c ]
+kudesnik2012 bets [2,000]
+StackMagnet calls [2,000]
+** Dealing Turn ** [ Ks ]
+kudesnik2012 bets [4,000]
+StackMagnet calls [4,000]
+** Dealing River ** [ Qs ]
+kudesnik2012 bets [16,000]
+StackMagnet folds
+kudesnik2012 does not show cards.
+kudesnik2012 wins 32,000 chips
+Game #16120330865 starts.
+
+#Game No : 16120330865 
+***** Hand History for Game 16120330865 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:32:50 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 38,500 )
+Seat 4: Bust1985 ( 32,031 )
+Seat 3: DieterR55 ( 29,100 )
+Seat 1: EverSoNice ( 39,673 )
+Seat 7: Figarootoo ( 418 )
+Seat 6: PokerJensen ( 22,184 )
+Seat 5: StackMagnet ( 50,730 )
+Seat 2: kudesnik2012 ( 39,625 )
+Trny:138340269 Level:4 
+Blinds-Antes(200/400 -50)
+EverSoNice posts ante [50]
+kudesnik2012 posts ante [50]
+DieterR55 posts ante [50]
+Bust1985 posts ante [50]
+StackMagnet posts ante [50]
+PokerJensen posts ante [50]
+Figarootoo posts ante [50]
+Aleksander1610 posts ante [50]
+DieterR55 posts small blind [200].
+Bust1985 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  9c 3h ]
+StackMagnet folds
+PokerJensen folds
+Figarootoo folds
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+DieterR55 calls [200]
+Bust1985 folds
+DieterR55 does not show cards.
+DieterR55 wins 1,200 chips
+Game #16120333027 starts.
+
+#Game No : 16120333027 
+***** Hand History for Game 16120333027 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:33:24 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 38,450 )
+Seat 4: Bust1985 ( 31,581 )
+Seat 3: DieterR55 ( 29,850 )
+Seat 1: EverSoNice ( 39,623 )
+Seat 7: Figarootoo ( 368 )
+Seat 6: PokerJensen ( 22,134 )
+Seat 5: StackMagnet ( 50,680 )
+Seat 2: kudesnik2012 ( 39,575 )
+Trny:138340269 Level:4 
+Blinds-Antes(200/400 -50)
+EverSoNice posts ante [50]
+kudesnik2012 posts ante [50]
+DieterR55 posts ante [50]
+Bust1985 posts ante [50]
+StackMagnet posts ante [50]
+PokerJensen posts ante [50]
+Figarootoo posts ante [50]
+Aleksander1610 posts ante [50]
+Bust1985 posts small blind [200].
+StackMagnet posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  7h 4h ]
+PokerJensen calls [400]
+Figarootoo is all-In  [318]
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+DieterR55 folds
+Bust1985 folds
+StackMagnet checks
+** Dealing Flop ** [ 9h, 5c, 8s ]
+StackMagnet checks
+PokerJensen checks
+** Dealing Turn ** [ 3h ]
+StackMagnet checks
+PokerJensen checks
+** Dealing River ** [ Jd ]
+StackMagnet bets [1,718]
+PokerJensen folds
+StackMagnet shows [ Js, 4c ]a pair of Jacks.
+Figarootoo shows [ 7h, 4h ]high card Jack.
+StackMagnet wins 1,882 chips from the side pot 1 with a pair of Jacks.
+StackMagnet wins 1,554 chips from the main pot with a pair of Jacks.
+Player Figarootoo finished in 157.
+StackMagnet has knocked out Figarootoo and won a $0.10 USD bounty prize.

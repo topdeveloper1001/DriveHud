@@ -1,0 +1,197 @@
+Game #16120222406 starts.
+
+#Game No : 16120222406 
+***** Hand History for Game 16120222406 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:00:07 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #13 (Real Money)
+Seat 2 is the button
+Total number of players : 7/8 
+Seat 2: Figarootoo ( 30,000 )
+Seat 5: InFameWeTrust ( 30,000 )
+Seat 3: Palamar888 ( 30,000 )
+Seat 1: Pourquoi_pass ( 30,000 )
+Seat 7: RayzMeUp180 ( 30,000 )
+Seat 4: Rokotnik ( 30,000 )
+Seat 6: rodrig66 ( 30,000 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+Pourquoi_pass posts ante [25]
+Figarootoo posts ante [25]
+Palamar888 posts ante [25]
+Rokotnik posts ante [25]
+InFameWeTrust posts ante [25]
+rodrig66 posts ante [25]
+RayzMeUp180 posts ante [25]
+Palamar888 posts small blind [75].
+Rokotnik posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Th 5h ]
+InFameWeTrust is all-In  [29,975]
+rodrig66 folds
+RayzMeUp180 folds
+Pourquoi_pass folds
+Figarootoo folds
+Palamar888 folds
+Rokotnik folds
+InFameWeTrust does not show cards.
+InFameWeTrust wins 30,375 chips
+Game #16120223324 starts.
+
+#Game No : 16120223324 
+***** Hand History for Game 16120223324 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:00:42 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #13 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 2: Figarootoo ( 29,975 )
+Seat 5: InFameWeTrust ( 30,375 )
+Seat 3: Palamar888 ( 29,900 )
+Seat 1: Pourquoi_pass ( 29,975 )
+Seat 7: RayzMeUp180 ( 29,975 )
+Seat 4: Rokotnik ( 29,825 )
+Seat 6: rodrig66 ( 29,975 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+Pourquoi_pass posts ante [25]
+Figarootoo posts ante [25]
+Palamar888 posts ante [25]
+Rokotnik posts ante [25]
+InFameWeTrust posts ante [25]
+rodrig66 posts ante [25]
+RayzMeUp180 posts ante [25]
+Rokotnik posts small blind [75].
+InFameWeTrust posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Th Ad ]
+rodrig66 folds
+RayzMeUp180 folds
+Pourquoi_pass folds
+zhuravchik has joined the table.
+Figarootoo raises [375]
+Palamar888 calls [375]
+Rokotnik calls [300]
+InFameWeTrust calls [225]
+** Dealing Flop ** [ 5d, 4d, 6c ]
+Rokotnik checks
+InFameWeTrust checks
+Figarootoo bets [525]
+Palamar888 calls [525]
+Rokotnik folds
+InFameWeTrust is all-In  [29,975]
+Figarootoo folds
+Palamar888 folds
+InFameWeTrust does not show cards.
+InFameWeTrust wins 32,700 chips
+Game #16120226147 starts.
+
+#Game No : 16120226147 
+***** Hand History for Game 16120226147 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:01:51 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #13 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 2: Figarootoo ( 29,050 )
+Seat 5: InFameWeTrust ( 32,700 )
+Seat 3: Palamar888 ( 28,975 )
+Seat 1: Pourquoi_pass ( 29,950 )
+Seat 7: RayzMeUp180 ( 29,950 )
+Seat 4: Rokotnik ( 29,425 )
+Seat 6: rodrig66 ( 29,950 )
+Seat 8: zhuravchik ( 30,000 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+Pourquoi_pass posts ante [25]
+Figarootoo posts ante [25]
+Palamar888 posts ante [25]
+Rokotnik posts ante [25]
+InFameWeTrust posts ante [25]
+rodrig66 posts ante [25]
+RayzMeUp180 posts ante [25]
+zhuravchik posts ante [25]
+InFameWeTrust posts small blind [75].
+rodrig66 posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  3d Ts ]
+RayzMeUp180 folds
+zhuravchik folds
+Pourquoi_pass folds
+Figarootoo folds
+Palamar888 calls [150]
+Rokotnik raises [300]
+InFameWeTrust calls [225]
+rodrig66 calls [150]
+Palamar888 calls [150]
+** Dealing Flop ** [ 6s, 9h, Jd ]
+InFameWeTrust checks
+rodrig66 checks
+Palamar888 checks
+Rokotnik bets [700]
+InFameWeTrust calls [700]
+rodrig66 folds
+Palamar888 folds
+** Dealing Turn ** [ 2c ]
+InFameWeTrust checks
+Rokotnik bets [1,350]
+InFameWeTrust calls [1,350]
+** Dealing River ** [ Tc ]
+InFameWeTrust checks
+Rokotnik checks
+InFameWeTrust shows [ 6d, Ad ]a pair of Sixes.
+Rokotnik shows [ Qd, Jh ]a pair of Jacks.
+Rokotnik wins 5,500 chips from the main pot with a pair of Jacks.
+Game #16120231084 starts.
+
+#Game No : 16120231084 
+***** Hand History for Game 16120231084 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:03:31 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #13 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 2: Figarootoo ( 29,025 )
+Seat 5: InFameWeTrust ( 30,325 )
+Seat 3: Palamar888 ( 28,650 )
+Seat 1: Pourquoi_pass ( 29,925 )
+Seat 7: RayzMeUp180 ( 29,925 )
+Seat 4: Rokotnik ( 32,550 )
+Seat 6: rodrig66 ( 29,625 )
+Seat 8: zhuravchik ( 29,975 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+Pourquoi_pass posts ante [25]
+Figarootoo posts ante [25]
+Palamar888 posts ante [25]
+Rokotnik posts ante [25]
+InFameWeTrust posts ante [25]
+rodrig66 posts ante [25]
+RayzMeUp180 posts ante [25]
+zhuravchik posts ante [25]
+rodrig66 posts small blind [75].
+RayzMeUp180 posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Jc 3s ]
+zhuravchik raises [450]
+Pourquoi_pass folds
+Figarootoo folds
+Palamar888 calls [450]
+Rokotnik folds
+InFameWeTrust calls [450]
+rodrig66 calls [375]
+RayzMeUp180 folds
+** Dealing Flop ** [ Qs, Qc, 8s ]
+rodrig66 checks
+zhuravchik checks
+Palamar888 checks
+InFameWeTrust checks
+** Dealing Turn ** [ 8h ]
+rodrig66 checks
+zhuravchik checks
+Palamar888 checks
+InFameWeTrust checks
+** Dealing River ** [ 3h ]
+rodrig66 checks
+zhuravchik bets [903]
+Palamar888 folds
+InFameWeTrust folds
+rodrig66 folds
+zhuravchik does not show cards.
+zhuravchik wins 3,053 chips
