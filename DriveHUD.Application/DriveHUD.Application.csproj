@@ -479,6 +479,7 @@
     <Compile Include="ViewModels\Layouts\HudLayoutFourStatsBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGaugeIndicator.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGraphTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutHeatMapTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfoV2.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutPlainBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutPlayerIconTool.cs" />

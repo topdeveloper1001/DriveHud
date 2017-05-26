@@ -73,7 +73,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             var cloned = new HudLayoutGraphTool
             {
                 Id = Id,
-                BaseStat = BaseStat,
+                BaseStat = BaseStat?.Clone(),
                 IsVertical = IsVertical,
                 ParentId = ParentId,
                 PositionInfo = PositionInfo?.Clone(),

@@ -222,6 +222,7 @@
     <Compile Include="UnitTests\BaseIndicatorsTests.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
+    <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />

@@ -25,10 +25,13 @@ using Model.Site;
 using Newtonsoft.Json.Linq;
 using Prism.Events;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -37,6 +40,12 @@ namespace DriveHUD.Importers.Bovada
     /// </summary>
     internal class BovadaTable : IPokerTable
     {
+        private const int delayStep = 500;
+
+        private const int delayBeforeImport = 5000;
+
+        private volatile bool resetDelay = false;
+
         private List<Command> commands;
 
         private List<Command> middleHandCommands;
@@ -46,6 +55,8 @@ namespace DriveHUD.Importers.Bovada
         private Dictionary<int, int> initialAfterBlindStacks;
 
         private Dictionary<int, int> seatsPlayerIds;
+
+        private ConcurrentDictionary<int, PlayerFinalPosition> playersFinalPositions;
 
         private bool hasResultCommand = false;
 
@@ -77,6 +88,8 @@ namespace DriveHUD.Importers.Bovada
 
             initialStacks = new Dictionary<int, int>();
             initialAfterBlindStacks = new Dictionary<int, int>();
+
+            playersFinalPositions = new ConcurrentDictionary<int, PlayerFinalPosition>();
 
             seatsPlayerIds = Enumerable.Range(1, 9).ToDictionary(x => x, x => 0);
 
@@ -451,6 +464,9 @@ namespace DriveHUD.Importers.Bovada
                     // add missed add/remove commands from middle hand list
                     commands.AddRange(middleHandCommands);
                     middleHandCommands.Clear();
+
+                    resetDelay = true;
+
                     break;
 
                 case "CO_TABLE_STATE":
@@ -632,6 +648,19 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
+                case "PLAY_TOUR_PRIZE_INFO_REMATCH_V2":
+
+                    var playerFinalPosition = new PlayerFinalPosition
+                    {
+                        Seat = cmdObj.seat,
+                        Place = cmdObj.rank,
+                        Prize = BovadaConverters.ConvertPrizeTextToDecimal(cmdObj.prize)
+                    };
+
+                    playersFinalPositions.AddOrUpdate(playerFinalPosition.Seat, playerFinalPosition, (key, oldValue) => playerFinalPosition);
+
+                    break;
+
                 default:
                     break;
             }
@@ -678,7 +707,7 @@ namespace DriveHUD.Importers.Bovada
                     InitializeActiveTableDict(handModel, configuration);
 
                     Game game = null;
-                    var handHistoryXml = handHistoryBuilder.Build(handModel, this, configuration, out game);
+                    var handHistoryXml = handHistoryBuilder.BuildXml(handModel, this, configuration, out game);
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
@@ -695,15 +724,56 @@ namespace DriveHUD.Importers.Bovada
                         WindowHandle = WindowHandle.ToInt32()
                     };
 
+                    resetDelay = false;
+
                     ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
                 }
             }
         }
 
-        private void ImportHand(string handHistory, ulong handNumber, GameInfo gameInfo, Game game)
+        private void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
         {
             Task.Run(() =>
             {
+                // wait for tournament results
+                if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
+                {
+                    for (var i = 0; i <= delayBeforeImport; i += delayStep)
+                    {
+                        if (resetDelay)
+                        {
+                            break;
+                        }
+
+                        Task.Delay(delayStep).Wait();
+                    }
+
+                    if (playersFinalPositions.ContainsKey(HeroSeat))
+                    {
+                        try
+                        {
+                            var heroFinalPosition = playersFinalPositions[HeroSeat];
+
+                            var placeNode = handHistoryXml.SelectSingleNode("//place");
+                            var winNode = handHistoryXml.SelectSingleNode("//win");
+
+                            if (placeNode != null)
+                            {
+                                placeNode.InnerText = heroFinalPosition.Place.ToString();
+                            }
+
+                            if (winNode != null)
+                            {
+                                winNode.InnerText = heroFinalPosition.Prize.ToString();
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, string.Format("Hand {0} final place has not been processed [{1}]", handNumber, Identifier), e);
+                        }
+                    }
+                }
+
                 var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
                 var progress = new DHProgress();
 
@@ -711,7 +781,7 @@ namespace DriveHUD.Importers.Bovada
 
                 try
                 {
-                    parsingResult = dbImporter.Import(handHistory, progress, gameInfo);
+                    parsingResult = dbImporter.Import(handHistoryXml.InnerXml, progress, gameInfo);
                 }
                 catch (Exception e)
                 {
@@ -1540,25 +1610,6 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        private PlayerList GetPlayersList(Game game, GameInfo gameInfo, bool updateSeats)
-        {
-            var players = new List<HandHistories.Objects.Players.Player>();
-            foreach (var player in PlayersOnTable)
-            {
-                int seatNumber = player.Key;
-                if (updateSeats)
-                {
-                    seatNumber = GeneralHelpers.ShiftPlayerSeat(seatNumber, game.General.PlayersSeatShift, (int)gameInfo.TableType);
-                }
-
-                players.Add(new HandHistories.Objects.Players.Player(player.Value, 0, seatNumber));
-            }
-
-            var playerList = new PlayerList(players);
-
-            return playerList;
-        }
-
         private void InitializeActiveTableDict(HandModel2 hand, ISiteConfiguration configuration)
         {
             // Moving to new table - remove all players
@@ -1608,6 +1659,15 @@ namespace DriveHUD.Importers.Bovada
                     PlayersOnTable.Add(item, newPlayer);
                 }
             }
+        }
+
+        private class PlayerFinalPosition
+        {
+            public int Seat { get; set; }
+
+            public decimal Prize { get; set; }
+
+            public int Place { get; set; }
         }
 
         #endregion

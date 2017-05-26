@@ -24,6 +24,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
     [XmlInclude(typeof(HudLayoutNonPopupTool)), ProtoInclude(29, typeof(HudLayoutNonPopupTool))]
     [XmlInclude(typeof(HudLayoutGaugeIndicator)), ProtoInclude(32, typeof(HudLayoutGaugeIndicator))]
     [XmlInclude(typeof(HudLayoutGraphTool)), ProtoInclude(36, typeof(HudLayoutGraphTool))]
+    [XmlInclude(typeof(HudLayoutGraphTool)), ProtoInclude(38, typeof(HudLayoutHeatMapTool))]    
     public abstract class HudLayoutTool
     {
         public HudLayoutTool()

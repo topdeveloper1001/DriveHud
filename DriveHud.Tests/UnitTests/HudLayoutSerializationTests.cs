@@ -611,6 +611,23 @@ namespace DriveHud.Tests.UnitTests
         }
 
         /// <summary>
+        /// Method tests if <see cref="HudLayoutGaugeIndicator"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudLayoutHeatMapToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutHeatMapTool
+            {
+                BaseStat = new StatInfo { Stat = Stat.S3Bet }
+            };
+
+            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+
+            Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
+            Assert.That(hudLayoutToolActual.BaseStat.Stat, Is.EqualTo(hudLayoutToolExpected.BaseStat.Stat));
+        }
+
+        /// <summary>
         /// Creates <see cref="HudLayoutInfoV2"/> for tests, all tools must be included
         /// </summary>
         /// <returns><see cref="HudLayoutInfoV2"/></returns>
@@ -687,8 +704,9 @@ namespace DriveHud.Tests.UnitTests
             var playerIconTool = new HudLayoutPlayerIconTool();
             var graphTool = new HudLayoutGraphTool();
             var gaugeIndicatorTool = new HudLayoutGaugeIndicator();
+            var bumperStickers = new HudLayoutBumperStickersTool();
 
-            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool, playerIconTool, graphTool, gaugeIndicatorTool };
+            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool, playerIconTool, graphTool, gaugeIndicatorTool, bumperStickers };
 
             return hudLayoutInfo;
         }

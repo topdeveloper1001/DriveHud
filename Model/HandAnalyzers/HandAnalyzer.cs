@@ -42,7 +42,7 @@ namespace Model.HandAnalyzers
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, String.Format("Hand Analyzer Error occured: Player cards = {0}; Board Cards = {1}", string.Join("", playerCards.Select(c => c.CardStringValue)), boardCards.ToString()), ex);
+                LogProvider.Log.Error(this, String.Format("Hand Analyzer Error occurred: Player cards = {0}; Board Cards = {1}", string.Join("", playerCards.Select(c => c.CardStringValue)), boardCards.ToString()), ex);
             }
 
             return new StubAnalyzer();

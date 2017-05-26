@@ -192,7 +192,6 @@
     <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
     <Compile Include="Builders\iPoker\PokerEvaluator.cs" />
-    <Compile Include="Builders\iPoker\PokerStarsBuilder.cs" />
     <Compile Include="Builders\iPoker\StringExtensions.cs" />
     <Compile Include="DataImportedEvent.cs" />
     <Compile Include="DataImportedEventArgs.cs" />

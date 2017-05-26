@@ -80,7 +80,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             var cloned = new HudLayoutGaugeIndicator
             {
                 Id = Id,
-                BaseStat = BaseStat,
+                BaseStat = BaseStat?.Clone(),
                 Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
                 {
                     var statInfoBreak = x as StatInfoBreak;

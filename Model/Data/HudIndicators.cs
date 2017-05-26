@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHandHistoryBuilder.cs" company="Ace Poker Solutions">
+// <copyright file="HudIndicators.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,31 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.Bovada;
-using Model.Site;
-using System.Xml;
+using DriveHUD.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DriveHUD.Importers.Builders.iPoker
+namespace Model.Data
 {
-    internal interface IHandHistoryBuilder
+    public class HudIndicators : HudLightIndicators
     {
-        XmlDocument BuildXml(HandModel2 handModel, IPokerTable tableModel, ISiteConfiguration configuration, out Game game);
+        public HudIndicators() : base()
+        {
+        }
+
+        public HudIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
+        {
+        }
+
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            base.AddStatistic(statistic);
+
+
+
+        }
     }
 }

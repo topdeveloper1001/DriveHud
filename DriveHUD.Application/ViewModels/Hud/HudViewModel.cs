@@ -1069,7 +1069,7 @@ namespace DriveHUD.Application.ViewModels
             if (StatInfoObserveCollection.Count > 0)
             {
                 ReturnStatsToStatCollection();
-            }
+            }            
 
             AddStatsToSelectedStatCollection();
 
