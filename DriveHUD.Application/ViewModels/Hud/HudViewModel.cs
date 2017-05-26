@@ -1029,13 +1029,13 @@ namespace DriveHUD.Application.ViewModels
 
             var notification = new PopupBaseNotification()
             {
-                Title = "Delete HUD",
-                CancelButtonCaption = "Cancel",
-                ConfirmButtonCaption = "Yes",
-                Content = "Are you sure you want to delete this HUD?",
+                Title = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudTitle"),
+                CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudCancel"),
+                ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudYes"),
+                Content = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudContent"),
                 IsDisplayH1Text = true
             };
-
+            
             NotificationRequest.Raise(notification,
                   confirmation =>
                   {
