@@ -267,12 +267,14 @@ namespace DriveHUD.Application.Controls
 
             isGroupDragInProgress = false;
 
-            if (ElementBeingDragged.DataContext == null)
+            var elementBeingDraggedViewModel = ElementBeingDragged.DataContext as IHudNonPopupToolViewModel;
+
+            if (elementBeingDraggedViewModel == null)
             {
                 return;
             }
 
-            var nonPopupTools = ElementBeingDragged.DataContext.Parent.Tools
+            var nonPopupTools = elementBeingDraggedViewModel.Parent.Tools
                    .OfType<IHudNonPopupToolViewModel>()
                    .ToArray();
 
@@ -322,7 +324,7 @@ namespace DriveHUD.Application.Controls
             var dragElement = new DragElement
             {
                 Element = element,
-                DataContext = element.DataContext as IHudNonPopupToolViewModel,
+                DataContext = element.DataContext as IHudWindowElement,
                 OrigHorizOffset = origHorizOffset,
                 OrigVertOffset = origVertOffset,
                 ModifyLeftOffset = modifyLeftOffset,
@@ -461,6 +463,7 @@ namespace DriveHUD.Application.Controls
 
             if (isDragInProgress)
             {
+                isDragInProgress = false;
                 DragEnded?.Invoke(ElementBeingDragged.Element, new EventArgs());
             }
 
@@ -616,7 +619,7 @@ namespace DriveHUD.Application.Controls
         {
             public FrameworkElement Element { get; set; }
 
-            public IHudNonPopupToolViewModel DataContext { get; set; }
+            public IHudWindowElement DataContext { get; set; }
 
             public double OrigHorizOffset { get; set; }
 

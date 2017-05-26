@@ -20,6 +20,7 @@ using System.Windows;
 using System.Windows.Data;
 using Telerik.Windows.Controls;
 using DriveHUD.Entities;
+using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -34,10 +35,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, HudWindow window)
+        public virtual Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, FrameworkElement toolElement, HudWindow window)
         {
             Check.ArgumentNotNull(() => toolViewModel);
             Check.ArgumentNotNull(() => window);
+            Check.ArgumentNotNull(() => toolElement);
 
             var panelOffset = window.GetPanelOffset(toolViewModel);
 
@@ -50,24 +52,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (scaledXPosition < 0)
             {
                 scaledXPosition = 0;
+                toolViewModel.OffsetX = 0;
             }
 
-            if (scaledYPosition < 0)
+            if (scaledYPosition + HudDefaultSettings.HudIconHeaderHeight < 0)
             {
-                scaledYPosition = 0;
+                scaledYPosition = -HudDefaultSettings.HudIconHeaderHeight;
+                toolViewModel.OffsetY = -HudDefaultSettings.HudIconHeaderHeight;
             }
 
-            var toolWidth = !double.IsNaN(toolViewModel.Width) ? toolViewModel.Width : 0;
-            var toolHeight = !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height : 0;
+            var toolWidth = toolElement.ActualWidth != 0 && !double.IsNaN(toolElement.ActualWidth) ?
+                toolElement.ActualWidth :
+                (!double.IsNaN(toolViewModel.Width) ? toolViewModel.Width : 0);
+
+            var toolHeight = toolElement.ActualHeight != 0 && !double.IsNaN(toolElement.ActualHeight) ?
+                toolElement.ActualHeight :
+                !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height : 0;
 
             if (scaledXPosition > window.Width - toolWidth)
             {
                 scaledXPosition = window.Width - toolWidth;
+                toolViewModel.OffsetX = window.ScaleX != 0 ? scaledXPosition / window.ScaleX : toolViewModel.OffsetX;
             }
 
-            if (scaledYPosition > window.Height - toolHeight)
+            if (scaledYPosition > window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight)
             {
-                scaledYPosition = window.Height - toolHeight;
+                scaledYPosition = window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight;
+                toolViewModel.OffsetY = window.ScaleY != 0 ?
+                    ((window.Height - toolHeight) / window.ScaleY - HudDefaultSettings.HudIconHeaderHeight) :
+                    toolViewModel.OffsetY;
             }
 
             return new Tuple<double, double>(scaledXPosition, scaledYPosition);

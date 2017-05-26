@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, HudWindow window);
+        Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, FrameworkElement toolElement, HudWindow window);
 
         /// <summary>
         /// Converts offset values into position value

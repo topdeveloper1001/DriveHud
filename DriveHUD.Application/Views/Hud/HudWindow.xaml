@@ -12,6 +12,7 @@
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:valueConverters="clr-namespace:DriveHUD.Application.ValueConverters"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     ResizeMode="NoResize"
     WindowStyle="None"
     ShowInTaskbar="False"
@@ -41,7 +42,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="35" />
+                Height="{Binding Source={x:Static res:HudDefaultSettings.HudIconHeaderHeight}}" />
             <RowDefinition
                 Height="*" />
         </Grid.RowDefinitions>
@@ -49,8 +50,10 @@
             Grid.Row="0"
             Source="/DriveHUD.Common.Resources;component/images/logo32x32.png"
             Stretch="Uniform"
-            Width="35"
-            Height="35">
+            Width="32"
+            Height="32"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
             <telerik:RadContextMenu.ContextMenu>
                 <telerik:RadContextMenu
                     ItemClick="OnRadMenuItemClick">

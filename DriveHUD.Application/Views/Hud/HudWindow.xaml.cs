@@ -205,7 +205,7 @@ namespace DriveHUD.Application.Views
                 hudPanel.Width = toolViewModel.Width * ScaleX;
                 hudPanel.Height = toolViewModel.Height != double.NaN ? toolViewModel.Height * ScaleY : double.NaN;
 
-                var positions = hudPanelService.CalculatePositions(toolViewModel, this);
+                var positions = hudPanelService.CalculatePositions(toolViewModel, hudPanel, this);
 
                 Canvas.SetLeft(hudPanel, positions.Item1);
                 Canvas.SetTop(hudPanel, positions.Item2);
