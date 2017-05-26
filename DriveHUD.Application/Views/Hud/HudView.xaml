@@ -32,15 +32,13 @@
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
-            <infra:PopupWindowAction
-                IsModal="True"
-                HasBorder="False"
-                CenterOverAssociatedObject="True"
-                WindowStyle="{StaticResource NotificationWindowStyle2}">
-                <infra:PopupWindowAction.WindowContent>
+            <infra:PopupTelerikWindowAction
+                IsModal="True"            
+                WindowStyle="{StaticResource NotificationWindowStyle}">
+                <infra:PopupTelerikWindowAction.WindowContent>
                     <vp:PopupContainerBaseNotificationView />
-                </infra:PopupWindowAction.WindowContent>
-            </infra:PopupWindowAction>
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 
