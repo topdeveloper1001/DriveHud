@@ -38,7 +38,7 @@
                 CenterOverAssociatedObject="True"
                 WindowStyle="{StaticResource NotificationWindowStyle2}">
                 <infra:PopupWindowAction.WindowContent>
-                    <vp:BaseNotificationView />
+                    <vp:PopupContainerBaseNotificationView />
                 </infra:PopupWindowAction.WindowContent>
             </infra:PopupWindowAction>
         </prism:InteractionRequestTrigger>
