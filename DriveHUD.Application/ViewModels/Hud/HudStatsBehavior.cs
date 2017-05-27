@@ -165,7 +165,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void Update()
         {
-            if (StatInfoSource == null || HudElementViewModel == null)
+            if (StatInfoSource == null)
             {
                 return;
             }

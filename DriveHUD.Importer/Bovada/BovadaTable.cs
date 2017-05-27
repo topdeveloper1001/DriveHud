@@ -28,6 +28,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Xml;
@@ -40,11 +41,9 @@ namespace DriveHUD.Importers.Bovada
     /// </summary>
     internal class BovadaTable : IPokerTable
     {
-        private const int delayStep = 500;
-
         private const int delayBeforeImport = 5000;
 
-        private volatile bool resetDelay = false;
+        private CancellationTokenSource cancellationTokenSource;
 
         private List<Command> commands;
 
@@ -465,7 +464,10 @@ namespace DriveHUD.Importers.Bovada
                     commands.AddRange(middleHandCommands);
                     middleHandCommands.Clear();
 
-                    resetDelay = true;
+                    if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
+                    {
+                        cancellationTokenSource.Cancel();
+                    }
 
                     break;
 
@@ -648,6 +650,7 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
+                case "PLAY_TOUR_PRIZE_INFO_V2":
                 case "PLAY_TOUR_PRIZE_INFO_REMATCH_V2":
 
                     var playerFinalPosition = new PlayerFinalPosition
@@ -724,7 +727,7 @@ namespace DriveHUD.Importers.Bovada
                         WindowHandle = WindowHandle.ToInt32()
                     };
 
-                    resetDelay = false;
+                    cancellationTokenSource = new CancellationTokenSource();
 
                     ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
                 }
@@ -738,14 +741,13 @@ namespace DriveHUD.Importers.Bovada
                 // wait for tournament results
                 if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
                 {
-                    for (var i = 0; i <= delayBeforeImport; i += delayStep)
+                    try
                     {
-                        if (resetDelay)
-                        {
-                            break;
-                        }
-
-                        Task.Delay(delayStep).Wait();
+                        Task.Delay(delayBeforeImport).Wait(cancellationTokenSource.Token);
+                    }
+                    catch
+                    {
+                        System.Diagnostics.Debug.WriteLine("delay canceled");
                     }
 
                     if (playersFinalPositions.ContainsKey(HeroSeat))
