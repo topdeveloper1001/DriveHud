@@ -41,9 +41,9 @@ namespace DriveHUD.Importers.Bovada
     /// </summary>
     internal class BovadaTable : IPokerTable
     {
-        private const int delayBeforeImport = 5000;
+        private const int delayBeforeImport = 5000;        
 
-        private CancellationTokenSource cancellationTokenSource;
+        private ManualResetEventSlim importHandResetEvent = new ManualResetEventSlim(false);
 
         private List<Command> commands;
 
@@ -464,10 +464,7 @@ namespace DriveHUD.Importers.Bovada
                     commands.AddRange(middleHandCommands);
                     middleHandCommands.Clear();
 
-                    if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
-                    {
-                        cancellationTokenSource.Cancel();
-                    }
+                    importHandResetEvent.Set();                
 
                     break;
 
@@ -727,7 +724,7 @@ namespace DriveHUD.Importers.Bovada
                         WindowHandle = WindowHandle.ToInt32()
                     };
 
-                    cancellationTokenSource = new CancellationTokenSource();
+                    importHandResetEvent.Reset();                    
 
                     ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
                 }
@@ -741,14 +738,7 @@ namespace DriveHUD.Importers.Bovada
                 // wait for tournament results
                 if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
                 {
-                    try
-                    {
-                        Task.Delay(delayBeforeImport).Wait(cancellationTokenSource.Token);
-                    }
-                    catch
-                    {
-                        System.Diagnostics.Debug.WriteLine("delay canceled");
-                    }
+                    importHandResetEvent.Wait(delayBeforeImport);
 
                     if (playersFinalPositions.ContainsKey(HeroSeat))
                     {
