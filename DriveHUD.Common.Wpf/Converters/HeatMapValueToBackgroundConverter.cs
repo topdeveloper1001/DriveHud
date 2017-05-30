@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="StatDto.cs" company="Ace Poker Solutions">
+// <copyright file="HeatMapValueToBorderBrushConverter.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,31 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using ProtoBuf;
-
-namespace Model.Data
+namespace DriveHUD.Common.Wpf.Converters
 {
-    [ProtoContract]
-    [ProtoInclude(4, typeof(HeatMapStatDto))]
-    public class StatDto
+    public class HeatMapValueToBackgroundConverter : HeatMapValueToColorsBaseConverter
     {
-        public StatDto()
+        private string[] colors = new[] { "#e1e1f2", "#5edb15", "#89d624", "#a7d624", "#c7d624", "#d6bc24", "#d69e24", "#d78924", "#d76c24", "#d64b24", "#d72424" };
+
+        protected override string[] Colors
         {
+            get
+            {
+                return colors;
+            }
         }
-
-        public StatDto(int occurred, int couldOccurred)
-        {
-            Occurred = occurred;
-            CouldOccurred = couldOccurred;
-        }
-
-        [ProtoMember(1)]
-        public virtual decimal Value { get; set; }
-
-        [ProtoMember(2)]
-        public virtual int Occurred { get; set; }
-
-        [ProtoMember(3)]
-        public virtual int CouldOccurred { get; set; }
     }
 }

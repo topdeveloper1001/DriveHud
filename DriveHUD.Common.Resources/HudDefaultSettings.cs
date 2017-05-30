@@ -68,6 +68,10 @@ namespace DriveHUD.Common.Resources
 
         public readonly static Color StatInfoActiveColor = Colors.White;
 
+        public const int PopupShowDelay = 500;
+
+        public const int ToolTipShowDelay = 200;
+
         #region Tools sizes
 
         public const double PlainStatBoxWidth = 135d;
@@ -119,6 +123,10 @@ namespace DriveHUD.Common.Resources
         public const double BumperStickersWidth = 100d;
 
         public const double BumperStickersHeight = 13d;
+
+        public const double HeatMapWidth = 393d;
+
+        public const double HeatMapHeight = 364d;
 
         #endregion
     }

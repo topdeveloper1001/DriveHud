@@ -1,8 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="RangeCardsEnums.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
 namespace Model.Enums
 {
@@ -10,12 +16,12 @@ namespace Model.Enums
     {
         None = -1, Clubs = 0, Diamonds = 1, Hearts = 2, Spades = 3
     }
+
     public enum RangeCardRank
     {
         None = -1, Two = 0, Three = 1, Four = 2, Five = 3, Six = 4, Seven = 5, Eight = 6,
         Nine = 7, Ten = 8, Jack = 9, Queen = 10, King = 11, Ace = 12
     }
-
 
     public enum RangeSelectorItemType
     {
@@ -36,6 +42,7 @@ namespace Model.Enums
     }
 
     #region Suit/Rank To String extensions
+
     public static class RangeCardEnumExtensions
     {
         public static string ToSuitString(this RangeCardSuit suit)
@@ -167,6 +174,7 @@ namespace Model.Enums
             return result;
         }
     }
+
     #endregion
 
     public static class RangeSelectorItemTypeEnumExtensions
@@ -199,6 +207,7 @@ namespace Model.Enums
                         return RangeSelectorItemType.Suited;
                 }
             }
+
             return RangeSelectorItemType.Pair;
         }
     }

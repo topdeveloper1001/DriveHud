@@ -37,7 +37,7 @@
                 TargetType="Grid">
                 <Setter
                     Property="ToolTipService.InitialShowDelay"
-                    Value="1" />
+                    Value="{x:Static res:HudDefaultSettings.PopupShowDelay}" />
                 <Setter
                     Property="ToolTipService.ShowDuration"
                     Value="60000" />

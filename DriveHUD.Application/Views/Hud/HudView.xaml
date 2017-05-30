@@ -33,7 +33,7 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction
-                IsModal="True"            
+                IsModal="True"
                 WindowStyle="{StaticResource NotificationWindowStyle}">
                 <infra:PopupTelerikWindowAction.WindowContent>
                     <vp:PopupContainerBaseNotificationView />
@@ -502,7 +502,6 @@
                 Style="{StaticResource BottomBorderStyle}" />
         </DataTemplate>
 
-
         <Style
             x:Key="ControlButtonStyle"
             TargetType="{x:Type Button}"
@@ -634,7 +633,7 @@
                     </comboboxControl:ComboBoxEx.ItemTemplate>
                 </comboboxControl:ComboBoxEx>
 
-                <Button                    
+                <Button
                     Grid.Row="1"
                     Grid.Column="4"
                     HorizontalAlignment="Left"
@@ -814,10 +813,17 @@
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
-                        IsEnabled="False"
+                        ToolTip="{ResX Key=Common_HudSideBar_HeatMapTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}"
                         Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}">
+                        <dh:DragDrop.GroupProperty>
+                            <x:Static
+                                Member="vm:HudDragDropGroups.Popups" />
+                        </dh:DragDrop.GroupProperty>
+                    </controls:ImageButton>
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"

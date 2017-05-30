@@ -406,10 +406,14 @@ namespace Model.Data
         protected decimal GetPercentage(decimal? actual, decimal? possible)
         {
             if (TotalHands == 0)
+            {
                 return 0;
+            }
 
             if (!possible.HasValue || !actual.HasValue || possible == 0)
+            {
                 return 0;
+            }
 
             return (actual.Value / possible.Value) * 100;
         }

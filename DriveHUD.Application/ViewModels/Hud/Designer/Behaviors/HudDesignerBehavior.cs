@@ -523,7 +523,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 SnapsToDevicePixels = true,
                 Template = ToolbarTemplate,
                 Background = new SolidColorBrush(Colors.Transparent),
-                ZIndex = 101
+                ZIndex = 99
             };
 
             var disposable = Observable.FromEventPattern<PropertyEventArgs>(

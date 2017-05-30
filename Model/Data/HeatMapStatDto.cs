@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="StatDto.cs" company="Ace Poker Solutions">
+// <copyright file="HeatMapStatDto.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,27 +14,9 @@ using ProtoBuf;
 
 namespace Model.Data
 {
-    [ProtoContract]
-    [ProtoInclude(4, typeof(HeatMapStatDto))]
-    public class StatDto
-    {
-        public StatDto()
-        {
-        }
-
-        public StatDto(int occurred, int couldOccurred)
-        {
-            Occurred = occurred;
-            CouldOccurred = couldOccurred;
-        }
-
-        [ProtoMember(1)]
-        public virtual decimal Value { get; set; }
-
-        [ProtoMember(2)]
-        public virtual int Occurred { get; set; }
-
-        [ProtoMember(3)]
-        public virtual int CouldOccurred { get; set; }
+    public class HeatMapStatDto : StatDto
+    {          
+        [ProtoMember(4)]
+        public string CardRange { get; set; }
     }
 }

@@ -1656,6 +1656,105 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All-in Equity%.
+        /// </summary>
+        internal static string Common_ReportView_Hands_AllInEquity {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_AllInEquity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Board.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Board {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Board", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cards.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Cards {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Cards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Date {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $EV Diff.
+        /// </summary>
+        internal static string Common_ReportView_Hands_EvDiff {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_EvDiff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Line {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Line", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Common_ReportView_Hands_NetWon {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Position {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre Flop.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Preflop {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Preflop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Hole Cards.
+        /// </summary>
+        internal static string Common_ReportView_ShowHoleCards {
+            get {
+                return ResourceManager.GetString("Common_ReportView_ShowHoleCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tagged Hands.
+        /// </summary>
+        internal static string Common_ReportView_TaggedHands {
+            get {
+                return ResourceManager.GetString("Common_ReportView_TaggedHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
         internal static string Common_Reset {

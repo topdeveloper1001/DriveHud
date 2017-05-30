@@ -18,6 +18,7 @@ using HandHistories.Parser.Utils.FastParsing;
 using Model.Enums;
 using System;
 using System.Globalization;
+using System.Linq;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -299,7 +300,31 @@ namespace DriveHUD.Importers.Bovada
                 return 0;
             }
 
-            var prizeStartIndex = prizeText.IndexOf("Cash:", StringComparison.OrdinalIgnoreCase);
+            int prizeStartIndex = -1;
+            int prizeEndIndex = -1;
+
+            if (prizeText.IndexOf("Tournament Ticket:", StringComparison.OrdinalIgnoreCase) > 0 &&
+                (prizeStartIndex = prizeText.IndexOf("Any", StringComparison.OrdinalIgnoreCase)) > 0)
+            {
+                prizeEndIndex = prizeText.LastIndexOf("<", StringComparison.Ordinal);
+
+                if (prizeEndIndex < prizeStartIndex)
+                {
+                    prizeEndIndex = prizeText.Length;
+                }
+
+                prizeText = prizeText.Substring(prizeStartIndex, prizeEndIndex - prizeStartIndex);
+
+                var ticketBuyInAndRake = prizeText
+                    .Split(new char[] { '+' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(x => ParserUtils.ParseMoney(x.Trim()))
+                    .ToArray();
+
+                var result = ticketBuyInAndRake.Sum();
+                return result;
+            }
+
+            prizeStartIndex = prizeText.IndexOf("Cash:", StringComparison.OrdinalIgnoreCase);
 
             if (prizeStartIndex <= 0)
             {
@@ -317,7 +342,7 @@ namespace DriveHUD.Importers.Bovada
                 prizeStartIndex += 6;
             }
 
-            var prizeEndIndex = prizeText.LastIndexOf("<", StringComparison.Ordinal);
+            prizeEndIndex = prizeText.LastIndexOf("<", StringComparison.Ordinal);
 
             if (prizeEndIndex <= 0)
             {

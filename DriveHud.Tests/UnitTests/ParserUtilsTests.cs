@@ -12,6 +12,9 @@
 
 using HandHistories.Parser.Utils.FastParsing;
 using NUnit.Framework;
+using HandHistories.Objects.Cards;
+using System.Text;
+using System;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -41,5 +44,22 @@ namespace DriveHud.Tests.UnitTests
             ParserUtils.TryParseMoney(moneyText, out money);
             Assert.That(money, Is.EqualTo(expectedMoney));
         }
+
+        [Test]
+        [TestCase("Ac9d", "A9o")]
+        [TestCase("AcAd", "AA")]
+        [TestCase("2h2s", "22")]
+        [TestCase("AdKc", "AKo")]
+        [TestCase("AdKd", "AKs")]
+        [TestCase("Qh7h", "Q7s")]
+        [TestCase("AdKdQdTc", "")]
+        [TestCase("Ad", "")]
+        [TestCase("9d9d", "")]
+        [TestCase("RcMd", "")]
+        public void TestConvertToCardRange(string cards, string expectedRange)
+        {
+            var actualRange = ParserUtils.ConvertToCardRange(cards);
+            Assert.That(actualRange, Is.EqualTo(expectedRange));
+        }      
     }
 }

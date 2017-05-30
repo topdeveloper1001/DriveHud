@@ -90,6 +90,13 @@
             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
+    <!-- Template for heat map inside RadDiagramShape on HudView -->
+    <DataTemplate
+        x:Key="HudHeatMapTemplate">
+        <ctl:HudHeatMapDesigner
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
+    </DataTemplate>
+
     <!-- Template for HudToolBar -->
     <ControlTemplate
         x:Key="HudToolBarControlTemplate"

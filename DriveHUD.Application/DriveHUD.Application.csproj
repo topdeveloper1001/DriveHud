@@ -313,6 +313,12 @@
     <Compile Include="Controls\HudGraphDesigner.xaml.cs">
       <DependentUpon>HudGraphDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudHeatMap.xaml.cs">
+      <DependentUpon>HudHeatMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudHeatMapDesigner.xaml.cs">
+      <DependentUpon>HudHeatMapDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudPanel.xaml.cs">
       <DependentUpon>HudPanel.xaml</DependentUpon>
     </Compile>
@@ -438,6 +444,7 @@
     <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudHeatMapViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudPlayerIconViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudTextBoxViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudTiltMeterViewModel.cs" />
@@ -450,12 +457,14 @@
     <Compile Include="ViewModels\Hud\Designer\IHudNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\HeatMapStatDtoViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudBaseToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
     <Compile Include="ViewModels\Hud\HudDuplicateLayoutViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudDuplicateLayoutViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudHeatMapBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
@@ -810,6 +819,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudHeatMapStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\HudPlainBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -871,6 +884,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudGraphDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudHeatMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudHeatMapDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -155,6 +155,7 @@
     <Compile Include="ChartData\TournamentChartData.cs" />
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
+    <Compile Include="Data\HeatMapStatDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
     <Compile Include="Data\HudLightIndicators.cs" />
@@ -318,6 +319,7 @@
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
     <Compile Include="Stats\StatInfo.cs" />
+    <Compile Include="Stats\StatInfoBase.cs" />
     <Compile Include="Stats\StatInfoBreak.cs" />
     <Compile Include="Stats\StatInfoGroup.cs" />
     <Compile Include="Stats\StatInfoHelper.cs" />

@@ -20,8 +20,10 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
+using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
+using Model.Data;
 using Model.Enums;
 using Model.Filters;
 using Model.Settings;
@@ -686,6 +688,17 @@ namespace DriveHUD.Application.ViewModels
                 });
             });
 
+            var cardRanges = Card.GetCardRanges();
+
+            previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
+            {
+                tool.BaseStat.CurrentValue = random.Next(0, 100);            
+
+                tool.HeatMap = (from cardRange in cardRanges
+                                let occurred = random.Next(0, 100)
+                                select new { CardRange = cardRange, StatDto = new StatDto(occurred, 100) }).ToDictionary(x => x.CardRange, x => x.StatDto);
+            });
+
             previewHudElementViewModel.Seat = 1;
             previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
 
@@ -1035,7 +1048,7 @@ namespace DriveHUD.Application.ViewModels
                 Content = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudContent"),
                 IsDisplayH1Text = true
             };
-            
+
             NotificationRequest.Raise(notification,
                   confirmation =>
                   {
@@ -1069,7 +1082,7 @@ namespace DriveHUD.Application.ViewModels
             if (StatInfoObserveCollection.Count > 0)
             {
                 ReturnStatsToStatCollection();
-            }            
+            }
 
             AddStatsToSelectedStatCollection();
 

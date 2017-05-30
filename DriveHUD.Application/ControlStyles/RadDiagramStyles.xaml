@@ -18,7 +18,8 @@
         HudPlayerIconTemplate="{StaticResource HudPlayerIconTemplate}"
         HudGraphTemplate="{StaticResource HudGraphTemplate}"
         HudTextBoxTemplate="{StaticResource HudTextBoxTemplate}"
-        HudBumperStickersTemplate="{StaticResource HudBumperStickersTemplate}" />
+        HudBumperStickersTemplate="{StaticResource HudBumperStickersTemplate}"
+        HudHeatMapTemplate="{StaticResource HudHeatMapTemplate}" />
 
     <Style
         x:Key="RadDiagramStyle"

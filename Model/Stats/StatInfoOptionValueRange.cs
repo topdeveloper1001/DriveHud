@@ -167,9 +167,10 @@ namespace Model.Stats
             return statInfoOptionValueRange;
         }
 
+        private object _eventLock = new object();
 
         private event PropertyChangedEventHandler _propertyChanged;
-        private object _eventLock = new object();
+        
         public event PropertyChangedEventHandler PropertyChanged
         {
             add
@@ -192,11 +193,7 @@ namespace Model.Stats
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = _propertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            _propertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion

@@ -225,12 +225,14 @@
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
+    <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
     <Compile Include="UnitTests\Helpers\DataServiceHelper.cs" />
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
+    <Compile Include="UnitTests\Helpers\SerializerHelper.cs" />
     <Compile Include="UnitTests\HudLayoutMigrationTests.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
@@ -240,6 +242,7 @@
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
     <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
     <Compile Include="UnitTests\ReportCreatorTests.cs" />
+    <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>

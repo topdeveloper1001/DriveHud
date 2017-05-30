@@ -16,8 +16,8 @@ namespace DriveHUD.Importers
 {
     public class SessionCacheStatistic
     {
-        public HudLightIndicators PlayerData { get; set; } = new HudLightIndicators();
+        public HudIndicators PlayerData { get; set; } = new HudIndicators();
 
-        public HudLightIndicators SessionPlayerData { get; set; } = new HudLightIndicators();
+        public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
     }
 }

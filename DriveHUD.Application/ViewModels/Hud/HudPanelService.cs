@@ -139,6 +139,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     break;
                 case HudDesignerToolType.GaugeIndicator:
                 case HudDesignerToolType.Graph:
+                case HudDesignerToolType.HeatMap:
                     break;
                 default:
                     throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
@@ -168,6 +169,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     break;
                 case HudDesignerToolType.Graph:
                     factory = new FrameworkElementFactory(typeof(HudGraph));
+                    break;
+                case HudDesignerToolType.HeatMap:
+                    factory = new FrameworkElementFactory(typeof(HudHeatMap));
                     break;
                 default:
                     break;
