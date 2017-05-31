@@ -520,38 +520,7 @@ namespace DriveHUD.Application.ViewModels
                     InitializeDesigner();
                 }
 
-                if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
-                {
-                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
-
-                    var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
-
-                    if (statInfo == null)
-                    {
-                        return;
-                    }
-
-                    var targetToolViewModel = dragDropDataObject.Source as HudBaseToolViewModel;
-
-                    if (targetToolViewModel == null)
-                    {
-                        return;
-                    }
-
-                    targetToolViewModel = DesignerHudElementViewModel.Tools.FirstOrDefault(t => t.Id == targetToolViewModel.Id);
-
-                    SelectedToolViewModel = targetToolViewModel;
-
-                    UpdateStatsCollections();
-
-                    StatInfoObserveCollection.Add(statInfo);
-
-                    return;
-                }
-
-                var dataObject = dragDropDataObject.DragEventArgs.Data.GetData(DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.DataFormat.Name);
-
-                var toolType = dataObject as HudDesignerToolType?;
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
                 if (toolType.HasValue && CanAddTool(toolType.Value))
                 {
@@ -559,30 +528,50 @@ namespace DriveHUD.Application.ViewModels
                 }
             }, x =>
             {
-                var dragEventArgs = x as DragEventArgs;
+                var dragDropDataObject = x as DragDropDataObject;
 
-                if (dragEventArgs == null)
+                if (dragDropDataObject == null)
                 {
                     return false;
                 }
 
-                var statInfoList = dragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
-                var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
-
-                if (statInfo == null)
+                if (!toolType.HasValue)
                 {
                     return false;
                 }
 
-                var dragTarget = dragEventArgs.Source as FrameworkElement;
-
-                if (dragTarget == null || dragTarget.DataContext == null)
+                // drop on main table
+                if (dragDropDataObject.Source is HudViewModel && toolType.Value.IsCommonTool())
                 {
-                    return false;
+                    return true;
                 }
 
-                return dragTarget.DataContext is HudFourStatsBoxViewModel || dragTarget.DataContext is HudPlainStatBoxViewModel;
+                // Gauge indicator can be dropped only on stat info
+                if (dragDropDataObject.Source is StatInfo && toolType == HudDesignerToolType.GaugeIndicator)
+                {
+                    return true;
+                }
+
+                // Graph can be dropped only on stat info or on plain box, 4-stat or player icon
+                if ((dragDropDataObject.Source is StatInfo || dragDropDataObject.Source is HudPlainStatBoxViewModel ||
+                    dragDropDataObject.Source is HudPlayerIconViewModel) && toolType == HudDesignerToolType.Graph)
+                {
+                    return true;
+                }
+
+                // Heat map can be dropped only on supported StatInfo
+                if (dragDropDataObject.Source is StatInfo && toolType == HudDesignerToolType.HeatMap)
+                {
+                    var statInfo = dragDropDataObject.Source as StatInfo;
+
+                    var heatMapStats = StatInfoHelper.GetHeatMapStats();
+
+                    return heatMapStats.Any(s => s.Stat == statInfo.Stat);
+                }
+
+                return false;
             });
 
             RemoveToolCommand = ReactiveCommand.Create();
@@ -692,7 +681,7 @@ namespace DriveHUD.Application.ViewModels
 
             previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
             {
-                tool.BaseStat.CurrentValue = random.Next(0, 100);            
+                tool.BaseStat.CurrentValue = random.Next(0, 100);
 
                 tool.HeatMap = (from cardRange in cardRanges
                                 let occurred = random.Next(0, 100)

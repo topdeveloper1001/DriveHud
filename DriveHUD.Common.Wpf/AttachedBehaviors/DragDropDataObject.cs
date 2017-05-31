@@ -24,5 +24,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public Point Position { get; set; }
 
         public object Source { get; set; }
+
+        public object DropData { get; set; }
     }
 }

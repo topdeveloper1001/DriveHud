@@ -117,14 +117,22 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>();
 
-            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(toolTipViewModels.First());
+            var toolTipViewModel = toolTipViewModels.First();
+
+            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(toolTipViewModel);
 
             if (frameworkElementFactory == null)
             {
                 return;
             }
 
-            var dataContextBinding = new Binding { Source = toolTipViewModels };
+            var dataContextBinding = new Binding
+            {
+                Source = toolTipViewModels
+                    .Where(x => x.GetType() == toolTipViewModel.GetType())
+                    .ToArray()
+            };
+
             frameworkElementFactory.SetBinding(FrameworkElement.DataContextProperty, dataContextBinding);
 
             var template = new DataTemplate();

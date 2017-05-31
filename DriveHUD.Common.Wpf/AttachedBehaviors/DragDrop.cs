@@ -93,18 +93,6 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             target.SetValue(DragDropDataProperty, value);
         }
 
-        public static readonly DependencyProperty GroupProperty = DependencyProperty.RegisterAttached("Group", typeof(string), typeof(DragDrop));
-
-        public static string GetGroupProperty(UIElement target)
-        {
-            return (string)target.GetValue(GroupProperty);
-        }
-
-        public static void SetGroupProperty(UIElement target, object value)
-        {
-            target.SetValue(GroupProperty, value);
-        }
-
         private static DragAdorner dragAdorner;
 
         public static DragAdorner DragAdorner
@@ -227,24 +215,13 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             if (dragDropCommand != null)
             {
-                var dragDropDataObject = new DragDropDataObject
-                {
-                    DragEventArgs = e,
-                    Position = e.GetPosition(uiElement),
-                    Source = (uiElement as FrameworkElement)?.DataContext
-                };
+                var dragDropDataObject = CreateDragDropDataObject(uiElement, e);
 
                 dragDropCommand.Execute(dragDropDataObject);
             }
 
             DragAdorner = null;
             e.Handled = true;
-        }
-
-        private static void OnDragLeave(object sender, DragEventArgs e)
-        {
-            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
-            DragAdorner = null;
         }
 
         private static void OnDragOver(object sender, DragEventArgs e)
@@ -255,20 +232,13 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             {
                 return;
             }
-                        
+
             var dragDropCommand = GetDragDropCommand(uiElement);
 
-            if (dragDropCommand != null && dragDropCommand.CanExecute(e))
+            var dragDropDataObject = CreateDragDropDataObject(uiElement, e);
+
+            if (dragDropCommand == null || !dragDropCommand.CanExecute(dragDropDataObject))
             {
-                e.Effects = DragDropEffects.Copy;
-                e.Handled = true;
-                return;
-            }
-
-            var targetGroup = GetGroupProperty(uiElement);
-
-            if (dragInfo == null || !string.Equals(targetGroup, dragInfo.Group))
-            {                
                 e.Effects = DragDropEffects.None;
                 e.Handled = true;
                 return;
@@ -291,9 +261,15 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         private static void OnDragEnter(object sender, DragEventArgs e)
-        {            
+        {
             UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = true);
             OnDragOver(sender, e);
+        }
+
+        private static void OnDragLeave(object sender, DragEventArgs e)
+        {
+            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
+            DragAdorner = null;
         }
 
         private static void CreateDragAdorner(UIElement uiElement)
@@ -319,6 +295,19 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             {
                 action(frameworkElement.DataContext as T);
             }
+        }
+
+        private static DragDropDataObject CreateDragDropDataObject(UIElement element, DragEventArgs e)
+        {
+            var dragDropDataObject = new DragDropDataObject
+            {
+                DragEventArgs = e,
+                DropData = e.Data.GetData(DataFormat.Name),
+                Position = e.GetPosition(element),
+                Source = (element as FrameworkElement)?.DataContext
+            };
+
+            return dragDropDataObject;
         }
     }
 }

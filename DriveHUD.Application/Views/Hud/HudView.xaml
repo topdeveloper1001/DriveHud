@@ -751,9 +751,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -761,9 +759,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_TextBoxTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.TextBox}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -771,13 +767,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_GraphTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.Graph}">
-                        <dh:DragDrop.GroupProperty>
-                            <x:Static
-                                Member="vm:HudDragDropGroups.Popups" />
-                        </dh:DragDrop.GroupProperty>
-                    </controls:ImageButton>
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -785,9 +775,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -795,9 +783,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -805,10 +791,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}"
-                        Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.FourStatBox}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -816,22 +799,13 @@
                         ToolTip="{ResX Key=Common_HudSideBar_HeatMapTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}"
-                        Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}">
-                        <dh:DragDrop.GroupProperty>
-                            <x:Static
-                                Member="vm:HudDragDropGroups.Popups" />
-                        </dh:DragDrop.GroupProperty>
-                    </controls:ImageButton>
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
                         ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
-                        IsEnabled="False"
-                        Command="{Binding DesignerToolCommand}"
-                        CommandParameter="{x:Static vm:HudDesignerToolType.HeatMap}" />
+                        IsEnabled="False" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -839,9 +813,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_PlainStatBoxTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}">
-                    </controls:ImageButton>
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -849,8 +821,7 @@
                         ToolTip="{ResX Key=Common_HudSideBar_BumperStickersTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}"
-                        dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Common}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}" />
 
                 </UniformGrid>
 

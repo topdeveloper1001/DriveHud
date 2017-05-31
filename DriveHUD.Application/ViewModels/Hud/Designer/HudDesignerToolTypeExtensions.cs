@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DragInfo.cs" company="Ace Poker Solutions">
+// <copyright file="HudDesignerToolTypeExtensions.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,29 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows;
-using System.Windows.Input;
+using System.Linq;
 
-namespace DriveHUD.Common.Wpf.AttachedBehaviors
+namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class DragInfo
+    public static class HudDesignerToolTypeExtensions
     {
-        public DragInfo(object sender, MouseButtonEventArgs e)
-        {
-            VisualSource = sender as UIElement;         
-            DragStartPosition = e.GetPosition((IInputElement)sender);
-        }
+        private static HudDesignerToolType[] commonTools = new[] {
+            HudDesignerToolType.BumperStickers, HudDesignerToolType.FourStatBox, HudDesignerToolType.PlainStatBox,
+            HudDesignerToolType.PlayerProfileIcon, HudDesignerToolType.TextBox, HudDesignerToolType.TiltMeter
+        };
 
-        public UIElement VisualSource
+        public static bool IsCommonTool(this HudDesignerToolType toolType)
         {
-            get;
-            private set;
+            return commonTools.Contains(toolType);
         }
-
-        public Point DragStartPosition
-        {
-            get;
-            private set;
-        }     
     }
 }

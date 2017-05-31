@@ -33,7 +33,9 @@ namespace Model.Stats
             Stat.PlayerInfoIcon,
             Stat.TotalHands,
             Stat.NetWon,
-            Stat.BBs
+            Stat.BBs,
+            Stat.AF,
+            Stat.RecentAgg
         };
 
         /// <summary>
@@ -64,12 +66,12 @@ namespace Model.Stats
             var statsCollection = new[]
             {
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PlayerInfoIcon },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = nameof(Indicators.VPIP) },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = nameof(Indicators.VPIP), GetStatDtoExpression = x => new StatDto(x.Vpiphands, x.Totalhands) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = nameof(Indicators.PFR), GetStatDtoExpression = x => new StatDto(x.Pfrhands, x.Totalhands) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S3Bet, PropertyName = nameof(Indicators.ThreeBet) },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S3Bet, PropertyName = nameof(Indicators.ThreeBet), GetStatDtoExpression = x => new StatDto(x.Didthreebet, x.Couldthreebet) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.AF, PropertyName = nameof(Indicators.Agg) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.AGG, PropertyName = nameof(Indicators.AggPr) },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CBet, PropertyName = nameof(Indicators.FlopCBet)},
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.AGG, PropertyName = nameof(Indicators.AggPr), GetStatDtoExpression = x => new StatDto(x.Totalbets, x.Totalpostflopstreetsplayed) },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CBet, PropertyName = nameof(Indicators.FlopCBet), GetStatDtoExpression = x => new StatDto(x.Flopcontinuationbetmade, x.Flopcontinuationbetpossible) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WTSD, PropertyName = nameof(Indicators.WTSD) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WSSD, PropertyName = nameof(Indicators.WSSD) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.WWSF, PropertyName = nameof(Indicators.WSWSF) },
