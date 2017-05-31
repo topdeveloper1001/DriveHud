@@ -298,9 +298,11 @@ namespace DriveHUD.Application.TableConfigurators
 
                     var statInfo = selectedStatInfo.Clone();
 
-                    if (!string.IsNullOrWhiteSpace(statInfo.PropertyName))
+                    var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                    if (!string.IsNullOrWhiteSpace(propertyName))
                     {
-                        statInfo.AssignStatInfoValues(hudIndicators);
+                        statInfo.AssignStatInfoValues(hudIndicators, propertyName);
                     }
 
                     replayerPlayer.StatInfoCollection.Add(statInfo);

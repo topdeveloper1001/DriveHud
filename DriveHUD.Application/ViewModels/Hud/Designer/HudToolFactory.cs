@@ -336,7 +336,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 statInfo.IsSelected = false;
 
                 var initialStat = statInfo.Stat == Stat.PlayerInfoIcon ?
-                    StatInfoHelper.GetStat(Stat.NetWon) :
+                    StatsProvider.GetStat(Stat.NetWon) :
                     statInfo.Clone();
 
                 layoutTool = new HudLayoutGraphTool

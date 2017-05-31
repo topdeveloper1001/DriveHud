@@ -502,7 +502,7 @@ namespace DriveHUD.Application.ViewModels
 
                     var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection.Concat(heatMapTools.Select(x => x.BaseStat)).ToArray();
 
-                    StatInfoHelper.UpdateStats(activeLayoutHudStats);
+                    StatsProvider.UpdateStats(activeLayoutHudStats);
 
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
@@ -514,14 +514,16 @@ namespace DriveHUD.Application.ViewModels
 
                     foreach (var statInfo in activeLayoutHudStats)
                     {
-                        if (!string.IsNullOrEmpty(statInfo.PropertyName))
+                        var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                        if (!string.IsNullOrEmpty(propertyName))
                         {
                             if (item.TotalHands < statInfo.MinSample)
                             {
                                 statInfo.IsNotVisible = true;
                             }
 
-                            statInfo.AssignStatInfoValues(item);
+                            statInfo.AssignStatInfoValues(item, propertyName);
                         }
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {

@@ -20,7 +20,7 @@ namespace Model.Data
 {
     public class HudIndicators : HudLightIndicators
     {
-        private Dictionary<StatInfoBase, Dictionary<string, StatDto>> heatMaps = new Dictionary<StatInfoBase, Dictionary<string, StatDto>>();
+        private Dictionary<StatBase, Dictionary<string, StatDto>> heatMaps = new Dictionary<StatBase, Dictionary<string, StatDto>>();
 
         public HudIndicators() : base()
         {
@@ -34,11 +34,11 @@ namespace Model.Data
 
         private void InitializeHeatMaps()
         {
-            var heatMapsStats = StatInfoHelper.GetHeatMapStats();
+            var heatMapsStats = StatsProvider.GetHeatMapStats();
             heatMapsStats.ForEach(heatMapStat => heatMaps.Add(heatMapStat, new Dictionary<string, StatDto>()));
         }
 
-        public Dictionary<StatInfoBase, Dictionary<string, StatDto>> HeatMaps
+        public Dictionary<StatBase, Dictionary<string, StatDto>> HeatMaps
         {
             get
             {
@@ -52,14 +52,12 @@ namespace Model.Data
 
             foreach (var stat in heatMaps.Keys)
             {
-                if (stat.GetStatDtoExpression == null)
+                if (stat.CreateStatDto == null)
                 {
                     continue;
                 }
-
-                var getStatDto = stat.GetStatDtoExpression.Compile();
-
-                var statDto = getStatDto(statistic);
+                
+                var statDto = stat.CreateStatDto(statistic);
 
                 var cardsRange = ParserUtils.ConvertToCardRange(statistic.Cards);
 

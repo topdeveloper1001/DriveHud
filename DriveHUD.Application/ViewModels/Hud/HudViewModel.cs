@@ -450,7 +450,7 @@ namespace DriveHUD.Application.ViewModels
         private void InitializeStatInfoCollection()
         {
             // Create a list of StatInfo
-            StatInfoCollection = new ReactiveList<StatInfo>(StatInfoHelper.GetAllStats());
+            StatInfoCollection = new ReactiveList<StatInfo>(StatsProvider.GetAllStats());
 
             // Initialize stat info
             StatInfoCollection.ForEach(x => x.Initialize());
@@ -566,7 +566,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     var statInfo = dragDropDataObject.Source as StatInfo;
 
-                    var heatMapStats = StatInfoHelper.GetHeatMapStats();
+                    var heatMapStats = StatsProvider.GetHeatMapStats();
 
                     return heatMapStats.Any(s => s.Stat == statInfo.Stat);
                 }
@@ -744,7 +744,7 @@ namespace DriveHUD.Application.ViewModels
                         return;
                     }
 
-                    var allStats = StatInfoHelper.GetAllStats();
+                    var allStats = StatsProvider.GetAllStats();
 
                     // remove invalid stats
                     var validStats = (from addedStat in addedStats

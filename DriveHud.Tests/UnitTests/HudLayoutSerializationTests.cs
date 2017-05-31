@@ -37,9 +37,16 @@ namespace DriveHud.Tests.UnitTests
         [OneTimeSetUp]
         public void SetUp()
         {
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.Color), false).SetSurrogate(typeof(ColorDto));
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            try
+            {
+                RuntimeTypeModel.Default.Add(typeof(Color), false).SetSurrogate(typeof(ColorDto));
+                RuntimeTypeModel.Default.Add(typeof(SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
+                RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            }
+            // ignore InvalidOperationException, because serializer might be generated in other test
+            catch (InvalidOperationException)
+            {
+            }
         }
 
         /// <summary>

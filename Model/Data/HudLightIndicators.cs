@@ -1657,11 +1657,13 @@ namespace Model.Data
                 return;
             }
 
-            var allStats = StatInfoHelper.GetAllStats();
+            var allStats = StatsProvider.GetAllStats();
 
             foreach (var statInfo in allStats)
             {
-                if (string.IsNullOrEmpty(statInfo.PropertyName))
+                var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                if (string.IsNullOrEmpty(propertyName))
                 {
                     continue;
                 }
@@ -1671,11 +1673,10 @@ namespace Model.Data
                     statsSessionCollection.Add(statInfo.Stat, new List<decimal>());
                 }
 
-                var statValue = (decimal)ReflectionHelper.GetMemberValue(this, statInfo.PropertyName);
+                var statValue = (decimal)ReflectionHelper.GetMemberValue(this, propertyName);
 
                 statsSessionCollection[statInfo.Stat].Add(statValue);
             }
-
         }
 
         #endregion       

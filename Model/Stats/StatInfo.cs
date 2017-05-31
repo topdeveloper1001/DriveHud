@@ -21,6 +21,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
@@ -31,7 +32,7 @@ namespace Model.Stats
     [Serializable]
     [ProtoContract]
     [ProtoInclude(101, typeof(StatInfoBreak))]
-    public class StatInfo : StatInfoBase
+    public class StatInfo : INotifyPropertyChanged
     {
         private const string totalHandFormat = "{0:0}";
 
@@ -153,6 +154,28 @@ namespace Model.Stats
             }
         }
 
+        private Stat stat;
+
+        [ProtoMember(4)]
+        public virtual Stat Stat
+        {
+            get
+            {
+                return stat;
+            }
+            set
+            {
+                if (value == stat)
+                {
+                    return;
+                }
+
+                stat = value;
+
+                OnPropertyChanged();
+            }
+        }
+
         public string ToolTip
         {
             get
@@ -168,7 +191,7 @@ namespace Model.Stats
         [NonSerialized]
         private string format;
 
-        [ProtoMember(4)]
+        [ProtoMember(5)]
         [XmlIgnore]
         public string Format
         {
@@ -215,21 +238,6 @@ namespace Model.Stats
             {
                 if (value == groupName) return;
                 groupName = value;
-                OnPropertyChanged();
-            }
-        }
-
-        [ProtoMember(5)]
-        public string PropertyName
-        {
-            get
-            {
-                return propertyName;
-            }
-            set
-            {
-                if (value == propertyName) return;
-                propertyName = value;
                 OnPropertyChanged();
             }
         }
@@ -720,8 +728,7 @@ namespace Model.Stats
             statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
-            statInfoClone.Format = Format;
-            statInfoClone.PropertyName = PropertyName;
+            statInfoClone.Format = Format;            
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
@@ -753,15 +760,15 @@ namespace Model.Stats
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
         }
 
-        public void AssignStatInfoValues(Indicators source)
+        public void AssignStatInfoValues(Indicators source, string propertyName)
         {
-            if (string.IsNullOrEmpty(PropertyName))
+            if (string.IsNullOrEmpty(propertyName))
             {
                 LogProvider.Log.Error(string.Format("Couldn't find propertyName for {0}", Stat));
                 return;
             }
 
-            var propName = string.Format("{0}{1}", PropertyName, "Object");
+            var propName = string.Format("{0}{1}", propertyName, "Object");
 
             object propValue;
 
@@ -779,7 +786,7 @@ namespace Model.Stats
             }
             else
             {
-                propValue = ReflectionHelper.GetPropertyValue(source, PropertyName);
+                propValue = ReflectionHelper.GetPropertyValue(source, propertyName);
             }
 
             Caption = string.Format(Format, propValue);
@@ -824,6 +831,18 @@ namespace Model.Stats
                     }
                 }
             }
+        }
+
+        #endregion
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion

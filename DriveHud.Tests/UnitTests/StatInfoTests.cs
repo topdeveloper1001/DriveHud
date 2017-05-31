@@ -17,6 +17,7 @@ using Model.Enums;
 using Model.Stats;
 using NUnit.Framework;
 using ProtoBuf.Meta;
+using System;
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
@@ -29,9 +30,16 @@ namespace DriveHud.Tests.UnitTests
         [OneTimeSetUp]
         public void SetUp()
         {
-            RuntimeTypeModel.Default.Add(typeof(Color), false).SetSurrogate(typeof(ColorDto));
-            RuntimeTypeModel.Default.Add(typeof(SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            try
+            {
+                RuntimeTypeModel.Default.Add(typeof(Color), false).SetSurrogate(typeof(ColorDto));
+                RuntimeTypeModel.Default.Add(typeof(SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
+                RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            }
+            // ignore InvalidOperationException, because serializer might be generated in other test
+            catch (InvalidOperationException)
+            {
+            }
         }
 
         [Test]
@@ -42,8 +50,7 @@ namespace DriveHud.Tests.UnitTests
                 Stat = Stat.S3Bet,
                 Caption = "Caption1",
                 IsCaptionHidden = true,
-                Format = "Format1",
-                PropertyName = "PropertyName1",
+                Format = "Format1",                
                 CurrentColor = Colors.Black,
                 CurrentValue = 15m,
                 SettingsAppearance_IsChecked = true,
@@ -74,8 +81,7 @@ namespace DriveHud.Tests.UnitTests
                 Assert.That(actualStatInfo.Stat, Is.EqualTo(expectedStatInfo.Stat), nameof(StatInfo.Stat));
                 Assert.That(actualStatInfo.Caption, Is.EqualTo(expectedStatInfo.Caption), nameof(StatInfo.Caption));
                 Assert.That(actualStatInfo.IsCaptionHidden, Is.EqualTo(expectedStatInfo.IsCaptionHidden), nameof(StatInfo.IsCaptionHidden));
-                Assert.That(actualStatInfo.Format, Is.EqualTo(expectedStatInfo.Format), nameof(StatInfo.Format));
-                Assert.That(actualStatInfo.PropertyName, Is.EqualTo(expectedStatInfo.PropertyName), nameof(StatInfo.PropertyName));
+                Assert.That(actualStatInfo.Format, Is.EqualTo(expectedStatInfo.Format), nameof(StatInfo.Format));                
                 Assert.That(actualStatInfo.CurrentColor, Is.EqualTo(expectedStatInfo.CurrentColor), nameof(StatInfo.CurrentColor));
                 Assert.That(actualStatInfo.CurrentValue, Is.EqualTo(expectedStatInfo.CurrentValue), nameof(StatInfo.CurrentValue));
                 Assert.That(actualStatInfo.SettingsAppearance_IsChecked, Is.EqualTo(expectedStatInfo.SettingsAppearance_IsChecked), nameof(StatInfo.SettingsAppearance_IsChecked));

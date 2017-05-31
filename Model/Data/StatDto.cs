@@ -22,10 +22,10 @@ namespace Model.Data
         {
         }
 
-        public StatDto(int occurred, int couldOccurred)
+        public StatDto(int? occurred, int? couldOccurred)
         {
-            Occurred = occurred;
-            CouldOccurred = couldOccurred;
+            Occurred = occurred.HasValue ? occurred.Value : 0;
+            CouldOccurred = couldOccurred.HasValue ? couldOccurred.Value : 0;
         }
 
         [ProtoMember(1)]

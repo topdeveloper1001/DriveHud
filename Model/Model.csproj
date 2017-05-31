@@ -318,14 +318,13 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Stats\StatBase.cs" />
     <Compile Include="Stats\StatInfo.cs" />
-    <Compile Include="Stats\StatInfoBase.cs" />
     <Compile Include="Stats\StatInfoBreak.cs" />
     <Compile Include="Stats\StatInfoGroup.cs" />
-    <Compile Include="Stats\StatInfoHelper.cs" />
+    <Compile Include="Stats\StatsProvider.cs" />
     <Compile Include="Stats\StatInfoMeterModel.cs" />
     <Compile Include="Stats\StatInfoOptionValueRange.cs" />
-    <Compile Include="Stats\StatInfoToolTip.cs" />
     <Compile Include="StealAttempt.cs" />
     <Compile Include="PlayerStatisticCalculator.cs" />
     <Compile Include="StringFormatter.cs" />

@@ -53,7 +53,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
         public LayoutMigrator()
         {
-            availableStats = StatInfoHelper.GetAllStats();
+            availableStats = StatsProvider.GetAllStats();
         }
 
         public HudLayoutInfoV2 Migrate(HudLayoutInfo layout)
