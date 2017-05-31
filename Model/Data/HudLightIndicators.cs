@@ -1657,25 +1657,23 @@ namespace Model.Data
                 return;
             }
 
-            var allStats = StatsProvider.GetAllStats();
-
-            foreach (var statInfo in allStats)
+            foreach (var statBase in StatsProvider.StatsBases.Values)
             {
-                var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
-
-                if (string.IsNullOrEmpty(propertyName))
+                if (string.IsNullOrEmpty(statBase.PropertyName))
                 {
                     continue;
                 }
 
-                if (!statsSessionCollection.ContainsKey(statInfo.Stat))
+                if (!statsSessionCollection.ContainsKey(statBase.Stat))
                 {
-                    statsSessionCollection.Add(statInfo.Stat, new List<decimal>());
+                    statsSessionCollection.Add(statBase.Stat, new List<decimal>());
                 }
 
-                var statValue = (decimal)ReflectionHelper.GetMemberValue(this, propertyName);
+                var statValue = statBase.Stat == Stat.NetWon ?
+                    statistic.NetWon :
+                    (decimal)ReflectionHelper.GetMemberValue(this, statBase.PropertyName);
 
-                statsSessionCollection[statInfo.Stat].Add(statValue);
+                statsSessionCollection[statBase.Stat].Add(statValue);
             }
         }
 
