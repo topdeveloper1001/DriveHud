@@ -110,6 +110,16 @@ namespace Model
             return string.Format(header, stakeLevel, GetDateTimeString(handDate));
         }
 
+        /// <summary>
+        /// Gets the path to the folder with logs
+        /// </summary>
+        /// <returns>Path to the folder with logs</returns>
+        public static string GetLogsFolderPath()
+        {
+            var logsFolder = CommonResourceManager.Instance.GetResourceString(ResourceStrings.LogsFolder);
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, logsFolder);
+        }
+
         #region DB strings
 
         public static string GetConnectionString(string server, string port, string database, string user, string password)

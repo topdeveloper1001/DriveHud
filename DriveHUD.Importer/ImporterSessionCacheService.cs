@@ -32,6 +32,9 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class ImporterSessionCacheService : IImporterSessionCacheService
     {
+        /// <summary>
+        /// Interval in minutes after which session will expire and will be removed from cache
+        /// </summary>
         private const int sessionLifeTime = 12;
 
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();

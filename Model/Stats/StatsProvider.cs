@@ -40,7 +40,7 @@ namespace Model.Stats
         };
 
         /// <summary>
-        /// The dictionary of all stats with indicator property and expression to calculate value
+        /// The dictionary of all stats with the property of <see cref="HudLightIndicators"/> and <see cref="Func{bool, Playerstatistic}"/> to calculate value
         /// </summary>
         public static ReadOnlyDictionary<Stat, StatBase> StatsBases = new ReadOnlyDictionary<Stat, StatBase>((new[]
         {
