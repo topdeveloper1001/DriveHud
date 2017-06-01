@@ -750,4 +750,37 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudLayout_DuplicateHeader" xml:space="preserve">
     <value>Select table type:</value>
   </data>
+  <data name="Common_ReportView_Hands_AllInEquity" xml:space="preserve">
+    <value>All-in Equity%</value>
+  </data>
+  <data name="Common_ReportView_Hands_Board" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="Common_ReportView_Hands_Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="Common_ReportView_Hands_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Common_ReportView_Hands_EvDiff" xml:space="preserve">
+    <value>$EV Diff</value>
+  </data>
+  <data name="Common_ReportView_Hands_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Common_ReportView_Hands_NetWon" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
+  <data name="Common_ReportView_Hands_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Common_ReportView_Hands_Preflop" xml:space="preserve">
+    <value>Pre Flop</value>
+  </data>
+  <data name="Common_ReportView_ShowHoleCards" xml:space="preserve">
+    <value>Show Hole Cards</value>
+  </data>
+  <data name="Common_ReportView_TaggedHands" xml:space="preserve">
+    <value>Tagged Hands</value>
+  </data>
 </root>

@@ -60,6 +60,10 @@ namespace DriveHUD.Application.ControlTemplateSelectors
             {
                 return HudBumperStickersTemplate;
             }
+            else if (radItem.DataContext is HudHeatMapViewModel)
+            {
+                return HudHeatMapTemplate;
+            }
             else if (radItem.DataContext is HudPlayerViewModel)
             {
                 return PlayerPlaceTemplate;
@@ -85,5 +89,7 @@ namespace DriveHUD.Application.ControlTemplateSelectors
         public DataTemplate HudTextBoxTemplate { get; set; }
 
         public DataTemplate HudBumperStickersTemplate { get; set; }
+
+        public DataTemplate HudHeatMapTemplate { get; set; }
     }
 }

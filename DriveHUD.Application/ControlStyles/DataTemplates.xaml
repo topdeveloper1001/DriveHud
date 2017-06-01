@@ -181,8 +181,7 @@
     <DataTemplate
         x:Key="RadListBoxItemTemplate_StatInfo">
         <Grid>
-            <Grid                
-                dh:DragDrop.GroupProperty="{x:Static hvm:HudDragDropGroups.Common}"
+            <Grid                                
                 Background="#1d1e20"
                 Height="30"
                 Visibility="{Binding Path=., Mode=OneWay,Converter={StaticResource StatTypeToVisibilityConverter},ConverterParameter=StatInfo}">

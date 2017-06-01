@@ -10,10 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using Model.Data;
 using Model.Enums;
 using Model.Stats;
 using NUnit.Framework;
@@ -35,9 +37,16 @@ namespace DriveHud.Tests.UnitTests
         [OneTimeSetUp]
         public void SetUp()
         {
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.Color), false).SetSurrogate(typeof(ColorDto));
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
-            RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            try
+            {
+                RuntimeTypeModel.Default.Add(typeof(Color), false).SetSurrogate(typeof(ColorDto));
+                RuntimeTypeModel.Default.Add(typeof(SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
+                RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            }
+            // ignore InvalidOperationException, because serializer might be generated in other test
+            catch (InvalidOperationException)
+            {
+            }
         }
 
         /// <summary>
@@ -113,7 +122,7 @@ namespace DriveHud.Tests.UnitTests
                 }
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
@@ -150,7 +159,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -179,7 +188,7 @@ namespace DriveHud.Tests.UnitTests
                 IsVertical = true
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.Text, Is.EqualTo(hudLayoutToolExpected.Text));
@@ -218,7 +227,7 @@ namespace DriveHud.Tests.UnitTests
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudGaugeIndicatorViewModel;
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -249,7 +258,7 @@ namespace DriveHud.Tests.UnitTests
                 IsVertical = true
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
@@ -288,7 +297,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -312,7 +321,7 @@ namespace DriveHud.Tests.UnitTests
         {
             var hudLayoutToolExpected = new HudLayoutTiltMeterTool();
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
@@ -339,7 +348,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -357,7 +366,7 @@ namespace DriveHud.Tests.UnitTests
         {
             var hudLayoutToolExpected = new HudLayoutPlayerIconTool();
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
@@ -384,7 +393,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -408,7 +417,7 @@ namespace DriveHud.Tests.UnitTests
                 Stats = new ReactiveList<StatInfo> { new StatInfo { Stat = Stat.AGG } }
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.IsVertical, Is.EqualTo(hudLayoutToolExpected.IsVertical));
@@ -439,7 +448,7 @@ namespace DriveHud.Tests.UnitTests
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudGraphViewModel;
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -462,7 +471,7 @@ namespace DriveHud.Tests.UnitTests
                 Text = "Test"
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.Text, Is.EqualTo(hudLayoutToolExpected.Text));
@@ -491,7 +500,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -510,7 +519,7 @@ namespace DriveHud.Tests.UnitTests
         {
             var hudLayoutToolExpected = new HudLayoutBumperStickersTool();
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.ToolType, Is.EqualTo(hudLayoutToolExpected.ToolType));
@@ -537,7 +546,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
-            var hudToolViewModelActual = GetSerializedDeserializedActualTool(hudToolViewModelExpected);
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
             Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
             Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
@@ -621,10 +630,43 @@ namespace DriveHud.Tests.UnitTests
                 BaseStat = new StatInfo { Stat = Stat.S3Bet }
             };
 
-            var hudLayoutToolActual = GetSerializedDeserializedActualTool(hudLayoutToolExpected);
+            var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
 
             Assert.That(hudLayoutToolActual.Id, Is.EqualTo(hudLayoutToolExpected.Id));
             Assert.That(hudLayoutToolActual.BaseStat.Stat, Is.EqualTo(hudLayoutToolExpected.BaseStat.Stat));
+        }
+
+        /// <summary>
+        /// Method tests if <see cref="HudHeatMapViewModel"/> can be serialized with <seealso cref="Serializer"/>
+        /// </summary>
+        [Test]
+        public void HudHeatMapViewModelToolCanBeSerializedDeserializedWithProtobuf()
+        {
+            var hudLayoutToolExpected = new HudLayoutHeatMapTool
+            {
+                BaseStat = new StatInfo { Stat = Stat.S3Bet }
+            };
+
+            var hudElement = new HudElementViewModel
+            {
+                Seat = 1,
+            };
+
+            var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudHeatMapViewModel;
+            hudToolViewModelExpected.HeatMap.Add("AA", new StatDto(10, 15));
+
+            var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
+
+            Assert.That(hudToolViewModelActual.Id, Is.EqualTo(hudToolViewModelExpected.Id));
+            Assert.That(hudToolViewModelActual.ToolType, Is.EqualTo(hudToolViewModelExpected.ToolType));
+            Assert.That(hudToolViewModelActual.BaseStat.Stat, Is.EqualTo(hudToolViewModelExpected.BaseStat.Stat));
+            Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
+            Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
+            Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.HeatMap.Count, Is.EqualTo(hudToolViewModelExpected.HeatMap.Count));
+            Assert.That(hudToolViewModelActual.HeatMap.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.Keys.First()));
+            Assert.That(hudToolViewModelActual.HeatMap.Values.First().Occurred, Is.EqualTo(hudToolViewModelExpected.HeatMap.Values.First().Occurred));
+            Assert.That(hudToolViewModelActual.HeatMap.Values.First().CouldOccurred, Is.EqualTo(hudToolViewModelExpected.HeatMap.Values.First().CouldOccurred));
         }
 
         /// <summary>
@@ -705,46 +747,11 @@ namespace DriveHud.Tests.UnitTests
             var graphTool = new HudLayoutGraphTool();
             var gaugeIndicatorTool = new HudLayoutGaugeIndicator();
             var bumperStickers = new HudLayoutBumperStickersTool();
+            var heatMap = new HudLayoutHeatMapTool();
 
-            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool, playerIconTool, graphTool, gaugeIndicatorTool, bumperStickers };
+            hudLayoutInfo.LayoutTools = new List<HudLayoutTool> { plainBoxTool, textboxTool, fourStatBoxTool, tiltMeterTool, playerIconTool, graphTool, gaugeIndicatorTool, bumperStickers, heatMap };
 
             return hudLayoutInfo;
-        }
-
-        /// <summary>
-        /// Gets the deserialized object of the serialized version of the specified object of type <see cref="{T}"/>
-        /// </summary>
-        /// <typeparam name="T">Type of object to be serialized/deserialized</typeparam>
-        /// <param name="hudLayoutToolExpected">Object to be serialized/deserialized</param>
-        /// <returns>Deserialized object of type <see cref="{T}"/></returns>
-        private static T GetSerializedDeserializedActualTool<T>(T hudLayoutToolExpected) where T : class
-        {
-            byte[] data = null;
-
-            Assert.DoesNotThrow(() =>
-            {
-                using (var msTestString = new MemoryStream())
-                {
-                    Serializer.Serialize(msTestString, hudLayoutToolExpected);
-                    data = msTestString.ToArray();
-                }
-            });
-
-            Assert.IsNotNull(data);
-
-            T hudLayoutToolActual = null;
-
-            Assert.DoesNotThrow(() =>
-            {
-                using (var afterStream = new MemoryStream(data))
-                {
-                    hudLayoutToolActual = Serializer.Deserialize<T>(afterStream);
-                }
-            });
-
-            Assert.IsNotNull(hudLayoutToolActual);
-
-            return hudLayoutToolActual;
         }
     }
 }

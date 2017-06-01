@@ -700,8 +700,7 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         {
             Assert.That(actual.GetType(), Is.EqualTo(expected.GetType()), "Type");
             Assert.That(actual.Stat, Is.EqualTo(expected.Stat), nameof(StatInfo.Stat));
-            Assert.That(actual.GroupName, Is.EqualTo(expected.GroupName), nameof(StatInfo.GroupName));
-            Assert.That(actual.PropertyName, Is.EqualTo(expected.PropertyName), nameof(StatInfo.PropertyName));
+            Assert.That(actual.GroupName, Is.EqualTo(expected.GroupName), nameof(StatInfo.GroupName));            
             Assert.That(actual.CurrentColor, Is.EqualTo(expected.CurrentColor), nameof(StatInfo.CurrentColor));
             Assert.That(actual.SettingsAppearance_IsChecked, Is.EqualTo(expected.SettingsAppearance_IsChecked), nameof(StatInfo.SettingsAppearance_IsChecked));
             Assert.That(actual.SettingsPlayerType_IsChecked, Is.EqualTo(expected.SettingsPlayerType_IsChecked), nameof(StatInfo.SettingsPlayerType_IsChecked));

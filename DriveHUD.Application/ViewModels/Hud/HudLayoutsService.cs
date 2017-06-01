@@ -1020,8 +1020,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return false;
                 }
 
-                var currentStat = new StatInfo { PropertyName = stat.PropertyName };
-                currentStat.AssignStatInfoValues(source);
+                var propertyName = StatsProvider.GetStatProperyName(stat.Stat);
+
+                var currentStat = new StatInfo();
+                currentStat.AssignStatInfoValues(source, propertyName);
 
                 var high = rangeStat.High ?? 100;
                 var low = rangeStat.Low ?? -1;
@@ -1100,7 +1102,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 });
 
                 var layoutStats = layout.LayoutTools.OfType<IHudLayoutStats>().SelectMany(x => x.Stats).ToArray();
-                StatInfoHelper.UpdateStats(layoutStats);
+                StatsProvider.UpdateStats(layoutStats);
 
                 return layout;
             }

@@ -820,9 +820,7 @@ namespace DriveHUD.Entities
         public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
 
         public virtual FixedSizeList<Tuple<int, int>> RecentAggList { get; set; }
-
-        public virtual IList<decimal> MoneyWonCollection { get; set; }
-
+   
         #endregion
 
         public bool IsUnopened
@@ -1211,11 +1209,6 @@ namespace DriveHUD.Entities
             if (ThreeBetCardsList != null && !string.IsNullOrWhiteSpace(a.Cards) && a.Didthreebet != 0)
             {
                 ThreeBetCardsList.Add(a.Cards);
-            }
-
-            if (MoneyWonCollection != null)
-            {
-                MoneyWonCollection.Add(a.NetWon);
             }
 
             if (RecentAggList != null)

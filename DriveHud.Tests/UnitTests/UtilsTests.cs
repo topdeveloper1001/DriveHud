@@ -39,7 +39,9 @@ namespace DriveHud.Tests.UnitTests
         {
             var actual = Utils.IsDateInDateRange(testData.Date, testData.StartDate, testData.EndDate, testData.RangeExtension);
             Assert.That(actual, Is.EqualTo(testData.ExpectedResult), $"\r\nDate: {testData.Date} \r\nStartDate: {testData.StartDate} \r\nEndDate: {testData.EndDate} \r\nRangeExt: {testData.RangeExtension}");
-        }
+        }       
+
+        #region Support classes
 
         public class IsInDateRangeTestClass
         {
@@ -121,5 +123,7 @@ namespace DriveHud.Tests.UnitTests
                 };
             }
         }
+
+        #endregion
     }
 }

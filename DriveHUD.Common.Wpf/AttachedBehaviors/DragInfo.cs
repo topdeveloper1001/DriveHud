@@ -19,13 +19,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
     {
         public DragInfo(object sender, MouseButtonEventArgs e)
         {
-            VisualSource = sender as UIElement;
-
-            if (VisualSource != null)
-            {
-                Group = DragDrop.GetGroupProperty(VisualSource);
-            }
-
+            VisualSource = sender as UIElement;         
             DragStartPosition = e.GetPosition((IInputElement)sender);
         }
 
@@ -39,12 +33,6 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         {
             get;
             private set;
-        }
-
-        public string Group
-        {
-            get;
-            private set;
-        }
+        }     
     }
 }

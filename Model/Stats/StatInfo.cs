@@ -18,7 +18,6 @@ using Model.Data;
 using Model.Enums;
 using ProtoBuf;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -32,7 +31,7 @@ namespace Model.Stats
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable]
     [ProtoContract]
-    [ProtoInclude(30, typeof(StatInfoBreak))]
+    [ProtoInclude(101, typeof(StatInfoBreak))]
     public class StatInfo : INotifyPropertyChanged
     {
         private const string totalHandFormat = "{0:0}";
@@ -83,7 +82,6 @@ namespace Model.Stats
         private string caption;
 
         private StatInfoGroup statInfoGroup;
-        private string category;
         private string propertyName;
         private string groupName;
 
@@ -104,8 +102,6 @@ namespace Model.Stats
 
         private bool settingsAppearance_IsChecked;
         private bool settingsPlayerType_IsChecked;
-
-        private ObservableCollection<StatInfoToolTip> statInfoTooltipCollection;
 
         [ProtoMember(1)]
         public Guid Id
@@ -158,18 +154,6 @@ namespace Model.Stats
             }
         }
 
-        public string ToolTip
-        {
-            get
-            {
-                return IsCaptionHidden ?
-                        string.Empty :
-                            StatDto != null ?
-                                string.Format("{0} ({1}/{2})", CommonResourceManager.Instance.GetEnumResource(Stat), statDto.Occured, statDto.CouldOccured) :
-                                CommonResourceManager.Instance.GetEnumResource(Stat);
-            }
-        }
-
         private Stat stat;
 
         [ProtoMember(4)]
@@ -192,6 +176,18 @@ namespace Model.Stats
             }
         }
 
+        public string ToolTip
+        {
+            get
+            {
+                return IsCaptionHidden ?
+                        string.Empty :
+                            StatDto != null ?
+                                string.Format("{0} ({1}/{2})", CommonResourceManager.Instance.GetEnumResource(Stat), statDto.Occurred, statDto.CouldOccurred) :
+                                CommonResourceManager.Instance.GetEnumResource(Stat);
+            }
+        }
+
         [NonSerialized]
         private string format;
 
@@ -201,7 +197,7 @@ namespace Model.Stats
         {
             get
             {
-                if (stat == Stat.TotalHands)
+                if (Stat == Stat.TotalHands)
                 {
                     return totalHandFormat;
                 }
@@ -246,22 +242,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(7)]
-        public string PropertyName
-        {
-            get
-            {
-                return propertyName;
-            }
-            set
-            {
-                if (value == propertyName) return;
-                propertyName = value;
-                OnPropertyChanged();
-            }
-        }
-
-        [XmlIgnore, ProtoMember(8)]
+        [XmlIgnore, ProtoMember(6)]
         public Color CurrentColor
         {
             get
@@ -281,7 +262,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(9), DefaultValue(-1)]
+        [ProtoMember(7), DefaultValue(-1)]
         public decimal CurrentValue
         {
             get
@@ -298,7 +279,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(10)]
+        [ProtoMember(8)]
         public bool SettingsAppearance_IsChecked
         {
             get
@@ -315,7 +296,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(11)]
+        [ProtoMember(9)]
         public bool SettingsPlayerType_IsChecked
         {
             get
@@ -332,7 +313,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(12)]
+        [ProtoMember(10)]
         public string SettingsAppearanceFontSource
         {
             get
@@ -373,7 +354,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(13)]
+        [ProtoMember(11)]
         public int SettingsAppearanceFontSize
         {
             get
@@ -403,7 +384,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(14)]
+        [ProtoMember(12)]
         public bool SettingsAppearanceFontBold_IsChecked
         {
             get
@@ -435,7 +416,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(15)]
+        [ProtoMember(13)]
         public bool SettingsAppearanceFontItalic_IsChecked
         {
             get
@@ -466,7 +447,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(16)]
+        [ProtoMember(14)]
         public bool SettingsAppearanceFontUnderline_IsChecked
         {
             get
@@ -484,7 +465,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(17)]
+        [ProtoMember(15)]
         public ObservableCollection<StatInfoOptionValueRange> SettingsAppearanceValueRangeCollection
         {
             get
@@ -499,32 +480,9 @@ namespace Model.Stats
             }
         }
 
-        public bool IsStatInfoToolTipAvailable
-        {
-            get
-            {
-                return StatInfoToolTipCollection != null && StatInfoToolTipCollection.Any();
-            }
-        }
-
-        [ProtoMember(18)]
-        public ObservableCollection<StatInfoToolTip> StatInfoToolTipCollection
-        {
-            get
-            {
-                return statInfoTooltipCollection;
-            }
-            set
-            {
-                if (value == statInfoTooltipCollection) return;
-                statInfoTooltipCollection = value;
-                OnPropertyChanged(nameof(StatInfoToolTipCollection));
-            }
-        }
-
         private int minSample = 1;
 
-        [ProtoMember(19), DefaultValue(1)]
+        [ProtoMember(16), DefaultValue(1)]
         public int MinSample
         {
             get
@@ -541,7 +499,7 @@ namespace Model.Stats
 
         private string label;
 
-        [ProtoMember(20)]
+        [ProtoMember(17)]
         public string Label
         {
             get
@@ -560,7 +518,7 @@ namespace Model.Stats
         private bool isNotVisible;
 
         [XmlIgnore]
-        [ProtoMember(21)]
+        [ProtoMember(18)]
         public bool IsNotVisible
         {
             get
@@ -579,7 +537,7 @@ namespace Model.Stats
         private bool isListed;
 
         [XmlIgnore]
-        [ProtoMember(22)]
+        [ProtoMember(19)]
         public bool IsListed
         {
             get
@@ -598,7 +556,7 @@ namespace Model.Stats
         private StatDto statDto;
 
         [XmlIgnore]
-        [ProtoMember(23)]
+        [ProtoMember(20)]
         public StatDto StatDto
         {
             get
@@ -614,7 +572,7 @@ namespace Model.Stats
         }
 
         [XmlIgnore]
-        [ProtoMember(24)]
+        [ProtoMember(21)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
         [NonSerialized]
@@ -666,7 +624,7 @@ namespace Model.Stats
         }
 
         [NonSerialized]
-        [ProtoMember(28)]
+        [ProtoMember(22)]
         private string graphToolIconSource;
 
         /// <summary>
@@ -770,15 +728,11 @@ namespace Model.Stats
             statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
-            statInfoClone.Format = Format;
-            statInfoClone.PropertyName = PropertyName;
+            statInfoClone.Format = Format;            
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
             statInfoClone.GraphToolIconSource = GraphToolIconSource;
-            statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
-                                                        new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
-                                                        StatInfoToolTipCollection;
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);
@@ -806,15 +760,15 @@ namespace Model.Stats
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
         }
 
-        public void AssignStatInfoValues(Indicators source)
+        public void AssignStatInfoValues(Indicators source, string propertyName)
         {
-            if (string.IsNullOrEmpty(PropertyName))
+            if (string.IsNullOrEmpty(propertyName))
             {
                 LogProvider.Log.Error(string.Format("Couldn't find propertyName for {0}", Stat));
                 return;
             }
 
-            var propName = string.Format("{0}{1}", PropertyName, "Object");
+            var propName = string.Format("{0}{1}", propertyName, "Object");
 
             object propValue;
 
@@ -831,8 +785,8 @@ namespace Model.Stats
                 }
             }
             else
-            {                
-                propValue = ReflectionHelper.GetPropertyValue(source, PropertyName);
+            {
+                propValue = ReflectionHelper.GetPropertyValue(source, propertyName);
             }
 
             Caption = string.Format(Format, propValue);
@@ -843,11 +797,10 @@ namespace Model.Stats
         {
             ValueSetColor(CurrentValue);
         }
+
         #endregion
 
-        #region Events
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Events      
 
         [NotifyPropertyChangedInvocator]
         private void SettingsAppearanceValueRangeSelectedItem_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -879,6 +832,12 @@ namespace Model.Stats
                 }
             }
         }
+
+        #endregion
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

@@ -37,6 +37,10 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
     /// </summary>
     public class HudDesignerBehavior : Behavior<RadDiagram>
     {
+        private const int ToolElementZIndex = 100;
+
+        private const int ToolBarZIndex = 99;
+
         #region Dependency Properties
 
         private CompositeDisposable Disposables = new CompositeDisposable();
@@ -236,8 +240,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
             table.Y = diagram.Height / 2 - table.Height / 2;
 
             dragDropShape = CreateDragDropRadDiagramShape();
-            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetIsDragTarget(dragDropShape, true);
-            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetGroupProperty(dragDropShape, HudDragDropGroups.Common);
+            DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.SetIsDragTarget(dragDropShape, true);            
             diagram.AddShape(dragDropShape);
         }
 
@@ -375,7 +378,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 IsManipulationEnabled = false,
                 IsDraggingEnabled = true,
                 IsConnectorsManipulationEnabled = false,
-                ZIndex = 100
+                ZIndex = ToolElementZIndex
             };
 
             AttachToolBar(shape, toolViewModel as IHudToolBar);
@@ -384,7 +387,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
 
             SetWidthBinding(shape, toolViewModel);
             SetHeightBinding(shape, toolViewModel);
-            SetPositionBinding(shape, toolViewModel);            
+            SetPositionBinding(shape, toolViewModel);
             SetIsSelectedBinding(shape, toolViewModel);
             SetIsVisibleBinding(shape, toolViewModel);
 
@@ -523,7 +526,7 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                 SnapsToDevicePixels = true,
                 Template = ToolbarTemplate,
                 Background = new SolidColorBrush(Colors.Transparent),
-                ZIndex = 101
+                ZIndex = ToolBarZIndex
             };
 
             var disposable = Observable.FromEventPattern<PropertyEventArgs>(
@@ -535,10 +538,14 @@ namespace DriveHUD.Application.ViewModels.Hud.Designer.Behaviors
                         toolbarShape.X = shape.X + shape.ActualWidth - toolbarShape.ActualWidth;
                         toolbarShape.Y = shape.Y + shape.ActualHeight + 1;
                     }
+                    else if (x.EventArgs.PropertyName == nameof(RadDiagramShape.IsSelected))
+                    {
+                        toolbarShape.ZIndex = shape.IsSelected ? ToolElementZIndex : ToolBarZIndex;
+                    }
                 });
 
             AssociatedObject.AddShape(toolbarShape);
-            RemovableShapes.Add(toolbarShape);            
+            RemovableShapes.Add(toolbarShape);
 
             Disposables.Add(disposable);
         }

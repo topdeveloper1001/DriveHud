@@ -23,7 +23,8 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("You Placed 2nd in the tournament.<br/>Prize<br/>Cash: $21.20<br/>", 2120)]
         [TestCase("You Placed 6th in the tournament.<br/>", 0)]
         [TestCase("", 0)]
-        [TestCase("You placed 1st in the tournament.<br/> Prize <br/> Tournament Ticket: ID:6099746Name: Any $50 + $5", 0)]
+        [TestCase("You placed 1st in the tournament.<br/> Prize <br/> Tournament Ticket: ID:6099746Name: Any $50 + $5", 5500)]
+        [TestCase("You placed 1st in the tournament.<br/> Prize <br/> Tournament Ticket: ID:6099746Name: Any $50", 5000)]
         [TestCase("You placed 2nd in the tournament.<br/>Prize<br/>Play Money: 1575.00<br/>", 157500)]
         public void TestConvertPrizeTextToDecimal(string prizeText, int expected)
         {

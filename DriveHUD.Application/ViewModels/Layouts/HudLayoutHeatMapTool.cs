@@ -11,13 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
 using Model.Stats;
 using ProtoBuf;
-using ReactiveUI;
 using System;
-using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -69,7 +66,13 @@ namespace DriveHUD.Application.ViewModels.Layouts
         /// <returns>The view model of the current <see cref="HudLayoutHeatMapTool" /></returns>
         public override HudBaseToolViewModel CreateViewModel(HudElementViewModel hudElement)
         {
-            throw new NotImplementedException();
+            var viewModel = new HudHeatMapViewModel(this, hudElement)
+            {
+                Width = HudDefaultSettings.HeatMapWidth,
+                Height = HudDefaultSettings.HeatMapHeight
+            };
+
+            return viewModel;
         }
     }
 }

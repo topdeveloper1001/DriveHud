@@ -225,7 +225,7 @@ namespace DriveHUD.Common.Utils
             {
                 return GetMD5HashFromFile(fileName);
             });
-        }        
+        }
 
         /// <summary>
         /// Determines whenever date is in date range
@@ -250,6 +250,6 @@ namespace DriveHUD.Common.Utils
             }
 
             return date >= start && date <= end;
-        }
+        }      
     }
 }

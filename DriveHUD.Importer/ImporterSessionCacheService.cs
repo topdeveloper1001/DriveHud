@@ -32,6 +32,11 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class ImporterSessionCacheService : IImporterSessionCacheService
     {
+        /// <summary>
+        /// Interval in minutes after which session will expire and will be removed from cache
+        /// </summary>
+        private const int sessionLifeTime = 12;
+
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 
         private ReaderWriterLockSlim globalCacheLock = new ReaderWriterLockSlim();
@@ -403,12 +408,15 @@ namespace DriveHUD.Importers
             if (cachedData.ContainsKey(session))
             {
                 sessionData = cachedData[session];
+                sessionData.LastModified = DateTime.Now;
             }
             else
             {
                 sessionData = new SessionCacheData();
                 cachedData.Add(session, sessionData);
             }
+
+            RemoveExpiredSessions();
 
             return sessionData;
         }
@@ -458,6 +466,23 @@ namespace DriveHUD.Importers
             {
                 playerData.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
                 playerData.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
+            }
+        }
+
+        private void RemoveExpiredSessions()
+        {
+            Check.Require(!cacheLock.IsWriteLockHeld, "Write lock must be held before using this function");
+
+            var now = DateTime.Now;
+
+            foreach (var sessionKey in cachedData.Keys.ToArray())
+            {
+                var timeSinceLastUpdate = now - cachedData[sessionKey].LastModified;
+
+                if (timeSinceLastUpdate.TotalMinutes >= sessionLifeTime)
+                {
+                    cachedData.Remove(sessionKey);
+                }
             }
         }
     }

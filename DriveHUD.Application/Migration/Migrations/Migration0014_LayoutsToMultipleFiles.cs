@@ -491,8 +491,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 if (first.Caption != second.Caption) return false;
                 if (first.Stat != second.Stat) return false;
                 if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
-                if (first.GroupName != second.GroupName) return false;
-                if (first.PropertyName != second.PropertyName) return false;
+                if (first.GroupName != second.GroupName) return false;                
                 if (first.CurrentColor != second.CurrentColor) return false;
                 if (first.SettingsAppearance_IsChecked != second.SettingsAppearance_IsChecked) return false;
                 if (first.SettingsPlayerType_IsChecked != second.SettingsPlayerType_IsChecked) return false;

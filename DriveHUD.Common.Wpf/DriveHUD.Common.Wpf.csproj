@@ -150,6 +150,9 @@
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToBackgroundConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToBorderBrushConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToColorsBaseConverter.cs" />
     <Compile Include="Converters\IsTournamentEnumGameTypeToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumNotToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToLocalizedStringConverter.cs" />

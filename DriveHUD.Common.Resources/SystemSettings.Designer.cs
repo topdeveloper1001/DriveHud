@@ -268,6 +268,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logs.
+        /// </summary>
+        internal static string SystemSettings_LogsFolder {
+            get {
+                return ResourceManager.GetString("SystemSettings_LogsFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
         /// </summary>
         internal static string SystemSettings_OnlineManual {

@@ -59,6 +59,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return CreateTextBoxTool(creationInfo);
                 case HudDesignerToolType.BumperStickers:
                     return CreateBumperStickersTool(creationInfo);
+                case HudDesignerToolType.HeatMap:
+                    return CreateHeatMapTool(creationInfo);
                 default:
                     throw new NotSupportedException($"{creationInfo.ToolType} isn't supported");
             }
@@ -334,7 +336,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 statInfo.IsSelected = false;
 
                 var initialStat = statInfo.Stat == Stat.PlayerInfoIcon ?
-                    StatInfoHelper.GetStat(Stat.NetWon) :
+                    StatsProvider.GetStat(Stat.NetWon) :
                     statInfo.Clone();
 
                 layoutTool = new HudLayoutGraphTool
@@ -357,6 +359,43 @@ namespace DriveHUD.Application.ViewModels.Hud
                     ParentId = parentTool.Tool.Id
                 };
             }
+
+            var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
+            toolViewModel.Position = creationInfo.Position;
+
+            creationInfo.Layout.LayoutTools.Add(layoutTool);
+
+            return toolViewModel;
+        }
+
+        /// <summary>
+        /// Creates heat map view model
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudToolCreationInfo"/></param>
+        /// <returns>Graph view model</returns>
+        private HudBaseToolViewModel CreateHeatMapTool(HudToolCreationInfo creationInfo)
+        {
+            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Heat map has not been created.");
+
+            var statInfo = creationInfo.Source as StatInfo;
+
+            HudLayoutHeatMapTool layoutTool = null;
+
+            if (statInfo == null)
+            {
+                return null;
+            }
+
+            statInfo.IsSelected = false;
+
+            layoutTool = new HudLayoutHeatMapTool
+            {
+                BaseStat = statInfo.Clone()
+            };
+
+            var random = new Random();
+
+            layoutTool.BaseStat.CurrentValue = random.Next(0, 100);
 
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
             toolViewModel.Position = creationInfo.Position;

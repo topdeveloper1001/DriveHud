@@ -480,6 +480,17 @@ namespace DriveHUD.Application.ViewModels
                         graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
                     }
 
+                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>().ToArray();
+
+                    heatMapTools.ForEach(x =>
+                    {
+                        var heatMapKey = sessionData.HeatMaps.Keys
+                            .ToArray()
+                            .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
+
+                        x.HeatMap = sessionData.HeatMaps[heatMapKey];
+                    });
+
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
@@ -489,9 +500,9 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
                         new ObservableCollection<decimal>();
 
-                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection;
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection.Concat(heatMapTools.Select(x => x.BaseStat)).ToArray();
 
-                    StatInfoHelper.UpdateStats(activeLayoutHudStats);
+                    StatsProvider.UpdateStats(activeLayoutHudStats);
 
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
@@ -503,14 +514,16 @@ namespace DriveHUD.Application.ViewModels
 
                     foreach (var statInfo in activeLayoutHudStats)
                     {
-                        if (!string.IsNullOrEmpty(statInfo.PropertyName))
+                        var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                        if (!string.IsNullOrEmpty(propertyName))
                         {
                             if (item.TotalHands < statInfo.MinSample)
                             {
                                 statInfo.IsNotVisible = true;
                             }
 
-                            statInfo.AssignStatInfoValues(item);
+                            statInfo.AssignStatInfoValues(item, propertyName);
                         }
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {
@@ -1261,7 +1274,7 @@ namespace DriveHUD.Application.ViewModels
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisYear;
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
-                case EnumFilterDropDown.FilterCustomDateRange:                    
+                case EnumFilterDropDown.FilterCustomDateRange:
 
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;

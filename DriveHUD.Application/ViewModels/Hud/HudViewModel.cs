@@ -20,8 +20,10 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
+using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
+using Model.Data;
 using Model.Enums;
 using Model.Filters;
 using Model.Settings;
@@ -448,7 +450,7 @@ namespace DriveHUD.Application.ViewModels
         private void InitializeStatInfoCollection()
         {
             // Create a list of StatInfo
-            StatInfoCollection = new ReactiveList<StatInfo>(StatInfoHelper.GetAllStats());
+            StatInfoCollection = new ReactiveList<StatInfo>(StatsProvider.GetAllStats());
 
             // Initialize stat info
             StatInfoCollection.ForEach(x => x.Initialize());
@@ -518,38 +520,7 @@ namespace DriveHUD.Application.ViewModels
                     InitializeDesigner();
                 }
 
-                if (dragDropDataObject.Source is HudFourStatsBoxViewModel || dragDropDataObject.Source is HudPlainStatBoxViewModel)
-                {
-                    var statInfoList = dragDropDataObject.DragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
-
-                    var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
-
-                    if (statInfo == null)
-                    {
-                        return;
-                    }
-
-                    var targetToolViewModel = dragDropDataObject.Source as HudBaseToolViewModel;
-
-                    if (targetToolViewModel == null)
-                    {
-                        return;
-                    }
-
-                    targetToolViewModel = DesignerHudElementViewModel.Tools.FirstOrDefault(t => t.Id == targetToolViewModel.Id);
-
-                    SelectedToolViewModel = targetToolViewModel;
-
-                    UpdateStatsCollections();
-
-                    StatInfoObserveCollection.Add(statInfo);
-
-                    return;
-                }
-
-                var dataObject = dragDropDataObject.DragEventArgs.Data.GetData(DriveHUD.Common.Wpf.AttachedBehaviors.DragDrop.DataFormat.Name);
-
-                var toolType = dataObject as HudDesignerToolType?;
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
                 if (toolType.HasValue && CanAddTool(toolType.Value))
                 {
@@ -557,30 +528,50 @@ namespace DriveHUD.Application.ViewModels
                 }
             }, x =>
             {
-                var dragEventArgs = x as DragEventArgs;
+                var dragDropDataObject = x as DragDropDataObject;
 
-                if (dragEventArgs == null)
+                if (dragDropDataObject == null)
                 {
                     return false;
                 }
 
-                var statInfoList = dragEventArgs.Data.GetData("Model.Stats.StatInfo") as List<object>;
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
-                var statInfo = statInfoList?.OfType<StatInfo>().FirstOrDefault();
-
-                if (statInfo == null)
+                if (!toolType.HasValue)
                 {
                     return false;
                 }
 
-                var dragTarget = dragEventArgs.Source as FrameworkElement;
-
-                if (dragTarget == null || dragTarget.DataContext == null)
+                // drop on main table
+                if (dragDropDataObject.Source is HudViewModel && toolType.Value.IsCommonTool())
                 {
-                    return false;
+                    return true;
                 }
 
-                return dragTarget.DataContext is HudFourStatsBoxViewModel || dragTarget.DataContext is HudPlainStatBoxViewModel;
+                // Gauge indicator can be dropped only on stat info
+                if (dragDropDataObject.Source is StatInfo && toolType == HudDesignerToolType.GaugeIndicator)
+                {
+                    return true;
+                }
+
+                // Graph can be dropped only on stat info or on plain box, 4-stat or player icon
+                if ((dragDropDataObject.Source is StatInfo || dragDropDataObject.Source is HudPlainStatBoxViewModel ||
+                    dragDropDataObject.Source is HudPlayerIconViewModel) && toolType == HudDesignerToolType.Graph)
+                {
+                    return true;
+                }
+
+                // Heat map can be dropped only on supported StatInfo
+                if (dragDropDataObject.Source is StatInfo && toolType == HudDesignerToolType.HeatMap)
+                {
+                    var statInfo = dragDropDataObject.Source as StatInfo;
+
+                    var heatMapStats = StatsProvider.GetHeatMapStats();
+
+                    return heatMapStats.Any(s => s.Stat == statInfo.Stat);
+                }
+
+                return false;
             });
 
             RemoveToolCommand = ReactiveCommand.Create();
@@ -686,6 +677,17 @@ namespace DriveHUD.Application.ViewModels
                 });
             });
 
+            var cardRanges = Card.GetCardRanges();
+
+            previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
+            {
+                tool.BaseStat.CurrentValue = random.Next(0, 100);
+
+                tool.HeatMap = (from cardRange in cardRanges
+                                let occurred = random.Next(0, 100)
+                                select new { CardRange = cardRange, StatDto = new StatDto(occurred, 100) }).ToDictionary(x => x.CardRange, x => x.StatDto);
+            });
+
             previewHudElementViewModel.Seat = 1;
             previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
 
@@ -742,7 +744,7 @@ namespace DriveHUD.Application.ViewModels
                         return;
                     }
 
-                    var allStats = StatInfoHelper.GetAllStats();
+                    var allStats = StatsProvider.GetAllStats();
 
                     // remove invalid stats
                     var validStats = (from addedStat in addedStats
@@ -1035,7 +1037,7 @@ namespace DriveHUD.Application.ViewModels
                 Content = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_DeleteHudContent"),
                 IsDisplayH1Text = true
             };
-            
+
             NotificationRequest.Raise(notification,
                   confirmation =>
                   {
@@ -1069,7 +1071,7 @@ namespace DriveHUD.Application.ViewModels
             if (StatInfoObserveCollection.Count > 0)
             {
                 ReturnStatsToStatCollection();
-            }            
+            }
 
             AddStatsToSelectedStatCollection();
 

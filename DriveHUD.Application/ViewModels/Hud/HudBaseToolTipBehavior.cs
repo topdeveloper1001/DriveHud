@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using Microsoft.Practices.ServiceLocation;
 using Model.Stats;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual void OnHudElementViewModelChanged()
         {
-        }        
+        }
 
         protected virtual void ConfigureSimpleToolTip(FrameworkElement element, object toolTipSource, string path)
         {
@@ -72,6 +73,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             };
 
             element.SetBinding(FrameworkElement.ToolTipProperty, toolTipBinding);
+
+            ToolTipService.SetInitialShowDelay(element, HudDefaultSettings.ToolTipShowDelay);
         }
 
         protected virtual void ConfigureSimpleToolTip(FrameworkElement element, object toolTipSource)
@@ -114,14 +117,22 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>();
 
-            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(toolTipViewModels.First());
+            var toolTipViewModel = toolTipViewModels.First();
+
+            var frameworkElementFactory = hudPanelService.CreateFrameworkElementFactory(toolTipViewModel);
 
             if (frameworkElementFactory == null)
             {
                 return;
             }
 
-            var dataContextBinding = new Binding { Source = toolTipViewModels };
+            var dataContextBinding = new Binding
+            {
+                Source = toolTipViewModels
+                    .Where(x => x.GetType() == toolTipViewModel.GetType())
+                    .ToArray()
+            };
+
             frameworkElementFactory.SetBinding(FrameworkElement.DataContextProperty, dataContextBinding);
 
             var template = new DataTemplate();
@@ -138,7 +149,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             tooltip.Background = new SolidColorBrush(Colors.Transparent);
             tooltip.ContentTemplate = toolTipContentTemplate;
 
-            ToolTipService.SetInitialShowDelay(element, 1);
+            ToolTipService.SetInitialShowDelay(element, HudDefaultSettings.PopupShowDelay);
             ToolTipService.SetShowDuration(element, 60000);
             ToolTipService.SetVerticalOffset(element, -5.0);
             ToolTipService.SetPlacement(element, System.Windows.Controls.Primitives.PlacementMode.Top);

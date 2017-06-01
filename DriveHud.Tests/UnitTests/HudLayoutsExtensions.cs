@@ -51,14 +51,7 @@ namespace DriveHud.Tests.UnitTests
             }
 
             statInfo.Caption = string.Format(statInfo.Format, value);
-            statInfo.CurrentValue = value;
-
-            if (string.IsNullOrWhiteSpace(propertyName))
-            {
-                return;
-            }
-
-            statInfo.PropertyName = propertyName;
+            statInfo.CurrentValue = value;        
         }
     }
 }

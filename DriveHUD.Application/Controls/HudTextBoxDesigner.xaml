@@ -37,8 +37,7 @@
                 BorderThickness="1"
                 BorderBrush="#33519b"
                 VerticalAlignment="Center"
-                dh:DragDrop.IsDragTarget="True"
-                dh:DragDrop.GroupProperty="{x:Static vm:HudDragDropGroups.Popups}"
+                dh:DragDrop.IsDragTarget="True"                
                 dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                 Style="{StaticResource TextBoxBorderStyle}">
 
