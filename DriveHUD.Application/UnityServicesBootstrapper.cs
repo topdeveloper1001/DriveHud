@@ -41,6 +41,8 @@ namespace DriveHUD.Application
             container.RegisterType<IHudPanelService, Poker888HudPanelService>(EnumPokerSites.Poker888.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.AmericasCardroom.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.BlackChipPoker.ToString());
+            container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.TruePoker.ToString());
+            container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.YaPoker.ToString());
             container.RegisterType<IHudPanelService, WinningPokerNetworkHudPanelService>(EnumPokerSites.WinningPokerNetwork.ToString());
 
             // Position Providers
@@ -55,6 +57,8 @@ namespace DriveHUD.Application
             container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.WinningPokerNetwork.ToString());
             container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.AmericasCardroom.ToString());
             container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.BlackChipPoker.ToString());
+            container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.TruePoker.ToString());
+            container.RegisterType<IPositionProvider, WinningPositionProvider>(EnumPokerSites.YaPoker.ToString());
         }
     }
 }

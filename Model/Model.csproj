@@ -319,6 +319,8 @@
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
     <Compile Include="Stats\StatBase.cs" />
+    <Compile Include="Site\TruePokerConfiguration.cs" />
+    <Compile Include="Site\YaPokerConfiguration.cs" />
     <Compile Include="Stats\StatInfo.cs" />
     <Compile Include="Stats\StatInfoBreak.cs" />
     <Compile Include="Stats\StatInfoGroup.cs" />

@@ -26,6 +26,8 @@ namespace DriveHUD.Entities
         TigerGaming = 9,
         AmericasCardroom = 10,
         BlackChipPoker = 11,
-        WinningPokerNetwork = 12
+        WinningPokerNetwork = 12,
+        TruePoker = 13,
+        YaPoker = 14
     }
 }
