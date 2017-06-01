@@ -1,4 +1,16 @@
-﻿using DriveHUD.Common.Resources;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ShowdownHandsReportRecord.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Model.Enums;
 using Model.HandAnalyzers;
@@ -7,7 +19,7 @@ using System.Linq;
 
 namespace Model.Data
 {
-    public class ShowdownHandsReportRecord : Indicators
+    public class ShowdownHandsReportRecord : ReportIndicators
     {
         public ShowdownHands ShowdownHand { get; set; }
 
@@ -25,12 +37,10 @@ namespace Model.Data
                         return ShowdownHandsResourceStrings.PocketPairSecondOrWorseResourceString;
                     case (ShowdownHands.TopPair):
                         return ShowdownHandsResourceStrings.TopPairResourceString;
-
                     case (ShowdownHands.TopPairTopKicker):
                         return ShowdownHandsResourceStrings.TopPairTopKickerResourceString;
                     case (ShowdownHands.SecondPair):
                         return ShowdownHandsResourceStrings.SecondPairResourceString;
-
                     case (ShowdownHands.ThirdPair):
                         return ShowdownHandsResourceStrings.ThirdPairResourceString;
                     case (ShowdownHands.BottomPair):
@@ -106,7 +116,9 @@ namespace Model.Data
             get
             {
                 if (TotalHands == 0)
+                {
                     return 0;
+                }
 
                 return (Source.Wonhand / TotalHands) * 100;
             }

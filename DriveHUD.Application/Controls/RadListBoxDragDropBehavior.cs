@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="RadListBoxDragDropBehavior.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using Model.Stats;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media;
-
-using Telerik.Windows.Controls;
 using Telerik.Windows.DragDrop.Behaviors;
-
-using DriveHUD.ViewModels;
-using DriveHUD.Application.ViewModels;
 
 namespace DriveHUD.Application.Controls
 {
@@ -20,48 +21,34 @@ namespace DriveHUD.Application.Controls
         public RadListBoxDragDropBehavior()
             : base()
         {
-
-            Console.WriteLine("RadListBoxDragDropBehavior");
-        }
-
-        protected override IEnumerable<object> CopyDraggedItems(DragDropState state)
-        {
-
-            Console.WriteLine("CopyDraggedItems");
-            return base.CopyDraggedItems(state);
         }
 
         public override void Drop(DragDropState state)
         {
-            Console.WriteLine("Drop");
-            if (!state.IsSameControl && state.DraggedItems.Cast<StatInfo>().All<StatInfo>(x => x is StatInfoBreak))
+            if (!state.IsSameControl && state.DraggedItems.Cast<StatInfo>().All(x => x is StatInfoBreak))
             {
                 base.DragDropCanceled(state);
                 return;
             }
+
             base.Drop(state);
         }
 
-
         public override void DragDropCanceled(DragDropState state)
         {
-            Console.WriteLine("DragDropCanceled");
-            if (!state.DraggedItems.Cast<StatInfo>().All<StatInfo>(x => x is StatInfoBreak))
+            if (!state.DraggedItems.Cast<StatInfo>().All(x => x is StatInfoBreak))
             {
                 base.DragDropCanceled(state);
             }
             else
+            {
                 base.DragDropCompleted(state);
+            }
         }
-
 
         public override void DragDropCompleted(DragDropState state)
         {
-            Console.WriteLine("DragDropCompleted");
             base.DragDropCompleted(state);
-
         }
-
     }
-
 }

@@ -1,0 +1,65 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style
+        x:Key="LabelStyle"
+        TargetType="Label">
+        <Setter
+            Property="Foreground"
+            Value="White" />
+        <Setter
+            Property="FontWeight"
+            Value="Normal" />
+        <Setter
+            Property="Background"
+            Value="{StaticResource BackgroundBrush}" />
+        <Setter
+            Property="Padding"
+            Value="5 2" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="Label">
+                    <Border
+                        BorderBrush="Transparent"
+                        BorderThickness="0"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="1">
+                        <ContentPresenter />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="TickStyle"
+        TargetType="Rectangle">
+        <Setter
+            Property="Visibility"
+            Value="Collapsed" />
+    </Style>
+
+    <VisualBrush
+        x:Key="DotFillBrush"
+        TileMode="Tile"
+        Viewport="0,0,5,5"
+        ViewportUnits="Absolute"
+        Viewbox="0,0,5,5"
+        ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Ellipse
+                Fill="{StaticResource ForegroundBrush}"
+                Width="1"
+                Height="1" />
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <SolidColorBrush
+        x:Key="CloseButtonBackground"
+        x:Shared="False"
+        Color="#191a1e" />
+
+</ResourceDictionary>

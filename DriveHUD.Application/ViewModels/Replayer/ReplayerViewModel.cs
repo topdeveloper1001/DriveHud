@@ -5,7 +5,6 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
-using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Entities;
@@ -14,6 +13,7 @@ using Model.Interfaces;
 using Model.Replayer;
 using Prism.Events;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -26,6 +26,13 @@ using System.Windows.Threading;
 using Prism.Interactivity.InteractionRequest;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Resources;
+using DriveHUD.Importers.Builders.iPoker;
+using Model.Importer;
+using Model;
+using NHibernate;
+using NHibernate.Linq;
+using HandHistory = HandHistories.Objects.Hand.HandHistory;
+using Player = HandHistories.Objects.Players.Player;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -42,7 +49,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         #region Constructor
 
-        internal ReplayerViewModel()
+        public ReplayerViewModel()
         {
             _dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
@@ -98,7 +105,6 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 return;
             }
-
             SetCommunityCards(CurrentGame.CommunityCards);
 
             decimal anteAmount = Math.Abs(CurrentGame.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).Sum(x => x.Amount));
@@ -114,9 +120,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
                 ReplayerTableState state = new ReplayerTableState();
 
-                var lastAction = TableStateList.LastOrDefault();
+                ReplayerTableState lastAction = TableStateList.LastOrDefault();
                 if (lastAction != null && lastAction.CurrentStreet != action.Street && action.Street >= Street.Flop && action.Street <= Street.River)
-                {
+                {                //if we are inside this "if" we create an extra state between two actions
                     totalPotValue = currentPotValue;
                     state.TotalPotValue = totalPotValue;
                     state.CurrentPotValue = currentPotValue;
@@ -124,17 +130,17 @@ namespace DriveHUD.Application.ViewModels.Replayer
                     state.IsStreetChangedAction = true;
                     state.ActivePlayer = new ReplayerPlayerViewModel();
                     state.CurrentStreet = action.Street;
-                    TableStateList.Add(state);
+                    TableStateList.Add(state);  //added new state between actions like flop/river
+                    state.CurrentAction = action;
 
                     state = new ReplayerTableState();
                 }
-
+                state.CurrentAction = action;
                 state.ActionAmount = action.Amount;
                 state.CurrentStreet = action.Street;
 
                 ReplayerPlayerViewModel activePlayer = GetActivePlayerLastState(action);
                 state.ActivePlayer = new ReplayerPlayerViewModel();
-
                 ReplayerPlayerViewModel.Copy(activePlayer, state.ActivePlayer);
 
                 state.UpdatePlayerState(action);
@@ -151,10 +157,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 {
                     currentPotValue = currentPotValue - state.ActionAmount;
                 }
-
                 state.TotalPotValue = totalPotValue;
                 state.CurrentPotValue = currentPotValue;
-
                 TableStateList.Add(state);
             }
 
@@ -184,8 +188,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             ReplayerPlayerViewModel activePlayer;
 
-            var activePlayerName = action.PlayerName;
-            var activePlayerLastState = TableStateList.LastOrDefault(x => x.ActivePlayer != null && x.ActivePlayer.Name == activePlayerName);
+            string activePlayerName = action.PlayerName;
+            ReplayerTableState activePlayerLastState = TableStateList.LastOrDefault(x => x.ActivePlayer != null && x.ActivePlayer.Name == activePlayerName);
             if (activePlayerLastState == null)
             {
                 activePlayer = PlayersCollection.LastOrDefault(x => x.Name == activePlayerName);
@@ -212,7 +216,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             var dealer = CurrentGame.Players.FirstOrDefault(x => x.SeatNumber == CurrentGame.DealerButtonPosition);
-            foreach (var player in CurrentGame.Players)
+            foreach (Player player in CurrentGame.Players)
             {
                 int i = GetPlayersSeatNumber(player, CurrentGame.Players, CurrentGame.GameDescription.SeatType.MaxPlayers);
 
@@ -241,6 +245,126 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
         }
 
+        public List<Player> ActivePlayerHasHoleCard { get; set; }
+        public List<Player> ActivePlayerHasHoleCardFolded { get; set; }
+
+        public List<HoleCards> AllDeadCards = new List<HoleCards>();
+        public string AllDeadCardsString = string.Empty;
+
+        public string CurrentBoardCards { get; set; }
+        public Card[] CurrentBoard { get; set; }
+
+        private void UpdatePlayersEquityWin(ReplayerTableState state)
+        {
+            //preparing for formula Card on the Board in dependence of street in current state
+            switch (state.CurrentAction.Street)
+            {
+                case Street.Preflop:
+                    CurrentBoard = new Card[] { };
+                    CurrentBoardCards = string.Empty;
+                    break;
+                case Street.Flop:
+                    CurrentBoard = CurrentGame.CommunityCards.Take(3).ToArray();
+                    CurrentBoardCards = new string(CurrentGame.CommunityCardsString.Take(6).ToArray());
+                    break;
+                case Street.Turn:
+                    CurrentBoard = CurrentGame.CommunityCards.Take(4).ToArray();
+                    CurrentBoardCards = new string(CurrentGame.CommunityCardsString.Take(8).ToArray());
+                    break;
+                case Street.River:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
+                case Street.Showdown:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
+                case Street.Summary:
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();//todo the_weeknd 9J268
+                    CurrentBoardCards = CurrentGame.CommunityCardsString;
+                    break;
+            }
+
+
+            //finding all players having hole cards  
+            ActivePlayerHasHoleCard = CurrentGame.Players.Where(pl => pl.hasHoleCards).ToList();
+
+            //searching for deadcards and removing this player from list of ActivePlayerHasHoleCard 
+            ActivePlayerHasHoleCardFolded = new List<Player>();
+            foreach (ReplayerTableState replayerTableState in TableStateList)
+            {
+                Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
+                if (playerInTableState != null
+                    && TableStateList.IndexOf(replayerTableState) <= TableStateList.IndexOf(state)
+                    && replayerTableState.CurrentAction.IsFold
+                    && playerInTableState.hasHoleCards)
+                {
+                    ActivePlayerHasHoleCardFolded.Add(playerInTableState);
+                    ActivePlayerHasHoleCard.Remove(playerInTableState);
+                    AllDeadCards.Add(playerInTableState.HoleCards);
+                    AllDeadCardsString += playerInTableState.Cards;
+                }
+            }
+
+            //calculation of probabilities
+            List<decimal> equities;
+
+            equities = Converter.CalculateEquity(CurrentGame,
+                ActivePlayerHasHoleCard,
+                AllDeadCards,
+                AllDeadCardsString,
+                CurrentBoardCards,
+                CurrentBoard);
+
+
+
+            //updating states in replayer view 
+            if (equities != null) //if equity was returned null, it means that there were no players to whome we need to calcualte, for example there was one player with holecards in the game and he was folded in some step
+                RefreshBoard(equities, state.CurrentStreet);
+
+
+            //case of last state. Needed for All-in before River for some cases
+            if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
+            {
+                //calculation of probabilities
+                equities = Converter.CalculateEquity(CurrentGame,
+                                                                                      ActivePlayerHasHoleCard,
+                                                                                      AllDeadCards,
+                                                                                      AllDeadCardsString,
+                                                                                      CurrentBoardCards,
+                                                                                      CurrentBoard);
+                //updating states in replayer view
+                if (equities != null)
+                    RefreshBoard(equities, Street.Preflop);
+            }
+        }
+
+        private ReplayerPlayerViewModel _playerInState { get; set; }
+        private void RefreshBoard(List<decimal> equities, Street street)
+        {
+            foreach (ReplayerTableState replayerTableState in TableStateList.Where(st => st.CurrentStreet == street))
+            {
+                try
+                {
+                    _playerInState = PlayersCollection.FirstOrDefault(u => u.Name == replayerTableState.CurrentAction.PlayerName);
+                    if (_playerInState != null
+                        && ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName) != null
+                        && replayerTableState.CurrentAction != null
+                        && ActivePlayerHasHoleCard.Count > 1)
+                        replayerTableState.ActivePlayer.EquityWin = equities[ActivePlayerHasHoleCard.IndexOf(ActivePlayerHasHoleCard.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName))];
+                    else
+                        replayerTableState.ActivePlayer.EquityWin = -1;
+
+
+                    ReplayerPlayerViewModel.CopyEquityWin(replayerTableState.ActivePlayer, _playerInState);
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(typeof(Converter), $"Player with name '{replayerTableState.CurrentAction.PlayerName}' has not been found in PlayerCollection in method RefreshBoard in ReplayerViewModel class", ex);
+                }
+            }
+        }
+
         private void LoadState(int stateIndex)
         {
             if (stateIndex < 0 || stateIndex >= TableStateList.Count)
@@ -250,8 +374,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             bool isBackward = stateIndex < this.StateIndex;
             bool isRefreshPlayersRequired = Math.Abs(stateIndex - this.StateIndex) > 1;
-
-            var state = TableStateList[stateIndex];
+            ReplayerTableState state = TableStateList[stateIndex];
+            UpdatePlayersEquityWin(state);
             this.CurrentStreet = state.CurrentStreet;
             this.CurrentPotValue = state.CurrentPotValue;
             UpdateTotalPot(state.TotalPotValue);
@@ -428,6 +552,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             ResetPlayersPot(PlayersCollection);
             PlayersCollection.Where(x => !x.IsFinished && TableStateList.Any(t => t.ActivePlayer.Name == x.Name && t.ActivePlayer.IsFinished)).ForEach(x => x.IsFinished = true);
             StateIndex = TableStateList.Count - 1;
+
+            ReplayerTableState replayerTableStateBeforeSummary = TableStateList.FirstOrDefault(x => x.CurrentStreet == Street.Summary);
+            UpdatePlayersEquityWin(replayerTableStateBeforeSummary); //added in order to update equity state for winning actions when we go to the end of TableStateList
         }
 
         private void NextStep(object obj)
@@ -486,8 +613,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
                         PlayersCollection.Where(x => x.IsFinished && TableStateList.Any(t => t.ActivePlayer.Name == x.Name)).ForEach(x => x.IsFinished = false);
                     }
                     StateIndex = TableStateList.IndexOf(streetState);
+                    UpdatePlayersEquityWin(TableStateList.FirstOrDefault(x => x.CurrentStreet == outStreet)); //update equity win property of all players
                 }
             }
+
         }
 
         private void FacebookOAuthCommandHandler()
@@ -552,7 +681,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private string _activePlayerName;
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
-
+        private ReplayerDataModel _replayerDataModel { get; set; }
         public ReplayerDataModel CurrentHand
         {
             get { return _currentHand; }
@@ -561,6 +690,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 if (value == _currentHand || value == null)
                     return;
+                _replayerDataModel = value;
 
                 LoadGame(value);
                 SetProperty(ref _currentHand, value);

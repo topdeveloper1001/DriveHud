@@ -14,7 +14,9 @@ using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
+using HandHistories.Parser.Utils.FastParsing;
 using Model.Enums;
+using System;
 using System.Globalization;
 
 namespace DriveHUD.Importers.Bovada
@@ -288,6 +290,44 @@ namespace DriveHUD.Importers.Bovada
             {
                 return s;
             }
+        }
+
+        public static decimal ConvertPrizeTextToDecimal(string prizeText)
+        {
+            if (string.IsNullOrEmpty(prizeText))
+            {
+                return 0;
+            }
+
+            var prizeStartIndex = prizeText.IndexOf("Cash:", StringComparison.OrdinalIgnoreCase);
+
+            if (prizeStartIndex <= 0)
+            {
+                prizeStartIndex = prizeText.IndexOf("Play Money:", StringComparison.OrdinalIgnoreCase);
+
+                if (prizeStartIndex <= 0)
+                {
+                    return 0;
+                }
+
+                prizeStartIndex += 11;
+            }
+            else
+            {
+                prizeStartIndex += 6;
+            }
+
+            var prizeEndIndex = prizeText.LastIndexOf("<", StringComparison.Ordinal);
+
+            if (prizeEndIndex <= 0)
+            {
+                return 0;
+            }
+
+            prizeText = prizeText.Substring(prizeStartIndex, prizeEndIndex - prizeStartIndex);
+
+            var prize = ParserUtils.ParseMoney(prizeText);
+            return prize;
         }
     }
 }

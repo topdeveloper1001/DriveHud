@@ -66,7 +66,7 @@ namespace DriveHUD.HUD
             unityContainer.RegisterType<IHudServiceHost, HudServiceHost>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
-            unityContainer.RegisterType<IHandHistoryParserFactory, HandHistoryParserFactoryImpl>();
+            unityContainer.RegisterType<IHandHistoryParserFactory, HandHistoryParserFactoryImpl>();            
 
             UnityServicesBootstrapper.ConfigureContainer(unityContainer);
             ModelBootstrapper.ConfigureContainer(unityContainer);

@@ -146,6 +146,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
       <Private>True</Private>
@@ -187,9 +188,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="IntegrationTests\Base\BaseDatabaseTest.cs" />
+    <Compile Include="IntegrationTests\Base\BaseIntegrationTest.cs" />
     <Compile Include="IntegrationTests\Base\DatabaseHelper.cs" />
-    <Compile Include="IntegrationTests\Base\PerformanceMonitor.cs" />
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
+    <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />
+    <Compile Include="IntegrationTests\Migrations\BaseLayoutsMigrationTest.cs" />
+    <Compile Include="IntegrationTests\Migrations\LayoutMigratorTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
@@ -213,8 +219,10 @@
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\BaseIndicatorsTests.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
+    <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
@@ -223,13 +231,15 @@
     <Compile Include="UnitTests\Helpers\DataServiceHelper.cs" />
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
+    <Compile Include="UnitTests\HudLayoutMigrationTests.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
-    <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
+    <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
+    <Compile Include="UnitTests\ReportCreatorTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
@@ -324,6 +334,9 @@
     <Content Include="UnitTests\TestData\888PokerSummary.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ACR-SnG2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -384,10 +397,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IntegrationTests\Importers\TestData\" />
+    <Folder Include="IntegrationTests\Migrations\TestData\" />
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
-    <Folder Include="UnitTests\TestData\Bovada\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

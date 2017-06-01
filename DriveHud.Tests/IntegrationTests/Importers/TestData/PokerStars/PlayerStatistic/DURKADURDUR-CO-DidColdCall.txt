@@ -1,0 +1,38 @@
+PokerStars Game #47151047809:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:01:12 ET
+Table 'Retsina' 6-max Seat #1 is the button
+Seat 1: FIrmFighter ($217.30 in chips) 
+Seat 2: stopme10 ($244.05 in chips) 
+Seat 3: maestroB ($98.65 in chips) 
+Seat 4: faridMahi ($110 in chips) 
+Seat 6: DURKADURDUR ($260.50 in chips) 
+stopme10: posts small blind $1
+maestroB: posts big blind $2
+GorillzaT: sits out 
+*** HOLE CARDS ***
+faridMahi: raises $2 to $4
+DURKADURDUR: calls $4
+FIrmFighter: folds 
+stopme10: folds 
+maestroB: folds 
+*** FLOP *** [3s 4d Kh]
+faridMahi: bets $6
+DURKADURDUR: calls $6
+*** TURN *** [3s 4d Kh] [6d]
+faridMahi: bets $14
+DURKADURDUR: raises $24 to $38
+faridMahi: calls $24
+*** RIVER *** [3s 4d Kh 6d] [Th]
+faridMahi: bets $62 and is all-in
+DURKADURDUR: calls $62
+*** SHOW DOWN ***
+faridMahi: shows [6c Jc] (a pair of Sixes)
+DURKADURDUR: shows [Ah Js] (high card Ace)
+faridMahi collected $221 from pot
+*** SUMMARY ***
+Total pot $223 | Rake $2 
+Board [3s 4d Kh 6d Th]
+Seat 1: FIrmFighter (button) folded before Flop (didn't bet)
+Seat 2: stopme10 (small blind) folded before Flop
+Seat 3: maestroB (big blind) folded before Flop
+Seat 4: faridMahi showed [6c Jc] and won ($221) with a pair of Sixes
+Seat 6: DURKADURDUR showed [Ah Js] and lost with high card Ace

@@ -18,6 +18,7 @@ using Model.Enums;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using Model.Settings;
 using Prism.Events;
 using Model.Events;
@@ -59,7 +60,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 ViewModelCollection = new List<ISettingsViewModel>()
                 {
-                    new SettingsGeneralViewModel(name: "General"),
+                    new SettingsGeneralViewModel(name: "General", parent: this),
                     new SettingsSiteViewModel(name: "Site Settings"),
                     new SettingsCurrencyViewModel(name: "Currency"),
                     new SettingsRakeBackViewModel(name: "RakeBack"),
@@ -79,7 +80,15 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 var viewModel = ViewModelCollection.FirstOrDefault(x => x == obj);
                 if (viewModel != null)
                 {
-                    SelectedViewModel = viewModel;
+                    SettingsSiteViewModel vm = viewModel as SettingsSiteViewModel;
+                    if (vm != null && _preferredSeatingFlag)
+                    {
+                        vm.SelectedSiteType = EnumPokerSites.Ignition;
+                        _preferredSeatingFlag = false;
+                        SelectedViewModel = vm;
+                    }
+                    else
+                        SelectedViewModel = viewModel;
                 }
             }
         }
@@ -121,6 +130,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         #region Properties
 
+        private bool _preferredSeatingFlag;
         private PopupContainerSettingsViewModelNotification _notification;
         private IEnumerable<ISettingsViewModel> _viewModelCollection;
         private object _selectedViewModel;
@@ -151,7 +161,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
                     InitializeViewModelCollection();
                     LoadSettings();
-                    SwitchView(ViewModelCollection.FirstOrDefault());
+
+                    if (_notification.Parameter == "Preferred Seating")
+                        _preferredSeatingFlag = true;       //become true when need start setting tab from Bodog/Ignition
+
+
+                    SwitchView(_notification.Parameter == "Preferred Seating"
+                        ? ViewModelCollection.FirstOrDefault(x => x.Name == "Site Settings")
+                        : ViewModelCollection.FirstOrDefault());
                 }
             }
         }

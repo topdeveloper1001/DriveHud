@@ -10,20 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
+using Model.Stats;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -32,129 +31,735 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using System.Windows;
-using System.Windows.Media;
 using System.Xml.Serialization;
-
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    /// <summary>
+    /// Service for initializing, loading, deleting layouts of the hud
+    /// </summary>
     internal class HudLayoutsService : IHudLayoutsService
     {
-        private const string LayoutsFolderName = "Layouts";
-        private const string LayoutFileExtension = ".xml";
-        private const string MappingsFileName = "Mappings";
+        protected string LayoutFileExtension;
+        protected string MappingsFileName;
         private const string PathToImages = @"data\PlayerTypes";
-        private readonly EnumPokerSites[] _extendedHudPokerSites = { EnumPokerSites.Bodog, EnumPokerSites.Ignition };
+        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Vertical_1", "Vertical_2", "Horizontal" };
 
-        private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
-        private IEventAggregator _eventAggregator;
+        private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
+        private IEventAggregator eventAggregator;
 
-        public HudLayoutMappings HudLayoutMappings { get; set; }
-
-        public List<HudTableViewModel> HudTableViewModels { get; set; }
-
+        /// <summary>
+        /// Initializes an instance of <see cref="HudLayoutsService"/>
+        /// </summary>        
         public HudLayoutsService()
         {
+            LayoutFileExtension = StringFormatter.GetLayoutsExtension();
+            MappingsFileName = StringFormatter.GetLayoutsMappings();
+
             Initialize();
         }
 
-        #region private classes
+        #region Properties
 
-        private class MatchRatio
+        /// <summary>
+        /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
+        /// </summary>
+        public HudLayoutMappings HudLayoutMappings { get; set; }
+
+        #endregion
+
+        #region Implementation of IHudLayoutsService
+
+        /// <summary>
+        /// Saves the mapping of the layout to the file on the default path
+        /// </summary>
+        public void SaveLayoutMappings()
         {
-            public HudPlayerType PlayerType { get; set; }
-
-            public bool IsInRange { get; set; }
-
-            public decimal Ratio { get; set; }
-
-            public decimal ExtraRatio { get; set; }
+            var layoutsDirectory = GetLayoutsDirectory();
+            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
+            SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
         }
 
-        private class PlayerMatchRatios
+        /// <summary>
+        /// Sets active layout for the specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumGameType"/> game type and <see cref="EnumTableType"/> table type
+        /// </summary>
+        /// <param name="hudToLoad">Layout to be set as active</param>
+        /// <param name="pokerSite">Poker site to set active layout</param>
+        /// <param name="gameType">Game type to set active layout</param>
+        /// <param name="tableType">Table type to set active layout</param>
+        public void SetActiveLayout(HudLayoutInfoV2 hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            public HudElementViewModel HudElement { get; set; }
+            try
+            {
+                var mappings = HudLayoutMappings.Mappings.
+                                Where(m => m.PokerSite == pokerSite
+                                        && m.GameType == gameType
+                                        && m.TableType == tableType).ToArray();
 
-            public List<MatchRatio> MatchRatios { get; set; }
+                var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
 
-            public List<MatchRatio> ExtraMatchRatios { get; set; }
+                if (mapping == null)
+                {
+                    mapping = new HudLayoutMapping
+                    {
+                        PokerSite = pokerSite,
+                        TableType = tableType,
+                        GameType = gameType,
+                        IsDefault = hudToLoad.IsDefault,
+                        Name = hudToLoad.Name,
+                        FileName = GetLayoutFileName(hudToLoad.Name)
+                    };
+
+                    HudLayoutMappings.Mappings.Add(mapping);
+                }
+
+                mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
+
+                mapping.IsSelected = true;
+
+                SaveLayoutMappings();
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Layout has not been set active", e);
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified layout
+        /// </summary>
+        /// <param name="layoutName">Name of the layout to delete</param>
+        /// <returns>True if the layout is deleted, otherwise - false</returns>
+        public bool Delete(string layoutName)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(layoutName))
+                {
+                    return false;
+                }
+
+                var layoutToDelete = GetLayout(layoutName);
+
+                if (layoutToDelete == null || layoutToDelete.IsDefault)
+                {
+                    return false;
+                }
+
+                var layoutsDirectory = GetLayoutsDirectory();
+
+                var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
+
+                if (string.IsNullOrEmpty(fileName))
+                {
+                    LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been found");
+                    return false;
+                }
+
+                HudLayoutMappings.Mappings.
+                    RemoveByCondition(m => string.Equals(m.FileName, Path.GetFileName(fileName), StringComparison.InvariantCultureIgnoreCase));
+
+                SaveLayoutMappings();
+
+                File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been deleted properly.", e);
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Saves the specified layout on the default path
+        /// </summary>
+        /// <param name="hudLayout">The layout to save</param>
+        public void Save(HudLayoutInfoV2 hudLayout)
+        {
+            if (hudLayout == null)
+            {
+                return;
+            }
+
+            InternalSave(hudLayout);
+        }
+
+        /// <summary>
+        /// Saves layout based on the specified <see cref="HudSavedDataInfo"/> data
+        /// </summary>
+        /// <param name="hudData">Data to save layout</param>
+        public HudLayoutInfoV2 SaveAs(HudSavedDataInfo hudData)
+        {
+            if (hudData == null || string.IsNullOrWhiteSpace(hudData.Name))
+            {
+                return null;
+            }
+
+            var layout = GetLayout(hudData.Name);
+
+            var isNewLayout = layout == null;
+
+            // need to check if we don't change table type of layout
+            if (!isNewLayout && hudData.Name.Equals(layout.Name, StringComparison.OrdinalIgnoreCase) &&
+                layout.IsDefault && layout.TableType != hudData.LayoutInfo.TableType)
+            {
+                eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "The default layout can't be overwritten"));
+                return null;
+            }
+
+            layout = hudData.LayoutInfo.Clone();
+            layout.Name = hudData.Name;
+
+            var fileName = InternalSave(layout);
+
+            if (isNewLayout && !layout.IsDefault)
+            {
+                var layoutMappings = HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
+
+                var pokerSites = Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>().Where(p => p != EnumPokerSites.Unknown);
+
+                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                {
+                    FileName = Path.GetFileName(fileName),
+                    Name = layout.Name,
+                    TableType = layout.TableType,
+                    IsSelected = false,
+                    IsDefault = false
+                });
+
+                SaveLayoutMappings();
+            }
+
+            return layout;
+        }
+
+        /// <summary>
+        /// Exports <see cref="HudLayoutInfoV2"/> the layout to the specified path
+        /// </summary>
+        /// <param name="layout">Layout to export</param>
+        /// <param name="path">Path to file</param>
+        public void Export(HudLayoutInfoV2 layout, string path)
+        {
+            if (layout == null)
+            {
+                return;
+            }
+
+            locker.EnterReadLock();
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfoV2));
+                    xmlSerializer.Serialize(fs, layout);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Layout {layout.Name} has not been exported", e);
+            }
+            finally
+            {
+                locker.ExitReadLock();
+            }
+        }
+
+        /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout on the specified path
+        /// </summary>
+        /// <param name="path">Path to layout</param>
+        public HudLayoutInfoV2 Import(string path)
+        {
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+
+            try
+            {
+                HudLayoutInfoV2 importedHudLayout;
+
+                locker.EnterReadLock();
+
+                try
+                {
+                    using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    {
+                        importedHudLayout = LoadLayoutFromStream(fs);
+                    }
+                }
+                finally
+                {
+                    locker.ExitReadLock();
+                }
+
+                var layoutName = importedHudLayout.Name;
+                importedHudLayout.IsDefault = false;
+
+                var i = 1;
+
+                while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
+                {
+                    importedHudLayout.Name = $"{layoutName} ({i})";
+                    i++;
+                }
+
+                var fileName = InternalSave(importedHudLayout);
+
+                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                {
+                    FileName = Path.GetFileName(fileName),
+                    Name = importedHudLayout.Name,
+                    TableType = importedHudLayout.TableType,
+                    IsSelected = false,
+                    IsDefault = false
+                });
+
+                SaveLayoutMappings();
+
+                return importedHudLayout;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Layout from '{path}' has not been imported.", e);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Sets icons for hud elements based on stats and layout player type settings
+        /// </summary>
+        public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName)
+        {
+            var layout = GetLayout(layoutName);
+
+            if (layout == null)
+            {
+                return;
+            }
+
+            // get total hands now to prevent enumeration in future
+            var hudElementViewModels = hudElements as HudElementViewModel[] ?? hudElements.ToArray();
+
+            var hudElementsTotalHands = hudElementViewModels
+                .Select(hudElement =>
+                {
+                    var totalHandsStatInfo = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == Stat.TotalHands);
+
+                    return new
+                    {
+                        HudElement = hudElement,
+                        TotalHands = totalHandsStatInfo != null ? totalHandsStatInfo.CurrentValue : default(decimal)
+                    };
+                })
+                .ToDictionary(x => x.HudElement, x => x.TotalHands);
+
+            // get match ratios by player
+            var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
+                                       from hudElement in hudElementViewModels
+                                       let matchRatio = GetMatchRatio(hudElement, playerType)
+                                       where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
+                                       group
+                                       new MatchRatio
+                                       {
+                                           IsInRange = matchRatio.Item1,
+                                           Ratio = matchRatio.Item2,
+                                           ExtraRatio = matchRatio.Item3,
+                                           PlayerType = playerType
+                                       } by hudElement
+                into grouped
+                                       select
+                                       new PlayerMatchRatios
+                                       {
+                                           HudElement = grouped.Key,
+                                           MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
+                                           ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
+                                       }).ToList();
+
+            var proccesedElements = new HashSet<int>();
+
+            Action<PlayerMatchRatios, List<MatchRatio>> proccessPlayerRatios = (matchRatioPlayer, matchRatios) =>
+            {
+                if (proccesedElements.Contains(matchRatioPlayer.HudElement.Seat))
+                {
+                    return;
+                }
+
+                var match = matchRatios.FirstOrDefault();
+
+                if (match == null)
+                {
+                    return;
+                }
+
+                var playerType = match.PlayerType;
+
+                if (playerType.DisplayPlayerIcon)
+                {
+                    matchRatioPlayer.HudElement.PlayerIcon = GetImageLink(playerType.ImageAlias);
+                }
+
+                matchRatioPlayer.HudElement.PlayerIconToolTip =
+                    $"{matchRatioPlayer.HudElement.PlayerName.Split('_').FirstOrDefault()}: {playerType.Name}";
+
+                proccesedElements.Add(matchRatioPlayer.HudElement.Seat);
+            };
+
+            // set icons
+            foreach (var playerRatios in matchRatiosByPlayer)
+            {
+                proccessPlayerRatios(playerRatios, playerRatios.MatchRatios);
+            }
+
+            // set icons for extra match
+            foreach (var playerRatios in matchRatiosByPlayer)
+            {
+                proccessPlayerRatios(playerRatios, playerRatios.ExtraMatchRatios);
+            }
+        }
+
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        public IList<string> GetValidStickers(Playerstatistic statistic, string layoutName)
+        {
+            var layout = GetLayout(layoutName);
+            if (layout == null || statistic == null)
+                return new List<string>();
+            return
+                layout.HudBumperStickerTypes?.Where(
+                        x => x.FilterPredicate != null && new[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any())
+                    .Select(x => x.Name)
+                    .ToList();
+        }
+
+        /// <summary>
+        /// Sets stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, string layoutName)
+        {
+            hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
+
+            var layout = GetLayout(layoutName);
+
+            if (layout == null || stickersStatistics == null)
+            {
+                return;
+            }
+
+            foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
+            {
+                if (!stickersStatistics.ContainsKey(sticker.Name))
+                {
+                    continue;
+                }
+
+                var statistics = new HudLightIndicators(new[] { stickersStatistics[sticker.Name] });
+
+                if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
+                {
+                    continue;
+                }
+
+                if (IsInRange(hudElement, sticker.Stats, statistics))
+                {
+                    hudElement.Stickers.Add(sticker);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets path to the image directory
+        /// </summary>
+        /// <returns>Path to the image directory</returns>
+        public string GetImageDirectory()
+        {
+            var executingApp = Assembly.GetExecutingAssembly().Location;
+            return Path.Combine(Path.GetDirectoryName(executingApp), PathToImages);
+        }
+
+        /// <summary>
+        /// Gets the link to the specified image
+        /// </summary>
+        /// <param name="image">The image to get the link</param>
+        /// <returns>Path to the image</returns>
+        public virtual string GetImageLink(string image)
+        {
+            if (string.IsNullOrWhiteSpace(image))
+            {
+                return string.Empty;
+            }
+
+            var imageLink = Path.Combine(GetImageDirectory(), image);
+
+            if (File.Exists(imageLink) && Path.GetExtension(imageLink).ToUpperInvariant().Equals(".PNG"))
+            {
+                return imageLink;
+            }
+
+            return string.Empty;
+        }
+
+        /// <summary>
+        /// Gets active <see cref="HudLayoutInfoV2"/> layout for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
+        /// </summary>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="tableType">Type of table</param>
+        /// <param name="gameType">Type of game</param>
+        /// <returns>Active layout</returns>
+        public HudLayoutInfoV2 GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
+        {
+            var mapping =
+               HudLayoutMappings.Mappings.FirstOrDefault(
+                   m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsSelected);
+
+            if (mapping == null)
+            {
+                mapping =
+                    HudLayoutMappings.Mappings.FirstOrDefault(
+                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsSelected) ??
+                    HudLayoutMappings.Mappings.FirstOrDefault(
+                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsDefault);
+            }
+
+            if (mapping == null)
+            {
+                return LoadDefault(tableType);
+            }
+
+            return LoadLayout(mapping);
+        }
+
+        /// <summary>
+        /// Gets layout with the specified name
+        /// </summary>
+        /// <param name="name">Name of layout to get</param>
+        /// <returns>Layout</returns>
+        public HudLayoutInfoV2 GetLayout(string name)
+        {
+            var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            return LoadLayout(mapping);
+        }
+
+        /// <summary>
+        /// Gets layouts names for specified <see cref="EnumTableType"/>  table type
+        /// </summary>
+        /// <param name="tableType">Type of table</param>
+        /// <returns>Collection of names</returns>
+        public IEnumerable<string> GetLayoutsNames(EnumTableType tableType)
+        {
+            return HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).OrderByDescending(m => m.IsDefault).Select(m => m.Name).Distinct();
+        }
+
+        /// <summary>
+        /// Gets the names of available layouts for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
+        /// </summary>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="tableType">Type of table</param>
+        /// <param name="gameType">Type of game</param>        
+        public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
+        {
+            var defaultNames = HudLayoutMappings.Mappings.Where(m => m.TableType == tableType)
+                        .Select(m => m.Name).Distinct().ToList();
+
+            return defaultNames;
+        }
+
+        /// <summary>
+        /// Gets the sorted list of <see cref="HudLayoutInfoV2"/> layouts for the specified <see cref="EnumTableType"/> table type
+        /// </summary>
+        /// <param name="tableType">Type of table</param>        
+        public List<HudLayoutInfoV2> GetAllLayouts(EnumTableType tableType)
+        {
+            var result = new List<HudLayoutInfoV2>();
+
+            var layoutMappings = HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).Select(x => x.FileName).Distinct().ToArray();
+
+            var layoutsDirectory = GetLayoutsDirectory();
+
+            foreach (var layoutMapping in layoutMappings)
+            {
+                locker.EnterReadLock();
+
+                try
+                {
+                    var fileName = Path.Combine(layoutsDirectory.FullName, layoutMapping);
+
+                    using (var fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    {
+                        var layout = LoadLayoutFromStream(fs);
+
+                        if (layout != null)
+                        {
+                            if (layout.IsDefault)
+                            {
+                                result.Insert(0, layout);
+                            }
+                            else
+                            {
+                                result.Add(layout);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not load layout {layoutMapping}", e);
+                }
+                finally
+                {
+                    locker.ExitReadLock();
+                }
+            }
+
+            return result.OrderBy(l => l.TableType).ToList();
+        }
+
+        /// <summary>
+        /// Gets the path to the directory with layouts
+        /// </summary>
+        /// <returns>Directory</returns>
+        public DirectoryInfo GetLayoutsDirectory()
+        {
+            var layoutsDirectory = new DirectoryInfo(StringFormatter.GetLayoutsV2FolderPath());
+
+            if (!layoutsDirectory.Exists)
+            {
+                try
+                {
+                    layoutsDirectory.Create();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Directory '{layoutsDirectory.FullName}' for layouts has not been created.", e);
+                }
+            }
+
+            return layoutsDirectory;
+        }
+
+
+        /// <summary>
+        /// Duplicates the specified <see cref="HudLayoutInfoV2" />
+        /// </summary>
+        /// <param name="tableType">Table type of the duplicated layout</param>
+        /// <param name="layoutName">Name of the duplicated layout</param>
+        /// <param name="layoutToDuplicate">Layout to duplicate</param>
+        /// <returns>The duplicated layout</returns>
+        public HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate)
+        {
+            if (layoutToDuplicate == null)
+            {
+                return null;
+            }
+
+            layoutName = layoutName ?? layoutToDuplicate.Name;
+
+            var currentTableTypeText = CommonResourceManager.Instance.GetEnumResource(layoutToDuplicate.TableType);
+            var duplicateTableTypeText = CommonResourceManager.Instance.GetEnumResource(tableType);
+
+            // rename n-max to k-max in table name
+            layoutName = layoutName.Replace(currentTableTypeText, duplicateTableTypeText);
+
+            var layouts = GetAllLayouts(tableType);
+
+            var copyIndex = 1;
+
+            // name is busy
+            while (layouts.Any(x => x.Name == layoutName))
+            {
+                layoutName = $"{layoutName} ({copyIndex++})";
+            }
+
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            var duplicateLayout = layoutToDuplicate.Clone();
+            duplicateLayout.TableType = tableType;
+            duplicateLayout.Name = layoutName;
+            duplicateLayout.IsDefault = false;
+
+            foreach (var layoutTool in duplicateLayout.LayoutTools.OfType<HudLayoutNonPopupTool>())
+            {
+                layoutTool.Positions = new List<HudPositionsInfo>();
+
+                var position = layoutTool.UIPositions.FirstOrDefault(x => x.Seat == 1);
+
+                if (position == null)
+                {
+                    LogProvider.Log.Error($"{layoutToDuplicate.Name} could not be duplicated. Position for seat #1 has not been found");
+                    return null;
+                }
+
+                var uiPositions = factory.GetHudUIPositions(tableType, layoutToDuplicate.TableType, position.Position);
+                layoutTool.UIPositions = uiPositions;
+            }
+
+            var duplicateLayoutFile = InternalSave(duplicateLayout);
+
+            if (!File.Exists(duplicateLayoutFile))
+            {
+                return null;
+            }
+
+            if (HudLayoutMappings.Mappings.Any(x => x.Name == layoutName))
+            {
+                return duplicateLayout;
+            }
+
+            var mapping = new HudLayoutMapping
+            {
+                FileName = Path.GetFileName(duplicateLayoutFile),
+                IsDefault = false,
+                IsSelected = false,
+                Name = layoutName,
+                TableType = tableType
+            };
+
+            HudLayoutMappings.Mappings.Add(mapping);
+
+            SaveLayoutMappings();
+
+            return duplicateLayout;
         }
 
         #endregion
 
-        #region private methods
+        #region Infrastructure
 
+        /// <summary>
+        /// Initializes <see cref="HudLayoutsService"/>
+        /// </summary>
         protected virtual void Initialize()
         {
             try
             {
-                _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+                eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
                 var layoutsDirectory = GetLayoutsDirectory();
 
                 var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
 
-                if (File.Exists(mappingsFilePath))
-                {
-                    HudLayoutMappings = LoadLayoutMappings(mappingsFilePath);
-                }
-                else
-                {
-                    HudLayoutMappings = new HudLayoutMappings();
-                }
+                HudLayoutMappings = LoadLayoutMappings(mappingsFilePath);
 
-                foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
+                foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
                 {
-                    var defaultLayoutInfo = GetPredefindedLayout(tableType);
-                    defaultLayoutInfo.TableType = tableType;
-                    defaultLayoutInfo.IsDefault = true;
-
-                    foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+                    foreach (var predefinedPostfix in PredefinedLayoutPostfixes)
                     {
-                        defaultLayoutInfo.Name =
-                            $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : $"{hudViewType} - Ignition/Bodog")}"
-                                .Trim();
+                        var defaultLayoutInfo = GetPredefinedLayout(tableType, predefinedPostfix);
 
                         if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
                         {
                             continue;
                         }
 
-                        defaultLayoutInfo.HudPositionsInfo.Clear();
-                        defaultLayoutInfo.HudViewType = hudViewType;
-
-                        var pokerSites = hudViewType == HudViewType.Plain
-                            ? Enum.GetValues(typeof(EnumPokerSites))
-                                .OfType<EnumPokerSites>()
-                                .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker)
-                            : new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog };
-
-                        foreach (var pokerSite in pokerSites)
-                        {
-                            foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                            {
-                                var hudPositions = GeneratePositions(pokerSite, hudViewType, tableType);
-                                if (hudPositions != null)
-                                    defaultLayoutInfo.HudPositionsInfo.Add(new HudPositionsInfo
-                                    {
-                                        PokerSite = pokerSite,
-                                        GameType = gameType,
-                                        HudPositions = hudPositions
-                                    });
-                            }
-                        }
-
-                        if (hudViewType != HudViewType.Plain)
-                        {
-                            defaultLayoutInfo.UiPositionsInfo.ForEach(x => x.Width = HudDefaultSettings.BovadaRichHudElementWidth);
-                        }
-
                         var fileName = InternalSave(defaultLayoutInfo);
 
                         var existingMapping = HudLayoutMappings.Mappings.FirstOrDefault(x => x.TableType == tableType &&
-                                                    x.Name == defaultLayoutInfo.Name &&
-                                                    x.IsDefault &&
-                                                    x.HudViewType == defaultLayoutInfo.HudViewType);
+                                                    x.Name == defaultLayoutInfo.Name);
 
                         if (existingMapping == null)
                         {
@@ -162,8 +767,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             {
                                 TableType = tableType,
                                 Name = defaultLayoutInfo.Name,
-                                IsDefault = true,
-                                HudViewType = defaultLayoutInfo.HudViewType,
+                                IsDefault = string.IsNullOrEmpty(predefinedPostfix),
                                 FileName = Path.GetFileName(fileName)
                             });
                         }
@@ -175,6 +779,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
+                RemoveNotExistingLayouts(layoutsDirectory.FullName);
             }
             catch (Exception e)
             {
@@ -182,18 +787,29 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private HudLayoutMappings LoadLayoutMappings(string fileName)
+        /// <summary>
+        /// Loads <see cref="HudLayoutMappings"/> mappings of the layout defined in specified file
+        /// </summary>
+        /// <param name="fileName">File with layout</param>
+        /// <returns>Mappings of layout</returns>
+        protected HudLayoutMappings LoadLayoutMappings(string fileName)
         {
-            HudLayoutMappings hudLayoutMappings = null;
+            if (!File.Exists(fileName))
+            {
+                return new HudLayoutMappings();
+            }
 
-            _rwLock.EnterReadLock();
+            locker.EnterReadLock();
 
             try
             {
+                var layoutsFolder = GetLayoutsDirectory();
+
                 using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                    hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
+                    var hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
+                    return hudLayoutMappings;
                 }
             }
             catch (Exception e)
@@ -202,22 +818,50 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             finally
             {
-                _rwLock.ExitReadLock();
+                locker.ExitReadLock();
             }
 
-            return hudLayoutMappings;
+            return new HudLayoutMappings();
         }
 
-        public void SaveLayoutMappings()
+        /// <summary>
+        /// Removes not-existing layouts from mappings
+        /// </summary>
+        protected void RemoveNotExistingLayouts(string layoutsDirectory)
         {
-            var layoutsDirectory = GetLayoutsDirectory();
-            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
-            SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
+            locker.EnterReadLock();
+
+            try
+            {
+                foreach (var mapping in HudLayoutMappings.Mappings.ToArray())
+                {
+                    var layoutFile = Path.Combine(layoutsDirectory, mapping.FileName);
+
+                    if (!File.Exists(layoutFile))
+                    {
+                        HudLayoutMappings.Mappings.Remove(mapping);
+                        LogProvider.Log.Warn($"Layout '{mapping.Name}' (default={mapping.IsDefault}) has not been found at '{layoutFile}' and will be skipped.");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+            finally
+            {
+                locker.ExitReadLock();
+            }
         }
 
-        private void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
+        /// <summary>
+        /// Saves <see cref="HudLayoutMappings"/> mappings of layout to the specified file
+        /// </summary>
+        /// <param name="fileName">The file to save to</param>
+        /// <param name="mappings">The mappings of layout to save to the file</param>
+        protected void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
         {
-            _rwLock.EnterWriteLock();
+            locker.EnterWriteLock();
 
             try
             {
@@ -233,158 +877,96 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             finally
             {
-                _rwLock.ExitWriteLock();
+                locker.ExitWriteLock();
             }
         }
 
-        private HudLayoutInfo LoadDefault(EnumTableType tableType)
+        /// <summary>
+        /// Loads default <see cref="HudLayoutInfoV2"/> for specified <see cref="EnumTableType"/> table type
+        /// </summary>
+        /// <param name="tableType">Type of table</param>
+        /// <returns>Default layout</returns>
+        private HudLayoutInfoV2 LoadDefault(EnumTableType tableType)
         {
-            var fileName =
-                Path.GetInvalidFileNameChars()
-                    .Aggregate($"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}",
-                        (current, c) => current.Replace(c.ToString(), string.Empty));
+            var fileName = $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}".RemoveInvalidFileNameChars();
             return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, fileName));
         }
 
-        private HudLayoutInfo LoadLayout(HudLayoutMapping mapping)
+        /// <summary>
+        /// Loads a <see cref="HudLayoutInfoV2"/> of the specified mapping
+        /// </summary>
+        /// <param name="mapping">Mapping to load layout</param>
+        /// <returns>Loaded layout</returns>
+        private HudLayoutInfoV2 LoadLayout(HudLayoutMapping mapping)
         {
-            return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName));
+            if (mapping == null || string.IsNullOrEmpty(mapping.FileName))
+            {
+                return null;
+            }
+
+            var pathToLayout = Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName);
+
+            return LoadLayout(pathToLayout);
         }
 
-        private HudLayoutInfo LoadLayout(string fileName)
+        /// <summary>
+        /// Loads a <see cref="HudLayoutInfoV2"/> on the specified path
+        /// </summary>
+        /// <param name="fileName">Path to layout</param>
+        /// <returns>Loaded layout</returns>
+        private HudLayoutInfoV2 LoadLayout(string fileName)
         {
-            HudLayoutInfo result = null;
-
-            _rwLock.EnterReadLock();
+            locker.EnterReadLock();
 
             try
             {
                 using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
-                    result = LoadLayoutFromStream(stream);
+                    var layout = LoadLayoutFromStream(stream);
+                    return layout;
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Layout has not been loaded.", e);
+                LogProvider.Log.Error(this, $"Layout has not been loaded on the '{fileName}' path.", e);
             }
             finally
             {
-                _rwLock.ExitReadLock();
+                locker.ExitReadLock();
             }
 
-            return result;
+            return null;
         }
 
-        private HudLayoutInfo GetPredefindedLayout(EnumTableType tableType)
+        /// <summary>
+        /// Gets predefined <see cref="HudLayoutInfoV2"/> layout based on the table type
+        /// </summary>
+        /// <param name="tableType">Table type</param>
+        /// <returns>Predefined <see cref="HudLayoutInfoV2"/> layout</returns>
+        private HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
+
             try
             {
-                using (
-                    var stream =
-                        resourcesAssembly.GetManifestResourceStream($"DriveHUD.Common.Resources.Layouts.Default-{CommonResourceManager.Instance.GetEnumResource(tableType)}.xml"))
+                if (!string.IsNullOrEmpty(postfix))
+                {
+                    postfix = $" {postfix}";
+                }
+
+                var resourceName = $"DriveHUD.Common.Resources.Layouts.DH {CommonResourceManager.Instance.GetEnumResource(tableType)}{postfix}.xml";
+
+                using (var stream = resourcesAssembly.GetManifestResourceStream(resourceName))
                 {
                     return LoadLayoutFromStream(stream);
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Could not load predefined layout", e);
             }
+
             return null;
-        }
-
-        private List<HudBumperStickerType> CreateDefaultBumperStickers()
-        {
-            var bumperStickers = new List<HudBumperStickerType> {
-                new HudBumperStickerType(true)
-                {
-                    Name = "One and Done",
-                    SelectedColor = Colors.OrangeRed,
-                    Description = "C-bets at a high% on the flop, but then rarely double barrels.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 55, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Pre-Flop Reg",
-                    SelectedColor = Colors.Orange,
-                    Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 19, High = 26},
-                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 15, High = 23},
-                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Barrelling",
-                    SelectedColor = Colors.Yellow,
-                    Description = "Double and triple barrels a high percentage of the time.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 20, High = 30},
-                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 17, High = 28},
-                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 40, High = 49},
-                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 65, High = 80},
-                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 44, High = 53},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "3 For Free",
-                    SelectedColor = Colors.GreenYellow,
-                    Description = "3-Bets too much, and folds to a 3-bet too often.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8.8m, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Way Too Early",
-                    SelectedColor = Colors.Green,
-                    Description = "Open raises to wide of a range in early pre-flop positions.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Sticky Fish",
-                    SelectedColor = Colors.Blue,
-                    Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 35, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 40},
-                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100}
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Yummy Fish",
-                    SelectedColor = Colors.DarkBlue,
-                    Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat> {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 40, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 6},
-                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34}
-                        }
-                }
-            };
-
-            return bumperStickers;
         }
 
         private Tuple<bool, decimal, decimal> GetMatchRatio(HudElementViewModel hudElement, HudPlayerType hudPlayerType)
@@ -417,28 +999,32 @@ namespace DriveHUD.Application.ViewModels.Hud
                     matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats,
-            HudIndicators source)
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
+            {
                 return false;
+            }
 
             foreach (var rangeStat in rangeStats)
             {
                 if (!rangeStat.High.HasValue && !rangeStat.Low.HasValue)
+                {
                     continue;
+                }
 
                 var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
 
                 if (stat == null)
+                {
                     return false;
+                }
 
                 var currentStat = new StatInfo { PropertyName = stat.PropertyName };
                 currentStat.AssignStatInfoValues(source);
 
                 var high = rangeStat.High ?? 100;
                 var low = rangeStat.Low ?? -1;
-
 
                 if (currentStat.CurrentValue < low || currentStat.CurrentValue > high)
                 {
@@ -449,64 +1035,54 @@ namespace DriveHUD.Application.ViewModels.Hud
             return true;
         }
 
-        private decimal GetStatAverageValue(HudPlayerTypeStat stat)
+        /// <summary>
+        /// Saves <see cref="HudLayoutInfoV2"/> hud layout to the predefined file based on the name of the layout
+        /// </summary>
+        /// <param name="hudLayoutInfo">Layout to save</param>
+        /// <returns>Path to the saved layout</returns>
+        private string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
         {
-            var low = stat.Low ?? 0;
-            var high = stat.High ?? 100;
+            Check.ArgumentNotNull(() => hudLayoutInfo);
 
-            return (high + low) / 2;
-        }
-
-        private DirectoryInfo GetLayoutsDirectory()
-        {
-            var layoutsDirectory =
-                new DirectoryInfo(Path.Combine(StringFormatter.GetAppDataFolderPath(), LayoutsFolderName));
-            if (!layoutsDirectory.Exists)
-                layoutsDirectory.Create();
-            return layoutsDirectory;
-        }
-
-        private string InternalSave(HudLayoutInfo hudLayoutInfo)
-        {
             var layoutsDirectory = GetLayoutsDirectory().FullName;
 
             var layoutsFile = Path.Combine(layoutsDirectory, GetLayoutFileName(hudLayoutInfo.Name));
 
-            _rwLock.EnterWriteLock();
+            locker.EnterWriteLock();
 
             try
             {
                 using (var fs = File.Open(layoutsFile, FileMode.Create))
                 {
-                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfoV2));
                     xmlSerializer.Serialize(fs, hudLayoutInfo);
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Could not save layout {hudLayoutInfo.Name} to the '{layoutsFile}'", e);
             }
             finally
             {
-                _rwLock.ExitWriteLock();
+                locker.ExitWriteLock();
             }
 
             return layoutsFile;
         }
 
         /// <summary>
-        /// Import layouts from stream
+        /// Loads <see cref="HudLayoutInfoV2"/> layouts from specified stream
         /// </summary>
-        /// <param name="stream">Stream to be used for importing</param>
-        /// <returns>Imported layout</returns>
-        private HudLayoutInfo LoadLayoutFromStream(Stream stream)
+        /// <param name="stream">Stream to be used for loading</param>
+        /// <returns>Loaded <see cref="HudLayoutInfoV2"/> layout</returns>
+        private HudLayoutInfoV2 LoadLayoutFromStream(Stream stream)
         {
             Check.ArgumentNotNull(() => stream);
 
             try
             {
-                var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
-                var layout = xmlSerializer.Deserialize(stream) as HudLayoutInfo;
+                var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfoV2));
+                var layout = xmlSerializer.Deserialize(stream) as HudLayoutInfoV2;
 
                 // set image after loading
                 layout?.HudPlayerTypes.ForEach(x =>
@@ -517,16 +1093,20 @@ namespace DriveHUD.Application.ViewModels.Hud
                     }
                 });
 
+                // initialize filter predicates for bumper stickers
                 layout?.HudBumperStickerTypes.ForEach(x =>
                 {
                     x?.InitializeFilterPredicate();
                 });
 
+                var layoutStats = layout.LayoutTools.OfType<IHudLayoutStats>().SelectMany(x => x.Stats).ToArray();
+                StatInfoHelper.UpdateStats(layoutStats);
+
                 return layout;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Layout could not be loaded.", e);
             }
 
             return null;
@@ -734,671 +1314,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             return hudPlayerTypes;
         }
 
-        #endregion
-
-        public void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
-        {
-            try
-            {
-                var mappings = HudLayoutMappings.Mappings.
-                                Where(m => m.PokerSite == pokerSite
-                                        && m.GameType == gameType
-                                        && m.TableType == tableType).
-                                ToArray();
-
-                var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
-
-                if (mapping == null)
-                {
-                    mapping = new HudLayoutMapping
-                    {
-                        PokerSite = pokerSite,
-                        TableType = tableType,
-                        GameType = gameType,
-                        IsDefault = hudToLoad.IsDefault,
-                        Name = hudToLoad.Name,
-                        FileName = GetLayoutFileName(hudToLoad.Name),
-                        HudViewType = hudToLoad.HudViewType
-                    };
-
-                    HudLayoutMappings.Mappings.Add(mapping);
-                }
-
-                mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
-
-                mapping.IsSelected = true;
-
-                SaveLayoutMappings();
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Layout has not been set active", e);
-            }
-        }
-
-        public bool Delete(string layoutName)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(layoutName))
-                {
-                    return false;
-                }
-
-                var layoutToDelete = GetLayout(layoutName);
-
-                if (layoutToDelete == null || layoutToDelete.IsDefault)
-                {
-                    return false;
-                }
-
-                var layoutsDirectory = GetLayoutsDirectory();
-
-                var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
-
-                HudLayoutMappings.Mappings.RemoveByCondition(
-                    m =>
-                        string.Equals(m.FileName, Path.GetFileName(fileName),
-                            StringComparison.InvariantCultureIgnoreCase));
-
-                SaveLayoutMappings();
-
-                if (!string.IsNullOrEmpty(fileName))
-                {
-                    File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been deleted properly.", e);
-                return false;
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        /// Simple save
-        /// </summary>
-        /// <param name="hudLayout"></param>
-        public void Save(HudLayoutInfo hudLayout)
-        {
-            if (hudLayout == null)
-            {
-                return;
-            }
-
-            InternalSave(hudLayout);
-        }
-
-        /// <summary>
-        /// Save new layout
-        /// </summary>
-        /// <param name="hudData">Hud Data</param>
-        public HudLayoutInfo SaveAs(HudSavedDataInfo hudData)
-        {
-            if (hudData == null)
-            {
-                return null;
-            }
-
-            var layout = GetLayout(hudData.Name);
-
-            var addLayout = layout == null;
-
-            if (addLayout)
-            {
-                layout = new HudLayoutInfo();
-            }
-            if (!addLayout && layout.Name == hudData.Name)
-            {
-                if (layout.IsDefault && (layout.TableType != hudData.LayoutInfo.TableType || layout.HudViewType != hudData.LayoutInfo.HudViewType))
-                {
-                    _eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "Can't overwrite default layout."));
-                    return null;
-                }
-            }
-
-            layout.Name = hudData.Name;
-            layout.TableType = hudData.LayoutInfo.TableType;
-            layout.HudOpacity = hudData.LayoutInfo.HudOpacity;
-
-            if (addLayout || layout.HudViewType != hudData.LayoutInfo.HudViewType)
-            {
-                layout.HudPositionsInfo.Clear();
-
-                var pokerSites = hudData.LayoutInfo.HudViewType == HudViewType.Plain
-                    ? Enum.GetValues(typeof(EnumPokerSites))
-                        .OfType<EnumPokerSites>()
-                        .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker)
-                    : new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog };
-
-                foreach (var pokerSite in pokerSites)
-                {
-                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                    {
-                        var hudPositions = GeneratePositions(pokerSite, hudData.LayoutInfo.HudViewType, layout.TableType);
-
-                        if (hudPositions != null)
-                        {
-                            layout.HudPositionsInfo.Add(new HudPositionsInfo
-                            {
-                                PokerSite = pokerSite,
-                                GameType = gameType,
-                                HudPositions = hudPositions
-                            });
-                        }
-                    }
-                }
-            }
-            else
-            {
-                layout.HudPositionsInfo = hudData.LayoutInfo.HudPositionsInfo.Select(p => p.Clone()).ToList();
-            }
-
-            layout.HudViewType = hudData.LayoutInfo.HudViewType;
-
-            layout.HudStats = hudData.Stats.Select(x =>
-            {
-                var statInfoBreak = x as StatInfoBreak;
-                return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
-            }).ToList();
-
-            layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
-            layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
-            layout.UiPositionsInfo = hudData.HudTable.HudElements.Select(x => new UiPositionInfo
-            {
-                Seat = x.Seat,
-                Height = x.Height,
-                Width = x.Width,
-                Position = x.Position
-            }).ToList();
-
-            var fileName = InternalSave(layout);
-
-            if (!layout.IsDefault && addLayout)
-            {
-                var layoutMappings = HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
-
-                var pokerSites = layout.HudViewType == HudViewType.Plain ?
-                    Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>().Where(p => p != EnumPokerSites.Unknown) :
-                    _extendedHudPokerSites;
-
-                foreach (var pokerSite in pokerSites)
-                {
-                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                    {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                        {
-                            FileName = Path.GetFileName(fileName),
-                            Name = layout.Name,
-                            GameType = gameType,
-                            PokerSite = pokerSite,
-                            TableType = layout.TableType,
-                            HudViewType = layout.HudViewType,
-                            IsSelected = false,
-                            IsDefault = false
-                        });
-                    }
-                }
-            }
-
-            SaveLayoutMappings();
-
-            return layout;
-        }
-
-        private List<HudPositionInfo> GeneratePositions(EnumPokerSites pokerSite, HudViewType hudViewType, EnumTableType tableType)
-        {
-            var positionsProvider =
-                Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IPositionProvider>(
-                    PositionConfiguratorHelper.GetServiceName(pokerSite, hudViewType));
-            if (!positionsProvider.Positions.ContainsKey((int)tableType))
-                return null;
-            var result = new List<HudPositionInfo>();
-            for (var i = 0; i < (int)tableType; i++)
-            {
-                result.Add(new HudPositionInfo
-                {
-                    Position =
-                        new Point
-                        {
-                            X =
-                                positionsProvider.Positions[(int)tableType][i, 0] +
-                                positionsProvider.GetOffsetX((int)tableType, i + 1),
-                            Y =
-                                positionsProvider.Positions[(int)tableType][i, 1] +
-                                positionsProvider.GetOffsetY((int)tableType, i + 1)
-                        },
-                    Seat = i + 1
-                });
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Export
-        /// </summary>
-        /// <param name="layout">Layout to be exported</param>
-        /// <param name="path">Path to file</param>
-        public void Export(HudLayoutInfo layout, string path)
-        {
-            if (layout == null)
-                return;
-            _rwLock.EnterReadLock();
-            try
-            {
-                using (var fs = File.Open(path, FileMode.Create))
-                {
-                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
-                    xmlSerializer.Serialize(fs, layout);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-            finally
-            {
-                _rwLock.ExitReadLock();
-            }
-        }
-
-        /// <summary>
-        /// Import layout
-        /// </summary>
-        /// <param name="path">Path to layout</param>
-        public HudLayoutInfo Import(string path)
-        {
-            if (!File.Exists(path))
-            {
-                return null;
-            }
-
-            try
-            {
-                HudLayoutInfo importedHudLayout;
-
-                _rwLock.EnterReadLock();
-
-                try
-                {
-                    using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
-                    {
-                        importedHudLayout = LoadLayoutFromStream(fs);
-                    }
-                }
-                finally
-                {
-                    _rwLock.ExitReadLock();
-                }
-
-                var layoutName = importedHudLayout.Name;
-                importedHudLayout.IsDefault = false;
-
-                var i = 1;
-
-                while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
-                {
-                    importedHudLayout.Name = $"{layoutName} ({i})";
-                    i++;
-                }
-
-                var fileName = InternalSave(importedHudLayout);
-
-                foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
-                {
-                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                    {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                        {
-                            FileName = Path.GetFileName(fileName),
-                            Name = importedHudLayout.Name,
-                            GameType = gameType,
-                            PokerSite = pokerSite,
-                            TableType = importedHudLayout.TableType,
-                            HudViewType = importedHudLayout.HudViewType,
-                            IsSelected = false,
-                            IsDefault = false
-                        });
-                    }
-                }
-
-                SaveLayoutMappings();
-
-                return importedHudLayout;
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Layout from '{path}' has not been imported.", e);
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Set icons for hud elements based on stats and layout player type settings
-        /// </summary>
-        public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName)
-        {
-            var layout = GetLayout(layoutName);
-            if (layout == null)
-                return;
-
-            // get total hands now to prevent enumeration in future
-            var hudElementViewModels = hudElements as HudElementViewModel[] ?? hudElements.ToArray();
-            var hudElementsTotalHands = (from hudElement in hudElementViewModels
-                                         from stat in hudElement.StatInfoCollection
-                                         where stat.Stat == Stat.TotalHands
-                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement,
-                x => x.TotalHands);
-            // get match ratios by player
-            var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
-                                       from hudElement in hudElementViewModels
-                                       let matchRatio = GetMatchRatio(hudElement, playerType)
-                                       where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
-                                       group
-                                       new MatchRatio
-                                       {
-                                           IsInRange = matchRatio.Item1,
-                                           Ratio = matchRatio.Item2,
-                                           ExtraRatio = matchRatio.Item3,
-                                           PlayerType = playerType
-                                       } by hudElement
-                into grouped
-                                       select
-                                       new PlayerMatchRatios
-                                       {
-                                           HudElement = grouped.Key,
-                                           MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
-                                           ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
-                                       }).ToList();
-
-            var proccesedElements = new HashSet<int>();
-
-            Action<PlayerMatchRatios, List<MatchRatio>> proccessPlayerRatios = (matchRatioPlayer, matchRatios) =>
-            {
-                if (proccesedElements.Contains(matchRatioPlayer.HudElement.Seat))
-                {
-                    return;
-                }
-
-                var match = matchRatios.FirstOrDefault();
-
-                if (match == null)
-                {
-                    return;
-                }
-
-                var playerType = match.PlayerType;
-
-                if (playerType.DisplayPlayerIcon)
-                {
-                    matchRatioPlayer.HudElement.PlayerIcon = GetImageLink(playerType.ImageAlias);
-                }
-
-                matchRatioPlayer.HudElement.PlayerIconToolTip =
-                    $"{matchRatioPlayer.HudElement.PlayerName.Split('_').FirstOrDefault()}: {playerType.Name}";
-
-                proccesedElements.Add(matchRatioPlayer.HudElement.Seat);
-            };
-
-            // set icons
-            foreach (var playerRatios in matchRatiosByPlayer)
-            {
-                proccessPlayerRatios(playerRatios, playerRatios.MatchRatios);
-            }
-
-            // set icons for extra match
-            foreach (var playerRatios in matchRatiosByPlayer)
-            {
-                proccessPlayerRatios(playerRatios, playerRatios.ExtraMatchRatios);
-            }
-        }
-
-        /// <summary>
-        /// Set stickers for hud elements based on stats and bumper sticker settings
-        /// </summary>
-        public IList<string> GetValidStickers(Playerstatistic statistic, string layoutName)
-        {
-            var layout = GetLayout(layoutName);
-            if (layout == null || statistic == null)
-                return new List<string>();
-            return
-                layout.HudBumperStickerTypes?.Where(
-                        x => x.FilterPredicate != null && new[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any())
-                    .Select(x => x.Name)
-                    .ToList();
-        }
-
-        /// <summary>
-        /// Set stickers for hud elements based on stats and bumper sticker settings
-        /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics,
-            string layoutName)
-        {
-            hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
-            var layout = GetLayout(layoutName);
-            if (layout == null || stickersStatistics == null)
-                return;
-            foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
-            {
-                if (!stickersStatistics.ContainsKey(sticker.Name))
-                {
-                    continue;
-                }
-
-                var statistics = new HudIndicators(new[] { stickersStatistics[sticker.Name] });
-                if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
-                {
-                    continue;
-                }
-
-                if (IsInRange(hudElement, sticker.Stats, statistics))
-                {
-                    hudElement.Stickers.Add(sticker);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Save bumper stickers for layout specified
-        /// </summary>
-        //public void SaveBumperStickers(HudLayoutInfo hudLayout, HudTableDefinition tableDefinition)
-        //{
-        //    if (hudLayout == null)
-        //        return;
-        //    var layout = GetLayout(hudLayout.Name);
-        //    if (layout == null)
-        //        return;
-        //    var targetProps =
-        //        layout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
-        //    var sourceProps =
-        //        hudLayout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
-        //    //TODO recheck!!!
-        //    if (targetProps != null && sourceProps != null)
-        //    {
-        //        targetProps.HudBumperStickerTypes =
-        //            new List<HudBumperStickerType>(sourceProps.HudBumperStickerTypes.Select(x => x.Clone()));
-        //        InternalSave(layout);
-        //    }
-        //}
-
-
-
-        /// <summary>
-        /// Get path to image directory
-        /// </summary>
-        /// <returns>Path to image directory</returns>
-        public string GetImageDirectory()
-        {
-            var executingApp = Assembly.GetExecutingAssembly().Location;
-
-            return Path.Combine(Path.GetDirectoryName(executingApp), PathToImages);
-        }
-
-        /// <summary>
-        /// Get link to image
-        /// </summary>
-        /// <param name="image">Image alias</param>
-        /// <returns>Full path to image</returns>
-        public virtual string GetImageLink(string image)
-        {
-            if (string.IsNullOrWhiteSpace(image))
-            {
-                return string.Empty;
-            }
-
-            var imageLink = Path.Combine(GetImageDirectory(), image);
-
-            if (File.Exists(imageLink) && Path.GetExtension(imageLink).ToUpperInvariant().Equals(".PNG"))
-            {
-                return imageLink;
-            }
-
-            return string.Empty;
-        }
-
-        public HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
-        {
-            var mapping =
-               HudLayoutMappings.Mappings.FirstOrDefault(
-                   m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsSelected);
-
-            if (mapping == null)
-            {
-                Func<HudLayoutMapping, bool> extraCondition;
-
-                if (pokerSite == EnumPokerSites.Ignition || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Bovada)
-                {
-                    extraCondition = m =>
-                    {
-                        return m.HudViewType == HudDefaultSettings.IgnitionDefaultHudViewType;
-                    };
-                }
-                else
-                {
-                    extraCondition = m => m.HudViewType == HudViewType.Plain;
-                }
-
-                mapping =
-                    HudLayoutMappings.Mappings.FirstOrDefault(
-                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsSelected) ??
-                    HudLayoutMappings.Mappings.FirstOrDefault(
-                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsDefault && extraCondition(m));
-            }
-
-            if (mapping == null)
-            {
-                return LoadDefault(tableType);
-            }
-
-            return LoadLayout(mapping);
-        }
-
-        public HudLayoutInfo GetLayout(string name)
-        {
-            var defaultNames = new List<string>();
-
-            foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
-            {
-                foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
-                {
-                    defaultNames.Add(
-                        $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
-                            .Trim());
-                }
-            }
-
-            if (defaultNames.Contains(name))
-                return
-                    LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
-                        $"{Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}"));
-            var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == name);
-            return mapping == null ? null : LoadLayout(mapping);
-        }
-
-        public IEnumerable<string> GetLayoutsNames(EnumTableType tableType)
-        {
-            return HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).OrderByDescending(m => m.IsDefault).Select(m => m.Name).Distinct();
-        }
-
-        public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType,
-            EnumGameType gameType)
-        {
-            var defaultNames = new List<string>();
-
-            HudViewType[] availableHudViewTypes;
-
-            if (pokerSite == EnumPokerSites.Bodog || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Ignition)
-            {
-                availableHudViewTypes = Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>().ToArray();
-            }
-            else
-            {
-                availableHudViewTypes = new[] { HudViewType.Plain };
-            }
-
-            foreach (var hudViewType in availableHudViewTypes)
-            {
-                defaultNames.Add(
-                    $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
-                        .Trim());
-            }
-
-            defaultNames = defaultNames.Union(
-                    HudLayoutMappings.Mappings.Where(
-                            m => m.TableType == tableType && availableHudViewTypes.Contains(m.HudViewType))
-                        .Select(m => m.Name)).Distinct().ToList();
-
-            return defaultNames;
-        }
-
-        public List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType)
-        {
-            var result = new List<HudLayoutInfo>();
-
-            var layoutMappings = HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).Select(x => x.FileName).Distinct().ToArray();
-
-            var layoutsDirectory = GetLayoutsDirectory();
-
-            foreach (var layoutMapping in layoutMappings)
-            {
-                _rwLock.EnterReadLock();
-
-                try
-                {
-                    var fileName = Path.Combine(layoutsDirectory.FullName, layoutMapping);
-
-                    using (var fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
-                    {
-                        var layout = LoadLayoutFromStream(fs);
-
-                        if (layout != null)
-                        {
-                            if (layout.HudViewType == HudViewType.Plain)
-                                result.Insert(0, layout);
-                            else
-                                result.Add(layout);
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, $"Could not load layout {layoutMapping}", e);
-                }
-                finally
-                {
-                    _rwLock.ExitReadLock();
-                }
-            }
-
-            return result.OrderBy(l => l.TableType).ToList();
-        }
-
-        private static string GetLayoutFileName(string layoutName)
+        protected string GetLayoutFileName(string layoutName)
         {
             return $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}";
         }
+
+        #endregion
+
+        #region Private classes
+
+        private class MatchRatio
+        {
+            public HudPlayerType PlayerType { get; set; }
+
+            public bool IsInRange { get; set; }
+
+            public decimal Ratio { get; set; }
+
+            public decimal ExtraRatio { get; set; }
+        }
+
+        private class PlayerMatchRatios
+        {
+            public HudElementViewModel HudElement { get; set; }
+
+            public List<MatchRatio> MatchRatios { get; set; }
+
+            public List<MatchRatio> ExtraMatchRatios { get; set; }
+        }
+
+        #endregion
     }
 }

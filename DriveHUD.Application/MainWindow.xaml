@@ -27,7 +27,10 @@
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
     xmlns:enums="clr-namespace:Model.Enums;assembly=Model"
+    xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:cts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -38,7 +41,9 @@
     UseLayoutRounding="True"
     mc:Ignorable="d"
     Width="{Binding WindowMinWidth}"
-    MinWidth="{Binding WindowMinWidth}">
+    MinWidth="{Binding WindowMinWidth}"
+    PreviewMouseLeftButtonDown="MainWindow_OnPreviewMouseLeftButtonDown"
+    x:Name="RadMainWindow">
 
     <telerik:RadWindow.Resources>
 
@@ -67,10 +72,30 @@
             <v:AppsView />
         </DataTemplate>
 
+        <DataTemplate
+            x:Key="CommonFilterTemplate">
+            <telerik:RadMenuItem>
+                <telerik:RadMenuItem.Style>
+                    <Style
+                        TargetType="telerik:RadMenuItem"
+                        BasedOn="{StaticResource RadMenuItemStyle1}">
+                        <Setter
+                            Property="Header"
+                            Value="{Binding Path=Name}" />
+                        <Setter
+                            Property="Command"
+                            Value="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}" />
+                        <Setter
+                            Property="CommandParameter"
+                            Value="{Binding}" />
+                    </Style>
+                </telerik:RadMenuItem.Style>
+            </telerik:RadMenuItem>
+        </DataTemplate>
+
         <Style
             x:Key="RadComboBoxStyle1"
             TargetType="{x:Type telerik:RadComboBox}">
-            <!--<Setter Property="telerik:ScrollingSettingsBehavior.IsEnabled" Value="True"/>-->
             <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollAreaPadding"
                 Value="30" />
@@ -880,6 +905,7 @@
                                 </Grid>
                             </Grid>
                         </Border>
+
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -963,6 +989,8 @@
             <Setter
                 Property="Width"
                 Value="180" />
+
+
         </Style>
 
     </telerik:RadWindow.Resources>
@@ -1183,6 +1211,7 @@
 
     </i:Interaction.Triggers>
 
+
     <Grid
         x:Name="LayoutRoot"
         dh:GridExtensions.IsBlurEnabled="{Binding IsActive, Converter={dh:BoolNotConverter}}">
@@ -1203,6 +1232,7 @@
         <!-- ************************************************************************************ -->
         <Grid
             x:Name="HeaderArea"
+            IsEnabled="{Binding IsEnabled}"
             Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -1370,7 +1400,7 @@
                     CommandParameter="{x:Static enums:EnumViewModelType.AppsViewModel}" />
 
             </StackPanel>
-      
+
             <!-- Version panel -->
             <StackPanel
                 Grid.Row="1"
@@ -1419,6 +1449,9 @@
             <!-- ************************************************************************************ -->
             <!-- COMMANDS PANEL ********************************************************************* -->
             <!-- ************************************************************************************ -->
+
+
+
             <StackPanel
                 x:Name="UserPanel"
                 Grid.Row="2"
@@ -1427,39 +1460,35 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 application:MarginSetter.Margin="10 0 0 0">
+
                 <telerik:RadRibbonDropDownButton
+                    x:Name="RadRibbonDropDownButton"
                     Foreground="White"
                     VerticalAlignment="Stretch"
                     Margin="0"
                     Width="100"
+                    KeepOpen="{Binding RadDropDownButtonFilterKeepOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    IsOpen="{Binding RadDropDownButtonFilterIsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
                     Style="{StaticResource RadRibbonDropDownButtonStyle1}">
+
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu
+                            x:Name="RadContextMenu"
                             BorderThickness="0"
+                            DataContext="{Binding}"
                             Background="{StaticResource BackgroundBrush3}"
+                            ItemsSource="{Binding Path=FilterTypeList}"
                             Style="{StaticResource RadContextMenuStyle1}"
-                            ItemsSource="{Binding Path=FilterTypeList}">
-                            <telerik:RadContextMenu.ItemContainerStyle>
-                                <Style
-                                    TargetType="telerik:RadMenuItem"
-                                    BasedOn="{StaticResource RadMenuItemStyle1}">
-                                    <Setter
-                                        Property="Header"
-                                        Value="{Binding Path=Name}" />
-                                    <Setter
-                                        Property="Command"
-                                        Value="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}" />
-                                    <Setter
-                                        Property="CommandParameter"
-                                        Value="{Binding}" />
-                                </Style>
-                            </telerik:RadContextMenu.ItemContainerStyle>
+                            ItemContainerTemplateSelector="{StaticResource FilterTemplateSelector}">
+
                         </telerik:RadContextMenu>
+
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>
+
                 <telerik:RadComboBox
                     MinWidth="150"
                     IsEditable="True"
@@ -1490,8 +1519,7 @@
                         <telerik:RadContextMenu
                             BorderThickness="0"
                             Background="{StaticResource BackgroundBrush3}"
-                            Style="{StaticResource RadContextMenuStyle1}"
-                            ItemContainerStyle="{StaticResource RadMenuItemStyle1}">
+                            Style="{StaticResource RadContextMenuStyle1}">
                             <telerik:RadMenuItem
                                 Header="Import from file"
                                 Command="{Binding ImportFromFileCommand}" />
@@ -1554,9 +1582,12 @@
         <!-- ************************************************************************************ -->
         <!-- REPORT GADGET ********************************************************************** -->
         <!-- ************************************************************************************ -->
-        <ScrollViewer
+        <ScrollViewer            
             Grid.Row="2"
             Margin="0 0 10 0"
+            PreviewMouseDown="ScrollViewer_PreviewMouseDown"
+            PreviewMouseLeftButtonDown="ScrollViewer_PreviewMouseDown"
+            PreviewMouseRightButtonUp="ScrollViewer_PreviewMouseDown"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Disabled">
             <i:Interaction.Behaviors>
@@ -1564,7 +1595,8 @@
                     ThresholdHeight="600"
                     ContentContainer="{Binding ElementName=ReportGrid}" />
             </i:Interaction.Behaviors>
-            <Grid>
+            <Grid                
+                dh:GridExtensions.IsBlurEnabled="{Binding IsEnabled, Converter={dh:BoolNotConverter}}">
                 <Grid.RowDefinitions>
                     <RowDefinition
                         Height="Auto" />
@@ -1678,6 +1710,7 @@
                 Width="20"
                 ToolTip="{ResX Key=Progress_Stop}"
                 HorizontalAlignment="Right"
+                IsEnabled="{Binding IsEnabled}"
                 Visibility="{Binding ProgressViewModel.IsActive, Converter={cnv:BoolToVisibilityConverter}, Mode=OneWay}"
                 Command="{Binding ProgressViewModel.StopCommand}">
                 <Button.Content>

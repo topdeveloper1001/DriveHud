@@ -1,0 +1,53 @@
+<Game Information>
+Title: SNG 2.0 $5.50
+Entry #: 4073583
+Begin Time: 2017/05/08 08:31:47 UTC
+Buyin to Payout: Real To Real
+Play Type: Sit & Go
+Game Type: Hold’em
+Bet Limit Type: No Limit
+
+Game Hand #12909892 - Tournament #8034884 - Holdem(No Limit) - Level 8 (150.00/300.00)- 2017/05/08 09:07:20 UTC
+Table '1' 9-max Seat #7 is the button
+Seat 1: Villain1 (1088.00)
+Seat 2: Villain2 (2960.00)
+Seat 4: Peon_84 (2178.00)
+Seat 6: Villain3 (1613.00)
+Seat 7: Villain4 (280.00) is sitting out
+Seat 9: Villain5 (5381.00)
+Villain1 posts ante 25.00
+Villain2 posts ante 25.00
+Peon_84 posts ante 25.00
+Villain3 posts ante 25.00
+Villain4 posts ante 25.00
+Villain5 posts ante 25.00
+Villain5 posts the small blind 150.00
+Villain1 posts the big blind 300.00
+*** HOLE CARDS ***
+Main pot 150.00
+Dealt to Peon_84 [6d Td]
+Villain2 folds
+Peon_84 folds
+Villain3 folds
+Villain4 folds
+Villain5 raises 450.00 to 600.00
+Villain1 calls 300.00
+*** FLOP *** [6s 3s 5h]
+Main pot 1350.00
+Villain5 checks
+Villain1 checks
+*** TURN *** [6s 3s 5h] [Ad]
+Main pot 1350.00
+Villain5 bets 300.00
+Villain1 folds
+Uncalled bet (300.00) returned to Villain5
+Villain5 does not show
+*** SUMMARY ***
+Total pot 1350.00 | Rake 0.00
+Board [6s 3s 5h Ad]
+Seat 1: Villain1 (big blind) folded on the Turn
+Seat 2: Villain2 folded on the Pre-Flop and did not bet
+Seat 4: Peon_84 folded on the Pre-Flop and did not bet
+Seat 6: Villain3 folded on the Pre-Flop and did not bet
+Seat 7: Villain4 (button) folded on the Pre-Flop
+Seat 9: Villain5 did not show and won 1350.00

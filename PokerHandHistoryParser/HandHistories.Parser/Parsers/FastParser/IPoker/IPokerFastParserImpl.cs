@@ -605,7 +605,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return true;
         }
 
-        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        public override bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
             return IsValidHand(handLines);

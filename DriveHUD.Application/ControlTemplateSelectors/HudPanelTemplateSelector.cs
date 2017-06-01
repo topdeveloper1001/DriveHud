@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ClassTemplateSelector.cs" company="Ace Poker Solutions">
+// <copyright file="HudPanelTemplateSelector.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,8 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Entities;
+using DriveHUD.Application.ViewModels.Hud;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls.Diagrams;
@@ -29,42 +28,62 @@ namespace DriveHUD.Application.ControlTemplateSelectors
                 return null;
             }
 
-            if (radItem.DataContext is ITableSeatArea)
+            if (radItem.DataContext is HudFourStatsBoxViewModel)
             {
-                return null;
+                return HudFourStatBoxTemplate;
+            }
+            else if (radItem.DataContext is HudPlainStatBoxViewModel)
+            {
+                return HudPlainStatBoxTemplate;
+            }
+            else if (radItem.DataContext is HudGaugeIndicatorViewModel)
+            {
+                return HudGaugeIndicatorTemplate;
+            }
+            else if (radItem.DataContext is HudTiltMeterViewModel)
+            {
+                return HudTiltMeterTemplate;
+            }
+            else if (radItem.DataContext is HudPlayerIconViewModel)
+            {
+                return HudPlayerIconTemplate;
+            }
+            else if (radItem.DataContext is HudTextBoxViewModel)
+            {
+                return HudTextBoxTemplate;
+            }
+            else if (radItem.DataContext is HudGraphViewModel)
+            {
+                return HudGraphTemplate;
+            }
+            else if (radItem.DataContext is HudBumperStickersViewModel)
+            {
+                return HudBumperStickersTemplate;
+            }
+            else if (radItem.DataContext is HudPlayerViewModel)
+            {
+                return PlayerPlaceTemplate;
             }
 
-            var classViewModel = radItem.DataContext as HudPlayerViewModel;
-
-            if (classViewModel == null)
-            {
-                var hudType = radItem.Tag as HudViewType?;
-
-                if (hudType == null)
-                {
-                    return null;
-                }
-
-                if (!hudType.HasValue)
-                {
-                    return PlayerPlaceTemplate;
-                }
-
-                if (hudType == HudViewType.Plain)
-                {
-                    return PlainHudTemplate;
-                }
-
-                return RichHudTemplate;
-            }
-
-            return PlayerPlaceTemplate;
+            return null;
         }
 
         public DataTemplate PlayerPlaceTemplate { get; set; }
 
-        public DataTemplate PlainHudTemplate { get; set; }
+        public DataTemplate HudPlainStatBoxTemplate { get; set; }
 
-        public DataTemplate RichHudTemplate { get; set; }
+        public DataTemplate HudFourStatBoxTemplate { get; set; }
+
+        public DataTemplate HudGaugeIndicatorTemplate { get; set; }
+
+        public DataTemplate HudTiltMeterTemplate { get; set; }
+
+        public DataTemplate HudPlayerIconTemplate { get; set; }
+
+        public DataTemplate HudGraphTemplate { get; set; }
+
+        public DataTemplate HudTextBoxTemplate { get; set; }
+
+        public DataTemplate HudBumperStickersTemplate { get; set; }
     }
 }

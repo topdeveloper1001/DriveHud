@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Common.Wpf.Helpers;
 using Model;
 using Model.Data;
@@ -17,7 +18,7 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(Add("Started", nameof(TournamentReportRecord.StartedString), GetColumnWidth(StringFormatter.GetDateTimeString(DateTime.Now))));
+            gridView.Columns.Add(Add("Started", nameof(TournamentReportRecord.Started), GetColumnWidth(StringFormatter.GetDateTimeString(DateTime.Now)), new DateTimeToLocalizedDateTimeConverter()));
             gridView.Columns.Add(Add("Table Type", nameof(TournamentReportRecord.TableType)));
             gridView.Columns.Add(Add("Game Type", nameof(TournamentReportRecord.GameType), GetColumnWidth("NoLimitHoldem")));
             gridView.Columns.Add(Add("Speed", nameof(TournamentReportRecord.TournamentSpeed)));

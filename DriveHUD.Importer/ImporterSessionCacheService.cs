@@ -23,6 +23,7 @@ using Model.Interfaces;
 using DriveHUD.Common.Linq;
 using Model.Data;
 using HandHistories.Objects.GameDescription;
+using Model.Enums;
 
 namespace DriveHUD.Importers
 {
@@ -115,6 +116,7 @@ namespace DriveHUD.Importers
 
                 bool skipAdding = false;
 
+                // get or initialize new session 
                 if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
                 {
                     sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
@@ -137,14 +139,11 @@ namespace DriveHUD.Importers
 
                         playerStatistic.ForEach(x =>
                         {
-                            // we don't have this data in the db so update it after loading from file
-                            PlayerStatisticCalculator.CalculatePositionalData(x);
-
                             var isCurrentGame = x.GameNumber == cacheInfo.Stats.GameNumber;
 
                             if (isCurrentGame)
                             {
-                                PlayerStatisticCalculator.CalculateTotalPotValues(x);
+                                x.CalculateTotalPot();
                                 x.SessionCode = cacheInfo.Session;
                             }
 
@@ -346,7 +345,7 @@ namespace DriveHUD.Importers
                 {
                     if (playerStickersDictionary.ContainsKey(item.Key))
                     {
-                        playerStickersDictionary[item.Key].Add(item.Value);
+                        playerStickersDictionary[item.Key] += item.Value;
                     }
                     else
                     {
@@ -449,10 +448,10 @@ namespace DriveHUD.Importers
 
         private void InitSessionStatCollections(HudLightIndicators playerData, Playerstatistic stats)
         {
-            if (playerData.MoneyWonCollection == null)
+            if (playerData.StatsSessionCollection == null)
             {
-                playerData.MoneyWonCollection = new List<decimal>();
-                playerData.MoneyWonCollection.Add(stats.NetWon);
+                playerData.StatsSessionCollection = new Dictionary<Stat, IList<decimal>>();
+                playerData.AddStatsToSession(stats);
             }
 
             if (playerData.RecentAggList == null)

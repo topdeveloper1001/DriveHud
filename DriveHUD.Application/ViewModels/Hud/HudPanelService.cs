@@ -10,27 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
-using Model.Enums;
-using System;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Media;
-using System.Linq;
 using DriveHUD.Application.Controls;
-using DriveHUD.Application.Views;
-using DriveHUD.Common;
-using Telerik.Windows.Controls;
-using DriveHUD.Application.Views.Popups;
 using DriveHUD.Application.ViewModels.Popups;
-using DriveHUD.Common.Resources;
+using DriveHUD.Application.Views;
+using DriveHUD.Application.Views.Popups;
+using DriveHUD.Common;
+using System;
+using System.Windows;
 using System.Windows.Data;
+using Telerik.Windows.Controls;
 using DriveHUD.Entities;
+using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Creates Hud Panels 
+    /// Determines service to create HUD tools
     /// </summary>
     internal class HudPanelService : IHudPanelService
     {
@@ -40,17 +35,55 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window)
+        public virtual Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, FrameworkElement toolElement, HudWindow window)
         {
-            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => toolViewModel);
             Check.ArgumentNotNull(() => window);
+            Check.ArgumentNotNull(() => toolElement);
 
-            var panelOffset = window.GetPanelOffset(hudElement);
+            var panelOffset = window.GetPanelOffset(toolViewModel);
 
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
 
-            return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
+            var scaledXPosition = xPosition * window.ScaleX;
+            var scaledYPosition = yPosition * window.ScaleY;
+
+            if (scaledXPosition < 0)
+            {
+                scaledXPosition = 0;
+                toolViewModel.OffsetX = 0;
+            }
+
+            if (scaledYPosition + HudDefaultSettings.HudIconHeaderHeight < 0)
+            {
+                scaledYPosition = -HudDefaultSettings.HudIconHeaderHeight;
+                toolViewModel.OffsetY = -HudDefaultSettings.HudIconHeaderHeight;
+            }
+
+            var toolWidth = toolElement.ActualWidth != 0 && !double.IsNaN(toolElement.ActualWidth) ?
+                toolElement.ActualWidth :
+                (!double.IsNaN(toolViewModel.Width) ? toolViewModel.Width : 0);
+
+            var toolHeight = toolElement.ActualHeight != 0 && !double.IsNaN(toolElement.ActualHeight) ?
+                toolElement.ActualHeight :
+                !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height : 0;
+
+            if (scaledXPosition > window.Width - toolWidth)
+            {
+                scaledXPosition = window.Width - toolWidth;
+                toolViewModel.OffsetX = window.ScaleX != 0 ? scaledXPosition / window.ScaleX : toolViewModel.OffsetX;
+            }
+
+            if (scaledYPosition > window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight)
+            {
+                scaledYPosition = window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight;
+                toolViewModel.OffsetY = window.ScaleY != 0 ?
+                    ((window.Height - toolHeight) / window.ScaleY - HudDefaultSettings.HudIconHeaderHeight) :
+                    toolViewModel.OffsetY;
+            }
+
+            return new Tuple<double, double>(scaledXPosition, scaledYPosition);
         }
 
         /// <summary>
@@ -59,54 +92,90 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
+        public virtual Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindow window)
         {
-            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => toolViewModel);
             Check.ArgumentNotNull(() => window);
 
-            var maxSeats = (int)window.Layout.TableType;
+            var panelOffset = window.GetPanelOffset(toolViewModel);
 
-            var panelOffset = window.GetPanelOffset(hudElement);               
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
 
             return new Tuple<double, double>(xPosition, yPosition);
         }
 
         /// <summary>
-        /// Create Hud Panel based on specified HUD element view model
+        /// Creates <see cref="FrameworkElement"/>  based on specified <see cref="HudBaseToolViewModel"/>
         /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <returns>HUD panel</returns>
-        public virtual FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType)
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/></param>
+        /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
+        public virtual FrameworkElement Create(HudBaseToolViewModel hudToolElement)
         {
-            var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
-            contextMenu.EventName = "MouseRightButtonUp";
+            Check.Require(hudToolElement != null);
 
-            hudElement.Opacity = hudElement.Opacity / 100d;
+            FrameworkElement hudTool = null;
 
-            if (hudViewType == HudViewType.Plain)
+            switch (hudToolElement.ToolType)
             {
-                var panel = new HudPanel
-                {
-                    DataContext = hudElement
-                };
-
-                RadContextMenu.SetContextMenu(panel, contextMenu);
-
-                return panel;
+                case HudDesignerToolType.PlainStatBox:
+                    hudTool = new HudPlainBox();
+                    AttachContextMenu(hudToolElement, hudTool);
+                    break;
+                case HudDesignerToolType.FourStatBox:
+                    hudTool = new HudFourStatsBox();
+                    break;
+                case HudDesignerToolType.TiltMeter:
+                    hudTool = new HudTiltMeter();
+                    break;
+                case HudDesignerToolType.PlayerProfileIcon:
+                    hudTool = new HudPlayerIcon();
+                    break;
+                case HudDesignerToolType.TextBox:
+                    hudTool = new HudTextBox();
+                    break;
+                case HudDesignerToolType.BumperStickers:
+                    hudTool = new HudBumperStickers();
+                    break;
+                case HudDesignerToolType.GaugeIndicator:
+                case HudDesignerToolType.Graph:
+                    break;
+                default:
+                    throw new NotSupportedException($"{hudToolElement.ToolType} isn't supported");
             }
 
-            var richPanel = new HudRichPanel
+            if (hudTool != null)
             {
-                DataContext = hudElement
-            };
+                hudTool.DataContext = hudToolElement;
+            }
 
-            RadContextMenu.SetContextMenu(richPanel, contextMenu);
-
-            return richPanel;
+            return hudTool;
         }
+
+        /// <summary>
+        /// Creates <see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" />
+        /// </summary>
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/> to create <see cref="FrameworkElementFactory"/></param>
+        /// <returns><see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" /></returns>
+        public virtual FrameworkElementFactory CreateFrameworkElementFactory(HudBaseToolViewModel hudToolElement)
+        {
+            FrameworkElementFactory factory = null;
+
+            switch (hudToolElement.ToolType)
+            {
+                case HudDesignerToolType.GaugeIndicator:
+                    factory = new FrameworkElementFactory(typeof(HudGaugeIndicator));
+                    break;
+                case HudDesignerToolType.Graph:
+                    factory = new FrameworkElementFactory(typeof(HudGraph));
+                    break;
+                default:
+                    break;
+            }
+
+            return factory;
+        }
+
 
         /// <summary>
         /// Get initial table size 
@@ -131,38 +200,52 @@ namespace DriveHUD.Application.ViewModels.Hud
             return handle;
         }
 
-        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName, HudElementViewModel datacontext)
+        /// <summary>
+        /// Attaches context menu to the specified <see cref="FrameworkElement"/>
+        /// </summary>
+        /// <param name="hudToolViewModel"></param>
+        /// <param name="hudTool"></param>
+        protected virtual void AttachContextMenu(HudBaseToolViewModel hudToolViewModel, FrameworkElement hudTool)
         {
-            RadContextMenu radMenu = new RadContextMenu();
-
-            var item = new RadMenuItem();
-
-            var binding = new Binding(nameof(HudElementViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
-            item.SetBinding(RadMenuItem.HeaderProperty, binding);
-
-            item.Click += (s, e) =>
+            if (hudToolViewModel == null || hudToolViewModel.Parent == null || hudTool == null)
             {
-                PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
-                var frm = new PlayerNoteView(viewModel);
-                frm.ShowDialog();
+                return;
+            }
 
-                if (viewModel.PlayerNoteEntity == null)
-                {
-                    return;
-                }
+            var menuItem = new RadMenuItem();
 
-                var clickedItem = s as FrameworkElement;
-                if (clickedItem == null || !(clickedItem.DataContext is HudElementViewModel))
-                {
-                    return;
-                }
-
-                var hudElement = clickedItem.DataContext as HudElementViewModel;
-                hudElement.NoteToolTip = viewModel.Note;
+            var binding = new Binding(nameof(HudElementViewModel.NoteMenuItemText))
+            {
+                Source = hudToolViewModel.Parent,
+                Mode = BindingMode.OneWay
             };
-            radMenu.Items.Add(item);
 
-            return radMenu;
+            menuItem.SetBinding(RadMenuItem.HeaderProperty, binding);
+
+            menuItem.Click += (s, e) =>
+            {
+                var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PokerSiteId, hudToolViewModel.Parent.PlayerName);
+
+                var playerNoteView = new PlayerNoteView(playerNoteViewModel);
+
+                playerNoteView.ShowDialog();
+
+                if (playerNoteViewModel.PlayerNoteEntity == null)
+                {
+                    return;
+                }
+
+                hudToolViewModel.Parent.NoteToolTip = playerNoteViewModel.Note;
+            };
+
+            var contextMenu = new RadContextMenu();
+            contextMenu.Items.Add(menuItem);
+            RadContextMenu.SetContextMenu(hudTool, contextMenu);
+        }
+
+        public virtual Point GetPositionShift(EnumTableType tableType, int seat)
+        {
+            return new Point(0, 0);
         }
     }
 }

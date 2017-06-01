@@ -28,91 +28,7 @@
                 Property="Background"
                 Value="{StaticResource PopupBackground}" />
         </Style>
-
-        <Style
-            x:Key="StatInfoListBoxItemStyle"
-            TargetType="{x:Type ListBoxItem}">
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type ListBoxItem}">
-                        <Border
-                            x:Name="MainBody"
-                            Background="{StaticResource ButtonBackground}"
-                            CornerRadius="2"
-                            Height="40"
-                            Margin="0,0,8,8">
-                            <DockPanel>
-                                <ContentPresenter
-                                    x:Name="MainContent"
-                                    DockPanel.Dock="Left"
-                                    TextBlock.Foreground="#7d7e82"
-                                    VerticalAlignment="Center"
-                                    Margin="10,0,0,0" />
-
-                                <Grid
-                                    Width="20"
-                                    Height="20"
-                                    DockPanel.Dock="Right"
-                                    HorizontalAlignment="Right"
-                                    Margin="0,0,13,0">
-
-                                    <Ellipse
-                                        x:Name="OuterEllipse"
-                                        Width="20"
-                                        Height="20"
-                                        Stroke="#9da7cb"
-                                        StrokeThickness="1"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center" />
-
-                                    <Ellipse
-                                        x:Name="InnerEllipse"
-                                        Width="8"
-                                        Height="8"
-                                        Fill="#9da7cb"
-                                        Visibility="Collapsed"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center" />
-                                </Grid>
-                            </DockPanel>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger
-                                Property="IsMouseOver"
-                                Value="true">
-                                <Setter
-                                    TargetName="MainBody"
-                                    Property="Background"
-                                    Value="#313035" />
-                                <Setter
-                                    TargetName="MainContent"
-                                    Property="TextBlock.Foreground"
-                                    Value="#828387" />
-                            </Trigger>
-                            <Trigger
-                                Property="IsSelected"
-                                Value="true">
-                                <Setter
-                                    TargetName="MainBody"
-                                    Property="Background"
-                                    Value="#34529b" />
-                                <Setter
-                                    TargetName="MainContent"
-                                    Property="TextBlock.Foreground"
-                                    Value="#ffffff" />
-                                <Setter
-                                    TargetName="InnerEllipse"
-                                    Property="Visibility"
-                                    Value="Visible" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
+    
     </UserControl.Resources>
 
     <Grid>
@@ -172,7 +88,7 @@
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
                 BorderThickness="0"
-                ItemContainerStyle="{StaticResource StatInfoListBoxItemStyle}"
+                ItemContainerStyle="{StaticResource EllipseListBoxItemStyle}"
                 Background="Transparent">
                 <ListBox.ItemTemplate>
                     <DataTemplate>

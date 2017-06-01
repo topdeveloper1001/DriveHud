@@ -94,6 +94,10 @@
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -188,7 +192,6 @@
     <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
     <Compile Include="Builders\iPoker\PokerEvaluator.cs" />
-    <Compile Include="Builders\iPoker\PokerStarsBuilder.cs" />
     <Compile Include="Builders\iPoker\StringExtensions.cs" />
     <Compile Include="DataImportedEvent.cs" />
     <Compile Include="DataImportedEventArgs.cs" />
@@ -209,6 +212,7 @@
     <Compile Include="ImporterService.cs" />
     <Compile Include="ImporterSessionCacheService.cs" />
     <Compile Include="IPipeManager.cs" />
+    <Compile Include="IPlayerStatisticReImporter.cs" />
     <Compile Include="IPokerCatcher.cs" />
     <Compile Include="IPokerClientDataManager.cs" />
     <Compile Include="IPokerClientEncryptedLogger.cs" />
@@ -222,6 +226,7 @@
     <Compile Include="Pacific888\IPacific888Importer.cs" />
     <Compile Include="Pacific888\Pacific888Importer.cs" />
     <Compile Include="PipeManager.cs" />
+    <Compile Include="PlayerStatisticReImporter.cs" />
     <Compile Include="PlayerStatsSessionCacheInfo.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />

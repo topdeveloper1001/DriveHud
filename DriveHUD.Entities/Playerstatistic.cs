@@ -16,13 +16,17 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace DriveHUD.Entities
 {
     [ProtoContract]
     public partial class Playerstatistic : INotifyPropertyChanged
     {
+        public override string ToString()
+        {
+            return $"Tournament: {TournamentId}; Time: {Time}; HandNumber: {GameNumber}; Currency: {CurrencyId}; Cards: {Cards}";
+        }
+
         public virtual int CompiledplayerresultsId { get; set; }
         [Required, ProtoMember(232)]
         public virtual int PlayerId { get; set; }
@@ -350,21 +354,6 @@ namespace DriveHUD.Entities
         [ProtoMember(140)]
         public virtual int DidFourBetInBb { get; set; }
 
-        [ProtoMember(141)]
-        public virtual int DidColdCallInMp { get; set; }
-
-        [ProtoMember(142)]
-        public virtual int DidColdCallInCo { get; set; }
-
-        [ProtoMember(143)]
-        public virtual int DidColdCallInBtn { get; set; }
-
-        [ProtoMember(144)]
-        public virtual int DidColdCallInSb { get; set; }
-
-        [ProtoMember(145)]
-        public virtual int DidColdCallInBb { get; set; }
-
         [ProtoMember(148)]
         public virtual int DidDonkBet { get; set; }
 
@@ -666,83 +655,161 @@ namespace DriveHUD.Entities
         public virtual decimal EVDiff { get; set; }
 
         [ProtoMember(249)]
-        public int FacedRaiseFlop { get; set; }
+        public virtual int FacedRaiseFlop { get; set; }
 
         [ProtoMember(250)]
-        public int FoldedFacedRaiseFlop { get; set; }
+        public virtual int FoldedFacedRaiseFlop { get; set; }
 
         [ProtoMember(251)]
-        public int CalledFacedRaiseFlop { get; set; }
+        public virtual int CalledFacedRaiseFlop { get; set; }
 
         [ProtoMember(252)]
-        public int ReraisedFacedRaiseFlop { get; set; }
+        public virtual int ReraisedFacedRaiseFlop { get; set; }
 
         [ProtoMember(253)]
-        public int FacedRaiseTurn { get; set; }
+        public virtual int FacedRaiseTurn { get; set; }
 
         [ProtoMember(254)]
-        public int FoldedFacedRaiseTurn { get; set; }
+        public virtual int FoldedFacedRaiseTurn { get; set; }
 
         [ProtoMember(255)]
-        public int CalledFacedRaiseTurn { get; set; }
+        public virtual int CalledFacedRaiseTurn { get; set; }
 
         [ProtoMember(256)]
-        public int ReraisedFacedRaiseTurn { get; set; }
+        public virtual int ReraisedFacedRaiseTurn { get; set; }
 
         [ProtoMember(257)]
-        public int FacedRaiseRiver { get; set; }
+        public virtual int FacedRaiseRiver { get; set; }
 
         [ProtoMember(258)]
-        public int FoldedFacedRaiseRiver { get; set; }
+        public virtual int FoldedFacedRaiseRiver { get; set; }
 
         [ProtoMember(259)]
-        public int CalledFacedRaiseRiver { get; set; }
+        public virtual int CalledFacedRaiseRiver { get; set; }
 
         [ProtoMember(260)]
-        public int ReraisedFacedRaiseRiver { get; set; }
+        public virtual int ReraisedFacedRaiseRiver { get; set; }
 
         [ProtoMember(261)]
-        public int CanBetWhenCheckedToFlop { get; set; }
+        public virtual int CanBetWhenCheckedToFlop { get; set; }
 
         [ProtoMember(262)]
-        public int DidBetWhenCheckedToFlop { get; set; }
+        public virtual int DidBetWhenCheckedToFlop { get; set; }
 
         [ProtoMember(263)]
-        public int CanBetWhenCheckedToTurn { get; set; }
+        public virtual int CanBetWhenCheckedToTurn { get; set; }
 
         [ProtoMember(264)]
-        public int DidBetWhenCheckedToTurn { get; set; }
+        public virtual int DidBetWhenCheckedToTurn { get; set; }
 
         [ProtoMember(265)]
-        public int CanBetWhenCheckedToRiver { get; set; }
+        public virtual int CanBetWhenCheckedToRiver { get; set; }
 
         [ProtoMember(266)]
-        public int DidBetWhenCheckedToRiver { get; set; }
+        public virtual int DidBetWhenCheckedToRiver { get; set; }
 
         [ProtoMember(267)]
-        public int FacedSqueez { get; set; }
+        public virtual int FacedSqueez { get; set; }
 
         [ProtoMember(268)]
-        public int FoldedFacedSqueez { get; set; }
+        public virtual int FoldedFacedSqueez { get; set; }
 
         [ProtoMember(269)]
-        public int CalledFacedSqueez { get; set; }
+        public virtual int CalledFacedSqueez { get; set; }
 
         [ProtoMember(270)]
-        public int ReraisedFacedSqueez { get; set; }
+        public virtual int ReraisedFacedSqueez { get; set; }
+
+        [ProtoMember(271)]
+        public virtual int LimpBtn { get; set; }
+
+        [ProtoMember(272)]
+        public virtual int LimpEp { get; set; }
+
+        [ProtoMember(273)]
+        public virtual int LimpMp { get; set; }
+
+        [ProtoMember(274)]
+        public virtual int LimpCo { get; set; }
+
+        [ProtoMember(275)]
+        public virtual int LimpSb { get; set; }
+
+        [ProtoMember(141)]
+        public virtual int DidColdCallInMp { get; set; }
+
+        [ProtoMember(142)]
+        public virtual int DidColdCallInCo { get; set; }
+
+        [ProtoMember(143)]
+        public virtual int DidColdCallInBtn { get; set; }
+
+        [ProtoMember(144)]
+        public virtual int DidColdCallInSb { get; set; }
+
+        [ProtoMember(145)]
+        public virtual int DidColdCallInBb { get; set; }
+
+        [ProtoMember(276)]
+        public virtual int DidColdCallInEp { get; set; }
+
+        [ProtoMember(277)]
+        public virtual int DidColdCallThreeBet { get; set; }
+
+        [ProtoMember(278)]
+        public virtual int CouldColdCallThreeBet { get; set; }
+
+        [ProtoMember(279)]
+        public virtual int DidColdCallFourBet { get; set; }
+
+        [ProtoMember(280)]
+        public virtual int CouldColdCallFourBet { get; set; }
+
+        [ProtoMember(281)]
+        public virtual int DidColdCallVsOpenRaiseBtn { get; set; }
+
+        [ProtoMember(282)]
+        public virtual int DidColdCallVsOpenRaiseCo { get; set; }
+
+        [ProtoMember(283)]
+        public virtual int DidColdCallVsOpenRaiseSb { get; set; }
+
+        [ProtoMember(284)]
+        public virtual int CouldColdCallVsOpenRaiseBtn { get; set; }
+
+        [ProtoMember(285)]
+        public virtual int CouldColdCallVsOpenRaiseCo { get; set; }
+
+        [ProtoMember(286)]
+        public virtual int CouldColdCallVsOpenRaiseSb { get; set; }
+
+        [ProtoMember(287)]
+        public virtual int PreflopIP { get; set; }
+
+        [ProtoMember(288)]
+        public virtual int PreflopOOP { get; set; }
 
         #region Additional properties (not for serialization)
 
-        #region Positional stats for current session 
-        /* This stats are for test feature so this will be changed after final version will be approved */
+        #region Positional stats for current session         
 
         public virtual PositionalStat PositionUnoppened { get; set; }
+
         public virtual PositionalStat PositionTotal { get; set; }
+
         public virtual PositionalStat PositionVPIP { get; set; }
+
         public virtual PositionalStat PositionDidColdCall { get; set; }
+
         public virtual PositionalStat PositionCouldColdCall { get; set; }
+
         public virtual PositionalStat PositionDidThreeBet { get; set; }
+
         public virtual PositionalStat PositionCouldThreeBet { get; set; }
+
+        public virtual PositionalStat PositionDidFourBet { get; set; }
+
+        public virtual PositionalStat PositionCouldFourBet { get; set; }
 
         #endregion
 
@@ -758,8 +825,17 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        public virtual decimal TotalPot { get; set; }
+        public bool IsUnopened
+        {
+            get
+            {
+                return (FacingPreflop == EnumFacingPreflop.Unopened
+                        || FacingPreflop == EnumFacingPreflop.Limper
+                        || FacingPreflop == EnumFacingPreflop.MultipleLimpers);
+            }
+        }
 
+        public virtual decimal TotalPot { get; set; }
 
         public virtual decimal TotalPotInBB { get; set; }
 
@@ -1034,6 +1110,17 @@ namespace DriveHUD.Entities
             DidColdCallInCo += a.DidColdCallInCo;
             DidColdCallInMp += a.DidColdCallInMp;
             DidColdCallInSb += a.DidColdCallInSb;
+            DidColdCallInEp += a.DidColdCallInEp;
+            DidColdCallThreeBet += a.DidColdCallThreeBet;
+            CouldColdCallThreeBet += a.CouldColdCallThreeBet;
+            DidColdCallFourBet += a.DidColdCallFourBet;
+            CouldColdCallFourBet += a.CouldColdCallFourBet;
+            DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn;
+            DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo;
+            DidColdCallVsOpenRaiseSb += a.DidColdCallVsOpenRaiseSb;
+            CouldColdCallVsOpenRaiseBtn += a.CouldColdCallVsOpenRaiseBtn;
+            CouldColdCallVsOpenRaiseCo += a.CouldColdCallVsOpenRaiseCo;
+            CouldColdCallVsOpenRaiseSb += a.CouldColdCallVsOpenRaiseSb;
 
             FirstRaiser += a.FirstRaiser;
 
@@ -1063,6 +1150,11 @@ namespace DriveHUD.Entities
             LimpCalled += a.LimpCalled;
             LimpFolded += a.LimpFolded;
             LimpReraised += a.LimpReraised;
+            LimpBtn += a.LimpBtn;
+            LimpEp += a.LimpEp;
+            LimpMp += a.LimpMp;
+            LimpCo += a.LimpCo;
+            LimpSb += a.LimpSb;
 
             TotalbetsFlop += a.TotalbetsFlop;
             TotalbetsTurn += a.TotalbetsTurn;
@@ -1131,17 +1223,22 @@ namespace DriveHUD.Entities
                 RecentAggList.Add(new Tuple<int, int>(a.Totalbets, a.Totalpostflopstreetsplayed));
             }
 
-            PositionUnoppened = PositionalStat.Sum(PositionUnoppened, a.PositionUnoppened);
-            PositionTotal = PositionalStat.Sum(PositionTotal, a.PositionTotal);
-            PositionVPIP = PositionalStat.Sum(PositionVPIP, a.PositionVPIP);
-            PositionDidColdCall = PositionalStat.Sum(PositionDidColdCall, a.PositionDidColdCall);
-            PositionCouldColdCall = PositionalStat.Sum(PositionCouldColdCall, a.PositionCouldColdCall);
-            PositionDidThreeBet = PositionalStat.Sum(PositionDidThreeBet, a.PositionDidThreeBet);
-            PositionCouldThreeBet = PositionalStat.Sum(PositionCouldThreeBet, a.PositionCouldThreeBet);
+            PositionUnoppened?.Add(a.PositionUnoppened);
+            PositionTotal?.Add(a.PositionTotal);
+            PositionVPIP?.Add(a.PositionVPIP);
+            PositionDidColdCall?.Add(a.PositionDidColdCall);
+            PositionCouldColdCall?.Add(a.PositionCouldColdCall);
+            PositionDidThreeBet?.Add(a.PositionDidThreeBet);
+            PositionCouldThreeBet?.Add(a.PositionCouldThreeBet);
+            PositionDidFourBet?.Add(a.PositionDidFourBet);
+            PositionCouldFourBet?.Add(a.PositionCouldFourBet);
 
             MRatio = a.MRatio;
             StackInBBs = a.StackInBBs;
             EVDiff = a.EVDiff;
+
+            PreflopIP = a.PreflopIP;
+            PreflopOOP = a.PreflopOOP;
 
             #region tilt meter 
 
@@ -1179,7 +1276,11 @@ namespace DriveHUD.Entities
             r.PokergametypeId = b.PokergametypeId;
             r.TotalPot = a.TotalPot + b.TotalPot;
             r.TotalPotInBB = a.TotalPotInBB + b.TotalPotInBB;
-
+            r.LimpBtn = a.LimpBtn + b.LimpBtn;
+            r.LimpEp = a.LimpEp + b.LimpEp;
+            r.LimpMp = a.LimpMp + b.LimpMp;
+            r.LimpCo = a.LimpCo + b.LimpCo;
+            r.LimpSb = a.LimpSb + b.LimpSb;
             r.Sawshowdown = a.Sawshowdown + b.Sawshowdown;
             r.Sawflop = a.Sawflop + b.Sawflop;
             r.SawTurn = a.SawTurn + b.SawTurn;
@@ -1369,6 +1470,17 @@ namespace DriveHUD.Entities
             r.DidColdCallInCo += a.DidColdCallInCo + b.DidColdCallInCo;
             r.DidColdCallInMp += a.DidColdCallInMp + b.DidColdCallInMp;
             r.DidColdCallInSb += a.DidColdCallInSb + b.DidColdCallInSb;
+            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp;
+            r.DidColdCallThreeBet += a.DidColdCallThreeBet + b.DidColdCallThreeBet;
+            r.CouldColdCallThreeBet += a.CouldColdCallThreeBet + b.CouldColdCallThreeBet;
+            r.DidColdCallFourBet += a.DidColdCallFourBet + b.DidColdCallFourBet;
+            r.CouldColdCallFourBet += a.CouldColdCallFourBet + b.CouldColdCallFourBet;
+            r.DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn + b.DidColdCallVsOpenRaiseBtn;
+            r.DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo + b.DidColdCallVsOpenRaiseCo;
+            r.DidColdCallVsOpenRaiseSb += a.DidColdCallVsOpenRaiseSb + b.DidColdCallVsOpenRaiseSb;
+            r.CouldColdCallVsOpenRaiseBtn += a.CouldColdCallVsOpenRaiseBtn + b.CouldColdCallVsOpenRaiseBtn;
+            r.CouldColdCallVsOpenRaiseCo += a.CouldColdCallVsOpenRaiseCo + b.CouldColdCallVsOpenRaiseCo;
+            r.CouldColdCallVsOpenRaiseSb += a.CouldColdCallVsOpenRaiseSb + b.CouldColdCallVsOpenRaiseSb;
 
             r.FirstRaiser = a.FirstRaiser + b.FirstRaiser;
 
@@ -1458,11 +1570,16 @@ namespace DriveHUD.Entities
             r.PositionCouldColdCall = PositionalStat.Sum(a.PositionCouldColdCall, b.PositionCouldColdCall);
             r.PositionDidThreeBet = PositionalStat.Sum(a.PositionDidThreeBet, b.PositionDidThreeBet);
             r.PositionCouldThreeBet = PositionalStat.Sum(a.PositionCouldThreeBet, b.PositionCouldThreeBet);
+            r.PositionDidFourBet = PositionalStat.Sum(a.PositionDidFourBet, b.PositionDidFourBet);
+            r.PositionCouldFourBet = PositionalStat.Sum(a.PositionCouldFourBet, b.PositionCouldFourBet);
 
             r.MRatio = b.MRatio;
             r.StackInBBs = b.StackInBBs;
 
             r.EVDiff = a.EVDiff + b.EVDiff;
+
+            r.PreflopIP = a.PreflopIP + b.PreflopIP;
+            r.PreflopOOP = a.PreflopOOP + b.PreflopOOP;
 
             #region tilt meter
 
@@ -1480,6 +1597,78 @@ namespace DriveHUD.Entities
         public virtual Playerstatistic Copy()
         {
             return (Playerstatistic)MemberwiseClone();
+        }
+
+        /// <summary>
+        /// Calculates <see cref="PositionalStat"/> stats of the current <see cref="Playerstatistic"/>
+        /// </summary>
+        public void CalculatePositionalStats()
+        {
+            var unopened = IsUnopened ? 1 : 0;
+
+            if (PositionTotal == null)
+            {
+                PositionTotal = new PositionalStat();
+            }
+
+            if (PositionUnoppened == null)
+            {
+                PositionUnoppened = new PositionalStat();
+            }
+
+            if (PositionVPIP == null)
+            {
+                PositionVPIP = new PositionalStat();
+            }
+
+            if (PositionDidColdCall == null)
+            {
+                PositionDidColdCall = new PositionalStat();
+            }
+
+            if (PositionCouldColdCall == null)
+            {
+                PositionCouldColdCall = new PositionalStat();
+            }
+
+            if (PositionDidThreeBet == null)
+            {
+                PositionDidThreeBet = new PositionalStat();
+            }
+
+            if (PositionCouldThreeBet == null)
+            {
+                PositionCouldThreeBet = new PositionalStat();
+            }
+
+            if (PositionDidFourBet == null)
+            {
+                PositionDidFourBet = new PositionalStat();
+            }
+
+            if (PositionCouldFourBet == null)
+            {
+                PositionCouldFourBet = new PositionalStat();
+            }
+
+            PositionTotal.SetPositionValue(Position, 1);
+            PositionUnoppened.SetPositionValue(Position, unopened);
+            PositionVPIP.SetPositionValue(Position, Vpiphands);
+            PositionDidColdCall.SetPositionValue(Position, Didcoldcall);
+            PositionCouldColdCall.SetPositionValue(Position, Couldcoldcall);
+            PositionDidThreeBet.SetPositionValue(Position, Didthreebet);
+            PositionCouldThreeBet.SetPositionValue(Position, Couldthreebet);
+            PositionDidFourBet.SetPositionValue(Position, Didfourbet);
+            PositionCouldFourBet.SetPositionValue(Position, Couldfourbet);
+        }
+
+        /// <summary>
+        /// Calculates total pot
+        /// </summary>
+        public void CalculateTotalPot()
+        {
+            TotalPot = Pot;
+            TotalPotInBB = (TotalPot != 0) && (BigBlind != 0) ? TotalPot / BigBlind : 0;
         }
 
         private static void CalculateTiltMeterValue(Playerstatistic source, Playerstatistic statistic)
@@ -1550,72 +1739,4 @@ namespace DriveHUD.Entities
         // required to avoid binding leaks
         public virtual event PropertyChangedEventHandler PropertyChanged;
     }
-
-    public class PositionalStat
-    {
-        public int EP { get; set; } = 0;
-        public int MP { get; set; } = 0;
-        public int CO { get; set; } = 0;
-        public int BN { get; set; } = 0;
-        public int SB { get; set; } = 0;
-        public int BB { get; set; } = 0;
-
-        public static PositionalStat Sum(PositionalStat a, PositionalStat b)
-        {
-            if (a == null)
-            {
-                a = new PositionalStat();
-            }
-
-            if (b == null)
-            {
-                b = new PositionalStat();
-            }
-
-            return new PositionalStat
-            {
-                EP = a.EP + b.EP,
-                MP = a.MP + b.MP,
-                CO = a.CO + b.CO,
-                BN = a.BN + b.BN,
-                SB = a.SB + b.SB,
-                BB = a.BB + b.BB,
-            };
-        }
-
-        public void SetPositionalStat(EnumPosition position, int value)
-        {
-            switch (position)
-            {
-                case EnumPosition.BTN:
-                    BN = value;
-                    break;
-                case EnumPosition.SB:
-                    SB = value;
-                    break;
-                case EnumPosition.BB:
-                    BB = value;
-                    break;
-                case EnumPosition.CO:
-                    CO = value;
-                    break;
-                case EnumPosition.MP3:
-                case EnumPosition.MP2:
-                case EnumPosition.MP1:
-                case EnumPosition.MP:
-                    MP = value;
-                    break;
-                case EnumPosition.UTG:
-                case EnumPosition.UTG_1:
-                case EnumPosition.UTG_2:
-                case EnumPosition.EP:
-                    EP = value;
-                    break;
-                case EnumPosition.Undefined:
-                default:
-                    break;
-            }
-        }
-    }
-
 }

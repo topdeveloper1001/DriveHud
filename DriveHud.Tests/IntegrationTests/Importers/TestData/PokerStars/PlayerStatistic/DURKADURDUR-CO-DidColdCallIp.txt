@@ -1,0 +1,51 @@
+PokerStars Game #47152349375:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:47:08 ET
+Table 'Lilaea III' 6-max Seat #4 is the button
+Seat 1: LiraMaker ($99.45 in chips) 
+Seat 2: stopme10 ($224 in chips) 
+Seat 3: DURKADURDUR ($477.55 in chips) 
+Seat 4: Othermotte ($200 in chips) 
+Seat 5: kaader ($200 in chips) 
+Seat 6: Bosas2 ($224.20 in chips) 
+kaader: posts small blind $1
+Bosas2: posts big blind $2
+*** HOLE CARDS ***
+LiraMaker: folds 
+stopme10: raises $4 to $6
+DURKADURDUR: calls $6
+Othermotte: folds 
+kaader: folds 
+Bosas2: calls $4
+*** FLOP *** [Kc 5s Jd]
+Bosas2: checks 
+stopme10: bets $14
+DURKADURDUR: calls $14
+Bosas2: folds 
+*** TURN *** [Kc 5s Jd] [2d]
+stopme10: bets $26
+DURKADURDUR: raises $51 to $77
+stopme10: calls $51
+*** RIVER *** [Kc 5s Jd 2d] [Qc]
+stopme10: checks 
+DURKADURDUR: bets $136
+stopme10: calls $127 and is all-in
+Uncalled bet ($9) returned to DURKADURDUR
+*** SHOW DOWN ***
+DURKADURDUR: shows [Jc Js] (three of a kind, Jacks)
+stopme10: shows [Qd Kd] (two pair, Kings and Queens)
+DURKADURDUR collected $452 from pot
+stopme10 leaves the table
+*** SUMMARY ***
+Total pot $455 | Rake $3 
+Board [Kc 5s Jd 2d Qc]
+Seat 1: LiraMaker folded before Flop (didn't bet)
+Seat 2: stopme10 showed [Qd Kd] and lost with two pair, Kings and Queens
+Seat 3: DURKADURDUR showed [Jc Js] and won ($452) with three of a kind, Jacks
+Seat 4: Othermotte (button) folded before Flop (didn't bet)
+Seat 5: kaader (small blind) folded before Flop
+Seat 6: Bosas2 (big blind) folded on the Flop
+
+
+
+
+
+

@@ -187,6 +187,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .stat.
+        /// </summary>
+        internal static string SystemSettings_DefaultPlayerStatisticExtension {
+            get {
+                return ResourceManager.GetString("SystemSettings_DefaultPlayerStatisticExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Database.
         /// </summary>
         internal static string SystemSettings_DefaultPlayerStatisticFolderName {
@@ -223,11 +232,74 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .xml.
+        /// </summary>
+        internal static string SystemSettings_LayoutsExtension {
+            get {
+                return ResourceManager.GetString("SystemSettings_LayoutsExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layouts.
+        /// </summary>
+        internal static string SystemSettings_LayoutsFolder {
+            get {
+                return ResourceManager.GetString("SystemSettings_LayoutsFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mappings.
+        /// </summary>
+        internal static string SystemSettings_LayoutsMappings {
+            get {
+                return ResourceManager.GetString("SystemSettings_LayoutsMappings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LayoutsV2.
+        /// </summary>
+        internal static string SystemSettings_LayoutsV2Folder {
+            get {
+                return ResourceManager.GetString("SystemSettings_LayoutsV2Folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
         /// </summary>
         internal static string SystemSettings_OnlineManual {
             get {
                 return ResourceManager.GetString("SystemSettings_OnlineManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database-backup.
+        /// </summary>
+        internal static string SystemSettings_PlayerStatisticBackupFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_PlayerStatisticBackupFolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database-old.
+        /// </summary>
+        internal static string SystemSettings_PlayerStatisticOldFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_PlayerStatisticOldFolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database-temp.
+        /// </summary>
+        internal static string SystemSettings_PlayerStatisticTempFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_PlayerStatisticTempFolderName", resourceCulture);
             }
         }
         

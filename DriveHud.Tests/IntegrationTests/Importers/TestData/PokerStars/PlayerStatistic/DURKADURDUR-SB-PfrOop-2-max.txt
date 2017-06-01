@@ -1,0 +1,33 @@
+PokerStars Game #47154127350:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:49:29 ET
+Table 'Idelsonia' 6-max Seat #4 is the button
+Seat 2: twinpsych ($378.70 in chips) 
+Seat 4: DURKADURDUR ($478.30 in chips) 
+DURKADURDUR: posts small blind $1
+fakker11: is sitting out 
+RiverRock55: is sitting out 
+twinpsych: posts big blind $2
+*** HOLE CARDS ***
+fakker11 leaves the table
+RiverRock55 leaves the table
+DURKADURDUR: raises $4 to $6
+twinpsych: raises $12 to $18
+DURKADURDUR: calls $12
+*** FLOP *** [8c Kh 5d]
+twinpsych: bets $23.40
+DURKADURDUR: calls $23.40
+*** TURN *** [8c Kh 5d] [8d]
+twinpsych: bets $54.30
+DURKADURDUR: calls $54.30
+*** RIVER *** [8c Kh 5d 8d] [2d]
+twinpsych: checks 
+chrisdm joins the table at seat #6 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+twinpsych: shows [7c 7s] (two pair, Eights and Sevens)
+DURKADURDUR: shows [Kd Ac] (two pair, Kings and Eights)
+DURKADURDUR collected $190.90 from pot
+*** SUMMARY ***
+Total pot $191.40 | Rake $0.50 
+Board [8c Kh 5d 8d 2d]
+Seat 2: twinpsych (big blind) showed [7c 7s] and lost with two pair, Eights and Sevens
+Seat 4: DURKADURDUR (button) (small blind) showed [Kd Ac] and won ($190.90) with two pair, Kings and Eights

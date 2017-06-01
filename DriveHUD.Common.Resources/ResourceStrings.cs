@@ -32,8 +32,16 @@ namespace DriveHUD.Common.Resources
         public static string AppStoreRemoteTrainingProductHash = "SystemSettings_AppStoreRemoteTrainingProductHash";
         public static string DefaultPlayersFolderName = "SystemSettings_DefaultPlayersFolderName";
         public static string DefaultPlayerStatisticFolderName = "SystemSettings_DefaultPlayerStatisticFolderName";
+        public static string DefaultPlayerStatisticExtension = "SystemSettings_DefaultPlayerStatisticExtension";
+        public static string PlayerStatisticTempFolderName = "SystemSettings_PlayerStatisticTempFolderName";
+        public static string PlayerStatisticBackupFolderName = "SystemSettings_PlayerStatisticBackupFolderName";
+        public static string PlayerStatisticOldFolderName = "SystemSettings_PlayerStatisticOldFolderName";
         public static string DbFileName = "SystemSettings_DbFileName";
         public static string HeroName = "SystemSettings_HeroName";
+        public static string LayoutsFolder = "SystemSettings_LayoutsFolder";
+        public static string LayoutsV2Folder = "SystemSettings_LayoutsV2Folder";
+        public static string LayoutsExtension = "SystemSettings_LayoutsExtension";
+        public static string LayoutsMappings = "SystemSettings_LayoutsMappings";
 
         #endregion
 

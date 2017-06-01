@@ -1,14 +1,23 @@
+//-----------------------------------------------------------------------
+// <copyright file="OverAllReportCreator.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Data;
+using Model.Interfaces;
+using NHibernate.Util;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Model.Data;
-using DriveHUD.Entities;
-using NHibernate.Util;
 using System.Linq;
-using Microsoft.Practices.ServiceLocation;
-using Model.Interfaces;
-using Model.Enums;
-using System;
-using HandHistories.Objects.GameDescription;
 
 namespace Model.Reports
 {
@@ -26,9 +35,9 @@ namespace Model.Reports
                 return report;
             }
 
-            var stat = new Indicators();
+            var stat = new ReportIndicators();
 
-            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney))
+            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).ToArray())
             {
                 stat.AddStatistic(playerstatistic);
             }
@@ -57,7 +66,14 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)))
+                var stats = statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray();
+
+                if (stats.Length == 0)
+                {
+                    continue;
+                }
+
+                foreach (var playerstatistic in stats)
                 {
                     stat.AddStatistic(playerstatistic);
                 }

@@ -34,7 +34,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;DBC_CHECK_ALL</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.0.9.1196, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.1.0.1390, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.0.9.1196, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.1.0.1390, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.0.9.1196, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.1.0.1390, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -126,6 +126,7 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4" />
     <Reference Include="NLog, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
@@ -288,8 +289,44 @@
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudBumperStickers.xaml.cs">
+      <DependentUpon>HudBumperStickers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudBumperStickersDesigner.xaml.cs">
+      <DependentUpon>HudBumperStickersDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudFourStatsBox.xaml.cs">
+      <DependentUpon>HudFourStatsBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudFourStatsBoxDesigner.xaml.cs">
+      <DependentUpon>HudFourStatsBoxDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudGaugeIndicator.xaml.cs">
+      <DependentUpon>HudGaugeIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudGaugeIndicatorDesigner.xaml.cs">
+      <DependentUpon>HudGaugeIndicatorDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudGraph.xaml.cs">
+      <DependentUpon>HudGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudGraphDesigner.xaml.cs">
+      <DependentUpon>HudGraphDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HudPanel.xaml.cs">
       <DependentUpon>HudPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlainBox.xaml.cs">
+      <DependentUpon>HudPlainBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlainBoxDesigner.xaml.cs">
+      <DependentUpon>HudPlainBoxDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlayerIcon.xaml.cs">
+      <DependentUpon>HudPlayerIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlayerIconDesigner.xaml.cs">
+      <DependentUpon>HudPlayerIconDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
@@ -297,9 +334,26 @@
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudTextBox.xaml.cs">
+      <DependentUpon>HudTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTextBoxDesigner.xaml.cs">
+      <DependentUpon>HudTextBoxDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTiltMeter.xaml.cs">
+      <DependentUpon>HudTiltMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudTiltMeterDesigner.xaml.cs">
+      <DependentUpon>HudTiltMeterDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudToolBar.xaml.cs">
+      <DependentUpon>HudToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlTemplateSelectors\FilterTemplateSelector.cs" />
     <Compile Include="HudServices\HudNamedPipeBindingCallbackService.cs" />
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />
@@ -314,23 +368,16 @@
     <Compile Include="Licensing\LicenseSubType.cs" />
     <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="Migration\IMigrationService.cs" />
-    <Compile Include="Migration\Migrations\Migration0009_NonDB_AddAmericasCardroomPredefinedLayouts.cs" />
-    <Compile Include="Migration\Migrations\Migration0007_NonDB_ChangeDefaultCustomProcessedDataLocation.cs" />
     <Compile Include="Migration\MigrationService.cs" />
-    <Compile Include="Migration\Migrations\Migration0000_CreateDatabase.cs" />
-    <Compile Include="Migration\Migrations\Migration0001_CreateTablePlayerNotes.cs" />
-    <Compile Include="Migration\Migrations\Migration0002_NonDB_DefaultLayoutsAddBumperStickers.cs" />
-    <Compile Include="Migration\Migrations\Migration0003_NonDB_PokersiteSettingsChangeBovadaToIgnition.cs" />
-    <Compile Include="Migration\Migrations\Migration0004_NonDB_AddPokerStarsPredefinedLayouts.cs" />
-    <Compile Include="Migration\Migrations\Migration0005_NonDB_Add888PokerSiteSettings.cs" />
-    <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
-    <Compile Include="Migration\Migrations\Migration0008_NonDb_AddAmericasCardroomSiteSettings.cs" />
-    <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
-    <Compile Include="Migration\Migrations\Migration0011_RemoveHandHistoryHandNumberUniqueKey.cs" />
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
     <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
-    <Compile Include="Migration\Migrations\Migration0015_FixBreakLineInLayouts.cs" />
-    <Compile Include="Migration\Migrations\Migration0016_RenameIgnitionLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0017_RebuildPlayerStatistic.cs" />
+    <Compile Include="Migration\Migrations\Migration0018_MigrationToHUD_V2.cs" />
+    <Compile Include="Migration\Migrations\Migration0019_MoveLayoutsToLayoutV2.cs" />
+    <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
+    <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
+    <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
+    <Compile Include="Migration\Migrators\MigrationUtils.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -339,6 +386,10 @@
     <Compile Include="Services\PokerStarsDetectorService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
+    <Compile Include="SplashScreen\NotificationViewModel.cs" />
+    <Compile Include="SplashScreen\NotificationWindow.xaml.cs">
+      <DependentUpon>NotificationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
@@ -347,11 +398,6 @@
     <Compile Include="Surrogates\ColorDto.cs" />
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
-    <Compile Include="TableConfigurators\BlackChipPokerTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\CommonHorizTableConfiguration.cs" />
-    <Compile Include="TableConfigurators\CommonVertOneTableConfiguration.cs" />
-    <Compile Include="TableConfigurators\CommonVertTwoTableConfiguration.cs" />
-    <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
@@ -361,7 +407,6 @@
     <Compile Include="TableConfigurators\PositionProviders\PokerStarsPositionProvider.cs" />
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
-    <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\WinningPokerNetworkSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
@@ -370,16 +415,12 @@
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\Poker888SiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PokerStarsSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\ISiteSettingTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\PokerStarsTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\BovadaTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\CommonTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\ITableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\ITableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
-    <Compile Include="TableConfigurators\TruePokerTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\WinningPokerNetworkTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\YaPokerTableConfigurator.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
@@ -390,19 +431,43 @@
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
-    <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
-    <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
+    <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGraphViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudPlayerIconViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudTextBoxViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudTiltMeterViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudToolCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudDesignerToolType.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudBaseToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudPlainStatBoxViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudBaseStatToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudNonPopupToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\HudBaseToolTipBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
+    <Compile Include="ViewModels\Hud\HudDuplicateLayoutViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudDuplicateLayoutViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudToolTipBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
     <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />
-    <Compile Include="ViewModels\Hud\BovadaHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickerType.cs" />
-    <Compile Include="ViewModels\Hud\HudTableLayoutMenuItem.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
@@ -410,6 +475,19 @@
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutBumperStickersTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutFourStatsBoxTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutGaugeIndicator.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutGraphTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutHeatMapTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutInfoV2.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutPlainBoxTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutPlayerIconTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutTextBoxTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutTiltMeterTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutNonPopupTool.cs" />
+    <Compile Include="ViewModels\Layouts\IHudLayoutStats.cs" />
     <Compile Include="ViewModels\Layouts\UiPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutMapping.cs" />
@@ -444,6 +522,9 @@
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Hud\HudDuplicateLayoutPopupView.xaml.cs">
+      <DependentUpon>HudDuplicateLayoutPopupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
       <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
     </Compile>
@@ -472,8 +553,6 @@
       <DependentUpon>RegistrationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Security\UserSession.cs" />
-    <Compile Include="TableConfigurators\CommonRichTableConfiguration.cs" />
-    <Compile Include="ViewModels\Hud\HudTableLayout.cs" />
     <Compile Include="ViewModels\Popups\EditTournamentViewModel.cs" />
     <Compile Include="ViewModels\Popups\DataRemoverViewModel.cs" />
     <Compile Include="Views\Popups\EditTournamentView.xaml.cs">
@@ -482,7 +561,7 @@
     <Compile Include="Views\Popups\DataRemoverView.xaml.cs">
       <DependentUpon>DataRemoverView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DragCanvas.cs" />
+    <Compile Include="Controls\HudDragCanvas.cs" />
     <Compile Include="Controls\HudRichPanel.xaml.cs">
       <DependentUpon>HudRichPanel.xaml</DependentUpon>
     </Compile>
@@ -517,14 +596,9 @@
       <DependentUpon>TwitterOAuth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Social\TwitterStuff.cs" />
-    <Compile Include="TableConfigurators\BaseTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\BovadaRichTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\BovadaTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\CommonTableConfigurator.cs" />
     <Compile Include="TableConfigurators\FilterTableConfigurators\FilterBaseTableConfigurator.cs" />
     <Compile Include="TableConfigurators\FilterTableConfigurators\IFilterTableConfigurator.cs" />
     <Compile Include="TableConfigurators\ReplayerTableConfigurators\IReplayerTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\ITableConfigurator.cs" />
     <Compile Include="TableConfigurators\ReplayerTableConfigurators\ReplayerTableConfigurator.cs" />
     <Compile Include="TableConfigurators\TableConfiguratorHelper.cs" />
     <Compile Include="ValueConverters\CurrentViewModelConverter.cs" />
@@ -540,9 +614,7 @@
     <Compile Include="ViewModels\Filters\FilterQuickViewModel.cs" />
     <Compile Include="ViewModels\Filters\FilterStandardViewModel.cs" />
     <Compile Include="ViewModels\Filters\FilterViewModel.cs" />
-    <Compile Include="ViewModels\Hud\EnumGameTypeWrapper.cs" />
     <Compile Include="ViewModels\Filters\IFilterViewModel.cs" />
-    <Compile Include="ViewModels\Hud\HudDefaultSettings.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModelCreator.cs" />
     <Compile Include="ViewModels\Hud\HudLayoutsService.cs" />
     <Compile Include="ViewModels\Hud\HudPanelService.cs" />
@@ -573,7 +645,6 @@
     <Compile Include="ViewModels\Popups\HandNoteViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudLayout.cs" />
-    <Compile Include="ViewModels\Hud\HudTableViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerFiltersViewModelNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSettingsViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerSettingsViewModelNotification.cs" />
@@ -723,11 +794,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlStyles\HudDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudFourStatsBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudGaugeIndicatorStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudGraphStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudPlainBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudPlayerIconStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\HudTiltMeterStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlStyles\RadContextMenuTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlStyles\RadDateTimePickerTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadDiagramStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -739,7 +842,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\HudBumperStickers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudBumperStickersDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudFourStatsBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudFourStatsBoxDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudGaugeIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudGaugeIndicatorDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudGraph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudGraphDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\HudPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlainBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlainBoxDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlayerIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlayerIconDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -748,6 +899,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HudStatToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTextBoxDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTiltMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudTiltMeterDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudToolBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -760,11 +931,19 @@
       <Generator>MSBuild:Compile</Generator>
       <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
     </Page>
+    <Page Include="SplashScreen\NotificationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SplashScreen\SplashWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudDuplicateLayoutPopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -828,7 +1007,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ControlStyles\ButtonTemplate.xaml">
+    <Page Include="ControlStyles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

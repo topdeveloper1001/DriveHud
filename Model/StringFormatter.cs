@@ -32,6 +32,26 @@ namespace Model
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), appdata);
         }
 
+        public static string GetLayoutsV2FolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsV2Folder));
+        }
+
+        public static string GetLayoutsFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsFolder));
+        }
+
+        public static string GetLayoutsExtension()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsExtension);
+        }
+
+        public static string GetLayoutsMappings()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsMappings);
+        }
+
         public static string GetProcessedDataFolderPath()
         {
             return Path.Combine(SettingsService.GetSettings().SiteSettings.ProcessedDataLocation);
@@ -45,6 +65,26 @@ namespace Model
         public static string GetPlayerStatisticDataFolderPath()
         {
             return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayerStatisticFolderName));
+        }
+
+        public static string GetPlayerStatisticDataTempFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlayerStatisticTempFolderName));
+        }
+
+        public static string GetPlayerStatisticDataBackupFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlayerStatisticBackupFolderName));
+        }
+
+        public static string GetPlayerStatisticDataOldFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlayerStatisticOldFolderName));
+        }
+
+        public static string GetPlayerStatisticExtension()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayerStatisticExtension);
         }
 
         public static string GetActivePlayerFilePath()
