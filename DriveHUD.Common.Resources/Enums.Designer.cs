@@ -223,6 +223,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to True Poker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_TruePoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_TruePoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YaPoker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_YaPoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_YaPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Less Than.
         /// </summary>
         internal static string Enum_EnumStatInfoValueRangeType_LessThan {
