@@ -77,7 +77,7 @@ namespace DriveHUD.Importers.BetOnline
             }
 
             cancellationTokenSource = new CancellationTokenSource();
-          
+
             site = EnumPokerSites.Unknown;
 
             // start main job
@@ -187,7 +187,7 @@ namespace DriveHUD.Importers.BetOnline
                 lockObject.ExitUpgradeableReadLock();
             }
         }
-      
+
         #region Infrastructure
 
         private void ProcessTableWindows()
@@ -287,15 +287,17 @@ namespace DriveHUD.Importers.BetOnline
 
                 if (Match(title))
                 {
-                    var titles = title.Split('|');
+                    var titles = title.Split('-').Select(x => x.Trim()).ToArray();
 
-                    if (titles.Length < 2)
+                    var handTextTitle = titles.FirstOrDefault(x => x.StartsWith("Hand", StringComparison.OrdinalIgnoreCase));
+
+                    if (handTextTitle == null)
                     {
                         continue;
                     }
 
-                    var handIdText = titles[1].Trim();
-                    handIdText = handIdText.Substring(6, handIdText.Length - 6);
+                    var handIdText = handTextTitle?.Trim();
+                    handIdText = handIdText?.Substring(6, handIdText.Length - 6);
 
                     ulong handId;
 
@@ -356,7 +358,7 @@ namespace DriveHUD.Importers.BetOnline
                 return false;
             }
 
-            if (title.IndexOf("| Hand", StringComparison.OrdinalIgnoreCase) > 0)
+            if (title.IndexOf("Hand:", StringComparison.OrdinalIgnoreCase) > 0)
             {
                 return true;
             }
