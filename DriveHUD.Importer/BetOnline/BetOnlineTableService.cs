@@ -296,8 +296,8 @@ namespace DriveHUD.Importers.BetOnline
                         continue;
                     }
 
-                    var handIdText = handTextTitle?.Trim();
-                    handIdText = handIdText?.Substring(6, handIdText.Length - 6);
+                    var handIdText = handTextTitle.Trim();
+                    handIdText = handIdText.Substring(6, handIdText.Length - 6);
 
                     ulong handId;
 
@@ -398,12 +398,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             isRunning = false;
 
-            var handler = ProcessStopped;
-
-            if (handler != null)
-            {
-                handler(this, EventArgs.Empty);
-            }
+            ProcessStopped?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
