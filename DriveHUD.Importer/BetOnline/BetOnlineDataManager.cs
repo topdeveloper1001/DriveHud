@@ -247,7 +247,27 @@ namespace DriveHUD.Importers.BetOnline
 
             if (xml.StartsWith("<Error", StringComparison.OrdinalIgnoreCase))
             {
-                LogProvider.Log.Warn($"Error occurred in stream: {xml}");
+                if (isLoggingEnabled)
+                {
+
+                    string errorText = null;
+
+                    var errorTextStartIndex = xml.IndexOf("text=\"", StringComparison.OrdinalIgnoreCase) + 6;
+
+                    if (errorTextStartIndex > 0)
+                    {
+                        var errorTextEndIndex = xml.IndexOf("\"", errorTextStartIndex, StringComparison.OrdinalIgnoreCase);
+
+                        if (errorTextEndIndex > 0)
+                        {
+                            errorText = xml.Substring(errorTextStartIndex, errorTextEndIndex - errorTextStartIndex);
+                        }
+                    }
+
+                    errorText = errorText ?? xml;
+
+                    LogProvider.Log.Warn($"Error occurred in stream: {errorText}");
+                }
 
                 return false;
             }
@@ -257,7 +277,28 @@ namespace DriveHUD.Importers.BetOnline
                 buffer.Clear();
                 buffer.Add(xml);
 
-                LogProvider.Log.Warn("Unexpected table details");
+                if (isLoggingEnabled)
+                {
+                    var isTournament = xml.IndexOf("TOURNAMENT_TABLE", StringComparison.OrdinalIgnoreCase) > 0;
+
+                    var tagName = isTournament ? "tournamentName" : "name";
+
+                    var indexStart = xml.IndexOf(tagName, StringComparison.OrdinalIgnoreCase) + tagName.Length;
+
+                    var table = string.Empty;
+
+                    if (indexStart > 0)
+                    {
+                        var indexEnd = xml.IndexOf("\"", indexStart, StringComparison.OrdinalIgnoreCase);
+
+                        if (indexEnd > 0)
+                        {
+                            table = xml.Substring(indexStart, indexEnd - indexStart);
+                        }
+                    }
+
+                    LogProvider.Log.Warn($"Unexpected table details [{table}]");
+                }
 
                 return false;
             }
