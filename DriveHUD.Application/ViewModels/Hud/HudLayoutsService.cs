@@ -214,7 +214,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var fileName = InternalSave(layout);
 
-            if (isNewLayout && !layout.IsDefault)
+            if (isNewLayout)
             {
                 var layoutMappings = HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
 
