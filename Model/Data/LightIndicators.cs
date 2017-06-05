@@ -403,7 +403,7 @@ namespace Model.Data
 
         #region Help methods
 
-        protected decimal GetPercentage(decimal? actual, decimal? possible)
+        protected virtual decimal GetPercentage(decimal? actual, decimal? possible)
         {
             if (TotalHands == 0)
             {

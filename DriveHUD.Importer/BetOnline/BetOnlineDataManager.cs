@@ -13,7 +13,6 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
-using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
