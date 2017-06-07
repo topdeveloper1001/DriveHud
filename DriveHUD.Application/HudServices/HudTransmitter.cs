@@ -3,6 +3,7 @@ using DriveHUD.HUD.Service;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DriveHUD.Application.HudServices
         private const string hudClientFileName = "DriveHUD.HUD.exe";
         private const string hudProcessName = "DriveHUD.HUD";
 
-        private const double delayMS = 1000;
+        private const int delayMS = 2000;
 
         private Process hudClient;
         private DuplexChannelFactory<IHudNamedPipeBindingService> _namedPipeBindingFactory;
@@ -53,7 +54,15 @@ namespace DriveHUD.Application.HudServices
 
                 if (existingClientProcess != null)
                 {
-                    existingClientProcess.Kill();
+                    try
+                    {
+                        existingClientProcess.Kill();
+                    }
+                    catch (Win32Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Hud process cannot be killed, because it's being terminated.", ex);
+                        Task.Delay(delayMS).Wait();
+                    }
                 }
 
                 hudClient = BuildClientProcess();
@@ -84,7 +93,7 @@ namespace DriveHUD.Application.HudServices
             {
                 try
                 {
-                    Task.Delay(TimeSpan.FromMilliseconds(delayMS)).Wait();
+                    Task.Delay(delayMS).Wait();
 
                     if (_cancellationTokenSource != null && _cancellationTokenSource.IsCancellationRequested)
                     {

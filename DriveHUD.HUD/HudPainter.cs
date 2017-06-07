@@ -69,6 +69,10 @@ namespace DriveHUD.HUD
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool IsWindow(IntPtr hWnd);
 
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool IsIconic(IntPtr hWnd);
+
         static IEnumerable<IntPtr> EnumerateProcessWindowHandles(int processId)
         {
             var handles = new List<IntPtr>();
@@ -232,6 +236,11 @@ namespace DriveHUD.HUD
         private static void UpdateWindowOverlay(IntPtr handle)
         {
             if (!windows.ContainsKey(handle))
+            {
+                return;
+            }
+
+            if (IsIconic(handle))
             {
                 return;
             }
