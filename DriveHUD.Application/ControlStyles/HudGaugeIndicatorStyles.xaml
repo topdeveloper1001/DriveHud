@@ -10,6 +10,10 @@
         x:Key="GaugeBorderBrush"
         Color="#333539" />
 
+    <SolidColorBrush
+        x:Key="GaugeInternalBorderBrush"
+        Color="#595959" />
+
     <Style
         x:Key="HudToolTipHeadTextBlockStyle"
         BasedOn="{StaticResource Title_H1}"
@@ -72,7 +76,7 @@
             Value="#3e3e3e" />
         <Setter
             Property="BorderBrush"
-            Value="#595959" />
+            Value="{StaticResource GaugeInternalBorderBrush}" />
     </Style>
 
     <ItemsPanelTemplate
@@ -170,6 +174,23 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style
+        x:Key="StatInfoBorderStyle"
+        TargetType="{x:Type Border}">
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding IsSelected}"
+                Value="True">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0,0,0,1" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource GaugeInternalBorderBrush}" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

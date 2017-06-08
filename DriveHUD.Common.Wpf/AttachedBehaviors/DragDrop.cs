@@ -209,7 +209,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 return;
             }
 
-            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
+            UpdateTargetDataContext<StatInfo>(sender, x => x.IsSelected = false);
 
             var dragDropCommand = GetDragDropCommand(uiElement);
 
@@ -257,18 +257,19 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 DragAdorner.InvalidateVisual();
             }
 
+            UpdateTargetDataContext<StatInfo>(sender, x => x.IsSelected = true);
+
             e.Handled = true;
         }
 
         private static void OnDragEnter(object sender, DragEventArgs e)
-        {
-            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = true);
+        {            
             OnDragOver(sender, e);
         }
 
         private static void OnDragLeave(object sender, DragEventArgs e)
         {
-            UpdateTagretDataContext<StatInfo>(sender, x => x.IsSelected = false);
+            UpdateTargetDataContext<StatInfo>(sender, x => x.IsSelected = false);
             DragAdorner = null;
         }
 
@@ -287,7 +288,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             DragAdorner = new DragAdorner(uiElement, contentPresenter);
         }
 
-        private static void UpdateTagretDataContext<T>(object sender, Action<T> action) where T : class
+        private static void UpdateTargetDataContext<T>(object sender, Action<T> action) where T : class
         {
             var frameworkElement = sender as FrameworkElement;
 

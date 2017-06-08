@@ -805,7 +805,8 @@
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
                         ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
-                        IsEnabled="False" />
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.LineBreak}" />
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"

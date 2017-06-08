@@ -12,7 +12,9 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using Model.Stats;
 using ProtoBuf;
@@ -21,6 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -185,6 +188,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the command for drag & drop actions
+        /// </summary>
+        public virtual ICommand DragDropCommand
+        {
+            get;
+            protected set;
+        }
+
         #endregion
 
         #region Implementation of HudBaseToolViewModel
@@ -261,6 +273,46 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 IsVisible = false;
                 IsSelected = false;
+            });
+
+            DragDropCommand = new RelayCommand(x =>
+            {
+                var dragDropDataObject = x as DragDropDataObject;
+
+                if (dragDropDataObject == null)
+                {
+                    return;
+                }
+
+                var dropStatInfoSource = dragDropDataObject.Source as StatInfo;
+
+                if (dropStatInfoSource == null)
+                {
+                    return;
+                }
+
+                var dropStatInfoSourceIndex = Stats.IndexOf(dropStatInfoSource) + 1;
+
+                if (dropStatInfoSourceIndex < 0 || dropStatInfoSourceIndex >= Stats.Count)
+                {
+                    return;
+                }
+
+                IsSelected = false;
+                Stats.Insert(dropStatInfoSourceIndex, new StatInfoBreak());
+                IsSelected = true;
+            }, x =>
+            {
+                var dragDropDataObject = x as DragDropDataObject;
+
+                if (dragDropDataObject == null)
+                {
+                    return false;
+                }
+
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
+
+                return toolType == HudDesignerToolType.LineBreak;
             });
         }
 

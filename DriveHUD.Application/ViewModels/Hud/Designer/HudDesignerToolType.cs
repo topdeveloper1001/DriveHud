@@ -22,6 +22,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         PlainStatBox,
         TiltMeter,
         PlayerProfileIcon,
-        HeatMap
+        HeatMap,
+        LineBreak
     }
 }

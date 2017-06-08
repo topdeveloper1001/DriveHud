@@ -6,12 +6,87 @@
     xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:app="clr-namespace:DriveHUD.Application"
+    xmlns:tpls="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     Width="{Binding Width}"
     Height="{Binding Height}">
 
     <UserControl.Resources>
-        <ResourceDictionary
-            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudGaugeIndicatorStyles.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudGaugeIndicatorStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate
+                x:Key="StatInfoTextTemplate">
+                <Border                    
+                    Style="{StaticResource StatInfoBorderStyle}">
+                    <TextBlock
+                        dh:DragDrop.IsDragTarget="True"
+                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                        Foreground="White"
+                        Height="16"
+                        VerticalAlignment="Center"
+                        Margin="3"
+                        Text="{Binding ToolTip}" />
+                </Border>
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoMeterTemplate">
+                <Border
+                    Style="{StaticResource StatInfoBorderStyle}">
+                    <ContentControl
+                        Margin="3"
+                        Style="{StaticResource MeterControlStyle}"
+                        Height="16"
+                        VerticalAlignment="Center" />
+                </Border>
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoValueTemplate">
+                <Border
+                    Style="{StaticResource StatInfoBorderStyle}">
+                    <TextBlock
+                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                        Margin="3"
+                        Height="16"
+                        VerticalAlignment="Center"
+                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                </Border>
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoBreakTemplate">
+                <Border
+                    Height="10"
+                    Margin="0,0,0,2"
+                    Style="{StaticResource StatInfoBorderStyle}">
+                    <Border
+                        Height="1"
+                        Margin="0,3,0,0"
+                        Background="{StaticResource GaugeInternalBorderBrush}" />
+                </Border>
+            </DataTemplate>
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoTextTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoTextTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoMeterTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoMeterTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoValueTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoValueTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>
@@ -91,7 +166,7 @@
                         <ColumnDefinition
                             Width="Auto" />
                         <ColumnDefinition
-                            Width="Auto" />
+                            Width="*" />
                         <ColumnDefinition
                             Width="Auto" />
                     </Grid.ColumnDefinitions>
@@ -101,50 +176,20 @@
                     <ItemsControl
                         Grid.Column="0"
                         ItemsSource="{Binding Stats}"
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock
-                                    Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Foreground="White"
-                                    Height="16"
-                                    VerticalAlignment="Center"
-                                    Margin="3"
-                                    Text="{Binding ToolTip}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                        ItemTemplateSelector="{StaticResource StatInfoTextTemplateSelector}" />
 
                     <ItemsControl
                         Grid.Column="1"
-                        ItemsSource="{Binding Stats}"
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <ContentControl
-                                    Margin="3"
-                                    Style="{StaticResource MeterControlStyle}"
-                                    Height="16"
-                                    VerticalAlignment="Center" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                        ItemsSource="{Binding Stats}"                        
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                        ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />
 
                     <ItemsControl
                         Grid.Column="2"
                         ItemsSource="{Binding Stats}"
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock
-                                    Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Margin="3"
-                                    Height="16"
-                                    VerticalAlignment="Center"
-                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                        ItemTemplateSelector="{StaticResource StatInfoValueTemplateSelector}" />
 
                 </Grid>
             </Border>
