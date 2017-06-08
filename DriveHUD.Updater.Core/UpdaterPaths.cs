@@ -11,10 +11,8 @@
 //----------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 
 namespace DriveHUD.Updater.Core
 {
@@ -22,6 +20,9 @@ namespace DriveHUD.Updater.Core
     {
         private const string updaterBasePath = "http://pokerleakbuster.com/Updates/";
         private const string updaterDataPath = "dhupdater.xml";
+        private const string appDataFolder = "DriveHUD";
+        private const string tempUpdatesFolder = "_updates";
+        private const string tempUnpackedFolder = "_unpacked";
 
         public static string GetUpdaterDataPath()
         {
@@ -33,6 +34,26 @@ namespace DriveHUD.Updater.Core
         {
             var uri = new Uri(new Uri(updaterBasePath), path);
             return uri.AbsoluteUri;
-        }        
+        }
+
+        public static string GetAppDataFolderPath()
+        {
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), appDataFolder);
+        }
+
+        public static string GetTempUpdatesFolder()
+        {
+            return Path.Combine(GetAppDataFolderPath(), tempUpdatesFolder);
+        }
+
+        public static string GetTempUnpackedFolder()
+        {
+            return Path.Combine(GetTempUpdatesFolder(), tempUnpackedFolder);
+        }
+
+        public static string GetCurrentFolder()
+        {
+            return Assembly.GetEntryAssembly().Location;
+        }
     }
 }
