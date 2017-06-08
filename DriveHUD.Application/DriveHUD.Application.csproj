@@ -337,6 +337,7 @@
     <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
       <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HudPopupService.cs" />
     <Compile Include="Controls\HudStatToolTip.xaml.cs">
       <DependentUpon>HudStatToolTip.xaml</DependentUpon>
     </Compile>

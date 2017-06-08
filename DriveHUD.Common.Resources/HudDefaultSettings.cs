@@ -68,9 +68,17 @@ namespace DriveHUD.Common.Resources
 
         public readonly static Color StatInfoActiveColor = Colors.White;
 
+        #region Popup and tooltip settings
+
         public const int PopupShowDelay = 500;
 
+        public const int PopupCloseDelay = 200;
+
+        public const double PopupVerticalOffset = -5d;
+
         public const int ToolTipShowDelay = 200;
+
+        #endregion
 
         #region Tools sizes
 

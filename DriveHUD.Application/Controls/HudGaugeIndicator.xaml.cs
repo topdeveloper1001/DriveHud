@@ -22,7 +22,7 @@ namespace DriveHUD.Application.Controls
     {
         public HudGaugeIndicator()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }

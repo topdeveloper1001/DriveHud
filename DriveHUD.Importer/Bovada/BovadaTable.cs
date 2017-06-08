@@ -16,8 +16,6 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
-using DriveHUD.Importers.Helpers;
-using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -32,7 +30,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Xml;
-using System.Xml.Linq;
 
 namespace DriveHUD.Importers.Bovada
 {

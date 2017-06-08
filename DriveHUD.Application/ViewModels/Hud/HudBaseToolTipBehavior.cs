@@ -10,12 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Controls;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Controls;
 using Microsoft.Practices.ServiceLocation;
 using Model.Stats;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Interactivity;
 using System.Windows.Media;
@@ -144,16 +147,30 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual void AttachToolTip(FrameworkElement element, DataTemplate toolTipContentTemplate)
         {
-            var tooltip = new ToolTip();
-            tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
-            tooltip.Background = new SolidColorBrush(Colors.Transparent);
-            tooltip.ContentTemplate = toolTipContentTemplate;
+            // create empty tooltip to override any of underlaying tooltips           
+            element.ToolTip = new ToolTip();
+            element.ToolTipOpening += (s, e) => e.Handled = true;
 
-            ToolTipService.SetInitialShowDelay(element, HudDefaultSettings.PopupShowDelay);
-            ToolTipService.SetShowDuration(element, 60000);
-            ToolTipService.SetVerticalOffset(element, -5.0);
-            ToolTipService.SetPlacement(element, System.Windows.Controls.Primitives.PlacementMode.Top);
-            ToolTipService.SetToolTip(element, tooltip);
+            // content for the popup
+            var contentControl = new ContentControl
+            {
+                BorderThickness = new Thickness(0, 0, 0, 0),
+                Background = new SolidColorBrush(Colors.Transparent),
+                ContentTemplate = toolTipContentTemplate
+            };
+
+            // popup to show on the specified element
+            var popup = new NonTopmostPopup
+            {
+                Child = contentControl,
+                AllowsTransparency = true
+            };
+
+            HudPopupService.SetInitialShowDelay(element, HudDefaultSettings.PopupShowDelay);
+            HudPopupService.SetCloseDelay(element, HudDefaultSettings.PopupCloseDelay);
+            HudPopupService.SetPlacement(element, PlacementMode.Top);
+            HudPopupService.SetVerticalOffset(element, HudDefaultSettings.PopupVerticalOffset);
+            HudPopupService.SetPopup(element, popup);
         }
     }
 }

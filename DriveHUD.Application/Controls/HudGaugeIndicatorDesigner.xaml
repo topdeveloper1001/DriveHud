@@ -17,7 +17,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="Auto" />
+                Height="28" />
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
@@ -26,35 +26,48 @@
                 Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Border
-            Grid.Row="0"
-            Padding="5 2"
-            HorizontalAlignment="Right"
-            Background="{StaticResource BackgroundBrush1}">
-            <TextBox
-                HorizontalAlignment="Right"
-                Text="{Binding HeaderText}"
-                Style="{StaticResource HudToolTipHeadTextBoxStyle}" />
-        </Border>
-
-        <Grid
-            Grid.Row="1"
-            MinHeight="{x:Static res:HudDefaultSettings.GaugeIndicatorMinHeight}"
-            MinWidth="{x:Static res:HudDefaultSettings.GaugeIndicatorMinWidth}"
-            Background="{StaticResource BackgroundBrush1}">
+        <!-- Header -->
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
-                    Width="Auto" />
+                    Width="*" />
                 <ColumnDefinition
                     Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <Border
+                Grid.Column="1"
+                Margin="0,5,0,0"
+                Padding="5 2"
+                CornerRadius="0,2,0,0"
+                BorderThickness="1"
+                BorderBrush="{StaticResource GaugeBorderBrush}"
+                Background="{StaticResource BackgroundBrush1}">
+                <TextBox
+                    HorizontalAlignment="Right"
+                    Text="{Binding HeaderText}"
+                    Style="{StaticResource HudToolTipHeadTextBoxStyle}" />
+            </Border>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            MinHeight="{x:Static res:HudDefaultSettings.GaugeIndicatorMinHeight}"
+            MinWidth="{x:Static res:HudDefaultSettings.GaugeIndicatorMinWidth}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border
                 Grid.Column="0"
-                BorderBrush="{StaticResource ForegroundBrush}"
-                BorderThickness="0,0,1,0"
-                Padding="3 0 5 0"
-                Margin="3 0">
+                CornerRadius="0,0,0,2"
+                BorderBrush="{StaticResource GaugeBorderBrush}"
+                Background="{StaticResource BackgroundBrush1}"
+                BorderThickness="1,0,1,1"
+                Padding="6 0 5 0">
                 <TextBox
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -67,68 +80,74 @@
                 </TextBox>
             </Border>
 
-            <Grid
-                Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition
-                        Width="Auto" />
-                    <ColumnDefinition
-                        Width="Auto" />
-                    <ColumnDefinition
-                        Width="Auto" />
-                </Grid.ColumnDefinitions>
+            <Border
+                Grid.Column="1"
+                CornerRadius="0,0,2,0"
+                BorderThickness="0,0,1,1"
+                Background="{StaticResource BackgroundBrush1}"
+                BorderBrush="{StaticResource GaugeBorderBrush}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
 
-                <!-- Use separate items controls in order to properly size columns -->
-                <ItemsControl
-                    Grid.Column="0"
-                    ItemsSource="{Binding Stats}"
-                    ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock
-                                Style="{StaticResource HudToolTipTextBlockStyle}"
-                                Foreground="White"
-                                Height="16"
-                                VerticalAlignment="Center"
-                                Margin="3"
-                                Text="{Binding ToolTip}" />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                    <!-- Use separate items controls in order to properly size columns -->
+                    <ItemsControl
+                        Grid.Column="0"
+                        ItemsSource="{Binding Stats}"
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Foreground="White"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Margin="3"
+                                    Text="{Binding ToolTip}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
 
-                <ItemsControl
-                    Grid.Column="1"
-                    ItemsSource="{Binding Stats}"
-                    ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <ContentControl
-                                Margin="3"
-                                Style="{StaticResource MeterControlStyle}"
-                                Height="16"
-                                VerticalAlignment="Center" />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                    <ItemsControl
+                        Grid.Column="1"
+                        ItemsSource="{Binding Stats}"
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <ContentControl
+                                    Margin="3"
+                                    Style="{StaticResource MeterControlStyle}"
+                                    Height="16"
+                                    VerticalAlignment="Center" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
 
-                <ItemsControl
-                    Grid.Column="2"
-                    ItemsSource="{Binding Stats}"
-                    ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock
-                                Style="{StaticResource HudToolTipTextBlockStyle}"
-                                Margin="3"
-                                Height="16"
-                                VerticalAlignment="Center"
-                                Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                    <ItemsControl
+                        Grid.Column="2"
+                        ItemsSource="{Binding Stats}"
+                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Margin="3"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
 
-            </Grid>
+                </Grid>
+            </Border>
 
         </Grid>
 

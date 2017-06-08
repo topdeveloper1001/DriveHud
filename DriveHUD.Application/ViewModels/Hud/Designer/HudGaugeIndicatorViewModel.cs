@@ -148,7 +148,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return tool.BaseStat;
             }
         }
-       
+
         /// <summary>
         /// Gets the list of <see cref="StatInfo"/> of gauge indicator
         /// </summary>
@@ -158,9 +158,34 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return tool.Stats;
             }
-        }    
-      
-        #endregion    
+        }
+
+        /// <summary>
+        /// Gets whenever heat map is attached to the <see cref="BaseStat"/> 
+        /// </summary>
+        public bool IsHeatMapVisible
+        {
+            get
+            {
+                return Parent != null && Parent.Tools != null &&
+                    Parent.Tools.OfType<HudHeatMapViewModel>().Any(x => x.BaseStat != null && x.BaseStat.Stat == BaseStat.Stat);
+            }
+        }
+
+        /// <summary>
+        /// Gets <see cref="HudHeatMapViewModel"/> which is attached to the <see cref="BaseStat"/> 
+        /// </summary>
+        public HudHeatMapViewModel HeatMapViewModel
+        {
+            get
+            {
+                return IsHeatMapVisible ?
+                    Parent.Tools.OfType<HudHeatMapViewModel>().FirstOrDefault(x => x.BaseStat != null && x.BaseStat.Stat == BaseStat.Stat) :
+                    null;
+            }
+        }
+
+        #endregion
 
         #region Implementation of HudBaseToolViewModel
 

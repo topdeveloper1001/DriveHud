@@ -783,4 +783,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_ReportView_TaggedHands" xml:space="preserve">
     <value>Tagged Hands</value>
   </data>
+  <data name="Common_HudLayout_HeatMap" xml:space="preserve">
+    <value>HEAT MAP</value>
+  </data>
 </root>
