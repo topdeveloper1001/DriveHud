@@ -10,13 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.ViewModels;
-using DriveHUD.Entities;
-using System;
-using System.Windows;
 using System.Windows.Controls;
-using Telerik.Windows.Diagrams.Core;
 
 namespace DriveHUD.Application.Views
 {
@@ -28,53 +22,6 @@ namespace DriveHUD.Application.Views
         public HudView()
         {
             InitializeComponent();
-
-            DataContextChanged += (o, e) =>
-            {
-                if (ViewModel == null)
-                {
-                    return;
-                }
-
-                ViewModel.TableUpdated += OnViewModelTableUpdated;             
-
-                var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-
-                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
-            };
-        }
-
-        private void OnViewModelTableUpdated(object sender, EventArgs e)
-        {
-            if (ViewModel == null)
-            {
-                return;
-            }
-
-            var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-
-            Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
-        }
-
-        private HudViewModel ViewModel
-        {
-            get
-            {
-                return DataContext as HudViewModel;
-            }
-        }
-
-        private ITableConfigurator Configurator
-        {
-            get
-            {
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(ViewModel.HudViewType.ToString());
-            }
-        }
-
-        private void OnDiagramViewportChanged(object sender, PropertyEventArgs<Rect> e)
-        {
-            diagram.BringIntoView(new Rect(1, 1, e.NewValue.Width, e.NewValue.Height), false);
         }
     }
 }

@@ -12,11 +12,12 @@
 
 using DriveHUD.Importers.Bovada;
 using Model.Site;
+using System.Xml;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {
     internal interface IHandHistoryBuilder
     {
-        string Build(HandModel2 handModel, IPokerTable tableModel, ISiteConfiguration configuration, out Game game);
+        XmlDocument BuildXml(HandModel2 handModel, IPokerTable tableModel, ISiteConfiguration configuration, out Game game);
     }
 }

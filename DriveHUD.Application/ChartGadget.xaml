@@ -330,7 +330,7 @@
                             <telerik:DateTimeCategoricalAxis
                                 x:Name="AxisDateTime"
                                 LabelFitMode="MultiLine"
-                                TickThickness="0"
+                                TickThickness="0"                                      
                                 ElementBrush="#303134"
                                 FontSize="11" />
                         </telerik:RadCartesianChart.HorizontalAxis>

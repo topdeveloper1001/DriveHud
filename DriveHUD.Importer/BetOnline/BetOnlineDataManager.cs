@@ -13,7 +13,6 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
-using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
@@ -37,6 +36,8 @@ namespace DriveHUD.Importers.BetOnline
 
         private readonly List<RelocationData> relocationData = new List<RelocationData>();
         private static object locker = new object();
+
+        private List<string> buffer = new List<string>();
 
         public BetOnlineDataManager(IEventAggregator eventAggregator)
         {
@@ -74,14 +75,21 @@ namespace DriveHUD.Importers.BetOnline
             {
                 var encryptedXml = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
 
-                var xml = Decrypt(encryptedXml);
+                var partialXml = Decrypt(encryptedXml);
 
                 if (logger != null && isLoggingEnabled)
                 {
-                    logger.Log(xml);
+                    logger.Log(partialXml);
                 }
 
-                if (TryParseRelocationData(xml))
+                if (TryParseRelocationData(partialXml))
+                {
+                    return;
+                }
+
+                string xml;
+
+                if (!AddToBuffer(partialXml, out xml))
                 {
                     return;
                 }
@@ -222,6 +230,104 @@ namespace DriveHUD.Importers.BetOnline
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Relocation data has not been parsed.", e);
+            }
+
+            return false;
+        }
+
+        private bool AddToBuffer(string xml, out string combinedXml)
+        {
+            combinedXml = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(xml))
+            {
+                return false;
+            }
+
+            if (xml.StartsWith("<Error", StringComparison.OrdinalIgnoreCase))
+            {
+                if (isLoggingEnabled)
+                {
+
+                    string errorText = null;
+
+                    var errorTextStartIndex = xml.IndexOf("text=\"", StringComparison.OrdinalIgnoreCase) + 6;
+
+                    if (errorTextStartIndex > 0)
+                    {
+                        var errorTextEndIndex = xml.IndexOf("\"", errorTextStartIndex, StringComparison.OrdinalIgnoreCase);
+
+                        if (errorTextEndIndex > 0)
+                        {
+                            errorText = xml.Substring(errorTextStartIndex, errorTextEndIndex - errorTextStartIndex);
+                        }
+                    }
+
+                    errorText = errorText ?? xml;
+
+                    LogProvider.Log.Warn($"Error occurred in stream: {errorText}");
+                }
+
+                return false;
+            }
+
+            if (xml.StartsWith("<TableDetails", StringComparison.OrdinalIgnoreCase) && buffer.Count > 0)
+            {
+                buffer.Clear();
+                buffer.Add(xml);
+
+                if (isLoggingEnabled)
+                {
+                    var isTournament = xml.IndexOf("TOURNAMENT_TABLE", StringComparison.OrdinalIgnoreCase) > 0;
+
+                    var tagName = isTournament ? "tournamentName" : "name";
+
+                    var indexStart = xml.IndexOf(tagName, StringComparison.OrdinalIgnoreCase) + tagName.Length;
+
+                    var table = string.Empty;
+
+                    if (indexStart > 0)
+                    {
+                        var indexEnd = xml.IndexOf("\"", indexStart, StringComparison.OrdinalIgnoreCase);
+
+                        if (indexEnd > 0)
+                        {
+                            table = xml.Substring(indexStart, indexEnd - indexStart);
+                        }
+                    }
+
+                    LogProvider.Log.Warn($"Unexpected table details [{table}]");
+                }
+
+                return false;
+            }
+
+            buffer.Add(xml);
+
+            if (buffer.Count == 3)
+            {
+                var sb = new StringBuilder();
+                sb.AppendLine("<HandHistory>");
+                buffer.ForEach(b =>
+                {
+                    if (!b.StartsWith("<TableDetails", StringComparison.OrdinalIgnoreCase) && !b.StartsWith("<GameState"))
+                    {
+                        sb.AppendLine("<Changes>");
+                        sb.AppendLine(b);
+                        sb.AppendLine("</Changes>");
+                    }
+                    else
+                    {
+                        sb.AppendLine(b);
+                    }
+                });
+                sb.AppendLine("</HandHistory>");
+
+                combinedXml = sb.ToString();
+
+                buffer.Clear();
+
+                return true;
             }
 
             return false;

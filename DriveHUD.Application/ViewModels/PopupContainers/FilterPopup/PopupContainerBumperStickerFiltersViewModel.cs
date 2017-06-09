@@ -1,15 +1,12 @@
 ﻿using DriveHUD.Application.ViewModels.Filters;
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
-using System;
+using Model.Enums;
+using Model.Filters;
+using Prism.Interactivity.InteractionRequest;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Enums;
-using Prism.Interactivity.InteractionRequest;
-using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
-using Model.Filters;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {

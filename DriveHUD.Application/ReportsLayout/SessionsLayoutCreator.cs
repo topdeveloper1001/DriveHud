@@ -6,6 +6,7 @@ using HandHistories.Objects.GameDescription;
 using DriveHUD.Common.Resources;
 using Model;
 using Model.Data;
+using DriveHUD.Common.Wpf.Converters;
 
 namespace DriveHUD.Application.ReportsLayout
 {
@@ -15,7 +16,7 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(Add("Session Start", nameof(Indicators.SessionStart), GetColumnWidth(StringFormatter.GetDateTimeString(DateTime.Now))));
+            gridView.Columns.Add(Add("Session Start", nameof(Indicators.SessionStart), GetColumnWidth(StringFormatter.GetDateTimeString(DateTime.Now)), new DateTimeToLocalizedDateTimeConverter()));
             gridView.Columns.Add(Add("Session Length", nameof(Indicators.SessionLength)));
             gridView.Columns.Add(Add("Games Played", nameof(Indicators.GameType), GetColumnWidth("0.00/0.00 NoLimitHoldem")));
             gridView.Columns.Add(Add("Total Hands", nameof(Indicators.TotalHands)));

@@ -28,6 +28,7 @@ namespace HandHistories.Parser.Parsers.Exceptions
         {
             _handText = string.Join(Environment.NewLine, handLines);
         }
+
         protected HandParseException(string handText, string message) : base(message)
         {
             _handText = handText;
@@ -103,7 +104,25 @@ namespace HandHistories.Parser.Parsers.Exceptions
 
     public class TableNameException : HandParseException
     {
+        public TableNameException(string[] handLines, string message)
+            : base(handLines, message)
+        {
+        }
+
         public TableNameException(string handText, string message)
+            : base(handText, message)
+        {
+        }
+    }
+
+    public class DealerPositionException : HandParseException
+    {
+        public DealerPositionException(string[] handLines, string message)
+            : base(handLines, message)
+        {
+        }
+
+        public DealerPositionException(string handText, string message)
             : base(handText, message)
         {
         }
@@ -119,6 +138,11 @@ namespace HandHistories.Parser.Parsers.Exceptions
 
     public class SeatTypeException : HandParseException
     {
+        public SeatTypeException(string[] handLines, string message)
+            : base(handLines, message)
+        {
+        }
+
         public SeatTypeException(string handText, string message)
             : base(handText, message)
         {

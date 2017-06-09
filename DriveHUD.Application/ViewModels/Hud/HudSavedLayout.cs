@@ -10,15 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
 using Model.Enums;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [Serializable]
     public class HudSavedLayouts

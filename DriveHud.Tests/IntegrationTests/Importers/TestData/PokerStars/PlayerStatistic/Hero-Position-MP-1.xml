@@ -1,0 +1,86 @@
+<session sessioncode="206953723">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Table #4, $0.10 NL [R+A]</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-05-24 11:14:13</startdate>
+		<currency>USD</currency>
+		<nickname>Peon84</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>$0.10 NL [R+A]</tournamentname>
+		<place>28</place>
+		<buyin>$0.10+$0.01</buyin>
+		<totalbuyin>$0.11</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="147197432">
+		<general>
+			<startdate>2017-05-24 11:30:10</startdate>
+			<players>
+				<player seat="10" name="xluckyx17" chips="1920" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="1" name="Fumblruski" chips="1916" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="2" name="talaverajl" chips="4250" dealer="0" win="0" bet="1220" rebuy="0" addon="0" />
+				<player seat="3" name="ReallyFolks" chips="1880" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="4" name="Adam Rose" chips="2870" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="XO.........OX" chips="652" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="6" name="Peon84" chips="1430" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="7" name="Caissus" chips="1245" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="8" name="kmbwpa" chips="1220" dealer="1" win="2770" bet="1220" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xluckyx17" type="15" sum="15" cards="" />
+			<action no="2" player="Fumblruski" type="15" sum="15" cards="" />
+			<action no="3" player="talaverajl" type="15" sum="15" cards="" />
+			<action no="4" player="ReallyFolks" type="15" sum="15" cards="" />
+			<action no="5" player="Adam Rose" type="15" sum="15" cards="" />
+			<action no="6" player="XO.........OX" type="15" sum="15" cards="" />
+			<action no="7" player="Peon84" type="15" sum="15" cards="" />
+			<action no="8" player="Caissus" type="15" sum="15" cards="" />
+			<action no="9" player="kmbwpa" type="15" sum="15" cards="" />
+			<action no="10" player="xluckyx17" type="1" sum="75" cards="" />
+			<action no="11" player="Fumblruski" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xluckyx17">X X</cards>
+			<cards type="Pocket" player="Fumblruski">X X</cards>
+			<cards type="Pocket" player="talaverajl">D2 SA</cards>
+			<cards type="Pocket" player="ReallyFolks">X X</cards>
+			<cards type="Pocket" player="Adam Rose">X X</cards>
+			<cards type="Pocket" player="XO.........OX">X X</cards>
+			<cards type="Pocket" player="Peon84">D9 H10</cards>
+			<cards type="Pocket" player="Caissus">X X</cards>
+			<cards type="Pocket" player="kmbwpa">CK D4</cards>
+			<action no="12" player="talaverajl" type="3" sum="150" cards="" />
+			<action no="13" player="ReallyFolks" type="0" sum="0" cards="" />
+			<action no="14" player="Adam Rose" type="0" sum="0" cards="" />
+			<action no="15" player="XO.........OX" type="0" sum="0" cards="" />
+			<action no="16" player="Peon84" type="0" sum="0" cards="" />
+			<action no="17" player="Caissus" type="0" sum="0" cards="" />
+			<action no="18" player="kmbwpa" type="23" sum="750" cards="" />
+			<action no="19" player="xluckyx17" type="0" sum="0" cards="" />
+			<action no="20" player="Fumblruski" type="0" sum="0" cards="" />
+			<action no="21" player="talaverajl" type="3" sum="600" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK C2 CQ</cards>
+			<action no="22" player="talaverajl" type="4" sum="0" cards="" />
+			<action no="23" player="kmbwpa" type="5" sum="455" cards="" />
+			<action no="24" player="talaverajl" type="3" sum="455" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C7</cards>
+		</round>
+	</game>
+</session>

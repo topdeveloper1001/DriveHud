@@ -26,7 +26,7 @@ namespace DriveHud.Tests
 {
     [TestFixture]
     public class BetOnlineXmlToIPokerXmlConverterTests
-    {      
+    {
         private const int SessionCode = 7777777;
 
         private class TableServiceStub : IBetOnlineTableService
@@ -100,6 +100,8 @@ namespace DriveHud.Tests
             unityContainer.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
             unityContainer.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
             unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
 
             var locator = new UnityServiceLocator(unityContainer);
@@ -111,22 +113,29 @@ namespace DriveHud.Tests
         }
 
         [Test]
-        [TestCase("CashHand-10-max-potsize-error", "CashHand-10-max-potsize-error-ipoker")]
-        [TestCase("CashHand-10-max", "CashHand-10-max-ipoker")]
-        [TestCase("CashHand-2-max", "CashHand-2-max-ipoker")]
-        [TestCase("SnGHand-8-max", "SnGHand-8-max-ipoker")]
-        [TestCase("CashHand-10-max-relocate", "CashHand-10-max-relocate-ipoker")]
-        [TestCase("CashOmaha-10-max-big-rake-error", "CashOmaha-10-max-big-rake-error-ipoker")]
-        [TestCase("MTT-Holdem-10-max-invalid-relocation", "MTT-Holdem-10-max-invalid-relocation-ipoker")]
-        public void TestConverter(string sourceXmlFile, string expectedXmlFile)
+        [TestCase("CashHand-10-max-potsize-error", "CashHand-10-max-potsize-error-ipoker", "")]
+        [TestCase("CashHand-10-max", "CashHand-10-max-ipoker", "")]
+        [TestCase("CashHand-2-max", "CashHand-2-max-ipoker", "")]
+        [TestCase("SnGHand-8-max", "SnGHand-8-max-ipoker", "")]
+        [TestCase("CashHand-10-max-relocate", "CashHand-10-max-relocate-ipoker", "<RelocationData me=\"8\" pivot=\"5\" />")]
+        [TestCase("CashOmaha-10-max-big-rake-error", "CashOmaha-10-max-big-rake-error-ipoker", "")]
+        [TestCase("MTT-Holdem-10-max-invalid-relocation", "MTT-Holdem-10-max-invalid-relocation-ipoker", "<RelocationData me=\"1\" pivot=\"5\" />")]
+        public void TestConverter(string sourceXmlFile, string expectedXmlFile, string rellocation)
         {
             var source = File.ReadAllText(GetTestDataFilePath(sourceXmlFile));
 
             var expected = XDocument.Load(GetTestDataFilePath(expectedXmlFile));
 
-            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();         
+            var betOnlineXmlToIPokerConverter = new BetOnlineXmlToIPokerXmlConverter();
+            betOnlineXmlToIPokerConverter.Initialize(source);
 
-            var convertedResult = betOnlineXmlToIPokerConverter.Convert(source);
+            if (!string.IsNullOrEmpty(rellocation))
+            {
+                var rellocationXml = XDocument.Parse(rellocation);
+                betOnlineXmlToIPokerConverter.AddRelocationData(rellocationXml.Root);
+            }
+
+            var convertedResult = betOnlineXmlToIPokerConverter.Convert();
 
             Assert.IsNotNull(convertedResult);
 

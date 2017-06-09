@@ -27,7 +27,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
         public const string ZonePokerTableTemplate = "!{0}!";
 
-        public const int DefaultTournamentPlace = 25;
+        public const int DefaultTournamentPlace = 0;
 
         public const string DefaultBuyIn = "0";
 

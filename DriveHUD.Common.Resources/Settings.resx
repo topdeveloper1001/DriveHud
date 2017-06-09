@@ -186,6 +186,18 @@
   <data name="Settings_RakeBackPlayer" xml:space="preserve">
     <value>Player</value>
   </data>
+  <data name="Settings_RebuildStats" xml:space="preserve">
+    <value>Rebuild</value>
+  </data>
+  <data name="Settings_RebuildTitle" xml:space="preserve">
+    <value>Rebuild players statistics (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
+  </data>
+  <data name="Settings_RecoverStats" xml:space="preserve">
+    <value>Recover</value>
+  </data>
+  <data name="Settings_RecoverTitle" xml:space="preserve">
+    <value>Recover players statistics from backup (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
+  </data>
   <data name="Settings_RenewLicense" xml:space="preserve">
     <value>Renew License</value>
   </data>
@@ -200,6 +212,9 @@
   </data>
   <data name="Settings_SendSupportMessage" xml:space="preserve">
     <value>Send Message to DriveHUD Support:</value>
+  </data>
+  <data name="Settings_ServiceCommands" xml:space="preserve">
+    <value>Service commands</value>
   </data>
   <data name="Settings_StartOfWeekHeader" xml:space="preserve">
     <value>Start of week begins on</value>

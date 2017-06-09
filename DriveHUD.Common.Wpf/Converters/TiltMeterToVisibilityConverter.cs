@@ -14,7 +14,7 @@ namespace DriveHUD.Common.Wpf.Converters
     {
         public TiltMeterToVisibilityConverter()
         {
-            HiddenVisibility = Visibility.Collapsed;
+            HiddenVisibility = Visibility.Hidden;
         }
 
         public Visibility HiddenVisibility { get; set; }

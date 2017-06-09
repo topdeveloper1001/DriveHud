@@ -1,11 +1,8 @@
-﻿using HandHistories.Objects.Actions;
+﻿using DriveHUD.Entities;
+using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using Model.Importer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -58,15 +55,29 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #region Properties
         private Street _currentStreet;
         private ReplayerPlayerViewModel _activePlayer;
+        private bool _deadCardFlag;
         private bool _isStreetChangedAction;
         private decimal _actionAmount;
         private decimal _currentPotValue;
         private decimal _totalPotValue;
+        private HandAction _currrentAction;
+
+        internal HandAction CurrentAction
+        {
+            get { return _currrentAction; }
+            set { _currrentAction = value; }
+        }
 
         internal Street CurrentStreet
         {
             get { return _currentStreet; }
             set { _currentStreet = value; }
+        }
+
+        internal bool DeadCardFlag
+        {
+            get { return _deadCardFlag; }
+            set { _deadCardFlag = value; }
         }
 
         internal ReplayerPlayerViewModel ActivePlayer
