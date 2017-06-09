@@ -90,7 +90,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             DateTime dateTime = DateTime.Parse(dateString);
 
-            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, TimeZoneType.GMT);
+            TimeZoneType timeZone = TimeZoneType.GMT;
+
+            // WSOP and TowerTorneosPoker used local time zone for hand history.
+            if (handLines[1].Contains("WSOP.com") || handLines[1].Contains("TowerTorneosPoker"))
+                timeZone = TimeZoneType.Current;
+
+            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, timeZone);
 
             return utcTime;
         }

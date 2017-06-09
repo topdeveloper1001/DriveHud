@@ -212,6 +212,7 @@
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
@@ -313,6 +314,17 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_2.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_1.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_2.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\FullHands\FullTournament.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\FullHands\WSOP.com-NJ20170604 Sit &amp; Go 20 + 2 6 Seats %28353029%29 No Limit Holdem.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 1.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 2.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 3.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 4.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 5.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 6.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 7.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 8.txt" />
+    <Content Include="IntegrationTests\Parsers\WSPO\Summary\WSOP.com-NJ20170604 Sit &amp; Go 20 + 2 6 Seats %28353029%29 No Limit Holdem.txt - Summary.txt" />
     <Content Include="IsEqualBuilder.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
