@@ -19,7 +19,7 @@ namespace DriveHUD.Updater.Core
     public static class UpdaterPaths
     {
         private const string updaterBasePath = "http://pokerleakbuster.com/Updates/";
-        private const string updaterDataPath = "dhupdater-test.xml";
+        private const string updaterDataPath = "dhupdater.xml";
         private const string appDataFolder = "DriveHUD";
         private const string tempUpdatesFolder = "_updates";
         private const string tempUnpackedFolder = "_unpacked";

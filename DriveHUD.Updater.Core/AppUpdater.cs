@@ -206,7 +206,7 @@ namespace DriveHUD.Updater.Core
         {
             Version appInfoVersion;
 
-            var appInfo = applicationInfo.FirstOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
+            var appInfo = applicationInfo.LastOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
                                                                 Version.TryParse(x.Version.Version, out appInfoVersion) &&
                                                                 appInfoVersion > appVersion);
 

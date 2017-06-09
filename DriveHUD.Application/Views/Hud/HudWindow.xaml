@@ -18,6 +18,7 @@
     ShowInTaskbar="False"
     AllowsTransparency="True"
     Background="Transparent"
+    UseLayoutRounding="True"
     HorizontalAlignment="Center"
     x:Name="hudWindow">
 
