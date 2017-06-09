@@ -21,20 +21,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.TowerTorneos
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData";
 
-        private const string FilePath_Amarillo12 = @"..\..\IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Amarillo 1-2 No Limit Holdem.txt";
-        private const string FilePath_Thornton36 = @"..\..\IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Thornton 3-6 No Limit Holdem.txt";
+        private const string FilePath_Amarillo12 = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\FullHands\TowerTorneosPoker20170602 Amarillo 1-2 No Limit Holdem.txt";
+        private const string FilePath_Thornton36 = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\FullHands\TowerTorneosPoker20170602 Thornton 3-6 No Limit Holdem.txt";
 
-        private const string FilePath_Tournament_100_1_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit & Go 100 + 1 Heads-Up Super Turbo (33663740) No Limit Holdem.txt";
-        private const string FilePath_Tournament_100_1_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit & Go 100 + 1 First Game.txt";
-        private const string FilePath_Tournament_11_1_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit & Go 11 + 1 10 Seats Rebuy and Add-on  (33663765) No Limit Holdem.txt";
-        private const string FilePath_Tournament_11_1_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit & Go 11 + 1 First Game.txt";
-        private const string FilePath_Tournament_500_30_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 Heads-Up Super Turbo (33663813) No Limit Holdem.txt";
-        private const string FilePath_Tournament_500_30_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 First Game.txt";
-        private const string FilePath_Tournament_500_30_WinGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 Win Game.txt";
+        private const string FilePath_Tournament_100_1_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\FullHands\TowerTorneosPoker20170604 Sit & Go 100 + 1 Heads-Up Super Turbo (33663740) No Limit Holdem.txt";
+        private const string FilePath_Tournament_100_1_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\SingleHands\TowerTorneosPoker20170604 Sit & Go 100 + 1 First Game.txt";
+        private const string FilePath_Tournament_11_1_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\FullHands\TowerTorneosPoker20170604 Sit & Go 11 + 1 10 Seats Rebuy and Add-on  (33663765) No Limit Holdem.txt";
+        private const string FilePath_Tournament_11_1_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\SingleHands\TowerTorneosPoker20170604 Sit & Go 11 + 1 First Game.txt";
+        private const string FilePath_Tournament_500_30_Full = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\FullHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 Heads-Up Super Turbo (33663813) No Limit Holdem.txt";
+        private const string FilePath_Tournament_500_30_FirstGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\SingleHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 First Game.txt";
+        private const string FilePath_Tournament_500_30_WinGame = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\SingleHands\TowerTorneosPoker20170604 Sit & Go 500 + 30 Win Game.txt";
 
-        private const string FilePath_Tournament_100_1_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit & Go 100 + 1 Heads-Up Super Turbo (33663740) No Limit Holdem.txt - Summary.txt";
-        private const string FilePath_Tournament_11_1_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit & Go 11 + 1 10 Seats Rebuy and Add-on  (33663765) No Limit Holdem.txt - Summary.txt";
-        private const string FilePath_Tournament_500_30_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit & Go 500 + 30 Heads-Up Super Turbo (33663813) No Limit Holdem.txt - Summary.txt";
+        private const string FilePath_Tournament_100_1_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\Summary\TowerTorneosPoker20170604 Sit & Go 100 + 1 Heads-Up Super Turbo (33663740) No Limit Holdem.txt - Summary.txt";
+        private const string FilePath_Tournament_11_1_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\Summary\TowerTorneosPoker20170604 Sit & Go 11 + 1 10 Seats Rebuy and Add-on  (33663765) No Limit Holdem.txt - Summary.txt";
+        private const string FilePath_Tournament_500_30_Summary = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData\Summary\TowerTorneosPoker20170604 Sit & Go 500 + 30 Heads-Up Super Turbo (33663813) No Limit Holdem.txt - Summary.txt";
         
         [OneTimeSetUp]
         public void Initialize()
@@ -716,26 +716,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.TowerTorneos
             var hand = ParseFirstGame(handHistoryFile);
 
             Assert.AreEqual(hand.DealerButtonPosition, dealerButtonPosition);
-        }
-
-        [Test]
-        [TestCase(FilePath_Tournament_100_1_FirstGame, "04/06/2017 13:20:05")]
-        [TestCase(FilePath_Tournament_100_1_Full, "04/06/2017 13:20:05")]
-        [TestCase(FilePath_Tournament_11_1_FirstGame, "04/06/2017 13:34:57")]
-        [TestCase(FilePath_Tournament_11_1_Full, "04/06/2017 13:34:57")]
-        [TestCase(FilePath_Tournament_500_30_FirstGame, "04/06/2017 13:30:43")]
-        [TestCase(FilePath_Tournament_500_30_Full, "04/06/2017 13:30:43")]
-        [TestCase(FilePath_Tournament_500_30_WinGame, "04/06/2017 13:31:11")]
-        [TestCase(FilePath_Amarillo12, "02/06/2017 13:50:02")]
-        [TestCase(FilePath_Thornton36, "02/06/2017 13:53:10")]
-        public void DateOfHandUtcIsParsedTest(string handHistoryFile, string dateOfHand)
-        {
-            var hand = ParseFirstGame(handHistoryFile);
-
-            var dateTimeUtc = DateTime.Parse(dateOfHand);
-
-            Assert.AreEqual(hand.DateOfHandUtc, dateTimeUtc);
-        }
+        }       
 
         [Test]
         [TestCase(FilePath_Tournament_100_1_FirstGame, HandActionType.CALL, 2)]

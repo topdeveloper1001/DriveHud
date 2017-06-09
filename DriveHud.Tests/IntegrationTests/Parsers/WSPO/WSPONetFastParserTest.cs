@@ -21,18 +21,18 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WSPONet
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\TowerTorneos\TestData";
 
-        private const string FilePath_Tournament_SuperTurboNoLimits = @"..\..\IntegrationTests\Parsers\WSPO\FullHands\FullTournament.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game1 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 1.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game2 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 2.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game3 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 3.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game4 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 4.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game5 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 5.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game6 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 6.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game7 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 7.txt";
-        private const string FilePath_Tournament_SuperTurboNoLimits_Game8 = @"..\..\IntegrationTests\Parsers\WSPO\SingleHands\Tornament Game 8.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits = @"..\..\IntegrationTests\Parsers\WSPO\TestData\FullHands\FullTournament.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game1 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 1.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game2 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 2.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game3 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 3.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game4 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 4.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game5 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 5.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game6 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 6.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game7 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 7.txt";
+        private const string FilePath_Tournament_SuperTurboNoLimits_Game8 = @"..\..\IntegrationTests\Parsers\WSPO\TestData\SingleHands\Tornament Game 8.txt";
 
-        private const string FilePath_Tournament_SitAndGo_20_2_FullHand = @"..\..\IntegrationTests\Parsers\WSPO\FullHands\WSOP.com-NJ20170604 Sit & Go 20 + 2 6 Seats (353029) No Limit Holdem.txt";
-        private const string FilePath_Tournament_SitAndGo_20_2_Summary = @"..\..\IntegrationTests\Parsers\WSPO\Summary\WSOP.com-NJ20170604 Sit & Go 20 + 2 6 Seats (353029) No Limit Holdem.txt - Summary.txt";
+        private const string FilePath_Tournament_SitAndGo_20_2_FullHand = @"..\..\IntegrationTests\Parsers\WSPO\TestData\FullHands\WSOP.com-NJ20170604 Sit & Go 20 + 2 6 Seats (353029) No Limit Holdem.txt";
+        private const string FilePath_Tournament_SitAndGo_20_2_Summary = @"..\..\IntegrationTests\Parsers\WSPO\TestData\Summary\WSOP.com-NJ20170604 Sit & Go 20 + 2 6 Seats (353029) No Limit Holdem.txt - Summary.txt";
 
         [OneTimeSetUp]
         public void Initialize()
@@ -861,51 +861,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WSPONet
             Assert.AreEqual(total, succeded);
 
             Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
-        }
-
-        [Test]
-        [TestCase(FilePath_Tournament_SuperTurboNoLimits, new string[]
-            {
-                "04 06 2017 07:49:59",
-                "04 06 2017 07:50:29",
-                "04 06 2017 07:50:34",
-                "04 06 2017 07:50:54",
-                "04 06 2017 07:50:59",
-                "04 06 2017 07:51:10",
-                "04 06 2017 07:51:14",
-                "04 06 2017 07:51:36",
-                "04 06 2017 07:51:38",
-                "04 06 2017 07:51:51",
-                "04 06 2017 07:51:56",
-                "04 06 2017 07:52:22",
-                "04 06 2017 07:52:27",
-                "04 06 2017 07:52:38",
-                "04 06 2017 07:52:43",
-                "04 06 2017 07:53:00",
-            })]
-        public void DateOfHandUtcIsParsedTest(string handHistoryFile, string[] dateOfHand)
-        {
-            var parser = new Poker888FastParserImpl();
-
-            string rawHands = File.ReadAllText(handHistoryFile);
-            var hands = parser.SplitUpMultipleHands(rawHands).ToArray();
-
-            var succeded = 0;
-            var total = hands.Count();
-
-            for (int i = 0; i < total; i++)
-            {
-                HandHistory hand = parser.ParseFullHandHistory(hands[i], true);
-                var dateTimeUtc = DateTime.Parse(dateOfHand[i]);
-
-                if (hand.DateOfHandUtc.Equals(dateTimeUtc))
-                    succeded++;
-            }
-
-            Assert.AreEqual(total, succeded);
-
-            Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
-        }
+        }        
 
         [Test]
         [TestCase(FilePath_Tournament_SuperTurboNoLimits_Game1, 1, HandActionType.SMALL_BLIND)]
