@@ -5,9 +5,9 @@ namespace Model.Events
 {
     public class DateFilterChangedEventArgs : EventArgs
     {
-        public EnumDateFiter DateFilterType { get; set; }
+        public EnumDateFiterStruct DateFilterType { get; set; }
 
-        public  DateFilterChangedEventArgs(EnumDateFiter dateFilterType)
+        public DateFilterChangedEventArgs(EnumDateFiterStruct dateFilterType)
         {
             this.DateFilterType = dateFilterType;
         }

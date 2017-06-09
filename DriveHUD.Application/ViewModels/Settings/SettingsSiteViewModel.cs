@@ -41,6 +41,8 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" },
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
+                { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
             };
 
             SelectedSiteViewModel = new SiteViewModel();

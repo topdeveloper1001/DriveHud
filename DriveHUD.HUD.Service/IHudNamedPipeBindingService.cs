@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -69,13 +70,13 @@ namespace DriveHUD.HUD.Service
     [DataContract]
     public class HudPositionContract
     {
+        [DataMember(Name = "Id")]
+        public Guid Id { get; set; }
+
         [DataMember(Name = "SeatNumber")]
         public int SeatNumber { get; set; }
 
         [DataMember(Name = "Position")]
-        public Point Position { get; set; }
-
-        [DataMember(Name = "HudViewType")]
-        public HudViewType HudViewType { get; set; }
+        public Point Position { get; set; }    
     }
 }

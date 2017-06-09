@@ -83,7 +83,7 @@ namespace DriveHUD.Application
                     break;
                 case Model.Enums.EnumTelerikRadChartDisplayRange.Week:
                     if (currentControl.WeekBtn.IsChecked.HasValue && !currentControl.WeekBtn.IsChecked.Value)
-                        currentControl.WeekBtn.IsChecked = true;
+                        currentControl.WeekBtn.IsChecked = true;                    
                     currentControl.AxisDateTime.LabelFormat = dayFormatString;
                     break;
             }

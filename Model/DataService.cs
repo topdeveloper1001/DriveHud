@@ -37,17 +37,30 @@ namespace Model
 
         protected virtual string playersPath
         {
-            get { return StringFormatter.GetPlayerStatisticDataFolderPath(); }
+            get;
+            set;
         }
 
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
 
         public DataService()
         {
+            playersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
+
             if (!Directory.Exists(dataPath))
             {
                 Directory.CreateDirectory(dataPath);
             }
+
+            if (!Directory.Exists(playersPath))
+            {
+                Directory.CreateDirectory(playersPath);
+            }
+        }
+
+        public void SetPlayerStatisticPath(string path)
+        {
+            playersPath = path;
 
             if (!Directory.Exists(playersPath))
             {
@@ -99,14 +112,20 @@ namespace Model
                 {
                     try
                     {
+                        if (string.IsNullOrWhiteSpace(line))
+                        {
+                            LogProvider.Log.Warn(this, $"Empty line in {file}");
+                            continue;
+                        }
+
                         /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
+                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
 
                         using (MemoryStream afterStream = new MemoryStream(byteAfter64))
                         {
                             var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
                             if (!pokersiteId.HasValue || (stat.PokersiteId == pokersiteId))
-                            {
+                            {                                
                                 result.Add(stat);
                             }
                         }
@@ -169,7 +188,6 @@ namespace Model
             }
         }
 
-
         public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -207,7 +225,7 @@ namespace Model
 
                 var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
 
-                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId);
+                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId, hh.HandhistoryVal);
 
                 var result = handHistoryParser.ParseFullHandHistory(hh.HandhistoryVal);
 
@@ -399,7 +417,7 @@ namespace Model
                 using (var msTestString = new MemoryStream())
                 {
                     Serializer.Serialize(msTestString, statistic);
-                    data = Convert.ToBase64String(msTestString.ToArray());
+                    data = Convert.ToBase64String(msTestString.ToArray()).Trim();
                 }
 
                 File.AppendAllLines(fileName, new[] { data });
@@ -464,7 +482,7 @@ namespace Model
                         using (var msTestString = new MemoryStream())
                         {
                             Serializer.Serialize(msTestString, stat);
-                            var data = Convert.ToBase64String(msTestString.ToArray());
+                            var data = Convert.ToBase64String(msTestString.ToArray()).Trim();
 
                             statisticStringsToAppend.Add(data);
                         }

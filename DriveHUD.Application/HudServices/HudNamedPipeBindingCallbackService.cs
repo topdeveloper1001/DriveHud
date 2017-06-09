@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
@@ -29,80 +29,111 @@ namespace DriveHUD.Application.HudServices
     {
         public void SaveHudLayout(HudLayoutContract hudLayoutContract)
         {
-            if (hudLayoutContract == null)
+            try
             {
-                LogProvider.Log.Warn(this, "hudLayoutContract is null");
-                return;
-            }
-
-            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
-            var existingHudLayout = hudLayoutsService.GetLayout(hudLayoutContract.LayoutName);
-
-            if (existingHudLayout == null)
-            {
-                LogProvider.Log.Info(this, $"Could not find layout {hudLayoutContract.LayoutName}");
-                return;
-            }
-
-            var existingHudPositions = existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
-
-            if (existingHudPositions == null)
-            {
-                existingHudPositions = new HudPositionsInfo
+                if (hudLayoutContract == null)
                 {
-                    GameType = hudLayoutContract.GameType,
-                    PokerSite = hudLayoutContract.PokerSite,
-                    HudPositions = new List<HudPositionInfo>()
-                };
-            }
-
-            // update positions 
-            foreach (var hudPosition in hudLayoutContract.HudPositions)
-            {
-                var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
-
-                if (hudPositionForUpdate == null)
-                {
-                    hudPositionForUpdate = new HudPositionInfo
-                    {
-                        Seat = hudPosition.SeatNumber
-                    };
-
-                    existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                    LogProvider.Log.Warn(this, "hudLayoutContract is null");
+                    return;
                 }
 
-                hudPositionForUpdate.Position = hudPosition.Position;
-            }
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            hudLayoutsService.Save(existingHudLayout);
+                var existingHudLayout = hudLayoutsService.GetLayout(hudLayoutContract.LayoutName);
+
+                if (existingHudLayout == null)
+                {
+                    LogProvider.Log.Info(this, $"Could not find layout {hudLayoutContract.LayoutName}");
+                    return;
+                }
+
+                HudPositionsInfo existingHudPositions = null;
+
+                var tools = existingHudLayout.LayoutTools.OfType<HudLayoutNonPopupTool>().ToArray();
+
+                foreach (var tool in tools)
+                {
+                    existingHudPositions = tool.Positions.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
+
+                    if (existingHudPositions == null)
+                    {
+                        existingHudPositions = new HudPositionsInfo
+                        {
+                            GameType = hudLayoutContract.GameType,
+                            PokerSite = hudLayoutContract.PokerSite,
+                            HudPositions = new List<HudPositionInfo>()
+                        };
+
+                        tool.Positions.Add(existingHudPositions);
+                    }
+
+                    // update positions 
+                    foreach (var hudPosition in hudLayoutContract.HudPositions.Where(x => x.Id == tool.Id))
+                    {
+                        var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
+
+                        if (hudPositionForUpdate == null)
+                        {
+                            hudPositionForUpdate = new HudPositionInfo
+                            {
+                                Seat = hudPosition.SeatNumber
+                            };
+
+                            existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                        }
+
+                        hudPositionForUpdate.Position = hudPosition.Position;
+                    }
+                }
+
+                hudLayoutsService.Save(existingHudLayout);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not save layout #{hudLayoutContract.LayoutName} for {hudLayoutContract.PokerSite}, {hudLayoutContract.TableType}, {hudLayoutContract.GameType}", e);
+            }
         }
 
         public void ReplayHand(long gameNumber, short pokerSiteId)
         {
-            var currentlySelectedPlayer = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite
-                ? currentlySelectedPlayer.Name
-                : string.Empty;
+            try
+            {
+                var currentlySelectedPlayer = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
-            ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
+                var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite
+                    ? currentlySelectedPlayer.Name
+                    : string.Empty;
+
+                ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not replay hand #{gameNumber} for {(EnumPokerSites)pokerSiteId}", e);
+            }
         }
 
         public void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            LogProvider.Log.Info($"Set layout {layoutName} as active for {pokerSite} {gameType} {tableType}");
-
-            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
-            var hudToLoad = hudLayoutsService.GetLayout(layoutName);
-
-            if (hudToLoad == null)
+            try
             {
-                LogProvider.Log.Info(this, $"Could not find layout with name {layoutName} for {pokerSite} {gameType} {tableType}");
-                return;
-            }
+                LogProvider.Log.Info($"Set layout {layoutName} as active for {pokerSite} {gameType} {tableType}");
 
-            hudLayoutsService.SetLayoutActive(hudToLoad, pokerSite, gameType, tableType);
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
+                var hudToLoad = hudLayoutsService.GetLayout(layoutName);
+
+                if (hudToLoad == null)
+                {
+                    LogProvider.Log.Info(this, $"Could not find layout with name {layoutName} for {pokerSite} {gameType} {tableType}");
+                    return;
+                }
+
+                hudLayoutsService.SetActiveLayout(hudToLoad, pokerSite, gameType, tableType);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not load layout #{layoutName} for {pokerSite}, {gameType}, {tableType}", e);
+            }
         }
 
         public void TagHand(long gameNumber, short pokerSiteId, int tag)
@@ -129,9 +160,9 @@ namespace DriveHUD.Application.HudServices
                     statistic.HandNote = handNote;
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                LogProvider.Log.Error(this, ex);
+                LogProvider.Log.Error(this, $"Could not tag hand #{gameNumber} for {(EnumPokerSites)pokerSiteId}", e);
             }
         }
     }

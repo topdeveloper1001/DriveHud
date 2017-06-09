@@ -50,13 +50,12 @@ namespace DriveHUD.Updater.Core
             this.operation = operation;
             this.operation.OperationStatus = status;
 
-            if (this.operation.OnOperationChanged != null)
-                this.operation.OnOperationChanged(status);
+            this.operation.OnOperationChanged?.Invoke(status);
         }
 
         public void Dispose()
         {
-            this.operation.OperationStatus = OperationStatus.None;
+            operation.OperationStatus = OperationStatus.None;
         }
     }
 }

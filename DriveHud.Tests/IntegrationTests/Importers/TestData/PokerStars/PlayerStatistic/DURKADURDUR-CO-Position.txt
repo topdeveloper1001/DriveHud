@@ -1,0 +1,35 @@
+PokerStars Game #47183731012:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:43:06 ET
+Table 'Hormuthia IV' 6-max Seat #4 is the button
+Seat 1: LingXY ($209 in chips) 
+Seat 2: crazybull83 ($200 in chips) 
+Seat 3: DURKADURDUR ($425.50 in chips) 
+Seat 4: thomaswkm ($359.70 in chips) 
+Seat 5: rivichico ($403.05 in chips) 
+Seat 6: imthesky ($212.65 in chips) 
+rivichico: posts small blind $1
+imthesky: posts big blind $2
+crazybull83: posts big blind $2
+*** HOLE CARDS ***
+LingXY: folds 
+crazybull83: raises $6 to $8
+DURKADURDUR: raises $16 to $24
+thomaswkm: folds 
+rivichico: folds 
+imthesky: folds 
+crazybull83: calls $16
+*** FLOP *** [Qc 3h 2s]
+crazybull83: checks 
+DURKADURDUR: bets $27
+crazybull83: folds 
+Uncalled bet ($27) returned to DURKADURDUR
+DURKADURDUR collected $48.45 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $51 | Rake $2.55 
+Board [Qc 3h 2s]
+Seat 1: LingXY folded before Flop (didn't bet)
+Seat 2: crazybull83 folded on the Flop
+Seat 3: DURKADURDUR collected ($48.45)
+Seat 4: thomaswkm (button) folded before Flop (didn't bet)
+Seat 5: rivichico (small blind) folded before Flop
+Seat 6: imthesky (big blind) folded before Flop

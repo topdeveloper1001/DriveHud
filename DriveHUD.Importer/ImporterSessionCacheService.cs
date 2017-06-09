@@ -23,6 +23,7 @@ using Model.Interfaces;
 using DriveHUD.Common.Linq;
 using Model.Data;
 using HandHistories.Objects.GameDescription;
+using Model.Enums;
 
 namespace DriveHUD.Importers
 {
@@ -31,6 +32,11 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class ImporterSessionCacheService : IImporterSessionCacheService
     {
+        /// <summary>
+        /// Interval in minutes after which session will expire and will be removed from cache
+        /// </summary>
+        private const int sessionLifeTime = 12;
+
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 
         private ReaderWriterLockSlim globalCacheLock = new ReaderWriterLockSlim();
@@ -115,6 +121,7 @@ namespace DriveHUD.Importers
 
                 bool skipAdding = false;
 
+                // get or initialize new session 
                 if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
                 {
                     sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
@@ -137,14 +144,11 @@ namespace DriveHUD.Importers
 
                         playerStatistic.ForEach(x =>
                         {
-                            // we don't have this data in the db so update it after loading from file
-                            PlayerStatisticCalculator.CalculatePositionalData(x);
-
                             var isCurrentGame = x.GameNumber == cacheInfo.Stats.GameNumber;
 
                             if (isCurrentGame)
                             {
-                                PlayerStatisticCalculator.CalculateTotalPotValues(x);
+                                x.CalculateTotalPot();
                                 x.SessionCode = cacheInfo.Session;
                             }
 
@@ -346,7 +350,7 @@ namespace DriveHUD.Importers
                 {
                     if (playerStickersDictionary.ContainsKey(item.Key))
                     {
-                        playerStickersDictionary[item.Key].Add(item.Value);
+                        playerStickersDictionary[item.Key] += item.Value;
                     }
                     else
                     {
@@ -404,12 +408,15 @@ namespace DriveHUD.Importers
             if (cachedData.ContainsKey(session))
             {
                 sessionData = cachedData[session];
+                sessionData.LastModified = DateTime.Now;
             }
             else
             {
                 sessionData = new SessionCacheData();
                 cachedData.Add(session, sessionData);
             }
+
+            RemoveExpiredSessions();
 
             return sessionData;
         }
@@ -449,16 +456,33 @@ namespace DriveHUD.Importers
 
         private void InitSessionStatCollections(HudLightIndicators playerData, Playerstatistic stats)
         {
-            if (playerData.MoneyWonCollection == null)
+            if (playerData.StatsSessionCollection == null)
             {
-                playerData.MoneyWonCollection = new List<decimal>();
-                playerData.MoneyWonCollection.Add(stats.NetWon);
+                playerData.StatsSessionCollection = new Dictionary<Stat, IList<decimal>>();
+                playerData.AddStatsToSession(stats);
             }
 
             if (playerData.RecentAggList == null)
             {
                 playerData.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
                 playerData.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
+            }
+        }
+
+        private void RemoveExpiredSessions()
+        {
+            Check.Require(!cacheLock.IsWriteLockHeld, "Write lock must be held before using this function");
+
+            var now = DateTime.Now;
+
+            foreach (var sessionKey in cachedData.Keys.ToArray())
+            {
+                var timeSinceLastUpdate = now - cachedData[sessionKey].LastModified;
+
+                if (timeSinceLastUpdate.TotalMinutes >= sessionLifeTime)
+                {
+                    cachedData.Remove(sessionKey);
+                }
             }
         }
     }

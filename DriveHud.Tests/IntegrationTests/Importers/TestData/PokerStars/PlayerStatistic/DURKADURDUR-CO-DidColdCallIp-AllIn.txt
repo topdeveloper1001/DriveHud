@@ -1,0 +1,37 @@
+PokerStars Game #47151818864:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:27:53 ET
+Table 'Iris IV' 6-max Seat #2 is the button
+Seat 1: DURKADURDUR ($267.40 in chips) 
+Seat 2: johnyindio ($289.20 in chips) 
+Seat 3: kaader ($455.35 in chips) 
+Seat 4: twinpsych ($651.25 in chips) 
+Seat 5: stopme10 ($200 in chips) 
+Seat 6: FIrmFighter ($200 in chips) 
+kaader: posts small blind $1
+twinpsych: posts big blind $2
+*** HOLE CARDS ***
+stopme10: raises $4 to $6
+FIrmFighter: folds 
+DURKADURDUR: calls $6
+johnyindio: calls $6
+kaader: folds 
+twinpsych: raises $25 to $31
+stopme10: folds 
+DURKADURDUR: raises $236.40 to $267.40 and is all-in
+johnyindio: folds 
+twinpsych: calls $236.40
+*** FLOP *** [Jh Qs 7c]
+*** TURN *** [Jh Qs 7c] [7s]
+*** RIVER *** [Jh Qs 7c 7s] [9h]
+*** SHOW DOWN ***
+twinpsych: shows [Ad Kd] (a pair of Sevens)
+DURKADURDUR: shows [Qd Qc] (a full house, Queens full of Sevens)
+DURKADURDUR collected $544.80 from pot
+*** SUMMARY ***
+Total pot $547.80 | Rake $3 
+Board [Jh Qs 7c 7s 9h]
+Seat 1: DURKADURDUR showed [Qd Qc] and won ($544.80) with a full house, Queens full of Sevens
+Seat 2: johnyindio (button) folded before Flop
+Seat 3: kaader (small blind) folded before Flop
+Seat 4: twinpsych (big blind) showed [Ad Kd] and lost with a pair of Sevens
+Seat 5: stopme10 folded before Flop
+Seat 6: FIrmFighter folded before Flop (didn't bet)

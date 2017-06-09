@@ -19,12 +19,12 @@ namespace DriveHUD.Common.Wpf.Actions
     public class PopupTelerikWindowAction : PopupAction<RadWindow>
     {        
         protected override RadWindow CreateWindow()
-        {
+        {            
             return new RadWindow();
         }
 
         protected override void ApplyStyles(RadWindow window, INotification notification)
-        {
+        {                        
             window.Header = notification.Title;
         }
 
@@ -35,7 +35,6 @@ namespace DriveHUD.Common.Wpf.Actions
                 window.Close();
             }
         }
-
         protected override void OnClosed(RadWindow window, Action callback)
         {
             EventHandler<WindowClosedEventArgs> handler = null;
@@ -45,10 +44,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 window.Closed -= handler;
                 window.Content = null;
 
-                if (callback != null)
-                {
-                    callback();
-                }
+                callback?.Invoke();
             };
 
             window.Closed += handler;
@@ -70,5 +66,5 @@ namespace DriveHUD.Common.Wpf.Actions
             window.Left = left;
             window.Top = top;
         }
-    }
+    }   
 }

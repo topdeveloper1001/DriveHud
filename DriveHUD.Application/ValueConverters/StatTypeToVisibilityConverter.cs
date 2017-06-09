@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Stats;
+using System;
 using System.Windows;
 using System.Windows.Data;
-
-using DriveHUD.Application.ViewModels;
-using DriveHUD.ViewModels;
 
 namespace DriveHUD.Application.ValueConverters
 {

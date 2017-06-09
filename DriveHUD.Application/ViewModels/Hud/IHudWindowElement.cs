@@ -17,7 +17,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// <summary>
     /// Interface for elements to be used in DragCanvas
     /// </summary>
-    internal interface IHudWindowElement: ICleanable
+    internal interface IHudWindowElement
     {
         double OffsetX { get; set; }
 

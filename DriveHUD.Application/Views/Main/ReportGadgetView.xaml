@@ -1790,7 +1790,7 @@
                                         VerticalAlignment="Center"
                                         TextTrimming="CharacterEllipsis"
                                         TextWrapping="NoWrap">
-                                <Run
+                                        <Run
                                             Text="{Binding Path=Name}" />
                                     </TextBlock>
                                     <TextBlock
@@ -1877,11 +1877,11 @@
                         DisplayMemberPath="Value" />
 
                     <CheckBox
-                        Content="Show Hole Cards"
+                        Content="{ResX Key=Common_ReportView_ShowHoleCards}"
                         Margin="40,3,0,3"
                         IsChecked="{Binding ReplayerShowHolecards_IsChecked, Mode=TwoWay}" />
                     <CheckBox
-                        Content="Tagged Hands"
+                        Content="{ResX Key=Common_ReportView_TaggedHands}"
                         Margin="40,3,0,3"
                         IsChecked="{Binding FilterTaggedHands_IsChecked, Mode=TwoWay}" />
 
@@ -1985,14 +1985,14 @@
                     <telerik:RadGridView.Columns>
 
                         <telerik:GridViewDataColumn
-                            Header="Date"
+                            Header="{ResX Key=Common_ReportView_Hands_Date}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
                             DataMemberBinding="{Binding Path=Statistic.Time, Converter={dh:DateTimeToLocalizedDateTimeConverter}}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Cards"
+                            Header="{ResX Key=Common_ReportView_Hands_Cards}"
                             UniqueName="Cards"
                             MinWidth="80"
                             Width="*"
@@ -2007,7 +2007,7 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Pre Flop"
+                            Header="{ResX Key=Common_ReportView_Hands_Preflop}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
                             DataMemberBinding="{Binding Path=Statistic.FacingPreflop}"
@@ -2016,7 +2016,7 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Board"
+                            Header="{ResX Key=Common_ReportView_Hands_Board}"
                             UniqueName="Board"
                             MinWidth="130"
                             Width="*"
@@ -2035,14 +2035,14 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Line"
+                            Header="{ResX Key=Common_ReportView_Hands_Line}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
                             DataMemberBinding="{Binding Path=Statistic.Line}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Net Won"
+                            Header="{ResX Key=Common_ReportView_Hands_NetWon}"
                             UniqueName="NetWon"
                             Width="*"
                             IsResizable="True"
@@ -2058,7 +2058,7 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="Position"
+                            Header="{ResX Key=Common_ReportView_Hands_Position}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
                             DataMemberBinding="{Binding Path=Statistic.Position}">
@@ -2071,7 +2071,7 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="All-in Equity%"
+                            Header="{ResX Key=Common_ReportView_Hands_AllInEquity}"
                             UniqueName="Equity"
                             Width="*"
                             IsResizable="True"
@@ -2086,7 +2086,7 @@
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
-                            Header="$EV Diff"
+                            Header="{ResX Key=Common_ReportView_Hands_EvDiff}"
                             UniqueName="EV Diff"
                             Width="*"
                             IsResizable="True"

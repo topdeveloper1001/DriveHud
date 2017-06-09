@@ -33,6 +33,10 @@ namespace DriveHUD.Common.Wpf.Converters
                         return "ACR";
                     case EnumPokerSites.BlackChipPoker:
                         return "BCP";
+                    case EnumPokerSites.TruePoker:
+                        return "TP";
+                    case EnumPokerSites.YaPoker:
+                        return "YP";
                     default:
                         break;
                 }

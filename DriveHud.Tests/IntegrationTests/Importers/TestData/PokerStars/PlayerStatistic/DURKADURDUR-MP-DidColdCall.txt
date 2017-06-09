@@ -1,0 +1,40 @@
+PokerStars Game #47147597262:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:15:12 ET
+Table 'Melete II' 6-max Seat #3 is the button
+Seat 1: DURKADURDUR ($200 in chips) 
+Seat 2: pobolero ($220.10 in chips) 
+Seat 3: LuckKi$$Me ($211.40 in chips) 
+Seat 4: Desateur ($510.60 in chips) 
+Seat 5: iLeftFTP ($220 in chips) 
+Seat 6: forty111999 ($137.80 in chips) 
+Desateur: posts small blind $1
+iLeftFTP: posts big blind $2
+*** HOLE CARDS ***
+forty111999: raises $4 to $6
+DURKADURDUR: calls $6
+pobolero: folds 
+LuckKi$$Me: folds 
+Desateur: folds 
+iLeftFTP: folds 
+*** FLOP *** [Ks 4c 8h]
+forty111999: checks 
+DURKADURDUR: bets $8
+forty111999: calls $8
+*** TURN *** [Ks 4c 8h] [9h]
+forty111999: checks 
+DURKADURDUR: checks 
+*** RIVER *** [Ks 4c 8h 9h] [Ah]
+forty111999: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+forty111999: shows [5s 5h] (a pair of Fives)
+DURKADURDUR: shows [Tc Th] (a pair of Tens)
+DURKADURDUR collected $29.50 from pot
+*** SUMMARY ***
+Total pot $31 | Rake $1.50 
+Board [Ks 4c 8h 9h Ah]
+Seat 1: DURKADURDUR showed [Tc Th] and won ($29.50) with a pair of Tens
+Seat 2: pobolero folded before Flop (didn't bet)
+Seat 3: LuckKi$$Me (button) folded before Flop (didn't bet)
+Seat 4: Desateur (small blind) folded before Flop
+Seat 5: iLeftFTP (big blind) folded before Flop
+Seat 6: forty111999 showed [5s 5h] and lost with a pair of Fives

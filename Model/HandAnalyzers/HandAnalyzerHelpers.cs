@@ -12,6 +12,11 @@ namespace Model.HandAnalyzers
 {
     internal static class HandAnalyzerHelpers
     {
+        private static HoldemHand.PocketHands PremiumHands = HoldemHand.PocketHands.Query("AA, KK, QQ, TT, 99, AKs, AKo, AQs, AQo");
+        private static HoldemHand.PocketHands ReversedBlufRange = HoldemHand.PocketHands.Query("AA, KK, QQ, TT, 99, AKs, AKo, AQs, AQo, AJs, AJo, ATs, ATo");
+        private static HoldemHand.PocketHands ReversedMarginalHand = HoldemHand.PocketHands.Query("AA, KK, QQ, TT, 99, 88, 77, 66, 55, 44, 33, 22, A9o, ATo, AJo, AQo, AKo, A2s, A3s, A4s, A5s, A6s, A7s, A8s, A9s, ATs, AJs, AQs, AKs, KTo, KJo, KQo, KTs, KJs, KQs, QTo, QJo, QTs, QJs, JTs, JTo");
+
+
         /// <summary>
         /// Determines if the same suit is in every card in the hand
         /// </summary>
@@ -379,7 +384,7 @@ namespace Model.HandAnalyzers
                 return false;
             }
 
-            return HoldemHand.PocketHands.Query("AA, KK, QQ, TT, AKs, AKo, AQs, AQo").Contains(HoldemHand.Hand.ParseHand(playerHand));
+            return PremiumHands.Contains(HoldemHand.Hand.ParseHand(playerHand));
         }
 
         /// <summary>
@@ -404,7 +409,7 @@ namespace Model.HandAnalyzers
                 return false;
             }
 
-            return !HoldemHand.PocketHands.Query("AA, KK, QQ, TT, 99, AKs, AKo, AQs, AQo, AJs, AJo, ATs, ATo").Contains(HoldemHand.Hand.ParseHand(playerHand));
+            return !ReversedBlufRange.Contains(HoldemHand.Hand.ParseHand(playerHand));
         }
 
         /// <summary>
@@ -429,7 +434,7 @@ namespace Model.HandAnalyzers
                 return false;
             }
             // 22+/A9o+/A2s+/KTo+/KTs+/QTo+/QTs+/JTs/JTo
-            return !HoldemHand.PocketHands.Query("AA, KK, QQ, TT, 99, 88, 77, 66, 55, 44, 33, 22, A9o, ATo, AJo, AQo, AKo, A2s, A3s, A4s, A5s, A6s, A7s, A8s, A9s, ATs, AJs, AQs, AKs, KTo, KJo, KQo, KTs, KJs, KQs, QTo, QJo, QTs, QJs, JTs, JTo").Contains(HoldemHand.Hand.ParseHand(playerHand));
+            return !ReversedMarginalHand.Contains(HoldemHand.Hand.ParseHand(playerHand));
         }
     }
 }

@@ -6,12 +6,15 @@ using HandHistories.Objects.Hand;
 using HoldemHand;
 using Model.Enums;
 using System.Collections.Generic;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using Model.Settings;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Entities;
 using Model.Extensions;
 using DriveHUD.EquityCalculator.Base.OmahaCalculations;
+using HandHistories.Objects.Players;
+using Card = HandHistories.Objects.Cards.Card;
 
 namespace Model.Importer
 {
@@ -19,14 +22,14 @@ namespace Model.Importer
     {
         private static List<EnumPosition[]> PositionList = new List<EnumPosition[]>() {
             new EnumPosition[2] { EnumPosition.SB, EnumPosition.BB }, // 2-handed table
-	        new EnumPosition[3] { EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 3-handed table
-	        new EnumPosition[4] { EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB,}, // 4-handed table
-	        new EnumPosition[5] { EnumPosition.MP1, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB}, // 5-handed table
-	        new EnumPosition[6] { EnumPosition.UTG, EnumPosition.MP1, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB}, // 6-handed table
-	        new EnumPosition[7] { EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 7-handed table
-	        new EnumPosition[8] { EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 8-handed table
-	        new EnumPosition[9] { EnumPosition.UTG, EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 9-handed table
-	        new EnumPosition[10] { EnumPosition.UTG, EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.MP3, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 10-handed table
+            new EnumPosition[3] { EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 3-handed table
+            new EnumPosition[4] { EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB,}, // 4-handed table
+            new EnumPosition[5] { EnumPosition.MP1, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB}, // 5-handed table
+            new EnumPosition[6] { EnumPosition.UTG, EnumPosition.MP1, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB}, // 6-handed table
+            new EnumPosition[7] { EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 7-handed table
+            new EnumPosition[8] { EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 8-handed table
+            new EnumPosition[9] { EnumPosition.UTG, EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 9-handed table
+            new EnumPosition[10] { EnumPosition.UTG, EnumPosition.UTG_1, EnumPosition.UTG_2, EnumPosition.MP1, EnumPosition.MP2, EnumPosition.MP3, EnumPosition.CO, EnumPosition.BTN, EnumPosition.SB, EnumPosition.BB }, // 10-handed table
         };
 
         public static string ToHoleCards(HoleCards holeCards)
@@ -50,14 +53,15 @@ namespace Model.Importer
                 return null;
             }
 
+            var actionStings = hand.HandActions
+                .Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
+                .Select(ActionToString).ToArray();
+
             var record = new HandHistoryRecord
             {
                 Time = hand.DateOfHandUtc,
                 Cards = player.HoleCards == null ? string.Empty : player.HoleCards.ToString(),
-                Line = hand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
-                    .Select(ActionToString)
-                    .Aggregate((x, y) => x + y).Trim(','),
-
+                Line = actionStings.Length > 0 ? actionStings.Aggregate((x, y) => x + y).Trim(',') : string.Empty,
                 Board = hand.CommunityCards.ToString(),
                 NetWonInCents = stat.Totalamountwonincents,
                 BBinCents = stat.Totalamountwonincents / stat.BigBlind,
@@ -115,23 +119,26 @@ namespace Model.Importer
             {
                 return EnumPosition.BB;
             }
-            else if (stat.IsCutoff)
-            {
-                return EnumPosition.CO;
-            }
 
-            var firstPlayerAction = hand.HandActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+            var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
+
+            var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
+
+            var handActions = hand.HandActions.Where(x => x.HandActionType != HandActionType.ANTE).ToList();
+
+            var firstPlayerAction = handActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+
+            int firstPlayerActionIndex;
+
             if (firstPlayerAction != null)
             {
-                int firstPlayerActionIndex = hand.HandActions.ToList().IndexOf(firstPlayerAction) - hand.HandActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - hand.HandActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
+                var blindActionsCount = handActions
+                    .Where(x => x.HandActionType == HandActionType.SMALL_BLIND ||
+                        x.HandActionType == HandActionType.BIG_BLIND ||
+                        x.HandActionType == HandActionType.POSTS)
+                    .Count();
 
-                /* Conver size in case if there are not 2 blind actions (only bb, multiple bb etc.) */
-                var blinds = hand.HandActions.Take(2);
-                int blindSize = (hand.HandActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0)
-                    + (hand.HandActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0);
-
-                int tableSize = hand.Players.Where(p => !p.IsSittingOut).Count() - blindSize + 2; // PositionList contains 2 blind positions
-                var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
+                firstPlayerActionIndex = handActions.IndexOf(firstPlayerAction) - blindActionsCount;
 
                 if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
                 {
@@ -139,7 +146,17 @@ namespace Model.Importer
                 }
             }
 
-            // determine position based on distance from dealer
+            // check ante
+            var handAnteActions = hand.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).ToList();
+
+            firstPlayerAction = handAnteActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+
+            firstPlayerActionIndex = handAnteActions.IndexOf(firstPlayerAction) - handActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - handActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
+
+            if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
+            {
+                return table[firstPlayerActionIndex];
+            }
 
             return EnumPosition.Undefined;
         }
@@ -191,6 +208,56 @@ namespace Model.Importer
                 return string.Empty;
 
             return wasAllinAction.Street.ToString();
+        }
+
+
+
+        public static List<decimal> CalculateEquity(HandHistory currentGame,
+                                                    List<Player> playersHasHoleCards,
+                                                    List<HoleCards> listDeadCards,
+                                                    string deadCardsString,
+                                                    string currentBoardString,
+                                                    HandHistories.Objects.Cards.Card[] currentBoardArray)
+        {
+            List<decimal> equity = new List<decimal>();
+            int count = playersHasHoleCards.Count;
+            if (count == 0)
+                return null; //no players with hole cards in this game for this action left
+            List<HoleCards> holeCards = playersHasHoleCards.Select(x => x.HoleCards).ToList();
+            try
+            {
+                GeneralGameTypeEnum gameType = new GeneralGameTypeEnum().ParseGameType(currentGame.GameDescription.GameType);
+
+                if (gameType == GeneralGameTypeEnum.Holdem)
+                {
+                    long[] wins = new long[count];
+                    long[] losses = new long[count];
+                    long[] ties = new long[count];
+                    long totalhands = 0;
+
+                    List<string> cardList = new List<string>();
+                    foreach (var card in holeCards.Where(card => card?.Count > 0))
+                        cardList.AddRange(CardHelper.SplitTwoCards(card.ToString()));
+                    Hand.HandWinOdds(cardList.ToArray(), currentBoardString, deadCardsString, wins, ties, losses, ref totalhands);
+                    if (totalhands != 0)
+                        equity = wins.Select(x => Math.Round((decimal)x * 100 / totalhands, 2)).ToList();
+                }
+                else if (gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo)
+                {
+                    OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
+                    MEquity[] eq = calc.Equity(currentBoardArray.Select(x => x.ToString()).ToArray(),
+                                         holeCards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(),
+                                         new string[] { },
+                                         0);
+
+                    equity = eq.Select(x => Math.Round((decimal)x.TotalEq, 2)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(typeof(Converter), $"Error in CalculateEquityForListOfPlayers method of Converter class", ex);
+            }
+            return equity;
         }
 
         public static decimal CalculateAllInEquity(HandHistory hand, Playerstatistic stat)

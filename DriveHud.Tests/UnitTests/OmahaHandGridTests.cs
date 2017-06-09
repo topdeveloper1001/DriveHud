@@ -15,6 +15,7 @@ using Model.Filters;
 using Model.OmahaHoleCardsAnalyzers;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -44,17 +45,17 @@ namespace DriveHud.Tests.UnitTests
         {
             var analyzer = new OmahaOnePairAnalyzer();
 
-            var item11 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "") };
-            var item12 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "4") };
+            var item11 = CreateOnePairHandGridItem(new Tuple<string, string>("", ""));
+            var item12 = CreateOnePairHandGridItem(new Tuple<string, string>("", "4"));
             var cards1 = CardGroup.Parse("4c8cKcAc");
 
-            var item21 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "") };
-            var item22 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "K") };
-            var item23 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "4") };
+            var item21 = CreateOnePairHandGridItem(new Tuple<string, string>("", ""));
+            var item22 = CreateOnePairHandGridItem(new Tuple<string, string>("", "K"));
+            var item23 = CreateOnePairHandGridItem(new Tuple<string, string>("", "4"));
             var cards2 = CardGroup.Parse("KcKd4c5c");
 
-            var item31 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "") };
-            var item32 = new OnePairHandGridItem() { SelectedRank = new Tuple<string, string>("", "5") };
+            var item31 = CreateOnePairHandGridItem(new Tuple<string, string>("", ""));
+            var item32 = CreateOnePairHandGridItem(new Tuple<string, string>("", "5"));
             var cards3 = CardGroup.Parse("5c5d9c9d");
             var cards4 = CardGroup.Parse("5d5c5h2c");
             var cards5 = CardGroup.Parse("5c5d5h5s");
@@ -151,7 +152,7 @@ namespace DriveHud.Tests.UnitTests
         }
 
         [Test]
-        public  void TestOmahaAceSuitedAnalyzer()
+        public void TestOmahaAceSuitedAnalyzer()
         {
             var analyzer = new OmahaAceSuitedAnalyzer();
 
@@ -312,11 +313,11 @@ namespace DriveHud.Tests.UnitTests
             var cards3 = CardGroup.Parse("Ad5sAcAs");
             var cards4 = CardGroup.Parse("Ad6sAcAs");
 
-            var item0 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 0) };
-            var item1 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 1) };
-            var item2 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 2) };
-            var item3 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 3) };
-            var item4 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 4) };
+            var item0 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 0));
+            var item1 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 1));
+            var item2 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 2));
+            var item3 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 3));
+            var item4 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 4));
 
             Assert.That(analyzer.Analyze(cards0, item0), Is.True);
             Assert.That(analyzer.Analyze(cards0, item1), Is.False);
@@ -360,11 +361,11 @@ namespace DriveHud.Tests.UnitTests
             var cards3 = CardGroup.Parse("Ad5s6sAd");
             var cards4 = CardGroup.Parse("Ad2d7s7d");
 
-            var item0 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 0) };
-            var item1 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 1) };
-            var item2 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 2) };
-            var item3 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 3) };
-            var item4 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 4) };
+            var item0 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 0));
+            var item1 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 1));
+            var item2 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 2));
+            var item3 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 3));
+            var item4 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 4));
 
             Assert.That(analyzer.Analyze(cards0, item0), Is.True);
             Assert.That(analyzer.Analyze(cards0, item0), Is.True);
@@ -409,11 +410,11 @@ namespace DriveHud.Tests.UnitTests
             var cards3 = CardGroup.Parse("Ad5s6s7d");
             var cards4 = CardGroup.Parse("Ad2d7s8s");
 
-            var item0 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 0) };
-            var item1 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 1) };
-            var item2 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 2) };
-            var item3 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 3) };
-            var item4 = new WrapsAndRundownsHandGridItem() { SelectedGap = new Tuple<string, int>("", 4) };
+            var item0 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 0));
+            var item1 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 1));
+            var item2 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 2));
+            var item3 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 3));
+            var item4 = CreateWrapsAndRundownsHandGridItem(new Tuple<string, int>("", 4));
 
             Assert.That(analyzer.Analyze(cards0, item0), Is.True);
             Assert.That(analyzer.Analyze(cards0, item0), Is.True);
@@ -445,6 +446,28 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(analyzer.Analyze(cards4, item2), Is.False);
             Assert.That(analyzer.Analyze(cards4, item3), Is.False);
             Assert.That(analyzer.Analyze(cards4, item4), Is.True);
+        }
+
+        private WrapsAndRundownsHandGridItem CreateWrapsAndRundownsHandGridItem(Tuple<string, int> gap)
+        {
+            var wrapsAndRundownsHandGridItem = new WrapsAndRundownsHandGridItem
+            {
+                GapsList = new List<Tuple<string, int>> { gap },
+                SelectedGap = gap
+            };
+
+            return wrapsAndRundownsHandGridItem;
+        }
+
+        private OnePairHandGridItem CreateOnePairHandGridItem(Tuple<string, string> rank)
+        {
+            var onePairHandGridItem = new OnePairHandGridItem
+            {
+                RanksList = new List<Tuple<string, string>> { rank },
+                SelectedRank = rank
+            };
+
+            return onePairHandGridItem;
         }
     }
 }

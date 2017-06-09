@@ -12,6 +12,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers.Notifications
 {
     public class PopupContainerSettingsViewModelNotification : Confirmation
     {
+        public string Parameter;
         public PopupContainerSettingsViewModelNotification()
         {
         }

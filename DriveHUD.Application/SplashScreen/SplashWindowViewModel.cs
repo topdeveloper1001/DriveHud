@@ -30,5 +30,19 @@ namespace DriveHUD.Application.SplashScreen
                 OnPropertyChanged();
             }
         }
+
+        private NotificationWindow notificationWindow;
+
+        public void ShowNotification(BaseViewModel viewModel)
+        {
+            notificationWindow = new NotificationWindow();
+            notificationWindow.DataContext = viewModel;
+            notificationWindow.ShowDialog();
+        }
+
+        public void CloseNotification()
+        {
+            notificationWindow?.Close();
+        }
     }
 }
