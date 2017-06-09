@@ -1,0 +1,27 @@
+﻿#Game No : 439270106
+***** WSOP.com-NJ Hand History for Game 439270106 *****
+25/50 Blinds No Limit Holdem - *** 04 06 2017 09:51:14
+Tournament #350804 10 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: AlexPoker92 ( 1,625 )
+Seat 9: Confl1ct10n ( 1,375 )
+AlexPoker92 posts small blind [25]
+Confl1ct10n posts big blind [50]
+** Dealing down cards **
+Dealt to AlexPoker92 [ 7h, Kd ]
+AlexPoker92 calls [25]
+Confl1ct10n checks
+** Dealing flop ** [ Qc, 5s, 6d ]
+Confl1ct10n checks
+AlexPoker92 checks
+** Dealing turn ** [ 2s ]
+Confl1ct10n checks
+AlexPoker92 checks
+** Dealing river ** [ 3s ]
+Confl1ct10n checks
+AlexPoker92 checks
+** Summary **
+Confl1ct10n shows [ 2d, 4s ]
+AlexPoker92 mucks [ 7h, Kd ]
+Confl1ct10n collected [ 100 ]
