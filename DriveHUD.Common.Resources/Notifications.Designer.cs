@@ -95,5 +95,50 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Notifications_HudLayout_DeleteHudYes", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Notifications_Update_Cancel {
+            get {
+                return ResourceManager.GetString("Notifications_Update_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD v.{0} is available.
+        /// </summary>
+        internal static string Notifications_Update_Header {
+            get {
+                return ResourceManager.GetString("Notifications_Update_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD is being stopped....
+        /// </summary>
+        internal static string Notifications_Update_StoppingHUD {
+            get {
+                return ResourceManager.GetString("Notifications_Update_StoppingHUD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD Update Notice.
+        /// </summary>
+        internal static string Notifications_Update_Title {
+            get {
+                return ResourceManager.GetString("Notifications_Update_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        internal static string Notifications_Update_Update {
+            get {
+                return ResourceManager.GetString("Notifications_Update_Update", resourceCulture);
+            }
+        }
     }
 }

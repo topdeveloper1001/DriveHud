@@ -532,6 +532,7 @@
     <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
+    <Compile Include="ViewModels\Update\UpdateViewModel.cs" />
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
     </Compile>
@@ -790,6 +791,9 @@
     </Compile>
     <Compile Include="Views\Settings\SettingsSiteView.xaml.cs">
       <DependentUpon>SettingsSiteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Update\UpdateView.xaml.cs">
+      <DependentUpon>UpdateView.xaml</DependentUpon>
     </Compile>
     <Page Include="BraceletControl.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -1260,6 +1264,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Settings\SettingsSiteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Update\UpdateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

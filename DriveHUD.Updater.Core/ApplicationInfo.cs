@@ -30,7 +30,7 @@ namespace DriveHUD.Updater.Core
         public string Guid { get; set; }
 
         [XmlElement("version", typeof(VersionInfo))]
-        public VersionInfo Version { get; set; }
+        public VersionInfo Version { get; set; }   
     }
 
     public class VersionInfo
@@ -42,6 +42,8 @@ namespace DriveHUD.Updater.Core
         [XmlAttribute("md5hash")]
         public string Md5hash { get; set; }
         [XmlAttribute("isCritical")]
-        public bool IsCritical { get; set; }        
+        public bool IsCritical { get; set; }
+        [XmlElement("notes")]
+        public string ReleaseNotes { get; set; }
     }
 }

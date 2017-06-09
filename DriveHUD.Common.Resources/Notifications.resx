@@ -129,4 +129,19 @@
   <data name="Notifications_HudLayout_DeleteHudYes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Notifications_Update_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Notifications_Update_Header" xml:space="preserve">
+    <value>DriveHUD v.{0} is available</value>
+  </data>
+  <data name="Notifications_Update_StoppingHUD" xml:space="preserve">
+    <value>HUD is being stopped...</value>
+  </data>
+  <data name="Notifications_Update_Title" xml:space="preserve">
+    <value>DriveHUD Update Notice</value>
+  </data>
+  <data name="Notifications_Update_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
 </root>
