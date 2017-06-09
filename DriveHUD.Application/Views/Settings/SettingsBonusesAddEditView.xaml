@@ -54,6 +54,7 @@
                            ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
                            ItemsBackgroundColor="{StaticResource BackgroundBrush2}"
                            SelectedItem="{Binding Player, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}"
+                           DisplayMemberPath="DecodedName"
                            ItemsSource="{Binding Path=StorageModel.PlayerCollection}">
             </dh:ComboBoxEx>
             
