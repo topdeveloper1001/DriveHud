@@ -10,18 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.Views;
-using DriveHUD.Common;
-using DriveHUD.Common.WinApi;
-using Model.Enums;
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Service to calculate hud positions for BetOnline
-    /// </summary>z
+    /// </summary>
     internal class BetOnlineHudPanelService : HudPanelService
     {
         private readonly Dictionary<int, int[,]> plainPositionsShifts = new Dictionary<int, int[,]>
@@ -36,67 +34,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         };
 
         /// <summary>
-        /// Calculates hudElement position in window
-        /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
-        /// <returns>Item1 - X, Item2 - Y</returns>
-        public override Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window)
-        {
-            Check.ArgumentNotNull(() => hudElement);
-            Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-
-            var maxSeats = (int)window.Layout.TableType;
-
-            var panelOffset = window.GetPanelOffset(hudElement);
-
-            if (!plainPositionsShifts.ContainsKey(maxSeats))
-            {
-                return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
-            }
-
-            var shifts = plainPositionsShifts[maxSeats];
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X + shifts[hudElement.Seat - 1, 0];
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y + shifts[hudElement.Seat - 1, 1];
-
-
-            System.Diagnostics.Debug.WriteLine($"{hudElement.Seat}: {hudElement.Position.X - panelOffset.X}, {hudElement.Position.Y - panelOffset.Y}");
-
-            return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
-        }
-
-        /// <summary>
-        /// Converts offset values into position value
-        /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
-        /// <returns>Item1 - X, Item2 - Y</returns>
-        public override Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
-        {
-            Check.ArgumentNotNull(() => hudElement);
-            Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-
-            var maxSeats = (int)window.Layout.TableType;
-
-            var panelOffset = window.GetPanelOffset(hudElement);
-
-            if (!plainPositionsShifts.ContainsKey(maxSeats))
-            {
-                return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
-            }
-
-            var shifts = plainPositionsShifts[maxSeats];
-
-            var xPosition = panelOffset.X != 0 ? panelOffset.X - shifts[hudElement.Seat - 1, 0] : hudElement.Position.X;
-            var yPosition = panelOffset.Y != 0 ? panelOffset.Y - shifts[hudElement.Seat - 1, 1] : hudElement.Position.Y;
-
-            return new Tuple<double, double>(xPosition, yPosition);
-        }
-
-        /// <summary>
         /// Get initial table size 
         /// </summary>
         /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
@@ -105,29 +42,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             return new Tuple<double, double>(816, 631);
         }
 
-        /// <summary>
-        /// Get handle of window on which hud has to be attached
-        /// </summary>
-        /// <returns>Handle of window</returns>
-        public override IntPtr GetWindowHandle(IntPtr handle)
+        public override Point GetPositionShift(EnumTableType tableType, int seat)
         {
-            return FindPanelWindow(handle);
-        }
+            var tableSize = (int)tableType;
 
-        public override Tuple<double, double> GetInitialTrackConditionMeterPosition()
-        {
-            return new Tuple<double, double>(220, 0);
-        }
+            if (!plainPositionsShifts.ContainsKey(tableSize))
+            {
+                return base.GetPositionShift(tableType, seat);
+            }
 
-        /// <summary>
-        /// Find child window with poker table 
-        /// </summary>
-        /// <param name="hWnd">Main window handle</param>
-        /// <returns>Child window handle</returns>
-        private IntPtr FindPanelWindow(IntPtr hWnd)
-        {
-            var panelHandle = WinApi.FindWindowEx(hWnd, IntPtr.Zero, "wxWindowClass", "panel");
-            return panelHandle != IntPtr.Zero ? panelHandle : hWnd;
+            var shift = plainPositionsShifts[tableSize];
+
+            return new Point(shift[seat - 1, 0], shift[seat - 1, 1]);
         }
     }
 }

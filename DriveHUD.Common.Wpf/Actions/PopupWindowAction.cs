@@ -69,7 +69,7 @@ namespace DriveHUD.Common.Wpf.Actions
             {
                 window.Closed -= handler;
                 window.Content = null;
-                if (callback != null) callback();
+                callback?.Invoke();
             };
 
             window.Closed += handler;

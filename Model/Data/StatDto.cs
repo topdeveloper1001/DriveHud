@@ -15,15 +15,26 @@ using ProtoBuf;
 namespace Model.Data
 {
     [ProtoContract]
+    [ProtoInclude(4, typeof(HeatMapStatDto))]
     public class StatDto
     {
+        public StatDto()
+        {
+        }
+
+        public StatDto(int? occurred, int? couldOccurred)
+        {
+            Occurred = occurred.HasValue ? occurred.Value : 0;
+            CouldOccurred = couldOccurred.HasValue ? couldOccurred.Value : 0;
+        }
+
         [ProtoMember(1)]
-        public decimal Value { get; set; }
+        public virtual decimal Value { get; set; }
 
         [ProtoMember(2)]
-        public int Occured { get; set; }
+        public virtual int Occurred { get; set; }
 
         [ProtoMember(3)]
-        public int CouldOccured { get; set; }
+        public virtual int CouldOccurred { get; set; }
     }
 }

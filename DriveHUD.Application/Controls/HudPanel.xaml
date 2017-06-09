@@ -112,7 +112,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <Grid.Style>
+        <!--<Grid.Style>
             <Style
                 TargetType="Grid">
                 <Setter
@@ -143,7 +143,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-        </Grid.Style>
+        </Grid.Style>-->
 
         <Grid.RowDefinitions>
             <RowDefinition
@@ -162,13 +162,13 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">
-                    <i:Interaction.Behaviors>
+                    <!--<i:Interaction.Behaviors>
                         <hud:HudStatsBehavior
-                            StatInfoSource="{Binding StatInfoCollection}"
+                            StatInfoSource="{Binding Stats}"
                             IsDefaultImage="{Binding IsDefaultImage}"
                             PlayerIconSource="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}"
                             IsMainStatsPanelEnabled="False" />
-                    </i:Interaction.Behaviors>
+                    </i:Interaction.Behaviors>-->
                 </WrapPanel>
                 <Border
                     Background="Transparent"
@@ -185,7 +185,8 @@
                         Stretch="Uniform"
                         Fill="{StaticResource ForegroundBrush}" />
                 </Border>
-                <ItemsControl
+                <!-- Stickers need to move to new control -->
+                <!--<ItemsControl
                     ItemsSource="{Binding Stickers}"
                     Margin="0 -10 0 0">
                     <ItemsControl.ItemsPanel>
@@ -217,7 +218,7 @@
                             </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                </ItemsControl>-->
             </Grid>
         </Border>
 

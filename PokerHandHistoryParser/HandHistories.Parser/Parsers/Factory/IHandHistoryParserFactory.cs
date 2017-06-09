@@ -19,7 +19,7 @@ namespace HandHistories.Parser.Parsers.Factory
     {
         EnumPokerSites LastSelected { get; set; }
 
-        IHandHistoryParser GetFullHandHistoryParser(EnumPokerSites siteName);
+        IHandHistoryParser GetFullHandHistoryParser(EnumPokerSites siteName, string handText = null);
 
         IHandHistoryParser GetFullHandHistoryParser(string handText);    
     }

@@ -10,18 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using Model.Enums;
 using ReactiveUI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Xml.Serialization;
 using System.Linq;
-using DriveHUD.Common.Linq;
-using Microsoft.Practices.ServiceLocation;
+using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
     /// Hud player profile type
@@ -218,6 +216,60 @@ namespace DriveHUD.Application.ViewModels
             var clone = (HudPlayerType)MemberwiseClone();
             clone.Stats = new ObservableCollection<HudPlayerTypeStat>(clone.Stats.Select(x => (HudPlayerTypeStat)x.Clone()));
             return clone;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 23;
+                hash = (hash * 31) + Name.GetHashCode();
+                hash = (hash * 31) + ImageAlias.GetHashCode();
+                hash = (hash * 31) + EnablePlayerProfile.GetHashCode();
+                hash = (hash * 31) + DisplayPlayerIcon.GetHashCode();
+                hash = (hash * 31) + MinSample.GetHashCode();
+                hash = (hash * 31) + Stats.GetHashCode();
+                return hash;
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            var hudPlayerType = obj as HudPlayerType;
+
+            if (hudPlayerType == null)
+            {
+                return false;
+            }
+
+            return Equals(hudPlayerType);
+        }
+
+        private bool Equals(HudPlayerType hudPlayerType)
+        {
+            var result = hudPlayerType.Name == Name && hudPlayerType.ImageAlias == ImageAlias &&
+                hudPlayerType.EnablePlayerProfile == EnablePlayerProfile && hudPlayerType.DisplayPlayerIcon == DisplayPlayerIcon &&
+                hudPlayerType.minSample == MinSample;
+
+            if ((Stats != null && hudPlayerType.Stats != null && Stats.Count != hudPlayerType.Stats.Count) ||
+                (Stats == null && hudPlayerType.Stats != null) || (Stats != null && hudPlayerType.Stats == null))
+            {
+                return false;
+            }
+            else if (Stats == null && hudPlayerType.Stats == null)
+            {
+                return result;
+            }
+
+            var orderedStatList = Stats.OrderBy(x => x.Stat).ToArray();
+            var hudPlayerTypeOrderedStatList = hudPlayerType.Stats.OrderBy(x => x.Stat).ToArray();
+
+            for (var i = 0; i < orderedStatList.Length; i++)
+            {
+                result &= orderedStatList[i].Equals(hudPlayerTypeOrderedStatList[i]);
+            }
+
+            return result;
         }
     }
 }

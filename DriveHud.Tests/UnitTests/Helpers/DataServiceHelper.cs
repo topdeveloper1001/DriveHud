@@ -42,7 +42,7 @@ namespace DriveHud.Tests.UnitTests.Helpers
                 using (MemoryStream afterStream = new MemoryStream(byteAfter64))
                 {
                     var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
-
+             
                     if (filter != null)
                     {
                         if (filter(stat))

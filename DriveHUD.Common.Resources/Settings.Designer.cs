@@ -268,6 +268,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rebuild.
+        /// </summary>
+        internal static string Settings_RebuildStats {
+            get {
+                return ResourceManager.GetString("Settings_RebuildStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rebuild players statistics (Import must be stopped, before executing. Click the STOP button on the HUD tab).
+        /// </summary>
+        internal static string Settings_RebuildTitle {
+            get {
+                return ResourceManager.GetString("Settings_RebuildTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recover.
+        /// </summary>
+        internal static string Settings_RecoverStats {
+            get {
+                return ResourceManager.GetString("Settings_RecoverStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recover players statistics from backup (Import must be stopped, before executing. Click the STOP button on the HUD tab).
+        /// </summary>
+        internal static string Settings_RecoverTitle {
+            get {
+                return ResourceManager.GetString("Settings_RecoverTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Renew License.
         /// </summary>
         internal static string Settings_RenewLicense {
@@ -309,6 +345,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_SendSupportMessage {
             get {
                 return ResourceManager.GetString("Settings_SendSupportMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service commands.
+        /// </summary>
+        internal static string Settings_ServiceCommands {
+            get {
+                return ResourceManager.GetString("Settings_ServiceCommands", resourceCulture);
             }
         }
         

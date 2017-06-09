@@ -1,40 +1,33 @@
-﻿using System;
+﻿using DriveHUD.Application.ValueConverters;
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Application.ViewModels.Popups;
+using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Application.Views.Popups;
+using DriveHUD.Application.Views.Replayer;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Wpf.Converters;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
+using Microsoft.Practices.ServiceLocation;
+using Model.Data;
+using Model.Enums;
+using Model.Interfaces;
+using Model.Stats;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Application.ViewModels.Replayer;
-using DriveHUD.ViewModels;
-using Telerik.Windows.Controls;
-using Model.Enums;
-using DriveHUD.Application.ViewModels;
-using HandHistories.Objects.GameDescription;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using DriveHUD.Common.Log;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Controls;
-using DriveHUD.Application.ValueConverters;
-using System.Windows.Media.Animation;
-using DriveHUD.Common.Wpf.Converters;
-using DriveHUD.Common.Reflection;
-using HandHistories.Objects.Cards;
-using System.Collections.ObjectModel;
-using Model.Interfaces;
-using Model.Data;
-using Model.Reports;
-using DriveHUD.Common.Linq;
-using Microsoft.Practices.ServiceLocation;
-using System.Threading;
-using System.Diagnostics;
-using DriveHUD.Application.Controls;
-using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Application.Views.Replayer;
-using DriveHUD.Entities;
-using DriveHUD.Application.ViewModels.Popups;
-using DriveHUD.Application.Views.Popups;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -290,7 +283,7 @@ namespace DriveHUD.Application.TableConfigurators
             replayerPlayer.StatInfoCollection.Clear();
 
             var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
-            var hudIndicators = new HudIndicators(statisticCollection);
+            var hudIndicators = new HudLightIndicators(statisticCollection);
 
             if (hudIndicators != null)
             {
@@ -305,9 +298,11 @@ namespace DriveHUD.Application.TableConfigurators
 
                     var statInfo = selectedStatInfo.Clone();
 
-                    if (!string.IsNullOrWhiteSpace(statInfo.PropertyName))
+                    var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                    if (!string.IsNullOrWhiteSpace(propertyName))
                     {
-                        statInfo.AssignStatInfoValues(hudIndicators);
+                        statInfo.AssignStatInfoValues(hudIndicators, propertyName);
                     }
 
                     replayerPlayer.StatInfoCollection.Add(statInfo);
@@ -479,12 +474,14 @@ namespace DriveHUD.Application.TableConfigurators
         private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
             var activeLayout = hudLayoutsService.GetActiveLayout(pokerSite, tableType, gameType);
+
             if (activeLayout == null)
             {
                 LogProvider.Log.Error("Could not find active layout");
                 return null;
             }
-            return activeLayout.HudStats.ToArray();
+
+            return activeLayout.LayoutTools.OfType<HudLayoutPlainBoxTool>().SelectMany(x => x.Stats).ToArray();
         }
 
         private EnumPokerSites GetPokerSite(EnumPokerSites site)

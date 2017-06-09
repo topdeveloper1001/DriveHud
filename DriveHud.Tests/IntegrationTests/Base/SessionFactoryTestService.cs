@@ -22,14 +22,19 @@ namespace DriveHud.Tests.IntegrationTests.Base
     {
         private static readonly object factorylock = new object();
 
-        public ISessionFactory CreateSessionFactory()
+        public virtual ISessionFactory CreateSessionFactory()
         {
             throw new NotSupportedException("Only SQLite is supported in tests.");
         }
 
+        public virtual string GetConnectionString()
+        {
+            return DatabaseHelper.GetConnectionString();
+        }
+
         private ISessionFactory sqliteSessionFactory;
 
-        public ISessionFactory CreateSQLiteSessionFactory()
+        public virtual ISessionFactory CreateSQLiteSessionFactory()
         {
             if (sqliteSessionFactory == null || sqliteSessionFactory.IsClosed)
             {
@@ -38,7 +43,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     if (sqliteSessionFactory == null || sqliteSessionFactory.IsClosed)
                     {
                         sqliteSessionFactory = Fluently.Configure()
-                            .Database(SQLiteConfiguration.Standard.ConnectionString(DatabaseHelper.GetConnectionString()))
+                            .Database(SQLiteConfiguration.Standard.ConnectionString(GetConnectionString()))
                             .Mappings(x => x.FluentMappings.AddFromAssemblyOf<DriveHUD.Entities.Mapping.TournamentsMap>())
                             .BuildSessionFactory();
                     }
@@ -49,12 +54,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
             return sqliteSessionFactory;
         }
 
-        public ISession OpenSession()
+        public virtual ISession OpenSession()
         {
             return CreateSQLiteSessionFactory().OpenSession();
         }
 
-        public IStatelessSession OpenStatelessSession()
+        public virtual IStatelessSession OpenStatelessSession()
         {
             return CreateSQLiteSessionFactory().OpenStatelessSession();
         }

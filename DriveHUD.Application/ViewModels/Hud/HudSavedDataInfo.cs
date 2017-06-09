@@ -10,16 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
-using System.Collections.Generic;
 using DriveHUD.Application.ViewModels.Layouts;
+using Model.Stats;
+using System.Collections.Generic;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class HudSavedDataInfo
-    {
-        public HudTableViewModel HudTable { get; set; }
-        public HudLayoutInfo LayoutInfo { get; set; }
+    {        
+        public HudLayoutInfoV2 LayoutInfo { get; set; }
+
         public IEnumerable<StatInfo> Stats { get; set; }
 
         public string Name { get; set; }        

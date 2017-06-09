@@ -14,7 +14,7 @@ using DriveHUD.Common.Wpf.Mvvm;
 using ReactiveUI;
 using System;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     public abstract class BaseRangeTypePopupViewModel : ViewModelBase
     {

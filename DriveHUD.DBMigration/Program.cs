@@ -286,18 +286,20 @@ namespace DriveHUD.DBMigration
 
             public override int GetHashCode()
             {
-                var hashcode = 23;
-                hashcode = (hashcode * 31) + PlayerName.GetHashCode();
-                hashcode = (hashcode * 31) + PokersiteId;
-
-                return hashcode;
+                unchecked
+                {
+                    var hashcode = 23;
+                    hashcode = (hashcode * 31) + PlayerName.GetHashCode();
+                    hashcode = (hashcode * 31) + PokersiteId;
+                    return hashcode;
+                }
             }
 
             public override bool Equals(object obj)
             {
                 var playerKey = obj as PlayersKey;
 
-                return Equals(obj);
+                return Equals(playerKey);
             }
 
             public bool Equals(PlayersKey obj)

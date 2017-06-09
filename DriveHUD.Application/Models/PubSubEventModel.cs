@@ -14,6 +14,7 @@ namespace DriveHUD.Application.Models
         public EnumViewModelType SenderType { get; set; }
         public EnumViewModelType RecieverType { get; set; }
         public string Action { get; set; }
+        public string Parameter { get; set; }
         public List<KeyValuePair<string, object>> Params { get; set; }
     }
 }

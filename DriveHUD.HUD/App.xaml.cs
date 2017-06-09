@@ -54,6 +54,8 @@ namespace DriveHUD.HUD
 
         private void Initialize()
         {
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomainUnhandledException;
+
             VisualStudio2013Palette.LoadPreset(VisualStudio2013Palette.ColorVariation.Dark);
             ResourceRegistrator.Initialization();
 
@@ -84,7 +86,7 @@ namespace DriveHUD.HUD
         {
             try
             {
-                LogProvider.Log.Error(this, "Unexpected error", e.Exception);
+                LogProvider.Log.Error(this, "Unexpected fatal error", e.Exception);
 
                 if (!Debugger.IsAttached)
                 {
@@ -94,6 +96,12 @@ namespace DriveHUD.HUD
             catch
             {
             }
+        }
+
+        private void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            var ex = e.ExceptionObject as Exception;
+            LogProvider.Log.Error(this, "Unexpected domain fatal error", ex);
         }
     }
 }

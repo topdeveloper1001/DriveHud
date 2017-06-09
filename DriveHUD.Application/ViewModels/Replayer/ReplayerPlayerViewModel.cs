@@ -2,28 +2,26 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
-using System;
-using System.Collections.Generic;
+using Model.Stats;
+using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
     public class ReplayerPlayerViewModel : BaseViewModel
     {
-        internal ReplayerPlayerViewModel()
+        public ReplayerPlayerViewModel()
         {
+            EquityWin = -1;
         }
 
         internal void Reset(bool keepCards = false)
         {
             ChipsContainer = new ReplayerChipsContainer();
-            StatInfoCollection = new ObservableCollection<StatInfo>();
+            StatInfoCollection = new ReactiveList<StatInfo>();
 
             if (Cards == null)
             {
@@ -94,6 +92,11 @@ namespace DriveHUD.Application.ViewModels.Replayer
             this.ChipsContainer.UpdateChips(this.ActiveAmount);
         }
 
+        internal static void CopyEquityWin(ReplayerPlayerViewModel from, ReplayerPlayerViewModel to)
+        {
+            to.EquityWin = from.EquityWin;
+        }
+
         internal static void Copy(ReplayerPlayerViewModel from, ReplayerPlayerViewModel to)
         {
             if (to == null || from == null)
@@ -111,7 +114,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             to.IsFinished = from.IsFinished;
             to.IsDealer = from.IsDealer;
             to.IsWin = from.IsWin;
-
+            to.EquityWin = from.EquityWin; 
             to.Bank = from.Bank;
             to.OldBank = from.OldBank;
             to.ActiveAmount = from.ActiveAmount;
@@ -131,6 +134,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private bool _isDealer;
         private bool _isWin;
         private decimal _bank;
+        private decimal _equityWin;     
         private decimal _oldBank;
         private decimal _activeAmount;
         private decimal _oldAmount;
@@ -138,7 +142,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private string _actionString;
         private ReplayerChipsContainer _chipsContainer;
         private Street _currentStreet;
-        private ObservableCollection<StatInfo> _statInfoCollection;
+        private ReactiveList<StatInfo> _statInfoCollection;
 
         public string Name
         {
@@ -159,6 +163,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             get { return _isActive; }
             set { SetProperty(ref _isActive, value); }
+        }
+
+        public decimal EquityWin
+        {
+            get { return _equityWin; }
+            set { SetProperty(ref _equityWin, value);}
         }
 
         public decimal Bank
@@ -230,7 +240,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set { _currentStreet = value; }
         }
 
-        public ObservableCollection<StatInfo> StatInfoCollection
+        public ReactiveList<StatInfo> StatInfoCollection
         {
             get { return _statInfoCollection; }
             set { SetProperty(ref _statInfoCollection, value); }

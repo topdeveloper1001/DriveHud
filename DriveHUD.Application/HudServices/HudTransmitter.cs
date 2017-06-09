@@ -1,8 +1,21 @@
-﻿using DriveHUD.Common.Log;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudTransmitter.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Log;
 using DriveHUD.HUD.Service;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -16,8 +29,8 @@ namespace DriveHUD.Application.HudServices
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
         private const string hudProcessName = "DriveHUD.HUD";
-             
-        private const double delayMS = 1000;
+
+        private const int delayMS = 2000;
 
         private Process hudClient;
         private DuplexChannelFactory<IHudNamedPipeBindingService> _namedPipeBindingFactory;
@@ -52,14 +65,22 @@ namespace DriveHUD.Application.HudServices
                 var existingClientProcess = Process.GetProcessesByName(hudProcessName).FirstOrDefault();
 
                 if (existingClientProcess != null)
-                {
-                    existingClientProcess.Kill();
+                {                   
+                    try
+                    {
+                        existingClientProcess.Kill();
+                    }
+                    catch (Win32Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Hud process cannot be killed, because it's being terminated.", ex);
+                        Task.Delay(delayMS).Wait();
+                    }
                 }
 
                 hudClient = BuildClientProcess();
                 hudClient.Start();
 
-                Task.Delay(2000).Wait();
+                Task.Delay(delayMS).Wait();
 
                 StartPipe();
 
@@ -84,7 +105,7 @@ namespace DriveHUD.Application.HudServices
             {
                 try
                 {
-                    Task.Delay(TimeSpan.FromMilliseconds(delayMS)).Wait();
+                    Task.Delay(delayMS).Wait();
 
                     if (_cancellationTokenSource != null && _cancellationTokenSource.IsCancellationRequested)
                     {
@@ -216,38 +237,45 @@ namespace DriveHUD.Application.HudServices
 
         private void Close()
         {
-            if (_initializeTask != null && _initializeTask.Status != TaskStatus.RanToCompletion)
+            try
             {
-                try
+                if (_initializeTask != null && _initializeTask.Status != TaskStatus.RanToCompletion)
                 {
-                    _cancellationTokenSource.Cancel();
-                    _initializeTask.Wait();
+                    try
+                    {
+                        _cancellationTokenSource.Cancel();
+                        _initializeTask.Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, ex);
+                    }
                 }
-                catch (Exception ex)
+
+                isInitialized = false;
+
+                _initializeTask = null;
+                _cancellationTokenSource = null;
+
+                if (_namedPipeBindingFactory != null)
                 {
-                    LogProvider.Log.Error(this, ex);
+                    _namedPipeBindingFactory.Faulted -= Pipe_Faulted;
+                    _namedPipeBindingFactory.Opened -= Pipe_Opened;
+                    _namedPipeBindingFactory.Abort();
+
+                    _namedPipeBindingFactory = null;
+                    _namedPipeBindingProxy = null;
+                    _callbackService = null;
+                }
+
+                if (hudClient != null && !hudClient.HasExited)
+                {
+                    hudClient.Kill();
                 }
             }
-
-            isInitialized = false;
-
-            _initializeTask = null;
-            _cancellationTokenSource = null;
-
-            if (_namedPipeBindingFactory != null)
+            catch (Exception e)
             {
-                _namedPipeBindingFactory.Faulted -= Pipe_Faulted;
-                _namedPipeBindingFactory.Opened -= Pipe_Opened;
-                _namedPipeBindingFactory.Abort();
-
-                _namedPipeBindingFactory = null;
-                _namedPipeBindingProxy = null;
-                _callbackService = null;
-            }
-
-            if (hudClient != null && !hudClient.HasExited)
-            {
-                hudClient.Kill();
+                LogProvider.Log.Error(this, "HUD transmitter could not be stopped.", e);
             }
         }
 

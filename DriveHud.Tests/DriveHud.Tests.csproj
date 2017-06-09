@@ -146,6 +146,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
       <Private>True</Private>
@@ -187,9 +188,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="IntegrationTests\Base\BaseDatabaseTest.cs" />
+    <Compile Include="IntegrationTests\Base\BaseIntegrationTest.cs" />
     <Compile Include="IntegrationTests\Base\DatabaseHelper.cs" />
-    <Compile Include="IntegrationTests\Base\PerformanceMonitor.cs" />
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
+    <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />
+    <Compile Include="IntegrationTests\Migrations\BaseLayoutsMigrationTest.cs" />
+    <Compile Include="IntegrationTests\Migrations\LayoutMigratorTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
@@ -211,26 +217,32 @@
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
-    <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\BaseIndicatorsTests.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
+    <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
+    <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
     <Compile Include="UnitTests\Helpers\DataServiceHelper.cs" />
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
+    <Compile Include="UnitTests\Helpers\SerializerHelper.cs" />
+    <Compile Include="UnitTests\HudLayoutMigrationTests.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
-    <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
+    <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
+    <Compile Include="UnitTests\ReportCreatorTests.cs" />
+    <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
@@ -278,42 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Amarillo 1-2 No Limit Holdem.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Thornton 3-6 No Limit Holdem.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 Heads-Up Super Turbo %2833663740%29 No Limit Holdem.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 10 Seats Rebuy and Add-on  %2833663765%29 No Limit Holdem.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Heads-Up Super Turbo %2833663813%29 No Limit Holdem.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 First Game.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 First Game.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 First Game.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Win Game.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 Heads-Up Super Turbo %2833663740%29 No Limit Holdem.txt - Summary.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 10 Seats Rebuy and Add-on  %2833663765%29 No Limit Holdem.txt - Summary.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Heads-Up Super Turbo %2833663813%29 No Limit Holdem.txt - Summary.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09 - Unfinished.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
@@ -359,6 +335,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\888PokerSummary.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ACR-SnG2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
@@ -421,11 +400,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IntegrationTests\Importers\TestData\" />
+    <Folder Include="IntegrationTests\Migrations\TestData\" />
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
-    <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
-    <Folder Include="UnitTests\TestData\Bovada\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

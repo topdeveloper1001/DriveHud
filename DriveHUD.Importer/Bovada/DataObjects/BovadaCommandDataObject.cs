@@ -88,5 +88,9 @@ namespace DriveHUD.Importers.Bovada
         public int place { get; set; }
 
         public object dead { get; set; }
+
+        public int rank { get; set; }
+
+        public string prize { get; set; }
     }
 }

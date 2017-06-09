@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Entities;
+using Model.Stats;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
-using DriveHUD.Entities;
-using DriveHUD.ViewModels;
-using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
