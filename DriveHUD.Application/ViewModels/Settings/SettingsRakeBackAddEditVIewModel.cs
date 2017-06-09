@@ -31,7 +31,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             _settingsModel = _infoViewModel?.Model;
 
             this.RakeBackName = _settingsModel?.RakeBackName ?? string.Empty;
-            this.Player = _settingsModel?.Player ?? string.Empty;
+            this.Player = StorageModel.PlayerCollection.FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
             this.DateBegan = _settingsModel?.DateBegan ?? DateTime.Now;
             this.Percentage = _settingsModel?.Percentage ?? 0m;
         }
@@ -46,7 +46,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
 
             _settingsModel.RakeBackName = RakeBackName;
-            _settingsModel.Player = Player;
+            _settingsModel.Player = Player.DecodedName;
             _settingsModel.DateBegan = DateBegan;
             _settingsModel.Percentage = Percentage;
 
@@ -70,7 +70,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private RakeBackModel _settingsModel;
 
         private string _rakeBackName;
-        private string _player;
+        private PlayerCollectionItem _player;
         private decimal _percentage;
         private DateTime _dateBegan;
 
@@ -87,7 +87,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
-        public string Player
+        public PlayerCollectionItem Player
         {
             get
             {
