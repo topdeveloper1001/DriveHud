@@ -211,6 +211,7 @@
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
@@ -277,6 +278,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Amarillo 1-2 No Limit Holdem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170602 Thornton 3-6 No Limit Holdem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 Heads-Up Super Turbo %2833663740%29 No Limit Holdem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 10 Seats Rebuy and Add-on  %2833663765%29 No Limit Holdem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\FullHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Heads-Up Super Turbo %2833663813%29 No Limit Holdem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 First Game.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 First Game.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 First Game.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\SingleHands\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Win Game.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 100 + 1 Heads-Up Super Turbo %2833663740%29 No Limit Holdem.txt - Summary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 11 + 1 10 Seats Rebuy and Add-on  %2833663765%29 No Limit Holdem.txt - Summary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IntegrationTests\Parsers\TowerTorneos\Summary\TowerTorneosPoker20170604 Sit &amp; Go 500 + 30 Heads-Up Super Turbo %2833663813%29 No Limit Holdem.txt - Summary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09 - Unfinished.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
@@ -387,6 +424,7 @@
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
     <Folder Include="UnitTests\TestData\Bovada\" />
   </ItemGroup>
   <Choose>

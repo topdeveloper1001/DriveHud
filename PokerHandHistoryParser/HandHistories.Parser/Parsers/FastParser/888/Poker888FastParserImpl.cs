@@ -90,7 +90,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             DateTime dateTime = DateTime.Parse(dateString);
 
-            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, TimeZoneType.GMT);
+            TimeZoneType timeZone = TimeZoneType.GMT;
+
+            // WSOP and TowerTorneosPoker used local time zone for hand history.
+            if (handLines[1].Contains("WSOP.com") || handLines[1].Contains("TowerTorneosPoker"))
+                timeZone = TimeZoneType.Current;
+
+            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, timeZone);
 
             return utcTime;
         }
@@ -476,7 +482,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     int openSquareIndex = handLine.IndexOf('[');
 
                     string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
-                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", string.Empty).RemoveWhitespace());
+                    HoleCards holeCards = HoleCards.FromCards(CardNormalization(handLines, cards.Replace(",", string.Empty).RemoveWhitespace()));
 
                     string playerName = handLine.Substring(0, openSquareIndex - 7);
 
@@ -522,7 +528,31 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 boardCards += cards.Replace(",", string.Empty).RemoveWhitespace();
             }
 
-            return BoardCards.FromCards(boardCards);
+            return BoardCards.FromCards(CardNormalization(handLines, boardCards));
+        }
+
+        private string CardNormalization(string[] handlines, string boardCards)
+        {
+            if (!handlines[1].Contains("TowerTorneosPoker"))
+                return boardCards;
+
+            // In tower torneos used French names of suits:
+            // tréboles     - clubs
+            // diamantes    - diamonds
+            // picas        - spades
+            // corazones    - hearts
+            boardCards = boardCards.Replace('c', 'h')
+                .Replace('t', 'c')
+                .Replace('d', 'd')
+                .Replace('p', 's');
+
+            // Same for 10
+            // dix - ten
+            return boardCards.Replace('D', 'T');
+            //.Replace('J', 'J')
+            //.Replace('Q', 'Q')
+            //.Replace('K', 'K')
+            //.Replace('A', 'A');
         }
 
         protected override string ParseHeroName(string[] handlines, PlayerList playerList)
@@ -544,7 +574,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         var cards = line.Substring(startIndex + 1, line.Length - startIndex - 2)
                                     .Replace("[", string.Empty).Replace("]", string.Empty).Replace(",", " ");
 
-                        playerList[heroName].HoleCards = HoleCards.FromCards(cards);
+                        playerList[heroName].HoleCards = HoleCards.FromCards(CardNormalization(handlines, cards));
                     }
 
                     return heroName;

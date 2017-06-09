@@ -1,0 +1,26 @@
+#Game No : 326812640
+***** TowerTorneosPoker Hand History for Game 326812640 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:20:05
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 500 )
+Seat 9: OSVALDOJN30 ( 500 )
+kherson_it posts small blind [10]
+OSVALDOJN30 posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ 2d, 4d ]
+kherson_it calls [10]
+OSVALDOJN30 checks
+** Dealing flop ** [ 2t, 6p, 5c ]
+OSVALDOJN30 bets [20]
+kherson_it calls [20]
+** Dealing turn ** [ 8t ]
+OSVALDOJN30 checks
+kherson_it checks
+** Dealing river ** [ 9c ]
+OSVALDOJN30 bets [460]
+kherson_it folds
+** Summary **
+OSVALDOJN30 did not show his hand
+OSVALDOJN30 collected [ 80 ]
