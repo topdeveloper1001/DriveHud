@@ -1,0 +1,197 @@
+#Game No : 326812640
+***** TowerTorneosPoker Hand History for Game 326812640 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:20:05
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 500 )
+Seat 9: OSVALDOJN30 ( 500 )
+kherson_it posts small blind [10]
+OSVALDOJN30 posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ 2d, 4d ]
+kherson_it calls [10]
+OSVALDOJN30 checks
+** Dealing flop ** [ 2t, 6p, 5c ]
+OSVALDOJN30 bets [20]
+kherson_it calls [20]
+** Dealing turn ** [ 8t ]
+OSVALDOJN30 checks
+kherson_it checks
+** Dealing river ** [ 9c ]
+OSVALDOJN30 bets [460]
+kherson_it folds
+** Summary **
+OSVALDOJN30 did not show his hand
+OSVALDOJN30 collected [ 80 ]
+
+
+
+#Game No : 326812654
+***** TowerTorneosPoker Hand History for Game 326812654 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:20:44
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 9 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 460 )
+Seat 9: OSVALDOJN30 ( 540 )
+OSVALDOJN30 posts small blind [10]
+kherson_it posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ 3t, Ad ]
+OSVALDOJN30 raises [30]
+kherson_it calls [20]
+** Dealing flop ** [ Qc, Dp, Qp ]
+kherson_it checks
+OSVALDOJN30 checks
+** Dealing turn ** [ 2c ]
+kherson_it checks
+OSVALDOJN30 bets [20]
+kherson_it folds
+** Summary **
+OSVALDOJN30 did not show his hand
+OSVALDOJN30 collected [ 80 ]
+
+
+
+#Game No : 326812663
+***** TowerTorneosPoker Hand History for Game 326812663 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:21:13
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 420 )
+Seat 9: OSVALDOJN30 ( 580 )
+kherson_it posts small blind [10]
+OSVALDOJN30 posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ 4t, Dc ]
+kherson_it calls [10]
+OSVALDOJN30 checks
+** Dealing flop ** [ 9d, 2p, Kc ]
+OSVALDOJN30 bets [20]
+kherson_it calls [20]
+** Dealing turn ** [ 5t ]
+OSVALDOJN30 checks
+kherson_it checks
+** Dealing river ** [ Dp ]
+OSVALDOJN30 bets [40]
+kherson_it calls [40]
+** Summary **
+OSVALDOJN30 shows [ Kp, 2d ]
+kherson_it mucks [ 4t, Dc ]
+OSVALDOJN30 collected [ 160 ]
+
+
+
+#Game No : 326812689
+***** TowerTorneosPoker Hand History for Game 326812689 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:22:11
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 9 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 340 )
+Seat 9: OSVALDOJN30 ( 660 )
+OSVALDOJN30 posts small blind [10]
+kherson_it posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ Dt, 4p ]
+OSVALDOJN30 raises [30]
+kherson_it calls [20]
+** Dealing flop ** [ 3c, 8d, 4t ]
+kherson_it checks
+OSVALDOJN30 checks
+** Dealing turn ** [ Qt ]
+kherson_it bets [20]
+OSVALDOJN30 calls [20]
+** Dealing river ** [ 9t ]
+kherson_it bets [20]
+OSVALDOJN30 calls [20]
+** Summary **
+kherson_it shows [ Dt, 4p ]
+OSVALDOJN30 shows [ 6c, 9c ]
+OSVALDOJN30 collected [ 160 ]
+
+
+
+#Game No : 326812695
+***** TowerTorneosPoker Hand History for Game 326812695 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:22:41
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 260 )
+Seat 9: OSVALDOJN30 ( 740 )
+kherson_it posts small blind [10]
+OSVALDOJN30 posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ 8c, 4c ]
+kherson_it calls [10]
+OSVALDOJN30 raises [20]
+kherson_it calls [20]
+** Dealing flop ** [ 5p, 6d, Qt ]
+OSVALDOJN30 bets [20]
+kherson_it calls [20]
+** Dealing turn ** [ At ]
+OSVALDOJN30 checks
+kherson_it checks
+** Dealing river ** [ 3p ]
+OSVALDOJN30 bets [20]
+kherson_it folds
+** Summary **
+OSVALDOJN30 did not show his hand
+OSVALDOJN30 collected [ 120 ]
+
+
+
+#Game No : 326812710
+***** TowerTorneosPoker Hand History for Game 326812710 *****
+15/30 Blinds No Limit Holdem - *** 04 06 2017 15:23:07
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 9 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 200 )
+Seat 9: OSVALDOJN30 ( 800 )
+OSVALDOJN30 posts small blind [15]
+kherson_it posts big blind [30]
+** Dealing down cards **
+Dealt to kherson_it [ 6p, 7p ]
+OSVALDOJN30 raises [45]
+kherson_it calls [30]
+** Dealing flop ** [ 9t, Qc, Jp ]
+kherson_it checks
+OSVALDOJN30 bets [60]
+kherson_it folds
+** Summary **
+OSVALDOJN30 did not show his hand
+OSVALDOJN30 collected [ 120 ]
+
+
+
+#Game No : 326812723
+***** TowerTorneosPoker Hand History for Game 326812723 *****
+15/30 Blinds No Limit Holdem - *** 04 06 2017 15:23:29
+Tournament #33663740 100 + 1 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: kherson_it ( 140 )
+Seat 9: OSVALDOJN30 ( 860 )
+kherson_it posts small blind [15]
+OSVALDOJN30 posts big blind [30]
+** Dealing down cards **
+Dealt to kherson_it [ At, 3d ]
+kherson_it calls [15]
+OSVALDOJN30 raises [30]
+kherson_it calls [30]
+** Dealing flop ** [ 3p, 4d, 2c ]
+OSVALDOJN30 bets [90]
+kherson_it calls [80]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ 9t ]
+** Summary **
+kherson_it shows [ At, 3d ]
+OSVALDOJN30 shows [ 3c, 9d ]
+OSVALDOJN30 collected [ 280 ]
+
+
+

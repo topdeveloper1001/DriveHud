@@ -1,0 +1,21 @@
+#Game No : 326813094
+***** TowerTorneosPoker Hand History for Game 326813094 *****
+10/20 Blinds No Limit Holdem - *** 04 06 2017 15:31:11
+Tournament #33663813 500 + 30 - Table #1 2 Max (Play Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: o.bender1975 ( 560 )
+Seat 9: kherson_it ( 440 )
+o.bender1975 posts small blind [10]
+kherson_it posts big blind [20]
+** Dealing down cards **
+Dealt to kherson_it [ Ap, 8d ]
+o.bender1975 calls [10]
+kherson_it raises [20]
+o.bender1975 calls [20]
+** Dealing flop ** [ Ac, Dc, 3t ]
+kherson_it bets [20]
+o.bender1975 folds
+** Summary **
+kherson_it did not show his hand
+kherson_it collected [ 80 ]

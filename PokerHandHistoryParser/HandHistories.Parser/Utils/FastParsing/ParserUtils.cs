@@ -120,6 +120,7 @@ namespace HandHistories.Parser.Utils.FastParsing
         public static bool TryParseMoney(string moneyText, out decimal money)
         {
             money = 0m;
+
             // Char #65533 present on TowerTorneos and WSOP hand history.
             moneyText = moneyText.RemoveWhitespace().Replace(",", ".").Replace(((char)65533).ToString(), "");
 
