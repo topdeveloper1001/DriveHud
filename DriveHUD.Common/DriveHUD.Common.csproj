@@ -84,6 +84,7 @@
     <Compile Include="Log\IDHLog.cs" />
     <Compile Include="Log\LogMessageType.cs" />
     <Compile Include="Log\LogProvider.cs" />
+    <Compile Include="Log\PerformanceMonitor.cs" />
     <Compile Include="Progress\DHProgress.cs" />
     <Compile Include="Progress\IDHProgress.cs" />
     <Compile Include="Progress\ProgressItem.cs" />

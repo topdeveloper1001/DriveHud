@@ -70,6 +70,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set All HUDs Same As.
+        /// </summary>
+        internal static string Main_ContextMenu_ApplyPositions {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ApplyPositions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seat #{0}.
+        /// </summary>
+        internal static string Main_ContextMenu_ApplyPositionsAsSeat {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ApplyPositionsAsSeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Calculate Equity.
         /// </summary>
         internal static string Main_ContextMenu_CalculateEquity {

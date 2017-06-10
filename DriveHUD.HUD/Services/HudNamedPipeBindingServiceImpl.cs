@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.HUD.Service;
 using ProtoBuf;
@@ -36,7 +37,7 @@ namespace DriveHUD.HUD.Services
 
                 using (var afterStream = new MemoryStream(data))
                 {
-                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
+                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);                    
                 }
 
                 LogProvider.Log.Debug(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");

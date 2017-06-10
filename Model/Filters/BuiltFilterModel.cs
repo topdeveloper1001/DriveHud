@@ -647,26 +647,39 @@ namespace Model.Filters
             }
 
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
-            switch (DateModel.DateFilterType)
+            switch (DateModel.DateFilterType.EnumDateRange)
             {
-                case EnumDateFiter.Today:
+                case EnumDateFiterStruct.EnumDateFiter.Today:
                     filterSectionItem.Name = "Today";
                     filterSectionItem.IsActive = true;
                     break;
-                case EnumDateFiter.ThisWeek:
+                case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
                     filterSectionItem.Name = "This Week";
                     filterSectionItem.IsActive = true;
                     break;
-                case EnumDateFiter.ThisMonth:
+                case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
                     filterSectionItem.Name = "This Month";
                     filterSectionItem.IsActive = true;
                     break;
-                case EnumDateFiter.LastMonth:
+                case EnumDateFiterStruct.EnumDateFiter.LastMonth:
                     filterSectionItem.Name = "Last Month";
                     filterSectionItem.IsActive = true;
                     break;
-                case EnumDateFiter.ThisYear:
+                case EnumDateFiterStruct.EnumDateFiter.ThisYear:
                     filterSectionItem.Name = "This Year";
+                    filterSectionItem.IsActive = true;
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
+                    if (DateModel.DateFilterType.DateFrom <= DateModel.DateFilterType.DateTo)
+                        filterSectionItem.Name = DateModel.DateFilterType.DateFrom.Date.ToShortDateString() 
+                                               + " - " 
+                                               + DateModel.DateFilterType.DateTo.Date.ToShortDateString();
+                    else
+                        filterSectionItem.Name = DateModel.DateFilterType.DateTo.Date.ToShortDateString() 
+                                               + " - " 
+                                               + DateModel.DateFilterType.DateFrom.Date.ToShortDateString();
+
+
                     filterSectionItem.IsActive = true;
                     break;
                 default:

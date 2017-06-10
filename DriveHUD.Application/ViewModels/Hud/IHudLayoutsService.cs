@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudStatSettingsViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="IHudLayoutsService.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,55 +10,73 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
-using Model.Enums;
+using System.Collections.Generic;
+using System.IO;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     /// <summary>
-    /// Operates with HUD layouts
+    /// Defines the service for initializing, loading, deleting layouts of the hud
     /// </summary>
     internal interface IHudLayoutsService
     {
-        List<HudTableViewModel> HudTableViewModels { get; set; }
-
+        /// <summary>
+        /// Gets or sets <see cref="HudLayoutMappings"/> the mappings of the layouts
+        /// </summary>
         HudLayoutMappings HudLayoutMappings { get; set; }
 
-        HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
-
-        HudLayoutInfo GetLayout(string name);
+        /// <summary>
+        /// Gets active <see cref="HudLayoutInfoV2"/> layout for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
+        /// </summary>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="tableType">Type of table</param>
+        /// <param name="gameType">Type of game</param>
+        /// <returns>Active layout</returns>
+        HudLayoutInfoV2 GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
 
         /// <summary>
-        /// Simple save
+        /// Gets layout with the specified name
         /// </summary>
-        void Save(HudLayoutInfo hudLayout);
+        /// <param name="name">Name of layout to get</param>
+        /// <returns>Layout</returns>
+        HudLayoutInfoV2 GetLayout(string name);
 
         /// <summary>
-        /// Save new layout
+        /// Saves the specified layout on the default path
         /// </summary>
-        HudLayoutInfo SaveAs(HudSavedDataInfo hudData);
+        /// <param name="hudLayout">The layout to save</param>
+        void Save(HudLayoutInfoV2 hudLayout);
 
         /// <summary>
-        /// Delete layout
+        /// Saves layout based on the specified <see cref="HudSavedDataInfo"/> data
         /// </summary>
-        /// <param name="layout">Layout to delete</param>
+        /// <param name="hudData">Data to save layout</param>
+        HudLayoutInfoV2 SaveAs(HudSavedDataInfo hudData);
+
+        /// <summary>
+        /// Deletes the specified layout
+        /// </summary>
+        /// <param name="layoutName">Name of the layout to delete</param>
+        /// <returns>True if the layout is deleted, otherwise - false</returns>
         bool Delete(string layoutName);
 
         /// <summary>
-        /// Export layout
+        /// Exports <see cref="HudLayoutInfoV2"/> the layout to the specified path
         /// </summary>
-        void Export(HudLayoutInfo layout, string path);
+        /// <param name="layout">Layout to export</param>
+        /// <param name="path">Path to file</param>
+        void Export(HudLayoutInfoV2 layout, string path);
 
         /// <summary>
-        /// Import layout
+        /// Imports <see cref="HudLayoutInfoV2"/> layout on the specified path
         /// </summary>
         /// <param name="path">Path to layout</param>
-        HudLayoutInfo Import(string path);
+        HudLayoutInfoV2 Import(string path);
 
         /// <summary>
-        /// Set icons for hud elements based on stats and layout player type settings
+        /// Sets icons for hud elements based on stats and layout player type settings
         /// </summary>
         void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName);
 
@@ -69,15 +87,9 @@ namespace DriveHUD.Application.ViewModels
         IList<string> GetValidStickers(Playerstatistic statistic, string layoutName);
 
         /// <summary>
-        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics,
-            string layoutName);
-
-        /// <summary>
-        /// Save bumper stickers for layout specified
-        /// </summary>
-        //void SaveBumperStickers(HudLayoutInfo hudLayout);
+        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, string layoutName);
 
         /// <summary>
         /// Get path to image directory
@@ -93,20 +105,53 @@ namespace DriveHUD.Application.ViewModels
         string GetImageLink(string image);
 
         /// <summary>
-        /// Set active layout
+        /// Sets active layout for the specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumGameType"/> game type and <see cref="EnumTableType"/> table type
         /// </summary>
         /// <param name="hudToLoad">Layout to be set as active</param>
-        /// <param name="pokerSite">Poker site</param>
-        /// <param name="gameType">Game type</param>
-        /// <param name="tableType">Table type</param>
-        void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
+        /// <param name="pokerSite">Poker site to set active layout</param>
+        /// <param name="gameType">Game type to set active layout</param>
+        /// <param name="tableType">Table type to set active layout</param>
+        void SetActiveLayout(HudLayoutInfoV2 hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
 
+        /// <summary>
+        /// Gets layouts names for specified <see cref="EnumTableType"/>  table type
+        /// </summary>
+        /// <param name="tableType">Type of table</param>
+        /// <returns>Collection of names</returns>
         IEnumerable<string> GetLayoutsNames(EnumTableType tableType);
 
+        /// <summary>
+        /// Gets the names of available layouts for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
+        /// </summary>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="tableType">Type of table</param>
+        /// <param name="gameType">Type of game</param>        
         IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
 
-        List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType);
+        /// <summary>
+        /// Gets the sorted list of <see cref="HudLayoutInfoV2"/> layouts for the specified <see cref="EnumTableType"/> table type
+        /// </summary>
+        /// <param name="tableType">Type of table</param>        
+        List<HudLayoutInfoV2> GetAllLayouts(EnumTableType tableType);
 
+        /// <summary>
+        /// Saves the mapping of the layout to the file on the default path
+        /// </summary>
         void SaveLayoutMappings();
+
+        /// <summary>
+        /// Gets the path to the directory with layouts
+        /// </summary>
+        /// <returns>Directory</returns>
+        DirectoryInfo GetLayoutsDirectory();
+
+        /// <summary>
+        /// Duplicates the specified <see cref="HudLayoutInfoV2" />
+        /// </summary>
+        /// <param name="tableType">Table type of the duplicated layout</param>
+        /// <param name="layoutName">Name of the duplicated layout</param>
+        /// <param name="layoutToDuplicate">Layout to duplicate</param>
+        /// <returns>The duplicated layout</returns>
+        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
     }
 }

@@ -76,6 +76,8 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
                 case EnumPokerSites.BlackChipPoker:
+                case EnumPokerSites.TruePoker:
+                case EnumPokerSites.YaPoker:
                     return WinningPokerNetworkSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.SportsBetting:
                 default:

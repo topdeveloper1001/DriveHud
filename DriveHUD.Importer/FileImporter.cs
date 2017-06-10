@@ -400,7 +400,7 @@ namespace DriveHUD.Importers
                                 }
                             }
 
-                            ProcessTournamentData(tournamentsData, parsingResult, session);
+                            ProcessTournaments(tournamentsData, parsingResult, session);
 
                             transaction.Commit();
 
@@ -460,7 +460,7 @@ namespace DriveHUD.Importers
                                 PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
                             },
                             Stats = playerStatCopy,
-                            IsHero = isHero                         
+                            IsHero = isHero
                         };
 
                         importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
@@ -570,14 +570,7 @@ namespace DriveHUD.Importers
 
                 playerStat.SessionCode = session;
 
-                if (string.IsNullOrEmpty(session))
-                {
-                    Task.Run(() => dataService.Store(playerStat));
-                }
-                else
-                {
-                    dataService.Store(playerStat);
-                }
+                StorePlayerStatistic(playerStat, session);
 
                 return playerStat;
             }
@@ -586,6 +579,22 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Error(e);
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Stores player statistics
+        /// </summary>
+        /// <param name="playerStat"></param>
+        /// <param name="session"></param>
+        protected virtual void StorePlayerStatistic(Playerstatistic playerStat, string session)
+        {
+            if (string.IsNullOrEmpty(session))
+            {
+                Task.Run(() => dataService.Store(playerStat));
+                return;
+            }
+
+            dataService.Store(playerStat);
         }
 
         /// <summary>
@@ -731,9 +740,44 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
+        /// Processes tournaments data
+        /// </summary>
+        /// <param name="tournaments">List of tournaments</param>
+        /// <param name="parsingResult">Results of parsing of hh </param>
+        /// <param name="session">DB session</param>
+        private void ProcessTournaments(List<Tournaments> tournaments, List<ParsingResult> parsingResult, IStatelessSession session)
+        {
+            // if hh file contains data about several tournaments we need to group them
+            var tournamentsDataGrouped = tournaments
+                .GroupBy(x => x.Tourneynumber)
+                .Select(x => new { TournamentId = x.Key, Tournaments = x.ToList() })
+                .ToDictionary(x => x.TournamentId, x => x.Tournaments);
+
+            var parsingResultGrouped = parsingResult
+                .Where(x => x.Source.GameDescription != null && x.Source.GameDescription.IsTournament)
+                .GroupBy(x => x.Source.GameDescription.Tournament.TournamentId)
+                .Select(x => new { TournamentId = x.Key, Tournaments = x.ToList() })
+                .ToDictionary(x => x.TournamentId, x => x.Tournaments);
+
+            foreach (var tournamentData in tournamentsDataGrouped)
+            {
+                // that should never happen, but who knows :)
+                if (!parsingResultGrouped.ContainsKey(tournamentData.Key))
+                {
+                    LogProvider.Log.Error(this, $"Inconsistent data. Couldn't find '{tournamentData.Key}' in parsing results. Tournament processing has been skipped.");
+                    continue;
+                }
+
+                var tournamentParsingResult = parsingResultGrouped[tournamentData.Key];
+                ProcessTournamentData(tournamentData.Value, tournamentParsingResult, session);
+            }
+        }
+
+        /// <summary>
         /// Process tournament data
         /// </summary>
         /// <param name="tournaments">List of tournaments</param>
+        /// <param name="parsingResult">Results of parsing of hh </param>
         /// <param name="session">DB session</param>
         private void ProcessTournamentData(List<Tournaments> tournaments, List<ParsingResult> parsingResult, IStatelessSession session)
         {
@@ -792,13 +836,20 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName);
+                var isHero = lastParsingResult.Source.Hero != null && lastParsingResult.Source.Hero.PlayerName != null ?
+                    lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName) :
+                    false;
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
                     Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :
                     GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
 
-                tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = currentPosition--;
+                tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = isHero && lastParsingResult.Source.GameDescription.Tournament.FinishPosition != 0 ?
+                    lastParsingResult.Source.GameDescription.Tournament.FinishPosition :
+                    currentPosition;
+
+                currentPosition--;
+
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer = true;
             }
 

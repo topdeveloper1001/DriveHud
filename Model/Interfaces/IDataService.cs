@@ -10,22 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.IO;
+using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Model.Data;
-using DriveHUD.Entities;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Model.Interfaces
 {
     public interface IDataService
-    {        
+    {
+        void SetPlayerStatisticPath(string path);
+
         IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
 
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
         Indicators GetPlayerIndicator(int playerId, short pokersiteId);
+
         IList<HandHistoryRecord> GetHandHistoryRecords();
+
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 
         Players GetPlayer(string playerName, short pokersiteId);

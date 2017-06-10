@@ -17,6 +17,7 @@ namespace DriveHUD.Entities
         Horizontal,
         Vertical_1,
         Vertical_2,
-        Plain
+        Plain,
+        CustomDesigned
     }
 }

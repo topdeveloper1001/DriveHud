@@ -16,6 +16,8 @@ namespace DriveHUD.Updater
     {
         public const string MainApplicationProccess = "DriveHUD.Application.exe";
 
+        public const string MainApplicationInstaller = "DriveHUD-install.exe";
+
         public const string MainApplicationGuid = "590a4281-a3c0-42b3-a646-6dc72dcc46f2";
     }
 }

@@ -11,14 +11,6 @@
 //----------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using DriveHUD.Updater.Core;
 
 namespace DriveHUD.Updater
 {
@@ -26,22 +18,9 @@ namespace DriveHUD.Updater
     {
         [STAThread]
         public static void Main()
-        {           
-            //use same as MainApp guid to prevent running updater and app together
-            //if (SingleInstance<App>.InitializeAsFirstInstance(DriveHUDUpdaterPaths.MainApplicationGuid, false))
-            //{
-                if (CertificateHelper.Verify(DriveHUDUpdaterPaths.MainApplicationProccess))
-                {
-                    var application = new App();                    
-                    application.Run();
-                }
-                else
-                {
-                    MessageBox.Show("Certificate is invalid. Updater couldn't be run.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-
-            //    SingleInstance<App>.Cleanup();
-            //}
+        {
+            var application = new App();
+            application.Run();
         }
     }
 }

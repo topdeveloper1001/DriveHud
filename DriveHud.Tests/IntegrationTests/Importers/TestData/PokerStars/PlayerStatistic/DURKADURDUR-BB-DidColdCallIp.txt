@@ -1,0 +1,39 @@
+PokerStars Game #47153247340:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:19:40 ET
+Table 'Lilaea III' 6-max Seat #1 is the button
+Seat 1: chloepuppy8 ($209 in chips) 
+Seat 2: fakker11 ($200 in chips) 
+Seat 3: DURKADURDUR ($684.90 in chips) 
+Seat 4: stopme10 ($200 in chips) 
+Seat 5: ballagio22 ($240.60 in chips) 
+Seat 6: Bosas2 ($254.90 in chips) 
+fakker11: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+stopme10: folds 
+ballagio22: folds 
+Bosas2: folds 
+chloepuppy8: folds 
+fakker11: raises $4 to $6
+DURKADURDUR: calls $4
+*** FLOP *** [Kh Ks Tc]
+fakker11: checks 
+DURKADURDUR: checks 
+*** TURN *** [Kh Ks Tc] [7d]
+fakker11: checks 
+DURKADURDUR: checks 
+*** RIVER *** [Kh Ks Tc 7d] [Jd]
+fakker11: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+fakker11: shows [6d Qd] (a pair of Kings)
+DURKADURDUR: shows [6h 6c] (two pair, Kings and Sixes)
+DURKADURDUR collected $11.40 from pot
+*** SUMMARY ***
+Total pot $12 | Rake $0.60 
+Board [Kh Ks Tc 7d Jd]
+Seat 1: chloepuppy8 (button) folded before Flop (didn't bet)
+Seat 2: fakker11 (small blind) showed [6d Qd] and lost with a pair of Kings
+Seat 3: DURKADURDUR (big blind) showed [6h 6c] and won ($11.40) with two pair, Kings and Sixes
+Seat 4: stopme10 folded before Flop (didn't bet)
+Seat 5: ballagio22 folded before Flop (didn't bet)
+Seat 6: Bosas2 folded before Flop (didn't bet)
