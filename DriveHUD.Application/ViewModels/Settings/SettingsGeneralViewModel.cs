@@ -206,42 +206,23 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         private void RebuildStats(object obj)
         {
-            var mainViewModel = GetMainViewModel();
+            var mainViewModel = App.GetMainViewModel();
             mainViewModel?.RebuildStats();
             parent.FinishInteraction?.Invoke();
         }
 
         private void RecoverStats(object obj)
         {
-            var mainViewModel = GetMainViewModel();
+            var mainViewModel = App.GetMainViewModel();
             mainViewModel?.RecoverStats();
             parent.FinishInteraction?.Invoke();
         }
 
         private bool CanRunStatsCommand()
         {
-            var mainViewModel = GetMainViewModel();
+            var mainViewModel = App.GetMainViewModel();
             return mainViewModel != null && !mainViewModel.IsHudRunning;
-        }
-
-        private MainWindowViewModel GetMainViewModel()
-        {
-            if (App.Current.MainWindow == null)
-            {
-                return null;
-            }
-
-            var mainWindow = App.Current.MainWindow.Content as RadWindow;
-
-            if (mainWindow == null)
-            {
-                return null;
-            }
-
-            var mainViewModel = mainWindow.DataContext as MainWindowViewModel;
-
-            return mainViewModel;
-        }
+        }       
 
         #endregion
     }

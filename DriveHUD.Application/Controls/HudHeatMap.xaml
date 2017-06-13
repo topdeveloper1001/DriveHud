@@ -41,12 +41,16 @@
             <Grid>
 
                 <TextBlock
-                    Text="{Binding BaseStat.Stat, Converter={dh:EnumToLocalizedStringConverter}}"
+                    Text="{ResX Key=Common_HudLayout_PlayerRange}"
                     Style="{StaticResource HeatMapHeaderTextBlockStyle}" />
 
                 <TextBlock
-                    Text="{Binding BaseStat.Caption}"
-                    Style="{StaticResource HeatMapStatValueTextBlockStyle}" />
+                    Style="{StaticResource HeatMapStatValueTextBlockStyle}">
+                    <Run
+                        Text="{Binding BaseStat.Caption}" />
+                      <Run
+                        Text="{ResX Key=Common_PercentSign}" />
+                </TextBlock>
 
             </Grid>
 

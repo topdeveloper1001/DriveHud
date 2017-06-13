@@ -27,6 +27,8 @@ namespace DriveHUD.Updater.Core
     {
         bool CheckIsUpdateAvailable(string guid, string applicationPath);
 
+        ApplicationInfo CheckIsUpdateAvailable(string guid, string applicationPath, out bool isUpdateAvailable);
+
         Task<DirectoryInfo> UpdateApplicationAsync(string guid, string applicationPath, bool doNotMoveData);
 
         Task InitializeAsync(string pathToUpdatingData = null, X509Certificate2 assemblyCertificate = null);
@@ -109,13 +111,29 @@ namespace DriveHUD.Updater.Core
 
         public virtual bool CheckIsUpdateAvailable(string guid, string applicationPath)
         {
+            bool isUpdateAvailable;
+
+            CheckIsUpdateAvailable(guid, applicationPath, out isUpdateAvailable);
+
+            return isUpdateAvailable;
+        }
+
+        public virtual ApplicationInfo CheckIsUpdateAvailable(string guid, string applicationPath, out bool isUpdateAvailable)
+        {
+            isUpdateAvailable = false;
+
             if (!isInitialized)
-                return false;
+            {
+                return null;
+            }
 
             var assemblyName = AssemblyName.GetAssemblyName(applicationPath);
 
             var appInfo = GetApplicationUpdateInfo(guid, assemblyName.Version);
-            return appInfo != null;
+
+            isUpdateAvailable = appInfo != null;
+
+            return appInfo;
         }
 
         public async virtual Task<DirectoryInfo> UpdateApplicationAsync(string guid, string applicationPath, bool doNotMoveData)
@@ -188,7 +206,7 @@ namespace DriveHUD.Updater.Core
         {
             Version appInfoVersion;
 
-            var appInfo = applicationInfo.FirstOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
+            var appInfo = applicationInfo.LastOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
                                                                 Version.TryParse(x.Version.Version, out appInfoVersion) &&
                                                                 appInfoVersion > appVersion);
 

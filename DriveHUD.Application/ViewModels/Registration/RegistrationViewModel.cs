@@ -792,10 +792,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 #endif
             }
 
-            if (FinishInteraction != null)
-            {
-                FinishInteraction();
-            }
+            FinishInteraction?.Invoke();
         }
 
         private void Send()

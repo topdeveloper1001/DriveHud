@@ -38,6 +38,8 @@
                 <Border
                     Style="{StaticResource StatInfoBorderStyle}">
                     <ContentControl
+                        dh:DragDrop.IsDragTarget="True"
+                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                         Margin="3"
                         Style="{StaticResource MeterControlStyle}"
                         Height="16"
@@ -50,6 +52,8 @@
                 <Border
                     Style="{StaticResource StatInfoBorderStyle}">
                     <TextBlock
+                        dh:DragDrop.IsDragTarget="True"
+                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                         Style="{StaticResource HudToolTipTextBlockStyle}"
                         Margin="3"
                         Height="16"

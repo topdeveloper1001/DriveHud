@@ -21,7 +21,8 @@ namespace HandHistories.Parser.Utils.Time
         CET,
         GMT,
         GMT1,
-        CEST
+        CEST,
+        Current
     }
 
     internal static class TimeZoneUtil
@@ -60,6 +61,9 @@ namespace HandHistories.Parser.Utils.Time
                         break;
                     case TimeZoneType.CEST:
                         timeZoneId = "Central European Summer Time";
+                        break;
+                    case TimeZoneType.Current:
+                        timeZoneId = TimeZoneInfo.Local.Id;
                         break;
                     default:
                         throw new NotImplementedException("GetTimeZoneInfo: Not implemented for time zone " +

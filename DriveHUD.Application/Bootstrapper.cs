@@ -124,6 +124,13 @@ namespace DriveHUD.Application
 
                     App.SplashScreen.CloseSplashScreen();
 
+                    if (App.IsUpdateAvailable)
+                    {
+                        mainWindowViewModel.IsActive = true;
+                        mainWindowViewModel.ShowUpdate();
+                        mainWindowViewModel.IsActive = false;
+                    }
+
                     var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
                     if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
@@ -162,6 +169,7 @@ namespace DriveHUD.Application
             foreach (string arg in args.Skip(1))
             {
                 LogProvider.Log.Info(this, string.Format("Argument found {0}", arg));
+
                 if (arg == "-uninstall")
                 {
                     return true;
@@ -232,9 +240,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
 
-
             // HUD designer 
-            Container.RegisterType<IHudToolFactory, HudToolFactory>();          
+            Container.RegisterType<IHudToolFactory, HudToolFactory>();
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);

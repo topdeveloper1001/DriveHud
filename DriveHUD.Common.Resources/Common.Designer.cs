@@ -800,6 +800,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player range.
+        /// </summary>
+        internal static string Common_HudLayout_PlayerRange {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_PlayerRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select HUD layout:.
         /// </summary>
         internal static string Common_HudLayout_SelectLabel {

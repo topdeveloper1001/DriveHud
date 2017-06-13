@@ -306,14 +306,7 @@
                                                         Key="A"
                                                         Modifiers="Control" />
                                                 </ScrollViewer.InputBindings>
-                                                <Grid>
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto"></RowDefinition>
-                                                        <RowDefinition Height="*"></RowDefinition>
-                                                    </Grid.RowDefinitions>
-
-                                                    <ItemsPresenter Grid.Row="1" />
-                                                </Grid>
+                                                <ItemsPresenter />
                                             </ScrollViewer>
                                         </Grid>
                                     </Border>
@@ -1271,6 +1264,53 @@
                     <system:Boolean>False</system:Boolean>
                 </infra:PopupWindowAction.HasBorder>
             </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding UpdateViewRequest,Mode=OneWay}">
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource PopupBackground}" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="150" />
+                        <Setter
+                            Property="MaxHeight"
+                            Value="370" />
+                        <Setter
+                            Property="CanClose"
+                            Value="False" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
+                            Property="Width"
+                            Value="480" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <v:UpdateView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
 
     </i:Interaction.Triggers>

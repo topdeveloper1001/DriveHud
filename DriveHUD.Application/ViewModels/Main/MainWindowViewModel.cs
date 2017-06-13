@@ -18,6 +18,7 @@ using DriveHUD.Application.Services;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
+using DriveHUD.Application.ViewModels.Update;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -142,7 +143,6 @@ namespace DriveHUD.Application.ViewModels
             RadDropDownButtonFilterIsOpen = false;
             RadDropDownButtonFilterKeepOpen = true;
 
-
             StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
 
@@ -169,6 +169,8 @@ namespace DriveHUD.Application.ViewModels
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
+            UpdateViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
 
             SortedPlayers = new CollectionViewSource();
@@ -921,6 +923,12 @@ namespace DriveHUD.Application.ViewModels
             IsEnabled = true;
         }
 
+        internal void ShowUpdate()
+        {
+            var updateViewModel = new UpdateViewModel(App.UpdateApplicationInfo);
+            UpdateViewRequest?.Raise(updateViewModel);
+        }
+
         #endregion
 
         #region Properties
@@ -1414,6 +1422,8 @@ namespace DriveHUD.Application.ViewModels
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
+        public InteractionRequest<INotification> UpdateViewRequest { get; private set; }
+
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {
             PopupContainerSettingsViewModelNotification notification = new PopupContainerSettingsViewModelNotification();
@@ -1460,7 +1470,7 @@ namespace DriveHUD.Application.ViewModels
             notification.Title = "Filters";
             notification.FilterTuple = filterTuple;
 
-            this.PopupFiltersRequest.Raise(notification,
+            PopupFiltersRequest.Raise(notification,
                 returned => { });
         }
 

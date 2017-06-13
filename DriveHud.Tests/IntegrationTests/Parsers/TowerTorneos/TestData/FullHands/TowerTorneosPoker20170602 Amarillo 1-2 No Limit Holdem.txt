@@ -1,0 +1,37 @@
+#Game No : 476760690
+***** TowerTorneosPoker Hand History for Game 476760690 *****
+1/2 Blinds No Limit Holdem - *** 02 06 2017 15:50:02
+Table Amarillo 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 4: AleksMordas5 ( 229 )
+Seat 6: kherson_it ( 200 )
+Seat 7: mouseyyy77 ( 994,90 )
+Seat 8: Buzila14 ( 442,20 )
+Seat 9: sanyi7966 ( 115 )
+AleksMordas5 posts small blind [1]
+kherson_it posts big blind [2]
+** Dealing down cards **
+Dealt to kherson_it [ 9c, Kp ]
+mouseyyy77 calls [2]
+Buzila14 calls [2]
+sanyi7966 raises [115]
+AleksMordas5 folds
+kherson_it calls [113]
+mouseyyy77 folds
+Buzila14 calls [113]
+** Dealing flop ** [ 8c, 3c, 7c ]
+kherson_it checks
+Buzila14 bets [85]
+kherson_it calls [85]
+** Dealing turn ** [ 9p ]
+** Dealing river ** [ Dt ]
+** Summary **
+kherson_it shows [ 9c, Kp ]
+Buzila14 shows [ 7d, Ac ]
+sanyi7966 shows [ Jt, Jp ]
+sanyi7966 collected [ 344 ]
+kherson_it collected [ 170 ]
+
+
+
