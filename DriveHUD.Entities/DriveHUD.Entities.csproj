@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aliases.cs" />
     <Compile Include="DatabaseType.cs" />
     <Compile Include="EntityUtils.cs" />
     <Compile Include="EnumFacingPreflop.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="HandHistoryRecord.cs" />
     <Compile Include="Handnotes.cs" />
     <Compile Include="HudViewType.cs" />
+    <Compile Include="Mappings\AliasesMap.cs" />
     <Compile Include="Mappings\GametypesMap.cs" />
     <Compile Include="Mappings\HandhistoryMap.cs" />
     <Compile Include="Mappings\HandhistoryrecordMap.cs" />

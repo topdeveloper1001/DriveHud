@@ -275,8 +275,15 @@ namespace DriveHUD.Application.ViewModels
                 return;
 
             SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
+            List<Tournaments> playerTournaments = new List<Tournaments>();
 
-            var playerTournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+                playerTournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite));
+
+            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
+                foreach (var player in (StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias)
+                    playerTournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite));
+
             MTTWon = 0;
             STTWon = 0;
             TotalMTT = 0;

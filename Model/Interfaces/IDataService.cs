@@ -68,11 +68,11 @@ namespace Model.Interfaces
 
         Stream OpenStorageStream(string filename, FileMode mode);
 
-        IList<PlayerCollectionItem> GetPlayersList();
+        IList<IPlayer> GetPlayersList();
 
-        void AddPlayerToList(PlayerCollectionItem playerItem);
+        void AddPlayerToList(IPlayer playerItem);
 
-        void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems);
+        void AddPlayerRangeToList(IEnumerable<IPlayer> playerItems);
 
         void RemoveAppData();
 
@@ -82,8 +82,20 @@ namespace Model.Interfaces
         /// <param name="statistic">Statistic to delete</param>
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
 
-        PlayerCollectionItem GetActivePlayer();
+        IPlayer GetActivePlayer();
 
         void SaveActivePlayer(string playerName, short pokersiteId);
+
+        #region Aliases
+
+        Aliases GetAlias(string aliasName);
+
+        void SaveAlias(AliasCollectionItem aliasToSave);
+
+        void RemoveAlias(AliasCollectionItem aliasToRemove);
+
+        IList<IPlayer> GetAliasesList();
+
+        #endregion
     }
 }

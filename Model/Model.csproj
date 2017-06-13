@@ -137,6 +137,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AliasCollectionItem.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
     <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
     <Compile Include="AppStore\ITrainingAppStoreRepository.cs" />
@@ -244,6 +245,7 @@
     <Compile Include="Interfaces\ITopPlayersService.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
+    <Compile Include="IPlayer.cs" />
     <Compile Include="IPlayerStatisticCalculator.cs" />
     <Compile Include="ISessionFactoryService.cs" />
     <Compile Include="LocalCalculator\PreflopRange.cs" />

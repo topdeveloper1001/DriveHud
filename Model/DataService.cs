@@ -180,6 +180,56 @@ namespace Model
             }
         }
 
+        #region Aliases
+
+        public Aliases GetAlias(string aliasName)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<Aliases>().FirstOrDefault(x => x.AliasName == aliasName);
+            }
+        }
+
+        public void SaveAlias(AliasCollectionItem aliasToSave)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    session.SaveOrUpdate(new Aliases()
+                    {
+                        AliasId = aliasToSave.PlayerId,
+                        AliasName = aliasToSave.Name,
+                        PlayersInAlias = aliasToSave.ConvertPlayersToString()
+                    });
+
+                    if (aliasToSave.PlayerId == 0)
+                        aliasToSave.PlayerId = session.Query<Aliases>().Where(x => x.AliasName == aliasToSave.Name).FirstOrDefault().AliasId;
+
+                    transaction.Commit();
+                }
+            }
+        }
+
+        public void RemoveAlias(AliasCollectionItem aliasToRemove)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    session.Delete(new Aliases()
+                    {
+                        AliasId = aliasToRemove.PlayerId,
+                        AliasName = aliasToRemove.Name,
+                        PlayersInAlias = aliasToRemove.ConvertPlayersToString()
+                    });
+                    transaction.Commit();
+                }
+            }
+        }
+
+        #endregion
+
         public IList<HandHistoryRecord> GetHandHistoryRecords()
         {
             using (var session = ModelEntities.OpenSession())
@@ -529,11 +579,13 @@ namespace Model
 
         #region workaround for players collection (need to organize it better)
 
-        private List<PlayerCollectionItem> playerInternalCollection = null;
+        private List<IPlayer> playerInternalCollection = null;
+        private List<IPlayer> aliasesInternalCollection = null;
 
         private ReaderWriterLockSlim playerCollectionLock = new ReaderWriterLockSlim();
+        private ReaderWriterLockSlim aliasCollectionLock = new ReaderWriterLockSlim();
 
-        public void AddPlayerToList(PlayerCollectionItem playerItem)
+        public void AddPlayerToList(IPlayer playerItem)
         {
             if (playerItem == null)
             {
@@ -546,7 +598,7 @@ namespace Model
             {
                 if (playerInternalCollection == null)
                 {
-                    playerInternalCollection = new List<PlayerCollectionItem>();
+                    playerInternalCollection = new List<IPlayer>();
                 }
 
                 playerInternalCollection.Add(playerItem);
@@ -557,7 +609,7 @@ namespace Model
             }
         }
 
-        public void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems)
+        public void AddPlayerRangeToList(IEnumerable<IPlayer> playerItems)
         {
             if (playerItems == null)
             {
@@ -570,7 +622,7 @@ namespace Model
             {
                 if (playerInternalCollection == null)
                 {
-                    playerInternalCollection = new List<PlayerCollectionItem>();
+                    playerInternalCollection = new List<IPlayer>();
                 }
 
                 playerInternalCollection.AddRange(playerItems);
@@ -581,7 +633,7 @@ namespace Model
             }
         }
 
-        public IList<PlayerCollectionItem> GetPlayersList()
+        public IList<IPlayer> GetPlayersList()
         {
             if (playerInternalCollection == null)
             {
@@ -604,7 +656,7 @@ namespace Model
 
             try
             {
-                return new List<PlayerCollectionItem>(playerInternalCollection.OrderBy(x => x.Name));
+                return new List<IPlayer>(playerInternalCollection.OrderBy(x => x.Name));
             }
             finally
             {
@@ -612,7 +664,7 @@ namespace Model
             }
         }
 
-        private List<PlayerCollectionItem> GetPlayersListInternal()
+        private List<IPlayer> GetPlayersListInternal()
         {
             try
             {
@@ -621,14 +673,16 @@ namespace Model
                     Directory.CreateDirectory(playersPath);
                 }
 
+                List<IPlayer> players = new List<IPlayer>();
+
                 using (var session = ModelEntities.OpenSession())
                 {
-                    var players = session.Query<Players>().ToArray().Select(x => new PlayerCollectionItem
+                    players.AddRange(session.Query<Players>().ToArray().Select(x => new PlayerCollectionItem
                     {
                         PlayerId = x.PlayerId,
                         PokerSite = (EnumPokerSites)x.PokersiteId,
                         Name = x.Playername
-                    }).ToList();
+                    }));
 
                     return players;
                 }
@@ -638,7 +692,69 @@ namespace Model
                 LogProvider.Log.Error(this, "Couldn't get player list", e);
             }
 
-            return new List<PlayerCollectionItem>();
+            return new List<IPlayer>();
+        }
+
+        public IList<IPlayer> GetAliasesList()
+        {
+            if (aliasesInternalCollection == null)
+            {
+                aliasCollectionLock.EnterWriteLock();
+
+                if (aliasesInternalCollection == null)
+                {
+                    try
+                    {
+                        aliasesInternalCollection = GetAliasesListInternal();
+                    }
+                    finally
+                    {
+                        aliasCollectionLock.ExitWriteLock();
+                    }
+                }
+            }
+
+            aliasCollectionLock.EnterReadLock();
+
+            try
+            {
+                return new List<IPlayer>(aliasesInternalCollection.OrderBy(x => x.Name));
+            }
+            finally
+            {
+                aliasCollectionLock.ExitReadLock();
+            }
+        }
+
+        private List<IPlayer> GetAliasesListInternal()
+        {
+            try
+            {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                List<IPlayer> players = new List<IPlayer>();
+
+                using (var session = ModelEntities.OpenSession())
+                {
+                    players.AddRange(session.Query<Aliases>().ToArray().Select(x => new AliasCollectionItem
+                    {
+                        PlayerId = x.AliasId,
+                        Name = x.AliasName,
+                        PlayersInAlias = AliasCollectionItem.ConvertFromDB(x.PlayersInAlias)
+                    }));
+
+                    return players;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't get player list", e);
+            }
+
+            return new List<IPlayer>();
         }
 
         #endregion
@@ -712,7 +828,7 @@ namespace Model
 
         }
 
-        public PlayerCollectionItem GetActivePlayer()
+        public IPlayer GetActivePlayer()
         {
             var activePlayer = new PlayerCollectionItem();
 

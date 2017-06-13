@@ -306,7 +306,14 @@
                                                         Key="A"
                                                         Modifiers="Control" />
                                                 </ScrollViewer.InputBindings>
-                                                <ItemsPresenter />
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+
+                                                    <ItemsPresenter Grid.Row="1" />
+                                                </Grid>
                                             </ScrollViewer>
                                         </Grid>
                                     </Border>
@@ -565,7 +572,20 @@
                                                         Key="A"
                                                         Modifiers="Control" />
                                                 </ScrollViewer.InputBindings>
-                                                <ItemsPresenter />
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Button Margin="5"
+                                                            Background="{TemplateBinding Background}"
+                                                            Command="{Binding AliasMenuCommand}">
+                                                        Create Alias
+                                                    </Button>
+
+                                                    <ItemsPresenter Grid.Row="1" />
+                                                </Grid>
                                             </ScrollViewer>
                                         </Grid>
                                     </Border>
@@ -898,7 +918,7 @@
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                                     <TextBlock
-                                        Text="{Binding Path=PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
+                                        Text="{Binding Description}"
                                         HorizontalAlignment="Right"
                                         Margin="0 0 5 0"
                                         Style="{StaticResource Title_H2}" />
@@ -1127,6 +1147,50 @@
         </prism:InteractionRequestTrigger>
 
         <prism:InteractionRequestTrigger
+            SourceObject="{Binding Path=PopupAliasRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource BackgroundBrush1}" />
+                        <Setter
+                            Property="Height"
+                            Value="450" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="450" />
+                        <Setter
+                            Property="Width"
+                            Value="360" />
+                        <Setter
+                            Property="MinWidth"
+                            Value="360" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="CanResize" />
+                        <Setter
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerAliasView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
+
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction>
                 <infra:PopupTelerikWindowAction.WindowStyle>
@@ -1210,7 +1274,6 @@
         </prism:InteractionRequestTrigger>
 
     </i:Interaction.Triggers>
-
 
     <Grid
         x:Name="LayoutRoot"
@@ -1497,7 +1560,7 @@
                     Background="{StaticResource BackgroundBrush2}"
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     DisplayMemberPath="DecodedName"
-                    ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
+                    ItemsSource="{Binding SortedPlayers.View, Mode=OneWay}"
                     Style="{StaticResource RadComboBoxStyle1}"
                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
                     <telerik:RadComboBox.ItemsPanel>

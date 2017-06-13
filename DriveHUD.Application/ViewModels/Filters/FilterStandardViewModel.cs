@@ -9,6 +9,8 @@ using Model.Interfaces;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using DriveHUD.Application.ViewModels;
+using DriveHUD.Entities;
+using Model;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -22,7 +24,18 @@ namespace DriveHUD.Application.ViewModels
         public override void InitializeFilterModel()
         {
             var player = StorageModel.PlayerSelectedItem;
-            var gameTypes = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes(player.Name, (short)player.PokerSite);
+
+            List<Gametypes> gameTypes = new List<Gametypes>();
+            List<PlayerCollectionItem> players = new List<PlayerCollectionItem>();
+
+            if (player is PlayerCollectionItem)
+                players.Add(player as PlayerCollectionItem);
+
+            else if (player is AliasCollectionItem)
+                players.AddRange((player as AliasCollectionItem).PlayersInAlias);
+
+            foreach (PlayerCollectionItem playerIn in players)
+                gameTypes.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes((playerIn?.Name ?? string.Empty), (short)(playerIn?.PokerSite ?? EnumPokerSites.Unknown)));
 
             this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.Where(x => x.GetType().Equals(typeof(FilterStandardModel))).FirstOrDefault();
             this.FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);
