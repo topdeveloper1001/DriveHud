@@ -30,7 +30,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             _settingsModel = _infoViewModel?.Model;
 
             this.BonusName = _settingsModel?.BonusName ?? string.Empty;
-            this.Player = StorageModel.PlayerCollection.FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
+            this.Player = StorageModel.PlayerCollection.Where(pl => pl is PlayerCollectionItem).Select(pl => pl as PlayerCollectionItem).FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
             this.Date = _settingsModel?.Date ?? DateTime.Now;
             this.Amount = _settingsModel?.Amount ?? 0m;
         }

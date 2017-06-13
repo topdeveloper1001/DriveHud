@@ -433,6 +433,10 @@
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
+    <Compile Include="ViewModels\Alias\AliasAddEditViewModel.cs" />
+    <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
+    <Compile Include="ViewModels\Alias\AliasViewModel.cs" />
+    <Compile Include="ViewModels\Alias\AliasViewModelInfo.cs" />
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
@@ -510,6 +514,8 @@
     <Compile Include="ViewModels\Main\AppsViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerAliasViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBumperStickerFiltersViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />
@@ -533,6 +539,12 @@
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
     <Compile Include="ViewModels\Update\UpdateViewModel.cs" />
+    <Compile Include="Views\Alias\AliasAddEditView.xaml.cs">
+      <DependentUpon>AliasAddEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Alias\AliasView.xaml.cs">
+      <DependentUpon>AliasView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
     </Compile>
@@ -547,6 +559,9 @@
     </Compile>
     <Compile Include="Views\Filters\FilterDateView.xaml.cs">
       <DependentUpon>FilterDateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerAliasView.xaml.cs">
+      <DependentUpon>PopupContainerAliasView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
       <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
@@ -968,6 +983,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Alias\AliasAddEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Alias\AliasView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -991,6 +1014,10 @@
     <Page Include="Views\Hud\HudBumperStickersSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerAliasView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml">
       <SubType>Designer</SubType>
