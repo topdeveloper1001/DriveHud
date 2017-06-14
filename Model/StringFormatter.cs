@@ -101,7 +101,7 @@ namespace Model
 
         public static string GetDateTimeString(DateTime utcDateTime)
         {
-            return Converter.ToLocalizedDateTime(utcDateTime).ToString("MM/dd/yyyy hh.mm tt");
+            return Converter.ToLocalizedDateTime(utcDateTime).ToString("MM/dd/yyyy HH.mm tt");
         }
 
         public static string GetReplayerHeaderString(string stakeLevel, DateTime handDate)
