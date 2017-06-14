@@ -1,0 +1,49 @@
+PokerStars Hand #162520255332: Tournament #1705825174, Freeroll  Hold'em No Limit - Level II (15/30) - 2016/12/06 12:10:17 PT [2016/12/06 15:10:17 ET]
+Table '1705825174 21' 9-max Seat #3 is the button
+Seat 1: Karasinski88 (880 in chips) 
+Seat 2: dupcik007 (1835 in chips) 
+Seat 3: Lamanho3 (925 in chips) is sitting out
+Seat 4: pitbull19740 (1975 in chips) 
+Seat 5: simao092 (5 in chips) is sitting out
+Seat 6: Peon347 (5 in chips) 
+Seat 7: bapuk2009 (970 in chips) is sitting out
+Seat 8: jekstrflesh (2320 in chips) 
+Seat 9: redrug1990 (970 in chips) is sitting out
+pitbull19740: posts small blind 15
+simao092: posts big blind 5 and is all-in
+Peon347: posts big blind 5 and is all-in
+*** HOLE CARDS ***
+Dealt to Peon347 [5h 4c]
+bapuk2009: folds 
+jekstrflesh: raises 45 to 60
+redrug1990: folds 
+Karasinski88: folds 
+dupcik007: folds 
+Lamanho3: folds 
+pitbull19740: calls 45
+simao092: folds 
+*** FLOP *** [3h Ad 5d]
+pitbull19740: bets 60
+jekstrflesh: raises 90 to 150
+pitbull19740: calls 90
+*** TURN *** [3h Ad 5d] [3s]
+Peon84: folds
+pitbull19740: checks 
+jekstrflesh: bets 390
+pitbull19740: folds 
+Uncalled bet (390) returned to jekstrflesh
+jekstrflesh collected 410 from side pot
+jekstrflesh collected 20 from main pot
+simao092 finished the tournament in 4668th place
+*** SUMMARY ***
+Total pot 430 Main pot 20. Side pot 410. | Rake 0 
+Board [3h Ad 5d 3s]
+Seat 1: Karasinski88 folded before Flop (didn't bet)
+Seat 2: dupcik007 folded before Flop (didn't bet)
+Seat 3: Lamanho3 (button) folded before Flop (didn't bet)
+Seat 4: pitbull19740 (small blind) folded on the Turn
+Seat 5: simao092 (big blind) folded before Flop
+Seat 6: Peon347 folded before Flop (didn't bet)
+Seat 7: bapuk2009 folded before Flop (didn't bet)
+Seat 8: jekstrflesh collected (430)
+Seat 9: redrug1990 folded before Flop (didn't bet)

@@ -12,7 +12,6 @@
 
 using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
-using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using Microsoft.Practices.ServiceLocation;
@@ -22,10 +21,8 @@ using Model.Data;
 using Model.Interfaces;
 using NUnit.Framework;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {

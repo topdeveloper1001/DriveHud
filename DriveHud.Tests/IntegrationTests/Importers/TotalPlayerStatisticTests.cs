@@ -93,7 +93,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(playerstatistic.LimpSb, Is.EqualTo(1),nameof(playerstatistic.LimpSb));
                 Assert.That(playerstatistic.LimpEp, Is.EqualTo(3), nameof(playerstatistic.LimpEp));
                 Assert.That(playerstatistic.LimpMp, Is.EqualTo(1), nameof(playerstatistic.LimpMp));
-                Assert.That(playerstatistic.LimpCo, Is.EqualTo(0), nameof(playerstatistic.LimpCo));
+                Assert.That(playerstatistic.LimpCo, Is.EqualTo(1), nameof(playerstatistic.LimpCo));
                 Assert.That(playerstatistic.LimpBtn, Is.EqualTo(0), nameof(playerstatistic.LimpBtn));
                 Assert.That(playerstatistic.LimpPossible, Is.EqualTo(11), nameof(playerstatistic.LimpPossible));
 

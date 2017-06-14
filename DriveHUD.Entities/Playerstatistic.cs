@@ -24,7 +24,7 @@ namespace DriveHUD.Entities
     {
         public override string ToString()
         {
-            return $"Tournament: {TournamentId}; Time: {Time}; HandNumber: {GameNumber}; Currency: {CurrencyId}; Cards: {Cards}";
+            return $"Player: {PlayerName}; Tournament: {TournamentId}; Time: {Time}; HandNumber: {GameNumber}; Currency: {CurrencyId}; Cards: {Cards}";
         }
 
         public virtual int CompiledplayerresultsId { get; set; }
@@ -820,7 +820,7 @@ namespace DriveHUD.Entities
         public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
 
         public virtual FixedSizeList<Tuple<int, int>> RecentAggList { get; set; }
-   
+
         #endregion
 
         public bool IsUnopened

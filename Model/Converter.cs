@@ -124,9 +124,12 @@ namespace Model.Importer
 
             var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
 
-            var handActions = hand.HandActions.Where(x => x.HandActionType != HandActionType.ANTE).ToList();
+            var handActions = hand.HandActions
+                .Where(x => x.HandActionType != HandActionType.ANTE).ToList();
 
-            var firstPlayerAction = handActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+            var firstPlayerAction = handActions
+                .Where(x => x.HandActionType != HandActionType.SMALL_BLIND && x.HandActionType != HandActionType.BIG_BLIND && x.HandActionType != HandActionType.POSTS)
+                .FirstOrDefault(x => x.PlayerName == stat.PlayerName);
 
             int firstPlayerActionIndex;
 
@@ -144,6 +147,31 @@ namespace Model.Importer
                 {
                     return table[firstPlayerActionIndex];
                 }
+            }
+          
+            // get position using button place
+            var playersBeforeDealerPosition = new List<Player>();
+            var playersAfterDealerPosition = new List<Player>();
+
+            for (var i = 0; i < hand.Players.Count; i++)
+            {
+                if (i <= hand.DealerButtonPosition - 1)
+                {
+                    playersBeforeDealerPosition.Add(hand.Players[i]);
+                }
+                else
+                {
+                    playersAfterDealerPosition.Add(hand.Players[i]);
+                }
+            }
+
+            var playersOrderedByPosition = playersAfterDealerPosition.Concat(playersAfterDealerPosition);
+
+            firstPlayerActionIndex = playersOrderedByPosition.FindIndex(x => x.PlayerName == stat.PlayerName) - 2;
+
+            if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
+            {
+                return table[firstPlayerActionIndex];
             }
 
             // check ante
