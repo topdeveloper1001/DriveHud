@@ -44,7 +44,7 @@ namespace DriveHUD.Application.ViewModels.Alias
             this.AliasName = _newAlias?.Name ?? string.Empty;
             this.PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(_newAlias?.PlayersInAlias);
 
-            AllPlayers = new ObservableCollection<PlayerCollectionItem>(StorageModel.PlayerCollection.Except(this.PlayersInAlias).Where(x => x is PlayerCollectionItem).Select(x => x as PlayerCollectionItem));
+            AllPlayers = new ObservableCollection<PlayerCollectionItem>(StorageModel.PlayerCollection.Except(this.PlayersInAlias).OfType<PlayerCollectionItem>());
 
             AllPlayersSorted.Source = AllPlayers;
             AllPlayersSorted.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));

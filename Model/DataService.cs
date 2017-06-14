@@ -204,7 +204,7 @@ namespace Model
                     });
 
                     if (aliasToSave.PlayerId == 0)
-                        aliasToSave.PlayerId = session.Query<Aliases>().Where(x => x.AliasName == aliasToSave.Name).FirstOrDefault().AliasId;
+                        aliasToSave.PlayerId = session.Query<Aliases>().FirstOrDefault(x => x.AliasName == aliasToSave.Name).AliasId;
 
                     transaction.Commit();
                 }

@@ -66,10 +66,10 @@ namespace Model
                 return null;
 
             var result = new ObservableCollection<PlayerCollectionItem>();
-            var allPlayers = ServiceLocator.Current.TryResolve<SingletonStorageModel>().PlayerCollection.Where(x => x is PlayerCollectionItem).Select(x => x as PlayerCollectionItem);
+            var allPlayers = ServiceLocator.Current.TryResolve<SingletonStorageModel>().PlayerCollection.OfType<PlayerCollectionItem>();
 
             foreach (int id in encodedPlayers.Split(',').Select(ch => Convert.ToInt32(ch)))
-                result.Add(allPlayers.Where(x => x.PlayerId == id).FirstOrDefault());
+                result.Add(allPlayers.FirstOrDefault(x => x.PlayerId == id));
 
             return result;
         }

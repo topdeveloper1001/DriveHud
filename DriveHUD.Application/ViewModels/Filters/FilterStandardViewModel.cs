@@ -37,7 +37,7 @@ namespace DriveHUD.Application.ViewModels
             foreach (PlayerCollectionItem playerIn in players)
                 gameTypes.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes((playerIn?.Name ?? string.Empty), (short)(playerIn?.PokerSite ?? EnumPokerSites.Unknown)));
 
-            this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.Where(x => x.GetType().Equals(typeof(FilterStandardModel))).FirstOrDefault();
+            this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(FilterStandardModel)));
             this.FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);
 
             this.FilterModelClone = (FilterStandardModel)this.FilterModel.Clone();

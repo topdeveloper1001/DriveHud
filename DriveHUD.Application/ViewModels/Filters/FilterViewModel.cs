@@ -24,7 +24,7 @@ namespace DriveHUD.Application.ViewModels
 
         public virtual void InitializeFilterModel()
         {
-            this.FilterModel = (T)FilterModelManager.FilterModelCollection.Where(x => x.GetType().Equals(typeof(T))).FirstOrDefault();
+            this.FilterModel = (T)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(T)));
             this.FilterModelClone = (T)this.FilterModel.Clone();
         }
 
