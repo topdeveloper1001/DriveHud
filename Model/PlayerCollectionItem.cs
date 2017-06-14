@@ -27,7 +27,7 @@ namespace Model
 
         public string DecodedName { get { return HttpUtility.HtmlDecode(Name); } }
 
-        public EnumPokerSites PokerSite { get; set; }
+        public EnumPokerSites? PokerSite { get; set; }
 
         public string Description
         {
@@ -46,7 +46,7 @@ namespace Model
 
         #region Methods
 
-        public static string GetShortPokerSiteName(EnumPokerSites site)
+        public static string GetShortPokerSiteName(EnumPokerSites? site)
         {
             // TODO : check it for adding new poker sites
 

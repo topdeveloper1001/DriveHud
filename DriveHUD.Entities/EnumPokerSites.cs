@@ -14,7 +14,6 @@ namespace DriveHUD.Entities
 {
     public enum EnumPokerSites : short
     {
-        Alias = -1,
         Unknown = 0,
         Ignition = 1,
         IPoker = 2,

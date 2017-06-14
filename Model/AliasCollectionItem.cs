@@ -33,7 +33,7 @@ namespace Model
 
         public int PlayerId { get; set; }
 
-        public EnumPokerSites PokerSite { get { return EnumPokerSites.Alias; } }
+        public EnumPokerSites? PokerSite { get { return null; } }
 
         public string Description
         {

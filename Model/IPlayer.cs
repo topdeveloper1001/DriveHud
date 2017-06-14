@@ -13,6 +13,6 @@ namespace Model
         string Name { get; set; }
         string DecodedName { get; }
         string Description { get; }
-        EnumPokerSites PokerSite { get; }
+        EnumPokerSites? PokerSite { get; }
     }
 }
