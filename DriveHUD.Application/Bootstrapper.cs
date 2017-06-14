@@ -23,7 +23,6 @@ using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
