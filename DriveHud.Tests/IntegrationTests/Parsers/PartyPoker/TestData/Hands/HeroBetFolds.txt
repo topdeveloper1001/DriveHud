@@ -1,0 +1,52 @@
+﻿#Game No : 16120227763 
+***** Hand History for Game 16120227763 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:02:27 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 32,696 )
+Seat 1: EverSoNice ( 29,950 )
+Seat 7: Figarootoo ( 29,950 )
+Seat 8: Opa_Claus ( 29,975 )
+Seat 6: PokerJensen ( 29,650 )
+Seat 5: StackMagnet ( 28,479 )
+Seat 2: kudesnik2012 ( 29,950 )
+Seat 3: memphisino ( 29,350 )
+Trny:138340269 Level:1 
+Blinds-Antes(75/150 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+PokerJensen posts small blind [75].
+Figarootoo posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Ac 8c ]
+Opa_Claus calls [150]
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [150]
+StackMagnet folds
+PokerJensen calls [75]
+Figarootoo raises [600]
+Opa_Claus folds
+Bust1985 calls [600]
+PokerJensen folds
+** Dealing Flop ** [ Kc, 3h, 5d ]
+Figarootoo checks
+Bust1985 checks
+** Dealing Turn ** [ 4d ]
+Figarootoo bets [1,333]
+Bust1985 calls [1,333]
+** Dealing River ** [ 6h ]
+Figarootoo checks
+Bust1985 is all-In  [30,588]
+Figarootoo folds
+Bust1985 does not show cards.
+Bust1985 wins 35,254 chips
+Game #16120233069 starts.

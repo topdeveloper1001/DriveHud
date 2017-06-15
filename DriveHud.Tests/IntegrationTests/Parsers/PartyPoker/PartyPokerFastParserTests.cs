@@ -186,10 +186,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.That(action?.IsAllIn, Is.EqualTo(isAllin));
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 10)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 25)]
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/HeroBetFolds.txt", 25)]
+        [TestCase(TestDataFolder + @"Hands/HeroWins.txt", 25)]
         public void ParseAnteTest(string handHistoryFile, decimal ante)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -268,13 +267,13 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(speed, handHistory.GameDescription.Tournament.Speed);
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", 525, 1050)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", 5, 0)]
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/HeroBetFolds.txt", 2108, 0)]
+        [TestCase(TestDataFolder + @"Hands/HeroWins.txt", 691, 1632)]
         public void HeroBetWinIsParsedTest(string handHistoryFile, decimal bet, decimal win)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.Hero.Bet, Is.EqualTo(bet));
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
         }
 

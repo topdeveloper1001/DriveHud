@@ -637,7 +637,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             const int raiseLength = 8;//" raises ".Length
             const int callsLength = 7;//" calls ".Length
             const int betsLength = 6;//" bets ".Length
-            const int anteLength = 12;//" posts ante ".Length
             const int allInLength = 12;//" is all-In  ".Length
 
             int amountStartIndex = line.LastIndexOf('[');
@@ -648,12 +647,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             switch (actionID)
             {
                 //Player bets [$23.75 USD]
-                //Player posts ante [25]
                 case 't':
-                    bool isAnte = line[amountStartIndex - 4] == 'n';
-                    var action = isAnte ? HandActionType.ANTE : HandActionType.BET;
-                    playerName = line.Remove(amountStartIndex - (isAnte ? anteLength : betsLength));
-                    return new HandAction(playerName, action, amount, currentStreet);
+                    playerName = line.Remove(amountStartIndex - betsLength);
+                    return new HandAction(playerName, HandActionType.BET, amount, currentStreet);
                 //Player calls [$25 USD]
                 case 'l':
                     playerName = line.Remove(amountStartIndex - callsLength);
@@ -1049,6 +1045,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         public int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex)
         {
+            const int anteWidth = 12;//" posts ante ".Length
             const int smallBlindWidth = 19;//" posts small blind ".Length
             const int bigBlindWidth = 17;//" posts big blind ".Length
             const int PostingWidth = 24;//" posts big blind + dead ".Length
@@ -1057,7 +1054,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 string line = handLines[i];
 
-                char lastChar = line[line.Length - 2];
+                char lastChar = line.Last() == '.' 
+                    ? line[line.Length - 2] 
+                    : line[line.Length - 1];
                 if (lastChar == ']')
                 {
                     int amountStartIndex = line.LastIndexOf('[');
@@ -1069,6 +1068,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
                     switch (blindIdentifier)
                     {
+                        //"Player posts ante [25]"
+                        case 's':
+                            playerName = line.Remove(amountStartIndex - anteWidth);
+                            action = HandActionType.ANTE;
+                            amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1));
+                            break;
+
                         //"Player posts big blind [$10 USD]."
                         case 'i':
                             playerName = line.Remove(amountStartIndex - bigBlindWidth);
