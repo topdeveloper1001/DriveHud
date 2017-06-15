@@ -8,8 +8,5 @@ namespace DriveHUD.Entities
 
         [Required]
         public virtual string AliasName { get; set; }
-
-        [Required]
-        public virtual string PlayersInAlias { get; set; }
     }
 }

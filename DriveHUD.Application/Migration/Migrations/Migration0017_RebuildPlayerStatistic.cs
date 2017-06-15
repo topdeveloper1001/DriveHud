@@ -21,7 +21,7 @@ using System;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(17)]
-    public class Migration0017_RebuildPlayerStatistic : Migration
+    public class Migration0017_RebuildPlayerStatistic : FluentMigrator.Migration
     {
         public override void Down()
         {

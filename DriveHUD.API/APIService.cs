@@ -40,7 +40,7 @@ namespace DriveHUD.API
                 // Return hand for currently selected user
                 if (site == EnumPokerSites.Unknown)
                 {
-                    site = _storageModel.PlayerSelectedItem.PokerSite;
+                    site = _storageModel.PlayerSelectedItem.PokerSite ?? EnumPokerSites.Unknown;
                 }
 
                 return _dataService.GetGame(parsedId, (short)site);

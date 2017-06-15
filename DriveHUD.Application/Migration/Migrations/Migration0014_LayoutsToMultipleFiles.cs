@@ -33,7 +33,7 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(14)]
-    public class Migration0014_LayoutsToMultipleFiles : Migration
+    public class Migration0014_LayoutsToMultipleFiles : FluentMigrator.Migration
     {
         private readonly List<TableDescription> hashTable;
 

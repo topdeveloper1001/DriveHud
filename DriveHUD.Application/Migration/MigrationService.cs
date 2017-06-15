@@ -35,7 +35,7 @@ namespace DriveHUD.Application.MigrationService
 
             var migrationContext = new RunnerContext(announcer)
             {
-                Namespace = "DriveHUD.Application.MigrationService.Migrations"
+                Namespace = "DriveHUD.Application.Migration.Migrations"
             };
 
             var options = new MigrationOptions { PreviewOnly = false, Timeout = 60 };

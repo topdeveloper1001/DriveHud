@@ -2,14 +2,26 @@
 
 namespace DriveHUD.Entities
 {
-    public partial class PlayerAliases
+    public partial class AliasPlayer
     {
-        public virtual int PlayerAliasesId { get; set; }
+        public virtual int AliasId { get; set; }
 
-        [Required]
-        public virtual string AliasId { get; set; }
+        public virtual int PlayersId { get; set; }
 
-        [Required]
-        public virtual string PlayersId { get; set; }
+        public override int GetHashCode()
+        {
+            return AliasId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as AliasPlayer;
+
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+
+            return this.AliasId == other.AliasId &&
+                this.PlayersId == other.PlayersId;
+        }
     }
 }

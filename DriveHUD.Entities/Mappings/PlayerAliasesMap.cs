@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Entities.Mappings
 {
-    public class PlayerAliasesMap : ClassMap<PlayerAliases>
+    public class PlayerAliasesMap : ClassMap<AliasPlayer>
     {
         public PlayerAliasesMap()
         {
-            Table("PlayerAliases");
+            Table("AliasPlayers");
             LazyLoad();
-            Id(x => x.PlayerAliasesId).GeneratedBy.Native().Column("PlayerAliasId");
-            Map(x => x.AliasId).Column("AliasId").Not.Nullable();
-            Map(x => x.PlayersId).Column("PlayersId").Not.Nullable();
+            CompositeId().KeyProperty(x => x.AliasId, "AliasId").KeyProperty(x => x.PlayersId, "PlayerId");
         }
     }
 }

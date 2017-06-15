@@ -22,6 +22,7 @@ using NHibernate.Linq;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -125,7 +126,7 @@ namespace Model
                         {
                             var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
                             if (!pokersiteId.HasValue || (stat.PokersiteId == pokersiteId))
-                            {                                
+                            {
                                 result.Add(stat);
                             }
                         }
@@ -199,12 +200,18 @@ namespace Model
                     session.SaveOrUpdate(new Aliases()
                     {
                         AliasId = aliasToSave.PlayerId,
-                        AliasName = aliasToSave.Name,
-                        PlayersInAlias = aliasToSave.ConvertPlayersToString()
+                        AliasName = aliasToSave.Name
                     });
 
                     if (aliasToSave.PlayerId == 0)
                         aliasToSave.PlayerId = session.Query<Aliases>().FirstOrDefault(x => x.AliasName == aliasToSave.Name).AliasId;
+
+                    foreach (PlayerCollectionItem player in aliasToSave.PlayersInAlias)
+                        session.SaveOrUpdate(new AliasPlayer()
+                        {
+                            AliasId = aliasToSave.PlayerId,
+                            PlayersId = player.PlayerId
+                        });
 
                     transaction.Commit();
                 }
@@ -220,9 +227,16 @@ namespace Model
                     session.Delete(new Aliases()
                     {
                         AliasId = aliasToRemove.PlayerId,
-                        AliasName = aliasToRemove.Name,
-                        PlayersInAlias = aliasToRemove.ConvertPlayersToString()
+                        AliasName = aliasToRemove.Name
                     });
+
+                    foreach (PlayerCollectionItem player in aliasToRemove.PlayersInAlias)
+                        session.Delete(new AliasPlayer()
+                        {
+                            AliasId = aliasToRemove.PlayerId,
+                            PlayersId = player.PlayerId
+                        });
+
                     transaction.Commit();
                 }
             }
@@ -735,18 +749,26 @@ namespace Model
                     Directory.CreateDirectory(playersPath);
                 }
 
-                List<IPlayer> players = new List<IPlayer>();
+                List<IPlayer> aliases = new List<IPlayer>();
+                var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
                 using (var session = ModelEntities.OpenSession())
                 {
-                    players.AddRange(session.Query<Aliases>().ToArray().Select(x => new AliasCollectionItem
+                    aliases.AddRange(session.Query<Aliases>().ToArray().Select(x => new AliasCollectionItem
                     {
                         PlayerId = x.AliasId,
-                        Name = x.AliasName,
-                        PlayersInAlias = AliasCollectionItem.ConvertFromDB(x.PlayersInAlias)
+                        Name = x.AliasName
                     }));
 
-                    return players;
+                    foreach (AliasCollectionItem alias in aliases)
+                    {
+                        List<int> links = session.Query<AliasPlayer>().Where(x => x.AliasId == alias.PlayerId).Select(x => x.PlayersId).ToList();
+
+                        alias.PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(storageModel.PlayerCollection.OfType<PlayerCollectionItem>()
+                            .Where(x => links.Contains(x.PlayerId)));
+                    }
+
+                    return aliases;
                 }
             }
             catch (Exception e)

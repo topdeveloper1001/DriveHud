@@ -24,7 +24,7 @@ using DriveHUD.Application.Bootstrappers;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(12)]
-    public class Migration0012_MigrationToSQLite : Migration
+    public class Migration0012_MigrationToSQLite : FluentMigrator.Migration
     {
         private const string migrationProcessFile = "DriveHUD.DBMigration.exe";
 
