@@ -10,6 +10,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.Extensions;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using Model.Importer;
 
 namespace Model.Filters
 {
@@ -33,29 +34,29 @@ namespace Model.Filters
             switch (DateFilterType.EnumDateRange)
             {
                 case EnumDateFiterStruct.EnumDateFiter.Today:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.StartOfDay());
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.StartOfDay());
                 case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
                     FirstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
                 case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfMonth());
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfMonth());
                 case EnumDateFiterStruct.EnumDateFiter.LastMonth:
                     var statisticCollection = ServiceLocator.Current.GetInstance<SingletonStorageModel>()?.StatisticCollection;
                     if (statisticCollection == null || !statisticCollection.Any())
                     {
                         break;
                     }
-                    var lastAvailableDate = statisticCollection.Max(x => x.Time);
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= lastAvailableDate.FirstDayOfMonth());
+                    var lastAvailableDate = statisticCollection.Max(x => Converter.ToLocalizedDateTime(x.Time));
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= lastAvailableDate.FirstDayOfMonth());
 
                 case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
                     if (DateFilterType.DateFrom <= DateFilterType.DateTo)
-                        return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateFilterType.DateFrom && x.Time <= DateFilterType.DateTo);
+                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateFrom && Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateTo);
                     else
-                        return PredicateBuilder.Create<Playerstatistic>(x => x.Time <= DateFilterType.DateFrom && x.Time >= DateFilterType.DateTo);
+                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateFrom && Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateTo);
 
                 case EnumDateFiterStruct.EnumDateFiter.ThisYear:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfYear());
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfYear());
             };
 
             return null;
@@ -63,7 +64,7 @@ namespace Model.Filters
 
         public void ResetFilter()
         {
-            DateFilterType = new EnumDateFiterStruct { EnumDateRange = EnumDateFiterStruct.EnumDateFiter.None };  
+            DateFilterType = new EnumDateFiterStruct { EnumDateRange = EnumDateFiterStruct.EnumDateFiter.None };
         }
 
         public void LoadFilter(IFilterModel filter)
