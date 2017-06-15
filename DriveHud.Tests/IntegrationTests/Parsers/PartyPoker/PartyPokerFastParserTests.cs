@@ -22,19 +22,22 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         public void ParsingDoesNotThrowExceptions(string culture)
         {
-            throw new NotImplementedException();
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         public void IsCancelledHandTest(string handHistoryFile, bool isCanceled)
         {
-            throw new NotImplementedException();
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         public void ValidHandTest(string handHistoryFile, bool isValid)
         {
-            throw new NotImplementedException();
         }
 
         [Test]
@@ -42,6 +45,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", "Th Ah Ts 3d")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", "")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "9c 5h 6h Jd 8h")]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "Kh 7c 2h Ts Tc")]
         public void ParseCommunityCardsTest(string handHistoryFile, string expectedBoard)
         {
             BoardCards expectedCards = BoardCards.FromCards(expectedBoard);
@@ -50,6 +54,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.CommunityCards, expectedCards);
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
             throw new NotImplementedException();
@@ -60,6 +66,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", 1)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 1)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 1)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 2)]
         public void ParseDealerPositionTest(string handHistoryFile, int expectedPosition)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -72,6 +79,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", GameType.NoLimitHoldem)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", GameType.PotLimitOmaha)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", GameType.PotLimitOmahaHiLo)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", GameType.PotLimitHoldem)]
         public void ParseGameTypeTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -84,6 +92,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", 13551258247)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 13551973065)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 13550515602)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 11614201072)]
         public void ParseHandIdTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -91,11 +100,13 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.HandId, handId);
         }
 
-        [Test]
+        //[Test]
+        [Ignore("not yet implemented")]
         [TestCase(TestDataFolder + @"GameTypes/FixedLimitHoldem.txt", 13549974403)]
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", 13551258247)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 13551973065)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 13550515602)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 13550515602)]
         public void ParseHeroNameTest(string handHistoryFile, string heroName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -108,6 +119,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", 0.05, 0.1, Currency.USD)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 5, 10, Currency.USD)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 0.05, 0.1, Currency.USD)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 0.25, 0.5, Currency.USD)]
         public void ParseLimitTest(string handHistoryFile, decimal smallBlind, decimal bigBlind, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -140,6 +152,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", "Delhi")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", "Zurich")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "Manila")]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "Table  131342 (No DP)")]
         public void ParseTableNameTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -151,43 +164,41 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/FixedLimitHoldem.txt", "aisberg_2013", -0.05, HandActionType.BET, Street.Flop, 1)]
         [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", "addy188", 0, HandActionType.FOLD, Street.Turn, 1)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", "neohacks", -30, HandActionType.RAISE, Street.Preflop, 1)]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "ragga22", -0.05, HandActionType.CHECK, Street.Preflop, 1)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "ragga22", -0.05, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4.txt", "PotatoGun", 7.56, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "marlboro man", -0.71, HandActionType.CALL, Street.Flop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
             var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).ToArray();
 
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }
 
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", -490, HandActionType.RAISE, Street.Preflop, true)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", -1500, HandActionType.RAISE, Street.Preflop, true)]
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "KrookedTyrant", -116.92, HandActionType.CALL, Street.Preflop, true)]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin2.txt", "FATDAN44", -413.34, HandActionType.RAISE, Street.Preflop, true)]
         public void AllInIsParsed(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, bool isAllin)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
             var action = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).FirstOrDefault();
 
             Assert.That(action?.IsAllIn, Is.EqualTo(isAllin));
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 10)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithAnte.txt", 25)]
         public void ParseAnteTest(string handHistoryFile, decimal ante)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
         }
 
         [Test]
-        [TestCase(TestDataFolder + @"GameTypes/FixedLimitHoldem.txt", "kachanow")]
-        [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", "addy188")]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", "SooooLastYr")]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "dimatlt633")]
-        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4.txt", "LOLYOU FOLD")]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "KrookedTyrant")]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin2.txt", "bvinnieb")]
         public void PlayerIsLostTest(string handHistoryFile, string playerName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -197,14 +208,14 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         }
 
         [Test]
-        [TestCase(TestDataFolder + @"MultipleHands/NLHoldem2_4.txt", 1, 0)]
-        [TestCase(TestDataFolder + @"MultipleHands/NLHoldem2_4.txt", 1, 0)]
-        [TestCase(TestDataFolder + @"MultipleHands/NLHoldem2_4.txt", 1, 0)]
-        [TestCase(TestDataFolder + @"MultipleHands/NLHoldem2_4.txt", 1, 0)]
-        [TestCase(TestDataFolder + @"MultipleHands/NLHoldem2_4.txt", 1, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/Edison-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 122, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/Lakewood-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 58, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/Neptune-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 90, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/Orange-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 146, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/Union City-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 466, 0)]
+        [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 1)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
-            throw new NotImplementedException();
             var parser = new HandHistories.Parser.Parsers.FastParser.PartyPoker.PartyPokerFastParserImpl();
             int validHands = 0;
             int invalidHands = 0;
@@ -229,50 +240,13 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(numberOfInvalidHands, invalidHands);
         }
 
-
-        [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", "artgdev", EnumPosition.EP)]
-        public void ParseAllInAnte(string handHistoryFile, string playername, EnumPosition position)
-        {
-            throw new NotImplementedException();
-            //var parsingResult = GetParsingResult(handHistoryFile);
-
-            //var calc = new PlayerStatisticCalculator();
-            //var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
-            //Assert.That(stat.PositionString, Is.EqualTo(position.ToString()));
-        }
-
-        [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\BB All-In.txt", "artgdev")]
-        public void ParseBigBlindAllIn(string handHistoryFile, string playername)
-        {
-            throw new NotImplementedException();
-            //var parsingResult = GetParsingResult(handHistoryFile);
-
-            //var calc = new PlayerStatisticCalculator();
-            //var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
-            //Assert.That(stat.Position, Is.EqualTo(EnumPosition.BB));
-        }
-
-        [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\SB All-In.txt", "artgdev")]
-        public void ParseSmallBlindAllIn(string handHistoryFile, string playername)
-        {
-            throw new NotImplementedException();
-            //var parsingResult = GetParsingResult(handHistoryFile);
-
-            //var calc = new PlayerStatisticCalculator();
-            //var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
-            //Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
-        }
-
-        [Test]
+        //[Test]
+        [Ignore("not yet implemented")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt", GameType.PotLimitHoldem, "6626931", 0, 0, TournamentSpeed.Regular)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary2.txt", GameType.NoLimitHoldem, "6626931", 1, 0.1, TournamentSpeed.Regular)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary3.txt", GameType.NoLimitHoldem, "6626931", 3, 0.3, TournamentSpeed.Regular)]
         public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
 
             Assert.IsTrue(handHistory.GameDescription.IsTournament);
@@ -283,26 +257,26 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.Rake, tournamentRake);
         }
 
+        //[Test]
+        [Ignore("not yet implemented")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", TournamentSpeed.HyperTurbo)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20170216 T6995792-G39795657.txt", TournamentSpeed.Turbo)]
         public void ParseTournamentSpeedTest(string handHistoryFile, TournamentSpeed speed)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
 
             Assert.AreEqual(speed, handHistory.GameDescription.Tournament.Speed);
         }
 
-        [Test]
+        //[Test]
+        [Ignore("not yet implemented")]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", 525, 1050)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", 5, 0)]
         public void HeroBetWinIsParsedTest(string handHistoryFile, decimal bet, decimal win)
         {
-            throw new NotImplementedException();
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
         }
-
 
         private HandHistories.Objects.Hand.HandHistory ParseHandHistory(string handHistoryFile)
         {
@@ -311,6 +285,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             var parserFactory = new HandHistories.Parser.Parsers.Factory.HandHistoryParserFactoryImpl();
 
             var parser = parserFactory.GetFullHandHistoryParser(handHistoryText);
+
+            if (parser.SiteName != EnumPokerSites.PartyPoker)
+                throw new ArgumentException();
 
             var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
 

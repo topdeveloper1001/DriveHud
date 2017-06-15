@@ -181,6 +181,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw new InvalidHandException(handText ?? "NULL");
                 }
 
+                handLines = PreprocessHandLines(handLines);
+
                 //Set members outside of the constructor for easier performance analysis               
                 handHistory.DateOfHandUtc = ParseDateUtc(handLines);
                 handHistory.GameDescription = ParseGameDescriptor(handLines);
@@ -713,6 +715,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         protected virtual string ClearHandHistory(string handText)
         {
             return handText;
+        }
+
+        protected virtual string[] PreprocessHandLines(string[] handLines)
+        {
+            return handLines;
         }
     }
 }

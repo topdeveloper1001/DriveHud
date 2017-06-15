@@ -285,6 +285,8 @@
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\FixedLimitHoldem.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitHoldem.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitOmaha.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin2.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Edison-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Lakewood-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />

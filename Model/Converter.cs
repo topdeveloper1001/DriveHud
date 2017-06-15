@@ -260,7 +260,7 @@ namespace Model.Importer
                 return 0m;
             }
 
-            if (!hand.HandActions.Where(x => x.Street == lastHeroStreetAction.Street).Any(x => x.IsAllInAction))
+            if (!hand.HandActions.Where(x => x.Street == lastHeroStreetAction.Street).Any(x => x.IsAllInAction || x.IsAllIn))
             {
                 return 0m;
             }

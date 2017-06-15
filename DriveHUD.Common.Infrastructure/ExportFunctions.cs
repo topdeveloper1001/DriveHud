@@ -478,7 +478,7 @@ namespace DriveHUD.Common.Ifrastructure
             {
                 resultString = String.Format("{0} ${1}", resultString, Math.Abs(action.Amount));
             }
-            if (action.IsAllInAction)
+            if (action.IsAllInAction || action.IsAllIn)
             {
                 resultString = String.Format("{0} (allin)", resultString);
             }
