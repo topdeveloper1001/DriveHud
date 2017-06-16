@@ -6,6 +6,7 @@
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Alias"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:model="clr-namespace:Model;assembly=Model"
              mc:Ignorable="d" 
              Height="400"
              Width="450"
@@ -18,12 +19,73 @@
 
         <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
 
+        <Style x:Key="ButtonInList" TargetType="{x:Type Button}">
+            <Setter Property="SnapsToDevicePixels"
+                    Value="true" />
+            <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
+            <Setter Property="OverridesDefaultStyle"
+                    Value="true" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"
+                                Padding="{TemplateBinding Padding}"
+                                CornerRadius="2"
+                                BorderThickness="0"
+                                Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition GeneratedDuration="0:0:0.5" />
+                                        <VisualTransition GeneratedDuration="0" To="Pressed" />
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                                          Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame KeyTime="0"
+                                                                     Value="#4b6cc2" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                                          Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame KeyTime="0" 
+                                                                     Value="#2c437f" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                                          Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame KeyTime="0"
+                                                                     Value="#FFAEA5A5" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter Margin="2"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
             <Setter Property="Margin" Value="10 5"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
 
-        <Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
+        <Style x:Key="ListViewItemStyle1" TargetType="{x:Type ListViewItem}">
             <Setter Property="MinHeight"
                     Value="19" />
             <Setter Property="Margin"
@@ -112,6 +174,62 @@
                                 </Grid>
                             </Grid>
                         </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ListViewItemStyle"
+               TargetType="{x:Type telerik:RadListBoxItem}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#7d7e82" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type telerik:RadListBoxItem}">
+                        <Border x:Name="MainBody"
+                                Background="#202125"
+                                CornerRadius="2"
+                                Height="35"
+                                Margin="0,0,8,8">
+                            <DockPanel>
+                                <ContentPresenter x:Name="MainContent"
+                                                  DockPanel.Dock="Left"
+                                                  TextBlock.Foreground="#7d7e82"
+                                                  Content="{Binding DecodedName}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                  Margin="10,0,0,0" />
+
+                                <TextBlock HorizontalAlignment="Right"
+                                           DockPanel.Dock="Right"
+                                           Margin="0,0,10,0"
+                                           Foreground="{TemplateBinding Foreground}"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                           Text="{Binding Description}"/>
+                            </DockPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="MainBody"
+                                        Property="Background"
+                                        Value="#313035" />
+                                <Setter TargetName="MainContent"
+                                        Property="TextBlock.Foreground"
+                                        Value="#828387" />
+                                <Setter Property="TextBlock.Foreground"
+                                        Value="#828387"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected"
+                                     Value="true">
+                                <Setter TargetName="MainBody"
+                                        Property="Background"
+                                        Value="#34529b" />
+                                <Setter TargetName="MainContent"
+                                        Property="TextBlock.Foreground"
+                                        Value="#ffffff" />
+                                <Setter Property="TextBlock.Foreground"
+                                        Value="#ffffff"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -317,6 +435,7 @@
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
@@ -329,39 +448,64 @@
             </Grid.RowDefinitions>
 
             <Label HorizontalAlignment="Left" Foreground="White">Alias name:</Label>
-            <TextBox Name="AliasName" Text="{Binding Path=AliasName}" Foreground="White" Grid.Column="1"></TextBox>
+            <TextBox Name="AliasName" Text="{Binding Path=AliasName}"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Height="28"
+                     MaxLength="70"
+                     Foreground="White" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
 
-            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0 0 0 5">
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Margin="0 0 0 5">
                 <TextBlock Text="Select players to alias"
                            Style="{StaticResource Title_H1}"
                            Foreground="{StaticResource ForegroundBrush}" />
                 <Separator />
             </StackPanel>
 
-            <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Height="28"
+                     MaxLength="70" />
             <telerik:RadListBox ItemsSource="{Binding AllPlayersSorted.View}"
-                                ItemContainerStyle="{StaticResource TelerikListViewItemStyle}"
+                                ItemContainerStyle="{StaticResource ListViewItemStyle}"
                                 SelectionMode="Multiple"
                                 Grid.Row="3" Grid.Column="0"
-                                Name="SelectedList"
-                                BorderThickness="0"
-                                Foreground="White"
-                                Background="{StaticResource BackgroundBrush2}"
-                                Margin="10 5" />
-
-            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" />
-            <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
-                                ItemContainerStyle="{StaticResource TelerikSelectedListViewItemStyle}"
-                                SelectionMode="Multiple"
-                                Grid.Row="3" Grid.Column="1"
                                 Name="AllPlayersList"
                                 BorderThickness="0"
                                 Foreground="White"
-                                Background="{StaticResource BackgroundBrush2}"
+                                Background="Transparent"
+                                Margin="10 5" />
+
+            <StackPanel Grid.Column="1" Grid.Row="3">
+                <Button Content="+" Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                        CommandParameter="{Binding ElementName=AllPlayersList, Path=(SelectedItem)}"/>
+                <Button Content="-" Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                        CommandParameter="{Binding ElementName=SelectedList, Path=(SelectedItem)}"/>
+            </StackPanel>
+
+            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" 
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Height="28"
+                     MaxLength="70"/>
+            <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
+                                ItemContainerStyle="{StaticResource ListViewItemStyle}"
+                                SelectionMode="Multiple"
+                                Grid.Row="3" Grid.Column="2"
+                                Name="SelectedList"
+                                BorderThickness="0"
+                                Foreground="White"
+                                Background="Transparent"
                                 Margin="10 5" >
             </telerik:RadListBox>
 
-            <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}" Margin="10" Width="85" Height="30"  >
                     <Button.Style>
                         <Style  TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">

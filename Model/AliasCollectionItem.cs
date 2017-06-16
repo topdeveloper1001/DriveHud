@@ -37,7 +37,7 @@ namespace Model
 
         public string Description
         {
-            get { return $"Players: {_playersInAlias.Count}."; }
+            get { return $"Players: {_playersInAlias.Count}"; }
         }
 
         public ObservableCollection<PlayerCollectionItem> PlayersInAlias

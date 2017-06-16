@@ -727,13 +727,7 @@
                                         CornerRadius="1"
                                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                         MinWidth="{TemplateBinding MinDropDownWidth}">
-                                        <Grid>
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition
-                                                    Height="Auto" />
-                                                <RowDefinition
-                                                    Height="*" />
-                                            </Grid.RowDefinitions>
+                                        <StackPanel>
                                             <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
@@ -763,7 +757,7 @@
                                                 </ScrollViewer.InputBindings>
                                                 <ItemsPresenter />
                                             </ScrollViewer>
-                                        </Grid>
+                                        </StackPanel>
                                     </Border>
                                 </Grid>
                             </Popup>
