@@ -23,6 +23,7 @@
     xmlns:equityCalculator="clr-namespace:DriveHUD.EquityCalculator.Views;assembly=DriveHUD.EquityCalculator"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:va="clr-namespace:DriveHUD.Application.Views.Alias"
     xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
@@ -1134,11 +1135,11 @@
         </prism:InteractionRequestTrigger>
 
         <prism:InteractionRequestTrigger
-            SourceObject="{Binding Path=PopupAliasRequest, Mode=OneWay}">
-            <infra:PopupTelerikWindowAction>
-                <infra:PopupTelerikWindowAction.WindowStyle>
+            SourceObject="{Binding AliasViewRequest, Mode=OneWay}">
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
                     <Style
-                        TargetType="{x:Type telerik:RadWindow}">
+                        TargetType="{x:Type Window}">
                         <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
@@ -1153,7 +1154,7 @@
                             Value="450" />
                         <Setter
                             Property="Width"
-                            Value="360" />
+                            Value="520" />
                         <Setter
                             Property="MinWidth"
                             Value="360" />
@@ -1161,20 +1162,23 @@
                             Property="ResizeMode"
                             Value="CanResize" />
                         <Setter
-                            Property="IconTemplate"
-                            Value="{StaticResource IconTemplate}" />
+                            Property="ShowInTaskbar"
+                            Value="False" />
                     </Style>
-                </infra:PopupTelerikWindowAction.WindowStyle>
-                <infra:PopupTelerikWindowAction.IsModal>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
                     <system:Boolean>True</system:Boolean>
-                </infra:PopupTelerikWindowAction.IsModal>
-                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
                     <system:Boolean>True</system:Boolean>
-                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-                <infra:PopupTelerikWindowAction.WindowContent>
-                    <vp:PopupContainerAliasView />
-                </infra:PopupTelerikWindowAction.WindowContent>
-            </infra:PopupTelerikWindowAction>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.WindowContent>
+                    <va:AliasView />
+                </infra:PopupWindowAction.WindowContent>
+                <infra:PopupWindowAction.HasBorder>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+            </infra:PopupWindowAction>
         </prism:InteractionRequestTrigger>
 
         <prism:InteractionRequestTrigger

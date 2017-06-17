@@ -7,19 +7,50 @@
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Alias"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              xmlns:model="clr-namespace:Model;assembly=Model"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              Height="400"
-             Width="450"
+             Width="580"
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Background" Value="#1F2124" />
+            <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Margin" Value="10 5"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
 
+        <ControlTemplate x:Key="SearchTextBoxTemplate" TargetType="{x:Type TextBox}">
+            <Border Name="Border" 
+                    CornerRadius="2"
+                    Background="{TemplateBinding Background}"
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    Padding="2">
+                <Grid>
+                    <TextBlock Text="Search"
+                               Style="{StaticResource Title_H2}"
+                               Name="Hint"
+                               Margin="5 0 0 0"
+                               Visibility="Collapsed"
+                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                    <Setter TargetName="Hint" Property="Visibility" Value="Visible" />
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter TargetName="Hint" Property="Visibility" Value="Collapsed" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
         <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
 
         <Style x:Key="ButtonInList" TargetType="{x:Type Button}">
+            <Setter Property="MinHeight" Value="23" />
             <Setter Property="SnapsToDevicePixels"
                     Value="true" />
             <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
@@ -204,7 +235,7 @@
                                            Margin="0,0,10,0"
                                            Foreground="{TemplateBinding Foreground}"
                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                           Text="{Binding Description}"/>
+                                           Text="{Binding PokerSite}"/>
                             </DockPanel>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -431,7 +462,8 @@
         </Style>
     </UserControl.Resources>
 
-    <Border BorderBrush="{StaticResource BackgroundBrush3}" Padding="15" BorderThickness="1" Background="{StaticResource PopupBackground}">
+    <Border BorderBrush="{StaticResource BackgroundBrush1}" Padding="15" BorderThickness="1"
+            Background="#1F2124">
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -441,69 +473,97 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label HorizontalAlignment="Left" Foreground="White">Alias name:</Label>
-            <TextBox Name="AliasName" Text="{Binding Path=AliasName}"
-                     VerticalAlignment="Center"
-                     VerticalContentAlignment="Center" 
-                     HorizontalAlignment="Stretch"
-                     Height="28"
-                     MaxLength="70"
-                     Foreground="White" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+            <DockPanel Grid.ColumnSpan="3">
+                <Label HorizontalAlignment="Left" Foreground="White" DockPanel.Dock="Left">Alias:</Label>
+                <TextBox Name="AliasName" Text="{Binding Path=AliasName}"
+                         Background="{StaticResource BackgroundBrush}"
+                         VerticalAlignment="Center"
+                         VerticalContentAlignment="Center" 
+                         HorizontalAlignment="Stretch"
+                         Height="28"
+                         MaxLength="70"
+                         Foreground="White" />
+            </DockPanel>
 
-            <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Margin="0 0 0 5">
-                <TextBlock Text="Select players to alias"
-                           Style="{StaticResource Title_H1}"
-                           Foreground="{StaticResource ForegroundBrush}" />
-                <Separator />
+            <TextBlock Grid.Row="1" Text="Players" Foreground="White" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="Selected players" Foreground="White" VerticalAlignment="Center" />
+
+            <Border Grid.Row="2" Background="{StaticResource BackgroundBrush1}" BorderThickness="0">
+                <DockPanel>
+                    <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
+                             Template="{StaticResource SearchTextBoxTemplate}"
+                             DockPanel.Dock="Top"
+                             VerticalAlignment="Center"
+                             VerticalContentAlignment="Center" 
+                             HorizontalAlignment="Stretch"
+                             Height="28"
+                             MaxLength="70" />
+                    <telerik:RadListBox ItemsSource="{Binding AllPlayersSorted.View}"
+                                        SelectedIndex="{Binding AllPlayersSelectdIndex, Mode=TwoWay}"
+                                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
+                                        SelectionMode="Multiple"
+                                        Grid.Row="3" Grid.Column="0"
+                                        Name="AllPlayersList"
+                                        BorderThickness="0"
+                                        Foreground="White"
+                                        Background="Transparent"
+                                        Margin="10 5" >
+                        <telerik:RadListBox.DragDropBehavior>
+                            <telerik:ListBoxDragDropBehavior />
+                        </telerik:RadListBox.DragDropBehavior>
+                    </telerik:RadListBox>
+                </DockPanel>
+            </Border>
+
+            <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+                <Button Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                        CommandParameter="{Binding ElementName=AllPlayersList, Path=(SelectedItems)}">
+                    <Button.Content>
+                        <Path Data="M 0,5 L 10,5 M 5,0 L 5,10" Stroke="White" StrokeThickness="2" />
+                    </Button.Content>
+                </Button>
+                <Button Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                        CommandParameter="{Binding ElementName=SelectedList, Path=(SelectedItems)}">
+                    <Button.Content>
+                        <Path Data="M 0,5 L 10,5" Stroke="White" StrokeThickness="2" />
+                    </Button.Content>
+                </Button>
             </StackPanel>
 
-            <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
-                     VerticalAlignment="Center"
-                     VerticalContentAlignment="Center" 
-                     HorizontalAlignment="Stretch"
-                     Height="28"
-                     MaxLength="70" />
-            <telerik:RadListBox ItemsSource="{Binding AllPlayersSorted.View}"
-                                ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                SelectionMode="Multiple"
-                                Grid.Row="3" Grid.Column="0"
-                                Name="AllPlayersList"
-                                BorderThickness="0"
-                                Foreground="White"
-                                Background="Transparent"
-                                Margin="10 5" />
-
-            <StackPanel Grid.Column="1" Grid.Row="3">
-                <Button Content="+" Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
-                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                        CommandParameter="{Binding ElementName=AllPlayersList, Path=(SelectedItem)}"/>
-                <Button Content="-" Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
-                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                        CommandParameter="{Binding ElementName=SelectedList, Path=(SelectedItem)}"/>
-            </StackPanel>
-
-            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" 
-                     VerticalAlignment="Center"
-                     VerticalContentAlignment="Center" 
-                     HorizontalAlignment="Stretch"
-                     Height="28"
-                     MaxLength="70"/>
-            <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
-                                ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                SelectionMode="Multiple"
-                                Grid.Row="3" Grid.Column="2"
-                                Name="SelectedList"
-                                BorderThickness="0"
-                                Foreground="White"
-                                Background="Transparent"
-                                Margin="10 5" >
-            </telerik:RadListBox>
+            <Border Grid.Row="2" Grid.Column="2" Background="{StaticResource BackgroundBrush1}" BorderThickness="0">
+                <DockPanel>
+                    <TextBox Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" 
+                             Template="{StaticResource SearchTextBoxTemplate}"
+                             DockPanel.Dock="Top"
+                             VerticalAlignment="Center"
+                             VerticalContentAlignment="Center" 
+                             HorizontalAlignment="Stretch"
+                             Height="28"
+                             MaxLength="70"/>
+                    <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
+                                        SelectedIndex="{Binding SelectedPlayersSelectdIndex, Mode=TwoWay}"
+                                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
+                                        SelectionMode="Multiple"
+                                        Grid.Row="3" Grid.Column="2"
+                                        Name="SelectedList"
+                                        BorderThickness="0"
+                                        Foreground="White"
+                                        Background="Transparent"
+                                        Margin="10 5" >
+                        <telerik:RadListBox.DragDropBehavior>
+                            <telerik:ListBoxDragDropBehavior />
+                        </telerik:RadListBox.DragDropBehavior>
+                    </telerik:RadListBox>
+                </DockPanel>
+            </Border>
 
             <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}" Margin="10" Width="85" Height="30"  >

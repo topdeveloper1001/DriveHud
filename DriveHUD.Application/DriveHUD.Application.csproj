@@ -1407,6 +1407,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\splashscreen.png" />
+    <Resource Include="images\delete.png" />
+    <Resource Include="images\edit.png" />
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

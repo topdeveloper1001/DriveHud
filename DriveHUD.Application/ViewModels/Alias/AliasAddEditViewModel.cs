@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.ComponentModel;
+using System.Collections;
 
 namespace DriveHUD.Application.ViewModels.Alias
 {
@@ -77,22 +78,37 @@ namespace DriveHUD.Application.ViewModels.Alias
 
         private void SwitchSelect(object obj)
         {
-            if (!(obj is PlayerCollectionItem))
+            IEnumerable args = obj as IEnumerable;
+            List<PlayerCollectionItem> switchPlayers = new List<PlayerCollectionItem>(args.OfType<PlayerCollectionItem>());
+
+            if (!switchPlayers.Any())
                 return;
 
-            PlayerCollectionItem switchPlayer = obj as PlayerCollectionItem;
-
-            if (PlayersInAlias.Contains(switchPlayer))
+            if (PlayersInAlias.Contains(switchPlayers[0]))
             {
-                PlayersInAlias.Remove(switchPlayer);
-                AllPlayers.Add(switchPlayer);
-                switchPlayer.LinkedAliases.Add(_newAlias);
+                int index = PlayersInAlias.IndexOf(switchPlayers[0]);
+
+                switchPlayers.ForEach(player =>
+                {
+                    PlayersInAlias.Remove(player);
+                    AllPlayers.Add(player);
+                    player.LinkedAliases.Add(_newAlias);
+                });
+
+                SelectedPlayersSelectdIndex = index + 1 > PlayersInAlias.Count ? 0 : index;
             }
             else
             {
-                PlayersInAlias.Add(switchPlayer);
-                AllPlayers.Remove(switchPlayer);
-                switchPlayer.LinkedAliases.Remove(_newAlias);
+                int index = AllPlayers.IndexOf(switchPlayers[0]);
+
+                switchPlayers.ForEach(player =>
+                {
+                    PlayersInAlias.Add(player);
+                    AllPlayers.Remove(player);
+                    player.LinkedAliases.Remove(_newAlias);
+                });
+
+                AllPlayersSelectdIndex = index + 1 > AllPlayers.Count ? 0 : index;
             }
         }
 
@@ -131,6 +147,21 @@ namespace DriveHUD.Application.ViewModels.Alias
         #endregion
 
         #region Properties
+
+        private int _allPlayersSelectdIndex = -1;
+        private int _selectedPlayersSelectdIndex = -1;
+        public int AllPlayersSelectdIndex
+        {
+            get { return _allPlayersSelectdIndex; }
+
+            set { SetProperty(ref _allPlayersSelectdIndex, value); }
+        }
+        public int SelectedPlayersSelectdIndex
+        {
+            get { return _selectedPlayersSelectdIndex; }
+
+            set { SetProperty(ref _selectedPlayersSelectdIndex, value); }
+        }
 
         private ObservableCollection<PlayerCollectionItem> _allPlayers;
         public ObservableCollection<PlayerCollectionItem> AllPlayers

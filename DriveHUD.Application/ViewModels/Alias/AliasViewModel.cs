@@ -1,7 +1,9 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
+using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,12 +16,15 @@ using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Alias
 {
-    public class AliasViewModel : BaseViewModel
+    public class AliasViewModel : ViewModelBase, INotification, IInteractionRequestAware
     {
         #region Constructors
 
         internal AliasViewModel()
         {
+            NotificationRequest = new InteractionRequest<INotification>();
+            title = "Aliases";
+
             Initialize();
         }
 
@@ -30,6 +35,7 @@ namespace DriveHUD.Application.ViewModels.Alias
             PopupModel = new AliasPopupViewModelBase();
             PopupModel.InitializeCommands();
 
+            OkCommand = new RelayCommand(Ok);
             EditAliasCommand = new RelayCommand(EditAlias);
             RemoveAliasCommand = new RelayCommand(RemoveAlias);
 
@@ -80,6 +86,7 @@ namespace DriveHUD.Application.ViewModels.Alias
 
         #region Properties
 
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
         private IDataService _dataService;
         private AliasPopupViewModelBase _popupModel;
         private string _searchFilter = string.Empty;
@@ -88,7 +95,7 @@ namespace DriveHUD.Application.ViewModels.Alias
         {
             get { return _popupModel; }
 
-            set { SetProperty(ref _popupModel, value); }
+            set { _popupModel = value; }
         }
 
         public CollectionViewSource AliasSorted { get; set; }
@@ -107,10 +114,80 @@ namespace DriveHUD.Application.ViewModels.Alias
             }
         }
 
+        public SingletonStorageModel StorageModel
+        {
+            get { return ServiceLocator.Current.TryResolve<SingletonStorageModel>(); }
+        }
+
+        #endregion
+
+        #region Implementation of INotification
+
+        private object content;
+
+        public object Content
+        {
+            get
+            {
+                return content;
+            }
+            set
+            {
+                content = value;
+            }
+        }
+
+        private string title;
+
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                title = value;
+            }
+        }
+
+        #endregion
+
+        #region Implementation of IInteractionRequestAware
+
+        private Action finishInteraction;
+
+        public Action FinishInteraction
+        {
+            get
+            {
+                return finishInteraction;
+            }
+            set
+            {
+                finishInteraction = value;
+            }
+        }
+
+        private INotification notification;
+
+        public INotification Notification
+        {
+            get
+            {
+                return notification;
+            }
+            set
+            {
+                notification = value;
+            }
+        }
+
         #endregion
 
         #region ICommands
 
+        public ICommand OkCommand { get; set; }
         public ICommand EditAliasCommand { get; set; }
         public ICommand RemoveAliasCommand { get; set; }
 
@@ -141,6 +218,11 @@ namespace DriveHUD.Application.ViewModels.Alias
                 StorageModel.PlayerCollection.Remove(alias);
                 _dataService.RemoveAlias(alias);
             }
+        }
+
+        private void Ok(object obj)
+        {
+            FinishInteraction.Invoke();
         }
 
         #endregion

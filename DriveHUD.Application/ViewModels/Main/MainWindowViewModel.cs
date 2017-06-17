@@ -15,6 +15,7 @@ using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
+using DriveHUD.Application.ViewModels.Alias;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
@@ -165,8 +166,8 @@ namespace DriveHUD.Application.ViewModels
             PurchaseCommand = new RelayCommand(Purchase);
 
             PopupSettingsRequest = new InteractionRequest<PopupContainerSettingsViewModelNotification>();
-            PopupAliasRequest = new InteractionRequest<PopupContainerAliasViewModelNotification>();
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
+            AliasViewRequest = new InteractionRequest<INotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
@@ -832,13 +833,10 @@ namespace DriveHUD.Application.ViewModels
             PopupSettingsRequest_Execute(pubSubMessage);
         }
 
-        private void OpenAliasMenu(object obj)
+        private void OpenAliasMenu()
         {
-            PubSubMessage pubSubMessage = new PubSubMessage();
-            if (obj?.ToString() == "Preferred Seating")
-                pubSubMessage.Parameter = "Preferred Seating";
-
-            PopupAliasRequest_Execute(pubSubMessage);
+            var model = new AliasViewModel();
+            AliasViewRequest.Raise(model);
         }
 
         private void Upgrade()
@@ -1415,11 +1413,11 @@ namespace DriveHUD.Application.ViewModels
         #region InteractionRequest
 
         public InteractionRequest<PopupContainerSettingsViewModelNotification> PopupSettingsRequest { get; private set; }
-        public InteractionRequest<PopupContainerAliasViewModelNotification> PopupAliasRequest { get; private set; }
         public InteractionRequest<PopupContainerFiltersViewModelNotification> PopupFiltersRequest { get; private set; }
 
         public InteractionRequest<INotification> PopupSupportRequest { get; private set; }
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
+        public InteractionRequest<INotification> AliasViewRequest { get; private set; }
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         public InteractionRequest<INotification> UpdateViewRequest { get; private set; }
@@ -1443,26 +1441,7 @@ namespace DriveHUD.Application.ViewModels
                     }
                 });
         }
-
-        private void PopupAliasRequest_Execute(PubSubMessage pubSubMessage)
-        {
-            PopupContainerAliasViewModelNotification notification = new PopupContainerAliasViewModelNotification();
-
-            notification.Title = "Alias";
-            notification.PubSubMessage = pubSubMessage;
-
-            this.PopupAliasRequest.Raise(notification,
-                returned =>
-                {
-                    if (returned != null && returned.Confirmed)
-                    {
-                    }
-                    else
-                    {
-                    }
-                });
-        }
-
+        
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
             PopupContainerFiltersViewModelNotification notification = new PopupContainerFiltersViewModelNotification();
