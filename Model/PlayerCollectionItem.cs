@@ -29,9 +29,14 @@ namespace Model
 
         public EnumPokerSites? PokerSite { get; set; }
 
-        public string Description
+        public string ShortDescription
         {
             get { return GetShortPokerSiteName(PokerSite); }
+        }
+
+        public string Description
+        {
+            get { return PokerSite == null ? "Alias" : PokerSite.ToString(); }
         }
 
         private List<AliasCollectionItem> _linkedAliases = new List<AliasCollectionItem>();
@@ -70,7 +75,7 @@ namespace Model
                     break;
             }
 
-            return null;
+            return site.ToString();
         }
 
         #endregion

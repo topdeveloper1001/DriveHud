@@ -12,6 +12,7 @@ namespace Model
         int PlayerId { get; set; }
         string Name { get; set; }
         string DecodedName { get; }
+        string ShortDescription { get; }
         string Description { get; }
         EnumPokerSites? PokerSite { get; }
     }

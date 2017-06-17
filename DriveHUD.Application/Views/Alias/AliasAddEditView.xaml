@@ -13,49 +13,21 @@
              Width="580"
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
-            <Setter Property="Background" Value="#1F2124" />
-            <Setter Property="BorderThickness" Value="0" />
+        <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
+
+        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Foreground" Value="White" />
             <Setter Property="Margin" Value="10 5"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
 
-        <ControlTemplate x:Key="SearchTextBoxTemplate" TargetType="{x:Type TextBox}">
-            <Border Name="Border" 
-                    CornerRadius="2"
-                    Background="{TemplateBinding Background}"
-                    BorderThickness="{TemplateBinding BorderThickness}" 
-                    Padding="2">
-                <Grid>
-                    <TextBlock Text="Search"
-                               Style="{StaticResource Title_H2}"
-                               Name="Hint"
-                               Margin="5 0 0 0"
-                               Visibility="Collapsed"
-                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
-                </Grid>
-            </Border>
-            <ControlTemplate.Triggers>
-                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                    <Setter TargetName="Hint" Property="Visibility" Value="Visible" />
-                </Trigger>
-                <Trigger Property="IsKeyboardFocused" Value="True">
-                    <Setter TargetName="Hint" Property="Visibility" Value="Collapsed" />
-                </Trigger>
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
-
-        <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
-
         <Style x:Key="ButtonInList" TargetType="{x:Type Button}">
             <Setter Property="MinHeight" Value="23" />
-            <Setter Property="SnapsToDevicePixels"
-                    Value="true" />
+            <Setter Property="SnapsToDevicePixels" Value="true" />
             <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
-            <Setter Property="OverridesDefaultStyle"
-                    Value="true" />
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="5" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -111,101 +83,72 @@
             </Setter>
         </Style>
 
-        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
-            <Setter Property="Margin" Value="10 5"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style x:Key="CommandButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Width" Value="85" />
+            <Setter Property="Height" Value="30" />
         </Style>
 
-        <Style x:Key="ListViewItemStyle1" TargetType="{x:Type ListViewItem}">
-            <Setter Property="MinHeight"
-                    Value="19" />
-            <Setter Property="Margin"
-                    Value="0,-1,0,0" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="BorderBrush"
-                    Value="Transparent" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Padding"
-                    Value="3,2" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Stretch" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Center" />
-            <Setter Property="FocusVisualStyle"
-                    Value="{x:Null}" />
-            <Setter Property="Template">
+        <Style x:Key="CommandOkButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Width" Value="85" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="IsEnabled" Value="True"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=AliasName, Path=Text}" Value="">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Margin" Value="15 0 0 0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="Height" Value="28" />
+            <Setter Property="MaxLength" Value="70" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <ControlTemplate x:Key="SearchTextBoxTemplate" TargetType="{x:Type TextBox}">
+            <Border Name="Border" 
+                    CornerRadius="2"
+                    Background="{TemplateBinding Background}"
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    Padding="2">
+                <Grid>
+                    <TextBlock Text="Search"
+                               Style="{StaticResource Title_H2}"
+                               Name="Hint"
+                               Margin="5 0 0 0"
+                               Visibility="Collapsed"
+                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                    <Setter TargetName="Hint" Property="Visibility" Value="Visible" />
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter TargetName="Hint" Property="Visibility" Value="Collapsed" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style TargetType="{x:Type telerik:RadListBox}">
+            <Setter Property="SelectionMode" Value="Multiple" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="10 5"/>
+            <Setter Property="DragDropBehavior">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ListViewItem}">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="Selected">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled">
-                                        <Storyboard>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
-                                                                           Storyboard.TargetName="Content">
-                                                <DiscreteDoubleKeyFrame KeyTime="0"
-                                                                        Value="0.33" />
-                                            </DoubleAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Grid>
-                                <Border x:Name="HighlightVisual"
-                                        Background="{StaticResource BackgroundBrush4}"
-                                        BorderBrush="{StaticResource BackgroundBrush4}"
-                                        BorderThickness="1"
-                                        CornerRadius="1"
-                                        Visibility="Collapsed">
-                                    <Border BorderBrush="White"
-                                            BorderThickness="0"
-                                            CornerRadius="0" />
-                                </Border>
-                                <Grid>
-                                    <ContentPresenter x:Name="Content"
-                                                      ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                      Content="{Binding DecodedName}"
-                                                      ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                      Margin="{TemplateBinding Padding}"
-                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                                    <TextBlock Text="{Binding Path=PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
-                                               HorizontalAlignment="Right"
-                                               Margin="0 0 5 0"
-                                               Style="{StaticResource Title_H2}" />
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </ControlTemplate>
+                    <telerik:ListBoxDragDropBehavior />
                 </Setter.Value>
             </Setter>
         </Style>
@@ -232,6 +175,7 @@
 
                                 <TextBlock HorizontalAlignment="Right"
                                            DockPanel.Dock="Right"
+                                           FontSize="10"
                                            Margin="0,0,10,0"
                                            Foreground="{TemplateBinding Foreground}"
                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -265,204 +209,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <Style x:Key="TelerikListViewItemStyle" TargetType="{x:Type telerik:RadListBoxItem}">
-            <Setter Property="MinHeight"
-                    Value="25" />
-            <Setter Property="Margin"
-                    Value="5" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="BorderBrush"
-                    Value="Transparent" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Padding"
-                    Value="3,2" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Stretch" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Center" />
-            <Setter Property="FocusVisualStyle"
-                    Value="{x:Null}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Border>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="Selected">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled">
-                                        <Storyboard>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
-                                                                           Storyboard.TargetName="Content">
-                                                <DiscreteDoubleKeyFrame KeyTime="0"
-                                                                        Value="0.33" />
-                                            </DoubleAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Grid>
-                                <Border x:Name="HighlightVisual"
-                                        Background="{StaticResource BackgroundBrush4}"
-                                        BorderBrush="{StaticResource BackgroundBrush4}"
-                                        BorderThickness="1"
-                                        CornerRadius="1"
-                                        Visibility="Collapsed">
-                                    <Border BorderBrush="White"
-                                            BorderThickness="0"
-                                            CornerRadius="0" />
-                                </Border>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <ContentPresenter x:Name="Content"
-                                                      VerticalAlignment="Center"
-                                                      Margin="5 0"
-                                                      Content="{Binding DecodedName}" />
-                                    <TextBlock Text="{Binding Description}"
-                                               HorizontalAlignment="Right"
-                                               Margin="0 0 5 0"
-                                               Style="{StaticResource Title_H2}" />
-                                    <Button Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                                            CommandParameter="{Binding}"
-                                            Background="{TemplateBinding Background}"
-                                            Content="+" Grid.Column="1" Width="15" Height="15" Margin="0" />
-
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style x:Key="TelerikSelectedListViewItemStyle" TargetType="{x:Type telerik:RadListBoxItem}">
-            <Setter Property="MinHeight"
-                    Value="25" />
-            <Setter Property="Margin"
-                    Value="5" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="BorderBrush"
-                    Value="Transparent" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Padding"
-                    Value="3,2" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Stretch" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Center" />
-            <Setter Property="FocusVisualStyle"
-                    Value="{x:Null}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Border>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="Selected">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                                           Storyboard.TargetName="HighlightVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled">
-                                        <Storyboard>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
-                                                                           Storyboard.TargetName="Content">
-                                                <DiscreteDoubleKeyFrame KeyTime="0"
-                                                                        Value="0.33" />
-                                            </DoubleAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Grid>
-                                <Border x:Name="HighlightVisual"
-                                        Background="{StaticResource BackgroundBrush4}"
-                                        BorderBrush="{StaticResource BackgroundBrush4}"
-                                        BorderThickness="1"
-                                        CornerRadius="1"
-                                        Visibility="Collapsed">
-                                    <Border BorderBrush="White"
-                                            BorderThickness="0"
-                                            CornerRadius="0" />
-                                </Border>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <ContentPresenter x:Name="Content"
-                                                      Margin="5 0"
-                                                      VerticalAlignment="Center"
-                                                      Content="{Binding DecodedName}" />
-                                    <TextBlock Text="{Binding Description}"
-                                               HorizontalAlignment="Right"
-                                               Margin="0 0 5 0"
-                                               Style="{StaticResource Title_H2}" />
-                                    <Button Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                                            CommandParameter="{Binding}"
-                                            Content="-" Grid.Column="1"  Width="10" Height="10" Margin="0" />
-
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </UserControl.Resources>
 
-    <Border BorderBrush="{StaticResource BackgroundBrush1}" Padding="15" BorderThickness="1"
+    <Border BorderBrush="{StaticResource BackgroundBrush1}" Padding="15 15 15 0" BorderThickness="1"
             Background="#1F2124">
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
@@ -470,7 +219,6 @@
                 <ColumnDefinition Width="40"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
@@ -479,57 +227,37 @@
             </Grid.RowDefinitions>
 
             <DockPanel Grid.ColumnSpan="3">
-                <Label HorizontalAlignment="Left" Foreground="White" DockPanel.Dock="Left">Alias:</Label>
-                <TextBox Name="AliasName" Text="{Binding Path=AliasName}"
-                         Background="{StaticResource BackgroundBrush}"
-                         VerticalAlignment="Center"
-                         VerticalContentAlignment="Center" 
-                         HorizontalAlignment="Stretch"
-                         Height="28"
-                         MaxLength="70"
-                         Foreground="White" />
+                <TextBlock DockPanel.Dock="Left" Text="Alias:" />
+                <TextBox Name="AliasName" Text="{Binding Path=AliasName}" />
             </DockPanel>
 
-            <TextBlock Grid.Row="1" Text="Players" Foreground="White" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="1" Text="Players" />
 
-            <TextBlock Grid.Row="1" Grid.Column="2" Text="Selected players" Foreground="White" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="Selected players" />
 
             <Border Grid.Row="2" Background="{StaticResource BackgroundBrush1}" BorderThickness="0">
                 <DockPanel>
                     <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
                              Template="{StaticResource SearchTextBoxTemplate}"
                              DockPanel.Dock="Top"
-                             VerticalAlignment="Center"
-                             VerticalContentAlignment="Center" 
-                             HorizontalAlignment="Stretch"
-                             Height="28"
-                             MaxLength="70" />
+                             Margin="10 5"/>
                     <telerik:RadListBox ItemsSource="{Binding AllPlayersSorted.View}"
                                         SelectedIndex="{Binding AllPlayersSelectdIndex, Mode=TwoWay}"
                                         ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                        SelectionMode="Multiple"
                                         Grid.Row="3" Grid.Column="0"
-                                        Name="AllPlayersList"
-                                        BorderThickness="0"
-                                        Foreground="White"
-                                        Background="Transparent"
-                                        Margin="10 5" >
-                        <telerik:RadListBox.DragDropBehavior>
-                            <telerik:ListBoxDragDropBehavior />
-                        </telerik:RadListBox.DragDropBehavior>
-                    </telerik:RadListBox>
+                                        Name="AllPlayersList" />
                 </DockPanel>
             </Border>
 
             <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
-                <Button Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                <Button Style="{StaticResource ButtonInList}" 
                         Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
                         CommandParameter="{Binding ElementName=AllPlayersList, Path=(SelectedItems)}">
                     <Button.Content>
                         <Path Data="M 0,5 L 10,5 M 5,0 L 5,10" Stroke="White" StrokeThickness="2" />
                     </Button.Content>
                 </Button>
-                <Button Foreground="White" Margin="5" Style="{StaticResource ButtonInList}" 
+                <Button Style="{StaticResource ButtonInList}" 
                         Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
                         CommandParameter="{Binding ElementName=SelectedList, Path=(SelectedItems)}">
                     <Button.Content>
@@ -543,42 +271,20 @@
                     <TextBox Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" 
                              Template="{StaticResource SearchTextBoxTemplate}"
                              DockPanel.Dock="Top"
-                             VerticalAlignment="Center"
-                             VerticalContentAlignment="Center" 
-                             HorizontalAlignment="Stretch"
-                             Height="28"
-                             MaxLength="70"/>
+                             Margin="10 5"/>
                     <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
                                         SelectedIndex="{Binding SelectedPlayersSelectdIndex, Mode=TwoWay}"
                                         ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                        SelectionMode="Multiple"
                                         Grid.Row="3" Grid.Column="2"
-                                        Name="SelectedList"
-                                        BorderThickness="0"
-                                        Foreground="White"
-                                        Background="Transparent"
-                                        Margin="10 5" >
-                        <telerik:RadListBox.DragDropBehavior>
-                            <telerik:ListBoxDragDropBehavior />
-                        </telerik:RadListBox.DragDropBehavior>
-                    </telerik:RadListBox>
+                                        Name="SelectedList" />
                 </DockPanel>
             </Border>
 
             <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}" Margin="10" Width="85" Height="30"  >
-                    <Button.Style>
-                        <Style  TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding ElementName=AliasName, Path=Text}" Value="">
-                                    <Setter Property="IsEnabled" Value="False"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                            <Setter Property="IsEnabled" Value="True"/>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button Command="{Binding CancelCommand}" Content="{ResX Key=Common_Cancel}" Margin="10" Width="85" Height="30"  />
+                <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}"
+                        Style="{StaticResource CommandOkButton}" />
+                <Button Command="{Binding CancelCommand}" Content="{ResX Key=Common_Cancel}" 
+                        Style="{StaticResource CommandButton}" />
             </StackPanel>
         </Grid>
     </Border>

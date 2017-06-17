@@ -35,6 +35,11 @@ namespace Model
 
         public EnumPokerSites? PokerSite { get { return null; } }
 
+        public string ShortDescription
+        {
+            get { return "Alias"; }
+        }
+
         public string Description
         {
             get { return $"Players: {_playersInAlias.Count}"; }

@@ -539,6 +539,7 @@
                                                 <RowDefinition
                                                     Height="*" />
                                             </Grid.RowDefinitions>
+                                            
                                             <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
@@ -550,6 +551,13 @@
                                                     <telerik:Office_BlackTheme />
                                                 </telerik:StyleManager.Theme>
                                             </telerik:RadButton>
+
+                                            <Button Margin="-1,-1,-1,0"
+                                                    Background="{TemplateBinding Background}"
+                                                    Command="{Binding AliasMenuCommand}">
+                                                Create Alias
+                                            </Button>
+                                            
                                             <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
@@ -566,20 +574,7 @@
                                                         Key="A"
                                                         Modifiers="Control" />
                                                 </ScrollViewer.InputBindings>
-                                                <Grid>
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto"></RowDefinition>
-                                                        <RowDefinition Height="*"></RowDefinition>
-                                                    </Grid.RowDefinitions>
-
-                                                    <Button Margin="5"
-                                                            Background="{TemplateBinding Background}"
-                                                            Command="{Binding AliasMenuCommand}">
-                                                        Create Alias
-                                                    </Button>
-
-                                                    <ItemsPresenter Grid.Row="1" />
-                                                </Grid>
+                                                <ItemsPresenter />
                                             </ScrollViewer>
                                         </Grid>
                                     </Border>
@@ -728,7 +723,13 @@
                                         CornerRadius="1"
                                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                         MinWidth="{TemplateBinding MinDropDownWidth}">
-                                        <StackPanel>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="Auto" />
+                                                <RowDefinition
+                                                    Height="*" />
+                                            </Grid.RowDefinitions>
                                             <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
@@ -758,7 +759,7 @@
                                                 </ScrollViewer.InputBindings>
                                                 <ItemsPresenter />
                                             </ScrollViewer>
-                                        </StackPanel>
+                                        </Grid>
                                     </Border>
                                 </Grid>
                             </Popup>
@@ -906,7 +907,7 @@
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                                     <TextBlock
-                                        Text="{Binding Description}"
+                                        Text="{Binding ShortDescription}"
                                         HorizontalAlignment="Right"
                                         Margin="0 0 5 0"
                                         Style="{StaticResource Title_H2}" />
