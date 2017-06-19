@@ -113,6 +113,7 @@ namespace DriveHUD.Common.Utils
             if (!string.IsNullOrWhiteSpace(dataFolder))
             {
                 logs.Add(Path.Combine(dataFolder, "Settings.xml"));
+                logs.Add(Path.Combine(dataFolder, "CurrentPlayer.txt"));
             }
 
             logs = logs.Where(x => File.Exists(x)).ToList();
@@ -162,7 +163,7 @@ namespace DriveHUD.Common.Utils
 
             if (!string.IsNullOrEmpty(dataFolder) && Directory.Exists(dataFolder))
             {
-                var extensionsToZip = new[] { ".data", ".xml", ".df" };
+                var extensionsToZip = new[] { ".data", ".xml", ".df", ".txt" };
                 AddZipAtachment(archive,
                     Directory.GetFiles(dataFolder)
                         .Where(
