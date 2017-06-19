@@ -195,10 +195,11 @@ namespace DriveHUD.Application.Views
 
         private void DeleteHand(object sender, RadRoutedEventArgs e)
         {
-            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
+            var items = reportGadgetViewModel.SelectedStatistics;
+            if (items != null && items.Any())
             {
-                reportGadgetViewModel.DeleteHandCommand.Execute(item.DataContext);
+                //reportGadgetViewModel.ReportSelectedItemStatisticsCollection;
+                reportGadgetViewModel.DeleteHandCommand.Execute(items);
             }
         }
 
@@ -527,6 +528,12 @@ namespace DriveHUD.Application.Views
                 }
                 e.Cancel = true;
             }
+        }
+
+        private void GridViewKnownHands_SelectionChanged(object sender, SelectionChangeEventArgs e)
+        {
+            reportGadgetViewModel.SelectedStatistics = new ObservableCollection<Playerstatistic>(((RadGridView)sender).SelectedItems
+                .Select(x => (x as ComparableCardsStatistic).Statistic).OfType<Playerstatistic>());
         }
 
         private IEnumerable<T> SortData<T>(IEnumerable<T> collection, GridViewSortingEventArgs e)

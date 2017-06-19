@@ -22,6 +22,7 @@ using Prism.Interactivity.InteractionRequest;
 using DriveHUD.Common.Wpf.Actions;
 using System.Threading.Tasks;
 using Model.Events.FilterEvents;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -146,21 +147,20 @@ namespace DriveHUD.Application.ViewModels
 
         private void DeleteHand(object obj)
         {
-            if (obj != null && obj is ComparableCardsStatistic)
-            {
-                var stat = (obj as ComparableCardsStatistic)?.Statistic;
+            var items = obj as IEnumerable<Playerstatistic>;
 
-                if (stat == null)
-                {
-                    return;
-                }
+            if (items != null && items.Any())
+            {
+                int count = items.Count();
 
                 var notification = new PopupBaseNotification()
                 {
-                    Title = "Delete Hand",
+                    Title = count == 1 ? "Delete Hand" : $"Delete {count} Hands",
                     CancelButtonCaption = "Cancel",
                     ConfirmButtonCaption = "Yes",
-                    Content = "Are you sure you want to delete this hand?",
+                    Content = count == 1 
+                    ? "Are you sure you want to delete this hand?"
+                    : "Are you sure you want to delete this hands?",
                     IsDisplayH1Text = true
                 };
 
@@ -172,8 +172,11 @@ namespace DriveHUD.Application.ViewModels
                               var dataservice = ServiceLocator.Current.GetInstance<IDataService>();
                               var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
-                              dataservice.DeletePlayerStatisticFromFile(stat);
-                              StorageModel.StatisticCollection.Remove(stat);
+                              foreach (var stat in items)
+                              {
+                                  dataservice.DeletePlayerStatisticFromFile(stat);
+                                  StorageModel.StatisticCollection.Remove(stat);
+                              }
 
                               eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                           }
@@ -312,6 +315,7 @@ namespace DriveHUD.Application.ViewModels
 
         private Indicators _reportSelectedItem;
         private IEnumerable<Playerstatistic> _reportSelectedItemStatisticsCollection;
+        private IEnumerable<Playerstatistic> _selectedStatistics;
 
         private RangeObservableCollection<ComparableCardsStatistic> _reportSelectedItemStatisticsCollection_Filtered;
 
@@ -405,6 +409,16 @@ namespace DriveHUD.Application.ViewModels
                 OnPropertyChanged();
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
+            }
+        }
+
+        public IEnumerable<Playerstatistic> SelectedStatistics
+        {
+            get { return _selectedStatistics; }
+            set
+            {
+                _selectedStatistics = value;
+                OnPropertyChanged();
             }
         }
 
