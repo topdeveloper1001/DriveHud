@@ -464,20 +464,20 @@
 
                 <!-- Pop-up-->
                 <TextBlock
-                    Text="Pop-up"
+                    Text="Decimal Places"
                     Margin="0,18,0,12" />
 
-                <telerik:RadComboBox
+                <telerik:RadMaskedNumericInput
+                    Style="{StaticResource NumericTextBoxStyle}"
                     Width="190"
                     Height="33"
-                    Margin="0,0,0,0"
-                    Padding="10,0,0,0"
-                    HorizontalAlignment="Left"
-                    IsEditable="False"
-                    BorderBrush="Transparent"
-                    Foreground="{StaticResource ActiveTextForeground}"
-                    Background="{StaticResource ButtonBackground}"
-                    ItemContainerStyle="{StaticResource FontItemContainerStyle}" />
+                    TextMode="PlainText"
+                    FormatString="N0"
+                    Mask=""
+                    Culture="en-US"
+                    maskedInput:MaskedInputExtensions.Minimum="0"
+                    maskedInput:MaskedInputExtensions.Maximum="2"
+                    Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
 
             </StackPanel>
 

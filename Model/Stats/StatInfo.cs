@@ -191,7 +191,6 @@ namespace Model.Stats
         [NonSerialized]
         private string format;
 
-        [ProtoMember(5)]
         [XmlIgnore]
         public string Format
         {
@@ -202,13 +201,32 @@ namespace Model.Stats
                     return totalHandFormat;
                 }
 
+                var format = digitsAfterDecimalPoint == 0 ? "{0:0}" : digitsAfterDecimalPoint == 1 ? "{0:0.0}" : "{0:0.00}";
+
                 return format;
+            }
+        }
+
+        private int digitsAfterDecimalPoint = 1;
+
+        [ProtoMember(5)]
+        public int DigitsAfterDecimalPoint
+        {
+            get
+            {
+                return digitsAfterDecimalPoint;
             }
             set
             {
-                if (value == format) return;
-                format = value;
+                if (digitsAfterDecimalPoint == value || digitsAfterDecimalPoint < 0 || digitsAfterDecimalPoint > 2)
+                {
+                    return;
+                }
+
+                digitsAfterDecimalPoint = value;
+
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Format));
             }
         }
 
@@ -713,6 +731,7 @@ namespace Model.Stats
             var statInfoClone = new StatInfo();
 
             statInfoClone.MinSample = MinSample;
+            statInfoClone.DigitsAfterDecimalPoint = DigitsAfterDecimalPoint;
             statInfoClone.Label = Label;
             statInfoClone.SettingsAppearanceFontBold = SettingsAppearanceFontBold;
             statInfoClone.SettingsAppearanceFontBold_IsChecked = SettingsAppearanceFontBold_IsChecked;
@@ -728,7 +747,6 @@ namespace Model.Stats
             statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
-            statInfoClone.Format = Format;            
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
@@ -748,6 +766,7 @@ namespace Model.Stats
         public void Merge(StatInfo statInfo)
         {
             MinSample = statInfo.MinSample;
+            DigitsAfterDecimalPoint = statInfo.DigitsAfterDecimalPoint;
             Label = statInfo.Label;
             SettingsAppearanceFontBold = statInfo.SettingsAppearanceFontBold;
             SettingsAppearanceFontBold_IsChecked = statInfo.SettingsAppearanceFontBold_IsChecked;
