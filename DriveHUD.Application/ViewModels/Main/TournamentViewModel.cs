@@ -1,24 +1,30 @@
+//-----------------------------------------------------------------------
+// <copyright file="TournamentViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
+using Microsoft.Practices.ServiceLocation;
+using Model.ChartData;
+using Model.Data;
+using Model.Enums;
+using Model.Events;
+using Model.Interfaces;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
-
-using Model;
-using Model.Enums;
-
-using DriveHUD.ViewModels;
-using DriveHUD.Common.Infrastructure.Base;
 using System.Windows.Input;
-using System.Diagnostics;
-using Model.Data;
-using Model.Reports;
-using Microsoft.Practices.ServiceLocation;
-using Model.Interfaces;
-using Prism.Events;
-using Model.Events;
-using DriveHUD.Entities;
-using Model.ChartData;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -275,22 +281,20 @@ namespace DriveHUD.Application.ViewModels
                 return;
 
             SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
-            List<Tournaments> playerTournaments = new List<Tournaments>();
 
-            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
-                playerTournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite));
-
-            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
-                foreach (var player in (StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias)
-                    playerTournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite));
+            var playerTournaments = StorageModel.PlayerSelectedItem != null ?
+                ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds) :
+                new List<Tournaments>();
 
             MTTWon = 0;
             STTWon = 0;
             TotalMTT = 0;
             TotalSTT = 0;
+
             foreach (var tournament in playerTournaments)
             {
                 TournamentsTags tag;
+
                 if (Enum.TryParse(tournament.Tourneytagscsv, out tag))
                 {
                     switch (tag)

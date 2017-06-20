@@ -61,13 +61,7 @@ namespace Model.Reports
 
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
-            List<Tournaments> tournaments = new List<Tournaments>();
-
-            if (player is PlayerCollectionItem)
-                tournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite));
-            if (player is AliasCollectionItem)
-                foreach (var playerIn in (player as AliasCollectionItem).PlayersInAlias)
-                    tournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(playerIn.Name, (short)playerIn.PokerSite));
+            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
             foreach (var group in tournaments.GroupBy(x => new { x.Buyinincents, x.Tourneytagscsv, x.SpeedtypeId, x.PokergametypeId }))
             {

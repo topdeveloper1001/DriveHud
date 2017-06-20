@@ -26,7 +26,7 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(18)]
-    public class Migration0018_MigrationToHUD_V2 : FluentMigrator.Migration
+    public class Migration0018_MigrationToHUD_V2 : Migration
     {
         private const int delayBeforeMovingFolders = 2000;
 

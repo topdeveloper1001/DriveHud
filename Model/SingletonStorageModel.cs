@@ -37,19 +37,17 @@ namespace Model
         /// <param name="loadHeroIfMissing">True if need to select HERO in case when player with specified name does not exist</param>
         public void TryLoadActivePlayer(IPlayer player, bool loadHeroIfMissing)
         {
-            // TODO : check it
-            if (player is PlayerCollectionItem)
-            {
-                if (PlayerCollection.Contains(player))
-                {
-                    PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == player);
-                    return;
-                }
+            var playerSelectedItem = PlayerCollection.FirstOrDefault(x => x.PlayerId == player.PlayerId && x.GetType() == player.GetType());
 
-                if (loadHeroIfMissing)
-                {
-                    TryLoadHeroPlayer();
-                }
+            if (playerSelectedItem != null)
+            {
+                PlayerSelectedItem = playerSelectedItem;
+                return;
+            }
+
+            if (loadHeroIfMissing)
+            {
+                TryLoadHeroPlayer();
             }
         }
 
@@ -57,9 +55,11 @@ namespace Model
         {
             var heroName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.HeroName);
 
-            if (PlayerCollection.Any(x => x.Name == heroName))
+            var playerCollectionItems = PlayerCollection.OfType<PlayerCollectionItem>().ToArray();
+
+            if (playerCollectionItems.Any(x => x.Name == heroName))
             {
-                PlayerSelectedItem = PlayerCollection
+                PlayerSelectedItem = playerCollectionItems
                     .Where(x => x.Name == heroName)
                     .OrderBy(x => x.PokerSite).FirstOrDefault();
             }
@@ -167,7 +167,7 @@ namespace Model
         }
 
         private IList<Playerstatistic> _filteredPlayerStatistic;
-        
+
         public IList<Playerstatistic> FilteredPlayerStatistic
         {
             set

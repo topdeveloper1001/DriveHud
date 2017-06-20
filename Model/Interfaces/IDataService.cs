@@ -38,6 +38,8 @@ namespace Model.Interfaces
 
         IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId);
 
+        IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
+
         Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId);
 
         HandHistory GetGame(long gameNumber, short pokersiteId);
@@ -84,7 +86,7 @@ namespace Model.Interfaces
 
         IPlayer GetActivePlayer();
 
-        void SaveActivePlayer(string playerName, short pokersiteId);
+        void SaveActivePlayer(string playerName, short? pokersiteId);
 
         #region Aliases
 

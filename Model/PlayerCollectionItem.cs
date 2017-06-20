@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Prism.Mvvm;
 using System.Collections.Generic;
@@ -23,28 +24,62 @@ namespace Model
 
         public int PlayerId { get; set; }
 
+        public IEnumerable<int> PlayerIds
+        {
+            get
+            {
+                return new[] { PlayerId };
+            }
+        }
+
         public string Name { get; set; }
 
-        public string DecodedName { get { return HttpUtility.HtmlDecode(Name); } }
+        public string DecodedName
+        {
+            get
+            {
+                return HttpUtility.HtmlDecode(Name);
+            }
+        }
 
         public EnumPokerSites? PokerSite { get; set; }
 
+        public IEnumerable<EnumPokerSites> PokerSites
+        {
+            get
+            {
+                return PokerSite.HasValue ?
+                    new[] { PokerSite.Value } :
+                    new EnumPokerSites[0];
+            }
+        }
+
         public string ShortDescription
         {
-            get { return GetShortPokerSiteName(PokerSite); }
+            get
+            {
+                return GetShortPokerSiteName(PokerSite);
+            }
         }
 
         public string Description
         {
-            get { return PokerSite == null ? "Alias" : PokerSite.ToString(); }
+            get
+            {
+                return PokerSite.HasValue ?
+                    CommonResourceManager.Instance.GetEnumResource(PokerSite.Value) :
+                    CommonResourceManager.Instance.GetResourceString("Common_Alias");
+            }
         }
 
         private List<AliasCollectionItem> _linkedAliases = new List<AliasCollectionItem>();
 
         public List<AliasCollectionItem> LinkedAliases
         {
-            get { return _linkedAliases; }
-            set { _linkedAliases = value; }
+            get
+            {
+                return _linkedAliases;
+            }
         }
 
         #endregion

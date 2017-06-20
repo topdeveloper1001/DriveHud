@@ -58,16 +58,9 @@ namespace Model.Reports
                 return report;
             }
 
-            List<Tournaments> tournaments = new List<Tournaments>();
-
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
-            if (player is PlayerCollectionItem)
-                tournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite));
-
-            if (player is AliasCollectionItem)
-                foreach (var playerIn in (player as AliasCollectionItem).PlayersInAlias)
-                    tournaments.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(playerIn.Name, (short)playerIn.PokerSite));
+            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
             foreach (var group in tournaments.GroupBy(x => x.SiteId))
             {

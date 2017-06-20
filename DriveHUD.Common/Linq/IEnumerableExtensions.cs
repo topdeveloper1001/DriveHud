@@ -282,5 +282,15 @@ namespace DriveHUD.Common.Linq
             }
         }
 
+        /// <summary>
+        /// Indicates whenever the specified <see cref="IEnumerable{T}" /> is null or empty
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
+        {            
+            return source == null || !source.Any();
+        }
     }
 }

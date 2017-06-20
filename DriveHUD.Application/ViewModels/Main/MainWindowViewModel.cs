@@ -270,12 +270,17 @@ namespace DriveHUD.Application.ViewModels
         internal void Load()
         {
             var player = StorageModel.PlayerSelectedItem;
+
             List<Playerstatistic> statistics = new List<Playerstatistic>();
 
             if (player is PlayerCollectionItem)
+            {
                 statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
             else if (player is AliasCollectionItem)
+            {
                 (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+            }
 
             AddHandTags(statistics);
 
@@ -300,6 +305,8 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
                 // TODO : reading players from db.
                 StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
+                StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
+
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
@@ -803,16 +810,23 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            List<Handnotes> notes = new List<Handnotes>();
-            List<PlayerCollectionItem> allPlayers = new List<PlayerCollectionItem>();
+            var notes = new List<Handnotes>();
+
+            var allPlayers = new List<PlayerCollectionItem>();
 
             if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+            {
                 allPlayers.Add(StorageModel.PlayerSelectedItem as PlayerCollectionItem);
+            }
             else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
+            {
                 allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
+            }
 
             foreach (var player in allPlayers)
+            {
                 notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
 
             var statisticsForUpdate = (from note in notes
                                        join statistic in statistics on note.Gamenumber equals statistic.GameNumber
@@ -1370,16 +1384,10 @@ namespace DriveHUD.Application.ViewModels
                 hudTransmitter.Dispose();
                 importerSessionCacheService.End();
 
-                if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+                if (StorageModel.PlayerSelectedItem != null)
                 {
-                    var player = StorageModel.PlayerSelectedItem as PlayerCollectionItem;
-                    dataService.SaveActivePlayer(player.Name, (short)player.PokerSite);
+                    dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short?)StorageModel.PlayerSelectedItem.PokerSite);
                 }
-                if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
-                {
-                    // TODO : add save for alias.
-                }
-
 
                 // flush betonline cash
                 var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
@@ -1441,7 +1449,7 @@ namespace DriveHUD.Application.ViewModels
                     }
                 });
         }
-        
+
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
             PopupContainerFiltersViewModelNotification notification = new PopupContainerFiltersViewModelNotification();

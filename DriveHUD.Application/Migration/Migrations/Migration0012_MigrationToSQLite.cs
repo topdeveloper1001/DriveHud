@@ -10,8 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
+using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -19,12 +20,11 @@ using Model.Settings;
 using System;
 using System.Diagnostics;
 using System.IO;
-using DriveHUD.Application.Bootstrappers;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(12)]
-    public class Migration0012_MigrationToSQLite : FluentMigrator.Migration
+    public class Migration0012_MigrationToSQLite : Migration
     {
         private const string migrationProcessFile = "DriveHUD.DBMigration.exe";
 

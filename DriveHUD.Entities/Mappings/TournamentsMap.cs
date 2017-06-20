@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using FluentNHibernate.Mapping;
-using DriveHUD.Entities;
 
 namespace DriveHUD.Entities.Mapping
 {

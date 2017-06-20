@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
@@ -197,21 +198,16 @@ namespace Model
             {
                 using (var transaction = session.BeginTransaction())
                 {
+                    var playersIds = aliasToSave.PlayersInAlias.Select(x => x.PlayerId).ToArray();
+
+                    var players = session.Query<Players>().Where(x => playersIds.Contains(x.PlayerId)).ToArray();
+
                     session.SaveOrUpdate(new Aliases()
                     {
                         AliasId = aliasToSave.PlayerId,
-                        AliasName = aliasToSave.Name
+                        AliasName = aliasToSave.Name,
+                        Players = players
                     });
-
-                    if (aliasToSave.PlayerId == 0)
-                        aliasToSave.PlayerId = session.Query<Aliases>().FirstOrDefault(x => x.AliasName == aliasToSave.Name).AliasId;
-
-                    foreach (PlayerCollectionItem player in aliasToSave.PlayersInAlias)
-                        session.SaveOrUpdate(new AliasPlayer()
-                        {
-                            AliasId = aliasToSave.PlayerId,
-                            PlayersId = player.PlayerId
-                        });
 
                     transaction.Commit();
                 }
@@ -266,6 +262,33 @@ namespace Model
             {
                 return session.Query<Tournaments>().Where(x => x.Player.Playername == playerName && x.SiteId == pokersiteId).Fetch(x => x.Player).ToList();
             }
+        }
+
+        /// <summary>
+        /// Gets tournaments list for the specified ids of players 
+        /// </summary>
+        /// <param name="playerIds"></param>
+        /// <returns></returns>
+        public IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds)
+        {
+            if (playerIds.IsNullOrEmpty())
+            {
+                return new List<Tournaments>();
+            }
+
+            try
+            {
+                using (var session = ModelEntities.OpenSession())
+                {
+                    return session.Query<Tournaments>().Where(x => playerIds.Contains(x.Player.PlayerId)).Fetch(x => x.Player).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not read tournaments", ex);
+            }
+
+            return new List<Tournaments>();
         }
 
         public Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId)
@@ -744,36 +767,29 @@ namespace Model
         {
             try
             {
-                if (!Directory.Exists(playersPath))
-                {
-                    Directory.CreateDirectory(playersPath);
-                }
-
-                List<IPlayer> aliases = new List<IPlayer>();
-                var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
-
                 using (var session = ModelEntities.OpenSession())
                 {
-                    aliases.AddRange(session.Query<Aliases>().ToArray().Select(x => new AliasCollectionItem
+                    var aliasesEntities = session.Query<Aliases>().Fetch(x => x.Players).ToArray();
+
+                    var aliases = aliasesEntities.Select(x => new AliasCollectionItem
                     {
                         PlayerId = x.AliasId,
-                        Name = x.AliasName
-                    }));
-
-                    foreach (AliasCollectionItem alias in aliases)
-                    {
-                        List<int> links = session.Query<AliasPlayer>().Where(x => x.AliasId == alias.PlayerId).Select(x => x.PlayersId).ToList();
-
-                        alias.PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(storageModel.PlayerCollection.OfType<PlayerCollectionItem>()
-                            .Where(x => links.Contains(x.PlayerId)));
-                    }
+                        Name = x.AliasName,
+                        PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(x.Players.Select(p =>
+                        new PlayerCollectionItem
+                        {
+                            PlayerId = p.PlayerId,
+                            PokerSite = (EnumPokerSites)p.PokersiteId,
+                            Name = p.Playername
+                        }))
+                    }).OfType<IPlayer>().ToList();
 
                     return aliases;
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Couldn't get player list", e);
+                LogProvider.Log.Error(this, "Couldn't get aliases list", e);
             }
 
             return new List<IPlayer>();
@@ -852,7 +868,7 @@ namespace Model
 
         public IPlayer GetActivePlayer()
         {
-            var activePlayer = new PlayerCollectionItem();
+            IPlayer activePlayer = new PlayerCollectionItem();
 
             string dataPath = StringFormatter.GetActivePlayerFilePath();
 
@@ -862,6 +878,34 @@ namespace Model
 
                 if (splittedResult.Length < 2)
                 {
+                    try
+                    {
+                        using (var session = ModelEntities.OpenSession())
+                        {
+                            var alias = session.Query<Aliases>().Fetch(x => x.Players).FirstOrDefault(x => x.AliasName.Equals(splittedResult[0]));
+
+                            if (alias != null)
+                            {
+                                activePlayer = new AliasCollectionItem
+                                {
+                                    PlayerId = alias.AliasId,
+                                    Name = alias.AliasName,
+                                    PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(alias.Players.Select(p =>
+                                        new PlayerCollectionItem
+                                        {
+                                            PlayerId = p.PlayerId,
+                                            PokerSite = (EnumPokerSites)p.PokersiteId,
+                                            Name = p.Playername
+                                        }))
+                                };
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, "Couldn't get active alias", e);
+                    }
+
                     return activePlayer;
                 }
 
@@ -893,13 +937,20 @@ namespace Model
             return activePlayer;
         }
 
-        public void SaveActivePlayer(string playerName, short pokersiteId)
+        public void SaveActivePlayer(string playerName, short? pokersiteId)
         {
             try
             {
                 string dataPath = StringFormatter.GetActivePlayerFilePath();
 
-                File.WriteAllText(dataPath, $"{playerName}{Environment.NewLine}{pokersiteId}");
+                if (pokersiteId.HasValue)
+                {
+                    File.WriteAllText(dataPath, $"{playerName}{Environment.NewLine}{pokersiteId}");
+                }
+                else
+                {
+                    File.WriteAllText(dataPath, playerName);
+                }
             }
             catch (Exception ex)
             {

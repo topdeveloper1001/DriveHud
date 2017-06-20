@@ -24,7 +24,7 @@ using System.IO;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(19)]
-    public class Migration0019_MoveLayoutsToLayoutV2 : FluentMigrator.Migration
+    public class Migration0019_MoveLayoutsToLayoutV2 : Migration
     {
         private readonly string layoutsV2Folder;
         private readonly string layoutsFolder;
