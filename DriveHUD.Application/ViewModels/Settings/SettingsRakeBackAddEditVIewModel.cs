@@ -31,7 +31,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             _settingsModel = _infoViewModel?.Model;
 
             this.RakeBackName = _settingsModel?.RakeBackName ?? string.Empty;
-            this.Player = StorageModel.PlayerCollection.FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
+            this.Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>().FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
             this.DateBegan = _settingsModel?.DateBegan ?? DateTime.Now;
             this.Percentage = _settingsModel?.Percentage ?? 0m;
         }

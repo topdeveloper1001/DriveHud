@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
@@ -22,6 +23,7 @@ using NHibernate.Linq;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -125,7 +127,7 @@ namespace Model
                         {
                             var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
                             if (!pokersiteId.HasValue || (stat.PokersiteId == pokersiteId))
-                            {                                
+                            {
                                 result.Add(stat);
                             }
                         }
@@ -180,6 +182,64 @@ namespace Model
             }
         }
 
+        #region Aliases
+
+        public Aliases GetAlias(string aliasName)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<Aliases>().FirstOrDefault(x => x.AliasName == aliasName);
+            }
+        }
+
+        public void SaveAlias(AliasCollectionItem aliasToSave)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    var playersIds = aliasToSave.PlayersInAlias.Select(x => x.PlayerId).ToArray();
+
+                    var players = session.Query<Players>().Where(x => playersIds.Contains(x.PlayerId)).ToArray();
+
+                    session.SaveOrUpdate(new Aliases()
+                    {
+                        AliasId = aliasToSave.PlayerId,
+                        AliasName = aliasToSave.Name,
+                        Players = players
+                    });
+
+                    transaction.Commit();
+                }
+            }
+        }
+
+        public void RemoveAlias(AliasCollectionItem aliasToRemove)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    session.Delete(new Aliases()
+                    {
+                        AliasId = aliasToRemove.PlayerId,
+                        AliasName = aliasToRemove.Name
+                    });
+
+                    foreach (PlayerCollectionItem player in aliasToRemove.PlayersInAlias)
+                        session.Delete(new AliasPlayer()
+                        {
+                            AliasId = aliasToRemove.PlayerId,
+                            PlayersId = player.PlayerId
+                        });
+
+                    transaction.Commit();
+                }
+            }
+        }
+
+        #endregion
+
         public IList<HandHistoryRecord> GetHandHistoryRecords()
         {
             using (var session = ModelEntities.OpenSession())
@@ -202,6 +262,33 @@ namespace Model
             {
                 return session.Query<Tournaments>().Where(x => x.Player.Playername == playerName && x.SiteId == pokersiteId).Fetch(x => x.Player).ToList();
             }
+        }
+
+        /// <summary>
+        /// Gets tournaments list for the specified ids of players 
+        /// </summary>
+        /// <param name="playerIds"></param>
+        /// <returns></returns>
+        public IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds)
+        {
+            if (playerIds.IsNullOrEmpty())
+            {
+                return new List<Tournaments>();
+            }
+
+            try
+            {
+                using (var session = ModelEntities.OpenSession())
+                {
+                    return session.Query<Tournaments>().Where(x => playerIds.Contains(x.Player.PlayerId)).Fetch(x => x.Player).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not read tournaments", ex);
+            }
+
+            return new List<Tournaments>();
         }
 
         public Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId)
@@ -529,11 +616,13 @@ namespace Model
 
         #region workaround for players collection (need to organize it better)
 
-        private List<PlayerCollectionItem> playerInternalCollection = null;
+        private List<IPlayer> playerInternalCollection = null;
+        private List<IPlayer> aliasesInternalCollection = null;
 
         private ReaderWriterLockSlim playerCollectionLock = new ReaderWriterLockSlim();
+        private ReaderWriterLockSlim aliasCollectionLock = new ReaderWriterLockSlim();
 
-        public void AddPlayerToList(PlayerCollectionItem playerItem)
+        public void AddPlayerToList(IPlayer playerItem)
         {
             if (playerItem == null)
             {
@@ -546,7 +635,7 @@ namespace Model
             {
                 if (playerInternalCollection == null)
                 {
-                    playerInternalCollection = new List<PlayerCollectionItem>();
+                    playerInternalCollection = new List<IPlayer>();
                 }
 
                 playerInternalCollection.Add(playerItem);
@@ -557,7 +646,7 @@ namespace Model
             }
         }
 
-        public void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems)
+        public void AddPlayerRangeToList(IEnumerable<IPlayer> playerItems)
         {
             if (playerItems == null)
             {
@@ -570,7 +659,7 @@ namespace Model
             {
                 if (playerInternalCollection == null)
                 {
-                    playerInternalCollection = new List<PlayerCollectionItem>();
+                    playerInternalCollection = new List<IPlayer>();
                 }
 
                 playerInternalCollection.AddRange(playerItems);
@@ -581,7 +670,7 @@ namespace Model
             }
         }
 
-        public IList<PlayerCollectionItem> GetPlayersList()
+        public IList<IPlayer> GetPlayersList()
         {
             if (playerInternalCollection == null)
             {
@@ -604,7 +693,7 @@ namespace Model
 
             try
             {
-                return new List<PlayerCollectionItem>(playerInternalCollection.OrderBy(x => x.Name));
+                return new List<IPlayer>(playerInternalCollection.OrderBy(x => x.Name));
             }
             finally
             {
@@ -612,7 +701,7 @@ namespace Model
             }
         }
 
-        private List<PlayerCollectionItem> GetPlayersListInternal()
+        private List<IPlayer> GetPlayersListInternal()
         {
             try
             {
@@ -621,14 +710,16 @@ namespace Model
                     Directory.CreateDirectory(playersPath);
                 }
 
+                List<IPlayer> players = new List<IPlayer>();
+
                 using (var session = ModelEntities.OpenSession())
                 {
-                    var players = session.Query<Players>().ToArray().Select(x => new PlayerCollectionItem
+                    players.AddRange(session.Query<Players>().ToArray().Select(x => new PlayerCollectionItem
                     {
                         PlayerId = x.PlayerId,
                         PokerSite = (EnumPokerSites)x.PokersiteId,
                         Name = x.Playername
-                    }).ToList();
+                    }));
 
                     return players;
                 }
@@ -638,7 +729,70 @@ namespace Model
                 LogProvider.Log.Error(this, "Couldn't get player list", e);
             }
 
-            return new List<PlayerCollectionItem>();
+            return new List<IPlayer>();
+        }
+
+        public IList<IPlayer> GetAliasesList()
+        {
+            if (aliasesInternalCollection == null)
+            {
+                aliasCollectionLock.EnterWriteLock();
+
+                if (aliasesInternalCollection == null)
+                {
+                    try
+                    {
+                        aliasesInternalCollection = GetAliasesListInternal();
+                    }
+                    finally
+                    {
+                        aliasCollectionLock.ExitWriteLock();
+                    }
+                }
+            }
+
+            aliasCollectionLock.EnterReadLock();
+
+            try
+            {
+                return new List<IPlayer>(aliasesInternalCollection.OrderBy(x => x.Name));
+            }
+            finally
+            {
+                aliasCollectionLock.ExitReadLock();
+            }
+        }
+
+        private List<IPlayer> GetAliasesListInternal()
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenSession())
+                {
+                    var aliasesEntities = session.Query<Aliases>().Fetch(x => x.Players).ToArray();
+
+                    var aliases = aliasesEntities.Select(x => new AliasCollectionItem
+                    {
+                        PlayerId = x.AliasId,
+                        Name = x.AliasName,
+                        PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(x.Players.Select(p =>
+                        new PlayerCollectionItem
+                        {
+                            PlayerId = p.PlayerId,
+                            PokerSite = (EnumPokerSites)p.PokersiteId,
+                            Name = p.Playername
+                        }))
+                    }).OfType<IPlayer>().ToList();
+
+                    return aliases;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't get aliases list", e);
+            }
+
+            return new List<IPlayer>();
         }
 
         #endregion
@@ -712,9 +866,9 @@ namespace Model
 
         }
 
-        public PlayerCollectionItem GetActivePlayer()
+        public IPlayer GetActivePlayer()
         {
-            var activePlayer = new PlayerCollectionItem();
+            IPlayer activePlayer = new PlayerCollectionItem();
 
             string dataPath = StringFormatter.GetActivePlayerFilePath();
 
@@ -724,6 +878,34 @@ namespace Model
 
                 if (splittedResult.Length < 2)
                 {
+                    try
+                    {
+                        using (var session = ModelEntities.OpenSession())
+                        {
+                            var alias = session.Query<Aliases>().Fetch(x => x.Players).FirstOrDefault(x => x.AliasName.Equals(splittedResult[0]));
+
+                            if (alias != null)
+                            {
+                                activePlayer = new AliasCollectionItem
+                                {
+                                    PlayerId = alias.AliasId,
+                                    Name = alias.AliasName,
+                                    PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(alias.Players.Select(p =>
+                                        new PlayerCollectionItem
+                                        {
+                                            PlayerId = p.PlayerId,
+                                            PokerSite = (EnumPokerSites)p.PokersiteId,
+                                            Name = p.Playername
+                                        }))
+                                };
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, "Couldn't get active alias", e);
+                    }
+
                     return activePlayer;
                 }
 
@@ -755,13 +937,20 @@ namespace Model
             return activePlayer;
         }
 
-        public void SaveActivePlayer(string playerName, short pokersiteId)
+        public void SaveActivePlayer(string playerName, short? pokersiteId)
         {
             try
             {
                 string dataPath = StringFormatter.GetActivePlayerFilePath();
 
-                File.WriteAllText(dataPath, $"{playerName}{Environment.NewLine}{pokersiteId}");
+                if (pokersiteId.HasValue)
+                {
+                    File.WriteAllText(dataPath, $"{playerName}{Environment.NewLine}{pokersiteId}");
+                }
+                else
+                {
+                    File.WriteAllText(dataPath, playerName);
+                }
             }
             catch (Exception ex)
             {

@@ -54,7 +54,7 @@ namespace Model.Stats
         {
             currentValue = -1;
             settingAppearanceFontSource = DefaultFont;
-            settingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == settingAppearanceFontSource).FirstOrDefault();
+            settingsAppearanceFontFamily = Fonts.SystemFontFamilies.FirstOrDefault(x => x.Source == settingAppearanceFontSource);
             currentColor = HudDefaultSettings.StatInfoDefaultColor;
             settingsAppearanceFontSize = 10;
             settingsAppearanceFontBold = FontWeights.Normal;
@@ -348,7 +348,7 @@ namespace Model.Stats
                 settingAppearanceFontSource = value;
                 OnPropertyChanged();
 
-                SettingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == settingAppearanceFontSource).FirstOrDefault();
+                SettingsAppearanceFontFamily = Fonts.SystemFontFamilies.FirstOrDefault(x => x.Source == settingAppearanceFontSource);
             }
         }
 

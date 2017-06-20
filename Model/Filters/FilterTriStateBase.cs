@@ -25,7 +25,7 @@ namespace Model.Filters
                     new TriStateItem() { TriState = EnumTriState.Off, Color = Colors.Red, },
                 }
             );
-            this.TriStateSelectedItem = this.TriStateCollection.Where(x => x.TriState == param).FirstOrDefault();
+            this.TriStateSelectedItem = this.TriStateCollection.FirstOrDefault(x => x.TriState == param);
         }
 
         private ObservableCollection<TriStateItem> _triStateCollection;
@@ -69,7 +69,7 @@ namespace Model.Filters
         {
             if (this.TriStateCollection.Where(x => x.TriState == _param).Any())
             {
-                this.TriStateSelectedItem = this.TriStateCollection.Where(x => x.TriState == _param).FirstOrDefault();
+                this.TriStateSelectedItem = this.TriStateCollection.FirstOrDefault(x => x.TriState == _param);
             }
         }
     }

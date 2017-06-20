@@ -27,7 +27,8 @@ namespace Model.ChartData
             var report = new List<TournamentReportRecord>();
 
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
+
+            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
             if (tournaments == null || tournaments.Count == 0)
             {
