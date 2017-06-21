@@ -100,13 +100,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.HandId, handId);
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        [TestCase(TestDataFolder + @"GameTypes/FixedLimitHoldem.txt", 13549974403)]
-        [TestCase(TestDataFolder + @"GameTypes/NoLimitHoldem.txt", 13551258247)]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 13551973065)]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 13550515602)]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 13550515602)]
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/HeroBetFolds.txt", "Figarootoo")]
         public void ParseHeroNameTest(string handHistoryFile, string heroName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -241,10 +236,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
 
         //[Test]
         [Ignore("not yet implemented")]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt", GameType.PotLimitHoldem, "6626931", 0, 0, TournamentSpeed.Regular)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary2.txt", GameType.NoLimitHoldem, "6626931", 1, 0.1, TournamentSpeed.Regular)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary3.txt", GameType.NoLimitHoldem, "6626931", 3, 0.3, TournamentSpeed.Regular)]
-        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed)
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", 0.55, 0, TournamentSpeed.Regular, 157)]
+        [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", 1.1, 0, TournamentSpeed.Regular, 211)]
+        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
@@ -254,12 +248,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, tournamentBuyIn);
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.Rake, tournamentRake);
+            Assert.AreEqual(handHistory.GameDescription.Tournament.FinishPosition, finishPosition);
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", TournamentSpeed.HyperTurbo)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20170216 T6995792-G39795657.txt", TournamentSpeed.Turbo)]
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/HeroBetFolds.txt", TournamentSpeed.Regular)]
         public void ParseTournamentSpeedTest(string handHistoryFile, TournamentSpeed speed)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

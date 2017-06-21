@@ -42,7 +42,7 @@ namespace HandHistories.Parser.Utils.Extensions
             }
 
             if (handText.StartsWith("#Game No", StringComparison.InvariantCultureIgnoreCase))
-            { 
+            {
                 if (handText.IndexOf("***** H", 0, 50) > -1)
                 {
                     siteName = EnumPokerSites.PartyPoker;
@@ -53,15 +53,16 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
-            if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase) 
+                || handText.StartsWith("Game #", StringComparison.InvariantCultureIgnoreCase))
             {
-                siteName = EnumPokerSites.Poker888;
+                siteName = EnumPokerSites.PartyPoker;
                 return true;
             }
 
-            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
             {
-                siteName = EnumPokerSites.PartyPoker;
+                siteName = EnumPokerSites.Poker888;
                 return true;
             }
 

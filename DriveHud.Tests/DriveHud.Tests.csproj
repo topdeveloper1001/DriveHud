@@ -286,6 +286,8 @@
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitHoldem.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitOmaha.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\HeroBetFolds.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\Tournament157.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\Tournament211.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\HeroWins.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin2.txt" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin.txt" />
