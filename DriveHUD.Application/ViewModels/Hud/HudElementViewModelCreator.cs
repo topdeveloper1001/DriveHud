@@ -10,10 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -23,6 +26,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal class HudElementViewModelCreator : IHudElementViewModelCreator
     {
+        private static readonly HudDesignerToolType[] PSDeniedTools = new HudDesignerToolType[] { HudDesignerToolType.PlayerProfileIcon, HudDesignerToolType.HeatMap, HudDesignerToolType.BumperStickers };
+
         /// <summary>
         /// Creates <see cref="HudElementViewModel"/> based on the specific <see cref="HudElementViewModelCreationInfo"/>
         /// </summary>
@@ -33,13 +38,19 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => creationInfo);
             Check.Require(creationInfo.HudLayoutInfo != null, "HudLayoutInfo must be set.");
 
-            var hudElementViewModel = new HudElementViewModel(creationInfo.HudLayoutInfo.LayoutTools.Select(x => x.Clone()));
+            var layoutTools = GetHudLayoutTools(creationInfo);
+
+            var hudElementViewModel = new HudElementViewModel(layoutTools);
             hudElementViewModel.Seat = creationInfo.SeatNumber;
             hudElementViewModel.Opacity = creationInfo.HudLayoutInfo.Opacity;
 
             try
             {
-                hudElementViewModel.Tools.ForEach(x => x.InitializePositions(creationInfo.PokerSite, creationInfo.HudLayoutInfo.TableType, creationInfo.GameType));
+                hudElementViewModel.Tools.ForEach(x =>
+                {
+                    x.InitializePositions(creationInfo.PokerSite, creationInfo.HudLayoutInfo.TableType, creationInfo.GameType);
+                    ApplyRestrictions(x, creationInfo);
+                });
             }
             catch (DHBusinessException e)
             {
@@ -47,6 +58,40 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return hudElementViewModel;
+        }
+
+        /// <summary>
+        /// Gets the array of <see cref="HudLayoutTool"/> for the specified layout
+        /// </summary>
+        /// <param name="creationInfo"><see cref="HudElementViewModelCreationInfo"/> to get the array of <see cref="HudLayoutTool"/></param>        
+        private IEnumerable<HudLayoutTool> GetHudLayoutTools(HudElementViewModelCreationInfo creationInfo)
+        {
+            var layoutTools = creationInfo.HudLayoutInfo.LayoutTools.Select(x => x.Clone()).ToArray();
+
+            if (creationInfo.PokerSite == EnumPokerSites.PokerStars)
+            {
+                layoutTools = layoutTools.Where(x => !PSDeniedTools.Contains(x.ToolType)).ToArray();
+            }
+
+            return layoutTools;
+        }
+
+        /// <summary>
+        /// Applies restrictions to the specified <see cref="HudBaseToolViewModel"/> for the specified <see cref="HudElementViewModelCreationInfo"/> 
+        /// </summary>
+        /// <param name="toolViewModel"></param>
+        /// <param name="creationInfo"></param>
+        private void ApplyRestrictions(HudBaseToolViewModel toolViewModel, HudElementViewModelCreationInfo creationInfo)
+        {
+            if (creationInfo == null || creationInfo.PokerSite != EnumPokerSites.PokerStars)
+            {
+                return;
+            }
+
+            if (toolViewModel is HudGaugeIndicatorViewModel)
+            {
+                (toolViewModel as HudGaugeIndicatorViewModel).IsGraphIndicatorsDisabled = true;
+            }
         }
     }
 }

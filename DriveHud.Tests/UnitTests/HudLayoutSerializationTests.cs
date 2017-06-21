@@ -226,6 +226,7 @@ namespace DriveHud.Tests.UnitTests
             };
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudGaugeIndicatorViewModel;
+            hudToolViewModelExpected.IsGraphIndicatorsDisabled = true;
 
             var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
@@ -238,6 +239,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.HeaderText, Is.EqualTo(hudToolViewModelExpected.HeaderText));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
+            Assert.That(hudToolViewModelActual.IsGraphIndicatorsDisabled, Is.EqualTo(hudToolViewModelExpected.IsGraphIndicatorsDisabled));
         }
 
         /// <summary>

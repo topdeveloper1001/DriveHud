@@ -22,14 +22,14 @@
             x:Name="vbMain"
             Stretch="Uniform">
 
-            <Grid
+            <Grid                
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
 
                 <!-- Horizontal box -->
                 <Border
                     Grid.Row="0"
-                    Grid.Column="0"
+                    Grid.Column="0"                   
                     Style="{StaticResource CentralBorderStyle}"
                     Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
 
@@ -141,6 +141,7 @@
                 <Border
                     Grid.Row="0"
                     Grid.Column="0"
+                    Padding="3"
                     Style="{StaticResource VerticalBorderStyle}"
                     Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
                     <Border
