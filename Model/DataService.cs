@@ -202,14 +202,21 @@ namespace Model
 
                     var players = session.Query<Players>().Where(x => playersIds.Contains(x.PlayerId)).ToArray();
 
-                    session.SaveOrUpdate(new Aliases()
+                    var alias = new Aliases()
                     {
                         AliasId = aliasToSave.PlayerId,
                         AliasName = aliasToSave.Name,
                         Players = players
-                    });
+                    };
+                                      
+                    session.SaveOrUpdate(alias);
 
                     transaction.Commit();
+
+                    if (aliasToSave.PlayerId == 0)
+                    {
+                        aliasToSave.PlayerId = alias.AliasId;
+                    }
                 }
             }
         }
@@ -220,18 +227,9 @@ namespace Model
             {
                 using (var transaction = session.BeginTransaction())
                 {
-                    session.Delete(new Aliases()
-                    {
-                        AliasId = aliasToRemove.PlayerId,
-                        AliasName = aliasToRemove.Name
-                    });
+                    var aliasEntity = session.Load<Aliases>(aliasToRemove.PlayerId);
 
-                    foreach (PlayerCollectionItem player in aliasToRemove.PlayersInAlias)
-                        session.Delete(new AliasPlayer()
-                        {
-                            AliasId = aliasToRemove.PlayerId,
-                            PlayersId = player.PlayerId
-                        });
+                    session.Delete(aliasEntity);
 
                     transaction.Commit();
                 }
