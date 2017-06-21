@@ -26,7 +26,7 @@ namespace DriveHUD.Entities.Mappings
                 .Table("AliasPlayers")
                 .ParentKeyColumn("AliasId")
                 .ChildKeyColumn("PlayerId")
-                .Cascade.All();
+                .Cascade.None();
         }
     }
 }
