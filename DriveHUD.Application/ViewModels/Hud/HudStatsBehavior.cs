@@ -184,7 +184,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 panel.Width = double.NaN;
                 panel.Height = double.NaN;
                 panel.Margin = new Thickness(2, 2, 2, 0);
-                panel.Orientation = Orientation.Horizontal;
+                panel.Orientation = Orientation.Horizontal;                
 
                 foreach (var statInfo in statInfoGroup)
                 {

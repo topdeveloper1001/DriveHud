@@ -48,6 +48,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets whenever default size must be used 
+        /// </summary>
+        public virtual bool UseDefaultSizesOnly
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Initializes UI position and size for the current <see cref="HudBaseNonPopupToolViewModel"/>
         /// </summary>
         /// <exception cref="DHBusinessException" />
@@ -135,8 +146,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             Position = hudPositionInfo.Position;
             Opacity = Parent.Opacity;
 
-            Width = uiPosition != null && uiPosition.Width != 0 ? uiPosition.Width : DefaultWidth;
-            Height = uiPosition != null && uiPosition.Height != 0 ? uiPosition.Height : DefaultHeight;
+            Width = uiPosition != null && uiPosition.Width != 0 && !UseDefaultSizesOnly ? uiPosition.Width : DefaultWidth;
+            Height = uiPosition != null && uiPosition.Height != 0 && !UseDefaultSizesOnly ? uiPosition.Height : DefaultHeight;
         }
 
         /// <summary>

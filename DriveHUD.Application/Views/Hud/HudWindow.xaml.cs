@@ -202,8 +202,8 @@ namespace DriveHUD.Application.Views
                     panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
                 }
 
-                hudPanel.Width = toolViewModel.Width * ScaleX;
-                hudPanel.Height = toolViewModel.Height != double.NaN ? toolViewModel.Height * ScaleY : double.NaN;
+                hudPanel.Width = !double.IsNaN(toolViewModel.Width) ? toolViewModel.Width * ScaleX : double.NaN;
+                hudPanel.Height = !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height * ScaleY : double.NaN;
 
                 var positions = hudPanelService.CalculatePositions(toolViewModel, hudPanel, this);
 

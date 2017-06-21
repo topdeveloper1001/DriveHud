@@ -909,11 +909,18 @@ namespace DriveHUD.Application.ViewModels
             };
 
             ClosePopup();
-
+        
             var savedLayout = HudLayoutsService.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
+                var existingLayout = Layouts.FirstOrDefault(x => x.Name == savedLayout.Name);
+
+                if (existingLayout != null)
+                {
+                    Layouts.Remove(existingLayout);
+                }
+
                 Layouts.Add(savedLayout);
 
                 var tempCurrentLayout = CurrentLayout;
@@ -1167,7 +1174,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void HideStatsInStatCollection()
         {
-            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel)
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel &&
+                !(SelectedToolViewModel is IHudNonPopupToolViewModel))
             {
                 var statsSelectedToolViewModel = SelectedToolViewModel as IHudStatsToolViewModel;
                 HideStatsInStatCollection(statsSelectedToolViewModel.Stats);

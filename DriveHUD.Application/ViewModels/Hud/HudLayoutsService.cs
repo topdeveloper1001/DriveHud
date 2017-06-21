@@ -200,7 +200,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudData">Data to save layout</param>
         public HudLayoutInfoV2 SaveAs(HudSavedDataInfo hudData)
-        {
+        {         
             if (hudData == null || string.IsNullOrWhiteSpace(hudData.Name))
             {
                 return null;

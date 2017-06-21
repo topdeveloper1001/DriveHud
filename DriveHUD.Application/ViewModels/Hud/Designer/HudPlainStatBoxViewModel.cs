@@ -127,7 +127,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return HudDefaultSettings.PlainStatBoxHeight;
             }
-        }        
+        }
+
+        /// <summary>
+        /// Gets whenever default size must be used 
+        /// </summary>
+        public override bool UseDefaultSizesOnly
+        {
+            get
+            {
+                return true;
+            }
+        }
 
         #endregion
     }
