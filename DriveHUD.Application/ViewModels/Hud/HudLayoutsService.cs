@@ -139,16 +139,25 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return false;
                 }
 
+                var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutName);
+
+                if (mapping == null || mapping.IsDefault)
+                {
+                    LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been found");
+                    return false;
+                }
+
                 var layoutToDelete = GetLayout(layoutName);
 
-                if (layoutToDelete == null || layoutToDelete.IsDefault)
+                if (layoutToDelete == null)
                 {
+                    LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been found");
                     return false;
                 }
 
                 var layoutsDirectory = GetLayoutsDirectory();
 
-                var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
+                var fileName = mapping.FileName;
 
                 if (string.IsNullOrEmpty(fileName))
                 {
@@ -211,6 +220,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             layout = hudData.LayoutInfo.Clone();
             layout.Name = hudData.Name;
+
+            if (isNewLayout)
+            {
+                layout.IsDefault = false;
+            }
 
             var fileName = InternalSave(layout);
 

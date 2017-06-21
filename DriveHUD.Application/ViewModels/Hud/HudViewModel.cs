@@ -915,7 +915,20 @@ namespace DriveHUD.Application.ViewModels
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
                 Layouts.Add(savedLayout);
+
+                var tempCurrentLayout = CurrentLayout;
+
                 CurrentLayout = savedLayout;
+
+                var originalLayout = HudLayoutsService.GetLayout(tempCurrentLayout.Name);
+
+                if (originalLayout != null)
+                {
+                    var currentLayoutIndex = Layouts.IndexOf(tempCurrentLayout);
+
+                    Layouts.Insert(currentLayoutIndex, originalLayout);
+                    Layouts.Remove(tempCurrentLayout);
+                }
             }
 
             var settings = SettingsService.GetSettings();
