@@ -208,7 +208,7 @@ namespace Model
                         AliasName = aliasToSave.Name,
                         Players = players
                     };
-                                      
+
                     session.SaveOrUpdate(alias);
 
                     transaction.Commit();
@@ -509,7 +509,7 @@ namespace Model
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                if (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                if (storageModel.PlayerSelectedItem != null && statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
                 {
                     storageModel.StatisticCollection.Add(statistic);
                 }
@@ -577,7 +577,7 @@ namespace Model
 
                     var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                    if (stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                    if (storageModel.PlayerSelectedItem != null && stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
                     {
                         storageModel.StatisticCollection.AddRange(stats.Statistic);
                     }

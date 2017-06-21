@@ -346,12 +346,13 @@ namespace DriveHUD.Application.ViewModels
         {
             UpdatePlayerList(gameInfo);
 
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
+            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
                 {
                     StorageModel.TryLoadHeroPlayer();
                 });
+
                 return;
             }
 
@@ -617,25 +618,21 @@ namespace DriveHUD.Application.ViewModels
                     LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                 }
 
-                if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.DecodedName) ||
+                    StorageModel.PlayerSelectedItem?.PokerSite == EnumPokerSites.Unknown))
                 {
-                    var player = StorageModel.PlayerSelectedItem as PlayerCollectionItem;
+                    isSetPlayerIdMessageShown = true;
 
-                    if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(player.Name) ||
-                        string.IsNullOrEmpty(player.DecodedName) ||
-                        player.PokerSite == EnumPokerSites.Unknown))
+                    System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
                     {
-                        isSetPlayerIdMessageShown = true;
-                        System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
-                       {
-                           this.NotificationRequest.Raise(
-                               new PopupActionNotification
-                               {
-                                   Content = "Please, set Player ID in order to see data.",
-                                   Title = "DriveHUD",
-                               }, n => { });
-                       });
-                    }
+                        NotificationRequest.Raise(
+                           new PopupActionNotification
+                           {
+                               Content = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Message"),
+                               Title = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Title"),
+                           }, n => { });
+                    });
                 }
             }
             catch (Exception ex)

@@ -29,13 +29,18 @@ namespace DriveHUD.Application.ViewModels
             List<PlayerCollectionItem> players = new List<PlayerCollectionItem>();
 
             if (player is PlayerCollectionItem)
+            {
                 players.Add(player as PlayerCollectionItem);
-
+            }
             else if (player is AliasCollectionItem)
+            {
                 players.AddRange((player as AliasCollectionItem).PlayersInAlias);
+            }
 
             foreach (PlayerCollectionItem playerIn in players)
+            {
                 gameTypes.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes((playerIn?.Name ?? string.Empty), (short)(playerIn?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
 
             this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(FilterStandardModel)));
             this.FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);

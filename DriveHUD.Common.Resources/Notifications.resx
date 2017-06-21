@@ -129,6 +129,12 @@
   <data name="Notifications_HudLayout_DeleteHudYes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Notifications_SelectPlayer_Message" xml:space="preserve">
+    <value>Please, set Player ID in order to see data.</value>
+  </data>
+  <data name="Notifications_SelectPlayer_Title" xml:space="preserve">
+    <value>DriveHUD</value>
+  </data>
   <data name="Notifications_Update_Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>

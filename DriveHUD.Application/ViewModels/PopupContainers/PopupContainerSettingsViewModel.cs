@@ -106,11 +106,12 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         private void Apply(object obj)
         {
             var oldSettings = _settingsService.GetSettings();
+
             var isUpdatePlayersRequired = oldSettings?.SiteSettings.IsProcessedDataLocationEnabled != _settingsModel?.SiteSettings.IsProcessedDataLocationEnabled
                 || (oldSettings?.SiteSettings.ProcessedDataLocation != _settingsModel?.SiteSettings.ProcessedDataLocation
                     && (_settingsModel?.SiteSettings.IsProcessedDataLocationEnabled ?? false));
 
-            if (isUpdatePlayersRequired)
+            if (isUpdatePlayersRequired && StorageModel.PlayerSelectedItem != null)
             {
                 _dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
             }
@@ -126,6 +127,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             Apply(null);
             FinishInteraction.Invoke();
         }
+
         #endregion
 
         #region Properties

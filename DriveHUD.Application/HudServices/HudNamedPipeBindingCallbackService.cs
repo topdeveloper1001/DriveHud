@@ -112,7 +112,7 @@ namespace DriveHUD.Application.HudServices
                         playerName = playerCollectionItem.Name;
                     }
                 }
-                else if (currentlySelectedPlayer.PokerSite.HasValue && (short)currentlySelectedPlayer.PokerSite.Value == pokerSiteId)
+                else if (currentlySelectedPlayer != null && currentlySelectedPlayer.PokerSite.HasValue && (short)currentlySelectedPlayer.PokerSite.Value == pokerSiteId)
                 {
                     playerName = currentlySelectedPlayer.Name;
                 }
