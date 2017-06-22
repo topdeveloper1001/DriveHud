@@ -86,6 +86,8 @@ namespace Model.Stats
         private string groupName;
 
         private Color currentColor;
+
+        [NonSerialized]
         private decimal currentValue;
 
         private string settingAppearanceFontSource;
@@ -292,7 +294,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(7), DefaultValue(-1)]
+        [ProtoMember(7), DefaultValue(-1), XmlIgnore]
         public decimal CurrentValue
         {
             get
@@ -463,6 +465,7 @@ namespace Model.Stats
             }
         }
 
+        [XmlIgnore]
         public TextDecorationCollection SettingsAppearanceFontUnderline
         {
             get
