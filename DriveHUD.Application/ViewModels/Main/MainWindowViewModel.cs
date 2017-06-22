@@ -175,10 +175,9 @@ namespace DriveHUD.Application.ViewModels
             UpdateViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
 
-            SortedPlayers = new CollectionViewSource();
-            SortedPlayers.Source = StorageModel.PlayerCollection;
-            SortedPlayers.SortDescriptions.Add(new SortDescription("PokerSite", ListSortDirection.Ascending));
-            SortedPlayers.SortDescriptions.Add(new SortDescription("DecodedName", ListSortDirection.Ascending));
+            SortedPlayers = (CollectionView)CollectionViewSource.GetDefaultView(StorageModel.PlayerCollection);
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.DecodedName), ListSortDirection.Ascending));
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.PokerSite), ListSortDirection.Ascending));
         }
 
         private void InitializeFilters()
@@ -740,11 +739,34 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
+            var isPlayersReloadRequired = gameInfo == null || gameInfo.AddedPlayers == null;
 
-            foreach (var player in updatedPlayers)
+            var players = isPlayersReloadRequired ? dataService.GetPlayersList() : gameInfo.AddedPlayers;
+
+            if (isPlayersReloadRequired)
             {
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    var selectedPlayer = StorageModel.PlayerSelectedItem;
+
+                    StorageModel.PlayerCollection.RemoveAll(x => x is PlayerCollectionItem);
+                    StorageModel.PlayerCollection.AddRange(players);
+
+                    if (selectedPlayer is PlayerCollectionItem)
+                    {
+                        StorageModel.PlayerSelectedItem = StorageModel.PlayerCollection.FirstOrDefault(x => x.PlayerId == selectedPlayer.PlayerId);
+                    }
+                });
+            }
+            else
+            {
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    foreach (var player in players)
+                    {
+                        StorageModel.PlayerCollection.Add(player);
+                    }
+                });
             }
         }
 
@@ -1276,7 +1298,26 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public CollectionViewSource SortedPlayers { get; set; }
+        private CollectionView sortedPlayers;
+
+        public CollectionView SortedPlayers
+        {
+            get
+            {
+                return sortedPlayers;
+            }
+            private set
+            {
+                if (ReferenceEquals(sortedPlayers, value))
+                {
+                    return;
+                }
+
+                sortedPlayers = value;
+
+                OnPropertyChanged();
+            }
+        }
 
         #endregion
 

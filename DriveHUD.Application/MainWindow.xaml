@@ -1599,8 +1599,8 @@
                     Background="{StaticResource BackgroundBrush2}"
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     DisplayMemberPath="DecodedName"
-                    ItemsSource="{Binding SortedPlayers.View, Mode=OneWay}"
-                    Style="{StaticResource RadComboBoxStyle1}"
+                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"
+                    Style="{StaticResource RadComboBoxStyle1}"                         
                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
                     <telerik:RadComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -1608,6 +1608,7 @@
                         </ItemsPanelTemplate>
                     </telerik:RadComboBox.ItemsPanel>
                 </telerik:RadComboBox>
+                
                 <telerik:RadRibbonDropDownButton
                     Foreground="White"
                     VerticalAlignment="Stretch"
