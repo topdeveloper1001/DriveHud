@@ -519,6 +519,8 @@ namespace DriveHUD.Application.ViewModels
                         x.HeatMap = sessionData.HeatMaps[heatMapKey];
                     });
 
+                    var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
+
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
@@ -528,7 +530,10 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
                         new ObservableCollection<decimal>();
 
-                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection.Concat(heatMapTools.Select(x => x.BaseStat)).ToArray();
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection
+                        .Concat(heatMapTools.Select(x => x.BaseStat))
+                        .Concat(gaugeIndicatorTools.Select(x => x.BaseStat))
+                        .ToArray();
 
                     StatsProvider.UpdateStats(activeLayoutHudStats);
 

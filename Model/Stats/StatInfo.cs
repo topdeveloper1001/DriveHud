@@ -188,6 +188,18 @@ namespace Model.Stats
             }
         }
 
+        public string IterationsText
+        {
+            get
+            {
+                return IsCaptionHidden ?
+                        string.Empty :
+                            StatDto != null ?
+                                string.Format("({0}/{1})", statDto.Occurred, statDto.CouldOccurred) :
+                                string.Empty;
+            }
+        }
+
         [NonSerialized]
         private string format;
 

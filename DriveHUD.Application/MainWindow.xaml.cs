@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels;
+using System;
 using System.Windows;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
@@ -23,9 +24,9 @@ namespace DriveHUD.Application
     public partial class MainWindow : RadWindow
     {
         public MainWindow()
-        {
+        {            
             InitializeComponent();
-        }      
+        }
 
         private void MainWindow_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -48,5 +49,6 @@ namespace DriveHUD.Application
                 e.Handled = true;
             }
         }
+       
     }
 }

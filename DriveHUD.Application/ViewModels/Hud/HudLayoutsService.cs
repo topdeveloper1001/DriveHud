@@ -200,30 +200,43 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudData">Data to save layout</param>
         public HudLayoutInfoV2 SaveAs(HudSavedDataInfo hudData)
-        {         
+        {
             if (hudData == null || string.IsNullOrWhiteSpace(hudData.Name))
             {
                 return null;
             }
 
-            var layout = GetLayout(hudData.Name);
+            var originalLayout = GetLayout(hudData.Name);
 
-            var isNewLayout = layout == null;
+            var isNewLayout = originalLayout == null;
 
             // need to check if we don't change table type of layout
-            if (!isNewLayout && hudData.Name.Equals(layout.Name, StringComparison.OrdinalIgnoreCase) &&
-                layout.IsDefault && layout.TableType != hudData.LayoutInfo.TableType)
+            if (!isNewLayout && hudData.Name.Equals(originalLayout.Name, StringComparison.OrdinalIgnoreCase) &&
+                originalLayout.IsDefault && originalLayout.TableType != hudData.LayoutInfo.TableType)
             {
                 eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "The default layout can't be overwritten"));
                 return null;
             }
 
-            layout = hudData.LayoutInfo.Clone();
+            var layout = hudData.LayoutInfo.Clone();
             layout.Name = hudData.Name;
 
             if (isNewLayout)
             {
                 layout.IsDefault = false;
+            }
+            else
+            {
+                var nonPopupToolsUpdateMap = (from nonPopupTool in originalLayout.LayoutTools.OfType<HudLayoutNonPopupTool>()
+                                              join tool in layout.LayoutTools.OfType<HudLayoutNonPopupTool>() on new { nonPopupTool.Id, nonPopupTool.ToolType } equals new { tool.Id, tool.ToolType } into grouped
+                                              from groupedTool in grouped
+                                              select new
+                                              {
+                                                  Tool = groupedTool,
+                                                  Positions = nonPopupTool.Positions
+                                              }).ToArray();
+
+                nonPopupToolsUpdateMap.ForEach(x => x.Tool.Positions = x.Positions);
             }
 
             var fileName = InternalSave(layout);
