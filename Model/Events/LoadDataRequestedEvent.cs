@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="UpdateViewRequestedEventArgs.cs" company="Ace Poker Solutions">
+// <copyright file="LoadDataRequestedEvent.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,13 +15,11 @@ using System;
 
 namespace Model.Events
 {
-    public class UpdateViewRequestedEventArgs: EventArgs
+    public class LoadDataRequestedEventArgs : EventArgs
     {
-        public bool IsUpdateReportRequested { get; set; }
     }
 
-    public class UpdateViewRequestedEvent : PubSubEvent<UpdateViewRequestedEventArgs>
+    public class LoadDataRequestedEvent : PubSubEvent<LoadDataRequestedEventArgs>
     {
-
     }
 }

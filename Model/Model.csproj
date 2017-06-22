@@ -190,6 +190,7 @@
     <Compile Include="Events\FilterEvents\UpdateFilterRequestEvent.cs" />
     <Compile Include="Events\HandHistoryUpdatedEvent.cs" />
     <Compile Include="Events\HandNoteUpdatedEvent.cs" />
+    <Compile Include="Events\LoadDataRequestedEvent.cs" />
     <Compile Include="Events\MainNotificationEvent.cs" />
     <Compile Include="Events\PokerStarsDetectedEvent.cs" />
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />

@@ -109,6 +109,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
+            eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
 
             InitializeFilters();
             InitializeData();

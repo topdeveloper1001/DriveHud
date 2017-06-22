@@ -1,15 +1,27 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AliasAddEditViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
+using Microsoft.Practices.ServiceLocation;
 using Model;
-using System;
+using Model.Events;
+using Prism.Events;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.ComponentModel;
-using System.Collections;
 
 namespace DriveHUD.Application.ViewModels.Alias
 {
@@ -33,17 +45,17 @@ namespace DriveHUD.Application.ViewModels.Alias
 
         internal void InitializeData(AliasViewModelInfo<AliasCollectionItem> info)
         {
-            _infoViewModel = info;
-            _newAlias = info?.Model;
+            infoViewModel = info;
+            newAlias = info?.Model;
 
-            if (_newAlias == null)
+            if (newAlias == null)
             {
-                _isAdd = true;
-                _newAlias = new AliasCollectionItem();
+                isAdd = true;
+                newAlias = new AliasCollectionItem();
             }
 
-            this.AliasName = _newAlias?.Name ?? string.Empty;
-            this.PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(_newAlias?.PlayersInAlias);
+            this.AliasName = newAlias?.Name ?? string.Empty;
+            this.PlayersInAlias = new ObservableCollection<PlayerCollectionItem>(newAlias?.PlayersInAlias);
 
             AllPlayers = new ObservableCollection<PlayerCollectionItem>(StorageModel.PlayerCollection.Except(this.PlayersInAlias).OfType<PlayerCollectionItem>());
 
@@ -57,23 +69,32 @@ namespace DriveHUD.Application.ViewModels.Alias
 
         private void SaveChanges()
         {
-            _newAlias.Name = _aliasName;
-            _newAlias.PlayersInAlias = _playersInAlias;
+            newAlias.Name = aliasName;
+            newAlias.PlayersInAlias = playersInAlias;
 
-            if (_isAdd)
+            if (isAdd)
             {
-                _infoViewModel?.Add(_newAlias);
+                infoViewModel?.Add(newAlias);
             }
             else
             {
-                _infoViewModel?.Save(_newAlias);
-                _infoViewModel?.Close();
+                infoViewModel?.Save(newAlias);
+                infoViewModel?.Close();
+            }
+
+            if ((StorageModel.PlayerSelectedItem is AliasCollectionItem) && StorageModel.PlayerSelectedItem.Name.Equals(newAlias.Name))
+            {
+                var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
+                var args = new LoadDataRequestedEventArgs();
+
+                eventAggregator.GetEvent<LoadDataRequestedEvent>().Publish(args);
             }
         }
 
         private void Cancel()
         {
-            _infoViewModel?.Close();
+            infoViewModel?.Close();
         }
 
         private void SwitchSelect(object obj)
@@ -92,7 +113,7 @@ namespace DriveHUD.Application.ViewModels.Alias
                 {
                     PlayersInAlias.Remove(player);
                     AllPlayers.Add(player);
-                    player.LinkedAliases.Add(_newAlias);
+                    player.LinkedAliases.Add(newAlias);
                 });
 
                 SelectedPlayersSelectdIndex = index + 1 > PlayersInAlias.Count ? 0 : index;
@@ -105,7 +126,7 @@ namespace DriveHUD.Application.ViewModels.Alias
                 {
                     PlayersInAlias.Add(player);
                     AllPlayers.Remove(player);
-                    player.LinkedAliases.Remove(_newAlias);
+                    player.LinkedAliases.Remove(newAlias);
                 });
 
                 AllPlayersSelectdIndex = index + 1 > AllPlayers.Count ? 0 : index;
@@ -123,9 +144,13 @@ namespace DriveHUD.Application.ViewModels.Alias
             var src = e.Item as PlayerCollectionItem;
 
             if (src == null)
+            {
                 e.Accepted = false;
+            }
             else if (src.DecodedName != null && !src.DecodedName.ToLower().Contains(AllSearchFilter.ToLower()))
+            {
                 e.Accepted = false;
+            }
         }
 
         private void AddFilterSelected()
@@ -139,57 +164,77 @@ namespace DriveHUD.Application.ViewModels.Alias
             var src = e.Item as PlayerCollectionItem;
 
             if (src == null)
+            {
                 e.Accepted = false;
+            }
             else if (src.DecodedName != null && !src.DecodedName.ToLower().Contains(SelectedSearchFilter.ToLower()))
+            {
                 e.Accepted = false;
+            }
         }
 
         #endregion
 
         #region Properties
 
-        private int _allPlayersSelectdIndex = -1;
-        private int _selectedPlayersSelectdIndex = -1;
+        private int allPlayersSelectdIndex = -1;
+        private int selectedPlayersSelectdIndex = -1;
         public int AllPlayersSelectdIndex
         {
-            get { return _allPlayersSelectdIndex; }
-
-            set { SetProperty(ref _allPlayersSelectdIndex, value); }
+            get
+            {
+                return allPlayersSelectdIndex;
+            }
+            set
+            {
+                SetProperty(ref allPlayersSelectdIndex, value);
+            }
         }
         public int SelectedPlayersSelectdIndex
         {
-            get { return _selectedPlayersSelectdIndex; }
-
-            set { SetProperty(ref _selectedPlayersSelectdIndex, value); }
+            get
+            {
+                return selectedPlayersSelectdIndex;
+            }
+            set
+            {
+                SetProperty(ref selectedPlayersSelectdIndex, value);
+            }
         }
 
-        private ObservableCollection<PlayerCollectionItem> _allPlayers;
+        private ObservableCollection<PlayerCollectionItem> allPlayers;
+
         public ObservableCollection<PlayerCollectionItem> AllPlayers
         {
-            get { return _allPlayers; }
-
-            set { SetProperty(ref _allPlayers, value); }
+            get
+            {
+                return allPlayers;
+            }
+            set
+            {
+                SetProperty(ref allPlayers, value);
+            }
         }
 
-        private AliasViewModelInfo<AliasCollectionItem> _infoViewModel;
-        private AliasCollectionItem _newAlias;
+        private AliasViewModelInfo<AliasCollectionItem> infoViewModel;
+        private AliasCollectionItem newAlias;
 
-        private bool _isAdd = false;
-        private string _aliasName;
-        private ObservableCollection<PlayerCollectionItem> _playersInAlias;
+        private bool isAdd = false;
+        private string aliasName;
+        private ObservableCollection<PlayerCollectionItem> playersInAlias;
 
         public string AliasName
         {
-            get { return _aliasName; }
-            set { SetProperty(ref _aliasName, value); }
+            get { return aliasName; }
+            set { SetProperty(ref aliasName, value); }
         }
 
         public ObservableCollection<PlayerCollectionItem> PlayersInAlias
         {
-            get { return _playersInAlias; }
+            get { return playersInAlias; }
             set
             {
-                SetProperty(ref _playersInAlias, value);
+                SetProperty(ref playersInAlias, value);
             }
         }
 
