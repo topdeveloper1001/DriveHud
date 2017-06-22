@@ -909,7 +909,7 @@ namespace DriveHUD.Application.ViewModels
             };
 
             ClosePopup();
-        
+
             var savedLayout = HudLayoutsService.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
@@ -1204,7 +1204,8 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void SpliterAdd()
         {
-            StatInfoObserveCollection.Add(new StatInfoBreak());
+            var breakLineStat = new StatInfoBreak();
+            StatInfoObserveCollection.Add(breakLineStat);
         }
 
         /// <summary>
