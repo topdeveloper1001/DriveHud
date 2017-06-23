@@ -638,6 +638,9 @@
     <EmbeddedResource Include="Layouts\DH 6-max Cash.xml" />
     <EmbeddedResource Include="Layouts\DH 9-max Cash.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 10-max Cash.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

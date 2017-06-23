@@ -249,10 +249,11 @@ namespace DriveHUD.Importers
 
                 var playerList = GetPlayerList(result.Source);
 
-                if (gameInfo.WindowHandle == 0)
+                if (gameInfo.WindowHandle == 0 || !WinApi.IsWindow(new IntPtr(gameInfo.WindowHandle)))
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
                 }
+
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result);

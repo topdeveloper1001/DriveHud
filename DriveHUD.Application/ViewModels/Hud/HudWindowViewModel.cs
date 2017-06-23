@@ -24,6 +24,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
@@ -37,6 +38,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         private ReaderWriterLockSlim readerWriterLock;
         private HudLayout layout;
+        private Dictionary<HudToolKey, Point> panelOffsets;
 
         public HudWindowViewModel()
         {
@@ -51,6 +53,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
             ApplyPositionsCommand = new RelayCommand(ApplyPositions);
+
+            panelOffsets = new Dictionary<HudToolKey, Point>();
         }
 
         #region Properties
@@ -117,6 +121,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        internal Dictionary<HudToolKey, Point> PanelOffsets
+        {
+            get
+            {
+                return panelOffsets;
+            }
+        }
+
         public Action RefreshHud
         {
             get;
@@ -140,6 +152,28 @@ namespace DriveHUD.Application.ViewModels.Hud
         #endregion
 
         #region Methods
+
+        internal Point GetPanelOffset(HudBaseToolViewModel toolViewModel)
+        {
+            var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
+            {
+                return panelOffsets[toolKey];
+            }
+
+            return new Point(0, 0);
+        }
+
+        internal void UpdatePanelOffset(HudBaseToolViewModel toolViewModel)
+        {
+            var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
+            {
+                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+            }
+        }
 
         internal void SetLayout(HudLayout layout)
         {
@@ -268,9 +302,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void ApplyPositions(object obj)
         {
-            var seat = obj as int?;
+            var sourceSeat = obj as int?;
 
-            if (!seat.HasValue || layout == null)
+            if (!sourceSeat.HasValue || layout == null)
             {
                 return;
             }
@@ -284,14 +318,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var seatsPositions = positionProvider.Positions[(int)layout.TableType];
 
-            var baseHUDPlayer = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == seat.Value);
+            var baseHUDPlayer = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == sourceSeat.Value);
 
             if (baseHUDPlayer == null)
             {
                 return;
             }
 
-            var baseSeatPosition = new Point(seatsPositions[seat.Value - 1, 0], seatsPositions[seat.Value - 1, 1]);
+            var baseSeatPosition = new Point(seatsPositions[sourceSeat.Value - 1, 0], seatsPositions[sourceSeat.Value - 1, 1]);
 
             var nonPopupToolViewModels = baseHUDPlayer.HudElement.Tools.OfType<IHudNonPopupToolViewModel>();
 
@@ -302,7 +336,38 @@ namespace DriveHUD.Application.ViewModels.Hud
                                          let shiftY = toolOffsetY - baseSeatPosition.Y
                                          select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);
 
-            var elementsToUpdate = layout.ListHUDPlayer.Where(x => x.SeatNumber != seat.Value).Select(x => x.HudElement).ToArray();
+            for (var seat = 1; seat <= (int)layout.TableType; seat++)
+            {
+                if (seat == sourceSeat.Value)
+                {
+                    continue;
+                }
+
+                foreach (var tool in toolOffsetsDictionary.Values)
+                {
+                    var toolKey = new HudToolKey
+                    {
+                        Id = tool.ToolId,
+                        Seat = seat
+                    };
+
+                    var seatPosition = new Point(seatsPositions[seat - 1, 0], seatsPositions[seat - 1, 1]);
+
+                    var offsetX = seatPosition.X + tool.ShiftX;
+                    var offsetY = seatPosition.Y + tool.ShiftY;
+
+                    if (!PanelOffsets.ContainsKey(toolKey))
+                    {
+                        PanelOffsets.Add(toolKey, new Point(offsetX, offsetY));
+                    }
+                    else
+                    {
+                        PanelOffsets[toolKey] = new Point(offsetX, offsetY);
+                    }
+                }
+            }
+
+            var elementsToUpdate = layout.ListHUDPlayer.Where(x => x.SeatNumber != sourceSeat.Value).Select(x => x.HudElement).ToArray();
 
             elementsToUpdate.ForEach(element =>
             {
@@ -335,5 +400,51 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #endregion
+
+        internal class HudToolKey
+        {
+            public Guid Id { get; set; }
+
+            public int Seat { get; set; }
+
+            public static HudToolKey BuildKey(HudBaseToolViewModel toolViewModel)
+            {
+                if (toolViewModel == null)
+                {
+                    return null;
+                }
+
+                var seat = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                var toolKey = new HudToolKey
+                {
+                    Id = toolViewModel.Id,
+                    Seat = seat
+                };
+
+                return toolKey;
+            }
+
+            public override int GetHashCode()
+            {
+                var hash = 23;
+                hash = hash * 31 + Id.GetHashCode();
+                hash = hash * 31 + Seat;
+
+                return hash;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var toolKey = obj as HudToolKey;
+
+                if (toolKey == null)
+                {
+                    return false;
+                }
+
+                return toolKey.Id == Id && toolKey.Seat == Seat;
+            }
+        }
     }
 }
