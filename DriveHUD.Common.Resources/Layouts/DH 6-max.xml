@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 6-max" IsDefault="true" TableType="Six">
+<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 6-max" IsDefault="false" TableType="Six">
   <Opacity>1</Opacity>
   <HudPlayerTypes>
     <HudPlayerType>

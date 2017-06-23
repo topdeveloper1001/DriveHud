@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 9-max" IsDefault="true" TableType="Nine">
+<HudLayoutInfoV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DH: 9-max" IsDefault="false" TableType="Nine">
   <Opacity>1</Opacity>
   <HudPlayerTypes>
     <HudPlayerType>

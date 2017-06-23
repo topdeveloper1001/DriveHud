@@ -351,7 +351,7 @@
 
                                     <ItemsControl
                                         Grid.Column="1"
-                                        Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverterHiddenByDef}, ConverterParameter=1}"
+                                        Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                                         ItemsSource="{Binding Stats}"
                                         ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
                                         ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />

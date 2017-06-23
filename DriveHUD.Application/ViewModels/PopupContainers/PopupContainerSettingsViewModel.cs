@@ -1,28 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopupContainerSettingsViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using Prism.Commands;
-using Prism.Interactivity.InteractionRequest;
-
-using DriveHUD.Application.Models;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
-
-using DriveHUD.ViewModels;
-using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Application.ViewModels.Settings;
-using Model.Enums;
-using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Common.Exceptions;
-using DriveHUD.Common.Resources;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Entities;
-using Model.Settings;
-using Prism.Events;
+using Microsoft.Practices.ServiceLocation;
 using Model.Events;
 using Model.Interfaces;
+using Model.Settings;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {

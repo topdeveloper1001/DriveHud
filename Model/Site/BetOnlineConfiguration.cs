@@ -64,6 +64,22 @@ namespace Model.Site
             set;
         }
 
+        public bool IsHandHistoryLocationRequired
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public bool IsPrefferedSeatsAllowed
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         private readonly Dictionary<int, int> prefferedSeat;
 
         public Dictionary<int, int> PreferredSeats

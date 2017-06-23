@@ -164,6 +164,7 @@
                     </Style.Triggers>
                 </Style>
             </StackPanel.Style>
+
             <telerik:RadGridView
                 IsReadOnly="True"
                 Margin="5 10"
@@ -177,6 +178,7 @@
                 ItemsSource="{Binding SelectedSite.HandHistoryLocationList}"
                 SelectedItem="{Binding SelectedHandHistoryLocation}"
                 EnableRowVirtualization="True"
+                Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                 Height="148">
 
                 <telerik:RadGridView.Columns>
@@ -184,14 +186,14 @@
                     <telerik:GridViewDataColumn
                         DataMemberBinding="{Binding}"
                         Header="Hand History Location"
-                        Width="*">
-                    </telerik:GridViewDataColumn>
+                        Width="*" />
 
                 </telerik:RadGridView.Columns>
 
             </telerik:RadGridView>
 
             <StackPanel
+                Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                 HorizontalAlignment="Right"
                 Orientation="Horizontal"
                 Margin="5 10">
