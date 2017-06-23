@@ -9,6 +9,11 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Actions;
 using DriveHUD.Entities;
 using HandHistories.Objects.Players;
+using System.Diagnostics;
+using System.IO;
+using HandHistories.Parser.Parsers.Factory;
+using System.Threading;
+using System.Globalization;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
 {
@@ -22,22 +27,68 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
+        [Test]
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
         public void ParsingDoesNotThrowExceptions(string culture)
         {
-        }
+            var cultureInfo = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        public void IsCancelledHandTest(string handHistoryFile, bool isCanceled)
-        {
-        }
+            var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        public void ValidHandTest(string handHistoryFile, bool isValid)
-        {
+            var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
+
+            var succeded = 0;
+            var total = 0;
+
+            foreach (var handHistoryFile in handHistoryFiles)
+            {
+                if (handHistoryFile.FullName.Contains("Tournaments"))
+                {
+                    continue;
+                }
+
+                var handHistory = File.ReadAllText(handHistoryFile.FullName);
+
+                var parserFactory = new HandHistoryParserFactoryImpl();
+
+                var parser = parserFactory.GetFullHandHistoryParser(handHistory);
+
+                var hands = parser.SplitUpMultipleHands(handHistory).ToArray();
+
+                total += hands.Length;
+
+                var hash = new HashSet<string>();
+
+                foreach (var hand in hands)
+                {
+                    try
+                    {
+                        parser.ParseFullHandHistory(hand, true);
+                        succeded++;
+                    }
+                    catch (Exception e)
+                    {
+                        if (!hash.Contains(handHistoryFile.FullName))
+                        {
+                            Debug.WriteLine(handHistoryFile.FullName);
+                        }
+
+                        Assert.Fail(e.ToString());
+                    }
+                }
+            }
+
+            Assert.AreEqual(total, succeded);
+
+            Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
         }
 
         [Test]
@@ -54,11 +105,15 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.CommunityCards, expectedCards);
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
+        [Test]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "2014/01/06 13:05:47")]
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", "2017/05/20 23:33:24")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
-            throw new NotImplementedException();
+            var handHistory = ParseHandHistory(handHistoryFile);
+            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture);
+
+            Assert.AreEqual(handHistory.DateOfHandUtc, dateTime);
         }
 
         [Test]
@@ -148,6 +203,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", "Zurich")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "Manila")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "Table  131342 (No DP)")]
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", "Table #10")]
         public void ParseTableNameTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -234,16 +290,16 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(numberOfInvalidHands, invalidHands);
         }
 
-        //[Test]
-        [Ignore("not yet implemented")]
-        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", 0.55, 0, TournamentSpeed.Regular, 157)]
-        [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", 1.1, 0, TournamentSpeed.Regular, 211)]
-        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition)
+        [Test]
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", "Flyweight. $150 Gtd KO", 0.55, 0, TournamentSpeed.Regular, 157)]
+        [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", "Flyweight. $400 Gtd KO", 1.1, 0, TournamentSpeed.Regular, 211)]
+        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, string tournamentName, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
             Assert.IsTrue(handHistory.GameDescription.IsTournament);
             Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentId, tournamentId);
+            Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentName, tournamentName);
             Assert.AreEqual(handHistory.GameDescription.GameType, gameType);
             Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, tournamentBuyIn);

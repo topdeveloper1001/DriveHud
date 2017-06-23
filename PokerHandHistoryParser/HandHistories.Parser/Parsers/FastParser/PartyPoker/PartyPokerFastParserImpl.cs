@@ -112,21 +112,23 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             int timeEndIndex = line.IndexOf(' ', timeStartIndex);
             string timeStr = line.Substring(timeStartIndex, timeEndIndex - timeStartIndex);
 
+            int timeZoneStartIndex = timeEndIndex + 1;
+            int timeZoneEndIndex = line.IndexOf(' ', timeZoneStartIndex);
+            string timeZoneString = line.Substring(timeZoneStartIndex, timeZoneEndIndex - timeZoneStartIndex);
 
             int yearIndex = line.LastIndexOf(' ');
             string Year = line.Substring(yearIndex);
             int year = int.Parse(Year);
 
-
             TimeSpan time = TimeSpan.Parse(timeStr, CultureInfo.InvariantCulture);
 
             DateTime result = new DateTime(year, GetMonthNumber(month), day, time.Hours, time.Minutes, time.Seconds);
-            return ConvertHandDateToUtc(result);
+            return ConvertHandDateToUtc(result, timeZoneString);
         }
 
-        static DateTime ConvertHandDateToUtc(DateTime handDate)
+        static DateTime ConvertHandDateToUtc(DateTime handDate, string timeZone)
         {
-            DateTime converted = TimeZoneInfo.ConvertTimeToUtc(handDate, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+            DateTime converted = TimeZoneInfo.ConvertTimeToUtc(handDate, TimeZoneInfo.Local);
 
             return DateTime.SpecifyKind(converted, DateTimeKind.Utc);
         }
@@ -193,8 +195,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             //Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
             string line = handLines[2];
 
-            int startIndex = line.IndexOf(" Table #") > 0
-                ? line.LastIndexOf('#')
+            int startIndex = line.LastIndexOf(") Table #");
+            startIndex = startIndex > 0
+                ? startIndex + 2
                 : 6;
             int endIndex = line.LastIndexOf(" (");
 
@@ -1054,8 +1057,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 string line = handLines[i];
 
-                char lastChar = line.Last() == '.' 
-                    ? line[line.Length - 2] 
+                char lastChar = line.Last() == '.'
+                    ? line[line.Length - 2]
                     : line[line.Length - 1];
                 if (lastChar == ']')
                 {
@@ -1132,8 +1135,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 TournamentId = tournamentId,
                 BuyIn = Buyin.FromBuyinRake(buyIn, rake, currency),
                 Speed = speed,
-                TournamentName = ""//$"{tournamentName} #{match.Groups["tournament_id"].Value}",
+                TournamentName = ParseTournamentName(handLines[2])
             };
+
+            var finishedLines = handLines.Where(x => x.Contains(" finished in "));
+            if (finishedLines.Any())
+            {
+                var heroName = ParseHeroName(handLines, null);
+                if (!string.IsNullOrWhiteSpace(heroName))
+                {
+                    // fill up the finished position
+                    var heroFinished = finishedLines.FirstOrDefault(x => x.Contains($"Player {heroName} finished in "));
+                    if (string.IsNullOrWhiteSpace(heroFinished) || heroFinished.Last() != '.')
+                    {
+                        return tournamentDescriptor;
+                    }
+
+                    var finishedStartIndex = heroFinished.LastIndexOf(' ') + 1;
+                    var finishedEndIndex = heroFinished.Length - finishedStartIndex - 1;
+
+                    short finishPosition = 0;
+                    if (short.TryParse(heroFinished.Substring(finishedStartIndex, finishedEndIndex), out finishPosition))
+                    {
+                        tournamentDescriptor.FinishPosition = finishPosition;
+                    }
+                }
+            }
 
             return tournamentDescriptor;
         }
@@ -1162,6 +1189,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         private static int GetDecimalStartIndex(string line, int amountStartIndex)
         {
             return amountStartIndex + (char.IsNumber(line[amountStartIndex]) ? 0 : 1);
+        }
+
+        private static string ParseTournamentName(string line)
+        {
+            const int startIndex = 6;
+            int endIndex = line.LastIndexOf(" Table #");
+            endIndex = line.LastIndexOf(" (", endIndex);
+
+
+            return line.Substring(startIndex, endIndex - startIndex);
         }
     }
 }
