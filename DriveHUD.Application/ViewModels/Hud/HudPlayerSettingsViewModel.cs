@@ -10,23 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ReactiveUI;
-using System.Collections.ObjectModel;
 using DriveHUD.Common;
-using Model.Enums;
-using Microsoft.Win32;
-using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Common.Images;
-using System.Drawing;
-using System.IO;
 using DriveHUD.Common.Log;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
+using ReactiveUI;
+using System;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudPlayerSettingsViewModel : BaseRangeTypePopupViewModel
     {

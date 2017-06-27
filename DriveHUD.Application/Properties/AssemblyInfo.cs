@@ -50,13 +50,13 @@ using System.Windows;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.9.1209")]
-[assembly: AssemblyVersion("1.0.9.1209")]
-[assembly: AssemblyFileVersion("1.0.9.1209")]
+// [assembly: AssemblyVersion("1.1.0.1474")]
+[assembly: AssemblyVersion("1.1.0.1474")]
+[assembly: AssemblyFileVersion("1.1.0.1474")]
 
 #if DEBUG
 
 [assembly: InternalsVisibleTo("DriveHUD.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 #endif
-

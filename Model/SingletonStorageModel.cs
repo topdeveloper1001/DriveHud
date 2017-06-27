@@ -35,11 +35,13 @@ namespace Model
         /// </summary>
         /// <param name="player">Player</param>
         /// <param name="loadHeroIfMissing">True if need to select HERO in case when player with specified name does not exist</param>
-        public void TryLoadActivePlayer(PlayerCollectionItem player, bool loadHeroIfMissing)
+        public void TryLoadActivePlayer(IPlayer player, bool loadHeroIfMissing)
         {
-            if (PlayerCollection.Contains(player))
+            var playerSelectedItem = PlayerCollection.FirstOrDefault(x => x.PlayerId == player.PlayerId && x.GetType() == player.GetType());
+
+            if (playerSelectedItem != null)
             {
-                PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == player);
+                PlayerSelectedItem = playerSelectedItem;
                 return;
             }
 
@@ -52,9 +54,14 @@ namespace Model
         public void TryLoadHeroPlayer()
         {
             var heroName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.HeroName);
-            if (PlayerCollection.Any(x => x.Name == heroName))
+
+            var playerCollectionItems = PlayerCollection.OfType<PlayerCollectionItem>().ToArray();
+
+            if (playerCollectionItems.Any(x => x.Name == heroName))
             {
-                PlayerSelectedItem = PlayerCollection.Where(x => x.Name == heroName).OrderBy(x => x.PokerSite).FirstOrDefault();
+                PlayerSelectedItem = playerCollectionItems
+                    .Where(x => x.Name == heroName)
+                    .OrderBy(x => x.PokerSite).FirstOrDefault();
             }
         }
 
@@ -98,8 +105,8 @@ namespace Model
         public static SingletonStorageModel Instance { get { return lazy.Value; } }
 
         private RangeObservableCollection<Playerstatistic> _statisticCollection;
-        private ObservableCollection<PlayerCollectionItem> _playerCollection;
-        private PlayerCollectionItem _playerSelectedItem;
+        private ObservableCollection<IPlayer> _playerCollection;
+        private IPlayer _playerSelectedItem;
 
         private Expression<Func<Playerstatistic, bool>> _filterPredicate = PredicateBuilder.True<Playerstatistic>();
 
@@ -124,7 +131,7 @@ namespace Model
             }
         }
 
-        public ObservableCollection<PlayerCollectionItem> PlayerCollection
+        public ObservableCollection<IPlayer> PlayerCollection
         {
             get { return _playerCollection; }
             set
@@ -134,7 +141,7 @@ namespace Model
             }
         }
 
-        public PlayerCollectionItem PlayerSelectedItem
+        public IPlayer PlayerSelectedItem
         {
             get { return _playerSelectedItem; }
             set
@@ -160,7 +167,7 @@ namespace Model
         }
 
         private IList<Playerstatistic> _filteredPlayerStatistic;
-        
+
         public IList<Playerstatistic> FilteredPlayerStatistic
         {
             set

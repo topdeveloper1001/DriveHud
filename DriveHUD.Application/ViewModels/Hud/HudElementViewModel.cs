@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.Entities;
-using DriveHUD.ViewModels;
-using Model.Enums;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
@@ -24,131 +23,44 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [ProtoContract]
     /// <summary>
-    /// This View Model represents size and position of Hud Elements (these black rectangles where stat block is)(not thread-safe)
+    /// Represents view model of hud element
     /// </summary>    
-    public class HudElementViewModel : ViewModelBase, IHudWindowElement
+    public class HudElementViewModel : ViewModelBase
     {
         private static StatInfo BlankStatInfo = new StatInfo { Caption = string.Empty, IsCaptionHidden = true };
 
         public HudElementViewModel()
         {
-            statInfoCollection = new ObservableCollection<StatInfo>();         
+            tools = new ReactiveList<HudBaseToolViewModel>();
+            Opacity = 1;
         }
 
-        public HudElementViewModel(IEnumerable<StatInfo> statInfos)
+        public HudElementViewModel(IEnumerable<HudLayoutTool> initialTools)
         {
-            statInfoCollection = new ObservableCollection<StatInfo>(statInfos);
-            Init();
-        }
+            Check.ArgumentNotNull(() => initialTools);
 
-        private void Init()
-        {
-            HudViewType = HudViewType.Vertical_1;
-            Opacity = 100;
-        }
+            tools = new ReactiveList<HudBaseToolViewModel>(initialTools.Select(x =>
+            {
+                var toolViewModel = x.CreateViewModel(this);
 
-        public void UpdateMainStats()
-        {
-            RaisePropertyChanged(() => Stat1);
-            RaisePropertyChanged(() => Stat2);
-            RaisePropertyChanged(() => Stat3);
-            RaisePropertyChanged(() => Stat4);
+                if (toolViewModel is IHudBaseStatToolViewModel)
+                {
+                    toolViewModel.IsVisible = false;
+                }
+
+                return toolViewModel;
+            }));
+
+            Opacity = 1;
         }
 
         #region Properties
 
         [ProtoMember(1)]
-        private System.Windows.Point position;
-
-        /// <summary>
-        /// Position on table
-        /// </summary>
-        public System.Windows.Point Position
-        {
-            get
-            {
-                return position;
-            }
-            set
-            {
-                OffsetY = 0;
-                OffsetX = 0;
-
-                this.RaiseAndSetIfChanged(ref position, value);
-            }
-        }
-
-        [ProtoMember(2)]
-        private double height;
-
-        /// <summary>
-        /// Panel base height
-        /// </summary>
-        public double Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref height, value);
-            }
-        }
-
-        [ProtoMember(3)]
-        private double width;
-
-        /// <summary>
-        /// Panel base width
-        /// </summary>
-        public double Width
-        {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref width, value);
-            }
-        }
-
-        [ProtoMember(4)]
-        private double offsetX;
-
-        public double OffsetX
-        {
-            get
-            {
-                return offsetX;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref offsetX, value);
-            }
-        }
-
-        [ProtoMember(5)]
-        private double offsetY;
-
-        public double OffsetY
-        {
-            get
-            {
-                return offsetY;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref offsetY, value);
-            }
-        }
-
-        [ProtoMember(6)]
         private int seat;
 
         /// <summary>
@@ -166,7 +78,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(7)]
+        [ProtoMember(2)]
         private string playerName;
 
         /// <summary>
@@ -184,11 +96,11 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(8)]
+        [ProtoMember(3)]
         private short pokerSiteId;
 
         /// <summary>
-        /// Pokersite Id
+        /// Poker site Id
         /// </summary>
         public short PokerSiteId
         {
@@ -203,56 +115,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(9)]
-        private bool isRightOriented;
-
-        /// <summary>
-        /// Determines rich HUD indicator and icon alignment
-        /// </summary>
-        public bool IsRightOriented
-        {
-            get
-            {
-                return isRightOriented;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isRightOriented, value);
-            }
-        }
-
-        [ProtoMember(10)]
-        private HudViewType hudViewType;
-
-        /// <summary>
-        /// Determines rich Hud type
-        /// </summary>
-        public HudViewType HudViewType
-        {
-            get
-            {
-                return hudViewType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref hudViewType, value);
-                this.RaisePropertyChanged(nameof(IsVertical));
-            }
-        }
-
-        /// <summary>
-        /// Determines if rich Hud is vertical
-        /// </summary>
-        public bool IsVertical
-        {
-            get
-            {
-                return HudViewType == HudViewType.Vertical_1
-                    || HudViewType == HudViewType.Vertical_2;
-            }
-        }
-
-        [ProtoMember(11)]
+        [ProtoMember(4)]
         private decimal tiltMeter;
 
         /// <summary>
@@ -279,7 +142,7 @@ namespace DriveHUD.Application.ViewModels
             get { return !string.IsNullOrWhiteSpace(noteToolTip); }
         }
 
-        [ProtoMember(12)]
+        [ProtoMember(5)]
         private string noteToolTip;
 
         public string NoteToolTip
@@ -307,7 +170,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(13)]
+        [ProtoMember(6)]
         private decimal? sessionHands;
 
         /// <summary>
@@ -322,27 +185,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(14)]
-        private ObservableCollection<decimal> sessionMoneyWonCollection;
-
-        public ObservableCollection<decimal> SessionMoneyWonCollection
-        {
-            get { return sessionMoneyWonCollection; }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref sessionMoneyWonCollection, value);
-            }
-        }
-
-        /// <summary>
-        /// Money won for current session
-        /// </summary>
-        public decimal? SessionMoneyWon
-        {
-            get { return SessionMoneyWonCollection?.Sum(); }
-        }
-
-        [ProtoMember(15)]
+        [ProtoMember(8)]
         private ObservableCollection<string> cardsCollection;
 
         /// <summary>
@@ -357,110 +200,24 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        #region Rich HUD stats
+        [NonSerialized]
+        [ProtoMember(9)]
+        private ReactiveList<HudBaseToolViewModel> tools;
 
-        /// <summary>
-        /// Second stat for block #2 in rich HUD
-        /// </summary>
-        public StatInfo Stat1
+        public ReactiveList<HudBaseToolViewModel> Tools
         {
             get
             {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 1)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[0];
-
-                return stat;
+                return tools;
             }
-        }
-
-        /// <summary>
-        /// Second stat for block #2 in rich HUD
-        /// </summary>
-        public StatInfo Stat2
-        {
-            get
+            set
             {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 2)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[1];
-
-                return stat;
-            }
-        }
-
-        /// <summary>
-        /// Third stat for block #3 in rich HUD
-        /// </summary>
-        public StatInfo Stat3
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 3)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[2];
-
-                return stat;
-            }
-        }
-
-        /// <summary>
-        /// Fourth stat for block #4 in rich HUD
-        /// </summary>
-        public StatInfo Stat4
-        {
-            get
-            {
-                var mainStats = GetMainStats();
-
-                if (mainStats.Count < 4)
-                {
-                    return BlankStatInfo;
-                }
-
-                var stat = mainStats[3];
-
-                return stat;
+                this.RaiseAndSetIfChanged(ref tools, value);
             }
         }
 
         [NonSerialized]
-        [ProtoMember(16)]
-        private ObservableCollection<StatInfo> statInfoCollection;
-
-        [XmlIgnore]
-        /// <summary>
-        /// Collection of stats for current panel
-        /// </summary>
-        public ObservableCollection<StatInfo> StatInfoCollection
-        {
-            get
-            {
-                return statInfoCollection;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
-            }
-        }
-
-        [NonSerialized]
-        [ProtoMember(17)]
+        [ProtoMember(10)]
         private ObservableCollection<HudBumperStickerType> stickers;
 
         public ObservableCollection<HudBumperStickerType> Stickers
@@ -491,7 +248,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [NonSerialized]
-        [ProtoMember(19)]
+        [ProtoMember(11)]
         private string playerIconToolTip;
 
         [XmlIgnore]
@@ -508,7 +265,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [NonSerialized]
-        [ProtoMember(20, IsRequired = true)]
+        [ProtoMember(12, IsRequired = true)]
         private bool isDefaultImage = true;
 
         [XmlIgnore]
@@ -524,31 +281,56 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(21)]
-        private HudType hudType;
-
-        public HudType HudType
-        {
-            get
-            {
-                return hudType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref hudType, value);
-            }
-        }
-
-        [ProtoMember(22)]
-        private double _opacity;
+        [ProtoMember(13)]
+        private double opacity;
 
         public double Opacity
         {
-            get { return _opacity; }
-            set { this.RaiseAndSetIfChanged(ref _opacity, value); }
+            get
+            {
+                return opacity;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref opacity, value);
+            }
         }
 
-        #endregion
+        [ProtoMember(14)]
+        private ObservableCollection<decimal> sessionMoneyWonCollection;
+
+        /// <summary>
+        /// Collection of won money
+        /// </summary>
+        public ObservableCollection<decimal> SessionMoneyWonCollection
+        {
+            get
+            {
+                return sessionMoneyWonCollection;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref sessionMoneyWonCollection, value);
+            }
+        }
+
+        /// <summary>
+        /// Money won for current session
+        /// </summary>
+        public decimal? SessionMoneyWon
+        {
+            get { return SessionMoneyWonCollection?.Sum(); }
+        }
+
+        public IEnumerable<StatInfo> StatInfoCollection
+        {
+            get
+            {
+                return Tools != null ?
+                    Tools.OfType<IHudStatsToolViewModel>().SelectMany(x => x.Stats).ToArray() :
+                    new StatInfo[0];
+            }
+        }
 
         #endregion
 
@@ -561,37 +343,7 @@ namespace DriveHUD.Application.ViewModels
         public HudElementViewModel Clone()
         {
             var cloned = (HudElementViewModel)MemberwiseClone();
-
-            cloned.StatInfoCollection = new ObservableCollection<StatInfo>();
-
             return cloned;
-        }
-
-        private List<StatInfo> GetMainStats()
-        {
-            var mainStats = new List<StatInfo>();
-
-            var counter = 0;
-
-            foreach (var statInfo in StatInfoCollection.Where(x => !x.IsNotVisible))
-            {
-                if (counter > 4)
-                {
-                    break;
-                }
-
-                if (statInfo is StatInfoBreak)
-                {
-                    continue;
-                }
-
-                mainStats.Add(statInfo);
-
-                counter++;
-            }
-
-            return mainStats;
-
         }
 
         public void Cleanup()

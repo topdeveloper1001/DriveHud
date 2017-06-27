@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Model.Settings;
 using System.Windows.Input;
+using Model;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
@@ -29,7 +30,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             _settingsModel = _infoViewModel?.Model;
 
             this.BonusName = _settingsModel?.BonusName ?? string.Empty;
-            this.Player = _settingsModel?.Player ?? string.Empty;
+            this.Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>().FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
             this.Date = _settingsModel?.Date ?? DateTime.Now;
             this.Amount = _settingsModel?.Amount ?? 0m;
         }
@@ -44,7 +45,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
 
             _settingsModel.BonusName = BonusName;
-            _settingsModel.Player = Player;
+            _settingsModel.Player = Player.DecodedName;
             _settingsModel.Date = Date;
             _settingsModel.Amount = Amount;
 
@@ -68,7 +69,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private BonusModel _settingsModel;
 
         private string _bonusName;
-        private string _player;
+        private PlayerCollectionItem _player;
         private decimal _amount;
         private DateTime _date;
 
@@ -85,7 +86,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
-        public string Player
+        public PlayerCollectionItem Player
         {
             get
             {

@@ -17,13 +17,11 @@
 // 
 // A suggested default usage scenario is the following:
 // 
-// #if DEBUG
-// #define DBC_CHECK_ALL    
-// #else
-// #define DBC_CHECK_PRECONDITION
-// #endif
-//
-// Alternatively, you can define these in the project properties dialog.
+//#if DEBUG
+//#define DBC_CHECK_ALL
+//#else
+//#define DBC_CHECK_PRECONDITION
+//#endif
 
 using System;
 using System.Diagnostics;

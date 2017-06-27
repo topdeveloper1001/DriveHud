@@ -10,6 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
+using System;
+using System.Windows;
+using System.Windows.Input;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -20,8 +24,31 @@ namespace DriveHUD.Application
     public partial class MainWindow : RadWindow
     {
         public MainWindow()
-        {
+        {            
             InitializeComponent();
         }
+
+        private void MainWindow_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (!RadRibbonDropDownButton.IsOpen || RadRibbonDropDownButton.IsMouseOver)
+            {
+                return;
+            }
+
+            RadRibbonDropDownButton.KeepOpen = false;
+            RadRibbonDropDownButton.IsOpen = false;
+            RadRibbonDropDownButton.KeepOpen = true;
+        }
+
+        private void ScrollViewer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var mainWindowViewModel = DataContext as MainWindowViewModel;
+
+            if (mainWindowViewModel != null && !mainWindowViewModel.IsEnabled)
+            {
+                e.Handled = true;
+            }
+        }
+       
     }
 }

@@ -1,0 +1,66 @@
+<Game Information>
+Title: SNG 2.0 $5.50
+Entry #: 4073583
+Begin Time: 2017/05/08 08:31:47 UTC
+Buyin to Payout: Real To Real
+Play Type: Sit & Go
+Game Type: Hold’em
+Bet Limit Type: No Limit
+
+<Hand History>
+Game Hand #12908866 - Tournament #8034884 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/08 08:32:30 UTC
+Table '1' 9-max Seat #9 is the button
+Seat 1: Villain1 (1500.00)
+Seat 2: Villain2 (1500.00)
+Seat 3: Villain3 (1500.00)
+Seat 4: Peon_84 (1500.00)
+Seat 5: Villain4 (1500.00)
+Seat 6: Villain5 (1500.00)
+Seat 7: Villain6 (1500.00)
+Seat 8: Villain7 (1500.00)
+Seat 9: Villain8 (1500.00)
+Dealt to Villain1 [5d]
+Dealt to Villain5 [Td]
+Dealt to Villain2 [Ks]
+Dealt to Villain6 [Jc]
+Dealt to Villain3 [3s]
+Dealt to Villain7 [3c]
+Dealt to Peon_84 [Ad]
+Dealt to Villain8 [As]
+Dealt to Villain4 [9s]
+Villain1 posts the small blind 10.00
+Villain2 posts the big blind 20.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [6c 5s]
+Villain3 folds
+Peon_84 folds
+Villain4 raises 1500.00 to 1500.00 and is all-in
+Villain5 calls 1500.00 and is all-in
+Villain6 folds
+Villain7 folds
+Villain8 folds
+Villain1 folds
+Villain2 folds
+*** FLOP *** [Ts 7c 5c]
+Main pot 3030.00
+*** TURN *** [Ts 7c 5c] [3d]
+Main pot 3030.00
+*** RIVER *** [Ts 7c 5c 3d] [Qc]
+Main pot 3030.00
+*** SHOW DOWN ***
+Main pot 3030.00
+Villain4 shows [Jd 7d] (a pair of Sevens [7d 7c Qc Jd Ts])
+Villain5 shows [As Ah] (a pair of Aces [As Ah Qc Ts 7c])
+Villain5 collected 3030.00 from main pot
+*** SUMMARY ***
+Total pot 3030.00 | Rake 0.00
+Board [Ts 7c 5c 3d Qc]
+Seat 1: Villain1 (small blind) folded on the Pre-Flop
+Seat 2: Villain2 (big blind) folded on the Pre-Flop
+Seat 3: Villain3 folded on the Pre-Flop and did not bet
+Seat 4: Peon_84 folded on the Pre-Flop and did not bet
+Seat 5: Villain4 showed [Jd 7d] and lost with a pair of Sevens [7d 7c Qc Jd Ts]
+Seat 6: Villain5 showed [As Ah] and won 3030.00 with a pair of Aces [As Ah Qc Ts 7c]
+Seat 7: Villain6 folded on the Pre-Flop and did not bet
+Seat 8: Villain7 folded on the Pre-Flop and did not bet
+Seat 9: Villain8 (button) folded on the Pre-Flop

@@ -1,117 +1,188 @@
-﻿using DriveHUD.Common.Extensions;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudWindowViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.TableConfigurators.PositionProviders;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
+using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudWindowViewModel : BaseViewModel
     {
-        private ReaderWriterLockSlim _readerWriterLock;
-        private long _gameNumber;
-        private EnumPokerSites _pokerSite;
+        private ReaderWriterLockSlim readerWriterLock;
+        private HudLayout layout;
+        private Dictionary<HudToolKey, Point> panelOffsets;
 
-        internal HudWindowViewModel()
+        public HudWindowViewModel()
         {
-            _readerWriterLock = new ReaderWriterLockSlim();
+            readerWriterLock = new ReaderWriterLockSlim();
 
             NotificationRequest = new InteractionRequest<INotification>();
 
-            _layoutsCollection = new ObservableCollection<string>();
+            layoutsCollection = new ObservableCollection<string>();
 
             ExportHandCommand = new RelayCommand(ExportHand);
             TagHandCommand = new RelayCommand(TagHand);
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
+            ApplyPositionsCommand = new RelayCommand(ApplyPositions);
+
+            panelOffsets = new Dictionary<HudToolKey, Point>();
         }
 
         #region Properties
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
-        private EnumGameType? gameType;
         public EnumGameType? GameType
         {
             get
             {
-                return gameType;
-            }
-            set
-            {
-                SetProperty(ref gameType, value);
+                return layout?.GameType;
             }
         }
 
-        private EnumTableType tableType;
-        public EnumTableType TableType
+        public EnumTableType? TableType
         {
             get
             {
-                return tableType;
+                return layout?.TableType;
+            }
+        }
+
+        private string layoutName;
+
+        public string LayoutName
+        {
+            get
+            {
+                return layoutName;
             }
             set
             {
-                SetProperty(ref tableType, value);
+                SetProperty(ref layoutName, value);
             }
         }
 
-        private string _layoutName;
-        public string LayoutName
-        {
-            get { return _layoutName; }
-            set { SetProperty(ref _layoutName, value); }
-        }
+        private string selectedLayout;
 
-
-        private string _selectedLayout;
         public string SelectedLayout
         {
-            get { return _selectedLayout; }
-            set { SetProperty(ref _selectedLayout, value); }
+            get
+            {
+                return selectedLayout;
+            }
+            set
+            {
+                SetProperty(ref selectedLayout, value);
+            }
         }
 
-        private ObservableCollection<string> _layoutsCollection;
+        private ObservableCollection<string> layoutsCollection;
 
         public ObservableCollection<string> LayoutsCollection
         {
-            get { return _layoutsCollection; }
-            set { SetProperty(ref _layoutsCollection, value); }
+            get { return layoutsCollection; }
+            set { SetProperty(ref layoutsCollection, value); }
+        }
+
+        public ObservableCollection<int> Seats
+        {
+            get
+            {
+                return layout != null ? new ObservableCollection<int>(Enumerable.Range(1, (int)layout.TableType)) : null;
+            }
+        }
+
+        internal Dictionary<HudToolKey, Point> PanelOffsets
+        {
+            get
+            {
+                return panelOffsets;
+            }
+        }
+
+        public Action RefreshHud
+        {
+            get;
+            set;
         }
 
         #endregion
 
         #region ICommand
 
-        public ICommand ExportHandCommand { get; set; }
-        public ICommand TagHandCommand { get; set; }
-        public ICommand ReplayLastHandCommand { get; set; }
-        public ICommand LoadLayoutCommand { get; set; }
+        public ICommand ExportHandCommand { get; private set; }
+
+        public ICommand TagHandCommand { get; private set; }
+
+        public ICommand ReplayLastHandCommand { get; private set; }
+
+        public ICommand LoadLayoutCommand { get; private set; }
+
+        public ICommand ApplyPositionsCommand { get; private set; }
 
         #endregion
 
         #region Methods
 
+        internal Point GetPanelOffset(HudBaseToolViewModel toolViewModel)
+        {
+            var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
+            {
+                return panelOffsets[toolKey];
+            }
+
+            return new Point(0, 0);
+        }
+
+        internal void UpdatePanelOffset(HudBaseToolViewModel toolViewModel)
+        {
+            var toolKey = HudToolKey.BuildKey(toolViewModel);
+
+            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
+            {
+                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+            }
+        }
+
         internal void SetLayout(HudLayout layout)
-        {            
-            using (var write = _readerWriterLock.Write())
+        {
+            using (var write = readerWriterLock.Write())
             {
                 if (layout != null)
-                {                    
+                {
+                    this.layout = layout;
                     LayoutName = layout.LayoutName;
-                    _gameNumber = layout.GameNumber;
-                    _pokerSite = layout.PokerSite;
 
                     if (layout.AvailableLayouts != null)
                     {
@@ -136,9 +207,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void TagHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
                     EnumHandTag tag = EnumHandTag.None;
 
@@ -147,15 +223,20 @@ namespace DriveHUD.Application.ViewModels.Hud
                         return;
                     }
 
-                    LogProvider.Log.Info($"Tagging hand {_gameNumber} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} [{layout.PokerSite}]");
 
-                    HudNamedPipeBindingService.TagHand(_gameNumber, (short)_pokerSite, (int)tag);
+                    HudNamedPipeBindingService.TagHand(layout.GameNumber, (short)layout.PokerSite, (int)tag);
                 }
             });
         }
 
         private async void ExportHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             EnumExportType exportType = EnumExportType.Raw;
 
             if (obj == null || !Enum.TryParse(obj.ToString(), out exportType))
@@ -165,11 +246,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Exporting hand {_gameNumber}, {exportType} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Exporting hand {layout.GameNumber}, {exportType} [{layout.PokerSite}]");
 
-                    ExportFunctions.ExportHand(_gameNumber, (short)_pokerSite, exportType, true);
+                    ExportFunctions.ExportHand(layout.GameNumber, (short)layout.PokerSite, exportType, true);
                     RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
             });
@@ -177,22 +258,32 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void ReplayLastHand(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
-                    LogProvider.Log.Info($"Replaying hand {_gameNumber} [{_pokerSite}]");
+                    LogProvider.Log.Info($"Replaying hand {layout.GameNumber} [{layout.PokerSite}]");
 
-                    HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, (short)_pokerSite);
+                    HudNamedPipeBindingService.RaiseReplayHand(layout.GameNumber, (short)layout.PokerSite);
                 }
             });
         }
 
         private async void LoadLayout(object obj)
         {
+            if (layout == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
-                using (var readToken = _readerWriterLock.Read())
+                using (var readToken = readerWriterLock.Read())
                 {
                     var layoutName = obj?.ToString();
 
@@ -203,10 +294,96 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                     LayoutName = layoutName;
 
-                    HudNamedPipeBindingService.LoadLayout(layoutName, _pokerSite, GameType.Value, TableType);
+                    HudNamedPipeBindingService.LoadLayout(layoutName, layout.PokerSite, GameType.Value, TableType.Value);
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });
+        }
+
+        private void ApplyPositions(object obj)
+        {
+            var sourceSeat = obj as int?;
+
+            if (!sourceSeat.HasValue || layout == null)
+            {
+                return;
+            }
+
+            var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(layout.PokerSite.ToString());
+
+            if (!positionProvider.Positions.ContainsKey((int)layout.TableType))
+            {
+                return;
+            }
+
+            var seatsPositions = positionProvider.Positions[(int)layout.TableType];
+
+            var baseHUDPlayer = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == sourceSeat.Value);
+
+            if (baseHUDPlayer == null)
+            {
+                return;
+            }
+
+            var baseSeatPosition = new Point(seatsPositions[sourceSeat.Value - 1, 0], seatsPositions[sourceSeat.Value - 1, 1]);
+
+            var nonPopupToolViewModels = baseHUDPlayer.HudElement.Tools.OfType<IHudNonPopupToolViewModel>();
+
+            var toolOffsetsDictionary = (from nonPopupToolViewModel in nonPopupToolViewModels
+                                         let toolOffsetX = nonPopupToolViewModel.OffsetX != 0 ? nonPopupToolViewModel.OffsetX : nonPopupToolViewModel.Position.X
+                                         let toolOffsetY = nonPopupToolViewModel.OffsetY != 0 ? nonPopupToolViewModel.OffsetY : nonPopupToolViewModel.Position.Y
+                                         let shiftX = toolOffsetX - baseSeatPosition.X
+                                         let shiftY = toolOffsetY - baseSeatPosition.Y
+                                         select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);
+
+            for (var seat = 1; seat <= (int)layout.TableType; seat++)
+            {
+                if (seat == sourceSeat.Value)
+                {
+                    continue;
+                }
+
+                foreach (var tool in toolOffsetsDictionary.Values)
+                {
+                    var toolKey = new HudToolKey
+                    {
+                        Id = tool.ToolId,
+                        Seat = seat
+                    };
+
+                    var seatPosition = new Point(seatsPositions[seat - 1, 0], seatsPositions[seat - 1, 1]);
+
+                    var offsetX = seatPosition.X + tool.ShiftX;
+                    var offsetY = seatPosition.Y + tool.ShiftY;
+
+                    if (!PanelOffsets.ContainsKey(toolKey))
+                    {
+                        PanelOffsets.Add(toolKey, new Point(offsetX, offsetY));
+                    }
+                    else
+                    {
+                        PanelOffsets[toolKey] = new Point(offsetX, offsetY);
+                    }
+                }
+            }
+
+            var elementsToUpdate = layout.ListHUDPlayer.Where(x => x.SeatNumber != sourceSeat.Value).Select(x => x.HudElement).ToArray();
+
+            elementsToUpdate.ForEach(element =>
+            {
+                element.Tools.OfType<IHudNonPopupToolViewModel>().ForEach(tool =>
+                {
+                    if (toolOffsetsDictionary.ContainsKey(tool.Id))
+                    {
+                        var seatPosition = new Point(seatsPositions[element.Seat - 1, 0], seatsPositions[element.Seat - 1, 1]);
+
+                        tool.OffsetX = seatPosition.X + toolOffsetsDictionary[tool.Id].ShiftX;
+                        tool.OffsetY = seatPosition.Y + toolOffsetsDictionary[tool.Id].ShiftY;
+                    }
+                });
+            });
+
+            RefreshHud?.Invoke();
         }
 
         private void RaiseNotification(string content, string title)
@@ -223,5 +400,51 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #endregion
+
+        internal class HudToolKey
+        {
+            public Guid Id { get; set; }
+
+            public int Seat { get; set; }
+
+            public static HudToolKey BuildKey(HudBaseToolViewModel toolViewModel)
+            {
+                if (toolViewModel == null)
+                {
+                    return null;
+                }
+
+                var seat = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                var toolKey = new HudToolKey
+                {
+                    Id = toolViewModel.Id,
+                    Seat = seat
+                };
+
+                return toolKey;
+            }
+
+            public override int GetHashCode()
+            {
+                var hash = 23;
+                hash = hash * 31 + Id.GetHashCode();
+                hash = hash * 31 + Seat;
+
+                return hash;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var toolKey = obj as HudToolKey;
+
+                if (toolKey == null)
+                {
+                    return false;
+                }
+
+                return toolKey.Id == Id && toolKey.Seat == Seat;
+            }
+        }
     }
 }

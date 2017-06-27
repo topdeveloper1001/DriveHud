@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Hud;
 using Model.Enums;
 using System.Linq;
 
@@ -51,14 +51,7 @@ namespace DriveHud.Tests.UnitTests
             }
 
             statInfo.Caption = string.Format(statInfo.Format, value);
-            statInfo.CurrentValue = value;
-
-            if (string.IsNullOrWhiteSpace(propertyName))
-            {
-                return;
-            }
-
-            statInfo.PropertyName = propertyName;
+            statInfo.CurrentValue = value;        
         }
     }
 }

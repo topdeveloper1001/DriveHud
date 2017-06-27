@@ -1,0 +1,83 @@
+<session sessioncode="21656533631">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $10/$20</gametype>
+		<tablename>Lima #4117</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-06-13 15:03:35</startdate>
+		<currency>USD</currency>
+		<nickname>Peon_184</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3091604">
+		<general>
+			<startdate>2017-06-13 15:03:35</startdate>
+			<players>
+				<player seat="1" name="daveh555" chips="388.5" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="2" name="Peon_184" chips="950" dealer="0" win="0" bet="140" rebuy="0" addon="0" />
+				<player seat="3" name="stam1104" chips="3347.04" dealer="1" win="0" bet="20" rebuy="0" addon="0" />
+				<player seat="4" name="RogDodge" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="8" name="mrsgrundy" chips="2029" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+				<player seat="9" name="reme1" chips="2092.5" dealer="0" win="0" bet="140" rebuy="0" addon="0" />
+				<player seat="10" name="jardito" chips="2807" dealer="0" win="477" bet="140" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="RogDodge" type="1" sum="10" cards="" />
+			<action no="2" player="mrsgrundy" type="2" sum="20" cards="" />
+			<action no="3" player="Peon_184" type="2" sum="20" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="daveh555">X X</cards>
+			<cards type="Pocket" player="Peon_184">S9 DJ</cards>
+			<cards type="Pocket" player="stam1104">X X</cards>
+			<cards type="Pocket" player="RogDodge">X X</cards>
+			<cards type="Pocket" player="mrsgrundy">X X</cards>
+			<cards type="Pocket" player="reme1">C3 D5</cards>
+			<cards type="Pocket" player="jardito">H7 H4</cards>
+			<action no="4" player="reme1" type="3" sum="20" cards="" />
+			<action no="5" player="jardito" type="3" sum="20" cards="" />
+			<action no="6" player="daveh555" type="0" sum="0" cards="" />
+			<action no="7" player="Peon_184" type="4" sum="0" cards="" />
+			<action no="8" player="stam1104" type="3" sum="20" cards="" />
+			<action no="9" player="RogDodge" type="0" sum="0" cards="" />
+			<action no="10" player="mrsgrundy" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HQ D7 D8</cards>
+			<action no="11" player="mrsgrundy" type="4" sum="0" cards="" />
+			<action no="12" player="reme1" type="4" sum="0" cards="" />
+			<action no="13" player="jardito" type="4" sum="0" cards="" />
+			<action no="14" player="Peon_184" type="4" sum="0" cards="" />
+			<action no="15" player="stam1104" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+			<action no="16" player="mrsgrundy" type="4" sum="0" cards="" />
+			<action no="17" player="reme1" type="5" sum="20" cards="" />
+			<action no="18" player="jardito" type="3" sum="20" cards="" />
+			<action no="19" player="Peon_184" type="23" sum="100" cards="" />
+			<action no="20" player="stam1104" type="0" sum="0" cards="" />
+			<action no="21" player="mrsgrundy" type="0" sum="0" cards="" />
+			<action no="22" player="reme1" type="3" sum="80" cards="" />
+			<action no="23" player="jardito" type="3" sum="80" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">CQ</cards>
+			<action no="24" player="reme1" type="5" sum="20" cards="" />
+			<action no="25" player="jardito" type="3" sum="20" cards="" />
+			<action no="26" player="Peon_184" type="3" sum="20" cards="" />
+		</round>
+	</game>
+</session>

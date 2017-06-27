@@ -1,11 +1,24 @@
+//-----------------------------------------------------------------------
+// <copyright file="Card.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using System;
-using System.Runtime.Serialization;
+using System.Collections.Generic;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
-    //When Card is a struct it only allocates 1 byte on the stack instead of 4 Reference bytes and two strings on the heap
-    //Combined with lookup tables and using enums we get a 20x speedup of parsing cards
+    // When Card is a struct it only allocates 1 byte on the stack instead of 4 Reference bytes and two strings on the heap
+    // Combined with lookup tables and using enums we get a 20x speedup of parsing cards
     [Serializable]
     public partial struct Card
     {
@@ -84,6 +97,7 @@ namespace HandHistories.Objects.Cards
         }
 
         #region Constructors
+
         public Card(char rank, char suit)
         {
             CardValueEnum _rank = rankParseLookup[rank];
@@ -91,6 +105,7 @@ namespace HandHistories.Objects.Cards
             SuitEnum _suit = suitParseLookup[suit];
 
             _card = (CardEnum)((int)_suit + (int)_rank);
+
             if (_suit == SuitEnum.Unknown || _rank == CardValueEnum.Unknown)
             {
                 throw new ArgumentException("Hand is not correctly formatted. Value: " + rank + " Suit: " + suit);
@@ -112,6 +127,7 @@ namespace HandHistories.Objects.Cards
         #endregion
 
         #region Operators
+
         public static bool operator ==(Card c1, Card c2)
         {
             return c1._card == c2._card;
@@ -124,8 +140,9 @@ namespace HandHistories.Objects.Cards
 
         public static explicit operator Card(string card)
         {
-            return Card.Parse(card);
+            return Parse(card);
         }
+
         #endregion
 
         [XmlIgnore]
@@ -152,6 +169,44 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        public static string[] GetCardRanges()
+        {
+            var cardsRanks = PossibleRanksHighCardFirst;
+
+            var cardRanges = new string[cardsRanks.Length * cardsRanks.Length];
+
+            var sb = new StringBuilder();
+
+            for (var i = 0; i < cardsRanks.Length; i++)
+            {
+                for (var j = 0; j < cardsRanks.Length; j++)
+                {
+                    if (j >= i)
+                    {
+                        sb.Append(cardsRanks[i]);
+                        sb.Append(cardsRanks[j]);
+
+                        if (j > i)
+                        {
+                            sb.Append("s");
+                        }
+                    }
+                    else if (j < i)
+                    {
+                        sb.Append(cardsRanks[j]);
+                        sb.Append(cardsRanks[i]);
+                        sb.Append("o");
+                    }
+
+                    cardRanges[j + i * cardsRanks.Length] = sb.ToString();
+
+                    sb.Clear();
+                }
+            }
+
+            return cardRanges;
+        }
+
         public static Card GetCardFromIntValue(int value)
         {
             //Sanity check
@@ -176,7 +231,9 @@ namespace HandHistories.Objects.Cards
         public static Card Parse(string card)
         {
             if (card.Length != 2)
+            {
                 throw new ArgumentException("Cards must be length 2. Format Rs where R is rank and s is suit.");
+            }
 
             return new Card(card[0], card[1]);
         }
@@ -210,6 +267,11 @@ namespace HandHistories.Objects.Cards
         public static int GetRankNumericValue(string rank1)
         {
             return (int)rankParseLookup[rank1[0]];
+        }
+
+        public bool IsValid()
+        {
+            return rank != CardValueEnum.Unknown && suit != SuitEnum.Unknown;
         }
 
         public override string ToString()

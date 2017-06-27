@@ -666,6 +666,36 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Hud_TableLayout" xml:space="preserve">
     <value>Table Layout</value>
   </data>
+  <data name="Common_HudSideBar_4StatDHBoxTool" xml:space="preserve">
+    <value>4-Stat DH Box</value>
+  </data>
+  <data name="Common_HudSideBar_BumperStickersTool" xml:space="preserve">
+    <value>Bumper Stickers</value>
+  </data>
+  <data name="Common_HudSideBar_GaugeIndicatorTool" xml:space="preserve">
+    <value>Line Bar Graphs</value>
+  </data>
+  <data name="Common_HudSideBar_GraphTool" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="Common_HudSideBar_HeatMapTool" xml:space="preserve">
+    <value>Heat Map</value>
+  </data>
+  <data name="Common_HudSideBar_PlayerProfileIconTool" xml:space="preserve">
+    <value>Player Profile Icon</value>
+  </data>
+  <data name="Common_HudSideBar_TextBoxTool" xml:space="preserve">
+    <value>Text Box</value>
+  </data>
+  <data name="Common_HudSideBar_TiltMeterTool" xml:space="preserve">
+    <value>Tilt Meter</value>
+  </data>
+  <data name="Common_HudSideBar_Title" xml:space="preserve">
+    <value>HUD Design Elements</value>
+  </data>
+  <data name="Common_HudSideBar_PlainStatBoxTool" xml:space="preserve">
+    <value>Plain Stat Box</value>
+  </data>
   <data name="Common_Hud_IgnWarning" xml:space="preserve">
     <value>Note: This HUD is for Ignition/Bodog only.</value>
   </data>
@@ -683,5 +713,86 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_HudLayout_GotIt" xml:space="preserve">
     <value>Got It!</value>
+  </data>
+  <data name="Common_Hud_AllStats" xml:space="preserve">
+    <value>All Stats</value>
+  </data>
+  <data name="Common_Hud_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Common_ApplyButtonForCalendars" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Common_Preferred_Seating_Button" xml:space="preserve">
+    <value>Preferred Seating</value>
+  </data>
+  <data name="Common_PercentSign" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="Common_WinPercent" xml:space="preserve">
+    <value>Win%: </value>
+  </data>
+  <data name="Common_Hud_ToolBar_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Common_Hud_ToolBar_Delete" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_Hud_ToolBar_Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="Common_HudSideBar_BreakLine" xml:space="preserve">
+    <value>Break Line</value>
+  </data>
+  <data name="Common_Hud_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Common_HudLayout_DuplicateHeader" xml:space="preserve">
+    <value>Select table type:</value>
+  </data>
+  <data name="Common_ReportView_Hands_AllInEquity" xml:space="preserve">
+    <value>All-in Equity%</value>
+  </data>
+  <data name="Common_ReportView_Hands_Board" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="Common_ReportView_Hands_Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="Common_ReportView_Hands_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Common_ReportView_Hands_EvDiff" xml:space="preserve">
+    <value>$EV Diff</value>
+  </data>
+  <data name="Common_ReportView_Hands_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Common_ReportView_Hands_NetWon" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
+  <data name="Common_ReportView_Hands_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Common_ReportView_Hands_Preflop" xml:space="preserve">
+    <value>Pre Flop</value>
+  </data>
+  <data name="Common_ReportView_ShowHoleCards" xml:space="preserve">
+    <value>Show Hole Cards</value>
+  </data>
+  <data name="Common_ReportView_TaggedHands" xml:space="preserve">
+    <value>Tagged Hands</value>
+  </data>
+  <data name="Common_HudLayout_HeatMap" xml:space="preserve">
+    <value>HEAT MAP</value>
+  </data>
+  <data name="Common_HudLayout_PlayerRange" xml:space="preserve">
+    <value>Player range</value>
+  </data>
+  <data name="Common_Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="Common_Alias_Players" xml:space="preserve">
+    <value>Players: {0}</value>
   </data>
 </root>

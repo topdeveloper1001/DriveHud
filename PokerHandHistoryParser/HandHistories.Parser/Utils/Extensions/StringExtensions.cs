@@ -1,9 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="StringExtensions.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HandHistories.Parser.Utils.Extensions
 {
@@ -17,7 +24,7 @@ namespace HandHistories.Parser.Utils.Extensions
         public static decimal ParseAmount(this string str)
         {
             str = str.Trim('£', '€', '$');
-            return Decimal.Parse(str, CultureInfo.InvariantCulture);
+            return decimal.Parse(str, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -28,7 +35,7 @@ namespace HandHistories.Parser.Utils.Extensions
         public static decimal ParseAmount(this string str, NumberFormatInfo numberFormat)
         {
             str = str.Trim('£', '€', '$');
-            return Decimal.Parse(str, numberFormat);
+            return decimal.Parse(str, numberFormat);
         }
 
         static readonly char[] ParseWSTrimChars = new char[]
@@ -37,25 +44,25 @@ namespace HandHistories.Parser.Utils.Extensions
         };
 
         /// <summary>
-        /// Removes any currency symbols and whitespaces before parsing
+        /// Removes any currency symbols and white-spaces before parsing
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
         public static decimal ParseAmountWS(this string str)
         {
             str = str.Trim(ParseWSTrimChars);
-            return Decimal.Parse(str, CultureInfo.InvariantCulture);
+            return decimal.Parse(str, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
-        /// Removes any currency symbols and whitespaces before parsing
+        /// Removes any currency symbols and white-spaces before parsing
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
         public static decimal ParseAmountWS(this string str, NumberFormatInfo numberFormat)
         {
             str = str.Trim(ParseWSTrimChars);
-            return Decimal.Parse(str, numberFormat);
+            return decimal.Parse(str, numberFormat);
         }
     }
 }

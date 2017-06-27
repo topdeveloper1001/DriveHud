@@ -1,0 +1,28 @@
+PokerStars Game #46867069246:  Hold'em No Limit ($1/$2 USD) - 2010/07/16 19:40:20 CT [2010/07/16 20:40:20 ET]
+Table 'Eros III' 6-max Seat #6 is the button
+Seat 3: FrAnWaN ($202 in chips) 
+Seat 6: ledzep6028 ($363.60 in chips) 
+ledzep6028: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+ledzep6028: raises $4 to $6
+FrAnWaN: calls $4
+*** FLOP *** [Ts 7d Qh]
+FrAnWaN: checks 
+ledzep6028: bets $8
+FrAnWaN: calls $8
+*** TURN *** [Ts 7d Qh] [Ad]
+FrAnWaN: checks 
+ledzep6028: checks 
+*** RIVER *** [Ts 7d Qh Ad] [9h]
+FrAnWaN: checks 
+ledzep6028: checks 
+*** SHOW DOWN ***
+FrAnWaN: shows [Td Js] (a pair of Tens)
+ledzep6028: mucks hand 
+FrAnWaN collected $27.50 from pot
+*** SUMMARY ***
+Total pot $28 | Rake $0.50 
+Board [Ts 7d Qh Ad 9h]
+Seat 3: FrAnWaN (big blind) showed [Td Js] and won ($27.50) with a pair of Tens
+Seat 6: ledzep6028 (button) (small blind) mucked [5d 4s]

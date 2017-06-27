@@ -106,6 +106,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alias.
+        /// </summary>
+        internal static string Common_Alias {
+            get {
+                return ResourceManager.GetString("Common_Alias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Players: {0}.
+        /// </summary>
+        internal static string Common_Alias_Players {
+            get {
+                return ResourceManager.GetString("Common_Alias_Players", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Common_All {
@@ -138,6 +156,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Apply {
             get {
                 return ResourceManager.GetString("Common_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_ApplyButtonForCalendars {
+            get {
+                return ResourceManager.GetString("Common_ApplyButtonForCalendars", resourceCulture);
             }
         }
         
@@ -539,6 +566,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Stats.
+        /// </summary>
+        internal static string Common_Hud_AllStats {
+            get {
+                return ResourceManager.GetString("Common_Hud_AllStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Size to All.
         /// </summary>
         internal static string Common_Hud_ApplySizeToAll {
@@ -562,6 +598,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Delete {
             get {
                 return ResourceManager.GetString("Common_Hud_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate.
+        /// </summary>
+        internal static string Common_Hud_Duplicate {
+            get {
+                return ResourceManager.GetString("Common_Hud_Duplicate", resourceCulture);
             }
         }
         
@@ -611,6 +656,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Preview.
+        /// </summary>
+        internal static string Common_Hud_Preview {
+            get {
+                return ResourceManager.GetString("Common_Hud_Preview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string Common_Hud_Save {
@@ -638,6 +692,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Apply {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Delete {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotate.
+        /// </summary>
+        internal static string Common_Hud_ToolBar_Rotate {
+            get {
+                return ResourceManager.GetString("Common_Hud_ToolBar_Rotate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Common_HudLayout_Cancel {
@@ -652,6 +733,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudLayout_DeleteLabel {
             get {
                 return ResourceManager.GetString("Common_HudLayout_DeleteLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select table type:.
+        /// </summary>
+        internal static string Common_HudLayout_DuplicateHeader {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_DuplicateHeader", resourceCulture);
             }
         }
         
@@ -701,6 +791,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HEAT MAP.
+        /// </summary>
+        internal static string Common_HudLayout_HeatMap {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_HeatMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter layout&apos;s name:.
         /// </summary>
         internal static string Common_HudLayout_InputLabel {
@@ -715,6 +814,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudLayout_OK {
             get {
                 return ResourceManager.GetString("Common_HudLayout_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player range.
+        /// </summary>
+        internal static string Common_HudLayout_PlayerRange {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_PlayerRange", resourceCulture);
             }
         }
         
@@ -854,6 +962,105 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Stat DH Box.
+        /// </summary>
+        internal static string Common_HudSideBar_4StatDHBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_4StatDHBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Break Line.
+        /// </summary>
+        internal static string Common_HudSideBar_BreakLine {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BreakLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bumper Stickers.
+        /// </summary>
+        internal static string Common_HudSideBar_BumperStickersTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_BumperStickersTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line Bar Graphs.
+        /// </summary>
+        internal static string Common_HudSideBar_GaugeIndicatorTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GaugeIndicatorTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graph.
+        /// </summary>
+        internal static string Common_HudSideBar_GraphTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_GraphTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Map.
+        /// </summary>
+        internal static string Common_HudSideBar_HeatMapTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_HeatMapTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plain Stat Box.
+        /// </summary>
+        internal static string Common_HudSideBar_PlainStatBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlainStatBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player Profile Icon.
+        /// </summary>
+        internal static string Common_HudSideBar_PlayerProfileIconTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_PlayerProfileIconTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Box.
+        /// </summary>
+        internal static string Common_HudSideBar_TextBoxTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TextBoxTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tilt Meter.
+        /// </summary>
+        internal static string Common_HudSideBar_TiltMeterTool {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_TiltMeterTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Design Elements.
+        /// </summary>
+        internal static string Common_HudSideBar_Title {
+            get {
+                return ResourceManager.GetString("Common_HudSideBar_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Avg.Pot Size.
         /// </summary>
         internal static string Common_HudTrackConditions_AveragePotSize {
@@ -989,6 +1196,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to %.
+        /// </summary>
+        internal static string Common_PercentSign {
+            get {
+                return ResourceManager.GetString("Common_PercentSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Place.
         /// </summary>
         internal static string Common_Place {
@@ -1030,6 +1246,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Pot {
             get {
                 return ResourceManager.GetString("Common_Pot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferred Seating.
+        /// </summary>
+        internal static string Common_Preferred_Seating_Button {
+            get {
+                return ResourceManager.GetString("Common_Preferred_Seating_Button", resourceCulture);
             }
         }
         
@@ -1467,6 +1692,105 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All-in Equity%.
+        /// </summary>
+        internal static string Common_ReportView_Hands_AllInEquity {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_AllInEquity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Board.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Board {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Board", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cards.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Cards {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Cards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Date {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $EV Diff.
+        /// </summary>
+        internal static string Common_ReportView_Hands_EvDiff {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_EvDiff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Line {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Line", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Common_ReportView_Hands_NetWon {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Position {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre Flop.
+        /// </summary>
+        internal static string Common_ReportView_Hands_Preflop {
+            get {
+                return ResourceManager.GetString("Common_ReportView_Hands_Preflop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Hole Cards.
+        /// </summary>
+        internal static string Common_ReportView_ShowHoleCards {
+            get {
+                return ResourceManager.GetString("Common_ReportView_ShowHoleCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tagged Hands.
+        /// </summary>
+        internal static string Common_ReportView_TaggedHands {
+            get {
+                return ResourceManager.GetString("Common_ReportView_TaggedHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
         internal static string Common_Reset {
@@ -1706,6 +2030,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_UpdateQuestion {
             get {
                 return ResourceManager.GetString("Common_UpdateQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win%: .
+        /// </summary>
+        internal static string Common_WinPercent {
+            get {
+                return ResourceManager.GetString("Common_WinPercent", resourceCulture);
             }
         }
         

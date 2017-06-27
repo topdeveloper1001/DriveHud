@@ -74,7 +74,7 @@ namespace DriveHUD.Updater.Core
 
         protected virtual Task<XmlDocument> GetXmlDocumentAsync(string xml)
         {
-            return Task<XmlDocument>.Run(() =>
+            return Task.Run(() =>
             {
                 var assembly = Assembly.GetExecutingAssembly();
 

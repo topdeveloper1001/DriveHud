@@ -42,7 +42,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             converter = new PokerCardsConverter();
         }
 
-        public string Build(HandModel2 handModel, IPokerTable tableModel, ISiteConfiguration configuration, out Game game)
+        public XmlDocument BuildXml(HandModel2 handModel, IPokerTable tableModel, ISiteConfiguration configuration, out Game game)
         {
             Check.ArgumentNotNull(() => handModel);
             Check.ArgumentNotNull(() => tableModel);
@@ -94,10 +94,8 @@ namespace DriveHUD.Importers.Builders.iPoker
 
                 handHistoryXmlDocument.DocumentElement.AppendChild(gameXmlNodeImported);
             }
-
-            var handHistoryXml = handHistoryXmlDocument.InnerXml;
-
-            return handHistoryXml;
+            
+            return handHistoryXmlDocument;
         }
 
         #region IO operations
@@ -565,12 +563,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 return 0;
             }
 
-            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);
-
-            //foreach (var player in players)
-            //{
-            //    player.Seat = ConvertSeat(player.Seat);
-            //}
+            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);      
         }
 
         /// <summary>

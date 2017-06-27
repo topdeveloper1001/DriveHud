@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using Model.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -24,9 +23,13 @@ namespace Model.Site
     {
         #region Predefined properties
 
-        EnumPokerSites Site { get; }        
+        EnumPokerSites Site { get; }
 
         IEnumerable<EnumTableType> TableTypes { get; }
+
+        bool IsHandHistoryLocationRequired { get; }
+
+        bool IsPrefferedSeatsAllowed { get; }
 
         #endregion
 

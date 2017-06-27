@@ -27,7 +27,9 @@ namespace DriveHUD.Updater.Core
     {
         bool CheckIsUpdateAvailable(string guid, string applicationPath);
 
-        Task UpdateApplicationAsync(string guid, string applicationPath);
+        ApplicationInfo CheckIsUpdateAvailable(string guid, string applicationPath, out bool isUpdateAvailable);
+
+        Task<DirectoryInfo> UpdateApplicationAsync(string guid, string applicationPath, bool doNotMoveData);
 
         Task InitializeAsync(string pathToUpdatingData = null, X509Certificate2 assemblyCertificate = null);
 
@@ -47,8 +49,6 @@ namespace DriveHUD.Updater.Core
     public class AppUpdater : IAppUpdater
     {
         private readonly IApplicationInfoLoader loader;
-        private const string tempUpdatesFolder = "_updates";
-        private const string tempUnpackedFolder = "_unpacked";
         private X509Certificate2 assemblyCertificate;
 
         public AppUpdater(IApplicationInfoLoader loader)
@@ -111,19 +111,37 @@ namespace DriveHUD.Updater.Core
 
         public virtual bool CheckIsUpdateAvailable(string guid, string applicationPath)
         {
+            bool isUpdateAvailable;
+
+            CheckIsUpdateAvailable(guid, applicationPath, out isUpdateAvailable);
+
+            return isUpdateAvailable;
+        }
+
+        public virtual ApplicationInfo CheckIsUpdateAvailable(string guid, string applicationPath, out bool isUpdateAvailable)
+        {
+            isUpdateAvailable = false;
+
             if (!isInitialized)
-                return false;
+            {
+                return null;
+            }
 
             var assemblyName = AssemblyName.GetAssemblyName(applicationPath);
 
             var appInfo = GetApplicationUpdateInfo(guid, assemblyName.Version);
-            return appInfo != null;
+
+            isUpdateAvailable = appInfo != null;
+
+            return appInfo;
         }
 
-        public async virtual Task UpdateApplicationAsync(string guid, string applicationPath)
+        public async virtual Task<DirectoryInfo> UpdateApplicationAsync(string guid, string applicationPath, bool doNotMoveData)
         {
             if (!isInitialized)
-                return;
+            {
+                return null;
+            }
 
             var assemblyName = AssemblyName.GetAssemblyName(applicationPath);
 
@@ -131,7 +149,9 @@ namespace DriveHUD.Updater.Core
             var appInfo = GetApplicationUpdateInfo(guid, assemblyName.Version);
 
             if (appInfo == null)
-                return;
+            {
+                return null;
+            }
 
             // Download update
             var updatePath = await DownloadUpdateAsync(appInfo);
@@ -144,14 +164,13 @@ namespace DriveHUD.Updater.Core
 
             var unpackedDir = await Unzip(updatePath);
 
-            // verify certificates
-            if (!CertificateHelper.Verify(applicationPath, assemblyCertificate))
+            if (!doNotMoveData)
             {
-                throw new UpdaterException(UpdaterError.VerifyingFailed);
+                // move data
+                await Move(unpackedDir);
             }
 
-            // move data
-            await Move(unpackedDir);
+            return unpackedDir;
         }
 
         public void Dispose()
@@ -165,41 +184,29 @@ namespace DriveHUD.Updater.Core
 
         protected virtual void ProgressReport(int progress)
         {
-            var handle = ProgressChanged;
-
-            if (handle != null)
-                handle(this, new UpdaterProgressChangedEventArgs(progress, currentOperation.OperationStatus));
+            ProgressChanged?.Invoke(this, new UpdaterProgressChangedEventArgs(progress, currentOperation.OperationStatus));
         }
 
         protected virtual void OnOperationChanged(OperationStatus operationStatus)
         {
-            var handle = OperationChanged;
-
-            if (handle != null)
-                handle(this, new UpdaterOperationChangedEventArgs(operationStatus));
+            OperationChanged?.Invoke(this, new UpdaterOperationChangedEventArgs(operationStatus));
         }
 
         protected virtual void OnUnzippingFileChanged(string fileName)
         {
-            var handle = UnzippingFileChanged;
-
-            if (handle != null)
-                handle(this, new UpdateProcessingFileChangedEventArgs(fileName));
+            UnzippingFileChanged?.Invoke(this, new UpdateProcessingFileChangedEventArgs(fileName));
         }
 
         protected virtual void OnCopyingFileChanged(string fileName)
         {
-            var handle = CopyingFileChanged;
-
-            if (handle != null)
-                handle(this, new UpdateProcessingFileChangedEventArgs(fileName));
+            CopyingFileChanged?.Invoke(this, new UpdateProcessingFileChangedEventArgs(fileName));
         }
 
         protected virtual ApplicationInfo GetApplicationUpdateInfo(string guid, Version appVersion)
         {
             Version appInfoVersion;
 
-            var appInfo = applicationInfo.FirstOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
+            var appInfo = applicationInfo.LastOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
                                                                 Version.TryParse(x.Version.Version, out appInfoVersion) &&
                                                                 appInfoVersion > appVersion);
 
@@ -213,7 +220,7 @@ namespace DriveHUD.Updater.Core
                 throw new ArgumentNullException("appInfo");
             }
 
-            DirectoryInfo dir = new DirectoryInfo(tempUpdatesFolder);
+            DirectoryInfo dir = new DirectoryInfo(UpdaterPaths.GetTempUpdatesFolder());
 
             if (!dir.Exists)
                 dir.Create();
@@ -243,7 +250,7 @@ namespace DriveHUD.Updater.Core
 
                                     bytesLoaded += bytesRead;
 
-                                    double progress = (double)bytesLoaded / (double)bytesTotal * 100;
+                                    double progress = (double)bytesLoaded / bytesTotal * 100;
                                     ProgressReport((int)progress);
 
                                 }
@@ -295,7 +302,7 @@ namespace DriveHUD.Updater.Core
             {
                 try
                 {
-                    DirectoryInfo dir = new DirectoryInfo(Path.Combine(tempUpdatesFolder, tempUnpackedFolder));
+                    DirectoryInfo dir = new DirectoryInfo(UpdaterPaths.GetTempUnpackedFolder());
 
                     if (!dir.Exists)
                         dir.Create();
@@ -306,14 +313,14 @@ namespace DriveHUD.Updater.Core
                         {
                             foreach (ZipArchiveEntry entry in archive.Entries)
                             {
-                                if (String.IsNullOrWhiteSpace(entry.Name))
+                                if (string.IsNullOrWhiteSpace(entry.Name))
                                     continue;
 
                                 OnUnzippingFileChanged(entry.Name);
 
                                 var directoryPath = entry.FullName.Remove(entry.FullName.IndexOf(entry.Name));
 
-                                if (!String.IsNullOrWhiteSpace(directoryPath))
+                                if (!string.IsNullOrWhiteSpace(directoryPath))
                                     Directory.CreateDirectory(Path.Combine(dir.FullName, directoryPath));
 
                                 string fileName = Path.Combine(dir.FullName, entry.FullName.Replace("/", @"\"));
@@ -333,7 +340,7 @@ namespace DriveHUD.Updater.Core
 
                                         bytesLoaded += bytesRead;
 
-                                        double progress = (double)bytesLoaded / (double)entry.Length * 100;
+                                        double progress = (double)bytesLoaded / entry.Length * 100;
                                         ProgressReport((int)progress);
 
                                     }
@@ -370,12 +377,14 @@ namespace DriveHUD.Updater.Core
         {
             try
             {
-                var tempPath = Path.Combine(tempUpdatesFolder, tempUnpackedFolder) + "\\";
+                var tempPath = UpdaterPaths.GetTempUnpackedFolder() + "\\";
                 var newFilePath = file.FullName.Remove(file.FullName.IndexOf(tempPath), tempPath.Length);
                 var directoryPath = newFilePath.Remove(newFilePath.IndexOf(file.Name));
 
-                if (!Directory.Exists(directoryPath) && !String.IsNullOrWhiteSpace(directoryPath))
+                if (!Directory.Exists(directoryPath) && !string.IsNullOrWhiteSpace(directoryPath))
+                {
                     Directory.CreateDirectory(directoryPath);
+                }
 
                 using (var oldFileStream = file.OpenRead())
                 {
@@ -412,12 +421,14 @@ namespace DriveHUD.Updater.Core
 
         private void Clear()
         {
-            DirectoryInfo dir = new DirectoryInfo(tempUpdatesFolder);
+            DirectoryInfo dir = new DirectoryInfo(UpdaterPaths.GetTempUpdatesFolder());
 
             try
             {
                 if (dir.Exists)
+                {
                     dir.Delete(true);
+                }
             }
             catch
             {

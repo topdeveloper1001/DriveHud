@@ -13,13 +13,14 @@ namespace DriveHUD.Common.Utils
     {
         private const string LogsFolder = "Logs";
         private const string LayoutsFolder = "Layouts";
+        private const string LayoutsV2Folder = "LayoutsV2";
         private const string ImportFolder = "Import";
 
         private static readonly string _supportEmail = CommonResourceManager.GetResourceStringForCompositeKey("SystemSettings_SupportEmail");
 
         private static readonly string[] _advancedSupportEmails = new string[]
         {
-            "devs@drivehud.com"            
+            "devs@drivehud.com"
         };
 
         private static readonly string _supportPassword = @"DHmexico121@";
@@ -112,6 +113,7 @@ namespace DriveHUD.Common.Utils
             if (!string.IsNullOrWhiteSpace(dataFolder))
             {
                 logs.Add(Path.Combine(dataFolder, "Settings.xml"));
+                logs.Add(Path.Combine(dataFolder, "CurrentPlayer.txt"));
             }
 
             logs = logs.Where(x => File.Exists(x)).ToList();
@@ -144,6 +146,13 @@ namespace DriveHUD.Common.Utils
                     AddZipAtachment(archive, Directory.GetFiles(layoutsFolder, "*.xml"), LayoutsFolder);
                 }
 
+                var layoutsV2Folder = Path.Combine(dataFolder, LayoutsV2Folder);
+
+                if (Directory.Exists(layoutsV2Folder))
+                {
+                    AddZipAtachment(archive, Directory.GetFiles(layoutsV2Folder, "*.xml"), LayoutsV2Folder);
+                }
+
                 var importFolder = Path.Combine(dataFolder, ImportFolder);
 
                 if (Directory.Exists(importFolder))
@@ -154,7 +163,7 @@ namespace DriveHUD.Common.Utils
 
             if (!string.IsNullOrEmpty(dataFolder) && Directory.Exists(dataFolder))
             {
-                var extensionsToZip = new[] { ".data", ".xml", ".df" };
+                var extensionsToZip = new[] { ".data", ".xml", ".df", ".txt" };
                 AddZipAtachment(archive,
                     Directory.GetFiles(dataFolder)
                         .Where(

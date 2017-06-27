@@ -12,20 +12,13 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
-using Model.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudElementViewModelCreationInfo
     {        
-        public HudLayoutInfo HudLayoutInfo { get; set; }
-
-        public IEnumerable<HudElementViewModel> PreparedHudElements { get; set; }
+        public HudLayoutInfoV2 HudLayoutInfo { get; set; }        
 
         public int SeatNumber { get; set; }
 

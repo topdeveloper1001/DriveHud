@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopupContainerSettingsViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using Prism.Commands;
-using Prism.Interactivity.InteractionRequest;
-
-using DriveHUD.Application.Models;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
-
-using DriveHUD.ViewModels;
-using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Application.ViewModels.Settings;
-using Model.Enums;
+using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Common.Exceptions;
-using DriveHUD.Common.Resources;
-using Model.Settings;
-using Prism.Events;
 using Model.Events;
 using Model.Interfaces;
+using Model.Settings;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
@@ -59,7 +61,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 ViewModelCollection = new List<ISettingsViewModel>()
                 {
-                    new SettingsGeneralViewModel(name: "General"),
+                    new SettingsGeneralViewModel(name: "General", parent: this),
                     new SettingsSiteViewModel(name: "Site Settings"),
                     new SettingsCurrencyViewModel(name: "Currency"),
                     new SettingsRakeBackViewModel(name: "RakeBack"),
@@ -79,7 +81,15 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 var viewModel = ViewModelCollection.FirstOrDefault(x => x == obj);
                 if (viewModel != null)
                 {
-                    SelectedViewModel = viewModel;
+                    SettingsSiteViewModel vm = viewModel as SettingsSiteViewModel;
+                    if (vm != null && _preferredSeatingFlag)
+                    {
+                        vm.SelectedSiteType = EnumPokerSites.Ignition;
+                        _preferredSeatingFlag = false;
+                        SelectedViewModel = vm;
+                    }
+                    else
+                        SelectedViewModel = viewModel;
                 }
             }
         }
@@ -97,11 +107,12 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         private void Apply(object obj)
         {
             var oldSettings = _settingsService.GetSettings();
+
             var isUpdatePlayersRequired = oldSettings?.SiteSettings.IsProcessedDataLocationEnabled != _settingsModel?.SiteSettings.IsProcessedDataLocationEnabled
                 || (oldSettings?.SiteSettings.ProcessedDataLocation != _settingsModel?.SiteSettings.ProcessedDataLocation
                     && (_settingsModel?.SiteSettings.IsProcessedDataLocationEnabled ?? false));
 
-            if (isUpdatePlayersRequired)
+            if (isUpdatePlayersRequired && StorageModel.PlayerSelectedItem != null)
             {
                 _dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
             }
@@ -117,10 +128,12 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             Apply(null);
             FinishInteraction.Invoke();
         }
+
         #endregion
 
         #region Properties
 
+        private bool _preferredSeatingFlag;
         private PopupContainerSettingsViewModelNotification _notification;
         private IEnumerable<ISettingsViewModel> _viewModelCollection;
         private object _selectedViewModel;
@@ -151,7 +164,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
                     InitializeViewModelCollection();
                     LoadSettings();
-                    SwitchView(ViewModelCollection.FirstOrDefault());
+
+                    if (_notification.Parameter == "Preferred Seating")
+                        _preferredSeatingFlag = true;       //become true when need start setting tab from Bodog/Ignition
+
+
+                    SwitchView(_notification.Parameter == "Preferred Seating"
+                        ? ViewModelCollection.FirstOrDefault(x => x.Name == "Site Settings")
+                        : ViewModelCollection.FirstOrDefault());
                 }
             }
         }

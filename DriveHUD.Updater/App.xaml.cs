@@ -72,7 +72,9 @@ namespace DriveHUD.Updater
         private void HandleException(Exception ex)
         {
             if (ex != null)
-                System.Windows.MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             Current.Shutdown();
         }

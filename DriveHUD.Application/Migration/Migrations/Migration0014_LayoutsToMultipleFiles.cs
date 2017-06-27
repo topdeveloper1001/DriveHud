@@ -10,17 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.MigrationService.Migrators;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
 using Model.Filters;
+using Model.Settings;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,8 +32,6 @@ using System.Xml.Serialization;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
-    using Model.Settings;
-
     [Migration(14)]
     public class Migration0014_LayoutsToMultipleFiles : Migration
     {
@@ -39,13 +39,13 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private List<HudLayoutInfo> defaultLayouts;
 
-        private readonly IHudLayoutsService hudLayoutsService;
+        private readonly HudLayoutsMigrationService hudLayoutsService;
 
         private readonly ISettingsService settingsService;
 
         public Migration0014_LayoutsToMultipleFiles()
         {
-            hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            hudLayoutsService = new HudLayoutsMigrationService();
             settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
 
             hashTable = GetHashTable();
@@ -54,10 +54,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
         private List<HudLayoutInfo> GetDefaultLayouts()
         {
             var result = new List<HudLayoutInfo>();
+
             foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
             {
                 result.AddRange(hudLayoutsService.GetAllLayouts(tableType));
             }
+
             return result;
         }
 
@@ -65,6 +67,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             if (!File.Exists(fileName))
                 return null;
+
             using (var fs = File.Open(fileName, FileMode.Open))
             {
                 var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
@@ -83,8 +86,11 @@ namespace DriveHUD.Application.MigrationService.Migrations
         private HudLayoutInfo GetHudLayoutInfo(List<HudSavedLayout> layouts, HudViewType hudViewType)
         {
             var masterLayout = layouts.FirstOrDefault();
+
             if (masterLayout == null)
+            {
                 return null;
+            }
 
             var tableDescription = GetTableDescription(masterLayout.LayoutId);
 
@@ -204,7 +210,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
 
                 if (oldLayouts == null)
+                {
                     return;
+                }
 
                 while (oldLayouts.Layouts.Count > 0)
                 {
@@ -232,29 +240,38 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
                     {
                         var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
+
                         if (newLayout == null)
+                        {
                             continue;
+                        }
 
                         if (!newLayout.IsDefault)
                         {
                             var i = 1;
+
                             string hudTypeName = string.Empty;
+
                             if (hudViewType != HudViewType.Plain)
+                            {
                                 hudTypeName = $" {hudViewType}";
+                            }
 
                             string tableTypeName = string.Empty;
-                            if (
-                                !newLayout.Name.Contains(
-                                    CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
-                                tableTypeName =
-                                    $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
+
+                            if (!newLayout.Name.Contains(CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
+                            {
+                                tableTypeName = $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
+                            }
 
                             var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
+
                             while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
                             {
                                 layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
                                 i++;
                             }
+
                             newLayout.Name = layoutName;
                         }
                         else
@@ -265,6 +282,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                                 defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
                             }
                         }
+
                         var layoutFileName = Save(newLayout);
 
                         foreach (var selected in grouppedLayouts)
@@ -295,7 +313,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                             hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
                         }
-
                     }
 
                     oldLayouts.Layouts.RemoveAll(
@@ -474,10 +491,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 if (first.Caption != second.Caption) return false;
                 if (first.Stat != second.Stat) return false;
                 if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
-                if (first.GroupName != second.GroupName) return false;
-                if (first.PropertyName != second.PropertyName) return false;
+                if (first.GroupName != second.GroupName) return false;                
                 if (first.CurrentColor != second.CurrentColor) return false;
-                if (first.Settings_IsAvailable != second.Settings_IsAvailable) return false;
                 if (first.SettingsAppearance_IsChecked != second.SettingsAppearance_IsChecked) return false;
                 if (first.SettingsPlayerType_IsChecked != second.SettingsPlayerType_IsChecked) return false;
                 if (first.SettingsAppearanceFontBold_IsChecked != second.SettingsAppearanceFontBold_IsChecked) return false;

@@ -20,17 +20,17 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudSelectLayoutViewModel : ViewModelBase
     {
-        private readonly HudSelectLayoutViewModelInfo _viewModelInfo;
+        private readonly HudSelectLayoutViewModelInfo viewModelInfo;
 
         public HudSelectLayoutViewModel(HudSelectLayoutViewModelInfo viewModelInfo)
         {
-            Check.ArgumentNotNull(() => viewModelInfo);
+            Check.Require(viewModelInfo != null);
 
-            this._viewModelInfo = viewModelInfo;
+            this.viewModelInfo = viewModelInfo;
 
             Initialize();
         }
@@ -39,21 +39,22 @@ namespace DriveHUD.Application.ViewModels
         {
             var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            var layouts =
-                hudLayoutService.GetLayoutsNames(_viewModelInfo.TableType).ToList();
+            var layouts = hudLayoutService.GetLayoutsNames(viewModelInfo.TableType).ToList();
 
             items = new ObservableCollection<string>(layouts);
-            if (!items.Contains(_viewModelInfo.LayoutName))
-                items.Insert(0, _viewModelInfo.LayoutName);
-            selectedItem = _viewModelInfo.LayoutName;
 
+            if (!items.Contains(viewModelInfo.LayoutName))
+            {
+                items.Insert(0, viewModelInfo.LayoutName);
+            }
 
+            selectedItem = viewModelInfo.LayoutName;
 
-            ShowInput = _viewModelInfo.IsSaveAsMode;
+            ShowInput = viewModelInfo.IsSaveAsMode;
 
             if (ShowInput)
             {
-                Name = _viewModelInfo.LayoutName;
+                Name = viewModelInfo.LayoutName;
             }
 
             var canSave = this.WhenAny(x => x.Name, x => !string.IsNullOrWhiteSpace(x.Value));
@@ -61,13 +62,13 @@ namespace DriveHUD.Application.ViewModels
             SaveCommand = ReactiveCommand.Create(canSave);
             SaveCommand.Subscribe(x =>
             {
-                _viewModelInfo.Save?.Invoke();
+                viewModelInfo.Save?.Invoke();
             });
 
             CancelCommand = ReactiveCommand.Create();
             CancelCommand.Subscribe(x =>
             {
-                _viewModelInfo.Cancel?.Invoke();
+                viewModelInfo.Cancel?.Invoke();
             });
         }
 
@@ -75,12 +76,11 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> CancelCommand { get; private set; }
 
-
         public string Header
         {
             get
             {
-                return _viewModelInfo.IsDeleteMode
+                return viewModelInfo.IsDeleteMode
                     ? CommonResourceManager.Instance.GetResourceString("Common_HudLayout_DeleteLabel")
                     : CommonResourceManager.Instance.GetResourceString("Common_HudLayout_SelectLabel");
             }
@@ -90,23 +90,38 @@ namespace DriveHUD.Application.ViewModels
 
         public bool ShowInput
         {
-            get { return showInput; }
-            private set { this.RaiseAndSetIfChanged(ref showInput, value); }
+            get
+            {
+                return showInput;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref showInput, value);
+            }
         }
 
         private ObservableCollection<string> items;
 
         public ObservableCollection<string> Items
         {
-            get { return items; }
-            private set { this.RaiseAndSetIfChanged(ref items, value); }
+            get
+            {
+                return items;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref items, value);
+            }
         }
 
         private string selectedItem;
 
         public string SelectedItem
         {
-            get { return selectedItem; }
+            get
+            {
+                return selectedItem;
+            }
             set
             {
                 this.RaiseAndSetIfChanged(ref selectedItem, value);
@@ -118,8 +133,14 @@ namespace DriveHUD.Application.ViewModels
 
         public string Name
         {
-            get { return name; }
-            set { this.RaiseAndSetIfChanged(ref name, value); }
+            get
+            {
+                return name;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref name, value);
+            }
         }
     }
 }

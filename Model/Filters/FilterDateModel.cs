@@ -1,15 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PokerBuilder.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Importer;
+using Model.Settings;
+using System;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using Model.Enums;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.Extensions;
-using Microsoft.Practices.ServiceLocation;
-using Model.Settings;
 
 namespace Model.Filters
 {
@@ -18,8 +28,8 @@ namespace Model.Filters
     {
         public FilterDateModel()
         {
-            this.Name = "Date";
-            this.Type = EnumFilterModelType.FilterDateModel;
+            Name = "Date";
+            Type = EnumFilterModelType.FilterDateModel;
         }
 
         public void Initialize()
@@ -28,27 +38,47 @@ namespace Model.Filters
         }
 
         #region Methods
+
         public Expression<Func<Playerstatistic, bool>> GetFilterPredicate()
         {
-            switch (this.DateFilterType)
+            switch (DateFilterType.EnumDateRange)
             {
-                case EnumDateFiter.Today:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.StartOfDay());
-                case EnumDateFiter.ThisWeek:
+                case EnumDateFiterStruct.EnumDateFiter.Today:
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.StartOfDay());
+
+                case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
                     FirstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
-                case EnumDateFiter.ThisMonth:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfMonth());
-                case EnumDateFiter.LastMonth:
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
+
+                case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfMonth());
+
+                case EnumDateFiterStruct.EnumDateFiter.LastMonth:
                     var statisticCollection = ServiceLocator.Current.GetInstance<SingletonStorageModel>()?.StatisticCollection;
+
                     if (statisticCollection == null || !statisticCollection.Any())
                     {
                         break;
                     }
-                    var lastAvailableDate = statisticCollection.Max(x => x.Time);
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= lastAvailableDate.FirstDayOfMonth());
-                case EnumDateFiter.ThisYear:
-                    return PredicateBuilder.Create<Playerstatistic>(x => x.Time >= DateTime.Now.FirstDayOfYear());
+
+                    var lastAvailableDate = statisticCollection.Max(x => Converter.ToLocalizedDateTime(x.Time));
+
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= lastAvailableDate.FirstDayOfMonth());
+
+                case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
+                    if (DateFilterType.DateFrom <= DateFilterType.DateTo)
+                    {
+                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateFrom &&
+                            Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateTo);
+                    }
+                    else
+                    {
+                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateFrom &&
+                            Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateTo);
+                    }
+
+                case EnumDateFiterStruct.EnumDateFiter.ThisYear:
+                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfYear());
             };
 
             return null;
@@ -56,7 +86,7 @@ namespace Model.Filters
 
         public void ResetFilter()
         {
-            this.DateFilterType = EnumDateFiter.None;
+            DateFilterType = new EnumDateFiterStruct { EnumDateRange = EnumDateFiterStruct.EnumDateFiter.None };
         }
 
         public void LoadFilter(IFilterModel filter)
@@ -67,26 +97,37 @@ namespace Model.Filters
                 DateFilterType = filterToLoad.DateFilterType;
             }
         }
+
         #endregion
 
         #region Properties
+
         public static Action OnChanged;
 
         private EnumFilterModelType _type;
-        private EnumDateFiter _dateFilterType;
+
+        private EnumDateFiterStruct _dateFilterType;
 
         public EnumFilterModelType Type
         {
-            get { return _type; }
+            get
+            {
+                return _type;
+            }
             set
             {
-                if (value == _type) return;
+                if (value == _type)
+                {
+                    return;
+                }
+
                 _type = value;
+
                 OnPropertyChanged();
             }
         }
 
-        public EnumDateFiter DateFilterType
+        public EnumDateFiterStruct DateFilterType
         {
             get
             {
@@ -95,15 +136,20 @@ namespace Model.Filters
 
             set
             {
-                if (value == _dateFilterType) return;
-                _dateFilterType = value;
-                OnPropertyChanged();
+                if (value.EnumDateRange == _dateFilterType.EnumDateRange)
+                {
+                    return;
+                }
 
-                if (OnChanged != null) OnChanged.Invoke();
+                _dateFilterType = value;
+
+                OnPropertyChanged();
+                OnChanged?.Invoke();
             }
         }
 
         public DayOfWeek FirstDayOfWeek { get; private set; }
+
         #endregion
     }
 }

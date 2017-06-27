@@ -10,14 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.API;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
-using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.ViewModels.Alias;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
+using DriveHUD.Application.ViewModels.Update;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -30,7 +32,6 @@ using DriveHUD.Common.Wpf.Helpers;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
-using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
@@ -38,9 +39,11 @@ using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
 using Model.Settings;
+using Model.Stats;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ProtoBuf;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,10 +55,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
-using DriveHUD.API;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -81,6 +84,8 @@ namespace DriveHUD.Application.ViewModels
 
         private bool isSetPlayerIdMessageShown = false;
 
+        private const int ImportFileUpdateDelay = 750;
+
         #endregion
 
         #region Constructor
@@ -104,6 +109,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
+            eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
 
             InitializeFilters();
             InitializeData();
@@ -127,10 +133,17 @@ namespace DriveHUD.Application.ViewModels
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-            StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
+
+            CalendarFrom = DateTime.Now;
+            CalendarTo = DateTime.Now;
+
+            RadDropDownButtonFilterIsOpen = false;
+            RadDropDownButtonFilterKeepOpen = true;
 
             StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
@@ -149,14 +162,22 @@ namespace DriveHUD.Application.ViewModels
             StopHudCommand = new DelegateCommand(x => StopHud(), x => IsHudRunning);
             HideEquityCalculatorCommand = new RelayCommand(HideEquityCalculator);
             SettingsCommand = new RelayCommand(OpenSettingsMenu);
+            AliasMenuCommand = new RelayCommand(OpenAliasMenu);
             UpgradeCommand = new RelayCommand(Upgrade);
             PurchaseCommand = new RelayCommand(Purchase);
 
             PopupSettingsRequest = new InteractionRequest<PopupContainerSettingsViewModelNotification>();
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
+            AliasViewRequest = new InteractionRequest<INotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
+            UpdateViewRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
+
+            SortedPlayers = (CollectionView)CollectionViewSource.GetDefaultView(StorageModel.PlayerCollection);
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.DecodedName), ListSortDirection.Ascending));
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.PokerSite), ListSortDirection.Ascending));
         }
 
         private void InitializeFilters()
@@ -228,11 +249,18 @@ namespace DriveHUD.Application.ViewModels
 
             System.Windows.Application.Current?.Dispatcher.Invoke(() =>
             {
-                // update data after hud is stopped
-                CreatePositionReport();
-                UpdateCurrentView();
+                try
+                {
+                    // update data after hud is stopped
+                    CreatePositionReport();
+                    UpdateCurrentView();
 
-                RefreshCommandsCanExecute();
+                    RefreshCommandsCanExecute();
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, ex);
+                }
             });
 
             GC.Collect();
@@ -241,10 +269,22 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
-            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+            var player = StorageModel.PlayerSelectedItem;
+
+            List<Playerstatistic> statistics = new List<Playerstatistic>();
+
+            if (player is PlayerCollectionItem)
+            {
+                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
+            else if (player is AliasCollectionItem)
+            {
+                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+            }
+
             AddHandTags(statistics);
 
-            if (statistics != null)
+            if (statistics != null || statistics.Any())
             {
                 StorageModel.StatisticCollection.Reset(statistics);
             }
@@ -263,7 +303,10 @@ namespace DriveHUD.Application.ViewModels
             if (args.IsUpdatePlayersCollection)
             {
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-                StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
+                // TODO : reading players from db.
+                StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
+                StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
+
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
@@ -303,12 +346,13 @@ namespace DriveHUD.Application.ViewModels
         {
             UpdatePlayerList(gameInfo);
 
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
+            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
                 {
                     StorageModel.TryLoadHeroPlayer();
                 });
+
                 return;
             }
 
@@ -331,20 +375,12 @@ namespace DriveHUD.Application.ViewModels
                 // need to update UI info
                 RefreshData(e.GameInfo);
 
-                // if no handle available then we don't need to do anything with this data, because hud won't be up
+                // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
                     LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
                     return;
                 }
-
-                var sw = new Stopwatch();
-
-                sw.Start();
-
-                var refreshTime = sw.ElapsedMilliseconds;
-
-                sw.Restart();
 
                 var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
 
@@ -367,15 +403,11 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(activeLayout.HudViewType.ToString());
-                var preparedHudElements = tableConfigurator.GenerateElements(maxSeats);
-
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
-                    HudViewType = activeLayout.HudViewType,
                     TableType = gameInfo.TableType,
                     PokerSite = gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
@@ -386,39 +418,25 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                // TODO: Opponent Analysis report turned off
-                //var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
-                //topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
-
-                for (int i = 1; i <= maxSeats; i++)
+                for (int seatNumber = 1; seatNumber <= maxSeats; seatNumber++)
                 {
-                    var playerName = string.Empty;
-                    var playerCollectionItem = new PlayerCollectionItem();
-                    var seatNumber = 0;
+                    var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
 
-                    foreach (var player in players)
-                    {
-                        if (player.SeatNumber == i)
-                        {
-                            if (!string.IsNullOrEmpty(player.PlayerName))
-                            {
-                                playerName = player.PlayerName;
-                                seatNumber = player.SeatNumber;
-                                playerCollectionItem = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.PlayerName, PokerSite = site };
-                            }
-
-                            break;
-                        }
-                    }
-
-                    if (string.IsNullOrEmpty(playerName))
+                    if (player == null || string.IsNullOrEmpty(player.PlayerName))
                     {
                         continue;
                     }
 
+                    var playerCollectionItem = new PlayerCollectionItem
+                    {
+                        PlayerId = player.PlayerId,
+                        Name = player.PlayerName,
+                        PokerSite = site
+                    };
+
                     var playerHudContent = new PlayerHudContent
                     {
-                        Name = playerName,
+                        Name = player.PlayerName,
                         SeatNumber = seatNumber
                     };
 
@@ -428,6 +446,9 @@ namespace DriveHUD.Application.ViewModels
 
                     var item = sessionCacheStatistic.PlayerData;
                     var sessionData = sessionCacheStatistic.SessionPlayerData;
+
+                    // need to do that for track meter tool
+                    #region track condition meter
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
@@ -446,6 +467,8 @@ namespace DriveHUD.Application.ViewModels
                         }
                     }
 
+                    #endregion
+
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
                     var hudElementCreationInfo = new HudElementViewModelCreationInfo
@@ -453,7 +476,6 @@ namespace DriveHUD.Application.ViewModels
                         GameType = gameInfo.EnumGameType,
                         HudLayoutInfo = activeLayout,
                         PokerSite = gameInfo.PokerSite,
-                        PreparedHudElements = preparedHudElements,
                         SeatNumber = seatNumber
                     };
 
@@ -465,115 +487,81 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = playerName;
+                    playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
-                                                           string.Empty;
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
 
+                    // configure data for graph tool
+                    var sessionStats = sessionData.StatsSessionCollection;
 
-                    var sessionMoney = sessionData.MoneyWonCollection;
-                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionData.MoneyWonCollection == null
-                        ? new ObservableCollection<decimal>()
-                        : new ObservableCollection<decimal>(sessionMoney);
+                    var graphTools = playerHudContent.HudElement.Tools.OfType<HudGraphViewModel>().ToArray();
+
+                    foreach (var graphTool in graphTools)
+                    {
+                        if (graphTool.MainStat == null || !sessionStats.ContainsKey(graphTool.MainStat.Stat))
+                        {
+                            graphTool.StatSessionCollection = new ReactiveList<decimal>();
+                            continue;
+                        }
+
+                        graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
+                    }
+
+                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>().ToArray();
+
+                    heatMapTools.ForEach(x =>
+                    {
+                        var heatMapKey = sessionData.HeatMaps.Keys
+                            .ToArray()
+                            .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
+
+                        x.HeatMap = sessionData.HeatMaps[heatMapKey];
+                    });
+
+                    var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
 
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
 
-                    // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionStats.ContainsKey(Stat.NetWon) ?
+                        new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
+                        new ObservableCollection<decimal>();
+
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection
+                        .Concat(heatMapTools.Select(x => x.BaseStat))
+                        .Concat(gaugeIndicatorTools.Select(x => x.BaseStat))
+                        .ToArray();
+
+                    StatsProvider.UpdateStats(activeLayoutHudStats);
+
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
                         // remove prohibited for PS stats.
                         activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToArray();
+                        activeLayoutHudStats.ForEach(x => x.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(
+                                x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3))));
                     }
 
-                    var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
-                                        {
-                                            var statInfoBreak = x as StatInfoBreak;
-
-                                            if (statInfoBreak != null)
-                                            {
-                                                return statInfoBreak.Clone();
-                                            }
-
-                                            return x.Clone();
-                                        }).ToArray();
-
-                    statsExceptActive.ForEach(x => x.IsNotVisible = true);
-
-                    var allStats = activeLayoutHudStats.Select(x =>
+                    foreach (var statInfo in activeLayoutHudStats)
                     {
-                        var statInfoBreak = x as StatInfoBreak;
+                        var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
 
-                        if (statInfoBreak != null)
-                        {
-                            return statInfoBreak.Clone();
-                        }
-
-                        if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
-                        {
-                            // for poker stars we take only 3 last color ranges.
-                            var clone = x.Clone();
-                            clone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3)));
-                            return clone;
-                        }
-                        else
-                        {
-                            return x.Clone();
-                        }
-
-                    }).Concat(statsExceptActive);
-
-                    foreach (var statInfo in allStats)
-                    {
-                        if (!string.IsNullOrEmpty(statInfo.PropertyName))
+                        if (!string.IsNullOrEmpty(propertyName))
                         {
                             if (item.TotalHands < statInfo.MinSample)
                             {
                                 statInfo.IsNotVisible = true;
                             }
 
-                            statInfo.AssignStatInfoValues(item);
+                            statInfo.AssignStatInfoValues(item, propertyName);
                         }
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {
                             continue;
                         }
-
-                        // temporary
-                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
-
-                        if (tooltipCollection != null)
-                        {
-                            foreach (var tooltip in tooltipCollection)
-                            {
-                                tooltip.CategoryStat.AssignStatInfoValues(item);
-
-                                foreach (var stat in tooltip.StatsCollection)
-                                {
-                                    stat.AssignStatInfoValues(item);
-                                }
-
-                                if (tooltip.CardsList == null)
-                                {
-                                    continue;
-                                }
-
-                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
-
-                                if (listObj != null)
-                                {
-                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                                }
-                            }
-                            statInfo.StatInfoToolTipCollection = tooltipCollection;
-                        }
-
-                        playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
@@ -592,10 +580,6 @@ namespace DriveHUD.Application.ViewModels
 
                     ht.ListHUDPlayer.Add(playerHudContent);
                 }
-
-                sw.Stop();
-
-                Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars)
                 {
@@ -639,20 +623,21 @@ namespace DriveHUD.Application.ViewModels
                     LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                 }
 
-                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
-                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
-                    StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown))
+                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.DecodedName) ||
+                    StorageModel.PlayerSelectedItem?.PokerSite == EnumPokerSites.Unknown))
                 {
                     isSetPlayerIdMessageShown = true;
+
                     System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
-                   {
-                       this.NotificationRequest.Raise(
+                    {
+                        NotificationRequest.Raise(
                            new PopupActionNotification
                            {
-                               Content = "Please, set Player ID in order to see data.",
-                               Title = "DriveHUD",
+                               Content = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Message"),
+                               Title = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Title"),
                            }, n => { });
-                   });
+                    });
                 }
             }
             catch (Exception ex)
@@ -681,14 +666,13 @@ namespace DriveHUD.Application.ViewModels
             await Task.Run(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
+                Task.Delay(ImportFileUpdateDelay).Wait();
                 RefreshData();
             });
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
             ProgressViewModel.Reset();
-
-            CreatePositionReport();
         }
 
         internal async void ImportFromDirectory()
@@ -719,14 +703,13 @@ namespace DriveHUD.Application.ViewModels
             await Task.Factory.StartNew(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
+                Task.Delay(ImportFileUpdateDelay).Wait();
                 RefreshData();
             });
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
             ProgressViewModel.Reset();
-
-            CreatePositionReport();
         }
 
         private void RefreshCommandsCanExecute()
@@ -761,11 +744,34 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
+            var isPlayersReloadRequired = gameInfo == null || gameInfo.AddedPlayers == null;
 
-            foreach (var player in updatedPlayers)
+            var players = isPlayersReloadRequired ? dataService.GetPlayersList() : gameInfo.AddedPlayers;
+
+            if (isPlayersReloadRequired)
             {
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    var selectedPlayer = StorageModel.PlayerSelectedItem;
+
+                    StorageModel.PlayerCollection.RemoveAll(x => x is PlayerCollectionItem);
+                    StorageModel.PlayerCollection.AddRange(players);
+
+                    if (selectedPlayer is PlayerCollectionItem)
+                    {
+                        StorageModel.PlayerSelectedItem = StorageModel.PlayerCollection.FirstOrDefault(x => x.PlayerId == selectedPlayer.PlayerId);
+                    }
+                });
+            }
+            else
+            {
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    foreach (var player in players)
+                    {
+                        StorageModel.PlayerCollection.Add(player);
+                    }
+                });
             }
         }
 
@@ -829,7 +835,23 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = dataService.GetHandNotes((short)StorageModel.PlayerSelectedItem.PokerSite);
+            var notes = new List<Handnotes>();
+
+            var allPlayers = new List<PlayerCollectionItem>();
+
+            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+            {
+                allPlayers.Add(StorageModel.PlayerSelectedItem as PlayerCollectionItem);
+            }
+            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
+            {
+                allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
+            }
+
+            foreach (var player in allPlayers)
+            {
+                notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
 
             var statisticsForUpdate = (from note in notes
                                        join statistic in statistics on note.Gamenumber equals statistic.GameNumber
@@ -843,7 +865,17 @@ namespace DriveHUD.Application.ViewModels
 
         private void OpenSettingsMenu(object obj)
         {
-            PopupSettingsRequest_Execute(new PubSubMessage());
+            PubSubMessage pubSubMessage = new PubSubMessage();
+            if (obj?.ToString() == "Preferred Seating")
+                pubSubMessage.Parameter = "Preferred Seating";
+
+            PopupSettingsRequest_Execute(pubSubMessage);
+        }
+
+        private void OpenAliasMenu()
+        {
+            var model = new AliasViewModel();
+            AliasViewRequest.Raise(model);
         }
 
         private void Upgrade()
@@ -866,6 +898,72 @@ namespace DriveHUD.Application.ViewModels
         internal void UpdateHeader()
         {
             OnPropertyChanged(nameof(AppStartupHeader));
+        }
+
+        internal async void RebuildStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    LogProvider.Log.Info("Executing statistics rebuild");
+
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RebuildingStatistics"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.ReImport();
+
+                    LogProvider.Log.Info("Statistics rebuild has been completed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void RecoverStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RecoveringStatistics"));
+
+                    LogProvider.Log.Info("Executing statistics recovering");
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.Recover();
+
+                    LogProvider.Log.Info("Statistics recovering has been completed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Statistics recovering failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal void ShowUpdate()
+        {
+            var updateViewModel = new UpdateViewModel(App.UpdateApplicationInfo);
+            UpdateViewRequest?.Raise(updateViewModel);
         }
 
         #endregion
@@ -917,6 +1015,38 @@ namespace DriveHUD.Application.ViewModels
 
                 return string.Format(CommonResourceManager.Instance.GetResourceString("Common_ApplicationTitle"), App.Version, string.Join(" & ", licenseStrings));
             }
+        }
+
+        private bool _radDropDownButtonFilterKeepOpen { get; set; }
+
+        public bool RadDropDownButtonFilterKeepOpen
+        {
+            get { return _radDropDownButtonFilterKeepOpen; }
+            set { _radDropDownButtonFilterKeepOpen = value; OnPropertyChanged(); }
+        }
+
+        private bool _radDropDownButtonFilterIsOpen { get; set; }
+
+        public bool RadDropDownButtonFilterIsOpen
+        {
+            get { return _radDropDownButtonFilterIsOpen; }
+            set { _radDropDownButtonFilterIsOpen = value; OnPropertyChanged(); }
+        }
+
+        private DateTime _calendarFrom { get; set; }
+
+        public DateTime CalendarFrom
+        {
+            get { return _calendarFrom; }
+            set { _calendarFrom = value; OnPropertyChanged(); }
+        }
+
+        private DateTime _calendarTo { get; set; }
+
+        public DateTime CalendarTo
+        {
+            get { return _calendarTo; }
+            set { _calendarTo = value; OnPropertyChanged(); }
         }
 
         public Version Version
@@ -1155,6 +1285,45 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            private set
+            {
+                if (isEnabled != value)
+                {
+                    isEnabled = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private CollectionView sortedPlayers;
+
+        public CollectionView SortedPlayers
+        {
+            get
+            {
+                return sortedPlayers;
+            }
+            private set
+            {
+                if (ReferenceEquals(sortedPlayers, value))
+                {
+                    return;
+                }
+
+                sortedPlayers = value;
+
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -1180,34 +1349,55 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
+                RadDropDownButtonFilterKeepOpen = false;
+                RadDropDownButtonFilterIsOpen = false;
+                RadDropDownButtonFilterKeepOpen = true;
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
             }
-
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            EnumDateFiterStruct enumDateFiterStruct = new EnumDateFiterStruct();
+            IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             switch (type.FilterType)
             {
                 case EnumFilterDropDown.FilterToday:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.Today));
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.Today;
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterThisWeek:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisWeek));
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisWeek;
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterThisMonth:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisMonth));
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisMonth;
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterLastMonth:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.LastMonth));
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.LastMonth;
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterThisYear:
-                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(EnumDateFiter.ThisYear));
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.ThisYear;
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+                    break;
+                case EnumFilterDropDown.FilterCustomDateRange:
+
+                    enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
+                    enumDateFiterStruct.DateFrom = CalendarFrom;
+                    enumDateFiterStruct.DateTo = CalendarTo;
+
+                    eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
+
+                    RadDropDownButtonFilterKeepOpen = false;
+                    RadDropDownButtonFilterIsOpen = false;
+                    RadDropDownButtonFilterKeepOpen = true;
                     break;
                 case EnumFilterDropDown.FilterAllStats:
                 default:
                     eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
                     break;
             }
+
         }
 
         public ICommand PurgeCommand { get; set; }
@@ -1220,6 +1410,7 @@ namespace DriveHUD.Application.ViewModels
         public ICommand CalculateEquityCommand { get; set; }
         public ICommand HideEquityCalculatorCommand { get; set; }
         public ICommand SettingsCommand { get; set; }
+        public ICommand AliasMenuCommand { get; set; }
 
         #endregion
 
@@ -1227,27 +1418,37 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            if (importerService.IsStarted)
+            try
             {
-                importerService.StopImport();
+                if (importerService.IsStarted)
+                {
+                    importerService.StopImport();
+                }
+
+                hudTransmitter.Dispose();
+                importerSessionCacheService.End();
+
+                if (StorageModel.PlayerSelectedItem != null)
+                {
+                    dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short?)StorageModel.PlayerSelectedItem.PokerSite);
+                }
+
+                // flush betonline cash
+                var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
+                tournamentsCacheService.Flush();
+
+                PokerStarsDetectorSingletonService.Instance.Stop();
+
+                apiHost.CloseAPIService();
+
+                if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+                {
+                    eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                }
             }
-
-            hudTransmitter.Dispose();
-            importerSessionCacheService.End();
-
-            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
-
-            // flush betonline cash
-            var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
-            tournamentsCacheService.Flush();
-
-            PokerStarsDetectorSingletonService.Instance.Stop();
-
-            apiHost.CloseAPIService();
-
-            if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
+            catch (Exception ex)
             {
-                eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
+                LogProvider.Log.Error(this, ex);
             }
         }
 
@@ -1268,7 +1469,10 @@ namespace DriveHUD.Application.ViewModels
 
         public InteractionRequest<INotification> PopupSupportRequest { get; private set; }
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
+        public InteractionRequest<INotification> AliasViewRequest { get; private set; }
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
+        public InteractionRequest<INotification> UpdateViewRequest { get; private set; }
 
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {
@@ -1276,6 +1480,7 @@ namespace DriveHUD.Application.ViewModels
 
             notification.Title = "Settings";
             notification.PubSubMessage = pubSubMessage;
+            notification.Parameter = pubSubMessage?.Parameter;
 
             this.PopupSettingsRequest.Raise(notification,
                 returned =>
@@ -1296,7 +1501,7 @@ namespace DriveHUD.Application.ViewModels
             notification.Title = "Filters";
             notification.FilterTuple = filterTuple;
 
-            this.PopupFiltersRequest.Raise(notification,
+            PopupFiltersRequest.Raise(notification,
                 returned => { });
         }
 

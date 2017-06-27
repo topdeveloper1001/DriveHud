@@ -11,6 +11,7 @@ using GalaSoft.MvvmLight;
 using DriveHUD.Bootstrapper.App.Utilities;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace DriveHUD.Bootstrapper.App.ViewModels
 {
@@ -40,6 +41,22 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
             }
         }
 
+        public string Title
+        {
+            get
+            {
+                return $"DriveHUD - {Version}";
+            }
+        }
+
+        public Version Version
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version;
+            }
+        }
+
         public MainWindowViewModel()
         {
             CurrentPackageState = PackageState.Unknown;
@@ -49,9 +66,9 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
 
         private void EvaluateConditions(Collection<BundleCondition> conditions)
         {
-            foreach(var condition in conditions)
+            foreach (var condition in conditions)
             {
-                if(!_model.Bootstrapper.Engine.EvaluateCondition(condition.Condition))
+                if (!_model.Bootstrapper.Engine.EvaluateCondition(condition.Condition))
                 {
                     _model.LogMessage(string.Format("Condition '{0}' evaluated to false. Condition Message: {1}", condition.Condition, condition.Message));
                     _model.ErrorsList.Add(condition.Message);
@@ -91,9 +108,9 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
 
         private void DetectPackageComplete(object sender, DetectPackageCompleteEventArgs e)
         {
-            if(e.PackageId == "DriveHUD")
+            if (e.PackageId == "DriveHUD")
             {
-                if(e.State == PackageState.Superseded)
+                if (e.State == PackageState.Superseded)
                 {
                     _model.ErrorsList.Add("The version of the software on your computer is newer than the version provided with this installer.");
                 }
@@ -134,7 +151,7 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
             EvaluateConditions(_model.BundleInfo.Conditions);
 
             /* Display final view in case of error/failed condition */
-            if(_model.ErrorsList.Any())
+            if (_model.ErrorsList.Any())
             {
                 _model.InvokeFinalView();
                 return;
@@ -161,7 +178,7 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
         private void DetectBegin(object sender, DetectBeginEventArgs e)
         {
             Debug.WriteLine("DetectBegin -> installed = " + e.Installed.ToString());
-        } 
+        }
         #endregion
     }
 }

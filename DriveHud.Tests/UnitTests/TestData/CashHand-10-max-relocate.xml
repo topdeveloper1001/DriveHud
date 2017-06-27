@@ -385,6 +385,5 @@
 			<PROTOCOL_FEATURE name="may_wait_for_bb" />
 			<PROTOCOL_FEATURE name="multi_bbj" />
 		</PROTOCOL_FEATURES>
-	</TableDetails>
-	<RelocationData me="8" pivot="5" />
+	</TableDetails>	
 </HandHistory>

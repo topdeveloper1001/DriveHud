@@ -1,21 +1,28 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="SettingsSiteViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model;
-using Model.Enums;
 using Model.Settings;
 using Model.Site;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 
@@ -34,13 +41,15 @@ namespace DriveHUD.Application.ViewModels.Settings
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
-                { EnumPokerSites.Ignition, "Bodog / Ignition" },
-                { EnumPokerSites.BetOnline, "BetOnline" },
+                { EnumPokerSites.Ignition, string.Format("{0} / {1}", CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition), CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Bodog)) },
+                { EnumPokerSites.BetOnline, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BetOnline) },
                 { EnumPokerSites.BlackChipPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BlackChipPoker) },
-                { EnumPokerSites.PokerStars, "Pokerstars" },
+                { EnumPokerSites.PokerStars, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.PokerStars) },
                 { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
-                { EnumPokerSites.SportsBetting, "Sportbetting.ag" },
-                { EnumPokerSites.TigerGaming, "Tigergaming" },
+                { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
+                { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
+                { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
             };
 
             SelectedSiteViewModel = new SiteViewModel();
@@ -63,83 +72,86 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         #region Properties
 
-        private Dictionary<EnumPokerSites, string> _pokerSitesDictionary;
-        private Dictionary<EnumTableType, string> _tableTypeDictionary;
-        private EnumPokerSites _selectedSiteType;
-        private EnumTableType _selectedTableType;
-        private SiteModel _selectedSite;
-        private SiteViewModel _siteViewModel;
-        private string _selectedHandHistoryLocation;
-        private bool _isPreferredSeatingVisible;
+        private Dictionary<EnumPokerSites, string> pokerSitesDictionary;
+        private Dictionary<EnumTableType, string> tableTypeDictionary;
+        private EnumPokerSites selectedSiteType;
+        private EnumTableType selectedTableType;
+        private SiteModel selectedSite;
+        private SiteViewModel siteViewModel;
+        private string selectedHandHistoryLocation;
+        private bool isPreferredSeatingVisible;
+        private bool isHandHistoryLocationRequired;
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
         {
-            get { return _pokerSitesDictionary; }
+            get { return pokerSitesDictionary; }
             set
             {
-                SetProperty(ref _pokerSitesDictionary, value);
+                SetProperty(ref pokerSitesDictionary, value);
             }
         }
 
         public Dictionary<EnumTableType, string> TableTypeDictionary
         {
-            get { return _tableTypeDictionary; }
+            get { return tableTypeDictionary; }
             set
             {
-                SetProperty(ref _tableTypeDictionary, value);
+                SetProperty(ref tableTypeDictionary, value);
             }
         }
 
         public EnumPokerSites SelectedSiteType
         {
-            get { return _selectedSiteType; }
+            get { return selectedSiteType; }
             set
             {
                 UpdateTableTypeDictionary(value);
                 UpdateSelectedSite(value);
-                IsPreferredSeatingVisible = (value != EnumPokerSites.BetOnline 
-                    && value != EnumPokerSites.SportsBetting 
-                    && value != EnumPokerSites.TigerGaming);
 
-                SetProperty(ref _selectedSiteType, value);
+                var siteConfiguration = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(value);
+
+                IsPreferredSeatingVisible = siteConfiguration.IsPrefferedSeatsAllowed;
+                IsHandHistoryLocationRequired = siteConfiguration.IsHandHistoryLocationRequired;
+
+                SetProperty(ref selectedSiteType, value);
             }
         }
 
         public EnumTableType SelectedTableType
         {
-            get { return _selectedTableType; }
+            get { return selectedTableType; }
             set
             {
-                SetProperty(ref _selectedTableType, value);
+                SetProperty(ref selectedTableType, value);
                 SetCurrentSeatModel();
             }
         }
 
         public SiteModel SelectedSite
         {
-            get { return _selectedSite; }
+            get { return selectedSite; }
             set
             {
-                SetProperty(ref _selectedSite, value);
+                SetProperty(ref selectedSite, value);
                 SetCurrentSeatModel();
             }
         }
 
         public SiteViewModel SelectedSiteViewModel
         {
-            get { return _siteViewModel; }
+            get { return siteViewModel; }
             set
             {
-                SetProperty(ref _siteViewModel, value);
+                SetProperty(ref siteViewModel, value);
             }
         }
 
         public string SelectedHandHistoryLocation
         {
-            get { return _selectedHandHistoryLocation; }
+            get { return selectedHandHistoryLocation; }
             set
             {
-                SetProperty(ref _selectedHandHistoryLocation, value);
+                SetProperty(ref selectedHandHistoryLocation, value);
             }
         }
 
@@ -178,10 +190,26 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         public bool IsPreferredSeatingVisible
         {
-            get { return _isPreferredSeatingVisible; }
+            get
+            {
+                return isPreferredSeatingVisible;
+            }
             set
             {
-                SetProperty(ref _isPreferredSeatingVisible, value);
+                SetProperty(ref isPreferredSeatingVisible, value);
+            }
+
+        }
+
+        public bool IsHandHistoryLocationRequired
+        {
+            get
+            {
+                return isHandHistoryLocationRequired;
+            }
+            set
+            {
+                SetProperty(ref isHandHistoryLocationRequired, value);
             }
         }
 
@@ -229,7 +257,6 @@ namespace DriveHUD.Application.ViewModels.Settings
                     System.Windows.MessageBox.Show("Unable to write to the directory specified");
                 }
             }
-
         }
 
         private void AddHandHistoryLocation(object obj)
@@ -318,5 +345,4 @@ namespace DriveHUD.Application.ViewModels.Settings
             OnPropertyChanged(nameof(SelectedSeatModel));
         }
     }
-
 }

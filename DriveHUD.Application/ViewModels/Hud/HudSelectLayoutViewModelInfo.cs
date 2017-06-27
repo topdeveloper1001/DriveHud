@@ -13,15 +13,20 @@
 using DriveHUD.Entities;
 using System;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudSelectLayoutViewModelInfo
     {
         public EnumTableType TableType { get; set; }
+
         public string LayoutName { get; set; }
+
         public Action Save { get; set; }
+
         public Action Cancel { get; set; }
+
         public bool IsSaveAsMode { get; set; }
+
         public bool IsDeleteMode { get; set; }
     }
 }

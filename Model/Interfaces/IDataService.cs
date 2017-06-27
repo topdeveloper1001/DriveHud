@@ -10,22 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.IO;
+using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Model.Data;
-using DriveHUD.Entities;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Model.Interfaces
 {
     public interface IDataService
-    {        
+    {
+        void SetPlayerStatisticPath(string path);
+
         IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
 
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
         Indicators GetPlayerIndicator(int playerId, short pokersiteId);
+
         IList<HandHistoryRecord> GetHandHistoryRecords();
+
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 
         Players GetPlayer(string playerName, short pokersiteId);
@@ -33,6 +37,8 @@ namespace Model.Interfaces
         IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId);
 
         IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId);
+
+        IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
 
         Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId);
 
@@ -64,11 +70,11 @@ namespace Model.Interfaces
 
         Stream OpenStorageStream(string filename, FileMode mode);
 
-        IList<PlayerCollectionItem> GetPlayersList();
+        IList<IPlayer> GetPlayersList();
 
-        void AddPlayerToList(PlayerCollectionItem playerItem);
+        void AddPlayerToList(IPlayer playerItem);
 
-        void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems);
+        void AddPlayerRangeToList(IEnumerable<IPlayer> playerItems);
 
         void RemoveAppData();
 
@@ -78,8 +84,20 @@ namespace Model.Interfaces
         /// <param name="statistic">Statistic to delete</param>
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
 
-        PlayerCollectionItem GetActivePlayer();
+        IPlayer GetActivePlayer();
 
-        void SaveActivePlayer(string playerName, short pokersiteId);
+        void SaveActivePlayer(string playerName, short? pokersiteId);
+
+        #region Aliases
+
+        Aliases GetAlias(string aliasName);
+
+        void SaveAlias(AliasCollectionItem aliasToSave);
+
+        void RemoveAlias(AliasCollectionItem aliasToRemove);
+
+        IList<IPlayer> GetAliasesList();
+
+        #endregion
     }
 }

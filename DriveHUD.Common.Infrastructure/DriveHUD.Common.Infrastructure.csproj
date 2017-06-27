@@ -74,6 +74,10 @@
       <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
       <Name>DriveHUD.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
       <Name>Model</Name>

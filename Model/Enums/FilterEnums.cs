@@ -22,13 +22,14 @@ namespace Model.Enums
 
     public enum EnumFilterDropDown
     {
-        FilterCreate,
-        FilterToday,
-        FilterThisWeek,
-        FilterThisMonth,
-        FilterLastMonth,
-        FilterThisYear,
-        FilterAllStats
+        FilterCreate = 0,
+        FilterToday = 1,
+        FilterThisWeek = 2,
+        FilterThisMonth = 3,
+        FilterLastMonth = 4,
+        FilterThisYear = 5,
+        FilterCustomDateRange = 6,
+        FilterAllStats = 7
     }
 
 
@@ -75,15 +76,24 @@ namespace Model.Enums
         QuickFilterItem,
     }
 
-    public enum EnumDateFiter
+    public struct EnumDateFiterStruct
+
     {
-        None,
-        Custom,
-        Today,
-        ThisWeek,
-        ThisMonth,
-        LastMonth,
-        ThisYear,
+        public EnumDateFiter EnumDateRange{ get; set; }
+        public DateTime DateFrom { get; set; }
+        public DateTime DateTo { get; set; }
+
+        public enum EnumDateFiter
+        {
+            None,
+            Custom,
+            Today,
+            ThisWeek,
+            ThisMonth,
+            LastMonth,
+            ThisYear,
+            CustomDateRange
+        }
     }
 
     public enum EnumHandValuesFastFilterType
@@ -114,6 +124,12 @@ namespace Model.Enums
         NonPremiumHand,
         BluffRange,
     }
+
+    public enum QuickFilterPositionEnum
+    {
+        Any, BTN, Blinds, Small, Big, IP, OOP
+    }
+
 
     public enum EnumFilterType
     {

@@ -1,39 +1,57 @@
-﻿using DriveHUD.Common.Linq;
+﻿//-----------------------------------------------------------------------
+// <copyright file="TournamentChartData.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
-using Model.Importer;
 using Model.Interfaces;
-using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.ChartData
 {
-    public class DayTournamentChartData : ITournamentChartData
+    public abstract class TournamentChartDataBase : ITournamentChartData
     {
-        public IEnumerable<TournamentReportRecord> Create()
+        public virtual IEnumerable<TournamentReportRecord> Create()
         {
             var report = new List<TournamentReportRecord>();
 
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
 
-            if (tournaments == null || tournaments.Count() == 0)
-                return report;
+            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
-            tournaments.ForEach(x => Converter.ToLocalizedDateTime(x.Firsthandtimestamp));
-
-            var firstDate = tournaments.Max(x => x.Firsthandtimestamp).AddDays(-1);
-            foreach (var group in tournaments.Where(x => x.Firsthandtimestamp >= firstDate).OrderBy(x => x.Firsthandtimestamp).GroupBy(x => new { x.Firsthandtimestamp.Year, x.Firsthandtimestamp.Month, x.Firsthandtimestamp.Day, x.Firsthandtimestamp.Hour }))
+            if (tournaments == null || tournaments.Count == 0)
             {
-                TournamentReportRecord stat = new TournamentReportRecord();
-                stat.Started = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day, group.Key.Hour, 0, 0);
+                return report;
+            }
 
-                var tournamentStats = tournaments.Where(t => t.Firsthandtimestamp >= firstDate &&
-                                                       (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber)));
+            var firstDate = GetFirstDate(tournaments.Max(x => x.Firsthandtimestamp));
+
+            var groupedTournaments = tournaments
+                .Where(x => x.Firsthandtimestamp >= firstDate)
+                .OrderBy(x => x.Firsthandtimestamp)
+                .GroupBy(x => BuildGroupedDateKey(x));
+
+            foreach (var group in groupedTournaments)
+            {
+                var stat = new TournamentReportRecord();
+
+                stat.Started = CreateDateTimeFromDateKey(group.Key);
+
+                var tournamentStats = tournaments
+                    .Where(t => t.Firsthandtimestamp >= firstDate
+                        && (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber))).
+                    ToArray();
 
                 stat.SetTotalBuyIn(tournamentStats.Sum(x => x.Buyinincents));
                 stat.SetRake(tournamentStats.Sum(x => x.Rakeincents));
@@ -41,127 +59,163 @@ namespace Model.ChartData
                 stat.SetWinning(tournamentStats.Sum(x => x.Winningsincents));
 
                 stat.TournamentsInPrizes = tournamentStats.Where(x => x.Winningsincents > 0).Count();
-                stat.TournamentsPlayed = tournamentStats.Count();
+                stat.TournamentsPlayed = tournamentStats.Length;
 
                 report.Add(stat);
             }
 
             return report;
         }
-    }
 
-    public class WeekTournamentChartData : ITournamentChartData
-    {
-        public IEnumerable<TournamentReportRecord> Create()
+        protected abstract DateTime GetFirstDate(DateTime maxDateTime);
+
+        protected abstract GroupedDateKey BuildGroupedDateKey(Tournaments tournament);
+
+        protected abstract DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey);
+
+        protected class GroupedDateKey
         {
-            var report = new List<TournamentReportRecord>();
+            public int Year { get; set; }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
+            public int Month { get; set; }
 
-            if (tournaments == null || tournaments.Count() == 0)
-                return report;
+            public int Day { get; set; }
 
-            tournaments.ForEach(x => Converter.ToLocalizedDateTime(x.Firsthandtimestamp));
+            public int Hour { get; set; }
 
-            var firstDate = tournaments.Max(x => x.Firsthandtimestamp).AddDays(-7);
-            foreach (var group in tournaments.Where(x => x.Firsthandtimestamp >= firstDate).OrderBy(x => x.Firsthandtimestamp).GroupBy(x => new { x.Firsthandtimestamp.Year, x.Firsthandtimestamp.Month, x.Firsthandtimestamp.Day }))
+            public override bool Equals(object obj)
             {
-                TournamentReportRecord stat = new TournamentReportRecord();
-                stat.Started = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day);
+                var dateKey = obj as GroupedDateKey;
 
-                var tournamentStats = tournaments.Where(t => t.Firsthandtimestamp >= firstDate &&
-                                                       (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber)));
+                if (dateKey == null)
+                {
+                    return false;
+                }
 
-                stat.SetTotalBuyIn(tournamentStats.Sum(x => x.Buyinincents));
-                stat.SetRake(tournamentStats.Sum(x => x.Rakeincents));
-                stat.SetRebuy(tournamentStats.Sum(x => x.Rebuyamountincents));
-                stat.SetWinning(tournamentStats.Sum(x => x.Winningsincents));
-
-                stat.TournamentsInPrizes = tournamentStats.Where(x => x.Winningsincents > 0).Count();
-                stat.TournamentsPlayed = tournamentStats.Count();
-
-                report.Add(stat);
+                return Equals(dateKey);
             }
 
-            return report;
+            public override int GetHashCode()
+            {
+                unchecked
+                {
+                    var hashcode = 23;
+                    hashcode = (hashcode * 31) + Year;
+                    hashcode = (hashcode * 31) + Month;
+                    hashcode = (hashcode * 31) + Day;
+                    hashcode = (hashcode * 31) + Hour;
+                    return hashcode;
+                }
+            }
+
+            private bool Equals(GroupedDateKey dateKey)
+            {
+                return Year == dateKey.Year && Month == dateKey.Month && Day == dateKey.Day && Hour == dateKey.Hour;
+            }
         }
     }
 
-    public class MonthTournamentChartData : ITournamentChartData
+    public class DayTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
-        public IEnumerable<TournamentReportRecord> Create()
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
-            var report = new List<TournamentReportRecord>();
+            return maxDateTime.AddDays(-1);
+        }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
-
-            if (tournaments == null || tournaments.Count() == 0)
-                return report;
-
-            tournaments.ForEach(x => Converter.ToLocalizedDateTime(x.Firsthandtimestamp));
-
-            var firstDate = tournaments.Max(x => x.Firsthandtimestamp).AddMonths(-1);
-            foreach (var group in tournaments.Where(x => x.Firsthandtimestamp >= firstDate).OrderBy(x => x.Firsthandtimestamp).GroupBy(x => new { x.Firsthandtimestamp.Year, x.Firsthandtimestamp.Month, x.Firsthandtimestamp.Day }))
+        protected override GroupedDateKey BuildGroupedDateKey(Tournaments tournament)
+        {
+            var dateKey = new GroupedDateKey
             {
-                TournamentReportRecord stat = new TournamentReportRecord();
-                stat.Started = new System.DateTime(group.Key.Year, group.Key.Month, group.Key.Day);
+                Year = tournament.Firsthandtimestamp.Year,
+                Month = tournament.Firsthandtimestamp.Month,
+                Day = tournament.Firsthandtimestamp.Day,
+                Hour = tournament.Firsthandtimestamp.Hour
+            };
 
-                var tournamentStats = tournaments.Where(t => t.Firsthandtimestamp >= firstDate &&
-                                                       (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber)));
+            return dateKey;
+        }
 
-                stat.SetTotalBuyIn(tournamentStats.Sum(x => x.Buyinincents));
-                stat.SetRake(tournamentStats.Sum(x => x.Rakeincents));
-                stat.SetRebuy(tournamentStats.Sum(x => x.Rebuyamountincents));
-                stat.SetWinning(tournamentStats.Sum(x => x.Winningsincents));
-
-                stat.TournamentsInPrizes = tournamentStats.Where(x => x.Winningsincents > 0).Count();
-                stat.TournamentsPlayed = tournamentStats.Count();
-
-                report.Add(stat);
-            }
-
-            return report;
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day, dateKey.Hour, 0, 0);
+            return dateTime;
         }
     }
 
-    public class YearTournamentChartData : ITournamentChartData
+    public class WeekTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
-        public IEnumerable<TournamentReportRecord> Create()
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
-            var report = new List<TournamentReportRecord>();
+            return maxDateTime.AddDays(-7);
+        }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
-
-            if (tournaments == null || tournaments.Count() == 0)
-                return report;
-
-            tournaments.ForEach(x => Converter.ToLocalizedDateTime(x.Firsthandtimestamp));
-
-            var firstDate = tournaments.Max(x => x.Firsthandtimestamp).AddYears(-1);
-            foreach (var group in tournaments.Where(x => x.Firsthandtimestamp >= firstDate).OrderBy(x => x.Firsthandtimestamp).GroupBy(x => new { x.Firsthandtimestamp.Year, x.Firsthandtimestamp.Month }))
+        protected override GroupedDateKey BuildGroupedDateKey(Tournaments tournament)
+        {
+            var dateKey = new GroupedDateKey
             {
-                TournamentReportRecord stat = new TournamentReportRecord();
-                stat.Started = new System.DateTime(group.Key.Year, group.Key.Month, 1);
+                Year = tournament.Firsthandtimestamp.Year,
+                Month = tournament.Firsthandtimestamp.Month,
+                Day = tournament.Firsthandtimestamp.Day
+            };
 
-                var tournamentStats = tournaments.Where(t => t.Firsthandtimestamp >= firstDate &&
-                                                       (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber)));
+            return dateKey;
+        }
 
-                stat.SetTotalBuyIn(tournamentStats.Sum(x => x.Buyinincents));
-                stat.SetRake(tournamentStats.Sum(x => x.Rakeincents));
-                stat.SetRebuy(tournamentStats.Sum(x => x.Rebuyamountincents));
-                stat.SetWinning(tournamentStats.Sum(x => x.Winningsincents));
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day);
+            return dateTime;
+        }
+    }
 
-                stat.TournamentsInPrizes = tournamentStats.Where(x => x.Winningsincents > 0).Count();
-                stat.TournamentsPlayed = tournamentStats.Count();
+    public class MonthTournamentChartData : TournamentChartDataBase, ITournamentChartData
+    {
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        {
+            return maxDateTime.AddMonths(-1);
+        }
 
-                report.Add(stat);
-            }
+        protected override GroupedDateKey BuildGroupedDateKey(Tournaments tournament)
+        {
+            var dateKey = new GroupedDateKey
+            {
+                Year = tournament.Firsthandtimestamp.Year,
+                Month = tournament.Firsthandtimestamp.Month,
+                Day = tournament.Firsthandtimestamp.Day
+            };
 
-            return report;
+            return dateKey;
+        }
+
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day);
+            return dateTime;
+        }
+    }
+
+    public class YearTournamentChartData : TournamentChartDataBase, ITournamentChartData
+    {
+        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        {
+            return maxDateTime.AddYears(-1);
+        }
+
+        protected override GroupedDateKey BuildGroupedDateKey(Tournaments tournament)
+        {
+            var dateKey = new GroupedDateKey
+            {
+                Year = tournament.Firsthandtimestamp.Year,
+                Month = tournament.Firsthandtimestamp.Month
+            };
+
+            return dateKey;
+        }
+
+        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
+        {
+            var dateTime = new DateTime(dateKey.Year, dateKey.Month, 1);
+            return dateTime;
         }
     }
 }
-
