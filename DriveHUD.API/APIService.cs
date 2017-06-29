@@ -53,9 +53,11 @@ namespace DriveHUD.API
 
         public HandHistory[] GetHands(string date)
         {
-            DateTime parsedDate = ParseDate(date, _storageModel.StatisticCollection.Max(x => x.Time));
+            var statisticCollection = _storageModel.StatisticCollection.ToList();
 
-            var handsToSelect = _storageModel.StatisticCollection.Where(x => x.Time.Date == parsedDate.Date);
+            DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
+
+            var handsToSelect = statisticCollection.Where(x => x.Time.Date == parsedDate.Date);
 
             if (!handsToSelect.Any())
             {
@@ -93,15 +95,17 @@ namespace DriveHUD.API
 
         public HandInfoDataContract[] GetHandsList(string date)
         {
-            DateTime parsedDate = ParseDate(date, _storageModel.StatisticCollection.Max(x => x.Time));
+            var statisticCollection = _storageModel.StatisticCollection.ToList();
+
+            DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
 
             if (TryParseDate(date, out parsedDate))
             {
-                return _storageModel.StatisticCollection.Where(x => x.Time.Date == parsedDate.Date).Select(x => HandInfoDataContract.Map(x)).ToArray();
+                return statisticCollection.Where(x => x.Time.Date == parsedDate.Date).Select(x => HandInfoDataContract.Map(x)).ToArray();
             }
             else
             {
-                return _storageModel.StatisticCollection.Select(x => HandInfoDataContract.Map(x)).ToArray();
+                return statisticCollection.Select(x => HandInfoDataContract.Map(x)).ToArray();
             }
         }
 

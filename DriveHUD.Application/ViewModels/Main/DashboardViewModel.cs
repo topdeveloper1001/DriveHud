@@ -221,13 +221,13 @@ namespace DriveHUD.Application.ViewModels
             switch (range)
             {
                 case EnumTelerikRadChartDisplayRange.Year:
-                    indicators = new List<Indicators>(new YearChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
                 case EnumTelerikRadChartDisplayRange.Month:
-                    indicators = new List<Indicators>(new MonthChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
                 case EnumTelerikRadChartDisplayRange.Week:
-                    indicators = new List<Indicators>(new WeekChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
             }
 

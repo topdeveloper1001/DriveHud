@@ -795,4 +795,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Alias_Players" xml:space="preserve">
     <value>Players: {0}</value>
   </data>
+  <data name="Common_RegistrationView_TrialRegisterError" xml:space="preserve">
+    <value>Could not register error. Internal error occurred. Please contact support.</value>
+  </data>
 </root>
