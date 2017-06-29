@@ -1,27 +1,38 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReportGadgetViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
+using DriveHUD.Application.Views;
+using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Data;
+using Model.Enums;
+using Model.Events;
+using Model.Events.FilterEvents;
+using Model.Extensions;
+using Model.Filters;
+using Model.Interfaces;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
-using Prism.Events;
-using Model.Data;
-using DriveHUD.Entities;
-using Model.Enums;
-using DriveHUD.Common.Infrastructure.Base;
-using Model.Events;
-using Microsoft.Practices.ServiceLocation;
-using System;
-using Model.Interfaces;
-using DriveHUD.Common.Resources;
-using Model.Extensions;
 using System.Linq.Expressions;
-using DriveHUD.Common.Utils;
-using Model.Filters;
-using DriveHUD.Application.Views;
-using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
-using Prism.Interactivity.InteractionRequest;
-using DriveHUD.Common.Wpf.Actions;
-using System.Threading.Tasks;
-using Model.Events.FilterEvents;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -61,7 +72,7 @@ namespace DriveHUD.Application.ViewModels
             CalculateEquityCommand = new RelayCommand(ShowCalculateEquityView);
             ButtonFilterModelSectionRemove_CommandClick = new RelayCommand(ButtonFilterModelSectionRemove_OnClick);
             MakeNoteCommand = new RelayCommand(MakeNote);
-            DeleteHandCommand = new RelayCommand(DeleteHand);
+            DeleteHandCommand = new RelayCommand(x => DeleteHands());
             EditTournamentCommand = new RelayCommand(EditTournament);
             ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
 
@@ -144,23 +155,25 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void DeleteHand(object obj)
+        private void DeleteHands()
         {
-            if (obj != null && obj is ComparableCardsStatistic)
+            var itemsToDelete = SelectedComparableCardsStatistic?.Select(x => x.Statistic).ToArray();
+
+            if (itemsToDelete != null && itemsToDelete.Length > 0)
             {
-                var stat = (obj as ComparableCardsStatistic)?.Statistic;
-
-                if (stat == null)
-                {
-                    return;
-                }
-
                 var notification = new PopupBaseNotification()
                 {
-                    Title = "Delete Hand",
-                    CancelButtonCaption = "Cancel",
-                    ConfirmButtonCaption = "Yes",
-                    Content = "Are you sure you want to delete this hand?",
+                    Title = itemsToDelete.Length == 1 ?
+                        CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_SingleTitle") :
+                        string.Format(CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_MultipleTitle"), itemsToDelete.Length),
+
+                    CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Cancel"),
+                    ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Yes"),
+
+                    Content = itemsToDelete.Length == 1 ?
+                        CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_SingleContent") :
+                        CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_MultipleContent"),
+
                     IsDisplayH1Text = true
                 };
 
@@ -172,8 +185,11 @@ namespace DriveHUD.Application.ViewModels
                               var dataservice = ServiceLocator.Current.GetInstance<IDataService>();
                               var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
-                              dataservice.DeletePlayerStatisticFromFile(stat);
-                              StorageModel.StatisticCollection.Remove(stat);
+                              foreach (var stat in itemsToDelete)
+                              {
+                                  dataservice.DeletePlayerStatisticFromFile(stat);
+                                  StorageModel.StatisticCollection.Remove(stat);
+                              }
 
                               eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                           }
@@ -312,6 +328,7 @@ namespace DriveHUD.Application.ViewModels
 
         private Indicators _reportSelectedItem;
         private IEnumerable<Playerstatistic> _reportSelectedItemStatisticsCollection;
+        private IEnumerable<Playerstatistic> _selectedStatistics;
 
         private RangeObservableCollection<ComparableCardsStatistic> _reportSelectedItemStatisticsCollection_Filtered;
 
@@ -408,12 +425,42 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public IEnumerable<Playerstatistic> SelectedStatistics
+        {
+            get { return _selectedStatistics; }
+            set
+            {
+                _selectedStatistics = value;
+                OnPropertyChanged();
+            }
+        }
+
         public RangeObservableCollection<ComparableCardsStatistic> ReportSelectedItemStatisticsCollection_Filtered
         {
             get { return _reportSelectedItemStatisticsCollection_Filtered; }
             set
             {
                 _reportSelectedItemStatisticsCollection_Filtered = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<ComparableCardsStatistic> selectedComparableCardsStatistic = new ObservableCollection<ComparableCardsStatistic>();
+
+        public ObservableCollection<ComparableCardsStatistic> SelectedComparableCardsStatistic
+        {
+            get
+            {
+                return selectedComparableCardsStatistic;
+            }
+            private set
+            {
+                if (ReferenceEquals(selectedComparableCardsStatistic, value))
+                {
+                    return;
+                }
+
+                selectedComparableCardsStatistic = value;
                 OnPropertyChanged();
             }
         }

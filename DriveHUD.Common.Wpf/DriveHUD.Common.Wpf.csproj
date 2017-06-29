@@ -137,6 +137,7 @@
     <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />
     <Compile Include="AttachedBehaviors\MainScrollBarBehavior.cs" />
     <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
+    <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
     <Compile Include="Controls\NonTopmostPopup.cs" />

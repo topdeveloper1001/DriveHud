@@ -1963,7 +1963,7 @@
                     CanUserReorderColumns="True"
                     RowHeight="40"
                     Foreground="Red"
-                    SelectionMode="Single"
+                    SelectionMode="Multiple"
                     MouseDoubleClick="GridViewKnownHands_MouseDoubleClick"
                     ItemsSource="{Binding Path=ReportSelectedItemStatisticsCollection_Filtered}"
                     RowLoaded="GridViewKnownHands_RowLoaded"
@@ -1973,6 +1973,11 @@
                     EnableColumnVirtualization="True"
                     EnableRowVirtualization="True"
                     Sorting="GridViewKnownHands_Sorting">
+
+                    <i:Interaction.Behaviors>
+                        <dh:RadGridViewMultiSelectBehavior
+                            SelectedItems="{Binding SelectedComparableCardsStatistic, Mode=OneWay}" />
+                    </i:Interaction.Behaviors>
 
                     <telerik:RadContextMenu.ContextMenu>
                         <telerik:RadContextMenu

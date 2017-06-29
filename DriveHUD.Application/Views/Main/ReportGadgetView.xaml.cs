@@ -1,44 +1,49 @@
-﻿using System;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Windows.Controls;
-using System.Windows.Input;
-
-
-using Telerik.Windows.Controls;
-using Telerik.Windows.Data;
-using Telerik.Windows.Persistence;
-using Telerik.Windows.Persistence.Services;
-using DriveHUD.Entities;
-using Model.Interfaces;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReportGadgetView.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ReportsLayout;
 using DriveHUD.Application.ViewModels;
-using Microsoft.Practices.ServiceLocation;
-using Telerik.Windows.Controls.GridView;
-using System.Windows;
-using DriveHUD.Common.Resources;
-using Telerik.Windows;
-using DriveHUD.Common.Ifrastructure;
-using Model.Data;
-using DriveHUD.Common.Reflection;
-using System.Collections.ObjectModel;
-using System.Windows.Data;
-using Model.Extensions;
-using Model;
-using DriveHUD.Application.Views.Replayer;
-using DriveHUD.Common.Utils;
-using Model.Replayer;
-using Model.Enums;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using Model.Reports;
-using DriveHUD.Common.Log;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Common.Ifrastructure;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Converters;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model;
+using Model.Data;
+using Model.Enums;
+using Model.Extensions;
+using Model.Interfaces;
+using Model.Reports;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Input;
+using Telerik.Windows;
+using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.GridView;
+using Telerik.Windows.Data;
+using Telerik.Windows.Persistence;
+using Telerik.Windows.Persistence.Services;
 
 namespace DriveHUD.Application.Views
 {
@@ -97,7 +102,7 @@ namespace DriveHUD.Application.Views
             handsGridContextMenu = new RadContextMenu();
             tournamentsGridContextMenu = new RadContextMenu();
             /* Calculate equity item */
-            RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false, 
+            RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false,
                 EquityCalcMenuItem_Click);
             Binding equityEnabledBinding = new Binding(nameof(ReportGadgetViewModel.IsEquityCalculatorEnabled)) { Source = this.reportGadgetViewModel };
             calculateEquityItem.SetBinding(RadMenuItem.IsEnabledProperty, equityEnabledBinding);
@@ -146,7 +151,7 @@ namespace DriveHUD.Application.Views
             /* Edit tournament */
             RadMenuItem editTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditTournamentResourceString), false, EditTournament);
             /* Delete Hand */
-            RadMenuItem deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, DeleteHand);
+            RadMenuItem deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, null, command: nameof(ReportGadgetViewModel.DeleteHandCommand));
 
             handsGridContextMenu.Items.Add(calculateEquityItem);
             handsGridContextMenu.Items.Add(exportHandItem);
@@ -158,7 +163,7 @@ namespace DriveHUD.Application.Views
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
         }
 
-        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null)
+        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null, string command = null)
         {
             var item = new RadMenuItem
             {
@@ -166,6 +171,16 @@ namespace DriveHUD.Application.Views
                 IsCheckable = isCheckable,
                 Tag = tag
             };
+
+            if (!string.IsNullOrEmpty(command))
+            {
+                var commandBinding = new Binding(command)
+                {
+                    Source = reportGadgetViewModel
+                };
+
+                item.SetBinding(RadMenuItem.CommandProperty, commandBinding);
+            }
 
             if (clickAction != null)
             {
@@ -192,16 +207,7 @@ namespace DriveHUD.Application.Views
                 reportGadgetViewModel.EditTournamentCommand.Execute(item.DataContext);
             }
         }
-
-        private void DeleteHand(object sender, RadRoutedEventArgs e)
-        {
-            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
-            {
-                reportGadgetViewModel.DeleteHandCommand.Execute(item.DataContext);
-            }
-        }
-
+   
         private void MakeNote(object sender, RadRoutedEventArgs e)
         {
             var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
@@ -527,6 +533,12 @@ namespace DriveHUD.Application.Views
                 }
                 e.Cancel = true;
             }
+        }
+
+        private void GridViewKnownHands_SelectionChanged(object sender, SelectionChangeEventArgs e)
+        {
+            reportGadgetViewModel.SelectedStatistics = new ObservableCollection<Playerstatistic>(((RadGridView)sender).SelectedItems
+                .Select(x => (x as ComparableCardsStatistic).Statistic).OfType<Playerstatistic>());
         }
 
         private IEnumerable<T> SortData<T>(IEnumerable<T> collection, GridViewSortingEventArgs e)
