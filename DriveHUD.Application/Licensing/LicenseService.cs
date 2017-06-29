@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -21,11 +20,7 @@ using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.Licensing
 {

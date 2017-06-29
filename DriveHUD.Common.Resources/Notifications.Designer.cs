@@ -63,6 +63,60 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
+        internal static string Notifications_DeleteHand_Cancel {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete these hands?.
+        /// </summary>
+        internal static string Notifications_DeleteHand_MultipleContent {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_MultipleContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete {0} hands.
+        /// </summary>
+        internal static string Notifications_DeleteHand_MultipleTitle {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_MultipleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this hand?.
+        /// </summary>
+        internal static string Notifications_DeleteHand_SingleContent {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_SingleContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete hand.
+        /// </summary>
+        internal static string Notifications_DeleteHand_SingleTitle {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_SingleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string Notifications_DeleteHand_Yes {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteHand_Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
         internal static string Notifications_HudLayout_DeleteHudCancel {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_DeleteHudCancel", resourceCulture);

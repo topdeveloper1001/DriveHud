@@ -1966,7 +1966,6 @@
                     SelectionMode="Multiple"
                     MouseDoubleClick="GridViewKnownHands_MouseDoubleClick"
                     ItemsSource="{Binding Path=ReportSelectedItemStatisticsCollection_Filtered}"
-                    SelectionChanged="GridViewKnownHands_SelectionChanged"
                     RowLoaded="GridViewKnownHands_RowLoaded"
                     RowStyle="{StaticResource GridViewKnownHandsRowStyle}"
                     AlternateRowStyle="{StaticResource GridViewKnownHandsAlternateRowStyle}"
@@ -1974,6 +1973,11 @@
                     EnableColumnVirtualization="True"
                     EnableRowVirtualization="True"
                     Sorting="GridViewKnownHands_Sorting">
+
+                    <i:Interaction.Behaviors>
+                        <dh:RadGridViewMultiSelectBehavior
+                            SelectedItems="{Binding SelectedComparableCardsStatistic, Mode=OneWay}" />
+                    </i:Interaction.Behaviors>
 
                     <telerik:RadContextMenu.ContextMenu>
                         <telerik:RadContextMenu
