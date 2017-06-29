@@ -823,7 +823,7 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        public bool IsUnopened
+        public virtual bool IsUnopened
         {
             get
             {
@@ -1595,7 +1595,7 @@ namespace DriveHUD.Entities
         /// <summary>
         /// Calculates <see cref="PositionalStat"/> stats of the current <see cref="Playerstatistic"/>
         /// </summary>
-        public void CalculatePositionalStats()
+        public virtual void CalculatePositionalStats()
         {
             var unopened = IsUnopened ? 1 : 0;
 
@@ -1658,7 +1658,7 @@ namespace DriveHUD.Entities
         /// <summary>
         /// Calculates total pot
         /// </summary>
-        public void CalculateTotalPot()
+        public virtual void CalculateTotalPot()
         {
             TotalPot = Pot;
             TotalPotInBB = (TotalPot != 0) && (BigBlind != 0) ? TotalPot / BigBlind : 0;
