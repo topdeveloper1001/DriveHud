@@ -574,7 +574,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void DisplayTournamentHands(RequestDisplayTournamentHandsEvent obj)
         {
-            ReportSelectedItemStatisticsCollection = new ObservableCollection<Playerstatistic>(this.StorageModel.StatisticCollection.Where(x => x.TournamentId == obj.TournamentNumber));
+            ReportSelectedItemStatisticsCollection = new ObservableCollection<Playerstatistic>(StorageModel.StatisticCollection.ToList().Where(x => x.TournamentId == obj.TournamentNumber));
         }
 
         private void UpdateBuiltFilter(BuiltFilterChangedEventArgs obj)

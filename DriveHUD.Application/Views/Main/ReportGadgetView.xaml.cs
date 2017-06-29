@@ -207,7 +207,7 @@ namespace DriveHUD.Application.Views
                 reportGadgetViewModel.EditTournamentCommand.Execute(item.DataContext);
             }
         }
-   
+
         private void MakeNote(object sender, RadRoutedEventArgs e)
         {
             var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
@@ -437,7 +437,7 @@ namespace DriveHUD.Application.Views
             bool showHoleCards = (this.DataContext as ReportGadgetViewModel).ReplayerShowHolecards_IsChecked;
 
             ServiceLocator.Current.GetInstance<IReplayerService>()
-                .ReplayHand(statistic, reportGadgetViewModel.StorageModel.StatisticCollection, showHoleCards);
+                .ReplayHand(statistic, reportGadgetViewModel.StorageModel.StatisticCollection.ToList(), showHoleCards);
         }
 
         private void ReplayHand(object sender, RadRoutedEventArgs e)

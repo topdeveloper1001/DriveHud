@@ -94,7 +94,7 @@ namespace Model
 
         private void UpdateFilteredStatistics()
         {
-            FilteredPlayerStatistic = this.StatisticCollection?.AsQueryable().Where(FilterPredicate).ToList();
+            FilteredPlayerStatistic = StatisticCollection?.ToList().AsQueryable().Where(FilterPredicate).ToList();
         }
 
         #endregion
