@@ -29,7 +29,7 @@ namespace DriveHUD.Application.Licensing
     /// </summary>
     internal class LicenseService : ILicenseService
     {
-        private const string serialRSAKey = "<RSAKeyValue><Modulus>kF+lETiUOwsAhv2QcNM0ARxY29z9F1Fqx8LfMhbkSMq5mtKSnQ8lvVWgRBO3IcZJkXyc03bz1VdMHMk182rPfcHKWbmkFmSwSFUPaKc6s0R4YLSczibLIbpmUJYh419FYcbsOlHKx8XAoFbCsnSrtVbtxAi9CXoZuUW0wGf1Ick=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+        private const string serialRSAKey = "<RSAKeyValue><Modulus>qFM2NXCFclFl9kvhxFr2sXTvl6aWy7n2oVeGo8WM8FpfKz5zbTeYKlqdhczwW0li4wtoHKKykPOiGGpAoChjB95YYyJpOPIL2hQWsEunbJlnDBceBPg+9tsqT1HVCJe52fI5EWEBBGrGvKaYqi2lMdNh96cd19EIs7lmy6IPN+M=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
 
         private readonly List<ILicenseInfo> licenseInfos;
 
@@ -177,7 +177,7 @@ namespace DriveHUD.Application.Licensing
 
             if (licenseInfo != null)
             {
-                licenseInfos.Remove(licenseInfo);                                
+                licenseInfos.Remove(licenseInfo);
             }
 
             var requestInfo = new LicenseValidationRequestInfo
@@ -187,13 +187,13 @@ namespace DriveHUD.Application.Licensing
                 SaveExternalSerials = true,
                 DisableTrials = true,
                 DisableCache = true,
-                ShouldGetNewSerialNumber = true                
+                ShouldGetNewSerialNumber = true
             };
 
             requestInfo.AdditionalServerProperties.Add("email", email);
 
             try
-            {               
+            {
                 license = licenseManager.Validate(requestInfo);
 
                 if (license == null || license.IsTrial)
@@ -288,6 +288,23 @@ namespace DriveHUD.Application.Licensing
             }
 
             return parseResult;
+        }
+
+        /// <summary>
+        /// Encrypts the specified email
+        /// </summary>
+        /// <param name="email">Email to encrypt</param>
+        /// <returns>Encrypted email</returns>
+        public string EncryptEmail(string email)
+        {
+            var random = new Random();
+
+            var salt = random.Next(100000, 999999).ToString();
+
+            var emailWithSalt = email + salt;
+
+            var encryptedEmail = SecurityUtils.EncryptStringRSA(emailWithSalt, serialRSAKey);
+            return encryptedEmail;
         }
 
         /// <summary>
