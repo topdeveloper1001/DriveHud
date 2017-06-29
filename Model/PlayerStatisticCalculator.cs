@@ -1568,7 +1568,7 @@ namespace Model
 
         private static bool IsOpenRaise(IList<HandAction> preflops, string player)
         {
-            var playerAction = preflops.Where(x => !x.IsBlinds && !x.IsFold).FirstOrDefault();
+            var playerAction = preflops.FirstOrDefault(x => !x.IsBlinds && !x.IsFold);
             if (playerAction != null && playerAction.PlayerName == player)
             {
                 return playerAction.IsRaise();

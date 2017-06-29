@@ -22,7 +22,7 @@ namespace Model.Stats
     {
         public StatInfoBreak() : base()
         {
-            Stat = Stat.LineBreak;
+            base.Stat = Stat.LineBreak;
         }
 
         public override Stat Stat

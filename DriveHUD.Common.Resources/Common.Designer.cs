@@ -106,6 +106,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alias.
+        /// </summary>
+        internal static string Common_Alias {
+            get {
+                return ResourceManager.GetString("Common_Alias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Players: {0}.
+        /// </summary>
+        internal static string Common_Alias_Players {
+            get {
+                return ResourceManager.GetString("Common_Alias_Players", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Common_All {

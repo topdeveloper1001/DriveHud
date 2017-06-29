@@ -789,4 +789,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudLayout_PlayerRange" xml:space="preserve">
     <value>Player range</value>
   </data>
+  <data name="Common_Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="Common_Alias_Players" xml:space="preserve">
+    <value>Players: {0}</value>
+  </data>
 </root>

@@ -790,6 +790,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 #if !DEBUG
                 System.Windows.Application.Current.Shutdown();
 #endif
+                System.Windows.Application.Current.Shutdown();
             }
 
             FinishInteraction?.Invoke();

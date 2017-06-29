@@ -16,13 +16,20 @@ namespace DriveHUD.Common.Wpf.Converters
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
-                return value;
+            {
+                return EnumPokerSites.Unknown;
+            }
 
             EnumPokerSites site;
+
             if (Enum.TryParse(value.ToString(), out site))
             {
                 switch (site)
                 {
+                    case EnumPokerSites.TigerGaming:
+                        return "TG";
+                    case EnumPokerSites.SportsBetting:
+                        return "SB";
                     case EnumPokerSites.BetOnline:
                         return "BOL";
                     case EnumPokerSites.Poker888:

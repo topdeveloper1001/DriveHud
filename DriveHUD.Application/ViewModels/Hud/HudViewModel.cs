@@ -914,8 +914,28 @@ namespace DriveHUD.Application.ViewModels
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
             {
+                var existingLayout = Layouts.FirstOrDefault(x => x.Name == savedLayout.Name);
+
+                if (existingLayout != null)
+                {
+                    Layouts.Remove(existingLayout);
+                }
+
                 Layouts.Add(savedLayout);
+
+                var tempCurrentLayout = CurrentLayout;
+
                 CurrentLayout = savedLayout;
+
+                var originalLayout = HudLayoutsService.GetLayout(tempCurrentLayout.Name);
+
+                if (originalLayout != null)
+                {
+                    var currentLayoutIndex = Layouts.IndexOf(tempCurrentLayout);
+
+                    Layouts.Insert(currentLayoutIndex, originalLayout);
+                    Layouts.Remove(tempCurrentLayout);
+                }
             }
 
             var settings = SettingsService.GetSettings();
@@ -1154,7 +1174,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void HideStatsInStatCollection()
         {
-            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel)
+            if (SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel &&
+                !(SelectedToolViewModel is IHudNonPopupToolViewModel))
             {
                 var statsSelectedToolViewModel = SelectedToolViewModel as IHudStatsToolViewModel;
                 HideStatsInStatCollection(statsSelectedToolViewModel.Stats);
@@ -1183,7 +1204,8 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void SpliterAdd()
         {
-            StatInfoObserveCollection.Add(new StatInfoBreak());
+            var breakLineStat = new StatInfoBreak();
+            StatInfoObserveCollection.Add(breakLineStat);
         }
 
         /// <summary>

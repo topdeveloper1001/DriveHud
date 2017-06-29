@@ -102,6 +102,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets whenever default size must be used 
+        /// </summary>
+        public override bool UseDefaultSizesOnly
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Gets the first <see cref="StatInfo"/> of stats collection
         /// </summary>
         public StatInfo Stat1

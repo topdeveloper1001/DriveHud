@@ -98,11 +98,24 @@ namespace DriveHUD.Application.HudServices
         {
             try
             {
+                var playerName = string.Empty;
+
                 var currentlySelectedPlayer = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
-                var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite
-                    ? currentlySelectedPlayer.Name
-                    : string.Empty;
+                if (currentlySelectedPlayer is AliasCollectionItem)
+                {
+                    var playerCollectionItem = (currentlySelectedPlayer as AliasCollectionItem).PlayersInAlias
+                        .FirstOrDefault(x => x.PokerSite.HasValue && (short)x.PokerSite.Value == pokerSiteId);
+
+                    if (playerCollectionItem != null)
+                    {
+                        playerName = playerCollectionItem.Name;
+                    }
+                }
+                else if (currentlySelectedPlayer != null && currentlySelectedPlayer.PokerSite.HasValue && (short)currentlySelectedPlayer.PokerSite.Value == pokerSiteId)
+                {
+                    playerName = currentlySelectedPlayer.Name;
+                }
 
                 ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
             }

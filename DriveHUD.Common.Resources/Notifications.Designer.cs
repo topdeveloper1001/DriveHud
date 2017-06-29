@@ -97,6 +97,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please, set Player ID in order to see data..
+        /// </summary>
+        internal static string Notifications_SelectPlayer_Message {
+            get {
+                return ResourceManager.GetString("Notifications_SelectPlayer_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD.
+        /// </summary>
+        internal static string Notifications_SelectPlayer_Title {
+            get {
+                return ResourceManager.GetString("Notifications_SelectPlayer_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Notifications_Update_Cancel {

@@ -230,7 +230,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.Squeeze },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CheckRaise },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.BetWhenCheckedTo },
-                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.NetWon, GraphToolIconSource = "/DriveHUD.Common.Resources;Component/images/hud/dollar_sign.png", Format = "{0:0.00}" },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.NetWon, GraphToolIconSource = "/DriveHUD.Common.Resources;Component/images/hud/dollar_sign.png", DigitsAfterDecimalPoint = 2 },
 
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetIP },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetOOP },
@@ -413,8 +413,7 @@ namespace Model.Stats
                                   select new { StatToUpdate = stat, OriginalStat = allStat }).ToArray();
 
             statsUpdateMap.ForEach(x =>
-            {
-                x.StatToUpdate.Format = x.OriginalStat.Format;
+            {                
                 x.StatToUpdate.GraphToolIconSource = x.OriginalStat.GraphToolIconSource;
             });
         }

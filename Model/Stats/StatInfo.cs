@@ -54,7 +54,7 @@ namespace Model.Stats
         {
             currentValue = -1;
             settingAppearanceFontSource = DefaultFont;
-            settingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == settingAppearanceFontSource).FirstOrDefault();
+            settingsAppearanceFontFamily = Fonts.SystemFontFamilies.FirstOrDefault(x => x.Source == settingAppearanceFontSource);
             currentColor = HudDefaultSettings.StatInfoDefaultColor;
             settingsAppearanceFontSize = 10;
             settingsAppearanceFontBold = FontWeights.Normal;
@@ -86,6 +86,8 @@ namespace Model.Stats
         private string groupName;
 
         private Color currentColor;
+
+        [NonSerialized]
         private decimal currentValue;
 
         private string settingAppearanceFontSource;
@@ -188,10 +190,21 @@ namespace Model.Stats
             }
         }
 
+        public string IterationsText
+        {
+            get
+            {
+                return IsCaptionHidden ?
+                        string.Empty :
+                            StatDto != null ?
+                                string.Format("({0}/{1})", statDto.Occurred, statDto.CouldOccurred) :
+                                string.Empty;
+            }
+        }
+
         [NonSerialized]
         private string format;
 
-        [ProtoMember(5)]
         [XmlIgnore]
         public string Format
         {
@@ -202,13 +215,32 @@ namespace Model.Stats
                     return totalHandFormat;
                 }
 
+                var format = digitsAfterDecimalPoint == 0 ? "{0:0}" : digitsAfterDecimalPoint == 1 ? "{0:0.0}" : "{0:0.00}";
+
                 return format;
+            }
+        }
+
+        private int digitsAfterDecimalPoint = 1;
+
+        [ProtoMember(5)]
+        public int DigitsAfterDecimalPoint
+        {
+            get
+            {
+                return digitsAfterDecimalPoint;
             }
             set
             {
-                if (value == format) return;
-                format = value;
+                if (digitsAfterDecimalPoint == value || digitsAfterDecimalPoint < 0 || digitsAfterDecimalPoint > 2)
+                {
+                    return;
+                }
+
+                digitsAfterDecimalPoint = value;
+
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Format));
             }
         }
 
@@ -262,7 +294,7 @@ namespace Model.Stats
             }
         }
 
-        [ProtoMember(7), DefaultValue(-1)]
+        [ProtoMember(7), DefaultValue(-1), XmlIgnore]
         public decimal CurrentValue
         {
             get
@@ -330,7 +362,7 @@ namespace Model.Stats
                 settingAppearanceFontSource = value;
                 OnPropertyChanged();
 
-                SettingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == settingAppearanceFontSource).FirstOrDefault();
+                SettingsAppearanceFontFamily = Fonts.SystemFontFamilies.FirstOrDefault(x => x.Source == settingAppearanceFontSource);
             }
         }
 
@@ -433,6 +465,7 @@ namespace Model.Stats
             }
         }
 
+        [XmlIgnore]
         public TextDecorationCollection SettingsAppearanceFontUnderline
         {
             get
@@ -713,6 +746,7 @@ namespace Model.Stats
             var statInfoClone = new StatInfo();
 
             statInfoClone.MinSample = MinSample;
+            statInfoClone.DigitsAfterDecimalPoint = DigitsAfterDecimalPoint;
             statInfoClone.Label = Label;
             statInfoClone.SettingsAppearanceFontBold = SettingsAppearanceFontBold;
             statInfoClone.SettingsAppearanceFontBold_IsChecked = SettingsAppearanceFontBold_IsChecked;
@@ -728,7 +762,6 @@ namespace Model.Stats
             statInfoClone.CurrentColor = currentColor;
             statInfoClone.Caption = Caption;
             statInfoClone.Stat = Stat;
-            statInfoClone.Format = Format;            
             statInfoClone.SettingsPlayerType_IsChecked = SettingsPlayerType_IsChecked;
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
@@ -748,6 +781,7 @@ namespace Model.Stats
         public void Merge(StatInfo statInfo)
         {
             MinSample = statInfo.MinSample;
+            DigitsAfterDecimalPoint = statInfo.DigitsAfterDecimalPoint;
             Label = statInfo.Label;
             SettingsAppearanceFontBold = statInfo.SettingsAppearanceFontBold;
             SettingsAppearanceFontBold_IsChecked = statInfo.SettingsAppearanceFontBold_IsChecked;

@@ -197,6 +197,24 @@ namespace DriveHUD.Application.ViewModels.Hud
             protected set;
         }
 
+        [ProtoMember(6)]
+        private bool isGraphIndicatorsDisabled;
+
+        /// <summary>
+        /// Gets whenever the graph indicators are disabled
+        /// </summary>
+        public bool IsGraphIndicatorsDisabled
+        {
+            get
+            {
+                return isGraphIndicatorsDisabled;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isGraphIndicatorsDisabled, value);
+            }
+        }
+
         #endregion
 
         #region Implementation of HudBaseToolViewModel

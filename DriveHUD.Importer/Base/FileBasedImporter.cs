@@ -64,17 +64,17 @@ namespace DriveHUD.Importers
         // Import data from PS HH
         protected override void DoImport()
         {
-            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
-
-            var handHistoryFolders = GetHandHistoryFolders(siteSettings);
-
-            IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
-
             while (!cancellationTokenSource.IsCancellationRequested)
             {
                 try
                 {
+                    var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+                    var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+                    var handHistoryFolders = GetHandHistoryFolders(siteSettings);
+
+                    IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
+
                     // detect all *.txt files in directories
                     var handHistoryFiles = handHistoryFolders.Where(x => x.Exists).SelectMany(x => x.GetFiles(HandHistoryFilter, SearchOption.AllDirectories)).ToArray();
 
@@ -83,6 +83,7 @@ namespace DriveHUD.Importers
                                                       from item in capturedFileGrouped.DefaultIfEmpty()
                                                       where item == null && !filesToSkip.Contains(handHistoryFile.FullName)
                                                       select handHistoryFile).ToArray();
+
 
                     // add new files and lock them
                     foreach (var hh in newlyDetectedHandHistories)
@@ -248,10 +249,11 @@ namespace DriveHUD.Importers
 
                 var playerList = GetPlayerList(result.Source);
 
-                if (gameInfo.WindowHandle == 0)
+                if (gameInfo.WindowHandle == 0 || !WinApi.IsWindow(new IntPtr(gameInfo.WindowHandle)))
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
                 }
+
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result);
@@ -293,8 +295,7 @@ namespace DriveHUD.Importers
             }
             else
             {
-                var site = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(SiteString);
-                dirs = site.GetHandHistoryFolders().Select(x => new DirectoryInfo(x)).ToArray();
+                dirs = new DirectoryInfo[0];
             }
 
             return dirs;
@@ -363,7 +364,7 @@ namespace DriveHUD.Importers
                             return true;
                         }, IntPtr.Zero);
                     }
-                }                
+                }
 
                 foreach (var handle in handles)
                 {

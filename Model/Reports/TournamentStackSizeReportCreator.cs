@@ -11,10 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
-using Model.Interfaces;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -32,9 +30,6 @@ namespace Model.Reports
                 return report;
             }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
-
             foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => GetMRatio(x)).ToArray())
             {
                 var stat = new MRatioReportRecord();
@@ -45,6 +40,7 @@ namespace Model.Reports
                 }
 
                 stat.MRatio = group.Key;
+
                 report.Add(stat);
             }
 

@@ -310,12 +310,17 @@
                                 <TextBlock
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
-                                    Style="{StaticResource HudToolTipHeadTextBlockStyle}"
-                                    Text="{Binding Text}">
+                                    Style="{StaticResource HudToolTipHeadTextBlockStyle}">
                                     <TextBlock.LayoutTransform>
                                         <RotateTransform
                                             Angle="270" />
                                     </TextBlock.LayoutTransform>
+                                    <Run
+                                        Text="{Binding Text}" />
+                                    <Run
+                                        Text=" " />
+                                    <Run
+                                        Text="{Binding BaseStat.IterationsText, Mode=OneWay}" />
                                 </TextBlock>
                             </Border>
 
@@ -343,9 +348,10 @@
                                         ItemsSource="{Binding Stats}"
                                         ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
                                         ItemTemplateSelector="{StaticResource StatInfoTextTemplateSelector}" />
-                                   
+
                                     <ItemsControl
                                         Grid.Column="1"
+                                        Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                                         ItemsSource="{Binding Stats}"
                                         ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
                                         ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />

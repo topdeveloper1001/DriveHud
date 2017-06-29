@@ -82,9 +82,11 @@ namespace DriveHUD.Common.Resources
 
         #region Tools sizes
 
-        public const double PlainStatBoxWidth = 135d;
+        public const double PlainStatBoxWidth = double.NaN;
 
         public const double PlainStatBoxHeight = double.NaN;
+
+        public const double PlainStatBoxMinWidth = 135d;
 
         public const double PlainStatBoxMinHeight = 35d;
 

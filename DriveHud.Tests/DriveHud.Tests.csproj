@@ -228,6 +228,7 @@
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\CardTests.cs" />
+    <Compile Include="UnitTests\ExportFunctionsTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
@@ -252,6 +253,10 @@
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
       <Project>{9b9115f6-c76e-4f23-b050-295287d140c5}</Project>
       <Name>DriveHUD.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
       <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
@@ -370,6 +375,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\CashOmaha-10-max-big-rake-error.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-MTT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-MTT.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">

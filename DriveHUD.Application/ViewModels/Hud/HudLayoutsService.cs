@@ -43,7 +43,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         protected string LayoutFileExtension;
         protected string MappingsFileName;
         private const string PathToImages = @"data\PlayerTypes";
-        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Vertical_1", "Vertical_2", "Horizontal" };
+        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private IEventAggregator eventAggregator;
@@ -139,16 +139,25 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return false;
                 }
 
+                var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutName);
+
+                if (mapping == null || mapping.IsDefault)
+                {
+                    LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been found");
+                    return false;
+                }
+
                 var layoutToDelete = GetLayout(layoutName);
 
-                if (layoutToDelete == null || layoutToDelete.IsDefault)
+                if (layoutToDelete == null)
                 {
+                    LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been found");
                     return false;
                 }
 
                 var layoutsDirectory = GetLayoutsDirectory();
 
-                var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
+                var fileName = mapping.FileName;
 
                 if (string.IsNullOrEmpty(fileName))
                 {
@@ -197,20 +206,38 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return null;
             }
 
-            var layout = GetLayout(hudData.Name);
+            var originalLayout = GetLayout(hudData.Name);
 
-            var isNewLayout = layout == null;
+            var isNewLayout = originalLayout == null;
 
             // need to check if we don't change table type of layout
-            if (!isNewLayout && hudData.Name.Equals(layout.Name, StringComparison.OrdinalIgnoreCase) &&
-                layout.IsDefault && layout.TableType != hudData.LayoutInfo.TableType)
+            if (!isNewLayout && hudData.Name.Equals(originalLayout.Name, StringComparison.OrdinalIgnoreCase) &&
+                originalLayout.IsDefault && originalLayout.TableType != hudData.LayoutInfo.TableType)
             {
                 eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "The default layout can't be overwritten"));
                 return null;
             }
 
-            layout = hudData.LayoutInfo.Clone();
+            var layout = hudData.LayoutInfo.Clone();
             layout.Name = hudData.Name;
+
+            if (isNewLayout)
+            {
+                layout.IsDefault = false;
+            }
+            else
+            {
+                var nonPopupToolsUpdateMap = (from nonPopupTool in originalLayout.LayoutTools.OfType<HudLayoutNonPopupTool>()
+                                              join tool in layout.LayoutTools.OfType<HudLayoutNonPopupTool>() on new { nonPopupTool.Id, nonPopupTool.ToolType } equals new { tool.Id, tool.ToolType } into grouped
+                                              from groupedTool in grouped
+                                              select new
+                                              {
+                                                  Tool = groupedTool,
+                                                  Positions = nonPopupTool.Positions
+                                              }).ToArray();
+
+                nonPopupToolsUpdateMap.ForEach(x => x.Tool.Positions = x.Positions);
+            }
 
             var fileName = InternalSave(layout);
 
@@ -751,7 +778,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     {
                         var defaultLayoutInfo = GetPredefinedLayout(tableType, predefinedPostfix);
 
-                        if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
+                        if (defaultLayoutInfo == null || File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
                         {
                             continue;
                         }
@@ -767,7 +794,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             {
                                 TableType = tableType,
                                 Name = defaultLayoutInfo.Name,
-                                IsDefault = string.IsNullOrEmpty(predefinedPostfix),
+                                IsDefault = defaultLayoutInfo.IsDefault,
                                 FileName = Path.GetFileName(fileName)
                             });
                         }
@@ -1079,7 +1106,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Loaded <see cref="HudLayoutInfoV2"/> layout</returns>
         private HudLayoutInfoV2 LoadLayoutFromStream(Stream stream)
         {
-            Check.ArgumentNotNull(() => stream);
+            if (stream == null)
+            {
+                return null;
+            }
 
             try
             {

@@ -41,7 +41,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => window);
             Check.ArgumentNotNull(() => toolElement);
 
-            var panelOffset = window.GetPanelOffset(toolViewModel);
+            var panelOffset = window.ViewModel.GetPanelOffset(toolViewModel);
 
             var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;
@@ -92,12 +92,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        public virtual Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindow window)
+        public virtual Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindowViewModel viewModel)
         {
             Check.ArgumentNotNull(() => toolViewModel);
-            Check.ArgumentNotNull(() => window);
+            Check.ArgumentNotNull(() => viewModel);
 
-            var panelOffset = window.GetPanelOffset(toolViewModel);
+            var panelOffset = viewModel.GetPanelOffset(toolViewModel);
 
             var xPosition = panelOffset.X != 0 ? panelOffset.X : toolViewModel.Position.X;
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : toolViewModel.Position.Y;

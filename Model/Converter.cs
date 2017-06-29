@@ -107,17 +107,39 @@ namespace Model.Importer
 
         public static EnumPosition ToPosition(HandHistory hand, Playerstatistic stat)
         {
-            if (stat.IsDealer)
+            return ToPosition(hand, stat?.PlayerName, stat);
+        }
+
+        public static EnumPosition ToPosition(HandHistory hand, string playerName, Playerstatistic stat = null)
+        {
+            if (stat != null && stat.IsDealer)
             {
                 return EnumPosition.BTN;
             }
-            else if (stat.IsSmallBlind)
+            else if (stat != null && stat.IsSmallBlind)
             {
                 return EnumPosition.SB;
             }
-            else if (stat.IsBigBlind)
+            else if (stat != null && stat.IsBigBlind)
             {
                 return EnumPosition.BB;
+            }
+            else if (stat == null)
+            {
+                if (hand.Players.Any(x => x.SeatNumber == hand.DealerButtonPosition && x.PlayerName == playerName))
+                {
+                    return EnumPosition.BTN;
+                }
+
+                if (hand.HandActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND && x.PlayerName == playerName))
+                {
+                    return EnumPosition.BB;
+                }
+
+                if (hand.HandActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND && x.PlayerName == playerName))
+                {
+                    return EnumPosition.SB;
+                }
             }
 
             var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
@@ -129,7 +151,7 @@ namespace Model.Importer
 
             var firstPlayerAction = handActions
                 .Where(x => x.HandActionType != HandActionType.SMALL_BLIND && x.HandActionType != HandActionType.BIG_BLIND && x.HandActionType != HandActionType.POSTS)
-                .FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+                .FirstOrDefault(x => x.PlayerName == playerName);
 
             int firstPlayerActionIndex;
 
@@ -148,7 +170,7 @@ namespace Model.Importer
                     return table[firstPlayerActionIndex];
                 }
             }
-          
+
             // get position using button place
             var playersBeforeDealerPosition = new List<Player>();
             var playersAfterDealerPosition = new List<Player>();
@@ -167,7 +189,7 @@ namespace Model.Importer
 
             var playersOrderedByPosition = playersAfterDealerPosition.Concat(playersAfterDealerPosition);
 
-            firstPlayerActionIndex = playersOrderedByPosition.FindIndex(x => x.PlayerName == stat.PlayerName) - 2;
+            firstPlayerActionIndex = playersOrderedByPosition.FindIndex(x => x.PlayerName == playerName) - 2;
 
             if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
             {
@@ -177,7 +199,7 @@ namespace Model.Importer
             // check ante
             var handAnteActions = hand.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).ToList();
 
-            firstPlayerAction = handAnteActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+            firstPlayerAction = handAnteActions.FirstOrDefault(x => x.PlayerName == playerName);
 
             firstPlayerActionIndex = handAnteActions.IndexOf(firstPlayerAction) - handActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - handActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
 

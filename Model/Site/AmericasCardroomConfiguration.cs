@@ -78,6 +78,22 @@ namespace Model.Site
             set;
         }
 
+        public bool IsHandHistoryLocationRequired
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public bool IsPrefferedSeatsAllowed
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public virtual string[] GetHandHistoryFolders()
         {
             var path = GetInstalledPath("AmericasCardroom");

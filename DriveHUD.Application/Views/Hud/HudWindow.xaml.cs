@@ -36,12 +36,10 @@ namespace DriveHUD.Application.Views
     {
         private IHudPanelService hudPanelService;
 
-        private Dictionary<HudToolKey, Point> panelOffsets;
-
         private Point? trackerConditionsMeterPosition;
         private Point trackerConditionsMeterPositionOffset;
 
-        private HudWindowViewModel ViewModel
+        public HudWindowViewModel ViewModel
         {
             get
             {
@@ -53,7 +51,6 @@ namespace DriveHUD.Application.Views
         {
             InitializeComponent();
 
-            panelOffsets = new Dictionary<HudToolKey, Point>();
             dgCanvas.DragEnded += DgCanvas_DragEnded;
         }
 
@@ -110,12 +107,7 @@ namespace DriveHUD.Application.Views
             {
                 var toolViewModel = panel.DataContext as HudBaseToolViewModel;
 
-                var toolKey = HudToolKey.BuildKey(toolViewModel);
-
-                if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
-                {
-                    panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
-                }
+                ViewModel.UpdatePanelOffset(toolViewModel);
 
                 var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
 
@@ -138,18 +130,18 @@ namespace DriveHUD.Application.Views
                     continue;
                 }
 
-                foreach (var toolViewModel in playerHudContent.HudElement.Tools)
+                foreach (var toolViewModel in playerHudContent.HudElement.Tools.Where(x => x is IHudNonPopupToolViewModel).ToArray())
                 {
-                    var toolKey = HudToolKey.BuildKey(toolViewModel);
+                    var toolKey = HudWindowViewModel.HudToolKey.BuildKey(toolViewModel);
 
-                    if (!panelOffsets.ContainsKey(toolKey))
+                    if (!ViewModel.PanelOffsets.ContainsKey(toolKey))
                     {
-                        panelOffsets.Add(toolKey, new Point(0, 0));
+                        ViewModel.PanelOffsets.Add(toolKey, new Point(0, 0));
                     }
                     else
                     {
-                        toolViewModel.OffsetX = panelOffsets[toolKey].X;
-                        toolViewModel.OffsetY = panelOffsets[toolKey].Y;
+                        toolViewModel.OffsetX = ViewModel.PanelOffsets[toolKey].X;
+                        toolViewModel.OffsetY = ViewModel.PanelOffsets[toolKey].Y;
                     }
 
                     var panel = hudPanelService.Create(toolViewModel);
@@ -195,15 +187,15 @@ namespace DriveHUD.Application.Views
 
                 var toolViewModel = hudPanel.DataContext as HudBaseToolViewModel;
 
-                var toolKey = HudToolKey.BuildKey(toolViewModel);
+                var toolKey = HudWindowViewModel.HudToolKey.BuildKey(toolViewModel);
 
                 if (toolViewModel != null)
                 {
-                    panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+                    ViewModel.PanelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
                 }
 
-                hudPanel.Width = toolViewModel.Width * ScaleX;
-                hudPanel.Height = toolViewModel.Height != double.NaN ? toolViewModel.Height * ScaleY : double.NaN;
+                hudPanel.Width = !double.IsNaN(toolViewModel.Width) ? toolViewModel.Width * ScaleX : double.NaN;
+                hudPanel.Height = !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height * ScaleY : double.NaN;
 
                 var positions = hudPanelService.CalculatePositions(toolViewModel, hudPanel, this);
 
@@ -227,18 +219,6 @@ namespace DriveHUD.Application.Views
             NameScope.GetNameScope(this).UnregisterName("dgCanvas");
 
             GC.Collect();
-        }
-
-        public Point GetPanelOffset(HudBaseToolViewModel toolViewModel)
-        {
-            var toolKey = HudToolKey.BuildKey(toolViewModel);
-
-            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
-            {
-                return panelOffsets[toolKey];
-            }
-
-            return new Point(0, 0);
         }
 
         private void BuildTrackConditionsMeter(HudTrackConditionsViewModelInfo trackConditionViewModelInfo)
@@ -312,20 +292,66 @@ namespace DriveHUD.Application.Views
 
                 // clone is needed
                 var toolViewModels = dgCanvas.Children.OfType<FrameworkElement>()
-                    .Where(x => x != null && (x.DataContext is HudBaseToolViewModel))
+                    .Where(x => x != null && (x.DataContext is IHudNonPopupToolViewModel))
                     .Select(x => (x.DataContext as HudBaseToolViewModel))
                     .ToList();
 
+                var toolsIds = new HashSet<Guid>();
+                var seats = new HashSet<int>();
+
                 foreach (var toolViewModel in toolViewModels)
                 {
-                    var position = hudPanelService.GetOffsetPosition(toolViewModel, this);
+                    if (!toolsIds.Contains(toolViewModel.Id))
+                    {
+                        toolsIds.Add(toolViewModel.Id);
+                    }
+
+                    var seatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                    if (!seats.Contains(seatNumber))
+                    {
+                        seats.Add(seatNumber);
+                    }
+
+                    var position = hudPanelService.GetOffsetPosition(toolViewModel, ViewModel);
 
                     hudLayoutContract.HudPositions.Add(new HudPositionContract
                     {
                         Id = toolViewModel.Id,
                         Position = new Point(position.Item1, position.Item2),
-                        SeatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1
+                        SeatNumber = seatNumber
                     });
+                }
+
+                var emptySeats = Enumerable.Range(1, (int)Layout.TableType).Except(seats);
+
+                foreach (var seat in emptySeats)
+                {
+                    foreach (var toolId in toolsIds)
+                    {
+                        var toolkey = new HudWindowViewModel.HudToolKey
+                        {
+                            Id = toolId,
+                            Seat = seat
+                        };
+
+                        if (!ViewModel.PanelOffsets.ContainsKey(toolkey))
+                        {
+                            continue;
+                        }
+
+                        var panelOffset = ViewModel.PanelOffsets[toolkey];
+
+                        if (panelOffset.X != 0 && panelOffset.Y != 0)
+                        {
+                            hudLayoutContract.HudPositions.Add(new HudPositionContract
+                            {
+                                Id = toolId,
+                                Position = new Point(panelOffset.X, panelOffset.Y),
+                                SeatNumber = seat
+                            });
+                        }
+                    }
                 }
 
                 ViewModel?.SaveHudPositions(hudLayoutContract);
@@ -394,52 +420,6 @@ namespace DriveHUD.Application.Views
                         }
                     }
                 }
-            }
-        }
-
-        private class HudToolKey
-        {
-            public Guid Id { get; set; }
-
-            public int Seat { get; set; }
-
-            public static HudToolKey BuildKey(HudBaseToolViewModel toolViewModel)
-            {
-                if (toolViewModel == null)
-                {
-                    return null;
-                }
-
-                var seat = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
-
-                var toolKey = new HudToolKey
-                {
-                    Id = toolViewModel.Id,
-                    Seat = seat
-                };
-
-                return toolKey;
-            }
-
-            public override int GetHashCode()
-            {
-                var hash = 23;
-                hash = hash * 31 + Id.GetHashCode();
-                hash = hash * 31 + Seat;
-
-                return hash;
-            }
-
-            public override bool Equals(object obj)
-            {
-                var toolKey = obj as HudToolKey;
-
-                if (toolKey == null)
-                {
-                    return false;
-                }
-
-                return toolKey.Id == Id && toolKey.Seat == Seat;
             }
         }
     }

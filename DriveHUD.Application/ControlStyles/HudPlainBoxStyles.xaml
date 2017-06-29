@@ -79,7 +79,7 @@
             FontSize="{Binding SettingsAppearanceFontSize}"
             FontWeight="{Binding SettingsAppearanceFontBold}"
             FontStyle="{Binding SettingsAppearanceFontItalic}"
-            TextDecorations="{Binding SettingsAppearanceFontUnderline}"
+            TextDecorations="{Binding SettingsAppearanceFontUnderline}"            
             VerticalAlignment="Bottom">           
             <Run
                 Text="{Binding Label}" />

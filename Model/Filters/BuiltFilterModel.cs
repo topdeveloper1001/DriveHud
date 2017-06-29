@@ -381,7 +381,7 @@ namespace Model.Filters
         #region Stake Level (Standard Filter)
         private void SetStakeLevelItems()
         {
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.StakeLevel).FirstOrDefault();
+            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.StakeLevel);
             var selectedStakeLevels = StandardModel?.StakeLevelCollection.Where(x => x.IsChecked);
 
             if (selectedStakeLevels == null || !StandardModel.StakeLevelCollection.Any(x => !x.IsChecked))
@@ -404,7 +404,7 @@ namespace Model.Filters
         #region Pre Flop Action Item (Standard Filter)
         private void SetPreFlopActionItems()
         {
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.PreFlopAction).FirstOrDefault();
+            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.PreFlopAction);
             var selectedPreFlopItems = StandardModel?.PreFlopActionCollection.Where(x => x.IsChecked);
 
             if (selectedPreFlopItems == null || StandardModel == null || !StandardModel.PreFlopActionCollection.Any(x => !x.IsChecked))
@@ -427,7 +427,7 @@ namespace Model.Filters
         #region Currency Item (Standard Filter)
         private void SetCurrencyItems()
         {
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Currency).FirstOrDefault();
+            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.Currency);
             var selectedCurrencyItems = StandardModel?.CurrencyCollection.Where(x => x.IsChecked);
             if (selectedCurrencyItems == null || !StandardModel.CurrencyCollection.Any(x => !x.IsChecked))
             {
@@ -492,7 +492,7 @@ namespace Model.Filters
                 return;
             }
 
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.PlayersBetween).FirstOrDefault();
+            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.PlayersBetween);
 
             filterSectionItem.Name = String.Format("Players={0}-{1}", StandardModel.PlayerCountMinSelectedItem, StandardModel.PlayerCountMaxSelectedItem);
             filterSectionItem.IsActive = (StandardModel.PlayerCountMaxSelectedItem != StandardModel.PlayerCountMaxAvailable) || (StandardModel.PlayerCountMinSelectedItem != StandardModel.PlayerCountMinAvailable);
@@ -587,17 +587,17 @@ namespace Model.Filters
             switch (street)
             {
                 case Street.Flop:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.FlopHandValue).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FlopHandValue);
                     filterSectionItemString = "Flop Hands";
                     collection = HandValueModel.FlopHandValuesCollection;
                     break;
                 case Street.Turn:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.TurnHandValue).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TurnHandValue);
                     filterSectionItemString = "Turn Hands";
                     collection = HandValueModel.TurnHandValuesCollection;
                     break;
                 case Street.River:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.RiverHandValue).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RiverHandValue);
                     filterSectionItemString = "River Hands";
                     collection = HandValueModel.RiverHandValuesCollection;
                     break;
@@ -646,7 +646,7 @@ namespace Model.Filters
                 return;
             }
 
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
+            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.Date);
             switch (DateModel.DateFilterType.EnumDateRange)
             {
                 case EnumDateFiterStruct.EnumDateFiter.Today:
@@ -705,17 +705,17 @@ namespace Model.Filters
             switch (street)
             {
                 case Street.Flop:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.FlopBoardCardItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FlopBoardCardItem);
                     filterSectionItemString = "Specific Flop";
                     collection = BoardTextureModel.FlopCardItemsCollection;
                     break;
                 case Street.Turn:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.TurnBoardCardItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TurnBoardCardItem);
                     filterSectionItemString = "Specific Flop+Turn";
                     collection = BoardTextureModel.TurnCardItemsCollection;
                     break;
                 case Street.River:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.RiverBoardCardItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RiverBoardCardItem);
                     filterSectionItemString = "Specific Full Board";
                     collection = BoardTextureModel.RiverCardItemsCollection;
                     break;
@@ -764,17 +764,17 @@ namespace Model.Filters
             switch (street)
             {
                 case Street.Flop:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.FlopBoardTextureItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FlopBoardTextureItem);
                     filterSectionItemString = "Flop Texture";
                     collection = BoardTextureModel.FlopBoardTextureCollection;
                     break;
                 case Street.Turn:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.TurnBoardTextureItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TurnBoardTextureItem);
                     filterSectionItemString = "Turn Texture";
                     collection = BoardTextureModel.TurnBoardTextureCollection;
                     break;
                 case Street.River:
-                    filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.RiverBoardTextureItem).FirstOrDefault();
+                    filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RiverBoardTextureItem);
                     filterSectionItemString = "River Texture";
                     collection = BoardTextureModel.RiverBoardTextureCollection;
                     break;

@@ -691,8 +691,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 bigBlind = smallBlind * 2m;
             }
 
-            handHistory.GameDescription.Limit.SmallBlind = smallBlind;
-            handHistory.GameDescription.Limit.BigBlind = bigBlind;
+            handHistory.GameDescription.Limit.SmallBlind = Math.Abs(smallBlind);
+            handHistory.GameDescription.Limit.BigBlind = Math.Abs(bigBlind);
         }
 
         protected virtual bool IsSummaryHand(string[] handLines)

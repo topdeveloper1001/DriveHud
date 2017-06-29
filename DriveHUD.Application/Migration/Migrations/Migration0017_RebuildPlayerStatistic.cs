@@ -23,6 +23,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
     [Migration(17)]
     public class Migration0017_RebuildPlayerStatistic : Migration
     {
+        private static readonly bool skipMigration = true;
+
         public override void Down()
         {
         }
@@ -30,6 +32,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
         public override void Up()
         {
             LogProvider.Log.Info("Preparing migration #17");
+
+            if (skipMigration)
+            {
+                LogProvider.Log.Info("Migration #17 has been skipped by system.");
+                return;
+            }
 
             var doMigration = false;
 
@@ -73,7 +81,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
             }
             else
             {
-                LogProvider.Log.Info("Preparing migration #17 has been skipped by user.");
+                LogProvider.Log.Info("Migration #17 has been skipped by user.");
             }
         }
     }

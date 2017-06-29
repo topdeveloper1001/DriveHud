@@ -48,9 +48,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Converts offset values into position value
         /// </summary>
         /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
+        /// <param name="viewModel">Overlay window viewmodel</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindow window);
+        Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindowViewModel viewModel);
 
         /// <summary>
         /// Get handle of window on which hud has to be attached

@@ -15,6 +15,7 @@ using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
+using DriveHUD.Application.ViewModels.Alias;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
@@ -54,6 +55,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
@@ -107,6 +109,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
+            eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
 
             InitializeFilters();
             InitializeData();
@@ -130,7 +133,8 @@ namespace DriveHUD.Application.ViewModels
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-            StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
@@ -158,15 +162,22 @@ namespace DriveHUD.Application.ViewModels
             StopHudCommand = new DelegateCommand(x => StopHud(), x => IsHudRunning);
             HideEquityCalculatorCommand = new RelayCommand(HideEquityCalculator);
             SettingsCommand = new RelayCommand(OpenSettingsMenu);
+            AliasMenuCommand = new RelayCommand(OpenAliasMenu);
             UpgradeCommand = new RelayCommand(Upgrade);
             PurchaseCommand = new RelayCommand(Purchase);
 
             PopupSettingsRequest = new InteractionRequest<PopupContainerSettingsViewModelNotification>();
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
+            AliasViewRequest = new InteractionRequest<INotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
             UpdateViewRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
+
+            SortedPlayers = (CollectionView)CollectionViewSource.GetDefaultView(StorageModel.PlayerCollection);
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.DecodedName), ListSortDirection.Ascending));
+            SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.PokerSite), ListSortDirection.Ascending));
         }
 
         private void InitializeFilters()
@@ -258,10 +269,22 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
-            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+            var player = StorageModel.PlayerSelectedItem;
+
+            List<Playerstatistic> statistics = new List<Playerstatistic>();
+
+            if (player is PlayerCollectionItem)
+            {
+                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
+            else if (player is AliasCollectionItem)
+            {
+                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+            }
+
             AddHandTags(statistics);
 
-            if (statistics != null)
+            if (statistics != null || statistics.Any())
             {
                 StorageModel.StatisticCollection.Reset(statistics);
             }
@@ -280,7 +303,10 @@ namespace DriveHUD.Application.ViewModels
             if (args.IsUpdatePlayersCollection)
             {
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-                StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
+                // TODO : reading players from db.
+                StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
+                StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
+
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
@@ -320,12 +346,13 @@ namespace DriveHUD.Application.ViewModels
         {
             UpdatePlayerList(gameInfo);
 
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
+            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
                 {
                     StorageModel.TryLoadHeroPlayer();
                 });
+
                 return;
             }
 
@@ -492,6 +519,8 @@ namespace DriveHUD.Application.ViewModels
                         x.HeatMap = sessionData.HeatMaps[heatMapKey];
                     });
 
+                    var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
+
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
@@ -501,7 +530,10 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
                         new ObservableCollection<decimal>();
 
-                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection.Concat(heatMapTools.Select(x => x.BaseStat)).ToArray();
+                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection
+                        .Concat(heatMapTools.Select(x => x.BaseStat))
+                        .Concat(gaugeIndicatorTools.Select(x => x.BaseStat))
+                        .ToArray();
 
                     StatsProvider.UpdateStats(activeLayoutHudStats);
 
@@ -591,20 +623,21 @@ namespace DriveHUD.Application.ViewModels
                     LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                 }
 
-                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
-                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
-                    StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown))
+                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.DecodedName) ||
+                    StorageModel.PlayerSelectedItem?.PokerSite == EnumPokerSites.Unknown))
                 {
                     isSetPlayerIdMessageShown = true;
+
                     System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
-                   {
-                       this.NotificationRequest.Raise(
+                    {
+                        NotificationRequest.Raise(
                            new PopupActionNotification
                            {
-                               Content = "Please, set Player ID in order to see data.",
-                               Title = "DriveHUD",
+                               Content = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Message"),
+                               Title = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Title"),
                            }, n => { });
-                   });
+                    });
                 }
             }
             catch (Exception ex)
@@ -711,11 +744,34 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
+            var isPlayersReloadRequired = gameInfo == null || gameInfo.AddedPlayers == null;
 
-            foreach (var player in updatedPlayers)
+            var players = isPlayersReloadRequired ? dataService.GetPlayersList() : gameInfo.AddedPlayers;
+
+            if (isPlayersReloadRequired)
             {
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    var selectedPlayer = StorageModel.PlayerSelectedItem;
+
+                    StorageModel.PlayerCollection.RemoveAll(x => x is PlayerCollectionItem);
+                    StorageModel.PlayerCollection.AddRange(players);
+
+                    if (selectedPlayer is PlayerCollectionItem)
+                    {
+                        StorageModel.PlayerSelectedItem = StorageModel.PlayerCollection.FirstOrDefault(x => x.PlayerId == selectedPlayer.PlayerId);
+                    }
+                });
+            }
+            else
+            {
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    foreach (var player in players)
+                    {
+                        StorageModel.PlayerCollection.Add(player);
+                    }
+                });
             }
         }
 
@@ -779,7 +835,23 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = dataService.GetHandNotes((short)StorageModel.PlayerSelectedItem.PokerSite);
+            var notes = new List<Handnotes>();
+
+            var allPlayers = new List<PlayerCollectionItem>();
+
+            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+            {
+                allPlayers.Add(StorageModel.PlayerSelectedItem as PlayerCollectionItem);
+            }
+            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
+            {
+                allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
+            }
+
+            foreach (var player in allPlayers)
+            {
+                notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
 
             var statisticsForUpdate = (from note in notes
                                        join statistic in statistics on note.Gamenumber equals statistic.GameNumber
@@ -798,6 +870,12 @@ namespace DriveHUD.Application.ViewModels
                 pubSubMessage.Parameter = "Preferred Seating";
 
             PopupSettingsRequest_Execute(pubSubMessage);
+        }
+
+        private void OpenAliasMenu()
+        {
+            var model = new AliasViewModel();
+            AliasViewRequest.Raise(model);
         }
 
         private void Upgrade()
@@ -1225,6 +1303,27 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private CollectionView sortedPlayers;
+
+        public CollectionView SortedPlayers
+        {
+            get
+            {
+                return sortedPlayers;
+            }
+            private set
+            {
+                if (ReferenceEquals(sortedPlayers, value))
+                {
+                    return;
+                }
+
+                sortedPlayers = value;
+
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -1311,6 +1410,7 @@ namespace DriveHUD.Application.ViewModels
         public ICommand CalculateEquityCommand { get; set; }
         public ICommand HideEquityCalculatorCommand { get; set; }
         public ICommand SettingsCommand { get; set; }
+        public ICommand AliasMenuCommand { get; set; }
 
         #endregion
 
@@ -1328,7 +1428,10 @@ namespace DriveHUD.Application.ViewModels
                 hudTransmitter.Dispose();
                 importerSessionCacheService.End();
 
-                dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+                if (StorageModel.PlayerSelectedItem != null)
+                {
+                    dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short?)StorageModel.PlayerSelectedItem.PokerSite);
+                }
 
                 // flush betonline cash
                 var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
@@ -1362,13 +1465,11 @@ namespace DriveHUD.Application.ViewModels
         #region InteractionRequest
 
         public InteractionRequest<PopupContainerSettingsViewModelNotification> PopupSettingsRequest { get; private set; }
-
         public InteractionRequest<PopupContainerFiltersViewModelNotification> PopupFiltersRequest { get; private set; }
 
         public InteractionRequest<INotification> PopupSupportRequest { get; private set; }
-
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
-
+        public InteractionRequest<INotification> AliasViewRequest { get; private set; }
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         public InteractionRequest<INotification> UpdateViewRequest { get; private set; }
@@ -1381,7 +1482,7 @@ namespace DriveHUD.Application.ViewModels
             notification.PubSubMessage = pubSubMessage;
             notification.Parameter = pubSubMessage?.Parameter;
 
-            PopupSettingsRequest.Raise(notification,
+            this.PopupSettingsRequest.Raise(notification,
                 returned =>
                 {
                     if (returned != null && returned.Confirmed)
