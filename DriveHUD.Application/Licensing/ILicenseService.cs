@@ -32,6 +32,13 @@ namespace DriveHUD.Application.Licensing
         bool Register(string serial, string email);
 
         /// <summary>
+        /// Encrypts the specified email
+        /// </summary>
+        /// <param name="email">Email to encrypt</param>
+        /// <returns>Encrypted email</returns>
+        string EncryptEmail(string email);
+
+        /// <summary>
         /// Current licenses information
         /// </summary>
         IEnumerable<ILicenseInfo> LicenseInfos { get; }
