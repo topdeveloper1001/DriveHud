@@ -72,7 +72,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
                 if (this.FilterViewCollection.Where(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString()).Any())
                 {
-                    this.FilterViewSelectedItem = this.FilterViewCollection.Where(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString()).FirstOrDefault();
+                    this.FilterViewSelectedItem = this.FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString());
                 }
                 else
                 {
@@ -156,7 +156,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         private void ViewModelSwitch(FilterTuple filterTuple)
         {
-            this.FilterViewSelectedItem = this.FilterViewCollection.Where(x => x.ViewModel.GetType().Name == filterTuple.ViewModelType.ToString()).FirstOrDefault();
+            this.FilterViewSelectedItem = this.FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTuple.ViewModelType.ToString());
         }
 
         protected virtual Expression<Func<Playerstatistic, bool>> GetCurrentFilter()

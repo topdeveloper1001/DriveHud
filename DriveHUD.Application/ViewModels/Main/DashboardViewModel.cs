@@ -27,7 +27,7 @@ namespace DriveHUD.Application.ViewModels
         private ObservableCollection<ChartSeries> _secondChartCollection = new ObservableCollection<ChartSeries>();
         private EnumTelerikRadChartDisplayRange _firstChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
         private EnumTelerikRadChartDisplayRange _secondChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
-        private Indicators _indicatorCollection;
+        private LightIndicators _indicatorCollection;
         private bool _isExpanded = true;
         #endregion
 
@@ -89,7 +89,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public Indicators IndicatorCollection
+        public LightIndicators IndicatorCollection
         {
             get { return _indicatorCollection; }
             set
@@ -114,7 +114,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartSerieResourceHelper resource, EnumTelerikRadChartDisplayRange displayRange)
-        {            
+        {
             foreach (var serie in chartCollection)
             {
                 List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
@@ -154,7 +154,7 @@ namespace DriveHUD.Application.ViewModels
         {
             if (IndicatorCollection == null)
             {
-                IndicatorCollection = new Indicators();
+                IndicatorCollection = new LightIndicators();
             }
             else
             {
@@ -221,13 +221,13 @@ namespace DriveHUD.Application.ViewModels
             switch (range)
             {
                 case EnumTelerikRadChartDisplayRange.Year:
-                    indicators = new List<Indicators>(new YearChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
                 case EnumTelerikRadChartDisplayRange.Month:
-                    indicators = new List<Indicators>(new MonthChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
                 case EnumTelerikRadChartDisplayRange.Week:
-                    indicators = new List<Indicators>(new WeekChartData().Create(this.StorageModel.StatisticCollection.Where(x => !x.IsTourney).ToList()));
+                    indicators = new List<Indicators>(new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
                     break;
             }
 

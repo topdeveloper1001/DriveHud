@@ -32,6 +32,26 @@ namespace Model
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), appdata);
         }
 
+        public static string GetLayoutsV2FolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsV2Folder));
+        }
+
+        public static string GetLayoutsFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsFolder));
+        }
+
+        public static string GetLayoutsExtension()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsExtension);
+        }
+
+        public static string GetLayoutsMappings()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.LayoutsMappings);
+        }
+
         public static string GetProcessedDataFolderPath()
         {
             return Path.Combine(SettingsService.GetSettings().SiteSettings.ProcessedDataLocation);
@@ -81,13 +101,23 @@ namespace Model
 
         public static string GetDateTimeString(DateTime utcDateTime)
         {
-            return Converter.ToLocalizedDateTime(utcDateTime).ToString("MM/dd/yyyy hh.mm tt");
+            return Converter.ToLocalizedDateTime(utcDateTime).ToString("MM/dd/yyyy HH.mm tt");
         }
 
         public static string GetReplayerHeaderString(string stakeLevel, DateTime handDate)
         {
             var header = CommonResourceManager.Instance.GetResourceString(ResourceStrings.ReplayerHeaderResourceString);
             return string.Format(header, stakeLevel, GetDateTimeString(handDate));
+        }
+
+        /// <summary>
+        /// Gets the path to the folder with logs
+        /// </summary>
+        /// <returns>Path to the folder with logs</returns>
+        public static string GetLogsFolderPath()
+        {
+            var logsFolder = CommonResourceManager.Instance.GetResourceString(ResourceStrings.LogsFolder);
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, logsFolder);
         }
 
         #region DB strings

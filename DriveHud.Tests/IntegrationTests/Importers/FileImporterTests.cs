@@ -28,7 +28,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// Importer integration tests
     /// </summary>
     [TestFixture]
-    public class FileImporterTests : BaseDatabaseTest
+    class FileImporterTests : BaseDatabaseTest
     {
         /// <summary>
         /// Initialize environment for test

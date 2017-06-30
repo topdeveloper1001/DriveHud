@@ -247,7 +247,7 @@ namespace Model
             //calculation of cold call after open raise at Sb position
             ConditionalBet coldCallVsSbOpen = new ConditionalBet();
             if (parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND) != null)
-            ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
+                ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
 
             //calculation of cold call after open raise at Co position
             ConditionalBet coldCallVsCoOpen = new ConditionalBet();
@@ -622,7 +622,7 @@ namespace Model
             stat.Cards = Converter.ToHoleCards(currentPlayer.HoleCards);
 
             stat.Pot = parsedHand.TotalPot ?? 0;
-            CalculateTotalPotValues(stat);
+            stat.CalculateTotalPot();
 
             List<string> line = new List<string>();
             foreach (var streetLine in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
@@ -687,7 +687,7 @@ namespace Model
 
             stat.StackInBBs = stat.StartingStack / stat.BigBlind;
             stat.MRatio = CalculateMRatio(stat);
-            CalculatePositionalData(stat);
+            stat.CalculatePositionalStats();
 
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
@@ -714,68 +714,6 @@ namespace Model
             decimal mRatioValue = stat.StartingStack / (Math.Abs(stat.SmallBlind) + Math.Abs(stat.BigBlind) + Math.Abs(totalAntes));
 
             return mRatioValue;
-        }
-
-        internal static bool IsUnopened(Playerstatistic stat)
-        {
-            return (stat.FacingPreflop == EnumFacingPreflop.Unopened
-                    || stat.FacingPreflop == EnumFacingPreflop.Limper
-                    || stat.FacingPreflop == EnumFacingPreflop.MultipleLimpers);
-        }
-
-        public static void CalculatePositionalData(Playerstatistic stat)
-        {
-            int unopened = IsUnopened(stat) ? 1 : 0;
-
-            if (stat.PositionTotal == null)
-            {
-                stat.PositionTotal = new PositionalStat();
-            }
-
-            if (stat.PositionUnoppened == null)
-            {
-                stat.PositionUnoppened = new PositionalStat();
-            }
-
-            if (stat.PositionVPIP == null)
-            {
-                stat.PositionVPIP = new PositionalStat();
-            }
-
-            if (stat.PositionDidColdCall == null)
-            {
-                stat.PositionDidColdCall = new PositionalStat();
-            }
-
-            if (stat.PositionCouldColdCall == null)
-            {
-                stat.PositionCouldColdCall = new PositionalStat();
-            }
-
-            if (stat.PositionDidThreeBet == null)
-            {
-                stat.PositionDidThreeBet = new PositionalStat();
-            }
-
-            if (stat.PositionCouldThreeBet == null)
-            {
-                stat.PositionCouldThreeBet = new PositionalStat();
-            }
-
-            stat.PositionTotal.SetPositionalStat(stat.Position, 1);
-            stat.PositionUnoppened.SetPositionalStat(stat.Position, unopened);
-            stat.PositionVPIP.SetPositionalStat(stat.Position, stat.Vpiphands);
-            stat.PositionDidColdCall.SetPositionalStat(stat.Position, stat.Didcoldcall);
-            stat.PositionCouldColdCall.SetPositionalStat(stat.Position, stat.Couldcoldcall);
-            stat.PositionDidThreeBet.SetPositionalStat(stat.Position, stat.Didthreebet);
-            stat.PositionCouldThreeBet.SetPositionalStat(stat.Position, stat.Couldthreebet);
-
-        }
-
-        public static void CalculateTotalPotValues(Playerstatistic stat)
-        {
-            stat.TotalPot = stat.Pot;
-            stat.TotalPotInBB = (stat.TotalPot != 0) && (stat.BigBlind) != 0 ? stat.TotalPot / stat.BigBlind : 0;
         }
 
         private void CalculateCheckRiverOnBxLine(Condition checkRiverOnBxLine, HandHistory parsedHand, string player)
@@ -890,7 +828,7 @@ namespace Model
         {
             switch (stat.PositionString)
             {
-                case "EP":
+                case "EP":                    
                     stat.PfrInEp = stat.Pfrhands;
                     stat.LimpEp = stat.LimpMade;
                     stat.DidColdCallInEp = stat.Didcoldcall;
@@ -1630,7 +1568,7 @@ namespace Model
 
         private static bool IsOpenRaise(IList<HandAction> preflops, string player)
         {
-            var playerAction = preflops.Where(x => !x.IsBlinds && !x.IsFold).FirstOrDefault();
+            var playerAction = preflops.FirstOrDefault(x => !x.IsBlinds && !x.IsFold);
             if (playerAction != null && playerAction.PlayerName == player)
             {
                 return playerAction.IsRaise();
@@ -1695,13 +1633,32 @@ namespace Model
         private static Player GetCutOffPlayer(HandHistory hand)
         {
             if (hand.Players.Count == 2)
+            {
                 return null;
+            }
 
             var players = hand.Players.ToList();
-            var button = players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
-            var co = hand.HandActions.Select(h => h.PlayerName).Distinct().Where(x => x != button?.PlayerName).LastOrDefault();
 
-            return hand.Players.FirstOrDefault(x => x.PlayerName == co);
+            var button = players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
+
+            var orderedPlayers = players.OrderBy(x => x.SeatNumber).ToArray();
+
+            var btnPlayerIndex = orderedPlayers.FindIndex(x => x.SeatNumber == hand.DealerButtonPosition);
+
+            if (btnPlayerIndex < 0)
+            {
+                var co = hand.HandActions
+                    .Select(h => h.PlayerName)
+                    .Distinct()
+                    .Where(x => x != button?.PlayerName)
+                    .LastOrDefault();
+
+                return hand.Players.FirstOrDefault(x => x.PlayerName == co);
+            }
+
+            var coPlayer = btnPlayerIndex == 0 ? orderedPlayers.Last() : orderedPlayers[btnPlayerIndex - 1];
+
+            return coPlayer;
         }
 
         private static Player GetDealerPlayer(HandHistory hand)

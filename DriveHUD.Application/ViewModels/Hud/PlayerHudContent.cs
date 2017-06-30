@@ -11,13 +11,13 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.ViewModels;
+using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Application.ViewModels.Hud
 {
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable, ProtoContract]

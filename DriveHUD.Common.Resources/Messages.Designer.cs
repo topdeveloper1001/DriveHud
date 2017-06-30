@@ -120,5 +120,50 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Message_Migration0017_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Message_Migration0019_Exit {
+            get {
+                return ResourceManager.GetString("Message_Migration0019_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry.
+        /// </summary>
+        internal static string Message_Migration0019_Retry {
+            get {
+                return ResourceManager.GetString("Message_Migration0019_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip.
+        /// </summary>
+        internal static string Message_Migration0019_Skip {
+            get {
+                return ResourceManager.GetString("Message_Migration0019_Skip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUDs have not been migrated. Migration failed. That error might cause an unexpected issues with HUDs. Please retry to run migration again. You can also skip migration, in this case default HUDs will be created..
+        /// </summary>
+        internal static string Message_Migration0019_Text {
+            get {
+                return ResourceManager.GetString("Message_Migration0019_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Migration error.
+        /// </summary>
+        internal static string Message_Migration0019_Title {
+            get {
+                return ResourceManager.GetString("Message_Migration0019_Title", resourceCulture);
+            }
+        }
     }
 }

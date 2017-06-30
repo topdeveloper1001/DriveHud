@@ -1,0 +1,377 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Controls.HudGaugeIndicator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:app="clr-namespace:DriveHUD.Application"
+    xmlns:control="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:tpls="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    Width="{Binding Width}"
+    Height="{Binding Height}">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudGaugeIndicatorStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate
+                x:Key="StatInfoTextTemplate">
+                <TextBlock
+                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                    Foreground="White"
+                    Height="16"
+                    VerticalAlignment="Center"
+                    Margin="3"
+                    Text="{Binding ToolTip}" />
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoMeterTemplate">
+                <ContentControl
+                    Margin="3"
+                    Style="{StaticResource MeterControlStyle}"
+                    Height="16"
+                    VerticalAlignment="Center" />
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoValueTemplate">
+                <TextBlock
+                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                    Margin="3"
+                    Height="16"
+                    VerticalAlignment="Center"
+                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="StatInfoBreakTemplate">
+                <Border
+                    Height="10"
+                    Margin="0,0,0,2">
+                    <Border
+                        Height="1"
+                        Margin="0,3,0,0"
+                        Background="{StaticResource GaugeInternalBorderBrush}" />
+                </Border>
+            </DataTemplate>
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoTextTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoTextTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoMeterTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoMeterTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
+                x:Key="StatInfoValueTemplateSelector"
+                StatInfoTemplate="{StaticResource StatInfoValueTemplate}"
+                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+
+        <ItemsControl
+            ItemsSource="{Binding}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid
+                        VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="28" />
+                            <RowDefinition
+                                Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid
+                                Cursor="Hand"
+                                Grid.Column="0">
+
+                                <Grid.Style>
+                                    <Style
+                                        TargetType="Grid">
+                                        <Setter
+                                            Property="Visibility"
+                                            Value="Hidden" />
+                                        <Setter
+                                            Property="ToolTipService.InitialShowDelay"
+                                            Value="{x:Static res:HudDefaultSettings.PopupShowDelay}" />
+                                        <Setter
+                                            Property="ToolTipService.ShowDuration"
+                                            Value="60000" />
+                                        <Setter
+                                            Property="ToolTipService.VerticalOffset"
+                                            Value="-5" />
+                                        <Setter
+                                            Property="ToolTipService.Placement"
+                                            Value="Top" />
+                                        <Setter
+                                            Property="ToolTipService.ToolTip">
+                                            <Setter.Value>
+                                                <ToolTip
+                                                    BorderThickness="0"
+                                                    Background="Transparent">
+                                                    <ToolTip.ContentTemplate>
+                                                        <DataTemplate>
+                                                            <control:HudHeatMap
+                                                                DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}}, Path=DataContext.HeatMapViewModel}" />
+                                                        </DataTemplate>
+                                                    </ToolTip.ContentTemplate>
+                                                </ToolTip>
+                                            </Setter.Value>
+                                        </Setter>
+
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding RelativeSource={RelativeSource PreviousData}}"
+                                                        Value="{x:Null}">
+                                                    </Condition>
+                                                    <Condition
+                                                        Binding="{Binding IsHeatMapVisible}"
+                                                        Value="True">
+                                                    </Condition>
+                                                </MultiDataTrigger.Conditions>
+
+                                                <Setter
+                                                    Property="Visibility"
+                                                    Value="Visible" />
+
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+
+                                    </Style>
+                                </Grid.Style>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="5" />
+                                    <RowDefinition
+                                        Height="23" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="68" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    BorderThickness="1,1,0,0"
+                                    BorderBrush="{StaticResource GaugeBorderBrush}"
+                                    CornerRadius="2,0,0,0"
+                                    Background="#252628" />
+
+                                <Border
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    CornerRadius="2,2,0,0"
+                                    BorderThickness="1,1,1,0"
+                                    BorderBrush="{StaticResource GaugeBorderBrush}"
+                                    Background="#252628" />
+
+                                <Border
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    Margin="0,-1,0,0"
+                                    BorderBrush="{StaticResource GaugeBorderBrush}"
+                                    Background="#252628">
+
+                                    <Grid>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="Auto" />
+                                            <RowDefinition
+                                                Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Path
+                                            Grid.Row="0"
+                                            VerticalAlignment="Top"
+                                            HorizontalAlignment="Center">
+                                            <Path.Style>
+                                                <Style
+                                                    TargetType="{x:Type Path}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger
+                                                            Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type Grid}, AncestorLevel=2}}"
+                                                            Value="True">
+                                                            <Setter
+                                                                Property="Data"
+                                                                Value="M 0 0 L 4 4 L 8 0 Z" />
+                                                        </DataTrigger>
+                                                        <DataTrigger
+                                                            Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type Grid}, AncestorLevel=2}}"
+                                                            Value="False">
+                                                            <Setter
+                                                                Property="Data"
+                                                                Value="M 0 4 L 4 0 L 8 4 Z" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Path.Style>
+                                            <Path.Fill>
+                                                <SolidColorBrush
+                                                    Color="{StaticResource GlyphColor}" />
+                                            </Path.Fill>
+                                        </Path>
+
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            VerticalAlignment="Top"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"
+                                            FontSize="10"
+                                            Text="{ResX Key=Common_HudLayout_HeatMap}"
+                                            Style="{StaticResource HudToolTipTextBlockStyle}" />
+
+                                    </Grid>
+
+                                </Border>
+
+                                <Border
+                                    Grid.Column="2"
+                                    Grid.Row="1"
+                                    BorderThickness="0,1,0,0"
+                                    BorderBrush="{StaticResource GaugeBorderBrush}"
+                                    Background="#252628" />
+
+                            </Grid>
+
+                            <Border
+                                Grid.Column="1"
+                                Margin="0,5,0,0"
+                                Padding="5 2"
+                                CornerRadius="0,2,0,0"
+                                BorderThickness="1,1,1,0"
+                                BorderBrush="{StaticResource GaugeBorderBrush}"
+                                Background="{StaticResource BackgroundBrush1}">
+                                <TextBlock
+                                    HorizontalAlignment="Right"
+                                    Text="{Binding HeaderText}"
+                                    Style="{StaticResource HudToolTipTextBlockStyle}" />
+                            </Border>
+
+                        </Grid>
+
+                        <Grid
+                            Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border
+                                Grid.Column="0"
+                                CornerRadius="0,0,0,2"
+                                BorderBrush="{StaticResource GaugeBorderBrush}"
+                                Background="{StaticResource BackgroundBrush1}"
+                                BorderThickness="1"
+                                Padding="6 0 5 0">
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Style="{StaticResource HudToolTipHeadTextBlockStyle}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform
+                                            Angle="270" />
+                                    </TextBlock.LayoutTransform>
+                                    <Run
+                                        Text="{Binding Text}" />
+                                    <Run
+                                        Text=" " />
+                                    <Run
+                                        Text="{Binding BaseStat.IterationsText, Mode=OneWay}" />
+                                </TextBlock>
+                            </Border>
+
+                            <Border
+                                Grid.Column="1"
+                                CornerRadius="0,0,2,0"
+                                BorderThickness="0,1,1,1"
+                                Background="{StaticResource BackgroundBrush1}"
+                                BorderBrush="{StaticResource GaugeBorderBrush}">
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="Auto" />
+                                        <ColumnDefinition
+                                            Width="Auto" />
+                                        <ColumnDefinition
+                                            Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <!-- Use separate items controls in order to properly size columns -->
+                                    <ItemsControl
+                                        Grid.Column="0"
+                                        ItemsSource="{Binding Stats}"
+                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                                        ItemTemplateSelector="{StaticResource StatInfoTextTemplateSelector}" />
+
+                                    <ItemsControl
+                                        Grid.Column="1"
+                                        Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                                        ItemsSource="{Binding Stats}"
+                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                                        ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />
+
+                                    <ItemsControl
+                                        Grid.Column="2"
+                                        ItemsSource="{Binding Stats}"
+                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
+                                        ItemTemplateSelector="{StaticResource StatInfoValueTemplateSelector}" />
+
+                                </Grid>
+
+                            </Border>
+                        </Grid>
+
+                    </Grid>
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+</UserControl>

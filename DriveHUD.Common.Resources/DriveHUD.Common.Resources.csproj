@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Errors.resx</DependentUpon>
     </Compile>
+    <Compile Include="HudDefaultSettings.cs" />
     <Compile Include="Main.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +73,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notifications.resx</DependentUpon>
     </Compile>
     <Compile Include="ProgressMessages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,6 +135,10 @@
     <EmbeddedResource Include="Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Notifications.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -516,91 +526,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\hud\drivehud-hudmenu.png" />
-    <Content Include="Layouts\DH-6max-Basic.xml">
+    <EmbeddedResource Include="Layouts\DH 10-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 2-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 3-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 4-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max.xml">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Layouts\DH-FR-Basic.xml" />
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\DH 6-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 8-max.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max.xml" />
+    <Resource Include="images\icons\4-stat.png" />
+    <Resource Include="images\icons\break line.png" />
+    <Resource Include="images\icons\bumpers.png" />
+    <Resource Include="images\icons\gauge.png" />
+    <Resource Include="images\icons\graph.png" />
+    <Resource Include="images\icons\heatmap.png" />
+    <Resource Include="images\icons\plain stat box.png" />
+    <Resource Include="images\icons\profile.png" />
+    <Resource Include="images\icons\textbox.png" />
+    <Resource Include="images\icons\tilt.meter.png" />
+    <Resource Include="images\icons\rotate-icon-w.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icons\drivehud.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-6max-Basic-OH.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH.xml" />
-    <Content Include="Layouts\DH-MTT-Basic.xml" />
-    <Content Include="Layouts\DH-SNG-Basic.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-10max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-10max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-2max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH.xml" />
-    <Content Include="Layouts\DH-2max-Basic.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic.xml" />
-    <Content Include="Layouts\DH-3max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-4max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-6max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-6max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-10max-MTT-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-10max-SNG-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-MTT-Basic-OH.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-BOL.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-SNG-Basic-OH.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-8max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-BOL.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\logo32x32.png" />
@@ -608,80 +557,6 @@
   <ItemGroup>
     <Resource Include="images\hud\cards_hand.png" />
     <Resource Include="images\hud\dollar_sign.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-10max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-10max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-BOL-T.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-BOL-S.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-BOL-T.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\settings\pokerstars-10max.png" />
@@ -701,182 +576,10 @@
     <Resource Include="images\settings\pokerstars-9max.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Layouts\DH-10max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-10max-Basic-PS.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-PS.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-2max-Basic-PS.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-PS.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-4max-Basic-PS.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-PS.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-6max-Basic-PS.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-PS.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-8max-Basic-PS.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-PS.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-FR-Basic-PS.xml" />
-    <Content Include="Layouts\DH-MTT-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-MTT-Basic-PS.xml" />
-    <Content Include="Layouts\DH-SNG-Basic-OH-PS.xml" />
-    <Content Include="Layouts\DH-SNG-Basic-PS.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\settings\5max.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\settings\empty-table.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-10max-Basic-888.xml" />
-    <Content Include="Layouts\DH-10max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-10max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-10max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-2max-Basic-888.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-3max-Basic-888.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-4max-Basic-888.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-5max-Basic-888.xml" />
-    <Content Include="Layouts\DH-5max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-5max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-5max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-5max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-5max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-6max-Basic-888.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-8max-Basic-888.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-9max-Basic-888.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-888.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-OH-888.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-888.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-OH-888.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-2max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-3max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-4max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-6max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-8max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-9max-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-OH-ACR.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-ACR.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-OH-ACR.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-2max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-2max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-2max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-2max-SNG-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-3max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-3max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-3max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-3max-SNG-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-4max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-4max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-4max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-4max-SNG-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-6max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-6max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-6max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-6max-SNG-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-8max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-8max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-8max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-8max-SNG-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-9max-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-OH-BCP.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-BCP.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-OH-BCP.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Layouts\DH-9max-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-9max-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-9max-MTT-Basic-OH-BOL.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-BOL.xml" />
-    <Content Include="Layouts\DH-9max-SNG-Basic-OH-BOL.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\search.png" />
@@ -891,7 +594,32 @@
     <Resource Include="images\hud\chip_icon_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Layouts\Default.xml" />
+    <EmbeddedResource Include="Layouts\DH 10-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 10-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 10-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 2-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 2-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 3-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 3-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 3-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 4-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 4-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 4-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 6-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 6-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 6-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 8-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 8-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 8-max Vertical_2.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max Horizontal.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max Vertical_1.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max Vertical_2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 2-max Vertical_2.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Layouts\Default-10-max.xml" />
@@ -902,6 +630,16 @@
     <EmbeddedResource Include="Layouts\Default-6-max.xml" />
     <EmbeddedResource Include="Layouts\Default-8-max.xml" />
     <EmbeddedResource Include="Layouts\Default-9-max.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\pref-seating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 6-max Cash.xml" />
+    <EmbeddedResource Include="Layouts\DH 9-max Cash.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 10-max Cash.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

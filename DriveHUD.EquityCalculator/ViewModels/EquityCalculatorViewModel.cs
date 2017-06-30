@@ -280,7 +280,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             try
             {
                 ResetAll(null);
-                if(obj.IsEmptyRequest)
+
+                if (obj.IsEmptyRequest)
                 {
                     _currentHandHistory = null;
                     InitPlayersList();
@@ -288,18 +289,23 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 _currentHandHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(obj.GameNumber, obj.PokersiteId);
+
                 if (_currentHandHistory == null)
+                {
                     return;
+                }
 
                 SetStreetVisibility(_currentHandHistory);
                 LoadBoardData(_currentHandHistory, _currentHandHistory.CommunityCards.Count());
                 LoadPlayersData(_currentHandHistory);
+
                 var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentSreet);
-                PlayersList.RemoveAll(x => 
+
+                PlayersList.RemoveAll(x =>
                        _currentHandHistory
-                            .HandActions.Any(a=> (a.HandActionType == HandActionType.FOLD) 
-                                                && (a.PlayerName == x.PlayerName)) 
-                    && (x.PlayerName != this.StorageModel.PlayerSelectedItem.Name)
+                            .HandActions.Any(a => (a.HandActionType == HandActionType.FOLD)
+                                                && (a.PlayerName == x.PlayerName))
+                    && (x.PlayerName != StorageModel.PlayerSelectedItem?.Name)
                     && (x.PlayerName != strongestOpponent));
             }
             catch (ArgumentOutOfRangeException ex)

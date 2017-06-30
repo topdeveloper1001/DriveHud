@@ -8,6 +8,9 @@
             <xs:sequence>
               <xs:element name="version" minOccurs="1" maxOccurs="1">
                 <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="notes" minOccurs="0" maxOccurs="1" />
+                  </xs:sequence>
                   <xs:attribute name="version" type="xs:string" use="required" />
                   <xs:attribute name="path" type="xs:string" use="required"/>
                   <xs:attribute name="md5hash" type="xs:string" use="required" />

@@ -192,7 +192,6 @@
     <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
     <Compile Include="Builders\iPoker\PokerEvaluator.cs" />
-    <Compile Include="Builders\iPoker\PokerStarsBuilder.cs" />
     <Compile Include="Builders\iPoker\StringExtensions.cs" />
     <Compile Include="DataImportedEvent.cs" />
     <Compile Include="DataImportedEventArgs.cs" />
@@ -248,7 +247,11 @@
     <Compile Include="WinningPokerNetwork\BlackChipPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\IAmericasCardroomImporter.cs" />
     <Compile Include="WinningPokerNetwork\IBlackChipPokerImporter.cs" />
+    <Compile Include="WinningPokerNetwork\ITruePokerImporter.cs" />
+    <Compile Include="WinningPokerNetwork\IYaPokerImporter.cs" />
+    <Compile Include="WinningPokerNetwork\TruePokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\WinningPokerNetworkFileBasedImporter.cs" />
+    <Compile Include="WinningPokerNetwork\YaPokerImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">

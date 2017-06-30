@@ -23,6 +23,7 @@
     xmlns:equityCalculator="clr-namespace:DriveHUD.EquityCalculator.Views;assembly=DriveHUD.EquityCalculator"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    xmlns:va="clr-namespace:DriveHUD.Application.Views.Alias"
     xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
@@ -30,6 +31,7 @@
     xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
     xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:cts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -69,6 +71,27 @@
         <DataTemplate
             DataType="{x:Type vm:AppsViewModel}">
             <v:AppsView />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="CommonFilterTemplate">
+            <telerik:RadMenuItem>
+                <telerik:RadMenuItem.Style>
+                    <Style
+                        TargetType="telerik:RadMenuItem"
+                        BasedOn="{StaticResource RadMenuItemStyle1}">
+                        <Setter
+                            Property="Header"
+                            Value="{Binding Path=Name}" />
+                        <Setter
+                            Property="Command"
+                            Value="{Binding Path=DataContext.MenuItemPopupFilter_CommandClick, RelativeSource={RelativeSource AncestorType=application:MainWindow}}" />
+                        <Setter
+                            Property="CommandParameter"
+                            Value="{Binding}" />
+                    </Style>
+                </telerik:RadMenuItem.Style>
+            </telerik:RadMenuItem>
         </DataTemplate>
 
         <Style
@@ -516,6 +539,7 @@
                                                 <RowDefinition
                                                     Height="*" />
                                             </Grid.RowDefinitions>
+                                            
                                             <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
@@ -527,6 +551,13 @@
                                                     <telerik:Office_BlackTheme />
                                                 </telerik:StyleManager.Theme>
                                             </telerik:RadButton>
+
+                                            <Button Margin="-1,-1,-1,0"
+                                                    Background="{TemplateBinding Background}"
+                                                    Command="{Binding AliasMenuCommand}">
+                                                Create Alias
+                                            </Button>
+                                            
                                             <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
@@ -876,7 +907,7 @@
                                         Margin="{TemplateBinding Padding}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                                     <TextBlock
-                                        Text="{Binding Path=PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
+                                        Text="{Binding ShortDescription}"
                                         HorizontalAlignment="Right"
                                         Margin="0 0 5 0"
                                         Style="{StaticResource Title_H2}" />
@@ -1105,6 +1136,53 @@
         </prism:InteractionRequestTrigger>
 
         <prism:InteractionRequestTrigger
+            SourceObject="{Binding AliasViewRequest, Mode=OneWay}">
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type Window}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource BackgroundBrush1}" />
+                        <Setter
+                            Property="Height"
+                            Value="450" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="450" />
+                        <Setter
+                            Property="Width"
+                            Value="520" />
+                        <Setter
+                            Property="MinWidth"
+                            Value="360" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="CanResize" />
+                        <Setter
+                            Property="ShowInTaskbar"
+                            Value="False" />
+                    </Style>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.WindowContent>
+                    <va:AliasView />
+                </infra:PopupWindowAction.WindowContent>
+                <infra:PopupWindowAction.HasBorder>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+            </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+
+        <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction>
                 <infra:PopupTelerikWindowAction.WindowStyle>
@@ -1187,8 +1265,54 @@
             </infra:PopupWindowAction>
         </prism:InteractionRequestTrigger>
 
-    </i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding UpdateViewRequest,Mode=OneWay}">
+            <infra:PopupTelerikWindowAction>
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource PopupBackground}" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="150" />
+                        <Setter
+                            Property="MaxHeight"
+                            Value="370" />
+                        <Setter
+                            Property="CanClose"
+                            Value="False" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
+                            Property="Width"
+                            Value="480" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.IsModal>
+                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <v:UpdateView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
 
+    </i:Interaction.Triggers>
 
     <Grid
         x:Name="LayoutRoot"
@@ -1466,7 +1590,7 @@
 
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>
-
+          
                 <telerik:RadComboBox
                     MinWidth="150"
                     IsEditable="True"
@@ -1474,9 +1598,10 @@
                     BorderThickness="0"
                     Background="{StaticResource BackgroundBrush2}"
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    DisplayMemberPath="DecodedName"
-                    ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
-                    Style="{StaticResource RadComboBoxStyle1}"
+                    DisplayMemberPath="DecodedName"         
+                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"                    
+                    Style="{StaticResource RadComboBoxStyle1}"                           
+                    
                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
                     <telerik:RadComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -1484,6 +1609,7 @@
                         </ItemsPanelTemplate>
                     </telerik:RadComboBox.ItemsPanel>
                 </telerik:RadComboBox>
+                
                 <telerik:RadRibbonDropDownButton
                     Foreground="White"
                     VerticalAlignment="Stretch"

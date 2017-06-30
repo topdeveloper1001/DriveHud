@@ -26,7 +26,7 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(GetMRatioColumn("M-Ratio", nameof(MRatioReportRecord.MRatio), GetColumnWidth("M-Ratio") + 10));
+            gridView.Columns.Add(GetMRatioColumn("M-Ratio", nameof(MRatioReportRecord.MRatioZone), GetColumnWidth("M-Ratio") + 10));
             gridView.Columns.Add(Add("Total Hands", nameof(MRatioReportRecord.TotalHands)));
             gridView.Columns.Add(AddFinancial("Net Won", nameof(MRatioReportRecord.TotalWon)));
             gridView.Columns.Add(Add("bb/100", nameof(MRatioReportRecord.BB)));

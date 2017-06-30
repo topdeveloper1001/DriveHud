@@ -23,7 +23,7 @@ using System.Linq;
 namespace DriveHud.Tests.UnitTests
 {
     [TestFixture]
-    class ReportCreatorTests : LightIndicatorsTests
+    class ReportCreatorTests : BaseIndicatorsTests
     {
         [OneTimeSetUp]
         public override void SetUp()

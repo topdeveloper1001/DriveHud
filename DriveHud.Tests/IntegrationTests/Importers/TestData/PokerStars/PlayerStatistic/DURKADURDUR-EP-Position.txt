@@ -1,0 +1,42 @@
+PokerStars Game #47149116574:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:34:29 ET
+Table 'Gormeisa' 6-max Seat #4 is the button
+Seat 1: DURKADURDUR ($386.50 in chips) 
+Seat 2: Chojjasd ($212.30 in chips) 
+Seat 3: LiraMaker ($100 in chips) 
+Seat 4: maestroB ($221.15 in chips) 
+Seat 5: Desateur ($464.15 in chips) 
+Seat 6: thomaswkm ($263.55 in chips) 
+Desateur: posts small blind $1
+thomaswkm: posts big blind $2
+LiraMaker: posts small blind $1
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+Chojjasd: raises $14 to $20
+LiraMaker: folds 
+maestroB: folds 
+Desateur: folds 
+thomaswkm: calls $18
+DURKADURDUR: folds 
+*** FLOP *** [7d 6s Kd]
+thomaswkm: checks 
+Chojjasd: checks 
+*** TURN *** [7d 6s Kd] [8h]
+thomaswkm: bets $28
+Chojjasd: calls $28
+*** RIVER *** [7d 6s Kd 8h] [6d]
+thomaswkm: checks 
+Chojjasd: bets $164.30 and is all-in
+thomaswkm: calls $164.30
+*** SHOW DOWN ***
+Chojjasd: shows [Ad 5d] (a flush, Ace high)
+thomaswkm: shows [Ah Kh] (two pair, Kings and Sixes)
+Chojjasd collected $429.60 from pot
+*** SUMMARY ***
+Total pot $432.60 | Rake $3 
+Board [7d 6s Kd 8h 6d]
+Seat 1: DURKADURDUR folded before Flop
+Seat 2: Chojjasd showed [Ad 5d] and won ($429.60) with a flush, Ace high
+Seat 3: LiraMaker folded before Flop
+Seat 4: maestroB (button) folded before Flop (didn't bet)
+Seat 5: Desateur (small blind) folded before Flop
+Seat 6: thomaswkm (big blind) showed [Ah Kh] and lost with two pair, Kings and Sixes

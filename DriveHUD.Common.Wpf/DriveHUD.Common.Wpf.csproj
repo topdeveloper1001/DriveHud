@@ -128,11 +128,16 @@
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
     <Compile Include="Actions\PopupWindowAction.cs" />
+    <Compile Include="AttachedBehaviors\DragAdorner.cs" />
+    <Compile Include="AttachedBehaviors\DragDrop.cs" />
+    <Compile Include="AttachedBehaviors\DragDropDataObject.cs" />
+    <Compile Include="AttachedBehaviors\DragInfo.cs" />
     <Compile Include="AttachedBehaviors\GridExtensions.cs" />
     <Compile Include="AttachedBehaviors\IgnoreMouseWheelBehavior.cs" />
     <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />
     <Compile Include="AttachedBehaviors\MainScrollBarBehavior.cs" />
     <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
+    <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
     <Compile Include="Controls\NonTopmostPopup.cs" />
@@ -146,6 +151,9 @@
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToBackgroundConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToBorderBrushConverter.cs" />
+    <Compile Include="Converters\HeatMapValueToColorsBaseConverter.cs" />
     <Compile Include="Converters\IsTournamentEnumGameTypeToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumNotToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToLocalizedStringConverter.cs" />
@@ -155,6 +163,8 @@
     <Compile Include="Converters\MultiBooleanAndConverter.cs" />
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
     <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
+    <Compile Include="Converters\NullToBoolConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
     <Compile Include="Converters\PokerSiteToShortStringConverter.cs" />

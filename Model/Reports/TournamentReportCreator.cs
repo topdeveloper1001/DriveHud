@@ -31,8 +31,9 @@ namespace Model.Reports
                 return report;
             }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
+            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;     
+
+            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
             foreach (var tournament in tournaments)
             {

@@ -61,6 +61,22 @@ namespace Model.Site
             set;
         }
 
+        public bool IsHandHistoryLocationRequired
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public bool IsPrefferedSeatsAllowed
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public virtual Dictionary<int, int> PreferredSeats
         {
             get

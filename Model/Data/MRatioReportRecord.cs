@@ -16,6 +16,6 @@ namespace Model.Data
 {
     public class MRatioReportRecord : ReportIndicators
     {
-        public new EnumMRatio MRatio { get; set; }
+        public new EnumMRatio MRatioZone { get; set; }
     }
 }

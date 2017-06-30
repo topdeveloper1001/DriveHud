@@ -10,13 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Model.Enums;
+using Model.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using DriveHUD.Common.Utils;
 
 namespace Model.Data
 {
@@ -39,8 +40,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP,
-                    Occured = Source.Vpiphands,
-                    CouldOccured = Source.Totalhands
+                    Occurred = Source.Vpiphands,
+                    CouldOccurred = Source.Totalhands
                 };
             }
         }
@@ -52,8 +53,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = PFR,
-                    Occured = Source.Pfrhands,
-                    CouldOccured = Source.Totalhands
+                    Occurred = Source.Pfrhands,
+                    CouldOccurred = Source.Totalhands
                 };
             }
         }
@@ -65,8 +66,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet,
-                    Occured = Source.Didthreebet,
-                    CouldOccured = Source.Couldthreebet
+                    Occurred = Source.Didthreebet,
+                    CouldOccurred = Source.Couldthreebet
                 };
             }
         }
@@ -78,8 +79,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBetIP,
-                    Occured = Source.DidThreeBetIp,
-                    CouldOccured = Source.CouldThreeBetIp
+                    Occurred = Source.DidThreeBetIp,
+                    CouldOccurred = Source.CouldThreeBetIp
                 };
             }
         }
@@ -91,8 +92,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBetOOP,
-                    Occured = Source.DidThreeBetOop,
-                    CouldOccured = Source.CouldThreeBetOop
+                    Occurred = Source.DidThreeBetOop,
+                    CouldOccurred = Source.CouldThreeBetOop
                 };
             }
         }
@@ -104,8 +105,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FourBet,
-                    Occured = Source.Didfourbet,
-                    CouldOccured = Source.Couldfourbet
+                    Occurred = Source.Didfourbet,
+                    CouldOccurred = Source.Couldfourbet
                 };
             }
         }
@@ -117,8 +118,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBetCall,
-                    Occured = Source.Calledthreebetpreflop,
-                    CouldOccured = Source.Facedthreebetpreflop
+                    Occurred = Source.Calledthreebetpreflop,
+                    CouldOccurred = Source.Facedthreebetpreflop
                 };
             }
         }
@@ -130,8 +131,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBet,
-                    Occured = Source.Flopcontinuationbetmade,
-                    CouldOccured = Source.Flopcontinuationbetpossible
+                    Occurred = Source.Flopcontinuationbetmade,
+                    CouldOccurred = Source.Flopcontinuationbetpossible
                 };
             }
         }
@@ -143,8 +144,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnCBet,
-                    Occured = Source.Turncontinuationbetmade,
-                    CouldOccured = Source.Turncontinuationbetpossible
+                    Occurred = Source.Turncontinuationbetmade,
+                    CouldOccurred = Source.Turncontinuationbetpossible
                 };
             }
         }
@@ -156,8 +157,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetInThreeBetPot,
-                    Occured = Source.FlopContinuationBetInThreeBetPotMade,
-                    CouldOccured = Source.FlopContinuationBetInThreeBetPotPossible
+                    Occurred = Source.FlopContinuationBetInThreeBetPotMade,
+                    CouldOccurred = Source.FlopContinuationBetInThreeBetPotPossible
                 };
 
             }
@@ -170,8 +171,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetInFourBetPot,
-                    Occured = Source.FlopContinuationBetInFourBetPotMade,
-                    CouldOccured = Source.FlopContinuationBetInFourBetPotPossible
+                    Occurred = Source.FlopContinuationBetInFourBetPotMade,
+                    CouldOccurred = Source.FlopContinuationBetInFourBetPotPossible
                 };
             }
         }
@@ -183,8 +184,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetVsOneOpp,
-                    Occured = Source.FlopContinuationBetVsOneOpponentMade,
-                    CouldOccured = Source.FlopContinuationBetVsOneOpponentPossible
+                    Occurred = Source.FlopContinuationBetVsOneOpponentMade,
+                    CouldOccurred = Source.FlopContinuationBetVsOneOpponentPossible
                 };
             }
         }
@@ -196,8 +197,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetVsTwoOpp,
-                    Occured = Source.FlopContinuationBetVsTwoOpponentsMade,
-                    CouldOccured = Source.FlopContinuationBetVsTwoOpponentsPossible
+                    Occurred = Source.FlopContinuationBetVsTwoOpponentsMade,
+                    CouldOccurred = Source.FlopContinuationBetVsTwoOpponentsPossible
                 };
             }
         }
@@ -209,8 +210,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetMW,
-                    Occured = Source.MultiWayFlopContinuationBetMade,
-                    CouldOccured = Source.MultiWayFlopContinuationBetPossible
+                    Occurred = Source.MultiWayFlopContinuationBetMade,
+                    CouldOccurred = Source.MultiWayFlopContinuationBetPossible
                 };
             }
         }
@@ -222,8 +223,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetMonotone,
-                    Occured = Source.FlopContinuationBetMonotonePotMade,
-                    CouldOccured = Source.FlopContinuationBetMonotonePotPossible
+                    Occurred = Source.FlopContinuationBetMonotonePotMade,
+                    CouldOccurred = Source.FlopContinuationBetMonotonePotPossible
                 };
             }
         }
@@ -235,8 +236,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCBetRag,
-                    Occured = Source.FlopContinuationBetRagPotMade,
-                    CouldOccured = Source.FlopContinuationBetRagPotPossible
+                    Occurred = Source.FlopContinuationBetRagPotMade,
+                    CouldOccurred = Source.FlopContinuationBetRagPotPossible
                 };
             }
         }
@@ -248,8 +249,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldFlopCBetFromThreeBetPot,
-                    Occured = Source.FoldedToFlopContinuationBetFromThreeBetPot,
-                    CouldOccured = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    Occurred = Source.FoldedToFlopContinuationBetFromThreeBetPot,
+                    CouldOccurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
                 };
             }
         }
@@ -261,8 +262,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldFlopCBetFromFourBetPot,
-                    Occured = Source.FoldedToFlopContinuationBetFromFourBetPot,
-                    CouldOccured = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    Occurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    CouldOccurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
                 };
             }
         }
@@ -274,8 +275,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = Steal,
-                    Occured = Source.StealMade,
-                    CouldOccured = Source.StealPossible
+                    Occurred = Source.StealMade,
+                    CouldOccurred = Source.StealPossible
                 };
             }
         }
@@ -287,8 +288,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToThreeBet,
-                    Occured = Source.Foldedtothreebetpreflop,
-                    CouldOccured = Source.Facedthreebetpreflop
+                    Occurred = Source.Foldedtothreebetpreflop,
+                    CouldOccurred = Source.Facedthreebetpreflop
                 };
             }
         }
@@ -300,8 +301,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BlindsReraiseSteal,
-                    Occured = Source.Bigblindstealreraised + Source.Smallblindstealreraised,
-                    CouldOccured = Source.Bigblindstealfaced + Source.Smallblindstealfaced
+                    Occurred = Source.Bigblindstealreraised + Source.Smallblindstealreraised,
+                    CouldOccurred = Source.Bigblindstealfaced + Source.Smallblindstealfaced
                 };
             }
         }
@@ -313,8 +314,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BlindsFoldSteal,
-                    Occured = Source.Bigblindstealfolded + Source.Smallblindstealfolded,
-                    CouldOccured = Source.Bigblindstealfaced + Source.Smallblindstealfaced
+                    Occurred = Source.Bigblindstealfolded + Source.Smallblindstealfolded,
+                    CouldOccurred = Source.Bigblindstealfaced + Source.Smallblindstealfaced
                 };
             }
         }
@@ -326,8 +327,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WSSD,
-                    Occured = Source.Wonshowdown,
-                    CouldOccured = Source.Sawshowdown
+                    Occurred = Source.Wonshowdown,
+                    CouldOccurred = Source.Sawshowdown
                 };
             }
         }
@@ -339,8 +340,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WWSF,
-                    Occured = Source.Wonhandwhensawflop,
-                    CouldOccured = Source.Sawflop
+                    Occurred = Source.Wonhandwhensawflop,
+                    CouldOccurred = Source.Sawflop
                 };
             }
         }
@@ -352,8 +353,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WTSD,
-                    Occured = Source.Sawshowdown,
-                    CouldOccured = Source.Sawflop
+                    Occurred = Source.Sawshowdown,
+                    CouldOccurred = Source.Sawflop
                 };
             }
         }
@@ -365,8 +366,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = AggPr,
-                    Occured = Source.Totalbets,
-                    CouldOccured = Source.Totalpostflopstreetsplayed
+                    Occurred = Source.Totalbets,
+                    CouldOccurred = Source.Totalpostflopstreetsplayed
                 };
             }
         }
@@ -378,8 +379,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TrueAggression,
-                    Occured = Source.TotalAggressiveBets,
-                    CouldOccured = Source.Totalpostflopstreetsplayed - Source.Flopcontinuationbetmade
+                    Occurred = Source.TotalAggressiveBets,
+                    CouldOccurred = Source.Totalpostflopstreetsplayed - Source.Flopcontinuationbetmade
                 };
             }
         }
@@ -391,8 +392,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WSWSF,
-                    Occured = Source.Wonhandwhensawflop,
-                    CouldOccured = Source.Sawflop
+                    Occurred = Source.Wonhandwhensawflop,
+                    CouldOccurred = Source.Sawflop
                 };
             }
         }
@@ -404,8 +405,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall,
-                    Occured = Source.Didcoldcall,
-                    CouldOccured = Source.Couldcoldcall
+                    Occurred = Source.Didcoldcall,
+                    CouldOccurred = Source.Couldcoldcall
                 };
             }
         }
@@ -417,8 +418,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopAgg,
-                    Occured = Source.TotalbetsFlop,
-                    CouldOccured = Source.FlopAggPossible
+                    Occurred = Source.TotalbetsFlop,
+                    CouldOccurred = Source.FlopAggPossible
                 };
             }
         }
@@ -430,8 +431,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnAgg,
-                    Occured = Source.TotalbetsTurn,
-                    CouldOccured = Source.TurnAggPossible
+                    Occurred = Source.TotalbetsTurn,
+                    CouldOccurred = Source.TurnAggPossible
                 };
             }
         }
@@ -443,8 +444,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RiverAgg,
-                    Occured = Source.TotalbetsRiver,
-                    CouldOccured = Source.RiverAggPossible
+                    Occurred = Source.TotalbetsRiver,
+                    CouldOccurred = Source.RiverAggPossible
                 };
             }
         }
@@ -456,8 +457,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldCBet,
-                    Occured = Source.Foldedtoflopcontinuationbet,
-                    CouldOccured = Source.Facingflopcontinuationbet
+                    Occurred = Source.Foldedtoflopcontinuationbet,
+                    CouldOccurred = Source.Facingflopcontinuationbet
                 };
             }
         }
@@ -469,8 +470,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RaiseCBet,
-                    Occured = Source.Raisedflopcontinuationbet,
-                    CouldOccured = Source.Facingflopcontinuationbet
+                    Occurred = Source.Raisedflopcontinuationbet,
+                    CouldOccurred = Source.Facingflopcontinuationbet
                 };
             }
         }
@@ -482,8 +483,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToFourBet,
-                    Occured = Source.Foldedtofourbetpreflop,
-                    CouldOccured = Source.Facedfourbetpreflop
+                    Occurred = Source.Foldedtofourbetpreflop,
+                    CouldOccurred = Source.Facedfourbetpreflop
                 };
             }
         }
@@ -495,8 +496,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = Squeeze,
-                    Occured = Source.Didsqueeze,
-                    CouldOccured = Source.Totalhands
+                    Occurred = Source.Didsqueeze,
+                    CouldOccurred = Source.Totalhands
                 };
             }
         }
@@ -508,8 +509,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckRaise,
-                    Occured = Source.DidCheckRaise,
-                    CouldOccured = Source.Totalhands
+                    Occurred = Source.DidCheckRaise,
+                    CouldOccurred = Source.Totalhands
                 };
             }
         }
@@ -521,8 +522,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopCheckRaise,
-                    Occured = Source.DidFlopCheckRaise,
-                    CouldOccured = Source.Sawflop
+                    Occurred = Source.DidFlopCheckRaise,
+                    CouldOccurred = Source.Sawflop
                 };
             }
         }
@@ -534,8 +535,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnCheckRaise,
-                    Occured = Source.DidTurnCheckRaise,
-                    CouldOccured = Source.SawTurn
+                    Occurred = Source.DidTurnCheckRaise,
+                    CouldOccurred = Source.SawTurn
                 };
             }
         }
@@ -547,8 +548,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RiverCheckRaise,
-                    Occured = Source.DidRiverCheckRaise,
-                    CouldOccured = Source.SawRiver
+                    Occurred = Source.DidRiverCheckRaise,
+                    CouldOccurred = Source.SawRiver
                 };
             }
         }
@@ -560,8 +561,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FloatFlop,
-                    Occured = Source.PlayedFloatFlop,
-                    CouldOccured = Source.Facingflopcontinuationbet
+                    Occurred = Source.PlayedFloatFlop,
+                    CouldOccurred = Source.Facingflopcontinuationbet
                 };
             }
         }
@@ -573,8 +574,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RaiseFlop,
-                    Occured = Source.DidRaiseFlop,
-                    CouldOccured = Source.CouldRaiseFlop
+                    Occurred = Source.DidRaiseFlop,
+                    CouldOccurred = Source.CouldRaiseFlop
                 };
             }
         }
@@ -586,8 +587,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RaiseTurn,
-                    Occured = Source.DidRaiseTurn,
-                    CouldOccured = Source.CouldRaiseTurn
+                    Occurred = Source.DidRaiseTurn,
+                    CouldOccurred = Source.CouldRaiseTurn
                 };
             }
         }
@@ -599,8 +600,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RaiseRiver,
-                    Occured = Source.DidRaiseRiver,
-                    CouldOccured = Source.CouldRaiseRiver
+                    Occurred = Source.DidRaiseRiver,
+                    CouldOccurred = Source.CouldRaiseRiver
                 };
             }
         }
@@ -612,8 +613,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RaiseFrequencyFactor,
-                    Occured = Source.DidRaiseFlop + Source.DidRaiseTurn + Source.DidRaiseRiver,
-                    CouldOccured = Source.CouldRaiseFlop + Source.CouldRaiseTurn + Source.CouldRaiseRiver
+                    Occurred = Source.DidRaiseFlop + Source.DidRaiseTurn + Source.DidRaiseRiver,
+                    CouldOccurred = Source.CouldRaiseFlop + Source.CouldRaiseTurn + Source.CouldRaiseRiver
                 };
             }
         }
@@ -625,8 +626,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnSeen,
-                    Occured = Source.SawTurn,
-                    CouldOccured = Source.WasTurn
+                    Occurred = Source.SawTurn,
+                    CouldOccurred = Source.WasTurn
                 };
             }
         }
@@ -638,8 +639,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RiverSeen,
-                    Occured = Source.SawRiver,
-                    CouldOccured = Source.WasRiver
+                    Occurred = Source.SawRiver,
+                    CouldOccurred = Source.WasRiver
                 };
             }
         }
@@ -651,8 +652,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBetVsSteal,
-                    Occured = Source.DidThreeBetVsSteal,
-                    CouldOccured = Source.CouldThreeBetVsSteal
+                    Occurred = Source.DidThreeBetVsSteal,
+                    CouldOccurred = Source.CouldThreeBetVsSteal
                 };
             }
         }
@@ -664,8 +665,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckRiverOnBXLine,
-                    Occured = Source.DidCheckRiverOnBXLine,
-                    CouldOccured = Source.CouldCheckRiverOnBXLine
+                    Occurred = Source.DidCheckRiverOnBXLine,
+                    CouldOccurred = Source.CouldCheckRiverOnBXLine
                 };
             }
         }
@@ -677,8 +678,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CBetIP,
-                    Occured = Source.Flopcontinuationipbetmade,
-                    CouldOccured = Source.Flopcontinuationipbetpossible
+                    Occurred = Source.Flopcontinuationipbetmade,
+                    CouldOccurred = Source.Flopcontinuationipbetpossible
                 };
             }
         }
@@ -690,138 +691,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CBetOOP,
-                    Occured = Source.Flopcontinuationoopbetmade,
-                    CouldOccured = Source.Flopcontinuationoopbetpossible
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInBB,
-                    Occured = Source.DidThreeBetInBb,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInBTN,
-                    Occured = Source.DidThreeBetInBtn,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInCO,
-                    Occured = Source.DidThreeBetInCo,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInMP,
-                    Occured = Source.DidThreeBetInMp,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto ThreeBetInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ThreeBetInSB,
-                    Occured = Source.DidThreeBetInSb,
-                    CouldOccured = Source.Couldthreebet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInBB,
-                    Occured = Source.DidFourBetInBb,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInBTN,
-                    Occured = Source.DidFourBetInBtn,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInCO,
-                    Occured = Source.DidFourBetInCo,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInMP,
-                    Occured = Source.DidFourBetInMp,
-                    CouldOccured = Source.Couldfourbet
-                };
-            }
-        }
-
-        public virtual StatDto FourBetInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = FourBetInSB,
-                    Occured = Source.DidFourBetInSb,
-                    CouldOccured = Source.Couldfourbet
+                    Occurred = Source.Flopcontinuationoopbetmade,
+                    CouldOccurred = Source.Flopcontinuationoopbetpossible
                 };
             }
         }
@@ -833,8 +704,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DonkBet,
-                    Occured = Source.DidDonkBet,
-                    CouldOccured = Source.CouldDonkBet
+                    Occurred = Source.DidDonkBet,
+                    CouldOccurred = Source.CouldDonkBet
                 };
             }
         }
@@ -846,8 +717,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DidDelayedTurnCBet,
-                    Occured = Source.DidDelayedTurnCBet,
-                    CouldOccured = Source.CouldDelayedTurnCBet
+                    Occurred = Source.DidDelayedTurnCBet,
+                    CouldOccurred = Source.CouldDelayedTurnCBet
                 };
             }
         }
@@ -859,8 +730,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BTNDefendCORaise,
-                    Occured = Source.Buttonstealdefended,
-                    CouldOccured = Source.Buttonstealfaced
+                    Occurred = Source.Buttonstealdefended,
+                    CouldOccurred = Source.Buttonstealfaced
                 };
             }
         }
@@ -872,8 +743,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BetFlopCalled3BetPreflopIp,
-                    Occured = Source.BetFlopCalled3BetPreflopIp,
-                    CouldOccured = Source.Totalhands
+                    Occurred = Source.BetFlopCalled3BetPreflopIp,
+                    CouldOccurred = Source.Totalhands
                 };
             }
         }
@@ -885,8 +756,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BetFoldFlopPfrRaiser,
-                    Occured = Source.BetFoldFlopPfrRaiser,
-                    CouldOccured = Source.Pfrhands
+                    Occurred = Source.BetFoldFlopPfrRaiser,
+                    CouldOccurred = Source.Pfrhands
                 };
             }
         }
@@ -898,8 +769,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckFoldFlop3BetOop,
-                    Occured = Source.CheckFoldFlop3BetOop,
-                    CouldOccured = Source.DidThreeBetOop
+                    Occurred = Source.CheckFoldFlop3BetOop,
+                    CouldOccurred = Source.DidThreeBetOop
                 };
             }
         }
@@ -911,8 +782,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckFoldFlopPfrOop,
-                    Occured = Source.CheckFoldFlopPfrOop,
-                    CouldOccured = Source.PfrOop
+                    Occurred = Source.CheckFoldFlopPfrOop,
+                    CouldOccurred = Source.PfrOop
                 };
             }
         }
@@ -928,8 +799,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DidLimp,
-                    Occured = Source.LimpMade,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpMade,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -941,8 +812,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpEp,
-                    Occured = Source.LimpEp,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpEp,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -954,8 +825,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpMp,
-                    Occured = Source.LimpMp,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpMp,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -967,8 +838,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpCo,
-                    Occured = Source.LimpCo,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpCo,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -980,8 +851,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpBtn,
-                    Occured = Source.LimpBtn,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpBtn,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -993,8 +864,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpSb,
-                    Occured = Source.LimpSb,
-                    CouldOccured = Source.LimpPossible
+                    Occurred = Source.LimpSb,
+                    CouldOccurred = Source.LimpPossible
                 };
             }
         }
@@ -1006,8 +877,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DidLimpCall,
-                    Occured = Source.LimpCalled,
-                    CouldOccured = Source.LimpFaced
+                    Occurred = Source.LimpCalled,
+                    CouldOccurred = Source.LimpFaced
                 };
             }
         }
@@ -1019,8 +890,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DidLimpFold,
-                    Occured = Source.LimpFolded,
-                    CouldOccured = Source.LimpFaced
+                    Occurred = Source.LimpFolded,
+                    CouldOccurred = Source.LimpFaced
                 };
             }
         }
@@ -1032,8 +903,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = DidLimpReraise,
-                    Occured = Source.LimpReraised,
-                    CouldOccured = Source.LimpFaced
+                    Occurred = Source.LimpReraised,
+                    CouldOccurred = Source.LimpFaced
                 };
             }
         }
@@ -1045,8 +916,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = BetWhenCheckedTo,
-                    Occured = Source.DidBetWhenCheckedToFlop + Source.DidBetWhenCheckedToTurn + Source.DidBetWhenCheckedToRiver,
-                    CouldOccured = Source.CanBetWhenCheckedToFlop + Source.CanBetWhenCheckedToTurn + Source.CanBetWhenCheckedToRiver,
+                    Occurred = Source.DidBetWhenCheckedToFlop + Source.DidBetWhenCheckedToTurn + Source.DidBetWhenCheckedToRiver,
+                    CouldOccurred = Source.CanBetWhenCheckedToFlop + Source.CanBetWhenCheckedToTurn + Source.CanBetWhenCheckedToRiver,
                 };
             }
         }
@@ -1058,8 +929,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToFlopRaise,
-                    Occured = Source.FoldedFacedRaiseFlop,
-                    CouldOccured = Source.FacedRaiseFlop,
+                    Occurred = Source.FoldedFacedRaiseFlop,
+                    CouldOccurred = Source.FacedRaiseFlop,
                 };
             }
         }
@@ -1071,8 +942,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToTurnRaise,
-                    Occured = Source.FoldedFacedRaiseTurn,
-                    CouldOccured = Source.FacedRaiseTurn,
+                    Occurred = Source.FoldedFacedRaiseTurn,
+                    CouldOccurred = Source.FacedRaiseTurn,
                 };
             }
         }
@@ -1084,8 +955,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToRiverCBet,
-                    Occured = Source.Foldedtorivercontinuationbet,
-                    CouldOccured = Source.Facingrivercontinuationbet
+                    Occurred = Source.Foldedtorivercontinuationbet,
+                    CouldOccurred = Source.Facingrivercontinuationbet
                 };
             }
         }
@@ -1097,8 +968,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToSqueez,
-                    Occured = Source.FoldedFacedSqueez,
-                    CouldOccured = Source.FacedSqueez,
+                    Occurred = Source.FoldedFacedSqueez,
+                    CouldOccurred = Source.FacedSqueez,
                 };
             }
         }
@@ -1164,8 +1035,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_EP,
-                    Occured = Source.UO_PFR_EP,
-                    CouldOccured = Source.PositionUnoppened?.EP ?? 0
+                    Occurred = Source.UO_PFR_EP,
+                    CouldOccurred = Source.PositionUnoppened?.EP ?? 0
                 };
             }
         }
@@ -1177,8 +1048,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_MP,
-                    Occured = Source.UO_PFR_MP,
-                    CouldOccured = Source.PositionUnoppened?.MP ?? 0
+                    Occurred = Source.UO_PFR_MP,
+                    CouldOccurred = Source.PositionUnoppened?.MP ?? 0
                 };
             }
         }
@@ -1190,8 +1061,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_CO,
-                    Occured = Source.UO_PFR_CO,
-                    CouldOccured = Source.PositionUnoppened?.CO ?? 0
+                    Occurred = Source.UO_PFR_CO,
+                    CouldOccurred = Source.PositionUnoppened?.CO ?? 0
                 };
             }
         }
@@ -1203,8 +1074,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_BN,
-                    Occured = Source.UO_PFR_BN,
-                    CouldOccured = Source.PositionUnoppened?.BN ?? 0
+                    Occurred = Source.UO_PFR_BN,
+                    CouldOccurred = Source.PositionUnoppened?.BN ?? 0
                 };
             }
         }
@@ -1216,8 +1087,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_SB,
-                    Occured = Source.UO_PFR_SB,
-                    CouldOccured = Source.PositionUnoppened?.SB ?? 0
+                    Occurred = Source.UO_PFR_SB,
+                    CouldOccurred = Source.PositionUnoppened?.SB ?? 0
                 };
             }
         }
@@ -1229,63 +1100,15 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = UO_PFR_BB,
-                    Occured = Source.UO_PFR_BB,
-                    CouldOccured = Source.PositionUnoppened?.BB ?? 0
+                    Occurred = Source.UO_PFR_BB,
+                    CouldOccurred = Source.PositionUnoppened?.BB ?? 0
                 };
             }
         }
 
         #endregion
 
-        #region Vpip
-
-        public virtual decimal VPIP_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.EP, Source.PositionTotal?.EP);
-            }
-        }
-
-        public virtual decimal VPIP_MP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.MP, Source.PositionTotal?.MP);
-            }
-        }
-
-        public virtual decimal VPIP_CO
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.CO, Source.PositionTotal?.CO);
-            }
-        }
-
-        public virtual decimal VPIP_BN
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.BN, Source.PositionTotal?.BN);
-            }
-        }
-
-        public virtual decimal VPIP_SB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.SB, Source.PositionTotal?.SB);
-            }
-        }
-
-        public virtual decimal VPIP_BB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionVPIP?.BB, Source.PositionTotal?.BB);
-            }
-        }
+        #region Positional VPIP
 
         public virtual StatDto VPIP_EPObject
         {
@@ -1294,8 +1117,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_EP,
-                    Occured = Source.PositionVPIP?.EP ?? 0,
-                    CouldOccured = Source.PositionTotal?.EP ?? 0
+                    Occurred = Source.PositionVPIP?.EP ?? 0,
+                    CouldOccurred = Source.PositionTotal?.EP ?? 0
                 };
             }
         }
@@ -1307,8 +1130,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_MP,
-                    Occured = Source.PositionVPIP?.MP ?? 0,
-                    CouldOccured = Source.PositionTotal?.MP ?? 0
+                    Occurred = Source.PositionVPIP?.MP ?? 0,
+                    CouldOccurred = Source.PositionTotal?.MP ?? 0
                 };
             }
         }
@@ -1320,8 +1143,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_CO,
-                    Occured = Source.PositionVPIP?.CO ?? 0,
-                    CouldOccured = Source.PositionTotal?.CO ?? 0
+                    Occurred = Source.PositionVPIP?.CO ?? 0,
+                    CouldOccurred = Source.PositionTotal?.CO ?? 0
                 };
             }
         }
@@ -1333,8 +1156,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_BN,
-                    Occured = Source.PositionVPIP?.BN ?? 0,
-                    CouldOccured = Source.PositionTotal?.BN ?? 0
+                    Occurred = Source.PositionVPIP?.BN ?? 0,
+                    CouldOccurred = Source.PositionTotal?.BN ?? 0
                 };
             }
         }
@@ -1346,8 +1169,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_SB,
-                    Occured = Source.PositionVPIP?.SB ?? 0,
-                    CouldOccured = Source.PositionTotal?.SB ?? 0
+                    Occurred = Source.PositionVPIP?.SB ?? 0,
+                    CouldOccurred = Source.PositionTotal?.SB ?? 0
                 };
             }
         }
@@ -1359,58 +1182,15 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = VPIP_BB,
-                    Occured = Source.PositionVPIP?.BB ?? 0,
-                    CouldOccured = Source.PositionTotal?.BB ?? 0
+                    Occurred = Source.PositionVPIP?.BB ?? 0,
+                    CouldOccurred = Source.PositionTotal?.BB ?? 0
                 };
             }
         }
 
         #endregion
 
-        #region ColdCall
-
-        public virtual decimal ColdCall_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.EP, Source.PositionCouldColdCall?.EP);
-            }
-        }
-        public virtual decimal ColdCall_MP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.MP, Source.PositionCouldColdCall?.MP);
-            }
-        }
-        public virtual decimal ColdCall_CO
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.CO, Source.PositionCouldColdCall?.CO);
-            }
-        }
-        public virtual decimal ColdCall_BN
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.BN, Source.PositionCouldColdCall?.BN);
-            }
-        }
-        public virtual decimal ColdCall_SB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.SB, Source.PositionCouldColdCall?.SB);
-            }
-        }
-        public virtual decimal ColdCall_BB
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidColdCall?.BB, Source.PositionCouldColdCall?.BB);
-            }
-        }
+        #region Positional Cold Call
 
         public virtual StatDto ColdCall_EPObject
         {
@@ -1419,11 +1199,12 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_EP,
-                    Occured = Source.PositionDidColdCall?.EP ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.EP ?? 0
+                    Occurred = Source.PositionDidColdCall?.EP ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.EP ?? 0
                 };
             }
         }
+
         public virtual StatDto ColdCall_MPObject
         {
             get
@@ -1431,11 +1212,12 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_MP,
-                    Occured = Source.PositionDidColdCall?.MP ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.MP ?? 0
+                    Occurred = Source.PositionDidColdCall?.MP ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.MP ?? 0
                 };
             }
         }
+
         public virtual StatDto ColdCall_COObject
         {
             get
@@ -1443,11 +1225,12 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_CO,
-                    Occured = Source.PositionDidColdCall?.CO ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.CO ?? 0
+                    Occurred = Source.PositionDidColdCall?.CO ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.CO ?? 0
                 };
             }
         }
+
         public virtual StatDto ColdCall_BNObject
         {
             get
@@ -1455,11 +1238,12 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_BN,
-                    Occured = Source.PositionDidColdCall?.BN ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.BN ?? 0
+                    Occurred = Source.PositionDidColdCall?.BN ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.BN ?? 0
                 };
             }
         }
+
         public virtual StatDto ColdCall_SBObject
         {
             get
@@ -1467,11 +1251,12 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_SB,
-                    Occured = Source.PositionDidColdCall?.SB ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.SB ?? 0
+                    Occurred = Source.PositionDidColdCall?.SB ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.SB ?? 0
                 };
             }
         }
+
         public virtual StatDto ColdCall_BBObject
         {
             get
@@ -1479,86 +1264,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCall_BB,
-                    Occured = Source.PositionDidColdCall?.BB ?? 0,
-                    CouldOccured = Source.PositionCouldColdCall?.BB ?? 0
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInBBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInBB,
-                    Occured = Source.DidColdCallInBb,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInBTNObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInBTN,
-                    Occured = Source.DidColdCallInBtn,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInCOObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInCO,
-                    Occured = Source.DidColdCallInCo,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInMPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInMP,
-                    Occured = Source.DidColdCallInMp,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInEPObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInEP,
-                    Occured = Source.DidColdCallInEp,
-                    CouldOccured = Source.Couldcoldcall
-                };
-            }
-        }
-
-        public virtual StatDto ColdCallInSBObject
-        {
-            get
-            {
-                return new StatDto
-                {
-                    Value = ColdCallInSB,
-                    Occured = Source.DidColdCallInSb,
-                    CouldOccured = Source.Couldcoldcall
+                    Occurred = Source.PositionDidColdCall?.BB ?? 0,
+                    CouldOccurred = Source.PositionCouldColdCall?.BB ?? 0
                 };
             }
         }
@@ -1570,8 +1277,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallThreeBet,
-                    Occured = Source.DidColdCallThreeBet,
-                    CouldOccured = Source.CouldColdCallThreeBet
+                    Occurred = Source.DidColdCallThreeBet,
+                    CouldOccurred = Source.CouldColdCallThreeBet
                 };
             }
         }
@@ -1583,8 +1290,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallFourBet,
-                    Occured = Source.DidColdCallFourBet,
-                    CouldOccured = Source.CouldColdCallFourBet
+                    Occurred = Source.DidColdCallFourBet,
+                    CouldOccurred = Source.CouldColdCallFourBet
                 };
             }
         }
@@ -1596,8 +1303,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallVsBtnOpen,
-                    Occured = Source.DidColdCallVsOpenRaiseBtn,
-                    CouldOccured = Source.CouldColdCallVsOpenRaiseBtn
+                    Occurred = Source.DidColdCallVsOpenRaiseBtn,
+                    CouldOccurred = Source.CouldColdCallVsOpenRaiseBtn
                 };
             }
         }
@@ -1609,8 +1316,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallVsCoOpen,
-                    Occured = Source.DidColdCallVsOpenRaiseCo,
-                    CouldOccured = Source.CouldColdCallVsOpenRaiseCo
+                    Occurred = Source.DidColdCallVsOpenRaiseCo,
+                    CouldOccurred = Source.CouldColdCallVsOpenRaiseCo
                 };
             }
         }
@@ -1622,43 +1329,15 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallVsSbOpen,
-                    Occured = Source.DidColdCallVsOpenRaiseSb,
-                    CouldOccured = Source.CouldColdCallVsOpenRaiseSb
+                    Occurred = Source.DidColdCallVsOpenRaiseSb,
+                    CouldOccurred = Source.CouldColdCallVsOpenRaiseSb
                 };
             }
         }
 
         #endregion
 
-        #region 3Bet
-
-        public virtual decimal ThreeBet_EP
-        {
-            get
-            {
-                return GetPercentage(Source.PositionDidThreeBet?.EP, Source.PositionCouldColdCall?.EP);
-            }
-        }
-        public virtual decimal ThreeBet_MP
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.MP, Source.PositionCouldThreeBet?.MP); }
-        }
-        public virtual decimal ThreeBet_CO
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.CO, Source.PositionCouldThreeBet?.CO); }
-        }
-        public virtual decimal ThreeBet_BN
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.BN, Source.PositionCouldThreeBet?.BN); }
-        }
-        public virtual decimal ThreeBet_SB
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.SB, Source.PositionCouldThreeBet?.SB); }
-        }
-        public virtual decimal ThreeBet_BB
-        {
-            get { return GetPercentage(Source.PositionDidThreeBet?.BB, Source.PositionCouldThreeBet?.BB); }
-        }
+        #region Positional 3-Bet
 
         public virtual StatDto ThreeBet_EPObject
         {
@@ -1667,8 +1346,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_EP,
-                    Occured = Source.PositionDidThreeBet?.EP ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.EP ?? 0
+                    Occurred = Source.PositionDidThreeBet?.EP ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.EP ?? 0
                 };
             }
         }
@@ -1679,8 +1358,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_MP,
-                    Occured = Source.PositionDidThreeBet?.MP ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.MP ?? 0
+                    Occurred = Source.PositionDidThreeBet?.MP ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.MP ?? 0
                 };
             }
         }
@@ -1691,8 +1370,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_CO,
-                    Occured = Source.PositionDidThreeBet?.CO ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.CO ?? 0
+                    Occurred = Source.PositionDidThreeBet?.CO ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.CO ?? 0
                 };
             }
         }
@@ -1703,8 +1382,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_BN,
-                    Occured = Source.PositionDidThreeBet?.BN ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.BN ?? 0
+                    Occurred = Source.PositionDidThreeBet?.BN ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.BN ?? 0
                 };
             }
         }
@@ -1715,8 +1394,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_SB,
-                    Occured = Source.PositionDidThreeBet?.SB ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.SB ?? 0
+                    Occurred = Source.PositionDidThreeBet?.SB ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.SB ?? 0
                 };
             }
         }
@@ -1727,8 +1406,90 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ThreeBet_BB,
-                    Occured = Source.PositionDidThreeBet?.BB ?? 0,
-                    CouldOccured = Source.PositionCouldThreeBet?.BB ?? 0
+                    Occurred = Source.PositionDidThreeBet?.BB ?? 0,
+                    CouldOccurred = Source.PositionCouldThreeBet?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional 4-Bet
+
+        public virtual StatDto FourBetInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInBB,
+                    Occurred = Source.PositionDidFourBet?.BB ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.BB ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInBTN,
+                    Occurred = Source.PositionDidFourBet?.BN ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.BN ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInCO,
+                    Occurred = Source.PositionDidFourBet?.CO ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.CO ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInMP,
+                    Occurred = Source.PositionDidFourBet?.MP ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.MP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInMP,
+                    Occurred = Source.PositionDidFourBet?.EP ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.EP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInSB,
+                    Occurred = Source.PositionDidFourBet?.SB ?? 0,
+                    CouldOccurred = Source.PositionCouldFourBet?.SB ?? 0,
                 };
             }
         }
@@ -1798,28 +1559,9 @@ namespace Model.Data
             }
         }
 
-        private IList<decimal> moneyWonCollection;
-
-        public virtual IList<decimal> MoneyWonCollection
-        {
-            get
-            {
-                return moneyWonCollection;
-            }
-            set
-            {
-                if (ReferenceEquals(moneyWonCollection, value))
-                {
-                    return;
-                }
-
-                moneyWonCollection = value;
-            }
-        }
-
         #endregion
 
-        #region Recent Agg
+        #region Recent Aggressive
 
         public virtual decimal RecentAggPr
         {
@@ -1839,9 +1581,32 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RecentAggPr,
-                    Occured = recentAggList?.Sum(x => x.Item1) ?? 0,
-                    CouldOccured = recentAggList?.Sum(x => x.Item2) ?? 0
+                    Occurred = recentAggList?.Sum(x => x.Item1) ?? 0,
+                    CouldOccurred = recentAggList?.Sum(x => x.Item2) ?? 0
                 };
+            }
+        }
+
+        #endregion
+
+        #region  Session stats 
+
+        private Dictionary<Stat, IList<decimal>> statsSessionCollection;
+
+        public Dictionary<Stat, IList<decimal>> StatsSessionCollection
+        {
+            get
+            {
+                return statsSessionCollection;
+            }
+            set
+            {
+                if (ReferenceEquals(statsSessionCollection, value))
+                {
+                    return;
+                }
+
+                statsSessionCollection = value;
             }
         }
 
@@ -1855,42 +1620,63 @@ namespace Model.Data
         {
             base.AddStatistic(statistic);
 
+            AddCards(statistic);
+            AddThreeBetCards(statistic);
+            AddStatsToSession(statistic);
+            AddRecentAgg(statistic);
+        }
+
+        protected virtual void AddCards(Playerstatistic statistic)
+        {
             if (CardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards))
             {
                 CardsList.Add(statistic.Cards);
             }
+        }
 
+        protected virtual void AddThreeBetCards(Playerstatistic statistic)
+        {
             if (threeBetCardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards) && statistic.Didthreebet != 0)
             {
                 threeBetCardsList.Add(statistic.Cards);
             }
+        }
 
-            if (moneyWonCollection != null)
-            {
-                moneyWonCollection.Add(statistic.NetWon);
-            }
-
+        protected virtual void AddRecentAgg(Playerstatistic statistic)
+        {
             if (recentAggList != null)
             {
                 recentAggList.Add(new Tuple<int, int>(statistic.Totalbets, statistic.Totalpostflopstreetsplayed));
             }
         }
 
-        #endregion
-
-        #region Help methods
-
-        protected decimal GetPercentage(decimal? actual, decimal? possible)
+        public virtual void AddStatsToSession(Playerstatistic statistic)
         {
-            if (TotalHands == 0)
-                return 0;
+            if (statsSessionCollection == null)
+            {
+                return;
+            }
 
-            if (!possible.HasValue || !actual.HasValue || possible == 0)
-                return 0;
+            foreach (var statBase in StatsProvider.StatsBases.Values)
+            {
+                if (string.IsNullOrEmpty(statBase.PropertyName))
+                {
+                    continue;
+                }
 
-            return (actual.Value / possible.Value) * 100;
+                if (!statsSessionCollection.ContainsKey(statBase.Stat))
+                {
+                    statsSessionCollection.Add(statBase.Stat, new List<decimal>());
+                }
+
+                var statValue = statBase.Stat == Stat.NetWon ?
+                    statistic.NetWon :
+                    (decimal)ReflectionHelper.GetMemberValue(this, statBase.PropertyName);
+
+                statsSessionCollection[statBase.Stat].Add(statValue);
+            }
         }
 
-        #endregion
+        #endregion       
     }
 }

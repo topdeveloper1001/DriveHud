@@ -250,6 +250,6 @@ namespace DriveHUD.Common.Utils
             }
 
             return date >= start && date <= end;
-        }
+        }      
     }
 }

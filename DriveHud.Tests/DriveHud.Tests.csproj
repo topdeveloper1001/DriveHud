@@ -188,11 +188,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="IntegrationTests\Base\BaseDatabaseTest.cs" />
+    <Compile Include="IntegrationTests\Base\BaseIntegrationTest.cs" />
     <Compile Include="IntegrationTests\Base\DatabaseHelper.cs" />
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
     <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />
+    <Compile Include="IntegrationTests\Migrations\BaseLayoutsMigrationTest.cs" />
+    <Compile Include="IntegrationTests\Migrations\LayoutMigratorTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
@@ -215,26 +218,35 @@
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PartyPoker\PartyPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\BaseIndicatorsTests.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
+    <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\BovadaTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
+    <Compile Include="UnitTests\CardTests.cs" />
+    <Compile Include="UnitTests\ExportFunctionsTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
     <Compile Include="UnitTests\Helpers\DataServiceHelper.cs" />
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
+    <Compile Include="UnitTests\Helpers\SerializerHelper.cs" />
+    <Compile Include="UnitTests\HudLayoutMigrationTests.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
-    <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
+    <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
     <Compile Include="UnitTests\ReportCreatorTests.cs" />
+    <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
@@ -242,6 +254,10 @@
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
       <Project>{9b9115f6-c76e-4f23-b050-295287d140c5}</Project>
       <Name>DriveHUD.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
       <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
@@ -382,6 +398,12 @@
     <Content Include="UnitTests\TestData\CashOmaha-10-max-big-rake-error.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-MTT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-MTT.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -412,9 +434,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IntegrationTests\Importers\TestData\" />
+    <Folder Include="IntegrationTests\Migrations\TestData\" />
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\WSPO\TestData\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

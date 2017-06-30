@@ -19,6 +19,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Linq;
+using HandHistories.Objects.Cards;
 
 namespace HandHistories.Parser.Utils.FastParsing
 {
@@ -119,7 +120,9 @@ namespace HandHistories.Parser.Utils.FastParsing
         public static bool TryParseMoney(string moneyText, out decimal money)
         {
             money = 0m;
-            moneyText = moneyText.RemoveWhitespace().Replace(",", ".");
+
+            // Char #65533 present on TowerTorneos and WSOP hand history.
+            moneyText = moneyText.RemoveWhitespace().Replace(",", ".").Replace(((char)65533).ToString(), "");
 
             var lastIndexOfDot = moneyText.LastIndexOf('.');
 
@@ -177,6 +180,48 @@ namespace HandHistories.Parser.Utils.FastParsing
             }
 
             throw new FormatException($"Unsupported date format: dateText");
+        }
+
+        /// <summary>
+        /// Converts cards to the range of cards (e.g. AsKd -> AKo, AsAc -> AA, AsKs -> AKs)
+        /// </summary>
+        /// <param name="cards">Cards to convert</param>
+        /// <returns>The range of cards</returns>
+        public static string ConvertToCardRange(string cards)
+        {
+            if (string.IsNullOrWhiteSpace(cards) || cards.Length != 4)
+            {
+                return string.Empty;
+            }
+
+            try
+            {
+                var card1 = new Card(cards[0], cards[1]);
+                var card2 = new Card(cards[2], cards[3]);
+
+                if (!card1.IsValid() || !card2.IsValid() || (card1 == card2))
+                {
+                    return string.Empty;
+                }
+
+                if (card1.Rank == card2.Rank)
+                {
+                    return $"{card1.Rank}{card2.Rank}";
+                }
+
+                if (card1.Suit == card2.Suit)
+                {
+                    return $"{card1.Rank}{card2.Rank}s";
+                }
+
+                return $"{card1.Rank}{card2.Rank}o";
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(ParserUtils), "Could not convert cards to the range of cards", e);
+            }
+
+            return string.Empty;
         }
     }
 }

@@ -18,8 +18,9 @@ namespace DriveHUD.Application.TableConfigurators
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
                 case EnumPokerSites.BlackChipPoker:
-                case EnumPokerSites.Bodog:
-                case EnumPokerSites.PartyPoker:                        
+                case EnumPokerSites.TruePoker:
+                case EnumPokerSites.YaPoker:
+                case EnumPokerSites.Bodog:                            
                     ps = pokerSite.ToString();
                     break;
             }

@@ -25,12 +25,20 @@ namespace Model.Data
     /// </summary>
     public class Indicators : INotifyPropertyChanged, IComparable
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="Indicators"/>
+        /// </summary>
         public Indicators()
         {
             Source = new Playerstatistic();
             Statistics = new List<Playerstatistic>();
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Indicators"/>
+        /// </summary>
         public Indicators(IEnumerable<Playerstatistic> playerStatistic) : this()
         {
             playerStatistic.ForEach(x => AddStatistic(x));
@@ -39,28 +47,6 @@ namespace Model.Data
         public Playerstatistic Source { get; set; }
 
         public List<Playerstatistic> Statistics { get; private set; }
-
-        protected virtual decimal GetPercentage(decimal actual, decimal possible)
-        {
-            if (TotalHands == 0)
-                return 0;
-
-            if (possible == 0)
-                return 0;
-
-            return (actual / possible) * 100;
-        }
-
-        protected decimal GetDevisionResult(decimal actual, decimal possible)
-        {
-            if (TotalHands == 0)
-                return 0;
-
-            if (possible == 0)
-                return 0;
-
-            return (actual / possible);
-        }
 
         public virtual int StatisticsCount
         {
@@ -577,134 +563,6 @@ namespace Model.Data
             }
         }
 
-        public virtual decimal ThreeBetInBB
-        {
-            get
-            {
-                return GetPercentage(Source.DidThreeBetInBb, Source.Couldthreebet);
-            }
-        }
-
-        public virtual decimal ThreeBetInBTN
-        {
-            get
-            {
-                return GetPercentage(Source.DidThreeBetInBtn, Source.Couldthreebet);
-            }
-        }
-
-        public virtual decimal ThreeBetInCO
-        {
-            get
-            {
-                return GetPercentage(Source.DidThreeBetInCo, Source.Couldthreebet);
-            }
-        }
-
-        public virtual decimal ThreeBetInMP
-        {
-            get
-            {
-                return GetPercentage(Source.DidThreeBetInMp, Source.Couldthreebet);
-            }
-        }
-
-        public virtual decimal ThreeBetInSB
-        {
-            get
-            {
-                return GetPercentage(Source.DidThreeBetInSb, Source.Couldthreebet);
-            }
-        }
-
-        public virtual decimal FourBetInBB
-        {
-            get
-            {
-                return GetPercentage(Source.DidFourBetInBb, Source.Couldfourbet);
-            }
-        }
-
-        public virtual decimal FourBetInBTN
-        {
-            get
-            {
-                return GetPercentage(Source.DidFourBetInBtn, Source.Couldfourbet);
-            }
-        }
-
-        public virtual decimal FourBetInCO
-        {
-            get
-            {
-                return GetPercentage(Source.DidFourBetInCo, Source.Couldfourbet);
-            }
-        }
-
-        public virtual decimal FourBetInMP
-        {
-            get
-            {
-                return GetPercentage(Source.DidFourBetInMp, Source.Couldfourbet);
-            }
-        }
-
-        public virtual decimal FourBetInSB
-        {
-            get
-            {
-                return GetPercentage(Source.DidFourBetInSb, Source.Couldfourbet);
-            }
-        }
-
-        public virtual decimal ColdCallInBB
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInBb, Source.Couldcoldcall);
-            }
-        }
-
-        public virtual decimal ColdCallInBTN
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInBtn, Source.Couldcoldcall);
-            }
-        }
-
-        public virtual decimal ColdCallInCO
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInCo, Source.Couldcoldcall);
-            }
-        }
-
-        public virtual decimal ColdCallInMP
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInMp, Source.Couldcoldcall);
-            }
-        }
-
-        public virtual decimal ColdCallInEP
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInEp, Source.Couldcoldcall);
-            }
-        }
-
-        public virtual decimal ColdCallInSB
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallInSb, Source.Couldcoldcall);
-            }
-        }
-
         public virtual decimal ColdCallThreeBet
         {
             get
@@ -777,14 +635,14 @@ namespace Model.Data
             }
         }
 
-        #region Unopened Pot
+        #region Unopened PFR
 
         public virtual decimal UO_PFR_EP
         {
             get
             {
                 return GetPercentage(Source.UO_PFR_EP,
-                    Statistics.Count(x => x.PositionString == "EP" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "EP" && x.IsUnopened));
             }
         }
         public virtual decimal UO_PFR_MP
@@ -792,7 +650,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_MP,
-                    Statistics.Count(x => x.PositionString == "MP" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "MP" && x.IsUnopened));
             }
         }
         public virtual decimal UO_PFR_CO
@@ -800,7 +658,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_CO,
-                    Statistics.Count(x => x.PositionString == "CO" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "CO" && x.IsUnopened));
             }
         }
         public virtual decimal UO_PFR_BN
@@ -808,7 +666,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_BN,
-                    Statistics.Count(x => x.PositionString == "BTN" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "BTN" && x.IsUnopened));
             }
         }
         public virtual decimal UO_PFR_SB
@@ -816,7 +674,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_SB,
-                    Statistics.Count(x => x.PositionString == "SB" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "SB" && x.IsUnopened));
             }
         }
         public virtual decimal UO_PFR_BB
@@ -824,7 +682,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_BB,
-                    Statistics.Count(x => x.PositionString == "BB" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "BB" && x.IsUnopened));
             }
         }
 
@@ -856,6 +714,209 @@ namespace Model.Data
         public virtual decimal PFRInSB
         {
             get { return GetPercentage(Source.PfrInSb, TotalHands); }
+        }
+
+        #endregion
+
+        #region Positional VPIP
+
+        public virtual decimal VPIP_EP
+        {
+            get
+            {
+                return GetPositionalPercentage("EP", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        public virtual decimal VPIP_MP
+        {
+            get
+            {
+                return GetPositionalPercentage("MP", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        public virtual decimal VPIP_CO
+        {
+            get
+            {
+                return GetPositionalPercentage("CO", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        public virtual decimal VPIP_BN
+        {
+            get
+            {
+                return GetPositionalPercentage("BTN", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        public virtual decimal VPIP_SB
+        {
+            get
+            {
+                return GetPositionalPercentage("SB", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        public virtual decimal VPIP_BB
+        {
+            get
+            {
+                return GetPositionalPercentage("BB", x => x.Vpiphands, x => x.Totalhands);
+            }
+        }
+
+        #endregion
+
+        #region Positional 3-Bet
+
+        public virtual decimal ThreeBet_EP
+        {
+            get
+            {
+                return GetPositionalPercentage("EP", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        public virtual decimal ThreeBet_MP
+        {
+            get
+            {
+                return GetPositionalPercentage("MP", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        public virtual decimal ThreeBet_CO
+        {
+            get
+            {
+                return GetPositionalPercentage("CO", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        public virtual decimal ThreeBet_BN
+        {
+            get
+            {
+                return GetPositionalPercentage("BTN", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        public virtual decimal ThreeBet_SB
+        {
+            get
+            {
+                return GetPositionalPercentage("SB", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        public virtual decimal ThreeBet_BB
+        {
+            get
+            {
+                return GetPositionalPercentage("BB", x => x.Didthreebet, x => x.Couldthreebet);
+            }
+        }
+
+        #endregion
+
+        #region Positional 4-Bet
+
+        public virtual decimal FourBetInBB
+        {
+            get
+            {
+                return GetPositionalPercentage("BB", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        public virtual decimal FourBetInBTN
+        {
+            get
+            {
+                return GetPositionalPercentage("BTN", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        public virtual decimal FourBetInCO
+        {
+            get
+            {
+                return GetPositionalPercentage("CO", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        public virtual decimal FourBetInMP
+        {
+            get
+            {
+                return GetPositionalPercentage("MP", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        public virtual decimal FourBetInEP
+        {
+            get
+            {
+                return GetPositionalPercentage("EP", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        public virtual decimal FourBetInSB
+        {
+            get
+            {
+                return GetPositionalPercentage("SB", x => x.Didfourbet, x => x.Couldfourbet);
+            }
+        }
+
+        #endregion
+
+        #region Positional Cold call
+
+        public virtual decimal ColdCall_EP
+        {
+            get
+            {
+                return GetPositionalPercentage("EP", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
+        }
+        public virtual decimal ColdCall_MP
+        {
+            get
+            {
+                return GetPositionalPercentage("MP", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
+        }
+        public virtual decimal ColdCall_CO
+        {
+            get
+            {
+                return GetPositionalPercentage("CO", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
+        }
+        public virtual decimal ColdCall_BN
+        {
+            get
+            {
+                return GetPositionalPercentage("BTN", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
+        }
+        public virtual decimal ColdCall_SB
+        {
+            get
+            {
+                return GetPositionalPercentage("SB", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
+        }
+        public virtual decimal ColdCall_BB
+        {
+            get
+            {
+                return GetPositionalPercentage("BB", x => x.Didcoldcall, x => x.Couldcoldcall);
+            }
         }
 
         #endregion
@@ -918,9 +979,13 @@ namespace Model.Data
         #endregion
 
         public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);
+
         public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Source.DidThreeBetOop);
+
         public virtual decimal BetFoldFlopPfrRaiser => GetPercentage(Source.BetFoldFlopPfrRaiser, Source.Pfrhands);
+
         public virtual decimal BetFlopCalled3BetPreflopIp => GetPercentage(Source.BetFlopCalled3BetPreflopIp, TotalHands);
+
         public virtual decimal BTNDefendCORaise
         {
             get
@@ -930,9 +995,13 @@ namespace Model.Data
         }
 
         public virtual string GameType { get; set; }
+
         public virtual string PokerSite
         {
-            get { return ((EnumPokerSites)Source.PokersiteId).ToString(); }
+            get
+            {
+                return ((EnumPokerSites)Source.PokersiteId).ToString();
+            }
         }
 
         public virtual string HourOfHand
@@ -941,11 +1010,13 @@ namespace Model.Data
             {
                 if (Statistics == null || !Statistics.Any())
                 {
-                    return "";
+                    return string.Empty;
                 }
+
                 var sessionStartHour = Converter.ToLocalizedDateTime(Statistics.Min(x => x.Time)).Hour;
                 var sessionEndHour = Converter.ToLocalizedDateTime(Statistics.Max(x => x.Time)).Hour;
-                return String.Format("{0}:00 - {1}:59", sessionStartHour, sessionEndHour);
+
+                return string.Format("{0}:00 - {1}:59", sessionStartHour, sessionEndHour);
             }
         }
 
@@ -956,7 +1027,6 @@ namespace Model.Data
                 return Statistics.Sum(x => x.EVDiff);
             }
         }
-
 
         public virtual decimal EVBB
         {
@@ -1013,6 +1083,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal NetWon
+        {
+            get
+            {
+                return Statistics.Sum(x => x.NetWon);
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;
@@ -1021,7 +1099,9 @@ namespace Model.Data
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
+            {
                 AddStatistic(statistic);
+            }
         }
 
         public virtual void AddStatistic(Playerstatistic statistic)
@@ -1039,6 +1119,7 @@ namespace Model.Data
         public virtual int CompareTo(object obj)
         {
             var objIndicator = obj as Indicators;
+
             if (objIndicator == null)
             {
                 return 1;
@@ -1052,7 +1133,45 @@ namespace Model.Data
                 : 0;
         }
 
-        // required to avoid binding leaks
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Helpers
+
+        protected virtual decimal GetPercentage(decimal actual, decimal possible)
+        {
+            if (TotalHands == 0)
+            {
+                return 0;
+            }
+
+            if (possible == 0)
+            {
+                return 0;
+            }
+
+            return (actual / possible) * 100;
+        }
+
+        protected virtual decimal GetPositionalPercentage(string position, Func<Playerstatistic, int> actualSelector, Func<Playerstatistic, int> possibleSelector)
+        {
+            if (Statistics == null)
+            {
+                return default(decimal);
+            }
+
+            var stats = Statistics.Where(x => x.PositionString == position).ToArray();
+            return GetPercentage(stats.Sum(actualSelector), stats.Sum(possibleSelector));
+        }
+
+        protected decimal GetDevisionResult(decimal actual, decimal possible)
+        {
+            if (TotalHands == 0)
+                return 0;
+
+            if (possible == 0)
+                return 0;
+
+            return (actual / possible);
+        }
+
+        #endregion        
     }
 }

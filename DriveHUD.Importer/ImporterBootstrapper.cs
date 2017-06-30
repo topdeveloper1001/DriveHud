@@ -50,6 +50,8 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();
             container.RegisterType<IAmericasCardroomImporter, AmericasCardroomImporter>();
             container.RegisterType<IBlackChipPokerImporter, BlackChipPokerImporter>();
+            container.RegisterType<ITruePokerImporter, TruePokerImporter>();
+            container.RegisterType<IYaPokerImporter, YaPokerImporter>();
             container.RegisterType<IPacific888Importer, Pacific888Importer>();
             container.RegisterType<IPartyPokerImporter, PartyPokerImporter>();
             container.RegisterType<ICardsConverter, PokerCardsConverter>();
@@ -84,6 +86,8 @@ namespace DriveHUD.Importers
             importerService.Register<IPokerStarsImporter>();
             importerService.Register<IAmericasCardroomImporter>();
             importerService.Register<IBlackChipPokerImporter>();
+            importerService.Register<ITruePokerImporter>();
+            importerService.Register<IYaPokerImporter>();
             importerService.Register<IPacific888Importer>();
             importerService.Register<IPartyPokerImporter>();
         }

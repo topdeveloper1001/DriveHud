@@ -178,15 +178,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PartyPoker.
-        /// </summary>
-        internal static string Enum_EnumPokerSites_PartyPoker {
-            get {
-                return ResourceManager.GetString("Enum_EnumPokerSites_PartyPoker", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 888.
         /// </summary>
         internal static string Enum_EnumPokerSites_Poker888 {
@@ -228,6 +219,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_TigerGaming {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_TigerGaming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True Poker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_TruePoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_TruePoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YaPoker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_YaPoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_YaPoker", resourceCulture);
             }
         }
         
@@ -709,7 +718,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BB Cold Call%.
+        ///   Looks up a localized string similar to Cold Call BB %.
         /// </summary>
         internal static string Enum_Stat_ColdCall_BB {
             get {
@@ -718,7 +727,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BN Cold Call%.
+        ///   Looks up a localized string similar to Cold Call BTN%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_BN {
             get {
@@ -727,7 +736,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CO Cold Call%.
+        ///   Looks up a localized string similar to Cold Call CO%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_CO {
             get {
@@ -736,7 +745,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EP Cold Call%.
+        ///   Looks up a localized string similar to Cold Call EP%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_EP {
             get {
@@ -745,7 +754,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MP Cold Call%.
+        ///   Looks up a localized string similar to Cold Call MP%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_MP {
             get {
@@ -754,7 +763,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SB Cold Call%.
+        ///   Looks up a localized string similar to Cold Call SB%.
         /// </summary>
         internal static string Enum_Stat_ColdCall_SB {
             get {
@@ -1141,6 +1150,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Enum_Stat_NetWon {
+            get {
+                return ResourceManager.GetString("Enum_Stat_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PFR%.
         /// </summary>
         internal static string Enum_Stat_PFR {
@@ -1402,6 +1420,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_S4BetEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_S4BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-Bet MP%.
         /// </summary>
         internal static string Enum_Stat_S4BetMP {
@@ -1447,7 +1474,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3-Bet BN%.
+        ///   Looks up a localized string similar to 3-Bet BTN%.
         /// </summary>
         internal static string Enum_Stat_ThreeBet_BN {
             get {
@@ -1555,7 +1582,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UO-PFR BN.
+        ///   Looks up a localized string similar to UO-PFR BTN.
         /// </summary>
         internal static string Enum_Stat_UO_PFR_BN {
             get {
@@ -1609,7 +1636,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BB VPIP%.
+        ///   Looks up a localized string similar to VPIP BB%.
         /// </summary>
         internal static string Enum_Stat_VPIP_BB {
             get {
@@ -1618,7 +1645,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BN VPIP%.
+        ///   Looks up a localized string similar to VPIP BTN%.
         /// </summary>
         internal static string Enum_Stat_VPIP_BN {
             get {
@@ -1627,7 +1654,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CO VPIP%.
+        ///   Looks up a localized string similar to VPIP CO%.
         /// </summary>
         internal static string Enum_Stat_VPIP_CO {
             get {
@@ -1636,7 +1663,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EP VPIP%.
+        ///   Looks up a localized string similar to VPIP EP%.
         /// </summary>
         internal static string Enum_Stat_VPIP_EP {
             get {
@@ -1645,7 +1672,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MP VPIP%.
+        ///   Looks up a localized string similar to VPIP MP%.
         /// </summary>
         internal static string Enum_Stat_VPIP_MP {
             get {
@@ -1654,7 +1681,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SB VPIP%.
+        ///   Looks up a localized string similar to VPIP SB%.
         /// </summary>
         internal static string Enum_Stat_VPIP_SB {
             get {

@@ -1,39 +1,83 @@
-﻿using DriveHUD.Common.Log;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ExportFunctions.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Extensions;
+using Model.Importer;
+using Model.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HandHistories.Objects.Actions;
-using HandHistories.Objects.Cards;
-using Model.Extensions;
-using Model.Enums;
-using Microsoft.Practices.ServiceLocation;
-using Model.Interfaces;
 using System.Windows;
-using System.Windows.Threading;
 
 namespace DriveHUD.Common.Ifrastructure
 {
     public static class ExportFunctions
     {
-        private static List<String[]> positionNames = new List<string[]>();
-
-        private static void InitPositionNames()
+        private static Dictionary<int, Dictionary<EnumPosition, string>> positionTable = new Dictionary<int, Dictionary<EnumPosition, string>>
         {
-            positionNames.Add(new String[] { }); // 0-handed table
-            positionNames.Add(new String[] { }); // 1-handed table
-            positionNames.Add(new String[] { "SB", "BB" }); // 2-handed table
-            positionNames.Add(new String[] { "SB", "BB", "BTN" }); // 3-handed table
-            positionNames.Add(new String[] { "SB", "BB", "CO", "BTN" }); // 4-handed table
-            positionNames.Add(new String[] { "SB", "BB", "HJ", "CO", "BTN" }); // 5-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "HJ", "CO", "BTN" }); // 6-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "MP", "HJ", "CO", "BTN" }); // 7-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "MP", "MP", "HJ", "CO", "BTN" }); // 8-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "EP", "MP", "MP", "HJ", "CO", "BTN" }); // 9-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "EP", "EP", "MP", "MP", "HJ", "CO", "BTN" }); // 10-handed table
-            positionNames.Add(new String[] { "SB", "BB", "UTG", "EP", "EP", "EP", "MP", "MP", "HJ", "CO", "BTN" }); // 11-handed table (should not exists in online poker)
-        }
+            // 5-handed table
+            [5] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.MP1] = "HJ"
+            },
+            // 6-handed table
+            [6] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.UTG] = "UTG",
+                [EnumPosition.MP1] = "HJ"
+            },
+            // 7-handed table
+            [7] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.UTG_2] = "UTG",
+                [EnumPosition.MP1] = "MP",
+                [EnumPosition.MP2] = "HJ"
+            },
+            // 8-handed table
+            [8] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.UTG_1] = "UTG",
+                [EnumPosition.UTG_2] = "MP",
+                [EnumPosition.MP1] = "MP",
+                [EnumPosition.MP2] = "HJ"
+            },
+            // 9-handed table
+            [9] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.UTG] = "UTG",
+                [EnumPosition.UTG_1] = "EP",
+                [EnumPosition.UTG_2] = "MP",
+                [EnumPosition.MP1] = "MP",
+                [EnumPosition.MP2] = "HJ"
+            },
+            // 10-handed table
+            [10] = new Dictionary<EnumPosition, string>
+            {
+                [EnumPosition.UTG] = "UTG",
+                [EnumPosition.UTG_1] = "EP",
+                [EnumPosition.UTG_2] = "EP",
+                [EnumPosition.MP1] = "MP",
+                [EnumPosition.MP2] = "MP",
+                [EnumPosition.MP3] = "HJ"
+            }
+        };
 
         #region Export Functions
 
@@ -371,25 +415,30 @@ namespace DriveHUD.Common.Ifrastructure
             return card[0] + ":" + suit + ":";
         }
 
-        private static string GetPositionName(string playerName, HandHistory currentHandHistory)
+        private static string GetPositionName(string playerName, HandHistory hand)
         {
-            if (positionNames.Count == 0) InitPositionNames();
-            //int posToCheck = (PositionIndex == -1) ? 0 : PositionIndex;
+            var position = Converter.ToPosition(hand, playerName);
 
-            var playersList = currentHandHistory.PreFlop.Select(x => x.PlayerName).Distinct();
-            if (!playersList.Contains(playerName))
-                return string.Empty;
-
-            int positionIndex = playersList.ToList().IndexOf(playersList.First(x => x == playerName));
-
-            int posToCheck = positionIndex;
-            int nbPlayers = currentHandHistory.Players.Count;
-            if (currentHandHistory.PreFlop.Count() > 2 && currentHandHistory.PreFlop.First().HandActionType == HandActionType.BIG_BLIND)
+            switch (position)
             {
-                posToCheck++;
-                nbPlayers++;
+                case EnumPosition.SB:
+                    return "SB";
+                case EnumPosition.BB:
+                    return "BB";
+                case EnumPosition.BTN:
+                    return "BTN";
+                case EnumPosition.CO:
+                    return "CO";
+                default:
+                    var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
+
+                    if (positionTable.ContainsKey(tableSize) && positionTable[tableSize].ContainsKey(position))
+                    {
+                        return positionTable[tableSize][position];
+                    }
+
+                    return position.ToString();
             }
-            return positionNames[nbPlayers][posToCheck];
         }
 
         private static bool IsFolded(string playerName, IEnumerable<HandAction> actions)

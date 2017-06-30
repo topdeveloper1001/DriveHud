@@ -13,6 +13,7 @@
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.Mvvm;
@@ -98,7 +99,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         private void InitializeCommands()
         {
-            var canSend = this.WhenAny(x1 => x1.Email, x2 => x2.CaptchaText, (x1, x2) => Utils.IsValidEmail(x1.Value) && (IsCaptchaVisible && !string.IsNullOrWhiteSpace(x2.Value) || !IsCaptchaVisible));
+            var canSend = this.WhenAny(x => x.Email, x => Utils.IsValidEmail(x.Value));
 
             SendCommand = ReactiveCommand.Create(canSend);
             SendCommand.Subscribe(x => Send());
@@ -125,61 +126,6 @@ namespace DriveHUD.Application.ViewModels.Registration
             BuyCommand.Subscribe(x => Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink")));
         }
 
-        private void InitializeCaptcha()
-        {
-            byte[] imageData = new byte[0];
-
-            try
-            {
-                imageData = server.CreateSession();
-            }
-            catch (WebException ex)
-            {
-                var response = (HttpWebResponse)ex.Response;
-
-                // no response from server
-                if (response == null)
-                {
-                    var errorMessage = "License service isn't responding";
-
-                    LogProvider.Log.Error(this, errorMessage, ex);
-                    throw new LicenseNoConnectionException(errorMessage, ex);
-                }
-
-                if (response != null && response.StatusCode == HttpStatusCode.Found)
-                {
-                    serverUrl = new Uri(new Uri(server.Url), response.Headers["Location"]).AbsoluteUri;
-                    server.Url = serverUrl;
-                    imageData = server.CreateSession();
-                }
-            }
-
-            LogProvider.Log.Info($"Trying to register trial. Cookies in container: {server.CookieContainer.Count}");
-
-            var image = new BitmapImage();
-
-            try
-            {
-                using (var mem = new MemoryStream(imageData))
-                {
-                    mem.Position = 0;
-                    image.BeginInit();
-                    image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
-                    image.CacheOption = BitmapCacheOption.OnLoad;
-                    image.StreamSource = mem;
-                    image.EndInit();
-                }
-
-                image.Freeze();
-
-                CaptchaImage = image;
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Couldn't get captcha image", e);
-            }
-        }
-
         /// <summary>
         /// Configure view to show greeting message
         /// </summary>
@@ -191,7 +137,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = true;
@@ -218,7 +163,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = false;
@@ -245,7 +189,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = false;
@@ -268,21 +211,10 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             state = RegistrationState.Trial;
 
-            try
-            {
-                InitializeCaptcha();
-            }
-            catch (LicenseNoConnectionException)
-            {
-                InitializeMessage("Common_RegistrationView_NoConnection");
-                return;
-            }
-
             TextMessage = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_TrialRegisterText");
 
             IsSerialVisible = false;
             IsEmailVisible = true;
-            IsCaptchaVisible = true;
 
             IsSendButtonVisible = true;
             IsTrialButtonVisible = false;
@@ -309,7 +241,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = true;
             IsEmailVisible = true;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = true;
             IsTrialButtonVisible = false;
@@ -333,7 +264,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = false;
@@ -357,7 +287,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = false;
@@ -386,7 +315,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             IsSerialVisible = false;
             IsEmailVisible = false;
-            IsCaptchaVisible = false;
 
             IsSendButtonVisible = false;
             IsTrialButtonVisible = false;
@@ -471,34 +399,6 @@ namespace DriveHUD.Application.ViewModels.Registration
             private set
             {
                 this.RaiseAndSetIfChanged(ref captchaImage, value);
-            }
-        }
-
-        private string captchaText;
-
-        public string CaptchaText
-        {
-            get
-            {
-                return captchaText;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref captchaText, value);
-            }
-        }
-
-        private bool isCaptchaVisible;
-
-        public bool IsCaptchaVisible
-        {
-            get
-            {
-                return isCaptchaVisible;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref isCaptchaVisible, value);
             }
         }
 
@@ -790,12 +690,10 @@ namespace DriveHUD.Application.ViewModels.Registration
 #if !DEBUG
                 System.Windows.Application.Current.Shutdown();
 #endif
+                System.Windows.Application.Current.Shutdown();
             }
 
-            if (FinishInteraction != null)
-            {
-                FinishInteraction();
-            }
+            FinishInteraction?.Invoke();
         }
 
         private void Send()
@@ -825,32 +723,48 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             try
             {
-                trialSerial = server.RegisterTrial(CaptchaText, Email);
-            }
-            catch (WebException ex)
-            {
-                var response = (HttpWebResponse)ex.Response;
+                var encryptedEmail = licenseService.EncryptEmail(Email);
 
-                if (response != null && response.StatusCode == HttpStatusCode.Found)
-                {
-                    serverUrl = new Uri(new Uri(server.Url), response.Headers["Location"]).AbsoluteUri;
-                    server.Url = serverUrl;
-                    trialSerial = server.RegisterTrial(CaptchaText, Email);
-                }
-            }
-
-            if (string.IsNullOrWhiteSpace(trialSerial))
-            {
                 try
                 {
-                    InitializeCaptcha();
+                    trialSerial = server.RegisterTrialV2(encryptedEmail);
                 }
-                catch (LicenseNoConnectionException)
+                catch (WebException ex)
                 {
-                    InitializeMessage("Common_RegistrationView_NoConnection");
-                    return;
+                    var response = (HttpWebResponse)ex.Response;
+
+                    if (response == null)
+                    {
+                        var errorMessage = "License service isn't responding";
+
+                        LogProvider.Log.Error(this, errorMessage, ex);
+                        throw new LicenseNoConnectionException(errorMessage, ex);
+                    }
+
+                    if (response != null && response.StatusCode == HttpStatusCode.Found)
+                    {
+                        serverUrl = new Uri(new Uri(server.Url), response.Headers["Location"]).AbsoluteUri;
+                        server.Url = serverUrl;
+                        trialSerial = server.RegisterTrialV2(encryptedEmail);
+                    }
                 }
 
+                if (string.IsNullOrWhiteSpace(trialSerial))
+                {                    
+                    LogProvider.Log.Error(this, "Couldn't register trial. Server error.");
+                    InitializeMessage("Common_RegistrationView_TrialRegisterError");
+                    return;
+                }
+            }
+            catch (LicenseNoConnectionException)
+            {
+                InitializeMessage("Common_RegistrationView_NoConnection");
+                return;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't register trial", e);
+                InitializeMessage("Common_RegistrationView_TrialRegisterError");
                 return;
             }
 
@@ -917,7 +831,6 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             Serial = string.Empty;
             Email = string.Empty;
-            CaptchaText = string.Empty;
 
             if (licenseService.IsTrial)
             {

@@ -21,9 +21,7 @@ namespace DriveHUD.Common.Wpf.Converters
             {
                 return DependencyProperty.UnsetValue;
             }
-
         
-
             var brush = new SolidColorBrush(color.Value);
 
             return brush;

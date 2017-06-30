@@ -12,7 +12,6 @@
 
 using DriveHUD.Application.Views;
 using DriveHUD.Entities;
-using Model.Enums;
 using System;
 using System.Windows;
 
@@ -24,11 +23,18 @@ namespace DriveHUD.Application.ViewModels.Hud
     public interface IHudPanelService
     {
         /// <summary>
-        /// Create Hud Panel based on specified HUD element view model
+        /// Creates <see cref="FrameworkElement"/>  based on specified <see cref="HudBaseToolViewModel"/>
         /// </summary>
-        /// <param name="hudElement">HUD element view model</param>
-        /// <returns>HUD panel</returns>
-        FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType);
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/></param>
+        /// <returns>HUD panel as <see cref="FrameworkElement"/></returns>
+        FrameworkElement Create(HudBaseToolViewModel hudToolElement);
+
+        /// <summary>
+        /// Creates <see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" />
+        /// </summary>
+        /// <param name="hudToolElement"><see cref="HudBaseToolViewModel"/> to create <see cref="FrameworkElementFactory"/></param>
+        /// <returns><see cref="FrameworkElementFactory"/> for the specified <see cref="HudBaseToolViewModel" /></returns>
+        FrameworkElementFactory CreateFrameworkElementFactory(HudBaseToolViewModel hudToolElement);
 
         /// <summary>
         /// Calculates hudElement position in window
@@ -36,15 +42,15 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElement">HUD element view model</param>
         /// <param name="window">Overlay window</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> CalculatePositions(HudElementViewModel hudElement, HudWindow window);
+        Tuple<double, double> CalculatePositions(HudBaseToolViewModel toolViewModel, FrameworkElement toolElement, HudWindow window);
 
         /// <summary>
         /// Converts offset values into position value
         /// </summary>
         /// <param name="hudElement">HUD element view model</param>
-        /// <param name="window">Overlay window</param>
+        /// <param name="viewModel">Overlay window viewmodel</param>
         /// <returns>Item1 - X, Item2 - Y</returns>
-        Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window);
+        Tuple<double, double> GetOffsetPosition(HudBaseToolViewModel toolViewModel, HudWindowViewModel viewModel);
 
         /// <summary>
         /// Get handle of window on which hud has to be attached
@@ -63,5 +69,13 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <returns>Item1 - X, Item2 - Y</returns>
         Tuple<double, double> GetInitialTrackConditionMeterPosition();
+
+        /// <summary>
+        /// Gets the shift for the specified table type and seat
+        /// </summary>
+        /// <param name="tableType"></param>
+        /// <param name="seat"></param>
+        /// <returns></returns>
+        Point GetPositionShift(EnumTableType tableType, int seat);
     }
 }

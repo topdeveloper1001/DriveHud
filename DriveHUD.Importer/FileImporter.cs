@@ -836,13 +836,20 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName);
+                var isHero = lastParsingResult.Source.Hero != null && lastParsingResult.Source.Hero.PlayerName != null ?
+                    lastParsingResult.Source.Hero.PlayerName.Equals(lastHandByPlayer.PlayerName) :
+                    false;
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
                     Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :
                     GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
 
-                tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = currentPosition--;
+                tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = isHero && lastParsingResult.Source.GameDescription.Tournament.FinishPosition != 0 ?
+                    lastParsingResult.Source.GameDescription.Tournament.FinishPosition :
+                    currentPosition;
+
+                currentPosition--;
+
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer = true;
             }
 

@@ -123,11 +123,13 @@ namespace DriveHUD.Updater
                         return;
                     }
 
-                    await appUpdater.UpdateApplicationAsync(DriveHUDUpdaterPaths.MainApplicationGuid, DriveHUDUpdaterPaths.MainApplicationProccess);
+                    var unpackedDirectory = await appUpdater.UpdateApplicationAsync(DriveHUDUpdaterPaths.MainApplicationGuid, DriveHUDUpdaterPaths.MainApplicationProccess, true);                    
 
                     StatusMessage = Resources.Message_Operation_Completed;
 
-                    RunApplication();
+                    var installerPath = Path.Combine(unpackedDirectory.FullName, DriveHUDUpdaterPaths.MainApplicationInstaller);
+
+                    RunApplication(installerPath);
                 }
             }
             catch (UpdaterException ex)
@@ -159,15 +161,15 @@ namespace DriveHUD.Updater
             return false;
         }
 
-        private void RunApplication()
+        private void RunApplication(string applicationPath)
         {
             SingleInstance<App>.Cleanup();
 
             try
             {
-                if (File.Exists(DriveHUDUpdaterPaths.MainApplicationProccess))
+                if (File.Exists(applicationPath))
                 {
-                    var info = new ProcessStartInfo(DriveHUDUpdaterPaths.MainApplicationProccess);
+                    var info = new ProcessStartInfo(applicationPath);
 
                     var appProcess = new Process()
                     {

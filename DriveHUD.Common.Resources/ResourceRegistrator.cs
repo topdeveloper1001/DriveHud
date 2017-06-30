@@ -20,6 +20,7 @@ namespace DriveHUD.Common.Resources
         static readonly FileResourceManager showdownHandsResourceManager = new FileResourceManager("Showdown_", "DriveHUD.Common.Resources.ShowdownHands", Assembly.GetExecutingAssembly());
         static readonly FileResourceManager settingsResourceManager = new FileResourceManager("Settings_", "DriveHUD.Common.Resources.Settings", Assembly.GetExecutingAssembly());
         static readonly FileResourceManager systemSettingsResourceManager = new FileResourceManager("SystemSettings_", "DriveHUD.Common.Resources.SystemSettings", Assembly.GetExecutingAssembly());
+        static readonly FileResourceManager notificationsResourceManager = new FileResourceManager("Notifications_", "DriveHUD.Common.Resources.Notifications", Assembly.GetExecutingAssembly());
 
         public static void RegisterResources(CommonResourceManager resourceManager)
         {
@@ -37,6 +38,7 @@ namespace DriveHUD.Common.Resources
             resourceManager.RegisterResourceManager(showdownHandsResourceManager);
             resourceManager.RegisterResourceManager(settingsResourceManager);
             resourceManager.RegisterResourceManager(systemSettingsResourceManager);
+            resourceManager.RegisterDefaultResourceManager(notificationsResourceManager);
         }
     }
 }

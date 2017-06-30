@@ -47,7 +47,8 @@ namespace Model.Site
                 EnumPokerSites.Poker888,
                 EnumPokerSites.AmericasCardroom,
                 EnumPokerSites.BlackChipPoker,
-                EnumPokerSites.PartyPoker,
+                EnumPokerSites.TruePoker,
+                EnumPokerSites.YaPoker,
             };
 
             foreach (EnumPokerSites site in sites)
@@ -101,8 +102,10 @@ namespace Model.Site
                     return Get(EnumPokerSites.AmericasCardroom);
                 case "BlackChipPoker":
                     return Get(EnumPokerSites.BlackChipPoker);
-                case "PartyPoker":
-                    return Get(EnumPokerSites.PartyPoker);
+                case "TruePoker":
+                    return Get(EnumPokerSites.TruePoker);
+                case "YaPoker":
+                    return Get(EnumPokerSites.YaPoker);
                 default:
                     throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
 

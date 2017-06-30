@@ -49,6 +49,8 @@ namespace Model.Enums
         S3BetBTN,
         S3BetSB,
         S3BetBB,
+        S3BetEP,
+        S4BetEP,
         S4BetMP,
         S4BetCO,
         S4BetBTN,
@@ -144,5 +146,6 @@ namespace Model.Enums
         FoldToFlopRaise,
         FoldToTurnRaise,
         FoldToRiverCBet,
+        NetWon
     }
 }

@@ -38,6 +38,11 @@ namespace DriveHUD.Common.Resources
         public static string PlayerStatisticOldFolderName = "SystemSettings_PlayerStatisticOldFolderName";
         public static string DbFileName = "SystemSettings_DbFileName";
         public static string HeroName = "SystemSettings_HeroName";
+        public static string LayoutsFolder = "SystemSettings_LayoutsFolder";
+        public static string LayoutsV2Folder = "SystemSettings_LayoutsV2Folder";
+        public static string LayoutsExtension = "SystemSettings_LayoutsExtension";
+        public static string LayoutsMappings = "SystemSettings_LayoutsMappings";
+        public static string LogsFolder = "SystemSettings_LogsFolder";
 
         #endregion
 

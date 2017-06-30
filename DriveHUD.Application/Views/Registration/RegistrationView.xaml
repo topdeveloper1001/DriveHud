@@ -1,100 +1,149 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.RegistrationView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:local="clr-namespace:DriveHUD.Application"
-             xmlns:prism="http://www.codeplex.com/prism"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
-             mc:Ignorable="d" 
-             Foreground="{StaticResource ForegroundBrush}"
-             Background="{StaticResource BackgroundBrush1}"
-             d:DesignHeight="360" d:DesignWidth="480">
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.RegistrationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:local="clr-namespace:DriveHUD.Application"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+    mc:Ignorable="d"
+    Foreground="{StaticResource ForegroundBrush}"
+    Background="{StaticResource BackgroundBrush1}"
+    d:DesignHeight="360"
+    d:DesignWidth="480">
 
     <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
-            <infra:PopupTelerikWindowAction IsModal="True" 
-                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
-                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction
+                IsModal="True"
+                WindowStyle="{StaticResource NotificationWindowStyle}"
+                WindowContent="{StaticResource NotificationWindowContentTemplate}" />
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 
     <UserControl.Resources>
 
-        <SolidColorBrush x:Key="ButtonBackground" Color="#202125" />
-        <SolidColorBrush x:Key="ActiveTextForeground" Color="#ffffff" />
+        <SolidColorBrush
+            x:Key="ButtonBackground"
+            Color="#202125" />
+        <SolidColorBrush
+            x:Key="ActiveTextForeground"
+            Color="#ffffff" />
 
-        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
-            <Setter Property="VerticalAlignment" Value="Center" />
+        <Style
+            x:Key="TextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
         </Style>
 
-        <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="FontSize" Value="12px" />
-            <Setter Property="Width" Value="200" />
-            <Setter Property="Height" Value="25" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Background" Value="{StaticResource ButtonBackground}" />
-            <Setter Property="Margin" Value="0,3,0,3" />
-            <Setter Property="Template">
+        <Style
+            x:Key="TextBoxStyle"
+            TargetType="{x:Type TextBox}"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="FontSize"
+                Value="12px" />
+            <Setter
+                Property="Width"
+                Value="200" />
+            <Setter
+                Property="Height"
+                Value="25" />
+            <Setter
+                Property="HorizontalAlignment"
+                Value="Left" />
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource ButtonBackground}" />
+            <Setter
+                Property="Margin"
+                Value="0,3,0,3" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
+                    <ControlTemplate
+                        TargetType="{x:Type TextBox}">
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="2"        
+                            CornerRadius="2"
                             Padding="2,0,0,0"
                             BorderBrush="{TemplateBinding BorderBrush}">
-                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Foreground" Value="{StaticResource ActiveTextForeground}" />
-            <Setter Property="Margin" Value="10,0,0,0" />
-            <Setter Property="Width" Value="80" />
-            <Setter Property="Height" Value="30" />
+        <Style
+            x:Key="ButtonStyle"
+            TargetType="{x:Type Button}"
+            BasedOn="{StaticResource {x:Type Button}}">
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource ActiveTextForeground}" />
+            <Setter
+                Property="Margin"
+                Value="10,0,0,0" />
+            <Setter
+                Property="Width"
+                Value="80" />
+            <Setter
+                Property="Height"
+                Value="30" />
         </Style>
 
     </UserControl.Resources>
 
     <Grid>
-        <Border                    
+        <Border
             CornerRadius="4"
             Background="#335199"
-            Height="10"                    
-            VerticalAlignment="Top"
-            />
+            Height="10"
+            VerticalAlignment="Top" />
 
         <Border
             Background="{StaticResource BackgroundBrush1}"
             Margin="0,5,0,0"
             Padding="15">
 
-            <Grid Margin="0,5,0,0" >
+            <Grid
+                Margin="0,5,0,0">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!-- Message -->
                 <TextBlock
-                    Grid.Row="0"                    
+                    Grid.Row="0"
                     Style="{StaticResource TextBlockStyle}"
                     Foreground="{StaticResource ActiveTextForeground}"
-                    Margin="0,7,0,7"    
+                    Margin="0,7,0,7"
                     TextWrapping="Wrap"
-                    Text="{Binding TextMessage}" 
-                    />
+                    Text="{Binding TextMessage}" />
 
                 <Grid
                     Grid.Row="1"
@@ -102,71 +151,49 @@
                     HorizontalAlignment="Center">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition
+                            Width="100" />
+                        <ColumnDefinition
+                            Width="250" />
                     </Grid.ColumnDefinitions>
 
                     <!-- Email -->
-                    <TextBlock 
+                    <TextBlock
                         Grid.Row="0"
                         Grid.Column="0"
                         Style="{StaticResource TextBlockStyle}"
+                        Foreground="{StaticResource ActiveTextForeground}"
                         Visibility="{Binding IsEmailVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Text="{ResX Key=Common_RegistrationView_Email}" 
-                        />
+                        Text="{ResX Key=Common_RegistrationView_Email}" />
 
                     <TextBox
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource TextBoxStyle}"
                         Visibility="{Binding IsEmailVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
-                        />
-
-                    <!-- Captcha -->
-                    <TextBlock 
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Visibility="{Binding IsCaptchaVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Style="{StaticResource TextBlockStyle}"
-                        Text="{ResX Key=Common_RegistrationView_TextOnPicture}" 
-                        />
-
-                    <TextBox
-                        Grid.Row="1"
-                        Grid.Column="1"    
-                        MaxLength="10"
-                        Style="{StaticResource TextBoxStyle}"
-                        Visibility="{Binding IsCaptchaVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Text="{Binding CaptchaText, UpdateSourceTrigger=PropertyChanged}"
-                        />
-
-                    <Image             
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Height="30"        
-                        HorizontalAlignment="Left"
-                        Margin="0,3,0,3"
-                        Visibility="{Binding IsCaptchaVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Source="{Binding CaptchaImage}"
-                        />
+                        Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" />
 
                     <!-- Serial -->
-                    <TextBlock 
+                    <TextBlock
                         Grid.Row="3"
                         Grid.Column="0"
-                        Style="{StaticResource TextBlockStyle}"                        
+                        Style="{StaticResource TextBlockStyle}"
+                        Foreground="{StaticResource ActiveTextForeground}"
                         Visibility="{Binding IsSerialVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Text="{ResX Key=Common_RegistrationView_Serial}" 
-                        />
+                        Text="{ResX Key=Common_RegistrationView_Serial}" />
 
                     <TextBox
                         Grid.Row="3"
@@ -174,40 +201,43 @@
                         Style="{StaticResource TextBoxStyle}"
                         MaxLength="26"
                         Visibility="{Binding IsSerialVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Text="{Binding Serial}" 
-                        />
+                        Text="{Binding Serial}" />
 
                 </Grid>
 
                 <ItemsControl
-                    Grid.Row="1"                    
-                    ItemsSource="{Binding Licenses}"             
+                    Grid.Row="1"
+                    ItemsSource="{Binding Licenses}"
                     Visibility="{Binding IsLicenseDaysLeftVisible, Converter={dh:BoolToVisibilityConverter}}"
                     VerticalAlignment="Center">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Vertical" Margin="0,5,0,5">
+                            <StackPanel
+                                Orientation="Vertical"
+                                Margin="0,5,0,5">
                                 <TextBlock
                                     Style="{StaticResource TextBlockStyle}"
                                     Foreground="{StaticResource ActiveTextForeground}">
                                     <TextBlock.Text>
-                                        <ResX Key="Common_RegistrationView_ExpiringLicenseTitle">
-                                            <ResXParam Path="Serial" />
-                                            <ResXParam Path="DaysLeft" />
+                                        <ResX
+                                            Key="Common_RegistrationView_ExpiringLicenseTitle">
+                                            <ResXParam
+                                                Path="Serial" />
+                                            <ResXParam
+                                                Path="DaysLeft" />
                                         </ResX>
                                     </TextBlock.Text>
                                 </TextBlock>
-                                <dh:ProgressBarEx                                    
-                                    Height="20"             
+                                <dh:ProgressBarEx
+                                    Height="20"
                                     Value="{Binding DaysLeft, Mode=OneWay}"
-                                    Maximum="365"    
+                                    Maximum="365"
                                     BorderBrush="{StaticResource BackgroundBrush4}"
                                     BorderThickness="1"
-                                    Width="530"                   
+                                    Width="530"
                                     Margin="0,3,0,10"
                                     Visibility="{Binding IsTrialProgressBarVisible, Converter={dh:BoolToVisibilityConverter} }"
-                                    Style="{StaticResource ProgressBarExStyle1}"
-                                    />
+                                    Style="{StaticResource ProgressBarExStyle1}" />
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -216,93 +246,86 @@
 
                 <dh:ProgressBarEx
                     Grid.Row="2"
-                    Height="20"             
+                    Height="20"
                     Value="{Binding TrialDaysLeft, Mode=OneWay}"
-                    Maximum="30"    
+                    Maximum="30"
                     BorderBrush="{StaticResource BackgroundBrush4}"
                     BorderThickness="1"
-                    Width="530"                   
+                    Width="530"
                     Margin="0,0,0,10"
                     Visibility="{Binding IsTrialProgressBarVisible, Converter={dh:BoolToVisibilityConverter} }"
                     Style="{StaticResource ProgressBarExStyle1}">
                     <dh:ProgressBarEx.Text>
-                        <ResX Key="Common_RegistrationView_DaysLeft">
-                            <ResXParam Path="TrialDaysLeft" />
+                        <ResX
+                            Key="Common_RegistrationView_DaysLeft">
+                            <ResXParam
+                                Path="TrialDaysLeft" />
                         </ResX>
                     </dh:ProgressBarEx.Text>
                 </dh:ProgressBarEx>
 
                 <!-- Buttons -->
-                <StackPanel 
-                    Grid.Row="3"             
+                <StackPanel
+                    Grid.Row="3"
                     Margin="0,10,0,0"
-                    Orientation="Horizontal" 
-                    HorizontalAlignment="Right" 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
                     VerticalAlignment="Bottom">
 
-                    <Button                    
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_OK}"
                         Visibility="{Binding IsSendButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding SendCommand}"
-                        />
+                        Command="{Binding SendCommand}" />
 
-                    <Button                      
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Trial}"
                         Visibility="{Binding IsTrialButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding TrialCommand}"
-                        />
+                        Command="{Binding TrialCommand}" />
 
-                    <Button                       
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Buy}"
                         Visibility="{Binding IsBuyButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding BuyCommand}"
-                        />
+                        Command="{Binding BuyCommand}" />
 
-                    <Button                                               
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Register}"
                         Visibility="{Binding IsRegisterButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding RegisterCommand}"
-                        />
+                        Command="{Binding RegisterCommand}" />
 
-                    <Button                                        
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Renew}"
                         Visibility="{Binding IsRenewButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding RenewCommand}"
-                        />
+                        Command="{Binding RenewCommand}" />
 
-                    <Button                    
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Activate}"
                         Visibility="{Binding IsActivateButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding ActivateCommand}"
-                        />
+                        Command="{Binding ActivateCommand}" />
 
-                    <Button                                                                        
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Back}"
                         Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding BackCommand}"
-                        />
+                        Command="{Binding BackCommand}" />
 
-                    <Button                    
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_OK}"
                         Visibility="{Binding IsOKButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding OKCommand}"
-                        />
+                        Command="{Binding OKCommand}" />
 
 
-                    <Button                                                                        
+                    <Button
                         Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Cancel}"
                         Visibility="{Binding IsCancelButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
-                        Command="{Binding CancelCommand}"
-                        />
+                        Command="{Binding CancelCommand}" />
 
                 </StackPanel>
             </Grid>
