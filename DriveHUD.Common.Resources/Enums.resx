@@ -662,4 +662,7 @@
   <data name="Enum_Stat_FoldToTurnRaise" xml:space="preserve">
     <value>Fold To Turn Raise</value>
   </data>
+  <data name="Enum_EnumPokerSites_PartyPoker" xml:space="preserve">
+    <value>PartyPoker</value>
+  </data>
 </root>

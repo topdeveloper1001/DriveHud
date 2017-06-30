@@ -278,6 +278,7 @@
     <Compile Include="AppStore\AppStoreType.cs" />
     <Compile Include="SingletonStorageModel.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
+    <Compile Include="Site\PartyPokerConfiguration.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />

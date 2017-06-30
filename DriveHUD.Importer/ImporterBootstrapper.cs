@@ -15,6 +15,7 @@ using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Builders.iPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
+using DriveHUD.Importers.PartyPoker;
 using DriveHUD.Importers.PokerStars;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
@@ -50,6 +51,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IAmericasCardroomImporter, AmericasCardroomImporter>();
             container.RegisterType<IBlackChipPokerImporter, BlackChipPokerImporter>();
             container.RegisterType<IPacific888Importer, Pacific888Importer>();
+            container.RegisterType<IPartyPokerImporter, PartyPokerImporter>();
             container.RegisterType<ICardsConverter, PokerCardsConverter>();
             container.RegisterType<ITournamentsCacheService, TournamentsCacheService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IImporterService, ImporterService>(new ContainerControlledLifetimeManager());
@@ -83,6 +85,7 @@ namespace DriveHUD.Importers
             importerService.Register<IAmericasCardroomImporter>();
             importerService.Register<IBlackChipPokerImporter>();
             importerService.Register<IPacific888Importer>();
+            importerService.Register<IPartyPokerImporter>();
         }
     }
 }

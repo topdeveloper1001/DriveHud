@@ -28,9 +28,5 @@ namespace DriveHUD.Entities
         BlackChipPoker = 11,
         WinningPokerNetwork = 12,
         PartyPoker = 13,
-        PartyPokerFr = 14,
-        PartyPokerIt = 15,
-        PartyPokerNJ = 16,
-        PartyPokerEs = 17,
     }
 }

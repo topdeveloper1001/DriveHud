@@ -47,10 +47,6 @@ namespace HandHistories.Parser.Parsers.Factory
         {
             switch (siteName)
             {
-                case EnumPokerSites.PartyPokerEs:
-                case EnumPokerSites.PartyPokerFr:
-                case EnumPokerSites.PartyPokerNJ:
-                case EnumPokerSites.PartyPokerIt:
                 case EnumPokerSites.PartyPoker:
                     return new PartyPokerFastParserImpl(siteName);
                 case EnumPokerSites.PokerStars:

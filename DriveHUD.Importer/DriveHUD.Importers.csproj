@@ -226,6 +226,8 @@
     <Compile Include="Loggers\PokerClientLogger.cs" />
     <Compile Include="Pacific888\IPacific888Importer.cs" />
     <Compile Include="Pacific888\Pacific888Importer.cs" />
+    <Compile Include="PartyPoker\IPartyPokerImporter.cs" />
+    <Compile Include="PartyPoker\PartyPokerImporter.cs" />
     <Compile Include="PipeManager.cs" />
     <Compile Include="PlayerStatisticReImporter.cs" />
     <Compile Include="PlayerStatsSessionCacheInfo.cs" />

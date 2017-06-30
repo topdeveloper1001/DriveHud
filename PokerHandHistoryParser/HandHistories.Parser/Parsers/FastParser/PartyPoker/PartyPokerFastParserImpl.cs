@@ -57,29 +57,25 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         public PartyPokerFastParserImpl(EnumPokerSites siteName = EnumPokerSites.PartyPoker)
         {
             _siteName = siteName;
-
-            switch (siteName)
-            {
-                case EnumPokerSites.PartyPokerEs:
-                case EnumPokerSites.PartyPokerFr:
-                case EnumPokerSites.PartyPokerIt:
-                    NumberFormatInfo.CurrencySymbol = "€";
-                    _currency = Currency.EURO;
-                    break;
-                // PartyPoker + PartyPokerNJ
-                default:
-                    NumberFormatInfo.CurrencySymbol = "$";
-                    _currency = Currency.USD;
-                    break;
-
-            }
+            NumberFormatInfo.CurrencySymbol = "$";
+            _currency = Currency.USD;
         }
 
         protected override string[] SplitHandsLines(string handText)
         {
             return base.SplitHandsLines(handText)
                 .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
+                .Where(p => !p.StartsWith("#Game No : ", StringComparison.Ordinal))
                 .ToArray();
+        }
+
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            var result = base.SplitUpMultipleHands(rawHandHistories);
+            if (result.Any() && result.First().StartsWith("Game #"))
+                result = result.Skip(1);
+
+            return result;
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -1163,19 +1159,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
 
             return tournamentDescriptor;
-        }
-
-        protected override string[] PreprocessHandLines(string[] handLines)
-        {
-            if (handLines != null && handLines.Any())
-            {
-                if (handLines.First().StartsWith("#Game No", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    return handLines.Skip(1).ToArray();
-                }
-            }
-
-            return handLines;
         }
 
         private string GetBuyInString(string line)

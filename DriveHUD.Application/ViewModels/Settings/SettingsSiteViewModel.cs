@@ -37,6 +37,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.Ignition, "Bodog / Ignition" },
                 { EnumPokerSites.BetOnline, "BetOnline" },
                 { EnumPokerSites.BlackChipPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BlackChipPoker) },
+                { EnumPokerSites.PartyPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.PartyPoker) },
                 { EnumPokerSites.PokerStars, "Pokerstars" },
                 { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" },

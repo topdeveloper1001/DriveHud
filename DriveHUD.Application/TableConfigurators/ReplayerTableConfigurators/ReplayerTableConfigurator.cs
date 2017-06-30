@@ -503,6 +503,7 @@ namespace DriveHUD.Application.TableConfigurators
                 case EnumPokerSites.PokerStars:
                 case EnumPokerSites.Poker888:
                 case EnumPokerSites.TigerGaming:
+                case EnumPokerSites.PartyPoker:
                 default:
                     return site;
             }

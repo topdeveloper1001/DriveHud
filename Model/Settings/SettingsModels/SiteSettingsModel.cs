@@ -42,6 +42,7 @@ namespace Model.Settings
                 EnumPokerSites.Poker888,
                 EnumPokerSites.AmericasCardroom,
                 EnumPokerSites.BlackChipPoker,
+                EnumPokerSites.PartyPoker,
             };
 
             SitesModelList = sites.Select(x => new SiteModel
