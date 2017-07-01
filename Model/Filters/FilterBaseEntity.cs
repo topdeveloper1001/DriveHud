@@ -1,11 +1,20 @@
-﻿using DriveHUD.Common.Annotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterBaseEntity.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Annotations;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
@@ -14,7 +23,7 @@ namespace Model.Filters
     {
         public virtual object Clone()
         {
-            return this.MemberwiseClone();
+            return MemberwiseClone();
         }
 
         private Guid _id = Guid.NewGuid();
@@ -23,7 +32,10 @@ namespace Model.Filters
 
         public Guid Id
         {
-            get { return _id; }
+            get
+            {
+                return _id;
+            }
             set
             {
                 if (value == _id) return;
@@ -32,9 +44,13 @@ namespace Model.Filters
             }
         }
 
+        [XmlIgnore]
         public string Name
         {
-            get { return _name; }
+            get
+            {
+                return _name;
+            }
             set
             {
                 if (value == _name) return;
@@ -45,7 +61,10 @@ namespace Model.Filters
 
         public bool IsActive
         {
-            get { return _isActive; }
+            get
+            {
+                return _isActive;
+            }
             set
             {
                 if (value == _isActive) return;
@@ -59,11 +78,7 @@ namespace Model.Filters
         [NotifyPropertyChangedInvocator]
         public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

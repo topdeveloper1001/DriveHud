@@ -188,8 +188,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private BuiltFilterModel builtFilter;
-
-        [XmlIgnore]
+ 
         public BuiltFilterModel BuiltFilter
         {
             get { return builtFilter; }
@@ -200,8 +199,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private IFilterModelCollection filterModelCollection;
-        
-        [XmlIgnore]
+               
         public IFilterModelCollection FilterModelCollection
         {
             get { return filterModelCollection; }

@@ -12,15 +12,15 @@ using System.Linq.Expressions;
 
 namespace Model.Filters
 {
-
     [Serializable]
     public class FilterHandValueModel : FilterBaseEntity, IFilterModel
     {
         #region Constructor
+
         public FilterHandValueModel()
         {
-            this.Name = "Hand Value";
-            this.Type = EnumFilterModelType.FilterHandValueModel;
+            Name = "Hand Value";
+            Type = EnumFilterModelType.FilterHandValueModel;
         }
 
         public void Initialize()
@@ -30,6 +30,7 @@ namespace Model.Filters
             FilterSectionTurnHandValuesInitialize();
             FilterSectionRiverHandValuesInitialize();
         }
+
         #endregion
 
         #region Methods
@@ -333,7 +334,7 @@ namespace Model.Filters
 
         public void ResetFastFilterCollection()
         {
-            FastFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any).ToList().ForEach(x => x.TriStateSet(EnumTriState.Any));
+            FastFilterCollection.Where(x => x.CurrentTriState != EnumTriState.Any).ToList().ForEach(x => x.CurrentTriState = EnumTriState.Any);
         }
 
         public void ResetFlopHandValuesCollection()
@@ -360,9 +361,10 @@ namespace Model.Filters
             foreach (var filter in fastFilterList)
             {
                 var cur = FastFilterCollection.FirstOrDefault(x => x.Name == filter.Name);
+
                 if (cur != null)
                 {
-                    cur.TriStateSet(filter.TriStateSelectedItem.TriState);
+                    cur.CurrentTriState = filter.CurrentTriState;
                 }
             }
         }
@@ -532,17 +534,18 @@ namespace Model.Filters
 
         private Expression<Func<Playerstatistic, bool>> GetFastFilterPredicate()
         {
-            if (!FastFilterCollection.Any(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+            if (!FastFilterCollection.Any(x => x.CurrentTriState != EnumTriState.Any))
             {
                 return PredicateBuilder.True<Playerstatistic>();
             }
 
             var fastFilterPredicate = PredicateBuilder.True<Playerstatistic>();
 
-            foreach (var item in FastFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+            foreach (var item in FastFilterCollection.Where(x => x.CurrentTriState != EnumTriState.Any))
             {
                 var predicate = GetPredicateForFastFilterType(item);
-                if (item.TriStateSelectedItem.TriState == EnumTriState.Off)
+
+                if (item.CurrentTriState == EnumTriState.Off)
                 {
                     predicate = PredicateBuilder.Not(predicate);
                 }
@@ -696,8 +699,7 @@ namespace Model.Filters
         {
         }
 
-        private Street _targetStreet;
-        private TriStateItem _triStateSelectedItem;
+        private Street _targetStreet;        
         private EnumHandValuesFastFilterType _fastFilterType;
 
         public Street TargetStreet
@@ -713,16 +715,27 @@ namespace Model.Filters
             }
         }
 
-        public override TriStateItem TriStateSelectedItem
+        public override EnumTriState CurrentTriState
         {
-            get { return _triStateSelectedItem; }
+            get
+            {
+                return base.CurrentTriState;
+            }
             set
             {
-                if (value == _triStateSelectedItem) return;
-                _triStateSelectedItem = value;
+                if (value == currentTriState)
+                {
+                    return;
+                }
+
+                currentTriState = value;
+
                 OnPropertyChanged();
 
-                if (OnTriState != null) OnTriState.Invoke();
+                if (OnTriState != null)
+                {
+                    OnTriState.Invoke();
+                }
             }
         }
 
