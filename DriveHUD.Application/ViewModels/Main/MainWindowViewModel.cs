@@ -566,16 +566,18 @@ namespace DriveHUD.Application.ViewModels
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
                     {
-                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.Name);
+                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout);
 
-                        if (stickers.Any())
+                        if (stickers.Count > 0)
                         {
-                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session,
+                                playerCollectionItem,
+                                stickers.ToDictionary(x => x, x => lastHandStatistic));
                         }
 
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
-                            importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session,
-                                playerCollectionItem), activeLayout.Name);
+                            importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem),
+                            activeLayout);
                     }
 
                     ht.ListHUDPlayer.Add(playerHudContent);
@@ -584,7 +586,7 @@ namespace DriveHUD.Application.ViewModels
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars)
                 {
                     var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout);
                 }
 
                 Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
