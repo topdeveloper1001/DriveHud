@@ -189,7 +189,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (SelectedBumperSticker == null)
                 return;
 
-            SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
+            SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(FilterServices.Stickers);
             SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
 
             if (SelectedBumperSticker.FilterModelCollection == null || !SelectedBumperSticker.FilterModelCollection.Any())

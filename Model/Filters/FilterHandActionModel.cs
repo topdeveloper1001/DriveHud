@@ -5,15 +5,19 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using Model.Enums;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
     [Serializable]
-    public class FilterHandActionModel : FilterBaseEntity, IFilterModel
+    public class FilterHandActionModel : FilterBaseEntity, IFilterModel, IXmlSerializable
     {
         public FilterHandActionModel()
         {
@@ -539,6 +543,144 @@ namespace Model.Filters
 
             throw new ArgumentOutOfRangeException("street", street, "Street should be within Preflop-River range");
         }
+
+        #endregion
+
+        #region IXmlSerializable implementation
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            Initialize();
+
+            reader.MoveToContent();
+
+            Action<HandActionFilterItem, HandActionFilterItem> updateHandActionFilterItem = (existingItem, item) =>
+            {
+                existingItem.IsChecked = item.IsChecked;
+            };
+
+            Func<HandActionFilterItem, HandActionFilterItem, bool> handActionFilterItemPredicate = (existingItem, item) => existingItem.Name == item.Name && existingItem.BeginningActionType == item.BeginningActionType;
+
+            Action<HandActionFilterButton, HandActionFilterButton> updateHandActionFilterButton = (existingItem, item) =>
+            {
+                existingItem.IsChecked = item.IsChecked;
+            };
+
+            Func<HandActionFilterButton, HandActionFilterButton, bool> handActionFilterButtonPredicate = (existingItem, item) => existingItem.Name == item.Name && existingItem.HandActionType == item.HandActionType;
+
+            while (reader.Read())
+            {
+                if (reader.IsStartElement(nameof(Id)))
+                {
+                    Id = Guid.Parse(reader.ReadElementContentAsString());
+                }
+
+                ReadHandValueCollectionsXml(reader, PreflopItems, nameof(PreflopItems), updateHandActionFilterItem, handActionFilterItemPredicate);
+                ReadHandValueCollectionsXml(reader, FlopItems, nameof(FlopItems), updateHandActionFilterItem, handActionFilterItemPredicate);
+                ReadHandValueCollectionsXml(reader, TurnItems, nameof(TurnItems), updateHandActionFilterItem, handActionFilterItemPredicate);
+                ReadHandValueCollectionsXml(reader, RiverItems, nameof(RiverItems), updateHandActionFilterItem, handActionFilterItemPredicate);
+
+                ReadHandValueCollectionsXml(reader, PreflopButtons, nameof(PreflopButtons), updateHandActionFilterButton, handActionFilterButtonPredicate);
+                ReadHandValueCollectionsXml(reader, FlopButtons, nameof(FlopButtons), updateHandActionFilterButton, handActionFilterButtonPredicate);
+                ReadHandValueCollectionsXml(reader, TurnButtons, nameof(TurnButtons), updateHandActionFilterButton, handActionFilterButtonPredicate);
+                ReadHandValueCollectionsXml(reader, RiverButtons, nameof(RiverButtons), updateHandActionFilterButton, handActionFilterButtonPredicate);
+
+                if (reader.Name == nameof(FilterHandActionModel) && reader.NodeType == XmlNodeType.EndElement)
+                {
+                    reader.ReadEndElement();
+                    break;
+                }
+            }
+        }
+
+        private static void ReadHandValueCollectionsXml<T>(XmlReader reader, ObservableCollection<T> collection, string nameOfCollection, Action<T, T> update, Func<T, T, bool> predicate)
+            where T : FilterBaseEntity
+        {
+            if (!reader.IsStartElement(nameOfCollection) || reader.IsEmptyElement)
+            {
+                return;
+            }
+
+            reader.ReadStartElement(nameOfCollection);
+
+            while (reader.IsStartElement(typeof(T).Name))
+            {
+                var itemType = typeof(T);
+
+                var serializer = new XmlSerializer(itemType);
+
+                var handValueItem = (T)serializer.Deserialize(reader);
+
+                var existingHandValueItem = collection.FirstOrDefault(x => predicate(x, handValueItem));
+
+                if (existingHandValueItem == null)
+                {
+                    collection.Add(handValueItem);
+                }
+                else
+                {
+                    existingHandValueItem.Id = handValueItem.Id;
+                    existingHandValueItem.IsActive = handValueItem.IsActive;
+
+                    update?.Invoke(existingHandValueItem, handValueItem);
+                }
+            }
+
+            reader.ReadEndElement();
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteStartElement(nameof(Id));
+            writer.WriteValue(Id.ToString());
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(nameof(Type));
+            writer.WriteValue(Type.ToString());
+            writer.WriteEndElement();
+
+            Func<HandActionFilterItem, bool> handActionFilterItemPredicate = item => item.IsChecked;
+            Func<HandActionFilterButton, bool> handActionFilterButtonPredicate = item => item.IsChecked;
+
+            WriteHandValueCollectionsXml(writer, PreflopItems, nameof(PreflopItems), handActionFilterItemPredicate);
+            WriteHandValueCollectionsXml(writer, FlopItems, nameof(FlopItems), handActionFilterItemPredicate);
+            WriteHandValueCollectionsXml(writer, TurnItems, nameof(TurnItems), handActionFilterItemPredicate);
+            WriteHandValueCollectionsXml(writer, RiverItems, nameof(RiverItems), handActionFilterItemPredicate);
+
+            WriteHandValueCollectionsXml(writer, PreflopButtons, nameof(PreflopButtons), handActionFilterButtonPredicate);
+            WriteHandValueCollectionsXml(writer, FlopButtons, nameof(FlopButtons), handActionFilterButtonPredicate);
+            WriteHandValueCollectionsXml(writer, TurnButtons, nameof(TurnButtons), handActionFilterButtonPredicate);
+            WriteHandValueCollectionsXml(writer, RiverButtons, nameof(RiverButtons), handActionFilterButtonPredicate);
+        }
+
+        private static void WriteHandValueCollectionsXml<T>(XmlWriter writer, ObservableCollection<T> collection, string nameOfCollection, Func<T, bool> predicate)
+        {
+            var filteredCollection = collection?
+                .ToArray()
+                .Where(predicate)
+                .ToArray();
+
+            if (filteredCollection != null && filteredCollection.Length > 0)
+            {
+                writer.WriteStartElement(nameOfCollection);
+
+                foreach (var handValueItem in filteredCollection)
+                {
+                    var ns = new XmlSerializerNamespaces();
+                    ns.Add(string.Empty, string.Empty);
+                    var xmlSerializer = new XmlSerializer(handValueItem.GetType());
+                    xmlSerializer.Serialize(writer, handValueItem, ns);
+                }
+
+                writer.WriteEndElement();
+            }
+        }
+
         #endregion
     }
 

@@ -18,12 +18,16 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Xml.Serialization;
 using Cards = HandHistories.Objects.Cards;
+using System.Xml;
+using System.Xml.Schema;
+using System.Diagnostics;
 
 namespace Model.Filters
 {
     [Serializable]
-    public class FilterHoleCardsModel : FilterBaseEntity, IFilterModel
+    public class FilterHoleCardsModel : FilterBaseEntity, IFilterModel, IXmlSerializable
     {
         public static Action OnSelectionChanged;
 
@@ -186,6 +190,104 @@ namespace Model.Filters
             {
                 if (value == _holeCardsCollection) return;
                 _holeCardsCollection = value;
+            }
+        }
+
+        #endregion
+
+        #region IXmlSerializable implementation
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            FilterSectionHoleCardsInitialize();
+
+            reader.MoveToContent();
+
+            while (reader.Read())
+            {
+                if (reader.IsStartElement(nameof(Id)))
+                {
+                    Id = Guid.Parse(reader.ReadElementContentAsString());
+                }
+
+                if (reader.IsStartElement(nameof(Type)))
+                {
+                    Type = (EnumFilterModelType)Enum.Parse(typeof(EnumFilterModelType), reader.ReadElementContentAsString());
+                }
+
+                if (reader.IsStartElement(nameof(HoleCardsCollection)))
+                {
+                    if (reader.IsEmptyElement)
+                    {
+                        continue;
+                    }
+
+                    reader.ReadStartElement(nameof(HoleCardsCollection));
+
+                    while (reader.IsStartElement(nameof(HoleCardsItem)))
+                    {
+                        var holeCardsItemsType = typeof(HoleCardsItem);
+                        var serializer = new XmlSerializer(holeCardsItemsType);
+
+                        var holeCardsItem = (HoleCardsItem)serializer.Deserialize(reader);
+
+                        var existingHoleCardsItem = HoleCardsCollection.FirstOrDefault(x => x.Name == holeCardsItem.Name);
+
+                        if (existingHoleCardsItem == null)
+                        {
+                            HoleCardsCollection.Add(holeCardsItem);
+                        }
+                        else
+                        {
+                            existingHoleCardsItem.Id = holeCardsItem.Id;
+                            existingHoleCardsItem.IsActive = holeCardsItem.IsActive;
+                            existingHoleCardsItem.IsChecked = holeCardsItem.IsChecked;
+                            existingHoleCardsItem.ItemType = holeCardsItem.ItemType;
+                        }
+                    }
+
+                    reader.ReadEndElement();
+                }
+
+                if (reader.Name == nameof(FilterHoleCardsModel) && reader.NodeType == XmlNodeType.EndElement)
+                {
+                    reader.ReadEndElement();
+                    break;
+                }
+            }
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteStartElement(nameof(Id));
+            writer.WriteValue(Id.ToString());
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(nameof(Type));
+            writer.WriteValue(Type.ToString());
+            writer.WriteEndElement();
+
+            var holeCardsCollectionToSerialize = HoleCardsCollection?
+                .ToArray()
+                .Where(x => !x.IsChecked)
+                .ToArray();
+
+            if (holeCardsCollectionToSerialize != null && holeCardsCollectionToSerialize.Length > 0)
+            {
+                writer.WriteStartElement(nameof(HoleCardsCollection));
+
+                foreach (var holeCard in holeCardsCollectionToSerialize)
+                {
+                    var xmlSerializer = new XmlSerializer(holeCard.GetType());
+                    xmlSerializer.Serialize(writer, holeCard);
+                }
+
+                writer.WriteEndElement();
             }
         }
 

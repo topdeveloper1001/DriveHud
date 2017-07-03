@@ -43,8 +43,7 @@ namespace Model.Filters
                 OnPropertyChanged();
             }
         }
-
-        [XmlIgnore]
+     
         public string Name
         {
             get

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FilterHoleCardsModel>
+	<Id>064ea6de-bcd0-40ee-9eb8-31bb1b97873c</Id>
+	<Name>Hole Cards</Name>
+	<IsActive>false</IsActive>
+	<Type>FilterHoleCards</Type>
+	<HoleCardsCollection>
+		<HoleCardsItem>
+			<Id>40000630-e802-470f-9289-056b75f826bb</Id>
+			<Name>AA</Name>
+			<IsActive>false</IsActive>
+			<IsChecked>true</IsChecked>
+			<ItemType>Pair</ItemType>
+		</HoleCardsItem>
+	</HoleCardsCollection>
+</FilterHoleCardsModel>

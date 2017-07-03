@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Utils;
@@ -140,10 +141,13 @@ namespace DriveHUD.HUD
 
             if (windows.ContainsKey(hwnd))
             {
-                windows[hwnd].Window.Initialize(hudLayout);
-                windows[hwnd].Window.Refresh();
+                using (var scope = new PerformanceMonitor($"RefreshWindow ({hudLayout.GameNumber})"))
+                {
+                    windows[hwnd].Window.Initialize(hudLayout);
+                    windows[hwnd].Window.Refresh();
 
-                return;
+                    return;
+                }
             }
 
             uint processId = 0;
