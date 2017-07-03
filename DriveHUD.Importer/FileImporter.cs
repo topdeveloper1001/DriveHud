@@ -342,192 +342,177 @@ namespace DriveHUD.Importers
             // need to lock db operations to prevent deadlocks
             lock (locker)
             {
-                using (var pfScope = new PerformanceMonitor($"Internal insert hand({gameInfo.GameNumber})"))
+                try
                 {
-                    try
+                    parsingResult = parsingResult.ToList();
+
+                    using (var session = ModelEntities.OpenStatelessSession())
                     {
-                        parsingResult = parsingResult.ToList();
-
-                        using (var session = ModelEntities.OpenStatelessSession())
+                        using (var transaction = session.BeginTransaction())
                         {
-                            using (var transaction = session.BeginTransaction())
+                            var tournamentsData = new List<Tournaments>();
+
+                            var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
+                            var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
+
+                            for (var i = 0; i < parsingResult.Count; i++)
                             {
-                                var tournamentsData = new List<Tournaments>();
+                                var handHistory = parsingResult[i];
 
-                                var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
-                                var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
-
-                                for (var i = 0; i < parsingResult.Count; i++)
+                                // skip error hand
+                                if (handHistory.Source.HasError)
                                 {
-                                    var handHistory = parsingResult[i];
-
-                                    // skip error hand
-                                    if (handHistory.Source.HasError)
-                                    {
-                                        continue;
-                                    }
-
-                                    progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
-
-                                    // update tournament with summary data
-                                    if (handHistory.IsSummary)
-                                    {
-                                        InsertSummaryHand(session, handHistory, gameInfo);
-                                        continue;
-                                    }
-
-                                    // Check if this game was already parsed before
-                                    var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
-
-                                    if (exist)
-                                    {
-                                        duplicates++;
-                                        handHistory.IsDuplicate = true;
-                                        continue;
-                                    }
-
-                                    existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
-
-                                    InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
-
-                                    if (progress.CancellationToken.IsCancellationRequested)
-                                    {
-                                        progress.Report(new LocalizableString("Progress_StoppingImport"));
-                                        break;
-                                    }
+                                    continue;
                                 }
 
-                                ProcessTournaments(tournamentsData, parsingResult, session);
+                                progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
 
-                                using (var pfScope2 = new PerformanceMonitor($"transaction.Commit"))
+                                // update tournament with summary data
+                                if (handHistory.IsSummary)
                                 {
-                                    transaction.Commit();
+                                    InsertSummaryHand(session, handHistory, gameInfo);
+                                    continue;
                                 }
 
-                                parsingResult.ForEach(p => p.WasImported = true);
+                                // Check if this game was already parsed before
+                                var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
+
+                                if (exist)
+                                {
+                                    duplicates++;
+                                    handHistory.IsDuplicate = true;
+                                    continue;
+                                }
+
+                                existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
+
+                                InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+
+                                if (progress.CancellationToken.IsCancellationRequested)
+                                {
+                                    progress.Report(new LocalizableString("Progress_StoppingImport"));
+                                    break;
+                                }
                             }
+
+                            ProcessTournaments(tournamentsData, parsingResult, session);
+
+                            transaction.Commit();
+
+                            parsingResult.ForEach(p => p.WasImported = true);
                         }
                     }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, "DB error", e);
-                    }
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "DB error", e);
                 }
             }
         }
 
         private void InsertRegularHand(IStatelessSession session, ParsingResult handHistory, IEnumerable<Players> existingPlayers, string importerSession, List<Tournaments> tournamentsData, GameInfo gameInfo)
         {
-            using (var scope = new PerformanceMonitor("InsertRegulatHand"))
+            try
             {
-                try
+                var existingGameType = SaveGameType(session, handHistory);
+
+                session.Insert(handHistory.HandHistory);
+
+                // join new players with existing
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
+
+                foreach (var existingPlayer in handPlayers.ToArray())
                 {
-                    var existingGameType = SaveGameType(session, handHistory);
-
-                    session.Insert(handHistory.HandHistory);
-
-                    // join new players with existing
-                    var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
-
-                    using (var scope2 = new PerformanceMonitor("Process players"))
+                    if (existingGameType.Istourney)
                     {
-                        foreach (var existingPlayer in handPlayers.ToArray())
+                        existingPlayer.Tourneyhands++;
+                    }
+                    else
+                    {
+                        existingPlayer.Cashhands++;
+                    }
+
+                    session.Update(existingPlayer);
+
+                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession);
+
+                    if (playerStat != null)
+                    {
+                        // copy player stat to prevent having the same reference in different caches
+                        var playerStatCopy = playerStat.Copy();
+
+                        var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
+
+                        playerStatCopy.SessionCode = importerSession;
+
+                        var cacheInfo = new PlayerStatsSessionCacheInfo
                         {
-                            if (existingGameType.Istourney)
+                            Session = importerSession,
+                            Player = new PlayerCollectionItem
                             {
-                                existingPlayer.Tourneyhands++;
-                            }
-                            else
-                            {
-                                existingPlayer.Cashhands++;
-                            }
+                                PlayerId = existingPlayer.PlayerId,
+                                Name = existingPlayer.Playername,
+                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
+                            },
+                            Stats = playerStatCopy,
+                            IsHero = isHero
+                        };
 
-                            session.Update(existingPlayer);
+                        importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
 
-                            var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession);
+                        var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
-                            if (playerStat != null)
-                            {
-                                // copy player stat to prevent having the same reference in different caches
-                                var playerStatCopy = playerStat.Copy();
-
-                                var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
-
-                                playerStatCopy.SessionCode = importerSession;
-
-                                var cacheInfo = new PlayerStatsSessionCacheInfo
-                                {
-                                    Session = importerSession,
-                                    Player = new PlayerCollectionItem
-                                    {
-                                        PlayerId = existingPlayer.PlayerId,
-                                        Name = existingPlayer.Playername,
-                                        PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
-                                    },
-                                    Stats = playerStatCopy,
-                                    IsHero = isHero
-                                };
-
-                                using (var scope3 = new PerformanceMonitor("AddOrUpdatePlayerStats"))
-                                {
-                                    importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
-                                }
-
-                                var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
-
-                                if (hh != null)
-                                {
-                                    hh.GameType = existingGameType;
-                                    hh.Player = existingPlayer;
-                                    session.Insert(hh);
-                                }
-                            }
-
-                            #region Process tournament data
-
-                            if (handHistory.GameType.Istourney)
-                            {
-                                // get all existing data for that tournament
-                                if (tournamentsData == null)
-                                {
-                                    // this shouldn't be possible
-                                    LogProvider.Log.Warn(this, "tournamentsData is null");
-                                    continue;
-                                }
-
-                                if (tournamentsData.Count == 0)
-                                {
-                                    tournamentsData.AddRange(session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).Fetch(x => x.Player).ToList());
-                                }
-
-                                var existingTournament = tournamentsData.FirstOrDefault(x =>
-                                    x.Tourneynumber == handHistory.HandHistory.Tourneynumber && x.Player.PlayerId == existingPlayer.PlayerId);
-
-                                if (existingTournament == null)
-                                {
-                                    var tournaments = CreateTournaments(handHistory, existingPlayer, gameInfo);
-
-                                    if (gameInfo != null)
-                                    {
-                                        tournaments.SiteId = (short)gameInfo.PokerSite;
-                                    }
-
-                                    tournaments.Player = existingPlayer;
-
-                                    session.Insert(tournaments);
-
-                                    tournamentsData.Add(tournaments);
-                                }
-                            }
-
-                            #endregion
+                        if (hh != null)
+                        {
+                            hh.GameType = existingGameType;
+                            hh.Player = existingPlayer;
+                            session.Insert(hh);
                         }
                     }
+
+                    #region Process tournament data
+
+                    if (handHistory.GameType.Istourney)
+                    {
+                        // get all existing data for that tournament
+                        if (tournamentsData == null)
+                        {
+                            // this shouldn't be possible
+                            LogProvider.Log.Warn(this, "tournamentsData is null");
+                            continue;
+                        }
+
+                        if (tournamentsData.Count == 0)
+                        {
+                            tournamentsData.AddRange(session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).Fetch(x => x.Player).ToList());
+                        }
+
+                        var existingTournament = tournamentsData.FirstOrDefault(x =>
+                            x.Tourneynumber == handHistory.HandHistory.Tourneynumber && x.Player.PlayerId == existingPlayer.PlayerId);
+
+                        if (existingTournament == null)
+                        {
+                            var tournaments = CreateTournaments(handHistory, existingPlayer, gameInfo);
+
+                            if (gameInfo != null)
+                            {
+                                tournaments.SiteId = (short)gameInfo.PokerSite;
+                            }
+
+                            tournaments.Player = existingPlayer;
+
+                            session.Insert(tournaments);
+
+                            tournamentsData.Add(tournaments);
+                        }
+                    }
+
+                    #endregion
                 }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(this, string.Format("Hand #{0} has not been inserted due the following error", handHistory.HandHistory.HandhistoryId), ex);
-                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, string.Format("Hand #{0} has not been inserted due the following error", handHistory.HandHistory.HandhistoryId), ex);
             }
         }
 
@@ -571,30 +556,27 @@ namespace DriveHUD.Importers
         /// <returns>Calculated player statistic</returns>
         public Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session)
         {
-            using (var scope = new PerformanceMonitor("ProcessPlayerStatistic"))
+            try
             {
-                try
+                var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
+
+                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+
+                if (playerStat == null)
                 {
-                    var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
-
-                    var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
-
-                    if (playerStat == null)
-                    {
-                        return null;
-                    }
-
-                    playerStat.SessionCode = session;
-
-                    StorePlayerStatistic(playerStat, session);
-
-                    return playerStat;
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(e);
                     return null;
                 }
+
+                playerStat.SessionCode = session;
+
+                StorePlayerStatistic(playerStat, session);
+
+                return playerStat;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(e);
+                return null;
             }
         }
 
@@ -649,84 +631,78 @@ namespace DriveHUD.Importers
         /// <returns>Collection of existing hands. Item1 - hand number, item2 - pokersite id</returns>
         private List<Tuple<long, short>> GetExisting(IStatelessSession session, IEnumerable<ParsingResult> handHistories)
         {
-            using (var pfScope = new PerformanceMonitor("GetExisting"))
+            var hhGroupedByPokersite = handHistories.GroupBy(x => x.HandHistory.PokersiteId);
+
+            Disjunction restriction = Restrictions.Disjunction();
+            foreach (var pokersiteGroup in hhGroupedByPokersite)
             {
-                var hhGroupedByPokersite = handHistories.GroupBy(x => x.HandHistory.PokersiteId);
-
-                Disjunction restriction = Restrictions.Disjunction();
-                foreach (var pokersiteGroup in hhGroupedByPokersite)
-                {
-                    restriction.Add(Restrictions.Conjunction()
-                         .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(pokersiteGroup.Select(x => x.HandHistory.Gamenumber).ToList()))
-                         .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteGroup.Key)));
-                }
-
-                var list = session.QueryOver<Handhistory>().Where(restriction)
-                        .Select(x => x.Gamenumber, x => x.PokersiteId)
-                        .List<object[]>()
-                        .Select(x => new Tuple<long, short>((long)x[0], (short)x[1]))
-                        .ToList();
-
-                return list;
+                restriction.Add(Restrictions.Conjunction()
+                     .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(pokersiteGroup.Select(x => x.HandHistory.Gamenumber).ToList()))
+                     .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteGroup.Key)));
             }
+
+            var list = session.QueryOver<Handhistory>().Where(restriction)
+                    .Select(x => x.Gamenumber, x => x.PokersiteId)
+                    .List<object[]>()
+                    .Select(x => new Tuple<long, short>((long)x[0], (short)x[1]))
+                    .ToList();
+
+            return list;
         }
 
         private IList<Players> ComposePlayers(IStatelessSession session, IEnumerable<ParsingResult> handHistories, GameInfo gameInfo)
         {
-            using (var scope = new PerformanceMonitor("ComposePlayers"))
+            var playersToSelect = handHistories
+                .SelectMany(x => x.Players)
+                .GroupBy(x => new { x.Playername, x.PokersiteId })
+                .Select(x => x.FirstOrDefault())
+                .Where(x => x != null).ToList();
+
+            var playersGroupedByPokersite = playersToSelect.GroupBy(x => x.PokersiteId);
+
+            Disjunction restriction = Restrictions.Disjunction();
+
+            foreach (var pokersiteGroup in playersGroupedByPokersite)
             {
-                var playersToSelect = handHistories
-                    .SelectMany(x => x.Players)
-                    .GroupBy(x => new { x.Playername, x.PokersiteId })
-                    .Select(x => x.FirstOrDefault())
-                    .Where(x => x != null).ToList();
-
-                var playersGroupedByPokersite = playersToSelect.GroupBy(x => x.PokersiteId);
-
-                Disjunction restriction = Restrictions.Disjunction();
-
-                foreach (var pokersiteGroup in playersGroupedByPokersite)
-                {
-                    restriction.Add(Restrictions.Conjunction()
-                         .Add(Restrictions.On<Players>(x => x.Playername).IsIn(pokersiteGroup.Select(x => x.Playername).ToList()))
-                         .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
-                }
-
-                var existingPlayers = session.QueryOver<Players>().Where(restriction).List();
-
-                var playersToAdd = playersToSelect.Where(s => !existingPlayers.Any(e => s.Playername == e.Playername
-                                                                                    && s.PokersiteId == e.PokersiteId));
-
-                foreach (var player in playersToAdd)
-                {
-                    var inserted = session.Insert(player);
-                }
-
-                var playerItemCollection = playersToAdd.Select(x =>
-                    new PlayerCollectionItem()
-                    {
-                        PlayerId = x.PlayerId,
-                        Name = x.Playername,
-                        PokerSite = (EnumPokerSites)x.PokersiteId
-                    }).ToArray();
-
-                dataService.AddPlayerRangeToList(playerItemCollection);
-                gameInfo.AddedPlayers = playerItemCollection;
-
-                existingPlayers.AddRange(playersToAdd);
-
-                // update id for future use
-                var playersToUpdate = (from handPlayer in existingPlayers
-                                       join handHistoryPlayer in handHistories.SelectMany(x => x.Source.Players) on handPlayer.Playername equals handHistoryPlayer.PlayerName
-                                       select new { Player = handPlayer, HandHistoryPlayer = handHistoryPlayer }).ToArray();
-
-                playersToUpdate.ForEach(x =>
-                {
-                    x.HandHistoryPlayer.PlayerId = x.Player.PlayerId;
-                });
-
-                return existingPlayers;
+                restriction.Add(Restrictions.Conjunction()
+                     .Add(Restrictions.On<Players>(x => x.Playername).IsIn(pokersiteGroup.Select(x => x.Playername).ToList()))
+                     .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
             }
+
+            var existingPlayers = session.QueryOver<Players>().Where(restriction).List();
+
+            var playersToAdd = playersToSelect.Where(s => !existingPlayers.Any(e => s.Playername == e.Playername
+                                                                                && s.PokersiteId == e.PokersiteId));
+
+            foreach (var player in playersToAdd)
+            {
+                var inserted = session.Insert(player);
+            }
+
+            var playerItemCollection = playersToAdd.Select(x =>
+                new PlayerCollectionItem()
+                {
+                    PlayerId = x.PlayerId,
+                    Name = x.Playername,
+                    PokerSite = (EnumPokerSites)x.PokersiteId
+                }).ToArray();
+
+            dataService.AddPlayerRangeToList(playerItemCollection);
+            gameInfo.AddedPlayers = playerItemCollection;
+
+            existingPlayers.AddRange(playersToAdd);
+
+            // update id for future use
+            var playersToUpdate = (from handPlayer in existingPlayers
+                                   join handHistoryPlayer in handHistories.SelectMany(x => x.Source.Players) on handPlayer.Playername equals handHistoryPlayer.PlayerName
+                                   select new { Player = handPlayer, HandHistoryPlayer = handHistoryPlayer }).ToArray();
+
+            playersToUpdate.ForEach(x =>
+            {
+                x.HandHistoryPlayer.PlayerId = x.Player.PlayerId;
+            });
+
+            return existingPlayers;
         }
 
         /// <summary>
@@ -737,32 +713,28 @@ namespace DriveHUD.Importers
         /// <returns></returns>
         private Gametypes SaveGameType(IStatelessSession session, ParsingResult handhistory)
         {
-            using (var scope = new PerformanceMonitor("SaveGameType"))
-            {
-                var existingGameType = session.Query<Gametypes>().FirstOrDefault(x =>
+            var existingGameType = session.Query<Gametypes>().FirstOrDefault(x =>
                 x.Bigblindincents == handhistory.GameType.Bigblindincents &&
                 x.Anteincents == handhistory.GameType.Anteincents &&
                 x.CurrencytypeId == handhistory.GameType.CurrencytypeId &&
                 x.PokergametypeId == handhistory.GameType.PokergametypeId &&
                 x.Smallblindincents == handhistory.GameType.Smallblindincents &&
                 x.Tablesize == handhistory.GameType.Tablesize &&
-                x.Istourney == handhistory.GameType.Istourney
-                );
+                x.Istourney == handhistory.GameType.Istourney);
 
-                if (existingGameType == null)
-                {
-                    session.Insert(handhistory.GameType);
-                    existingGameType = handhistory.GameType;
-                }
-                else
-                {
-                    handhistory.GameType = existingGameType;
-                }
-
-                handhistory.HandHistory.GametypeId = existingGameType.GametypeId;
-
-                return existingGameType;
+            if (existingGameType == null)
+            {
+                session.Insert(handhistory.GameType);
+                existingGameType = handhistory.GameType;
             }
+            else
+            {
+                handhistory.GameType = existingGameType;
+            }
+
+            handhistory.HandHistory.GametypeId = existingGameType.GametypeId;
+
+            return existingGameType;
         }
 
         /// <summary>

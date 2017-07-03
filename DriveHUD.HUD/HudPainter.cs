@@ -141,13 +141,10 @@ namespace DriveHUD.HUD
 
             if (windows.ContainsKey(hwnd))
             {
-                using (var scope = new PerformanceMonitor($"RefreshWindow ({hudLayout.GameNumber})"))
-                {
-                    windows[hwnd].Window.Initialize(hudLayout);
-                    windows[hwnd].Window.Refresh();
+                windows[hwnd].Window.Initialize(hudLayout);
+                windows[hwnd].Window.Refresh();
 
-                    return;
-                }
+                return;
             }
 
             uint processId = 0;
