@@ -911,6 +911,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             }
 
+            // Get hero cards
+            // Dealt to Peon84 [  3d 3h ]
+            var heroLine = handLines.FirstOrDefault(x => x.StartsWith("Dealt to "));
+            if (!string.IsNullOrWhiteSpace(heroLine)) 
+            {
+                var heroName = GetHeroNameFromDealtToString(heroLine);
+                //cards 
+                var cardsStart = heroLine.IndexOf(" [  ") + 4;
+                var cardsEnd = heroLine.IndexOf(" ]", cardsStart);
+
+                playerList[heroName].HoleCards = HoleCards.FromCards(heroLine.Substring(cardsStart,  cardsEnd - cardsStart));
+            }
+
             // Looking for the showdown info which looks like this
             // Player1 checks
             // Player2 shows [ 8h, 5h, Ad, 3d ]high card Ace.
@@ -1035,11 +1048,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (handlines[i][0] == 'D' && handlines[i].StartsWith("Dealt to "))
                 {
                     string line = handlines[i];
-                    int endIndex = line.LastIndexOf('[');
-                    return line.Substring(9, endIndex - 9 - 1);
+                    return GetHeroNameFromDealtToString(line);
                 }
             }
             return null;
+        }
+
+        private string GetHeroNameFromDealtToString(string dealtToString)
+        {
+            int endIndex = dealtToString.LastIndexOf('[');
+            return dealtToString.Substring(9, endIndex - 9 - 1);
         }
 
         public int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex)

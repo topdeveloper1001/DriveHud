@@ -157,6 +157,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
 
         [Test]
         [TestCase(TestDataFolder + @"Hands/HeroBetFolds.txt", "Figarootoo")]
+        [TestCase(TestDataFolder + @"Hands/HeroCards.txt", "Peon84")]
         public void ParseHeroNameTest(string handHistoryFile, string heroName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

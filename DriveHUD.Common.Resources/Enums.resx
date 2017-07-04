@@ -674,4 +674,7 @@
   <data name="Enum_EnumPokerSites_YaPoker" xml:space="preserve">
     <value>YaPoker</value>
   </data>
+  <data name="Enum_EnumPokerSites_PartyPoker" xml:space="preserve">
+    <value>PartyPoker</value>
+  </data>
 </root>
