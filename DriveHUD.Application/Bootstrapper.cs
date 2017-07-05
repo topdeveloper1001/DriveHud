@@ -92,7 +92,7 @@ namespace DriveHUD.Application
             ImporterBootstrapper.ConfigureImporterService();
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
-            sqliteBootstrapper.InitializeDatabase();
+            sqliteBootstrapper.InitializeDatabase();        
 
             ShowMainWindow();
         }

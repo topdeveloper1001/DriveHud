@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
@@ -189,19 +190,13 @@ namespace DriveHUD.Importers
                 }
 
 #if DEBUG
-                var sw = new Stopwatch();
-
-                sw.Start();
-#endif            
-
-                InsertHands(parsingResult, progress, gameInfo);
-
+                using (var perfomanceScope = new PerformanceMonitor($"Insert hand({gameInfo.GameNumber})"))
+                {
+#endif
+                    InsertHands(parsingResult, progress, gameInfo);
 #if DEBUG
-                sw.Stop();
-
-                Debug.WriteLine("DB import for {0}ms", sw.ElapsedMilliseconds);
-                LogProvider.Log.Debug($"DB import for { sw.ElapsedMilliseconds}ms");
-#endif            
+                }
+#endif
 
                 return parsingResult;
             }
@@ -475,6 +470,8 @@ namespace DriveHUD.Importers
                         }
                     }
 
+                    #region Process tournament data
+
                     if (handHistory.GameType.Istourney)
                     {
                         // get all existing data for that tournament
@@ -509,6 +506,8 @@ namespace DriveHUD.Importers
                             tournamentsData.Add(tournaments);
                         }
                     }
+
+                    #endregion
                 }
             }
             catch (Exception ex)
@@ -721,8 +720,7 @@ namespace DriveHUD.Importers
                 x.PokergametypeId == handhistory.GameType.PokergametypeId &&
                 x.Smallblindincents == handhistory.GameType.Smallblindincents &&
                 x.Tablesize == handhistory.GameType.Tablesize &&
-                x.Istourney == handhistory.GameType.Istourney
-                );
+                x.Istourney == handhistory.GameType.Istourney);
 
             if (existingGameType == null)
             {

@@ -121,21 +121,21 @@ namespace DriveHUD.Importers.BetOnline
                     }
 
 #if DEBUG
-                    var streamFolder = "stream";
+                    //var streamFolder = "stream";
 
-                    if (!Directory.Exists(streamFolder))
-                    {
-                        Directory.CreateDirectory(streamFolder);
-                    }
+                    //if (!Directory.Exists(streamFolder))
+                    //{
+                    //    Directory.CreateDirectory(streamFolder);
+                    //}
 
-                    var logfile = convertedResult.TableName;
+                    //var logfile = convertedResult.TableName;
 
-                    foreach (var invalidChar in Path.GetInvalidFileNameChars())
-                    {
-                        logfile = logfile.Replace(new string(invalidChar, 1), string.Empty);
-                    }
+                    //foreach (var invalidChar in Path.GetInvalidFileNameChars())
+                    //{
+                    //    logfile = logfile.Replace(new string(invalidChar, 1), string.Empty);
+                    //}
 
-                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, logfile), xml);
+                    //File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, logfile), xml);
 #endif                    
 
                     ImportResult(convertedResult);

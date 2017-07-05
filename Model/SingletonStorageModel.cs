@@ -94,7 +94,7 @@ namespace Model
 
         private void UpdateFilteredStatistics()
         {
-            FilteredPlayerStatistic = this.StatisticCollection?.AsQueryable().Where(FilterPredicate).ToList();
+            FilteredPlayerStatistic = StatisticCollection?.ToList().AsQueryable().Where(FilterPredicate).ToList();
         }
 
         #endregion
@@ -191,11 +191,7 @@ namespace Model
         [NotifyPropertyChangedInvocator]
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion

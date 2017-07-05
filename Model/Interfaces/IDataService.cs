@@ -13,6 +13,7 @@
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Model.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -25,6 +26,10 @@ namespace Model.Interfaces
         IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
 
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
+
+        void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
+
+        void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
 
         Indicators GetPlayerIndicator(int playerId, short pokersiteId);
 

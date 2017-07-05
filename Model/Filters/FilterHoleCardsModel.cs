@@ -1,4 +1,16 @@
-﻿using DriveHUD.Common.Utils;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterHoleCardsModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Enums;
 using System;
@@ -6,21 +18,25 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Xml.Serialization;
 using Cards = HandHistories.Objects.Cards;
+using System.Xml;
+using System.Xml.Schema;
+using System.Diagnostics;
 
 namespace Model.Filters
 {
     [Serializable]
-    public class FilterHoleCardsModel : FilterBaseEntity, IFilterModel
+    public class FilterHoleCardsModel : FilterBaseEntity, IFilterModel, IXmlSerializable
     {
         public static Action OnSelectionChanged;
 
         #region Constructor
+
         public FilterHoleCardsModel()
         {
-            this.Name = "Hole Cards";
-            this.Type = EnumFilterModelType.FilterHoleCards;
-
+            Name = "Hole Cards";
+            Type = EnumFilterModelType.FilterHoleCards;
         }
 
         public void Initialize()
@@ -35,10 +51,13 @@ namespace Model.Filters
         public void FilterSectionHoleCardsInitialize()
         {
             HoleCardsCollection = new ObservableCollection<HoleCardsItem>();
+
             var rankValues = Cards.Card.PossibleRanksHighCardFirst;
+
             for (int i = 0; i < rankValues.Count(); i++)
             {
                 bool startS = false;
+
                 for (int j = 0; j < rankValues.Count(); j++)
                 {
                     string card1 = i < j ? rankValues.ElementAt(i) : rankValues.ElementAt(j);
@@ -46,17 +65,33 @@ namespace Model.Filters
 
                     if (startS)
                     {
-                        HoleCardsCollection.Add(new HoleCardsItem() { Name = string.Format("{0}{1}s", card1, card2), ItemType = RangeSelectorItemType.Suited, IsChecked = true });
+                        HoleCardsCollection.Add(new HoleCardsItem
+                        {
+                            Name = string.Format("{0}{1}s", card1, card2),
+                            ItemType = RangeSelectorItemType.Suited,
+                            IsChecked = true
+                        });
                     }
                     else
                     {
                         if (!card1.Equals(card2))
                         {
-                            HoleCardsCollection.Add(new HoleCardsItem() { Name = string.Format("{0}{1}o", card1, card2), ItemType = RangeSelectorItemType.OffSuited, IsChecked = true });
+                            HoleCardsCollection.Add(new HoleCardsItem
+                            {
+                                Name = string.Format("{0}{1}o", card1, card2),
+                                ItemType = RangeSelectorItemType.OffSuited,
+                                IsChecked = true
+                            });
                         }
                         else
                         {
-                            HoleCardsCollection.Add(new HoleCardsItem() { Name = string.Format("{0}{1}", card1, card2), ItemType = RangeSelectorItemType.Pair, IsChecked = true });
+                            HoleCardsCollection.Add(new HoleCardsItem
+                            {
+                                Name = string.Format("{0}{1}", card1, card2),
+                                ItemType = RangeSelectorItemType.Pair,
+                                IsChecked = true
+                            });
+
                             startS = true;
                         }
                     }
@@ -91,7 +126,7 @@ namespace Model.Filters
 
         public void LoadFilter(IFilterModel filter)
         {
-            if(filter is FilterHoleCardsModel)
+            if (filter is FilterHoleCardsModel)
             {
                 var filterToLoad = filter as FilterHoleCardsModel;
 
@@ -116,6 +151,7 @@ namespace Model.Filters
             foreach (var holeCard in holeCardsList)
             {
                 var cur = HoleCardsCollection.FirstOrDefault(x => x.Name == holeCard.Name);
+
                 if (cur != null)
                 {
                     cur.IsChecked = holeCard.IsChecked;
@@ -126,12 +162,16 @@ namespace Model.Filters
         #endregion
 
         #region Properties
+
         private ObservableCollection<HoleCardsItem> _holeCardsCollection;
         private EnumFilterModelType _type;
 
         public EnumFilterModelType Type
         {
-            get { return _type; }
+            get
+            {
+                return _type;
+            }
             set
             {
                 if (value == _type) return;
@@ -146,11 +186,108 @@ namespace Model.Filters
             {
                 return _holeCardsCollection;
             }
-
             set
             {
                 if (value == _holeCardsCollection) return;
                 _holeCardsCollection = value;
+            }
+        }
+
+        #endregion
+
+        #region IXmlSerializable implementation
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            FilterSectionHoleCardsInitialize();
+
+            reader.MoveToContent();
+
+            while (reader.Read())
+            {
+                if (reader.IsStartElement(nameof(Id)))
+                {
+                    Id = Guid.Parse(reader.ReadElementContentAsString());
+                }
+
+                if (reader.IsStartElement(nameof(Type)))
+                {
+                    Type = (EnumFilterModelType)Enum.Parse(typeof(EnumFilterModelType), reader.ReadElementContentAsString());
+                }
+
+                if (reader.IsStartElement(nameof(HoleCardsCollection)))
+                {
+                    if (reader.IsEmptyElement)
+                    {
+                        continue;
+                    }
+
+                    reader.ReadStartElement(nameof(HoleCardsCollection));
+
+                    while (reader.IsStartElement(nameof(HoleCardsItem)))
+                    {
+                        var holeCardsItemsType = typeof(HoleCardsItem);
+                        var serializer = new XmlSerializer(holeCardsItemsType);
+
+                        var holeCardsItem = (HoleCardsItem)serializer.Deserialize(reader);
+
+                        var existingHoleCardsItem = HoleCardsCollection.FirstOrDefault(x => x.Name == holeCardsItem.Name);
+
+                        if (existingHoleCardsItem == null)
+                        {
+                            HoleCardsCollection.Add(holeCardsItem);
+                        }
+                        else
+                        {
+                            existingHoleCardsItem.Id = holeCardsItem.Id;
+                            existingHoleCardsItem.IsActive = holeCardsItem.IsActive;
+                            existingHoleCardsItem.IsChecked = holeCardsItem.IsChecked;
+                            existingHoleCardsItem.ItemType = holeCardsItem.ItemType;
+                        }
+                    }
+
+                    reader.ReadEndElement();
+                }
+
+                if (reader.Name == nameof(FilterHoleCardsModel) && reader.NodeType == XmlNodeType.EndElement)
+                {
+                    reader.ReadEndElement();
+                    break;
+                }
+            }
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteStartElement(nameof(Id));
+            writer.WriteValue(Id.ToString());
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(nameof(Type));
+            writer.WriteValue(Type.ToString());
+            writer.WriteEndElement();
+
+            var holeCardsCollectionToSerialize = HoleCardsCollection?
+                .ToArray()
+                .Where(x => !x.IsChecked)
+                .ToArray();
+
+            if (holeCardsCollectionToSerialize != null && holeCardsCollectionToSerialize.Length > 0)
+            {
+                writer.WriteStartElement(nameof(HoleCardsCollection));
+
+                foreach (var holeCard in holeCardsCollectionToSerialize)
+                {
+                    var xmlSerializer = new XmlSerializer(holeCard.GetType());
+                    xmlSerializer.Serialize(writer, holeCard);
+                }
+
+                writer.WriteEndElement();
             }
         }
 
@@ -235,7 +372,7 @@ namespace Model.Filters
         /// <returns></returns>
         public bool Contains(IEnumerable<string> hand)
         {
-            if (hand.Count() != 2 || this.Name.Length < 2)
+            if (hand.Count() != 2 || Name.Length < 2)
             {
                 return false;
             }
@@ -252,5 +389,4 @@ namespace Model.Filters
             return false;
         }
     }
-
 }

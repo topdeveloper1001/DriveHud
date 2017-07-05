@@ -1665,6 +1665,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not register error. Internal error occurred. Please contact support..
+        /// </summary>
+        internal static string Common_RegistrationView_TrialRegisterError {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_TrialRegisterError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please enter the following data to activate your trial period:.
         /// </summary>
         internal static string Common_RegistrationView_TrialRegisterText {

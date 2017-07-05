@@ -39,7 +39,7 @@ namespace Model.Reports
                     stat.AddStatistic(playerstatistic);
                 }
 
-                stat.MRatio = group.Key;
+                stat.MRatioZone = group.Key;
 
                 report.Add(stat);
             }

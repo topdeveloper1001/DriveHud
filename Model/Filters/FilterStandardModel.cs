@@ -289,19 +289,21 @@ namespace Model.Filters
 
         public void ResetStatCollection()
         {
-            StatCollection.ToList().ForEach(x => x.TriStateSet(EnumTriState.Any));
+            StatCollection.ToList().ForEach(x => x.CurrentTriState = EnumTriState.Any);
         }
         #endregion
 
         #region Restore Defaults
+
         private void ResetFilterStatTo(IEnumerable<StatItem> statList)
         {
             foreach (var stat in statList)
             {
                 var cur = StatCollection.FirstOrDefault(x => x.PropertyName == stat.PropertyName);
+
                 if (cur != null)
                 {
-                    cur.TriStateSet(stat.TriStateSelectedItem.TriState);
+                    cur.CurrentTriState = stat.CurrentTriState;
                 }
             }
         }
@@ -454,12 +456,13 @@ namespace Model.Filters
         private Expression<Func<Playerstatistic, bool>> GetStatsPredicate()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
-            foreach (var stat in StatCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+
+            foreach (var stat in StatCollection.Where(x => x.CurrentTriState != EnumTriState.Any))
             {
-                Playerstatistic empty = new Playerstatistic();
+                var empty = new Playerstatistic();
                 var propValue = ReflectionHelper.GetMemberValue(empty, stat.PropertyName);
 
-                switch (stat.TriStateSelectedItem.TriState)
+                switch (stat.CurrentTriState)
                 {
                     case EnumTriState.On:
                         predicate = predicate.And(x => Convert.ToBoolean(ReflectionHelper.GetMemberValue(x, stat.PropertyName)));
@@ -872,8 +875,7 @@ namespace Model.Filters
         {
         }
 
-        private string _propertyName;
-        private TriStateItem _triStateSelectedItem;
+        private string _propertyName;        
 
         public string PropertyName
         {
@@ -881,47 +883,28 @@ namespace Model.Filters
             set { _propertyName = value; }
         }
 
-        public override TriStateItem TriStateSelectedItem
+        public override EnumTriState CurrentTriState
         {
-            get { return _triStateSelectedItem; }
+            get
+            {
+                return base.CurrentTriState;
+            }
             set
             {
-                if (value == _triStateSelectedItem) return;
-                _triStateSelectedItem = value;
+                if (value == currentTriState)
+                {
+                    return;
+                }
+
+                currentTriState = value;
+
                 OnPropertyChanged();
 
-                if (OnTriState != null) OnTriState.Invoke();
+                if (OnTriState != null)
+                {
+                    OnTriState.Invoke();
+                }
             }
         }
-    }
-
-    [Serializable]
-    public class TriStateItem : FilterBaseEntity
-    {
-        private EnumTriState _triState;
-        private Color _color;
-
-        public EnumTriState TriState
-        {
-            get { return _triState; }
-            set
-            {
-                if (value == _triState) return;
-                _triState = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public Color Color
-        {
-            get { return _color; }
-            set
-            {
-                if (value == _color) return;
-                _color = value;
-                OnPropertyChanged();
-            }
-        }
-    }
+    }   
 }
-

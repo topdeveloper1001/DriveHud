@@ -135,35 +135,34 @@ namespace DriveHUD.Importers
                     }
                     else
                     {
-                        var playerStatistic = dataService.GetPlayerStatisticFromFile(cacheInfo.Player.PlayerId, (short)cacheInfo.Player.PokerSite)
-                            .Where(x => x.IsTourney == cacheInfo.Stats.IsTourney &&
-                                    GameTypeUtils.CompareGameType((GameType)x.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId))
-                            .ToList();
-
                         sessionCacheStatistic = new SessionCacheStatistic();
 
-                        playerStatistic.ForEach(x =>
-                        {
-                            var isCurrentGame = x.GameNumber == cacheInfo.Stats.GameNumber;
-
-                            if (isCurrentGame)
+                        dataService.ActOnPlayerStatisticFromFile(cacheInfo.Player.PlayerId,
+                            stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
+                                    stat.IsTourney == cacheInfo.Stats.IsTourney &&
+                                    GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId),
+                            stat =>
                             {
-                                x.CalculateTotalPot();
-                                x.SessionCode = cacheInfo.Session;
-                            }
+                                var isCurrentGame = stat.GameNumber == cacheInfo.Stats.GameNumber;
 
-                            sessionCacheStatistic.PlayerData.AddStatistic(x);
+                                if (isCurrentGame)
+                                {
+                                    stat.CalculateTotalPot();
+                                    stat.SessionCode = cacheInfo.Session;
+                                }
 
-                            if (isCurrentGame)
-                            {
-                                sessionCacheStatistic.SessionPlayerData.AddStatistic(x);
+                                sessionCacheStatistic.PlayerData.AddStatistic(stat);
 
-                                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, x);
-                                InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, x);
-                                InitSessionStatCollections(sessionCacheStatistic.PlayerData, x);
-                                InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, x);
-                            }
-                        });
+                                if (isCurrentGame)
+                                {
+                                    sessionCacheStatistic.SessionPlayerData.AddStatistic(stat);
+
+                                    InitSessionCardsCollections(sessionCacheStatistic.PlayerData, stat);
+                                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, stat);
+                                    InitSessionStatCollections(sessionCacheStatistic.PlayerData, stat);
+                                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, stat);
+                                }
+                            });
 
                         skipAdding = true;
                     }
