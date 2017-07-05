@@ -9,18 +9,21 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
-
     [Serializable]
-    public class FilterHandValueModel : FilterBaseEntity, IFilterModel
+    public class FilterHandValueModel : FilterBaseEntity, IFilterModel, IXmlSerializable
     {
         #region Constructor
+
         public FilterHandValueModel()
         {
-            this.Name = "Hand Value";
-            this.Type = EnumFilterModelType.FilterHandValueModel;
+            Name = "Hand Value";
+            Type = EnumFilterModelType.FilterHandValueModel;
         }
 
         public void Initialize()
@@ -30,9 +33,11 @@ namespace Model.Filters
             FilterSectionTurnHandValuesInitialize();
             FilterSectionRiverHandValuesInitialize();
         }
+
         #endregion
 
         #region Methods
+
         public void FilterSectionFastFilterInitialize()
         {
             FastFilterCollection = new ObservableCollection<FastFilterItem>()
@@ -333,7 +338,7 @@ namespace Model.Filters
 
         public void ResetFastFilterCollection()
         {
-            FastFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any).ToList().ForEach(x => x.TriStateSet(EnumTriState.Any));
+            FastFilterCollection.Where(x => x.CurrentTriState != EnumTriState.Any).ToList().ForEach(x => x.CurrentTriState = EnumTriState.Any);
         }
 
         public void ResetFlopHandValuesCollection()
@@ -360,9 +365,10 @@ namespace Model.Filters
             foreach (var filter in fastFilterList)
             {
                 var cur = FastFilterCollection.FirstOrDefault(x => x.Name == filter.Name);
+
                 if (cur != null)
                 {
-                    cur.TriStateSet(filter.TriStateSelectedItem.TriState);
+                    cur.CurrentTriState = filter.CurrentTriState;
                 }
             }
         }
@@ -532,17 +538,18 @@ namespace Model.Filters
 
         private Expression<Func<Playerstatistic, bool>> GetFastFilterPredicate()
         {
-            if (!FastFilterCollection.Any(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+            if (!FastFilterCollection.Any(x => x.CurrentTriState != EnumTriState.Any))
             {
                 return PredicateBuilder.True<Playerstatistic>();
             }
 
             var fastFilterPredicate = PredicateBuilder.True<Playerstatistic>();
 
-            foreach (var item in FastFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+            foreach (var item in FastFilterCollection.Where(x => x.CurrentTriState != EnumTriState.Any))
             {
                 var predicate = GetPredicateForFastFilterType(item);
-                if (item.TriStateSelectedItem.TriState == EnumTriState.Off)
+
+                if (item.CurrentTriState == EnumTriState.Off)
                 {
                     predicate = PredicateBuilder.Not(predicate);
                 }
@@ -606,6 +613,7 @@ namespace Model.Filters
         #endregion
 
         #region Properties
+
         private ObservableCollection<FastFilterItem> _fastFilterCollection;
         private ObservableCollection<HandValueItem> _flopHandValuesCollection;
         private ObservableCollection<HandValueItem> _turnHandValuesCollection;
@@ -682,6 +690,165 @@ namespace Model.Filters
                 OnPropertyChanged();
             }
         }
+
+        #endregion
+
+        #region IXmlSerializable implementation
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            Initialize();
+
+            reader.MoveToContent();
+
+            while (reader.Read())
+            {
+                if (reader.IsStartElement(nameof(Id)))
+                {
+                    Id = Guid.Parse(reader.ReadElementContentAsString());
+                }
+
+                if (reader.IsStartElement(nameof(FastFilterCollection)))
+                {
+                    if (reader.IsEmptyElement)
+                    {
+                        continue;
+                    }
+
+                    reader.ReadStartElement(nameof(FastFilterCollection));
+
+                    while (reader.IsStartElement(nameof(FastFilterItem)))
+                    {
+                        var fastFilterItemType = typeof(FastFilterItem);
+                        var serializer = new XmlSerializer(fastFilterItemType);
+
+                        var fastFilterItem = (FastFilterItem)serializer.Deserialize(reader);
+
+                        var existingFastFilterItem = FastFilterCollection.FirstOrDefault(x => x.Name == fastFilterItem.Name);
+
+                        if (existingFastFilterItem == null)
+                        {
+                            FastFilterCollection.Add(fastFilterItem);
+                        }
+                        else
+                        {
+                            existingFastFilterItem.Id = fastFilterItem.Id;
+                            existingFastFilterItem.IsActive = fastFilterItem.IsActive;
+                            existingFastFilterItem.CurrentTriState = fastFilterItem.CurrentTriState;
+                            existingFastFilterItem.FastFilterType = fastFilterItem.FastFilterType;
+                            existingFastFilterItem.TargetStreet = fastFilterItem.TargetStreet;
+                        }
+                    }
+
+                    reader.ReadEndElement();
+                }
+
+                ReadHandValueCollectionsXml(reader, FlopHandValuesCollection, nameof(FlopHandValuesCollection));
+                ReadHandValueCollectionsXml(reader, TurnHandValuesCollection, nameof(TurnHandValuesCollection));
+                ReadHandValueCollectionsXml(reader, RiverHandValuesCollection, nameof(RiverHandValuesCollection));
+
+                if (reader.Name == nameof(FilterHandValueModel) && reader.NodeType == XmlNodeType.EndElement)
+                {
+                    reader.ReadEndElement();
+                    break;
+                }
+            }
+        }
+
+        private static void ReadHandValueCollectionsXml(XmlReader reader, ObservableCollection<HandValueItem> collection, string nameOfCollection)
+        {
+            if (!reader.IsStartElement(nameOfCollection) || reader.IsEmptyElement)
+            {
+                return;
+            }
+
+            reader.ReadStartElement(nameOfCollection);
+
+            while (reader.IsStartElement(nameof(HandValueItem)))
+            {
+                var handValueItemType = typeof(HandValueItem);
+                var serializer = new XmlSerializer(handValueItemType);
+
+                var handValueItem = (HandValueItem)serializer.Deserialize(reader);
+
+                var existingHandValueItem = collection.FirstOrDefault(x => x.Name == handValueItem.Name);
+
+                if (existingHandValueItem == null)
+                {
+                    collection.Add(handValueItem);
+                }
+                else
+                {
+                    existingHandValueItem.Id = handValueItem.Id;
+                    existingHandValueItem.IsActive = handValueItem.IsActive;
+                    existingHandValueItem.IsChecked = handValueItem.IsChecked;
+                    existingHandValueItem.Hand = handValueItem.Hand;
+                    existingHandValueItem.TargetStreet = handValueItem.TargetStreet;
+                }
+            }
+
+            reader.ReadEndElement();
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteStartElement(nameof(Id));
+            writer.WriteValue(Id.ToString());
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(nameof(Type));
+            writer.WriteValue(Type.ToString());
+            writer.WriteEndElement();
+
+            var fastFilterCollection = FastFilterCollection?
+                .ToArray()
+                .Where(x => x.CurrentTriState != EnumTriState.Any)
+                .ToArray();
+
+            if (fastFilterCollection != null && fastFilterCollection.Length > 0)
+            {
+                writer.WriteStartElement(nameof(FastFilterCollection));
+
+                foreach (var fastFilterItem in fastFilterCollection)
+                {
+                    var xmlSerializer = new XmlSerializer(fastFilterItem.GetType());
+                    xmlSerializer.Serialize(writer, fastFilterItem);
+                }
+
+                writer.WriteEndElement();
+            }
+
+            WriteHandValueCollectionsXml(writer, FlopHandValuesCollection, nameof(FlopHandValuesCollection));
+            WriteHandValueCollectionsXml(writer, TurnHandValuesCollection, nameof(TurnHandValuesCollection));
+            WriteHandValueCollectionsXml(writer, RiverHandValuesCollection, nameof(RiverHandValuesCollection));
+        }
+
+        private static void WriteHandValueCollectionsXml(XmlWriter writer, ObservableCollection<HandValueItem> collection, string nameOfCollection)
+        {
+            var filteredCollection = collection?
+                .ToArray()
+                .Where(x => x.IsChecked)
+                .ToArray();
+
+            if (filteredCollection != null && filteredCollection.Length > 0)
+            {
+                writer.WriteStartElement(nameOfCollection);
+
+                foreach (var handValueItem in filteredCollection)
+                {
+                    var xmlSerializer = new XmlSerializer(handValueItem.GetType());
+                    xmlSerializer.Serialize(writer, handValueItem);
+                }
+
+                writer.WriteEndElement();
+            }
+        }
+
         #endregion
     }
 
@@ -697,7 +864,6 @@ namespace Model.Filters
         }
 
         private Street _targetStreet;
-        private TriStateItem _triStateSelectedItem;
         private EnumHandValuesFastFilterType _fastFilterType;
 
         public Street TargetStreet
@@ -713,16 +879,27 @@ namespace Model.Filters
             }
         }
 
-        public override TriStateItem TriStateSelectedItem
+        public override EnumTriState CurrentTriState
         {
-            get { return _triStateSelectedItem; }
+            get
+            {
+                return base.CurrentTriState;
+            }
             set
             {
-                if (value == _triStateSelectedItem) return;
-                _triStateSelectedItem = value;
+                if (value == currentTriState)
+                {
+                    return;
+                }
+
+                currentTriState = value;
+
                 OnPropertyChanged();
 
-                if (OnTriState != null) OnTriState.Invoke();
+                if (OnTriState != null)
+                {
+                    OnTriState.Invoke();
+                }
             }
         }
 

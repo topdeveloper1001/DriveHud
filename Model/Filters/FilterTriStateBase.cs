@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
@@ -16,39 +17,23 @@ namespace Model.Filters
 
         public FilterTriStateBase(EnumTriState param = EnumTriState.Any)
         {
-            this.TriStateCollection = new ObservableCollection<TriStateItem>
-            (
-                new List<TriStateItem>()
+            CurrentTriState = param;
+        }
+     
+        protected EnumTriState currentTriState;
+
+        public virtual EnumTriState CurrentTriState
+        {
+            get { return currentTriState; }
+            set
+            {
+                if (value == currentTriState)
                 {
-                    new TriStateItem() { TriState = EnumTriState.Any, Color = Colors.Black, },
-                    new TriStateItem() { TriState = EnumTriState.On, Color = Colors.Green, },
-                    new TriStateItem() { TriState = EnumTriState.Off, Color = Colors.Red, },
+                    return;
                 }
-            );
-            this.TriStateSelectedItem = this.TriStateCollection.FirstOrDefault(x => x.TriState == param);
-        }
 
-        private ObservableCollection<TriStateItem> _triStateCollection;
-        private TriStateItem _triStateSelectedItem;
+                currentTriState = value;
 
-        public ObservableCollection<TriStateItem> TriStateCollection
-        {
-            get { return _triStateCollection; }
-            set
-            {
-                if (value == _triStateCollection) return;
-                _triStateCollection = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public virtual TriStateItem TriStateSelectedItem
-        {
-            get { return _triStateSelectedItem; }
-            set
-            {
-                if (value == _triStateSelectedItem) return;
-                _triStateSelectedItem = value;
                 OnPropertyChanged();
             }
         }
@@ -58,18 +43,17 @@ namespace Model.Filters
         /// </summary>
         public void TriStateSwap()
         {
-            int index = this.TriStateCollection.IndexOf(this.TriStateCollection.FirstOrDefault(x => x.TriState == this.TriStateSelectedItem.TriState));
-            this.TriStateSelectedItem = index == this.TriStateCollection.Count() - 1 ? this.TriStateCollection.ElementAt(0) : this.TriStateCollection.ElementAt(index + 1);
-        }
-
-        /// <summary>
-        /// Set to a certain defined TriState
-        /// </summary>
-        public void TriStateSet(EnumTriState _param)
-        {
-            if (this.TriStateCollection.Where(x => x.TriState == _param).Any())
+            if (CurrentTriState == EnumTriState.Any)
             {
-                this.TriStateSelectedItem = this.TriStateCollection.FirstOrDefault(x => x.TriState == _param);
+                CurrentTriState = EnumTriState.On;
+            }
+            else if (CurrentTriState == EnumTriState.On)
+            {
+                CurrentTriState = EnumTriState.Off;
+            }
+            else
+            {
+                CurrentTriState = EnumTriState.Any;
             }
         }
     }

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Extensions;
@@ -360,10 +361,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets icons for hud elements based on stats and layout player type settings
         /// </summary>
-        public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName)
+        public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, HudLayoutInfoV2 layout)
         {
-            var layout = GetLayout(layoutName);
-
             if (layout == null)
             {
                 return;
@@ -452,26 +451,25 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Set stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public IList<string> GetValidStickers(Playerstatistic statistic, string layoutName)
+        public IList<string> GetValidStickers(Playerstatistic statistic, HudLayoutInfoV2 layout)
         {
-            var layout = GetLayout(layoutName);
             if (layout == null || statistic == null)
+            {
                 return new List<string>();
-            return
-                layout.HudBumperStickerTypes?.Where(
-                        x => x.FilterPredicate != null && new[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any())
-                    .Select(x => x.Name)
-                    .ToList();
+            }
+
+            return layout.HudBumperStickerTypes?
+                .Where(x => x.FilterPredicate != null && x.FilterPredicate.Compile()(statistic))
+                .Select(x => x.Name)
+                .ToList();
         }
 
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, string layoutName)
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, HudLayoutInfoV2 layout)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
-
-            var layout = GetLayout(layoutName);
 
             if (layout == null || stickersStatistics == null)
             {

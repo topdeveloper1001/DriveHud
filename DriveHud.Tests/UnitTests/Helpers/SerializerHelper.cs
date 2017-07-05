@@ -13,6 +13,7 @@
 using NUnit.Framework;
 using ProtoBuf;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace DriveHud.Tests.UnitTests.Helpers
 {
@@ -46,6 +47,42 @@ namespace DriveHud.Tests.UnitTests.Helpers
                 using (var afterStream = new MemoryStream(data))
                 {
                     actualObject = Serializer.Deserialize<T>(afterStream);
+                }
+            });
+
+            Assert.IsNotNull(actualObject);
+
+            return actualObject;
+        }
+
+        /// <summary>
+        /// Gets the xml deserialized object of the xml serialized version of the specified object of type <see cref="{T}"/>
+        /// </summary>
+        /// <typeparam name="T">Type of object to be serialized/deserialized</typeparam>
+        /// <param name="hudLayoutToolExpected">Object to be serialized/deserialized</param>
+        /// <returns>Deserialized object of type <see cref="{T}"/></returns>
+        public static T GetXmlSerializedDeserializedObject<T>(T expectedObject) where T : class
+        {
+            string serializedObject = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var sw = new StringWriter())
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(T));
+                    xmlSerializer.Serialize(sw, expectedObject);
+                    serializedObject = sw.ToString();
+                }
+            });
+
+            T actualObject = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var sr = new StringReader(serializedObject))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(T));
+                    actualObject = xmlSerializer.Deserialize(sr) as T;
                 }
             });
 

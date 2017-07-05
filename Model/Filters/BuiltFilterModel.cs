@@ -335,7 +335,7 @@ namespace Model.Filters
             foreach (var triStateItem in StandardModel.StatCollection)
             {
                 var filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => !string.IsNullOrEmpty(x.Value) && x.Value == triStateItem.PropertyName);
-                var state = triStateItem.TriStateSelectedItem.TriState;
+                var state = triStateItem.CurrentTriState;
                 if (state == EnumTriState.Any && filterSectionItem != null)
                 {
                     /* Make element not active instead of removing it because tooltip is losing its style after element is being removed */
@@ -372,7 +372,7 @@ namespace Model.Filters
             var statItem = StandardModel?.StatCollection.FirstOrDefault(x => x.PropertyName == filterItemValue);
             if (statItem != null)
             {
-                statItem.TriStateSet(EnumTriState.Any);
+                statItem.CurrentTriState = EnumTriState.Any;
             }
 
         }
@@ -533,7 +533,9 @@ namespace Model.Filters
             foreach (var triStateItem in HandValueModel.FastFilterCollection)
             {
                 var filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => !string.IsNullOrEmpty(x.Value) && x.Value == triStateItem.Name);
-                var state = triStateItem.TriStateSelectedItem.TriState;
+
+                var state = triStateItem.CurrentTriState;
+
                 if (state == EnumTriState.Any && filterSectionItem != null)
                 {
                     /* Make element not active instead of removing it because tooltip is losing its style after element is being removed */
@@ -566,11 +568,14 @@ namespace Model.Filters
             {
                 return;
             }
+
             var filterItemValue = param.Value;
+
             var fastFilterItem = HandValueModel.FastFilterCollection.FirstOrDefault(x => x.Name == filterItemValue);
+
             if (fastFilterItem != null)
             {
-                fastFilterItem.TriStateSet(EnumTriState.Any);
+                fastFilterItem.CurrentTriState = EnumTriState.Any;
             }
         }
 
@@ -671,12 +676,12 @@ namespace Model.Filters
                     break;
                 case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
                     if (DateModel.DateFilterType.DateFrom <= DateModel.DateFilterType.DateTo)
-                        filterSectionItem.Name = DateModel.DateFilterType.DateFrom.Date.ToShortDateString() 
-                                               + " - " 
+                        filterSectionItem.Name = DateModel.DateFilterType.DateFrom.Date.ToShortDateString()
+                                               + " - "
                                                + DateModel.DateFilterType.DateTo.Date.ToShortDateString();
                     else
-                        filterSectionItem.Name = DateModel.DateFilterType.DateTo.Date.ToShortDateString() 
-                                               + " - " 
+                        filterSectionItem.Name = DateModel.DateFilterType.DateTo.Date.ToShortDateString()
+                                               + " - "
                                                + DateModel.DateFilterType.DateFrom.Date.ToShortDateString();
 
 
@@ -912,8 +917,10 @@ namespace Model.Filters
         {
             foreach (var triStateItem in QuickFilterModel.QuickFilterCollection)
             {
-                var filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => !string.IsNullOrEmpty(x.Value) && x.Value == triStateItem.Name);
-                var state = triStateItem.TriStateSelectedItem.TriState;
+                var filterSectionItem = FilterSectionCollection.FirstOrDefault(x => !string.IsNullOrEmpty(x.Value) && x.Value == triStateItem.Name);
+
+                var state = triStateItem.CurrentTriState;
+
                 if (state == EnumTriState.Any && filterSectionItem != null)
                 {
                     /* Make element not active instead of removing it because tooltip is losing its style after element is being removed */
@@ -946,11 +953,14 @@ namespace Model.Filters
             {
                 return;
             }
+
             var filterItemValue = param.Value;
+
             var fastFilterItem = QuickFilterModel.QuickFilterCollection.FirstOrDefault(x => x.Name == filterItemValue);
+
             if (fastFilterItem != null)
             {
-                fastFilterItem.TriStateSet(EnumTriState.Any);
+                fastFilterItem.CurrentTriState = EnumTriState.Any;
             }
         }
         #endregion

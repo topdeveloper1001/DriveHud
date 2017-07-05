@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Utils;
