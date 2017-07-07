@@ -73,6 +73,6 @@ namespace DriveHUD.Common.Resources
 
         public static string DeleteHandResourceString = "Main_ContextMenu_DeleteHand";
 
-        #endregion
+        #endregion     
     }
 }

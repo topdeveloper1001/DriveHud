@@ -160,7 +160,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ignition.
+        ///   Looks up a localized string similar to Ignition/Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Ignition {
             get {

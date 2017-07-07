@@ -145,7 +145,7 @@
     <value>Bovada/Ignition</value>
   </data>
   <data name="Enum_EnumPokerSites_Ignition" xml:space="preserve">
-    <value>Ignition</value>
+    <value>Ignition/Bodog</value>
   </data>
   <data name="Enum_EnumPokerSites_IPoker" xml:space="preserve">
     <value>IPoker</value>

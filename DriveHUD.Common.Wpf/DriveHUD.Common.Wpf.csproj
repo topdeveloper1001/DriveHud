@@ -145,6 +145,7 @@
     <Compile Include="Controls\ToggleSwitch.cs" />
     <Compile Include="Converters\BackgroundToForegroundColorConverter.cs" />
     <Compile Include="Converters\BoolNotConverter.cs" />
+    <Compile Include="Converters\BoolToGreenRedColorConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ColorBrightnessToSolidBrushConverter.cs" />
     <Compile Include="Converters\ColorToSolidBrushConverter.cs" />

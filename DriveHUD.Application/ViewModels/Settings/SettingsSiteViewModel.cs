@@ -41,7 +41,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
-                { EnumPokerSites.Ignition, string.Format("{0} / {1}", CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition), CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Bodog)) },
+                { EnumPokerSites.Ignition, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition) },
                 { EnumPokerSites.BetOnline, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BetOnline) },
                 { EnumPokerSites.BlackChipPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BlackChipPoker) },
                 { EnumPokerSites.PokerStars, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.PokerStars) },

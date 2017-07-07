@@ -16,11 +16,21 @@ namespace Model.Site
 {
     public class TigerGamingConfiguration : BetOnlineConfiguration
     {
+        private readonly string[] registryKeys = new[] { "TigerGaming 0" };
+
         public override EnumPokerSites Site
         {
             get
             {
                 return EnumPokerSites.TigerGaming;
+            }
+        }
+
+        protected override string[] RegistryKeys
+        {
+            get
+            {
+                return registryKeys;
             }
         }
     }

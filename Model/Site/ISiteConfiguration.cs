@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 
@@ -43,11 +44,11 @@ namespace Model.Site
 
         #endregion
 
-        #region Methods
+        #region Public methods
 
         string[] GetHandHistoryFolders();
 
-        void ValidateSiteConfiguration();
+        ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel);
 
         #endregion
     }

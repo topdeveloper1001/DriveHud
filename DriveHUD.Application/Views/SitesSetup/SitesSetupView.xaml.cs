@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SportsBettingConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="SitesSetupView.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,28 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
+using System.Windows.Controls;
 
-namespace Model.Site
+namespace DriveHUD.Application.Views
 {
-    public class SportsBettingConfiguration : BetOnlineConfiguration
+    /// <summary>
+    /// Interaction logic for SitesSetupView.xaml
+    /// </summary>
+    public partial class SitesSetupView : UserControl
     {
-        private readonly string[] registryKeys = new[] { "SportsBetting 0" };
-
-        public override EnumPokerSites Site
+        public SitesSetupView()
         {
-            get
-            {
-                return EnumPokerSites.SportsBetting;
-            }
-        }
-
-        protected override string[] RegistryKeys
-        {
-            get
-            {
-                return registryKeys;
-            }
+            InitializeComponent();
         }
     }
 }

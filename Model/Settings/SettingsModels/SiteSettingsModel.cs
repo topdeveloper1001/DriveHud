@@ -71,6 +71,7 @@ namespace Model.Settings
             for (int i = 0; i < model.SitesModelList.Count(); i++)
             {
                 var siteModel = this.SitesModelList.FirstOrDefault(x => x.PokerSite == model.SitesModelList[i].PokerSite);
+
                 if (siteModel != null)
                 {
                     model.SitesModelList[i] = (SiteModel)siteModel.Clone();
@@ -92,6 +93,12 @@ namespace Model.Settings
         [XmlAttribute]
         public EnumPokerSites PokerSite { get; set; }
 
+        [XmlAttribute]
+        public bool Enabled { get; set; }
+
+        [XmlAttribute]
+        public bool Configured { get; set; }
+
         [XmlArray]
         public ObservableCollection<string> HandHistoryLocationList { get; set; }
 
@@ -100,8 +107,8 @@ namespace Model.Settings
 
         public override object Clone()
         {
-            var model = (SiteModel)this.MemberwiseClone();
-            model.HandHistoryLocationList = new ObservableCollection<string>(this.HandHistoryLocationList);
+            var model = (SiteModel)MemberwiseClone();
+            model.HandHistoryLocationList = new ObservableCollection<string>(HandHistoryLocationList);
             model.PrefferedSeats = PrefferedSeats.Where(x => x != null).Select(x => (PreferredSeatModel)x.Clone()).ToList();
 
             return model;

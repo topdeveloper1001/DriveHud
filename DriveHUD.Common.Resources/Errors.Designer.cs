@@ -61,6 +61,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;English&quot; isn&apos;t selected as your language in the settings of 888 poker client.
+        /// </summary>
+        internal static string Error_888_Validation_HHLanguage {
+            get {
+                return ResourceManager.GetString("Error_888_Validation_HHLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Keep my hand history in&quot; option isn&apos;t checked in the settings of 888 poker client ({0}).
+        /// </summary>
+        internal static string Error_888_Validation_IsEnableHistory {
+            get {
+                return ResourceManager.GetString("Error_888_Validation_IsEnableHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Card already used by player.
         /// </summary>
         internal static string Error_EC_BoardCardAlreadyUsed {
@@ -111,6 +129,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Error_PG_MigrationWarningMessage {
             get {
                 return ResourceManager.GetString("Error_PG_MigrationWarningMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;English&quot; isn&apos;t selected as your language for Hand History formatting in the settings of PS ({0}).
+        /// </summary>
+        internal static string Error_PS_Validation_HHLanguage {
+            get {
+                return ResourceManager.GetString("Error_PS_Validation_HHLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Save My Hands History&quot; option isn&apos;t checked in the settings of PS client ({0}).
+        /// </summary>
+        internal static string Error_PS_Validation_SaveMyHandHistory {
+            get {
+                return ResourceManager.GetString("Error_PS_Validation_SaveMyHandHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Save My Tournament Summaries&quot; option isn&apos;t checked in the settings of PS ({0}).
+        /// </summary>
+        internal static string Error_PS_Validation_SaveTournamentSummaries {
+            get {
+                return ResourceManager.GetString("Error_PS_Validation_SaveTournamentSummaries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;English&quot; isn&apos;t selected as your language for Tournament Summaries formatting in the settings of PS ({0}).
+        /// </summary>
+        internal static string Error_PS_Validation_TSLanguage {
+            get {
+                return ResourceManager.GetString("Error_PS_Validation_TSLanguage", resourceCulture);
             }
         }
     }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SportsBettingConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="ISiteValidationResult.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,27 +11,25 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using System.Collections.Generic;
 
 namespace Model.Site
 {
-    public class SportsBettingConfiguration : BetOnlineConfiguration
+    /// <summary>
+    /// Represents the result of the validation of the site
+    /// </summary>
+    public interface ISiteValidationResult
     {
-        private readonly string[] registryKeys = new[] { "SportsBetting 0" };
+        EnumPokerSites PokerSite { get; }
 
-        public override EnumPokerSites Site
-        {
-            get
-            {
-                return EnumPokerSites.SportsBetting;
-            }
-        }
+        bool IsNew { get; set; }
 
-        protected override string[] RegistryKeys
-        {
-            get
-            {
-                return registryKeys;
-            }
-        }
+        bool HasIssue { get; }
+
+        bool IsDetected { get; set; }
+
+        IList<string> Issues { get; set; }
+
+        IList<string> HandHistoryLocations { get; set; }
     }
 }

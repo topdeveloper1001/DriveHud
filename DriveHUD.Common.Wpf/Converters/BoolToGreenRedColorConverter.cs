@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SportsBettingConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="BoolToGreenRedColorConverter.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,28 +10,36 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
+using System;
+using System.Globalization;
+using System.Windows.Media;
 
-namespace Model.Site
+namespace DriveHUD.Common.Wpf.Converters
 {
-    public class SportsBettingConfiguration : BetOnlineConfiguration
+    public class BoolToGreenRedColorConverter : MarkupExtensionConverterBase
     {
-        private readonly string[] registryKeys = new[] { "SportsBetting 0" };
-
-        public override EnumPokerSites Site
+        public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            get
+            var b = value as bool?;
+
+            if (b == true)
             {
-                return EnumPokerSites.SportsBetting;
+                return Colors.Green;
             }
+
+            return Colors.Red;
         }
 
-        protected override string[] RegistryKeys
+        public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            get
+            var color = value as Color?;
+
+            if (color == Colors.Green)
             {
-                return registryKeys;
+                return true;
             }
+
+            return false;
         }
     }
 }

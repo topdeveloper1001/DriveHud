@@ -13,6 +13,7 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Win32;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -199,8 +200,9 @@ namespace Model.Site
             return string.Empty;
         }
 
-        public void ValidateSiteConfiguration()
+        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
+            return null;
         }
     }
 }

@@ -259,7 +259,7 @@ namespace DriveHUD.Application.TableConfigurators
             var item = new RadMenuItem();
 
             var binding = new Binding(nameof(ReplayerPlayerViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
-            item.SetBinding(RadMenuItem.HeaderProperty, binding);
+            item.SetBinding(HeaderedItemsControl.HeaderProperty, binding);
 
             item.Click += (s, e) =>
             {

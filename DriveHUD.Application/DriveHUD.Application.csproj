@@ -519,6 +519,8 @@
     <Compile Include="ViewModels\PopupContainers\PopupContainerAliasViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBumperStickerFiltersViewModel.cs" />
+    <Compile Include="ViewModels\SitesSetup\SiteSetupViewModel.cs" />
+    <Compile Include="ViewModels\SitesSetup\SitesSetupViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />
     <Compile Include="ViewModels\Hud\PokerStarsHudPanelService.cs" />
     <Compile Include="ViewModels\Popups\PlayerNoteViewModel.cs" />
@@ -566,6 +568,9 @@
     </Compile>
     <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
       <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SitesSetup\SitesSetupView.xaml.cs">
+      <DependentUpon>SitesSetupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PopupContainers\PopupContainerSupportView.xaml.cs">
       <DependentUpon>PopupContainerSupportView.xaml</DependentUpon>
@@ -1021,6 +1026,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SitesSetup\SitesSetupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
