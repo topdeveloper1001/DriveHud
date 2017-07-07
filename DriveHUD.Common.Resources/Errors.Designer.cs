@@ -167,5 +167,14 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Error_PS_Validation_TSLanguage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Save Hand History&quot; option isn&apos;t checked in the settings of {0} client.
+        /// </summary>
+        internal static string Error_WPN_Validation_SaveHandHistory {
+            get {
+                return ResourceManager.GetString("Error_WPN_Validation_SaveHandHistory", resourceCulture);
+            }
+        }
     }
 }

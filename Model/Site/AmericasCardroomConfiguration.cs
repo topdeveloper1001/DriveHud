@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Win32;
 using Model.Settings;
@@ -24,6 +26,14 @@ namespace Model.Site
 {
     public class AmericasCardroomConfiguration : ISiteConfiguration
     {
+        private const string DisplayNameKeyValue = "DisplayName";
+        private const string InstallLocationKeyValue = "InstallLocation";
+        private const string SettingsFile = "pref.xml";
+        private const string ProfilesFolder = "profiles";
+        private const string ProfileHandHistoryId = "3";
+        private const string ProfileSaveHandHistoryId = "1";
+        private const string CorrectSaveHandHistoryTag = "1";
+
         public AmericasCardroomConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
@@ -95,31 +105,77 @@ namespace Model.Site
             }
         }
 
+        protected virtual string RegistryDisplayName
+        {
+            get
+            {
+                return "AmericasCardroom";
+            }
+        }
+
         public virtual string[] GetHandHistoryFolders()
         {
-            var path = GetInstalledPath("AmericasCardroom");
+            var handHistoryFolders = new List<string>();
 
-            if (string.IsNullOrEmpty(path))
-                return new string[] { };
+            var path = GetInstalledPath(RegistryDisplayName);
 
-            return GetHandHistoryFoldersFromProfiles(Path.Combine(path, "profiles")).ToArray();
+            var profilesDirectoryPath = Path.Combine(path, ProfilesFolder);
+
+            try
+            {
+                var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+
+                if (!profilesDirectory.Exists)
+                {
+                    return handHistoryFolders.ToArray();
+                }
+
+                foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
+                {
+                    try
+                    {
+                        var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId });
+
+                        if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                        {
+                            handHistoryFolders.Add(xmlValues[ProfileHandHistoryId]);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
+            }
+
+            return handHistoryFolders.Distinct().ToArray();
         }
 
         protected string GetInstalledPath(string softwareName)
         {
             try
             {
-                var key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall") ??
-                          Registry.LocalMachine.OpenSubKey(
-                              @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall");
+                var uninstallKeys = new[] {  Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath32Bit),
+                          Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath64Bit) };
 
-                if (key == null)
-                    return string.Empty;
-
-                foreach (var subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                foreach (var uninstallKey in uninstallKeys)
                 {
-                    if (string.Equals(subkey?.GetValue("DisplayName") as string, softwareName, StringComparison.InvariantCultureIgnoreCase))
-                        return subkey?.GetValue("InstallLocation") as string;
+                    if (uninstallKey == null)
+                    {
+                        continue;
+                    }
+
+                    foreach (var subkey in uninstallKey.GetSubKeyNames().Select(keyName => uninstallKey.OpenSubKey(keyName)))
+                    {
+                        if (string.Equals(subkey?.GetValue(DisplayNameKeyValue) as string, softwareName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            return subkey?.GetValue(InstallLocationKeyValue) as string;
+                        }
+                    }
                 }
             }
             catch (Exception e)
@@ -130,79 +186,94 @@ namespace Model.Site
             return string.Empty;
         }
 
-        protected IEnumerable<string> GetHandHistoryFoldersFromProfiles(string path)
-        {
-            var result = new List<string>();
-
-            try
-            {
-                if (!Directory.Exists(path))
-                    return result;
-
-                var profilesDirectory = new DirectoryInfo(path);
-
-                foreach (var profileDir in profilesDirectory.GetDirectories())
-                {
-                    var prefFileName = Path.Combine(profileDir.FullName, "pref.xml");
-
-                    var configuredHandHistoryPath = GetHandHistoryFolderFromPrefs(prefFileName);
-
-                    if (!string.IsNullOrEmpty(configuredHandHistoryPath))
-                    {
-                        result.Add(configuredHandHistoryPath);
-                        continue;
-                    }
-
-                    var handHistoryPath = Path.Combine(profileDir.FullName, "HandHistory");
-
-                    if (Directory.Exists(handHistoryPath))
-                        result.Add(handHistoryPath);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not get hh folder from profiles '{path}' [{Site}]", e);
-            }
-            return result;
-        }
-
-        protected string GetHandHistoryFolderFromPrefs(string prefFileName)
-        {
-            try
-            {
-                if (!File.Exists(prefFileName))
-                    return string.Empty;
-
-                var prefFile = new XmlDocument();
-                prefFile.Load(prefFileName);
-
-                var node = prefFile.SelectSingleNode("property_set_list");
-
-                var props = node?.SelectSingleNode("property_set")?.SelectNodes("property");
-
-                if (props == null)
-                    return string.Empty;
-
-                foreach (XmlNode property in props)
-                {
-                    if (property.Attributes?.OfType<XmlAttribute>().FirstOrDefault(a => a.Name == "id")?.Value != "3")
-                        continue;
-
-                    if (Directory.Exists(property.InnerText))
-                        return property.InnerText;
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not get hh folder from preferences '{prefFileName}' [{Site}]", e);
-            }
-
-            return string.Empty;
-        }
-
         public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
-            return null;
+            var installedPath = GetInstalledPath(RegistryDisplayName);
+
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                IsDetected = !string.IsNullOrEmpty(GetInstalledPath(RegistryDisplayName))
+            };
+
+            var profilesDirectoryPath = Path.Combine(installedPath, ProfilesFolder);
+
+            try
+            {
+                var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+
+                foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
+                {
+                    try
+                    {
+                        var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId, ProfileSaveHandHistoryId });
+
+                        if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                        {
+                            validationResult.HandHistoryLocations.Add(xmlValues[ProfileHandHistoryId]);
+                        }
+
+                        if (xmlValues.ContainsKey(ProfileSaveHandHistoryId) && (xmlValues[ProfileSaveHandHistoryId] != CorrectSaveHandHistoryTag))
+                        {
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_WPN_Validation_SaveHandHistory"), RegistryDisplayName);
+                            validationResult.Issues.Add(issue);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
+            }
+
+            return validationResult;
+        }
+
+        /// <summary>
+        /// Reads xml tag value from text
+        /// </summary>
+        /// <param name="text">Xml</param>
+        /// <returns>Result</returns>
+        private Dictionary<string, string> ReadXmlValues(string file, string[] ids)
+        {
+            var result = ids.GroupBy(x => x).ToDictionary(x => x.Key, x => string.Empty);
+
+            try
+            {
+                using (var xmlReader = XmlReader.Create(file))
+                {
+                    while (xmlReader.Read())
+                    {
+                        if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.HasAttributes)
+                        {
+                            foreach (var id in ids)
+                            {
+                                var attribute = xmlReader.GetAttribute("id");
+
+                                if (!string.IsNullOrEmpty(attribute) && attribute.Equals(id, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    result[id] = xmlReader.ReadElementContentAsString();
+
+                                    if (result.Values.All(x => !string.IsNullOrEmpty(x)))
+                                    {
+                                        return result;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not read xml data from {file}", ex);
+            }
+
+            return result;
         }
     }
 }

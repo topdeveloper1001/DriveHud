@@ -11,8 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using System.IO;
-using System.Linq;
 
 namespace Model.Site
 {
@@ -23,14 +21,12 @@ namespace Model.Site
             get { return EnumPokerSites.BlackChipPoker; }
         }
 
-        public override string[] GetHandHistoryFolders()
+        protected override string RegistryDisplayName
         {
-            var path = GetInstalledPath("BlackChipPoker");
-
-            if (string.IsNullOrEmpty(path))
-                return new string[] {};
-
-            return GetHandHistoryFoldersFromProfiles(Path.Combine(path, "profiles")).ToArray();
+            get
+            {
+                return "BlackChipPoker";
+            }
         }
     }
 }
