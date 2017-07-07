@@ -105,6 +105,14 @@ namespace Model.Site
             }
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/wpn_logo.png";
+            }
+        }
+
         protected virtual string RegistryDisplayName
         {
             get

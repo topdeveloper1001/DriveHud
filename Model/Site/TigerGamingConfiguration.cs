@@ -26,6 +26,14 @@ namespace Model.Site
             }
         }
 
+        public override string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/tigergaming_logo.png";
+            }
+        }
+
         protected override string[] RegistryKeys
         {
             get

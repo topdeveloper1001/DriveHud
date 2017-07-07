@@ -98,6 +98,14 @@ namespace Model.Site
             set;
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/betonline_logo.png";
+            }
+        }
+
         public string[] GetHandHistoryFolders()
         {
             return new string[] { };

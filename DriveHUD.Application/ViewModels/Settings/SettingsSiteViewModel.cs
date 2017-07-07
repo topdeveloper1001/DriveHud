@@ -61,6 +61,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             AddHandHistoryLocationCommand = new RelayCommand(AddHandHistoryLocation);
             DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
             AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
+            EnableCommand = new RelayCommand(x => SelectedSite.Enabled = !SelectedSite.Enabled);
         }
 
         public override void SetSettingsModel(ISettingsBase model)
@@ -221,6 +222,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         public ICommand AddHandHistoryLocationCommand { get; set; }
         public ICommand DeleteHandHistoryLocationCommand { get; set; }
         public ICommand AutoDetectHandHistoryLocationCommand { get; set; }
+        public ICommand EnableCommand { get; set; }
 
         #endregion
 

@@ -110,6 +110,14 @@ namespace Model.Site
             }
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/pokerstars_logo.png";
+            }
+        }
+
         /// <summary>
         /// Gets the paths to hand histories folders
         /// </summary>

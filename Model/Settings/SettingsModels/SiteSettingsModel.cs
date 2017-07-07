@@ -93,8 +93,26 @@ namespace Model.Settings
         [XmlAttribute]
         public EnumPokerSites PokerSite { get; set; }
 
+        private bool enabled;
+
         [XmlAttribute]
-        public bool Enabled { get; set; }
+        public bool Enabled
+        {
+            get
+            {
+                return enabled;
+            }
+            set
+            {
+                if (enabled == value)
+                {
+                    return;
+                }
+
+                enabled = value;
+                OnPropertyChanged();
+            }
+        }
 
         [XmlAttribute]
         public bool Configured { get; set; }

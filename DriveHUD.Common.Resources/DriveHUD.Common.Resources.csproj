@@ -641,6 +641,23 @@
   <ItemGroup>
     <EmbeddedResource Include="Layouts\DH 10-max Cash.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\wpn_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\888_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\pokerstars_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\betonline_logo.png" />
+    <Resource Include="images\SiteLogos\sportsbetting_logo.png" />
+    <Resource Include="images\SiteLogos\tigergaming_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\ignition_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

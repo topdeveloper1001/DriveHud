@@ -113,6 +113,14 @@ namespace Model.Site
             }
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/888_logo.png";
+            }
+        }
+
         public string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();

@@ -109,6 +109,14 @@ namespace Model.Site
             set;
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/ignition_logo.png";
+            }
+        }
+
         public string[] GetHandHistoryFolders()
         {
             return new string[] { };

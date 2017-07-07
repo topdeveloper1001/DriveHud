@@ -32,6 +32,8 @@ namespace Model.Site
 
         bool IsPrefferedSeatsAllowed { get; }
 
+        string LogoSource { get; }
+
         #endregion
 
         #region Editable properties

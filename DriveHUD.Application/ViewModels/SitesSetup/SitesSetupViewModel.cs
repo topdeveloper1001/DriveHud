@@ -158,7 +158,23 @@ namespace DriveHUD.Application.ViewModels
             ApplyCommand = ReactiveCommand.Create();
             ApplyCommand.Subscribe(x =>
             {
-                siteModels.Values.ForEach(p => p.Configured = true);
+                validationResults.ForEach(p =>
+                {
+                    if (siteModels.ContainsKey(p.PokerSite))
+                    {
+                        var siteModel = siteModels[p.PokerSite];
+
+                        if (!siteModel.Configured)
+                        {
+                            if (siteModel.HandHistoryLocationList.Count == 0)
+                            {
+                                siteModel.HandHistoryLocationList = new ObservableCollection<string>(p.HandHistoryLocations);
+                            }
+
+                            siteModel.Configured = true;
+                        }
+                    }
+                });
 
                 settingsService.SaveSettings(settingsModel);
                 FinishInteraction?.Invoke();

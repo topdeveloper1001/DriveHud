@@ -1330,7 +1330,7 @@
                             Value="250" />
                         <Setter
                             Property="MaxHeight"
-                            Value="670" />
+                            Value="770" />
                         <Setter
                             Property="SizeToContent"
                             Value="Height" />

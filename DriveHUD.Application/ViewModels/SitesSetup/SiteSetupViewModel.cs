@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using Model.Site;
 using ReactiveUI;
@@ -26,6 +27,8 @@ namespace DriveHUD.Application.ViewModels
     public class SiteSetupViewModel : ViewModelBase
     {
         private readonly ISiteValidationResult validationResult;
+
+        private readonly ISiteConfiguration siteConfiguration;
 
         private readonly SiteModel siteModel;
 
@@ -43,6 +46,8 @@ namespace DriveHUD.Application.ViewModels
 
             this.validationResult = validationResult;
             this.siteModel = siteModel;
+
+            siteConfiguration = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(validationResult.PokerSite);
 
             issues = new ObservableCollection<string>(validationResult.Issues);
             handHistoryLocations = new ObservableCollection<string>(validationResult.HandHistoryLocations);
@@ -121,6 +126,22 @@ namespace DriveHUD.Application.ViewModels
             get
             {
                 return handHistoryLocations != null && handHistoryLocations.Count > 0;
+            }
+        }
+
+        public bool IsConfigurationCorrect
+        {
+            get
+            {
+                return IsDetected && !HasIssues;
+            }
+        }
+
+        public string SiteLogo
+        {
+            get
+            {
+                return siteConfiguration.LogoSource;
             }
         }
 

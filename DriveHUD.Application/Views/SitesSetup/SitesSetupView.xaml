@@ -27,9 +27,6 @@
             BasedOn="{StaticResource BaseSiteSetupTextBlockStyle}"
             TargetType="{x:Type TextBlock}">
             <Setter
-                Property="Margin"
-                Value="0,0,0,5" />
-            <Setter
                 Property="FontSize"
                 Value="14" />
             <Setter
@@ -123,7 +120,7 @@
                 <ScrollViewer
                     Grid.Row="1"
                     Padding="3"
-                    MaxHeight="560"
+                    MaxHeight="660"
                     Margin="0,10,0,0"
                     HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Auto">
@@ -163,59 +160,71 @@
 
                                         <Grid.RowDefinitions>
                                             <RowDefinition
-                                                Height="Auto" />
-                                            <RowDefinition
-                                                Height="Auto" />
-                                            <RowDefinition
-                                                Height="Auto" />
-                                            <RowDefinition
-                                                Height="Auto" />
-                                            <RowDefinition
-                                                Height="Auto" />
-                                            <RowDefinition
                                                 Height="*" />
+                                            <RowDefinition
+                                                Height="Auto" />
+                                            <RowDefinition
+                                                Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                        <TextBlock
-                                            Grid.Row="0"
-                                            Style="{StaticResource HeaderTextBlockStyle}"
-                                            Text="{Binding PokerSite, Converter={dh:EnumToLocalizedStringConverter}}" />
+                                        <StackPanel
+                                            Orientation="Horizontal"
+                                            Margin="0,0,0,3"
+                                            Grid.Row="0">
+
+                                            <Image
+                                                Source="{Binding SiteLogo}"
+                                                VerticalAlignment="Center"
+                                                Width="100" />
+
+                                            <TextBlock
+                                                VerticalAlignment="Center"
+                                                Margin="5,0,0,0"
+                                                Style="{StaticResource HeaderTextBlockStyle}"
+                                                Text="{Binding PokerSite, Converter={dh:EnumToLocalizedStringConverter}}" />
+
+                                            <TextBlock
+                                                VerticalAlignment="Center"
+                                                Margin="5,0,0,0"
+                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}"
+                                                Text="[Site detected]" />
+
+                                            <TextBlock
+                                                VerticalAlignment="Center"
+                                                Margin="5,0,0,0"
+                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                                                Text="[No site detected]" />
+
+                                            <StackPanel
+                                                Orientation="Horizontal"
+                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    Margin="5,0,0,0"
+                                                    Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}}"
+                                                    Foreground="Green"
+                                                    Text="Configuration Correct" />
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    Margin="5,0,0,0"
+                                                    Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                                                    Foreground="Firebrick"
+                                                    Text="Configuration Incorrect" />
+                                            </StackPanel>
+
+                                        </StackPanel>
 
                                         <TextBlock
                                             Grid.Row="1"
-                                            Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}"
-                                            Margin="5,0,0,0"
-                                            Text="Site detected" />
-
-                                        <TextBlock
-                                            Grid.Row="1"
-                                            Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                            Margin="5,0,0,0"
-                                            Text="No site detected" />
-
-                                        <TextBlock
-                                            Grid.Row="2"
-                                            Visibility="{Binding HasHandHistoryLocations, Converter={dh:BoolToVisibilityConverter}}"
-                                            Style="{StaticResource BaseSiteSetupTextBlockStyle}"
-                                            Margin="5,0,0,0"
-                                            Text="Detected hand histories locations:" />
-
-                                        <ItemsControl
-                                            Grid.Row="3"
-                                            Visibility="{Binding HasHandHistoryLocations, Converter={dh:BoolToVisibilityConverter}}"
-                                            ItemsSource="{Binding HandHistoryLocations}"
-                                            Margin="15,0,0,0"
-                                            Foreground="{StaticResource ForegroundBrush}" />
-
-                                        <TextBlock
-                                            Grid.Row="4"
                                             Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
                                             Margin="5,0,0,0"
                                             Style="{StaticResource BaseSiteSetupTextBlockStyle}"
                                             Text="Found issues:" />
 
                                         <ItemsControl
-                                            Grid.Row="5"
+                                            Grid.Row="2"
                                             Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
                                             ItemsSource="{Binding Issues}"
                                             Margin="15,0,0,0"
@@ -227,10 +236,6 @@
                                         Grid.Row="1"
                                         Grid.Column="1"
                                         Orientation="Vertical">
-
-                                        <TextBlock
-                                            Foreground="{StaticResource ForegroundBrush}"
-                                            Text="Activate/Deactivate" />
 
                                         <Button
                                             Command="{Binding EnableCommand}"
