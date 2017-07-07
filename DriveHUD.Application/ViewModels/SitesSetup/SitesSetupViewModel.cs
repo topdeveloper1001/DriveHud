@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
@@ -27,7 +28,6 @@ namespace DriveHUD.Application.ViewModels
     public class SitesSetupViewModel : ViewModelBase, INotification, IInteractionRequestAware
     {
         private readonly IEnumerable<ISiteValidationResult> validationResults;
-        private SiteSettingsModel siteSettings;
 
         public SitesSetupViewModel(IEnumerable<ISiteValidationResult> validationResults)
         {
@@ -127,9 +127,9 @@ namespace DriveHUD.Application.ViewModels
             siteSetups = new ObservableCollection<SiteSetupViewModel>();
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-            siteSettings = settingsService.GetSettings().SiteSettings;
+            var settingsModel = settingsService.GetSettings();
 
-            var siteModels = siteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
+            var siteModels = settingsModel.SiteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
 
             foreach (var validationResult in validationResults)
             {
@@ -157,7 +157,10 @@ namespace DriveHUD.Application.ViewModels
 
             ApplyCommand = ReactiveCommand.Create();
             ApplyCommand.Subscribe(x =>
-            {                
+            {
+                siteModels.Values.ForEach(p => p.Configured = true);
+
+                settingsService.SaveSettings(settingsModel);
                 FinishInteraction?.Invoke();
             });
         }

@@ -161,7 +161,8 @@ namespace Model.Site
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
-                IsDetected = RegistryUtils.UninstallRegistryKeysExist(registryKeys)
+                IsDetected = RegistryUtils.UninstallRegistryKeysExist(registryKeys),
+                IsEnabled = siteModel.Enabled
             };
 
             var configurationDirectories = GetConfigurationDirectories();

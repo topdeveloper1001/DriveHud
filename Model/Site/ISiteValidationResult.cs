@@ -28,6 +28,8 @@ namespace Model.Site
 
         bool IsDetected { get; set; }
 
+        bool IsEnabled { get; }
+
         IList<string> Issues { get; set; }
 
         IList<string> HandHistoryLocations { get; set; }

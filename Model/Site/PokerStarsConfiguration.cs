@@ -163,7 +163,8 @@ namespace Model.Site
             {
                 IsNew = !siteModel.Configured,
                 HandHistoryLocations = GetHandHistoryFolders().ToList(),
-                IsDetected = configurationDirectories.Count > 0
+                IsDetected = configurationDirectories.Count > 0,
+                IsEnabled = siteModel.Enabled
             };
 
             foreach (var configurationDirectory in configurationDirectories)

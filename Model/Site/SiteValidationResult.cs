@@ -24,9 +24,11 @@ namespace Model.Site
 
         public EnumPokerSites PokerSite { get; private set; }
 
-        public bool IsNew { get; set; }    
+        public bool IsNew { get; set; }
 
         public bool IsDetected { get; set; }
+
+        public bool IsEnabled { get; set; }
 
         public bool HasIssue
         {

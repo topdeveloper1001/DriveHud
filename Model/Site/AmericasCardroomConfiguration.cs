@@ -193,6 +193,7 @@ namespace Model.Site
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
+                IsEnabled = siteModel.Enabled,
                 IsDetected = !string.IsNullOrEmpty(GetInstalledPath(RegistryDisplayName))
             };
 

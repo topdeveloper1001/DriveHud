@@ -154,9 +154,11 @@ namespace DriveHUD.Application
 
                     mainWindowViewModel.StartHudCommand.Execute(null);
 
-                    var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
+                    var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                        .ValidateSiteConfigurations()
+                        .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
 
-                    if (validationResults.Any(x => x.IsNew || x.HasIssue))
+                    if (validationResults.Any())
                     {
                         var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
                         mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
