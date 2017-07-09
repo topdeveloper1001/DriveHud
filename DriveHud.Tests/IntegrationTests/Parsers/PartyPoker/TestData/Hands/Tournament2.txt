@@ -1,0 +1,34 @@
+﻿#Game No : 16249024870 
+***** Hand History for Game 16249024870 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:143085353 Level:7  Blinds-Antes(100/200 -25) - Sunday, July 09, 13:32:29 CDT 2017
+Table Turbo (143085353) Table #1 (Real Money)
+Seat 4 is the button
+Total number of players : 2/9 
+Seat 4: EZy514 ( 9,621 )
+Seat 3: Peon84 ( 3,879 )
+Trny:143085353 Level:7 
+Blinds-Antes(100/200 -25)
+Peon84 posts ante [25]
+EZy514 posts ante [25]
+EZy514 posts small blind [100].
+Peon84 posts big blind [200].
+** Dealing down cards **
+Dealt to Peon84 [  Kd Tc ]
+EZy514 raises [500]
+Peon84 calls [400]
+** Dealing Flop ** [ 9h, 2s, Ks ]
+Peon84 checks
+EZy514 bets [833]
+Peon84 calls [833]
+** Dealing Turn ** [ 5h ]
+Peon84 checks
+EZy514 is all-In  [8,163]
+Peon84 is all-In  [2,421]
+** Dealing River ** [ Qd ]
+Peon84 shows [ Kd, Tc ]a pair of Kings.
+EZy514 shows [ Kh, Ah ]a pair of Kings with Ace kicker.
+EZy514 wins 5,742 chips from the side pot 1 with a pair of Kings with Ace kicker.
+EZy514 wins 7,758 chips from the main pot with a pair of Kings with Ace kicker.
+Congratulations to player EZy514 for winning tournament Turbo
+Player Peon84 finished in 2 place and received $2.61 USD 
+Player EZy514 finished in 1 place and received $4.38 USD 

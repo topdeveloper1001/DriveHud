@@ -549,6 +549,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return false;
             }
 
+            if (line.Contains(" finished in "))
+            {
+                return true;
+            }
+
             switch (lastChar)
             {
                 //Expected formats:
@@ -914,14 +919,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // Get hero cards
             // Dealt to Peon84 [  3d 3h ]
             var heroLine = handLines.FirstOrDefault(x => x.StartsWith("Dealt to "));
-            if (!string.IsNullOrWhiteSpace(heroLine)) 
+            if (!string.IsNullOrWhiteSpace(heroLine))
             {
                 var heroName = GetHeroNameFromDealtToString(heroLine);
                 //cards 
                 var cardsStart = heroLine.IndexOf(" [  ") + 4;
                 var cardsEnd = heroLine.IndexOf(" ]", cardsStart);
 
-                playerList[heroName].HoleCards = HoleCards.FromCards(heroLine.Substring(cardsStart,  cardsEnd - cardsStart));
+                playerList[heroName].HoleCards = HoleCards.FromCards(heroLine.Substring(cardsStart, cardsEnd - cardsStart));
             }
 
             // Looking for the showdown info which looks like this
@@ -1155,23 +1160,36 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             var finishedLines = handLines.Where(x => x.Contains(" finished in "));
             if (finishedLines.Any())
             {
+                //Player EZy514 finished in 1 place and received $4.38 USD 
+                //Player Jacob0950 finished in 9.
                 var heroName = ParseHeroName(handLines, null);
                 if (!string.IsNullOrWhiteSpace(heroName))
                 {
                     // fill up the finished position
-                    var heroFinished = finishedLines.FirstOrDefault(x => x.Contains($"Player {heroName} finished in "));
-                    if (string.IsNullOrWhiteSpace(heroFinished) || heroFinished.Last() != '.')
+                    var finishedStringStart = $"Player {heroName} finished in ";
+                    var heroFinishedString = finishedLines.FirstOrDefault(x => x.StartsWith(finishedStringStart));
+                    if (string.IsNullOrWhiteSpace(heroFinishedString))
                     {
                         return tournamentDescriptor;
                     }
 
-                    var finishedStartIndex = heroFinished.LastIndexOf(' ') + 1;
-                    var finishedEndIndex = heroFinished.Length - finishedStartIndex - 1;
+                    var winAmountStartIndex = heroFinishedString.IndexOf(" and received ");
+                    var isContainsWinAmount = winAmountStartIndex != -1;
+                    var finishedStartIndex = finishedStringStart.Length;
+                    var finishedEndIndex = isContainsWinAmount
+                        ? heroFinishedString.IndexOf(' ', finishedStartIndex) - finishedStartIndex
+                        : heroFinishedString.Length - finishedStartIndex - 1;
 
                     short finishPosition = 0;
-                    if (short.TryParse(heroFinished.Substring(finishedStartIndex, finishedEndIndex), out finishPosition))
+                    if (short.TryParse(heroFinishedString.Substring(finishedStartIndex, finishedEndIndex), out finishPosition))
                     {
                         tournamentDescriptor.FinishPosition = finishPosition;
+                    }
+
+                    if (isContainsWinAmount)
+                    {
+                        int amountStartIndex = winAmountStartIndex + 14;
+                        tournamentDescriptor.Winning = ParseDecimal(heroFinishedString, GetDecimalStartIndex(heroFinishedString, amountStartIndex));
                     }
                 }
             }

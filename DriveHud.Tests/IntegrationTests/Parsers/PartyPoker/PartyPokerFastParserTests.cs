@@ -292,9 +292,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         }
 
         [Test]
-        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", "Flyweight. $150 Gtd KO", 0.55, 0, TournamentSpeed.Regular, 157)]
-        [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", "Flyweight. $400 Gtd KO", 1.1, 0, TournamentSpeed.Regular, 211)]
-        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, string tournamentName, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition)
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", "Flyweight. $150 Gtd KO", 0.55, 0, TournamentSpeed.Regular, 157, 0)]
+        [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", "Flyweight. $400 Gtd KO", 1.1, 0, TournamentSpeed.Regular, 211, 0)]
+        [TestCase(TestDataFolder + @"Hands/Tournament2.txt", GameType.NoLimitHoldem, "143085353", "Turbo", 1.1, 0, TournamentSpeed.Turbo, 2, 2.61)]
+        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, string tournamentName, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition, decimal wonAmount)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
@@ -306,6 +307,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, tournamentBuyIn);
             Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.Rake, tournamentRake);
             Assert.AreEqual(handHistory.GameDescription.Tournament.FinishPosition, finishPosition);
+            Assert.AreEqual(handHistory.GameDescription.Tournament.Winning, wonAmount);
         }
 
         [Test]
