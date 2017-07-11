@@ -12,11 +12,11 @@
 
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Entities;
-using System;
 
 namespace Model.Site
 {
@@ -68,12 +68,31 @@ namespace Model.Site
         /// <summary>
         /// Checks the Poker Sites Validity
         /// </summary>
-        public void ValidateSiteConfigurations()
+        public IEnumerable<ISiteValidationResult> ValidateSiteConfigurations()
         {
+            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            var siteSettings = settingsService.GetSettings().SiteSettings;
+
+            var siteModels = siteSettings?.SitesModelList?.ToDictionary(x => x.PokerSite);
+
+            var validationResults = new List<ISiteValidationResult>();
+
             foreach (var configuration in configurations)
             {
-                configuration.ValidateSiteConfiguration();
+                if (siteModels != null && siteModels.ContainsKey(configuration.Site))
+                {
+                    var siteModel = siteModels[configuration.Site];
+
+                    var validationResult = configuration.ValidateSiteConfiguration(siteModel);
+
+                    if (validationResult != null)
+                    {
+                        validationResults.Add(validationResult);
+                    }
+                }
             }
+
+            return validationResults;
         }
 
         /// <summary>

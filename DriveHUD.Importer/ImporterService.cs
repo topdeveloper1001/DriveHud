@@ -82,12 +82,7 @@ namespace DriveHUD.Importers
         /// </summary>
         private void RaiseImportingStopped()
         {
-            var handler = ImportingStopped;
-
-            if (handler != null)
-            {
-                handler(this, EventArgs.Empty);
-            }
+            ImportingStopped?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

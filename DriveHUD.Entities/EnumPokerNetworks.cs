@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BlackChipPokerConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="EnumPokerNetworks.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,23 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-
-namespace Model.Site
+namespace DriveHUD.Entities
 {
-    public class BlackChipPokerConfiguration : AmericasCardroomConfiguration
+    public enum EnumPokerNetworks
     {
-        public override EnumPokerSites Site
-        {
-            get { return EnumPokerSites.BlackChipPoker; }
-        }
-
-        protected override string RegistryDisplayName
-        {
-            get
-            {
-                return "BlackChipPoker";
-            }
-        }
+        Ignition,
+        Chico,
+        WPN,
+        PokerStars,
+        Poker888,
     }
 }

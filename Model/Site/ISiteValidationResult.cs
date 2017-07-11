@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BlackChipPokerConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="ISiteValidationResult.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,22 +11,27 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using System.Collections.Generic;
 
 namespace Model.Site
 {
-    public class BlackChipPokerConfiguration : AmericasCardroomConfiguration
+    /// <summary>
+    /// Represents the result of the validation of the site
+    /// </summary>
+    public interface ISiteValidationResult
     {
-        public override EnumPokerSites Site
-        {
-            get { return EnumPokerSites.BlackChipPoker; }
-        }
+        EnumPokerSites PokerSite { get; }
 
-        protected override string RegistryDisplayName
-        {
-            get
-            {
-                return "BlackChipPoker";
-            }
-        }
+        bool IsNew { get; set; }
+
+        bool HasIssue { get; }
+
+        bool IsDetected { get; set; }
+
+        bool IsEnabled { get; }
+
+        IList<string> Issues { get; set; }
+
+        IList<string> HandHistoryLocations { get; set; }
     }
 }

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Error_888_Validation_HHLanguage" xml:space="preserve">
+    <value>"English" isn't selected as your language in the settings of 888 poker client</value>
+  </data>
+  <data name="Error_888_Validation_IsEnableHistory" xml:space="preserve">
+    <value>"Keep my hand history in" option isn't checked in the settings of 888 poker client ({0})</value>
+  </data>
   <data name="Error_EC_BoardCardAlreadyUsed" xml:space="preserve">
     <value>Card already used by player</value>
     <comment>Equity Calculator Error</comment>
@@ -138,5 +144,20 @@
   </data>
   <data name="Error_PG_MigrationWarningMessage" xml:space="preserve">
     <value>DriveHUD DB (PostgresSQL) is not available or could not be read. Do you want to initialize new db?</value>
+  </data>
+  <data name="Error_PS_Validation_HHLanguage" xml:space="preserve">
+    <value>"English" isn't selected as your language for Hand History formatting in the settings of PS ({0})</value>
+  </data>
+  <data name="Error_PS_Validation_SaveMyHandHistory" xml:space="preserve">
+    <value>"Save My Hands History" option isn't checked in the settings of PS client ({0})</value>
+  </data>
+  <data name="Error_PS_Validation_SaveTournamentSummaries" xml:space="preserve">
+    <value>"Save My Tournament Summaries" option isn't checked in the settings of PS ({0})</value>
+  </data>
+  <data name="Error_PS_Validation_TSLanguage" xml:space="preserve">
+    <value>"English" isn't selected as your language for Tournament Summaries formatting in the settings of PS ({0})</value>
+  </data>
+  <data name="Error_WPN_Validation_SaveHandHistory" xml:space="preserve">
+    <value>"Save Hand History" option isn't checked in the settings of {0} client</value>
   </data>
 </root>

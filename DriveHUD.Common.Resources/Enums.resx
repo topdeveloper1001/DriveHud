@@ -145,7 +145,7 @@
     <value>Bovada/Ignition</value>
   </data>
   <data name="Enum_EnumPokerSites_Ignition" xml:space="preserve">
-    <value>Ignition</value>
+    <value>Ignition/Bodog</value>
   </data>
   <data name="Enum_EnumPokerSites_IPoker" xml:space="preserve">
     <value>IPoker</value>
@@ -673,5 +673,20 @@
   </data>
   <data name="Enum_EnumPokerSites_YaPoker" xml:space="preserve">
     <value>YaPoker</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_Chico" xml:space="preserve">
+    <value>Chico Poker Network</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_Ignition" xml:space="preserve">
+    <value>Ignition/Bodog Network</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_Poker888" xml:space="preserve">
+    <value>888 Poker Network</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_PokerStars" xml:space="preserve">
+    <value>PokerStars</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_WPN" xml:space="preserve">
+    <value>Winning Poker Network</value>
   </data>
 </root>

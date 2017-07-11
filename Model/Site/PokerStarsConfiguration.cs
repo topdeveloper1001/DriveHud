@@ -14,23 +14,30 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
-using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
-using Model.Events;
-using Prism.Events;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.Site
 {
     public class PokerStarsConfiguration : ISiteConfiguration
     {
-        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT" };
-        private static readonly string[] HandHistoryFolders = new string[] { "HandHistory", "TournSummary" };
+        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR" };
+
+        private const string defaultHandHistoryFolder = "HandHistory";
+        private const string defaultTourneySummaryFolder = "TournSummary";
+        private const string iniSection = "PipeOption";
+        private const string iniKeyLocale = "Locale";
+        private const string iniKeyHHLocale = "HHLocale";
+        private const string iniKeyTSLocale = "TSLocale";
+        private const string iniKeySaveMyHands = "SaveMyHands";
+        private const string iniKeySaveMyTournSummaries = "SaveMyTournSummaries";
+        private const string iniSaveMyHandsPath = "SaveMyHandsPath";
+        private const string iniSaveMyTournSummariesPath = "SaveMyTournSummariesPath";
+        private const string settingsFileName = "user.ini";
+        private const string correctLanguageSetting = "0";
 
         public PokerStarsConfiguration()
         {
@@ -103,74 +110,134 @@ namespace Model.Site
             }
         }
 
-        public string[] GetHandHistoryFolders()
+        public virtual string LogoSource
         {
-            var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
-            var dirs = (from possibleFolder in PossibleFolders
-                        from handHistoryFolder in HandHistoryFolders
-                        let folder = Path.Combine(localApplicationData, possibleFolder)
-                        let hhFolder = Path.Combine(folder, handHistoryFolder)
-                        where Directory.Exists(folder)
-                        select hhFolder).ToArray();
-
-            return dirs;
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/pokerstars_logo.png";
+            }
         }
 
         /// <summary>
-        /// Checks if PokerStar's save hand history settings are enabled and if correct locale is set
+        /// Gets the paths to hand histories folders
         /// </summary>
-        public void ValidateSiteConfiguration()
+        /// <returns>The array of paths to hand histories folders</returns>
+        public string[] GetHandHistoryFolders()
         {
-            const string iniSection = "PipeOption";
-            const string iniKeyLocale = "Locale";
-            const string iniKeyHHLocale = "HHLocale";
-            const string iniKeyTSLocale = "TSLocale";
-            const string iniKeySaveMyHands = "SaveMyHands";
-            const string iniKeySaveMyTournSummaries = "SaveMyTournSummaries";
+            var handHistoryFolders = new List<string>();
 
-            var dirs = GetHandHistoryFolders().Select(x => (new DirectoryInfo(x)).Parent).GroupBy(x => x.FullName).Select(x => x.First()).ToArray();
-            List<string> psClientsWithSettingsMismatch = new List<string>();
+            var configurationDirectories = GetConfigurationDirectories();
 
-            bool hhLanguageIsCorrect = true;
-            bool tsLanguageIsCorrect = true;
-            bool hhIsEnabled = true;
-            bool tsIsEnabled = true;
+            foreach (var configurationDirectory in configurationDirectories)
+            {
+                var settingsFilePath = Path.Combine(configurationDirectory.FullName, settingsFileName);
 
-            foreach (var dir in dirs.Where(d => d.Exists))
+                if (!File.Exists(settingsFilePath))
+                {
+                    continue;
+                }
+
+                if (!ReadAndAddPathFromIniSettings(iniSaveMyHandsPath, handHistoryFolders, settingsFilePath))
+                {
+                    var handHistoryFolder = Path.Combine(configurationDirectory.FullName, defaultHandHistoryFolder);
+                    handHistoryFolders.Add(handHistoryFolder);
+                }
+
+                if (!ReadAndAddPathFromIniSettings(iniSaveMyTournSummariesPath, handHistoryFolders, settingsFilePath))
+                {
+                    var tourneySummaryFolder = Path.Combine(configurationDirectory.FullName, defaultTourneySummaryFolder);
+                    handHistoryFolders.Add(tourneySummaryFolder);
+                }
+            }
+
+            return handHistoryFolders.Distinct().ToArray();
+        }
+
+        /// <summary>
+        /// Validates site settings in both client and DH 
+        /// </summary>
+        /// <param name="siteModel">Model with site settings</param>
+        /// <returns>The result of validation</returns>
+        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        {
+            if (siteModel == null)
+            {
+                return null;
+            }
+
+            var configurationDirectories = GetConfigurationDirectories();
+
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                HandHistoryLocations = GetHandHistoryFolders().ToList(),
+                IsDetected = configurationDirectories.Count > 0,
+                IsEnabled = siteModel.Enabled
+            };
+
+            foreach (var configurationDirectory in configurationDirectories)
             {
                 try
                 {
-                    var settingsFile = Path.Combine(dir.FullName, "user.ini");
-                    if (File.Exists(settingsFile))
+                    var settingsFile = Path.Combine(configurationDirectory.FullName, settingsFileName);
+
+                    if (!File.Exists(settingsFile))
                     {
-                        LogProvider.Log.Info($"Getting PS settings from {settingsFile}");
+                        continue;
+                    }
 
-                        var localeSetting = IniFileHelpers.ReadValue(iniSection, iniKeyLocale, settingsFile);
-                        var hhLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyHHLocale, settingsFile);
-                        var tsLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyTSLocale, settingsFile);
-                        var hhEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyHands, settingsFile, "0");
-                        var tsEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyTournSummaries, settingsFile, "0");
+                    LogProvider.Log.Info($"Reading PS settings from {settingsFile}");
 
-                        LogProvider.Log.Info($"Locale: {localeSetting}; HHLocale: {hhLocaleSetting}; TSLocale: {tsLocaleSetting}");
+                    var localeSetting = IniFileHelpers.ReadValue(iniSection, iniKeyLocale, settingsFile);
+                    var hhLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyHHLocale, settingsFile);
+                    var tsLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyTSLocale, settingsFile);
+                    var hhEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyHands, settingsFile, "0");
+                    var tsEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyTournSummaries, settingsFile, "0");
 
-                        bool localeSettingIsCorrect = localeSetting == "0";
+                    LogProvider.Log.Info($"PS Settings: Locale: {localeSetting}; HHLocale: {hhLocaleSetting}; TSLocale: {tsLocaleSetting}");
 
-                        bool tempHHLanguageIsCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? localeSettingIsCorrect : hhLocaleSetting == "0";
-                        bool tempTSLanguageIsCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? localeSettingIsCorrect : tsLocaleSetting == "0";
-                        bool tempHHIsEnabled = hhEnabledSetting == "1";
-                        bool tempTSIsEnabled = tsEnabledSetting == "1";
+                    var isLocaleSettingCorrect = localeSetting == correctLanguageSetting;
 
-                        if (!tempHHLanguageIsCorrect || !tempTSLanguageIsCorrect || !tempHHIsEnabled || !tempTSIsEnabled)
+                    bool isHHLanguageCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? isLocaleSettingCorrect : hhLocaleSetting == correctLanguageSetting;
+                    bool isTSLanguageCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? isLocaleSettingCorrect : tsLocaleSetting == correctLanguageSetting;
+                    bool isHHEnabled = hhEnabledSetting == "1";
+                    bool isTSEnabled = tsEnabledSetting == "1";
+
+                    if (!isHHLanguageCorrect || !isTSLanguageCorrect || !isHHEnabled || !isTSEnabled)
+                    {
+                        if (!isHHEnabled)
                         {
-                            psClientsWithSettingsMismatch.Add(dir.Name);
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_PS_Validation_SaveMyHandHistory"),
+                                configurationDirectory.Name);
 
-                            hhLanguageIsCorrect = hhLanguageIsCorrect && tempHHLanguageIsCorrect;
-                            tsLanguageIsCorrect = tsLanguageIsCorrect && tempTSLanguageIsCorrect;
-                            hhIsEnabled = hhIsEnabled && tempHHIsEnabled;
-                            tsIsEnabled = tsIsEnabled && tempTSIsEnabled;
+                            validationResult.Issues.Add(issue);
+                        }
+
+                        if (!isTSEnabled)
+                        {
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_PS_Validation_SaveTournamentSummaries"),
+                                configurationDirectory.Name);
+
+                            validationResult.Issues.Add(issue);
+                        }
+
+                        if (!isHHLanguageCorrect)
+                        {
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_PS_Validation_HHLanguage"),
+                                configurationDirectory.Name);
+
+                            validationResult.Issues.Add(issue);
+                        }
+
+                        if (!isTSLanguageCorrect)
+                        {
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_PS_Validation_TSLanguage"),
+                                configurationDirectory.Name);
+
+                            validationResult.Issues.Add(issue);
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -178,35 +245,72 @@ namespace Model.Site
                 }
             }
 
-            if (psClientsWithSettingsMismatch.Any())
+            return validationResult;
+        }
+
+        /// <summary>
+        /// Gets the array of directories with user PS configuration
+        /// </summary>
+        /// <returns>The array of directories with user PS configuration</returns>
+        private IList<DirectoryInfo> GetConfigurationDirectories()
+        {
+            var directories = new List<DirectoryInfo>();
+
+            try
             {
-                var stringBuilder = new StringBuilder();
+                var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-                //todo: move to resources
-                if (!hhIsEnabled)
+                foreach (var possibleFolder in PossibleFolders)
                 {
-                    stringBuilder.AppendLine("- Enable the \"Save My Hands History\" options setting in the poker client.");
-                }
-                if (!tsIsEnabled)
-                {
-                    stringBuilder.AppendLine("- Enable the \"Save my Tournament Summaries\" options setting in the poker client.");
-                }
-                if (!hhLanguageIsCorrect)
-                {
-                    stringBuilder.AppendLine("- \"English\" is selected as your language for Hand History formatting in the poker client.");
-                }
-                if (!tsLanguageIsCorrect)
-                {
-                    stringBuilder.AppendLine("- \"English\" is selected as your language for Tournament Summaries formatting in the poker client.");
-                }
+                    var path = Path.Combine(localApplicationData, possibleFolder);
 
-                var resultString = String.Format(CommonResourceManager.Instance.GetResourceString("Main_SiteSettingsMismatch_PokerStars"),
-                    string.Join(", ", psClientsWithSettingsMismatch), stringBuilder.ToString());
+                    try
+                    {
+                        var directory = new DirectoryInfo(path);
 
-                var hyperLink = CommonResourceManager.Instance.GetResourceString("SystemSettings_SiteSetup_PokerStars");
-
-                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("Settings", resultString, hyperLink));
+                        if (directory.Exists)
+                        {
+                            directories.Add(directory);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Could not get info about {path}", e);
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not get path to local application data folder", ex);
+            }
+
+            return directories;
+        }
+
+        /// <summary>
+        /// Reads the value for the specified key for the specified path to ini file and add value to the specified list
+        /// </summary>
+        /// <param name="iniKey">Key to read</param>
+        /// <param name="handHistoryFolders">List to add value</param>
+        /// <param name="settingsFilePath">Path to the ini file</param>
+        private bool ReadAndAddPathFromIniSettings(string iniKey, IList<string> handHistoryFolders, string settingsFilePath)
+        {
+            try
+            {
+                var handHistoriesFolder = IniFileHelpers.ReadValue(iniSection, iniKey, settingsFilePath);
+
+                if (!string.IsNullOrEmpty(handHistoriesFolder))
+                {
+                    handHistoryFolders.Add(handHistoriesFolder);
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not read '{iniKey}'", e);
+            }
+
+            return false;
         }
     }
 }
