@@ -12,8 +12,11 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -66,6 +69,15 @@ namespace DriveHUD.Importers
                 return;
             }
 
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            if (siteSettings != null && !siteSettings.Enabled)
+            {
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" importer is disabled.", SiteString));
+                return;
+            }
+
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" importer", SiteString));
 
             // start main job
@@ -105,12 +117,7 @@ namespace DriveHUD.Importers
         {
             isRunning = false;
 
-            var handler = ProcessStopped;
-
-            if (handler != null)
-            {
-                handler(this, EventArgs.Empty);
-            }
+            ProcessStopped?.Invoke(this, EventArgs.Empty);
 
             LogProvider.Log.Info(this, $"\"{SiteString}\" importer has been stopped");
         }

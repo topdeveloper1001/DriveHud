@@ -16,6 +16,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using Model.Site;
 using System;
 using System.Collections.Generic;
@@ -109,7 +110,7 @@ namespace DriveHUD.Importers.BetOnline
                     return;
                 }
 
-                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);              
+                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
 
                 IsInitialized = true;
             }
@@ -140,15 +141,23 @@ namespace DriveHUD.Importers.BetOnline
             }
 
             try
-            {              
+            {
                 gameInfo = new GameInfo
                 {
                     PokerSite = EnumPokerSites.BetOnline
                 };
 
-                sessionCode = BuildSessionCode();             
+                sessionCode = BuildSessionCode();
 
                 var handHistory = BuildHandHistory();
+
+                var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+                var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == gameInfo.PokerSite);
+
+                if (siteSettings != null && !siteSettings.Enabled)
+                {
+                    return null;
+                }
 
                 AdjustHandHistory(handHistory);
 

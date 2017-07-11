@@ -13,6 +13,7 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using Model.Site;
@@ -37,17 +38,17 @@ namespace DriveHUD.Application.ViewModels
 
         #region Properties
 
-        private ObservableCollection<SiteSetupViewModel> siteSetups;
+        private ObservableCollection<NetworkSetupViewModel> networkSetups;
 
-        public ObservableCollection<SiteSetupViewModel> SiteSetups
+        public ObservableCollection<NetworkSetupViewModel> NetworkSetups
         {
             get
             {
-                return siteSetups;
+                return networkSetups;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref siteSetups, value);
+                this.RaiseAndSetIfChanged(ref networkSetups, value);
             }
         }
 
@@ -124,30 +125,42 @@ namespace DriveHUD.Application.ViewModels
 
         private void Initialize()
         {
-            siteSetups = new ObservableCollection<SiteSetupViewModel>();
+            networkSetups = new ObservableCollection<NetworkSetupViewModel>();
+
+            var networks = EntityUtils.GetNetworkSites();
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             var settingsModel = settingsService.GetSettings();
 
             var siteModels = settingsModel.SiteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
 
-            foreach (var validationResult in validationResults)
+            foreach (var network in networks.Keys)
             {
-                if (!siteModels.ContainsKey(validationResult.PokerSite))
-                {
-                    continue;
-                }
-
-                var siteModel = siteModels[validationResult.PokerSite];
-
                 try
                 {
-                    var siteSetupViewModel = new SiteSetupViewModel(validationResult, siteModel)
-                    {
-                        Enabled = validationResult.IsDetected
-                    };
+                    var networkSetupViewModel = new NetworkSetupViewModel(network);
 
-                    siteSetups.Add(siteSetupViewModel);
+                    if (!networks.ContainsKey(network))
+                    {
+                        continue;
+                    }
+
+                    var sitesToAdd = (from site in networks[network]
+                                      join validationResult in validationResults on site equals validationResult.PokerSite
+                                      where siteModels.ContainsKey(site)
+                                      select new SiteSetupViewModel(validationResult, siteModels[site])
+                                      {
+                                          Enabled = validationResult.IsDetected
+                                      }).ToArray();
+
+                    if (sitesToAdd.Length == 0)
+                    {
+                        continue;
+                    }
+
+                    networkSetupViewModel.NetworkSites.AddRange(sitesToAdd);
+
+                    networkSetups.Add(networkSetupViewModel);
                 }
                 catch (Exception e)
                 {
@@ -170,6 +183,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 siteModel.HandHistoryLocationList = new ObservableCollection<string>(p.HandHistoryLocations);
                             }
+
 
                             siteModel.Configured = true;
                         }

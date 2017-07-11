@@ -519,6 +519,7 @@
     <Compile Include="ViewModels\PopupContainers\PopupContainerAliasViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBumperStickerFiltersViewModel.cs" />
+    <Compile Include="ViewModels\SitesSetup\NetworkSetupViewModel.cs" />
     <Compile Include="ViewModels\SitesSetup\SiteSetupViewModel.cs" />
     <Compile Include="ViewModels\SitesSetup\SitesSetupViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />

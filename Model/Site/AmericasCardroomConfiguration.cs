@@ -202,14 +202,24 @@ namespace Model.Site
             {
                 IsNew = !siteModel.Configured,
                 IsEnabled = siteModel.Enabled,
-                IsDetected = !string.IsNullOrEmpty(GetInstalledPath(RegistryDisplayName))
+                IsDetected = !string.IsNullOrEmpty(installedPath)
             };
+
+            if (!validationResult.IsDetected)
+            {
+                return validationResult;
+            }
 
             var profilesDirectoryPath = Path.Combine(installedPath, ProfilesFolder);
 
             try
             {
                 var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+
+                if (!profilesDirectory.Exists)
+                {
+                    return validationResult;
+                }
 
                 foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
                 {
