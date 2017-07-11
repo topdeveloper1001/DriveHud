@@ -15,8 +15,10 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Importers.Loggers;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -61,6 +63,11 @@ namespace DriveHUD.Importers
             {
                 try
                 {
+                    if (!IsEnabled())
+                    {
+                        Stop();
+                    }
+
                     pipeServerHandle = pipeManager.GetHandle(Identifier);
 
                     if (pipeServerHandle == IntPtr.Zero)
@@ -112,7 +119,7 @@ namespace DriveHUD.Importers
 
             pokerClientLogger.StopLogging();
 
-            RaiseProcessStopped();      
+            RaiseProcessStopped();
         }
 
         /// <summary>
@@ -201,6 +208,11 @@ namespace DriveHUD.Importers
         protected abstract int PipeReadingTimeout
         {
             get;
+        }
+
+        protected virtual bool IsEnabled()
+        {
+            return true;
         }
 
         #endregion     

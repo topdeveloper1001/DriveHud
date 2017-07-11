@@ -13,6 +13,7 @@
 using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -107,7 +108,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             if (uiPosition == null)
             {
-                throw new DHBusinessException(new NonLocalizableString($"Could not find UI positions for {pokerSite}, {gameType}, {Parent.Seat}"));
+                LogProvider.Log.Warn($"Could not find UI positions for {pokerSite}, {gameType}, {Parent.Seat}, {tool.ToolType}");
             }
 
             var positionInfo = tool.Positions.FirstOrDefault(x => x.PokerSite == pokerSite && x.GameType == gameType);
@@ -130,8 +131,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var offsetX = playerLabelClientPosition[currentSeat, 0] - playerLabelPosition[currentSeat, 0];
                 var offsetY = playerLabelClientPosition[currentSeat, 1] - playerLabelPosition[currentSeat, 1];
 
+                var positionX = uiPosition != null ? uiPosition.Position.X : default(double);
+                var positionY = uiPosition != null ? uiPosition.Position.Y : default(double);
+
                 // do not change position if element is inside or above player label
-                if (uiPosition.Position.Y > playerLabelPosition[currentSeat, 1] + HudDefaultSettings.TablePlayerLabelActualHeight)
+                if (positionY > playerLabelPosition[currentSeat, 1] + HudDefaultSettings.TablePlayerLabelActualHeight)
                 {
                     offsetY += positionProvider.PlayerLabelHeight - HudDefaultSettings.TablePlayerLabelHeight;
                 }
@@ -139,7 +143,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 hudPositionInfo = new HudPositionInfo
                 {
                     Seat = Parent.Seat,
-                    Position = new Point(uiPosition.Position.X + offsetX, uiPosition.Position.Y + offsetY)
+                    Position = new Point(positionX + offsetX, positionY + offsetY)
                 };
             }
 

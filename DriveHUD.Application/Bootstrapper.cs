@@ -26,6 +26,7 @@ using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.PopupContainers;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
@@ -92,7 +93,7 @@ namespace DriveHUD.Application
             ImporterBootstrapper.ConfigureImporterService();
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
-            sqliteBootstrapper.InitializeDatabase();        
+            sqliteBootstrapper.InitializeDatabase();
 
             ShowMainWindow();
         }
@@ -113,13 +114,13 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)this.Shell).DataContext = mainWindowViewModel;
+                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
 
-                    ((RadWindow)this.Shell).Activated += MainWindow_Activated;
+                    ((RadWindow)Shell).Activated += MainWindow_Activated;
 
-                    ((RadWindow)this.Shell).IsTopmost = true;
-                    ((RadWindow)this.Shell).Show();
-                    ((RadWindow)this.Shell).IsTopmost = false;
+                    ((RadWindow)Shell).IsTopmost = true;
+                    ((RadWindow)Shell).Show();
+                    ((RadWindow)Shell).IsTopmost = false;
 
                     App.SplashScreen.CloseSplashScreen();
 
@@ -153,7 +154,15 @@ namespace DriveHUD.Application
 
                     mainWindowViewModel.StartHudCommand.Execute(null);
 
-                    ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
+                    var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                        .ValidateSiteConfigurations()
+                        .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+
+                    if (validationResults.Any())
+                    {
+                        var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
+                        mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                    }
                 }
             }
             catch (Exception e)
