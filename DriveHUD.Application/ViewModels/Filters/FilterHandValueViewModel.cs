@@ -1,12 +1,6 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
-using Model.Enums;
+﻿using Model.Enums;
 using Model.Filters;
 using Prism.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels

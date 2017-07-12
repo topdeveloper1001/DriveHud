@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 
@@ -31,6 +32,8 @@ namespace Model.Site
 
         bool IsPrefferedSeatsAllowed { get; }
 
+        string LogoSource { get; }
+
         #endregion
 
         #region Editable properties
@@ -43,11 +46,11 @@ namespace Model.Site
 
         #endregion
 
-        #region Methods
+        #region Public methods
 
         string[] GetHandHistoryFolders();
 
-        void ValidateSiteConfiguration();
+        ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel);
 
         #endregion
     }

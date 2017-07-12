@@ -10,22 +10,24 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
-using Model.Enums;
-using DriveHUD.Entities;
-using System.IO;
 
 namespace Model.Site
 {
     public class BetOnlineConfiguration : ISiteConfiguration
     {
+        private readonly string[] registryKeys = new[] { "BetOnline 0" };
+
         private const string heroName = "Hero";
 
         public BetOnlineConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
-            
+
             tableTypes = new EnumTableType[]
             {
                 EnumTableType.HU,
@@ -96,13 +98,37 @@ namespace Model.Site
             set;
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/betonline_logo.png";
+            }
+        }
+
         public string[] GetHandHistoryFolders()
         {
             return new string[] { };
         }
 
-        public void ValidateSiteConfiguration()
+        protected virtual string[] RegistryKeys
         {
+            get
+            {
+                return registryKeys;
+            }
+        }
+
+        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        {
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                IsDetected = RegistryUtils.UninstallRegistryKeysExist(RegistryKeys),
+                IsEnabled = siteModel.Enabled,
+            };
+
+            return validationResult;
         }
     }
 }

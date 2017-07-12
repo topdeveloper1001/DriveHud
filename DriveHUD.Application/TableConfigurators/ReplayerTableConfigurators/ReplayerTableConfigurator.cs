@@ -132,8 +132,7 @@ namespace DriveHUD.Application.TableConfigurators
             table = new RadDiagramShape()
             {
                 Name = "Table",
-                Background =
-                    new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
+                Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
                 Height = predefinedTableSizes[seats].Item1,
                 Width = predefinedTableSizes[seats].Item2,
                 StrokeThickness = 0,
@@ -176,7 +175,14 @@ namespace DriveHUD.Application.TableConfigurators
 
                 diagram.AddShape(label);
                 diagram.AddShape(player.ChipsContainer.ChipsShape);
-                diagram.AddShape(panel, position: hudPanelPosition);
+
+                var hudShape = diagram.AddShape(panel, position: hudPanelPosition) as RadDiagramShape;
+                hudShape.IsRotationEnabled = false;
+                hudShape.IsManipulationEnabled = false;
+                hudShape.IsConnectorsManipulationEnabled = false;
+                hudShape.IsManipulationAdornerVisible = false;
+                hudShape.IsResizingEnabled = false;
+                hudShape.IsEditable = false;
             }
         }
 
@@ -226,13 +232,15 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var player = viewModel.PlayersCollection[zeroBasedSeatNumber];
 
-            ReplayerHudPanel panel = new ReplayerHudPanel
+            player.Parent = new HudElementViewModel { Seat = zeroBasedSeatNumber };
+
+            var panel = new ReplayerHudPanel
             {
                 DataContext = player
             };
 
             panel.Height = double.NaN;
-            panel.Width = 150;
+            panel.Width = double.NaN;
 
             player.NoteToolTip = dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty;
 
@@ -251,7 +259,7 @@ namespace DriveHUD.Application.TableConfigurators
             var item = new RadMenuItem();
 
             var binding = new Binding(nameof(ReplayerPlayerViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
-            item.SetBinding(RadMenuItem.HeaderProperty, binding);
+            item.SetBinding(HeaderedItemsControl.HeaderProperty, binding);
 
             item.Click += (s, e) =>
             {
@@ -288,11 +296,13 @@ namespace DriveHUD.Application.TableConfigurators
             if (hudIndicators != null)
             {
                 var statList = new List<StatInfo>();
+
+                var counter = 0;
+
                 foreach (var selectedStatInfo in statInfoCollection)
                 {
                     if (selectedStatInfo is StatInfoBreak)
                     {
-                        replayerPlayer.StatInfoCollection.Add((selectedStatInfo as StatInfoBreak).Clone());
                         continue;
                     }
 
@@ -306,6 +316,13 @@ namespace DriveHUD.Application.TableConfigurators
                     }
 
                     replayerPlayer.StatInfoCollection.Add(statInfo);
+
+                    if ((counter + 1) % 4 == 0)
+                    {
+                        replayerPlayer.StatInfoCollection.Add(new StatInfoBreak());
+                    }
+
+                    counter++;
                 }
             }
         }

@@ -29,7 +29,7 @@ namespace Model.Site
         /// <summary>
         /// Checks the Poker Sites Validity
         /// </summary>
-        void ValidateSiteConfigurations();
+        IEnumerable<ISiteValidationResult> ValidateSiteConfigurations();
 
         /// <summary>
         /// Get site configuration

@@ -230,6 +230,7 @@
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\ExportFunctionsTests.cs" />
+    <Compile Include="UnitTests\FiltersModelSerializationTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
@@ -405,6 +406,9 @@
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-MTT.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\FilterModelSerializedData\FilterHoleCardsModel.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

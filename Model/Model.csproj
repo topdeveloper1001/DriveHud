@@ -312,8 +312,10 @@
     <Compile Include="SingletonStorageModel.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\PartyPokerConfiguration.cs" />
+    <Compile Include="Site\ISiteValidationResult.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
+    <Compile Include="Site\SiteValidationResult.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />
     <Compile Include="Site\BetOnlineConfiguration.cs" />

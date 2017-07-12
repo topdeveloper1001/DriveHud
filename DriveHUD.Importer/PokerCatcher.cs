@@ -14,6 +14,7 @@ using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -98,6 +99,11 @@ namespace DriveHUD.Importers
                 return;
             }
 
+            if (!IsEnabled())
+            {
+                return;
+            }
+
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" catcher", Identifier));
 
             // start main job
@@ -175,6 +181,11 @@ namespace DriveHUD.Importers
 
             while (true)
             {
+                if (!IsEnabled())
+                {
+                    Stop();
+                }
+
                 if (pokerClientProcess == null || pokerClientProcess.HasExited)
                 {
                     if (pokerClientProcess != null && pokerClientProcess.HasExited)
@@ -470,6 +481,11 @@ namespace DriveHUD.Importers
             }
 
             return IntPtr.Zero;
+        }
+
+        protected virtual bool IsEnabled()
+        {
+            return true;
         }
 
         #endregion

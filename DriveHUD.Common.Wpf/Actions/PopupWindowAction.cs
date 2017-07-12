@@ -35,10 +35,10 @@ namespace DriveHUD.Common.Wpf.Actions
             get { return (bool)GetValue(HasBorderProperty); }
             set { SetValue(HasBorderProperty, value); }
         }
-                
+
         protected override Window CreateWindow()
         {
-            var window = new Window();            
+            var window = new Window();
             return window;
         }
 
@@ -50,7 +50,10 @@ namespace DriveHUD.Common.Wpf.Actions
                 window.WindowStyle = System.Windows.WindowStyle.None;
             }
 
-            window.Title = notification.Title;
+            if (notification.Title != null)
+            {
+                window.Title = notification.Title;
+            }
         }
 
         protected override void CloseWindow(Window window)
@@ -80,7 +83,7 @@ namespace DriveHUD.Common.Wpf.Actions
             if (IsModal)
             {
                 window.Owner = Application.Current.MainWindow;
-                window.ShowDialog();                
+                window.ShowDialog();
                 return;
             }
 

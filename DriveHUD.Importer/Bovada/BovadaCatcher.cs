@@ -10,7 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System.Linq;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -66,6 +69,18 @@ namespace DriveHUD.Importers.Bovada
             {
                 return ImporterIdentifier.Bovada;
             }
+        }
+        protected override bool IsEnabled()
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.Ignition);
+
+            if (siteSettings != null && !siteSettings.Enabled)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         #endregion

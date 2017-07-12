@@ -81,63 +81,11 @@ namespace Model
 
         public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
         {
-            List<Playerstatistic> result = new List<Playerstatistic>();
+            var result = new List<Playerstatistic>();
 
-            var files = GetPlayerFiles(playerId);
-
-            if (files == null || !files.Any())
-            {
-                return result;
-            }
-
-            foreach (var file in files)
-            {
-                rwLock.EnterReadLock();
-
-                string[] allLines = null;
-
-                try
-                {
-                    allLines = File.ReadAllLines(file);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, e);
-                    return result;
-                }
-                finally
-                {
-                    rwLock.ExitReadLock();
-                }
-
-                foreach (var line in allLines)
-                {
-                    try
-                    {
-                        if (string.IsNullOrWhiteSpace(line))
-                        {
-                            LogProvider.Log.Warn(this, $"Empty line in {file}");
-                            continue;
-                        }
-
-                        /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                        using (MemoryStream afterStream = new MemoryStream(byteAfter64))
-                        {
-                            var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
-                            if (!pokersiteId.HasValue || (stat.PokersiteId == pokersiteId))
-                            {
-                                result.Add(stat);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        LogProvider.Log.Error($@"Cannot import the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
-                    }
-                }
-            }
+            ActOnPlayerStatisticFromFile(playerId,
+                stat => !pokersiteId.HasValue || (stat.PokersiteId == pokersiteId),
+                stat => result.Add(stat));
 
             return result;
         }
@@ -164,6 +112,103 @@ namespace Model
             }
 
             return new List<Playerstatistic>();
+        }
+
+        /// <summary>
+        /// Reads player statistic for the specified player name, invoke action for the filtered by predicate statistic 
+        /// </summary>      
+        public void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var player = session.Query<Players>().FirstOrDefault(x => x.Playername.Equals(playerName) && x.PokersiteId == pokerSiteId);
+
+                    if (player == null)
+                    {
+                        return;
+                    }
+
+                    ActOnPlayerStatisticFromFile(player.PlayerId, predicate, action);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't get player", e);
+            }
+        }
+
+        /// <summary>
+        /// Reads player statistic for the specified player id, invoke action for the filtered by predicate statistic 
+        /// </summary>      
+        public void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
+        {
+            if (action == null)
+            {
+                return;
+            }
+
+            var files = GetPlayerFiles(playerId);
+
+            if (files == null || !files.Any())
+            {
+                return;
+            }
+
+            rwLock.EnterReadLock();
+
+            try
+            {
+                foreach (var file in files)
+                {
+                    try
+                    {
+                        using (var sr = new StreamReader(file))
+                        {
+                            string line = null;
+
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                try
+                                {
+                                    if (string.IsNullOrWhiteSpace(line))
+                                    {
+                                        LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                        continue;
+                                    }
+
+                                    /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                    byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                                    using (var ms = new MemoryStream(byteAfter64))
+                                    {
+                                        var stat = Serializer.Deserialize<Playerstatistic>(ms);
+
+                                        if (predicate == null || predicate(stat))
+                                        {
+                                            action(stat);
+                                        }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    LogProvider.Log.Error($@"Cannot import the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"File '{file}' has not been imported.", e);
+                        return;
+                    }
+                }
+            }
+            finally
+            {
+                rwLock.ExitReadLock();
+            }
         }
 
         public IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId)
@@ -958,14 +1003,22 @@ namespace Model
 
         private string[] GetPlayerFiles(int playerId)
         {
-            string playerDirectory = Path.Combine(playersPath, playerId.ToString());
-
-            if (!Directory.Exists(playerDirectory))
+            try
             {
-                return new string[] { };
-            }
+                string playerDirectory = Path.Combine(playersPath, playerId.ToString());
 
-            return Directory.GetFiles(playerDirectory, "*.stat");
+                if (!Directory.Exists(playerDirectory))
+                {
+                    return new string[0];
+                }
+
+                return Directory.GetFiles(playerDirectory, "*.stat");
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not get player [{playerId}] files", e);
+                return new string[0];
+            }
         }
     }
 }

@@ -10,19 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
-using Model.Enums;
-using Microsoft.Practices.ServiceLocation;
-using Model.Settings;
 using System.Linq;
-using DriveHUD.Entities;
-using System.IO;
 
 namespace Model.Site
 {
     public class BovadaConfiguration : ISiteConfiguration
     {
+        private static readonly string[] registryKeys = new[] { "{D7CA2DF8-95CE-4C80-9296-98E21219A1E4}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E5}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E7}}_is1" };
+
         private const string heroName = "Hero";
 
         public BovadaConfiguration()
@@ -105,13 +109,29 @@ namespace Model.Site
             set;
         }
 
+        public virtual string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/ignition_logo.png";
+            }
+        }
+
         public string[] GetHandHistoryFolders()
         {
             return new string[] { };
         }
 
-        public void ValidateSiteConfiguration()
+        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                IsDetected = RegistryUtils.UninstallRegistryKeysExist(registryKeys),
+                IsEnabled = siteModel.Enabled,
+            };
+
+            return validationResult;
         }
     }
 }

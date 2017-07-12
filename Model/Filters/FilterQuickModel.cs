@@ -96,7 +96,7 @@ namespace Model.Filters
 
         public void ResetFastFilterCollection()
         {
-            QuickFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any).ToList().ForEach(x => x.TriStateSet(EnumTriState.Any));
+            QuickFilterCollection.ToList().ForEach(x => x.CurrentTriState = EnumTriState.Any);
         }
 
         #endregion
@@ -108,9 +108,10 @@ namespace Model.Filters
             foreach (var filter in quickFilterList)
             {
                 var cur = QuickFilterCollection.FirstOrDefault(x => x.Name == filter.Name);
-                if (cur != null && cur.TriStateSelectedItem.TriState != filter.TriStateSelectedItem.TriState)
+
+                if (cur != null && cur.CurrentTriState != filter.CurrentTriState)
                 {
-                    cur.TriStateSet(filter.TriStateSelectedItem.TriState);
+                    cur.CurrentTriState = filter.CurrentTriState;
                 }
             }
         }
@@ -122,25 +123,28 @@ namespace Model.Filters
         private Expression<Func<Playerstatistic, bool>> GetQuickFilterPredicate()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
-            foreach (var stat in QuickFilterCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
+
+            foreach (var stat in QuickFilterCollection.Where(x => x.CurrentTriState != EnumTriState.Any))
             {
                 if (stat.QuickFilterHandType == QuickFilterHandTypeEnum.FlushDrawOnFlop || stat.QuickFilterHandType == QuickFilterHandTypeEnum.StraightDrawOnFlop)
                 {
                     predicate = predicate.And(x => Convert.ToBoolean(ReflectionHelper.GetMemberValue(x, stat.YesPropertyName)));
+
                     var drawPredicate = GetHandPredicate(stat.QuickFilterHandType);
-                    if (stat.TriStateSelectedItem.TriState == EnumTriState.Off)
+
+                    if (stat.CurrentTriState == EnumTriState.Off)
                     {
                         drawPredicate = PredicateBuilder.Not(drawPredicate);
                     }
+
                     predicate = predicate.And(drawPredicate);
 
                     continue;
                 }
 
-
                 if (!string.IsNullOrWhiteSpace(stat.YesPropertyName))
                 {
-                    switch (stat.TriStateSelectedItem.TriState)
+                    switch (stat.CurrentTriState)
                     {
                         case EnumTriState.On:
                             predicate = predicate.And(x => Convert.ToBoolean(ReflectionHelper.GetMemberValue(x, stat.YesPropertyName)));
@@ -159,7 +163,7 @@ namespace Model.Filters
 
                 if (stat.QuickFilterPosition.HasValue)
                 {
-                    predicate =  predicate.And(GetPositionPredicate(stat.QuickFilterPosition.Value));
+                    predicate = predicate.And(GetPositionPredicate(stat.QuickFilterPosition.Value));
                 }
 
                 if (stat.QuickFilterHandType != QuickFilterHandTypeEnum.None)
@@ -167,6 +171,7 @@ namespace Model.Filters
                     predicate = predicate.And(GetHandPredicate(stat.QuickFilterHandType));
                 }
             }
+
             return predicate;
         }
 
@@ -278,8 +283,7 @@ namespace Model.Filters
         }
 
         private string _propertyName;
-        private string _isPossiblePropertyName;
-        private TriStateItem _triStateSelectedItem;
+        private string _isPossiblePropertyName;        
         private QuickFilterHandTypeEnum _quickFilterHandType;
         private QuickFilterPositionEnum? _quickFilterPosition;
 
@@ -295,16 +299,27 @@ namespace Model.Filters
             set { _isPossiblePropertyName = value; }
         }
 
-        public override TriStateItem TriStateSelectedItem
+        public override EnumTriState CurrentTriState
         {
-            get { return _triStateSelectedItem; }
+            get
+            {
+                return base.CurrentTriState;
+            }
             set
             {
-                if (value == _triStateSelectedItem) return;
-                _triStateSelectedItem = value;
+                if (value == currentTriState)
+                {
+                    return;
+                }
+
+                currentTriState = value;
+
                 OnPropertyChanged();
 
-                if (OnTriState != null) OnTriState.Invoke();
+                if (OnTriState != null)
+                {
+                    OnTriState.Invoke();
+                }
             }
         }
 

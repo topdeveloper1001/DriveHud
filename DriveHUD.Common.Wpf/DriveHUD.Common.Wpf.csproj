@@ -145,12 +145,14 @@
     <Compile Include="Controls\ToggleSwitch.cs" />
     <Compile Include="Converters\BackgroundToForegroundColorConverter.cs" />
     <Compile Include="Converters\BoolNotConverter.cs" />
+    <Compile Include="Converters\BoolToGreenRedColorConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ColorBrightnessToSolidBrushConverter.cs" />
     <Compile Include="Converters\ColorToSolidBrushConverter.cs" />
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\EnumTriStateToColorConverter.cs" />
     <Compile Include="Converters\HeatMapValueToBackgroundConverter.cs" />
     <Compile Include="Converters\HeatMapValueToBorderBrushConverter.cs" />
     <Compile Include="Converters\HeatMapValueToColorsBaseConverter.cs" />

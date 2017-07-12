@@ -115,6 +115,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chico Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Chico {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Chico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ignition/Bodog Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Ignition {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Ignition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 888 Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Poker888 {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Poker888", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PokerStars.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_PokerStars {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_PokerStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winning Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_WPN {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_WPN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AmericasCardroom.
         /// </summary>
         internal static string Enum_EnumPokerSites_AmericasCardroom {
@@ -160,7 +205,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ignition.
+        ///   Looks up a localized string similar to Ignition/Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Ignition {
             get {

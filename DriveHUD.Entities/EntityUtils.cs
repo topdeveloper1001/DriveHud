@@ -34,5 +34,23 @@ namespace DriveHUD.Entities
 
             return supportedPokerSites;
         }
+
+        /// <summary>
+        /// Gets the dictionary of poker networks
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<EnumPokerNetworks, EnumPokerSites[]> GetNetworkSites()
+        {
+            var networksDictionary = new Dictionary<EnumPokerNetworks, EnumPokerSites[]>
+            {
+                [EnumPokerNetworks.Ignition] = new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog, EnumPokerSites.Bovada },
+                [EnumPokerNetworks.Chico] = new[] { EnumPokerSites.BetOnline, EnumPokerSites.SportsBetting, EnumPokerSites.TigerGaming },
+                [EnumPokerNetworks.PokerStars] = new[] { EnumPokerSites.PokerStars },
+                [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker },
+                [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 }
+            };
+
+            return networksDictionary;
+        }
     }
 }
