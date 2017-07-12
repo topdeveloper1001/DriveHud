@@ -825,4 +825,13 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_SiteSetup_SiteDetected" xml:space="preserve">
     <value>[Site detected]</value>
   </data>
+  <data name="Common_SiteSetup_DoNotShow" xml:space="preserve">
+    <value>Don't show this form again</value>
+  </data>
+  <data name="Common_SiteSetup_GreenEnabled" xml:space="preserve">
+    <value>Green = Enabled</value>
+  </data>
+  <data name="Common_SiteSetup_RedDisabled" xml:space="preserve">
+    <value>Red = Disabled</value>
+  </data>
 </root>

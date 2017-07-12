@@ -28,6 +28,8 @@ namespace DriveHUD.Application.ViewModels
 {
     public class SitesSetupViewModel : ViewModelBase, INotification, IInteractionRequestAware
     {
+        private SettingsModel settingsModel;
+
         private readonly IEnumerable<ISiteValidationResult> validationResults;
 
         public SitesSetupViewModel(IEnumerable<ISiteValidationResult> validationResults)
@@ -49,6 +51,23 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 this.RaiseAndSetIfChanged(ref networkSetups, value);
+            }
+        }
+
+        public bool DoNotShowForm
+        {
+            get
+            {
+                return settingsModel != null && settingsModel.GeneralSettings != null ? !settingsModel.GeneralSettings.RunSiteDetection : false;
+            }
+            set
+            {
+                if (settingsModel != null && settingsModel.GeneralSettings != null)
+                {
+                    settingsModel.GeneralSettings.RunSiteDetection = !value;
+                }
+
+                this.RaisePropertyChanged();
             }
         }
 
@@ -130,7 +149,7 @@ namespace DriveHUD.Application.ViewModels
             var networks = EntityUtils.GetNetworkSites();
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-            var settingsModel = settingsService.GetSettings();
+            settingsModel = settingsService.GetSettings();
 
             var siteModels = settingsModel.SiteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
 

@@ -154,14 +154,20 @@ namespace DriveHUD.Application
 
                     mainWindowViewModel.StartHudCommand.Execute(null);
 
-                    var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
-                        .ValidateSiteConfigurations()
-                        .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                    var settingsModel = settingsService.GetSettings();
 
-                    if (validationResults.Any())
+                    if (settingsModel != null && settingsModel.GeneralSettings != null && settingsModel.GeneralSettings.RunSiteDetection)
                     {
-                        var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
-                        mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                        var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                            .ValidateSiteConfigurations()
+                            .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+
+                        if (validationResults.Any())
+                        {
+                            var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
+                            mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                        }
                     }
                 }
             }
