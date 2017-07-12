@@ -20,7 +20,7 @@
             Value="{StaticResource BackgroundBrush3}" />
         <Setter
             Property="FocusVisualStyle"
-            Value="{StaticResource ButtonFocusVisual}" />
+            Value="{DynamicResource ButtonFocusVisual}" />
         <Setter
             Property="MinHeight"
             Value="23" />
@@ -251,7 +251,7 @@
             Value="true" />
         <Setter
             Property="FocusVisualStyle"
-            Value="{StaticResource ButtonFocusVisual}" />
+            Value="{DynamicResource ButtonFocusVisual}" />
         <Setter
             Property="MinHeight"
             Value="23" />

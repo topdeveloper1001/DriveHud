@@ -798,4 +798,31 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_RegistrationView_TrialRegisterError" xml:space="preserve">
     <value>Could not register error. Internal error occurred. Please contact support.</value>
   </data>
+  <data name="Common_SiteSetup_Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="Common_SiteSetup_ConfigurationCorrect" xml:space="preserve">
+    <value>Configuration Correct</value>
+  </data>
+  <data name="Common_SiteSetup_ConfigurationIncorrect" xml:space="preserve">
+    <value>Configuration Incorrect</value>
+  </data>
+  <data name="Common_SiteSetup_Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
+  </data>
+  <data name="Common_SiteSetup_FoundIssues" xml:space="preserve">
+    <value>Found issues:</value>
+  </data>
+  <data name="Common_SiteSetup_Header" xml:space="preserve">
+    <value>DriveHUD Site Setup</value>
+  </data>
+  <data name="Common_SiteSetup_NoSiteDetected" xml:space="preserve">
+    <value>[No site detected]</value>
+  </data>
+  <data name="Common_SiteSetup_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_SiteSetup_SiteDetected" xml:space="preserve">
+    <value>[Site detected]</value>
+  </data>
 </root>
