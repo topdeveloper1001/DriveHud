@@ -1962,11 +1962,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t show this form again.
+        /// </summary>
+        internal static string Common_SiteSetup_DoNotShow {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_DoNotShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Found issues:.
         /// </summary>
         internal static string Common_SiteSetup_FoundIssues {
             get {
                 return ResourceManager.GetString("Common_SiteSetup_FoundIssues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green = Enabled.
+        /// </summary>
+        internal static string Common_SiteSetup_GreenEnabled {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_GreenEnabled", resourceCulture);
             }
         }
         
@@ -1994,6 +2012,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_SiteSetup_OK {
             get {
                 return ResourceManager.GetString("Common_SiteSetup_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red = Disabled.
+        /// </summary>
+        internal static string Common_SiteSetup_RedDisabled {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_RedDisabled", resourceCulture);
             }
         }
         

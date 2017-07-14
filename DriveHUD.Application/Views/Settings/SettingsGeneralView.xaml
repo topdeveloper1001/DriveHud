@@ -167,6 +167,11 @@
                 Margin="15 5" />
             <CheckBox
                 Style="{StaticResource CheckBoxRight}"
+                IsChecked="{Binding RunSiteDetection, Mode=TwoWay}"
+                Content="{ResX Key=Settings_RunSiteDetection}"
+                Margin="15 5" />
+            <CheckBox
+                Style="{StaticResource CheckBoxRight}"
                 IsChecked="{Binding IsTurnOnAdvancedLogging, Mode=TwoWay}"
                 Content="{ResX Key=Settings_Logging}"
                 Margin="15 5" />

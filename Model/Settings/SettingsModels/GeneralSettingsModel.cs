@@ -36,6 +36,8 @@ namespace Model.Settings
 
         public bool IsHudSavedAtFirstTime { get; set; }
 
+        public bool RunSiteDetection { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();
@@ -50,6 +52,7 @@ namespace Model.Settings
             IsHudSavedAtFirstTime = true;
             TimeZoneOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).Hours;
             HudViewMode = (int)HudViewType.Vertical_1;
+            RunSiteDetection = true;
 
             StartDayOfWeek = DayOfWeek.Monday;
         }
