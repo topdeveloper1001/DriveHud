@@ -10,12 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Builders.iPoker;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model;
+using Model.Settings;
 using Model.Site;
 using NUnit.Framework;
 using System;
@@ -87,6 +90,8 @@ namespace DriveHud.Tests
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
 
+            ResourceRegistrator.Initialization();
+
             var unityContainer = new UnityContainer();
 
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
@@ -103,6 +108,7 @@ namespace DriveHud.Tests
             unityContainer.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
 
             var locator = new UnityServiceLocator(unityContainer);
 

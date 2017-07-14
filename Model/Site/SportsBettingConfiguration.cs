@@ -16,11 +16,29 @@ namespace Model.Site
 {
     public class SportsBettingConfiguration : BetOnlineConfiguration
     {
+        private readonly string[] registryKeys = new[] { "SportsBetting 0" };
+
         public override EnumPokerSites Site
         {
             get
             {
                 return EnumPokerSites.SportsBetting;
+            }
+        }
+
+        public override string LogoSource
+        {
+            get
+            {
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/sportsbetting_logo.png";
+            }
+        }
+
+        protected override string[] RegistryKeys
+        {
+            get
+            {
+                return registryKeys;
             }
         }
     }

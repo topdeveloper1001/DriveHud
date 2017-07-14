@@ -22,9 +22,7 @@ using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
 using Model.Settings;
-using Model.Site;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -71,6 +69,11 @@ namespace DriveHUD.Importers
                     var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
                     var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
 
+                    if (siteSettings != null && !siteSettings.Enabled)
+                    {
+                        break;
+                    }
+
                     var handHistoryFolders = GetHandHistoryFolders(siteSettings);
 
                     IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
@@ -83,7 +86,6 @@ namespace DriveHUD.Importers
                                                       from item in capturedFileGrouped.DefaultIfEmpty()
                                                       where item == null && !filesToSkip.Contains(handHistoryFile.FullName)
                                                       select handHistoryFile).ToArray();
-
 
                     // add new files and lock them
                     foreach (var hh in newlyDetectedHandHistories)

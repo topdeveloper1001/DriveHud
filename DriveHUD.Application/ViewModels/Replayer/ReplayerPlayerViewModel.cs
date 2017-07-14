@@ -1,4 +1,5 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -280,6 +281,27 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return IsNoteIconVisible
                     ? CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditNote)
                     : CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote);
+            }
+        }
+
+        private HudElementViewModel parent;
+
+        public HudElementViewModel Parent
+        {
+            get
+            {
+                return parent;
+            }
+            set
+            {
+                if (ReferenceEquals(parent, value))
+                {
+                    return;
+                }
+
+                parent = value;
+
+                OnPropertyChanged();
             }
         }
 

@@ -33,6 +33,7 @@ using NHibernate;
 using NHibernate.Linq;
 using HandHistory = HandHistories.Objects.Hand.HandHistory;
 using Player = HandHistories.Objects.Players.Player;
+using DriveHUD.Application.ViewModels.Hud;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -826,7 +827,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 _activePlayerName = value;
             }
-        }
+        }      
+
         #endregion
     }
 }

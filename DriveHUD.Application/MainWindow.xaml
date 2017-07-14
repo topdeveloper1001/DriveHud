@@ -539,7 +539,7 @@
                                                 <RowDefinition
                                                     Height="*" />
                                             </Grid.RowDefinitions>
-                                            
+
                                             <telerik:RadButton
                                                 x:Name="PART_ClearButton"
                                                 Content="{TemplateBinding ClearSelectionButtonContent}"
@@ -552,12 +552,13 @@
                                                 </telerik:StyleManager.Theme>
                                             </telerik:RadButton>
 
-                                            <Button Margin="-1,-1,-1,0"
-                                                    Background="{TemplateBinding Background}"
-                                                    Command="{Binding AliasMenuCommand}">
+                                            <Button
+                                                Margin="-1,-1,-1,0"
+                                                Background="{TemplateBinding Background}"
+                                                Command="{Binding AliasMenuCommand}">
                                                 Create Alias
                                             </Button>
-                                            
+
                                             <ScrollViewer
                                                 x:Name="PART_ScrollViewer"
                                                 BorderThickness="0"
@@ -1312,6 +1313,56 @@
             </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
 
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding SitesSetupViewRequest,Mode=OneWay}">
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type Window}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource PopupBackground}" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="250" />
+                        <Setter
+                            Property="MaxHeight"
+                            Value="770" />
+                        <Setter
+                            Property="SizeToContent"
+                            Value="Height" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
+                            Property="Width"
+                            Value="760" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="ShowInTaskbar"
+                            Value="False" />
+                    </Style>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.HasBorder>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+                <infra:PopupWindowAction.WindowContent>
+                    <v:SitesSetupView />
+                </infra:PopupWindowAction.WindowContent>
+            </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+
     </i:Interaction.Triggers>
 
     <Grid
@@ -1590,7 +1641,7 @@
 
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>
-          
+
                 <telerik:RadComboBox
                     MinWidth="150"
                     IsEditable="True"
@@ -1598,10 +1649,9 @@
                     BorderThickness="0"
                     Background="{StaticResource BackgroundBrush2}"
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    DisplayMemberPath="DecodedName"         
-                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"                    
-                    Style="{StaticResource RadComboBoxStyle1}"                           
-                    
+                    DisplayMemberPath="DecodedName"
+                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"
+                    Style="{StaticResource RadComboBoxStyle1}"
                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
                     <telerik:RadComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -1609,7 +1659,7 @@
                         </ItemsPanelTemplate>
                     </telerik:RadComboBox.ItemsPanel>
                 </telerik:RadComboBox>
-                
+
                 <telerik:RadRibbonDropDownButton
                     Foreground="White"
                     VerticalAlignment="Stretch"
@@ -1686,7 +1736,7 @@
         <!-- ************************************************************************************ -->
         <!-- REPORT GADGET ********************************************************************** -->
         <!-- ************************************************************************************ -->
-        <ScrollViewer            
+        <ScrollViewer
             Grid.Row="2"
             Margin="0 0 10 0"
             PreviewMouseDown="ScrollViewer_PreviewMouseDown"
@@ -1699,7 +1749,7 @@
                     ThresholdHeight="600"
                     ContentContainer="{Binding ElementName=ReportGrid}" />
             </i:Interaction.Behaviors>
-            <Grid                
+            <Grid
                 dh:GridExtensions.IsBlurEnabled="{Binding IsEnabled, Converter={dh:BoolNotConverter}}">
                 <Grid.RowDefinitions>
                     <RowDefinition

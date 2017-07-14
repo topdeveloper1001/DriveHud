@@ -41,7 +41,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
-                { EnumPokerSites.Ignition, string.Format("{0} / {1}", CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition), CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Bodog)) },
+                { EnumPokerSites.Ignition, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition) },
                 { EnumPokerSites.BetOnline, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BetOnline) },
                 { EnumPokerSites.BlackChipPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BlackChipPoker) },
                 { EnumPokerSites.PokerStars, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.PokerStars) },
@@ -61,6 +61,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             AddHandHistoryLocationCommand = new RelayCommand(AddHandHistoryLocation);
             DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
             AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
+            EnableCommand = new RelayCommand(x => SelectedSite.Enabled = !SelectedSite.Enabled);
         }
 
         public override void SetSettingsModel(ISettingsBase model)
@@ -221,6 +222,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         public ICommand AddHandHistoryLocationCommand { get; set; }
         public ICommand DeleteHandHistoryLocationCommand { get; set; }
         public ICommand AutoDetectHandHistoryLocationCommand { get; set; }
+        public ICommand EnableCommand { get; set; }
 
         #endregion
 
