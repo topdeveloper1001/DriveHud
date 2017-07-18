@@ -1,0 +1,36 @@
+PokerStars Game #47148105381:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:42:17 ET
+Table 'Sitarski III' 6-max Seat #1 is the button
+Seat 1: tristyle ($843.35 in chips) 
+Seat 2: Gurin46 ($73.15 in chips) 
+Seat 3: pobolero ($295.95 in chips) 
+Seat 4: Desateur ($207.05 in chips) 
+Seat 5: twinpsych ($219.30 in chips) 
+Seat 6: DURKADURDUR ($200 in chips) 
+Gurin46: posts small blind $1
+pobolero: posts big blind $2
+*** HOLE CARDS ***
+Desateur: folds 
+twinpsych: folds 
+DURKADURDUR: raises $4 to $6
+tristyle: raises $12 to $18
+Gurin46: raises $55.15 to $73.15 and is all-in
+pobolero: folds 
+DURKADURDUR: folds 
+tristyle: folds 
+Uncalled bet ($55.15) returned to Gurin46
+Gurin46 collected $44 from pot
+Gurin46: doesn't show hand 
+*** SUMMARY ***
+Total pot $44 | Rake $0 
+Seat 1: tristyle (button) folded before Flop
+Seat 2: Gurin46 (small blind) collected ($44)
+Seat 3: pobolero (big blind) folded before Flop
+Seat 4: Desateur folded before Flop (didn't bet)
+Seat 5: twinpsych folded before Flop (didn't bet)
+Seat 6: DURKADURDUR folded before Flop
+
+
+
+
+
+

@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -144,6 +145,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void Initialize()
         {
+            Title = CommonResourceManager.Instance.GetResourceString("Common_SiteSetup_Header");
+
             networkSetups = new ObservableCollection<NetworkSetupViewModel>();
 
             var networks = EntityUtils.GetNetworkSites();

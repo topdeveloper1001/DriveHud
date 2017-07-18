@@ -288,8 +288,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FoldToThreeBet,
-                    Occurred = Source.Foldedtothreebetpreflop,
-                    CouldOccurred = Source.Facedthreebetpreflop
+                    Occurred = Source.FoldedtothreebetpreflopCounter,
+                    CouldOccurred = Source.FacedthreebetpreflopCounter
                 };
             }
         }

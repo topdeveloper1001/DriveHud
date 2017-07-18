@@ -1330,13 +1330,13 @@
                             Value="250" />
                         <Setter
                             Property="MaxHeight"
-                            Value="770" />
+                            Value="700" />
                         <Setter
                             Property="SizeToContent"
                             Value="Height" />
                         <Setter
                             Property="ResizeMode"
-                            Value="NoResize" />
+                            Value="CanResize" />
                         <Setter
                             Property="Width"
                             Value="760" />
@@ -1345,7 +1345,10 @@
                             Value="True" />
                         <Setter
                             Property="ShowInTaskbar"
-                            Value="False" />
+                            Value="True" />
+                        <Setter
+                            Property="Icon"
+                            Value="{markupext:IconExtension  /images/drivehud.ico, 32}" />
                     </Style>
                 </infra:PopupWindowAction.WindowStyle>
                 <infra:PopupWindowAction.IsModal>

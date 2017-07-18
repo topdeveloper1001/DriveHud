@@ -234,6 +234,25 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-FoldedThreeBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FoldedThreeBet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FoldedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            using (var perfScope = new PerformanceMonitor("DidColdCallIsCalculated"))
+            {
+                Playerstatistic playerstatistic = null;
+
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+
+                FillDatabaseFromSingleFile(fileName, pokerSite);
+
+                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
+                Assert.That(playerstatistic.FoldedtothreebetpreflopVirtual, Is.EqualTo(expected));
+            }
+        }
+
         /// <summary>
         /// Gets player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
         /// </summary>     
