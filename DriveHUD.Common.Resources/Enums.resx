@@ -692,4 +692,7 @@
   <data name="Enum_EnumPokerNetworks_WPN" xml:space="preserve">
     <value>Winning Poker Network</value>
   </data>
+  <data name="Enum_EnumPokerNetworks_PartyPoker" xml:space="preserve">
+    <value>PartyPoker</value>
+  </data>
 </root>

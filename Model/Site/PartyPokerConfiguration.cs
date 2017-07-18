@@ -5,11 +5,27 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model.Settings;
+using DriveHUD.Common.Utils;
+using DriveHUD.Common.Log;
+using Microsoft.Win32;
 
 namespace Model.Site
 {
     public class PartyPokerConfiguration : ISiteConfiguration
     {
+        private static string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ" };
+        private static string[] pathRegistryKeys = new[]
+        {
+            @"Software\PartyGaming\Partypoker",
+            @"Software\partyNJ\partypokerNJ"
+
+        };
+
+        private const string PathRegistyKeyValue = "AppPath";
+        private const string HandHistoryFolderName = "HandHistory";
+        private const string FolderNameToExclude = "XMLHandHistory";
+
         public PartyPokerConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
@@ -54,10 +70,7 @@ namespace Model.Site
 
         public Dictionary<int, int> PreferredSeats
         {
-            get
-            {
-                return prefferedSeat;
-            }
+            get { return prefferedSeat; }
         }
 
         public TimeSpan TimeZoneOffset
@@ -68,34 +81,60 @@ namespace Model.Site
 
         public bool IsHandHistoryLocationRequired
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
 
         public bool IsPrefferedSeatsAllowed
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
+        }
+
+        public string LogoSource
+        {
+            get { return "/DriveHUD.Common.Resources;Component/images/SiteLogos/partypoker_logo.png"; }
         }
 
         public string[] GetHandHistoryFolders()
         {
-            var myDocumentData = "C:\\Programs";
-            string[] possibleFolders = new string[] { "PartyGaming\\PartyPoker", "partyNJ\\partypokerNJ" };
+            var handHistoryFolders = new List<string>();
 
-            var dirs = (from possibleFolder in possibleFolders
-                        let folder = Path.Combine(myDocumentData, possibleFolder, "HandHistory")
-                        select folder).ToArray();
+            foreach (var key in pathRegistryKeys)
+            {
+                var pathRegistryKey = Registry.CurrentUser.OpenSubKey(key);
+                if (pathRegistryKey != null)
+                {
+                    var path = pathRegistryKey.GetValue(PathRegistyKeyValue)?.ToString();
+                    if (!string.IsNullOrWhiteSpace(path))
+                    {
+                        var hhFolder = Path.Combine(Path.GetDirectoryName(path), Path.GetFileName(pathRegistryKey.Name), HandHistoryFolderName);
+                        if (Directory.Exists(hhFolder))
+                        {
+                            var directories = new DirectoryInfo(hhFolder).GetDirectories().Where(x => x.Name != FolderNameToExclude).Select(x => x.FullName);
+                            handHistoryFolders.AddRange(directories);
+                        }
+                    }
+                }
+            }
 
-            return dirs;
+            return handHistoryFolders.Distinct().ToArray();
         }
 
-        public void ValidateSiteConfiguration()
+        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                IsDetected = RegistryUtils.UninstallRegistryKeysExist(uninstallRegistryKeys),
+                IsEnabled = siteModel.Enabled,
+                HandHistoryLocations = GetHandHistoryFolders().ToList(),
+            };
+
+            if (!validationResult.IsDetected)
+            {
+                return validationResult;
+            }
+
+            return validationResult;
         }
     }
 }
