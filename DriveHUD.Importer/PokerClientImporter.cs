@@ -63,7 +63,7 @@ namespace DriveHUD.Importers
             {
                 try
                 {
-                    if (!IsEnabled())
+                    if (IsDisabled())
                     {
                         Stop();
                     }
@@ -208,11 +208,6 @@ namespace DriveHUD.Importers
         protected abstract int PipeReadingTimeout
         {
             get;
-        }
-
-        protected virtual bool IsEnabled()
-        {
-            return true;
         }
 
         #endregion     

@@ -106,17 +106,12 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        protected override bool IsEnabled()
+        protected override bool IsDisabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.Ignition);
 
-            if (siteSettings != null && !siteSettings.Enabled)
-            {
-                return false;
-            }
-
-            return true;
+            return siteSettings != null && !siteSettings.Enabled;
         }
     }
 }

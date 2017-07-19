@@ -242,7 +242,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Foldedtothreebetpreflop, Source.Facedthreebetpreflop);
+                return GetPercentage(Source.FoldedtothreebetpreflopVirtualCounter, Source.FacedthreebetpreflopVirtualCounter);
             }
         }
 

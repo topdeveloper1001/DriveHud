@@ -13,6 +13,8 @@
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System.Linq;
 
 namespace DriveHUD.Importers.BetOnline
 {
@@ -96,6 +98,14 @@ namespace DriveHUD.Importers.BetOnline
             {
                 return pipeReadingTimeout;
             }
+        }
+
+        protected override bool IsDisabled()
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.Where(x => x.PokerSite == EnumPokerSites.BetOnline || x.PokerSite == EnumPokerSites.SportsBetting || x.PokerSite == EnumPokerSites.TigerGaming);
+
+            return siteSettings != null && siteSettings.All(x => !x.Enabled);
         }
     }
 }

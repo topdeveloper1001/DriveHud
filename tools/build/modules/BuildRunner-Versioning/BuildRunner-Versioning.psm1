@@ -62,7 +62,7 @@ function Update-AssemblyInfo()
      
     $versionAttributes = @('AssemblyVersion', 'AssemblyFileVersion')
     
-    (Get-Content $File) | ForEach-Object {
+    $content = (Get-Content $File) | ForEach-Object {
 
         $match = $false;
 
@@ -82,8 +82,9 @@ function Update-AssemblyInfo()
         if(-Not $match) {            
             $_
         }
+    } 
 
-    } | Set-Content $File    
+	[System.IO.File]::WriteAllLines($File, $content)
 }
 
 function Update-Wix()
