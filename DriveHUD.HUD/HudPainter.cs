@@ -142,7 +142,11 @@ namespace DriveHUD.HUD
             if (windows.ContainsKey(hwnd))
             {
                 windows[hwnd].Window.Initialize(hudLayout);
-                windows[hwnd].Window.Refresh();
+
+                if (!IsIconic(hwnd))
+                {
+                    windows[hwnd].Window.Refresh();
+                }
 
                 return;
             }
@@ -182,6 +186,8 @@ namespace DriveHUD.HUD
 
             window.Show();
 
+          
+
             RECT rect;
 
             GetWindowRect(windowHandle, out rect);
@@ -198,6 +204,11 @@ namespace DriveHUD.HUD
             window.Left = rect.Left * scale.Width;
             window.Height = rect.Height * scale.Height;
             window.Width = rect.Width * scale.Width;
+
+            if (IsIconic(hwnd))
+            {
+                return;
+            }
 
             window.Refresh();
         }
