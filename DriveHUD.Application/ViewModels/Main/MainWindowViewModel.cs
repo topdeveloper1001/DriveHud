@@ -513,11 +513,11 @@ namespace DriveHUD.Application.ViewModels
 
                     heatMapTools.ForEach(x =>
                     {
-                        var heatMapKey = sessionData.HeatMaps.Keys
+                        var heatMapKey = item.HeatMaps.Keys
                             .ToArray()
                             .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
 
-                        x.HeatMap = sessionData.HeatMaps[heatMapKey];
+                        x.HeatMap = item.HeatMaps[heatMapKey];
                     });
 
                     var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
