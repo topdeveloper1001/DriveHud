@@ -1,0 +1,29 @@
+PokerStars Game #47143096770:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 0:53:58 ET
+Table 'Sagitta V' 6-max Seat #5 is the button
+Seat 1: vulgokrusty ($235.35 in chips) 
+Seat 2: DURKADURDUR ($200 in chips) 
+Seat 3: pablostar ($340.75 in chips) 
+Seat 4: scriber98 ($62 in chips) 
+Seat 5: asseral ($200 in chips) 
+Seat 6: dexdez ($81 in chips) 
+dexdez: posts small blind $1
+vulgokrusty: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+pablostar: folds 
+scriber98: folds 
+asseral: raises $12 to $18
+dexdez: folds 
+vulgokrusty: folds 
+DURKADURDUR: folds 
+Uncalled bet ($12) returned to asseral
+asseral collected $15 from pot
+asseral: doesn't show hand 
+*** SUMMARY ***
+Total pot $15 | Rake $0 
+Seat 1: vulgokrusty (big blind) folded before Flop
+Seat 2: DURKADURDUR folded before Flop
+Seat 3: pablostar folded before Flop (didn't bet)
+Seat 4: scriber98 folded before Flop (didn't bet)
+Seat 5: asseral (button) collected ($15)
+Seat 6: dexdez (small blind) folded before Flop

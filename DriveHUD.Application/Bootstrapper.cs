@@ -151,9 +151,7 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
-
-                    mainWindowViewModel.StartHudCommand.Execute(null);
-
+                 
                     var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
                     var settingsModel = settingsService.GetSettings();
 
@@ -169,6 +167,8 @@ namespace DriveHUD.Application
                             mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
                         }
                     }
+
+                    mainWindowViewModel.StartHudCommand.Execute(null);
                 }
             }
             catch (Exception e)
