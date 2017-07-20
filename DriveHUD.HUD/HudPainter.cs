@@ -185,9 +185,7 @@ namespace DriveHUD.HUD
             window.Initialize(hudLayout);
 
             window.Show();
-
-          
-
+         
             RECT rect;
 
             GetWindowRect(windowHandle, out rect);
