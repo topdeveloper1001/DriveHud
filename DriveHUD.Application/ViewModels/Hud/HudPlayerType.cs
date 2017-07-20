@@ -223,12 +223,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             unchecked
             {
                 int hash = 23;
-                hash = (hash * 31) + Name.GetHashCode();
-                hash = (hash * 31) + ImageAlias.GetHashCode();
+                hash = (hash * 31) + (Name == null ? 0 : Name.GetHashCode());
+                hash = (hash * 31) + (ImageAlias == null ? 0 : ImageAlias.GetHashCode());
                 hash = (hash * 31) + EnablePlayerProfile.GetHashCode();
                 hash = (hash * 31) + DisplayPlayerIcon.GetHashCode();
                 hash = (hash * 31) + MinSample.GetHashCode();
-                hash = (hash * 31) + Stats.GetHashCode();
+                hash = (hash * 31) + (Stats == null ? 0 : Stats.GetHashCode());
                 return hash;
             }
         }
