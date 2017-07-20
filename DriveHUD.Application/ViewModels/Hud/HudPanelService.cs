@@ -49,18 +49,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var scaledXPosition = xPosition * window.ScaleX;
             var scaledYPosition = yPosition * window.ScaleY;
 
-            if (scaledXPosition < 0)
-            {
-                scaledXPosition = 0;
-                toolViewModel.OffsetX = 0;
-            }
-
-            if (scaledYPosition + HudDefaultSettings.HudIconHeaderHeight < 0)
-            {
-                scaledYPosition = -HudDefaultSettings.HudIconHeaderHeight;
-                toolViewModel.OffsetY = -HudDefaultSettings.HudIconHeaderHeight;
-            }
-
+            // border limits
             var toolWidth = toolElement.ActualWidth != 0 && !double.IsNaN(toolElement.ActualWidth) ?
                 toolElement.ActualWidth :
                 (!double.IsNaN(toolViewModel.Width) ? toolViewModel.Width : 0);
@@ -69,18 +58,38 @@ namespace DriveHUD.Application.ViewModels.Hud
                 toolElement.ActualHeight :
                 !double.IsNaN(toolViewModel.Height) ? toolViewModel.Height : 0;
 
-            if (scaledXPosition > window.Width - toolWidth)
+            var widthLimit = toolWidth >= HudDefaultSettings.MinimumDistanceToTheBorder ? HudDefaultSettings.MinimumDistanceToTheBorder : toolWidth;
+            var heightLimit = toolHeight >= HudDefaultSettings.MinimumDistanceToTheBorder ? HudDefaultSettings.MinimumDistanceToTheBorder : toolHeight;
+
+            if (toolWidth == 0 || toolWidth >= window.Width ||
+                widthLimit >= window.Width || toolHeight == 0 ||
+                toolHeight >= window.Height || (heightLimit + HudDefaultSettings.HudIconHeaderHeight) >= window.Height)
             {
-                scaledXPosition = window.Width - toolWidth;
-                toolViewModel.OffsetX = window.ScaleX != 0 ? scaledXPosition / window.ScaleX : toolViewModel.OffsetX;
+                return new Tuple<double, double>(scaledXPosition, scaledYPosition);
             }
 
-            if (scaledYPosition > window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight)
+            if (scaledXPosition > window.Width - widthLimit)
             {
-                scaledYPosition = window.Height - toolHeight - HudDefaultSettings.HudIconHeaderHeight;
+                scaledXPosition = window.Width - widthLimit;
+                toolViewModel.OffsetX = window.ScaleX != 0 ? scaledXPosition / window.ScaleX : toolViewModel.OffsetX;
+            }
+            else if (scaledXPosition < widthLimit - toolWidth)
+            {
+                scaledXPosition = widthLimit - toolWidth;
+                toolViewModel.OffsetX = widthLimit - toolWidth;
+            }
+
+            if (scaledYPosition > window.Height - heightLimit - HudDefaultSettings.HudIconHeaderHeight)
+            {
+                scaledYPosition = window.Height - heightLimit - HudDefaultSettings.HudIconHeaderHeight;
                 toolViewModel.OffsetY = window.ScaleY != 0 ?
-                    ((window.Height - toolHeight) / window.ScaleY - HudDefaultSettings.HudIconHeaderHeight) :
+                    ((window.Height - heightLimit) / window.ScaleY - HudDefaultSettings.HudIconHeaderHeight) :
                     toolViewModel.OffsetY;
+            }
+            else if (scaledYPosition < heightLimit - toolHeight - HudDefaultSettings.HudIconHeaderHeight)
+            {
+                scaledYPosition = heightLimit - toolHeight - HudDefaultSettings.HudIconHeaderHeight;
+                toolViewModel.OffsetY = heightLimit - toolHeight - HudDefaultSettings.HudIconHeaderHeight;
             }
 
             return new Tuple<double, double>(scaledXPosition, scaledYPosition);
