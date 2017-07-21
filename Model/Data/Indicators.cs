@@ -138,7 +138,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Calledthreebetpreflop, Source.Facedthreebetpreflop);
+                return GetPercentage(Source.Calledthreebetpreflop, Source.FacedthreebetpreflopVirtualCounter);
             }
         }
 
@@ -438,7 +438,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Didsqueeze, TotalHands);
+                return GetPercentage(Source.Didsqueeze, Source.Couldsqueeze);
             }
         }
 

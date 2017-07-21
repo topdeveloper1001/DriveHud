@@ -33,7 +33,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         private const double ui4StatBoxHorizontalShiftY = 89;
         private const double ui4StatBoxVerticalShiftX = 114;
 
-        private const double uiPlainBoxVertical1RightOrientedShiftX = -70;
+        private const double uiPlainBoxVertical1RightOrientedShiftX = -5;
         private const double uiPlainBoxVertical1ShiftX = 112;
         private const double uiPlainBoxVerticalShiftY = -8;
         private const double uiPlainBoxVerticalWidth = 101;
@@ -211,6 +211,27 @@ namespace DriveHUD.Application.MigrationService.Migrators
                              }).ToList()
             };
 
+            // add line breaks to vertical component 
+            var plainBoxStats = layout.HudStats
+                    .Where(x => !hudLayout4StatBoxTool.Stats.Any(p => p.Stat == x.Stat))
+                    .Select(x => x.Clone()).ToList();
+
+            if (layout.HudViewType == HudViewType.Vertical_1)
+            {
+                var plainBoxStatsTemp = plainBoxStats.Where(x => x.Stat != Stat.LineBreak).ToList();
+                plainBoxStats = new List<StatInfo>();
+
+                for (var i = 0; i < plainBoxStatsTemp.Count; i++)
+                {
+                    plainBoxStats.Add(plainBoxStatsTemp[i]);
+
+                    if (i != plainBoxStatsTemp.Count - 1)
+                    {
+                        plainBoxStats.Add(new StatInfoBreak());
+                    }
+                }
+            }
+
             // plain box
             var hudLayoutPlainBoxTool = new HudLayoutPlainBoxTool
             {
@@ -231,9 +252,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                    Height = height
                                }).ToList(),
 
-                Stats = new ReactiveList<StatInfo>(layout.HudStats
-                    .Where(x => !hudLayout4StatBoxTool.Stats.Any(p => p.Stat == x.Stat))
-                    .Select(x => x.Clone())),
+                Stats = new ReactiveList<StatInfo>(plainBoxStats),
 
                 Positions = (from hudPositionsInfo in layout.HudPositionsInfo
                              select new HudPositionsInfo
