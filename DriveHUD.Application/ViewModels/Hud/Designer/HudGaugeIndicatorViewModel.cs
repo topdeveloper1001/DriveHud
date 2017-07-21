@@ -126,7 +126,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
-        /// Gets or sets text on the left side of gauge indicator
+        /// Gets or sets text on the top right of gauge indicator
         /// </summary>
         public string HeaderText
         {
@@ -138,6 +138,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 tool.HeaderText = value;
                 this.RaisePropertyChanged(nameof(HeaderText));
+            }
+        }
+
+        /// <summary>
+        /// Gets the text of header to display
+        /// </summary>
+        public string HeaderDisplayText
+        {
+            get
+            {
+                return string.IsNullOrEmpty(HeaderText) ? BaseStat.ToolTip : HeaderText;
             }
         }
 

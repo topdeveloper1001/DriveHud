@@ -285,7 +285,7 @@
                                 Background="{StaticResource BackgroundBrush1}">
                                 <TextBlock
                                     HorizontalAlignment="Right"
-                                    Text="{Binding HeaderText}"
+                                    Text="{Binding HeaderDisplayText}"
                                     Style="{StaticResource HudToolTipTextBlockStyle}" />
                             </Border>
 
