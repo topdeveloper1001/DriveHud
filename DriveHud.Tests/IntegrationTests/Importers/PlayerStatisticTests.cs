@@ -17,8 +17,10 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -250,6 +252,39 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
                 Assert.That(playerstatistic.FoldedtothreebetpreflopVirtual, Is.EqualTo(expected));
+            }
+        }
+
+        [Test]
+        [TestCase(@"Hero-DidNotCallThreeBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        public void ThreeBetCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("ThreeBetCallIsCalculated", x => x.Calledthreebetpreflop, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-DidNotCallThreeBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        public void FacedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("FacedThreeBetIsCalculated", x => x.Facedthreebetpreflop, fileName, pokerSite, playerName, expected);
+        }
+
+        protected virtual void AssertThatStatIsCalculated(string method, Expression<Func<Playerstatistic, int>> expression, string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            using (var perfScope = new PerformanceMonitor(method))
+            {
+                Playerstatistic playerstatistic = null;
+
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+
+                FillDatabaseFromSingleFile(fileName, pokerSite);
+
+                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
+
+                var getStat = expression.Compile();
+
+                Assert.That(getStat(playerstatistic), Is.EqualTo(expected));
             }
         }
 

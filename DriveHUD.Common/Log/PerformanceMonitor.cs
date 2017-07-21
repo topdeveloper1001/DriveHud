@@ -39,13 +39,13 @@ namespace DriveHud.Common.Log
             }
 
             var durationMessage = $"{message} (Duration): {stopwatch.ElapsedMilliseconds}ms";
-            //var memoryMessage = $"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}";
+            var memoryMessage = $"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}";
 
-            //Console.WriteLine(durationMessage);
-            //Console.WriteLine(memoryMessage);
+            Console.WriteLine(durationMessage);
+            Console.WriteLine(memoryMessage);
 
             LogProvider.Log.Info(durationMessage);
-            //LogProvider.Log.Info(memoryMessage);
+            LogProvider.Log.Info(memoryMessage);
         }
     }
 }
