@@ -829,7 +829,7 @@ namespace Model
         {
             switch (stat.PositionString)
             {
-                case "EP":                    
+                case "EP":
                     stat.PfrInEp = stat.Pfrhands;
                     stat.LimpEp = stat.LimpMade;
                     stat.DidColdCallInEp = stat.Didcoldcall;
@@ -1277,12 +1277,19 @@ namespace Model
         {
             bool start3Bet = false;
 
+            var playersCannot3Bet = new HashSet<string>();
+
             foreach (var action in actions)
             {
                 if (start3Bet)
                 {
                     if (!threeBet.Happened)
                     {
+                        if (playersCannot3Bet.Contains(action.PlayerName))
+                        {
+                            continue;
+                        }
+
                         if (action.PlayerName == player && action.PlayerName != raiser)
                         {
                             threeBet.Possible = true;
@@ -1304,19 +1311,25 @@ namespace Model
                         return;
                     }
 
-                    if (action.PlayerName == player)
+                    if (action.PlayerName == player && raiser == action.PlayerName)
                     {
                         if (threeBet.CheckAction(action))
                         {
                             return;
                         }
-                    }           
+                    }
                 }
                 else
                 {
                     if (action.IsRaise() && action.PlayerName == raiser)
                     {
                         start3Bet = true;
+                        continue;
+                    }
+
+                    if (action.IsCall() && !playersCannot3Bet.Contains(action.PlayerName))
+                    {
+                        playersCannot3Bet.Add(action.PlayerName);
                     }
                 }
             }
