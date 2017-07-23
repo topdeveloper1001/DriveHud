@@ -20,6 +20,7 @@ using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DriveHUD.Importers.PokerStars
@@ -52,7 +53,7 @@ namespace DriveHUD.Importers.PokerStars
 
         protected override void ProcessHand(string handHistory, GameInfo gameInfo)
         {
-            gameInfo.UpdateInfo = UpdateGameInfo;
+            gameInfo.UpdateAction = UpdateGameInfo;
 
             base.ProcessHand(handHistory, gameInfo);
         }
@@ -109,8 +110,9 @@ namespace DriveHUD.Importers.PokerStars
             return title.Contains(parsingResult.Source.TableName);
         }
 
-        private void UpdateGameInfo(ParsingResult parsingResult, GameInfo gameInfo)
+        private void UpdateGameInfo(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
         {
+            var parsingResult = parsingResults?.FirstOrDefault();
             if (parsingResult == null || parsingResult.Source == null || gameInfo == null)
             {
                 return;

@@ -17,6 +17,7 @@ using HandHistories.Parser.Parsers;
 using Model;
 using Model.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace DriveHUD.Importers
 {
@@ -49,7 +50,7 @@ namespace DriveHUD.Importers
 
         public HandHistories.Objects.GameDescription.TournamentSpeed? TournamentSpeed { get; set; }
 
-        public Action<ParsingResult, GameInfo> UpdateInfo { get; set; }
+        public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }
 
         public PlayerCollectionItem[] AddedPlayers { get; set; }
 
