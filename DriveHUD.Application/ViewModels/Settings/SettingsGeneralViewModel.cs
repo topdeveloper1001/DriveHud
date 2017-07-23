@@ -37,7 +37,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             PopupModel = new SettingsPopupViewModelBase();
             PopupModel.InitializeCommands();
-            
+
             SendLogsCommand = new RelayCommand(SendLogs);
             RebuildStatsCommand = new RelayCommand(RebuildStats, x => CanRunStatsCommand());
             RecoverStatsCommand = new RelayCommand(RecoverStats, x => CanRunStatsCommand());
@@ -105,7 +105,20 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsAutomaticallyDownloadUpdates != value)
                 {
                     SettingsModel.IsAutomaticallyDownloadUpdates = value;
-                    OnPropertyChanged(nameof(IsApplyFiltersToTournamentsAndCashGames));
+                    OnPropertyChanged(nameof(IsAutomaticallyDownloadUpdates));
+                }
+            }
+        }
+
+        public bool RunSiteDetection
+        {
+            get { return SettingsModel?.RunSiteDetection ?? false; }
+            set
+            {
+                if (SettingsModel != null && SettingsModel.RunSiteDetection != value)
+                {
+                    SettingsModel.RunSiteDetection = value;
+                    OnPropertyChanged(nameof(RunSiteDetection));
                 }
             }
         }
@@ -222,7 +235,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             var mainViewModel = App.GetMainViewModel();
             return mainViewModel != null && !mainViewModel.IsHudRunning;
-        }       
+        }
 
         #endregion
     }

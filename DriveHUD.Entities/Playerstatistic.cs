@@ -789,6 +789,42 @@ namespace DriveHUD.Entities
         [ProtoMember(288)]
         public virtual int PreflopOOP { get; set; }
 
+        public virtual int FoldedtothreebetpreflopVirtual
+        {
+            get
+            {
+                return Totalhands == 1 && Pfrhands == 1 && Foldedtothreebetpreflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int FoldedtothreebetpreflopVirtualCounter
+        {
+            get
+            {
+                return FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual;
+            }
+        }
+
+        public virtual int FoldedtothreebetpreflopCounter { get; set; }
+
+        public virtual int FacedthreebetpreflopVirtual
+        {
+            get
+            {
+                return Totalhands == 1 && Position != EnumPosition.BB && Pfrhands == 1 && Facedthreebetpreflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int FacedthreebetpreflopVirtualCounter
+        {
+            get
+            {
+                return FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual;
+            }
+        }
+
+        public virtual int FacedthreebetpreflopCounter { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session         
@@ -1238,6 +1274,9 @@ namespace DriveHUD.Entities
             CalculateTiltMeterValue(this, a);
 
             #endregion
+
+            FoldedtothreebetpreflopCounter += a.FoldedtothreebetpreflopVirtualCounter;
+            FacedthreebetpreflopCounter += a.FacedthreebetpreflopVirtualCounter;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1579,6 +1618,9 @@ namespace DriveHUD.Entities
             CalculateTiltMeterValue(r, b);
 
             #endregion
+
+            r.FoldedtothreebetpreflopCounter = a.FoldedtothreebetpreflopVirtualCounter + b.FoldedtothreebetpreflopVirtualCounter;
+            r.FacedthreebetpreflopCounter = a.FacedthreebetpreflopVirtualCounter + b.FacedthreebetpreflopVirtualCounter;
 
             return r;
         }

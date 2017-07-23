@@ -189,6 +189,7 @@ namespace Model
             #region 3bet
 
             ConditionalBet threeBet = new ConditionalBet();
+
             if (pfrOcurred)
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
@@ -1275,6 +1276,7 @@ namespace Model
                                           string raiser)
         {
             bool start3Bet = false;
+
             foreach (var action in actions)
             {
                 if (start3Bet)
@@ -1287,11 +1289,17 @@ namespace Model
                         }
 
                         if (!action.IsRaise() || action.PlayerName == raiser)
+                        {
                             continue;
+                        }
 
                         threeBet.Happened = true;
+
                         if (action.PlayerName != player)
+                        {
                             continue;
+                        }
+
                         threeBet.Made = true;
                         return;
                     }
@@ -1299,13 +1307,10 @@ namespace Model
                     if (action.PlayerName == player)
                     {
                         if (threeBet.CheckAction(action))
+                        {
                             return;
-                    }
-
-                    if (action.IsRaise())
-                    {
-                        return;
-                    }
+                        }
+                    }           
                 }
                 else
                 {

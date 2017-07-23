@@ -1926,6 +1926,114 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Activate.
+        /// </summary>
+        internal static string Common_SiteSetup_Activate {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_Activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration Correct.
+        /// </summary>
+        internal static string Common_SiteSetup_ConfigurationCorrect {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_ConfigurationCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration Incorrect.
+        /// </summary>
+        internal static string Common_SiteSetup_ConfigurationIncorrect {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_ConfigurationIncorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deactivate.
+        /// </summary>
+        internal static string Common_SiteSetup_Deactivate {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_Deactivate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t show this form again.
+        /// </summary>
+        internal static string Common_SiteSetup_DoNotShow {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_DoNotShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found issues:.
+        /// </summary>
+        internal static string Common_SiteSetup_FoundIssues {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_FoundIssues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green = Enabled.
+        /// </summary>
+        internal static string Common_SiteSetup_GreenEnabled {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_GreenEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD Site Setup.
+        /// </summary>
+        internal static string Common_SiteSetup_Header {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [No site detected].
+        /// </summary>
+        internal static string Common_SiteSetup_NoSiteDetected {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_NoSiteDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string Common_SiteSetup_OK {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red = Disabled.
+        /// </summary>
+        internal static string Common_SiteSetup_RedDisabled {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_RedDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [Site detected].
+        /// </summary>
+        internal static string Common_SiteSetup_SiteDetected {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_SiteDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Speed.
         /// </summary>
         internal static string Common_Speed {

@@ -151,18 +151,24 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
+                 
+                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                    var settingsModel = settingsService.GetSettings();
+
+                    if (settingsModel != null && settingsModel.GeneralSettings != null && settingsModel.GeneralSettings.RunSiteDetection)
+                    {
+                        var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                            .ValidateSiteConfigurations()
+                            .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+
+                        if (validationResults.Any())
+                        {
+                            var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
+                            mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                        }
+                    }
 
                     mainWindowViewModel.StartHudCommand.Execute(null);
-
-                    var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
-                        .ValidateSiteConfigurations()
-                        .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
-
-                    if (validationResults.Any())
-                    {
-                        var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
-                        mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
-                    }
                 }
             }
             catch (Exception e)

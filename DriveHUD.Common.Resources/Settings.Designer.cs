@@ -313,6 +313,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Run site detection.
+        /// </summary>
+        internal static string Settings_RunSiteDetection {
+            get {
+                return ResourceManager.GetString("Settings_RunSiteDetection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save Filters on exit.
         /// </summary>
         internal static string Settings_SaveFilters {

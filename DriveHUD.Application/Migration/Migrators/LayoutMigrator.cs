@@ -103,7 +103,27 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                                      Height = HudDefaultSettings.PlainStatBoxHeight,
                                                  }).ToList();
 
-            hudLayoutPlainBoxTool.Stats = new ReactiveList<StatInfo>(layout.HudStats.Select(x => x.Clone()));
+            var clonedStats = layout.HudStats.Select(x => x.Clone()).ToList();
+
+            // insert line breaks
+            if (clonedStats.Count > 4 && clonedStats.All(x => !(x is StatInfoBreak)))
+            {
+                var clonedStatsWithBreaks = new List<StatInfo>();
+
+                for (var i = 0; i < clonedStats.Count; i++)
+                {
+                    if (i > 0 && i % 4 == 0)
+                    {
+                        clonedStatsWithBreaks.Add(new StatInfoBreak());
+                    }
+
+                    clonedStatsWithBreaks.Add(clonedStats[i]);
+                }
+
+                clonedStats = clonedStatsWithBreaks;
+            }
+
+            hudLayoutPlainBoxTool.Stats = new ReactiveList<StatInfo>(clonedStats);
 
             hudLayoutPlainBoxTool.Positions = (from hudPositionsInfo in layout.HudPositionsInfo
                                                select new HudPositionsInfo
@@ -478,7 +498,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
             return statInfo;
         }
-      
+
         private Point GetOffset(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType, int seat)
         {
             if (pokerSite == EnumPokerSites.Ignition || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Bodog)

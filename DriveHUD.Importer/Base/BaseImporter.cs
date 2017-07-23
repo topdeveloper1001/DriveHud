@@ -69,10 +69,7 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
-
-            if (siteSettings != null && !siteSettings.Enabled)
+            if (IsDisabled())
             {
                 LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" importer is disabled.", SiteString));
                 return;
@@ -120,6 +117,14 @@ namespace DriveHUD.Importers
             ProcessStopped?.Invoke(this, EventArgs.Empty);
 
             LogProvider.Log.Info(this, $"\"{SiteString}\" importer has been stopped");
+        }
+
+        protected virtual bool IsDisabled()
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            return siteSettings != null && !siteSettings.Enabled;
         }
 
         #endregion

@@ -201,6 +201,9 @@
   <data name="Settings_RenewLicense" xml:space="preserve">
     <value>Renew License</value>
   </data>
+  <data name="Settings_RunSiteDetection" xml:space="preserve">
+    <value>Run site detection</value>
+  </data>
   <data name="Settings_SaveFilters" xml:space="preserve">
     <value>Save Filters on exit</value>
   </data>

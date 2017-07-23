@@ -272,6 +272,35 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         }
 
         [Test]
+        [TestCase(@"Layouts v.2\Layouts1\DH 2-max.xml")]
+        public void LayoutV2ToolsPlainBoxStatsWithoutBreakersAreMigrated(string file)
+        {
+            var migrationResult = GetMigrationV2Result(file);
+
+            Assert.IsNotNull(migrationResult.Result.LayoutTools, "Tools not found in migrated layout");
+
+            var layoutTool = migrationResult.Result.LayoutTools.OfType<HudLayoutPlainBoxTool>().FirstOrDefault();
+
+            Assert.IsNotNull(layoutTool, "Tool not found in migrated layout");
+            Assert.IsNotNull(layoutTool.Stats, "Tool stats not found");
+
+            migrationResult.Source.HudStats.Insert(4, new StatInfoBreak());
+
+            Assert.That(layoutTool.Stats.Count, Is.EqualTo(migrationResult.Source.HudStats.Count), "Stats.Count");
+
+            Assert.Multiple(() =>
+            {
+                for (var i = 0; i < migrationResult.Source.HudStats.Count; i++)
+                {
+                    var expectedStat = migrationResult.Source.HudStats[i];
+                    var actualStat = layoutTool.Stats[i];
+
+                    AssertThatStatsAreEqual(actualStat, expectedStat);
+                }
+            });
+        }
+
+        [Test]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 338, 115)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 639, 202)]
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 3, 639, 388)]
@@ -700,7 +729,7 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         {
             Assert.That(actual.GetType(), Is.EqualTo(expected.GetType()), "Type");
             Assert.That(actual.Stat, Is.EqualTo(expected.Stat), nameof(StatInfo.Stat));
-            Assert.That(actual.GroupName, Is.EqualTo(expected.GroupName), nameof(StatInfo.GroupName));            
+            Assert.That(actual.GroupName, Is.EqualTo(expected.GroupName), nameof(StatInfo.GroupName));
             Assert.That(actual.CurrentColor, Is.EqualTo(expected.CurrentColor), nameof(StatInfo.CurrentColor));
             Assert.That(actual.SettingsAppearance_IsChecked, Is.EqualTo(expected.SettingsAppearance_IsChecked), nameof(StatInfo.SettingsAppearance_IsChecked));
             Assert.That(actual.SettingsPlayerType_IsChecked, Is.EqualTo(expected.SettingsPlayerType_IsChecked), nameof(StatInfo.SettingsPlayerType_IsChecked));

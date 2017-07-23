@@ -64,14 +64,14 @@
                     Value="True">
                     <Setter
                         Property="ToolTip"
-                        Value="Deactivate" />
+                        Value="{ResX Key=Common_SiteSetup_Deactivate}" />
                 </DataTrigger>
                 <DataTrigger
                     Binding="{Binding Enabled}"
                     Value="False">
                     <Setter
                         Property="ToolTip"
-                        Value="Activate" />
+                        Value="{ResX Key=Common_SiteSetup_Activate}" />
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -100,7 +100,7 @@
                     <RowDefinition
                         Height="Auto" />
                     <RowDefinition
-                        Height="Auto" />
+                        Height="*" />
                     <RowDefinition
                         Height="Auto" />
                 </Grid.RowDefinitions>
@@ -109,18 +109,51 @@
                     BorderBrush="#FFFFFF"
                     BorderThickness="0,0,0,1">
 
-                    <TextBlock
-                        Text="DriveHUD Site Setup"
-                        FontSize="16"
-                        Margin="0,0,0,5"
-                        Style="{StaticResource HeaderTextBlockStyle}" />
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="{ResX Key=Common_SiteSetup_Header}"
+                            FontSize="16"
+                            Margin="0,0,0,5"
+                            Style="{StaticResource HeaderTextBlockStyle}" />
+
+                        <TextBlock
+                            Grid.Column="1"
+                            FontSize="11"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Style="{StaticResource HeaderTextBlockStyle}">
+                            
+                            <Run
+                                Text="[" />                               
+                            <Run
+                                Text="{ResX Key=Common_SiteSetup_GreenEnabled}"
+                                Foreground="Green" />                                 
+                            <Run
+                                Text=" / " />
+                            <Run
+                                Text="{ResX Key=Common_SiteSetup_RedDisabled}"
+                                Foreground="Red" />
+                            <Run
+                                Text="]" />
+
+                        </TextBlock>
+                    </Grid>
 
                 </Border>
 
                 <ScrollViewer
                     Grid.Row="1"
                     Padding="3"
-                    MaxHeight="660"
+                    MaxHeight="590"
                     Margin="0,10,0,0"
                     HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Auto">
@@ -150,7 +183,7 @@
                                             Visibility="{Binding RelativeSource={RelativeSource PreviousData}, Converter={dh:NullToVisibilityConverter}}"
                                             BorderThickness="0,1,0,0" />
 
-                                        <StackPanel                                            
+                                        <StackPanel
                                             Orientation="Horizontal"
                                             Margin="0,0,0,3"
                                             Grid.Row="0">
@@ -227,13 +260,13 @@
                                                                 VerticalAlignment="Center"
                                                                 Margin="5,0,0,0"
                                                                 Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}"
-                                                                Text="[Site detected]" />
+                                                                Text="{ResX Key=Common_SiteSetup_SiteDetected}" />
 
                                                             <TextBlock
                                                                 VerticalAlignment="Center"
                                                                 Margin="5,0,0,0"
                                                                 Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                                                Text="[No site detected]" />
+                                                                Text="{ResX Key=Common_SiteSetup_NoSiteDetected}" />
 
                                                             <StackPanel
                                                                 Orientation="Horizontal"
@@ -244,14 +277,14 @@
                                                                     Margin="5,0,0,0"
                                                                     Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}}"
                                                                     Foreground="Green"
-                                                                    Text="Configuration Correct" />
+                                                                    Text="{ResX Key=Common_SiteSetup_ConfigurationCorrect}" />
 
                                                                 <TextBlock
                                                                     VerticalAlignment="Center"
                                                                     Margin="5,0,0,0"
                                                                     Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                                                    Foreground="Firebrick"
-                                                                    Text="Configuration Incorrect" />
+                                                                    Foreground="#db5050"
+                                                                    Text="{ResX Key=Common_SiteSetup_ConfigurationIncorrect}" />
                                                             </StackPanel>
 
                                                         </StackPanel>
@@ -261,14 +294,14 @@
                                                             Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
                                                             Margin="5,0,0,0"
                                                             Style="{StaticResource BaseSiteSetupTextBlockStyle}"
-                                                            Text="Found issues:" />
+                                                            Text="{ResX Key=Common_SiteSetup_FoundIssues}" />
 
                                                         <ItemsControl
                                                             Grid.Row="2"
                                                             Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
                                                             ItemsSource="{Binding Issues}"
                                                             Margin="25,0,0,0"
-                                                            Foreground="Firebrick" />
+                                                            Foreground="#db5050" />
 
                                                     </Grid>
 
@@ -316,13 +349,31 @@
                     BorderBrush="#FFFFFF"
                     BorderThickness="0,1,0,0">
 
-                    <Button
-                        Width="60"
-                        Height="27"
-                        HorizontalAlignment="Right"
-                        Margin="0,10,10,10"
-                        Content="OK"
-                        Command="{Binding ApplyCommand}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox
+                            Grid.Column="0"
+                            Content="{ResX Key=Common_SiteSetup_DoNotShow}"
+                            IsChecked="{Binding DoNotShowForm}"
+                            Margin="5,15" />
+
+                        <Button
+                            Grid.Column="1"
+                            Width="60"
+                            Height="27"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,10,10"
+                            Content="{ResX Key=Common_SiteSetup_OK}"
+                            Command="{Binding ApplyCommand}" />
+
+                    </Grid>
+
                 </Border>
 
             </Grid>
