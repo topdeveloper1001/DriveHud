@@ -253,6 +253,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             Container.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -286,6 +288,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.BlackChipPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

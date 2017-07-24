@@ -1,0 +1,27 @@
+﻿***** Hand History for Game 169502745 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 18:45:54 EDT 2017
+Table Lakewood (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: FATDAN44 ( $425.34 USD )
+Seat 1: Jonuzi ( $402 USD )
+Seat 2: Moose4Life ( $400 USD )
+Seat 6: bvinnieb ( $299.45 USD )
+Jonuzi posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 raises [$12 USD]
+bvinnieb raises [$60 USD]
+Jonuzi will be using their time bank for this hand.
+Jonuzi folds
+Moose4Life folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 is all-In  [$413.34 USD]
+bvinnieb is all-In  [$239.45 USD]
+** Dealing Flop ** [ 2d, Kd, 2c ]
+** Dealing Turn ** [ 6s ]
+** Dealing River ** [ Js ]
+bvinnieb shows [ Ac, Qs ]a pair of Twos.
+FATDAN44 shows [ Ts, Td ]two pairs, Tens and Twos.
+FATDAN44 wins $125.89 USD from the side pot 1 with two pairs, Tens and Twos.
+FATDAN44 wins $602.90 USD from the main pot with two pairs, Tens and Twos.

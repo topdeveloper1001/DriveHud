@@ -1,0 +1,28 @@
+﻿***** Hand History for Game 169480983 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 13:51:19 EDT 2017
+Table Edison (Real Money)
+Seat 2 is the button
+Total number of players : 6/6
+Seat 6: KrookedTyrant ( $133.46 USD )
+Seat 3: LOLYOUFOLD ( $472.79 USD )
+Seat 4: Moose4Life ( $505.33 USD )
+Seat 2: PotatoGun ( $545.22 USD )
+Seat 5: WhatDayIsIt ( $421.01 USD )
+Seat 1: im_riley ( $394 USD )
+LOLYOUFOLD posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+WhatDayIsIt folds
+KrookedTyrant raises [$16.54 USD]
+im_riley folds
+PotatoGun folds
+LOLYOUFOLD folds
+Moose4Life is all-In  [$501.33 USD]
+KrookedTyrant is all-In  [$116.92 USD]
+** Dealing Flop ** [ 5d, 2h, 6c ]
+** Dealing Turn ** [ Kd ]
+** Dealing River ** [ Qc ]
+KrookedTyrant shows [ Tc, Th ]a pair of Tens.
+Moose4Life shows [ As, Kh ]a pair of Kings.
+Moose4Life wins $371.87 USD from the side pot 1 with a pair of Kings.
+Moose4Life wins $265.92 USD from the main pot with a pair of Kings.

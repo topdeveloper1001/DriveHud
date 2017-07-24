@@ -1,0 +1,51 @@
+﻿#Game No : 16120384847 
+***** Hand History for Game 16120384847 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:6  Blinds-Antes(300/600 -50) - Saturday, May 20, 18:50:53 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 29,850 )
+Seat 5: Bailey07 ( 54,622 )
+Seat 7: Figarootoo ( 6,300 )
+Seat 1: ROGUE63 ( 54,476 )
+Seat 3: alt0idman ( 86,400 )
+Seat 4: qVaturrrr ( 39,269 )
+Seat 2: raypass ( 29,814 )
+Trny:138340262 Level:6 
+Blinds-Antes(300/600 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Anaconda75 posts ante [50]
+Figarootoo posts ante [50]
+qVaturrrr posts small blind [300].
+Bailey07 posts big blind [600].
+** Dealing down cards **
+Dealt to Figarootoo [  8h 8d ]
+Anaconda75 folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo will be using their time bank for this hand.
+Vozevut7 has joined the table.
+Figarootoo is all-In  [6,250]
+ROGUE63 calls [6,250]
+raypass folds
+alt0idman folds
+qVaturrrr folds
+Bailey07 calls [5,650]
+** Dealing Flop ** [ 3d, Kd, 5d ]
+Bailey07 bets [600]
+ROGUE63 is all-In  [48,176]
+Bailey07 calls [47,576]
+** Dealing Turn ** [ 7d ]
+** Dealing River ** [ Kc ]
+Bailey07 shows [ Jd, Jh ]a flush, King high with Jack kicker.
+Figarootoo shows [ 8h, 8d ]a flush, King high.
+ROGUE63 shows [ Ks, 6s ]three of a kind, Kings.
+Bailey07 wins 96,352 chips from the side pot 1 with a flush, King high with Jack kicker.
+Bailey07 wins 19,400 chips from the main pot with a flush, King high with Jack kicker.
+Player Figarootoo finished in 211.
+Player ROGUE63 finished in 210.
+Bailey07 has knocked out Figarootoo and won a $0.20 USD bounty prize.
+Bailey07 has knocked out ROGUE63 and won a $0.20 USD bounty prize.

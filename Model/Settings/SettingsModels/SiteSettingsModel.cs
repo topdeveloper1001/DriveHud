@@ -53,6 +53,7 @@ namespace Model.Settings
                 EnumPokerSites.BlackChipPoker,
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
+                EnumPokerSites.PartyPoker
             };
 
             SitesModelList = sites.Select(x => new SiteModel

@@ -18,6 +18,7 @@ using HandHistories.Parser.Parsers.FastParser._888;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.Parsers.FastParser.Winning;
+using HandHistories.Parser.Parsers.FastParser.PartyPoker;
 using HandHistories.Parser.Utils.Extensions;
 using System;
 
@@ -46,6 +47,8 @@ namespace HandHistories.Parser.Parsers.Factory
         {
             switch (siteName)
             {
+                case EnumPokerSites.PartyPoker:
+                    return new PartyPokerFastParserImpl(siteName);
                 case EnumPokerSites.PokerStars:
                     return new PokerStarsFastParserImpl(siteName);
                 case EnumPokerSites.IPoker:

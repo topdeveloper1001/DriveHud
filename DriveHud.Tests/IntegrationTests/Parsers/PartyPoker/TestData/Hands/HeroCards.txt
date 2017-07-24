@@ -1,0 +1,53 @@
+﻿#Game No : 16236783882 
+***** Hand History for Game 16236783882 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:142819960 Level:2  Blinds-Antes(15/30 -4) - Tuesday, July 04, 16:35:49 CDT 2017
+Table Turbo (142819960) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 8/9 
+Seat 6: Hui xxx ( 990 )
+Seat 8: Laantho ( 1,180 )
+Seat 3: Peon84 ( 1,299 )
+Seat 4: cAsh0o ( 1 )
+Seat 1: colaboy1967 ( 3,386 )
+Seat 7: dessens12 ( 1,410 )
+Seat 2: ken12241224 ( 3,443 )
+Seat 5: vyachikr ( 1,791 )
+Trny:142819960 Level:2 
+Blinds-Antes(15/30 -4)
+colaboy1967 posts ante [4]
+ken12241224 posts ante [4]
+Peon84 posts ante [4]
+cAsh0o posts ante [1]
+vyachikr posts ante [4]
+Hui xxx posts ante [4]
+dessens12 posts ante [4]
+Laantho posts ante [4]
+Peon84 posts small blind [15].
+cAsh0o posts big blind [0].
+** Dealing down cards **
+Dealt to Peon84 [  3d Js ]
+vyachikr folds
+Hui xxx folds
+dessens12 folds
+Laantho calls [30]
+colaboy1967 calls [30]
+ken12241224 folds
+Peon84 folds
+** Dealing Flop ** [ 6c, Jd, 4d ]
+Laantho checks
+colaboy1967 bets [52]
+Laantho calls [52]
+** Dealing Turn ** [ 8s ]
+Laantho checks
+colaboy1967 bets [208]
+Laantho calls [208]
+** Dealing River ** [ 7c ]
+Laantho bets [90]
+colaboy1967 calls [90]
+Laantho shows [ 7d, 7s ]three of a kind, Sevens.
+colaboy1967 doesn't show [ Jh, 6h ]two pairs, Jacks and Sixes.
+cAsh0o doesn't show [ 9h, 7h ]a pair of Sevens.
+Laantho wins 796 chips from the side pot 1 with three of a kind, Sevens.
+Laantho wins 8 chips from the main pot with three of a kind, Sevens.
+Player cAsh0o finished in 8.
+Game #16236786404 starts.

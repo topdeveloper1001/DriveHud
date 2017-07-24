@@ -1,0 +1,2221 @@
+***** Hand History for Game 169430917 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 19:59:11 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $433.11 USD )
+Seat 2: TTTTTTTTWO ( $421.56 USD )
+Seat 5: daxesh ( $404 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+TTTTTTTTWO raises [$10 USD]
+Moose4Life folds
+daxesh folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $16 USD
+
+
+***** Hand History for Game 169430945 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 19:59:22 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $433.11 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $400 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh raises [$10 USD]
+NILKNARF calls [$8 USD]
+** Dealing Flop ** [ 3d, Jd, Ac ]
+daxesh checks
+NILKNARF checks
+** Dealing Turn ** [ 6h ]
+daxesh bets [$17 USD]
+NILKNARF folds
+daxesh does not show cards.
+daxesh wins $39.67 USD
+
+
+***** Hand History for Game 169431031 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:00:08 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $421.11 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $410.67 USD )
+NILKNARF posts small blind [$2 USD].
+TTTTTTTTWO posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+daxesh raises [$12 USD]
+NILKNARF folds
+TTTTTTTTWO folds
+daxesh does not show cards.
+daxesh wins $18 USD
+
+
+***** Hand History for Game 169431078 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:00:28 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $419.11 USD )
+Seat 2: TTTTTTTTWO ( $423.56 USD )
+Seat 5: daxesh ( $416.67 USD )
+TTTTTTTTWO posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF folds
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh does not show cards.
+daxesh wins $18 USD
+
+
+***** Hand History for Game 169431097 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:00:42 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $419.11 USD )
+Seat 2: TTTTTTTTWO ( $421.56 USD )
+Seat 5: daxesh ( $422.67 USD )
+Seat 1: vladz1992 ( $0 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+vladz1992 has joined the table.
+TTTTTTTTWO raises [$10 USD]
+Moose4Life folds
+daxesh folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $16 USD
+
+
+***** Hand History for Game 169431141 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:01:01 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $419.11 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $418.67 USD )
+Seat 1: vladz1992 ( $120 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh raises [$10 USD]
+NILKNARF calls [$8 USD]
+** Dealing Flop ** [ Jh, 9d, Qh ]
+daxesh bets [$17 USD]
+NILKNARF folds
+daxesh does not show cards.
+daxesh wins $39.67 USD
+
+
+***** Hand History for Game 169431207 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:01:22 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $407.11 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $429.34 USD )
+Seat 1: vladz1992 ( $120 USD )
+NILKNARF posts small blind [$2 USD].
+vladz1992 posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life raises [$11 USD]
+daxesh folds
+NILKNARF will be using their time bank for this hand.
+NILKNARF calls [$9 USD]
+vladz1992 calls [$7 USD]
+** Dealing Flop ** [ Qs, 3s, 9c ]
+NILKNARF checks
+vladz1992 checks
+Moose4Life bets [$21 USD]
+NILKNARF folds
+vladz1992 folds
+Moose4Life does not show cards.
+Moose4Life wins $52.17 USD
+
+
+***** Hand History for Game 169431327 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:02:16 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $420.17 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $429.34 USD )
+Seat 1: vladz1992 ( $109 USD )
+vladz1992 posts small blind [$2 USD].
+TTTTTTTTWO posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+daxesh folds
+NILKNARF folds
+vladz1992 folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $6 USD
+
+
+***** Hand History for Game 169431355 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:02:30 EDT 2017
+Table Neptune (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $420.17 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $429.56 USD )
+Seat 5: daxesh ( $429.34 USD )
+Seat 1: vladz1992 ( $107 USD )
+TTTTTTTTWO posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh folds
+NILKNARF folds
+vladz1992 folds
+TTTTTTTTWO folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169431395 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:02:47 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $422.17 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $429.34 USD )
+Seat 1: vladz1992 ( $107 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+vladz1992 folds
+TTTTTTTTWO folds
+Moose4Life raises [$9 USD]
+daxesh folds
+Moose4Life does not show cards.
+Moose4Life wins $15 USD
+
+
+***** Hand History for Game 169431438 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:03:03 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $426.17 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $427.56 USD )
+Seat 5: daxesh ( $425.34 USD )
+Seat 1: vladz1992 ( $107 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+vladz1992 calls [$4 USD]
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh folds
+NILKNARF checks
+** Dealing Flop ** [ 3d, 3c, 5d ]
+NILKNARF checks
+vladz1992 checks
+** Dealing Turn ** [ 7d ]
+NILKNARF checks
+vladz1992 checks
+** Dealing River ** [ 5h ]
+NILKNARF checks
+vladz1992 checks
+NILKNARF shows [ 4s, Kc ]two pairs, Fives and Threes with King kicker.
+vladz1992 doesn't show [ Jh, Qs ]two pairs, Fives and Threes.
+NILKNARF wins $9.45 USD from the main pot with two pairs, Fives and Threes with King kicker.
+
+
+***** Hand History for Game 169431716 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:04:59 EDT 2017
+Table Neptune (Real Money)
+Seat 1 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $403.45 USD )
+Seat 2: TTTTTTTTWO ( $415.56 USD )
+Seat 5: daxesh ( $480.90 USD )
+Seat 1: vladz1992 ( $97 USD )
+TTTTTTTTWO posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF folds
+vladz1992 raises [$32 USD]
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh is all-In  [$468.90 USD]
+vladz1992 is all-In  [$65 USD]
+** Dealing Flop ** [ 4h, 8c, 9h ]
+** Dealing Turn ** [ Qh ]
+** Dealing River ** [ Th ]
+vladz1992 shows [ As, Ks ]high card Ace.
+daxesh shows [ Ts, Td ]three of a kind, Tens.
+daxesh wins $383.90 USD from the side pot 1 with three of a kind, Tens.
+daxesh wins $197 USD from the main pot with three of a kind, Tens.
+
+
+***** Hand History for Game 169431811 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:05:30 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $403.45 USD )
+Seat 2: TTTTTTTTWO ( $413.56 USD )
+Seat 5: daxesh ( $580.90 USD )
+Seat 1: vladz1992 ( $0 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+vladz1992 has left the table.
+TTTTTTTTWO raises [$10 USD]
+Moose4Life folds
+daxesh folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $16 USD
+
+
+***** Hand History for Game 169431853 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:05:45 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $403.45 USD )
+Seat 2: TTTTTTTTWO ( $419.56 USD )
+Seat 5: daxesh ( $576.90 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh folds
+NILKNARF does not show cards.
+NILKNARF wins $6 USD
+
+
+***** Hand History for Game 169431883 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:05:56 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $405.45 USD )
+Seat 2: TTTTTTTTWO ( $419.56 USD )
+Seat 5: daxesh ( $574.90 USD )
+NILKNARF posts small blind [$2 USD].
+TTTTTTTTWO posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+daxesh folds
+NILKNARF folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $6 USD
+
+
+***** Hand History for Game 169431899 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:06:04 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $403.45 USD )
+Seat 2: TTTTTTTTWO ( $421.56 USD )
+Seat 5: daxesh ( $574.90 USD )
+TTTTTTTTWO posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF folds
+TTTTTTTTWO raises [$42 USD]
+Moose4Life folds
+daxesh calls [$32 USD]
+** Dealing Flop ** [ Qs, 6d, 5s ]
+TTTTTTTTWO bets [$45 USD]
+daxesh calls [$45 USD]
+** Dealing Turn ** [ Qc ]
+TTTTTTTTWO checks
+daxesh checks
+** Dealing River ** [ Kh ]
+TTTTTTTTWO checks
+daxesh checks
+TTTTTTTTWO shows [ 2s, As ]a pair of Queens with Ace kicker.
+daxesh doesn't show [ 9s, Js ]a pair of Queens.
+TTTTTTTTWO wins $180 USD from the main pot with a pair of Queens with Ace kicker.
+
+
+***** Hand History for Game 169432070 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:07:08 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $403.45 USD )
+Seat 2: TTTTTTTTWO ( $512.56 USD )
+Seat 5: daxesh ( $485.90 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF raises [$12 USD]
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh raises [$38 USD]
+NILKNARF is disconnected. We will wait for NILKNARF to reconnect for a maximum of 14 seconds.
+NILKNARF calls [$30 USD]
+** Dealing Flop ** [ 2s, Jh, 4d ]
+daxesh bets [$42 USD]
+NILKNARF calls [$42 USD]
+** Dealing Turn ** [ 3s ]
+daxesh bets [$126 USD]
+NILKNARF folds
+daxesh does not show cards.
+daxesh wins $294 USD
+
+
+***** Hand History for Game 169432223 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:08:10 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $512.56 USD )
+Seat 5: daxesh ( $569.90 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life folds
+daxesh folds
+NILKNARF does not show cards.
+NILKNARF wins $6 USD
+
+
+***** Hand History for Game 169432248 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:08:19 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $402 USD )
+Seat 2: TTTTTTTTWO ( $512.56 USD )
+Seat 5: daxesh ( $567.90 USD )
+NILKNARF posts small blind [$2 USD].
+TTTTTTTTWO posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 has joined the table.
+daxesh folds
+NILKNARF folds
+TTTTTTTTWO does not show cards.
+TTTTTTTTWO wins $6 USD
+
+
+***** Hand History for Game 169432284 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:08:32 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $120 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $514.56 USD )
+Seat 5: daxesh ( $567.90 USD )
+TTTTTTTTWO posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 checks
+daxesh folds
+NILKNARF folds
+TTTTTTTTWO calls [$2 USD]
+Moose4Life checks
+** Dealing Flop ** [ Qs, As, 6h ]
+TTTTTTTTWO checks
+Moose4Life checks
+Just1Time33 checks
+** Dealing Turn ** [ 9d ]
+TTTTTTTTWO bets [$8.50 USD]
+Moose4Life folds
+Just1Time33 calls [$8.50 USD]
+** Dealing River ** [ Qh ]
+TTTTTTTTWO checks
+Just1Time33 checks
+TTTTTTTTWO shows [ 2c, Ah ]two pairs, Aces and Queens.
+Just1Time33 doesn't show [ Jd, 9h ]two pairs, Queens and Nines.
+TTTTTTTTWO wins $27.39 USD from the main pot with two pairs, Aces and Queens.
+
+
+***** Hand History for Game 169432382 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:09:15 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $107.50 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $400 USD )
+Seat 2: TTTTTTTTWO ( $529.45 USD )
+Seat 5: daxesh ( $567.90 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+daxesh folds
+NILKNARF raises [$12 USD]
+TTTTTTTTWO folds
+Moose4Life folds
+Just1Time33 calls [$8 USD]
+** Dealing Flop ** [ 6c, 3d, 4d ]
+Just1Time33 checks
+NILKNARF bets [$12.28 USD]
+Just1Time33 calls [$12.28 USD]
+** Dealing Turn ** [ 3c ]
+Just1Time33 checks
+NILKNARF bets [$23.88 USD]
+Just1Time33 calls [$23.88 USD]
+** Dealing River ** [ 7s ]
+Just1Time33 checks
+NILKNARF checks
+Just1Time33 shows [ Qd, Kc ]a pair of Threes.
+NILKNARF shows [ 9d, 9h ]two pairs, Nines and Threes.
+NILKNARF wins $95.32 USD from the main pot with two pairs, Nines and Threes.
+
+
+***** Hand History for Game 169432455 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:09:45 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $59.34 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $447.16 USD )
+Seat 2: TTTTTTTTWO ( $529.45 USD )
+Seat 5: daxesh ( $567.90 USD )
+Just1Time33 posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+TTTTTTTTWO folds
+Moose4Life folds
+Just1Time33 calls [$2 USD]
+daxesh checks
+** Dealing Flop ** [ Tc, 4c, 5d ]
+Just1Time33 bets [$7.56 USD]
+daxesh folds
+Just1Time33 does not show cards.
+Just1Time33 wins $15.12 USD
+
+
+***** Hand History for Game 169432504 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:10:04 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $62.90 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $447.16 USD )
+Seat 2: TTTTTTTTWO ( $529.45 USD )
+Seat 5: daxesh ( $563.90 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+TTTTTTTTWO folds
+Moose4Life raises [$11 USD]
+Just1Time33 is all-In  [$62.90 USD]
+daxesh folds
+NILKNARF calls [$58.90 USD]
+Moose4Life calls [$51.90 USD]
+** Dealing Flop ** [ Qh, Jd, 9s ]
+NILKNARF checks
+Moose4Life checks
+** Dealing Turn ** [ 3s ]
+NILKNARF checks
+Moose4Life checks
+** Dealing River ** [ 8h ]
+NILKNARF bets [$93.85 USD]
+Moose4Life folds
+NILKNARF shows [ Tc, Th ]a straight, Eight to Queen.
+Just1Time33 doesn't show [ Jh, Ad ]a pair of Jacks.
+NILKNARF wins $93.85 USD from the side pot 1 with a straight, Eight to Queen.
+NILKNARF wins $187.70 USD from the main pot with a straight, Eight to Queen.
+
+
+***** Hand History for Game 169432648 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:11:02 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $571.96 USD )
+Seat 2: TTTTTTTTWO ( $529.45 USD )
+Seat 5: daxesh ( $561.90 USD )
+NILKNARF posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh folds
+NILKNARF folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+TTTTTTTTWO has left the table.
+LOL oay the a h ole
+
+
+***** Hand History for Game 169432673 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:11:11 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $402 USD )
+Seat 6: NILKNARF ( $569.96 USD )
+Seat 5: daxesh ( $561.90 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+Moose4Life folds
+daxesh does not show cards.
+daxesh wins $6 USD
+
+
+***** Hand History for Game 169432707 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:11:25 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $569.96 USD )
+Seat 5: daxesh ( $563.90 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+daxesh folds
+NILKNARF does not show cards.
+NILKNARF wins $6 USD
+
+
+***** Hand History for Game 169432726 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:11:34 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $571.96 USD )
+Seat 5: daxesh ( $561.90 USD )
+NILKNARF posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF folds
+Moose4Life folds
+daxesh does not show cards.
+daxesh wins $18 USD
+
+
+***** Hand History for Game 169432768 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:11:50 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $569.96 USD )
+Seat 5: daxesh ( $567.90 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF: gimme dat
+NILKNARF folds
+Moose4Life folds
+daxesh does not show cards.
+daxesh wins $6 USD
+
+
+***** Hand History for Game 169432795 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:12:03 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $569.96 USD )
+Seat 5: daxesh ( $569.90 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+daxesh raises [$10 USD]
+NILKNARF calls [$8 USD]
+** Dealing Flop ** [ 5c, 4h, 9d ]
+daxesh bets [$17 USD]
+NILKNARF calls [$17 USD]
+** Dealing Turn ** [ Qd ]
+daxesh checks
+NILKNARF bets [$28 USD]
+daxesh calls [$28 USD]
+** Dealing River ** [ 7h ]
+daxesh checks
+NILKNARF checks
+daxesh shows [ Jh, Ad ]high card Ace.
+NILKNARF shows [ 7c, 6h ]a pair of Sevens.
+NILKNARF wins $112 USD from the main pot with a pair of Sevens.
+
+
+***** Hand History for Game 169432881 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:12:38 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $624.96 USD )
+Seat 5: daxesh ( $512.90 USD )
+NILKNARF posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh folds
+NILKNARF raises [$10 USD]
+Moose4Life calls [$8 USD]
+** Dealing Flop ** [ 2d, Ah, Js ]
+porkchopbd has joined the table.
+NILKNARF bets [$8 USD]
+Moose4Life folds
+NILKNARF does not show cards.
+NILKNARF wins $30.67 USD
+
+
+***** Hand History for Game 169432923 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:12:57 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $635.63 USD )
+Seat 5: daxesh ( $512.90 USD )
+Seat 2: porkchopbd ( $400 USD )
+Moose4Life posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF raises [$8 USD]
+Moose4Life folds
+daxesh raises [$24 USD]
+NILKNARF folds
+daxesh does not show cards.
+daxesh wins $38 USD
+
+
+***** Hand History for Game 169432980 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:13:15 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $627.63 USD )
+Seat 5: daxesh ( $522.90 USD )
+Seat 2: porkchopbd ( $400 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$11 USD]
+daxesh folds
+NILKNARF calls [$7 USD]
+** Dealing Flop ** [ 2d, Td, As ]
+NILKNARF checks
+Moose4Life checks
+** Dealing Turn ** [ Ac ]
+NILKNARF checks
+Moose4Life checks
+** Dealing River ** [ 3s ]
+NILKNARF bets [$8 USD]
+Moose4Life folds
+NILKNARF does not show cards.
+NILKNARF wins $30.67 USD
+
+
+***** Hand History for Game 169433076 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:13:59 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $0 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $639.30 USD )
+Seat 5: daxesh ( $520.90 USD )
+Seat 2: porkchopbd ( $400 USD )
+NILKNARF posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$11 USD]
+daxesh folds
+NILKNARF folds
+porkchopbd folds
+Moose4Life does not show cards.
+Moose4Life wins $17 USD
+
+
+***** Hand History for Game 169433101 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:14:11 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $120 USD )
+Seat 3: Moose4Life ( $406 USD )
+Seat 6: NILKNARF ( $637.30 USD )
+Seat 5: daxesh ( $520.90 USD )
+Seat 2: porkchopbd ( $396 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF calls [$12 USD]
+porkchopbd folds
+Moose4Life folds
+** Dealing Flop ** [ 6h, 8d, 8c ]
+daxesh checks
+NILKNARF checks
+** Dealing Turn ** [ Jd ]
+daxesh checks
+NILKNARF bets [$14.17 USD]
+daxesh calls [$14.17 USD]
+** Dealing River ** [ 2c ]
+daxesh checks
+NILKNARF bets [$37.56 USD]
+daxesh folds
+NILKNARF does not show cards.
+NILKNARF wins $93.90 USD
+
+
+***** Hand History for Game 169433197 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:14:52 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $120 USD )
+Seat 3: Moose4Life ( $402 USD )
+Seat 6: NILKNARF ( $667.47 USD )
+Seat 5: daxesh ( $494.73 USD )
+Seat 2: porkchopbd ( $394 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+daxesh raises [$12 USD]
+NILKNARF folds
+porkchopbd raises [$40 USD]
+Moose4Life folds
+Just1Time33 folds
+daxesh is all-In  [$482.73 USD]
+porkchopbd folds
+daxesh does not show cards.
+daxesh wins $540.73 USD
+
+
+***** Hand History for Game 169433279 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:15:24 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $116 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $667.47 USD )
+Seat 5: daxesh ( $540.73 USD )
+Seat 2: porkchopbd ( $354 USD )
+Just1Time33 posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF raises [$12 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 calls [$10 USD]
+daxesh calls [$8 USD]
+** Dealing Flop ** [ 6d, 3s, 9h ]
+Just1Time33 checks
+daxesh checks
+NILKNARF checks
+** Dealing Turn ** [ 4c ]
+Just1Time33 checks
+daxesh bets [$22 USD]
+NILKNARF folds
+Just1Time33 folds
+daxesh does not show cards.
+daxesh wins $56 USD
+
+
+***** Hand History for Game 169433390 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:16:06 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $104 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $655.47 USD )
+Seat 5: daxesh ( $562.73 USD )
+Seat 2: porkchopbd ( $354 USD )
+daxesh posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd raises [$8 USD]
+Moose4Life folds
+Just1Time33 calls [$8 USD]
+daxesh folds
+NILKNARF calls [$4 USD]
+** Dealing Flop ** [ 3c, 3s, 4d ]
+NILKNARF checks
+porkchopbd bets [$24.56 USD]
+Just1Time33 calls [$24.56 USD]
+NILKNARF folds
+** Dealing Turn ** [ Ah ]
+porkchopbd checks
+Just1Time33 checks
+** Dealing River ** [ 2s ]
+porkchopbd checks
+Just1Time33 checks
+porkchopbd shows [ Qh, Ts ]a pair of Threes with Ten kicker.
+Just1Time33 doesn't show [ Qd, 9d ]a pair of Threes.
+porkchopbd wins $72.12 USD from the main pot with a pair of Threes with Ten kicker.
+
+
+***** Hand History for Game 169433487 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:16:45 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $71.44 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $647.47 USD )
+Seat 5: daxesh ( $560.73 USD )
+Seat 2: porkchopbd ( $393.56 USD )
+NILKNARF posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 folds
+daxesh folds
+NILKNARF raises [$10 USD]
+porkchopbd folds
+NILKNARF does not show cards.
+NILKNARF wins $16 USD
+
+
+***** Hand History for Game 169433523 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:16:57 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $71.44 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $651.47 USD )
+Seat 5: daxesh ( $560.73 USD )
+Seat 2: porkchopbd ( $389.56 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 calls [$4 USD]
+daxesh raises [$24 USD]
+NILKNARF folds
+porkchopbd folds
+Moose4Life folds
+Just1Time33 calls [$20 USD]
+** Dealing Flop ** [ 9h, Js, 3h ]
+Just1Time33 is all-In  [$47.44 USD]
+daxesh calls [$47.44 USD]
+** Dealing Turn ** [ Jc ]
+** Dealing River ** [ Kd ]
+Just1Time33 shows [ Qc, Jh ]three of a kind, Jacks.
+daxesh shows [ 5h, 5c ]two pairs, Jacks and Fives.
+Just1Time33 wins $145.88 USD from the main pot with three of a kind, Jacks.
+
+
+***** Hand History for Game 169433593 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:17:20 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $145.88 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $651.47 USD )
+Seat 5: daxesh ( $489.29 USD )
+Seat 2: porkchopbd ( $387.56 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+daxesh folds
+NILKNARF raises [$12 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 calls [$8 USD]
+** Dealing Flop ** [ Ks, 6d, 8d ]
+Just1Time33 checks
+NILKNARF bets [$8 USD]
+Just1Time33 calls [$8 USD]
+** Dealing Turn ** [ 4c ]
+Just1Time33 checks
+NILKNARF bets [$26.44 USD]
+Just1Time33 folds
+NILKNARF does not show cards.
+NILKNARF wins $66.11 USD
+
+
+***** Hand History for Game 169433667 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:17:49 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $125.88 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $671.14 USD )
+Seat 5: daxesh ( $489.29 USD )
+Seat 2: porkchopbd ( $387.56 USD )
+Just1Time33 posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+porkchopbd folds
+Moose4Life folds
+Just1Time33 folds
+daxesh does not show cards.
+daxesh wins $6 USD
+
+
+***** Hand History for Game 169433712 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:18:04 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $123.88 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 6: NILKNARF ( $671.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $387.56 USD )
+NILKNARF posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$8 USD]
+Just1Time33 calls [$8 USD]
+NILKNARF folds
+porkchopbd calls [$4 USD]
+** Dealing Flop ** [ 5h, 3d, As ]
+porkchopbd checks
+Moose4Life bets [$12.28 USD]
+Just1Time33 folds
+porkchopbd folds
+Moose4Life does not show cards.
+Moose4Life wins $36.84 USD
+
+
+***** Hand History for Game 169433800 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:18:42 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $115.88 USD )
+Seat 3: Moose4Life ( $416.56 USD )
+Seat 6: NILKNARF ( $669.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $379.56 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+NILKNARF raises [$8 USD]
+porkchopbd folds
+Moose4Life folds
+NILKNARF does not show cards.
+NILKNARF wins $14 USD
+
+
+***** Hand History for Game 169433851 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:19:01 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $115.88 USD )
+Seat 3: Moose4Life ( $412.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $377.56 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+porkchopbd folds
+Moose4Life raises [$10 USD]
+Just1Time33 calls [$8 USD]
+** Dealing Flop ** [ 5d, 8c, As ]
+Moose4Life checks
+Just1Time33 checks
+** Dealing Turn ** [ 4c ]
+Moose4Life checks
+Just1Time33 bets [$22.67 USD]
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $45.34 USD
+
+
+***** Hand History for Game 169433953 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:19:37 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $126.55 USD )
+Seat 3: Moose4Life ( $400.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $377.56 USD )
+Just1Time33 posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life folds
+Just1Time33 folds
+NILKNARF does not show cards.
+NILKNARF wins $6 USD
+
+
+***** Hand History for Game 169433971 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:19:46 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $124.55 USD )
+Seat 3: Moose4Life ( $400.56 USD )
+Seat 6: NILKNARF ( $677.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $377.56 USD )
+NILKNARF posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life raises [$11 USD]
+Just1Time33 folds
+NILKNARF folds
+porkchopbd folds
+Moose4Life does not show cards.
+Moose4Life wins $17 USD
+
+
+***** Hand History for Game 169433989 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:19:55 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $124.55 USD )
+Seat 3: Moose4Life ( $406.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $373.56 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+NILKNARF folds
+porkchopbd folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169434037 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:20:09 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $124.55 USD )
+Seat 3: Moose4Life ( $408.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $371.56 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+porkchopbd folds
+Moose4Life raises [$9 USD]
+Just1Time33 folds
+Moose4Life does not show cards.
+Moose4Life wins $15 USD
+
+
+***** Hand History for Game 169434071 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:20:22 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $120.55 USD )
+Seat 3: Moose4Life ( $412.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $371.56 USD )
+Just1Time33 posts small blind [$2 USD].
+NILKNARF posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life raises [$11 USD]
+Just1Time33 calls [$9 USD]
+NILKNARF folds
+** Dealing Flop ** [ Ks, 7c, 9h ]
+Just1Time33 checks
+Moose4Life checks
+** Dealing Turn ** [ Ts ]
+Just1Time33 checks
+Moose4Life checks
+** Dealing River ** [ 3h ]
+Just1Time33 checks
+Moose4Life checks
+Just1Time33 shows [ 8c, 7s ]a pair of Sevens.
+Moose4Life doesn't show [ Ah, 4c ]high card Ace.
+Just1Time33 wins $24.56 USD from the main pot with a pair of Sevens.
+
+
+***** Hand History for Game 169434149 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:20:52 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $134.11 USD )
+Seat 3: Moose4Life ( $401.56 USD )
+Seat 6: NILKNARF ( $671.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $371.56 USD )
+NILKNARF posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 folds
+NILKNARF raises [$10 USD]
+porkchopbd folds
+NILKNARF does not show cards.
+NILKNARF wins $16 USD
+
+
+***** Hand History for Game 169434182 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:21:02 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $134.11 USD )
+Seat 3: Moose4Life ( $401.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $367.56 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+NILKNARF folds
+porkchopbd folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169434210 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:21:11 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $134.11 USD )
+Seat 3: Moose4Life ( $403.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $365.56 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF folds
+porkchopbd folds
+Moose4Life raises [$10 USD]
+Just1Time33 folds
+Moose4Life does not show cards.
+Moose4Life wins $16 USD
+
+
+***** Hand History for Game 169434239 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:21:21 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $130.11 USD )
+Seat 3: Moose4Life ( $407.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $365.56 USD )
+Just1Time33 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 raises [$10 USD]
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $16 USD
+
+
+***** Hand History for Game 169434265 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:21:32 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $134.11 USD )
+Seat 3: Moose4Life ( $407.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $361.56 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 calls [$4 USD]
+porkchopbd calls [$2 USD]
+Moose4Life checks
+** Dealing Flop ** [ Th, 5h, Td ]
+porkchopbd bets [$5.67 USD]
+Moose4Life folds
+Just1Time33 calls [$5.67 USD]
+** Dealing Turn ** [ Jd ]
+porkchopbd checks
+Just1Time33 bets [$11.02 USD]
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $33.07 USD
+
+
+***** Hand History for Game 169434350 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:22:01 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $146.49 USD )
+Seat 3: Moose4Life ( $403.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $351.89 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life raises [$10 USD]
+Just1Time33 folds
+Moose4Life does not show cards.
+Moose4Life wins $16 USD
+
+
+***** Hand History for Game 169434394 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:22:19 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $142.49 USD )
+Seat 3: Moose4Life ( $407.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $351.89 USD )
+Just1Time33 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 calls [$2 USD]
+porkchopbd checks
+** Dealing Flop ** [ Js, 3c, 4h ]
+Just1Time33 bets [$4 USD]
+porkchopbd calls [$4 USD]
+** Dealing Turn ** [ Ac ]
+Just1Time33 bets [$4 USD]
+porkchopbd raises [$8 USD]
+Just1Time33 calls [$4 USD]
+** Dealing River ** [ 6c ]
+Just1Time33 checks
+porkchopbd bets [$15.11 USD]
+Just1Time33 calls [$15.11 USD]
+porkchopbd shows [ 8c, As ]a pair of Aces.
+Just1Time33 shows [ 7d, 5s ]a straight, Three to Seven.
+Just1Time33 wins $60.22 USD from the main pot with a straight, Three to Seven.
+
+
+***** Hand History for Game 169434512 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:22:57 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $171.60 USD )
+Seat 3: Moose4Life ( $407.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $320.78 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 raises [$16 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $22 USD
+
+
+***** Hand History for Game 169434551 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:23:13 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $177.60 USD )
+Seat 3: Moose4Life ( $403.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $318.78 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $6 USD
+
+
+***** Hand History for Game 169434596 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:23:28 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 4: Just1Time33 ( $179.60 USD )
+Seat 3: Moose4Life ( $401.56 USD )
+Seat 6: NILKNARF ( $675.14 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $318.78 USD )
+Just1Time33 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+NILKNARF has left the table.
+Moose4Life folds
+Just1Time33 calls [$2 USD]
+porkchopbd checks
+** Dealing Flop ** [ Ah, 4d, 2c ]
+Just1Time33 bets [$7.56 USD]
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $15.12 USD
+
+
+***** Hand History for Game 169434678 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:23:57 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 4/6
+Seat 4: Just1Time33 ( $183.16 USD )
+Seat 3: Moose4Life ( $401.56 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $314.78 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 has joined the table.
+Just1Time33 calls [$4 USD]
+porkchopbd folds
+Moose4Life checks
+** Dealing Flop ** [ 7d, Kh, 4c ]
+Moose4Life checks
+Just1Time33 checks
+** Dealing Turn ** [ Ah ]
+Moose4Life bets [$5 USD]
+Just1Time33 folds
+Moose4Life does not show cards.
+Moose4Life wins $14.45 USD
+
+
+***** Hand History for Game 169434780 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:24:36 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $179.16 USD )
+Seat 3: Moose4Life ( $407.01 USD )
+Seat 5: daxesh ( $491.29 USD )
+Seat 2: porkchopbd ( $312.78 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+daxesh posts big blind + dead [$6].
+** Dealing down cards **
+daxesh checks
+porkchopbd folds
+Moose4Life folds
+Just1Time33 raises [$12 USD]
+daxesh folds
+Just1Time33 does not show cards.
+Just1Time33 wins $24 USD
+
+
+***** Hand History for Game 169434893 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:25:18 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 6/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $187.16 USD )
+Seat 1: LOLYOUFOLD ( $0 USD )
+Seat 3: Moose4Life ( $405.01 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $312.78 USD )
+Just1Time33 posts small blind [$2 USD].
+daxesh posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd raises [$8 USD]
+Moose4Life folds
+Just1Time33 raises [$18 USD]
+daxesh folds
+porkchopbd calls [$12 USD]
+** Dealing Flop ** [ 9c, Qs, 3c ]
+Just1Time33 bets [$42 USD]
+porkchopbd calls [$42 USD]
+** Dealing Turn ** [ Js ]
+Just1Time33 checks
+porkchopbd checks
+** Dealing River ** [ Ad ]
+Just1Time33 checks
+porkchopbd checks
+Just1Time33 shows [ Qc, Ks ]a pair of Queens.
+porkchopbd doesn't show [ Ts, Jh ]a pair of Jacks.
+Just1Time33 wins $126 USD from the main pot with a pair of Queens.
+
+
+***** Hand History for Game 169435004 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:26:00 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $251.16 USD )
+Seat 3: Moose4Life ( $405.01 USD )
+Seat 5: daxesh ( $481.29 USD )
+Seat 2: porkchopbd ( $250.78 USD )
+daxesh posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life folds
+Just1Time33 folds
+daxesh raises [$10 USD]
+FATDAN44 folds
+daxesh does not show cards.
+daxesh wins $16 USD
+
+
+***** Hand History for Game 169435079 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:26:26 EDT 2017
+Table Neptune (Real Money)
+Seat 5 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $251.16 USD )
+Seat 3: Moose4Life ( $405.01 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $250.78 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 raises [$8 USD]
+daxesh folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $14 USD
+
+
+***** Hand History for Game 169435119 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:26:41 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $257.16 USD )
+Seat 3: Moose4Life ( $405.01 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $246.78 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 raises [$8 USD]
+daxesh folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd calls [$6 USD]
+Moose4Life calls [$4 USD]
+** Dealing Flop ** [ Jc, 9h, 3d ]
+porkchopbd checks
+Moose4Life checks
+Just1Time33 bets [$24 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $46.67 USD
+
+
+***** Hand History for Game 169435211 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:27:12 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $271.83 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $238.78 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd folds
+Moose4Life raises [$10 USD]
+Just1Time33 folds
+Moose4Life does not show cards.
+Moose4Life wins $16 USD
+
+
+***** Hand History for Game 169435280 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:27:42 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $267.83 USD )
+Seat 3: Moose4Life ( $404 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $238.78 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd calls [$4 USD]
+Moose4Life folds
+Just1Time33 calls [$2 USD]
+FATDAN44 checks
+** Dealing Flop ** [ 2c, 2s, Qd ]
+Just1Time33 checks
+FATDAN44 checks
+porkchopbd checks
+** Dealing Turn ** [ Ts ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+porkchopbd bets [$11.34 USD]
+Just1Time33 folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd does not show cards.
+porkchopbd wins $22.68 USD
+
+
+***** Hand History for Game 169435349 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:28:08 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $263.83 USD )
+Seat 3: Moose4Life ( $404 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $246.12 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 raises [$8 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $14 USD
+
+
+***** Hand History for Game 169435375 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:28:21 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $269.83 USD )
+Seat 3: Moose4Life ( $404 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $242.12 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 calls [$4 USD]
+FATDAN44 folds
+porkchopbd calls [$2 USD]
+Moose4Life raises [$12 USD]
+Just1Time33 calls [$12 USD]
+porkchopbd calls [$12 USD]
+** Dealing Flop ** [ 4s, 8c, Td ]
+porkchopbd checks
+Moose4Life checks
+Just1Time33 bets [$23 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $69 USD
+
+
+***** Hand History for Game 169435468 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:28:58 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $299.83 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $226.12 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd calls [$4 USD]
+Moose4Life folds
+Just1Time33 checks
+** Dealing Flop ** [ 9d, Qd, 3s ]
+Just1Time33 checks
+porkchopbd bets [$9.45 USD]
+Just1Time33 folds
+porkchopbd does not show cards.
+porkchopbd wins $18.90 USD
+
+
+***** Hand History for Game 169435529 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:29:22 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $295.83 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $231.57 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd calls [$4 USD]
+Moose4Life folds
+Just1Time33 calls [$2 USD]
+FATDAN44 checks
+** Dealing Flop ** [ 5c, Kd, 8d ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+porkchopbd checks
+** Dealing Turn ** [ 9h ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+porkchopbd checks
+** Dealing River ** [ Td ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+porkchopbd bets [$11.34 USD]
+Just1Time33 calls [$11.34 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd shows [ Ad, 2d ]a flush, Ace high.
+Just1Time33 doesn't show [ 4d, Ts ]a pair of Tens.
+porkchopbd wins $32.76 USD from the main pot with a flush, Ace high.
+
+
+***** Hand History for Game 169435639 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:30:06 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $280.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $248.99 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 raises [$8 USD]
+FATDAN44 folds
+porkchopbd calls [$4 USD]
+** Dealing Flop ** [ Tc, Jc, 2h ]
+porkchopbd bets [$17 USD]
+Just1Time33 raises [$40 USD]
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $73 USD
+
+
+***** Hand History for Game 169435712 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:30:33 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $400 USD )
+Seat 4: Just1Time33 ( $305.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $223.99 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$10 USD]
+porkchopbd folds
+Moose4Life folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169435740 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:30:43 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $406 USD )
+Seat 4: Just1Time33 ( $305.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $221.99 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 raises [$12 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 calls [$8 USD]
+** Dealing Flop ** [ 2h, 4d, 7c ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$16 USD]
+Just1Time33 calls [$16 USD]
+** Dealing Turn ** [ 9h ]
+Just1Time33 checks
+FATDAN44 checks
+** Dealing River ** [ 5c ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+Just1Time33 shows [ 5d, Ah ]a pair of Fives.
+FATDAN44 shows [ 6d, 6h ]a pair of Sixes.
+FATDAN44 wins $56 USD from the main pot with a pair of Sixes.
+
+
+***** Hand History for Game 169435815 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:31:12 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $434 USD )
+Seat 4: Just1Time33 ( $277.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $221.99 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd calls [$4 USD]
+Moose4Life folds
+Just1Time33 folds
+FATDAN44 checks
+** Dealing Flop ** [ 7s, 3h, Qd ]
+FATDAN44 checks
+porkchopbd checks
+** Dealing Turn ** [ Th ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+porkchopbd checks
+** Dealing River ** [ Ac ]
+FATDAN44 checks
+porkchopbd bets [$9.45 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd does not show cards.
+porkchopbd wins $18.90 USD
+
+
+***** Hand History for Game 169435889 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:31:44 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $430 USD )
+Seat 4: Just1Time33 ( $275.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $227.44 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 folds
+FATDAN44 raises [$10 USD]
+porkchopbd folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169435929 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:31:57 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $434 USD )
+Seat 4: Just1Time33 ( $275.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $223.44 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 raises [$8 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $14 USD
+
+
+***** Hand History for Game 169435956 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:32:08 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $434 USD )
+Seat 4: Just1Time33 ( $281.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $221.44 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 folds
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $6 USD
+
+
+***** Hand History for Game 169435981 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:32:18 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $434 USD )
+Seat 4: Just1Time33 ( $283.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $221.44 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd calls [$4 USD]
+Moose4Life folds
+Just1Time33 folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+** Dealing Flop ** [ Ah, 8h, 8s ]
+FATDAN44 checks
+porkchopbd bets [$9.45 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd does not show cards.
+porkchopbd wins $18.90 USD
+
+
+***** Hand History for Game 169436030 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:32:37 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $430 USD )
+Seat 4: Just1Time33 ( $281.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $226.89 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 folds
+FATDAN44 folds
+porkchopbd does not show cards.
+porkchopbd wins $6 USD
+
+
+***** Hand History for Game 169436076 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:32:53 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $428 USD )
+Seat 4: Just1Time33 ( $281.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $228.89 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 calls [$4 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd calls [$2 USD]
+Moose4Life checks
+** Dealing Flop ** [ 9d, 2h, 6s ]
+porkchopbd checks
+Moose4Life checks
+Just1Time33 checks
+** Dealing Turn ** [ Kd ]
+porkchopbd bets [$5.67 USD]
+Moose4Life folds
+Just1Time33 folds
+porkchopbd does not show cards.
+porkchopbd wins $17.01 USD
+
+
+***** Hand History for Game 169436196 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:33:40 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $428 USD )
+Seat 4: Just1Time33 ( $277.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $236.23 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+porkchopbd folds
+Moose4Life folds
+Just1Time33 does not show cards.
+Just1Time33 wins $6 USD
+
+
+***** Hand History for Game 169436240 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:33:56 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $428 USD )
+Seat 4: Just1Time33 ( $279.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $236.23 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life folds
+Just1Time33 raises [$6 USD]
+FATDAN44 calls [$4 USD]
+** Dealing Flop ** [ 3c, 4s, 6h ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$10 USD]
+Just1Time33 calls [$10 USD]
+** Dealing Turn ** [ 2c ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$22 USD]
+Just1Time33 calls [$22 USD]
+** Dealing River ** [ Qh ]
+Just1Time33 checks
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 bets [$50 USD]
+Just1Time33 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $128 USD
+
+
+***** Hand History for Game 169436384 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:34:53 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $466 USD )
+Seat 4: Just1Time33 ( $239.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $236.23 USD )
+FATDAN44 posts small blind [$2 USD].
+porkchopbd posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+Just1Time33 raises [$12 USD]
+FATDAN44 folds
+porkchopbd folds
+Just1Time33 does not show cards.
+Just1Time33 wins $18 USD
+
+
+***** Hand History for Game 169436428 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:35:12 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $464 USD )
+Seat 4: Just1Time33 ( $245.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $232.23 USD )
+porkchopbd posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 raises [$10 USD]
+porkchopbd folds
+Moose4Life folds
+FATDAN44 does not show cards.
+FATDAN44 wins $16 USD
+
+
+***** Hand History for Game 169436445 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:35:23 EDT 2017
+Table Neptune (Real Money)
+Seat 2 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $470 USD )
+Seat 4: Just1Time33 ( $245.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $230.23 USD )
+Moose4Life posts small blind [$2 USD].
+Just1Time33 posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 raises [$12 USD]
+porkchopbd folds
+Moose4Life folds
+Just1Time33 folds
+FATDAN44 does not show cards.
+FATDAN44 wins $18 USD
+
+
+***** Hand History for Game 169436481 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:35:32 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 5/6
+Seat 6: FATDAN44 ( $476 USD )
+Seat 4: Just1Time33 ( $241.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+Seat 2: porkchopbd ( $230.23 USD )
+Just1Time33 posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+porkchopbd folds
+Moose4Life raises [$11 USD]
+Just1Time33 folds
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$7 USD]
+** Dealing Flop ** [ 2h, 3c, Qs ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+Moose4Life bets [$12 USD]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 calls [$12 USD]
+** Dealing Turn ** [ 6h ]
+FATDAN44 checks
+Moose4Life checks
+** Dealing River ** [ Jd ]
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 checks
+Moose4Life checks
+FATDAN44 shows [ 5h, 5d ]a pair of Fives.
+Moose4Life doesn't show [ Ah, Kd ]high card Ace.
+FATDAN44 wins $46 USD from the main pot with a pair of Fives.
+porkchopbd has left the table.
+
+
+***** Hand History for Game 169436562 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:36:03 EDT 2017
+Table Neptune (Real Money)
+Seat 4 is the button
+Total number of players : 4/6
+Seat 6: FATDAN44 ( $499 USD )
+Seat 4: Just1Time33 ( $239.49 USD )
+Seat 3: Moose4Life ( $400 USD )
+Seat 5: daxesh ( $485.29 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+Just1Time33 folds
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+
+
+***** Hand History for Game 169436591 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:36:12 EDT 2017
+Table Neptune (Real Money)
+Seat 6 is the button
+Total number of players : 4/6
+Seat 6: FATDAN44 ( $497 USD )
+Seat 4: Just1Time33 ( $239.49 USD )
+Seat 3: Moose4Life ( $402 USD )
+Seat 5: daxesh ( $485.29 USD )
+FATDAN44 posts small blind [$2 USD].
+Moose4Life posts big blind [$4 USD].
+** Dealing down cards **
+FATDAN44 will be using their time bank for this hand.
+FATDAN44 folds
+Moose4Life does not show cards.
+Moose4Life wins $6 USD
+Just1Time33 has left the table.
+
+
+***** Hand History for Game 169436608 *****
+$2/$4 USD NL Texas Hold'em - Sunday, May 21, 20:36:17 EDT 2017
+Table Neptune (Real Money)
+Seat 3 is the button
+Total number of players : 3/6
+Seat 6: FATDAN44 ( $495 USD )
+Seat 3: Moose4Life ( $404 USD )
+Seat 5: daxesh ( $485.29 USD )
+Moose4Life posts small blind [$2 USD].
+FATDAN44 posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+FATDAN44 does not show cards.
+FATDAN44 wins $6 USD
+daxesh has left the table.
+
+

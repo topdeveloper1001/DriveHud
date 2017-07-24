@@ -70,6 +70,7 @@
     <Compile Include="Parsers\Exceptions\HandParseException.cs" />
     <Compile Include="Parsers\FastParser\Base\HandHistoryParserFastImpl.cs" />
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerSnG2FastParserImpl.cs" />

@@ -28,6 +28,7 @@ namespace DriveHUD.Entities
         BlackChipPoker = 11,
         WinningPokerNetwork = 12,
         TruePoker = 13,
-        YaPoker = 14
+        YaPoker = 14,
+        PartyPoker = 15
     }
 }
