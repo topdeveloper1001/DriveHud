@@ -123,7 +123,38 @@ namespace DriveHUD.Application.ViewModels.Registration
             ActivateCommand.Subscribe(x => Register());
 
             BuyCommand = ReactiveCommand.Create();
-            BuyCommand.Subscribe(x => Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink")));
+            BuyCommand.Subscribe(x =>
+            {
+                try
+                {
+                    Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink"));
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Could not open buy link", ex);
+                }
+            });
+
+            RenewCommand = ReactiveCommand.Create();
+            RenewCommand.Subscribe(x =>
+            {
+                try
+                {
+                    var serialToRenew = licenseService.LicenseInfos
+                        .Where(l => !string.IsNullOrEmpty(l.Serial) && !l.IsTrial)
+                        .OrderBy(l => l.ExpiryDate).FirstOrDefault()?
+                        .Serial;
+
+                    if (!string.IsNullOrWhiteSpace(serialToRenew))
+                    {
+                        Process.Start(BrowserHelper.GetDefaultBrowserPath(), string.Format(CommonResourceManager.Instance.GetResourceString("SystemSettings_RenewLicenseLink"), serialToRenew));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Could not open renew link", ex);
+                }
+            });
         }
 
         /// <summary>
@@ -750,7 +781,7 @@ namespace DriveHUD.Application.ViewModels.Registration
                 }
 
                 if (string.IsNullOrWhiteSpace(trialSerial))
-                {                    
+                {
                     LogProvider.Log.Error(this, "Couldn't register trial. Server error.");
                     InitializeMessage("Common_RegistrationView_TrialRegisterError");
                     return;

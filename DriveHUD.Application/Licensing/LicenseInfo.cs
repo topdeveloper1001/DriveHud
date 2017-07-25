@@ -169,7 +169,7 @@ namespace DriveHUD.Application.Licensing
                 case 'S':
                     return LicenseSubType.Small;
                 case 'M':
-                    return LicenseSubType.Micro;
+                    return LicenseSubType.Mid;
                 case 'P':
                     return LicenseSubType.Pro;
                 case 'T':
