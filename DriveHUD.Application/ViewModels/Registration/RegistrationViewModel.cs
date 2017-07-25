@@ -70,6 +70,12 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             licenses = new ObservableCollection<LicenseInfoViewModel>(licenseService.LicenseInfos.Where(x => x.IsRegistered && !x.IsTrial).Select(x => new LicenseInfoViewModel(x)));
 
+            if (licenseService.IsExpiringSoon || licenseService.IsExpired)
+            {
+                InitializeExpiringSoon();
+                return;
+            }
+
             if (!licenseService.IsRegistered)
             {
                 if (licenseService.IsTrialExpired)
@@ -87,12 +93,6 @@ namespace DriveHUD.Application.ViewModels.Registration
             if (licenseService.IsTrial)
             {
                 InitializeTrialActive();
-                return;
-            }
-
-            if (licenseService.IsExpiringSoon || licenseService.IsExpired)
-            {
-                InitializeExpiringSoon();
                 return;
             }
         }
@@ -287,11 +287,11 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsLicenseDaysLeftVisible = false;
         }
 
-        private void InitializeMessage(string messageKey)
+        private void InitializeMessage(string messageKey, params object[] args)
         {
             state = RegistrationState.Message;
 
-            TextMessage = CommonResourceManager.Instance.GetResourceString(messageKey);
+            TextMessage = string.Format(CommonResourceManager.Instance.GetResourceString(messageKey), args);
 
             IsSerialVisible = false;
             IsEmailVisible = false;
@@ -340,9 +340,20 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             state = RegistrationState.ExpiringSoon;
 
-            TextMessage = licenseService.IsExpired ?
-                            CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText") :
-                            CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText");
+            if (licenseService.IsExpired)
+            {
+                var splitter = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiredSerialSplitter");
+
+                var expiredLicenses = string.Join(splitter, licenseService.LicenseInfos
+                    .Where(x => !x.IsTrial && x.IsExpired && !string.IsNullOrEmpty(x.Serial))
+                    .Select(x => x.Serial));
+
+                TextMessage = string.Format(CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiredText"), expiredLicenses);
+            }
+            else
+            {
+                TextMessage = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText");
+            }
 
             IsSerialVisible = false;
             IsEmailVisible = false;
@@ -825,7 +836,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             }
             catch (LicenseExpiredException)
             {
-                InitializeMessage("Common_RegistrationView_ExpiredText");
+                InitializeMessage("Common_RegistrationView_ExpiredText", serial);
                 return false;
             }
             catch

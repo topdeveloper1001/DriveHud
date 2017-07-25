@@ -1520,7 +1520,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your license has expired. Please renew..
+        ///   Looks up a localized string similar to , .
+        /// </summary>
+        internal static string Common_RegistrationView_ExpiredSerialSplitter {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_ExpiredSerialSplitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your license(s) has expired ({0}). Please renew..
         /// </summary>
         internal static string Common_RegistrationView_ExpiredText {
             get {
