@@ -133,7 +133,9 @@ namespace DriveHUD.Application
 
                     var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
-                    if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
+                    if (!isLicenseValid || licenseService.IsTrial ||
+                        (licenseService.IsRegistered && licenseService.IsExpiringSoon) ||
+                        !licenseService.IsRegistered)
                     {
                         var registrationViewModel = new RegistrationViewModel(false);
                         mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
@@ -151,7 +153,7 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
-                 
+
                     var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
                     var settingsModel = settingsService.GetSettings();
 

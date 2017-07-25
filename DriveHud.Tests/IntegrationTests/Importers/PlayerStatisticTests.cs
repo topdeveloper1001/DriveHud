@@ -267,7 +267,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void FacedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated("FacedThreeBetIsCalculated", x => x.Facedthreebetpreflop, fileName, pokerSite, playerName, expected);
-        }
+        }     
 
         protected virtual void AssertThatStatIsCalculated(string method, Expression<Func<Playerstatistic, int>> expression, string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {

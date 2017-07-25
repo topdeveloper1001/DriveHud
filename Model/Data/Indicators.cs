@@ -122,7 +122,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Didfourbet, Source.Couldfourbet);
+                return GetPercentage(Source.DidfourbetpreflopVirtualCounter, Source.CouldfourbetpreflopVirtualCounter);
             }
         }
 

@@ -70,7 +70,7 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             licenses = new ObservableCollection<LicenseInfoViewModel>(licenseService.LicenseInfos.Where(x => x.IsRegistered && !x.IsTrial).Select(x => new LicenseInfoViewModel(x)));
 
-            if (licenseService.IsExpiringSoon || licenseService.IsExpired)
+            if (licenseService.IsRegistered && licenseService.IsExpiringSoon)
             {
                 InitializeExpiringSoon();
                 return;
@@ -78,7 +78,11 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             if (!licenseService.IsRegistered)
             {
-                if (licenseService.IsTrialExpired)
+                if (licenseService.IsExpired)
+                {
+                    InitializeExpiringSoon();
+                }
+                else if (licenseService.IsTrialExpired)
                 {
                     InitializeTrialExpired();
                 }
