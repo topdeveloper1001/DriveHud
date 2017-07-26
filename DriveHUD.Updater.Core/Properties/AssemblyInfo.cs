@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DriveHUD.Updater.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DriveHUD")]
+[assembly: AssemblyCompany("Ace Poker Solutions LLC")]
 [assembly: AssemblyProduct("DriveHUD.Updater.Core")]
-[assembly: AssemblyCopyright("Copyright Ãƒâ€šÃ‚Â© AcePokerSolutions 2017")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

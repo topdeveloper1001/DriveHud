@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("DriveHUD.HUD")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Ace Poker Solutions LLC")]
 [assembly: AssemblyProduct("DriveHUD.HUD")]
-[assembly: AssemblyCopyright("Copyright Ã‚Â©  2016")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
