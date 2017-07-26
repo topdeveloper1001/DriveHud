@@ -2160,6 +2160,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Release Notes (v.{0}):.
+        /// </summary>
+        internal static string Common_UpdateView_ReleaseNotes {
+            get {
+                return ResourceManager.GetString("Common_UpdateView_ReleaseNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Win%: .
         /// </summary>
         internal static string Common_WinPercent {

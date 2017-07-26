@@ -542,6 +542,7 @@
     <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
+    <Compile Include="ViewModels\Update\UpdateReleaseNoteViewModel.cs" />
     <Compile Include="ViewModels\Update\UpdateViewModel.cs" />
     <Compile Include="Views\Alias\AliasAddEditView.xaml.cs">
       <DependentUpon>AliasAddEditView.xaml</DependentUpon>

@@ -206,9 +206,19 @@ namespace DriveHUD.Updater.Core
         {
             Version appInfoVersion;
 
-            var appInfo = applicationInfo.LastOrDefault(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
-                                                                Version.TryParse(x.Version.Version, out appInfoVersion) &&
-                                                                appInfoVersion > appVersion);
+            var newerAppInfos = applicationInfo
+                .Where(x => x.Guid.Equals(guid, StringComparison.InvariantCultureIgnoreCase) &&
+                    Version.TryParse(x.Version.Version, out appInfoVersion) &&
+                    appInfoVersion > appVersion)
+                .OrderByDescending(x => x.Version.Version)
+                .ToArray();
+
+            var appInfo = newerAppInfos.FirstOrDefault();
+
+            if (appInfo != null)
+            {
+                appInfo.VersionsSinceLastUpdate = newerAppInfos.Select(x => x.Version).ToArray();
+            }
 
             return appInfo;
         }
