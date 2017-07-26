@@ -14,7 +14,7 @@
     Width="450"
     d:DesignHeight="300"
     d:DesignWidth="300">
-    
+
     <UserControl.Resources>
 
         <Style
@@ -26,6 +26,9 @@
             <Setter
                 Property="VerticalAlignment"
                 Value="Top" />
+            <Setter
+                Property="Height"
+                Value="22" />
         </Style>
 
         <Style
