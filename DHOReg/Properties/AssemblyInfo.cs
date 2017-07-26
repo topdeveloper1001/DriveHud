@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AcePokerSolutions LLC")]
 [assembly: AssemblyProduct("DHOReg")]
-[assembly: AssemblyCopyright("Copyright Ã‚Â©  2016")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
