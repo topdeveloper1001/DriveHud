@@ -1,128 +1,100 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="SettingsRakeBackAddEditViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Settings;
+using ReactiveUI;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
-    public class SettingsRakeBackAddEditViewModel : BaseViewModel
+    public class SettingsRakeBackAddEditViewModel : WindowViewModelBase
     {
+        private SettingsRakeBackViewModelInfo<RakeBackModel> infoViewModel;
+        private RakeBackModel settingsModel;
+
         internal SettingsRakeBackAddEditViewModel(SettingsRakeBackViewModelInfo<RakeBackModel> info)
         {
             InitializeBindings();
             InitializeData(info);
         }
 
-        private void InitializeBindings()
-        {
-            OKCommand = new RelayCommand(SaveChanges);
-            CancelCommand = new RelayCommand(Cancel);
-        }
-
-        internal void InitializeData(SettingsRakeBackViewModelInfo<RakeBackModel> info)
-        {
-            _infoViewModel = info;
-            _settingsModel = _infoViewModel?.Model;
-
-            this.RakeBackName = _settingsModel?.RakeBackName ?? string.Empty;
-            this.Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>().FirstOrDefault(pl => pl.DecodedName == (_settingsModel?.Player ?? string.Empty));
-            this.DateBegan = _settingsModel?.DateBegan ?? DateTime.Now;
-            this.Percentage = _settingsModel?.Percentage ?? 0m;
-        }
-
-        private void SaveChanges()
-        {
-            bool isAdd = false;
-            if (_settingsModel == null)
-            {
-                isAdd = true;
-                _settingsModel = new RakeBackModel();
-            }
-
-            _settingsModel.RakeBackName = RakeBackName;
-            _settingsModel.Player = Player.DecodedName;
-            _settingsModel.DateBegan = DateBegan;
-            _settingsModel.Percentage = Percentage;
-
-            if (isAdd)
-            {
-                _infoViewModel?.Add(_settingsModel);
-            }
-            else
-            {
-                _infoViewModel?.Close();
-            }
-        }
-
-        private void Cancel()
-        {
-            _infoViewModel?.Close();
-        }
-
         #region Properties
-        private SettingsRakeBackViewModelInfo<RakeBackModel> _infoViewModel;
-        private RakeBackModel _settingsModel;
 
-        private string _rakeBackName;
-        private PlayerCollectionItem _player;
-        private decimal _percentage;
-        private DateTime _dateBegan;
+        public SingletonStorageModel StorageModel
+        {
+            get { return ServiceLocator.Current.TryResolve<SingletonStorageModel>(); }
+        }
+
+        private string rakeBackName;
 
         public string RakeBackName
         {
             get
             {
-                return _rakeBackName;
+                return rakeBackName;
             }
 
             set
             {
-                SetProperty(ref _rakeBackName, value);
+                this.RaiseAndSetIfChanged(ref rakeBackName, value);
             }
         }
+
+        private PlayerCollectionItem player;
 
         public PlayerCollectionItem Player
         {
             get
             {
-                return _player;
+                return player;
             }
 
             set
             {
-                SetProperty(ref _player, value);
+                this.RaiseAndSetIfChanged(ref player, value);
             }
         }
+
+        private decimal percentage;
 
         public decimal Percentage
         {
             get
             {
-                return _percentage;
+                return percentage;
             }
 
             set
             {
-                SetProperty(ref _percentage, value);
+                this.RaiseAndSetIfChanged(ref percentage, value);
             }
         }
+
+        private DateTime dateBegan;
 
         public DateTime DateBegan
         {
             get
             {
-                return _dateBegan;
+                return dateBegan;
             }
 
             set
             {
-                SetProperty(ref _dateBegan, value);
+                this.RaiseAndSetIfChanged(ref dateBegan, value);
             }
         }
 
@@ -130,8 +102,64 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         #region ICommand
 
-        public ICommand OKCommand { get; set; }
-        public ICommand CancelCommand { get; set; }
+        public ReactiveCommand<object> SaveCommand { get; private set; }
+
+        public ReactiveCommand<object> CancelCommand { get; private set; }
+
+        #endregion
+
+        #region Infrastructure
+
+        private void InitializeBindings()
+        {
+            var canSaveChanges = this.WhenAny(x => x.RakeBackName, x => x.Player, (x, y) => !string.IsNullOrWhiteSpace(x.Value) && y.Value != null);
+
+            SaveCommand = ReactiveCommand.Create(canSaveChanges);
+            SaveCommand.Subscribe(x => SaveChanges());
+
+            CancelCommand = ReactiveCommand.Create();
+            CancelCommand.Subscribe(x => Cancel());
+        }
+
+        private void InitializeData(SettingsRakeBackViewModelInfo<RakeBackModel> info)
+        {
+            infoViewModel = info;
+            settingsModel = infoViewModel?.Model;
+
+            RakeBackName = settingsModel?.RakeBackName ?? string.Empty;
+            Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>().FirstOrDefault(pl => pl.DecodedName == (settingsModel?.Player ?? string.Empty));
+            DateBegan = settingsModel?.DateBegan ?? DateTime.Now;
+            Percentage = settingsModel?.Percentage ?? 0m;
+        }
+
+        private void SaveChanges()
+        {
+            bool isAdd = false;
+            if (settingsModel == null)
+            {
+                isAdd = true;
+                settingsModel = new RakeBackModel();
+            }
+
+            settingsModel.RakeBackName = RakeBackName;
+            settingsModel.Player = Player.DecodedName;
+            settingsModel.DateBegan = DateBegan;
+            settingsModel.Percentage = Percentage;
+
+            if (isAdd)
+            {
+                infoViewModel?.Add(settingsModel);
+            }
+            else
+            {
+                infoViewModel?.Close();
+            }
+        }
+
+        private void Cancel()
+        {
+            infoViewModel?.Close();
+        }
 
         #endregion
     }

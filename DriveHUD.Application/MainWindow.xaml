@@ -95,7 +95,7 @@
         </DataTemplate>
 
         <Style
-            x:Key="RadComboBoxStyle1"
+            x:Key="PlayerComboBoxStyle"
             TargetType="{x:Type telerik:RadComboBox}">
             <Setter
                 Property="telerik:ScrollingSettingsBehavior.ScrollAreaPadding"
@@ -813,7 +813,7 @@
         </Style>
 
         <Style
-            x:Key="RadComboBoxItemStyle1"
+            x:Key="PlayerComboBoxItemStyle"
             TargetType="{x:Type telerik:RadComboBoxItem}">
             <Setter
                 Property="MinHeight"
@@ -1654,8 +1654,8 @@
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     DisplayMemberPath="DecodedName"
                     ItemsSource="{Binding SortedPlayers, Mode=OneWay}"
-                    Style="{StaticResource RadComboBoxStyle1}"
-                    ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
+                    Style="{StaticResource PlayerComboBoxStyle}"
+                    ItemContainerStyle="{StaticResource PlayerComboBoxItemStyle}">
                     <telerik:RadComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel />
