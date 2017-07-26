@@ -72,5 +72,12 @@ namespace DriveHUD.Application.Licensing
         /// Determines if user can upgrade his license
         /// </summary>
         bool IsUpgradable { get; }
+
+        /// <summary>
+        /// Gets the type of license from serial number
+        /// </summary>
+        /// <param name="serial">Serial number</param>
+        /// <returns>The type of the license</returns>
+        LicenseType? GetTypeFromSerial(string serial);
     }
 }

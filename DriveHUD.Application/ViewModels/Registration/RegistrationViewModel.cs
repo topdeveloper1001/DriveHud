@@ -840,7 +840,17 @@ namespace DriveHUD.Application.ViewModels.Registration
             }
             catch (LicenseExpiredException)
             {
-                InitializeMessage("Common_RegistrationView_ExpiredText", serial);
+                var licenseType = licenseService.GetTypeFromSerial(serial);
+
+                if (licenseType == LicenseType.Trial)
+                {
+                    InitializeMessage("Common_RegistrationView_TrialExpiredText");
+                }
+                else
+                {
+                    InitializeMessage("Common_RegistrationView_ExpiredText", serial);
+                }
+
                 return false;
             }
             catch
