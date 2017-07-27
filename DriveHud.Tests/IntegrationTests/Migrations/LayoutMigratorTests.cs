@@ -172,7 +172,15 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
                 foreach (var layoutFile in migratedLayoutsV2.Keys)
                 {
                     var migrationResult = GetMigrationV2Result(layoutFile);
-                    CollectionAssert.AreEquivalent(migrationResult.Source.HudPlayerTypes, migrationResult.Result.HudPlayerTypes);
+
+                    Assert.That(migrationResult.Result.HudPlayerTypes.Count, Is.EqualTo(migrationResult.Source.HudPlayerTypes.Count));
+
+                    foreach (var hudPlayerType in migrationResult.Source.HudPlayerTypes)
+                    {
+                        var foundPlayerType = migrationResult.Result.HudPlayerTypes.FirstOrDefault(x => ComparePlayerType(x, hudPlayerType));
+
+                        Assert.IsNotNull(foundPlayerType, $"{hudPlayerType.Name} doesn't match");
+                    }
                 }
             });
         }
@@ -786,6 +794,33 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
                 var hudLayoutInfo = xmlSerializer.Deserialize(fs) as HudLayoutInfo;
                 return hudLayoutInfo;
             }
+        }
+
+        private bool ComparePlayerType(HudPlayerType hudPlayerType1, HudPlayerType hudPlayerType2)
+        {
+            var result = hudPlayerType1.Name == hudPlayerType2.Name && hudPlayerType1.ImageAlias == hudPlayerType2.ImageAlias &&
+                hudPlayerType1.EnablePlayerProfile == hudPlayerType2.EnablePlayerProfile && hudPlayerType1.DisplayPlayerIcon == hudPlayerType2.DisplayPlayerIcon &&
+                hudPlayerType1.MinSample == hudPlayerType2.MinSample;
+
+            if ((hudPlayerType2.Stats != null && hudPlayerType1.Stats != null && hudPlayerType2.Stats.Count != hudPlayerType1.Stats.Count) ||
+                (hudPlayerType2.Stats == null && hudPlayerType1.Stats != null) || (hudPlayerType2.Stats != null && hudPlayerType1.Stats == null))
+            {
+                return false;
+            }
+            else if (hudPlayerType2.Stats == null && hudPlayerType1.Stats == null)
+            {
+                return result;
+            }
+
+            var orderedStatList = hudPlayerType2.Stats.OrderBy(x => x.Stat).ToArray();
+            var hudPlayerTypeOrderedStatList = hudPlayerType1.Stats.OrderBy(x => x.Stat).ToArray();
+
+            for (var i = 0; i < orderedStatList.Length; i++)
+            {
+                result &= orderedStatList[i].Equals(hudPlayerTypeOrderedStatList[i]);
+            }
+
+            return result;
         }
 
         private class MigrationV2Result

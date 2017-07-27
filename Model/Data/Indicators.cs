@@ -828,7 +828,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("BB", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("BB", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
@@ -836,7 +836,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("BTN", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("BTN", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
@@ -844,7 +844,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("CO", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("CO", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
@@ -852,7 +852,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("MP", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("MP", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
@@ -860,7 +860,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("EP", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("EP", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
@@ -868,7 +868,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("SB", x => x.Didfourbet, x => x.Couldfourbet);
+                return GetPositionalPercentage("SB", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
             }
         }
 
