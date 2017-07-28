@@ -267,7 +267,21 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void FacedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated("FacedThreeBetIsCalculated", x => x.Facedthreebetpreflop, fileName, pokerSite, playerName, expected);
-        }     
+        }
+
+        [Test]
+        [TestCase(@"Hero-Sawshowdown-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        public void SawFlopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("SawFlopIsCalculated", x => x.Sawflop, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-Sawshowdown-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        public void SawShowdownIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("SawShowdownIsCalculated", x => x.Sawshowdown, fileName, pokerSite, playerName, expected);
+        }
 
         protected virtual void AssertThatStatIsCalculated(string method, Expression<Func<Playerstatistic, int>> expression, string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
