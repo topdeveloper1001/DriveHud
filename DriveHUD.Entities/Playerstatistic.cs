@@ -806,7 +806,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual;
+                return Totalhands != 1 ? FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual : FoldedtothreebetpreflopVirtual;
             }
         }
 
@@ -824,7 +824,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual;
+                return Totalhands != 1 ? FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual : FacedthreebetpreflopVirtual;
             }
         }
 
@@ -843,7 +843,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return DidfourbetpreflopCounter + DidfourbetpreflopVirtual;
+                return Totalhands != 1 ? DidfourbetpreflopCounter + DidfourbetpreflopVirtual : DidfourbetpreflopVirtual;
             }
         }
 
@@ -861,7 +861,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return CouldfourbetpreflopCounter + CouldfourbetpreflopVirtual;
+                return Totalhands != 1 ? CouldfourbetpreflopCounter + CouldfourbetpreflopVirtual : CouldfourbetpreflopVirtual;
             }
         }
 
