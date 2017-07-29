@@ -82,7 +82,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Vpiphands, TotalHands);
+                return GetPercentage(Source.Vpiphands, TotalHands - Source.NumberOfWalks);
             }
         }
 
@@ -90,7 +90,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Pfrhands, TotalHands);
+                return GetPercentage(Source.Pfrhands, TotalHands - Source.NumberOfWalks);
             }
         }
 
@@ -332,6 +332,11 @@ namespace Model.Data
         public virtual decimal TotalHands
         {
             get { return Source.Totalhands; }
+        }
+
+        public virtual decimal NumberOfWalks
+        {
+            get { return Source.NumberOfWalks; }
         }
 
         public virtual decimal TotalWon

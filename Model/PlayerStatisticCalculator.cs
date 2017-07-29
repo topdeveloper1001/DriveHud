@@ -56,6 +56,8 @@ namespace Model
             int bet = playerHandActions.Count(handAction => handAction.IsBet() && handAction.Street > Street.Preflop);
             int raises = playerHandActions.Count(handAction => handAction.IsRaise() && handAction.Street > Street.Preflop);
 
+            var isWalkHand = parsedHand.HandActions.All(x => !x.IsBet() && !x.IsCall() && !x.IsRaise());
+
             stat.TotalbetsFlop = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Flop);
             stat.TotalbetsTurn = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Turn);
             stat.TotalbetsRiver = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.River);
@@ -70,11 +72,13 @@ namespace Model
             bool wasTurn = wasRiver || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Turn);
             bool wasFlop = wasTurn || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Flop);
 
-            bool playedRiver = playerHandActions.Any(x => x.Street == Street.River);
-            bool playedTurn = playedRiver || playerHandActions.Any(x => x.Street == Street.Turn);
-            bool playedFlop = playedTurn || playerHandActions.Any(x => x.Street == Street.Flop);
+            bool playedRiver = playerHandActions.Any(x => x.Street == Street.River) || (wasRiver && !playerFolded);
+            bool playedTurn = playedRiver || playerHandActions.Any(x => x.Street == Street.Turn) || (wasTurn && !playerFolded);
+            bool playedFlop = playedTurn || playerHandActions.Any(x => x.Street == Street.Flop) || (wasFlop && !playerFolded);
 
-            bool won = playerHandActions.Any(handAction => handAction.IsWinningsAction);
+            decimal netWon = playerHandActions.Sum(x => x.Amount);
+
+            bool won = playerHandActions.Any(handAction => handAction.IsWinningsAction) && netWon > 0;
 
             bool sawShowDown = !playerFolded &&
                 parsedHand.HandActions
@@ -83,8 +87,6 @@ namespace Model
                 .Any(x => x.All(p => !p.IsFold)) && playedFlop;
 
             bool wonShowdown = sawShowDown && won;
-
-            decimal netWon = playerHandActions.Sum(x => x.Amount);
 
             bool wonFlop = playedFlop && won;
             bool wonTurn = playedTurn && won;
@@ -186,24 +188,21 @@ namespace Model
 
             #endregion
 
-            #region 3bet
+            #region 3bet/4bet
 
             ConditionalBet threeBet = new ConditionalBet();
+            ConditionalBet fourBet = new ConditionalBet();
 
             if (pfrOcurred)
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
                 Calculate3Bet(threeBet, preflops, player, raiser);
+
+                if (threeBet.Faced)
+                {
+                    Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
+                }
             }
-
-            #endregion
-
-            #region 4bet
-
-            ConditionalBet fourBet = new ConditionalBet();
-            string fourBetPlayer = string.Empty;
-            if (pfrOcurred)
-                Calculate4Bet(fourBet, preflops, player);
 
             #endregion
 
@@ -420,6 +419,7 @@ namespace Model
             stat.Totalhands = 1;
             stat.Totalcalls = call;
             stat.Totalbets = bet + raises;
+            stat.NumberOfWalks = isWalkHand && won ? 1 : 0;
             stat.Totalpostflopstreetsplayed = (playedFlop ? 1 : 0) + (playedTurn ? 1 : 0) + (playedRiver ? 1 : 0);
             stat.Totalaggressivepostflopstreetsseen = (aggresiveFlop ? 1 : 0) + (aggresiveRiver ? 1 : 0) + (aggresiveTurn ? 1 : 0);
             stat.Totalamountwonincents = (int)(netWon * 100);
@@ -965,67 +965,177 @@ namespace Model
             }
         }
 
-        private static void Calculate4Bet(ConditionalBet fourBet, List<HandAction> preflops, string player)
+        private static void Calculate4Bet(ConditionalBet fourBet, List<HandAction> actions, string player, string raiser, PlayerList players)
         {
-            var raisers = new List<string>();
+            var start3Bet = false;
+            var threeBetHappened = false;
+            var threeBetIsAllIn = false;
+            var threeBetAllInPlayerStack = 0m;
+            var fourBetIsAllIn = false;
+            var fourBetAllInPlayerStack = 0m;
+            var callAfterThreeBet = false;
+            var callAfterFourBet = false;
+            var playersCannot3Bet = new HashSet<string>();
 
-            bool canThreeBet = false;
-            bool wasThreeBet = false;
-
-            foreach (var action in preflops)
+            for (var i = 0; i < actions.Count; i++)
             {
-                if (wasThreeBet)
+                var action = actions[i];
+
+                if (start3Bet)
                 {
-                    if (!fourBet.Happened)
+                    if (!threeBetHappened)
                     {
+                        if (playersCannot3Bet.Contains(action.PlayerName))
+                        {
+                            continue;
+                        }
+
+                        if (!action.IsRaise() || action.PlayerName == raiser)
+                        {
+                            continue;
+                        }
+
+                        threeBetHappened = true;
+
+                        if (action.IsAllInAction || action.IsAllIn)
+                        {
+                            threeBetIsAllIn = true;
+
+                            var allInPlayer = players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+
+                            if (allInPlayer != null)
+                            {
+                                threeBetAllInPlayerStack = allInPlayer.StartingStack;
+                            }
+                        }
+
+                        // player does 3-bet, so he can't be involved in 4-bet
                         if (action.PlayerName == player)
                         {
+                            return;
+                        }
+
+                        continue;
+                    }
+
+                    // 3-bet happened
+                    if (!fourBet.Happened)
+                    {
+                        if (action.IsCall() && action.PlayerName != player)
+                        {
+                            callAfterThreeBet = true;
+                        }
+
+                        if (playersCannot3Bet.Contains(action.PlayerName))
+                        {
+                            continue;
+                        }
+
+                        if (action.PlayerName == player && raiser == action.PlayerName)
+                        {
+                            if (threeBetIsAllIn && !callAfterThreeBet)
+                            {
+                                var couldRaise = false;
+
+                                for (var j = i + 1; j < actions.Count; j++)
+                                {
+                                    var playerToAct = players.FirstOrDefault(x => actions[j].PlayerName == x.PlayerName);
+
+                                    if (playerToAct != null && playerToAct.StartingStack > threeBetAllInPlayerStack)
+                                    {
+                                        couldRaise = true;
+                                        break;
+                                    }
+                                }
+
+                                if (!couldRaise)
+                                {
+                                    return;
+                                }
+                            }
+
                             fourBet.Possible = true;
                         }
 
                         if (!action.IsRaise())
+                        {
                             continue;
+                        }
 
                         fourBet.Happened = true;
 
+                        if (action.IsAllInAction)
+                        {
+                            fourBetIsAllIn = true;
+
+                            var allInPlayer = players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+
+                            if (allInPlayer != null)
+                            {
+                                fourBetAllInPlayerStack = allInPlayer.StartingStack;
+                            }
+                        }
+
                         if (action.PlayerName != player)
+                        {
                             continue;
+                        }
 
                         fourBet.Made = true;
                         return;
                     }
-                    else
-                    {
-                        if (action.PlayerName == player)
-                        {
-                            if (fourBet.CheckAction(action))
-                                return;
-                        }
 
-                        if (action.IsRaise())
-                            return;
+                    if (action.IsCall() && action.PlayerName != player)
+                    {
+                        callAfterFourBet = true;
                     }
-                }
-                else if (canThreeBet)
-                {
-                    if (action.IsRaise())
-                    {
-                        if (action.PlayerName == player)
-                            return;
 
-                        wasThreeBet = true;
+                    if (action.PlayerName == player && raiser == action.PlayerName)
+                    {
+                        if (fourBet.CheckAction(action))
+                        {
+                            if (fourBetIsAllIn && !callAfterFourBet)
+                            {
+                                var couldRaise = false;
+
+                                for (var j = i + 1; j < actions.Count; j++)
+                                {
+                                    var playerToAct = players.FirstOrDefault(x => actions[j].PlayerName == x.PlayerName);
+
+                                    if (playerToAct != null && playerToAct.StartingStack > fourBetAllInPlayerStack)
+                                    {
+                                        couldRaise = true;
+                                        break;
+                                    }
+                                }
+
+                                if (!couldRaise)
+                                {
+                                    return;
+                                }
+                            }
+
+                            fourBet.Possible = true;
+
+                            return;
+                        }
                     }
                 }
                 else
                 {
-                    if (action.IsRaise())
+                    if (action.IsRaise() && action.PlayerName == raiser)
                     {
-                        canThreeBet = true;
+                        start3Bet = true;
+                        continue;
+                    }
+
+                    if (action.IsCall() && !playersCannot3Bet.Contains(action.PlayerName))
+                    {
+                        playersCannot3Bet.Add(action.PlayerName);
                     }
                 }
             }
         }
-
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
         {

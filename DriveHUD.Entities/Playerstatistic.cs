@@ -789,6 +789,11 @@ namespace DriveHUD.Entities
         [ProtoMember(288)]
         public virtual int PreflopOOP { get; set; }
 
+        [ProtoMember(289)]
+        public virtual int NumberOfWalks { get; set; }
+
+        #region Workarounds for broken stats
+
         public virtual int FoldedtothreebetpreflopVirtual
         {
             get
@@ -861,6 +866,8 @@ namespace DriveHUD.Entities
         }
 
         public virtual int CouldfourbetpreflopCounter { get; set; }
+
+        #endregion
 
         #region Additional properties (not for serialization)
 
@@ -1025,6 +1032,7 @@ namespace DriveHUD.Entities
             Totalamountwonincents += a.Totalamountwonincents;
             Totalrakeincents += a.Totalrakeincents;
             Totalaggressivepostflopstreetsseen += a.Totalaggressivepostflopstreetsseen;
+            NumberOfWalks += a.NumberOfWalks;
 
             Flopcontinuationbetpossible += a.Flopcontinuationbetpossible;
             Flopcontinuationbetmade += a.Flopcontinuationbetmade;
@@ -1389,6 +1397,7 @@ namespace DriveHUD.Entities
             r.Totalamountwonincents = a.Totalamountwonincents + b.Totalamountwonincents;
             r.Totalaggressivepostflopstreetsseen = a.Totalaggressivepostflopstreetsseen + b.Totalaggressivepostflopstreetsseen;
             r.Totalrakeincents = a.Totalrakeincents + b.Totalrakeincents;
+            r.NumberOfWalks = a.NumberOfWalks + b.NumberOfWalks;
 
             r.Flopcontinuationbetpossible = a.Flopcontinuationbetpossible + b.Flopcontinuationbetpossible;
             r.Flopcontinuationbetmade = a.Flopcontinuationbetmade + b.Flopcontinuationbetmade;
