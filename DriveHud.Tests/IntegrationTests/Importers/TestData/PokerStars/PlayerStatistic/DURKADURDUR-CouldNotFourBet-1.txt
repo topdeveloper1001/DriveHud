@@ -1,0 +1,34 @@
+PokerStars Game #47147536093:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:11:46 ET
+Table 'Asmodeus IX' 6-max Seat #1 is the button
+Seat 1: khapa79 ($270.60 in chips)
+Seat 2: tristyle ($201 in chips)
+Seat 3: Desateur ($385.55 in chips)
+Seat 4: DURKADURDUR ($402.45 in chips)
+Seat 5: pobolero ($228.05 in chips)
+Seat 6: LiraMaker ($39.75 in chips)
+tristyle: posts small blind $1
+Desateur: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+pobolero: folds
+LiraMaker: raises $33.75 to $39.75 and is all-in
+khapa79: folds
+tristyle: folds
+Desateur: folds
+DURKADURDUR: calls $33.75
+*** FLOP *** [Qd 2h 5c]
+*** TURN *** [Qd 2h 5c] [Td]
+*** RIVER *** [Qd 2h 5c Td] [9c]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Jh Jc] (a pair of Jacks)
+LiraMaker: shows [Tc As] (a pair of Tens)
+DURKADURDUR collected $79.50 from pot
+*** SUMMARY ***
+Total pot $82.50 | Rake $3
+Board [Qd 2h 5c Td 9c]
+Seat 1: khapa79 (button) folded before Flop (didn't bet)
+Seat 2: tristyle (small blind) folded before Flop
+Seat 3: Desateur (big blind) folded before Flop
+Seat 4: DURKADURDUR showed [Jh Jc] and won ($79.50) with a pair of Jacks
+Seat 5: pobolero folded before Flop (didn't bet)
+Seat 6: LiraMaker showed [Tc As] and lost with a pair of Tens

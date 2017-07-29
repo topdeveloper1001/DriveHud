@@ -1,0 +1,52 @@
+<session sessioncode="1510704">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.50/$1</gametype>
+		<tablename>Fujiwata</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2016-03-18 23:51:17</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3253280683">
+		<general>
+			<startdate>2016-03-19 00:18:42</startdate>
+			<players>
+				<player seat="1" name="P1_768013YA" chips="29.83" dealer="0" win="32.83" bet="29.83" rebuy="0" addon="0" />
+				<player seat="3" name="P2_444925QU" chips="72.6" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="P3_939139EH" chips="101.8" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P4_149065VO" chips="57.05" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="10" name="Hero" chips="98.4" dealer="0" win="0" bet="3" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Hero" type="1" sum="0.5" cards="[cards]" />
+			<action no="2" player="P1_768013YA" type="2" sum="1" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_768013YA">X X</cards>
+			<cards type="Pocket" player="P2_444925QU">X X</cards>
+			<cards type="Pocket" player="P3_939139EH">X X</cards>
+			<cards type="Pocket" player="P4_149065VO">X X</cards>
+			<cards type="Pocket" player="Hero">H8 CA</cards>
+			<action no="3" player="P2_444925QU" type="0" sum="0" cards="" />
+			<action no="4" player="P3_939139EH" type="0" sum="0" cards="" />
+			<action no="5" player="P4_149065VO" type="0" sum="0" cards="" />
+			<action no="6" player="Hero" type="23" sum="3" cards="" />
+			<action no="7" player="P1_768013YA" type="7" sum="28.83" cards="" />
+			<action no="8" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

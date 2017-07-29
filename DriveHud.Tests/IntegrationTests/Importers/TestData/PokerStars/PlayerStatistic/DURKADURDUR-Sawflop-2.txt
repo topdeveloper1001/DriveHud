@@ -1,0 +1,24 @@
+PokerStars Game #47142941902:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 0:46:50 ET
+Table 'Piazzia IV' 6-max Seat #4 is the button
+Seat 1: Jinn_Rooh ($243.75 in chips)
+Seat 3: shnizzel ($214.75 in chips)
+Seat 4: DURKADURDUR ($200 in chips)
+Seat 6: pablostar ($260.35 in chips)
+dustinvan will be allowed to play after the button
+pablostar: posts small blind $1
+Jinn_Rooh: posts big blind $2
+mwkingpin76: sits out
+*** HOLE CARDS ***
+shnizzel: folds
+DURKADURDUR: raises $4 to $6
+pablostar: folds
+Jinn_Rooh: folds
+Uncalled bet ($4) returned to DURKADURDUR
+DURKADURDUR collected $5 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $5 | Rake $0
+Seat 1: Jinn_Rooh (big blind) folded before Flop
+Seat 3: shnizzel folded before Flop (didn't bet)
+Seat 4: DURKADURDUR (button) collected ($5)
+Seat 6: pablostar (small blind) folded before Flop

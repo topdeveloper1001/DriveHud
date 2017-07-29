@@ -1,0 +1,37 @@
+PokerStars Game #47149774585:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:06:16 ET
+Table 'Retsina' 6-max Seat #4 is the button
+Seat 1: FIrmFighter ($202 in chips) 
+Seat 2: stopme10 ($203 in chips) 
+Seat 3: chrisdm ($211 in chips) 
+Seat 4: tristyle ($926.75 in chips) 
+Seat 5: Zyrano86 ($81 in chips) 
+Seat 6: DURKADURDUR ($305.25 in chips) 
+Zyrano86: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+FIrmFighter: folds 
+stopme10: folds 
+chrisdm: folds 
+tristyle: raises $4 to $6
+Zyrano86: raises $18 to $24
+DURKADURDUR: calls $22
+tristyle: folds 
+*** FLOP *** [As 9d 5c]
+Zyrano86: bets $57 and is all-in
+DURKADURDUR: calls $57
+*** TURN *** [As 9d 5c] [2s]
+*** RIVER *** [As 9d 5c 2s] [Qs]
+*** SHOW DOWN ***
+Zyrano86: shows [Jc Js] (a pair of Jacks)
+DURKADURDUR: shows [Jd Jh] (a pair of Jacks)
+Zyrano86 collected $82.50 from pot
+DURKADURDUR collected $82.50 from pot
+*** SUMMARY ***
+Total pot $168 | Rake $3 
+Board [As 9d 5c 2s Qs]
+Seat 1: FIrmFighter folded before Flop (didn't bet)
+Seat 2: stopme10 folded before Flop (didn't bet)
+Seat 3: chrisdm folded before Flop (didn't bet)
+Seat 4: tristyle (button) folded before Flop
+Seat 5: Zyrano86 (small blind) showed [Jc Js] and won ($82.50) with a pair of Jacks
+Seat 6: DURKADURDUR (big blind) showed [Jd Jh] and won ($82.50) with a pair of Jacks

@@ -1,0 +1,56 @@
+<session sessioncode="791838">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.50/$1</gametype>
+		<tablename>Rothq</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-04-13 23:42:02</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3449025538">
+		<general>
+			<startdate>2017-04-13 23:47:17</startdate>
+			<players>
+				<player seat="1" name="P1-446487GX" chips="81.8" dealer="0" win="0" bet="1" rebuy="0" addon="0" />
+				<player seat="3" name="Hero" chips="98.5" dealer="0" win="0" bet="4.5" rebuy="0" addon="0" />
+				<player seat="5" name="P3-141573SW" chips="107.29" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P4-679467TT" chips="28.5" dealer="1" win="35.5" bet="28.5" rebuy="0" addon="0" />
+				<player seat="8" name="P5-547850AA" chips="159.26" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="10" name="P6-634463AX" chips="98" dealer="0" win="0" bet="1" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P5-547850AA" type="1" sum="0.5" cards="[cards]" />
+			<action no="2" player="P6-634463AX" type="2" sum="1" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1-446487GX">X X</cards>
+			<cards type="Pocket" player="Hero">HA H6</cards>
+			<cards type="Pocket" player="P3-141573SW">X X</cards>
+			<cards type="Pocket" player="P4-679467TT">X X</cards>
+			<cards type="Pocket" player="P5-547850AA">X X</cards>
+			<cards type="Pocket" player="P6-634463AX">X X</cards>
+			<action no="3" player="P1-446487GX" type="3" sum="1" cards="" />
+			<action no="4" player="Hero" type="23" sum="4.5" cards="" />
+			<action no="5" player="P3-141573SW" type="0" sum="0" cards="" />
+			<action no="6" player="P4-679467TT" type="7" sum="28.5" cards="" />
+			<action no="7" player="P5-547850AA" type="0" sum="0" cards="" />
+			<action no="8" player="P6-634463AX" type="0" sum="0" cards="" />
+			<action no="9" player="P1-446487GX" type="0" sum="0" cards="" />
+			<action no="10" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>
