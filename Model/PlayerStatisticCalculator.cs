@@ -449,10 +449,10 @@ namespace Model
 
             stat.Flopcontinuationbetpossible = flopCBet.Possible ? 1 : 0;
             stat.Flopcontinuationbetmade = flopCBet.Made ? 1 : 0;
-            stat.Flopcontinuationipbetmade = flopCBet.Made && flopInPosition ? 1 : 0;
-            stat.Flopcontinuationipbetpossible = flopCBet.Possible && flopInPosition ? 1 : 0;
-            stat.Flopcontinuationoopbetmade = flopCBet.Made && !flopInPosition ? 1 : 0;
-            stat.Flopcontinuationoopbetpossible = flopCBet.Possible && !flopInPosition ? 1 : 0;
+            stat.Flopcontinuationipbetmade = flopCBet.Made && preflopInPosition ? 1 : 0;
+            stat.Flopcontinuationipbetpossible = flopCBet.Possible && preflopInPosition ? 1 : 0;
+            stat.Flopcontinuationoopbetmade = flopCBet.Made && !preflopInPosition ? 1 : 0;
+            stat.Flopcontinuationoopbetpossible = flopCBet.Possible && !preflopInPosition ? 1 : 0;
             stat.FlopContinuationBetInThreeBetPotPossible = flopCBet.Possible && threeBet.Made ? 1 : 0;
             stat.FlopContinuationBetInThreeBetPotMade = flopCBet.Made && threeBet.Made ? 1 : 0;
             stat.FlopContinuationBetInFourBetPotPossible = flopCBet.Possible && fourBet.Made ? 1 : 0;
