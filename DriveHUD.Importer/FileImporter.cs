@@ -859,7 +859,7 @@ namespace DriveHUD.Importers
                 {
                     winnerPlayer.Finishposition = 1;
 
-                    var isHero = lastParsingResult.Source.Hero.PlayerName.Equals(winnerPlayer.PlayerName);
+                    var isHero = lastParsingResult.Source.Hero != null && lastParsingResult.Source.Hero.PlayerName.Equals(winnerPlayer.PlayerName);
 
                     if (isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0)
                     {

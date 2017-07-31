@@ -404,6 +404,19 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                // stats involved into player types and bumper stickers
+                var nonToolLayoutStats = activeLayout
+                    .HudPlayerTypes
+                    .SelectMany(x => x.Stats)
+                    .Select(x => x.Stat)
+                    .Concat(activeLayout
+                        .HudBumperStickerTypes
+                        .SelectMany(x => x.Stats)
+                        .Select(x => x.Stat))
+                    .Concat(new[] { Stat.TotalHands })
+                    .Distinct()
+                    .ToArray();
+
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 var ht = new HudLayout
@@ -445,7 +458,7 @@ namespace DriveHUD.Application.ViewModels
                     var sessionCacheStatistic = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
 
-                    var item = sessionCacheStatistic.PlayerData;
+                    var playerData = sessionCacheStatistic.PlayerData;
                     var sessionData = sessionCacheStatistic.SessionPlayerData;
 
                     // need to do that for track meter tool
@@ -491,7 +504,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
-                    playerHudContent.HudElement.TotalHands = item.TotalHands;
+                    playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
                     // configure data for graph tool
                     var sessionStats = sessionData.StatsSessionCollection;
@@ -513,11 +526,11 @@ namespace DriveHUD.Application.ViewModels
 
                     heatMapTools.ForEach(x =>
                     {
-                        var heatMapKey = item.HeatMaps.Keys
+                        var heatMapKey = playerData.HeatMaps.Keys
                             .ToArray()
                             .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
 
-                        x.HeatMap = item.HeatMaps[heatMapKey];
+                        x.HeatMap = playerData.HeatMaps[heatMapKey];
                     });
 
                     var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
@@ -531,17 +544,28 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
                         new ObservableCollection<decimal>();
 
-                    var activeLayoutHudStats = playerHudContent.HudElement.StatInfoCollection
+                    var activeLayoutHudStats = playerHudContent.HudElement.ToolsStatInfoCollection
                         .Concat(heatMapTools.Select(x => x.BaseStat))
                         .Concat(gaugeIndicatorTools.Select(x => x.BaseStat))
-                        .ToArray();
+                        .ToList();
+
+                    var extraStats = (from nonToolLayoutStat in nonToolLayoutStats
+                                      join activateLayoutHudStat in activeLayoutHudStats on nonToolLayoutStat equals activateLayoutHudStat.Stat into grouped
+                                      from extraStat in grouped.DefaultIfEmpty()
+                                      where extraStat == null
+                                      select new StatInfo
+                                      {
+                                          Stat = nonToolLayoutStat
+                                      }).ToArray();
+
+                    activeLayoutHudStats.AddRange(extraStats);
 
                     StatsProvider.UpdateStats(activeLayoutHudStats);
 
                     if (gameInfo.PokerSite == EnumPokerSites.PokerStars)
                     {
                         // remove prohibited for PS stats.
-                        activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToArray();
+                        activeLayoutHudStats = activeLayoutHudStats.Where(x => x.Stat != Stat.FlopCBetMonotone && x.Stat != Stat.FlopCBetRag).ToList();
                         activeLayoutHudStats.ForEach(x => x.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(
                                 x.SettingsAppearanceValueRangeCollection.Skip(Math.Max(0, x.SettingsAppearanceValueRangeCollection.Count() - 3))));
                     }
@@ -552,18 +576,20 @@ namespace DriveHUD.Application.ViewModels
 
                         if (!string.IsNullOrEmpty(propertyName))
                         {
-                            if (item.TotalHands < statInfo.MinSample)
+                            if (playerData.TotalHands < statInfo.MinSample)
                             {
                                 statInfo.IsNotVisible = true;
                             }
 
-                            statInfo.AssignStatInfoValues(item, propertyName);
+                            statInfo.AssignStatInfoValues(playerData, propertyName);
                         }
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {
                             continue;
                         }
                     }
+
+                    playerHudContent.HudElement.StatInfoCollection = activeLayoutHudStats;
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
                     {

@@ -1257,7 +1257,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
 
-                var previewStat = PreviewHudElementViewModel.StatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
+                var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
             }
