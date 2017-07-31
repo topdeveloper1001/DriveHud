@@ -197,11 +197,7 @@ namespace Model
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
                 Calculate3Bet(threeBet, preflops, player, raiser);
-
-                if (threeBet.Faced)
-                {
-                    Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
-                }
+                Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
             }
 
             #endregion
@@ -971,6 +967,7 @@ namespace Model
             var threeBetHappened = false;
             var threeBetIsAllIn = false;
             var threeBetAllInPlayerStack = 0m;
+            var threeBetMade = false;
             var fourBetIsAllIn = false;
             var fourBetAllInPlayerStack = 0m;
             var callAfterThreeBet = false;
@@ -1009,11 +1006,8 @@ namespace Model
                             }
                         }
 
-                        // player does 3-bet, so he can't be involved in 4-bet
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
+                        // player does 3-bet
+                        threeBetMade = action.PlayerName == player;
 
                         continue;
                     }
@@ -1057,14 +1051,14 @@ namespace Model
                             fourBet.Possible = true;
                         }
 
-                        if (!action.IsRaise())
+                        if (!action.IsRaise() || (action.PlayerName != raiser && !threeBetMade))
                         {
                             continue;
                         }
 
                         fourBet.Happened = true;
 
-                        if (action.IsAllInAction)
+                        if (action.IsAllInAction || action.IsAllIn)
                         {
                             fourBetIsAllIn = true;
 
@@ -1090,7 +1084,7 @@ namespace Model
                         callAfterFourBet = true;
                     }
 
-                    if (action.PlayerName == player && raiser == action.PlayerName)
+                    if (action.PlayerName == player && threeBetMade)
                     {
                         if (fourBet.CheckAction(action))
                         {
