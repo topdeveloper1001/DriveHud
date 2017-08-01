@@ -1336,6 +1336,12 @@ namespace DriveHUD.Entities
             FacedthreebetpreflopCounter += a.FacedthreebetpreflopVirtualCounter;
             DidfourbetpreflopCounter += a.DidfourbetpreflopVirtualCounter;
             CouldfourbetpreflopCounter += a.CouldfourbetpreflopVirtualCounter;
+
+            DidDelayedTurnCBet += a.DidDelayedTurnCBet;
+            CouldDelayedTurnCBet += a.CouldDelayedTurnCBet;
+
+            DidDonkBet += a.DidDonkBet;
+            CouldDonkBet += a.CouldDonkBet;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1686,6 +1692,11 @@ namespace DriveHUD.Entities
             r.FacedthreebetpreflopCounter = a.FacedthreebetpreflopVirtualCounter + b.FacedthreebetpreflopVirtualCounter;
             r.DidfourbetpreflopCounter = a.DidfourbetpreflopVirtualCounter + b.DidfourbetpreflopVirtualCounter;
             r.CouldfourbetpreflopCounter = a.CouldfourbetpreflopVirtualCounter + b.CouldfourbetpreflopVirtualCounter;
+
+            r.DidDelayedTurnCBet = a.DidDelayedTurnCBet + b.DidDelayedTurnCBet;
+            r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
+            r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
+            r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
 
             return r;
         }

@@ -287,6 +287,7 @@ namespace Model
             #region Donk Bet
 
             Condition donkBet = new Condition();
+
             if (pfrOcurred && !pfr)
             {
                 CalculateDonkBet(donkBet, parsedHand.HandActions, player);
@@ -555,7 +556,12 @@ namespace Model
             stat.CouldColdCallVsOpenRaiseCo = coldCallVsCoOpen.Possible ? 1 : 0;
 
             stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
-            stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && playedTurn ? 1 : 0;
+
+            var couldBetOnTurn = parsedHand.Turn != null &&
+                ((parsedHand.Turn.FirstOrDefault()?.PlayerName == player) ||
+                parsedHand.Turn.Any(x => x.PlayerName == player && (x.IsBet() || x.IsCheck)));
+
+            stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && couldBetOnTurn ? 1 : 0;
 
             stat.PlayedFloatFlop = isFloatFlop ? 1 : 0;
 
@@ -1941,6 +1947,7 @@ namespace Model
         private static void CalculateDonkBet(Condition donkBet, IList<HandAction> actions, string player)
         {
             var raisers = actions.PreFlopWhere(x => x.IsRaise());
+
             if (raisers.Any(x => x.PlayerName == player) || !raisers.Any())
             {
                 return;

@@ -1,0 +1,67 @@
+<session sessioncode="791838">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.50/$1</gametype>
+		<tablename>Rothq</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-04-13 23:42:02</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3449060055">
+		<general>
+			<startdate>2017-04-14 01:13:36</startdate>
+			<players>
+				<player seat="1" name="P1-939091IP" chips="188.47" dealer="0" win="0" bet="4" rebuy="0" addon="0" />
+				<player seat="3" name="Hero" chips="189.44" dealer="0" win="7.6" bet="4" rebuy="0" addon="0" />
+				<player seat="5" name="P3-641340CK" chips="100" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P4-490123ER" chips="69.25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="10" name="P6-444707HO" chips="39.29" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P1-939091IP" type="1" sum="0.5" cards="[cards]" />
+			<action no="2" player="Hero" type="2" sum="1" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1-939091IP">S10 CQ</cards>
+			<cards type="Pocket" player="Hero">DQ SK</cards>
+			<cards type="Pocket" player="P3-641340CK">X X</cards>
+			<cards type="Pocket" player="P4-490123ER">X X</cards>
+			<cards type="Pocket" player="P6-444707HO">X X</cards>
+			<action no="3" player="P3-641340CK" type="0" sum="0" cards="" />
+			<action no="4" player="P4-490123ER" type="0" sum="0" cards="" />
+			<action no="5" player="P6-444707HO" type="0" sum="0" cards="" />
+			<action no="6" player="P1-939091IP" type="3" sum="0.5" cards="" />
+			<action no="7" player="Hero" type="23" sum="4" cards="" />
+			<action no="8" player="P1-939091IP" type="3" sum="3" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S3 C5 C3</cards>
+			<action no="9" player="P1-939091IP" type="4" sum="0" cards="" />
+			<action no="10" player="Hero" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+			<action no="11" player="P1-939091IP" type="4" sum="0" cards="" />
+			<action no="12" player="Hero" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">S7</cards>
+			<action no="13" player="P1-939091IP" type="4" sum="0" cards="" />
+			<action no="14" player="Hero" type="4" sum="0" cards="" />
+		</round>
+	</game>
+</session>
