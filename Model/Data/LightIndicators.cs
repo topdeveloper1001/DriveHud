@@ -399,6 +399,18 @@ namespace Model.Data
             }
         }
 
+        public override void Clean()
+        {
+            base.Clean();
+
+            statisticCount = 0;
+            netWon = 0;
+            bigBlind = 0;
+            netWonByBigBlind = 0;
+            sessionStartTime = DateTime.MaxValue;
+            sessionEndTime = DateTime.MinValue;
+        }
+
         #endregion
 
         #region Help methods
