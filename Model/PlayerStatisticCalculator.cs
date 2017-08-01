@@ -347,7 +347,8 @@ namespace Model
 
             bool isOpenRaise = IsOpenRaise(preflops, player);
             bool isRaisedLimpers = IsRaisedLimpers(preflops, player);
-            Dictionary<Street, bool> checkRaisedOnStreetDictionary = GetCheckRaisedOnStreets(parsedHand.HandActions, player);
+            var checkRaisedOnStreetDictionary = GetCheckRaisedOnStreets(parsedHand.HandActions, player);
+            var checkRaiseOpportunities = GetCheckRaiseOpportunities(parsedHand.HandActions, parsedHand.Players, player);
 
             stat.IsRelativePosition = IsRelativePosition(parsedHand.HandActions, player);
             stat.IsRelative3BetPosition = IsRelative3BetPosition(parsedHand.HandActions, player);
@@ -357,6 +358,7 @@ namespace Model
             int flopTrueAggressionBets = checkRaisedOnStreetDictionary[Street.Flop] ? 2 : ((aggresiveFlop && !flopCBet.Made) ? 1 : 0);
             int turnTrueAggressionBets = checkRaisedOnStreetDictionary[Street.Turn] ? 2 : (aggresiveTurn ? 1 : 0);
             int riverTrueAggressionBets = checkRaisedOnStreetDictionary[Street.River] ? 2 : (aggresiveRiver ? 1 : 0);
+
             #endregion
 
             #region Tournament
@@ -533,6 +535,9 @@ namespace Model
             stat.DidFlopCheckRaise = checkRaisedOnStreetDictionary[Street.Flop] ? 1 : 0;
             stat.DidTurnCheckRaise = checkRaisedOnStreetDictionary[Street.Turn] ? 1 : 0;
             stat.DidRiverCheckRaise = checkRaisedOnStreetDictionary[Street.River] ? 1 : 0;
+            stat.CouldFlopCheckRaise = checkRaiseOpportunities[Street.Flop] ? 1 : 0;
+            stat.CouldTurnCheckRaise = checkRaiseOpportunities[Street.Turn] ? 1 : 0;
+            stat.CouldRiverCheckRaise = checkRaiseOpportunities[Street.River] ? 1 : 0;
 
             stat.Couldcoldcall = coldCall.Possible ? 1 : 0;
             stat.Didcoldcall = coldCall.Made ? 1 : 0;
@@ -1660,7 +1665,7 @@ namespace Model
 
         private static Dictionary<Street, bool> GetCheckRaisedOnStreets(IList<HandAction> actions, string player)
         {
-            Dictionary<Street, bool> _checkedRaisedOnStreetDictionary = new Dictionary<Street, bool>()
+            var checkedRaisedOnStreetDictionary = new Dictionary<Street, bool>
             {
                 { Street.Flop, false },
                 { Street.Turn, false },
@@ -1674,9 +1679,9 @@ namespace Model
 
                 if (checkAction != null && raiseAction != null)
                 {
-                    if (_checkedRaisedOnStreetDictionary.ContainsKey(group.Key))
+                    if (checkedRaisedOnStreetDictionary.ContainsKey(group.Key))
                     {
-                        _checkedRaisedOnStreetDictionary[group.Key] = true;
+                        checkedRaisedOnStreetDictionary[group.Key] = true;
                     }
                     else
                     {
@@ -1685,7 +1690,96 @@ namespace Model
                 }
             }
 
-            return _checkedRaisedOnStreetDictionary;
+            return checkedRaisedOnStreetDictionary;
+        }
+
+        /// <summary>
+        /// Determine the check-raise opportunities for the specified player
+        /// </summary>
+        /// <param name="actions">The list of actions of the hand</param>
+        /// <param name="player">The player for whom the check-raise opportunities will be determined</param>
+        /// <returns>The dictionary with the check-raise opportunities for each street</returns>
+        private static Dictionary<Street, bool> GetCheckRaiseOpportunities(IList<HandAction> actions, PlayerList players, string player)
+        {
+            var checkRaiseOpportunities = new Dictionary<Street, bool>()
+            {
+                { Street.Flop, false },
+                { Street.Turn, false },
+                { Street.River, false },
+            };
+
+            var actionsGroupedByStreet = actions
+                .GroupBy(x => x.Street)
+                .Where(x => x.Key >= Street.Flop && x.Key <= Street.River && x.Count() > 1)
+                .ToArray();
+
+            foreach (var streetActionsGroup in actionsGroupedByStreet)
+            {
+                var playerChecked = false;
+
+                Player allInPlayer = null;
+
+                var streetActions = streetActionsGroup.ToArray();
+
+                for (var i = 0; i < streetActions.Length; i++)
+                {
+                    var action = streetActions[i];
+
+                    if (!playerChecked)
+                    {
+                        if (action.PlayerName == player)
+                        {
+                            if (!action.IsCheck)
+                            {
+                                break;
+                            }
+
+                            playerChecked = true;
+                            continue;
+                        }
+
+                        continue;
+                    }
+
+                    if (action.IsBet() && action.PlayerName != player)
+                    {
+                        var couldCheckRaise = true;
+
+                        // if player bets and goes all-in we need to check if there is any other raiser, otherwise player can't raise
+                        if (action.IsAllIn || action.IsAllInAction)
+                        {
+                            couldCheckRaise = false;
+
+                            allInPlayer = players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+
+                            for (var j = i + 1; j < streetActions.Length; j++)
+                            {
+                                if (streetActions[j].PlayerName == player)
+                                {
+                                    break;
+                                }
+
+                                if (streetActions[j].IsRaise())
+                                {
+                                    if (!streetActions[j].IsAllIn && !streetActions[j].IsAllInAction)
+                                    {
+                                        couldCheckRaise = true;
+                                    }
+                                    else
+                                    {
+                                        couldCheckRaise = false;
+                                    }
+                                }
+                            }
+                        }
+
+                        checkRaiseOpportunities[streetActionsGroup.Key] = couldCheckRaise;
+                        break;
+                    }
+                }
+            }
+
+            return checkRaiseOpportunities;
         }
 
         private static bool IsOpenRaise(IList<HandAction> preflops, string player)

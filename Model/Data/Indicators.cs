@@ -451,7 +451,14 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidCheckRaise, TotalHands);
+                var couldCheckRaise = Source.CouldFlopCheckRaise + Source.CouldTurnCheckRaise + Source.CouldRiverCheckRaise;
+
+                if (couldCheckRaise == 0)
+                {
+                    couldCheckRaise = (int)TotalHands;
+                }
+
+                return GetPercentage(Source.DidFlopCheckRaise + Source.DidTurnCheckRaise + Source.DidRiverCheckRaise, couldCheckRaise);
             }
         }
 
@@ -459,7 +466,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidFlopCheckRaise, Source.Sawflop);
+                return GetPercentage(Source.DidFlopCheckRaise, Source.CouldFlopCheckRaise != 0 ? Source.CouldFlopCheckRaise : Source.Sawflop);
             }
         }
 
@@ -467,7 +474,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidTurnCheckRaise, Source.SawTurn);
+                return GetPercentage(Source.DidTurnCheckRaise, Source.CouldTurnCheckRaise != 0 ? Source.CouldTurnCheckRaise : Source.SawTurn);
             }
         }
 
@@ -475,7 +482,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidRiverCheckRaise, Source.SawRiver);
+                return GetPercentage(Source.DidRiverCheckRaise, Source.CouldRiverCheckRaise != 0 ? Source.CouldRiverCheckRaise : Source.SawRiver);
             }
         }
 

@@ -792,6 +792,15 @@ namespace DriveHUD.Entities
         [ProtoMember(289)]
         public virtual int NumberOfWalks { get; set; }
 
+        [ProtoMember(290)]
+        public virtual int CouldFlopCheckRaise { get; set; }
+
+        [ProtoMember(291)]
+        public virtual int CouldTurnCheckRaise { get; set; }
+
+        [ProtoMember(292)]
+        public virtual int CouldRiverCheckRaise { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1138,6 +1147,9 @@ namespace DriveHUD.Entities
             DidFlopCheckRaise += a.DidFlopCheckRaise;
             DidTurnCheckRaise += a.DidTurnCheckRaise;
             DidRiverCheckRaise += a.DidRiverCheckRaise;
+            CouldFlopCheckRaise += a.CouldFlopCheckRaise;
+            CouldTurnCheckRaise += a.CouldTurnCheckRaise;
+            CouldRiverCheckRaise += a.CouldRiverCheckRaise;
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -1501,6 +1513,9 @@ namespace DriveHUD.Entities
             r.DidFlopCheckRaise = a.DidFlopCheckRaise + b.DidFlopCheckRaise;
             r.DidTurnCheckRaise = a.DidTurnCheckRaise + b.DidTurnCheckRaise;
             r.DidRiverCheckRaise = a.DidRiverCheckRaise + b.DidRiverCheckRaise;
+            r.CouldFlopCheckRaise = a.CouldFlopCheckRaise + b.CouldFlopCheckRaise;
+            r.CouldTurnCheckRaise = a.CouldTurnCheckRaise + b.CouldTurnCheckRaise;
+            r.CouldRiverCheckRaise = a.CouldRiverCheckRaise + b.CouldRiverCheckRaise;
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;
 

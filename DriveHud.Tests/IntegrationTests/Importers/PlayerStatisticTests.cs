@@ -347,6 +347,19 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated("FoldedToFourBetPreflopIsCalculated", x => x.Foldedtofourbetpreflop, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"Hero-CouldFlopCheckRaise-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFlopCheckRaise-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFlopCheckRaise-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFlopCheckRaise-4.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFlopCheckRaise-5.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldNotFlopCheckRaise-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-CouldNotFlopCheckRaise-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        public void CouldFlopCheckRaise(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("CouldFlopCheckRaise", x => x.CouldFlopCheckRaise, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated(string method, Expression<Func<Playerstatistic, int>> expression, string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             using (var perfScope = new PerformanceMonitor(method))
