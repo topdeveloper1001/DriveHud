@@ -1,0 +1,49 @@
+﻿#Game No : 16120261650 
+***** Hand History for Game 16120261650 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:12:08 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 4: Bust1985 ( 35,022 )
+Seat 1: EverSoNice ( 29,525 )
+Seat 7: Figarootoo ( 27,517 )
+Seat 8: Opa_Claus ( 30,050 )
+Seat 6: PokerJensen ( 26,750 )
+Seat 5: StackMagnet ( 27,355 )
+Seat 2: kudesnik2012 ( 29,375 )
+Seat 3: memphisino ( 34,406 )
+Trny:138340269 Level:2 
+Blinds-Antes(100/200 -25)
+EverSoNice posts ante [25]
+kudesnik2012 posts ante [25]
+memphisino posts ante [25]
+Bust1985 posts ante [25]
+StackMagnet posts ante [25]
+PokerJensen posts ante [25]
+Figarootoo posts ante [25]
+Opa_Claus posts ante [25]
+PokerJensen posts small blind [100].
+Figarootoo posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Qs 9d ]
+Opa_Claus folds
+EverSoNice folds
+kudesnik2012 folds
+memphisino folds
+Bust1985 calls [200]
+StackMagnet folds
+PokerJensen folds
+Figarootoo checks
+** Dealing Flop ** [ 3c, Qd, 5d ]
+Figarootoo checks
+Bust1985 checks
+** Dealing Turn ** [ 3d ]
+Figarootoo bets [466]
+Bust1985 calls [466]
+** Dealing River ** [ Ks ]
+Figarootoo checks
+Bust1985 checks
+Figarootoo shows [ Qs, 9d ]two pairs, Queens and Threes.
+Bust1985 doesn't show [ 4h, 8d ]a pair of Threes.
+Figarootoo wins 1,632 chips from the main pot with two pairs, Queens and Threes.
+Game #16120264269 starts.

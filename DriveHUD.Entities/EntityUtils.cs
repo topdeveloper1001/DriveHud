@@ -46,6 +46,7 @@ namespace DriveHUD.Entities
                 [EnumPokerNetworks.Ignition] = new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog, EnumPokerSites.Bovada },
                 [EnumPokerNetworks.Chico] = new[] { EnumPokerSites.BetOnline, EnumPokerSites.SportsBetting, EnumPokerSites.TigerGaming },
                 [EnumPokerNetworks.PokerStars] = new[] { EnumPokerSites.PokerStars },
+                [EnumPokerNetworks.PartyPoker] = new[] { EnumPokerSites.PartyPoker },
                 [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker },
                 [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 }
             };

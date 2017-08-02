@@ -1,0 +1,30 @@
+﻿***** Hand History for Game 169480717 *****
+$2/$4 USD NL Texas Hold'em - Monday, May 22, 13:46:41 EDT 2017
+Table Edison (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 6: KrookedTyrant ( $133.90 USD )
+Seat 3: LOLYOU FOLD ( $423.45 USD )
+Seat 4: Moose4Life ( $551.33 USD )
+Seat 2: PotatoGun ( $559.66 USD )
+Seat 5: WhatDayIsIt ( $410.67 USD )
+PotatoGun posts small blind [$2 USD].
+LOLYOU FOLD posts big blind [$4 USD].
+** Dealing down cards **
+Moose4Life folds
+WhatDayIsIt folds
+KrookedTyrant folds
+PotatoGun calls [$2 USD]
+LOLYOU FOLD checks
+** Dealing Flop ** [ 3s, 9h, Tc ]
+PotatoGun checks
+LOLYOU FOLD checks
+** Dealing Turn ** [ 2h ]
+PotatoGun checks
+LOLYOU FOLD checks
+** Dealing River ** [ 4s ]
+PotatoGun checks
+LOLYOU FOLD checks
+PotatoGun shows [ Qc, Ac ]high card Ace with Queen kicker.
+LOLYOU FOLD doesn't show [ 6c, Ad ]high card Ace.
+PotatoGun wins $7.56 USD from the main pot with high card, Ace with Queen kicker.

@@ -184,9 +184,9 @@ namespace DriveHUD.Importers
 
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
 
-                if (gameInfo.UpdateInfo != null && parsingResult.Count > 0)
+                if (gameInfo.UpdateAction != null && parsingResult.Count > 0)
                 {
-                    gameInfo.UpdateInfo(parsingResult[0], gameInfo);
+                    gameInfo.UpdateAction(parsingResult, gameInfo);
                 }
 
 #if DEBUG

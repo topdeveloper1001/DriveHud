@@ -91,7 +91,7 @@ namespace HandHistories.Parser.Utils
                 {
                     HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
 
-                    identifiedActions.Add(new AllInAction(action.PlayerName, action.Amount, action.Street, actionType == HandActionType.RAISE, actionType));
+                    identifiedActions.Add(new HandAction(action.PlayerName, actionType, action.Amount, action.Street, AllInAction: true));
                 }
                 else
                 {

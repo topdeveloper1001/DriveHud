@@ -674,6 +674,9 @@
   <data name="Enum_EnumPokerSites_YaPoker" xml:space="preserve">
     <value>YaPoker</value>
   </data>
+  <data name="Enum_EnumPokerSites_PartyPoker" xml:space="preserve">
+    <value>PartyPoker</value>
+  </data>
   <data name="Enum_EnumPokerNetworks_Chico" xml:space="preserve">
     <value>Chico Poker Network</value>
   </data>
@@ -688,5 +691,8 @@
   </data>
   <data name="Enum_EnumPokerNetworks_WPN" xml:space="preserve">
     <value>Winning Poker Network</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_PartyPoker" xml:space="preserve">
+    <value>PartyPoker</value>
   </data>
 </root>
