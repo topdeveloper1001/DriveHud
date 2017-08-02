@@ -14,6 +14,7 @@ using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Linq;
+using System.IO;
 
 namespace DriveHUD.Importers.PartyPoker
 {
@@ -115,6 +116,45 @@ namespace DriveHUD.Importers.PartyPoker
             base.Clean();
         }
 
+        protected override string GetSessionForFile(string fileName)
+        {
+            //$1.10 Sat Tickets - Centroll. 20 Gtd (141689215) Table #21.txt
+            var tournamentNumber = GetTournamentNumberFromFile(fileName);
+
+            if (!string.IsNullOrEmpty(tournamentNumber))
+            {
+                var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tournamentNumber));
+
+                if (!string.IsNullOrWhiteSpace(session))
+                {
+                    return capturedFiles[session].Session;
+                }
+            }
+
+            return base.GetSessionForFile(fileName);
+        }
+
+        private string GetTournamentNumberFromFile(string fileName)
+        {
+            var file = Path.GetFileName(fileName);
+
+            var tableIndex = file.IndexOf("Table #", StringComparison.OrdinalIgnoreCase);
+
+            if (tableIndex != -1)
+            {
+                var tournamentStartIndex = file.LastIndexOf("(", tableIndex, StringComparison.Ordinal);
+                var tournamentEndIndex = file.LastIndexOf(")", tableIndex, StringComparison.Ordinal);
+
+                if (tournamentEndIndex > tournamentStartIndex)
+                {
+                    var tornamentNumber = file.Substring(tournamentStartIndex + 1, tournamentEndIndex - tournamentStartIndex - 1);
+                    return tornamentNumber;
+                }
+            }
+
+            return null;
+        }
+
         private void UpdatePlayerNames(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
         {
             parsingResults?.ForEach(x => UpdatePlayerName(x, gameInfo));
@@ -148,7 +188,7 @@ namespace DriveHUD.Importers.PartyPoker
                 }
 
                 var player = playersToUpdate.FirstOrDefault(x => x.SeatNumber == i + 1);
-                if(player == null)
+                if (player == null)
                 {
                     dictEntry[i] = null;
                     continue;

@@ -1296,6 +1296,73 @@
         <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
           <HudPositions />
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>444</X>
+                <Y>-33</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>664</X>
+                <Y>110</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>534</X>
+                <Y>235</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>329</X>
+                <Y>260</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>124</X>
+                <Y>235</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>84</X>
+                <Y>-5</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>222</X>
+                <Y>-33</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>584</X>
+                <Y>-5</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>13</X>
+                <Y>110</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -1629,6 +1696,73 @@
               <Position>
                 <X>219</X>
                 <Y>-15</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>-19</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>658</X>
+                <Y>124</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>528</X>
+                <Y>249</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>323</X>
+                <Y>274</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>118</X>
+                <Y>249</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>78</X>
+                <Y>9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>216</X>
+                <Y>-19</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>578</X>
+                <Y>9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>7</X>
+                <Y>124</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -3690,7 +3824,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>6ac6042f-ace8-4c1b-9868-acc834a9fea2</Id>
+          <Id>048a68ab-71b7-40ad-a2b4-b73d1215d608</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -4371,7 +4505,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>782261cb-c54a-4b68-ace9-df13a0833ed6</Id>
+          <Id>7676ac27-939d-40cc-b1c3-3ea42bfbc04c</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -4883,6 +5017,73 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>439</X>
+                <Y>3</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>659</X>
+                <Y>146</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>529</X>
+                <Y>271</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>324</X>
+                <Y>296</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>119</X>
+                <Y>271</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>79</X>
+                <Y>31</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>217</X>
+                <Y>3</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>579</X>
+                <Y>31</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>8</X>
+                <Y>146</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -5060,7 +5261,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>88db3f31-52ed-45af-9297-ec98ae24fe81</Id>
+          <Id>664d6fea-f3df-4ddd-aa75-7b155d99bdf2</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -5182,7 +5383,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>46309ef9-3cc3-4669-9a43-7622c1d139b1</Id>
+          <Id>fe323278-71ae-40c9-8750-21ef1317d8dd</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -5575,6 +5776,73 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>557</X>
+                <Y>1</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>777</X>
+                <Y>144</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>647</X>
+                <Y>269</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>442</X>
+                <Y>294</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>237</X>
+                <Y>269</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>197</X>
+                <Y>29</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>335</X>
+                <Y>1</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>697</X>
+                <Y>29</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>126</X>
+                <Y>144</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -5752,7 +6020,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>d99981c6-d491-4744-bb26-c3c5987cab17</Id>
+          <Id>b807acb4-9ef4-47a9-ac51-4349bf8856db</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -5874,7 +6142,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>8b392a8c-1920-462c-83af-0b59247f0cb3</Id>
+          <Id>b82bc259-4042-489b-b543-d0d5b54a5caa</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -6436,7 +6704,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>6123bfe9-3f40-44cf-b83b-cc8605dc1d2c</Id>
+          <Id>a7bbc744-0917-4a39-a13b-167829e9df3e</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -6667,7 +6935,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>4c204711-5053-4ad9-8125-01b331146245</Id>
+          <Id>2ea790fb-334b-47d1-b297-2bd0998a3a6b</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -7129,7 +7397,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>e4c27881-c4c7-4c84-b932-b7d615e5e724</Id>
+          <Id>05065e8d-cef5-4852-b60f-4342380178b0</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
@@ -7810,7 +8078,7 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>b0435c72-f714-4af2-a47b-12f2a1b38000</Id>
+          <Id>36a50e71-a091-431a-a6e7-da96365b2c8e</Id>
           <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
