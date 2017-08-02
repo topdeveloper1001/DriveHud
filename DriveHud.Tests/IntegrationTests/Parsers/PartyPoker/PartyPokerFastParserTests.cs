@@ -106,12 +106,12 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         }
 
         [Test]
-        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "2014/01/06 13:05:47")]
-        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", "2017/05/20 23:33:24")]
+        [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "2014/01/06 03:05:47Z")]
+        [TestCase(TestDataFolder + @"Hands/Tournament157.txt", "2017/05/20 15:33:24Z")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture);
+            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture).ToUniversalTime();
 
             Assert.AreEqual(handHistory.DateOfHandUtc, dateTime);
         }
