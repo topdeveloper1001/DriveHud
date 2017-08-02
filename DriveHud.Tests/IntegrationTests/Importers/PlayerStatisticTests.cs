@@ -355,30 +355,50 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-CouldFlopCheckRaise-5.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-CouldNotFlopCheckRaise-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
         [TestCase(@"Hero-CouldNotFlopCheckRaise-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
-        public void CouldFlopCheckRaise(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        public void CouldFlopCheckRaiseIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated("CouldFlopCheckRaise", x => x.CouldFlopCheckRaise, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated("CouldFlopCheckRaiseIsCalculated", x => x.CouldFlopCheckRaise, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
         [TestCase(@"Hero-DidDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-DidDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-DidDelayedTurnCBet-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
-        public void DidDelayedTurnCBet(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        public void DidDelayedTurnCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated("DidDelayedTurnCBet", x => x.DidDelayedTurnCBet, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated("DidDelayedTurnCBetIsCalculated", x => x.DidDelayedTurnCBet, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
         [TestCase(@"Hero-CouldDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-CouldNotDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
         [TestCase(@"Hero-CouldNotDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
-        public void CouldDelayedTurnCBet(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        public void CouldDelayedTurnCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated("CouldDelayedTurnCBet", x => x.CouldDelayedTurnCBet, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated("CouldDelayedTurnCBetIsCalculated", x => x.CouldDelayedTurnCBet, fileName, pokerSite, playerName, expected);
         }
 
-        protected virtual void AssertThatStatIsCalculated(string method, Expression<Func<Playerstatistic, int>> expression, string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        [Test]
+        [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 8840)]
+        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 450)]
+        public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            var expectedEVDiff = expected / 10000m;
+            AssertThatStatIsCalculated("EquityIsCalculated", x => x.Equity, fileName, pokerSite, playerName, expectedEVDiff, 0.001);
+        }
+
+        [Test]
+        [TestCase(@"Hero-ExpectedValue-1.xml", EnumPokerSites.IPoker, "Hero", -754)]
+        [TestCase(@"Hero-ExpectedValue-2.xml", EnumPokerSites.IPoker, "Hero", -3421)]
+        [TestCase(@"DURKADURDUR-ExpectedValue-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 7728)]
+        [TestCase(@"DURKADURDUR-ExpectedValue-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", -14786)]
+        public void EVDiffIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            var expectedEVDiff = expected / 100m;
+            AssertThatStatIsCalculated("EVDiffIsCalculated", x => x.EVDiff, fileName, pokerSite, playerName, expectedEVDiff);
+        }
+
+        protected virtual void AssertThatStatIsCalculated<T>(string method, Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01)
         {
             using (var perfScope = new PerformanceMonitor(method))
             {
@@ -393,7 +413,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 var getStat = expression.Compile();
 
-                Assert.That(getStat(playerstatistic), Is.EqualTo(expected));
+                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance) );
             }
         }
 

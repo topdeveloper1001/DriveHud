@@ -649,7 +649,7 @@ namespace Model
 
             if (stat.Equity > 0)
             {
-                stat.EVDiff = GetExpectedValue(parsedHand, playerHandActions, stat.Equity) - netWon;
+                stat.EVDiff = GetExpectedValue(parsedHand, playerHandActions, stat.Equity, player) - netWon;
             }
             else
             {
@@ -705,13 +705,68 @@ namespace Model
             return stat;
         }
 
-        private static decimal GetExpectedValue(HandHistory parsedHand, HandAction[] playerHandActions, decimal equity)
+        private static decimal GetExpectedValue(HandHistory parsedHand, HandAction[] playerHandActions, decimal equity, string player)
         {
+            // potential win amount (might be reduced if hero got uncalled bet or went all-in)
             var canWin = parsedHand.WinningActions.Sum(x => x.Amount);
             var moneyInPot = playerHandActions.Where(x => x.Amount < 0).Sum(x => Math.Abs(x.Amount));
-            var possibleNetWon = canWin - moneyInPot;
 
-            return possibleNetWon * equity - moneyInPot * (1 - equity);
+            if (playerHandActions.Any(x => x.HandActionType == HandActionType.UNCALLED_BET))
+            {
+                var uncalledBetAction = playerHandActions.FirstOrDefault(x => x.HandActionType == HandActionType.UNCALLED_BET);
+                moneyInPot -= uncalledBetAction.Amount;
+
+                return canWin * equity - moneyInPot;
+            }
+
+            var moneyInPotByPlayers = (from action in parsedHand.HandActions
+                                       group action by action.PlayerName into grouped
+                                       select new
+                                       {
+                                           PlayerName = grouped.Key,
+                                           IsAllIn = grouped.Any(x => x.IsAllIn || x.IsAllInAction),
+                                           Sum = Math.Abs(grouped.Where(x => x.Amount < 0).Sum(x => x.Amount))
+                                       }).ToArray();
+
+            var heroMoneyInPot = moneyInPotByPlayers.FirstOrDefault(x => x.PlayerName == player);
+
+            if (heroMoneyInPot.IsAllIn)
+            {
+                canWin = moneyInPotByPlayers.Select(x =>
+                {
+                    if (x.Sum > heroMoneyInPot.Sum)
+                    {
+                        return heroMoneyInPot.Sum;
+                    }
+
+                    return x.Sum;
+                }).Sum();
+
+                var uncalledBetActions = parsedHand.HandActions.Where(x => x.HandActionType == HandActionType.UNCALLED_BET).ToArray();
+
+                var allUncalledBets = uncalledBetActions.Length > 0 ? uncalledBetActions.Sum(x => x.Amount) : 0;
+
+                var totalMoneyInPot = moneyInPotByPlayers.Sum(x => x.Sum) - allUncalledBets;
+
+                var rake = totalMoneyInPot - parsedHand.WinningActions.Sum(x => x.Amount);                
+
+                canWin -= rake;
+
+                moneyInPot = heroMoneyInPot.Sum;
+            }
+
+            var playersWentAllInExceptHero = moneyInPotByPlayers.Where(x => x.IsAllIn && x.PlayerName != player).ToArray();
+
+            var maxPotOfAllInPlayer = playersWentAllInExceptHero.Length > 0 ? playersWentAllInExceptHero.Max(x => x.Sum) : 0;
+
+            var uncalledBet = !moneyInPotByPlayers.Any(x => x.Sum > maxPotOfAllInPlayer && x.PlayerName != player) && maxPotOfAllInPlayer < heroMoneyInPot.Sum ?
+                heroMoneyInPot.Sum - maxPotOfAllInPlayer : 0;
+
+            canWin -= uncalledBet;
+            moneyInPot -= uncalledBet;
+
+            var expectedValue = canWin * equity - moneyInPot;
+            return expectedValue;
         }
 
         #region Infrastructure
