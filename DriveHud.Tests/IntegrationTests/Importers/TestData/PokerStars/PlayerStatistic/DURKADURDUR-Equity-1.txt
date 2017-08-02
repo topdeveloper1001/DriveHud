@@ -1,0 +1,35 @@
+PokerStars Game #47143287701:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:04:11 ET
+Table 'Vindobona' 6-max Seat #5 is the button
+Seat 1: DURKADURDUR ($203 in chips)
+Seat 2: leukehond ($251 in chips)
+Seat 3: shnizzel ($568.10 in chips)
+Seat 4: JMP69 ($55 in chips)
+Seat 5: rkothapalli8 ($36.95 in chips)
+Seat 6: pablostar ($480.85 in chips)
+pablostar: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+leukehond: folds
+shnizzel: folds
+JMP69: raises $4 to $6
+rkothapalli8: folds
+pablostar: folds
+DURKADURDUR: raises $12 to $18
+JMP69: raises $37 to $55 and is all-in
+DURKADURDUR: calls $37
+*** FLOP *** [Js 4h 5c]
+*** TURN *** [Js 4h 5c] [6s]
+*** RIVER *** [Js 4h 5c 6s] [5s]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ah Ac] (two pair, Aces and Fives)
+JMP69: shows [Kc 4d] (two pair, Fives and Fours)
+DURKADURDUR collected $108 from pot
+*** SUMMARY ***
+Total pot $111 | Rake $3
+Board [Js 4h 5c 6s 5s]
+Seat 1: DURKADURDUR (big blind) showed [Ah Ac] and won ($108) with two pair, Aces and Fives
+Seat 2: leukehond folded before Flop (didn't bet)
+Seat 3: shnizzel folded before Flop (didn't bet)
+Seat 4: JMP69 showed [Kc 4d] and lost with two pair, Fives and Fours
+Seat 5: rkothapalli8 (button) folded before Flop (didn't bet)
+Seat 6: pablostar (small blind) folded before Flop
