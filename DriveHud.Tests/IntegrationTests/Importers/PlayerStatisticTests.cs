@@ -392,6 +392,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-ExpectedValue-2.xml", EnumPokerSites.IPoker, "Hero", -3421)]
         [TestCase(@"DURKADURDUR-ExpectedValue-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 7728)]
         [TestCase(@"DURKADURDUR-ExpectedValue-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", -14786)]
+        [TestCase(@"Peon84-ExpectedValue-1.txt", EnumPokerSites.PartyPoker, "Peon84", 1316758)]
         public void EVDiffIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             var expectedEVDiff = expected / 100m;
@@ -413,7 +414,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 var getStat = expression.Compile();
 
-                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance) );
+                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance));
             }
         }
 
