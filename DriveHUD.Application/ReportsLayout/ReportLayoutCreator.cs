@@ -33,19 +33,29 @@ namespace DriveHUD.Application.ReportsLayout
             return Add(name, member, new GridViewLength(0));
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible, IValueConverter converter = null)
+        protected virtual GridViewDataColumn Add(string name, string member, string stringFormat)
         {
-            return Add(name, member, new GridViewLength(0), isVisible, converter);
+            return Add(name, member, new GridViewLength(0), stringFormat: stringFormat);
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, IValueConverter converter = null)
+        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible, IValueConverter converter = null, string stringFormat = null)
         {
-            return Add(name, member, width, true, converter);
+            return Add(name, member, new GridViewLength(0), isVisible, converter, stringFormat);
         }
 
-        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible, IValueConverter converter)
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, IValueConverter converter = null, string stringFormat = null)
+        {
+            return Add(name, member, width, true, converter, stringFormat);
+        }
+
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible, IValueConverter converter, string stringFormat)
         {
             var binding = new Binding(member);
+
+            if (stringFormat != null)
+            {
+                binding.StringFormat = stringFormat;
+            }
 
             if (converter != null)
             {
@@ -270,9 +280,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Limp SB%", nameof(Indicators.LimpSb), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Donk Bet%", nameof(Indicators.DonkBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Raise Frequency Factor%", nameof(Indicators.RaiseFrequencyFactor), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("True Aggression% (TAP)", nameof(Indicators.TrueAggression), ColumnType.Percentile),
-            //new Tuple<string, string, ColumnType>("$EV Diff", nameof(Indicators.EVDiff), ColumnType.Financial),
-            new Tuple<string, string, ColumnType>("EV bb/100", nameof(Indicators.EVBB), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("True Aggression% (TAP)", nameof(Indicators.TrueAggression), ColumnType.Percentile)
         };
 
         #endregion

@@ -15,6 +15,12 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(Add("Total Hands", nameof(Indicators.TotalHands)));
             gridView.Columns.Add(AddFinancial("Total Won", ReflectionHelper.GetPath<Indicators>(o => o.Source.NetWon)));
             gridView.Columns.Add(Add("bb/100", nameof(Indicators.BB)));
+            gridView.Columns.Add(Add("EV bb/100", nameof(Indicators.EVBB)));
+            gridView.Columns.Add(Add("Std dev", nameof(Indicators.StdDev), "{0:n2}"));
+            gridView.Columns.Add(Add("Std dev in BB", nameof(Indicators.StdDevBB), "{0:n2}"));
+            gridView.Columns.Add(Add("Std dev in BB/100", nameof(Indicators.StdDevBBPer100Hands), "{0:n2}"));
+            gridView.Columns.Add(Add("$/h", nameof(Indicators.NetWonPerHour), "{0:n2}"));
+
             gridView.Columns.Add(AddPercentile("VPIP", nameof(Indicators.VPIP)));
             gridView.Columns.Add(AddPercentile("PFR", nameof(Indicators.PFR)));
             gridView.Columns.Add(AddPercentile("3-Bet%", nameof(Indicators.ThreeBet)));
