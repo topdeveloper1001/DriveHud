@@ -183,6 +183,9 @@
   <data name="Reports_Column_BB100" xml:space="preserve">
     <value>bb/100</value>
   </data>
+  <data name="Reports_Column_BetWhenCheckedTo" xml:space="preserve">
+    <value>Bet When Checked To%</value>
+  </data>
   <data name="Reports_Column_BlindsFoldToSteal" xml:space="preserve">
     <value>Blinds Fold to Steal</value>
   </data>

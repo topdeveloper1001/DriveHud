@@ -1,0 +1,31 @@
+PokerStars Game #47153649715:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:33:22 ET
+Table 'Alzirr IV' 6-max Seat #1 is the button
+Seat 1: @moepolo83@ ($218 in chips)
+Seat 2: DURKADURDUR ($302.85 in chips)
+Seat 3: mojox ($342.65 in chips)
+Seat 4: mad.afurable ($200 in chips)
+Seat 5: welle85 ($201.75 in chips)
+Seat 6: twinpsych ($352.40 in chips)
+DURKADURDUR: posts small blind $1
+mojox: posts big blind $2
+*** HOLE CARDS ***
+mad.afurable: folds
+welle85: folds
+twinpsych: raises $4 to $6
+@moepolo83@: calls $6
+DURKADURDUR: raises $20 to $26
+mojox: folds
+twinpsych has timed out
+twinpsych: folds
+@moepolo83@: folds
+Uncalled bet ($20) returned to DURKADURDUR
+DURKADURDUR collected $20 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $20 | Rake $0
+Seat 1: @moepolo83@ (button) folded before Flop
+Seat 2: DURKADURDUR (small blind) collected ($20)
+Seat 3: mojox (big blind) folded before Flop
+Seat 4: mad.afurable folded before Flop (didn't bet)
+Seat 5: welle85 folded before Flop (didn't bet)
+Seat 6: twinpsych folded before Flop

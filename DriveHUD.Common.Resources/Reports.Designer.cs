@@ -259,6 +259,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet When Checked To%.
+        /// </summary>
+        internal static string Reports_Column_BetWhenCheckedTo {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetWhenCheckedTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blinds Fold to Steal.
         /// </summary>
         internal static string Reports_Column_BlindsFoldToSteal {
