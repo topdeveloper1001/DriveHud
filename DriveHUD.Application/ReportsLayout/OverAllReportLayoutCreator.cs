@@ -25,11 +25,10 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
             gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
-            gridView.Columns.Add(Add("Reports_Column_StdDev", nameof(Indicators.StdDev), false, stringFormat: "{0:n2}"));
+            gridView.Columns.Add(AddFinancial("Reports_Column_StdDev", nameof(Indicators.StdDev), false));
             gridView.Columns.Add(Add("Reports_Column_StdDevBB", nameof(Indicators.StdDevBB), false, stringFormat: "{0:n2}"));
             gridView.Columns.Add(Add("Reports_Column_StdDevBB100", nameof(Indicators.StdDevBBPer100Hands), false, stringFormat: "{0:n2}"));
-            gridView.Columns.Add(Add("Reports_Column_UsdPerHour", nameof(Indicators.NetWonPerHour), GridViewLength.Auto, false, null, stringFormat: "{0:n2}"));
-
+            gridView.Columns.Add(AddFinancial("Reports_Column_UsdPerHour", nameof(Indicators.NetWonPerHour), false));
             gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(Indicators.VPIP)));
             gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(Indicators.PFR)));
             gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(Indicators.ThreeBet)));

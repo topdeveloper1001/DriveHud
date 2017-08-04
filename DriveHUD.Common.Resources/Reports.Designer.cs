@@ -997,7 +997,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Std dev in BB.
+        ///   Looks up a localized string similar to Std dev in bb.
         /// </summary>
         internal static string Reports_Column_StdDevBB {
             get {
@@ -1006,7 +1006,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Std dev in BB/100.
+        ///   Looks up a localized string similar to Std dev in bb/100.
         /// </summary>
         internal static string Reports_Column_StdDevBB100 {
             get {

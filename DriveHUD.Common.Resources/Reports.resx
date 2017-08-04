@@ -430,10 +430,10 @@
     <value>Std dev</value>
   </data>
   <data name="Reports_Column_StdDevBB" xml:space="preserve">
-    <value>Std dev in BB</value>
+    <value>Std dev in bb</value>
   </data>
   <data name="Reports_Column_StdDevBB100" xml:space="preserve">
-    <value>Std dev in BB/100</value>
+    <value>Std dev in bb/100</value>
   </data>
   <data name="Reports_Column_Steal" xml:space="preserve">
     <value>Steal%</value>
