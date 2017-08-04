@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Reports_Column_3Bet" xml:space="preserve">
+    <value>3-Bet%</value>
+  </data>
+  <data name="Reports_Column_3BetCall" xml:space="preserve">
+    <value>3-Bet Call%</value>
+  </data>
+  <data name="Reports_Column_3BetVsSteal" xml:space="preserve">
+    <value>3-Bet vs. Steal</value>
+  </data>
+  <data name="Reports_Column_3Bet_BB" xml:space="preserve">
+    <value>3-Bet BB%</value>
+  </data>
+  <data name="Reports_Column_3Bet_BTN" xml:space="preserve">
+    <value>3-Bet BTN%</value>
+  </data>
+  <data name="Reports_Column_3Bet_CO" xml:space="preserve">
+    <value>3-Bet CO%</value>
+  </data>
+  <data name="Reports_Column_3Bet_IP" xml:space="preserve">
+    <value>3-Bet IP%</value>
+  </data>
+  <data name="Reports_Column_3Bet_MP" xml:space="preserve">
+    <value>3-Bet MP%</value>
+  </data>
+  <data name="Reports_Column_3Bet_OOP" xml:space="preserve">
+    <value>3-Bet OOP%</value>
+  </data>
+  <data name="Reports_Column_3Bet_SB" xml:space="preserve">
+    <value>3-Bet SB%</value>
+  </data>
+  <data name="Reports_Column_4Bet" xml:space="preserve">
+    <value>4-Bet%</value>
+  </data>
+  <data name="Reports_Column_4BetRange" xml:space="preserve">
+    <value>4Bet Range</value>
+  </data>
+  <data name="Reports_Column_4Bet_BB" xml:space="preserve">
+    <value>4-Bet BB%</value>
+  </data>
+  <data name="Reports_Column_4Bet_BTN" xml:space="preserve">
+    <value>4-Bet BTN%</value>
+  </data>
+  <data name="Reports_Column_4Bet_CO" xml:space="preserve">
+    <value>4-Bet CO%</value>
+  </data>
+  <data name="Reports_Column_4Bet_EP" xml:space="preserve">
+    <value>4-Bet EP%</value>
+  </data>
+  <data name="Reports_Column_4Bet_MP" xml:space="preserve">
+    <value>4-Bet MP%</value>
+  </data>
+  <data name="Reports_Column_4Bet_SB" xml:space="preserve">
+    <value>4-Bet SB%</value>
+  </data>
+  <data name="Reports_Column_AF" xml:space="preserve">
+    <value>AF</value>
+  </data>
+  <data name="Reports_Column_Agg" xml:space="preserve">
+    <value>Agg</value>
+  </data>
+  <data name="Reports_Column_AggPercent" xml:space="preserve">
+    <value>Agg%</value>
+  </data>
+  <data name="Reports_Column_BB100" xml:space="preserve">
+    <value>bb/100</value>
+  </data>
+  <data name="Reports_Column_BlindsFoldToSteal" xml:space="preserve">
+    <value>Blinds Fold to Steal</value>
+  </data>
+  <data name="Reports_Column_BlindsReRaiseSteal" xml:space="preserve">
+    <value>Blinds Re-raise Steal</value>
+  </data>
+  <data name="Reports_Column_Buyin" xml:space="preserve">
+    <value>Buy-in</value>
+  </data>
+  <data name="Reports_Column_CBet4BetPot" xml:space="preserve">
+    <value>C-Bet 4-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_CBetIn3BetPot" xml:space="preserve">
+    <value>C-Bet in 3-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_CBetVs1Opp" xml:space="preserve">
+    <value>C-Bet vs 1 Opp%</value>
+  </data>
+  <data name="Reports_Column_CBetVs2Opp" xml:space="preserve">
+    <value>C-Bet vs 2 Opp%</value>
+  </data>
+  <data name="Reports_Column_CBet_IP" xml:space="preserve">
+    <value>C-Bet IP%</value>
+  </data>
+  <data name="Reports_Column_CBet_MonotonePot" xml:space="preserve">
+    <value>C-Bet Monotone Pot%</value>
+  </data>
+  <data name="Reports_Column_CBet_MWPot" xml:space="preserve">
+    <value>C-Bet MW Pot%</value>
+  </data>
+  <data name="Reports_Column_CBet_OOP" xml:space="preserve">
+    <value>C-Bet OOP%</value>
+  </data>
+  <data name="Reports_Column_CBet_RagFlop" xml:space="preserve">
+    <value>C-Bet Rag Flop%</value>
+  </data>
+  <data name="Reports_Column_CheckRaise" xml:space="preserve">
+    <value>Check-Raise%</value>
+  </data>
+  <data name="Reports_Column_CheckRiverOnBXLine" xml:space="preserve">
+    <value>Check River On BX Line%</value>
+  </data>
+  <data name="Reports_Column_ColdCall" xml:space="preserve">
+    <value>Cold Call%</value>
+  </data>
+  <data name="Reports_Column_ColdCallVsBTNOpen" xml:space="preserve">
+    <value>Cold Call vs BTN open%</value>
+  </data>
+  <data name="Reports_Column_ColdCallVsCOOpen" xml:space="preserve">
+    <value>Cold Call vs CO open%</value>
+  </data>
+  <data name="Reports_Column_ColdCallVsSBOpen" xml:space="preserve">
+    <value>Cold Call vs SB open%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_3Bet" xml:space="preserve">
+    <value>Cold Call 3-Bet%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_4Bet" xml:space="preserve">
+    <value>Cold Call 4-Bet%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_BB" xml:space="preserve">
+    <value>Cold Call BB%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_BTN" xml:space="preserve">
+    <value>Cold Call BTN%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_CO" xml:space="preserve">
+    <value>Cold Call CO%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_EP" xml:space="preserve">
+    <value>Cold Call EP%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_MP" xml:space="preserve">
+    <value>Cold Call MP%</value>
+  </data>
+  <data name="Reports_Column_ColdCall_SB" xml:space="preserve">
+    <value>Cold Call SB%</value>
+  </data>
+  <data name="Reports_Column_DelayedCBet" xml:space="preserve">
+    <value>Delayed C-Bet%</value>
+  </data>
+  <data name="Reports_Column_DownCards" xml:space="preserve">
+    <value>Down Cards</value>
+  </data>
+  <data name="Reports_Column_EVBB100" xml:space="preserve">
+    <value>EV bb/100</value>
+  </data>
+  <data name="Reports_Column_EVDiff" xml:space="preserve">
+    <value>$EV Diff</value>
+  </data>
+  <data name="Reports_Column_FinalTables" xml:space="preserve">
+    <value>Final Tables</value>
+  </data>
+  <data name="Reports_Column_FloatFlop" xml:space="preserve">
+    <value>Float Flop%</value>
+  </data>
+  <data name="Reports_Column_FlopAgg" xml:space="preserve">
+    <value>Flop AGG%</value>
+  </data>
+  <data name="Reports_Column_FlopCheckRaise" xml:space="preserve">
+    <value>Flop Check-Raise%</value>
+  </data>
+  <data name="Reports_Column_FlopToCBet" xml:space="preserve">
+    <value>Flop C-Bet%</value>
+  </data>
+  <data name="Reports_Column_FoldTo3Bet" xml:space="preserve">
+    <value>Fold to 3-Bet%</value>
+  </data>
+  <data name="Reports_Column_FoldTo4Bet" xml:space="preserve">
+    <value>Fold to 4-Bet%</value>
+  </data>
+  <data name="Reports_Column_FoldToCBet3BetPot" xml:space="preserve">
+    <value>Fold to C-Bet 3-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_FoldToCBet4BetPot" xml:space="preserve">
+    <value>Fold to C-Bet 4-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_FoldToFlopCBet" xml:space="preserve">
+    <value>Fold to Flop C-bet%</value>
+  </data>
+  <data name="Reports_Column_GamesPlayed" xml:space="preserve">
+    <value>Games Played</value>
+  </data>
+  <data name="Reports_Column_GameType" xml:space="preserve">
+    <value>Game Type</value>
+  </data>
+  <data name="Reports_Column_HourOfHand" xml:space="preserve">
+    <value>Hour of Hand</value>
+  </data>
+  <data name="Reports_Column_ITM" xml:space="preserve">
+    <value>ITM%</value>
+  </data>
+  <data name="Reports_Column_Limp" xml:space="preserve">
+    <value>Limp%</value>
+  </data>
+  <data name="Reports_Column_LimpCall" xml:space="preserve">
+    <value>Limp Call%</value>
+  </data>
+  <data name="Reports_Column_LimpFold" xml:space="preserve">
+    <value>Limp Fold%</value>
+  </data>
+  <data name="Reports_Column_LimpReRaise" xml:space="preserve">
+    <value>Limp Re-raise%</value>
+  </data>
+  <data name="Reports_Column_Limp_BTN" xml:space="preserve">
+    <value>Limp BTN%</value>
+  </data>
+  <data name="Reports_Column_Limp_CO" xml:space="preserve">
+    <value>Limp CO%</value>
+  </data>
+  <data name="Reports_Column_Limp_DonkBet" xml:space="preserve">
+    <value>Donk Bet%</value>
+  </data>
+  <data name="Reports_Column_Limp_EP" xml:space="preserve">
+    <value>Limp EP%</value>
+  </data>
+  <data name="Reports_Column_Limp_MP" xml:space="preserve">
+    <value>Limp MP%</value>
+  </data>
+  <data name="Reports_Column_Limp_RaiseFreqFactor" xml:space="preserve">
+    <value>Raise Frequency Factor%</value>
+  </data>
+  <data name="Reports_Column_Limp_SB" xml:space="preserve">
+    <value>Limp SB%</value>
+  </data>
+  <data name="Reports_Column_Limp_TrueAgg" xml:space="preserve">
+    <value>True Aggression% (TAP)</value>
+  </data>
+  <data name="Reports_Column_MRatio" xml:space="preserve">
+    <value>M-Ratio</value>
+  </data>
+  <data name="Reports_Column_NetWinnings" xml:space="preserve">
+    <value>Net Winnings</value>
+  </data>
+  <data name="Reports_Column_NetWon" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
+  <data name="Reports_Column_PFR" xml:space="preserve">
+    <value>PFR</value>
+  </data>
+  <data name="Reports_Column_Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="Reports_Column_PlayerName" xml:space="preserve">
+    <value>Player Name</value>
+  </data>
+  <data name="Reports_Column_PokerSite" xml:space="preserve">
+    <value>Poker Site</value>
+  </data>
+  <data name="Reports_Column_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Reports_Column_RaiseCBet" xml:space="preserve">
+    <value>Raise C-Bet%</value>
+  </data>
+  <data name="Reports_Column_RaiseFlop" xml:space="preserve">
+    <value>Raise Flop%</value>
+  </data>
+  <data name="Reports_Column_RaiseRiver" xml:space="preserve">
+    <value>Raise River%</value>
+  </data>
+  <data name="Reports_Column_RaiseTurn" xml:space="preserve">
+    <value>Raise Turn%</value>
+  </data>
+  <data name="Reports_Column_Rake" xml:space="preserve">
+    <value>Rake</value>
+  </data>
+  <data name="Reports_Column_Rebuy" xml:space="preserve">
+    <value>Re-buy</value>
+  </data>
+  <data name="Reports_Column_RiverAgg" xml:space="preserve">
+    <value>River AGG%</value>
+  </data>
+  <data name="Reports_Column_ROI" xml:space="preserve">
+    <value>ROI%</value>
+  </data>
+  <data name="Reports_Column_SeenRiver" xml:space="preserve">
+    <value>Seen River%</value>
+  </data>
+  <data name="Reports_Column_SeenTurn" xml:space="preserve">
+    <value>Seen Turn%</value>
+  </data>
+  <data name="Reports_Column_SessionLength" xml:space="preserve">
+    <value>Session Length</value>
+  </data>
+  <data name="Reports_Column_SessionStart" xml:space="preserve">
+    <value>Session Start</value>
+  </data>
+  <data name="Reports_Column_ShowdownHand" xml:space="preserve">
+    <value>Showdown Hand</value>
+  </data>
+  <data name="Reports_Column_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Reports_Column_Squeeze" xml:space="preserve">
+    <value>Squeeze%</value>
+  </data>
+  <data name="Reports_Column_Started" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="Reports_Column_StdDev" xml:space="preserve">
+    <value>Std dev</value>
+  </data>
+  <data name="Reports_Column_StdDevBB" xml:space="preserve">
+    <value>Std dev in BB</value>
+  </data>
+  <data name="Reports_Column_StdDevBB100" xml:space="preserve">
+    <value>Std dev in BB/100</value>
+  </data>
+  <data name="Reports_Column_Steal" xml:space="preserve">
+    <value>Steal%</value>
+  </data>
+  <data name="Reports_Column_TableSize" xml:space="preserve">
+    <value>Table Size</value>
+  </data>
+  <data name="Reports_Column_TableType" xml:space="preserve">
+    <value>Table Type</value>
+  </data>
+  <data name="Reports_Column_TotalHands" xml:space="preserve">
+    <value>Total Hands</value>
+  </data>
+  <data name="Reports_Column_TotalWinnings" xml:space="preserve">
+    <value>Total Winnings</value>
+  </data>
+  <data name="Reports_Column_TotalWon" xml:space="preserve">
+    <value>Total Won</value>
+  </data>
+  <data name="Reports_Column_TournamentLength" xml:space="preserve">
+    <value>Tournament Length</value>
+  </data>
+  <data name="Reports_Column_TurnAgg" xml:space="preserve">
+    <value>Turn AGG%</value>
+  </data>
+  <data name="Reports_Column_TurnCheckRaise" xml:space="preserve">
+    <value>Turn Check-Raise%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_BTN" xml:space="preserve">
+    <value>UO-PFR BTN%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_CO" xml:space="preserve">
+    <value>UO-PFR CO%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_EP" xml:space="preserve">
+    <value>UO-PFR EP%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_MP" xml:space="preserve">
+    <value>UO-PFR MP%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_SB" xml:space="preserve">
+    <value>UO-PFR SB%</value>
+  </data>
+  <data name="Reports_Column_UsdPerHour" xml:space="preserve">
+    <value>$/h</value>
+  </data>
+  <data name="Reports_Column_VPIP" xml:space="preserve">
+    <value>VPIP</value>
+  </data>
+  <data name="Reports_Column_Winning" xml:space="preserve">
+    <value>Winning%</value>
+  </data>
+  <data name="Reports_Column_WonAmount" xml:space="preserve">
+    <value>Won Amount</value>
+  </data>
+  <data name="Reports_Column_WonPercent" xml:space="preserve">
+    <value>Won%</value>
+  </data>
+  <data name="Reports_Column_WSSD" xml:space="preserve">
+    <value>W$SD</value>
+  </data>
+  <data name="Reports_Column_WSWSF" xml:space="preserve">
+    <value>W$WSF</value>
+  </data>
+  <data name="Reports_Column_WTSD" xml:space="preserve">
+    <value>WTSD%</value>
+  </data>
+</root>

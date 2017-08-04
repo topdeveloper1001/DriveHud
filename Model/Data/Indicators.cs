@@ -1056,43 +1056,33 @@ namespace Model.Data
             }
         }
 
+        private decimal? stdDev;
+
         public virtual decimal StdDev
         {
             get
             {
-                if (Statistics.Count == 0)
+                if (!stdDev.HasValue)
                 {
-                    return 0m;
+                    CalculateStdDeviation();
                 }
 
-                var statistic = Statistics.ToArray();
-
-                var netWonInBBStatistic = statistic.Select(x => x.NetWon);
-                var meanInBB = netWonInBBStatistic.Average();
-
-                var deviation = (decimal)Math.Sqrt((double)netWonInBBStatistic.Average(x => (x - meanInBB) * (x - meanInBB)));
-
-                return deviation;
+                return stdDev.HasValue ? stdDev.Value : 0m;
             }
         }
+
+        private decimal? stdDevBB;
 
         public virtual decimal StdDevBB
         {
             get
             {
-                if (Statistics.Count == 0)
+                if (!stdDevBB.HasValue)
                 {
-                    return 0m;
+                    CalculateStdDeviation();
                 }
 
-                var statistic = Statistics.ToArray();
-
-                var netWonInBBStatistic = statistic.Select(x => GetDivisionResult(x.NetWon, x.BigBlind));
-                var meanInBB = netWonInBBStatistic.Average();
-
-                var deviation = (decimal)Math.Sqrt((double)netWonInBBStatistic.Average(x => (x - meanInBB) * (x - meanInBB)));
-
-                return deviation;
+                return stdDevBB.HasValue ? stdDevBB.Value : 0m;
             }
         }
 
@@ -1250,6 +1240,53 @@ namespace Model.Data
             return (actual / possible);
         }
 
+        protected virtual void CalculateStdDeviation()
+        {
+            if (Statistics.Count == 0)
+            {
+                return;
+            }
+
+            var statistic = Statistics.ToArray();
+
+            var netWonCollection = statistic
+                .Select(x => new
+                {
+                    NetWon = x.NetWon,
+                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
+                })
+                .ToArray();
+
+            var netWonMean = 0m;
+            var netWonMeanInBB = 0m;
+
+            // calculate mean values
+            for (var i = 0; i < netWonCollection.Length; i++)
+            {
+                netWonMean += netWonCollection[i].NetWon;
+                netWonMeanInBB += netWonCollection[i].NetWonInBB;
+            }
+
+            netWonMean /= netWonCollection.Length;
+            netWonMeanInBB /= netWonCollection.Length;
+
+            var netWonVariance = 0m;
+            var netWonVarianceInBB = 0m;
+
+            // calculate variances
+            for (var i = 0; i < netWonCollection.Length; i++)
+            {
+                netWonVariance += (netWonCollection[i].NetWon - netWonMean) * (netWonCollection[i].NetWon - netWonMean);
+                netWonVarianceInBB += (netWonCollection[i].NetWonInBB - netWonMeanInBB) * (netWonCollection[i].NetWonInBB - netWonMeanInBB);
+            }
+
+            netWonVariance /= netWonCollection.Length;
+            netWonVarianceInBB /= netWonCollection.Length;
+
+            stdDev = (decimal)Math.Sqrt((double)netWonVariance);
+            stdDevBB = (decimal)Math.Sqrt((double)netWonVarianceInBB);
+        }
+
         protected virtual decimal CalculateNetWonPerHour()
         {
             if (Statistics == null || Statistics.Count == 0)
@@ -1275,14 +1312,14 @@ namespace Model.Data
                 }
                 else
                 {
-                    totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;                    
+                    totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
 
                     sessionStart = playerstatistic.Time;
                     sessionEnd = playerstatistic.Time;
                 }
             }
 
-            totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;            
+            totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
 
             if (totalMinutes == 0)
             {

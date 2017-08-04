@@ -1,5 +1,17 @@
+//-----------------------------------------------------------------------
+// <copyright file="PositiontLayoutCreator.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Common.Reflection;
-using DriveHUD.Common.Wpf.Helpers;
+using DriveHUD.Common.Resources;
 using Model.Data;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,21 +26,22 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(AddPosition("Position", ReflectionHelper.GetPath<Indicators>(o => o.Source.PositionString), ReflectionHelper.GetPath<Indicators>(o => o.Source.Position)));
-            gridView.Columns.Add(Add("Total Hands", nameof(Indicators.TotalHands)));
-            gridView.Columns.Add(AddFinancial("Total Won", nameof(Indicators.TotalWon)));
-            gridView.Columns.Add(Add("bb/100", nameof(Indicators.BB)));
-            gridView.Columns.Add(AddPercentile("VPIP", nameof(Indicators.VPIP)));
-            gridView.Columns.Add(AddPercentile("PFR", nameof(Indicators.PFR)));
-            gridView.Columns.Add(AddPercentile("3Bet%", nameof(Indicators.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("3-Bet Call%", nameof(Indicators.ThreeBetCall)));
-            gridView.Columns.Add(AddPercentile("WTSD%", nameof(Indicators.WTSD)));
-            gridView.Columns.Add(AddPercentile("Agg%", nameof(Indicators.AggPr)));
-            gridView.Columns.Add(AddPercentile("AF", nameof(Indicators.Agg)));
-            gridView.Columns.Add(AddPercentile("W$WSF", nameof(Indicators.WSWSF)));
-            gridView.Columns.Add(AddPercentile("Flop C-Bet%", nameof(Indicators.FlopCBet)));
-            gridView.Columns.Add(AddPercentile("Steal%", nameof(Indicators.Steal)));
-            gridView.Columns.Add(AddPercentile("4Bet Range", nameof(Indicators.FourBetRange)));
+            gridView.Columns.Add(AddPosition("Reports_Column_Position", ReflectionHelper.GetPath<Indicators>(o => o.Source.PositionString), ReflectionHelper.GetPath<Indicators>(o => o.Source.Position)));
+            gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
+            gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
+            gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
+            gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(Indicators.VPIP)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(Indicators.PFR)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(Indicators.ThreeBet)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_3BetCall", nameof(Indicators.ThreeBetCall)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(Indicators.WTSD)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(Indicators.AggPr)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_AF", nameof(Indicators.Agg)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(Indicators.WSWSF)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_FlopToCBet", nameof(Indicators.FlopCBet)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_Steal", nameof(Indicators.Steal)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_4BetRange", nameof(Indicators.FourBetRange)));
 
             base.AddDefaultStats(gridView);
 
@@ -38,24 +51,24 @@ namespace DriveHUD.Application.ReportsLayout
             }
         }
 
-        private GridViewDataColumn AddPosition(string name, string member, string dataMember)
+        private GridViewDataColumn AddPosition(string resourceKey, string member, string dataMember)
         {
-            return AddPosition(name, member, dataMember, new GridViewLength(0));
+            return AddPosition(resourceKey, member, dataMember, new GridViewLength(0));
         }
 
-        private GridViewDataColumn AddPosition(string name, string member, string dataMember, GridViewLength width)
+        private GridViewDataColumn AddPosition(string resourceKey, string member, string dataMember, GridViewLength width)
         {
-            FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
+            var fef = new FrameworkElementFactory(typeof(TextBlock));
             var bindingText = new Binding(member);
             fef.SetBinding(TextBlock.TextProperty, bindingText);
 
-            DataTemplate template = new DataTemplate();
+            var template = new DataTemplate();
             template.VisualTree = fef;
             template.Seal();
 
-            GridViewDataColumn column = new GridViewDataColumn
+            var column = new GridViewDataColumn
             {
-                Header = name,
+                Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
                 DataMemberBinding = new Binding(dataMember),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
