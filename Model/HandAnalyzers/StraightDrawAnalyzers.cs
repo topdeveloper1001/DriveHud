@@ -491,9 +491,13 @@ namespace Model.HandAnalyzers
         public bool Analyze(IEnumerable<Cards.Card> playerCards, BoardCards boardCards)
         {
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
+            {
                 return true;
+            }
 
-            return !Hand.IsStraightDraw(string.Join("", playerCards), boardCards.ToString(), string.Empty);
+            var result = !Hand.IsStraightDraw(string.Join("", playerCards), boardCards.ToString(), string.Empty);
+
+            return result;
         }
 
         public ShowdownHands GetRank()

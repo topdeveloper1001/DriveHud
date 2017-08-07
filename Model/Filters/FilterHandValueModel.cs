@@ -424,6 +424,7 @@ namespace Model.Filters
 
             var selectedHandAnalyzersList = GetSelectedAnalyzers(FlopHandValuesCollection, HandAnalyzer.GetHandValuesAnalyzers()).Select(x => x.GetRank());
             var selectedDrawAnalyzersList = GetSelectedAnalyzers(FlopHandValuesCollection, HandAnalyzer.GetDrawAnalyzers()).Select(x => x.GetRank());
+
             if (selectedDrawAnalyzersList.Any())
             {
                 var noDrawAnalyzers = HandAnalyzer.GetNoDrawAnalyzers();
@@ -435,8 +436,10 @@ namespace Model.Filters
 
                 if (selectedDrawAnalyzersList.Any(s => noDrawAnalyzers.Select(n => n.GetRank()).Contains(s)))
                 {
-                    var analyzer = new HandAnalyzer(noDrawAnalyzers);
-                    drawPredicate = drawPredicate.Or(x => selectedDrawAnalyzersList.Contains(analyzer.Analyze(CardGroup.Parse(x.Cards), BoardCards.FromCards(x.Board).GetBoardOnStreet(Street.Flop)).GetRank()));
+                    var selectedNoDrawAnalyzers = noDrawAnalyzers.Where(x => selectedDrawAnalyzersList.Contains(x.GetRank())).ToArray();
+
+                    var analyzer = new HandAnalyzer(selectedNoDrawAnalyzers);
+                    drawPredicate = drawPredicate.Or(x => !string.IsNullOrWhiteSpace(x.Cards) && selectedDrawAnalyzersList.Contains(analyzer.Analyze(CardGroup.Parse(x.Cards), BoardCards.FromCards(x.Board).GetBoardOnStreet(Street.Flop)).GetRank()));
                 }
 
                 if (selectedDrawAnalyzersList.Any(s => straightDrawAnalyzers.Select(d => d.GetRank()).Contains(s)))
@@ -460,6 +463,8 @@ namespace Model.Filters
                 flopHandValuesPredicate = flopHandValuesPredicate.Or(x => CardHelper.IsStreetAvailable(x.Board, Street.Flop)
                                            && selectedHandAnalyzersList.Contains(handAnalyzers.Analyze(CardGroup.Parse(x.Cards), BoardCards.FromCards(x.Board).GetBoardOnStreet(Street.Flop)).GetRank()));
             }
+
+
 
             return flopHandValuesPredicate;
         }
