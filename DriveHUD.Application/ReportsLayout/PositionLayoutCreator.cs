@@ -20,7 +20,7 @@ using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ReportsLayout
 {
-    public class PositiontLayoutCreator : ReportLayoutCreator
+    public class PositionLayoutCreator : ReportLayoutCreator
     {
         public override void Create(RadGridView gridView)
         {

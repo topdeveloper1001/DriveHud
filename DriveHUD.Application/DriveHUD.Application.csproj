@@ -719,7 +719,7 @@
     </Compile>
     <Compile Include="ReportsLayout\HoleCardsLayoutCreator.cs" />
     <Compile Include="ReportsLayout\OverAllReportLayoutCreator.cs" />
-    <Compile Include="ReportsLayout\PositiontLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\PositionLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportManager.cs" />
     <Compile Include="ReportsLayout\SessionsLayoutCreator.cs" />

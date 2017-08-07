@@ -14,7 +14,7 @@ namespace DriveHUD.Application.ReportsLayout
             /*  Dashboard Tab */
             Register<HoleCardsLayoutCreator, HoleCardsReportCreator>(Model.Enums.EnumReports.HoleCards);
             Register<OverAllReportLayoutCreator, OverAllReportCreator>(Model.Enums.EnumReports.OverAll);
-            Register<PositiontLayoutCreator, PositionReportCreator>(Model.Enums.EnumReports.Position);
+            Register<PositionLayoutCreator, PositionReportCreator>(Model.Enums.EnumReports.Position);
             Register<SessionsLayoutCreator, SessionsReportCreator>(Model.Enums.EnumReports.Session);
             Register<StakesLayoutCreator, StakesReportCreator>(Model.Enums.EnumReports.Stake);
             Register<TimeLayoutCreator, TimeReportCreator>(Model.Enums.EnumReports.Time);
@@ -26,7 +26,7 @@ namespace DriveHUD.Application.ReportsLayout
             Register<TournamentsLayoutCreator, TournamentReportCreator>(Model.Enums.EnumReports.Tournaments);
             Register<TournamentStatsLayoutCreator, TournamentOverAllReportCreator>(Model.Enums.EnumReports.TournamentStats);
             Register<TournamentStackSizeLayoutCreator, TournamentStackSizeReportCreator>(Model.Enums.EnumReports.TournamentStackSizes);
-            Register<PositiontLayoutCreator, TournamentPositionReportCreator>(Model.Enums.EnumReports.TournamentPosition);
+            Register<PositionLayoutCreator, TournamentPositionReportCreator>(Model.Enums.EnumReports.TournamentPosition);
             Register<HoleCardsLayoutCreator, TournamentHoleCardsReportCreator>(Model.Enums.EnumReports.TournamentHoleCards);
             Register<ShowdownHandsLayoutCreator, TournamentShowdownHandsReportCreator>(Model.Enums.EnumReports.TournamentShowdownHands);
             Register<TournamentPokerSiteLayoutCreator, TournamentPokerSiteReportCreator>(Model.Enums.EnumReports.TournamentPokerSite);
