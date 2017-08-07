@@ -63,6 +63,17 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region Properties
 
+        private Guid id = Guid.NewGuid();
+
+        [XmlIgnore]
+        public Guid Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+
         private string name;
 
         public string Name
@@ -216,6 +227,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             var clone = (HudPlayerType)MemberwiseClone();
             clone.Stats = new ObservableCollection<HudPlayerTypeStat>(clone.Stats.Select(x => (HudPlayerTypeStat)x.Clone()));
             return clone;
-        }            
+        }
     }
 }

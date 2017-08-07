@@ -840,4 +840,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_UpdateView_ReleaseNotes" xml:space="preserve">
     <value>Release Notes (v.{0}):</value>
   </data>
+  <data name="Common_HudPlayerType_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
 </root>

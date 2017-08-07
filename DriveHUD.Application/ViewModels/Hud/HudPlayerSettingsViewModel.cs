@@ -49,14 +49,44 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             base.InitializeCommands();
 
-
             LoadCommand = ReactiveCommand.Create();
             LoadCommand.Subscribe(x => Load());
+
+            var canDelete = this.WhenAny(x => x.SelectedPlayerType, x => x.Value != null);
+
+            DeleteCommand = ReactiveCommand.Create(canDelete);
+            DeleteCommand.Subscribe(x =>
+            {
+                if (SelectedPlayerType != null)
+                {
+                    PlayerTypes.Remove(SelectedPlayerType);
+                    SelectedPlayerType = PlayerTypes.FirstOrDefault();
+                }
+            });
+
+            ResetCommand = ReactiveCommand.Create(canDelete);
+            ResetCommand.Subscribe(x =>
+            {
+                var defaultPlayerTypes = hudLayoutService.CreateDefaultPlayerTypes(viewModelInfo.TableType);
+
+                var defaultPlayerType = defaultPlayerTypes.FirstOrDefault(p => p.Name == SelectedPlayerType.Name);
+
+                if (defaultPlayerType == null)
+                {
+                    return;
+                }
+
+                SelectedPlayerType.StatsToMerge = defaultPlayerType.Stats;
+            });
         }
 
         #region Commands
 
         public ReactiveCommand<object> LoadCommand { get; private set; }
+
+        public ReactiveCommand<object> ResetCommand { get; private set; }
+
+        public ReactiveCommand<object> DeleteCommand { get; private set; }
 
         #endregion
 

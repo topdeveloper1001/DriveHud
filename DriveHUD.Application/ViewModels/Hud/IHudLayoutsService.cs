@@ -153,5 +153,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutToDuplicate">Layout to duplicate</param>
         /// <returns>The duplicated layout</returns>
         HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
+
+        /// <summary>
+        /// Gets default player types for the specified <see cref="EnumTableType"/>
+        /// </summary>
+        /// <param name="tableType">Table type to get player types</param>
+        /// <returns>The collection of <see cref="HudPlayerType"/></returns>
+        IEnumerable<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType);
     }
 }

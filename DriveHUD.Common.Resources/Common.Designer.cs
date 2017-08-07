@@ -854,6 +854,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string Common_HudPlayerType_Delete {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display Player Icon.
         /// </summary>
         internal static string Common_HudPlayerType_DisplayPlayerIcon {
