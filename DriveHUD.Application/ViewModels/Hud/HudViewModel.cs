@@ -1348,22 +1348,7 @@ namespace DriveHUD.Application.ViewModels
 
             playerTypesToMerge.ForEach(pt =>
             {
-                pt.CurrentPlayerType.MinSample = pt.PlayerType.MinSample;
-                pt.CurrentPlayerType.EnablePlayerProfile = pt.PlayerType.EnablePlayerProfile;
-                pt.CurrentPlayerType.DisplayPlayerIcon = pt.PlayerType.DisplayPlayerIcon;
-                pt.CurrentPlayerType.Name = pt.PlayerType.Name;
-
-                var statsToMerge = (from currentStat in pt.CurrentPlayerType.Stats
-                                    join stat in pt.PlayerType.Stats on currentStat.Stat equals stat.Stat into gj
-                                    from grouped in gj.DefaultIfEmpty()
-                                    where grouped != null
-                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
-
-                statsToMerge.ForEach(s =>
-                {
-                    s.CurrentStat.Low = s.Stat.Low;
-                    s.CurrentStat.High = s.Stat.High;
-                });
+                pt.CurrentPlayerType.MergeWith(pt.PlayerType);
             });
 
             var playerTypesToAdd = (from playerType in hudPlayerSettingsViewModel.PlayerTypes

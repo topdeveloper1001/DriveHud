@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-
 namespace DriveHUD.Common.Resources
 {
     public static class ResourceStrings

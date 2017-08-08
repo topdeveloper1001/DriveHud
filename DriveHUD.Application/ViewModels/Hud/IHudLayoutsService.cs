@@ -76,6 +76,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         HudLayoutInfoV2 Import(string path);
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{HudPlayerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        void ExportPlayerType(HudPlayerType[] playerTypes, string path);
+
+        /// <summary>
+        /// Imports <see cref="HudPlayerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to player type</param>
+        HudPlayerType[] ImportPlayerType(string path);
+
+        /// <summary>
         /// Sets icons for hud elements based on stats and layout player type settings
         /// </summary>
         void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, HudLayoutInfoV2 layout);

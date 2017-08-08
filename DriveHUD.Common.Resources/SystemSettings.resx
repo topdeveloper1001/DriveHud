@@ -221,4 +221,7 @@
   <data name="SystemSettings_LogsFolder" xml:space="preserve">
     <value>Logs</value>
   </data>
+  <data name="SystemSettings_PlayerTypeFileDialogFilter" xml:space="preserve">
+    <value>Player types (.xml)|*.xml</value>
+  </data>
 </root>

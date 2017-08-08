@@ -359,6 +359,66 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{HudPlayerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        public void ExportPlayerType(HudPlayerType[] playerTypes, string path)
+        {
+            if (playerTypes == null || playerTypes.Length == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudPlayerType[]));
+                    xmlSerializer.Serialize(fs, playerTypes);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Player types has not been exported", e);
+            }
+        }
+
+        /// <summary>
+        /// Imports <see cref="HudPlayerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to player type</param>
+        public HudPlayerType[] ImportPlayerType(string path)
+        {
+            if (!File.Exists(path))
+            {
+                LogProvider.Log.Error($"Player type could not be imported. File '{path}' not found.");
+                return null;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudPlayerType[]));
+                    var playerTypes = xmlSerializer.Deserialize(fs) as HudPlayerType[];
+
+                    playerTypes.ForEach(playerType =>
+                    {
+                        playerType.Image = GetImageLink(playerType.ImageAlias);
+                    });
+
+                    return playerTypes;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Player type from '{path}' has not been imported.", e);
+            }
+
+            return null;
+        }
+
+        /// <summary>
         /// Sets icons for hud elements based on stats and layout player type settings
         /// </summary>
         public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, HudLayoutInfoV2 layout)

@@ -11,573 +11,621 @@
     mc:Ignorable="d"
     d:DesignHeight="445"
     d:DesignWidth="664">
-    <!--<UserControl.DataContext>
-        <local:TestPlayerSettingsViewModel />
-    </UserControl.DataContext>-->
+
     <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/RadDropDownButtonTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 
-        <!-- TODO: move those colors to global dict -->
+            <SolidColorBrush
+                x:Key="ButtonBackground"
+                Color="#202125" />
+            <SolidColorBrush
+                x:Key="ActiveTextForeground"
+                Color="#ffffff" />
+            <SolidColorBrush
+                x:Key="InactiveTextForeground"
+                Color="#7d7f84" />
+            <SolidColorBrush
+                x:Key="PopupBackground"
+                Color="#191a1e" />
+            <SolidColorBrush
+                x:Key="UnderlineColor"
+                Color="#33519b" />
+            <SolidColorBrush
+                x:Key="CreateNewColor"
+                Color="#78a239" />
+            <SolidColorBrush
+                x:Key="DarkBackground"
+                Color="#111315" />
+            <SolidColorBrush
+                x:Key="StandardBlueColor"
+                Color="#34529b" />
 
-        <SolidColorBrush
-            x:Key="ButtonBackground"
-            Color="#202125" />
-        <SolidColorBrush
-            x:Key="ActiveTextForeground"
-            Color="#ffffff" />
-        <SolidColorBrush
-            x:Key="InactiveTextForeground"
-            Color="#7d7f84" />
-        <SolidColorBrush
-            x:Key="PopupBackground"
-            Color="#191a1e" />
-        <SolidColorBrush
-            x:Key="UnderlineColor"
-            Color="#33519b" />
-        <SolidColorBrush
-            x:Key="CreateNewColor"
-            Color="#78a239" />
-        <SolidColorBrush
-            x:Key="DarkBackground"
-            Color="#111315" />
-        <SolidColorBrush
-            x:Key="StandardBlueColor"
-            Color="#34529b" />
+            <Style
+                x:Key="TextBlockStyle"
+                TargetType="{x:Type TextBlock}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="FontFamily"
+                    Value="/DriveHUD.Application;component/Fonts/#Open Sans" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+            </Style>
 
-        <Style
-            x:Key="TextBlockStyle"
-            TargetType="{x:Type TextBlock}">
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource ActiveTextForeground}" />
-            <Setter
-                Property="FontFamily"
-                Value="/DriveHUD.Application;component/Fonts/#Open Sans" />
-            <Setter
-                Property="FontSize"
-                Value="12px" />
-        </Style>
+            <Style
+                x:Key="CreateNewBorderStyle"
+                TargetType="{x:Type Border}">
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource DarkBackground}" />
+                <Setter
+                    Property="CornerRadius"
+                    Value="2,2,0,0" />
+                <Setter
+                    Property="Height"
+                    Value="37" />
+            </Style>
 
-        <Style
-            x:Key="CreateNewBorderStyle"
-            TargetType="{x:Type Border}">
-            <Setter
-                Property="Background"
-                Value="{StaticResource DarkBackground}" />
-            <Setter
-                Property="CornerRadius"
-                Value="2,2,0,0" />
-            <Setter
-                Property="Height"
-                Value="37" />
-        </Style>
+            <Style
+                x:Key="CreateNewTextBlockStyle"
+                TargetType="{x:Type TextBlock}"
+                BasedOn="{StaticResource TextBlockStyle}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource CreateNewColor}" />
+            </Style>
 
-        <Style
-            x:Key="CreateNewTextBlockStyle"
-            TargetType="{x:Type TextBlock}"
-            BasedOn="{StaticResource TextBlockStyle}">
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource CreateNewColor}" />
-        </Style>
+            <Style
+                x:Key="CreateNewButtonStyle"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                Cursor="Hand">
 
-        <Style
-            x:Key="CreateNewButtonStyle"
-            TargetType="{x:Type Button}">
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <StackPanel
-                            Orientation="Horizontal"
-                            Cursor="Hand">
+                                <Path
+                                    Stretch="Fill"
+                                    Fill="{StaticResource CreateNewColor}"
+                                    Stroke="{StaticResource CreateNewColor}"
+                                    Width="13"
+                                    Height="13"
+                                    StrokeThickness="1"
+                                    Data="M3.875,0 L5.125,0 5.125,3.875 9,3.875 9,5.125 5.125,5.125 5.125,9 3.875,9 3.875,5.125 0,5.125 0,3.875 3.875,3.875 3.875,0 z" />
 
-                            <Path
-                                Stretch="Fill"
-                                Fill="{StaticResource CreateNewColor}"
-                                Stroke="{StaticResource CreateNewColor}"
-                                Width="13"
-                                Height="13"
-                                StrokeThickness="1"
-                                Data="M3.875,0 L5.125,0 5.125,3.875 9,3.875 9,5.125 5.125,5.125 5.125,9 3.875,9 3.875,5.125 0,5.125 0,3.875 3.875,3.875 3.875,0 z" />
-
-                            <TextBlock
-                                Text="{ResX Key=Common_HudPlayerType_CreateNew}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Margin="15,0,0,0"
-                                Style="{StaticResource CreateNewTextBlockStyle}"
-                                TextDecorations="Underline" />
-
-                        </StackPanel>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style
-            x:Key="PlayerTypeListBoxItemStyle"
-            TargetType="{x:Type ListBoxItem}">
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type ListBoxItem}">
-                        <Border
-                            x:Name="MainBody"
-                            Background="{StaticResource ButtonBackground}"
-                            CornerRadius="2"
-                            Height="34"
-                            Margin="10,0,8,5">
-                            <DockPanel>
-                                <ContentPresenter
-                                    x:Name="MainContent"
-                                    DockPanel.Dock="Left"
-                                    TextBlock.Foreground="#7d7e82"
+                                <TextBlock
+                                    Text="{ResX Key=Common_HudPlayerType_CreateNew}"
                                     VerticalAlignment="Center"
-                                    Margin="5,0,0,0" />
-                            </DockPanel>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger
-                                Property="IsMouseOver"
-                                Value="true">
-                                <Setter
-                                    TargetName="MainBody"
-                                    Property="Background"
-                                    Value="#313035" />
-                                <Setter
-                                    TargetName="MainContent"
-                                    Property="TextBlock.Foreground"
-                                    Value="#828387" />
-                            </Trigger>
-                            <Trigger
-                                Property="IsSelected"
-                                Value="true">
-                                <Setter
-                                    TargetName="MainBody"
-                                    Property="Background"
-                                    Value="#34529b" />
-                                <Setter
-                                    TargetName="MainContent"
-                                    Property="TextBlock.Foreground"
-                                    Value="#ffffff" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+                                    HorizontalAlignment="Center"
+                                    Margin="15,0,0,0"
+                                    Style="{StaticResource CreateNewTextBlockStyle}"
+                                    TextDecorations="Underline" />
 
-        <Style
-            x:Key="TopButtonStyle"
-            BasedOn="{StaticResource {x:Type Button}}"
-            TargetType="{x:Type Button}">
-            <Setter
-                Property="Height"
-                Value="24" />
-            <Setter
-                Property="Width"
-                Value="100" />
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource ActiveTextForeground}" />
-        </Style>
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-        <Style
-            x:Key="IconButtonStyle"
-            BasedOn="{StaticResource TopButtonStyle}"
-            TargetType="{x:Type Button}">
-            <Setter
-                Property="MinHeight"
-                Value="20" />
-            <Setter
-                Property="Height"
-                Value="20" />
-            <Setter
-                Property="Width"
-                Value="84" />
-            <Setter
-                Property="FontSize"
-                Value="9px" />
-        </Style>
+            <Style
+                x:Key="PlayerTypeListBoxItemStyle"
+                TargetType="{x:Type ListBoxItem}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type ListBoxItem}">
+                            <Border
+                                x:Name="MainBody"
+                                Background="{StaticResource ButtonBackground}"
+                                CornerRadius="2"
+                                Height="34"
+                                Margin="10,0,8,5">
+                                <DockPanel>
+                                    <ContentPresenter
+                                        x:Name="MainContent"
+                                        DockPanel.Dock="Left"
+                                        TextBlock.Foreground="#7d7e82"
+                                        VerticalAlignment="Center"
+                                        Margin="5,0,0,0" />
+                                </DockPanel>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+                                    Property="IsMouseOver"
+                                    Value="true">
+                                    <Setter
+                                        TargetName="MainBody"
+                                        Property="Background"
+                                        Value="#313035" />
+                                    <Setter
+                                        TargetName="MainContent"
+                                        Property="TextBlock.Foreground"
+                                        Value="#828387" />
+                                </Trigger>
+                                <Trigger
+                                    Property="IsSelected"
+                                    Value="true">
+                                    <Setter
+                                        TargetName="MainBody"
+                                        Property="Background"
+                                        Value="#34529b" />
+                                    <Setter
+                                        TargetName="MainContent"
+                                        Property="TextBlock.Foreground"
+                                        Value="#ffffff" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-        <Style
-            x:Key="NumericTextBoxStyle"
-            TargetType="{x:Type telerik:RadMaskedNumericInput}"
-            BasedOn="{StaticResource RadMaskedInputBaseStyle}">
-            <Setter
-                Property="BorderThickness"
-                Value="1" />
-            <Setter
-                Property="BorderBrush"
-                Value="Transparent" />
-            <Setter
-                Property="SelectionOnFocus"
-                Value="SelectAll" />
-            <Setter
-                Property="IsClearButtonVisible"
-                Value="False" />
-            <Setter
-                Property="HorizontalContentAlignment"
-                Value="Center" />
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource ActiveTextForeground}" />
-            <Setter
-                Property="Background"
-                Value="{StaticResource ButtonBackground}" />
-        </Style>
+            <Style
+                x:Key="TopButtonStyle"
+                BasedOn="{StaticResource {x:Type Button}}"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="Height"
+                    Value="24" />
+                <Setter
+                    Property="Width"
+                    Value="80" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+            </Style>
 
-        <Style
-            x:Key="ButtomStatTextBlockStyle"
-            TargetType="{x:Type TextBlock}"
-            BasedOn="{StaticResource TextBlockStyle}">
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource InactiveTextForeground}" />
-            <Setter
-                Property="FontSize"
-                Value="9px" />
-            <Setter
-                Property="VerticalAlignment"
-                Value="Center" />
-            <Setter
-                Property="HorizontalAlignment"
-                Value="Center" />
-        </Style>
+            <Style
+                x:Key="TopDropDownButtonStyle"
+                BasedOn="{StaticResource RadRibbonDropDownButtonBaseStyle}"
+                TargetType="{x:Type telerik:RadRibbonDropDownButton}">
+                <Setter
+                    Property="Height"
+                    Value="24" />
+                <Setter
+                    Property="Width"
+                    Value="115" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="DropDownWidth"
+                    Value="115" />
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+            </Style>
 
-        <Style
-            x:Key="StatsListViewStyle"
-            TargetType="{x:Type ItemsControl}">
-            <Setter
-                Property="HorizontalContentAlignment"
-                Value="Left" />
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type ItemsControl}">
+            <Style
+                x:Key="TopButtonMenuItemStyle"
+                TargetType="{x:Type telerik:RadContextMenu}"
+                BasedOn="{StaticResource RadContextMenuStyle1}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+            </Style>
 
-                        <ScrollViewer
-                            x:Name="scroll"
-                            HorizontalScrollBarVisibility="Disabled"
-                            VerticalScrollBarVisibility="Auto"
+            <Style
+                x:Key="IconButtonStyle"
+                BasedOn="{StaticResource {x:Type Button}}"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="MinHeight"
+                    Value="20" />
+                <Setter
+                    Property="Height"
+                    Value="20" />
+                <Setter
+                    Property="Width"
+                    Value="84" />
+                <Setter
+                    Property="FontSize"
+                    Value="9px" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+            </Style>
+
+            <Style
+                x:Key="NumericTextBoxStyle"
+                TargetType="{x:Type telerik:RadMaskedNumericInput}"
+                BasedOn="{StaticResource RadMaskedInputBaseStyle}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="1" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="Transparent" />
+                <Setter
+                    Property="SelectionOnFocus"
+                    Value="SelectAll" />
+                <Setter
+                    Property="IsClearButtonVisible"
+                    Value="False" />
+                <Setter
+                    Property="HorizontalContentAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource ButtonBackground}" />
+            </Style>
+
+            <Style
+                x:Key="ButtomStatTextBlockStyle"
+                TargetType="{x:Type TextBlock}"
+                BasedOn="{StaticResource TextBlockStyle}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource InactiveTextForeground}" />
+                <Setter
+                    Property="FontSize"
+                    Value="9px" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="StatsListViewStyle"
+                TargetType="{x:Type ItemsControl}">
+                <Setter
+                    Property="HorizontalContentAlignment"
+                    Value="Left" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type ItemsControl}">
+
+                            <ScrollViewer
+                                x:Name="scroll"
+                                HorizontalScrollBarVisibility="Disabled"
+                                VerticalScrollBarVisibility="Auto"
+                                HorizontalAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                Padding="{TemplateBinding Padding}">
+
+                                <WrapPanel
+                                    IsItemsHost="True"
+                                    x:Name="ItemsHost"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+
+                            </ScrollViewer>
+
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <DataTemplate
+                x:Key="StatDataTemplate">
+                <Grid
+                    Margin="5,7,5,7"
+                    Width="90"
+                    Height="62">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="22" />
+                        <RowDefinition
+                            Height="25" />
+                        <RowDefinition
+                            Height="15" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="40" />
+                        <ColumnDefinition
+                            Width="10" />
+                        <ColumnDefinition
+                            Width="40" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Grid.Row="0"
+                        Height="16"
+                        VerticalAlignment="Top"
+                        BorderThickness="0,0,0,1"
+                        BorderBrush="{StaticResource StandardBlueColor}"
+                        Grid.ColumnSpan="3">
+
+                        <TextBlock
                             HorizontalAlignment="Center"
-                            HorizontalContentAlignment="Center"
-                            Padding="{TemplateBinding Padding}">
+                            VerticalAlignment="Top"
+                            Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}}"
+                            Margin="0,-4.25,0,0"
+                            Style="{StaticResource TextBlockStyle}" />
 
-                            <WrapPanel
-                                IsItemsHost="True"
-                                x:Name="ItemsHost"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
 
-                        </ScrollViewer>
-
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <DataTemplate
-            x:Key="StatDataTemplate">
-            <Grid
-                Margin="5,7,5,7"
-                Width="90"
-                Height="62">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition
-                        Height="22" />
-                    <RowDefinition
-                        Height="25" />
-                    <RowDefinition
-                        Height="15" />
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition
-                        Width="40" />
-                    <ColumnDefinition
-                        Width="10" />
-                    <ColumnDefinition
-                        Width="40" />
-                </Grid.ColumnDefinitions>
-
-                <Border
-                    Grid.Row="0"
-                    Height="16"
-                    VerticalAlignment="Top"
-                    BorderThickness="0,0,0,1"
-                    BorderBrush="{StaticResource StandardBlueColor}"
-                    Grid.ColumnSpan="3">
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        TextMode="PlainText"
+                        Culture="en-US"
+                        Width="40"
+                        Height="25"
+                        FormatString="N1"
+                        Mask=""
+                        UpdateValueEvent="LostFocus"
+                        maskedInput:MaskedInputExtensions.AllowNull="True"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="100"
+                        Value="{Binding Low, Converter={dh:DecimalToDoubleConverter}, Mode=TwoWay}" />
 
                     <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="-"
+                        VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}}"
-                        Margin="0,-4.25,0,0"
                         Style="{StaticResource TextBlockStyle}" />
 
-                </Border>
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        TextMode="PlainText"
+                        Culture="en-US"
+                        Width="40"
+                        Height="25"
+                        FormatString="N1"
+                        Mask=""
+                        UpdateValueEvent="LostFocus"
+                        maskedInput:MaskedInputExtensions.AllowNull="True"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="100"
+                        Value="{Binding High, Converter={dh:DecimalToDoubleConverter}, Mode=TwoWay}" />
 
-                <telerik:RadMaskedNumericInput
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    TextMode="PlainText"
-                    Culture="en-US"
-                    Width="40"
-                    Height="25"
-                    FormatString="N1"
-                    Mask=""
-                    UpdateValueEvent="LostFocus"
-                    maskedInput:MaskedInputExtensions.AllowNull="True"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="100"
-                    Value="{Binding Low, Converter={dh:DecimalToDoubleConverter}, Mode=TwoWay}" />
+                    <Border
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BorderThickness="0,0,0,1"
+                        BorderBrush="{StaticResource ButtonBackground}">
 
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="-"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Style="{StaticResource TextBlockStyle}" />
+                        <TextBlock
+                            Style="{StaticResource ButtomStatTextBlockStyle}"
+                            Text="{ResX Key=Common_HudPlayerType_Low}" />
 
-                <telerik:RadMaskedNumericInput
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    TextMode="PlainText"
-                    Culture="en-US"
-                    Width="40"
-                    Height="25"
-                    FormatString="N1"
-                    Mask=""
-                    UpdateValueEvent="LostFocus"
-                    maskedInput:MaskedInputExtensions.AllowNull="True"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="100"
-                    Value="{Binding High, Converter={dh:DecimalToDoubleConverter}, Mode=TwoWay}" />
+                    </Border>
 
-                <Border
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    BorderThickness="0,0,0,1"
-                    BorderBrush="{StaticResource ButtonBackground}">
+                    <Border
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        BorderThickness="0,0,0,1"
+                        BorderBrush="{StaticResource ButtonBackground}">
 
-                    <TextBlock
-                        Style="{StaticResource ButtomStatTextBlockStyle}"
-                        Text="{ResX Key=Common_HudPlayerType_Low}" />
+                        <TextBlock
+                            Style="{StaticResource ButtomStatTextBlockStyle}"
+                            Text="{ResX Key=Common_HudPlayerType_High}" />
 
-                </Border>
+                    </Border>
 
-                <Border
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    BorderThickness="0,0,0,1"
-                    BorderBrush="{StaticResource ButtonBackground}">
+                </Grid>
+            </DataTemplate>
 
-                    <TextBlock
-                        Style="{StaticResource ButtomStatTextBlockStyle}"
-                        Text="{ResX Key=Common_HudPlayerType_High}" />
+            <Style
+                x:Key="PlayerNameTextBoxStyle"
+                TargetType="{x:Type TextBox}"
+                BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+                <Setter
+                    Property="Width"
+                    Value="155" />
+                <Setter
+                    Property="Height"
+                    Value="25" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource ButtonBackground}" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TextBox}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2"
+                                Padding="2,0,0,0"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                                <ScrollViewer
+                                    x:Name="PART_ContentHost"
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-                </Border>
+            <Style
+                x:Key="BottomCheckBoxStyle"
+                TargetType="{x:Type CheckBox}">
+                <Setter
+                    Property="SnapsToDevicePixels"
+                    Value="true" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="FontSize"
+                    Value="9px" />
+                <Setter
+                    Property="Margin"
+                    Value="2" />
+                <Setter
+                    Property="OverridesDefaultStyle"
+                    Value="true" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{x:Null}" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type CheckBox}">
+                            <BulletDecorator
+                                Background="Transparent">
+                                <BulletDecorator.Bullet>
+                                    <Border
+                                        x:Name="Border"
+                                        Width="19"
+                                        Height="19"
+                                        CornerRadius="2"
+                                        BorderThickness="0">
+                                        <Border.BorderBrush>
+                                            <SolidColorBrush
+                                                Color="{StaticResource ControlLightColor}" />
+                                        </Border.BorderBrush>
+                                        <Border.Background>
+                                            <SolidColorBrush
+                                                Color="{StaticResource ControlLightColor}" />
+                                        </Border.Background>
+                                        <Grid>
+                                            <Path
+                                                Visibility="Collapsed"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                x:Name="CheckMark"
+                                                SnapsToDevicePixels="False"
+                                                Data="F1M17.414,5.414C17.414,5.414 15.414,7.414 15.414,7.414 15.414,7.414 9.414,13.414 9.414,13.414 9.052,13.775 8.552,13.999 8,13.999 7.447,13.999 6.947,13.775 6.585,13.414 6.585,13.414 2.585,9.414 2.585,9.414 2.224,9.052 2,8.552 2,7.999 2,6.895 2.895,5.999 4,5.999 4.552,5.999 5.052,6.223 5.414,6.585 5.414,6.585 8,9.171 8,9.171 8,9.171 12.586,4.585 12.586,4.585 12.586,4.585 14.585,2.585 14.585,2.585 14.947,2.223 15.447,1.999 16,1.999 17.104,1.999 18,2.895 18,3.999 18,4.552 17.776,5.052 17.414,5.414z">
+                                                <Path.Fill>
+                                                    <LinearGradientBrush
+                                                        StartPoint="0,0"
+                                                        EndPoint="0,1">
+                                                        <LinearGradientBrush.GradientStops>
+                                                            <GradientStopCollection>
+                                                                <GradientStop
+                                                                    Color="#4568b4" />
+                                                                <GradientStop
+                                                                    Color="#3f60b6"
+                                                                    Offset="1.0" />
+                                                            </GradientStopCollection>
+                                                        </LinearGradientBrush.GradientStops>
+                                                    </LinearGradientBrush>
+                                                </Path.Fill>
+                                            </Path>
+                                            <Path
+                                                Visibility="Collapsed"
+                                                Width="7"
+                                                Height="7"
+                                                x:Name="InderminateMark"
+                                                SnapsToDevicePixels="False"
+                                                StrokeThickness="2"
+                                                Data="M 0 7 L 7 0">
+                                                <Path.Stroke>
+                                                    <SolidColorBrush
+                                                        Color="{StaticResource GlyphColor}" />
+                                                </Path.Stroke>
+                                            </Path>
+                                        </Grid>
+                                    </Border>
+                                </BulletDecorator.Bullet>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Panel.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource ControlMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.BorderBrush).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource ControlMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed" />
+                                        <VisualState
+                                            x:Name="Disabled" />
+                                    </VisualStateGroup>
+                                    <VisualStateGroup
+                                        x:Name="CheckStates">
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                    Storyboard.TargetName="CheckMark">
+                                                    <DiscreteObjectKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Unchecked" />
+                                        <VisualState
+                                            x:Name="Indeterminate">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                    Storyboard.TargetName="InderminateMark">
+                                                    <DiscreteObjectKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="8,0,0,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    RecognizesAccessKey="True" />
+                            </BulletDecorator>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-            </Grid>
-        </DataTemplate>
-
-        <Style
-            x:Key="PlayerNameTextBoxStyle"
-            TargetType="{x:Type TextBox}"
-            BasedOn="{StaticResource {x:Type TextBox}}">
-            <Setter
-                Property="BorderThickness"
-                Value="0" />
-            <Setter
-                Property="FontSize"
-                Value="12px" />
-            <Setter
-                Property="Width"
-                Value="155" />
-            <Setter
-                Property="Height"
-                Value="25" />
-            <Setter
-                Property="Background"
-                Value="{StaticResource ButtonBackground}" />
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type TextBox}">
-                        <Border
-                            Background="{TemplateBinding Background}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="2"
-                            Padding="2,0,0,0"
-                            BorderBrush="{TemplateBinding BorderBrush}">
-                            <ScrollViewer
-                                x:Name="PART_ContentHost"
-                                VerticalAlignment="Center" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style
-            x:Key="BottomCheckBoxStyle"
-            TargetType="{x:Type CheckBox}">
-            <Setter
-                Property="SnapsToDevicePixels"
-                Value="true" />
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource ActiveTextForeground}" />
-            <Setter
-                Property="FontSize"
-                Value="9px" />
-            <Setter
-                Property="Margin"
-                Value="2" />
-            <Setter
-                Property="OverridesDefaultStyle"
-                Value="true" />
-            <Setter
-                Property="FocusVisualStyle"
-                Value="{x:Null}" />
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type CheckBox}">
-                        <BulletDecorator
-                            Background="Transparent">
-                            <BulletDecorator.Bullet>
-                                <Border
-                                    x:Name="Border"
-                                    Width="19"
-                                    Height="19"
-                                    CornerRadius="2"
-                                    BorderThickness="0">
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush
-                                            Color="{StaticResource ControlLightColor}" />
-                                    </Border.BorderBrush>
-                                    <Border.Background>
-                                        <SolidColorBrush
-                                            Color="{StaticResource ControlLightColor}" />
-                                    </Border.Background>
-                                    <Grid>
-                                        <Path
-                                            Visibility="Collapsed"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            x:Name="CheckMark"
-                                            SnapsToDevicePixels="False"
-                                            Data="F1M17.414,5.414C17.414,5.414 15.414,7.414 15.414,7.414 15.414,7.414 9.414,13.414 9.414,13.414 9.052,13.775 8.552,13.999 8,13.999 7.447,13.999 6.947,13.775 6.585,13.414 6.585,13.414 2.585,9.414 2.585,9.414 2.224,9.052 2,8.552 2,7.999 2,6.895 2.895,5.999 4,5.999 4.552,5.999 5.052,6.223 5.414,6.585 5.414,6.585 8,9.171 8,9.171 8,9.171 12.586,4.585 12.586,4.585 12.586,4.585 14.585,2.585 14.585,2.585 14.947,2.223 15.447,1.999 16,1.999 17.104,1.999 18,2.895 18,3.999 18,4.552 17.776,5.052 17.414,5.414z">
-                                            <Path.Fill>
-                                                <LinearGradientBrush
-                                                    StartPoint="0,0"
-                                                    EndPoint="0,1">
-                                                    <LinearGradientBrush.GradientStops>
-                                                        <GradientStopCollection>
-                                                            <GradientStop
-                                                                Color="#4568b4" />
-                                                            <GradientStop
-                                                                Color="#3f60b6"
-                                                                Offset="1.0" />
-                                                        </GradientStopCollection>
-                                                    </LinearGradientBrush.GradientStops>
-                                                </LinearGradientBrush>
-                                            </Path.Fill>
-                                        </Path>
-                                        <Path
-                                            Visibility="Collapsed"
-                                            Width="7"
-                                            Height="7"
-                                            x:Name="InderminateMark"
-                                            SnapsToDevicePixels="False"
-                                            StrokeThickness="2"
-                                            Data="M 0 7 L 7 0">
-                                            <Path.Stroke>
-                                                <SolidColorBrush
-                                                    Color="{StaticResource GlyphColor}" />
-                                            </Path.Stroke>
-                                        </Path>
-                                    </Grid>
-                                </Border>
-                            </BulletDecorator.Bullet>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup
-                                    x:Name="CommonStates">
-                                    <VisualState
-                                        x:Name="Normal" />
-                                    <VisualState
-                                        x:Name="MouseOver">
-                                        <Storyboard>
-                                            <ColorAnimationUsingKeyFrames
-                                                Storyboard.TargetName="Border"
-                                                Storyboard.TargetProperty="(Panel.Background).Color">
-                                                <EasingColorKeyFrame
-                                                    KeyTime="0"
-                                                    Value="{StaticResource ControlMouseOverColor}" />
-                                            </ColorAnimationUsingKeyFrames>
-                                            <ColorAnimationUsingKeyFrames
-                                                Storyboard.TargetName="Border"
-                                                Storyboard.TargetProperty="(Border.BorderBrush).Color">
-                                                <EasingColorKeyFrame
-                                                    KeyTime="0"
-                                                    Value="{StaticResource ControlMouseOverColor}" />
-                                            </ColorAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState
-                                        x:Name="Pressed" />
-                                    <VisualState
-                                        x:Name="Disabled" />
-                                </VisualStateGroup>
-                                <VisualStateGroup
-                                    x:Name="CheckStates">
-                                    <VisualState
-                                        x:Name="Checked">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames
-                                                Storyboard.TargetProperty="(UIElement.Visibility)"
-                                                Storyboard.TargetName="CheckMark">
-                                                <DiscreteObjectKeyFrame
-                                                    KeyTime="0"
-                                                    Value="{x:Static Visibility.Visible}" />
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState
-                                        x:Name="Unchecked" />
-                                    <VisualState
-                                        x:Name="Indeterminate">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames
-                                                Storyboard.TargetProperty="(UIElement.Visibility)"
-                                                Storyboard.TargetName="InderminateMark">
-                                                <DiscreteObjectKeyFrame
-                                                    KeyTime="0"
-                                                    Value="{x:Static Visibility.Visible}" />
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <ContentPresenter
-                                Margin="8,0,0,0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                RecognizesAccessKey="True" />
-                        </BulletDecorator>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        </ResourceDictionary>
 
     </UserControl.Resources>
 
@@ -677,16 +725,43 @@
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
 
-                    <Button
-                        Content="{ResX Key=Common_HudPlayerType_Reset}"
-                        Style="{StaticResource TopButtonStyle}"
-                        Command="{Binding ResetCommand}" />
+                    <telerik:RadRibbonDropDownButton
+                        Text="{ResX Key=Common_HudPlayerType_ResetDelete}"
+                        Style="{StaticResource TopDropDownButtonStyle}">
+                        <telerik:RadRibbonDropDownButton.DropDownContent>
+                            <telerik:RadContextMenu
+                                IconColumnWidth="0"
+                                Style="{StaticResource TopButtonMenuItemStyle}">
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Reset}"
+                                    Command="{Binding ResetCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Delete}"
+                                    Command="{Binding DeleteCommand}" />
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonDropDownButton.DropDownContent>
+                    </telerik:RadRibbonDropDownButton>
 
-                    <Button
-                        Content="{ResX Key=Common_HudPlayerType_Delete}"
+                    <telerik:RadRibbonDropDownButton
                         Margin="5,0,0,0"
-                        Style="{StaticResource TopButtonStyle}"
-                        Command="{Binding DeleteCommand}" />
+                        Text="{ResX Key=Common_HudPlayerType_ImportExport}"
+                        Style="{StaticResource TopDropDownButtonStyle}">
+                        <telerik:RadRibbonDropDownButton.DropDownContent>
+                            <telerik:RadContextMenu
+                                IconColumnWidth="0"
+                                Style="{StaticResource TopButtonMenuItemStyle}">
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Import}"
+                                    Command="{Binding ImportCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Export}"
+                                    Command="{Binding ExportCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_ExportAll}"
+                                    Command="{Binding ExportAllCommand}" />
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonDropDownButton.DropDownContent>
+                    </telerik:RadRibbonDropDownButton>
 
                     <Button
                         Content="{ResX Key=Common_HudPlayerType_Save}"

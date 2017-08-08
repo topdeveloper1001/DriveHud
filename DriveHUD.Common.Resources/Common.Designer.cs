@@ -881,6 +881,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        internal static string Common_HudPlayerType_Export {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export All .
+        /// </summary>
+        internal static string Common_HudPlayerType_ExportAll {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ExportAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         internal static string Common_HudPlayerType_High {
@@ -895,6 +913,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudPlayerType_Import {
             get {
                 return ResourceManager.GetString("Common_HudPlayerType_Import", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import / Export.
+        /// </summary>
+        internal static string Common_HudPlayerType_ImportExport {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ImportExport", resourceCulture);
             }
         }
         
@@ -949,6 +976,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudPlayerType_Reset {
             get {
                 return ResourceManager.GetString("Common_HudPlayerType_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset / Delete.
+        /// </summary>
+        internal static string Common_HudPlayerType_ResetDelete {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ResetDelete", resourceCulture);
             }
         }
         

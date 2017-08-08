@@ -1628,7 +1628,7 @@
                     Text="{ResX Key=Common_Filters}"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
-                    Style="{StaticResource RadRibbonDropDownButtonStyle1}">
+                    Style="{StaticResource RadRibbonDropDownButtonBaseStyle}">
 
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu
@@ -1671,7 +1671,7 @@
                     Width="100"
                     Background="{StaticResource BackgroundBrush3}"
                     BorderBrush="{StaticResource BackgroundBrush3}"
-                    Style="{StaticResource RadRibbonDropDownButtonStyle1}">
+                    Style="{StaticResource RadRibbonDropDownButtonBaseStyle}">
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu
                             BorderThickness="0"
