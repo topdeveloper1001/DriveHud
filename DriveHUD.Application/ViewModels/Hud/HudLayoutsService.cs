@@ -540,7 +540,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (!stickersStatistics.ContainsKey(sticker.Name))
                 {
-                    continue;
+                  continue;
                 }
 
                 var statistics = new HudLightIndicators(new[] { stickersStatistics[sticker.Name] });

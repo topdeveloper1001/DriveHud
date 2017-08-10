@@ -230,6 +230,7 @@
     <Compile Include="PipeManager.cs" />
     <Compile Include="PlayerStatisticReImporter.cs" />
     <Compile Include="PlayerStatsSessionCacheInfo.cs" />
+    <Compile Include="PlayerStickersCacheData.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />
     <Compile Include="PokerClientLoggerConfiguration.cs" />

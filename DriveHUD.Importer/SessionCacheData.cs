@@ -12,7 +12,6 @@
 
 using DriveHUD.Entities;
 using Model;
-using Model.Data;
 using System;
 using System.Collections.Generic;
 
@@ -26,6 +25,7 @@ namespace DriveHUD.Importers
         private readonly Dictionary<PlayerCollectionItem, SessionCacheStatistic> statisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Playerstatistic> lastHandStatisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, string> playerLayoutMap;
         private readonly List<HandHistoryRecord> records;
 
         public SessionCacheData()
@@ -33,6 +33,7 @@ namespace DriveHUD.Importers
             statisticByPlayer = new Dictionary<PlayerCollectionItem, SessionCacheStatistic>();
             lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
             stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>>();
+            playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();
             records = new List<HandHistoryRecord>();
             LastModified = DateTime.Now;
         }
@@ -73,6 +74,14 @@ namespace DriveHUD.Importers
         {
             get;
             set;
+        }
+
+        public Dictionary<PlayerCollectionItem, string> LayoutByPlayer
+        {
+            get
+            {
+                return playerLayoutMap;
+            }
         }
     }
 }

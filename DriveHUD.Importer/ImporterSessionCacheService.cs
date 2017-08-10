@@ -24,6 +24,7 @@ using DriveHUD.Common.Linq;
 using Model.Data;
 using HandHistories.Objects.GameDescription;
 using Model.Enums;
+using DriveHUD.Common.Log;
 
 namespace DriveHUD.Importers
 {
@@ -315,9 +316,9 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="player">Player name</param>
         /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
-        public void AddOrUpdatePlayerStickerStats(string session, PlayerCollectionItem player, IDictionary<string, Playerstatistic> stickersStats)
+        public void AddOrUpdatePlayerStickerStats(PlayerStickersCacheData playerStickersCacheData)
         {
-            if (!isStarted || string.IsNullOrEmpty(session))
+            if (!isStarted || playerStickersCacheData == null || !playerStickersCacheData.IsValid())
             {
                 return;
             }
@@ -326,36 +327,84 @@ namespace DriveHUD.Importers
 
             try
             {
-                var sessionData = GetSessionData(session);
+                var sessionData = GetSessionData(playerStickersCacheData.Session);
 
                 if (sessionData == null)
                 {
                     return;
                 }
 
+                var layoutWasChanged = !sessionData.LayoutByPlayer.ContainsKey(playerStickersCacheData.Player) ||
+                    sessionData.LayoutByPlayer[playerStickersCacheData.Player] != playerStickersCacheData.Layout;
+
+                if (layoutWasChanged)
+                {
+                    if (sessionData.StickersStatisticByPlayer.ContainsKey(playerStickersCacheData.Player))
+                    {
+                        sessionData.StickersStatisticByPlayer[playerStickersCacheData.Player]?.Clear();
+                    }
+
+                    if (sessionData.LayoutByPlayer.ContainsKey(playerStickersCacheData.Player))
+                    {
+                        sessionData.LayoutByPlayer[playerStickersCacheData.Player] = playerStickersCacheData.Layout;
+                    }
+                    else
+                    {
+                        sessionData.LayoutByPlayer.Add(playerStickersCacheData.Player, playerStickersCacheData.Layout);
+                    }
+                }
+
                 Dictionary<string, Playerstatistic> playerStickersDictionary = null;
 
-                if (sessionData.StickersStatisticByPlayer.ContainsKey(player))
+                if (sessionData.StickersStatisticByPlayer.ContainsKey(playerStickersCacheData.Player))
                 {
-                    playerStickersDictionary = sessionData.StickersStatisticByPlayer[player];
+                    playerStickersDictionary = sessionData.StickersStatisticByPlayer[playerStickersCacheData.Player];
                 }
                 else
                 {
                     playerStickersDictionary = new Dictionary<string, Playerstatistic>();
-                    sessionData.StickersStatisticByPlayer.Add(player, playerStickersDictionary);
+                    sessionData.StickersStatisticByPlayer.Add(playerStickersCacheData.Player, playerStickersDictionary);
                 }
 
-                foreach (var item in stickersStats)
+                Action<Playerstatistic> addStatToSticker = stat =>
                 {
-                    if (playerStickersDictionary.ContainsKey(item.Key))
+                    foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
                     {
-                        playerStickersDictionary[item.Key] += item.Value;
+                        if (!stickerFilter.Value(stat))
+                        {
+                            continue;
+                        }
+
+                        if (playerStickersDictionary.ContainsKey(stickerFilter.Key))
+                        {
+                            playerStickersDictionary[stickerFilter.Key].Add(stat);
+                        }
+                        else
+                        {
+                            playerStickersDictionary.Add(stickerFilter.Key, stat.Copy());
+                        }
                     }
-                    else
-                    {
-                        playerStickersDictionary.Add(item.Key, item.Value.Copy());
-                    }
+                };
+
+                if (layoutWasChanged)
+                {
+                    dataService.ActOnPlayerStatisticFromFile(playerStickersCacheData.Player.PlayerId,
+                          stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
+                                  stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
+                                  GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId),
+                          stat =>
+                          {
+                              addStatToSticker(stat);
+                          });
+
+                    return;
                 }
+
+                addStatToSticker(playerStickersCacheData.Statistic.Copy());
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not add stickers stat to cache.", e);
             }
             finally
             {
