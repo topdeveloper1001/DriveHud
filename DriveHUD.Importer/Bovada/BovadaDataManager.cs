@@ -26,11 +26,11 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Bovada data manager
     /// </summary>
-    internal class BovadaDataManager : IBovadaDataManager
+    internal class BovadaDataManager : BaseDataManager, IBovadaDataManager
     {
-        private IEventAggregator eventAggregator;
+        protected IEventAggregator eventAggregator;
 
-        private Dictionary<uint, IPokerTable> openedTables = new Dictionary<uint, IPokerTable>();
+        protected Dictionary<uint, IPokerTable> openedTables = new Dictionary<uint, IPokerTable>();
 
         private IPokerClientEncryptedLogger logger;
 
@@ -145,6 +145,17 @@ namespace DriveHUD.Importers.Bovada
         #region Infrastructure     
 
         /// <summary>
+        /// Converts raw data to string
+        /// </summary>
+        /// <param name="data">Data to convert</param>
+        /// <returns>The result of conversion</returns>
+        protected virtual string ConvertDataToString(byte[] data)
+        {
+            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty).Replace("\\", string.Empty);
+            return dataText;
+        }
+
+        /// <summary>
         /// Create data object from stream data
         /// </summary>
         /// <param name="data">Stream data</param>
@@ -156,7 +167,7 @@ namespace DriveHUD.Importers.Bovada
                 return null;
             }
 
-            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty).Replace("\\", string.Empty);
+            var dataText = ConvertDataToString(data);
 
             // Log stream data
             if (logger != null && isLoggingEnabled)
@@ -177,10 +188,10 @@ namespace DriveHUD.Importers.Bovada
         }
 
         /// <summary>
-        /// Add new table to tables dictionary
+        /// Adds new table to tables dictionary
         /// </summary>
         /// <param name="tableUid">Unique identifier of table</param>
-        private void AddTable(uint tableUid)
+        protected virtual void AddTable(uint tableUid)
         {
             if (openedTables != null && !openedTables.ContainsKey(tableUid))
             {

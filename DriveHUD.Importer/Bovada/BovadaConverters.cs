@@ -195,6 +195,25 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        public static GameType ConvertGameTypeFromTitle(string title)
+        {
+            if (title == null)
+            {
+                throw new ArgumentNullException("title");
+            }
+
+            if (title.IndexOf("omaha h/l", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameType.OmahaHiLo;
+            }
+            else if (title.IndexOf("omaha", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameType.Omaha;
+            }
+
+            return GameType.Holdem;
+        }
+
         public static GameFormat ConvertGameFormat(string gameFormat)
         {
             Check.ArgumentNotNull(() => gameFormat);
@@ -214,6 +233,25 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        public static GameFormat ConvertGameFormatFromTitle(string title)
+        {
+            if (title == null)
+            {
+                throw new ArgumentNullException("title");
+            }
+
+            if (title.IndexOf("tbl #", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameFormat.MTT;
+            }
+            else if (title.IndexOf("zone", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameFormat.Zone;
+            }
+
+            return GameFormat.Cash;
+        }
+
         public static GameLimit ConvertGameLimit(string gameLimit)
         {
             Check.ArgumentNotNull(() => gameLimit);
@@ -229,6 +267,25 @@ namespace DriveHUD.Importers.Bovada
                 default:
                     return GameLimit.NL;
             }
+        }
+
+        public static GameLimit ConvertGameLimitFromTitle(string title)
+        {
+            if (title == null)
+            {
+                throw new ArgumentNullException("title");
+            }
+
+            if (title.IndexOf("no limit", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameLimit.NL;
+            }
+            else if (title.IndexOf("pot limit", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                return GameLimit.PL;
+            }
+
+            return GameLimit.FL;
         }
 
         public static EnumCurrency ConvertCurrency(string currency)
@@ -248,6 +305,26 @@ namespace DriveHUD.Importers.Bovada
                 default:
                     return EnumCurrency.USD;
             }
+        }
+
+        public static string ParseTableNameFromTitle(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                return string.Empty;
+            }
+
+            var startIndex = title.IndexOf("-") + 1;
+            var endIndex = title.LastIndexOf("-");
+
+            if (startIndex >= endIndex)
+            {
+                return string.Empty;
+            }
+
+            var tableName = title.Substring(startIndex, endIndex - startIndex);
+
+            return tableName;
         }
 
         public static int ConvertTableState(int tableState)

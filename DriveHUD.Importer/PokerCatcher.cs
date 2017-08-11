@@ -80,6 +80,14 @@ namespace DriveHUD.Importers
             }
         }
 
+        public Process PokerClientProcess
+        {
+            get
+            {
+                return pokerClientProcess;
+            }
+        }
+
         protected abstract string DllToInject { get; }
 
         protected abstract string ProcessName { get; }

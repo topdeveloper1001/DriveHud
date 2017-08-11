@@ -38,8 +38,11 @@ namespace DriveHUD.Importers
 
             container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());
             container.RegisterType<IBovadaCatcher, BovadaCatcher>();
+            container.RegisterType<IIgnitionCatcher, IgnitionCatcher>();
             container.RegisterType<IBovadaDataManager, BovadaDataManager>();
+            container.RegisterType<IIgnitionDataManager, IgnitionDataManager>();
             container.RegisterType<IBovadaImporter, BovadaImporter>();
+            container.RegisterType<IIgnitionImporter, IgnitionImporter>();
             container.RegisterType<IBetOnlineCatcher, BetOnlineCatcher>();
             container.RegisterType<IBetOnlineDataManager, BetOnlineDataManager>();
             container.RegisterType<IBetOnlineImporter, BetOnlineImporter>();
@@ -62,6 +65,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IFileImporter, FileImporter>();
             container.RegisterType<IFileImporterLogger, FileImporterLogger>();
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
+            container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -79,6 +83,8 @@ namespace DriveHUD.Importers
 
             importerService.Register<IBovadaCatcher>();
             importerService.Register<IBovadaImporter>();
+            importerService.Register<IIgnitionCatcher>();
+            importerService.Register<IIgnitionImporter>();
             importerService.Register<IBetOnlineCatcher>();
             importerService.Register<IBetOnlineImporter>();
             importerService.Register<IBetOnlineTournamentImporter>();

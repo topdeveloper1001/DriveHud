@@ -1423,6 +1423,9 @@
     <Resource Include="images\splashscreen.png" />
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
+    <Content Include="Lib\CapPipedI2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

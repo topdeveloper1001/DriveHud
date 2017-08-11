@@ -165,9 +165,9 @@ namespace DriveHUD.Importers.Loggers
 
                 messageCounter = 0;
             }
-            catch
+            catch(Exception e)
             {
-                LogProvider.Log.Error("Stream logger wasn't started.");
+                LogProvider.Log.Error(this, "Stream logger wasn't started.", e);
             }
         }
 
@@ -184,9 +184,9 @@ namespace DriveHUD.Importers.Loggers
                 streamWriter.Flush();
                 streamWriter.Close();
             }
-            catch
+            catch(Exception e)
             {
-                LogProvider.Log.Error("Stream logger wasn't properly closed.");
+                LogProvider.Log.Error(this, "Stream logger wasn't properly closed.", e);
             }
 
             isStarted = false;

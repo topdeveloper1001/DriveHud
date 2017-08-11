@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IImporterService.cs" company="Ace Poker Solutions">
+// <copyright file="IIgnitionWindowCache.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -12,45 +12,35 @@
 
 using System;
 
-namespace DriveHUD.Importers
+namespace DriveHUD.Importers.Bovada
 {
     /// <summary>
-    /// Importer service is service responsible for importing
+    /// Represents simple cache for handles of windows
     /// </summary>
-    public interface IImporterService
+    internal interface IIgnitionWindowCache
     {
         /// <summary>
-        /// Importing has been stopped
+        /// Checks whenever the specified handle exists in the cache
         /// </summary>
-        event EventHandler ImportingStopped;
+        /// <param name="hWnd">The handle to check if exists in the cache</param>
+        /// <returns>Returns true if the handle exists in the cache, otherwise - false</returns>
+        bool IsWindowCached(IntPtr hWnd);
 
         /// <summary>
-        /// Service status
+        /// Adds the specified handle to the cache
         /// </summary>
-        bool IsStarted { get; }
+        /// <param name="hWnd">The handle to add to the cache</param>
+        void AddWindow(IntPtr hWnd);
 
         /// <summary>
-        /// Start import
+        /// Removes the specified window from the cache
         /// </summary>
-        void StartImport();
+        /// <param name="hWnd">The handle to remove from the cache</param>
+        void RemoveWindow(IntPtr hWnd);
 
         /// <summary>
-        /// Stop import
+        /// Clears the cache
         /// </summary>
-        void StopImport();
-
-        /// <summary>
-        /// Gets importer
-        /// </summary>
-        /// <typeparam name="T">Importer interface</typeparam>
-        /// <returns>Registered importer or null</returns>
-        T GetImporter<T>();
-
-        /// <summary>
-        /// Gets running importer
-        /// </summary>
-        /// <typeparam name="T">Importer interface</typeparam>
-        /// <returns>Registered importer or null</returns>
-        T GetRunningImporter<T>();
+        void Clear();
     }
 }
