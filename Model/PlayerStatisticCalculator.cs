@@ -117,7 +117,7 @@ namespace Model
             bool isBluffTurn = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Turn);
             bool isBluffRiver = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.River);
 
-            bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Preflop);
+            bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Flop);
             bool isRagPreflop = IsRag(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
 
             Player cutoff = GetCutOffPlayer(parsedHand);
