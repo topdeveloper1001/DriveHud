@@ -637,7 +637,7 @@ namespace DriveHUD.Application.ViewModels
                     BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
                 };
 
-                ht.HudTrackConditionsMeter = trackConditionsInfo;
+                ht.HudTrackConditionsMeter = trackConditionsInfo;                
 
                 byte[] serialized;
 
