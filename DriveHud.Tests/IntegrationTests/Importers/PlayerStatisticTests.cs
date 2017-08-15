@@ -12,7 +12,6 @@
 
 using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
-using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;

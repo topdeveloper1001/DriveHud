@@ -213,9 +213,9 @@ namespace DriveHUD.Importers
         /// Parse hands with specified parser
         /// </summary>
         /// <param name="hands">Hands array</param>
-        /// <param name="handHistoryParserser">Parser for parsing</param>
+        /// <param name="handHistoryParser">Parser for parsing</param>
         /// <returns>Result of parsing</returns>
-        private List<ParsingResult> ParseHands(string[] hands, IHandHistoryParser handHistoryParserser, GameInfo gameInfo)
+        private List<ParsingResult> ParseHands(string[] hands, IHandHistoryParser handHistoryParser, GameInfo gameInfo)
         {
             Check.ArgumentNotNull(() => hands);
 
@@ -223,7 +223,7 @@ namespace DriveHUD.Importers
 
             for (int i = 0; i < hands.Length; i++)
             {
-                var parsingHandResult = ParseHand(hands[i], handHistoryParserser, gameInfo);
+                var parsingHandResult = ParseHand(hands[i], handHistoryParser, gameInfo);
 
                 if (parsingHandResult == null)
                 {
