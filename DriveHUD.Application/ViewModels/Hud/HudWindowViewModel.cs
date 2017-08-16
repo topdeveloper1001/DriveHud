@@ -53,11 +53,30 @@ namespace DriveHUD.Application.ViewModels.Hud
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
             ApplyPositionsCommand = new RelayCommand(ApplyPositions);
+            TreatAsCommand = new RelayCommand(DoTreatAs);
 
             panelOffsets = new Dictionary<HudToolKey, Point>();
+
+            var tableTypes = Enum.GetValues(typeof(EnumTableType)).Cast<byte>().ToArray();
+
+            treatAs = new ObservableCollection<byte>(tableTypes);
         }
 
         #region Properties
+
+        private IntPtr windowHandle;
+
+        public IntPtr WindowHandle
+        {
+            get
+            {
+                return windowHandle;
+            }
+            set
+            {
+                SetProperty(ref windowHandle, value);
+            }
+        }
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
@@ -69,11 +88,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private EnumTableType? tableType;
+
         public EnumTableType? TableType
         {
             get
             {
-                return layout?.TableType;
+                return tableType.HasValue ? tableType.Value : layout?.TableType;
+            }
+            private set
+            {
+                tableType = value;
             }
         }
 
@@ -113,6 +138,16 @@ namespace DriveHUD.Application.ViewModels.Hud
             set { SetProperty(ref layoutsCollection, value); }
         }
 
+        private ObservableCollection<byte> treatAs;
+
+        public ObservableCollection<byte> TreatAs
+        {
+            get
+            {
+                return treatAs;
+            }
+        }
+
         public ObservableCollection<int> Seats
         {
             get
@@ -148,6 +183,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ICommand LoadLayoutCommand { get; private set; }
 
         public ICommand ApplyPositionsCommand { get; private set; }
+
+        public ICommand TreatAsCommand { get; private set; }
 
         #endregion
 
@@ -311,12 +348,12 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(layout.PokerSite.ToString());
 
-            if (!positionProvider.Positions.ContainsKey((int)layout.TableType))
+            if (!positionProvider.Positions.ContainsKey((int)TableType))
             {
                 return;
             }
 
-            var seatsPositions = positionProvider.Positions[(int)layout.TableType];
+            var seatsPositions = positionProvider.Positions[(int)TableType];
 
             var baseHUDPlayer = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == sourceSeat.Value);
 
@@ -336,7 +373,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                                          let shiftY = toolOffsetY - baseSeatPosition.Y
                                          select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);
 
-            for (var seat = 1; seat <= (int)layout.TableType; seat++)
+            for (var seat = 1; seat <= (int)TableType; seat++)
             {
                 if (seat == sourceSeat.Value)
                 {
@@ -396,6 +433,19 @@ namespace DriveHUD.Application.ViewModels.Hud
                             Content = content,
                             Title = title
                         });
+            });
+        }
+
+        private async void DoTreatAs(object obj)
+        {
+            await Task.Run(() =>
+            {
+                using (var readToken = readerWriterLock.Read())
+                {
+                    var tableType = (EnumTableType)obj;
+                    TableType = tableType;
+                    HudNamedPipeBindingService.TreatTableAs(WindowHandle, tableType);
+                }
             });
         }
 

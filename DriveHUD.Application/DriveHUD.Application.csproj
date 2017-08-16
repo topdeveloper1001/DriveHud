@@ -392,8 +392,10 @@
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
+    <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />
     <Compile Include="Services\PokerStarsDetectorService.cs" />
+    <Compile Include="Services\TreatAsService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
     <Compile Include="SplashScreen\NotificationViewModel.cs" />

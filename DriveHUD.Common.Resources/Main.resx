@@ -165,6 +165,12 @@
   <data name="Main_ContextMenu_TagLastHand" xml:space="preserve">
     <value>Tag Last Hand</value>
   </data>
+  <data name="Main_ContextMenu_TreatAs" xml:space="preserve">
+    <value>Treat as</value>
+  </data>
+  <data name="Main_ContextMenu_TreatAsTableSize" xml:space="preserve">
+    <value>Treat as {0}-max</value>
+  </data>
   <data name="Main_ReplayerHeader" xml:space="preserve">
     <value>DriveHUD Replayer: {0} - {1}</value>
   </data>

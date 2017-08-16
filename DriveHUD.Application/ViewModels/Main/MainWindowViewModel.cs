@@ -396,7 +396,16 @@ namespace DriveHUD.Application.ViewModels
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-                var activeLayout = hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
+                var treatAsService = ServiceLocator.Current.GetInstance<ITreatAsService>();
+
+                var treatedTableType = treatAsService.GetTableType(new IntPtr(e.GameInfo.WindowHandle));
+
+                if (!treatedTableType.HasValue)
+                {
+                    treatedTableType = e.GameInfo.TableType;
+                }
+
+                var activeLayout = hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, treatedTableType.Value, e.GameInfo.EnumGameType);
 
                 if (activeLayout == null)
                 {
@@ -637,7 +646,7 @@ namespace DriveHUD.Application.ViewModels
                     BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
                 };
 
-                ht.HudTrackConditionsMeter = trackConditionsInfo;                
+                ht.HudTrackConditionsMeter = trackConditionsInfo;
 
                 byte[] serialized;
 

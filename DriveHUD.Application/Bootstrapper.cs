@@ -21,6 +21,7 @@ using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.Security;
+using DriveHUD.Application.Services;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
@@ -234,6 +235,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
+            RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());

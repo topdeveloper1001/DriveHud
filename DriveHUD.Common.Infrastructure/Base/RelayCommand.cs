@@ -1,4 +1,5 @@
 using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
 
@@ -10,6 +11,7 @@ namespace DriveHUD.Common.Infrastructure.Base
 
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;
+        private ObservableCollection<byte> treatAs;
 
         #endregion // Fields
 
@@ -33,6 +35,11 @@ namespace DriveHUD.Common.Infrastructure.Base
 
             _execute = execute;
             _canExecute = canExecute;
+        }
+
+        public RelayCommand(ObservableCollection<byte> treatAs)
+        {
+            this.treatAs = treatAs;
         }
         #endregion // Constructors
 

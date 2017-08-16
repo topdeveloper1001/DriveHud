@@ -70,7 +70,7 @@ namespace DriveHUD.Application.Views
             get { return Height / BaseHeight; }
         }
 
-        public void Initialize(HudLayout layout)
+        public void Initialize(HudLayout layout, IntPtr hWnd)
         {
             if (layout == null)
             {
@@ -85,6 +85,7 @@ namespace DriveHUD.Application.Views
             if (ViewModel != null)
             {
                 ViewModel.SetLayout(layout);
+                ViewModel.WindowHandle = hWnd;
 
                 if (ViewModel.RefreshHud == null)
                 {
