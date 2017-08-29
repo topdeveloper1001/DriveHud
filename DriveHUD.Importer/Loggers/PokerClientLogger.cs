@@ -116,6 +116,11 @@ namespace DriveHUD.Importers.Loggers
             try
             {
 #if DEBUG
+                if (message.StartsWith("{"))
+                {
+                    message = message.Insert(1, "\r\n\"timestamp\" : \"" + DateTime.Now + "\"");
+                }
+
                 streamWriter.WriteLine(message);
                 streamWriter.Flush();
                 return;

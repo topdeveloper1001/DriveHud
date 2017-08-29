@@ -151,11 +151,16 @@
     <Compile Include="Bovada\IBovadaImporter.cs" />
     <Compile Include="Bovada\IgnitionCatcher.cs" />
     <Compile Include="Bovada\IgnitionDataManager.cs" />
+    <Compile Include="Bovada\IgnitionInfoDataManager.cs" />
+    <Compile Include="Bovada\IgnitionInfoImporter.cs" />
     <Compile Include="Bovada\IgnitionTable.cs" />
+    <Compile Include="Bovada\IgnitionTableData.cs" />
     <Compile Include="Bovada\IgnitionWindowCache.cs" />
     <Compile Include="Bovada\IIgnitionCatcher.cs" />
     <Compile Include="Bovada\IIgnitionDataManager.cs" />
     <Compile Include="Bovada\IIgnitionImporter.cs" />
+    <Compile Include="Bovada\IIgnitionInfoDataManager.cs" />
+    <Compile Include="Bovada\IIgnitionInfoImporter.cs" />
     <Compile Include="Bovada\IIgnitionWindowCache.cs" />
     <Compile Include="Bovada\Model\CardShown.cs" />
     <Compile Include="Bovada\Model\CashOrTournament.cs" />
@@ -226,6 +231,8 @@
     <Compile Include="IPokerClientDataManager.cs" />
     <Compile Include="IPokerClientEncryptedLogger.cs" />
     <Compile Include="IPokerTable.cs" />
+    <Compile Include="IPoker\IIPokerImporter.cs" />
+    <Compile Include="IPoker\IPokerImporter.cs" />
     <Compile Include="ISessionService.cs" />
     <Compile Include="IUserSession.cs" />
     <Compile Include="Loggers\FileImporterLogger.cs" />

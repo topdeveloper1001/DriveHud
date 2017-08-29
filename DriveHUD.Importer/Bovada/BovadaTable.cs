@@ -421,6 +421,11 @@ namespace DriveHUD.Importers.Bovada
 
             switch (pid)
             {
+                case "T_CONNECT_INFO":
+                case "CONNECT_INFO":
+                    ParseConnectInfo(cmdObj);
+                    break;
+
                 case "PLAY_TABLE_NUMBER":
                     ParsePlayTableNumber(cmdObj);
                     break;
@@ -703,6 +708,12 @@ namespace DriveHUD.Importers.Bovada
         }
 
         #region Command Parsers
+
+        protected virtual void ParseConnectInfo(BovadaCommandDataObject cmdObj)
+        {
+            // do nothing
+        }
+
         protected virtual void ParseOptionInfo(BovadaCommandDataObject cmdObj)
         {
             // do nothing
@@ -1380,7 +1391,7 @@ namespace DriveHUD.Importers.Bovada
             initialAfterBlindStacksAdded = true;
         }
 
-        private void UpdateHandNumberCommand()
+        protected virtual void UpdateHandNumberCommand()
         {
             var handNumberTableNameCommand = commands.FilterCommands<HandNumberTableName>(CommandCodeEnum.HandNumberTableName).FirstOrDefault();
 

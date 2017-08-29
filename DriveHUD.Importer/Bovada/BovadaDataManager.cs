@@ -34,7 +34,7 @@ namespace DriveHUD.Importers.Bovada
 
         private IPokerClientEncryptedLogger logger;
 
-        private string site;
+        protected string site;
 
         private SubscriptionToken pokerClientTableClosedSubsciption;
 
@@ -65,7 +65,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         /// <param name="data">Stream data</param>
         /// <returns>Result of processing</returns>
-        public void ProcessData(byte[] data)
+        public virtual void ProcessData(byte[] data)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace DriveHUD.Importers.Bovada
         /// <summary>
         /// Remove table from tables dictionary
         /// </summary>      
-        public void RemoveOpenedTable(PokerClientTableClosedEventArgs e)
+        public virtual void RemoveOpenedTable(PokerClientTableClosedEventArgs e)
         {
             if (openedTables != null)
             {
@@ -160,7 +160,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         /// <param name="data">Stream data</param>
         /// <returns>Stream data object</returns>
-        private BovadaCatcherDataObject CreateDataObject(byte[] data)
+        protected virtual BovadaCatcherDataObject CreateDataObject(byte[] data)
         {
             if (data == null)
             {

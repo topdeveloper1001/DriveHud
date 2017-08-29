@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ImporterIdentifier.cs" company="Ace Poker Solutions">
+// <copyright file="IgnitionTableData.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,27 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers
+using DriveHUD.Entities;
+
+namespace DriveHUD.Importers.Bovada
 {
-    public enum ImporterIdentifier
+    internal class IgnitionTableData
     {
-        Bovada,
-        Ignition,
-        IgnitionInfo,
-        BetOnline,
-        BetOnlineTournament
+        public uint Id { get; set; }
+
+        public int TableSize { get; set; }
+
+        public string TableName { get; set; }
+
+        public GameFormat GameFormat { get; set; }
+
+        public GameType GameType { get; set; }
+
+        public GameLimit GameLimit { get; set; }
+
+        public override string ToString()
+        {
+            return $"TableId: {Id} TableSize: {TableSize} GameFormat: {GameFormat} GameType: {GameType} GameLimit: {GameLimit} TableName: {TableName}";
+        }
     }
 }

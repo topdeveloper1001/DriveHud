@@ -36,13 +36,12 @@ namespace DriveHUD.Importers
                 throw new ArgumentNullException(nameof(container));
             }
 
-            container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());
-            container.RegisterType<IBovadaCatcher, BovadaCatcher>();
+            container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());            
             container.RegisterType<IIgnitionCatcher, IgnitionCatcher>();
-            container.RegisterType<IBovadaDataManager, BovadaDataManager>();
-            container.RegisterType<IIgnitionDataManager, IgnitionDataManager>();
-            container.RegisterType<IBovadaImporter, BovadaImporter>();
             container.RegisterType<IIgnitionImporter, IgnitionImporter>();
+            container.RegisterType<IIgnitionInfoImporter, IgnitionInfoImporter>();
+            container.RegisterType<IIgnitionDataManager, IgnitionDataManager>();                    
+            container.RegisterType<IIgnitionInfoDataManager, IgnitionInfoDataManager>();
             container.RegisterType<IBetOnlineCatcher, BetOnlineCatcher>();
             container.RegisterType<IBetOnlineDataManager, BetOnlineDataManager>();
             container.RegisterType<IBetOnlineImporter, BetOnlineImporter>();
@@ -80,11 +79,10 @@ namespace DriveHUD.Importers
             {
                 throw new InvalidCastException("Importers could not be registered");
             }
-
-            importerService.Register<IBovadaCatcher>();
-            importerService.Register<IBovadaImporter>();
+         
             importerService.Register<IIgnitionCatcher>();
             importerService.Register<IIgnitionImporter>();
+            importerService.Register<IIgnitionInfoImporter>();
             importerService.Register<IBetOnlineCatcher>();
             importerService.Register<IBetOnlineImporter>();
             importerService.Register<IBetOnlineTournamentImporter>();

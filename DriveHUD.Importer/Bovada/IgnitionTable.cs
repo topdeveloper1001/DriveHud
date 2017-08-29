@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
@@ -18,6 +19,7 @@ using Prism.Events;
 using System;
 using System.Diagnostics;
 using System.Text;
+using System.Web;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -26,6 +28,7 @@ namespace DriveHUD.Importers.Bovada
         private IImporterService importerService;
         private IIgnitionWindowCache ignitionWindowCache;
         private const string WindowClassName = "Chrome_WidgetWin_1";
+        private bool isConnectedInfoParsed;
 
         public IgnitionTable(IEventAggregator eventAggregator) : base(eventAggregator)
         {
@@ -48,8 +51,9 @@ namespace DriveHUD.Importers.Bovada
         protected override void ProcessCmdObject(BovadaCommandDataObject cmdObj)
         {
             SetWindowHandle();
-
             base.ProcessCmdObject(cmdObj);
+            SetBaseTableData();
+            SetTableCashName();
         }
 
         /// <summary>
@@ -86,8 +90,6 @@ namespace DriveHUD.Importers.Bovada
             ignitionWindowCache.AddWindow(windowHandle);
 
             WindowHandle = windowHandle;
-
-            SetBaseTableData();
         }
 
         /// <summary>
@@ -95,20 +97,43 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetBaseTableData()
         {
-            var title = WinApi.GetWindowText(WindowHandle);
-
-            GameType = BovadaConverters.ConvertGameTypeFromTitle(title);
-            GameFormat = BovadaConverters.ConvertGameFormatFromTitle(title);
-            GameLimit = BovadaConverters.ConvertGameLimitFromTitle(title);
-
-            if (GameFormat == GameFormat.SnG || GameFormat == GameFormat.MTT)
+            if (isConnectedInfoParsed)
             {
-                TableName = BovadaConverters.ParseTableNameFromTitle(title);
+                return;
             }
 
-            TableId = (uint)RandomProvider.GetThreadRandom().Next(12000001, 19999999);
+            var infoImporter = importerService.GetRunningImporter<IgnitionInfoImporter>();
 
-            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName))
+            if (infoImporter != null && infoImporter.InfoDataManager != null)
+            {
+                IgnitionTableData tableData = null;
+
+                tableData = infoImporter.InfoDataManager.GetTableData(TableId);
+
+                if (tableData == null)
+                {
+                    return;
+                }
+
+                TableId = tableData.Id;
+                MaxSeat = tableData.TableSize;
+                GameFormat = tableData.GameFormat;
+                GameLimit = tableData.GameLimit;
+                GameType = tableData.GameType;
+                TableName = HttpUtility.UrlDecode(tableData.TableName);
+
+                isConnectedInfoParsed = true;
+
+                LogProvider.Log.Info($"Table info has been set: {tableData} [{Identifier}]");
+            }
+        }
+
+        /// <summary>
+        /// Sets the table name for cash game
+        /// </summary>
+        private void SetTableCashName()
+        {
+            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
             {
                 TableName = $"Table{TableId}";
             }
@@ -120,10 +145,39 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="cmdObj">Command data object</param>
         protected override void ParseOptionInfo(BovadaCommandDataObject cmdObj)
         {
-            if (MaxSeat == 0 && cmdObj.maxSeat != 0)
+        }
+
+        protected override void ParseConnectInfo(BovadaCommandDataObject cmdObj)
+        {
+            var tableNumber = cmdObj.tourNo != 0 ? cmdObj.tourNo :
+                  cmdObj.tableNo;
+
+            TableId = tableNumber;
+        }
+
+        protected override void UpdateHandNumberCommand()
+        {
+            // if info didn't come for some reason trying to use title of window            
+            if (!isConnectedInfoParsed)
             {
-                MaxSeat = cmdObj.maxSeat;
+                LogProvider.Log.Warn($"Table data hasn't been detected from stream. Use table title. [{Identifier}]");
+
+                var title = WinApi.GetWindowText(WindowHandle);
+
+                GameType = BovadaConverters.ConvertGameTypeFromTitle(title);
+                GameFormat = BovadaConverters.ConvertGameFormatFromTitle(title);
+                GameLimit = BovadaConverters.ConvertGameLimitFromTitle(title);
+                MaxSeat = MaxSeat == 0 ? 9 : MaxSeat;
+
+                if (GameFormat == GameFormat.SnG || GameFormat == GameFormat.MTT)
+                {
+                    TableName = BovadaConverters.ParseTableNameFromTitle(title);
+                }
+
+                TableId = (uint)RandomProvider.GetThreadRandom().Next(12000001, 19999999);
             }
+
+            base.UpdateHandNumberCommand();
         }
 
         private IntPtr GetWindowHandle(Process pokerClientProcess)

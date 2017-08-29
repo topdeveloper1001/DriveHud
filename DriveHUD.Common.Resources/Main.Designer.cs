@@ -205,7 +205,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Treat as.
+        ///   Looks up a localized string similar to Treat HUD as.
         /// </summary>
         internal static string Main_ContextMenu_TreatAs {
             get {
