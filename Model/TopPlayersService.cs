@@ -15,14 +15,14 @@ namespace Model
 {
     public class TopPlayersService : ITopPlayersService
     {
-        private readonly IDataService _dataService;
-        private readonly IList<HandHistoryRecord> _handHistoryRecords;
-        private readonly IList<Playerstatistic> _topCollection;
-        private CancellationTokenSource _cancellationTokenSource;
-        private Task _updateTopTask;
-        private decimal _minNetWon;
-        private Expression<Func<Playerstatistic, bool>> _currentFilter;
-        private readonly IEventAggregator _eventAggregator;
+        private readonly IDataService dataService;
+        private readonly IList<HandHistoryRecord> handHistoryRecords;
+        private readonly IList<Playerstatistic> topCollection;
+        private CancellationTokenSource cancellationTokenSource;
+        private Task updateTopTask;
+        private decimal minNetWon;
+        private Expression<Func<Playerstatistic, bool>> currentFilter;
+        private readonly IEventAggregator eventAggregator;
 
 
         public int TopCount { get; set; }
@@ -30,45 +30,45 @@ namespace Model
 
         public TopPlayersService()
         {
-            _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            _eventAggregator.GetEvent<UpdateReportEvent>().Subscribe(OnUpdateReport, ThreadOption.BackgroundThread);
-            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
-            _topCollection = new List<Playerstatistic>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<UpdateReportEvent>().Subscribe(OnUpdateReport, ThreadOption.BackgroundThread);
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            topCollection = new List<Playerstatistic>();
             TopCount = 50;
-            _handHistoryRecords = _dataService.GetHandHistoryRecords();
-            _minNetWon = decimal.MinValue;
+            handHistoryRecords = dataService.GetHandHistoryRecords();
+            minNetWon = decimal.MinValue;
         }
 
         private async Task<CancellationTokenSource> StopBuildingReport()
         {
-            var previousCts = _cancellationTokenSource;
+            var previousCts = cancellationTokenSource;
             var newCts = new CancellationTokenSource();
-            _cancellationTokenSource = newCts;
+            cancellationTokenSource = newCts;
             if (previousCts == null)
                 return newCts;
             previousCts.Cancel();
             try
             {
-                await _updateTopTask;
+                await updateTopTask;
             }
             catch
             {
-                _topCollection.Clear();
+                topCollection.Clear();
             }
             return newCts;
         }
 
         private async void OnUpdateReport(Expression<Func<Playerstatistic, bool>> filterPredicate)
         {
-            if (filterPredicate == _currentFilter)
+            if (filterPredicate == currentFilter)
                 return;
-            _currentFilter = filterPredicate;
+            currentFilter = filterPredicate;
             var newCts = await StopBuildingReport();
             newCts.Token.ThrowIfCancellationRequested();
-            _minNetWon = decimal.MinValue;
-            _topCollection.Clear();
-            _updateTopTask = UpdateTop(filterPredicate, newCts.Token);
-            await _updateTopTask;
+            minNetWon = decimal.MinValue;
+            topCollection.Clear();
+            updateTopTask = UpdateTop(filterPredicate, newCts.Token);
+            await updateTopTask;
         }
 
         private Task UpdateTop(Expression<Func<Playerstatistic, bool>> filterPredicate,
@@ -78,9 +78,9 @@ namespace Model
             {
                 try
                 {
-                    var playerCount = _topCollection.Count;
+                    var playerCount = topCollection.Count;
                     var orderedHandHistories =
-                        _handHistoryRecords.GroupBy(
+                        handHistoryRecords.GroupBy(
                                 x => new {PlayerName = x.Player.Playername, PokersiteId = x.Player.PokersiteId})
                             .Select(
                                 x =>
@@ -96,24 +96,24 @@ namespace Model
                     {
                         cancellationToken.ThrowIfCancellationRequested();
                         if (
-                            _topCollection.Any(
+                            topCollection.Any(
                                 x => x.PlayerName == player.PlayerName && x.PokersiteId == player.PokersiteId))
                             continue;
-                        if (player.Wins < _minNetWon && playerCount >= TopCount)
+                        if (player.Wins < minNetWon && playerCount >= TopCount)
                             break;
                         var allStats =
-                            _dataService.GetPlayerStatisticFromFile(player.PlayerName, player.PokersiteId)
+                            dataService.GetPlayerStatisticFromFile(player.PlayerName, player.PokersiteId)
                                 .AsQueryable()
                                 .Where(x => !x.IsTourney);
                         var stats = allStats.Where(filterPredicate).ToList();
                         if (!stats.Any())
                             continue;
                         var netWon = stats.Sum(x => x.NetWon);
-                        if (!_topCollection.Any() || playerCount < TopCount)
+                        if (!topCollection.Any() || playerCount < TopCount)
                         {
-                            if (netWon < _minNetWon || !_topCollection.Any())
-                                _minNetWon = netWon;
-                            _topCollection.AddRange(stats);
+                            if (netWon < minNetWon || !topCollection.Any())
+                                minNetWon = netWon;
+                            topCollection.AddRange(stats);
                             //_minNetWon =
                             //    _topCollection.GroupBy(x => new {x.PlayerId, x.PokersiteId})
                             //        .Select(x => x.Sum(p => p.NetWon))
@@ -121,23 +121,23 @@ namespace Model
                             playerCount++;
                             continue;
                         }
-                        if (netWon < _minNetWon)
+                        if (netWon < minNetWon)
                             continue;
                         var lower =
-                            _topCollection.GroupBy(x => new {x.PlayerName, PokersiteId = (short) x.PokersiteId})
+                            topCollection.GroupBy(x => new {x.PlayerName, PokersiteId = (short) x.PokersiteId})
                                 .OrderBy(x => x.Sum(p => p.NetWon))
                                 .FirstOrDefault()?.Key;
                         if (lower == null)
                             continue;
-                        _topCollection.RemoveByCondition(
+                        topCollection.RemoveByCondition(
                             x => x.PlayerName == lower.PlayerName && x.PokersiteId == lower.PokersiteId);
-                        _topCollection.AddRange(stats);
-                        _minNetWon = netWon;
+                        topCollection.AddRange(stats);
+                        minNetWon = netWon;
                     }
                 }
                 catch (OperationCanceledException)
                 {
-                    _topCollection.Clear();
+                    topCollection.Clear();
                 }
             }, cancellationToken);
         }
@@ -146,31 +146,31 @@ namespace Model
         {
             return await Task.Run(() =>
             {
-                if (_updateTopTask.Status == TaskStatus.Running)
-                    _updateTopTask.Wait();
-                return _topCollection;
+                if (updateTopTask.Status == TaskStatus.Running)
+                    updateTopTask.Wait();
+                return topCollection;
             });
         }
 
         public async void UpdateStatistics(IList<Playerstatistic> playersStats)
         {
-            _eventAggregator.GetEvent<OpponentAnalysisBuildingEvent>().Publish();
+            eventAggregator.GetEvent<OpponentAnalysisBuildingEvent>().Publish();
             var newCts = await StopBuildingReport();
             var grouppedStats =
                 playersStats.AsQueryable()
                     .Where(x => !x.IsTourney)
-                    .Where(_currentFilter)
+                    .Where(currentFilter)
                     .GroupBy(x => new {x.PlayerName, x.PokersiteId})
                     .Select(x => new {x.Key, Sum = x.Sum(p => p.NetWon)});
             foreach (var stat in grouppedStats)
             {
                 var handHistory =
-                    _handHistoryRecords.FirstOrDefault(
+                    handHistoryRecords.FirstOrDefault(
                         h => h.Player.Playername == stat.Key.PlayerName && h.Player.PokersiteId == stat.Key.PokersiteId);
                 var wins = stat.Sum;
                 if (handHistory == null)
                 {
-                    _handHistoryRecords.Add(new HandHistoryRecord
+                    handHistoryRecords.Add(new HandHistoryRecord
                     {
                         Player =
                             new Players {Playername = stat.Key.PlayerName, PokersiteId = (short) stat.Key.PokersiteId},
@@ -179,46 +179,46 @@ namespace Model
                 }
                 else
                     wins =
-                        _handHistoryRecords.Where(
+                        handHistoryRecords.Where(
                             h =>
                                 h.Player.Playername == stat.Key.PlayerName &&
                                 h.Player.PokersiteId == stat.Key.PokersiteId).Sum(y => y.NetWonInCents);
                 var playerInTop =
-                    _topCollection.Where(
+                    topCollection.Where(
                         x => x.PlayerName == stat.Key.PlayerName && x.PokersiteId == stat.Key.PokersiteId).ToList();
                 if (playerInTop.Any())
                 {
-                    if (playerInTop.Sum(p => p.NetWon) + wins < _minNetWon)
+                    if (playerInTop.Sum(p => p.NetWon) + wins < minNetWon)
                     {
-                        _topCollection.RemoveByCondition(
+                        topCollection.RemoveByCondition(
                             x => x.PlayerName == stat.Key.PlayerName && x.PokersiteId == stat.Key.PokersiteId);
                     }
                     else
                     {
-                        _topCollection.AddRange(
+                        topCollection.AddRange(
                             playersStats.AsQueryable()
                                 .Where(x => !x.IsTourney)
-                                .Where(_currentFilter)
+                                .Where(currentFilter)
                                 .Where(p => p.PlayerName == stat.Key.PlayerName && p.PokersiteId == stat.Key.PokersiteId));
                     }
                 }
-                else if (wins > _minNetWon)
+                else if (wins > minNetWon)
                 {
-                    _topCollection.AddRange(
+                    topCollection.AddRange(
                         playersStats.AsQueryable()
                             .Where(x => !x.IsTourney)
-                            .Where(_currentFilter)
+                            .Where(currentFilter)
                             .Where(p => p.PlayerName == stat.Key.PlayerName && p.PokersiteId == stat.Key.PokersiteId));
                 }
             }
             await ArrangeTopCount(newCts);
-            _eventAggregator.GetEvent<OpponentAnalysisBuildedEvent>().Publish();
+            eventAggregator.GetEvent<OpponentAnalysisBuildedEvent>().Publish();
         }
 
         private async Task ArrangeTopCount(CancellationTokenSource cts)
         {
             var sortedTopList =
-                _topCollection.GroupBy(x => new {x.PlayerName, x.PokersiteId})
+                topCollection.GroupBy(x => new {x.PlayerName, x.PokersiteId})
                     .OrderByDescending(x => x.Sum(p => p.NetWon))
                     .Select((x, index) => new {x.Key.PlayerName, x.Key.PokersiteId, Index = index})
                     .ToList();
@@ -226,7 +226,7 @@ namespace Model
             {
                 foreach (var outOfRangePlayer in sortedTopList.Where(s => s.Index >= TopCount))
                 {
-                    _topCollection.RemoveByCondition(
+                    topCollection.RemoveByCondition(
                         x =>
                             x.PlayerName == outOfRangePlayer.PlayerName &&
                             x.PokersiteId == outOfRangePlayer.PokersiteId);
@@ -235,8 +235,8 @@ namespace Model
             else if (sortedTopList.Count < TopCount)
             {
                 cts.Token.ThrowIfCancellationRequested();
-                _updateTopTask = UpdateTop(_currentFilter, cts.Token);
-                await _updateTopTask;
+                updateTopTask = UpdateTop(currentFilter, cts.Token);
+                await updateTopTask;
             }
         }
     }

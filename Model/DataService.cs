@@ -554,7 +554,8 @@ namespace Model
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                if (storageModel.PlayerSelectedItem != null && statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                if (storageModel.PlayerSelectedItem != null &&
+                    (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(statistic.PlayerId)))
                 {
                     storageModel.StatisticCollection.Add(statistic);
                 }

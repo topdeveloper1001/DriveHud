@@ -1,0 +1,25 @@
+PokerStars Game #47184241842:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:01:55 ET
+Table 'Malabar III' 6-max Seat #3 is the button
+Seat 2: LingXY ($203 in chips)
+Seat 3: nachtvogel ($233.25 in chips)
+Seat 4: Fierytycoon ($222.60 in chips)
+Seat 5: TODO ADENTR0 ($210.85 in chips)
+Seat 6: DURKADURDUR ($459.80 in chips)
+Fierytycoon: posts small blind $1
+TODO ADENTR0: posts big blind $2
+imthesky: sits out
+*** HOLE CARDS ***
+DURKADURDUR: folds
+LingXY: folds
+nachtvogel: folds
+Fierytycoon: folds
+Uncalled bet ($1) returned to TODO ADENTR0
+TODO ADENTR0 collected $2 from pot
+TODO ADENTR0: doesn't show hand
+*** SUMMARY ***
+Total pot $2 | Rake $0
+Seat 2: LingXY folded before Flop (didn't bet)
+Seat 3: nachtvogel (button) folded before Flop (didn't bet)
+Seat 4: Fierytycoon (small blind) folded before Flop
+Seat 5: TODO ADENTR0 (big blind) collected ($2)
+Seat 6: DURKADURDUR folded before Flop (didn't bet)

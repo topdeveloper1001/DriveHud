@@ -23,6 +23,8 @@ namespace DriveHUD.Common.Resources
     {
         public const double HudIconHeaderHeight = 35d;
 
+        public const double MinimumDistanceToTheBorder = 5d;
+
         public const double BovadaRichHudElementWidth = 144;
 
         public const double BovadaRichHudElementHeight = 215;

@@ -579,7 +579,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdateBuiltFilter(BuiltFilterChangedEventArgs obj)
         {
-            this.CurrentlyBuiltFilter = obj.BuiltFilter;
+            CurrentlyBuiltFilter = obj.BuiltFilter;
             UpdateReport();
         }
 
@@ -590,12 +590,14 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            var item = this.ReportSelectedItemStatisticsCollection_Filtered.FirstOrDefault(x => x.Statistic.GameNumber == obj.GameNumber && x.Statistic.PlayerName == obj.PlayerName);
+            var item = ReportSelectedItemStatisticsCollection_Filtered.FirstOrDefault(x => x.Statistic.GameNumber == obj.GameNumber && x.Statistic.PlayerName == obj.PlayerName);
+            
             if (item != null)
             {
                 item.UpdateHandNoteText();
             }
         }
+
         #endregion
     }
 }

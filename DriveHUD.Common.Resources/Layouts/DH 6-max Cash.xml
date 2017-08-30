@@ -1233,6 +1233,52 @@
         <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
           <HudPositions />
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>465</X>
+                <Y>-29</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>685</X>
+                <Y>114</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>441</X>
+                <Y>264</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>270</X>
+                <Y>264</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>34</X>
+                <Y>114</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>243</X>
+                <Y>-29</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -1477,6 +1523,52 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>437</X>
+                <Y>-15</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>657</X>
+                <Y>128</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>413</X>
+                <Y>278</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>242</X>
+                <Y>278</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>6</X>
+                <Y>128</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>215</X>
+                <Y>-15</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -1545,7 +1637,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1655,7 +1746,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1765,7 +1855,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1875,7 +1964,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1989,7 +2077,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -2094,14 +2181,12 @@
           <Id>7e9e12be-9e8b-4271-ac96-f285f1f6f066</Id>
           <Stat>UO_PFR_EP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>38</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2205,14 +2290,12 @@
           <Id>53f8c79f-d236-4f26-9c66-b6442fb69998</Id>
           <Stat>UO_PFR_MP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>27</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2316,14 +2399,12 @@
           <Id>e4321a1a-3d3c-4a24-b9a6-6aae8144b06f</Id>
           <Stat>UO_PFR_CO</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>44</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2427,14 +2508,12 @@
           <Id>af9dd56e-a977-4282-b768-ac023be18339</Id>
           <Stat>UO_PFR_BN</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>32</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2538,14 +2617,12 @@
           <Id>aec7106d-50e0-47b9-ac73-ab6117fcad1d</Id>
           <Stat>UO_PFR_SB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>93</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2661,14 +2738,12 @@
         <Id>0fa653d6-072e-4315-85c4-d4aa80610a16</Id>
         <Stat>PFR</Stat>
         <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-        <CurrentValue>95</CurrentValue>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -2787,7 +2862,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -2892,14 +2966,12 @@
           <Id>bb877895-2bbb-4ed9-92f1-a1b1f39acb64</Id>
           <Stat>ThreeBet_EP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>45</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3003,14 +3075,12 @@
           <Id>ba8043d4-bb2d-4b33-93fb-dc9178445ac4</Id>
           <Stat>ThreeBet_MP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>75</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3114,14 +3184,12 @@
           <Id>46e010ab-b272-43de-a9af-a3a0d2ccba44</Id>
           <Stat>ThreeBet_CO</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>22</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3225,14 +3293,12 @@
           <Id>3bea8d38-ad3e-4a02-a3d2-3e0aa6510d4d</Id>
           <Stat>ThreeBet_BN</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>59</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3336,14 +3402,12 @@
           <Id>2a6ac52c-8f1c-47b1-ab1d-611cfce21801</Id>
           <Stat>ThreeBet_SB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>50</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3447,14 +3511,12 @@
           <Id>b1d39d7a-f1be-4a28-b472-a9d00669c57a</Id>
           <Stat>ThreeBet_BB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>40</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3555,8 +3617,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>209e5d67-545e-40f9-b519-bef7c1c73bf7</Id>
-          <Stat>VPIP</Stat>
+          <Id>815d8afc-853f-45f4-bfff-a1f664e27c9d</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -3564,7 +3626,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -3572,14 +3633,12 @@
           <Id>4e6d05fa-dbb8-4375-8e4d-f630f9b387fc</Id>
           <Stat>CBetInThreeBetPot</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>53</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3683,14 +3742,12 @@
           <Id>78fc6e81-e35f-4ae3-84b7-5987e5c830a2</Id>
           <Stat>ThreeBetVsSteal</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>41</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -3813,7 +3870,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -3918,14 +3974,12 @@
           <Id>483add5b-7460-4c53-8527-53afec00168a</Id>
           <Stat>FlopAGG</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>9</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4029,14 +4083,12 @@
           <Id>b1f631d6-9786-4ab2-9ed6-c1988066fcad</Id>
           <Stat>TurnAGG</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>16</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4140,14 +4192,12 @@
           <Id>3b9a0000-21a4-4974-9da6-a1d985d59a9c</Id>
           <Stat>RiverAGG</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>57</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4248,8 +4298,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>953de5d4-983e-4ca1-8de3-2c2ae17c90bd</Id>
-          <Stat>VPIP</Stat>
+          <Id>1da0c9ce-c63b-482d-be2f-c190702d5582</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -4257,7 +4307,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -4265,14 +4314,12 @@
           <Id>4a9b8b85-e1c6-4a3d-9c0f-e328a3228a65</Id>
           <Stat>RecentAgg</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>88</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4376,14 +4423,12 @@
           <Id>6b1f41da-b24a-41f7-a8f3-4418cd34cf61</Id>
           <Stat>AF</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>46</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4681,6 +4726,52 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>438</X>
+                <Y>3</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>658</X>
+                <Y>146</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>414</X>
+                <Y>296</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>243</X>
+                <Y>296</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>7</X>
+                <Y>146</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>216</X>
+                <Y>3</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -4749,7 +4840,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4850,8 +4940,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>27259bf1-b91b-46b0-837b-ca63fd75793e</Id>
-          <Stat>VPIP</Stat>
+          <Id>64e40d70-8daa-4932-b413-ddd622f69085</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -4859,7 +4949,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -4873,7 +4962,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -4974,8 +5062,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>8a2f4106-d44a-4575-aae5-3999b406a25a</Id>
-          <Stat>VPIP</Stat>
+          <Id>5f07c99a-d36a-4e31-8120-c9944c1c6148</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -4983,7 +5071,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -4997,7 +5084,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -5285,6 +5371,52 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>556</X>
+                <Y>5</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>776</X>
+                <Y>148</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>532</X>
+                <Y>298</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>361</X>
+                <Y>298</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>125</X>
+                <Y>148</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>334</X>
+                <Y>5</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -5353,7 +5485,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -5454,8 +5585,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>7ec71076-6faa-4d41-abf4-2bb1b06c64b4</Id>
-          <Stat>VPIP</Stat>
+          <Id>fae90e16-a4c6-427a-abaa-35b9d653481d</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -5463,7 +5594,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -5477,7 +5607,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -5578,8 +5707,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>c6a372db-d91f-47af-a3fb-4c4c9bacd5f6</Id>
-          <Stat>VPIP</Stat>
+          <Id>6902ccfd-01e3-4c08-a764-4c5eaa39ad74</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -5587,7 +5716,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -5601,7 +5729,6 @@
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -5714,7 +5841,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -5819,14 +5945,12 @@
           <Id>05927ffd-4795-49f9-bd0f-72ed240a1020</Id>
           <Stat>FoldToCBet</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>54</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -5930,14 +6054,12 @@
           <Id>61b9f6e8-0cfe-4640-b0f9-83c46561998e</Id>
           <Stat>RaiseCBet</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>36</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6041,14 +6163,12 @@
           <Id>ce8f4601-08e5-4345-9215-6466332cd5b5</Id>
           <Stat>FlopCBetMW</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>36</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6149,8 +6269,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>24bbd361-f703-4398-b1a7-13f2cbea6c8d</Id>
-          <Stat>VPIP</Stat>
+          <Id>ffccaf10-6f55-4ebd-8026-a3762a9e02a8</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -6158,7 +6278,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -6166,14 +6285,12 @@
           <Id>dc7269fc-41f3-4ca4-8b3b-979c595157e3</Id>
           <Stat>CBetInThreeBetPot</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>28</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6277,14 +6394,12 @@
           <Id>066d756a-aa00-455c-ba88-6044088e0f86</Id>
           <Stat>FoldToCBetFromThreeBetPot</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>65</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6385,8 +6500,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>2ec57d84-b8dc-443e-8b31-644d7c6a11f4</Id>
-          <Stat>VPIP</Stat>
+          <Id>70ac7bba-4985-48a1-b3c0-238aa898974f</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -6394,7 +6509,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -6402,14 +6516,12 @@
           <Id>cd9bc090-474b-4464-96f2-bac280b1a84a</Id>
           <Stat>DonkBet</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>75</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6531,7 +6643,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -6636,14 +6747,12 @@
           <Id>59d6aaec-4fab-4377-b333-5b5134e98b95</Id>
           <Stat>BetFlopCalled3BetPreflopIp</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>67</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6747,14 +6856,12 @@
           <Id>798d50a1-e119-43d3-92a9-e531809ebaa3</Id>
           <Stat>BetFoldFlopPfrRaiser</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>56</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6855,8 +6962,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>b296197d-f941-4668-9713-4c2a7458571a</Id>
-          <Stat>VPIP</Stat>
+          <Id>8a5d2eef-8c16-4b24-80a2-b7b54b9a8f60</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -6864,7 +6971,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -6872,14 +6978,12 @@
           <Id>88dffe65-6b54-45ac-a9af-e622e5ace1f0</Id>
           <Stat>DelayedTurnCBet</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>47</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -6983,14 +7087,12 @@
           <Id>aa84664e-f03b-46cb-8235-0f67f6c13376</Id>
           <Stat>CheckFoldFlop3BetOop</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>85</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7094,14 +7196,12 @@
           <Id>bd3038b7-f141-41f0-b25a-5f90e63cebb0</Id>
           <Stat>CheckFoldFlopPfrOop</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>52</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7224,7 +7324,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -7329,14 +7428,12 @@
           <Id>d84befdd-e6a5-4684-b637-8d37432b6ea1</Id>
           <Stat>ColdCallVsOpenRaiseBTN</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>16</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7440,14 +7537,12 @@
           <Id>e117d809-2c23-4bb1-90d5-937779b7cc1d</Id>
           <Stat>ColdCallVsOpenRaiseCO</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>31</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7548,8 +7643,8 @@
           </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo xsi:type="StatInfoBreak">
-          <Id>b3242478-b0d4-4726-b8af-5a18f8718ea7</Id>
-          <Stat>VPIP</Stat>
+          <Id>8d72887a-1705-4f7e-9c49-dbde32825ecc</Id>
+          <Stat>LineBreak</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
@@ -7557,7 +7652,6 @@
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -7565,14 +7659,12 @@
           <Id>372fefb6-c771-4f41-8aa3-d56cf9b141a6</Id>
           <Stat>ColdCall_BN</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>87</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7676,14 +7768,12 @@
           <Id>e8dd440a-82f9-4812-956e-ec111ad13263</Id>
           <Stat>ColdCall_SB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>44</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7787,14 +7877,12 @@
           <Id>fdeea843-9301-4eb9-b667-3c58cad8431c</Id>
           <Stat>ColdCall_BB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>93</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -7917,7 +8005,6 @@
         <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -8022,14 +8109,12 @@
           <Id>e426ff35-fa78-420c-b533-72a936d3b41f</Id>
           <Stat>VPIP_EP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>20</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8133,14 +8218,12 @@
           <Id>bdcd28a4-8386-4503-8399-519c36d4f751</Id>
           <Stat>VPIP_MP</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>1</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8244,14 +8327,12 @@
           <Id>443b3439-ae76-4382-8049-575908165c89</Id>
           <Stat>VPIP_CO</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>62</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8355,14 +8436,12 @@
           <Id>bef03bb8-3c77-4822-a09f-29f4a852e004</Id>
           <Stat>VPIP_BN</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>4</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8466,14 +8545,12 @@
           <Id>738ae284-f853-4fa7-9494-0bc0cb0b3587</Id>
           <Stat>VPIP_SB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>82</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8577,14 +8654,12 @@
           <Id>5747090e-04cc-4843-857d-57b50805f3c4</Id>
           <Stat>VPIP_BB</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>0</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -8700,14 +8775,12 @@
         <Id>2a771d1c-8fb1-47c1-8601-d2e503517409</Id>
         <Stat>VPIP</Stat>
         <DigitsAfterDecimalPoint>0</DigitsAfterDecimalPoint>
-        <CurrentValue>25</CurrentValue>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -8826,7 +8899,6 @@
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -8931,14 +9003,12 @@
           <Id>e4eb14f7-bddd-4cb0-bb16-3f9479bbc7f6</Id>
           <Stat>NetWon</Stat>
           <DigitsAfterDecimalPoint>2</DigitsAfterDecimalPoint>
-          <CurrentValue>29</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
         </StatInfo>
@@ -8964,7 +9034,6 @@
         <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
         <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-        <SettingsAppearanceFontUnderline />
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection>
           <StatInfoOptionValueRange>
@@ -9069,14 +9138,12 @@
           <Id>e7c1f398-e11e-4aeb-9213-1ec84c76a9d2</Id>
           <Stat>FoldToSqueez</Stat>
           <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <CurrentValue>51</CurrentValue>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>

@@ -1,0 +1,38 @@
+PokerStars Game #47143468727:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:13:00 ET
+Table 'Vindobona' 6-max Seat #6 is the button
+Seat 1: DURKADURDUR ($276.90 in chips)
+Seat 2: leukehond ($230.80 in chips)
+Seat 3: shnizzel ($543.10 in chips)
+Seat 4: bluffinmyway ($177.80 in chips)
+Seat 6: pablostar ($460.15 in chips)
+DURKADURDUR: posts small blind $1
+leukehond: posts big blind $2
+*** HOLE CARDS ***
+shnizzel: folds
+bluffinmyway: folds
+pablostar: raises $6 to $8
+DURKADURDUR: raises $16 to $24
+leukehond: folds
+pablostar: calls $16
+*** FLOP *** [9h 3s 8s]
+DURKADURDUR: bets $33
+pablostar: calls $33
+*** TURN *** [9h 3s 8s] [Th]
+DURKADURDUR: bets $66
+pablostar: raises $337.15 to $403.15 and is all-in
+TheAwfulDin joins the table at seat #5
+DURKADURDUR: calls $153.90 and is all-in
+Uncalled bet ($183.25) returned to pablostar
+*** RIVER *** [9h 3s 8s Th] [6d]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ad Ah] (a pair of Aces)
+pablostar: shows [8c 8d] (three of a kind, Eights)
+pablostar collected $553.80 from pot
+*** SUMMARY ***
+Total pot $555.80 | Rake $2
+Board [9h 3s 8s Th 6d]
+Seat 1: DURKADURDUR (small blind) showed [Ad Ah] and lost with a pair of Aces
+Seat 2: leukehond (big blind) folded before Flop
+Seat 3: shnizzel folded before Flop (didn't bet)
+Seat 4: bluffinmyway folded before Flop (didn't bet)
+Seat 6: pablostar (button) showed [8c 8d] and won ($553.80) with three of a kind, Eights

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Updater.Core
@@ -30,19 +31,26 @@ namespace DriveHUD.Updater.Core
         public string Guid { get; set; }
 
         [XmlElement("version", typeof(VersionInfo))]
-        public VersionInfo Version { get; set; }   
+        public VersionInfo Version { get; set; }
+
+        [XmlIgnore]
+        public IEnumerable<VersionInfo> VersionsSinceLastUpdate { get; set; }
     }
 
     public class VersionInfo
     {
         [XmlAttribute("version")]
         public string Version { get; set; }
+
         [XmlAttribute("path")]
         public string Path { get; set; }
+
         [XmlAttribute("md5hash")]
         public string Md5hash { get; set; }
+
         [XmlAttribute("isCritical")]
         public bool IsCritical { get; set; }
+
         [XmlElement("notes")]
         public string ReleaseNotes { get; set; }
     }

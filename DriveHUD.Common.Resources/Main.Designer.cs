@@ -205,6 +205,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Treat HUD as.
+        /// </summary>
+        internal static string Main_ContextMenu_TreatAs {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_TreatAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Treat as {0}-max.
+        /// </summary>
+        internal static string Main_ContextMenu_TreatAsTableSize {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_TreatAsTableSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DriveHUD Replayer: {0} - {1}.
         /// </summary>
         internal static string Main_ReplayerHeader {

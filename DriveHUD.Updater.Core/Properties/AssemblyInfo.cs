@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DriveHUD.Updater.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DriveHUD")]
+[assembly: AssemblyCompany("Ace Poker Solutions LLC")]
 [assembly: AssemblyProduct("DriveHUD.Updater.Core")]
-[assembly: AssemblyCopyright("Copyright Â© AcePokerSolutions 2017")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,6 +31,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.1.0.1512")]
-[assembly: AssemblyVersion("1.1.0.1512")]
-[assembly: AssemblyFileVersion("1.1.0.1512")]
+// [assembly: AssemblyVersion("1.1.1.1600")]
+[assembly: AssemblyVersion("1.1.1.1600")]
+[assembly: AssemblyFileVersion("1.1.1.1600")]

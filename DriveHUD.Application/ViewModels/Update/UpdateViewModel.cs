@@ -18,6 +18,8 @@ using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Web;
@@ -36,6 +38,8 @@ namespace DriveHUD.Application.ViewModels.Update
             this.appInfo = appInfo;
 
             title = CommonResourceManager.Instance.GetResourceString("Notifications_Update_Title");
+
+            BuildNotes();
 
             CancelCommand = ReactiveCommand.Create();
             CancelCommand.Subscribe(x => Cancel());
@@ -68,17 +72,49 @@ namespace DriveHUD.Application.ViewModels.Update
             }
         }
 
-        public string Notes
+        private ObservableCollection<UpdateReleaseNoteViewModel> notes;
+
+        public ObservableCollection<UpdateReleaseNoteViewModel> Notes
         {
             get
             {
-                return HttpUtility.HtmlDecode(appInfo.Version.ReleaseNotes);
+                return notes;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref notes, value);
             }
         }
 
         #endregion
 
         #region Infrastructure
+
+        private void BuildNotes()
+        {
+            Notes = new ObservableCollection<UpdateReleaseNoteViewModel>();
+
+            if (appInfo == null || appInfo.VersionsSinceLastUpdate == null)
+            {
+                return;
+            }
+
+            foreach (var versionInfo in appInfo.VersionsSinceLastUpdate)
+            {
+                if (versionInfo == null)
+                {
+                    continue;
+                }
+
+                var updateReleaseNoteViewModel = new UpdateReleaseNoteViewModel
+                {
+                    Notes = HttpUtility.HtmlDecode(versionInfo.ReleaseNotes),
+                    Version = versionInfo.Version
+                };
+
+                Notes.Add(updateReleaseNoteViewModel);
+            }
+        }
 
         private void Update()
         {

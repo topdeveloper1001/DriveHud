@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
@@ -31,7 +32,14 @@ namespace HandHistories.Parser.Utils
 
             foreach (Player player in playerList)
             {
-                playerStackRemaining.Add(player.PlayerName, player.StartingStack);
+                if (!playerStackRemaining.ContainsKey(player.PlayerName))
+                {
+                    playerStackRemaining.Add(player.PlayerName, player.StartingStack);
+                }
+                else
+                {
+                    LogProvider.Log.Warn($"Identifying all in actions: Player [{player.PlayerName}] has been added already.");
+                }
             }
 
             List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
@@ -83,7 +91,7 @@ namespace HandHistories.Parser.Utils
                 {
                     HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
 
-                    identifiedActions.Add(new AllInAction(action.PlayerName, action.Amount, action.Street, actionType == HandActionType.RAISE, actionType));
+                    identifiedActions.Add(new HandAction(action.PlayerName, actionType, action.Amount, action.Street, AllInAction: true));
                 }
                 else
                 {

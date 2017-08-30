@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.1.0.1512, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.1.0.1512, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.1.0.1512, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -392,8 +392,10 @@
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
+    <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />
     <Compile Include="Services\PokerStarsDetectorService.cs" />
+    <Compile Include="Services\TreatAsService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
     <Compile Include="SplashScreen\NotificationViewModel.cs" />
@@ -409,6 +411,7 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IgnitionPositionProvider.cs" />
@@ -418,6 +421,7 @@
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PartyPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\WinningPokerNetworkSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
@@ -479,6 +483,7 @@
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -542,6 +547,7 @@
     <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
+    <Compile Include="ViewModels\Update\UpdateReleaseNoteViewModel.cs" />
     <Compile Include="ViewModels\Update\UpdateViewModel.cs" />
     <Compile Include="Views\Alias\AliasAddEditView.xaml.cs">
       <DependentUpon>AliasAddEditView.xaml</DependentUpon>
@@ -715,7 +721,7 @@
     </Compile>
     <Compile Include="ReportsLayout\HoleCardsLayoutCreator.cs" />
     <Compile Include="ReportsLayout\OverAllReportLayoutCreator.cs" />
-    <Compile Include="ReportsLayout\PositiontLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\PositionLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportManager.cs" />
     <Compile Include="ReportsLayout\SessionsLayoutCreator.cs" />
@@ -1419,6 +1425,9 @@
     <Resource Include="images\splashscreen.png" />
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
+    <Content Include="Lib\CapPipedI2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

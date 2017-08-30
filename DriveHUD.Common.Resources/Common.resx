@@ -268,8 +268,8 @@ Use CTRL+V to paste your exported data.</value>
   <data name="Common_HudPlayerType_High" xml:space="preserve">
     <value>High</value>
   </data>
-  <data name="Common_HudPlayerType_Import" xml:space="preserve">
-    <value>Import</value>
+  <data name="Common_HudPlayerType_ImportExport" xml:space="preserve">
+    <value>Import / Export</value>
   </data>
   <data name="Common_HudPlayerType_Load" xml:space="preserve">
     <value>Load</value>
@@ -547,7 +547,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>You trial period is over. Please register your version of DriveHUD.</value>
   </data>
   <data name="Common_RegistrationView_ExpiredText" xml:space="preserve">
-    <value>Your license has expired. Please renew.</value>
+    <value>Your license(s) has expired ({0}). Please renew.</value>
   </data>
   <data name="Common_RegistrationView_ExpiringLicenseTitle" xml:space="preserve">
     <value>{0}: {1} day(s) left</value>
@@ -833,5 +833,26 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_SiteSetup_RedDisabled" xml:space="preserve">
     <value>Red = Disabled</value>
+  </data>
+  <data name="Common_RegistrationView_ExpiredSerialSplitter" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="Common_UpdateView_ReleaseNotes" xml:space="preserve">
+    <value>Release Notes (v.{0}):</value>
+  </data>
+  <data name="Common_HudPlayerType_ResetDelete" xml:space="preserve">
+    <value>Reset / Delete</value>
+  </data>
+  <data name="Common_HudPlayerType_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common_HudPlayerType_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Common_HudPlayerType_ExportAll" xml:space="preserve">
+    <value>Export All </value>
+  </data>
+  <data name="Common_HudPlayerType_Import" xml:space="preserve">
+    <value>Import</value>
   </data>
 </root>

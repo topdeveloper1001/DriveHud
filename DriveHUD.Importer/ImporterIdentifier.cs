@@ -15,6 +15,8 @@ namespace DriveHUD.Importers
     public enum ImporterIdentifier
     {
         Bovada,
+        Ignition,
+        IgnitionInfo,
         BetOnline,
         BetOnlineTournament
     }

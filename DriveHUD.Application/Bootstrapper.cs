@@ -21,6 +21,7 @@ using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Application.Security;
+using DriveHUD.Application.Services;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
@@ -133,7 +134,9 @@ namespace DriveHUD.Application
 
                     var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
-                    if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
+                    if (!isLicenseValid || licenseService.IsTrial ||
+                        (licenseService.IsRegistered && licenseService.IsExpiringSoon) ||
+                        !licenseService.IsRegistered)
                     {
                         var registrationViewModel = new RegistrationViewModel(false);
                         mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
@@ -151,7 +154,7 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
-                 
+
                     var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
                     var settingsModel = settingsService.GetSettings();
 
@@ -232,6 +235,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
+            RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
@@ -253,6 +257,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             Container.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -286,6 +292,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.BlackChipPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

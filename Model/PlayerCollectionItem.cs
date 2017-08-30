@@ -106,6 +106,8 @@ namespace Model
                     return "TP";
                 case EnumPokerSites.YaPoker:
                     return "YP";
+                case EnumPokerSites.PartyPoker:
+                    return "PP";
                 default:
                     break;
             }

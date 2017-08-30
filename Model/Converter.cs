@@ -253,9 +253,12 @@ namespace Model.Importer
 
         public static string ToAllin(HandHistory hand, Playerstatistic stat)
         {
-            var wasAllinAction = hand.HandActions.OfType<AllInAction>().FirstOrDefault();
+            var wasAllinAction = hand.HandActions.FirstOrDefault(x => x.IsAllIn || x.IsAllInAction);
+
             if (wasAllinAction == null)
+            {
                 return string.Empty;
+            }
 
             return wasAllinAction.Street.ToString();
         }
@@ -323,12 +326,13 @@ namespace Model.Importer
                 return 0m;
             }
 
-            if (!hand.HandActions.Where(x => x.Street == lastHeroStreetAction.Street).Any(x => x.IsAllInAction))
+            if (!hand.HandActions.Where(x => x.Street == lastHeroStreetAction.Street).Any(x => x.IsAllInAction || x.IsAllIn))
             {
                 return 0m;
             }
 
             var currentPlayer = hand.Players.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+
             if (currentPlayer == null || !currentPlayer.hasHoleCards)
             {
                 return 0m;

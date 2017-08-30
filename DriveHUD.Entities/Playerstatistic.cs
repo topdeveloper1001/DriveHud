@@ -24,7 +24,7 @@ namespace DriveHUD.Entities
     {
         public override string ToString()
         {
-            return $"Player: {PlayerName}; Tournament: {TournamentId}; Time: {Time}; HandNumber: {GameNumber}; Currency: {CurrencyId}; Cards: {Cards}";
+            return $"Player: {PlayerName}; TotalHands: {Totalhands}";
         }
 
         public virtual int CompiledplayerresultsId { get; set; }
@@ -789,6 +789,20 @@ namespace DriveHUD.Entities
         [ProtoMember(288)]
         public virtual int PreflopOOP { get; set; }
 
+        [ProtoMember(289)]
+        public virtual int NumberOfWalks { get; set; }
+
+        [ProtoMember(290)]
+        public virtual int CouldFlopCheckRaise { get; set; }
+
+        [ProtoMember(291)]
+        public virtual int CouldTurnCheckRaise { get; set; }
+
+        [ProtoMember(292)]
+        public virtual int CouldRiverCheckRaise { get; set; }
+
+        #region Workarounds for broken stats
+
         public virtual int FoldedtothreebetpreflopVirtual
         {
             get
@@ -801,7 +815,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual;
+                return Totalhands != 1 ? FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual : FoldedtothreebetpreflopVirtual;
             }
         }
 
@@ -819,11 +833,50 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual;
+                return Totalhands != 1 ? FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual : FacedthreebetpreflopVirtual;
             }
         }
 
         public virtual int FacedthreebetpreflopCounter { get; set; }
+
+        // 4 -bet workaround
+        public virtual int DidfourbetpreflopVirtual
+        {
+            get
+            {
+                return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Didfourbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidfourbetpreflopVirtualCounter
+        {
+            get
+            {
+                return Totalhands != 1 ? DidfourbetpreflopCounter + DidfourbetpreflopVirtual : DidfourbetpreflopVirtual;
+            }
+        }
+
+        public virtual int DidfourbetpreflopCounter { get; set; }
+
+        public virtual int CouldfourbetpreflopVirtual
+        {
+            get
+            {
+                return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Couldfourbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldfourbetpreflopVirtualCounter
+        {
+            get
+            {
+                return Totalhands != 1 ? CouldfourbetpreflopCounter + CouldfourbetpreflopVirtual : CouldfourbetpreflopVirtual;
+            }
+        }
+
+        public virtual int CouldfourbetpreflopCounter { get; set; }
+
+        #endregion
 
         #region Additional properties (not for serialization)
 
@@ -988,6 +1041,7 @@ namespace DriveHUD.Entities
             Totalamountwonincents += a.Totalamountwonincents;
             Totalrakeincents += a.Totalrakeincents;
             Totalaggressivepostflopstreetsseen += a.Totalaggressivepostflopstreetsseen;
+            NumberOfWalks += a.NumberOfWalks;
 
             Flopcontinuationbetpossible += a.Flopcontinuationbetpossible;
             Flopcontinuationbetmade += a.Flopcontinuationbetmade;
@@ -1093,6 +1147,9 @@ namespace DriveHUD.Entities
             DidFlopCheckRaise += a.DidFlopCheckRaise;
             DidTurnCheckRaise += a.DidTurnCheckRaise;
             DidRiverCheckRaise += a.DidRiverCheckRaise;
+            CouldFlopCheckRaise += a.CouldFlopCheckRaise;
+            CouldTurnCheckRaise += a.CouldTurnCheckRaise;
+            CouldRiverCheckRaise += a.CouldRiverCheckRaise;
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -1277,6 +1334,14 @@ namespace DriveHUD.Entities
 
             FoldedtothreebetpreflopCounter += a.FoldedtothreebetpreflopVirtualCounter;
             FacedthreebetpreflopCounter += a.FacedthreebetpreflopVirtualCounter;
+            DidfourbetpreflopCounter += a.DidfourbetpreflopVirtualCounter;
+            CouldfourbetpreflopCounter += a.CouldfourbetpreflopVirtualCounter;
+
+            DidDelayedTurnCBet += a.DidDelayedTurnCBet;
+            CouldDelayedTurnCBet += a.CouldDelayedTurnCBet;
+
+            DidDonkBet += a.DidDonkBet;
+            CouldDonkBet += a.CouldDonkBet;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1350,6 +1415,7 @@ namespace DriveHUD.Entities
             r.Totalamountwonincents = a.Totalamountwonincents + b.Totalamountwonincents;
             r.Totalaggressivepostflopstreetsseen = a.Totalaggressivepostflopstreetsseen + b.Totalaggressivepostflopstreetsseen;
             r.Totalrakeincents = a.Totalrakeincents + b.Totalrakeincents;
+            r.NumberOfWalks = a.NumberOfWalks + b.NumberOfWalks;
 
             r.Flopcontinuationbetpossible = a.Flopcontinuationbetpossible + b.Flopcontinuationbetpossible;
             r.Flopcontinuationbetmade = a.Flopcontinuationbetmade + b.Flopcontinuationbetmade;
@@ -1453,6 +1519,9 @@ namespace DriveHUD.Entities
             r.DidFlopCheckRaise = a.DidFlopCheckRaise + b.DidFlopCheckRaise;
             r.DidTurnCheckRaise = a.DidTurnCheckRaise + b.DidTurnCheckRaise;
             r.DidRiverCheckRaise = a.DidRiverCheckRaise + b.DidRiverCheckRaise;
+            r.CouldFlopCheckRaise = a.CouldFlopCheckRaise + b.CouldFlopCheckRaise;
+            r.CouldTurnCheckRaise = a.CouldTurnCheckRaise + b.CouldTurnCheckRaise;
+            r.CouldRiverCheckRaise = a.CouldRiverCheckRaise + b.CouldRiverCheckRaise;
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;
 
@@ -1621,6 +1690,13 @@ namespace DriveHUD.Entities
 
             r.FoldedtothreebetpreflopCounter = a.FoldedtothreebetpreflopVirtualCounter + b.FoldedtothreebetpreflopVirtualCounter;
             r.FacedthreebetpreflopCounter = a.FacedthreebetpreflopVirtualCounter + b.FacedthreebetpreflopVirtualCounter;
+            r.DidfourbetpreflopCounter = a.DidfourbetpreflopVirtualCounter + b.DidfourbetpreflopVirtualCounter;
+            r.CouldfourbetpreflopCounter = a.CouldfourbetpreflopVirtualCounter + b.CouldfourbetpreflopVirtualCounter;
+
+            r.DidDelayedTurnCBet = a.DidDelayedTurnCBet + b.DidDelayedTurnCBet;
+            r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
+            r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
+            r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
 
             return r;
         }
@@ -1693,8 +1769,8 @@ namespace DriveHUD.Entities
             PositionCouldColdCall.SetPositionValue(Position, Couldcoldcall);
             PositionDidThreeBet.SetPositionValue(Position, Didthreebet);
             PositionCouldThreeBet.SetPositionValue(Position, Couldthreebet);
-            PositionDidFourBet.SetPositionValue(Position, Didfourbet);
-            PositionCouldFourBet.SetPositionValue(Position, Couldfourbet);
+            PositionDidFourBet.SetPositionValue(Position, DidfourbetpreflopVirtualCounter);
+            PositionCouldFourBet.SetPositionValue(Position, CouldfourbetpreflopVirtualCounter);
         }
 
         /// <summary>

@@ -1,0 +1,41 @@
+PokerStars Game #47145260944:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 2:53:28 ET
+Table 'Siri III' 6-max Seat #3 is the button
+Seat 1: pablostar ($356.80 in chips)
+Seat 2: RiverRock55 ($200 in chips)
+Seat 3: lesha_949 ($221.65 in chips)
+Seat 4: DURKADURDUR ($217.90 in chips)
+Seat 5: LiraMaker ($119.65 in chips)
+Seat 6: Desateur ($262 in chips)
+DURKADURDUR: posts small blind $1
+LiraMaker: posts big blind $2
+*** HOLE CARDS ***
+Desateur: folds
+pablostar: raises $4 to $6
+RiverRock55: folds
+lesha_949: calls $6
+DURKADURDUR: calls $5
+LiraMaker: calls $4
+*** FLOP *** [Th 4h Ah]
+DURKADURDUR: bets $14
+LiraMaker: folds
+pablostar: calls $14
+lesha_949: folds
+*** TURN *** [Th 4h Ah] [9d]
+DURKADURDUR: bets $30
+pablostar: calls $30
+*** RIVER *** [Th 4h Ah 9d] [7s]
+DURKADURDUR: bets $66
+pablostar: calls $66
+*** SHOW DOWN ***
+DURKADURDUR: shows [4c 4d] (three of a kind, Fours)
+pablostar: mucks hand
+DURKADURDUR collected $241 from pot
+*** SUMMARY ***
+Total pot $244 | Rake $3
+Board [Th 4h Ah 9d 7s]
+Seat 1: pablostar mucked
+Seat 2: RiverRock55 folded before Flop (didn't bet)
+Seat 3: lesha_949 (button) folded on the Flop
+Seat 4: DURKADURDUR (small blind) showed [4c 4d] and won ($241) with three of a kind, Fours
+Seat 5: LiraMaker (big blind) folded on the Flop
+Seat 6: Desateur folded before Flop (didn't bet)

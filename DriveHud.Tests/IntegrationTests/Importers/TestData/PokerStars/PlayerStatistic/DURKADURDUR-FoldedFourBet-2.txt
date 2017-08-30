@@ -1,0 +1,30 @@
+PokerStars Game #47145144709:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 2:46:29 ET
+Table 'Piazzia IV' 6-max Seat #6 is the button
+Seat 1: RiverRock55 ($201 in chips)
+Seat 2: bluffinmyway ($200 in chips)
+Seat 3: dark_light_x ($209.80 in chips)
+Seat 4: FastEddie267 ($200 in chips)
+Seat 5: DURKADURDUR ($205.25 in chips)
+Seat 6: pablostar ($319.25 in chips)
+RiverRock55: posts small blind $1
+bluffinmyway: posts big blind $2
+*** HOLE CARDS ***
+dark_light_x: folds
+FastEddie267: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+pablostar: raises $30 to $50
+RiverRock55: folds
+bluffinmyway: folds
+FastEddie267: folds
+DURKADURDUR: folds
+Uncalled bet ($30) returned to pablostar
+pablostar collected $49 from pot
+pablostar: doesn't show hand
+*** SUMMARY ***
+Total pot $49 | Rake $0
+Seat 1: RiverRock55 (small blind) folded before Flop
+Seat 2: bluffinmyway (big blind) folded before Flop
+Seat 3: dark_light_x folded before Flop (didn't bet)
+Seat 4: FastEddie267 folded before Flop
+Seat 5: DURKADURDUR folded before Flop
+Seat 6: pablostar (button) collected ($49)

@@ -322,13 +322,29 @@ namespace DriveHUD.Application.ViewModels.Hud
             get { return SessionMoneyWonCollection?.Sum(); }
         }
 
-        public IEnumerable<StatInfo> StatInfoCollection
+        public IEnumerable<StatInfo> ToolsStatInfoCollection
         {
             get
             {
                 return Tools != null ?
                     Tools.OfType<IHudStatsToolViewModel>().SelectMany(x => x.Stats).ToArray() :
                     new StatInfo[0];
+            }
+        }
+
+        [NonSerialized]
+        private IList<StatInfo> statInfoCollection;
+
+        [XmlIgnore]
+        public IList<StatInfo> StatInfoCollection
+        {
+            get
+            {
+                return statInfoCollection;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statInfoCollection, value);
             }
         }
 

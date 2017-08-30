@@ -49,7 +49,7 @@ namespace Model.Data
             get
             {
                 var totalhands = statisticCount / 100m;
-                return Math.Round(GetDevisionResult(netWonByBigBlind, totalhands), 2);
+                return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
             }
         }
 
@@ -386,7 +386,7 @@ namespace Model.Data
             statisticCount++;
             netWon += statistic.NetWon;
             bigBlind += statistic.BigBlind;
-            netWonByBigBlind += GetDevisionResult(statistic.NetWon, statistic.BigBlind);
+            netWonByBigBlind += GetDivisionResult(statistic.NetWon, statistic.BigBlind);
 
             if (sessionStartTime > statistic.Time)
             {
@@ -397,6 +397,18 @@ namespace Model.Data
             {
                 sessionEndTime = statistic.Time;
             }
+        }
+
+        public override void Clean()
+        {
+            base.Clean();
+
+            statisticCount = 0;
+            netWon = 0;
+            bigBlind = 0;
+            netWonByBigBlind = 0;
+            sessionStartTime = DateTime.MaxValue;
+            sessionEndTime = DateTime.MinValue;
         }
 
         #endregion

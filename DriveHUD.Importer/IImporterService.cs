@@ -37,6 +37,20 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Stop import
         /// </summary>
-        void StopImport();     
+        void StopImport();
+
+        /// <summary>
+        /// Gets importer
+        /// </summary>
+        /// <typeparam name="T">Importer interface</typeparam>
+        /// <returns>Registered importer or null</returns>
+        T GetImporter<T>();
+
+        /// <summary>
+        /// Gets running importer
+        /// </summary>
+        /// <typeparam name="T">Importer interface</typeparam>
+        /// <returns>Registered importer or null</returns>
+        T GetRunningImporter<T>();
     }
 }

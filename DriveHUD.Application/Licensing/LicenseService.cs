@@ -451,7 +451,7 @@ namespace DriveHUD.Application.Licensing
         /// </summary>
         /// <param name="serial">Serial number</param>
         /// <returns>Type of license</returns>
-        private LicenseType? GetTypeFromSerial(string serial)
+        public LicenseType? GetTypeFromSerial(string serial)
         {
             if (serial.StartsWith("DHH", StringComparison.InvariantCulture))
             {

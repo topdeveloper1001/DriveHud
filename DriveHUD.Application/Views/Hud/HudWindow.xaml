@@ -181,6 +181,32 @@
                             </Style>
                         </telerik:RadMenuItem.ItemContainerStyle>
                     </telerik:RadMenuItem>
+                    <telerik:RadMenuItem
+                        Header="{ResX Key=Main_ContextMenu_TreatAs}"
+                        ItemsSource="{Binding TreatAs}">
+                        <telerik:RadMenuItem.ItemContainerStyle>
+                            <Style
+                                TargetType="telerik:RadMenuItem"
+                                BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
+                                <Setter
+                                    Property="Header">
+                                    <Setter.Value>
+                                        <ResX
+                                            Key="Main_ContextMenu_TreatAsTableSize">
+                                            <ResXParam
+                                                Path="." />
+                                        </ResX>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter
+                                    Property="Command"
+                                    Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type telerik:RadMenuItem}}, Path=DataContext.TreatAsCommand}" />
+                                <Setter
+                                    Property="CommandParameter"
+                                    Value="{Binding}" />
+                            </Style>
+                        </telerik:RadMenuItem.ItemContainerStyle>
+                    </telerik:RadMenuItem>
                 </telerik:RadContextMenu>
             </telerik:RadContextMenu.ContextMenu>
         </Image>

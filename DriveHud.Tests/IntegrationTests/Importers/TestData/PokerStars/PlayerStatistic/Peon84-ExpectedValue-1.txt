@@ -1,0 +1,35 @@
+***** Hand History for Game 16316263555 *****
+NL Texas Hold'em $0.01 USD Buy-in Trny:141689215 Level:17  Blinds-Antes(4 000/8 000 -800) - Wednesday, August 02, 23:19:27 MSK 2017
+Table $1.10 Sat Tickets - Centroll. 20 Gtd (141689215) Table #7 (Real Money)
+Seat 6 is the button
+Total number of players : 5/6
+Seat 2: HartmutZ1 ( 151,600 )
+Seat 1: Kalkulatorek ( 80,005 )
+Seat 6: Peon84 ( 19,800 )
+Seat 5: Wasser24 ( 103,166 )
+Seat 3: alanruizz ( 210,650 )
+Trny:141689215 Level:17
+Blinds-Antes(4 000/8 000 -800)
+Kalkulatorek posts ante [800]
+HartmutZ1 posts ante [800]
+alanruizz posts ante [800]
+Wasser24 posts ante [800]
+Peon84 posts ante [800]
+Kalkulatorek posts small blind [4,000].
+HartmutZ1 posts big blind [8,000].
+** Dealing down cards **
+Dealt to Peon84 [  Ad 2h ]
+alanruizz folds
+Wasser24 folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 is all-In  [19,000]
+Kalkulatorek is all-In  [75,205]
+HartmutZ1 folds
+** Dealing Flop ** [ Tc, 2c, Jh ]
+** Dealing Turn ** [ 7s ]
+** Dealing River ** [ Qd ]
+Kalkulatorek shows [ Ac, Kd ]a straight, Ten to Ace.
+Peon84 shows [ Ad, 2h ]a pair of Twos.
+Kalkulatorek wins 60,205 chips from the side pot 1 with a straight, Ten to Ace.
+Kalkulatorek wins 50,000 chips from the main pot with a straight, Ten to Ace.
+Player Peon84 finished in 33.

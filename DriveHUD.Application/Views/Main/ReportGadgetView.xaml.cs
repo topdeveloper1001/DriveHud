@@ -348,16 +348,19 @@ namespace DriveHUD.Application.Views
 
                 var layout = ReportManager.GetReportLayout(reportType);
                 var creator = ReportManager.GetReportCreator(reportType);
-                if (layout == null || creator == null) return;
 
-                var reportCollection =
-                    // TODO: Opponent Analysis report turned off
-                    //reportType == EnumReports.OpponentAnalysis ?
-                    //GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
-                    GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                if (layout == null || creator == null)
+                {
+                    return;
+                }
+
+                var reportCollection = GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+
                 reportGadgetViewModel.IsBusy = false;
+
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
+
                 reportGadgetViewModel.ReportCollection.Clear();
 
                 foreach (var item in await reportCollection)

@@ -62,7 +62,7 @@ function Update-AssemblyInfo()
      
     $versionAttributes = @('AssemblyVersion', 'AssemblyFileVersion')
     
-    $content = (Get-Content $File) | ForEach-Object {
+    $content = (Get-Content $File -Encoding UTF8) | ForEach-Object {
 
         $match = $false;
 
@@ -82,8 +82,8 @@ function Update-AssemblyInfo()
         if(-Not $match) {            
             $_
         }
-    } 
-
+    } 	
+	
 	[System.IO.File]::WriteAllLines($File, $content)
 }
 

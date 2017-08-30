@@ -11,12 +11,12 @@
       <Stats>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>17</High>
+          <High>11</High>
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>16</High>
+          <High>11</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -26,7 +26,7 @@
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>4.3</High>
+          <High>3.7</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -79,13 +79,13 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>36</Low>
+          <Low>31</Low>
           <High xsi:nil="true" />
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>13</High>
+          <High>11</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -95,7 +95,7 @@
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>4</High>
+          <High>3.8</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -148,13 +148,13 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>22</Low>
-          <High>27</High>
+          <Low>16</Low>
+          <High>22</High>
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>18</Low>
-          <High>25</High>
+          <Low>15</Low>
+          <High>21</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -163,8 +163,8 @@
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>4.7</Low>
-          <High>8.6</High>
+          <Low>4.5</Low>
+          <High>7.6</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -217,23 +217,23 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>18</Low>
-          <High>22</High>
+          <Low>14</Low>
+          <High>18</High>
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>14</Low>
-          <High>21</High>
+          <High>18</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>41</Low>
+          <Low xsi:nil="true" />
           <High xsi:nil="true" />
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>3.2</Low>
-          <High>6</High>
+          <Low>3.6</Low>
+          <High>6.8</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -286,23 +286,23 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>26</Low>
-          <High>35</High>
+          <Low>22</Low>
+          <High>29</High>
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>21</Low>
-          <High>33</High>
+          <Low>20</Low>
+          <High>28</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>43</Low>
+          <Low xsi:nil="true" />
           <High xsi:nil="true" />
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>6</Low>
-          <High xsi:nil="true" />
+          <Low>5.5</Low>
+          <High>9.6</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -355,13 +355,13 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>25</Low>
-          <High>34</High>
+          <Low>21</Low>
+          <High>28</High>
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>21</Low>
-          <High>31</High>
+          <High>28</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -370,8 +370,8 @@
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low>6.5</Low>
-          <High xsi:nil="true" />
+          <Low>6</Low>
+          <High>10</High>
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -424,18 +424,18 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>44</Low>
+          <Low>42</Low>
           <High xsi:nil="true" />
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low>0</Low>
-          <High>12</High>
+          <High>11</High>
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
           <Low xsi:nil="true" />
-          <High xsi:nil="true" />
+          <High>42</High>
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
@@ -493,7 +493,7 @@
       <MinSample>15</MinSample>
       <Stats>
         <HudPlayerTypeStat>
-          <Low>40</Low>
+          <Low>38</Low>
           <High xsi:nil="true" />
           <Stat>VPIP</Stat>
         </HudPlayerTypeStat>
@@ -503,12 +503,12 @@
           <Stat>PFR</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low xsi:nil="true" />
+          <Low>44</Low>
           <High xsi:nil="true" />
           <Stat>AGG</Stat>
         </HudPlayerTypeStat>
         <HudPlayerTypeStat>
-          <Low xsi:nil="true" />
+          <Low>5</Low>
           <High xsi:nil="true" />
           <Stat>S3Bet</Stat>
         </HudPlayerTypeStat>

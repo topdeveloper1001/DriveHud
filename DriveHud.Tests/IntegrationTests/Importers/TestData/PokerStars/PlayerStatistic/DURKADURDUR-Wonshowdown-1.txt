@@ -1,0 +1,33 @@
+PokerStars Game #47147158967:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 4:49:41 ET
+Table 'Vindobona' 6-max Seat #5 is the button
+Seat 2: pepecarlos58 ($235.85 in chips)
+Seat 4: DURKADURDUR ($203 in chips)
+Seat 5: VladKramnik ($217 in chips)
+pepecarlos58: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+VladKramnik: raises $3 to $5
+pepecarlos58: folds
+DURKADURDUR: calls $3
+*** FLOP *** [3c 3h Kd]
+DURKADURDUR: bets $7
+VladKramnik: calls $7
+*** TURN *** [3c 3h Kd] [Qs]
+DURKADURDUR: checks
+VladKramnik: bets $16
+DURKADURDUR: calls $16
+*** RIVER *** [3c 3h Kd Qs] [9h]
+DURKADURDUR: checks
+VladKramnik: bets $20
+DURKADURDUR: calls $20
+*** SHOW DOWN ***
+VladKramnik: shows [Ks Js] (two pair, Kings and Threes)
+DURKADURDUR: shows [Jh Kh] (two pair, Kings and Threes)
+DURKADURDUR collected $48 from pot
+VladKramnik collected $48 from pot
+*** SUMMARY ***
+Total pot $97 | Rake $1
+Board [3c 3h Kd Qs 9h]
+Seat 2: pepecarlos58 (small blind) folded before Flop
+Seat 4: DURKADURDUR (big blind) showed [Jh Kh] and won ($48) with two pair, Kings and Threes
+Seat 5: VladKramnik (button) showed [Ks Js] and won ($48) with two pair, Kings and Threes

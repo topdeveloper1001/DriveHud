@@ -497,7 +497,7 @@ namespace Model.Data
                 {
                     Value = Squeeze,
                     Occurred = Source.Didsqueeze,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.Couldsqueeze
                 };
             }
         }

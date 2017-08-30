@@ -216,6 +216,7 @@
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
+    <Compile Include="IntegrationTests\Parsers\PartyPoker\PartyPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
@@ -298,6 +299,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\FixedLimitHoldem.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitHoldem.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitOmaha.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\HeroCards.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\HeroBetFolds.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\Tournament157.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\Tournament2.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\Tournament211.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\HeroWins.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin2.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4_allin.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLHoldem2_4.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Edison-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Lakewood-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Neptune-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Orange-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\MultipleHands\Union City-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Tournaments\Flyweight. %24150 Gtd KO %28138340269%29 Table #10.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Tournaments\Flyweight. %24400 Gtd KO %28138340262%29 Table #13.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Tournaments\Flyweight. %24400 Gtd KO %28138340262%29 Table #16.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09 - Unfinished.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
@@ -308,6 +329,8 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\NoLimitHoldem.txt" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\GameTypes\PotLimitOmahaHiLo.txt" />
     <None Include="IsEqualBuilder.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>

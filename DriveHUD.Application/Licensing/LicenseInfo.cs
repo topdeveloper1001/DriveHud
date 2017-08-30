@@ -88,7 +88,10 @@ namespace DriveHUD.Application.Licensing
         {
             get
             {
-                var hasExpiredErrorCode = ValidationException != null ? Utils.GetErrorCodes(ValidationException).Any(x => x.Equals("E_TimeExpired")) : false;
+                var hasExpiredErrorCode = ValidationException != null ?
+                    ValidationException.Message.Contains("LCS_EXP") || Utils.GetErrorCodes(ValidationException).Any(x => x.Equals("E_TimeExpired")) :
+                    false;
+
                 return license != null && license.IsTrial && hasExpiredErrorCode;
             }
         }
@@ -169,7 +172,7 @@ namespace DriveHUD.Application.Licensing
                 case 'S':
                     return LicenseSubType.Small;
                 case 'M':
-                    return LicenseSubType.Micro;
+                    return LicenseSubType.Mid;
                 case 'P':
                     return LicenseSubType.Pro;
                 case 'T':

@@ -56,7 +56,9 @@ function Use-Obfuscator($session, $source, $includeFilter, $excludeFilter, $stro
             '-stringencryption',
             '1',
             '-obfuscation',
-            '1'                             
+            '1',
+			'-mapping_file',
+			'1'
         )
 
         if(Get-IsFilterMatch $assembly.FullName $strongAssembliesFilters)

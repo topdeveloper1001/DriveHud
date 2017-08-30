@@ -158,6 +158,6 @@
     <value>"English" isn't selected as your language for Tournament Summaries formatting in the settings of PS ({0})</value>
   </data>
   <data name="Error_WPN_Validation_SaveHandHistory" xml:space="preserve">
-    <value>"Save Hand History" option isn't checked in the settings of {0} client</value>
+    <value>"Save Hand History" option isn't checked in the settings of {0} client [Profile: {1}]</value>
   </data>
 </root>

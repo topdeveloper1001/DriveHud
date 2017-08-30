@@ -1,0 +1,51 @@
+﻿#Game No : 16120333027 
+***** Hand History for Game 16120333027 *****
+NL Texas Hold'em $0.55 USD Buy-in Trny:138340269 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:33:24 BST 2017
+Table Flyweight. $150 Gtd KO (138340269) Table #10 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 8: Aleksander1610 ( 38,450 )
+Seat 4: Bust1985 ( 31,581 )
+Seat 3: DieterR55 ( 29,850 )
+Seat 1: EverSoNice ( 39,623 )
+Seat 7: Figarootoo ( 368 )
+Seat 6: PokerJensen ( 22,134 )
+Seat 5: StackMagnet ( 50,680 )
+Seat 2: kudesnik2012 ( 39,575 )
+Trny:138340269 Level:4 
+Blinds-Antes(200/400 -50)
+EverSoNice posts ante [50]
+kudesnik2012 posts ante [50]
+DieterR55 posts ante [50]
+Bust1985 posts ante [50]
+StackMagnet posts ante [50]
+PokerJensen posts ante [50]
+Figarootoo posts ante [50]
+Aleksander1610 posts ante [50]
+Bust1985 posts small blind [200].
+StackMagnet posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  7h 4h ]
+PokerJensen calls [400]
+Figarootoo is all-In  [318]
+Aleksander1610 folds
+EverSoNice folds
+kudesnik2012 folds
+DieterR55 folds
+Bust1985 folds
+StackMagnet checks
+** Dealing Flop ** [ 9h, 5c, 8s ]
+StackMagnet checks
+PokerJensen checks
+** Dealing Turn ** [ 3h ]
+StackMagnet checks
+PokerJensen checks
+** Dealing River ** [ Jd ]
+StackMagnet bets [1,718]
+PokerJensen folds
+StackMagnet shows [ Js, 4c ]a pair of Jacks.
+Figarootoo shows [ 7h, 4h ]high card Jack.
+StackMagnet wins 1,882 chips from the side pot 1 with a pair of Jacks.
+StackMagnet wins 1,554 chips from the main pot with a pair of Jacks.
+Player Figarootoo finished in 157.
+StackMagnet has knocked out Figarootoo and won a $0.10 USD bounty prize.

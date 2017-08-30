@@ -1,0 +1,25 @@
+PokerStars Game #47152595609:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:55:59 ET
+Table 'Melete II' 6-max Seat #3 is the button
+Seat 1: waldwickstud ($191 in chips) 
+Seat 2: mad.afurable ($289.60 in chips) 
+Seat 3: AceKanone ($202.30 in chips) 
+Seat 4: Chojjasd ($289.35 in chips) 
+Seat 5: DURKADURDUR ($209.30 in chips) 
+Chojjasd: posts small blind $1
+DURKADURDUR: posts big blind $2
+FuIlh0use: sits out 
+*** HOLE CARDS ***
+waldwickstud: folds 
+mad.afurable: folds 
+AceKanone: folds 
+Chojjasd: folds 
+Uncalled bet ($1) returned to DURKADURDUR
+DURKADURDUR collected $2 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $2 | Rake $0 
+Seat 1: waldwickstud folded before Flop (didn't bet)
+Seat 2: mad.afurable folded before Flop (didn't bet)
+Seat 3: AceKanone (button) folded before Flop (didn't bet)
+Seat 4: Chojjasd (small blind) folded before Flop
+Seat 5: DURKADURDUR (big blind) collected ($2)

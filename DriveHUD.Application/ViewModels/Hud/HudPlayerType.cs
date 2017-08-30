@@ -63,6 +63,17 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region Properties
 
+        private Guid id = Guid.NewGuid();
+
+        [XmlIgnore]
+        public Guid Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+
         private string name;
 
         public string Name
@@ -218,58 +229,34 @@ namespace DriveHUD.Application.ViewModels.Hud
             return clone;
         }
 
-        public override int GetHashCode()
+        /// <summary>
+        /// Merges the current player type with the specified player type
+        /// </summary>
+        public void MergeWith(HudPlayerType playerType)
         {
-            unchecked
+            if (playerType == null)
             {
-                int hash = 23;
-                hash = (hash * 31) + Name.GetHashCode();
-                hash = (hash * 31) + ImageAlias.GetHashCode();
-                hash = (hash * 31) + EnablePlayerProfile.GetHashCode();
-                hash = (hash * 31) + DisplayPlayerIcon.GetHashCode();
-                hash = (hash * 31) + MinSample.GetHashCode();
-                hash = (hash * 31) + Stats.GetHashCode();
-                return hash;
-            }
-        }
-
-        public override bool Equals(object obj)
-        {
-            var hudPlayerType = obj as HudPlayerType;
-
-            if (hudPlayerType == null)
-            {
-                return false;
+                return;
             }
 
-            return Equals(hudPlayerType);
-        }
+            MinSample = playerType.MinSample;
+            EnablePlayerProfile = playerType.EnablePlayerProfile;
+            DisplayPlayerIcon = playerType.DisplayPlayerIcon;
+            Name = playerType.Name;
+            Image = playerType.Image;
+            ImageAlias = playerType.ImageAlias;
 
-        private bool Equals(HudPlayerType hudPlayerType)
-        {
-            var result = hudPlayerType.Name == Name && hudPlayerType.ImageAlias == ImageAlias &&
-                hudPlayerType.EnablePlayerProfile == EnablePlayerProfile && hudPlayerType.DisplayPlayerIcon == DisplayPlayerIcon &&
-                hudPlayerType.minSample == MinSample;
+            var statsToMerge = (from currentStat in Stats
+                                join stat in playerType.Stats on currentStat.Stat equals stat.Stat into gj
+                                from grouped in gj.DefaultIfEmpty()
+                                where grouped != null
+                                select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
 
-            if ((Stats != null && hudPlayerType.Stats != null && Stats.Count != hudPlayerType.Stats.Count) ||
-                (Stats == null && hudPlayerType.Stats != null) || (Stats != null && hudPlayerType.Stats == null))
+            statsToMerge.ForEach(s =>
             {
-                return false;
-            }
-            else if (Stats == null && hudPlayerType.Stats == null)
-            {
-                return result;
-            }
-
-            var orderedStatList = Stats.OrderBy(x => x.Stat).ToArray();
-            var hudPlayerTypeOrderedStatList = hudPlayerType.Stats.OrderBy(x => x.Stat).ToArray();
-
-            for (var i = 0; i < orderedStatList.Length; i++)
-            {
-                result &= orderedStatList[i].Equals(hudPlayerTypeOrderedStatList[i]);
-            }
-
-            return result;
+                s.CurrentStat.Low = s.Stat.Low;
+                s.CurrentStat.High = s.Stat.High;
+            });
         }
     }
 }

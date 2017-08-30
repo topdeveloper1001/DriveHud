@@ -70,9 +70,19 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             licenses = new ObservableCollection<LicenseInfoViewModel>(licenseService.LicenseInfos.Where(x => x.IsRegistered && !x.IsTrial).Select(x => new LicenseInfoViewModel(x)));
 
+            if (licenseService.IsRegistered && licenseService.IsExpiringSoon)
+            {
+                InitializeExpiringSoon();
+                return;
+            }
+
             if (!licenseService.IsRegistered)
             {
-                if (licenseService.IsTrialExpired)
+                if (licenseService.IsExpired)
+                {
+                    InitializeExpiringSoon();
+                }
+                else if (licenseService.IsTrialExpired)
                 {
                     InitializeTrialExpired();
                 }
@@ -87,12 +97,6 @@ namespace DriveHUD.Application.ViewModels.Registration
             if (licenseService.IsTrial)
             {
                 InitializeTrialActive();
-                return;
-            }
-
-            if (licenseService.IsExpiringSoon || licenseService.IsExpired)
-            {
-                InitializeExpiringSoon();
                 return;
             }
         }
@@ -123,7 +127,38 @@ namespace DriveHUD.Application.ViewModels.Registration
             ActivateCommand.Subscribe(x => Register());
 
             BuyCommand = ReactiveCommand.Create();
-            BuyCommand.Subscribe(x => Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink")));
+            BuyCommand.Subscribe(x =>
+            {
+                try
+                {
+                    Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink"));
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Could not open buy link", ex);
+                }
+            });
+
+            RenewCommand = ReactiveCommand.Create();
+            RenewCommand.Subscribe(x =>
+            {
+                try
+                {
+                    var serialToRenew = licenseService.LicenseInfos
+                        .Where(l => !string.IsNullOrEmpty(l.Serial) && !l.IsTrial)
+                        .OrderBy(l => l.ExpiryDate).FirstOrDefault()?
+                        .Serial;
+
+                    if (!string.IsNullOrWhiteSpace(serialToRenew))
+                    {
+                        Process.Start(BrowserHelper.GetDefaultBrowserPath(), string.Format(CommonResourceManager.Instance.GetResourceString("SystemSettings_RenewLicenseLink"), serialToRenew));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Could not open renew link", ex);
+                }
+            });
         }
 
         /// <summary>
@@ -256,11 +291,11 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsLicenseDaysLeftVisible = false;
         }
 
-        private void InitializeMessage(string messageKey)
+        private void InitializeMessage(string messageKey, params object[] args)
         {
             state = RegistrationState.Message;
 
-            TextMessage = CommonResourceManager.Instance.GetResourceString(messageKey);
+            TextMessage = string.Format(CommonResourceManager.Instance.GetResourceString(messageKey), args);
 
             IsSerialVisible = false;
             IsEmailVisible = false;
@@ -309,9 +344,20 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             state = RegistrationState.ExpiringSoon;
 
-            TextMessage = licenseService.IsExpired ?
-                            CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText") :
-                            CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText");
+            if (licenseService.IsExpired)
+            {
+                var splitter = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiredSerialSplitter");
+
+                var expiredLicenses = string.Join(splitter, licenseService.LicenseInfos
+                    .Where(x => !x.IsTrial && x.IsExpired && !string.IsNullOrEmpty(x.Serial))
+                    .Select(x => x.Serial));
+
+                TextMessage = string.Format(CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiredText"), expiredLicenses);
+            }
+            else
+            {
+                TextMessage = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_ExpiringSoonText");
+            }
 
             IsSerialVisible = false;
             IsEmailVisible = false;
@@ -750,7 +796,7 @@ namespace DriveHUD.Application.ViewModels.Registration
                 }
 
                 if (string.IsNullOrWhiteSpace(trialSerial))
-                {                    
+                {
                     LogProvider.Log.Error(this, "Couldn't register trial. Server error.");
                     InitializeMessage("Common_RegistrationView_TrialRegisterError");
                     return;
@@ -794,7 +840,17 @@ namespace DriveHUD.Application.ViewModels.Registration
             }
             catch (LicenseExpiredException)
             {
-                InitializeMessage("Common_RegistrationView_ExpiredText");
+                var licenseType = licenseService.GetTypeFromSerial(serial);
+
+                if (licenseType == LicenseType.Trial)
+                {
+                    InitializeMessage("Common_RegistrationView_TrialExpiredText");
+                }
+                else
+                {
+                    InitializeMessage("Common_RegistrationView_ExpiredText", serial);
+                }
+
                 return false;
             }
             catch

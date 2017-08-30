@@ -1,0 +1,2176 @@
+Game #16120238781 starts.
+
+#Game No : 16120238781 
+***** Hand History for Game 16120238781 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:05:42 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 29,900 )
+Seat 7: Figarootoo ( 29,000 )
+Seat 1: ROGUE63 ( 29,975 )
+Seat 3: alt0idman ( 29,675 )
+Seat 5: midlandwolf ( 28,928 )
+Seat 4: qVaturrrr ( 31,447 )
+Seat 2: raypass ( 29,975 )
+Seat 8: zolibaccssi ( 30,000 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+midlandwolf posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+qVaturrrr posts small blind [75].
+midlandwolf posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  4c Qd ]
+AA_NASTY raises [450]
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 is all-In  [29,950]
+raypass folds
+alt0idman folds
+qVaturrrr folds
+midlandwolf folds
+AA_NASTY folds
+ROGUE63 does not show cards.
+ROGUE63 wins 30,825 chips
+Game #16120240787 starts.
+
+#Game No : 16120240787 
+***** Hand History for Game 16120240787 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:06:18 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 29,425 )
+Seat 7: Figarootoo ( 28,975 )
+Seat 1: ROGUE63 ( 30,825 )
+Seat 3: alt0idman ( 29,650 )
+Seat 5: midlandwolf ( 28,753 )
+Seat 4: qVaturrrr ( 31,347 )
+Seat 2: raypass ( 29,950 )
+Seat 8: zolibaccssi ( 29,975 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+midlandwolf posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+midlandwolf posts small blind [75].
+AA_NASTY posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Ac 6h ]
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr raises [450]
+midlandwolf calls [375]
+AA_NASTY folds
+** Dealing Flop ** [ Tc, 8c, Ah ]
+midlandwolf bets [150]
+qVaturrrr calls [150]
+** Dealing Turn ** [ Js ]
+midlandwolf bets [150]
+qVaturrrr calls [150]
+** Dealing River ** [ 3h ]
+midlandwolf bets [150]
+qVaturrrr calls [150]
+midlandwolf shows [ Kh, Td ]a pair of Tens.
+qVaturrrr shows [ Jd, Qc ]a pair of Jacks.
+qVaturrrr wins 2,150 chips from the main pot with a pair of Jacks.
+Game #16120243333 starts.
+
+#Game No : 16120243333 
+***** Hand History for Game 16120243333 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:06:55 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 29,250 )
+Seat 7: Figarootoo ( 28,950 )
+Seat 1: ROGUE63 ( 30,800 )
+Seat 3: alt0idman ( 29,625 )
+Seat 5: midlandwolf ( 27,828 )
+Seat 4: qVaturrrr ( 32,572 )
+Seat 2: raypass ( 29,925 )
+Seat 8: zolibaccssi ( 29,950 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+midlandwolf posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+AA_NASTY posts small blind [75].
+Figarootoo posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  Qh 4c ]
+zolibaccssi calls [150]
+ROGUE63 folds
+raypass calls [150]
+alt0idman folds
+qVaturrrr folds
+midlandwolf calls [150]
+AA_NASTY folds
+Figarootoo checks
+** Dealing Flop ** [ 3h, 6c, Qd ]
+Figarootoo checks
+zolibaccssi checks
+raypass bets [656]
+midlandwolf folds
+Figarootoo calls [656]
+zolibaccssi folds
+** Dealing Turn ** [ 6h ]
+Figarootoo checks
+raypass bets [1,093]
+Figarootoo calls [1,093]
+** Dealing River ** [ Qc ]
+Figarootoo checks
+raypass is all-In  [28,001]
+Figarootoo is all-In  [27,026]
+Figarootoo shows [ Qh, 4c ]a full house, Queens full of Sixes.
+raypass shows [ Qs, Kd ]a full house, Queens full of Sixes.
+raypass wins 975 chips from the side pot 1 with a full house, Queens full of Sixes.
+Figarootoo wins 29,213 chips from the main pot with a full house, Queens full of Sixes.
+raypass wins 29,212 chips from the main pot with a full house, Queens full of Sixes.
+Game #16120249840 starts.
+
+#Game No : 16120249840 
+***** Hand History for Game 16120249840 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:08:41 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 29,150 )
+Seat 7: Figarootoo ( 29,213 )
+Seat 1: ROGUE63 ( 30,775 )
+Seat 3: alt0idman ( 29,600 )
+Seat 5: midlandwolf ( 27,653 )
+Seat 4: qVaturrrr ( 32,547 )
+Seat 2: raypass ( 30,187 )
+Seat 8: zolibaccssi ( 29,775 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+midlandwolf posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+Figarootoo posts small blind [75].
+zolibaccssi posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  6s 7h ]
+ROGUE63 calls [150]
+raypass folds
+alt0idman calls [150]
+qVaturrrr folds
+midlandwolf calls [150]
+AA_NASTY folds
+Figarootoo calls [75]
+zolibaccssi checks
+** Dealing Flop ** [ 2d, 5s, 9h ]
+Figarootoo checks
+zolibaccssi checks
+ROGUE63 checks
+alt0idman checks
+midlandwolf bets [450]
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 folds
+alt0idman calls [450]
+** Dealing Turn ** [ 5h ]
+alt0idman checks
+midlandwolf bets [450]
+alt0idman folds
+midlandwolf does not show cards.
+midlandwolf wins 2,300 chips
+Game #16120254755 starts.
+
+#Game No : 16120254755 
+***** Hand History for Game 16120254755 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:10:01 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 29,125 )
+Seat 7: Figarootoo ( 29,038 )
+Seat 1: ROGUE63 ( 30,600 )
+Seat 3: alt0idman ( 28,975 )
+Seat 5: midlandwolf ( 28,878 )
+Seat 4: qVaturrrr ( 32,522 )
+Seat 2: raypass ( 30,162 )
+Seat 8: zolibaccssi ( 29,600 )
+Trny:138340262 Level:1 
+Blinds-Antes(75/150 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+midlandwolf posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+zolibaccssi posts small blind [75].
+ROGUE63 posts big blind [150].
+** Dealing down cards **
+Dealt to Figarootoo [  8d Ts ]
+raypass calls [150]
+alt0idman calls [150]
+qVaturrrr folds
+midlandwolf raises [300]
+AA_NASTY raises [1,425]
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 calls [1,275]
+raypass calls [1,275]
+alt0idman calls [1,275]
+midlandwolf calls [1,125]
+** Dealing Flop ** [ 2d, 2c, Tc ]
+ROGUE63 bets [150]
+raypass calls [150]
+alt0idman calls [150]
+midlandwolf is all-In  [27,428]
+AA_NASTY is all-In  [27,675]
+ROGUE63 folds
+raypass folds
+alt0idman folds
+** Dealing Turn ** [ 4c ]
+** Dealing River ** [ Jd ]
+midlandwolf shows [ Th, Kh ]two pairs, Tens and Twos.
+AA_NASTY shows [ Ac, Td ]two pairs, Tens and Twos with Ace kicker.
+AA_NASTY wins 247 chips from the side pot 1 with two pairs, Tens and Twos with Ace kicker.
+AA_NASTY wins 62,706 chips from the main pot with two pairs, Tens and Twos with Ace kicker.
+Player midlandwolf finished in 149.
+AA_NASTY has knocked out midlandwolf and won a $0.20 USD bounty prize.
+Game #16120257738 starts.
+
+#Game No : 16120257738 
+***** Hand History for Game 16120257738 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:10:57 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 8 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 62,953 )
+Seat 7: Figarootoo ( 29,013 )
+Seat 1: ROGUE63 ( 29,000 )
+Seat 3: alt0idman ( 27,375 )
+Seat 4: qVaturrrr ( 32,497 )
+Seat 2: raypass ( 28,562 )
+Seat 8: zolibaccssi ( 29,500 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+ROGUE63 posts small blind [100].
+raypass posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  3c Kd ]
+alt0idman is all-In  [27,350]
+qVaturrrr folds
+AA_NASTY folds
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 folds
+raypass folds
+alt0idman does not show cards.
+alt0idman wins 27,825 chips
+Game #16120258986 starts.
+
+#Game No : 16120258986 
+***** Hand History for Game 16120258986 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:11:21 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 62,928 )
+Seat 7: Figarootoo ( 28,988 )
+Seat 1: ROGUE63 ( 28,875 )
+Seat 3: alt0idman ( 27,825 )
+Seat 4: qVaturrrr ( 32,472 )
+Seat 2: raypass ( 28,337 )
+Seat 8: zolibaccssi ( 29,475 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+raypass posts small blind [100].
+alt0idman posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  8s 7h ]
+qVaturrrr folds
+AA_NASTY folds
+Figarootoo folds
+zolibaccssi is all-In  [29,450]
+ROGUE63 folds
+Morgenfryd1 has joined the table.
+raypass folds
+alt0idman folds
+zolibaccssi does not show cards.
+zolibaccssi wins 29,925 chips
+Game #16120260524 starts.
+
+#Game No : 16120260524 
+***** Hand History for Game 16120260524 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:11:46 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,903 )
+Seat 7: Figarootoo ( 28,963 )
+Seat 5: Morgenfryd1 ( 30,000 )
+Seat 1: ROGUE63 ( 28,850 )
+Seat 3: alt0idman ( 27,600 )
+Seat 4: qVaturrrr ( 32,447 )
+Seat 2: raypass ( 28,212 )
+Seat 8: zolibaccssi ( 29,925 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+zolibaccssi posts ante [25]
+alt0idman posts small blind [100].
+qVaturrrr posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  4d 6c ]
+Morgenfryd1 raises [700]
+AA_NASTY folds
+Figarootoo folds
+zolibaccssi folds
+ROGUE63 folds
+raypass calls [700]
+alt0idman calls [600]
+qVaturrrr folds
+** Dealing Flop ** [ Jd, 6s, 7h ]
+alt0idman checks
+Morgenfryd1 bets [2,500]
+raypass folds
+alt0idman folds
+Morgenfryd1 does not show cards.
+Morgenfryd1 wins 5,000 chips
+Game #16120263998 starts.
+
+#Game No : 16120263998 
+***** Hand History for Game 16120263998 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:12:51 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 62,878 )
+Seat 7: Figarootoo ( 28,938 )
+Seat 5: Morgenfryd1 ( 31,775 )
+Seat 1: ROGUE63 ( 28,825 )
+Seat 3: alt0idman ( 26,875 )
+Seat 4: qVaturrrr ( 32,222 )
+Seat 2: raypass ( 27,487 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+qVaturrrr posts small blind [100].
+Morgenfryd1 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Kd 9h ]
+Stargate9 has joined the table.
+AA_NASTY folds
+Figarootoo folds
+ROGUE63 raises [700]
+raypass folds
+alt0idman calls [700]
+qVaturrrr folds
+Morgenfryd1 folds
+** Dealing Flop ** [ 5h, 7d, 7s ]
+ROGUE63 bets [300]
+alt0idman folds
+ROGUE63 does not show cards.
+ROGUE63 wins 2,175 chips
+Game #16120266464 starts.
+
+#Game No : 16120266464 
+***** Hand History for Game 16120266464 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:13:35 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,853 )
+Seat 7: Figarootoo ( 28,913 )
+Seat 5: Morgenfryd1 ( 31,550 )
+Seat 1: ROGUE63 ( 29,975 )
+Seat 8: Stargate9 ( 30,000 )
+Seat 3: alt0idman ( 26,150 )
+Seat 4: qVaturrrr ( 32,097 )
+Seat 2: raypass ( 27,462 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Morgenfryd1 posts small blind [100].
+AA_NASTY posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Jd 5d ]
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr raises [600]
+Morgenfryd1 calls [500]
+AA_NASTY folds
+** Dealing Flop ** [ 4d, 9d, 4s ]
+Morgenfryd1 checks
+qVaturrrr checks
+** Dealing Turn ** [ Qh ]
+Morgenfryd1 bets [1,600]
+qVaturrrr folds
+Morgenfryd1 does not show cards.
+Morgenfryd1 wins 3,200 chips
+Game #16120269988 starts.
+
+#Game No : 16120269988 
+***** Hand History for Game 16120269988 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:14:29 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,628 )
+Seat 7: Figarootoo ( 28,888 )
+Seat 5: Morgenfryd1 ( 32,525 )
+Seat 1: ROGUE63 ( 29,950 )
+Seat 8: Stargate9 ( 29,975 )
+Seat 3: alt0idman ( 26,125 )
+Seat 4: qVaturrrr ( 31,472 )
+Seat 2: raypass ( 27,437 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+AA_NASTY posts small blind [100].
+Figarootoo posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  7s Jh ]
+Stargate9 folds
+ROGUE63 folds
+raypass calls [200]
+alt0idman calls [200]
+qVaturrrr folds
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo checks
+** Dealing Flop ** [ 3d, 7h, Qs ]
+Figarootoo checks
+raypass checks
+alt0idman checks
+** Dealing Turn ** [ Qd ]
+Figarootoo bets [300]
+raypass calls [300]
+alt0idman folds
+** Dealing River ** [ 3s ]
+Figarootoo checks
+raypass bets [400]
+Figarootoo calls [400]
+raypass shows [ 6h, 7c ]two pairs, Queens and Sevens.
+Figarootoo shows [ 7s, Jh ]two pairs, Queens and Sevens with Jack kicker.
+Figarootoo wins 2,300 chips from the main pot with two pairs, Queens and Sevens with Jack kicker.
+Game #16120275451 starts.
+
+#Game No : 16120275451 
+***** Hand History for Game 16120275451 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:16:08 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,503 )
+Seat 7: Figarootoo ( 30,263 )
+Seat 5: Morgenfryd1 ( 32,500 )
+Seat 1: ROGUE63 ( 29,925 )
+Seat 8: Stargate9 ( 29,950 )
+Seat 3: alt0idman ( 25,900 )
+Seat 4: qVaturrrr ( 31,447 )
+Seat 2: raypass ( 26,512 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Figarootoo posts small blind [100].
+Stargate9 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Ah 8c ]
+ROGUE63 folds
+raypass calls [200]
+alt0idman folds
+qVaturrrr calls [200]
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo calls [100]
+Stargate9 checks
+** Dealing Flop ** [ 7s, 4c, 9s ]
+Figarootoo checks
+Stargate9 bets [500]
+raypass folds
+qVaturrrr raises [1,200]
+Figarootoo folds
+Stargate9 calls [700]
+** Dealing Turn ** [ 5h ]
+Stargate9 bets [1,700]
+qVaturrrr folds
+Stargate9 does not show cards.
+Stargate9 wins 5,100 chips
+Game #16120279878 starts.
+
+#Game No : 16120279878 
+***** Hand History for Game 16120279878 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:17:11 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,478 )
+Seat 7: Figarootoo ( 30,038 )
+Seat 5: Morgenfryd1 ( 32,475 )
+Seat 1: ROGUE63 ( 29,900 )
+Seat 8: Stargate9 ( 31,925 )
+Seat 3: alt0idman ( 25,875 )
+Seat 4: qVaturrrr ( 30,022 )
+Seat 2: raypass ( 26,287 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Stargate9 posts small blind [100].
+ROGUE63 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  4d 3d ]
+raypass calls [200]
+alt0idman will be using their time bank for this hand.
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 checks
+** Dealing Flop ** [ Kh, 7s, Th ]
+ROGUE63 checks
+raypass bets [200]
+ROGUE63 folds
+raypass does not show cards.
+raypass wins 900 chips
+Game #16120283705 starts.
+
+#Game No : 16120283705 
+***** Hand History for Game 16120283705 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:18:12 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,453 )
+Seat 7: Figarootoo ( 30,013 )
+Seat 5: Morgenfryd1 ( 32,450 )
+Seat 1: ROGUE63 ( 29,675 )
+Seat 8: Stargate9 ( 31,800 )
+Seat 3: alt0idman ( 25,850 )
+Seat 4: qVaturrrr ( 29,997 )
+Seat 2: raypass ( 26,762 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+ROGUE63 posts small blind [100].
+raypass posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  3d 4h ]
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 calls [200]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass checks
+** Dealing Flop ** [ 5h, 3h, Kd ]
+raypass checks
+Morgenfryd1 checks
+** Dealing Turn ** [ Ah ]
+raypass checks
+Morgenfryd1 checks
+** Dealing River ** [ 8d ]
+raypass checks
+Morgenfryd1 checks
+raypass shows [ 7d, 3c ]a pair of Threes.
+Morgenfryd1 shows [ Qs, 8c ]a pair of Eights.
+Morgenfryd1 wins 700 chips from the main pot with a pair of Eights.
+Game #16120285303 starts.
+
+#Game No : 16120285303 
+***** Hand History for Game 16120285303 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:18:41 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,428 )
+Seat 7: Figarootoo ( 29,988 )
+Seat 5: Morgenfryd1 ( 32,925 )
+Seat 1: ROGUE63 ( 29,550 )
+Seat 8: Stargate9 ( 31,775 )
+Seat 3: alt0idman ( 25,825 )
+Seat 4: qVaturrrr ( 29,972 )
+Seat 2: raypass ( 26,537 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+raypass posts small blind [100].
+alt0idman posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  7d 5h ]
+qVaturrrr folds
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass folds
+alt0idman does not show cards.
+alt0idman wins 500 chips
+Game #16120286266 starts.
+
+#Game No : 16120286266 
+***** Hand History for Game 16120286266 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:18:59 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,403 )
+Seat 7: Figarootoo ( 29,963 )
+Seat 5: Morgenfryd1 ( 32,900 )
+Seat 1: ROGUE63 ( 29,525 )
+Seat 8: Stargate9 ( 31,750 )
+Seat 3: alt0idman ( 26,100 )
+Seat 4: qVaturrrr ( 29,947 )
+Seat 2: raypass ( 26,412 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+alt0idman posts small blind [100].
+qVaturrrr posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  4s Th ]
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 calls [200]
+raypass calls [200]
+alt0idman folds
+qVaturrrr checks
+** Dealing Flop ** [ 9d, Jh, 4c ]
+qVaturrrr bets [720]
+ROGUE63 folds
+raypass calls [720]
+** Dealing Turn ** [ Qs ]
+qVaturrrr checks
+raypass checks
+** Dealing River ** [ 3s ]
+qVaturrrr bets [678]
+raypass calls [678]
+qVaturrrr shows [ Qh, Jc ]two pairs, Queens and Jacks.
+raypass doesn't show [ 9h, 8c ]a pair of Nines.
+qVaturrrr wins 3,696 chips from the main pot with two pairs, Queens and Jacks.
+Game #16120288734 starts.
+
+#Game No : 16120288734 
+***** Hand History for Game 16120288734 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:19:45 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,378 )
+Seat 7: Figarootoo ( 29,938 )
+Seat 5: Morgenfryd1 ( 32,875 )
+Seat 1: ROGUE63 ( 29,300 )
+Seat 8: Stargate9 ( 31,725 )
+Seat 3: alt0idman ( 25,975 )
+Seat 4: qVaturrrr ( 32,020 )
+Seat 2: raypass ( 24,789 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+qVaturrrr posts small blind [100].
+Morgenfryd1 posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  2c Jc ]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass calls [200]
+alt0idman calls [200]
+qVaturrrr folds
+Morgenfryd1 checks
+** Dealing Flop ** [ Ah, 7s, Ac ]
+Morgenfryd1 checks
+raypass bets [200]
+alt0idman folds
+Morgenfryd1 folds
+raypass does not show cards.
+raypass wins 1,100 chips
+Game #16120290327 starts.
+
+#Game No : 16120290327 
+***** Hand History for Game 16120290327 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:2  Blinds-Antes(100/200 -25) - Saturday, May 20, 18:20:14 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 62,353 )
+Seat 7: Figarootoo ( 29,913 )
+Seat 5: Morgenfryd1 ( 32,650 )
+Seat 1: ROGUE63 ( 29,275 )
+Seat 8: Stargate9 ( 31,700 )
+Seat 3: alt0idman ( 25,750 )
+Seat 4: qVaturrrr ( 31,895 )
+Seat 2: raypass ( 25,464 )
+Trny:138340262 Level:2 
+Blinds-Antes(100/200 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Morgenfryd1 posts small blind [100].
+AA_NASTY posts big blind [200].
+** Dealing down cards **
+Dealt to Figarootoo [  Th 5c ]
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass folds
+alt0idman will be using their time bank for this hand.
+alt0idman did not respond in time
+alt0idman folds
+qVaturrrr calls [200]
+Morgenfryd1 calls [100]
+AA_NASTY checks
+** Dealing Flop ** [ Qh, 5h, Jc ]
+Morgenfryd1 checks
+AA_NASTY checks
+qVaturrrr checks
+** Dealing Turn ** [ 2d ]
+Morgenfryd1 bets [200]
+AA_NASTY calls [200]
+qVaturrrr folds
+** Dealing River ** [ 9h ]
+Morgenfryd1 bets [1,200]
+AA_NASTY folds
+Morgenfryd1 does not show cards.
+Morgenfryd1 wins 2,400 chips
+Game #16120294927 starts.
+
+#Game No : 16120294927 
+***** Hand History for Game 16120294927 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:21:42 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,928 )
+Seat 7: Figarootoo ( 29,888 )
+Seat 5: Morgenfryd1 ( 33,425 )
+Seat 1: ROGUE63 ( 29,250 )
+Seat 8: Stargate9 ( 31,675 )
+Seat 3: alt0idman ( 25,725 )
+Seat 4: qVaturrrr ( 31,670 )
+Seat 2: raypass ( 25,439 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+AA_NASTY posts small blind [150].
+Figarootoo posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  3s 7d ]
+Stargate9 folds
+ROGUE63 folds
+raypass calls [300]
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 calls [300]
+AA_NASTY folds
+Figarootoo checks
+** Dealing Flop ** [ 4d, 2s, Jh ]
+Figarootoo checks
+raypass checks
+Morgenfryd1 bets [300]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo folds
+raypass calls [300]
+** Dealing Turn ** [ 3d ]
+raypass checks
+Morgenfryd1 bets [300]
+raypass folds
+Morgenfryd1 does not show cards.
+Morgenfryd1 wins 2,150 chips
+Game #16120298885 starts.
+
+#Game No : 16120298885 
+***** Hand History for Game 16120298885 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:22:48 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 6 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,753 )
+Seat 7: Figarootoo ( 29,563 )
+Seat 5: Morgenfryd1 ( 34,650 )
+Seat 1: ROGUE63 ( 29,225 )
+Seat 8: Stargate9 ( 31,650 )
+Seat 3: alt0idman ( 25,700 )
+Seat 4: qVaturrrr ( 31,645 )
+Seat 2: raypass ( 24,814 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Figarootoo posts small blind [150].
+Stargate9 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  Jc 9d ]
+ROGUE63 folds
+raypass calls [300]
+alt0idman folds
+qVaturrrr calls [300]
+Morgenfryd1 calls [300]
+AA_NASTY folds
+Figarootoo calls [150]
+Stargate9 folds
+** Dealing Flop ** [ 4d, Jd, Kc ]
+Figarootoo checks
+raypass bets [300]
+qVaturrrr folds
+Morgenfryd1 folds
+Figarootoo calls [300]
+** Dealing Turn ** [ 2d ]
+Figarootoo checks
+raypass checks
+** Dealing River ** [ 7d ]
+Figarootoo checks
+raypass checks
+Figarootoo shows [ Jc, 9d ]a flush, Jack high.
+raypass doesn't show [ Tc, Jh ]a pair of Jacks.
+Figarootoo wins 2,300 chips from the main pot with a flush, Jack high.
+Game #16120302463 starts.
+
+#Game No : 16120302463 
+***** Hand History for Game 16120302463 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:23:56 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,728 )
+Seat 7: Figarootoo ( 31,238 )
+Seat 5: Morgenfryd1 ( 34,325 )
+Seat 1: ROGUE63 ( 29,200 )
+Seat 8: Stargate9 ( 31,325 )
+Seat 3: alt0idman ( 25,675 )
+Seat 4: qVaturrrr ( 31,320 )
+Seat 2: raypass ( 24,189 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Stargate9 posts small blind [150].
+ROGUE63 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  3d As ]
+raypass folds
+alt0idman folds
+qVaturrrr raises [900]
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+qVaturrrr does not show cards.
+qVaturrrr wins 1,550 chips
+Game #16120303698 starts.
+
+#Game No : 16120303698 
+***** Hand History for Game 16120303698 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:24:20 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,703 )
+Seat 7: Figarootoo ( 31,213 )
+Seat 5: Morgenfryd1 ( 34,300 )
+Seat 1: ROGUE63 ( 28,875 )
+Seat 8: Stargate9 ( 31,150 )
+Seat 3: alt0idman ( 25,650 )
+Seat 4: qVaturrrr ( 31,945 )
+Seat 2: raypass ( 24,164 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+ROGUE63 posts small blind [150].
+raypass posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  8d Js ]
+alt0idman folds
+qVaturrrr will be using their time bank for this hand.
+qVaturrrr folds
+Morgenfryd1 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 calls [150]
+raypass checks
+** Dealing Flop ** [ 5h, 8s, 7h ]
+ROGUE63 bets [300]
+raypass calls [300]
+** Dealing Turn ** [ 9c ]
+ROGUE63 bets [300]
+raypass calls [300]
+** Dealing River ** [ As ]
+ROGUE63 bets [300]
+raypass raises [2,900]
+ROGUE63 folds
+raypass does not show cards.
+raypass wins 5,200 chips
+Game #16120308640 starts.
+
+#Game No : 16120308640 
+***** Hand History for Game 16120308640 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:25:47 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,678 )
+Seat 7: Figarootoo ( 31,188 )
+Seat 5: Morgenfryd1 ( 34,275 )
+Seat 1: ROGUE63 ( 27,650 )
+Seat 8: Stargate9 ( 31,125 )
+Seat 3: alt0idman ( 25,625 )
+Seat 4: qVaturrrr ( 31,920 )
+Seat 2: raypass ( 25,539 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+raypass posts small blind [150].
+alt0idman posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  6s 7c ]
+qVaturrrr will be using their time bank for this hand.
+qVaturrrr did not respond in time
+qVaturrrr folds
+Morgenfryd1 calls [300]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 calls [300]
+ROGUE63 folds
+raypass calls [150]
+alt0idman checks
+** Dealing Flop ** [ Js, Tc, 3h ]
+raypass checks
+alt0idman checks
+Morgenfryd1 checks
+Stargate9 bets [1,400]
+raypass folds
+alt0idman folds
+Morgenfryd1 folds
+Stargate9 does not show cards.
+Stargate9 wins 2,800 chips
+Game #16120311862 starts.
+
+#Game No : 16120311862 
+***** Hand History for Game 16120311862 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:26:50 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,653 )
+Seat 7: Figarootoo ( 31,163 )
+Seat 5: Morgenfryd1 ( 33,950 )
+Seat 1: ROGUE63 ( 27,625 )
+Seat 8: Stargate9 ( 32,200 )
+Seat 3: alt0idman ( 25,300 )
+Seat 4: qVaturrrr ( 31,895 )
+Seat 2: raypass ( 25,214 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+alt0idman posts small blind [150].
+qVaturrrr posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  As 2c ]
+Morgenfryd1 raises [600]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 is all-In  [27,600]
+raypass folds
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 calls [27,000]
+** Dealing Flop ** [ 2s, 8d, 8c ]
+** Dealing Turn ** [ 5h ]
+** Dealing River ** [ 4c ]
+Morgenfryd1 shows [ Kh, Th ]a pair of Eights.
+ROGUE63 shows [ Kc, Ah ]a pair of Eights with Ace kicker.
+ROGUE63 wins 55,850 chips from the main pot with a pair of Eights with Ace kicker.
+Game #16120313277 starts.
+
+#Game No : 16120313277 
+***** Hand History for Game 16120313277 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:27:17 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,628 )
+Seat 7: Figarootoo ( 31,138 )
+Seat 5: Morgenfryd1 ( 6,325 )
+Seat 1: ROGUE63 ( 55,850 )
+Seat 8: Stargate9 ( 32,175 )
+Seat 3: alt0idman ( 25,125 )
+Seat 4: qVaturrrr ( 31,570 )
+Seat 2: raypass ( 25,189 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+qVaturrrr posts small blind [150].
+Morgenfryd1 posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  5d Qh ]
+AA_NASTY folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo will be using their time bank for this hand.
+Figarootoo folds
+Stargate9 calls [300]
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 is all-In  [6,000]
+Stargate9 folds
+Morgenfryd1 does not show cards.
+Morgenfryd1 wins 6,950 chips
+Game #16120315802 starts.
+
+#Game No : 16120315802 
+***** Hand History for Game 16120315802 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:27:57 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 61,603 )
+Seat 7: Figarootoo ( 31,113 )
+Seat 5: Morgenfryd1 ( 6,950 )
+Seat 1: ROGUE63 ( 55,825 )
+Seat 8: Stargate9 ( 31,850 )
+Seat 3: alt0idman ( 25,100 )
+Seat 4: qVaturrrr ( 31,395 )
+Seat 2: raypass ( 25,164 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+Morgenfryd1 posts small blind [150].
+AA_NASTY posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  6d 7h ]
+Figarootoo folds
+Stargate9 calls [300]
+ROGUE63 will be using their time bank for this hand.
+ROGUE63 calls [300]
+raypass calls [300]
+alt0idman folds
+qVaturrrr folds
+Morgenfryd1 folds
+AA_NASTY checks
+** Dealing Flop ** [ Qd, 3s, 5s ]
+AA_NASTY bets [744]
+Stargate9 calls [744]
+ROGUE63 raises [4,526]
+raypass folds
+AA_NASTY folds
+Stargate9 folds
+ROGUE63 does not show cards.
+ROGUE63 wins 7,564 chips
+Game #16120320641 starts.
+
+#Game No : 16120320641 
+***** Hand History for Game 16120320641 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:3  Blinds-Antes(150/300 -25) - Saturday, May 20, 18:29:24 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 60,534 )
+Seat 7: Figarootoo ( 31,088 )
+Seat 5: Morgenfryd1 ( 6,775 )
+Seat 1: ROGUE63 ( 58,538 )
+Seat 8: Stargate9 ( 30,781 )
+Seat 3: alt0idman ( 25,075 )
+Seat 4: qVaturrrr ( 31,370 )
+Seat 2: raypass ( 24,839 )
+Trny:138340262 Level:3 
+Blinds-Antes(150/300 -25)
+ROGUE63 posts ante [25]
+raypass posts ante [25]
+alt0idman posts ante [25]
+qVaturrrr posts ante [25]
+Morgenfryd1 posts ante [25]
+AA_NASTY posts ante [25]
+Figarootoo posts ante [25]
+Stargate9 posts ante [25]
+AA_NASTY posts small blind [150].
+Figarootoo posts big blind [300].
+** Dealing down cards **
+Dealt to Figarootoo [  6d Ks ]
+Stargate9 folds
+ROGUE63 calls [300]
+raypass calls [300]
+alt0idman calls [300]
+qVaturrrr did not respond in time
+qVaturrrr folds
+Morgenfryd1 is all-In  [6,750]
+AA_NASTY folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo folds
+ROGUE63 is all-In  [58,213]
+raypass folds
+alt0idman is all-In  [24,750]
+** Dealing Flop ** [ As, 7d, 2d ]
+** Dealing Turn ** [ Ts ]
+** Dealing River ** [ 5c ]
+ROGUE63 shows [ 3c, Qc ]high card Ace.
+alt0idman shows [ 4h, Ad ]a pair of Aces.
+Morgenfryd1 shows [ Kh, Jh ]high card Ace.
+ROGUE63 wins 33,463 chips from the side pot 2 with high card, Ace.
+alt0idman wins 36,600 chips from the side pot 1 with a pair of Aces.
+alt0idman wins 21,200 chips from the main pot with a pair of Aces.
+Player Morgenfryd1 finished in 204.
+alt0idman has knocked out Morgenfryd1 and won a $0.20 USD bounty prize.
+Game #16120324590 starts.
+
+#Game No : 16120324590 
+***** Hand History for Game 16120324590 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:30:44 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 6 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 60,359 )
+Seat 7: Figarootoo ( 30,763 )
+Seat 1: ROGUE63 ( 33,463 )
+Seat 8: Stargate9 ( 30,756 )
+Seat 3: alt0idman ( 57,800 )
+Seat 4: qVaturrrr ( 31,345 )
+Seat 2: raypass ( 24,514 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+Figarootoo posts small blind [200].
+Stargate9 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  Ks Th ]
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr raises [840]
+ROGUE63: frickin XXXXX callin A 4
+AA_NASTY calls [840]
+Figarootoo folds
+Stargate9 calls [440]
+** Dealing Flop ** [ Kh, 8h, Js ]
+Stargate9 checks
+qVaturrrr checks
+AA_NASTY checks
+** Dealing Turn ** [ 8c ]
+Stargate9 bets [1,535]
+chazzer66 has joined the table.
+qVaturrrr folds
+AA_NASTY folds
+Stargate9 does not show cards.
+Stargate9 wins 4,605 chips
+Game #16120328714 starts.
+
+#Game No : 16120328714 
+***** Hand History for Game 16120328714 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:32:10 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 59,469 )
+Seat 7: Figarootoo ( 30,513 )
+Seat 1: ROGUE63 ( 33,413 )
+Seat 8: Stargate9 ( 32,936 )
+Seat 3: alt0idman ( 57,750 )
+Seat 5: chazzer66 ( 30,000 )
+Seat 4: qVaturrrr ( 30,455 )
+Seat 2: raypass ( 24,464 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+chazzer66 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+Stargate9 posts small blind [200].
+ROGUE63 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  Td 8h ]
+raypass raises [1,600]
+alt0idman folds
+qVaturrrr did not respond in time
+qVaturrrr folds
+chazzer66 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 calls [1,400]
+ROGUE63 calls [1,200]
+** Dealing Flop ** [ Ah, 7h, Kh ]
+Stargate9 checks
+ROGUE63 checks
+raypass checks
+** Dealing Turn ** [ 6h ]
+Stargate9 checks
+ROGUE63 checks
+raypass checks
+** Dealing River ** [ Jd ]
+Stargate9 checks
+ROGUE63 checks
+raypass checks
+Stargate9 shows [ Ad, 2s ]a pair of Aces.
+ROGUE63 doesn't show [ 4c, 4d ]a pair of Fours.
+raypass doesn't show [ Qs, Qd ]a pair of Queens.
+Stargate9 wins 5,200 chips from the main pot with a pair of Aces.
+Game #16120332850 starts.
+
+#Game No : 16120332850 
+***** Hand History for Game 16120332850 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:33:20 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 59,419 )
+Seat 7: Figarootoo ( 30,463 )
+Seat 1: ROGUE63 ( 31,763 )
+Seat 8: Stargate9 ( 36,486 )
+Seat 3: alt0idman ( 57,700 )
+Seat 5: chazzer66 ( 29,950 )
+Seat 4: qVaturrrr ( 30,405 )
+Seat 2: raypass ( 22,814 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+chazzer66 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+ROGUE63 posts small blind [200].
+raypass posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  Jc 6c ]
+alt0idman folds
+qVaturrrr folds
+chazzer66 calls [400]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 calls [400]
+ROGUE63 calls [200]
+raypass checks
+** Dealing Flop ** [ 7d, 8d, Kd ]
+ROGUE63 bets [400]
+raypass calls [400]
+chazzer66 folds
+Stargate9 folds
+** Dealing Turn ** [ 2c ]
+ROGUE63 bets [400]
+raypass calls [400]
+** Dealing River ** [ 2d ]
+ROGUE63 bets [400]
+raypass calls [400]
+ROGUE63 shows [ 3c, 7c ]two pairs, Sevens and Twos.
+raypass shows [ 8s, 7h ]two pairs, Eights and Sevens.
+raypass wins 4,400 chips from the main pot with two pairs, Eights and Sevens.
+Game #16120335825 starts.
+
+#Game No : 16120335825 
+***** Hand History for Game 16120335825 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:34:22 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 59,369 )
+Seat 7: Figarootoo ( 30,413 )
+Seat 1: ROGUE63 ( 30,113 )
+Seat 8: Stargate9 ( 36,036 )
+Seat 3: alt0idman ( 57,650 )
+Seat 5: chazzer66 ( 29,500 )
+Seat 4: qVaturrrr ( 30,355 )
+Seat 2: raypass ( 25,564 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+chazzer66 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+raypass posts small blind [200].
+alt0idman posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  7c Kh ]
+qVaturrrr folds
+chazzer66 calls [400]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 calls [400]
+raypass folds
+alt0idman checks
+** Dealing Flop ** [ 2d, Qd, Td ]
+alt0idman checks
+chazzer66 checks
+ROGUE63 checks
+** Dealing Turn ** [ 5c ]
+alt0idman checks
+chazzer66 bets [400]
+ROGUE63 folds
+alt0idman raises [800]
+chazzer66 calls [400]
+** Dealing River ** [ 4c ]
+alt0idman bets [3,400]
+chazzer66 raises [6,800]
+alt0idman is all-In  [53,000]
+chazzer66 is all-In  [21,450]
+chazzer66 shows [ Jd, Kd ]a flush, King high.
+alt0idman shows [ 5d, Ad ]a flush, Ace high.
+alt0idman wins 28,150 chips from the side pot 1 with a flush, Ace high.
+alt0idman wins 59,900 chips from the main pot with a flush, Ace high.
+Player chazzer66 finished in 206.
+alt0idman has knocked out chazzer66 and won a $0.20 USD bounty prize.
+Game #16120340198 starts.
+
+#Game No : 16120340198 
+***** Hand History for Game 16120340198 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:35:44 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 59,319 )
+Seat 7: Figarootoo ( 30,363 )
+Seat 1: ROGUE63 ( 29,663 )
+Seat 8: Stargate9 ( 35,986 )
+Seat 3: alt0idman ( 88,050 )
+Seat 4: qVaturrrr ( 30,305 )
+Seat 2: raypass ( 25,314 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+alt0idman posts small blind [200].
+qVaturrrr posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  4d Ks ]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 calls [400]
+raypass folds
+alt0idman calls [200]
+qVaturrrr checks
+** Dealing Flop ** [ Jd, 8c, 3c ]
+alt0idman checks
+qVaturrrr checks
+ROGUE63 checks
+** Dealing Turn ** [ 7s ]
+alt0idman checks
+qVaturrrr checks
+ROGUE63 checks
+** Dealing River ** [ 6h ]
+alt0idman checks
+qVaturrrr bets [449]
+ROGUE63 folds
+alt0idman folds
+qVaturrrr does not show cards.
+qVaturrrr wins 1,999 chips
+Game #16120342455 starts.
+
+#Game No : 16120342455 
+***** Hand History for Game 16120342455 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:36:31 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 59,269 )
+Seat 7: Figarootoo ( 30,313 )
+Seat 1: ROGUE63 ( 29,213 )
+Seat 8: Stargate9 ( 35,936 )
+Seat 3: alt0idman ( 87,600 )
+Seat 4: qVaturrrr ( 31,405 )
+Seat 2: raypass ( 25,264 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+qVaturrrr posts small blind [200].
+AA_NASTY posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  Qs Ad ]
+Figarootoo calls [400]
+Stargate9 folds
+ROGUE63 calls [400]
+raypass folds
+alt0idman calls [400]
+qVaturrrr calls [200]
+AA_NASTY checks
+** Dealing Flop ** [ Jc, Kc, 6h ]
+qVaturrrr checks
+AA_NASTY checks
+Figarootoo checks
+ROGUE63 bets [400]
+alt0idman calls [400]
+qVaturrrr folds
+AA_NASTY folds
+Figarootoo calls [400]
+** Dealing Turn ** [ 3s ]
+Figarootoo checks
+ROGUE63 bets [400]
+alt0idman folds
+Figarootoo calls [400]
+** Dealing River ** [ Tc ]
+Figarootoo checks
+ROGUE63 bets [400]
+Figarootoo raises [1,200]
+ROGUE63 calls [800]
+Figarootoo shows [ Qs, Ad ]a straight, Ten to Ace.
+ROGUE63 doesn't show [ Ah, Js ]a pair of Jacks.
+Figarootoo wins 6,750 chips from the main pot with a straight, Ten to Ace.
+Game #16120348557 starts.
+
+#Game No : 16120348557 
+***** Hand History for Game 16120348557 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:38:29 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 58,819 )
+Seat 7: Figarootoo ( 34,613 )
+Seat 1: ROGUE63 ( 26,763 )
+Seat 8: Stargate9 ( 35,886 )
+Seat 3: alt0idman ( 86,750 )
+Seat 4: qVaturrrr ( 30,955 )
+Seat 2: raypass ( 25,214 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+AA_NASTY posts small blind [200].
+Figarootoo posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  7d 5c ]
+Stargate9 folds
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr raises [960]
+AA_NASTY folds
+Figarootoo folds
+qVaturrrr does not show cards.
+qVaturrrr wins 1,910 chips
+Game #16120349709 starts.
+
+#Game No : 16120349709 
+***** Hand History for Game 16120349709 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:4  Blinds-Antes(200/400 -50) - Saturday, May 20, 18:38:54 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 6 is the button
+Total number of players : 7/8 
+Seat 6: AA_NASTY ( 58,569 )
+Seat 7: Figarootoo ( 34,163 )
+Seat 1: ROGUE63 ( 26,713 )
+Seat 8: Stargate9 ( 35,836 )
+Seat 3: alt0idman ( 86,700 )
+Seat 4: qVaturrrr ( 31,855 )
+Seat 2: raypass ( 25,164 )
+Trny:138340262 Level:4 
+Blinds-Antes(200/400 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+Figarootoo posts small blind [200].
+Stargate9 posts big blind [400].
+** Dealing down cards **
+Dealt to Figarootoo [  4h 7s ]
+ROGUE63 calls [400]
+raypass folds
+alt0idman folds
+qVaturrrr calls [400]
+AA_NASTY folds
+Figarootoo folds
+Stargate9 checks
+** Dealing Flop ** [ Ac, 6c, Ah ]
+Stargate9 checks
+ROGUE63 checks
+qVaturrrr checks
+** Dealing Turn ** [ As ]
+Stargate9 checks
+ROGUE63 bets [400]
+qVaturrrr folds
+Stargate9 calls [400]
+** Dealing River ** [ Qd ]
+Stargate9 checks
+ROGUE63 bets [2,550]
+Stargate9 folds
+ROGUE63 does not show cards.
+ROGUE63 wins 5,100 chips
+
+Game #16120352874 starts.
+#Game No : 16120352874 
+Connection Lost due to some reason
+The hand history for this hand number is not available here.Please use Instant Hand History in the "Game Rules & Options"  menu to have this hand history delivered to the email address you have registered with us.
+
+Game #16120357835 starts.
+
+#Game No : 16120357835 
+***** Hand History for Game 16120357835 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:41:43 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 58,469 )
+Seat 5: Bailey07 ( 30,000 )
+Seat 7: Figarootoo ( 32,463 )
+Seat 1: ROGUE63 ( 27,963 )
+Seat 8: Stargate9 ( 34,536 )
+Seat 3: alt0idman ( 89,150 )
+Seat 4: qVaturrrr ( 31,355 )
+Seat 2: raypass ( 25,064 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+ROGUE63 posts small blind [250].
+raypass posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  9h Kd ]
+alt0idman calls [500]
+qVaturrrr raises [1,500]
+Bailey07 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 folds
+ROGUE63 folds
+raypass calls [1,000]
+alt0idman calls [1,000]
+** Dealing Flop ** [ 9c, 6c, Qs ]
+raypass checks
+alt0idman checks
+qVaturrrr checks
+** Dealing Turn ** [ Ts ]
+raypass bets [1,250]
+alt0idman calls [1,250]
+qVaturrrr calls [1,250]
+** Dealing River ** [ 4s ]
+raypass checks
+alt0idman checks
+qVaturrrr checks
+raypass shows [ 8d, 7h ]a straight, Six to Ten.
+alt0idman doesn't show [ Tc, Kc ]a pair of Tens.
+qVaturrrr doesn't show [ As, Jc ]high card Ace.
+raypass wins 8,900 chips from the main pot with a straight, Six to Ten.
+Game #16120362740 starts.
+
+#Game No : 16120362740 
+***** Hand History for Game 16120362740 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:43:17 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 58,419 )
+Seat 5: Bailey07 ( 29,950 )
+Seat 7: Figarootoo ( 32,413 )
+Seat 1: ROGUE63 ( 27,663 )
+Seat 8: Stargate9 ( 34,486 )
+Seat 3: alt0idman ( 86,350 )
+Seat 4: qVaturrrr ( 28,555 )
+Seat 2: raypass ( 31,164 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+raypass posts small blind [250].
+alt0idman posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  Jh 9d ]
+qVaturrrr folds
+Bailey07 folds
+AA_NASTY folds
+Figarootoo folds
+Stargate9 calls [500]
+ROGUE63 folds
+raypass folds
+alt0idman checks
+** Dealing Flop ** [ 5h, 8h, Qh ]
+alt0idman checks
+Stargate9 bets [500]
+alt0idman folds
+Stargate9 does not show cards.
+Stargate9 wins 2,150 chips
+Game #16120364576 starts.
+
+#Game No : 16120364576 
+***** Hand History for Game 16120364576 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:43:57 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 58,369 )
+Seat 5: Bailey07 ( 29,900 )
+Seat 7: Figarootoo ( 32,363 )
+Seat 1: ROGUE63 ( 27,613 )
+Seat 8: Stargate9 ( 35,586 )
+Seat 3: alt0idman ( 85,800 )
+Seat 4: qVaturrrr ( 28,505 )
+Seat 2: raypass ( 30,864 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+alt0idman posts small blind [250].
+qVaturrrr posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  Qc Kd ]
+Bailey07 folds
+AA_NASTY folds
+Figarootoo raises [1,000]
+Stargate9 folds
+ROGUE63 will be using their time bank for this hand.
+ROGUE63 did not respond in time
+ROGUE63 folds
+raypass folds
+alt0idman calls [750]
+qVaturrrr folds
+** Dealing Flop ** [ Ks, 4s, 9s ]
+alt0idman checks
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo bets [1,933]
+alt0idman folds
+Figarootoo does not show cards.
+Figarootoo wins 4,833 chips
+Game #16120369452 starts.
+
+#Game No : 16120369452 
+***** Hand History for Game 16120369452 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:45:31 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 8/8 
+Seat 6: AA_NASTY ( 58,319 )
+Seat 5: Bailey07 ( 29,850 )
+Seat 7: Figarootoo ( 34,213 )
+Seat 1: ROGUE63 ( 27,563 )
+Seat 8: Stargate9 ( 35,536 )
+Seat 3: alt0idman ( 84,750 )
+Seat 4: qVaturrrr ( 27,955 )
+Seat 2: raypass ( 30,814 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+AA_NASTY posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+qVaturrrr posts small blind [250].
+Bailey07 posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  3h 9d ]
+AA_NASTY folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo folds
+Stargate9 calls [500]
+ROGUE63 folds
+raypass folds
+alt0idman folds
+qVaturrrr raises [2,000]
+Bailey07 folds
+Stargate9 calls [1,750]
+** Dealing Flop ** [ Tc, Th, Qd ]
+qVaturrrr bets [1,566]
+Stargate9 raises [3,132]
+qVaturrrr calls [1,566]
+** Dealing Turn ** [ 9s ]
+qVaturrrr checks
+Stargate9 bets [5,832]
+qVaturrrr calls [5,832]
+** Dealing River ** [ 2d ]
+qVaturrrr checks
+Stargate9 checks
+qVaturrrr shows [ Kc, Qc ]two pairs, Queens and Tens with King kicker.
+Stargate9 doesn't show [ 6s, Qs ]two pairs, Queens and Tens.
+qVaturrrr wins 23,328 chips from the main pot with two pairs, Queens and Tens with King kicker.
+Game #16120372446 starts.
+
+#Game No : 16120372446 
+***** Hand History for Game 16120372446 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:46:29 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 4 is the button
+Total number of players : 7/8 
+Seat 5: Bailey07 ( 29,300 )
+Seat 7: Figarootoo ( 34,163 )
+Seat 1: ROGUE63 ( 27,513 )
+Seat 8: Stargate9 ( 24,272 )
+Seat 3: alt0idman ( 84,700 )
+Seat 4: qVaturrrr ( 40,019 )
+Seat 2: raypass ( 30,764 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Figarootoo posts ante [50]
+Stargate9 posts ante [50]
+Bailey07 posts small blind [250].
+Figarootoo posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  3s Ad ]
+Stargate9 calls [500]
+ROGUE63 folds
+raypass calls [500]
+alt0idman folds
+qVaturrrr folds
+Bailey07 calls [250]
+Figarootoo checks
+** Dealing Flop ** [ 6h, 7h, 7d ]
+Bailey07 bets [2,350]
+Figarootoo folds
+Stargate9 calls [2,350]
+raypass folds
+** Dealing Turn ** [ Qc ]
+Bailey07 bets [7,050]
+Stargate9 calls [7,050]
+** Dealing River ** [ 7c ]
+Bailey07 bets [500]
+Anaconda75 has joined the table.
+Stargate9 is all-In  [14,322]
+Bailey07 calls [13,822]
+Bailey07 shows [ 9h, Qh ]a full house, Sevens full of Queens.
+Stargate9 shows [ 8h, Jh ]three of a kind, Sevens.
+Bailey07 wins 49,794 chips from the main pot with a full house, Sevens full of Queens.
+Player Stargate9 finished in 212.
+Bailey07 has knocked out Stargate9 and won a $0.20 USD bounty prize.
+Game #16120375740 starts.
+
+#Game No : 16120375740 
+***** Hand History for Game 16120375740 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:47:41 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 5 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 30,000 )
+Seat 5: Bailey07 ( 54,822 )
+Seat 7: Figarootoo ( 33,613 )
+Seat 1: ROGUE63 ( 27,463 )
+Seat 3: alt0idman ( 84,650 )
+Seat 4: qVaturrrr ( 39,969 )
+Seat 2: raypass ( 30,214 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Figarootoo posts ante [50]
+Figarootoo posts small blind [250].
+ROGUE63 posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  Kh 6c ]
+raypass calls [500]
+alt0idman folds
+qVaturrrr folds
+Bailey07 folds
+Figarootoo folds
+ROGUE63 checks
+** Dealing Flop ** [ 8c, Qc, 9h ]
+ROGUE63 checks
+raypass checks
+** Dealing Turn ** [ 2h ]
+ROGUE63 checks
+raypass checks
+** Dealing River ** [ 2s ]
+ROGUE63 checks
+raypass checks
+ROGUE63 shows [ 7h, 3s ]a pair of Twos.
+raypass shows [ Ad, 3d ]a pair of Twos with Ace kicker.
+raypass wins 1,550 chips from the main pot with a pair of Twos with Ace kicker.
+Game #16120377387 starts.
+
+#Game No : 16120377387 
+***** Hand History for Game 16120377387 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:48:18 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 7 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 30,000 )
+Seat 5: Bailey07 ( 54,772 )
+Seat 7: Figarootoo ( 33,313 )
+Seat 1: ROGUE63 ( 26,913 )
+Seat 3: alt0idman ( 84,600 )
+Seat 4: qVaturrrr ( 39,919 )
+Seat 2: raypass ( 31,214 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Anaconda75 posts ante [50]
+Figarootoo posts ante [50]
+ROGUE63 posts small blind [250].
+raypass posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  5c Kh ]
+alt0idman folds
+qVaturrrr folds
+Bailey07 folds
+Anaconda75 folds
+Figarootoo raises [1,250]
+ROGUE63 raises [1,750]
+raypass folds
+Figarootoo calls [750]
+** Dealing Flop ** [ Kd, Ad, 5h ]
+ROGUE63 is all-In  [24,863]
+Figarootoo calls [24,863]
+** Dealing Turn ** [ Js ]
+** Dealing River ** [ As ]
+ROGUE63 shows [ Ac, Qs ]three of a kind, Aces.
+Figarootoo shows [ 5c, Kh ]two pairs, Aces and Kings.
+ROGUE63 wins 54,576 chips from the main pot with three of a kind, Aces.
+Game #16120380950 starts.
+
+#Game No : 16120380950 
+***** Hand History for Game 16120380950 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:49:37 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 1 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 29,950 )
+Seat 5: Bailey07 ( 54,722 )
+Seat 7: Figarootoo ( 6,400 )
+Seat 1: ROGUE63 ( 54,576 )
+Seat 3: alt0idman ( 84,550 )
+Seat 4: qVaturrrr ( 39,869 )
+Seat 2: raypass ( 30,664 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Anaconda75 posts ante [50]
+Figarootoo posts ante [50]
+raypass posts small blind [250].
+alt0idman posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  8d 7h ]
+qVaturrrr folds
+Bailey07 folds
+Anaconda75 folds
+Figarootoo folds
+ROGUE63 folds
+raypass folds
+alt0idman does not show cards.
+alt0idman wins 1,100 chips
+There will be a break in 4 minute(s)
+Game #16120382315 starts.
+
+#Game No : 16120382315 
+***** Hand History for Game 16120382315 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:5  Blinds-Antes(250/500 -50) - Saturday, May 20, 18:50:06 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 2 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 29,900 )
+Seat 5: Bailey07 ( 54,672 )
+Seat 7: Figarootoo ( 6,350 )
+Seat 1: ROGUE63 ( 54,526 )
+Seat 3: alt0idman ( 85,100 )
+Seat 4: qVaturrrr ( 39,819 )
+Seat 2: raypass ( 30,364 )
+Trny:138340262 Level:5 
+Blinds-Antes(250/500 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Anaconda75 posts ante [50]
+Figarootoo posts ante [50]
+alt0idman posts small blind [250].
+qVaturrrr posts big blind [500].
+** Dealing down cards **
+Dealt to Figarootoo [  3d 4c ]
+Bailey07 folds
+Anaconda75 folds
+Figarootoo folds
+ROGUE63 folds
+raypass calls [500]
+alt0idman calls [250]
+qVaturrrr checks
+** Dealing Flop ** [ 2c, Ad, 2h ]
+alt0idman bets [500]
+qVaturrrr did not respond in time
+qVaturrrr folds
+raypass folds
+alt0idman does not show cards.
+alt0idman wins 2,350 chips
+Game #16120384847 starts.
+
+#Game No : 16120384847 
+***** Hand History for Game 16120384847 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:6  Blinds-Antes(300/600 -50) - Saturday, May 20, 18:50:53 BST 2017
+Table Flyweight. $400 Gtd KO (138340262) Table #16 (Real Money)
+Seat 3 is the button
+Total number of players : 7/8 
+Seat 6: Anaconda75 ( 29,850 )
+Seat 5: Bailey07 ( 54,622 )
+Seat 7: Figarootoo ( 6,300 )
+Seat 1: ROGUE63 ( 54,476 )
+Seat 3: alt0idman ( 86,400 )
+Seat 4: qVaturrrr ( 39,269 )
+Seat 2: raypass ( 29,814 )
+Trny:138340262 Level:6 
+Blinds-Antes(300/600 -50)
+ROGUE63 posts ante [50]
+raypass posts ante [50]
+alt0idman posts ante [50]
+qVaturrrr posts ante [50]
+Bailey07 posts ante [50]
+Anaconda75 posts ante [50]
+Figarootoo posts ante [50]
+qVaturrrr posts small blind [300].
+Bailey07 posts big blind [600].
+** Dealing down cards **
+Dealt to Figarootoo [  8h 8d ]
+Anaconda75 folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Figarootoo will be using their time bank for this hand.
+Vozevut7 has joined the table.
+Figarootoo is all-In  [6,250]
+ROGUE63 calls [6,250]
+raypass folds
+alt0idman folds
+qVaturrrr folds
+Bailey07 calls [5,650]
+** Dealing Flop ** [ 3d, Kd, 5d ]
+Bailey07 bets [600]
+ROGUE63 is all-In  [48,176]
+Bailey07 calls [47,576]
+** Dealing Turn ** [ 7d ]
+** Dealing River ** [ Kc ]
+Bailey07 shows [ Jd, Jh ]a flush, King high with Jack kicker.
+Figarootoo shows [ 8h, 8d ]a flush, King high.
+ROGUE63 shows [ Ks, 6s ]three of a kind, Kings.
+Bailey07 wins 96,352 chips from the side pot 1 with a flush, King high with Jack kicker.
+Bailey07 wins 19,400 chips from the main pot with a flush, King high with Jack kicker.
+Player Figarootoo finished in 211.
+Player ROGUE63 finished in 210.
+Bailey07 has knocked out Figarootoo and won a $0.20 USD bounty prize.
+Bailey07 has knocked out ROGUE63 and won a $0.20 USD bounty prize.

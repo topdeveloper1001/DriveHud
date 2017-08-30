@@ -172,7 +172,15 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
                 foreach (var layoutFile in migratedLayoutsV2.Keys)
                 {
                     var migrationResult = GetMigrationV2Result(layoutFile);
-                    CollectionAssert.AreEquivalent(migrationResult.Source.HudPlayerTypes, migrationResult.Result.HudPlayerTypes);
+
+                    Assert.That(migrationResult.Result.HudPlayerTypes.Count, Is.EqualTo(migrationResult.Source.HudPlayerTypes.Count));
+
+                    foreach (var hudPlayerType in migrationResult.Source.HudPlayerTypes)
+                    {
+                        var foundPlayerType = migrationResult.Result.HudPlayerTypes.FirstOrDefault(x => ComparePlayerType(x, hudPlayerType));
+
+                        Assert.IsNotNull(foundPlayerType, $"{hudPlayerType.Name} doesn't match");
+                    }
                 }
             });
         }
@@ -210,8 +218,8 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 156, 144, double.NaN)]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 174, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 267, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-horiz-s2)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 51, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 2, 554, 195, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 405, 51, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 2, 619, 195, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s2)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 4, 364, 342, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s4)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 195, 101, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert1-s5)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 174, 142, double.NaN, TestName = "LayoutV2ToolsPlainBoxUiPositionsAreMigrated(6-max-vert2-s1)")]
@@ -314,8 +322,8 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.AmericasCardroom, EnumGameType.CashHoldem, 6, 43, 252)]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 451, 133, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-horiz-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 632, 204, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-horiz-s2)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 264, 10, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s1)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 561, 96, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s2)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 329, 10, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 626, 96, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s2)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 4, 446, 364, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s4)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 148, 284, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert1-s5)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 334, 133, TestName = "LayoutV2ToolsPlainBoxPositionsAreMigrated(6-max-vert2-s1)")]
@@ -537,7 +545,7 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", 6, 282, 143, 100, 13)]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 1, 403, 164, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", 2, 624, 257, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(9-max-horizontal-s6")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 340, 41, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 1, 405, 41, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", 5, 172, 185, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert1-s6)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", 1, 410, 164, 100, 13, TestName = "LayoutV2ToolsBumperStickersUiPositionsAreMigrated(6-max-vert2-s2)")]
         public void LayoutV2ToolsBumperStickersUiPositionsAreMigrated(string file, int seat, double x, double y, double width, double height)
@@ -579,7 +587,7 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
         [TestCase(@"Layouts v.2\Layouts1\ACRsngHYPer 6-max.xml", EnumPokerSites.AmericasCardroom, EnumGameType.CashHoldem, 6, 43, 239)]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 451, 123, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-horiz-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH Harrington M-Zone 9-max Horizontal.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 2, 632, 194, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-horiz-s2)")]
-        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 264, 0, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert1-s1)")]
+        [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 329, 0, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert1-s1)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_1 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 5, 148, 274, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert1-s5)")]
         [TestCase(@"Layouts v.2\Layouts2\DH 6-max Vertical_2 - IgnitionBodog.xml", EnumPokerSites.Ignition, EnumGameType.CashHoldem, 1, 334, 123, TestName = "LayoutV2ToolsBumperStickersPositionsAreMigrated(6-max-vert2-s1)")]
         public void LayoutV2ToolsBumperStickersPositionsAreMigrated(string file, EnumPokerSites pokerSite, EnumGameType gameType, int seat, double x, double y)
@@ -786,6 +794,33 @@ namespace DriveHud.Tests.IntegrationTests.Migrations
                 var hudLayoutInfo = xmlSerializer.Deserialize(fs) as HudLayoutInfo;
                 return hudLayoutInfo;
             }
+        }
+
+        private bool ComparePlayerType(HudPlayerType hudPlayerType1, HudPlayerType hudPlayerType2)
+        {
+            var result = hudPlayerType1.Name == hudPlayerType2.Name && hudPlayerType1.ImageAlias == hudPlayerType2.ImageAlias &&
+                hudPlayerType1.EnablePlayerProfile == hudPlayerType2.EnablePlayerProfile && hudPlayerType1.DisplayPlayerIcon == hudPlayerType2.DisplayPlayerIcon &&
+                hudPlayerType1.MinSample == hudPlayerType2.MinSample;
+
+            if ((hudPlayerType2.Stats != null && hudPlayerType1.Stats != null && hudPlayerType2.Stats.Count != hudPlayerType1.Stats.Count) ||
+                (hudPlayerType2.Stats == null && hudPlayerType1.Stats != null) || (hudPlayerType2.Stats != null && hudPlayerType1.Stats == null))
+            {
+                return false;
+            }
+            else if (hudPlayerType2.Stats == null && hudPlayerType1.Stats == null)
+            {
+                return result;
+            }
+
+            var orderedStatList = hudPlayerType2.Stats.OrderBy(x => x.Stat).ToArray();
+            var hudPlayerTypeOrderedStatList = hudPlayerType1.Stats.OrderBy(x => x.Stat).ToArray();
+
+            for (var i = 0; i < orderedStatList.Length; i++)
+            {
+                result &= orderedStatList[i].Equals(hudPlayerTypeOrderedStatList[i]);
+            }
+
+            return result;
         }
 
         private class MigrationV2Result

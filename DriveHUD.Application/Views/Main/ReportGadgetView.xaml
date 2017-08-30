@@ -1280,6 +1280,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+            
             <Style
                 x:Key="CustomListBoxItem"
                 TargetType="{x:Type ListBoxItem}">
@@ -1484,6 +1485,7 @@
             <VisualBrush
                 Visual="{Binding ElementName=mask}" />
         </Grid.OpacityMask>
+        
         <Border
             Name="mask"
             Background="#181A1D"
@@ -1531,6 +1533,7 @@
                 Stretch="Fill"
                 Fill="#232528" />
 
+            <!-- Tab items to switch between reports -->
             <ListBox
                 x:Name="ReportRadioButtonPanel"
                 Grid.Row="1"
@@ -1563,7 +1566,6 @@
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Session}}"
                         Command="{Binding ReportRadioButtonClickCommand}"
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
-
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
                         Content="Stakes"
@@ -1604,11 +1606,6 @@
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
                         Command="{Binding ReportRadioButtonClickCommand}"
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
-                    <!--<RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
-                             IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
-                             Command="{Binding ReportRadioButtonClickCommand}"
-                             Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />-->
-
                     <!-- Tournament Columns -->
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
@@ -1763,6 +1760,7 @@
                     </telerik:RadBusyIndicator.BusyContentTemplate>
                 </telerik:RadBusyIndicator>
 
+                <!-- Filters under reports section -->
                 <ItemsControl
                     Grid.Row="1"
                     Margin="5"
@@ -1963,7 +1961,7 @@
                     CanUserReorderColumns="True"
                     RowHeight="40"
                     Foreground="Red"
-                    SelectionMode="Multiple"
+                    SelectionMode="Extended"
                     MouseDoubleClick="GridViewKnownHands_MouseDoubleClick"
                     ItemsSource="{Binding Path=ReportSelectedItemStatisticsCollection_Filtered}"
                     RowLoaded="GridViewKnownHands_RowLoaded"

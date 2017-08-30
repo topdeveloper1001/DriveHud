@@ -854,6 +854,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string Common_HudPlayerType_Delete {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display Player Icon.
         /// </summary>
         internal static string Common_HudPlayerType_DisplayPlayerIcon {
@@ -872,6 +881,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        internal static string Common_HudPlayerType_Export {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export All .
+        /// </summary>
+        internal static string Common_HudPlayerType_ExportAll {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ExportAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         internal static string Common_HudPlayerType_High {
@@ -886,6 +913,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudPlayerType_Import {
             get {
                 return ResourceManager.GetString("Common_HudPlayerType_Import", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import / Export.
+        /// </summary>
+        internal static string Common_HudPlayerType_ImportExport {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ImportExport", resourceCulture);
             }
         }
         
@@ -940,6 +976,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudPlayerType_Reset {
             get {
                 return ResourceManager.GetString("Common_HudPlayerType_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset / Delete.
+        /// </summary>
+        internal static string Common_HudPlayerType_ResetDelete {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerType_ResetDelete", resourceCulture);
             }
         }
         
@@ -1520,7 +1565,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your license has expired. Please renew..
+        ///   Looks up a localized string similar to , .
+        /// </summary>
+        internal static string Common_RegistrationView_ExpiredSerialSplitter {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_ExpiredSerialSplitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your license(s) has expired ({0}). Please renew..
         /// </summary>
         internal static string Common_RegistrationView_ExpiredText {
             get {
@@ -2147,6 +2201,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_UpdateQuestion {
             get {
                 return ResourceManager.GetString("Common_UpdateQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Release Notes (v.{0}):.
+        /// </summary>
+        internal static string Common_UpdateView_ReleaseNotes {
+            get {
+                return ResourceManager.GetString("Common_UpdateView_ReleaseNotes", resourceCulture);
             }
         }
         

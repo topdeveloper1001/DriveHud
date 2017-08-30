@@ -88,9 +88,46 @@
                     <ScrollViewer
                         Grid.Row="1">
 
-                        <TextBlock
-                            TextWrapping="Wrap"
-                            Text="{Binding Notes}" />
+                        <ItemsControl
+                            ItemsSource="{Binding Notes}">
+
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel
+                                        Orientation="Vertical" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+
+                                    <StackPanel
+                                        Margin="5,5,5,0"
+                                        Orientation="Vertical">
+
+                                        <TextBlock
+                                            TextDecorations="Underline">
+                                            <TextBlock.Text>
+                                                <ResX
+                                                    Key="Common_UpdateView_ReleaseNotes">
+                                                    <ResXParam
+                                                        Path="Version" />
+                                                </ResX>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+
+                                        <TextBlock
+                                            Margin="0,3,0,0"
+                                            TextWrapping="Wrap"
+                                            Text="{Binding Notes}" />
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+
                     </ScrollViewer>
 
                     <StackPanel
@@ -111,7 +148,7 @@
                             Margin="10,0,0,0"
                             Height="30"
                             Padding="8,4,8,4"
-                            FontSize="13"                            
+                            FontSize="13"
                             Command="{Binding CancelCommand}"
                             VerticalContentAlignment="Center"
                             Foreground="{StaticResource ActiveTextForeground}"

@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("DriveHUD Updater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DriveHUD")]
+[assembly: AssemblyCompany("Ace Poker Solutions LLC")]
 [assembly: AssemblyProduct("DriveHUD Updater")]
-[assembly: AssemblyCopyright("Copyright © AcePokerSolutions 2016")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: Guid("dfbf3827-ef7c-4e54-8d6c-3a3173addef0")]
@@ -51,6 +51,6 @@ using System.Windows;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.1.0.1512")]
-[assembly: AssemblyVersion("1.1.0.1512")]
-[assembly: AssemblyFileVersion("1.1.0.1512")]
+// [assembly: AssemblyVersion("1.1.1.1600")]
+[assembly: AssemblyVersion("1.1.1.1600")]
+[assembly: AssemblyFileVersion("1.1.1.1600")]

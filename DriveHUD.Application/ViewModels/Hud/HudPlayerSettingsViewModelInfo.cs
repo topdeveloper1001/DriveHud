@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -17,6 +18,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudPlayerSettingsViewModelInfo
     {
+        public EnumTableType TableType { get; set; }
+
         public IEnumerable<HudPlayerType> PlayerTypes { get; set; }
 
         public Action Save { get; set; }

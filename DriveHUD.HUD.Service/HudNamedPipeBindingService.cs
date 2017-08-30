@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Entities;
+using System;
 
 namespace DriveHUD.HUD.Service
 {
@@ -26,6 +27,11 @@ namespace DriveHUD.HUD.Service
         public static void TagHand(long gameNumber, short pokerSiteId, int tag)
         {
             _callback?.TagHand(gameNumber, pokerSiteId, tag);
+        }
+
+        public static void TreatTableAs(IntPtr handle, EnumTableType tableType)
+        {
+            _callback?.TreatTableAs(handle, tableType);
         }
 
         #endregion
