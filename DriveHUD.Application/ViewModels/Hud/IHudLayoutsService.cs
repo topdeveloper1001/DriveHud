@@ -76,6 +76,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         HudLayoutInfoV2 Import(string path);
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{HudPlayerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        void ExportPlayerType(HudPlayerType[] playerTypes, string path);
+
+        /// <summary>
+        /// Imports <see cref="HudPlayerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to player type</param>
+        HudPlayerType[] ImportPlayerType(string path);
+
+        /// <summary>
         /// Sets icons for hud elements based on stats and layout player type settings
         /// </summary>
         void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, HudLayoutInfoV2 layout);
@@ -153,5 +165,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutToDuplicate">Layout to duplicate</param>
         /// <returns>The duplicated layout</returns>
         HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
+
+        /// <summary>
+        /// Gets default player types for the specified <see cref="EnumTableType"/>
+        /// </summary>
+        /// <param name="tableType">Table type to get player types</param>
+        /// <returns>The collection of <see cref="HudPlayerType"/></returns>
+        IEnumerable<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType);
     }
 }

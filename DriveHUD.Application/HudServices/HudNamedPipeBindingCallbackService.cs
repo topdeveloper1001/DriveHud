@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Services;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.Replayer;
@@ -177,6 +178,12 @@ namespace DriveHUD.Application.HudServices
             {
                 LogProvider.Log.Error(this, $"Could not tag hand #{gameNumber} for {(EnumPokerSites)pokerSiteId}", e);
             }
+        }
+
+        public void TreatTableAs(IntPtr handle, EnumTableType tableType)
+        {
+            var treatAsService = ServiceLocator.Current.GetInstance<ITreatAsService>();
+            treatAsService.AddOrUpdate(handle, tableType);
         }
     }
 }

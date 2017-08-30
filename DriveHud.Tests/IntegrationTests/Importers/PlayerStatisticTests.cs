@@ -12,7 +12,6 @@
 
 using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
-using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
@@ -392,10 +391,22 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-ExpectedValue-2.xml", EnumPokerSites.IPoker, "Hero", -3421)]
         [TestCase(@"DURKADURDUR-ExpectedValue-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 7728)]
         [TestCase(@"DURKADURDUR-ExpectedValue-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", -14786)]
+        [TestCase(@"Peon84-ExpectedValue-1.txt", EnumPokerSites.PartyPoker, "Peon84", 1316758)]
         public void EVDiffIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             var expectedEVDiff = expected / 100m;
             AssertThatStatIsCalculated("EVDiffIsCalculated", x => x.EVDiff, fileName, pokerSite, playerName, expectedEVDiff);
+        }
+
+        [Test]
+        [TestCase(@"Hero-CouldThreeBetVsSteal-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"DURKADURDUR-CouldThreeBetVsSteal-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CouldThreeBetVsSteal-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CouldNotThreeBetVsSteal-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-CouldNotThreeBetVsSteal-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void CouldThreeBetVsStealIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("CouldThreeBetVsStealIsCalculated", x => x.CouldThreeBetVsSteal, fileName, pokerSite, playerName, expected);
         }
 
         protected virtual void AssertThatStatIsCalculated<T>(string method, Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01)
@@ -413,7 +424,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 var getStat = expression.Compile();
 
-                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance) );
+                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance));
             }
         }
 

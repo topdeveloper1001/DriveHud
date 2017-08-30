@@ -11,11 +11,13 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Model.Data
@@ -72,9 +74,9 @@ namespace Model.Data
                 var statistic = Statistics.ToArray();
 
                 decimal totalhands = statistic.Count() / (decimal)100;
-                decimal netwon = statistic.Sum(x => GetDevisionResult(x.NetWon, x.BigBlind));
+                decimal netwon = statistic.Sum(x => GetDivisionResult(x.NetWon, x.BigBlind));
 
-                return Math.Round(GetDevisionResult(netwon, totalhands), 2);
+                return Math.Round(GetDivisionResult(netwon, totalhands), 2);
             }
         }
 
@@ -1048,9 +1050,63 @@ namespace Model.Data
                 var statistic = Statistics.ToArray();
 
                 decimal totalhands = statistic.Count() / (decimal)100;
-                decimal adjustedNetwon = statistic.Sum(x => GetDevisionResult(x.NetWon + x.EVDiff, x.BigBlind));
+                decimal adjustedNetwon = statistic.Sum(x => GetDivisionResult(x.NetWon + x.EVDiff, x.BigBlind));
 
-                return Math.Round(GetDevisionResult(adjustedNetwon, totalhands), 2);
+                return Math.Round(GetDivisionResult(adjustedNetwon, totalhands), 2);
+            }
+        }
+
+        private decimal? stdDev;
+
+        public virtual decimal StdDev
+        {
+            get
+            {
+                if (!stdDev.HasValue)
+                {
+                    CalculateStdDeviation();
+                }
+
+                return stdDev.HasValue ? stdDev.Value : 0m;
+            }
+        }
+
+        private decimal? stdDevBB;
+
+        public virtual decimal StdDevBB
+        {
+            get
+            {
+                if (!stdDevBB.HasValue)
+                {
+                    CalculateStdDeviation();
+                }
+
+                return stdDevBB.HasValue ? stdDevBB.Value : 0m;
+            }
+        }
+
+        public virtual decimal StdDevBBPer100Hands
+        {
+            get
+            {
+                // formula is sqrt(100) * stddevBB
+                return StdDevBB * 10;
+            }
+        }
+
+        private decimal? netWonPerHour;
+
+        public virtual decimal NetWonPerHour
+        {
+            get
+            {
+                if (!netWonPerHour.HasValue)
+                {
+                    netWonPerHour = CalculateNetWonPerHour();
+                }
+
+                return netWonPerHour.Value;
             }
         }
 
@@ -1173,7 +1229,7 @@ namespace Model.Data
             return GetPercentage(stats.Sum(actualSelector), stats.Sum(possibleSelector));
         }
 
-        protected decimal GetDevisionResult(decimal actual, decimal possible)
+        protected decimal GetDivisionResult(decimal actual, decimal possible)
         {
             if (TotalHands == 0)
                 return 0;
@@ -1182,6 +1238,97 @@ namespace Model.Data
                 return 0;
 
             return (actual / possible);
+        }
+
+        protected virtual void CalculateStdDeviation()
+        {
+            if (Statistics.Count == 0)
+            {
+                return;
+            }
+
+            var statistic = Statistics.ToArray();
+
+            var netWonCollection = statistic
+                .Select(x => new
+                {
+                    NetWon = x.NetWon,
+                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
+                })
+                .ToArray();
+
+            var netWonMean = 0m;
+            var netWonMeanInBB = 0m;
+
+            // calculate mean values
+            for (var i = 0; i < netWonCollection.Length; i++)
+            {
+                netWonMean += netWonCollection[i].NetWon;
+                netWonMeanInBB += netWonCollection[i].NetWonInBB;
+            }
+
+            netWonMean /= netWonCollection.Length;
+            netWonMeanInBB /= netWonCollection.Length;
+
+            var netWonVariance = 0m;
+            var netWonVarianceInBB = 0m;
+
+            // calculate variances
+            for (var i = 0; i < netWonCollection.Length; i++)
+            {
+                netWonVariance += (netWonCollection[i].NetWon - netWonMean) * (netWonCollection[i].NetWon - netWonMean);
+                netWonVarianceInBB += (netWonCollection[i].NetWonInBB - netWonMeanInBB) * (netWonCollection[i].NetWonInBB - netWonMeanInBB);
+            }
+
+            netWonVariance /= netWonCollection.Length;
+            netWonVarianceInBB /= netWonCollection.Length;
+
+            stdDev = (decimal)Math.Sqrt((double)netWonVariance);
+            stdDevBB = (decimal)Math.Sqrt((double)netWonVarianceInBB);
+        }
+
+        protected virtual decimal CalculateNetWonPerHour()
+        {
+            if (Statistics == null || Statistics.Count == 0)
+            {
+                return 0m;
+            }
+
+            var totalMinutes = 0d;
+
+            DateTime? sessionStart = null;
+            DateTime? sessionEnd = null;
+
+            foreach (var playerstatistic in Statistics.OrderBy(x => x.Time).ToArray())
+            {
+                if (Utils.IsDateInDateRange(playerstatistic.Time, sessionStart, sessionEnd, TimeSpan.FromMinutes(30)))
+                {
+                    if (!sessionStart.HasValue)
+                    {
+                        sessionStart = playerstatistic.Time;
+                    }
+
+                    sessionEnd = playerstatistic.Time;
+                }
+                else
+                {
+                    totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
+
+                    sessionStart = playerstatistic.Time;
+                    sessionEnd = playerstatistic.Time;
+                }
+            }
+
+            totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
+
+            if (totalMinutes == 0)
+            {
+                totalMinutes = 1;
+            }
+
+            var netWonPerHour = NetWon / (decimal)totalMinutes * 60;
+
+            return netWonPerHour;
         }
 
         #endregion        

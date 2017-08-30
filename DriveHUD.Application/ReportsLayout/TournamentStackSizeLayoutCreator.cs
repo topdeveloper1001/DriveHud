@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Converters;
 using Model.Data;
 using System.Windows;
@@ -26,49 +27,52 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(GetMRatioColumn("M-Ratio", nameof(MRatioReportRecord.MRatioZone), GetColumnWidth("M-Ratio") + 10));
-            gridView.Columns.Add(Add("Total Hands", nameof(MRatioReportRecord.TotalHands)));
-            gridView.Columns.Add(AddFinancial("Net Won", nameof(MRatioReportRecord.TotalWon)));
-            gridView.Columns.Add(Add("bb/100", nameof(MRatioReportRecord.BB)));
-            gridView.Columns.Add(AddPercentile("VPIP", nameof(MRatioReportRecord.VPIP)));
-            gridView.Columns.Add(AddPercentile("PFR", nameof(MRatioReportRecord.PFR)));
-            gridView.Columns.Add(AddPercentile("Agg", nameof(MRatioReportRecord.Agg)));
-            gridView.Columns.Add(AddPercentile("Agg%", nameof(MRatioReportRecord.AggPr)));
-            gridView.Columns.Add(AddPercentile("3-Bet%", nameof(MRatioReportRecord.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("WTSD%", nameof(MRatioReportRecord.WTSD)));
-            gridView.Columns.Add(AddPercentile("W$SD", nameof(MRatioReportRecord.WSSD)));
-            gridView.Columns.Add(AddPercentile("W$WSF", nameof(MRatioReportRecord.WSWSF)));
+            gridView.Columns.Add(GetMRatioColumn("Reports_Column_MRatio", nameof(MRatioReportRecord.MRatioZone), GetColumnWidth("M-Ratio") + 10));
+            gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(MRatioReportRecord.TotalHands)));
+            gridView.Columns.Add(AddFinancial("Reports_Column_NetWon", nameof(MRatioReportRecord.TotalWon)));
+            gridView.Columns.Add(Add("Reports_Column_BB100", nameof(MRatioReportRecord.BB)));
+            gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(MRatioReportRecord.VPIP)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(MRatioReportRecord.PFR)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_Agg", nameof(MRatioReportRecord.Agg)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(MRatioReportRecord.AggPr)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(MRatioReportRecord.ThreeBet)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(MRatioReportRecord.WTSD)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(MRatioReportRecord.WSSD)));
+            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(MRatioReportRecord.WSWSF)));
 
             base.AddDefaultStats(gridView);
         }
 
-        private GridViewDataColumn GetMRatioColumn(string name, string member, GridViewLength width)
+        private GridViewDataColumn GetMRatioColumn(string resourceKey, string member, GridViewLength width)
         {
-            FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
+            var fef = new FrameworkElementFactory(typeof(TextBlock));
 
             var bindingText = new Binding(member);
             bindingText.Converter = new MRatioToTextConverter();
+
             fef.SetBinding(TextBlock.TextProperty, bindingText);
-            fef.SetValue(TextBlock.WidthProperty, 40.0);
+            fef.SetValue(FrameworkElement.WidthProperty, 40.0);
             fef.SetValue(TextBlock.TextAlignmentProperty, TextAlignment.Center);
 
-            FrameworkElementFactory rect = new FrameworkElementFactory(typeof(Rectangle));
-            rect.SetValue(Rectangle.WidthProperty, 20.0);
+            var rect = new FrameworkElementFactory(typeof(Rectangle));
+            rect.SetValue(FrameworkElement.WidthProperty, 20.0);
+
             var backgroundColorBinding = new Binding(member);
             backgroundColorBinding.Converter = new MRatioToColorConverter();
-            rect.SetBinding(Rectangle.FillProperty, backgroundColorBinding);
+            rect.SetBinding(Shape.FillProperty, backgroundColorBinding);
 
-            FrameworkElementFactory sp = new FrameworkElementFactory(typeof(StackPanel));
+            var sp = new FrameworkElementFactory(typeof(StackPanel));
             sp.SetValue(StackPanel.OrientationProperty, Orientation.Horizontal);
             sp.AppendChild(fef);
             sp.AppendChild(rect);
 
-            DataTemplate template = new DataTemplate { VisualTree = sp };
+            var template = new DataTemplate { VisualTree = sp };
             template.Seal();
 
-            GridViewDataColumn column = new GridViewDataColumn
+            var column = new GridViewDataColumn
             {
-                Header = name,
+                Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,

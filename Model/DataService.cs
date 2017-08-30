@@ -176,7 +176,7 @@ namespace Model
                                     {
                                         LogProvider.Log.Warn(this, $"Empty line in {file}");
                                         continue;
-                                    }                                    
+                                    }
 
                                     /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
                                     byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
@@ -554,7 +554,8 @@ namespace Model
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                if (storageModel.PlayerSelectedItem != null && statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                if (storageModel.PlayerSelectedItem != null &&
+                    (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(statistic.PlayerId)))
                 {
                     storageModel.StatisticCollection.Add(statistic);
                 }

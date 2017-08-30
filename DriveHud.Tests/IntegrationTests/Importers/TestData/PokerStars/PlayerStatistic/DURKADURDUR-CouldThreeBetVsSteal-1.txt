@@ -1,0 +1,29 @@
+PokerStars Game #47153283044:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:20:53 ET
+Table 'Pluto' 6-max Seat #3 is the button
+Seat 1: BigJimmy32 ($274.45 in chips) 
+Seat 2: oscara ($252.45 in chips) 
+Seat 3: welle85 ($337.80 in chips) 
+Seat 4: DURKADURDUR ($448 in chips) 
+Seat 5: mad.afurable ($234.65 in chips) 
+Seat 6: stopme10 ($203 in chips) 
+DURKADURDUR: posts small blind $1
+mad.afurable: posts big blind $2
+*** HOLE CARDS ***
+stopme10: folds 
+BigJimmy32: folds 
+oscara: raises $4 to $6
+welle85: folds 
+DURKADURDUR: raises $14 to $20
+mad.afurable: folds 
+oscara: folds 
+Uncalled bet ($14) returned to DURKADURDUR
+DURKADURDUR collected $14 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0 
+Seat 1: BigJimmy32 folded before Flop (didn't bet)
+Seat 2: oscara folded before Flop
+Seat 3: welle85 (button) folded before Flop (didn't bet)
+Seat 4: DURKADURDUR (small blind) collected ($14)
+Seat 5: mad.afurable (big blind) folded before Flop
+Seat 6: stopme10 folded before Flop (didn't bet)

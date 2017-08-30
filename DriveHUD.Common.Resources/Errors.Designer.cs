@@ -169,7 +169,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Save Hand History&quot; option isn&apos;t checked in the settings of {0} client.
+        ///   Looks up a localized string similar to &quot;Save Hand History&quot; option isn&apos;t checked in the settings of {0} client [Profile: {1}].
         /// </summary>
         internal static string Error_WPN_Validation_SaveHandHistory {
             get {

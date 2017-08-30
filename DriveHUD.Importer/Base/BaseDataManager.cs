@@ -16,9 +16,9 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DriveHUD.Importers.BetOnline
+namespace DriveHUD.Importers
 {
-    internal class BetOnlineBaseDataManager
+    internal class BaseDataManager
     {
         protected string Decrypt(string encryptedXml)
         {

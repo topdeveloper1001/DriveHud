@@ -26,15 +26,15 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Bovada data manager
     /// </summary>
-    internal class BovadaDataManager : IBovadaDataManager
+    internal class BovadaDataManager : BaseDataManager, IBovadaDataManager
     {
-        private IEventAggregator eventAggregator;
+        protected IEventAggregator eventAggregator;
 
-        private Dictionary<uint, IPokerTable> openedTables = new Dictionary<uint, IPokerTable>();
+        protected Dictionary<uint, IPokerTable> openedTables = new Dictionary<uint, IPokerTable>();
 
         private IPokerClientEncryptedLogger logger;
 
-        private string site;
+        protected string site;
 
         private SubscriptionToken pokerClientTableClosedSubsciption;
 
@@ -65,7 +65,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         /// <param name="data">Stream data</param>
         /// <returns>Result of processing</returns>
-        public void ProcessData(byte[] data)
+        public virtual void ProcessData(byte[] data)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace DriveHUD.Importers.Bovada
         /// <summary>
         /// Remove table from tables dictionary
         /// </summary>      
-        public void RemoveOpenedTable(PokerClientTableClosedEventArgs e)
+        public virtual void RemoveOpenedTable(PokerClientTableClosedEventArgs e)
         {
             if (openedTables != null)
             {
@@ -145,18 +145,29 @@ namespace DriveHUD.Importers.Bovada
         #region Infrastructure     
 
         /// <summary>
+        /// Converts raw data to string
+        /// </summary>
+        /// <param name="data">Data to convert</param>
+        /// <returns>The result of conversion</returns>
+        protected virtual string ConvertDataToString(byte[] data)
+        {
+            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty).Replace("\\", string.Empty);
+            return dataText;
+        }
+
+        /// <summary>
         /// Create data object from stream data
         /// </summary>
         /// <param name="data">Stream data</param>
         /// <returns>Stream data object</returns>
-        private BovadaCatcherDataObject CreateDataObject(byte[] data)
+        protected virtual BovadaCatcherDataObject CreateDataObject(byte[] data)
         {
             if (data == null)
             {
                 return null;
             }
 
-            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty).Replace("\\", string.Empty);
+            var dataText = ConvertDataToString(data);
 
             // Log stream data
             if (logger != null && isLoggingEnabled)
@@ -177,10 +188,10 @@ namespace DriveHUD.Importers.Bovada
         }
 
         /// <summary>
-        /// Add new table to tables dictionary
+        /// Adds new table to tables dictionary
         /// </summary>
         /// <param name="tableUid">Unique identifier of table</param>
-        private void AddTable(uint tableUid)
+        protected virtual void AddTable(uint tableUid)
         {
             if (openedTables != null && !openedTables.ContainsKey(tableUid))
             {

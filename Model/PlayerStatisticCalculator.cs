@@ -117,7 +117,7 @@ namespace Model
             bool isBluffTurn = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Turn);
             bool isBluffRiver = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.River);
 
-            bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Preflop);
+            bool isMonotonePreflop = IsMonotone(parsedHand.CommunityCards, Street.Flop);
             bool isRagPreflop = IsRag(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
 
             Player cutoff = GetCutOffPlayer(parsedHand);
@@ -219,7 +219,7 @@ namespace Model
             var isSmallBlind = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName == player;
             var isDealer = GetDealerPlayer(parsedHand)?.PlayerName == player;
 
-            CalculateSteal(stealAttempt, parsedHand, player);
+            CalculateSteal(stealAttempt, parsedHand, player, isBigBlind || isSmallBlind);
 
             #endregion
 
@@ -680,8 +680,8 @@ namespace Model
             stat.StealPossible = stealAttempt.Possible ? 1 : 0;
             stat.StealMade = stealAttempt.Attempted ? 1 : 0;
 
-            stat.CouldThreeBetVsSteal = stealAttempt.Faced ? 1 : 0;
-            stat.DidThreeBetVsSteal = stealAttempt.Raised ? 1 : 0;
+            stat.CouldThreeBetVsSteal = stealAttempt.Faced && threeBet.Possible ? 1 : 0;
+            stat.DidThreeBetVsSteal = stealAttempt.Faced && threeBet.Made ? 1 : 0;
 
             stat.PlayerFolded = playerFolded;
 
@@ -748,7 +748,7 @@ namespace Model
 
                 var totalMoneyInPot = moneyInPotByPlayers.Sum(x => x.Sum) - allUncalledBets;
 
-                var rake = totalMoneyInPot - parsedHand.WinningActions.Sum(x => x.Amount);                
+                var rake = totalMoneyInPot - parsedHand.WinningActions.Sum(x => x.Amount);
 
                 canWin -= rake;
 
@@ -935,7 +935,7 @@ namespace Model
             }
         }
 
-        private static void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player)
+        private static void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player, bool isBlindPosition)
         {
             var stealers = new List<string>();
 
@@ -950,6 +950,11 @@ namespace Model
                 {
                     if (action.PlayerName == player)
                     {
+                        if (!isBlindPosition)
+                        {
+                            return;
+                        }
+
                         stealAttempt.Faced = true;
                         stealAttempt.Defended = action.IsCall() || action.IsRaise();
                         stealAttempt.Raised = action.IsRaise();
@@ -958,8 +963,13 @@ namespace Model
                         return;
                     }
 
-                    if (action.IsRaise())
+                    if (!action.IsFold)
                     {
+                        if (action.IsCall() && parsedHand.HandActions.Any(x => x.PlayerName == action.PlayerName && x.HandActionType == HandActionType.SMALL_BLIND))
+                        {
+                            continue;
+                        }
+
                         return;
                     }
                 }
@@ -1689,6 +1699,7 @@ namespace Model
         private static void CalculateBetWhenCheckedTo(Condition betWhenCheckedTo, IEnumerable<HandAction> streetActions, string player)
         {
             bool wasCheck = false;
+
             foreach (var action in streetActions)
             {
                 if (!wasCheck)
@@ -1706,13 +1717,13 @@ namespace Model
                 }
                 else
                 {
-                    if (action.IsBet())
-                    {
-                        return;
-                    }
-
                     if (action.PlayerName != player)
                     {
+                        if (action.IsBet())
+                        {
+                            return;
+                        }
+
                         continue;
                     }
 

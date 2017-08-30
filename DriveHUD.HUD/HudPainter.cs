@@ -141,7 +141,7 @@ namespace DriveHUD.HUD
 
             if (windows.ContainsKey(hwnd))
             {
-                windows[hwnd].Window.Initialize(hudLayout);
+                windows[hwnd].Window.Initialize(hudLayout, hwnd);
 
                 if (!IsIconic(hwnd))
                 {
@@ -182,7 +182,7 @@ namespace DriveHUD.HUD
                 Owner = windowHandle
             };
 
-            window.Initialize(hudLayout);
+            window.Initialize(hudLayout, hwnd);
 
             window.Show();
          
@@ -215,7 +215,7 @@ namespace DriveHUD.HUD
 
         private static void WindowMoved(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            // filter out non-HWND name changes... (eg. items within a listbox)
+            // filter out non-HWND name changes... (e.g. items within a listbox)
             if (idObject != 0 || idChild != 0)
             {
                 return;
@@ -226,7 +226,7 @@ namespace DriveHUD.HUD
 
         private static void WindowClosed(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            // filter out non-HWND name changes... (eg. items within a listbox)
+            // filter out non-HWND name changes... (e.g. items within a listbox)
             if (idObject != 0 || idChild != 0)
             {
                 return;

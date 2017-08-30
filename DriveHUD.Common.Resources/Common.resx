@@ -268,8 +268,8 @@ Use CTRL+V to paste your exported data.</value>
   <data name="Common_HudPlayerType_High" xml:space="preserve">
     <value>High</value>
   </data>
-  <data name="Common_HudPlayerType_Import" xml:space="preserve">
-    <value>Import</value>
+  <data name="Common_HudPlayerType_ImportExport" xml:space="preserve">
+    <value>Import / Export</value>
   </data>
   <data name="Common_HudPlayerType_Load" xml:space="preserve">
     <value>Load</value>
@@ -839,5 +839,20 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_UpdateView_ReleaseNotes" xml:space="preserve">
     <value>Release Notes (v.{0}):</value>
+  </data>
+  <data name="Common_HudPlayerType_ResetDelete" xml:space="preserve">
+    <value>Reset / Delete</value>
+  </data>
+  <data name="Common_HudPlayerType_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common_HudPlayerType_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Common_HudPlayerType_ExportAll" xml:space="preserve">
+    <value>Export All </value>
+  </data>
+  <data name="Common_HudPlayerType_Import" xml:space="preserve">
+    <value>Import</value>
   </data>
 </root>

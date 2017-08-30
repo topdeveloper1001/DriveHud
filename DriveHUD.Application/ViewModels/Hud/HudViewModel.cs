@@ -1290,7 +1290,8 @@ namespace DriveHUD.Application.ViewModels
             var hudPlayerSettingsViewModelInfo = new HudPlayerSettingsViewModelInfo
             {
                 PlayerTypes = hudPlayerTypes.Select(x => x.Clone()),
-                Save = PlayerTypeSave
+                Save = PlayerTypeSave,
+                TableType = CurrentTableType
             };
 
             var hudPlayerSettingsViewModel = new HudPlayerSettingsViewModel(hudPlayerSettingsViewModelInfo);
@@ -1338,33 +1339,20 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var playerTypesToMerge = (from currentPlayerType in CurrentLayout.HudPlayerTypes
-                                      join playerType in hudPlayerSettingsViewModel.PlayerTypes on currentPlayerType.Name equals playerType.Name into ptgj
-                                      from ptgrouped in ptgj.DefaultIfEmpty()
-                                      where ptgrouped != null
-                                      select new { CurrentPlayerType = currentPlayerType, PlayerType = ptgrouped }).ToArray();
+            var playerTypesToMergeDelete = (from currentPlayerType in CurrentLayout.HudPlayerTypes
+                                            join playerType in hudPlayerSettingsViewModel.PlayerTypes on currentPlayerType.Id equals playerType.Id into ptgj
+                                            from ptgrouped in ptgj.DefaultIfEmpty()
+                                            select new { CurrentPlayerType = currentPlayerType, PlayerType = ptgrouped }).ToArray();
+
+            var playerTypesToMerge = playerTypesToMergeDelete.Where(x => x.PlayerType != null);
 
             playerTypesToMerge.ForEach(pt =>
             {
-                pt.CurrentPlayerType.MinSample = pt.PlayerType.MinSample;
-                pt.CurrentPlayerType.EnablePlayerProfile = pt.PlayerType.EnablePlayerProfile;
-                pt.CurrentPlayerType.DisplayPlayerIcon = pt.PlayerType.DisplayPlayerIcon;
-
-                var statsToMerge = (from currentStat in pt.CurrentPlayerType.Stats
-                                    join stat in pt.PlayerType.Stats on currentStat.Stat equals stat.Stat into gj
-                                    from grouped in gj.DefaultIfEmpty()
-                                    where grouped != null
-                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
-
-                statsToMerge.ForEach(s =>
-                {
-                    s.CurrentStat.Low = s.Stat.Low;
-                    s.CurrentStat.High = s.Stat.High;
-                });
+                pt.CurrentPlayerType.MergeWith(pt.PlayerType);
             });
 
             var playerTypesToAdd = (from playerType in hudPlayerSettingsViewModel.PlayerTypes
-                                    join currentPlayerType in CurrentLayout.HudPlayerTypes on playerType.Name equals currentPlayerType.Name into ptgj
+                                    join currentPlayerType in CurrentLayout.HudPlayerTypes on playerType.Id equals currentPlayerType.Id into ptgj
                                     from ptgrouped in ptgj.DefaultIfEmpty()
                                     where ptgrouped == null
                                     select new { AddedPlayerType = playerType }).ToArray();
@@ -1372,6 +1360,13 @@ namespace DriveHUD.Application.ViewModels
             playerTypesToAdd.ForEach(pt =>
             {
                 CurrentLayout.HudPlayerTypes.Add(pt.AddedPlayerType);
+            });
+
+            var playerTypesToDelete = playerTypesToMergeDelete.Where(x => x.PlayerType == null).Select(x => x.CurrentPlayerType).ToArray();
+
+            playerTypesToDelete.ForEach(pt =>
+            {
+                CurrentLayout.HudPlayerTypes.Remove(pt);
             });
 
             ClosePopup();

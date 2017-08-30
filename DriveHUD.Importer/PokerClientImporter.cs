@@ -54,8 +54,8 @@ namespace DriveHUD.Importers
             var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
             var dataManager = CreatePokerClientDataManager(pokerClientLogger);
 
-            pokerClientLogger.CleanLogs();
-            pokerClientLogger.StartLogging();
+            pokerClientLogger?.CleanLogs();
+            pokerClientLogger?.StartLogging();
 
             IntPtr pipeServerHandle = IntPtr.Zero;
 
@@ -117,7 +117,7 @@ namespace DriveHUD.Importers
 
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Pipe for \"{0}\" was closed.", Identifier));
 
-            pokerClientLogger.StopLogging();
+            pokerClientLogger?.StopLogging();
 
             RaiseProcessStopped();
         }

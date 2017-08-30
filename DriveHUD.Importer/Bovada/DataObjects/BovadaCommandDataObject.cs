@@ -21,6 +21,8 @@ namespace DriveHUD.Importers.Bovada
 
         public uint tableNo { get; set; }
 
+        public uint tourNo { get; set; }
+
         public uint stageNo { get; set; }
 
         public object account { get; set; }

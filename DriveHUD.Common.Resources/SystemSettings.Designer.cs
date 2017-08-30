@@ -313,6 +313,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player types (.xml)|*.xml.
+        /// </summary>
+        internal static string SystemSettings_PlayerTypeFileDialogFilter {
+            get {
+                return ResourceManager.GetString("SystemSettings_PlayerTypeFileDialogFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/pricing.
         /// </summary>
         internal static string SystemSettings_PricingLink {

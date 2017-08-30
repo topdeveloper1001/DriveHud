@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using HandHistories.Objects.GameDescription;
 using Model;
 
 namespace DriveHUD.Importers

@@ -74,7 +74,34 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }            
+            }
+        }
+
+        /// <summary>
+        /// Gets importer
+        /// </summary>
+        /// <typeparam name="T">Importer interface</typeparam>
+        /// <returns>Registered importer or null</returns>
+        public T GetImporter<T>()
+        {
+            var importer = importers.OfType<T>().FirstOrDefault();
+            return importer;
+        }
+
+        /// <summary>
+        /// Gets running importer
+        /// </summary>
+        /// <typeparam name="T">Importer interface</typeparam>
+        /// <returns>Registered importer or null</returns>
+        public T GetRunningImporter<T>()
+        {
+            var importer = importers.OfType<T>().FirstOrDefault(x =>
+            {
+                var backgroundProcess = x as IBackgroundProcess;
+                return backgroundProcess != null && backgroundProcess.IsRunning;
+            });
+
+            return importer;
         }
 
         /// <summary>

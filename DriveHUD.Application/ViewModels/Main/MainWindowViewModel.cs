@@ -396,7 +396,16 @@ namespace DriveHUD.Application.ViewModels
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-                var activeLayout = hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
+                var treatAsService = ServiceLocator.Current.GetInstance<ITreatAsService>();
+
+                var treatedTableType = treatAsService.GetTableType(new IntPtr(e.GameInfo.WindowHandle));
+
+                if (!treatedTableType.HasValue)
+                {
+                    treatedTableType = e.GameInfo.TableType;
+                }
+
+                var activeLayout = hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, treatedTableType.Value, e.GameInfo.EnumGameType);
 
                 if (activeLayout == null)
                 {
@@ -591,15 +600,22 @@ namespace DriveHUD.Application.ViewModels
 
                     playerHudContent.HudElement.StatInfoCollection = activeLayoutHudStats;
 
-                    if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null)
+                    if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null && activeLayout != null)
                     {
-                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout);
+                        var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+
+                        var playerStickersCacheData = new PlayerStickersCacheData
+                        {
+                            Session = gameInfo.Session,
+                            Player = playerCollectionItem,
+                            Layout = activeLayout.Name,
+                            Statistic = lastHandStatistic,
+                            StickerFilters = stickers
+                        };
 
                         if (stickers.Count > 0)
                         {
-                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session,
-                                playerCollectionItem,
-                                stickers.ToDictionary(x => x, x => lastHandStatistic));
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playerStickersCacheData);
                         }
 
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,

@@ -12,11 +12,14 @@
 
 using DriveHUD.Common;
 using DriveHUD.Common.Images;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -49,14 +52,68 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             base.InitializeCommands();
 
-
             LoadCommand = ReactiveCommand.Create();
             LoadCommand.Subscribe(x => Load());
+
+            var canDelete = this.WhenAny(x => x.SelectedPlayerType, x => x.Value != null);
+
+            DeleteCommand = ReactiveCommand.Create(canDelete);
+            DeleteCommand.Subscribe(x =>
+            {
+                if (SelectedPlayerType != null)
+                {
+                    PlayerTypes.Remove(SelectedPlayerType);
+                    SelectedPlayerType = PlayerTypes.FirstOrDefault();
+                }
+            });
+
+            ResetCommand = ReactiveCommand.Create(canDelete);
+            ResetCommand.Subscribe(x =>
+            {
+                var defaultPlayerTypes = hudLayoutService.CreateDefaultPlayerTypes(viewModelInfo.TableType);
+
+                var defaultPlayerType = defaultPlayerTypes.FirstOrDefault(p => p.Name == SelectedPlayerType.Name);
+
+                if (defaultPlayerType == null)
+                {
+                    return;
+                }
+
+                SelectedPlayerType.StatsToMerge = defaultPlayerType.Stats;
+            });
+
+            ExportCommand = ReactiveCommand.Create(canDelete);
+            ExportCommand.Subscribe(x =>
+            {
+                Export(new[] { SelectedPlayerType });
+            });
+
+            ExportAllCommand = ReactiveCommand.Create();
+            ExportAllCommand.Subscribe(x =>
+            {
+                Export(playerTypes);
+            });
+
+            ImportCommand = ReactiveCommand.Create();
+            ImportCommand.Subscribe(x =>
+            {
+                Import();
+            });
         }
 
         #region Commands
 
         public ReactiveCommand<object> LoadCommand { get; private set; }
+
+        public ReactiveCommand<object> ResetCommand { get; private set; }
+
+        public ReactiveCommand<object> DeleteCommand { get; private set; }
+
+        public ReactiveCommand<object> ExportCommand { get; private set; }
+
+        public ReactiveCommand<object> ExportAllCommand { get; private set; }
+
+        public ReactiveCommand<object> ImportCommand { get; private set; }
 
         #endregion
 
@@ -120,6 +177,13 @@ namespace DriveHUD.Application.ViewModels.Hud
             viewModelInfo.Save?.Invoke();
         }
 
+        protected override void Create()
+        {
+            var hudPlayerType = new HudPlayerType(true);
+            PlayerTypes.Add(hudPlayerType);
+            SelectedPlayerType = hudPlayerType;
+        }
+
         private void Load()
         {
             var initialDirectory = hudLayoutService.GetImageDirectory();
@@ -150,11 +214,53 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        protected override void Create()
+        private void Import()
         {
-            var hudPlayerType = new HudPlayerType(true);
-            PlayerTypes.Add(hudPlayerType);
-            SelectedPlayerType = hudPlayerType;
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = CommonResourceManager.Instance.GetResourceString("SystemSettings_PlayerTypeFileDialogFilter")
+            };
+
+            if (openFileDialog.ShowDialog() != true)
+            {
+                return;
+            }
+
+            var importedPlayerTypes = hudLayoutService.ImportPlayerType(openFileDialog.FileName);
+
+            if (importedPlayerTypes == null || importedPlayerTypes.Length == 0)
+            {
+                return;
+            }
+
+            var playerTypesMap = (from importedPlayerType in importedPlayerTypes
+                                  join playerType in PlayerTypes on importedPlayerType.Name equals playerType.Name into gj
+                                  from grouped in gj.DefaultIfEmpty()
+                                  select new { ImportedPlayerType = importedPlayerType, ExistingPlayerType = grouped }).ToArray();
+
+            foreach (var playerTypeMapItem in playerTypesMap)
+            {
+                if (playerTypeMapItem.ExistingPlayerType == null)
+                {
+                    PlayerTypes.Add(playerTypeMapItem.ImportedPlayerType);
+                    continue;
+                }
+
+                playerTypeMapItem.ExistingPlayerType.MergeWith(playerTypeMapItem.ImportedPlayerType);
+            }
+        }
+
+        private void Export(IEnumerable<HudPlayerType> playerTypes)
+        {
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = CommonResourceManager.Instance.GetResourceString("SystemSettings_PlayerTypeFileDialogFilter")
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                hudLayoutService.ExportPlayerType(playerTypes.ToArray(), saveFileDialog.FileName);
+            }
         }
 
         #endregion

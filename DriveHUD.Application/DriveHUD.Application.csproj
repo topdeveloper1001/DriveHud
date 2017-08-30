@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.1.0.1540, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.1.0.1540, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.1.0.1540, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.1.1.1600, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -392,8 +392,10 @@
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
+    <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />
     <Compile Include="Services\PokerStarsDetectorService.cs" />
+    <Compile Include="Services\TreatAsService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
     <Compile Include="SplashScreen\NotificationViewModel.cs" />
@@ -719,7 +721,7 @@
     </Compile>
     <Compile Include="ReportsLayout\HoleCardsLayoutCreator.cs" />
     <Compile Include="ReportsLayout\OverAllReportLayoutCreator.cs" />
-    <Compile Include="ReportsLayout\PositiontLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\PositionLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportLayoutCreator.cs" />
     <Compile Include="ReportsLayout\ReportManager.cs" />
     <Compile Include="ReportsLayout\SessionsLayoutCreator.cs" />
@@ -1423,6 +1425,9 @@
     <Resource Include="images\splashscreen.png" />
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
+    <Content Include="Lib\CapPipedI2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -38,7 +38,7 @@ namespace DriveHUD.Importers.Bovada
     /// </summary>
     internal class BovadaTable : IPokerTable
     {
-        private const int delayBeforeImport = 5000;        
+        private const int delayBeforeImport = 5000;
 
         private ManualResetEventSlim importHandResetEvent = new ManualResetEventSlim(false);
 
@@ -102,7 +102,7 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        public ImporterIdentifier Identifier
+        public virtual ImporterIdentifier Identifier
         {
             get
             {
@@ -407,7 +407,7 @@ namespace DriveHUD.Importers.Bovada
         /// Process command data object
         /// </summary>
         /// <param name="cmdObj">Command data object</param>
-        private void ProcessCmdObject(BovadaCommandDataObject cmdObj)
+        protected virtual void ProcessCmdObject(BovadaCommandDataObject cmdObj)
         {
             if (cmdObj.pid == null)
             {
@@ -421,16 +421,13 @@ namespace DriveHUD.Importers.Bovada
 
             switch (pid)
             {
+                case "T_CONNECT_INFO":
+                case "CONNECT_INFO":
+                    ParseConnectInfo(cmdObj);
+                    break;
+
                 case "PLAY_TABLE_NUMBER":
-
-                    // remember that hero was moved, so in history builder we don't need to update seat if preferred seat is set 
-                    if ((GameFormat == GameFormat.MTT || GameFormat == GameFormat.SnG) && TableIndex != 0 && TableIndex != cmdObj.tableNo)
-                    {
-                        HeroWasMoved = true;
-                    }
-
-                    TableIndex = cmdObj.tableNo;
-
+                    ParsePlayTableNumber(cmdObj);
                     break;
 
                 case "CO_ZONE_CHANGE_TABLE_INFO":
@@ -442,27 +439,11 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "PLAY_STAGE_INFO":
+                    ParseStageInfo(cmdObj);
+                    break;
+
                 case "PLAY_TOUR_STAGENUMBER":
-
-                    if (CurrentHandNumber == cmdObj.stageNo)
-                    {
-                        break;
-                    }
-
-                    CurrentHandNumber = cmdObj.stageNo;
-
-                    if (!IsZonePokerTable)
-                    {
-                        ClearInfo();
-                    }
-
-                    AddHandNumberTableName();
-                    // add missed add/remove commands from middle hand list
-                    commands.AddRange(middleHandCommands);
-                    middleHandCommands.Clear();
-
-                    importHandResetEvent.Set();                
-
+                    ParseTourStageNumber(cmdObj);
                     break;
 
                 case "CO_TABLE_STATE":
@@ -470,13 +451,7 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "CO_DEALER_SEAT":
-
-                    if (DealerSeat == 0)
-                    {
-                        AddDealerSeatCommand(cmdObj.seat);
-                        DealerSeat = cmdObj.seat;
-                    }
-
+                    ParseDealerSeat(cmdObj);
                     break;
 
                 // pocket cards
@@ -658,6 +633,10 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
+                case "CO_OPTION_INFO":
+                    ParseOptionInfo(cmdObj);
+                    break;
+
                 default:
                     break;
             }
@@ -721,12 +700,75 @@ namespace DriveHUD.Importers.Bovada
                         WindowHandle = WindowHandle.ToInt32()
                     };
 
-                    importHandResetEvent.Reset();                    
+                    importHandResetEvent.Reset();
 
                     ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
                 }
             }
         }
+
+        #region Command Parsers
+
+        protected virtual void ParseConnectInfo(BovadaCommandDataObject cmdObj)
+        {
+            // do nothing
+        }
+
+        protected virtual void ParseOptionInfo(BovadaCommandDataObject cmdObj)
+        {
+            // do nothing
+        }
+
+        protected virtual void ParseDealerSeat(BovadaCommandDataObject cmdObj)
+        {
+            if (DealerSeat != 0)
+            {
+                return;
+            }
+
+            AddDealerSeatCommand(cmdObj.seat);
+            DealerSeat = cmdObj.seat;
+        }
+
+        protected virtual void ParseTourStageNumber(BovadaCommandDataObject cmdObj)
+        {
+            ParseStageInfo(cmdObj);
+        }
+
+        protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
+        {
+            if (CurrentHandNumber == cmdObj.stageNo)
+            {
+                return;
+            }
+
+            CurrentHandNumber = cmdObj.stageNo;
+
+            if (!IsZonePokerTable)
+            {
+                ClearInfo();
+            }
+
+            AddHandNumberTableName();
+            // add missed add/remove commands from middle hand list
+            commands.AddRange(middleHandCommands);
+            middleHandCommands.Clear();
+
+            importHandResetEvent.Set();
+        }
+
+        protected virtual void ParsePlayTableNumber(BovadaCommandDataObject cmdObj)
+        {
+            // remember that hero was moved, so in history builder we don't need to update seat if preferred seat is set 
+            if ((GameFormat == GameFormat.MTT || GameFormat == GameFormat.SnG) && TableIndex != 0 && TableIndex != cmdObj.tableNo)
+            {
+                HeroWasMoved = true;
+            }
+
+            TableIndex = cmdObj.tableNo;
+        }
+
+        #endregion
 
         private void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
         {
@@ -1349,7 +1391,7 @@ namespace DriveHUD.Importers.Bovada
             initialAfterBlindStacksAdded = true;
         }
 
-        private void UpdateHandNumberCommand()
+        protected virtual void UpdateHandNumberCommand()
         {
             var handNumberTableNameCommand = commands.FilterCommands<HandNumberTableName>(CommandCodeEnum.HandNumberTableName).FirstOrDefault();
 

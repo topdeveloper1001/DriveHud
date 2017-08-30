@@ -45,7 +45,7 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo);        
+        void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo);
 
         /// <summary>
         /// Store hand history record in cache
@@ -79,10 +79,8 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Store stickers-related statistics in cache
         /// </summary>
-        /// <param name="session">Session</param>
-        /// <param name="player">Player name</param>
-        /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
-        void AddOrUpdatePlayerStickerStats(string session, PlayerCollectionItem player, IDictionary<string, Playerstatistic> stickersStats);
+        /// <param name="playerStickersCacheData">Cache data object</param>     
+        void AddOrUpdatePlayerStickerStats(PlayerStickersCacheData playerStickersCacheData);
 
         /// <summary>
         /// Gets collection of player statistics that are used for Bumper Stickers calculations

@@ -24,7 +24,7 @@ namespace DriveHUD.Entities
     {
         public override string ToString()
         {
-            return $"Player: {PlayerName}; Tournament: {TournamentId}; Time: {Time}; HandNumber: {GameNumber}; Currency: {CurrencyId}; Cards: {Cards}";
+            return $"Player: {PlayerName}; TotalHands: {Totalhands}";
         }
 
         public virtual int CompiledplayerresultsId { get; set; }

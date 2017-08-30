@@ -722,7 +722,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         playerName = line.Remove(amountStartIndex - deadBigBlindWidth);
                         return new HandAction(playerName, HandActionType.POSTS, amount, street);
                     default:
-                        throw new ArgumentException("Unkown posting Action: " + line);
+                        throw new ArgumentException("Unknown posting Action: " + line);
                 }
             }
             else if (line.Contains(" shows"))
@@ -730,13 +730,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (isWinType(line, " shows [", ref playerNameIndex))
                 {
                     playerName = line.Remove(playerNameIndex);
-                    return new HandAction(playerName, HandActionType.SHOW, 0m, street);
+                    return new HandAction(playerName, HandActionType.SHOW, 0m, Street.Showdown);
                 }
                 else if (line.Contains(" for low."))
                 {
                     playerNameIndex = line.IndexOf(" shows");
                     playerName = line.Remove(playerNameIndex);
-                    return new HandAction(playerName, HandActionType.SHOWS_FOR_LOW, 0m, street);
+                    return new HandAction(playerName, HandActionType.SHOWS_FOR_LOW, 0m, Street.Showdown);
                 }
                 else
                 {

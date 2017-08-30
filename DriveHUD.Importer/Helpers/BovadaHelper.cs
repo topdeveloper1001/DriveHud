@@ -12,8 +12,6 @@
 
 using DriveHUD.Entities;
 using DriveHUD.Importers.Bovada;
-using Model.Enums;
-using System;
 
 namespace DriveHUD.Importers.Helpers
 {

@@ -63,6 +63,17 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region Properties
 
+        private Guid id = Guid.NewGuid();
+
+        [XmlIgnore]
+        public Guid Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+
         private string name;
 
         public string Name
@@ -216,6 +227,36 @@ namespace DriveHUD.Application.ViewModels.Hud
             var clone = (HudPlayerType)MemberwiseClone();
             clone.Stats = new ObservableCollection<HudPlayerTypeStat>(clone.Stats.Select(x => (HudPlayerTypeStat)x.Clone()));
             return clone;
-        }            
+        }
+
+        /// <summary>
+        /// Merges the current player type with the specified player type
+        /// </summary>
+        public void MergeWith(HudPlayerType playerType)
+        {
+            if (playerType == null)
+            {
+                return;
+            }
+
+            MinSample = playerType.MinSample;
+            EnablePlayerProfile = playerType.EnablePlayerProfile;
+            DisplayPlayerIcon = playerType.DisplayPlayerIcon;
+            Name = playerType.Name;
+            Image = playerType.Image;
+            ImageAlias = playerType.ImageAlias;
+
+            var statsToMerge = (from currentStat in Stats
+                                join stat in playerType.Stats on currentStat.Stat equals stat.Stat into gj
+                                from grouped in gj.DefaultIfEmpty()
+                                where grouped != null
+                                select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
+
+            statsToMerge.ForEach(s =>
+            {
+                s.CurrentStat.Low = s.Stat.Low;
+                s.CurrentStat.High = s.Stat.High;
+            });
+        }
     }
 }

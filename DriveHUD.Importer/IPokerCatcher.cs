@@ -9,6 +9,9 @@
 // provided with the relevant materials.
 // </copyright>
 //----------------------------------------------------------------------
+
+using System.Diagnostics;
+
 namespace DriveHUD.Importers
 {
     /// <summary>
@@ -16,5 +19,6 @@ namespace DriveHUD.Importers
     /// </summary>
     internal interface IPokerCatcher : IBackgroundProcess
     {
+        Process PokerClientProcess { get; }
     }
 }
