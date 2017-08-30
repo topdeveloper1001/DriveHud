@@ -85,6 +85,8 @@ namespace DriveHUD.Importers
 
             foreach (var file in files)
             {
+                LogProvider.Log.Info($"Running manual import from  {file.FullName}");
+
                 progress.Report(new LocalizableString("Progress_ReadingFile", file.Name));
 
                 processingFile = file;
@@ -132,6 +134,8 @@ namespace DriveHUD.Importers
             {
                 return;
             }
+
+            LogProvider.Log.Info($"Running manual import from  {directory.FullName}");
 
             progress.Report(new LocalizableString("Progress_ScanningFolder"));
 
