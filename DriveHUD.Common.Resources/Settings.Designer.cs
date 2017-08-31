@@ -70,6 +70,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
+        /// </summary>
+        internal static string Settings_AmericasCardroomHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_AmericasCardroomHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Filters to Tournament and Cash Games.
         /// </summary>
         internal static string Settings_ApplyFilters {
@@ -84,6 +93,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_AttachLog {
             get {
                 return ResourceManager.GetString("Settings_AttachLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-25.
+        /// </summary>
+        internal static string Settings_BetOnlineHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_BetOnlineHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-29.
+        /// </summary>
+        internal static string Settings_BlackChipPokerHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_BlackChipPokerHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-26.
+        /// </summary>
+        internal static string Settings_BodogHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_BodogHelpLink", resourceCulture);
             }
         }
         
@@ -183,6 +219,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_OnlineManual {
             get {
                 return ResourceManager.GetString("Settings_OnlineManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-23.
+        /// </summary>
+        internal static string Settings_PartyPokerHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_PartyPokerHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-30.
+        /// </summary>
+        internal static string Settings_Poker888HelpLink {
+            get {
+                return ResourceManager.GetString("Settings_Poker888HelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-24.
+        /// </summary>
+        internal static string Settings_PokerStarsHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_PokerStarsHelpLink", resourceCulture);
             }
         }
         
@@ -367,6 +430,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-28.
+        /// </summary>
+        internal static string Settings_SportsBettingHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_SportsBettingHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start of week begins on.
         /// </summary>
         internal static string Settings_StartOfWeekHeader {
@@ -403,6 +475,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-27.
+        /// </summary>
+        internal static string Settings_TigerGamingHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_TigerGamingHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time Zone Settings.
         /// </summary>
         internal static string Settings_TimeZoneHeader {
@@ -421,11 +502,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
+        /// </summary>
+        internal static string Settings_TruePokerHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_TruePokerHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Automatically download updates.
         /// </summary>
         internal static string Settings_Updates {
             get {
                 return ResourceManager.GetString("Settings_Updates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
+        /// </summary>
+        internal static string Settings_WinningPokerNetworkHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_WinningPokerNetworkHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
+        /// </summary>
+        internal static string Settings_YaPokerHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_YaPokerHelpLink", resourceCulture);
             }
         }
     }

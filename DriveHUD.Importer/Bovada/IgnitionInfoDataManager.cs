@@ -77,7 +77,7 @@ namespace DriveHUD.Importers.Bovada
             var url = dataText.Split(new[] { '\r', '\n' }).FirstOrDefault().Trim();
 
             if (url.Contains(cashUrlPattern))
-            {
+            {                
                 ProcessCashData(url, dataText);
                 return;
             }

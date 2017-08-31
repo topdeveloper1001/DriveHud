@@ -133,7 +133,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetTableCashName()
         {
-            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
+            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament && TableId != 0)
             {
                 TableName = $"Table{TableId}";
             }
