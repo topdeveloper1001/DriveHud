@@ -188,6 +188,13 @@ namespace DriveHUD.Importers.Bovada
             {
                 WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
                 {
+                    var parentHWnd = WinApi.GetParent(hWnd);
+
+                    if (parentHWnd != IntPtr.Zero)
+                    {
+                        return true;
+                    }
+
                     var sb = new StringBuilder(256);
 
                     if (WinApi.GetClassName(hWnd, sb, sb.Capacity) != 0)
