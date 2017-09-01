@@ -438,10 +438,15 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void DoTreatAs(object obj)
         {
+            if (obj == null)
+            {
+                return;
+            }
+
             await Task.Run(() =>
             {
                 using (var readToken = readerWriterLock.Read())
-                {
+                {                   
                     var tableType = (EnumTableType)obj;
                     TableType = tableType;
                     HudNamedPipeBindingService.TreatTableAs(WindowHandle, tableType);

@@ -62,9 +62,7 @@ namespace DriveHUD.Common.Wpf.Actions
             if (window != null)
             {
                 window.Close();
-            }
-
-            NonTopmostPopup.DisableTopMost = false;
+            }            
         }
 
         protected override void OnClosed(Window window, Action callback)
@@ -73,6 +71,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
             handler = (o, e) =>
             {
+                NonTopmostPopup.DisableTopMost = false;
                 window.Closed -= handler;
                 window.Content = null;
                 callback?.Invoke();
