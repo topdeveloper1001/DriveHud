@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Wpf.Controls;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Windows;
@@ -139,9 +140,9 @@ namespace DriveHUD.Common.Wpf.Actions
                     SetWindowPosition(wrapperWindow, left, top);
                 };
 
-                wrapperWindow.SizeChanged += sizeHandler;             
+                wrapperWindow.SizeChanged += sizeHandler;
             }
-
+          
             Show(wrapperWindow);
         }
 
@@ -225,7 +226,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 }
             }
 
-            interactionAware.Notification = notification; 
+            interactionAware.Notification = notification;
             interactionAware.FinishInteraction = () => CloseWindow(wrapperWindow);
         }
 

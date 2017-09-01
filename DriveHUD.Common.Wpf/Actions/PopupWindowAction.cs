@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Wpf.Controls;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Windows;
@@ -62,6 +63,8 @@ namespace DriveHUD.Common.Wpf.Actions
             {
                 window.Close();
             }
+
+            NonTopmostPopup.DisableTopMost = false;
         }
 
         protected override void OnClosed(Window window, Action callback)
@@ -75,15 +78,17 @@ namespace DriveHUD.Common.Wpf.Actions
                 callback?.Invoke();
             };
 
-            window.Closed += handler;
+            window.Closed += handler;            
         }
 
         protected override void Show(Window window)
         {
+            NonTopmostPopup.DisableTopMost = true;
+
             if (IsModal)
             {
                 window.Owner = Application.Current.MainWindow;
-                window.ShowDialog();
+                window.ShowDialog();               
                 return;
             }
 
