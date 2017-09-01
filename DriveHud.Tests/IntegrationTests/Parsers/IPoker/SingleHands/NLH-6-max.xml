@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6727821106">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL €0.01/€0.02</gametype>
+  <tablename>Caslano, 817749865</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:07:10</duration>
+  <gamecount>12</gamecount>
+  <startdate>2017-09-01 15:15:38</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>€0.19</bets>
+  <wins>€0.19</wins>
+  <chipsin>€0.89</chipsin>
+  <chipsout>€0.80</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general> 
+ <game gamecode="7668185353">
+  <general>
+   <startdate>2017-09-01 15:17:33</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.04" chips="€2.57" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.30" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0.04" chips="€1.92" seat="5" win="€0" dealer="1"/>
+    <player name="Kosenkov89" bet="€0.01" chips="€2.12" seat="6" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0.10" chips="€0.80" seat="8" win="€0.19" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€3.92" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="Kosenkov89"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="23" no="4" sum="€0.04" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="3" no="6" sum="€0.04" player="madarassandor"/>
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="Kosenkov89"/>
+   <cards type="Pocket" player="Peon384">CJ HA</cards>
+   <action cards="" type="3" no="8" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H7 DA DJ</cards>
+   <action cards="" type="5" no="9" sum="€0.06" player="Peon384"/>
+   <action cards="" type="0" no="10" sum="€0" player="hjdsplt"/>
+   <action cards="" type="0" no="11" sum="€0" player="madarassandor"/>
+  </round>
+ </game> 
+</session>

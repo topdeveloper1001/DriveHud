@@ -171,7 +171,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         public void PokerFormatIsParsedTest(string handHistoryFile, PokerFormat pokerFormat)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            Assert.That(handHistory.GameDescription.PokerFormat, Is.EqualTo(PokerFormat.Tournament));
+            Assert.That(handHistory.GameDescription.PokerFormat, Is.EqualTo(pokerFormat));
         }
 
         [Test]
