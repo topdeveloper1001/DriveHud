@@ -111,7 +111,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int seatOffset = playerLine.IndexOf(" seat=", StringComparison.Ordinal) + 7;
             int seatEndOffset = playerLine.IndexOf("\"", seatOffset, StringComparison.Ordinal);
             string seatNumberString = playerLine.Substring(seatOffset, seatEndOffset - seatOffset);
-            return Int32.Parse(seatNumberString);
+            return int.Parse(seatNumberString);
         }
 
         private bool IsPlayerLineDealer(string playerLine)
@@ -306,21 +306,19 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private string GetGameTypeLineFromHandLines(string[] handLines)
         {
-            //This is the 4th line if we have the <session> tag header
-            return handLines[3];
+            return GetTagLine(handLines, "gametype");
         }
 
         private string GetTableNameLineFromHandLines(string[] handLines)
         {
-            //This is the 5th line if we have the <session> tag header
-            return handLines[4];
+            return GetTagLine(handLines, "tablename");
         }
 
         private string GetStartDateFromHandLines(string[] handLines)
         {
             for (int i = 0; i < handLines.Length; i++)
             {
-                if (handLines[i].IndexOf("gamecode=\"", StringComparison.Ordinal) > 0)
+                if (handLines[i].IndexOf("gamecode=\"", StringComparison.OrdinalIgnoreCase) > 0)
                 {
                     return handLines[i + 2];
                 }
@@ -409,6 +407,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
              */
 
             string gameTypeLine = GetGameTypeLineFromHandLines(handLines);
+
+            if (string.IsNullOrEmpty(gameTypeLine))
+            {
+                throw new Exception("Could not parse GameType for hand.");
+            }
 
             //If this is an H we're a Holdem, if O, Omaha
             char gameTypeChar = gameTypeLine[10];
@@ -499,6 +502,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             var gameTypeLine = GetGameTypeLineFromHandLines(handLines);
 
+            if (string.IsNullOrEmpty(gameTypeLine))
+            {
+                throw new Exception("Could not parse Limit for hand.");
+            }
+
             int limitStringBeginIndex = gameTypeLine.LastIndexOf(' ') + 1;
             int limitStringEndIndex = gameTypeLine.LastIndexOf("<", StringComparison.Ordinal) - 1;
 
@@ -555,16 +563,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private string GetCurrencyTagValue(string[] handLines)
         {
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < handLines.Length; i++)
             {
                 string handline = handLines[i];
+
                 if (handline[1] == 'c' && handline[2] == 'u')
                 {
                     int endIndex = handline.IndexOf('<', 10);
                     return handline.Substring(10, endIndex - 10);
                 }
             }
-            return "";
+
+            return string.Empty;
         }
 
         private Currency GetCurrency(string[] handLines)
@@ -782,7 +792,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetActionTypeFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf("\" t", StringComparison.Ordinal) + 8;
+            int actionStartPos = actionLine.IndexOf("type=", StringComparison.Ordinal) + 6;
             int actionEndPos = actionLine.IndexOf("\"", actionStartPos, StringComparison.Ordinal) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
@@ -980,12 +990,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            foreach (var handLine in handLines)
+            if (GetTagLine(handLines, "tournamentname") != null)
             {
-                if (handLine.StartsWith("<tournamentname", StringComparison.Ordinal))
-                {
-                    return PokerFormat.Tournament;
-                }
+                return PokerFormat.Tournament;
             }
 
             return PokerFormat.CashGame;
@@ -1019,6 +1026,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     }
 
                     tournamentId = handLine.Substring(sessionCodeStartIndex, sessionCodeEndIndex - sessionCodeStartIndex);
+                }
+
+                if (handLine.StartsWith("<tournamentcode", StringComparison.Ordinal))
+                {
+                    tournamentId = GetTagValue(handLine);
+                    continue;
                 }
 
                 if (handLine.StartsWith("<place", StringComparison.Ordinal))
@@ -1151,6 +1164,19 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             var tagValue = text.Substring(startIndex, endIndex - startIndex + 1);
 
             return tagValue;
+        }
+
+        private static string GetTagLine(string[] handLines, string tag)
+        {
+            foreach (var handLine in handLines)
+            {
+                if (handLine.IndexOf($"<{tag}", StringComparison.OrdinalIgnoreCase) != -1)
+                {
+                    return handLine;
+                }
+            }
+
+            return null;
         }
     }
 }

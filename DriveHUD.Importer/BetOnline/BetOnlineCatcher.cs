@@ -67,6 +67,14 @@ namespace DriveHUD.Importers.BetOnline
             }
         }
 
+        protected override ImporterIdentifier[] PipeIdentifiers
+        {
+            get
+            {
+                return new[] { ImporterIdentifier.BetOnline, ImporterIdentifier.BetOnlineTournament };
+            }
+        }
+
         #endregion 
     }
 }
