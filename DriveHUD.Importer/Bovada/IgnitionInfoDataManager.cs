@@ -77,7 +77,7 @@ namespace DriveHUD.Importers.Bovada
             var url = dataText.Split(new[] { '\r', '\n' }).FirstOrDefault().Trim();
 
             if (url.Contains(cashUrlPattern))
-            {
+            {                
                 ProcessCashData(url, dataText);
                 return;
             }
@@ -160,8 +160,8 @@ namespace DriveHUD.Importers.Bovada
 
                 var seatText = ReadJsonData(data, "seats");
                 var maxPlayersText = ReadJsonData(data, "maxPlayers");
-                var limitText = ReadJsonData(data, "limit");
-                var gameTypeText = ReadJsonData(data, "gameType");
+                var limitText = ReadJsonTextData(data, "limit");
+                var gameTypeText = ReadJsonTextData(data, "gameType");
                 var tournamentName = ReadJsonTextData(data, "tournamentName");
 
                 if (string.IsNullOrEmpty(seatText) && string.IsNullOrEmpty(maxPlayersText))

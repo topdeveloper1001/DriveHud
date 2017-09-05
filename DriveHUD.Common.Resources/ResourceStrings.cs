@@ -10,6 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using System.Collections.Generic;
+
 namespace DriveHUD.Common.Resources
 {
     public static class ResourceStrings
@@ -73,6 +76,28 @@ namespace DriveHUD.Common.Resources
 
         public static string DeleteHandResourceString = "Main_ContextMenu_DeleteHand";
 
-        #endregion         
+        #endregion
+
+        #region Help links
+
+        public static Dictionary<EnumPokerSites, string> PokerSiteHelpLinks = new Dictionary<EnumPokerSites, string>
+        {
+            [EnumPokerSites.AmericasCardroom] = "Settings_AmericasCardroomHelpLink",
+            [EnumPokerSites.BetOnline] = "Settings_BetOnlineHelpLink",
+            [EnumPokerSites.BlackChipPoker] = "Settings_BlackChipPokerHelpLink",
+            [EnumPokerSites.Bodog] = "Settings_BodogHelpLink",
+            [EnumPokerSites.Ignition] = "Settings_BodogHelpLink",
+            [EnumPokerSites.Bovada] = "Settings_BodogHelpLink",
+            [EnumPokerSites.PartyPoker] = "Settings_PartyPokerHelpLink",
+            [EnumPokerSites.Poker888] = "Settings_Poker888HelpLink",
+            [EnumPokerSites.PokerStars] = "Settings_PokerStarsHelpLink",
+            [EnumPokerSites.SportsBetting] = "Settings_SportsBettingHelpLink",
+            [EnumPokerSites.TigerGaming] = "Settings_TigerGamingHelpLink",
+            [EnumPokerSites.TruePoker] = "Settings_TruePokerHelpLink",
+            [EnumPokerSites.WinningPokerNetwork] = "Settings_WinningPokerNetworkHelpLink",
+            [EnumPokerSites.YaPoker] = "Settings_YaPokerHelpLink"
+        };
+
+        #endregion
     }
 }

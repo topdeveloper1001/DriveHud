@@ -300,17 +300,11 @@ namespace DriveHUD.Application.ViewModels
                     switch (tag)
                     {
                         case TournamentsTags.MTT:
-                            if (tournament.Finishposition == 1)
-                            {
-                                MTTWon += tournament.Winningsincents / 100m;
-                            }
+                            MTTWon += tournament.Winningsincents / 100m;
                             TotalMTT++;
                             break;
                         case TournamentsTags.STT:
-                            if (tournament.Finishposition == 1)
-                            {
-                                STTWon += tournament.Winningsincents / 100m;
-                            }
+                            STTWon += tournament.Winningsincents / 100m;
                             TotalSTT++;
                             break;
                     }

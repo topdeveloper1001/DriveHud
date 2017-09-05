@@ -474,6 +474,17 @@ namespace DriveHUD.Common.WinApi
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool IsWindow(IntPtr hWnd);
 
+        /// <summary>
+        /// Retrieves a handle to the specified window's parent or owner.
+        /// </summary>
+        /// <param name="hWnd">A handle to the window whose parent window handle is to be retrieved.</param>
+        /// <returns>
+        ///     If the window is a child window, the return value is a handle to the parent window. If the window is a top-level window with the WS_POPUP style, the return value is a handle to the owner window.<br />
+        ///     If the function fails, the return value is NULL.To get extended error information, call <see cref="GetLastError"/>.
+        ///</returns>
+        [DllImport("user32.dll", ExactSpelling = true, CharSet = CharSet.Auto)]
+        public static extern IntPtr GetParent(IntPtr hWnd);
+
         #endregion
     }
 }

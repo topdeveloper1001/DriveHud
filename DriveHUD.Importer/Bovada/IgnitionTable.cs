@@ -133,7 +133,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetTableCashName()
         {
-            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
+            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament && TableId != 0)
             {
                 TableName = $"Table{TableId}";
             }
@@ -188,6 +188,13 @@ namespace DriveHUD.Importers.Bovada
             {
                 WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
                 {
+                    var parentHWnd = WinApi.GetParent(hWnd);
+
+                    if (parentHWnd != IntPtr.Zero)
+                    {
+                        return true;
+                    }
+
                     var sb = new StringBuilder(256);
 
                     if (WinApi.GetClassName(hWnd, sb, sb.Capacity) != 0)

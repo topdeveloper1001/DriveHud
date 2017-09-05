@@ -34,6 +34,8 @@ namespace DriveHUD.Common.Wpf.Controls
         private bool _alreadyLoaded;
         private Window _parentWindow;
 
+        public static bool DisableTopMost { get; set; }
+
         /// <summary>
         /// Get/Set IsTopmost
         /// </summary>
@@ -51,7 +53,6 @@ namespace DriveHUD.Common.Wpf.Controls
             Loaded += OnPopupLoaded;
             Unloaded += OnPopupUnloaded;
         }
-
 
         void OnPopupLoaded(object sender, RoutedEventArgs e)
         {
@@ -124,7 +125,7 @@ namespace DriveHUD.Common.Wpf.Controls
         private void SetTopmostState(bool isTop)
         {
             // Don’t apply state if it’s the same as incoming state
-            if (_appliedTopMost.HasValue && _appliedTopMost == isTop)
+            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || DisableTopMost)
             {
                 return;
             }
