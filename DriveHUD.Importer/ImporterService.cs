@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Importers.Bovada;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }
+            }         
         }
 
         /// <summary>
@@ -127,6 +128,9 @@ namespace DriveHUD.Importers
                 {
                     IsStarted = false;
                     RaiseImportingStopped();
+
+                    var ignitionWindowsCache = ServiceLocator.Current.GetInstance<IIgnitionWindowCache>();
+                    ignitionWindowsCache.Clear();
                 }
             }
         }

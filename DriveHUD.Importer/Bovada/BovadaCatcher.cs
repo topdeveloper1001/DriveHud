@@ -70,6 +70,15 @@ namespace DriveHUD.Importers.Bovada
                 return ImporterIdentifier.Bovada;
             }
         }
+
+        protected override ImporterIdentifier[] PipeIdentifiers
+        {
+            get
+            {
+                return new[] { ImporterIdentifier.Bovada };
+            }
+        }
+
         protected override bool IsEnabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
