@@ -40,6 +40,7 @@ namespace Model.Site
             var sites = new EnumPokerSites[]
             {
                 EnumPokerSites.Ignition,
+                EnumPokerSites.IPoker,
                 EnumPokerSites.BetOnline,
                 EnumPokerSites.TigerGaming,
                 EnumPokerSites.SportsBetting,
@@ -128,6 +129,8 @@ namespace Model.Site
                     return Get(EnumPokerSites.YaPoker);
                 case "PartyPoker":
                     return Get(EnumPokerSites.PartyPoker);
+                case "IPoker":
+                    return Get(EnumPokerSites.IPoker);
                 default:
                     throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
 

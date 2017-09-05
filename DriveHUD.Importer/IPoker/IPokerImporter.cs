@@ -48,7 +48,13 @@ namespace DriveHUD.Importers.IPoker
 
         protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
+              parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))
+            {
+                return false;
+            }
+
+            return title.Contains(parsingResult.Source.TableName);
         }
     }
 }
