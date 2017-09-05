@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
@@ -39,15 +41,15 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        //[Test]
-        //[TestCase("en-US")]
-        //[TestCase("hu-HU")]
-        //[TestCase("ru-RU")]
-        //[TestCase("en-CA")]
-        //[TestCase("fr-CA")]
-        //[TestCase("zh-CN")]
-        //[TestCase("zh-HK")]
-        //[TestCase("zh-SG")]
+        [Test]
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
         public void ParsingDoesNotThrowExceptions(string culture)
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
@@ -117,6 +119,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 0.02)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 50)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -125,6 +128,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 25)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -179,7 +183,118 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
             Assert.That(handHistory.Hero.SeatNumber, Is.EqualTo(seatNumber));
         }
 
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml")]
+        public void IsTournamentTest(string handHistoryFile)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.IsTrue(handHistory.GameDescription.IsTournament);
+        }
 
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 5)]
+        public void AnteIsParsedTest(string handHistoryFile, decimal ante)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml")]
+        public void IsAnteTest(string handHistoryFile)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.IsTrue(handHistory.GameDescription.Limit.IsAnteTable);
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 0.91)]
+        public void BuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, Is.EqualTo(buyin));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", Currency.USD)]
+        public void BuyInCurrencyIsParsedTest(string handHistoryFile, Currency currency)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.Currency, Is.EqualTo(currency));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 0.09)]
+        public void BuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(rake));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 909153222)]                        
+        public void TournamentIdIsParsedTest(string handHistoryFile, long tournamentId)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.TournamentId, Is.EqualTo(tournamentId.ToString()));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", "5h8d")]
+        public void HeroHoleCardsIsParsedTest(string handHistoryFile, string holeCards)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.Hero.HoleCards.ToString(), Is.EqualTo(holeCards));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 10000)]
+        public void HeroStartingStackIsParsedTest(string handHistoryFile, decimal startingStack)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.Hero.StartingStack, Is.EqualTo(startingStack));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 4)]
+        public void PlayersCountIsParsedTest(string handHistoryFile, int playersCount)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.Players.Count, Is.EqualTo(playersCount));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 1)]
+        public void DealerButtonPositionIsParsedTest(string handHistoryFile, int dealerButtonPosition)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.DealerButtonPosition, Is.EqualTo(dealerButtonPosition));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 3, HandActionType.FOLD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", 4, HandActionType.ANTE)]
+        public void ActionsAreParsedBaseTest(string handHistoryFile, int numberOfActions, HandActionType handActionType)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+
+            var groupedAnteActions = (from handAction in handHistory.HandActions
+                                      where handAction.HandActionType == handActionType
+                                      group handAction by new { handAction.HandActionType, handAction.PlayerName } into grouped
+                                      select grouped.Key).ToArray();
+
+            Assert.That(groupedAnteActions.Length, Is.EqualTo(numberOfActions));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NHL-6-max-MTT.xml", "chalky608", -150, HandActionType.RAISE, Street.Preflop, 1)]
+        public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).ToArray();
+
+            Assert.That(actions.Length, Is.EqualTo(numberOfActions));
+        }
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {

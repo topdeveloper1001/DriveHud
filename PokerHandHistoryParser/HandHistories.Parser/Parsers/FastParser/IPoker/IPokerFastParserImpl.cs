@@ -563,16 +563,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private string GetCurrencyTagValue(string[] handLines)
         {
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < handLines.Length; i++)
             {
                 string handline = handLines[i];
+
                 if (handline[1] == 'c' && handline[2] == 'u')
                 {
                     int endIndex = handline.IndexOf('<', 10);
                     return handline.Substring(10, endIndex - 10);
                 }
             }
-            return "";
+
+            return string.Empty;
         }
 
         private Currency GetCurrency(string[] handLines)
@@ -790,7 +792,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetActionTypeFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf("\" t", StringComparison.Ordinal) + 8;
+            int actionStartPos = actionLine.IndexOf("type=", StringComparison.Ordinal) + 6;
             int actionEndPos = actionLine.IndexOf("\"", actionStartPos, StringComparison.Ordinal) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
@@ -1024,6 +1026,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     }
 
                     tournamentId = handLine.Substring(sessionCodeStartIndex, sessionCodeEndIndex - sessionCodeStartIndex);
+                }
+
+                if (handLine.StartsWith("<tournamentcode", StringComparison.Ordinal))
+                {
+                    tournamentId = GetTagValue(handLine);
+                    continue;
                 }
 
                 if (handLine.StartsWith("<place", StringComparison.Ordinal))
