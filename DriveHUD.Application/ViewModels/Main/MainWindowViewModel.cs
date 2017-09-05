@@ -238,7 +238,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void StopHud()
         {
-            importerService.StopImport();
+            importerService.StopImport();            
             IsHudRunning = false;
         }
 

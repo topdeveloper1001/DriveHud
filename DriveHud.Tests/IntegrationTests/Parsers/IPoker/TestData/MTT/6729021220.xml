@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6729021220">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Sat €20 Ticket - 2 tickets gtd, 909607878</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:37:43</duration>
+  <gamecount>35</gamecount>
+  <startdate>2017-09-04 15:40:33</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>10,000</bets>
+  <wins>0</wins>
+  <chipsin>9,970</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club1.80</statuspoints>
+  <awardpoints>Club1.80</awardpoints>
+  <ipoints>Club1.80</ipoints>
+  <tournamentcode>909153222</tournamentcode>
+  <tournamentname>Sat €20 Ticket - 2 tickets gtd</tournamentname>
+  <place>13</place>
+  <buyin>€0.91 + €0.09</buyin>
+  <totalbuyin>€1</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7671600692">
+  <general>
+   <startdate>2017-09-04 15:40:33</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="5" reg_code="" chips="10,000" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="30" reg_code="6729021220" chips="10,000" seat="3" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="55" reg_code="" chips="10,000" seat="5" name="kastokill"/>
+    <player win="245" addon="0" rebuy="0" dealer="0" bet="155" reg_code="" chips="10,000" seat="6" name="chalky608"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="5" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="5" player="kastokill" no="2" cards=""/>
+   <action type="15" sum="5" player="chalky608" no="3" cards=""/>
+   <action type="15" sum="5" player="WieYeay" no="4" cards=""/>
+   <action type="1" sum="25" player="Peon384" no="5" cards=""/>
+   <action type="2" sum="50" player="kastokill" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="chalky608">X X</cards>
+   <action type="23" sum="150" player="chalky608" no="7" cards=""/>
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">H5 D8</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="10" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671600725">
+  <general>
+   <startdate>2017-09-04 15:42:31</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="5" reg_code="" chips="9,995" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="5" reg_code="6729021220" chips="9,970" seat="3" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="316" reg_code="" chips="9,945" seat="5" name="kastokill"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="866" reg_code="" chips="10,090" seat="6" name="chalky608"/>
+    <player win="2,058" addon="0" rebuy="0" dealer="0" bet="866" reg_code="" chips="10,000" seat="8" name="krat0c"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="5" player="kastokill" no="1" cards=""/>
+   <action type="15" sum="5" player="chalky608" no="2" cards=""/>
+   <action type="15" sum="5" player="krat0c" no="3" cards=""/>
+   <action type="15" sum="5" player="WieYeay" no="4" cards=""/>
+   <action type="15" sum="5" player="Peon384" no="5" cards=""/>
+   <action type="1" sum="25" player="kastokill" no="6" cards=""/>
+   <action type="2" sum="50" player="chalky608" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="krat0c">H2 DA</cards>
+   <action type="3" sum="50" player="krat0c" no="8" cards=""/>
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">DK D6</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="3" sum="25" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="chalky608">C6 S7</cards>
+   <action type="4" sum="0" player="chalky608" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H3 SA H5</cards>
+   <action type="5" sum="87" player="kastokill" no="13" cards=""/>
+   <action type="3" sum="87" player="chalky608" no="14" cards=""/>
+   <action type="23" sum="261" player="krat0c" no="15" cards=""/>
+   <action type="3" sum="174" player="kastokill" no="16" cards=""/>
+   <action type="3" sum="174" player="chalky608" no="17" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">SK</cards>
+   <action type="4" sum="0" player="kastokill" no="18" cards=""/>
+   <action type="4" sum="0" player="chalky608" no="19" cards=""/>
+   <action type="4" sum="0" player="krat0c" no="20" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">C10</cards>
+   <action type="4" sum="0" player="kastokill" no="21" cards=""/>
+   <action type="5" sum="550" player="chalky608" no="22" cards=""/>
+   <action type="3" sum="550" player="krat0c" no="23" cards=""/>
+   <action type="0" sum="0" player="kastokill" no="24" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611219">
+  <general>
+   <startdate>2017-09-04 15:45:08</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="55" reg_code="" chips="10,000" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="30" reg_code="6729021220" chips="9,965" seat="8" name="Peon384"/>
+    <player win="140" addon="0" rebuy="1" dealer="0" bet="55" reg_code="" chips="9,629" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="5" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="5" player="kastokill" no="2" cards=""/>
+   <action type="15" sum="5" player="denn17" no="3" cards=""/>
+   <action type="1" sum="25" player="Peon384" no="4" cards=""/>
+   <action type="2" sum="50" player="kastokill" no="5" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="denn17">H8 D5</cards>
+   <action type="3" sum="50" player="denn17" no="6" cards=""/>
+   <cards type="Pocket" player="Peon384">DK C6</cards>
+   <action type="0" sum="0" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="kastokill">D9 S3</cards>
+   <action type="4" sum="0" player="kastokill" no="8" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S2 SJ CA</cards>
+   <action type="4" sum="0" player="kastokill" no="9" cards=""/>
+   <action type="4" sum="0" player="denn17" no="10" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C9</cards>
+   <action type="4" sum="0" player="kastokill" no="11" cards=""/>
+   <action type="4" sum="0" player="denn17" no="12" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">D6</cards>
+   <action type="4" sum="0" player="kastokill" no="13" cards=""/>
+   <action type="4" sum="0" player="denn17" no="14" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611244">
+  <general>
+   <startdate>2017-09-04 15:46:40</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="400" reg_code="" chips="9,945" seat="1" name="denn17"/>
+    <player win="1,740" addon="0" rebuy="0" dealer="0" bet="1,270" reg_code="" chips="10,000" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="10" reg_code="6729021220" chips="9,935" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="9,714" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="kastokill" no="1" cards=""/>
+   <action type="15" sum="10" player="denn17" no="2" cards=""/>
+   <action type="15" sum="10" player="zabogarsukakezuu" no="3" cards=""/>
+   <action type="15" sum="10" player="Peon384" no="4" cards=""/>
+   <action type="1" sum="50" player="kastokill" no="5" cards=""/>
+   <action type="2" sum="100" player="denn17" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="23" sum="390" player="zabogarsukakezuu" no="7" cards=""/>
+   <cards type="Pocket" player="Peon384">D6 DA</cards>
+   <action type="0" sum="0" player="Peon384" no="8" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="9" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="3" sum="290" player="denn17" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H8 D3 S7</cards>
+   <action type="4" sum="0" player="denn17" no="11" cards=""/>
+   <action type="5" sum="870" player="zabogarsukakezuu" no="12" cards=""/>
+   <action type="0" sum="0" player="denn17" no="13" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611266">
+  <general>
+   <startdate>2017-09-04 15:47:32</startdate>
+   <players>
+    <player win="340" addon="0" rebuy="0" dealer="0" bet="210" reg_code="" chips="9,545" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="110" reg_code="" chips="10,470" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="10" reg_code="6729021220" chips="9,925" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="10" reg_code="" chips="9,654" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="denn17" no="1" cards=""/>
+   <action type="15" sum="10" player="zabogarsukakezuu" no="2" cards=""/>
+   <action type="15" sum="10" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="10" player="kastokill" no="4" cards=""/>
+   <action type="1" sum="50" player="denn17" no="5" cards=""/>
+   <action type="2" sum="100" player="zabogarsukakezuu" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">S3 H5</cards>
+   <action type="0" sum="0" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="8" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="3" sum="50" player="denn17" no="9" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="4" sum="0" player="zabogarsukakezuu" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S6 H10 SK</cards>
+   <action type="5" sum="100" player="denn17" no="11" cards=""/>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="12" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611272">
+  <general>
+   <startdate>2017-09-04 15:47:51</startdate>
+   <players>
+    <player win="440" addon="0" rebuy="0" dealer="1" bet="210" reg_code="" chips="9,675" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="110" reg_code="" chips="10,360" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="110" reg_code="6729021220" chips="9,915" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="10" reg_code="" chips="9,644" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="zabogarsukakezuu" no="1" cards=""/>
+   <action type="15" sum="10" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="10" player="kastokill" no="3" cards=""/>
+   <action type="15" sum="10" player="denn17" no="4" cards=""/>
+   <action type="1" sum="50" player="zabogarsukakezuu" no="5" cards=""/>
+   <action type="2" sum="100" player="Peon384" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="7" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="3" sum="100" player="denn17" no="8" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="50" player="zabogarsukakezuu" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">C8 S7</cards>
+   <action type="4" sum="0" player="Peon384" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S3 HJ C4</cards>
+   <action type="4" sum="0" player="zabogarsukakezuu" no="11" cards=""/>
+   <action type="4" sum="0" player="Peon384" no="12" cards=""/>
+   <action type="5" sum="100" player="denn17" no="13" cards=""/>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="14" cards=""/>
+   <action type="0" sum="0" player="Peon384" no="15" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611283">
+  <general>
+   <startdate>2017-09-04 15:48:24</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="905" reg_code="" chips="9,905" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="310" reg_code="" chips="10,250" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="6729021220" chips="9,805" seat="8" name="Peon384"/>
+    <player win="2,180" addon="0" rebuy="0" dealer="0" bet="905" reg_code="" chips="9,634" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="10" player="kastokill" no="2" cards=""/>
+   <action type="15" sum="10" player="denn17" no="3" cards=""/>
+   <action type="15" sum="10" player="zabogarsukakezuu" no="4" cards=""/>
+   <action type="1" sum="50" player="Peon384" no="5" cards=""/>
+   <action type="2" sum="100" player="kastokill" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="denn17">D3 C3</cards>
+   <action type="23" sum="200" player="denn17" no="7" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="200" player="zabogarsukakezuu" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">H10 S9</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="kastokill">H6 D5</cards>
+   <action type="3" sum="100" player="kastokill" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S5 S3 DA</cards>
+   <action type="4" sum="0" player="kastokill" no="11" cards=""/>
+   <action type="5" sum="100" player="denn17" no="12" cards=""/>
+   <action type="3" sum="100" player="zabogarsukakezuu" no="13" cards=""/>
+   <action type="3" sum="100" player="kastokill" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">SA</cards>
+   <action type="4" sum="0" player="kastokill" no="15" cards=""/>
+   <action type="5" sum="495" player="denn17" no="16" cards=""/>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="17" cards=""/>
+   <action type="3" sum="495" player="kastokill" no="18" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">CA</cards>
+   <action type="4" sum="0" player="kastokill" no="19" cards=""/>
+   <action type="5" sum="100" player="denn17" no="20" cards=""/>
+   <action type="3" sum="100" player="kastokill" no="21" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611296">
+  <general>
+   <startdate>2017-09-04 15:49:10</startdate>
+   <players>
+    <player win="7,677" addon="0" rebuy="0" dealer="0" bet="7,462" reg_code="" chips="9,000" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="410" reg_code="" chips="9,940" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="10" reg_code="" chips="10,000" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="10" reg_code="6729021220" chips="9,745" seat="8" name="Peon384"/>
+    <player win="7,677" addon="0" rebuy="0" dealer="0" bet="7,462" reg_code="" chips="10,909" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="kastokill" no="1" cards=""/>
+   <action type="15" sum="10" player="denn17" no="2" cards=""/>
+   <action type="15" sum="10" player="zabogarsukakezuu" no="3" cards=""/>
+   <action type="15" sum="10" player="TheSwifty" no="4" cards=""/>
+   <action type="15" sum="10" player="Peon384" no="5" cards=""/>
+   <action type="1" sum="50" player="kastokill" no="6" cards=""/>
+   <action type="2" sum="100" player="denn17" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="100" player="zabogarsukakezuu" no="8" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">H6 DQ</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">D6 D8</cards>
+   <action type="3" sum="50" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="denn17">C8 D7</cards>
+   <action type="23" sum="400" player="denn17" no="12" cards=""/>
+   <action type="3" sum="300" player="zabogarsukakezuu" no="13" cards=""/>
+   <action type="3" sum="300" player="kastokill" no="14" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">DA S8 CJ</cards>
+   <action type="4" sum="0" player="kastokill" no="15" cards=""/>
+   <action type="4" sum="0" player="denn17" no="16" cards=""/>
+   <action type="4" sum="0" player="zabogarsukakezuu" no="17" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">H8</cards>
+   <action type="5" sum="669" player="kastokill" no="18" cards=""/>
+   <action type="3" sum="669" player="denn17" no="19" cards=""/>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="20" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">D5</cards>
+   <action type="5" sum="2,177" player="kastokill" no="21" cards=""/>
+   <action type="23" sum="6,383" player="denn17" no="22" cards=""/>
+   <action type="3" sum="4,206" player="kastokill" no="23" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611326">
+  <general>
+   <startdate>2017-09-04 15:50:31</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="3,585" reg_code="" chips="9,215" seat="1" name="denn17"/>
+    <player win="7,200" addon="0" rebuy="0" dealer="0" bet="3,585" reg_code="" chips="9,530" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="10" reg_code="" chips="9,990" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="10" reg_code="6729021220" chips="9,735" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="10" reg_code="" chips="11,124" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="10" player="denn17" no="1" cards=""/>
+   <action type="15" sum="10" player="zabogarsukakezuu" no="2" cards=""/>
+   <action type="15" sum="10" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="10" player="Peon384" no="4" cards=""/>
+   <action type="15" sum="10" player="kastokill" no="5" cards=""/>
+   <action type="1" sum="50" player="denn17" no="6" cards=""/>
+   <action type="2" sum="100" player="zabogarsukakezuu" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">D7 D3</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="10" cards=""/>
+   <cards type="Pocket" player="denn17">H3 SQ</cards>
+   <action type="3" sum="50" player="denn17" no="11" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">DJ HK</cards>
+   <action type="23" sum="350" player="zabogarsukakezuu" no="12" cards=""/>
+   <action type="3" sum="250" player="denn17" no="13" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C5 C3 DK</cards>
+   <action type="4" sum="0" player="denn17" no="14" cards=""/>
+   <action type="5" sum="375" player="zabogarsukakezuu" no="15" cards=""/>
+   <action type="3" sum="375" player="denn17" no="16" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">CA</cards>
+   <action type="5" sum="750" player="denn17" no="17" cards=""/>
+   <action type="3" sum="750" player="zabogarsukakezuu" no="18" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">SJ</cards>
+   <action type="5" sum="2,100" player="denn17" no="19" cards=""/>
+   <action type="3" sum="2,100" player="zabogarsukakezuu" no="20" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611347">
+  <general>
+   <startdate>2017-09-04 15:51:39</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="1,820" reg_code="" chips="5,630" seat="1" name="denn17"/>
+    <player win="15,225" addon="0" rebuy="0" dealer="0" bet="13,545" reg_code="" chips="13,145" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="1" dealer="0" bet="220" reg_code="" chips="19,980" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="6729021220" chips="9,725" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="11,114" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="zabogarsukakezuu" no="1" cards=""/>
+   <action type="15" sum="20" player="TheSwifty" no="2" cards=""/>
+   <action type="15" sum="20" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="20" player="kastokill" no="4" cards=""/>
+   <action type="15" sum="20" player="denn17" no="5" cards=""/>
+   <action type="1" sum="100" player="zabogarsukakezuu" no="6" cards=""/>
+   <action type="2" sum="200" player="TheSwifty" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">SJ C2</cards>
+   <action type="0" sum="0" player="Peon384" no="8" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="9" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="23" sum="800" player="denn17" no="10" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="700" player="zabogarsukakezuu" no="11" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">CQ SQ H3</cards>
+   <action type="5" sum="200" player="zabogarsukakezuu" no="13" cards=""/>
+   <action type="3" sum="200" player="denn17" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">HQ</cards>
+   <action type="5" sum="400" player="zabogarsukakezuu" no="15" cards=""/>
+   <action type="23" sum="800" player="denn17" no="16" cards=""/>
+   <action type="23" sum="12,125" player="zabogarsukakezuu" no="17" cards=""/>
+   <action type="0" sum="0" player="denn17" no="18" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671611361">
+  <general>
+   <startdate>2017-09-04 15:52:22</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="220" reg_code="" chips="3,810" seat="1" name="denn17"/>
+    <player win="1,200" addon="0" rebuy="0" dealer="1" bet="620" reg_code="" chips="15,225" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="120" reg_code="" chips="19,760" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="220" reg_code="6729021220" chips="9,705" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="11,094" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="TheSwifty" no="1" cards=""/>
+   <action type="15" sum="20" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="20" player="kastokill" no="3" cards=""/>
+   <action type="15" sum="20" player="denn17" no="4" cards=""/>
+   <action type="15" sum="20" player="zabogarsukakezuu" no="5" cards=""/>
+   <action type="1" sum="100" player="TheSwifty" no="6" cards=""/>
+   <action type="2" sum="200" player="Peon384" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="8" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="3" sum="200" player="denn17" no="9" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="200" player="zabogarsukakezuu" no="10" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="11" cards=""/>
+   <cards type="Pocket" player="Peon384">HQ D9</cards>
+   <action type="4" sum="0" player="Peon384" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">SA D2 D8</cards>
+   <action type="4" sum="0" player="Peon384" no="13" cards=""/>
+   <action type="4" sum="0" player="denn17" no="14" cards=""/>
+   <action type="5" sum="400" player="zabogarsukakezuu" no="15" cards=""/>
+   <action type="0" sum="0" player="Peon384" no="16" cards=""/>
+   <action type="0" sum="0" player="denn17" no="17" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619183">
+  <general>
+   <startdate>2017-09-04 15:53:13</startdate>
+   <players>
+    <player win="3,400" addon="0" rebuy="0" dealer="0" bet="2,220" reg_code="" chips="3,590" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="15,805" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="820" reg_code="" chips="19,640" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="120" reg_code="6729021220" chips="9,485" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="220" reg_code="" chips="11,074" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="20" player="kastokill" no="2" cards=""/>
+   <action type="15" sum="20" player="denn17" no="3" cards=""/>
+   <action type="15" sum="20" player="zabogarsukakezuu" no="4" cards=""/>
+   <action type="15" sum="20" player="TheSwifty" no="5" cards=""/>
+   <action type="1" sum="100" player="Peon384" no="6" cards=""/>
+   <action type="2" sum="200" player="kastokill" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="23" sum="600" player="denn17" no="8" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="9" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="3" sum="600" player="TheSwifty" no="10" cards=""/>
+   <cards type="Pocket" player="Peon384">D6 C8</cards>
+   <action type="0" sum="0" player="Peon384" no="11" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H9 S9 H4</cards>
+   <action type="5" sum="200" player="denn17" no="13" cards=""/>
+   <action type="3" sum="200" player="TheSwifty" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">D5</cards>
+   <action type="5" sum="1,400" player="denn17" no="15" cards=""/>
+   <action type="0" sum="0" player="TheSwifty" no="16" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619195">
+  <general>
+   <startdate>2017-09-04 15:53:56</startdate>
+   <players>
+    <player win="3,200" addon="0" rebuy="0" dealer="0" bet="2,320" reg_code="" chips="4,770" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="15,785" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="720" reg_code="" chips="18,820" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="20" reg_code="6729021220" chips="9,365" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="120" reg_code="" chips="10,854" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="kastokill" no="1" cards=""/>
+   <action type="15" sum="20" player="denn17" no="2" cards=""/>
+   <action type="15" sum="20" player="zabogarsukakezuu" no="3" cards=""/>
+   <action type="15" sum="20" player="TheSwifty" no="4" cards=""/>
+   <action type="15" sum="20" player="Peon384" no="5" cards=""/>
+   <action type="1" sum="100" player="kastokill" no="6" cards=""/>
+   <action type="2" sum="200" player="denn17" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="8" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="23" sum="500" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">DA H9</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="3" sum="300" player="denn17" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S3 C7 HJ</cards>
+   <action type="4" sum="0" player="denn17" no="13" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">SQ</cards>
+   <action type="5" sum="200" player="denn17" no="15" cards=""/>
+   <action type="3" sum="200" player="TheSwifty" no="16" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">D10</cards>
+   <action type="5" sum="1,600" player="denn17" no="17" cards=""/>
+   <action type="0" sum="0" player="TheSwifty" no="18" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619213">
+  <general>
+   <startdate>2017-09-04 15:54:41</startdate>
+   <players>
+    <player win="3,320" addon="0" rebuy="0" dealer="0" bet="2,360" reg_code="" chips="5,650" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="220" reg_code="" chips="15,765" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="18,100" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="6729021220" chips="9,345" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="700" reg_code="" chips="10,734" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="denn17" no="1" cards=""/>
+   <action type="15" sum="20" player="zabogarsukakezuu" no="2" cards=""/>
+   <action type="15" sum="20" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="20" player="Peon384" no="4" cards=""/>
+   <action type="15" sum="20" player="kastokill" no="5" cards=""/>
+   <action type="1" sum="100" player="denn17" no="6" cards=""/>
+   <action type="2" sum="200" player="zabogarsukakezuu" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">SQ S10</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="23" sum="440" player="kastokill" no="10" cards=""/>
+   <cards type="Pocket" player="denn17">X X</cards>
+   <action type="23" sum="680" player="denn17" no="11" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="12" cards=""/>
+   <action type="3" sum="240" player="kastokill" no="13" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">CQ D6 DQ</cards>
+   <action type="5" sum="1,660" player="denn17" no="14" cards=""/>
+   <action type="0" sum="0" player="kastokill" no="15" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619222">
+  <general>
+   <startdate>2017-09-04 16:00:12</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="16,610" reg_code="" chips="16,610" seat="1" name="denn17"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,020" reg_code="" chips="15,545" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="420" reg_code="" chips="18,080" seat="5" name="TheSwifty"/>
+    <player win="38,090" addon="0" rebuy="1" dealer="0" bet="21,400" reg_code="" chips="20,000" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="6729021220" chips="9,325" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="20" reg_code="" chips="10,034" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="20" player="zabogarsukakezuu" no="1" cards=""/>
+   <action type="15" sum="20" player="TheSwifty" no="2" cards=""/>
+   <action type="15" sum="20" player="nothingrhymed" no="3" cards=""/>
+   <action type="15" sum="20" player="Peon384" no="4" cards=""/>
+   <action type="15" sum="20" player="kastokill" no="5" cards=""/>
+   <action type="15" sum="20" player="denn17" no="6" cards=""/>
+   <action type="1" sum="100" player="zabogarsukakezuu" no="7" cards=""/>
+   <action type="2" sum="200" player="TheSwifty" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="nothingrhymed">S2 DA</cards>
+   <action type="23" sum="400" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">D4 HK</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="denn17">D6 H8</cards>
+   <action type="3" sum="400" player="denn17" no="12" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="3" sum="300" player="zabogarsukakezuu" no="13" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="3" sum="200" player="TheSwifty" no="14" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S6 SA D2</cards>
+   <action type="4" sum="0" player="zabogarsukakezuu" no="15" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="16" cards=""/>
+   <action type="5" sum="600" player="nothingrhymed" no="17" cards=""/>
+   <action type="3" sum="600" player="denn17" no="18" cards=""/>
+   <action type="3" sum="600" player="zabogarsukakezuu" no="19" cards=""/>
+   <action type="0" sum="0" player="TheSwifty" no="20" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C8</cards>
+   <action type="4" sum="0" player="zabogarsukakezuu" no="21" cards=""/>
+   <action type="5" sum="1,400" player="nothingrhymed" no="22" cards=""/>
+   <action type="23" sum="5,404" player="denn17" no="23" cards=""/>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="24" cards=""/>
+   <action type="23" sum="18,980" player="nothingrhymed" no="25" cards=""/>
+   <action type="7" sum="10,186" player="denn17" no="26" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">H4</cards>
+  </round>
+ </game>
+ <game gamecode="7671619250">
+  <general>
+   <startdate>2017-09-04 16:03:28</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="40" reg_code="" chips="14,525" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="240" reg_code="" chips="17,660" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="840" reg_code="" chips="38,090" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="40" reg_code="6729021220" chips="9,305" seat="8" name="Peon384"/>
+    <player win="2,775" addon="0" rebuy="0" dealer="0" bet="1,615" reg_code="" chips="10,014" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="40" player="TheSwifty" no="1" cards=""/>
+   <action type="15" sum="40" player="nothingrhymed" no="2" cards=""/>
+   <action type="15" sum="40" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="40" player="kastokill" no="4" cards=""/>
+   <action type="15" sum="40" player="zabogarsukakezuu" no="5" cards=""/>
+   <action type="1" sum="200" player="TheSwifty" no="6" cards=""/>
+   <action type="2" sum="400" player="nothingrhymed" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">S3 DQ</cards>
+   <action type="0" sum="0" player="Peon384" no="8" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="23" sum="800" player="kastokill" no="9" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="10" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="11" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="3" sum="400" player="nothingrhymed" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H7 H9 C9</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="13" cards=""/>
+   <action type="4" sum="0" player="kastokill" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">D7</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="15" cards=""/>
+   <action type="5" sum="775" player="kastokill" no="16" cards=""/>
+   <action type="0" sum="0" player="nothingrhymed" no="17" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619270">
+  <general>
+   <startdate>2017-09-04 16:04:10</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="840" reg_code="" chips="20,000" seat="1" name="klakchy777"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="40" reg_code="" chips="14,485" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="40" reg_code="" chips="17,420" seat="5" name="TheSwifty"/>
+    <player win="3,440" addon="0" rebuy="0" dealer="0" bet="2,040" reg_code="" chips="37,250" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="440" reg_code="6729021220" chips="9,265" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="40" reg_code="" chips="11,174" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="40" player="nothingrhymed" no="1" cards=""/>
+   <action type="15" sum="40" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="40" player="kastokill" no="3" cards=""/>
+   <action type="15" sum="40" player="klakchy777" no="4" cards=""/>
+   <action type="15" sum="40" player="zabogarsukakezuu" no="5" cards=""/>
+   <action type="15" sum="40" player="TheSwifty" no="6" cards=""/>
+   <action type="1" sum="200" player="nothingrhymed" no="7" cards=""/>
+   <action type="2" sum="400" player="Peon384" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="9" cards=""/>
+   <cards type="Pocket" player="klakchy777">X X</cards>
+   <action type="23" sum="800" player="klakchy777" no="10" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">X X</cards>
+   <action type="0" sum="0" player="zabogarsukakezuu" no="11" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="12" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="3" sum="600" player="nothingrhymed" no="13" cards=""/>
+   <cards type="Pocket" player="Peon384">DA C7</cards>
+   <action type="0" sum="0" player="Peon384" no="14" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">DK C4 SJ</cards>
+   <action type="5" sum="1,200" player="nothingrhymed" no="15" cards=""/>
+   <action type="0" sum="0" player="klakchy777" no="16" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619281">
+  <general>
+   <startdate>2017-09-04 16:04:43</startdate>
+   <players>
+    <player win="29,650" addon="0" rebuy="1" dealer="0" bet="14,445" reg_code="" chips="19,160" seat="1" name="klakchy777"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="14,445" reg_code="" chips="14,445" seat="3" name="zabogarsukakezuu"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="40" reg_code="" chips="17,380" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="40" reg_code="" chips="38,650" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="240" reg_code="6729021220" chips="8,825" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="440" reg_code="" chips="11,134" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="40" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="40" player="kastokill" no="2" cards=""/>
+   <action type="15" sum="40" player="klakchy777" no="3" cards=""/>
+   <action type="15" sum="40" player="zabogarsukakezuu" no="4" cards=""/>
+   <action type="15" sum="40" player="TheSwifty" no="5" cards=""/>
+   <action type="15" sum="40" player="nothingrhymed" no="6" cards=""/>
+   <action type="1" sum="200" player="Peon384" no="7" cards=""/>
+   <action type="2" sum="400" player="kastokill" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="klakchy777">S4 SK</cards>
+   <action type="3" sum="400" player="klakchy777" no="9" cards=""/>
+   <cards type="Pocket" player="zabogarsukakezuu">D8 C8</cards>
+   <action type="23" sum="2,040" player="zabogarsukakezuu" no="10" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="11" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="12" cards=""/>
+   <cards type="Pocket" player="Peon384">HA CA</cards>
+   <action type="0" sum="0" player="Peon384" no="13" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="14" cards=""/>
+   <action type="3" sum="1,640" player="klakchy777" no="15" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S8 SQ DA</cards>
+   <action type="4" sum="0" player="klakchy777" no="16" cards=""/>
+   <action type="5" sum="400" player="zabogarsukakezuu" no="17" cards=""/>
+   <action type="3" sum="400" player="klakchy777" no="18" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">S10</cards>
+   <action type="4" sum="0" player="klakchy777" no="19" cards=""/>
+   <action type="5" sum="11,965" player="zabogarsukakezuu" no="20" cards=""/>
+   <action type="3" sum="11,965" player="klakchy777" no="21" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">S2</cards>
+  </round>
+ </game>
+ <game gamecode="7671619308">
+  <general>
+   <startdate>2017-09-04 16:06:05</startdate>
+   <players>
+    <player win="3,900" addon="0" rebuy="0" dealer="0" bet="3,060" reg_code="" chips="34,365" seat="1" name="klakchy777"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="17,340" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="38,610" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="60" reg_code="6729021220" chips="8,585" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="660" reg_code="" chips="10,694" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="kastokill" no="1" cards=""/>
+   <action type="15" sum="60" player="klakchy777" no="2" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="4" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="5" cards=""/>
+   <action type="1" sum="300" player="kastokill" no="6" cards=""/>
+   <action type="2" sum="600" player="klakchy777" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">D10 D2</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="3" sum="300" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="klakchy777">X X</cards>
+   <action type="4" sum="0" player="klakchy777" no="12" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C4 H8 S6</cards>
+   <action type="4" sum="0" player="kastokill" no="13" cards=""/>
+   <action type="4" sum="0" player="klakchy777" no="14" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">HQ</cards>
+   <action type="4" sum="0" player="kastokill" no="15" cards=""/>
+   <action type="4" sum="0" player="klakchy777" no="16" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">C10</cards>
+   <action type="4" sum="0" player="kastokill" no="17" cards=""/>
+   <action type="5" sum="2,400" player="klakchy777" no="18" cards=""/>
+   <action type="0" sum="0" player="kastokill" no="19" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619332">
+  <general>
+   <startdate>2017-09-04 16:07:07</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="360" reg_code="" chips="35,205" seat="1" name="klakchy777"/>
+    <player win="1,260" addon="0" rebuy="0" dealer="0" bet="660" reg_code="" chips="10,000" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="17,280" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="38,550" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="6729021220" chips="8,525" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="60" reg_code="" chips="10,034" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="klakchy777" no="1" cards=""/>
+   <action type="15" sum="60" player="Cardsharp72" no="2" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="4" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="5" cards=""/>
+   <action type="15" sum="60" player="kastokill" no="6" cards=""/>
+   <action type="1" sum="300" player="klakchy777" no="7" cards=""/>
+   <action type="2" sum="600" player="Cardsharp72" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="10" cards=""/>
+   <cards type="Pocket" player="Peon384">C9 C6</cards>
+   <action type="0" sum="0" player="Peon384" no="11" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="12" cards=""/>
+   <cards type="Pocket" player="klakchy777">X X</cards>
+   <action type="0" sum="0" player="klakchy777" no="13" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619337">
+  <general>
+   <startdate>2017-09-04 16:07:24</startdate>
+   <players>
+    <player win="2,160" addon="0" rebuy="0" dealer="1" bet="660" reg_code="" chips="34,845" seat="1" name="klakchy777"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="660" reg_code="" chips="10,600" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="660" reg_code="" chips="17,220" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="38,490" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="6729021220" chips="8,465" seat="8" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="9,974" seat="10" name="kastokill"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="Cardsharp72" no="1" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="2" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="3" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="4" cards=""/>
+   <action type="15" sum="60" player="kastokill" no="5" cards=""/>
+   <action type="15" sum="60" player="klakchy777" no="6" cards=""/>
+   <action type="1" sum="300" player="Cardsharp72" no="7" cards=""/>
+   <action type="2" sum="600" player="TheSwifty" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">HA C6</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+   <cards type="Pocket" player="kastokill">X X</cards>
+   <action type="0" sum="0" player="kastokill" no="11" cards=""/>
+   <cards type="Pocket" player="klakchy777">H2 C2</cards>
+   <action type="3" sum="600" player="klakchy777" no="12" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">D7 C3</cards>
+   <action type="3" sum="300" player="Cardsharp72" no="13" cards=""/>
+   <cards type="Pocket" player="TheSwifty">HQ H4</cards>
+   <action type="4" sum="0" player="TheSwifty" no="14" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">SJ DA S8</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="15" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="16" cards=""/>
+   <action type="4" sum="0" player="klakchy777" no="17" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">H6</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="18" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="19" cards=""/>
+   <action type="4" sum="0" player="klakchy777" no="20" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">CA</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="21" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="22" cards=""/>
+   <action type="4" sum="0" player="klakchy777" no="23" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619359">
+  <general>
+   <startdate>2017-09-04 16:08:22</startdate>
+   <players>
+    <player win="2,940" addon="0" rebuy="0" dealer="1" bet="1,860" reg_code="" chips="9,940" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="360" reg_code="" chips="16,560" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="660" reg_code="" chips="38,430" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="6729021220" chips="8,405" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="TheSwifty" no="1" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="2" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="60" player="Cardsharp72" no="4" cards=""/>
+   <action type="1" sum="300" player="TheSwifty" no="5" cards=""/>
+   <action type="2" sum="600" player="nothingrhymed" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">SJ H7</cards>
+   <action type="0" sum="0" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="23" sum="1,800" player="Cardsharp72" no="8" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="10" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619367">
+  <general>
+   <startdate>2017-09-04 16:08:46</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="11,020" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="60" reg_code="" chips="16,200" seat="5" name="TheSwifty"/>
+    <player win="2,040" addon="0" rebuy="0" dealer="0" bet="1,560" reg_code="" chips="37,770" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="660" reg_code="6729021220" chips="8,345" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="nothingrhymed" no="1" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="60" player="Cardsharp72" no="3" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="4" cards=""/>
+   <action type="1" sum="300" player="nothingrhymed" no="5" cards=""/>
+   <action type="2" sum="600" player="Peon384" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="7" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="23" sum="1,200" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">DA S2</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619384">
+  <general>
+   <startdate>2017-09-04 16:09:24</startdate>
+   <players>
+    <player win="15,580" addon="0" rebuy="0" dealer="0" bet="10,960" reg_code="" chips="10,960" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="60" reg_code="" chips="16,140" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="4,200" reg_code="" chips="38,550" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="360" reg_code="6729021220" chips="7,685" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="60" player="Cardsharp72" no="2" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="4" cards=""/>
+   <action type="1" sum="300" player="Peon384" no="5" cards=""/>
+   <action type="2" sum="600" player="Cardsharp72" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="7" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="23" sum="1,200" player="nothingrhymed" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">HQ C3</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="23" sum="4,140" player="Cardsharp72" no="10" cards=""/>
+   <action type="3" sum="2,940" player="nothingrhymed" no="11" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">D5 D7 CK</cards>
+   <action type="5" sum="6,760" player="Cardsharp72" no="12" cards=""/>
+   <action type="0" sum="0" player="nothingrhymed" no="13" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671619400">
+  <general>
+   <startdate>2017-09-04 16:10:05</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="360" reg_code="" chips="15,580" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,860" reg_code="" chips="16,080" seat="5" name="TheSwifty"/>
+    <player win="5,940" addon="0" rebuy="0" dealer="0" bet="3,660" reg_code="" chips="34,350" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="60" reg_code="6729021220" chips="7,325" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="60" player="Cardsharp72" no="1" cards=""/>
+   <action type="15" sum="60" player="TheSwifty" no="2" cards=""/>
+   <action type="15" sum="60" player="nothingrhymed" no="3" cards=""/>
+   <action type="15" sum="60" player="Peon384" no="4" cards=""/>
+   <action type="1" sum="300" player="Cardsharp72" no="5" cards=""/>
+   <action type="2" sum="600" player="TheSwifty" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="23" sum="1,800" player="nothingrhymed" no="7" cards=""/>
+   <cards type="Pocket" player="Peon384">D2 D9</cards>
+   <action type="0" sum="0" player="Peon384" no="8" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="9" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="3" sum="1,200" player="TheSwifty" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">HQ CK C3</cards>
+   <action type="4" sum="0" player="TheSwifty" no="11" cards=""/>
+   <action type="5" sum="1,800" player="nothingrhymed" no="12" cards=""/>
+   <action type="0" sum="0" player="TheSwifty" no="13" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628178">
+  <general>
+   <startdate>2017-09-04 16:11:06</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="80" reg_code="" chips="15,220" seat="3" name="Cardsharp72"/>
+    <player win="3,264" addon="0" rebuy="0" dealer="0" bet="2,224" reg_code="" chips="14,220" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="880" reg_code="" chips="36,630" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="6729021220" chips="7,265" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="TheSwifty" no="1" cards=""/>
+   <action type="15" sum="80" player="nothingrhymed" no="2" cards=""/>
+   <action type="15" sum="80" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="80" player="Cardsharp72" no="4" cards=""/>
+   <action type="1" sum="400" player="TheSwifty" no="5" cards=""/>
+   <action type="2" sum="800" player="nothingrhymed" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">D7 DK</cards>
+   <action type="0" sum="0" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="8" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="3" sum="400" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C4 S8 C8</cards>
+   <action type="4" sum="0" player="TheSwifty" no="11" cards=""/>
+   <action type="4" sum="0" player="nothingrhymed" no="12" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">S4</cards>
+   <action type="4" sum="0" player="TheSwifty" no="13" cards=""/>
+   <action type="4" sum="0" player="nothingrhymed" no="14" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">S10</cards>
+   <action type="5" sum="1,344" player="TheSwifty" no="15" cards=""/>
+   <action type="0" sum="0" player="nothingrhymed" no="16" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628208">
+  <general>
+   <startdate>2017-09-04 16:12:08</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="" chips="15,140" seat="3" name="Cardsharp72"/>
+    <player win="3,520" addon="0" rebuy="0" dealer="1" bet="2,080" reg_code="" chips="15,260" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="480" reg_code="" chips="35,750" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="880" reg_code="6729021220" chips="7,185" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="nothingrhymed" no="1" cards=""/>
+   <action type="15" sum="80" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="80" player="Cardsharp72" no="3" cards=""/>
+   <action type="15" sum="80" player="TheSwifty" no="4" cards=""/>
+   <action type="1" sum="400" player="nothingrhymed" no="5" cards=""/>
+   <action type="2" sum="800" player="Peon384" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="7" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="23" sum="2,000" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">C10 SJ</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628216">
+  <general>
+   <startdate>2017-09-04 16:12:44</startdate>
+   <players>
+    <player win="10,320" addon="0" rebuy="0" dealer="0" bet="5,680" reg_code="" chips="15,060" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="" chips="16,700" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="4,080" reg_code="" chips="35,270" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="480" reg_code="6729021220" chips="6,305" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="Peon384" no="1" cards=""/>
+   <action type="15" sum="80" player="Cardsharp72" no="2" cards=""/>
+   <action type="15" sum="80" player="TheSwifty" no="3" cards=""/>
+   <action type="15" sum="80" player="nothingrhymed" no="4" cards=""/>
+   <action type="1" sum="400" player="Peon384" no="5" cards=""/>
+   <action type="2" sum="800" player="Cardsharp72" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="0" sum="0" player="TheSwifty" no="7" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="23" sum="2,400" player="nothingrhymed" no="8" cards=""/>
+   <cards type="Pocket" player="Peon384">C10 S7</cards>
+   <action type="0" sum="0" player="Peon384" no="9" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="3" sum="1,600" player="Cardsharp72" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C2 HA CJ</cards>
+   <action type="5" sum="1,600" player="Cardsharp72" no="11" cards=""/>
+   <action type="3" sum="1,600" player="nothingrhymed" no="12" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">H9</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="13" cards=""/>
+   <action type="4" sum="0" player="nothingrhymed" no="14" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">CQ</cards>
+   <action type="5" sum="1,600" player="Cardsharp72" no="15" cards=""/>
+   <action type="0" sum="0" player="nothingrhymed" no="16" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628239">
+  <general>
+   <startdate>2017-09-04 16:13:22</startdate>
+   <players>
+    <player win="3,520" addon="0" rebuy="0" dealer="0" bet="1,680" reg_code="" chips="19,700" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,680" reg_code="" chips="16,620" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="" chips="31,190" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="80" reg_code="6729021220" chips="5,825" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="Cardsharp72" no="1" cards=""/>
+   <action type="15" sum="80" player="TheSwifty" no="2" cards=""/>
+   <action type="15" sum="80" player="nothingrhymed" no="3" cards=""/>
+   <action type="15" sum="80" player="Peon384" no="4" cards=""/>
+   <action type="1" sum="400" player="Cardsharp72" no="5" cards=""/>
+   <action type="2" sum="800" player="TheSwifty" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="0" sum="0" player="nothingrhymed" no="7" cards=""/>
+   <cards type="Pocket" player="Peon384">S4 H2</cards>
+   <action type="0" sum="0" player="Peon384" no="8" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">S5 S6</cards>
+   <action type="3" sum="400" player="Cardsharp72" no="9" cards=""/>
+   <cards type="Pocket" player="TheSwifty">C5 H4</cards>
+   <action type="4" sum="0" player="TheSwifty" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H6 D6 D4</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="11" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="12" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">CQ</cards>
+   <action type="4" sum="0" player="Cardsharp72" no="13" cards=""/>
+   <action type="4" sum="0" player="TheSwifty" no="14" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">D3</cards>
+   <action type="5" sum="800" player="Cardsharp72" no="15" cards=""/>
+   <action type="3" sum="800" player="TheSwifty" no="16" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628252">
+  <general>
+   <startdate>2017-09-04 16:13:59</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="80" reg_code="" chips="21,540" seat="3" name="Cardsharp72"/>
+    <player win="10,240" addon="0" rebuy="0" dealer="0" bet="7,280" reg_code="" chips="14,940" seat="5" name="TheSwifty"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="2,800" reg_code="" chips="31,110" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="6729021220" chips="5,745" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="TheSwifty" no="1" cards=""/>
+   <action type="15" sum="80" player="nothingrhymed" no="2" cards=""/>
+   <action type="15" sum="80" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="80" player="Cardsharp72" no="4" cards=""/>
+   <action type="1" sum="400" player="TheSwifty" no="5" cards=""/>
+   <action type="2" sum="800" player="nothingrhymed" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">HJ H10</cards>
+   <action type="0" sum="0" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="8" cards=""/>
+   <cards type="Pocket" player="TheSwifty">X X</cards>
+   <action type="3" sum="400" player="TheSwifty" no="9" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">X X</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C3 CA S6</cards>
+   <action type="4" sum="0" player="TheSwifty" no="11" cards=""/>
+   <action type="5" sum="1,920" player="nothingrhymed" no="12" cards=""/>
+   <action type="23" sum="6,400" player="TheSwifty" no="13" cards=""/>
+   <action type="0" sum="0" player="nothingrhymed" no="14" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628272">
+  <general>
+   <startdate>2017-09-04 16:14:48</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="80" reg_code="" chips="21,460" seat="3" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="17,900" reg_code="" chips="17,900" seat="5" name="TheSwifty"/>
+    <player win="38,078" addon="0" rebuy="0" dealer="0" bet="19,218" reg_code="" chips="28,310" seat="6" name="nothingrhymed"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="880" reg_code="6729021220" chips="5,665" seat="8" name="Peon384"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="80" player="nothingrhymed" no="1" cards=""/>
+   <action type="15" sum="80" player="Peon384" no="2" cards=""/>
+   <action type="15" sum="80" player="Cardsharp72" no="3" cards=""/>
+   <action type="15" sum="80" player="TheSwifty" no="4" cards=""/>
+   <action type="1" sum="400" player="nothingrhymed" no="5" cards=""/>
+   <action type="2" sum="800" player="Peon384" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="7" cards=""/>
+   <cards type="Pocket" player="TheSwifty">D7 D5</cards>
+   <action type="23" sum="1,600" player="TheSwifty" no="8" cards=""/>
+   <cards type="Pocket" player="nothingrhymed">S9 HJ</cards>
+   <action type="3" sum="1,200" player="nothingrhymed" no="9" cards=""/>
+   <cards type="Pocket" player="Peon384">S3 D4</cards>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S5 D6 H8</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="11" cards=""/>
+   <action type="5" sum="3,024" player="TheSwifty" no="12" cards=""/>
+   <action type="3" sum="3,024" player="nothingrhymed" no="13" cards=""/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C7</cards>
+   <action type="4" sum="0" player="nothingrhymed" no="14" cards=""/>
+   <action type="5" sum="7,257" player="TheSwifty" no="15" cards=""/>
+   <action type="23" sum="14,514" player="nothingrhymed" no="16" cards=""/>
+   <action type="7" sum="5,939" player="TheSwifty" no="17" cards=""/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">H6</cards>
+  </round>
+ </game>
+ <game gamecode="7671628295">
+  <general>
+   <startdate>2017-09-04 16:15:50</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="100" reg_code="" chips="17,120" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="600" reg_code="" chips="10,260" seat="5" name="christopher1992"/>
+    <player win="2,000" addon="0" rebuy="0" dealer="0" bet="1,100" reg_code="" chips="37,947" seat="6" name="chalky608"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="21,380" seat="8" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="13,899" seat="10" name="fkf131"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="100" player="christopher1992" no="1" cards=""/>
+   <action type="15" sum="100" player="chalky608" no="2" cards=""/>
+   <action type="15" sum="100" player="Cardsharp72" no="3" cards=""/>
+   <action type="15" sum="100" player="fkf131" no="4" cards=""/>
+   <action type="15" sum="100" player="WieYeay" no="5" cards=""/>
+   <action type="1" sum="500" player="christopher1992" no="6" cards=""/>
+   <action type="2" sum="1,000" player="chalky608" no="7" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="chalky608">X X</cards>
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <action type="0" sum="0" player="Cardsharp72" no="8" cards=""/>
+   <cards type="Pocket" player="fkf131">X X</cards>
+   <action type="0" sum="0" player="fkf131" no="9" cards=""/>
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="10" cards=""/>
+   <cards type="Pocket" player="christopher1992">X X</cards>
+   <action type="0" sum="0" player="christopher1992" no="11" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628300">
+  <general>
+   <startdate>2017-09-04 16:16:09</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="17,020" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="6729021220" chips="4,785" seat="3" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="1" bet="100" reg_code="" chips="9,660" seat="5" name="christopher1992"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="600" reg_code="" chips="38,847" seat="6" name="chalky608"/>
+    <player win="2,100" addon="0" rebuy="0" dealer="0" bet="1,100" reg_code="" chips="21,280" seat="8" name="Cardsharp72"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="13,799" seat="10" name="fkf131"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="100" player="chalky608" no="1" cards=""/>
+   <action type="15" sum="100" player="Cardsharp72" no="2" cards=""/>
+   <action type="15" sum="100" player="fkf131" no="3" cards=""/>
+   <action type="15" sum="100" player="WieYeay" no="4" cards=""/>
+   <action type="15" sum="100" player="Peon384" no="5" cards=""/>
+   <action type="15" sum="100" player="christopher1992" no="6" cards=""/>
+   <action type="1" sum="500" player="chalky608" no="7" cards=""/>
+   <action type="2" sum="1,000" player="Cardsharp72" no="8" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Cardsharp72">X X</cards>
+   <cards type="Pocket" player="fkf131">X X</cards>
+   <action type="0" sum="0" player="fkf131" no="9" cards=""/>
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="10" cards=""/>
+   <cards type="Pocket" player="Peon384">S5 HA</cards>
+   <action type="0" sum="0" player="Peon384" no="11" cards=""/>
+   <cards type="Pocket" player="christopher1992">X X</cards>
+   <action type="0" sum="0" player="christopher1992" no="12" cards=""/>
+   <cards type="Pocket" player="chalky608">X X</cards>
+   <action type="0" sum="0" player="chalky608" no="13" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628323">
+  <general>
+   <startdate>2017-09-04 16:16:58</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="16,920" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,100" reg_code="6729021220" chips="4,685" seat="3" name="Peon384"/>
+    <player win="6,800" addon="0" rebuy="0" dealer="0" bet="4,500" reg_code="" chips="9,560" seat="5" name="christopher1992"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,100" reg_code="" chips="13,699" seat="10" name="fkf131"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="100" player="fkf131" no="1" cards=""/>
+   <action type="15" sum="100" player="WieYeay" no="2" cards=""/>
+   <action type="15" sum="100" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="100" player="christopher1992" no="4" cards=""/>
+   <action type="2" sum="1,000" player="fkf131" no="5" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="6" cards=""/>
+   <cards type="Pocket" player="Peon384">DQ HK</cards>
+   <action type="3" sum="1,000" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="christopher1992">X X</cards>
+   <action type="23" sum="4,400" player="christopher1992" no="8" cards=""/>
+   <cards type="Pocket" player="fkf131">X X</cards>
+   <action type="0" sum="0" player="fkf131" no="9" cards=""/>
+   <action type="0" sum="0" player="Peon384" no="10" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7671628337">
+  <general>
+   <startdate>2017-09-04 16:17:38</startdate>
+   <players>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="1,100" reg_code="" chips="16,820" seat="1" name="WieYeay"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="3,585" reg_code="6729021220" chips="3,585" seat="3" name="Peon384"/>
+    <player win="0" addon="0" rebuy="0" dealer="0" bet="100" reg_code="" chips="11,860" seat="5" name="christopher1992"/>
+    <player win="17,384" addon="0" rebuy="0" dealer="0" bet="13,099" reg_code="" chips="12,599" seat="10" name="fkf131"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="15" sum="100" player="fkf131" no="1" cards=""/>
+   <action type="15" sum="100" player="WieYeay" no="2" cards=""/>
+   <action type="15" sum="100" player="Peon384" no="3" cards=""/>
+   <action type="15" sum="100" player="christopher1992" no="4" cards=""/>
+   <action type="1" sum="500" player="fkf131" no="5" cards=""/>
+   <action type="2" sum="1,000" player="WieYeay" no="6" cards=""/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">HA H4</cards>
+   <action type="3" sum="1,000" player="Peon384" no="7" cards=""/>
+   <cards type="Pocket" player="christopher1992">X X</cards>
+   <action type="0" sum="0" player="christopher1992" no="8" cards=""/>
+   <cards type="Pocket" player="fkf131">D7 SK</cards>
+   <action type="23" sum="12,499" player="fkf131" no="9" cards=""/>
+   <cards type="Pocket" player="WieYeay">X X</cards>
+   <action type="0" sum="0" player="WieYeay" no="10" cards=""/>
+   <action type="7" sum="2,485" player="Peon384" no="11" cards=""/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">DJ H7 CK</cards>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C6</cards>
+  </round>
+  <round no="4">
+   <cards type="River" player="">S6</cards>
+  </round>
+ </game>
+</session>

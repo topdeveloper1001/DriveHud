@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
@@ -71,6 +72,8 @@ namespace DriveHUD.Importers
         protected CancellationTokenSource cancellationTokenSource;
 
         protected abstract ImporterIdentifier Identifier { get; }
+
+        protected abstract ImporterIdentifier[] PipeIdentifiers { get; }
 
         public virtual bool IsRunning
         {
@@ -199,7 +202,8 @@ namespace DriveHUD.Importers
                     if (pokerClientProcess != null && pokerClientProcess.HasExited)
                     {
                         var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
-                        pipeManager.RemoveHandle(Identifier);
+
+                        PipeIdentifiers.ForEach(x => pipeManager.RemoveHandle(x));
 
                         LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has exited", ProcessName));
                     }

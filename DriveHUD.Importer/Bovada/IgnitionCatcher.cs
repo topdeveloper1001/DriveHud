@@ -14,6 +14,7 @@ using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System.Linq;
+using System;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -67,9 +68,18 @@ namespace DriveHUD.Importers.Bovada
         {
             get
             {
-                return ImporterIdentifier.Bovada;
+                return ImporterIdentifier.Ignition;
             }
         }
+
+        protected override ImporterIdentifier[] PipeIdentifiers
+        {
+            get
+            {
+                return new[] { ImporterIdentifier.Ignition, ImporterIdentifier.IgnitionInfo };
+            }
+        }
+
         protected override bool IsEnabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();

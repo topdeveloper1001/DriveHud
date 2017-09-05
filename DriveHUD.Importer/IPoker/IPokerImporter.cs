@@ -34,7 +34,7 @@ namespace DriveHUD.Importers.IPoker
         {
             get
             {
-                throw new NotImplementedException();
+                return "pokerclient";
             }
         }
 
