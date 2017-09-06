@@ -570,38 +570,10 @@
                         Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <!-- HUD NAME ********************************************************************* -->
-                <TextBlock
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Margin="1,5,40,1"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Left"
-                    Text="{ResX Key=Common_Hud_HudName}"
-                    FontSize="13" />
-                <comboboxControl:ComboBoxEx
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Margin="0,0,40,0"
-                    MaxWidth="285"
-                    Height="35"
-                    PopupMaxWidth="255"
-                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Stretch"
-                    IsEnabled="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
-                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
-                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                    ItemsSource="{Binding Layouts}"
-                    DisplayMemberPath="Name"
-                    SelectedValue="{Binding Path=CurrentLayout}">
-                </comboboxControl:ComboBoxEx>
-
                 <!-- TABLE LAYOUT ***************************************************************** -->
                 <TextBlock
                     Grid.Row="0"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Margin="1,5,40,1"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
@@ -610,8 +582,8 @@
 
                 <comboboxControl:ComboBoxEx
                     Grid.Row="1"
-                    Grid.Column="2"
-                    Margin="0,0,5,0"
+                    Grid.Column="1"
+                    Margin="0,0,40,0"                    
                     MaxWidth="285"
                     Height="35"
                     PopupMaxWidth="255"
@@ -630,6 +602,35 @@
                                 Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
                         </DataTemplate>
                     </comboboxControl:ComboBoxEx.ItemTemplate>
+                </comboboxControl:ComboBoxEx>
+                
+                <!-- HUD NAME ********************************************************************* -->
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="1,5,40,1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Text="{ResX Key=Common_Hud_HudName}"
+                    FontSize="13" />
+                
+                <comboboxControl:ComboBoxEx
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="0,0,5,0"
+                    MaxWidth="285"
+                    Height="35"
+                    PopupMaxWidth="255"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Stretch"
+                    IsEnabled="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding Layouts}"
+                    DisplayMemberPath="Name"
+                    SelectedValue="{Binding Path=CurrentLayout}">
                 </comboboxControl:ComboBoxEx>
 
                 <Button
