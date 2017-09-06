@@ -61,7 +61,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetWindowHandle()
         {
-            if (WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero || (!IsTournament && !playerHasSeat))
             {
                 return;
             }

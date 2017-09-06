@@ -68,6 +68,8 @@ namespace DriveHUD.Importers.Bovada
 
         private IEventAggregator eventAggregator;
 
+        protected bool playerHasSeat = false;
+
         public BovadaTable(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
@@ -635,6 +637,10 @@ namespace DriveHUD.Importers.Bovada
 
                 case "CO_OPTION_INFO":
                     ParseOptionInfo(cmdObj);
+                    break;
+
+                case "PLAY_ACCOUNT_CASH_RES":
+                    playerHasSeat = cmdObj.cash > 0;
                     break;
 
                 default:
