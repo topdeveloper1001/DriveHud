@@ -61,7 +61,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetWindowHandle()
         {
-            if (WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero || (!IsTournament && !playerHasSeat))
             {
                 return;
             }
@@ -220,6 +220,8 @@ namespace DriveHUD.Importers.Bovada
         {
             var match = !string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(className) &&
                 className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
+                title.IndexOf("Ignition", StringComparison.OrdinalIgnoreCase) < 0 &&
+                !title.StartsWith("Tournament", StringComparison.OrdinalIgnoreCase) &&
                 !title.StartsWith("#") && !title.Equals("Poker", StringComparison.OrdinalIgnoreCase) && title.IndexOf("Lobby", StringComparison.OrdinalIgnoreCase) < 0;
 
             return match;

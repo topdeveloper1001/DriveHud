@@ -475,6 +475,7 @@ namespace DriveHUD.Application.ViewModels
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
+                    trackConditionsMeterData.BigBlind = sessionData.Source.BigBlind;
 
                     if (sessionData.TotalHands > trackConditionsMeterData.TotalHands)
                     {

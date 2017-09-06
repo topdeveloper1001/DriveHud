@@ -32,7 +32,7 @@ param
 
     [string] $ObfuscatorExcludeFilter = 'vshost',
 
-    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll',
+    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll',
 	
 	[string] $MsiName = 'DriveHUD.msi',
 	
