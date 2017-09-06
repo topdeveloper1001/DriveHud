@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="EnumPokerNetworks.cs" company="Ace Poker Solutions">
+// <copyright file="IPokerHudPanelService.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,16 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Entities
+using System;
+
+namespace DriveHUD.Application.ViewModels.Hud
 {
-    public enum EnumPokerNetworks
+    internal class IPokerHudPanelService : HudPanelService
     {
-        Ignition,
-        Chico,
-        WPN,
-        PokerStars,
-        Poker888,
-        PartyPoker,
-        IPoker
+        /// <summary>
+        /// Get initial table size 
+        /// </summary>
+        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
+        public override Tuple<double, double> GetInitialTableSize()
+        {
+            return new Tuple<double, double>(1024, 726);
+        }
     }
 }

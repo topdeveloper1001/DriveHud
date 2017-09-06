@@ -10,13 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using Model.Settings;
 
 namespace Model.Site
 {
@@ -30,8 +28,7 @@ namespace Model.Site
             {
                 EnumTableType.HU,
                 EnumTableType.Four,
-                EnumTableType.Six,
-                EnumTableType.Eight,
+                EnumTableType.Six,                
                 EnumTableType.Nine,
                 EnumTableType.Ten
             };
@@ -62,7 +59,7 @@ namespace Model.Site
         {
             get
             {
-                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/pokerstars_logo.png";
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/ipoker_logo.png";
             }
         }
 
@@ -102,12 +99,25 @@ namespace Model.Site
 
         public string[] GetHandHistoryFolders()
         {
-            throw new NotImplementedException();
+            return new string[0];
         }
 
         public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
-            throw new NotImplementedException();
+            if (siteModel == null)
+            {
+                return null;
+            }
+
+            var validationResult = new SiteValidationResult(Site)
+            {
+                IsNew = !siteModel.Configured,
+                HandHistoryLocations = GetHandHistoryFolders().ToList(),
+                IsDetected = false,
+                IsEnabled = siteModel.Enabled
+            };
+
+            return validationResult;
         }
     }
 }

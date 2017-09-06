@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerStarsSiteSettingTableConfigurator.cs" company="Ace Poker Solutions">
+// <copyright file="IPokerSiteSettingTableConfigurator.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -13,9 +13,9 @@
 using DriveHUD.Entities;
 using System.Collections.Generic;
 
-namespace DriveHUD.Application.TableConfigurators
+namespace DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators
 {
-    internal class PokerStarsSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
+    internal class IPokerSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
     {
         private const string BackgroundTableImage = "/DriveHUD.Common.Resources;component/images/settings/{0}max.png";
 

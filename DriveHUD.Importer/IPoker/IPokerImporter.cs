@@ -10,13 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System.Linq;
 
 namespace DriveHUD.Importers.IPoker
 {
@@ -54,7 +55,37 @@ namespace DriveHUD.Importers.IPoker
                 return false;
             }
 
-            return title.Contains(parsingResult.Source.TableName);
+            return title.Contains(parsingResult.Source.TableName.Replace(",", string.Empty));
+        }
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            if (heroSeat != 0)
+            {
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
+                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.IPoker)?.PrefferedSeats;
+
+                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+
+                if (prefferedSeat != null)
+                {
+                    var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
+
+                    foreach (var player in playerList)
+                    {
+                        player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                    }
+                }
+
+            }
+
+            return playerList;
         }
     }
 }

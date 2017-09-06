@@ -224,7 +224,7 @@ namespace DriveHUD.Importers
                         continue;
                     }
 
-                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has been found", ProcessName));
+                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{1}\" [{0}] has been found", pokerClientProcess.Id, ProcessName));
                 }
 
                 if (!isInjected)

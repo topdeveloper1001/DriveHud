@@ -411,6 +411,7 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
@@ -421,6 +422,7 @@
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\IPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PartyPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\WinningPokerNetworkSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
@@ -483,6 +485,7 @@
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\IPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
