@@ -170,8 +170,14 @@ namespace DriveHUD.Importers
 
                     if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
                     {
+                        var windowTitle = WinApi.GetWindowText(x.MainWindowHandle);
                         var windowClassName = sb.ToString();
-                        return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
+
+                        if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            LogProvider.Log.Info($"Found the process with main window = [{windowTitle}, {windowClassName}] [{Identifier}]");
+                            return true;
+                        }
                     }
 
                     return false;
@@ -224,7 +230,7 @@ namespace DriveHUD.Importers
                         continue;
                     }
 
-                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{1}\" [{0}] has been found", pokerClientProcess.Id, ProcessName));
+                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" [{1}] has been found", ProcessName, pokerClientProcess.Id));
                 }
 
                 if (!isInjected)
