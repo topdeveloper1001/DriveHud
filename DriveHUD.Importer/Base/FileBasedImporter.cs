@@ -135,7 +135,7 @@ namespace DriveHUD.Importers
 
                         var fs = cf.Value.FileStream;
 
-                        var handText = GetHandTextFromStream(fs, cf.Value.Encoding);
+                        var handText = GetHandTextFromStream(fs, cf.Value.Encoding, cf.Key);
 
                         if (string.IsNullOrEmpty(handText))
                         {
@@ -165,7 +165,8 @@ namespace DriveHUD.Importers
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
                                 TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
-                                FileName = fileName
+                                FileName = fileName,
+                                FullFileName = cf.Key
                             };
 
                             LogProvider.Log.Info($"Found '{cf.Key}' file. [{SiteString}]");
@@ -267,7 +268,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding)
+        protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
             var data = new byte[fs.Length - fs.Position];
 

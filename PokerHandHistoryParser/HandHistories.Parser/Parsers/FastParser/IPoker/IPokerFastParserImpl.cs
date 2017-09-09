@@ -27,10 +27,11 @@ using DriveHUD.Common.Log;
 using System.Globalization;
 using DriveHUD.Entities;
 using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
-    internal sealed class IPokerFastParserImpl : HandHistoryParserFastImpl
+    internal class IPokerFastParserImpl : HandHistoryParserFastImpl
     {
         public override EnumPokerSites SiteName
         {
@@ -65,6 +66,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         }
 
         public override bool RequiresAllInUpdates
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override bool RequiresSeatTypeAdjustment
         {
             get
             {
@@ -327,7 +336,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return handLines[8];
         }
 
-        private string[] GetPlayerLinesFromHandLines(string[] handLines)
+        protected string[] GetPlayerLinesFromHandLines(string[] handLines)
         {
             /*
               Returns all of the detail lines between the <players> tags
@@ -363,7 +372,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetFirstPlayerIndex(string[] handLines)
         {
-            for (int i = 18; i < handLines.Length; i++)
+            for (int i = 10; i < handLines.Length; i++)
             {
                 if (handLines[i][1] == 'p' && handLines[i][4] == 'y')
                 {
@@ -382,8 +391,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 string handLine = handLines[i];
                 handLine = handLine.TrimStart();
 
-                //If we don't have these letters at these positions, we're not a hand line
-                if (handLine[1] != 'c' || handLine[7] != 't')
+                if (!handLine.StartsWith("<cards", StringComparison.OrdinalIgnoreCase))
                 {
                     continue;
                 }
@@ -886,7 +894,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 handLine = handLine.Replace("10<", "T<");
 
                 //We only care about Pocket Cards
-                if (handLine[13] != 'P')
+                if (handLine.IndexOf("type=\"Pocket", StringComparison.OrdinalIgnoreCase) < 1)
                 {
                     continue;
                 }
@@ -901,18 +909,24 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     continue;
                 }
 
-                int playerNameStartIndex = 29;
-                int playerNameEndIndex = handLine.IndexOf("\"", playerNameStartIndex, StringComparison.Ordinal) - 1;
+                int playerNameStartIndex = handLine.IndexOf("player=\"", StringComparison.OrdinalIgnoreCase) + 8;
+
+                int playerNameEndIndex = handLine.IndexOf("\"", playerNameStartIndex, StringComparison.OrdinalIgnoreCase) - 1;
+
                 string playerName = handLine.Substring(playerNameStartIndex,
                                                        playerNameEndIndex - playerNameStartIndex + 1);
+
                 Player player = playerList.First(p => p.PlayerName.Equals(playerName));
 
 
-                int playerCardsStartIndex = playerNameEndIndex + 3;
+                int playerCardsStartIndex = handLine.IndexOf(">", StringComparison.OrdinalIgnoreCase) + 1;
                 int playerCardsEndIndex = handLine.Length - 9;
+
                 string playerCardString = handLine.Substring(playerCardsStartIndex,
                                                         playerCardsEndIndex - playerCardsStartIndex + 1);
+
                 string[] cards = playerCardString.Split(' ');
+
                 if (cards.Length > 1)
                 {
                     player.HoleCards = HoleCards.NoHolecards(player.PlayerName);
@@ -947,20 +961,29 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 //To make sure we know the exact character location of each card, turn 10s into Ts (these are recognized by our parser)
                 handLine = handLine.Replace("10", "T");
 
+                var typeIndex = handLine.IndexOf("type=\"");
+
+                if (typeIndex < 1)
+                {
+                    return BoardCards.FromCards(boardCards); ;
+                }
+
+                var typeFirstLetter = handLine[typeIndex + 6];
+
                 //The suit/ranks are reversed, so we need to reverse them when adding them to our board card string
 
                 //Flop
-                if (handLine[13] == 'F')
+                if (typeFirstLetter == 'F')
                 {
                     boardCards += new Card(handLine[30], handLine[29]) + "," + new Card(handLine[33], handLine[32]) + "," + new Card(handLine[36], handLine[35]);
                 }
                 //Turn
-                if (handLine[13] == 'T')
+                if (typeFirstLetter == 'T')
                 {
                     boardCards += "," + new Card(handLine[30], handLine[29]);
                 }
                 //River
-                if (handLine[13] == 'R')
+                if (typeFirstLetter == 'R')
                 {
                     boardCards += "," + new Card(handLine[31], handLine[30]);
                     break;
@@ -1177,6 +1200,115 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return null;
+        }
+
+        protected override void AdjustSeatTypes(HandHistory handHistory)
+        {
+            if (!handHistory.GameDescription.IsTournament || handHistory.GameDescription.Tournament == null)
+            {
+                return;
+            }
+
+            // detect table size using tournament name
+            if (!string.IsNullOrEmpty(handHistory.GameDescription.Tournament.TournamentName))
+            {
+                var tournamentName = handHistory.GameDescription.Tournament.TournamentName.Trim();
+
+                // heads up are always 2-max
+                if (tournamentName.IndexOf("Heads Up", StringComparison.OrdinalIgnoreCase) > 0 ||
+                    tournamentName.IndexOf(" HU", StringComparison.OrdinalIgnoreCase) > 0)
+                {
+                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(2);
+                    return;
+                }
+
+                // premium step are always 3-max (bet365)
+                if (tournamentName.IndexOf("Premium Step", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(3);
+                    return;
+                }
+
+                // "SUPER TURBO" $100 Double Up*4 
+                var playerNumberIndex = tournamentName.LastIndexOf("*", StringComparison.Ordinal);
+
+                if (playerNumberIndex > 0 && tournamentName.Length > playerNumberIndex)
+                {
+                    var playerNumberText = tournamentName.Substring(playerNumberIndex + 1);
+
+                    if (TryParseSeatNumber(handHistory, playerNumberText))
+                    {
+                        return;
+                    }
+                }
+
+                playerNumberIndex = tournamentName.LastIndexOf(" x", StringComparison.Ordinal);
+
+                if (playerNumberIndex > 0 && tournamentName.Length > (playerNumberIndex + 1))
+                {
+                    var playerNumberText = tournamentName.Substring(playerNumberIndex + 2);
+
+                    if (TryParseSeatNumber(handHistory, playerNumberText))
+                    {
+                        return;
+                    }
+                }
+            }
+
+            // detect table size using predefined numbers
+            var chipsSum = handHistory.Players.Sum(x => x.StartingStack);
+
+            var maxPlayers = 0;
+
+            if (chipsSum == 13500)
+            {
+                maxPlayers = 9;
+            }
+            else if (chipsSum == 9000)
+            {
+                maxPlayers = 6;
+            }
+            else if (chipsSum == 4800)
+            {
+                maxPlayers = 6;
+            }
+
+            if (maxPlayers != 0 && handHistory.Players.Count <= maxPlayers)
+            {
+                handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(maxPlayers);
+                return;
+            }
+
+            var seatsSet = new HashSet<int>(handHistory.Players.Select(x => x.SeatNumber));
+
+            if (seatsSet.Contains(7))
+            {
+                handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(10);
+            }
+            else if (seatsSet.Contains(2) || seatsSet.Contains(4) || seatsSet.Contains(9))
+            {
+                handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(9);
+            }
+            else if (seatsSet.Contains(1) || seatsSet.Contains(5) || seatsSet.Contains(6) || seatsSet.Contains(10))
+            {
+                handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(6);
+            }
+        }
+
+        private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)
+        {
+            int playerNumber;
+
+            if (int.TryParse(playerNumberText, out playerNumber))
+            {
+                if (handHistory.Players.Count <= playerNumber)
+                {
+                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(playerNumber);
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

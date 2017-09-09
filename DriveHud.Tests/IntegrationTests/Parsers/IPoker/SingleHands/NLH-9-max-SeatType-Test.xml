@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
+ <general>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Rocket 2x €5 Ticket Gtd, 909934797</tablename>  
+  <startdate>2017-09-07 16:46:42</startdate>
+  <tournamentcurrency>1</tournamentcurrency>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <tournamentcode>909934797</tournamentcode>
+  <tournamentname>Rocket 2x €5 Ticket Gtd</tournamentname>
+  <buyin>€0.45 + €0.05</buyin>
+  <totalbuyin>€0.50</totalbuyin>
+ </general>
+ <game gamecode="7677238685">
+  <general>
+	<startdate>2017-09-07 17:16:18</startdate>
+   <players>
+    <player reg_code="" dealer="0" chips="397" name="Double2Nature" seat="4"/>
+    <player reg_code="" dealer="0" chips="824" name="Trezh" seat="2"/>
+    <player reg_code="" dealer="0" chips="1,612" name="cherry2412" seat="6"/>
+    <player reg_code="" dealer="1" chips="445" name="dsavant" seat="3"/>
+    <player reg_code="" dealer="0" chips="782" name="nagyfonok36" seat="8"/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Double2Nature" sum="€8" no="1" type="15"/>
+   <action player="cherry2412" sum="€8" no="2" type="15"/>
+   <action player="nagyfonok36" sum="€8" no="3" type="15"/>
+   <action player="Trezh" sum="€8" no="4" type="15"/>
+   <action player="dsavant" sum="€8" no="5" type="15"/>
+   <action player="Double2Nature" sum="€40" no="6" type="1"/>
+   <action player="cherry2412" sum="€80" no="7" type="2"/>
+  </round>
+ </game>
+</session>

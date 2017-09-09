@@ -52,13 +52,14 @@ namespace HandHistories.Parser.Parsers.Factory
                 case EnumPokerSites.PokerStars:
                     return new PokerStarsFastParserImpl(siteName);
                 case EnumPokerSites.IPoker:
+                    return new IPokerFastParserImpl();
                 case EnumPokerSites.Bodog:
                 case EnumPokerSites.Ignition:
                 case EnumPokerSites.Bovada:
                 case EnumPokerSites.BetOnline:
                 case EnumPokerSites.SportsBetting:
                 case EnumPokerSites.TigerGaming:
-                    return new IPokerFastParserImpl();
+                    return new IPokerBovadaFastParserImpl();
                 case EnumPokerSites.Poker888:
                     return new Poker888FastParserImpl();
                 case EnumPokerSites.WinningPokerNetwork:

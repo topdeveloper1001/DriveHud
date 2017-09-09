@@ -55,5 +55,7 @@ namespace DriveHUD.Importers
         public PlayerCollectionItem[] AddedPlayers { get; set; }
 
         public string FileName { get; set; }
+
+        public string FullFileName { get; set; }
     }
 }

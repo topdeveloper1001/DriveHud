@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6730143411">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL €0.01/€0.02</gametype>
+  <tablename>Castellaro, 817750308</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:07:31</duration>
+  <gamecount>11</gamecount>
+  <startdate>2017-09-07 13:36:22</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>€0.20</bets>
+  <wins>€0.13</wins>
+  <chipsin>€1.98</chipsin>
+  <chipsout>€1.93</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general> 
+ <game gamecode="7674870553">
+  <general>
+   <startdate>2017-09-07 13:38:48</startdate>
+   <players>
+    <player dealer="1" chips="€4.31" seat="1" win="€0" bet="€0" name="GARALD84"/>
+    <player dealer="0" chips="€1.98" seat="3" win="€0" bet="€0.09" name="Peon384"/>
+    <player dealer="0" chips="€0.99" seat="5" win="€0.17" bet="€0.09" name="papernet"/>
+    <player dealer="0" chips="€3.82" seat="6" win="€0" bet="€0" name="JacubEk1987"/>
+    <player dealer="0" chips="€2" seat="10" win="€0" bet="€0" name="Bedak16"/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" cards="" sum="€0.01" type="1" no="1"/>
+   <action player="papernet" cards="" sum="€0.02" type="2" no="2"/>
+  </round>
+  <round no="1">
+   <cards player="JacubEk1987" type="Pocket">X X</cards>
+   <action player="JacubEk1987" cards="" sum="€0" type="0" no="3"/>
+   <cards player="Bedak16" type="Pocket">X X</cards>
+   <action player="Bedak16" cards="" sum="€0" type="0" no="4"/>
+   <cards player="GARALD84" type="Pocket">X X</cards>
+   <action player="GARALD84" cards="" sum="€0" type="0" no="5"/>
+   <cards player="Peon384" type="Pocket">S9 D9</cards>
+   <action player="Peon384" cards="" sum="€0.01" type="3" no="6"/>
+   <cards player="papernet" type="Pocket">H5 SJ</cards>
+   <action player="papernet" cards="" sum="€0" type="4" no="7"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S4 DK C3</cards>
+   <action player="Peon384" cards="" sum="€0" type="4" no="8"/>
+   <action player="papernet" cards="" sum="€0" type="4" no="9"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D6</cards>
+   <action player="Peon384" cards="" sum="€0" type="4" no="10"/>
+   <action player="papernet" cards="" sum="€0" type="4" no="11"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C7</cards>
+   <action player="Peon384" cards="" sum="€0.02" type="5" no="12"/>
+   <action player="papernet" cards="" sum="€0.07" type="23" no="13"/>
+   <action player="Peon384" cards="" sum="€0.05" type="3" no="14"/>
+  </round>
+ </game>
+ </session>

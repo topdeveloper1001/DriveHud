@@ -45,7 +45,7 @@ namespace DriveHUD.Importers
         /// <returns>List of possible stacks</returns>
         public static decimal[] GetPossibleInitialeStacksSizes()
         {
-            return new decimal[] { 250m, 300m, 500m, 1000m, 1500m, 2000m, 3000m, 5000m, 10000m, 30000m };
+            return new decimal[] { 250m, 300m, 500m, 800m, 1000m, 1500m, 2000m, 3000m, 5000m, 10000m, 30000m, 50000m };
         }
 
         /// <summary>
