@@ -17,6 +17,7 @@
 
     <!-- Ignore file version during upgrade -->
     <Property Id="REINSTALLMODE" Value="amus" />
+    <Property Id="MSIFASTINSTALL" Value="1" />
 
     <MajorUpgrade
       Schedule="afterInstallExecute"
