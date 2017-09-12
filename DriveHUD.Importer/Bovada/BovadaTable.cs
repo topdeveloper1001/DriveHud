@@ -851,7 +851,7 @@ namespace DriveHUD.Importers.Bovada
 
                     LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
 
-                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo);
+                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
 
                     eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
                 }

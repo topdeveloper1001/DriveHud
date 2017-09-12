@@ -262,7 +262,7 @@ namespace DriveHUD.Importers
                 gameInfo.TableType = ParseTableType(result);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
 
-                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo);
+                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
