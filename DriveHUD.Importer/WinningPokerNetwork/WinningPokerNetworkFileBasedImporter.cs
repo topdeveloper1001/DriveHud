@@ -142,7 +142,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return playerList;
         }
 
-        protected override string GetHandTextFromStream(Stream fs, Encoding encoding)
+        protected override string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
             // possible for WPN, since they remove partial data if table was closed before hand had been finished
             if (fs.Position > fs.Length)

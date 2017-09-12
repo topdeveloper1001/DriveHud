@@ -22,6 +22,7 @@ using Model.Site;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Input;
@@ -42,6 +43,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             {
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
                 { EnumPokerSites.Ignition, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition) },
+                { EnumPokerSites.IPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.IPoker) },
                 { EnumPokerSites.BetOnline, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BetOnline) },
                 { EnumPokerSites.BlackChipPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.BlackChipPoker) },
                 { EnumPokerSites.PartyPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.PartyPoker) },
@@ -50,7 +52,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
-                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) }                
             };
 
             SelectedSiteViewModel = new SiteViewModel();
@@ -63,6 +65,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
             AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
             EnableCommand = new RelayCommand(x => SelectedSite.Enabled = !SelectedSite.Enabled);
+            HelpCommand = new RelayCommand(Help);
         }
 
         public override void SetSettingsModel(ISettingsBase model)
@@ -220,10 +223,16 @@ namespace DriveHUD.Application.ViewModels.Settings
         #region ICommand
 
         public ICommand SelectDirectoryCommand { get; set; }
+
         public ICommand AddHandHistoryLocationCommand { get; set; }
+
         public ICommand DeleteHandHistoryLocationCommand { get; set; }
+
         public ICommand AutoDetectHandHistoryLocationCommand { get; set; }
+
         public ICommand EnableCommand { get; set; }
+
+        public ICommand HelpCommand { get; set; }
 
         #endregion
 
@@ -294,6 +303,26 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             var folders = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(SelectedSiteType).GetHandHistoryFolders();
             SelectedSite.HandHistoryLocationList.AddRange(folders.Except(SelectedSite.HandHistoryLocationList));
+        }
+
+        private void Help(object obj)
+        {
+            if (SelectedSite == null || !ResourceStrings.PokerSiteHelpLinks.ContainsKey(SelectedSite.PokerSite))
+            {
+                return;
+            }
+
+            var helpLinkKey = ResourceStrings.PokerSiteHelpLinks[SelectedSite.PokerSite];
+            var helpLink = CommonResourceManager.Instance.GetResourceString(helpLinkKey);
+
+            try
+            {
+                Process.Start(BrowserHelper.GetDefaultBrowserPath(), helpLink);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Link {helpLink} couldn't be opened", e);
+            }
         }
 
         private string GetTableTypeString(EnumTableType tableType)

@@ -69,6 +69,22 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             get { return false; }
         }
 
+        public virtual bool RequiresSeatTypeAdjustment
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public virtual bool RequiresTournamentSpeedAdjustment
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return HandSplitRegex.Split(rawHandHistories)
@@ -245,12 +261,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
                 }
 
-                // not sure !
-                //if (RequiresTotalPotCalculation)
-                //{
-                //    handHistory.TotalPot = PotCalculator.CalculateTotalPot(handHistory);
-                //    handHistory.Rake = PotCalculator.CalculateRake(handHistory);
-                //}
+                if (RequiresSeatTypeAdjustment)
+                {
+                    AdjustSeatTypes(handHistory);
+                }
+
+                if (handHistory.GameDescription.IsTournament && RequiresTournamentSpeedAdjustment)
+                {
+                    AdjustTournamentSpeed(handHistory);
+                }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
 
@@ -713,6 +732,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         protected virtual string ClearHandHistory(string handText)
         {
             return handText;
+        }
+
+        protected virtual void AdjustSeatTypes(HandHistory handHistory)
+        {
+        }
+
+        protected virtual void AdjustTournamentSpeed(HandHistory handHistory)
+        {
         }
     }
 }

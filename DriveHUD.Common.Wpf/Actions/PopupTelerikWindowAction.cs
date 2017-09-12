@@ -10,21 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Wpf.Controls;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Windows;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Common.Wpf.Actions
 {
     public class PopupTelerikWindowAction : PopupAction<RadWindow>
-    {        
+    {
         protected override RadWindow CreateWindow()
-        {            
+        {
             return new RadWindow();
         }
 
         protected override void ApplyStyles(RadWindow window, INotification notification)
-        {                        
+        {
             window.Header = notification.Title;
         }
 
@@ -35,12 +37,15 @@ namespace DriveHUD.Common.Wpf.Actions
                 window.Close();
             }
         }
+
         protected override void OnClosed(RadWindow window, Action callback)
         {
             EventHandler<WindowClosedEventArgs> handler = null;
 
             handler = (o, e) =>
             {
+                NonTopmostPopup.DisableTopMost = false;
+
                 window.Closed -= handler;
                 window.Content = null;
 
@@ -52,8 +57,11 @@ namespace DriveHUD.Common.Wpf.Actions
 
         protected override void Show(RadWindow window)
         {
+            NonTopmostPopup.DisableTopMost = true;
+
             if (IsModal)
-            {
+            {                
+                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }
@@ -66,5 +74,5 @@ namespace DriveHUD.Common.Wpf.Actions
             window.Left = left;
             window.Top = top;
         }
-    }   
+    }
 }

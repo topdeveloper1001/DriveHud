@@ -548,6 +548,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string Common_Help {
+            get {
+                return ResourceManager.GetString("Common_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Holdem.
         /// </summary>
         internal static string Common_Holdem {

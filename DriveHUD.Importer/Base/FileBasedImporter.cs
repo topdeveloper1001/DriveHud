@@ -135,7 +135,7 @@ namespace DriveHUD.Importers
 
                         var fs = cf.Value.FileStream;
 
-                        var handText = GetHandTextFromStream(fs, cf.Value.Encoding);
+                        var handText = GetHandTextFromStream(fs, cf.Value.Encoding, cf.Key);
 
                         if (string.IsNullOrEmpty(handText))
                         {
@@ -165,7 +165,8 @@ namespace DriveHUD.Importers
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
                                 TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
-                                FileName = fileName
+                                FileName = fileName,
+                                FullFileName = cf.Key
                             };
 
                             LogProvider.Log.Info($"Found '{cf.Key}' file. [{SiteString}]");
@@ -261,13 +262,13 @@ namespace DriveHUD.Importers
                 gameInfo.TableType = ParseTableType(result);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
 
-                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo);
+                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
         }
 
-        protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding)
+        protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
             var data = new byte[fs.Length - fs.Position];
 
@@ -307,8 +308,11 @@ namespace DriveHUD.Importers
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
-            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled;
-            var moveLocation = settings.SiteSettings.ProcessedDataLocation;
+            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled && !string.IsNullOrEmpty(settings.SiteSettings.ProcessedDataLocation);
+
+            var siteFolder = Site.ToString();
+            var dateFolder = DateTime.Now.ToString("yyyy-MM");
+            var moveLocation = Path.Combine(settings.SiteSettings.ProcessedDataLocation, siteFolder, dateFolder);
 
             foreach (var capturedFile in capturedFiles)
             {

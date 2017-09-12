@@ -475,6 +475,7 @@ namespace DriveHUD.Application.ViewModels
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
+                    trackConditionsMeterData.BigBlind = sessionData.Source.BigBlind;
 
                     if (sessionData.TotalHands > trackConditionsMeterData.TotalHands)
                     {
@@ -668,20 +669,19 @@ namespace DriveHUD.Application.ViewModels
                     LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                 }
 
-                if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name) ||
+                if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name) ||
                     string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.DecodedName) ||
-                    StorageModel.PlayerSelectedItem?.PokerSite == EnumPokerSites.Unknown))
+                    StorageModel.PlayerSelectedItem?.PokerSite == EnumPokerSites.Unknown)
                 {
-                    isSetPlayerIdMessageShown = true;
+                    if (e.Hero == null)
+                    {
+                        return;
+                    }
 
                     System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
                     {
-                        NotificationRequest.Raise(
-                           new PopupActionNotification
-                           {
-                               Content = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Message"),
-                               Title = CommonResourceManager.Instance.GetResourceString("Notifications_SelectPlayer_Title"),
-                           }, n => { });
+                        StorageModel.PlayerSelectedItem = StorageModel.PlayerCollection
+                            .FirstOrDefault(x => x.Name == e.Hero.PlayerName && x.PokerSite == e.GameInfo.PokerSite);
                     });
                 }
             }

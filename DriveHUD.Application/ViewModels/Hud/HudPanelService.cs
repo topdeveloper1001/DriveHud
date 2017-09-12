@@ -240,7 +240,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PokerSiteId, hudToolViewModel.Parent.PlayerName);
 
                 var playerNoteView = new PlayerNoteView(playerNoteViewModel);
-
+                playerNoteView.Owner = System.Windows.Application.Current.MainWindow;
                 playerNoteView.ShowDialog();
 
                 if (playerNoteViewModel.PlayerNoteEntity == null)

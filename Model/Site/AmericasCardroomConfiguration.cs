@@ -232,7 +232,7 @@ namespace Model.Site
                             validationResult.HandHistoryLocations.Add(xmlValues[ProfileHandHistoryId]);
                         }
 
-                        if (xmlValues.ContainsKey(ProfileSaveHandHistoryId) && (xmlValues[ProfileSaveHandHistoryId] != CorrectSaveHandHistoryTag))
+                        if (xmlValues.ContainsKey(ProfileSaveHandHistoryId) && (!string.IsNullOrEmpty(xmlValues[ProfileSaveHandHistoryId]) && xmlValues[ProfileSaveHandHistoryId] != CorrectSaveHandHistoryTag))
                         {
                             var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_WPN_Validation_SaveHandHistory"), RegistryDisplayName, settingsFile.Directory?.Name);
                             validationResult.Issues.Add(issue);

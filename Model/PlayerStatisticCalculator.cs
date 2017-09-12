@@ -432,10 +432,19 @@ namespace Model
                 stat.Totalrakeincents = 0;
             }
 
-            stat.Buttonstealfaced = isDealer && stealAttempt.Faced ? 1 : 0;
-            stat.Buttonstealdefended = isDealer && stealAttempt.Defended ? 1 : 0;
-            stat.Buttonstealfolded = isDealer && stealAttempt.Folded ? 1 : 0;
-            stat.Buttonstealreraised = isDealer && stealAttempt.Raised ? 1 : 0;
+            if (cutoff != null)
+            {
+                var cutoffAction = preflops
+                    .Where(x => x.PlayerName == cutoff.PlayerName && x.HandActionType != HandActionType.ANTE)
+                    .FirstOrDefault();
+
+                var cutoffRaised = cutoffAction != null ? cutoffAction.IsRaise() : false;
+
+                stat.Buttonstealfaced = isDealer && cutoffRaised ? 1 : 0;
+                stat.Buttonstealdefended = isDealer && cutoffRaised && vpip ? 1 : 0;
+                stat.Buttonstealfolded = isDealer && cutoffRaised && !vpip ? 1 : 0;
+                stat.Buttonstealreraised = isDealer && cutoffRaised && pfr ? 1 : 0;
+            }
 
             stat.Bigblindstealfaced = isBigBlind && stealAttempt.Faced ? 1 : 0;
             stat.Bigblindstealdefended = isBigBlind && stealAttempt.Defended ? 1 : 0;

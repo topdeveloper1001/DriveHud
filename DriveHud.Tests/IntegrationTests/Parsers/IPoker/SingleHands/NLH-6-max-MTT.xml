@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6729021220">
+	<general>
+		<client_version>17.5.5.19</client_version>
+		<uncalled_bet_enabled>false</uncalled_bet_enabled>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Sat €20 Ticket - 2 tickets gtd, 909607878</tablename>
+		<tournamentcurrency>EUR</tournamentcurrency>
+		<duration>00:37:43</duration>
+		<gamecount>35</gamecount>
+		<startdate>2017-09-04 15:40:33</startdate>
+		<currency>USD</currency>
+		<nickname>Peon384</nickname>
+		<bets>10,000</bets>
+		<wins>0</wins>
+		<chipsin>9,970</chipsin>
+		<chipsout>0</chipsout>
+		<statuspoints>Club1.80</statuspoints>
+		<awardpoints>Club1.80</awardpoints>
+		<ipoints>Club1.80</ipoints>
+		<tournamentcode>909153222</tournamentcode>
+		<tournamentname>Sat €20 Ticket - 2 tickets gtd</tournamentname>
+		<place>13</place>
+		<buyin>€0.91 + €0.09</buyin>
+		<totalbuyin>€1</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="7671600692">
+		<general>
+			<startdate>2017-09-04 15:40:33</startdate>
+			<players>
+				<player win="0" addon="0" rebuy="0" dealer="1" bet="5" reg_code="" chips="10,000" seat="1" name="WieYeay"/>
+				<player win="0" addon="0" rebuy="0" dealer="0" bet="30" reg_code="6729021220" chips="10,000" seat="3" name="Peon384"/>
+				<player win="0" addon="0" rebuy="0" dealer="0" bet="55" reg_code="" chips="10,000" seat="5" name="kastokill"/>
+				<player win="245" addon="0" rebuy="0" dealer="0" bet="155" reg_code="" chips="10,000" seat="6" name="chalky608"/>
+			</players>
+		</general>
+		<round no="0">
+			<action type="15" sum="5" player="Peon384" no="1" cards=""/>
+			<action type="15" sum="5" player="kastokill" no="2" cards=""/>
+			<action type="15" sum="5" player="chalky608" no="3" cards=""/>
+			<action type="15" sum="5" player="WieYeay" no="4" cards=""/>
+			<action type="1" sum="25" player="Peon384" no="5" cards=""/>
+			<action type="2" sum="50" player="kastokill" no="6" cards=""/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="chalky608">X X</cards>
+			<action type="23" sum="150" player="chalky608" no="7" cards=""/>
+			<cards type="Pocket" player="WieYeay">X X</cards>
+			<action type="0" sum="0" player="WieYeay" no="8" cards=""/>
+			<cards type="Pocket" player="Peon384">H5 D8</cards>
+			<action type="0" sum="0" player="Peon384" no="9" cards=""/>
+			<cards type="Pocket" player="kastokill">X X</cards>
+			<action type="0" sum="0" player="kastokill" no="10" cards=""/>
+		</round>
+	</game>
+</session>

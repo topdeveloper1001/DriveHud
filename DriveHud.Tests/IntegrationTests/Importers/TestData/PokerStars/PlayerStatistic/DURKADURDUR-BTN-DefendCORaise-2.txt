@@ -1,0 +1,44 @@
+PokerStars Game #47154292827:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:54:57 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 1: gebek8923 ($238.35 in chips)
+Seat 3: iancu4 ($165.90 in chips)
+Seat 4: fakker11 ($200 in chips)
+Seat 5: chrisdm ($217 in chips)
+Seat 6: DURKADURDUR ($203 in chips)
+gebek8923: posts small blind $1
+mad.afurable: is sitting out
+iancu4: posts big blind $2
+*** HOLE CARDS ***
+mad.afurable leaves the table
+fakker11: folds
+chrisdm: raises $4 to $6
+DURKADURDUR: calls $6
+gebek8923: calls $5
+iancu4: folds
+*** FLOP *** [9h Kh 4h]
+gebek8923: checks
+chrisdm: checks
+DURKADURDUR: bets $14
+gebek8923: calls $14
+chrisdm: folds
+*** TURN *** [9h Kh 4h] [As]
+TheKaas joins the table at seat #2
+gebek8923: checks
+DURKADURDUR: bets $27
+gebek8923: calls $27
+*** RIVER *** [9h Kh 4h As] [9d]
+gebek8923: bets $191.35 and is all-in
+DURKADURDUR: calls $156 and is all-in
+Uncalled bet ($35.35) returned to gebek8923
+*** SHOW DOWN ***
+gebek8923: shows [9s 9c] (four of a kind, Nines)
+DURKADURDUR: shows [4c 4d] (a full house, Fours full of Nines)
+gebek8923 collected $412 from pot
+*** SUMMARY ***
+Total pot $414 | Rake $2
+Board [9h Kh 4h As 9d]
+Seat 1: gebek8923 (small blind) showed [9s 9c] and won ($412) with four of a kind, Nines
+Seat 3: iancu4 (big blind) folded before Flop
+Seat 4: fakker11 folded before Flop (didn't bet)
+Seat 5: chrisdm folded on the Flop
+Seat 6: DURKADURDUR (button) showed [4c 4d] and lost with a full house, Fours full of Nines

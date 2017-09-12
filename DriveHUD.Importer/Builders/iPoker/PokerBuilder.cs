@@ -510,45 +510,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             return gameGeneral;
         }
-
-        private Dictionary<int, Dictionary<int, int>> seatMap = new Dictionary<int, Dictionary<int, int>>
-        {
-            { 2, new Dictionary<int, int>
-                 {
-                    { 1, 3 },
-                    { 2, 8 }
-                 }
-            },
-            { 4, new Dictionary<int, int>
-                {
-                    {1, 2},
-                    {2, 4},
-                    {3, 7},
-                    {4, 9}
-                }
-            },
-            { 6, new Dictionary<int, int>
-                 {
-                    { 1, 1 },
-                    { 2, 3 },
-                    { 3, 5 },
-                    { 4, 6 },
-                    { 5, 8 },
-                    { 6, 10 }
-                 }
-            }
-        };
-
-        private int ConvertSeat(int seat)
-        {
-            if (!seatMap.ContainsKey(handModel.TableType) || !seatMap[handModel.TableType].ContainsKey(seat))
-            {
-                return seat;
-            }
-
-            return seatMap[handModel.TableType][seat];
-        }
-
+        
         /// <summary>
         /// Adjusts players seats based on Preferred Seat setting
         /// </summary>

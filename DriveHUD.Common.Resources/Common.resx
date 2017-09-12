@@ -855,4 +855,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudPlayerType_Import" xml:space="preserve">
     <value>Import</value>
   </data>
+  <data name="Common_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
 </root>

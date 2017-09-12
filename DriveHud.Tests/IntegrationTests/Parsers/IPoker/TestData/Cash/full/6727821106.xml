@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6727821106">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL €0.01/€0.02</gametype>
+  <tablename>Caslano, 817749865</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:07:10</duration>
+  <gamecount>12</gamecount>
+  <startdate>2017-09-01 15:15:38</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>€0.19</bets>
+  <wins>€0.19</wins>
+  <chipsin>€0.89</chipsin>
+  <chipsout>€0.80</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general>
+ <game gamecode="7668184532">
+  <general>
+   <startdate>2017-09-01 15:15:38</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.27" chips="€2.01" seat="1" win="€0.53" dealer="0"/>
+    <player name="grizzly2509" bet="€0.02" chips="€2.33" seat="3" win="€0" dealer="0"/>
+    <player name="Kosenkov89" bet="€0.27" chips="€2.57" seat="6" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€3.98" seat="10" win="€0" dealer="1"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="hjdsplt"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="grizzly2509"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Kosenkov89">CK CA</cards>
+   <action cards="" type="23" no="3" sum="€0.06" player="Kosenkov89"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="4" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">C4 H4</cards>
+   <action cards="" type="3" no="5" sum="€0.05" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="6" sum="€0" player="grizzly2509"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">S2 C2 D9</cards>
+   <action cards="" type="4" no="7" sum="€0" player="hjdsplt"/>
+   <action cards="" type="5" no="8" sum="€0.07" player="Kosenkov89"/>
+   <action cards="" type="3" no="9" sum="€0.07" player="hjdsplt"/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">D8</cards>
+   <action cards="" type="4" no="10" sum="€0" player="hjdsplt"/>
+   <action cards="" type="5" no="11" sum="€0.14" player="Kosenkov89"/>
+   <action cards="" type="3" no="12" sum="€0.14" player="hjdsplt"/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">H5</cards>
+   <action cards="" type="4" no="13" sum="€0" player="hjdsplt"/>
+   <action cards="" type="4" no="14" sum="€0" player="Kosenkov89"/>
+  </round>
+ </game>
+ <game gamecode="7668184787">
+  <general>
+   <startdate>2017-09-01 15:16:25</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.04" chips="€2.27" seat="1" win="€0.07" dealer="1"/>
+    <player name="grizzly2509" bet="€0.01" chips="€2.31" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0.02" chips="€2" seat="5" win="€0" dealer="0"/>
+    <player name="Kosenkov89" bet="€0" chips="€2.30" seat="6" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€3.98" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="grizzly2509"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="madarassandor"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="Kosenkov89"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="4" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="23" no="5" sum="€0.04" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="6" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="madarassandor"/>
+  </round>
+ </game>
+ <game gamecode="7668184900">
+  <general>
+   <startdate>2017-09-01 15:16:47</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.36" chips="€2.30" seat="1" win="€0.63" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.30" seat="3" win="€0" dealer="1"/>
+    <player name="madarassandor" bet="€0.06" chips="€1.98" seat="5" win="€0" dealer="0"/>
+    <player name="Kosenkov89" bet="€0.18" chips="€2.30" seat="6" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0.06" chips="€3.98" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="madarassandor"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="Kosenkov89"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="23" no="3" sum="€0.06" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="3" no="4" sum="€0.06" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="3" no="6" sum="€0.05" player="madarassandor"/>
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="3" no="7" sum="€0.04" player="Kosenkov89"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C2 DJ C3</cards>
+   <action cards="" type="4" no="8" sum="€0" player="madarassandor"/>
+   <action cards="" type="5" no="9" sum="€0.12" player="Kosenkov89"/>
+   <action cards="" type="0" no="10" sum="€0" player="limpieza"/>
+   <action cards="" type="23" no="11" sum="€0.30" player="hjdsplt"/>
+   <action cards="" type="0" no="12" sum="€0" player="madarassandor"/>
+   <action cards="" type="0" no="13" sum="€0" player="Kosenkov89"/>
+  </round>
+ </game>
+ <game gamecode="7668185353">
+  <general>
+   <startdate>2017-09-01 15:17:33</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.04" chips="€2.57" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.30" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0.04" chips="€1.92" seat="5" win="€0" dealer="1"/>
+    <player name="Kosenkov89" bet="€0.01" chips="€2.12" seat="6" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0.10" chips="€0.80" seat="8" win="€0.19" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€3.92" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="Kosenkov89"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="23" no="4" sum="€0.04" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="3" no="6" sum="€0.04" player="madarassandor"/>
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="Kosenkov89"/>
+   <cards type="Pocket" player="Peon384">CJ HA</cards>
+   <action cards="" type="3" no="8" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H7 DA DJ</cards>
+   <action cards="" type="5" no="9" sum="€0.06" player="Peon384"/>
+   <action cards="" type="0" no="10" sum="€0" player="hjdsplt"/>
+   <action cards="" type="0" no="11" sum="€0" player="madarassandor"/>
+  </round>
+ </game>
+ <game gamecode="7668185525">
+  <general>
+   <startdate>2017-09-01 15:18:02</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0" chips="€2.53" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0.06" chips="€2.30" seat="3" win="€0.09" dealer="0"/>
+    <player name="madarassandor" bet="€0" chips="€1.88" seat="5" win="€0" dealer="0"/>
+    <player name="Kosenkov89" bet="€0" chips="€2.11" seat="6" win="€0" dealer="1"/>
+    <player name="Peon384" bet="€0.01" chips="€0.89" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0.02" chips="€3.92" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="Peon384"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="limpieza"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="23" no="4" sum="€0.06" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="madarassandor"/>
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="0" no="6" sum="€0" player="Kosenkov89"/>
+   <cards type="Pocket" player="Peon384">H8 SK</cards>
+   <action cards="" type="0" no="7" sum="€0" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="8" sum="€0" player="limpieza"/>
+  </round>
+ </game>
+ <game gamecode="7668185916">
+  <general>
+   <startdate>2017-09-01 15:18:34</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.02" chips="€2.53" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.33" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0.08" chips="€1.88" seat="5" win="€0.16" dealer="0"/>
+    <player name="Kosenkov89" bet="€0.06" chips="€2.11" seat="6" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0" chips="€0.88" seat="8" win="€0" dealer="1"/>
+    <player name="limpieza" bet="€0.01" chips="€3.90" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="limpieza"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="hjdsplt"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="3" no="4" sum="€0.02" player="madarassandor"/>
+   <cards type="Pocket" player="Kosenkov89">X X</cards>
+   <action cards="" type="23" no="5" sum="€0.06" player="Kosenkov89"/>
+   <cards type="Pocket" player="Peon384">CJ D4</cards>
+   <action cards="" type="0" no="6" sum="€0" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="8" sum="€0" player="hjdsplt"/>
+   <action cards="" type="3" no="9" sum="€0.04" player="madarassandor"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">H2 D3 H8</cards>
+   <action cards="" type="4" no="10" sum="€0" player="madarassandor"/>
+   <action cards="" type="4" no="11" sum="€0" player="Kosenkov89"/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C8</cards>
+   <action cards="" type="5" no="12" sum="€0.02" player="madarassandor"/>
+   <action cards="" type="0" no="13" sum="€0" player="Kosenkov89"/>
+  </round>
+ </game>
+ <game gamecode="7668187107">
+  <general>
+   <startdate>2017-09-01 15:19:22</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.01" chips="€2.51" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0.02" chips="€2.33" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0" chips="€1.96" seat="5" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0" chips="€0.88" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0.04" chips="€3.89" seat="10" win="€0.07" dealer="1"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="hjdsplt"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="grizzly2509"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="madarassandor"/>
+   <cards type="Pocket" player="Peon384">HQ S6</cards>
+   <action cards="" type="0" no="4" sum="€0" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="23" no="5" sum="€0.04" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="6" sum="€0" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="grizzly2509"/>
+  </round>
+ </game>
+ <game gamecode="7668189191">
+  <general>
+   <startdate>2017-09-01 15:19:54</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0" chips="€2.50" seat="1" win="€0" dealer="1"/>
+    <player name="grizzly2509" bet="€0.05" chips="€2.31" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0.02" chips="€1.96" seat="5" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0" chips="€0.88" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0.13" chips="€3.92" seat="10" win="€0.20" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="grizzly2509"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="madarassandor"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Peon384">S9 C7</cards>
+   <action cards="" type="0" no="3" sum="€0" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="23" no="4" sum="€0.05" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="3" no="6" sum="€0.04" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="7" sum="€0" player="madarassandor"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">CQ S4 HK</cards>
+   <action cards="" type="4" no="8" sum="€0" player="grizzly2509"/>
+   <action cards="" type="5" no="9" sum="€0.08" player="limpieza"/>
+   <action cards="" type="0" no="10" sum="€0" player="grizzly2509"/>
+  </round>
+ </game>
+ <game gamecode="7668189514">
+  <general>
+   <startdate>2017-09-01 15:20:25</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0" chips="€2.50" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.26" seat="3" win="€0" dealer="1"/>
+    <player name="madarassandor" bet="€0.06" chips="€1.94" seat="5" win="€0.08" dealer="0"/>
+    <player name="Peon384" bet="€0.02" chips="€0.88" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€3.99" seat="10" win="€0" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="madarassandor"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="4" sum="€0" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="3" no="6" sum="€0.01" player="madarassandor"/>
+   <cards type="Pocket" player="Peon384">H5 HA</cards>
+   <action cards="" type="4" no="7" sum="€0" player="Peon384"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">D10 D6 CJ</cards>
+   <action cards="" type="5" no="8" sum="€0.04" player="madarassandor"/>
+   <action cards="" type="0" no="9" sum="€0" player="Peon384"/>
+  </round>
+ </game>
+ <game gamecode="7668190185">
+  <general>
+   <startdate>2017-09-01 15:20:57</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0" chips="€2.50" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.26" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0" chips="€1.96" seat="5" win="€0" dealer="1"/>
+    <player name="Peon384" bet="€0.02" chips="€0.86" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0.09" chips="€3.99" seat="10" win="€0.09" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="Peon384"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="limpieza"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="4" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="madarassandor"/>
+   <cards type="Pocket" player="Peon384">HJ H3</cards>
+   <action cards="" type="3" no="6" sum="€0.01" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="23" no="7" sum="€0.07" player="limpieza"/>
+   <action cards="" type="0" no="8" sum="€0" player="Peon384"/>
+  </round>
+ </game>
+ <game gamecode="7668190332">
+  <general>
+   <startdate>2017-09-01 15:21:20</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.02" chips="€2.50" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0" chips="€2.26" seat="3" win="€0" dealer="0"/>
+    <player name="madarassandor" bet="€0" chips="€1.96" seat="5" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0.04" chips="€0.84" seat="8" win="€0" dealer="1"/>
+    <player name="limpieza" bet="€0.04" chips="€4.01" seat="10" win="€0.10" dealer="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="limpieza"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="hjdsplt"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="grizzly2509"/>
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="4" sum="€0" player="madarassandor"/>
+   <cards type="Pocket" player="Peon384">SK HJ</cards>
+   <action cards="" type="3" no="5" sum="€0.02" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">H8 H10</cards>
+   <action cards="" type="3" no="6" sum="€0.01" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="4" no="7" sum="€0" player="hjdsplt"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">C7 HQ D9</cards>
+   <action cards="" type="5" no="8" sum="€0.02" player="limpieza"/>
+   <action cards="" type="0" no="9" sum="€0" player="hjdsplt"/>
+   <action cards="" type="3" no="10" sum="€0.02" player="Peon384"/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">C8</cards>
+   <action cards="" type="4" no="11" sum="€0" player="limpieza"/>
+   <action cards="" type="4" no="12" sum="€0" player="Peon384"/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">S2</cards>
+   <action cards="" type="4" no="13" sum="€0" player="limpieza"/>
+   <action cards="" type="4" no="14" sum="€0" player="Peon384"/>
+  </round>
+ </game>
+ <game gamecode="7668190643">
+  <general>
+   <startdate>2017-09-01 15:22:13</startdate>
+   <players>
+    <player name="hjdsplt" bet="€0.05" chips="€2.48" seat="1" win="€0" dealer="0"/>
+    <player name="grizzly2509" bet="€0.08" chips="€2.26" seat="3" win="€0.12" dealer="0"/>
+    <player name="madarassandor" bet="€0" chips="€1.96" seat="5" win="€0" dealer="0"/>
+    <player name="Peon384" bet="€0" chips="€0.80" seat="8" win="€0" dealer="0"/>
+    <player name="limpieza" bet="€0" chips="€4.07" seat="10" win="€0" dealer="1"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" type="1" no="1" sum="€0.01" player="hjdsplt"/>
+   <action cards="" type="2" no="2" sum="€0.02" player="grizzly2509"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="madarassandor">X X</cards>
+   <action cards="" type="0" no="3" sum="€0" player="madarassandor"/>
+   <cards type="Pocket" player="Peon384">DJ H5</cards>
+   <action cards="" type="0" no="4" sum="€0" player="Peon384"/>
+   <cards type="Pocket" player="limpieza">X X</cards>
+   <action cards="" type="0" no="5" sum="€0" player="limpieza"/>
+   <cards type="Pocket" player="hjdsplt">X X</cards>
+   <action cards="" type="23" no="6" sum="€0.04" player="hjdsplt"/>
+   <cards type="Pocket" player="grizzly2509">X X</cards>
+   <action cards="" type="3" no="7" sum="€0.02" player="grizzly2509"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">SK C4 H9</cards>
+   <action cards="" type="4" no="8" sum="€0" player="hjdsplt"/>
+   <action cards="" type="5" no="9" sum="€0.04" player="grizzly2509"/>
+   <action cards="" type="0" no="10" sum="€0" player="hjdsplt"/>
+  </round>
+ </game>
+</session>

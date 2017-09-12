@@ -13,6 +13,7 @@
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Builders.iPoker;
+using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
@@ -36,11 +37,11 @@ namespace DriveHUD.Importers
                 throw new ArgumentNullException(nameof(container));
             }
 
-            container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());            
+            container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());
             container.RegisterType<IIgnitionCatcher, IgnitionCatcher>();
             container.RegisterType<IIgnitionImporter, IgnitionImporter>();
             container.RegisterType<IIgnitionInfoImporter, IgnitionInfoImporter>();
-            container.RegisterType<IIgnitionDataManager, IgnitionDataManager>();                    
+            container.RegisterType<IIgnitionDataManager, IgnitionDataManager>();
             container.RegisterType<IIgnitionInfoDataManager, IgnitionInfoDataManager>();
             container.RegisterType<IBetOnlineCatcher, BetOnlineCatcher>();
             container.RegisterType<IBetOnlineDataManager, BetOnlineDataManager>();
@@ -57,6 +58,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IPacific888Importer, Pacific888Importer>();
             container.RegisterType<IPartyPokerImporter, PartyPokerImporter>();
             container.RegisterType<ICardsConverter, PokerCardsConverter>();
+            container.RegisterType<IIPokerImporter, IPokerImporter>();
             container.RegisterType<ITournamentsCacheService, TournamentsCacheService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IImporterService, ImporterService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>();
@@ -79,7 +81,7 @@ namespace DriveHUD.Importers
             {
                 throw new InvalidCastException("Importers could not be registered");
             }
-         
+
             importerService.Register<IIgnitionCatcher>();
             importerService.Register<IIgnitionImporter>();
             importerService.Register<IIgnitionInfoImporter>();
@@ -94,6 +96,7 @@ namespace DriveHUD.Importers
             importerService.Register<IYaPokerImporter>();
             importerService.Register<IPacific888Importer>();
             importerService.Register<IPartyPokerImporter>();
+            importerService.Register<IIPokerImporter>();
         }
     }
 }

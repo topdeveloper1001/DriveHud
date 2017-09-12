@@ -265,6 +265,7 @@ namespace DriveHUD.Application.TableConfigurators
             {
                 PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
                 var frm = new PlayerNoteView(viewModel);
+                frm.Owner = System.Windows.Application.Current.MainWindow;
                 frm.ShowDialog();
 
                 if (viewModel.PlayerNoteEntity == null)

@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
@@ -71,6 +72,8 @@ namespace DriveHUD.Importers
         protected CancellationTokenSource cancellationTokenSource;
 
         protected abstract ImporterIdentifier Identifier { get; }
+
+        protected abstract ImporterIdentifier[] PipeIdentifiers { get; }
 
         public virtual bool IsRunning
         {
@@ -167,8 +170,14 @@ namespace DriveHUD.Importers
 
                     if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
                     {
+                        var windowTitle = WinApi.GetWindowText(x.MainWindowHandle);
                         var windowClassName = sb.ToString();
-                        return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
+
+                        if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            LogProvider.Log.Info($"Found the process with main window = [{windowTitle}, {windowClassName}] [{Identifier}]");
+                            return true;
+                        }
                     }
 
                     return false;
@@ -199,7 +208,8 @@ namespace DriveHUD.Importers
                     if (pokerClientProcess != null && pokerClientProcess.HasExited)
                     {
                         var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
-                        pipeManager.RemoveHandle(Identifier);
+
+                        PipeIdentifiers.ForEach(x => pipeManager.RemoveHandle(x));
 
                         LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has exited", ProcessName));
                     }
@@ -220,7 +230,7 @@ namespace DriveHUD.Importers
                         continue;
                     }
 
-                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has been found", ProcessName));
+                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" [{1}] has been found", ProcessName, pokerClientProcess.Id));
                 }
 
                 if (!isInjected)

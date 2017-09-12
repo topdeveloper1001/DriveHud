@@ -1,0 +1,36 @@
+PokerStars Game #47183523696:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:36:20 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 1: dimsumboy ($238.65 in chips)
+Seat 2: LingXY ($200 in chips)
+Seat 3: nachtvogel ($219.15 in chips)
+Seat 4: Fierytycoon ($218.10 in chips)
+Seat 5: TODO ADENTR0 ($406 in chips)
+Seat 6: DURKADURDUR ($231.75 in chips)
+dimsumboy: posts small blind $1
+LingXY: posts big blind $2
+*** HOLE CARDS ***
+nachtvogel: folds
+Fierytycoon: folds
+TODO ADENTR0: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+dimsumboy: folds
+LingXY: folds
+TODO ADENTR0: raises $23 to $43
+DURKADURDUR: raises $188.75 to $231.75 and is all-in
+TODO ADENTR0: calls $188.75
+*** FLOP *** [5h 6s Ah]
+*** TURN *** [5h 6s Ah] [5d]
+*** RIVER *** [5h 6s Ah 5d] [Js]
+*** SHOW DOWN ***
+TODO ADENTR0: shows [Kh Kd] (two pair, Kings and Fives)
+DURKADURDUR: shows [Kc Ad] (two pair, Aces and Fives)
+DURKADURDUR collected $463.50 from pot
+*** SUMMARY ***
+Total pot $466.50 | Rake $3
+Board [5h 6s Ah 5d Js]
+Seat 1: dimsumboy (small blind) folded before Flop
+Seat 2: LingXY (big blind) folded before Flop
+Seat 3: nachtvogel folded before Flop (didn't bet)
+Seat 4: Fierytycoon folded before Flop (didn't bet)
+Seat 5: TODO ADENTR0 showed [Kh Kd] and lost with two pair, Kings and Fives
+Seat 6: DURKADURDUR (button) showed [Kc Ad] and won ($463.50) with two pair, Aces and Fives
