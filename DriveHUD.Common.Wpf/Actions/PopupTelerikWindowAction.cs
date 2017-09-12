@@ -13,6 +13,7 @@
 using DriveHUD.Common.Wpf.Controls;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Windows;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Common.Wpf.Actions
@@ -33,8 +34,8 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             if (window != null)
             {
-                window.Close();                
-            }            
+                window.Close();
+            }
         }
 
         protected override void OnClosed(RadWindow window, Action callback)
@@ -51,7 +52,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 callback?.Invoke();
             };
 
-            window.Closed += handler;           
+            window.Closed += handler;
         }
 
         protected override void Show(RadWindow window)
@@ -59,8 +60,9 @@ namespace DriveHUD.Common.Wpf.Actions
             NonTopmostPopup.DisableTopMost = true;
 
             if (IsModal)
-            {
-                window.ShowDialog();                
+            {                
+                window.Owner = Application.Current.MainWindow;
+                window.ShowDialog();
                 return;
             }
 
