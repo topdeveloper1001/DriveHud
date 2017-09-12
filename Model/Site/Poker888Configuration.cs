@@ -29,7 +29,7 @@ namespace Model.Site
     {
         private static readonly string[] PossibleFolders = new string[] { "888poker" };
 
-        private static string[] registryKeys = new[] { "{8C4CF142-0807-473A-A0E5-08FE1CA14BBC}" };
+        private static string[] registryKeys = new[] { "{8C4CF142-0807-473A-A0E5-08FE1CA14BBC}", "{4D7C3811-3AC4-4B8A-BA1B-416A5133E6A1}" };
         //HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{4D7C3811-3AC4-4B8A-BA1B-416A5133E6A1}
         //7.3.02003 105.0.0.9
         private const string LanguageRegistryKey = @"SOFTWARE\pacificpoker\poker\INIT";

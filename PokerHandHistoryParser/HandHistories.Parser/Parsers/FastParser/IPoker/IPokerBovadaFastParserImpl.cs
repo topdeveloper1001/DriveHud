@@ -23,5 +23,13 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 return false;
             }
         }
+
+        public override bool RequiresTournamentSpeedAdjustment
+        {
+            get
+            {
+                return false;
+            }
+        }
     }
 }

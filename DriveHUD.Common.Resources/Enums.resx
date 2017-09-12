@@ -695,4 +695,7 @@
   <data name="Enum_EnumPokerNetworks_PartyPoker" xml:space="preserve">
     <value>PartyPoker</value>
   </data>
+  <data name="Enum_EnumPokerNetworks_IPoker" xml:space="preserve">
+    <value>IPoker Network</value>
+  </data>
 </root>

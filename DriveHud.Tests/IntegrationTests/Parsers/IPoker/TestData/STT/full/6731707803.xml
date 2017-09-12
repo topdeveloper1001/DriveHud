@@ -1,0 +1,2910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6731707803">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Turbo (€0.10), 910052583</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:35:59</duration>
+  <gamecount>46</gamecount>
+  <startdate>2017-09-11 13:57:34</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>27,383</bets>
+  <wins>25,703</wins>
+  <chipsin>1,500</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0.40</statuspoints>
+  <awardpoints>Club0.40</awardpoints>
+  <ipoints>Club0.40</ipoints>
+  <tournamentcode>910049707</tournamentcode>
+  <tournamentname>Turbo (€0.10)</tournamentname>
+  <place>2</place>
+  <buyin>€0.08 + €0.02</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>€0.21</win>
+ </general>
+ <game gamecode="7679311100">
+  <general>
+   <startdate>2017-09-11 13:57:34</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10" chips="1,500" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="1,500" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="80" chips="1,500" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="235" chips="1,500" seat="9" dealer="0" name="losetoomuch" win="425" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="1" sum="10"/>
+   <action no="2" player="ALVIN1956" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="3" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="4" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="5" player="anhanga" cards="" type="3" sum="20"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="6" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="7" player="losetoomuch" cards="" type="3" sum="20"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="8" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S6 D5</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="11" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S5 S4 DJ</cards>
+   <action no="12" player="ALVIN1956" cards="" type="5" sum="20"/>
+   <action no="13" player="anhanga" cards="" type="3" sum="20"/>
+   <action no="14" player="losetoomuch" cards="" type="3" sum="20"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C6</cards>
+   <action no="15" player="ALVIN1956" cards="" type="5" sum="20"/>
+   <action no="16" player="anhanga" cards="" type="3" sum="20"/>
+   <action no="17" player="losetoomuch" cards="" type="23" sum="40"/>
+   <action no="18" player="ALVIN1956" cards="" type="3" sum="20"/>
+   <action no="19" player="anhanga" cards="" type="3" sum="20"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+   <action no="20" player="ALVIN1956" cards="" type="5" sum="20"/>
+   <action no="21" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="22" player="losetoomuch" cards="" type="23" sum="155"/>
+   <action no="23" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679311291">
+  <general>
+   <startdate>2017-09-11 13:58:51</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="60" chips="1,490" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,400" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,500" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="1,420" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="80" chips="1,690" seat="9" dealer="0" name="losetoomuch" win="210" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="1" sum="10"/>
+   <action no="2" player="LeeCTsinWH" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="3" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="4" player="anhanga" cards="" type="3" sum="20"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="5" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="6" player="losetoomuch" cards="" type="23" sum="40"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="7" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S3 H3</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="3" sum="40"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="11" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <action no="12" player="anhanga" cards="" type="3" sum="20"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S9 SA D5</cards>
+   <action no="13" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="14" player="losetoomuch" cards="" type="5" sum="20"/>
+   <action no="15" player="changuillllo" cards="" type="3" sum="20"/>
+   <action no="16" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C6</cards>
+   <action no="17" player="losetoomuch" cards="" type="5" sum="20"/>
+   <action no="18" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679311407">
+  <general>
+   <startdate>2017-09-11 13:59:41</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="1,430" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="80" chips="1,390" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,480" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,500" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,380" chips="1,380" seat="6" dealer="0" name="anhanga" win="1,580" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="80" chips="1,820" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="LeeCTsinWH" cards="" type="1" sum="10"/>
+   <action no="2" player="chewbacca886" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="3" player="anhanga" cards="" type="3" sum="20"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="4" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="5" player="losetoomuch" cards="" type="3" sum="20"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="6" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C4 CK</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="3" sum="20"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="10" player="LeeCTsinWH" cards="" type="3" sum="10"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S7 SQ H4</cards>
+   <action no="12" player="LeeCTsinWH" cards="" type="4" sum="0"/>
+   <action no="13" player="chewbacca886" cards="" type="4" sum="0"/>
+   <action no="14" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="15" player="losetoomuch" cards="" type="4" sum="0"/>
+   <action no="16" player="ALVIN1956" cards="" type="5" sum="20"/>
+   <action no="17" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <action no="18" player="chewbacca886" cards="" type="0" sum="0"/>
+   <action no="19" player="anhanga" cards="" type="3" sum="20"/>
+   <action no="20" player="losetoomuch" cards="" type="23" sum="40"/>
+   <action no="21" player="ALVIN1956" cards="" type="3" sum="20"/>
+   <action no="22" player="anhanga" cards="" type="3" sum="20"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C3</cards>
+   <action no="23" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="24" player="losetoomuch" cards="" type="5" sum="20"/>
+   <action no="25" player="ALVIN1956" cards="" type="3" sum="20"/>
+   <action no="26" player="anhanga" cards="" type="3" sum="20"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D5</cards>
+   <action no="27" player="anhanga" cards="" type="5" sum="1,300"/>
+   <action no="28" player="losetoomuch" cards="" type="0" sum="0"/>
+   <action no="29" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679318361">
+  <general>
+   <startdate>2017-09-11 14:00:55</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="1,430" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="1,310" seat="3" dealer="0" name="ALVIN1956" win="80" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="1" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,480" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,580" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,740" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="1" sum="10"/>
+   <action no="2" player="anhanga" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="3" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="4" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="5" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D4 D8</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="3" sum="20"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="9" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="3" sum="10"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="11" player="anhanga" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C10 D9 S5</cards>
+   <action no="12" player="chewbacca886" cards="" type="4" sum="0"/>
+   <action no="13" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="14" player="ALVIN1956" cards="" type="5" sum="20"/>
+   <action no="15" player="chewbacca886" cards="" type="0" sum="0"/>
+   <action no="16" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679318460">
+  <general>
+   <startdate>2017-09-11 14:01:36</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="1,430" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,350" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="1,560" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="1,500" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="1,740" seat="9" dealer="0" name="losetoomuch" win="120" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="anhanga" cards="" type="1" sum="15"/>
+   <action no="2" player="siljorepa" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="3" player="losetoomuch" cards="" type="3" sum="30"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="4" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SJ H2</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="7" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="8" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="10" player="anhanga" cards="" type="3" sum="15"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="11" player="siljorepa" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SA C6 D5</cards>
+   <action no="12" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="13" player="siljorepa" cards="" type="4" sum="0"/>
+   <action no="14" player="losetoomuch" cards="" type="5" sum="30"/>
+   <action no="15" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="16" player="siljorepa" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679318544">
+  <general>
+   <startdate>2017-09-11 14:02:17</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="1,430" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="1,350" seat="3" dealer="0" name="ALVIN1956" win="195" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="1,530" seat="6" dealer="1" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,470" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="1,800" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="siljorepa" cards="" type="1" sum="15"/>
+   <action no="2" player="losetoomuch" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="3" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HQ C7</cards>
+   <action no="4" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="6" player="ALVIN1956" cards="" type="3" sum="30"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="7" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="9" player="anhanga" cards="" type="3" sum="30"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="10" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="11" player="losetoomuch" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HJ DJ D3</cards>
+   <action no="12" player="losetoomuch" cards="" type="4" sum="0"/>
+   <action no="13" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="14" player="anhanga" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S2</cards>
+   <action no="15" player="losetoomuch" cards="" type="4" sum="0"/>
+   <action no="16" player="ALVIN1956" cards="" type="5" sum="30"/>
+   <action no="17" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="18" player="losetoomuch" cards="" type="3" sum="30"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S7</cards>
+   <action no="19" player="losetoomuch" cards="" type="4" sum="0"/>
+   <action no="20" player="ALVIN1956" cards="" type="5" sum="30"/>
+   <action no="21" player="losetoomuch" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679318710">
+  <general>
+   <startdate>2017-09-11 14:03:30</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="90" chips="1,430" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="120" chips="1,455" seat="3" dealer="0" name="ALVIN1956" win="255" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="1" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,740" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="1,500" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="losetoomuch" cards="" type="1" sum="15"/>
+   <action no="2" player="Litvanyimaria" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CQ H5</cards>
+   <action no="3" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="4" player="changuillllo" cards="" type="23" sum="90"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="5" player="ALVIN1956" cards="" type="3" sum="90"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="6" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="7" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="8" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="9" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="10" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="11" player="Litvanyimaria" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DK D6 HJ</cards>
+   <action no="12" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="13" player="ALVIN1956" cards="" type="5" sum="30"/>
+   <action no="14" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679318828">
+  <general>
+   <startdate>2017-09-11 14:04:21</startdate>
+   <players>
+    <player bet="1,097" chips="1,500" seat="1" dealer="0" name="Peon384" win="2,741" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="120" chips="1,340" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="412" chips="1,590" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,097" chips="1,725" seat="9" dealer="1" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,470" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Litvanyimaria" cards="" type="1" sum="15"/>
+   <action no="2" player="Peon384" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="3" player="changuillllo" cards="" type="23" sum="60"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="4" player="ALVIN1956" cards="" type="3" sum="60"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="5" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="6" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="7" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="8" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">D10 C9</cards>
+   <action no="9" player="losetoomuch" cards="" type="3" sum="60"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="10" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HQ SK</cards>
+   <action no="11" player="Peon384" cards="" type="3" sum="30"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C3 DQ H5</cards>
+   <action no="12" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="13" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="14" player="ALVIN1956" cards="" type="5" sum="30"/>
+   <action no="15" player="losetoomuch" cards="" type="3" sum="30"/>
+   <action no="16" player="Peon384" cards="" type="23" sum="60"/>
+   <action no="17" player="changuillllo" cards="" type="3" sum="60"/>
+   <action no="18" player="ALVIN1956" cards="" type="3" sum="30"/>
+   <action no="19" player="losetoomuch" cards="" type="3" sum="30"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">DJ</cards>
+   <action no="20" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="21" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="22" player="ALVIN1956" cards="" type="5" sum="30"/>
+   <action no="23" player="losetoomuch" cards="" type="23" sum="292"/>
+   <action no="24" player="Peon384" cards="" type="3" sum="292"/>
+   <action no="25" player="changuillllo" cards="" type="0" sum="0"/>
+   <action no="26" player="ALVIN1956" cards="" type="3" sum="262"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H7</cards>
+   <action no="27" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="28" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="29" player="losetoomuch" cards="" type="5" sum="685"/>
+   <action no="30" player="Peon384" cards="" type="3" sum="685"/>
+   <action no="31" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319007">
+  <general>
+   <startdate>2017-09-11 14:05:44</startdate>
+   <players>
+    <player bet="25" chips="3,144" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,270" chips="1,220" seat="2" dealer="0" name="changuillllo" win="2,515" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,178" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,500" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="628" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,220" chips="1,455" seat="10" dealer="1" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="1" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="3" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="4" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="5" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="6" player="anhanga" cards="" type="3" sum="50"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="7" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="8" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">SA C10</cards>
+   <action no="9" player="Litvanyimaria" cards="" type="3" sum="50"/>
+   <cards player="Peon384" type="Pocket">S6 C4</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">D2 DA</cards>
+   <action no="11" player="changuillllo" cards="" type="23" sum="1,220"/>
+   <action no="12" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="13" player="Litvanyimaria" cards="" type="3" sum="1,170"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SJ D10 D5</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">DQ</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S8</cards>
+  </round>
+ </game>
+ <game gamecode="7679319096">
+  <general>
+   <startdate>2017-09-11 14:06:28</startdate>
+   <players>
+    <player bet="0" chips="3,119" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="2,515" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="800" chips="1,178" seat="3" dealer="0" name="ALVIN1956" win="1,030" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,450" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="335" chips="628" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="235" chips="235" seat="10" dealer="0" name="Litvanyimaria" win="365" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="1" sum="25"/>
+   <action no="2" player="ALVIN1956" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="3" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="4" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="5" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="6" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="7" player="losetoomuch" cards="" type="3" sum="50"/>
+   <cards player="Litvanyimaria" type="Pocket">DK DA</cards>
+   <action no="8" player="Litvanyimaria" cards="" type="23" sum="235"/>
+   <cards player="Peon384" type="Pocket">SK DQ</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">H9 HA</cards>
+   <action no="11" player="ALVIN1956" cards="" type="3" sum="185"/>
+   <action no="12" player="losetoomuch" cards="" type="3" sum="185"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SQ HQ C6</cards>
+   <action no="13" player="ALVIN1956" cards="" type="5" sum="50"/>
+   <action no="14" player="losetoomuch" cards="" type="3" sum="50"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SJ</cards>
+   <action no="15" player="ALVIN1956" cards="" type="5" sum="50"/>
+   <action no="16" player="losetoomuch" cards="" type="3" sum="50"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+   <action no="17" player="ALVIN1956" cards="" type="5" sum="465"/>
+   <action no="18" player="losetoomuch" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319222">
+  <general>
+   <startdate>2017-09-11 14:07:22</startdate>
+   <players>
+    <player bet="0" chips="3,119" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="2,490" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="1,408" seat="3" dealer="0" name="ALVIN1956" win="375" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="1,450" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="293" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="365" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="1" sum="25"/>
+   <action no="2" player="LeeCTsinWH" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="3" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="4" player="anhanga" cards="" type="3" sum="50"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="5" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="6" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="7" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S3 S10</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="23" sum="100"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="11" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <action no="12" player="anhanga" cards="" type="3" sum="50"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H9 DQ D9</cards>
+   <action no="13" player="ALVIN1956" cards="" type="5" sum="125"/>
+   <action no="14" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319309">
+  <general>
+   <startdate>2017-09-11 14:08:01</startdate>
+   <players>
+    <player bet="0" chips="3,119" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="2,490" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,558" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,410" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,460" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="1,350" seat="6" dealer="0" name="anhanga" win="225" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="293" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="365" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="LeeCTsinWH" cards="" type="1" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="3" player="anhanga" cards="" type="3" sum="50"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="4" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="5" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="6" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C2 S7</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="3" sum="50"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="10" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S3 D9 C5</cards>
+   <action no="12" player="chewbacca886" cards="" type="4" sum="0"/>
+   <action no="13" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="14" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H2</cards>
+   <action no="15" player="chewbacca886" cards="" type="4" sum="0"/>
+   <action no="16" player="anhanga" cards="" type="5" sum="50"/>
+   <action no="17" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <action no="18" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319437">
+  <general>
+   <startdate>2017-09-11 14:08:57</startdate>
+   <players>
+    <player bet="0" chips="3,119" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="2,490" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,508" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,385" seat="4" dealer="1" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,410" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,475" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="293" chips="293" seat="9" dealer="0" name="losetoomuch" win="368" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="365" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="1" sum="25"/>
+   <action no="2" player="anhanga" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="3" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="4" player="losetoomuch" cards="" type="23" sum="293"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="5" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SQ D8</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="9" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="11" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319470">
+  <general>
+   <startdate>2017-09-11 14:09:15</startdate>
+   <players>
+    <player bet="0" chips="3,119" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="0" chips="2,490" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,508" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="125" chips="1,385" seat="4" dealer="0" name="LeeCTsinWH" win="200" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,385" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,425" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,455" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="368" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="365" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="anhanga" cards="" type="1" sum="25"/>
+   <action no="2" player="siljorepa" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="losetoomuch" type="Pocket">X X</cards>
+   <action no="3" player="losetoomuch" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="4" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H6 S8</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="7" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="8" player="LeeCTsinWH" cards="" type="23" sum="125"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="10" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="11" player="siljorepa" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319568">
+  <general>
+   <startdate>2017-09-11 14:09:54</startdate>
+   <players>
+    <player bet="10" chips="3,119" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10" chips="2,490" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="368" chips="1,508" seat="3" dealer="0" name="ALVIN1956" win="846" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,460" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,385" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,400" seat="6" dealer="1" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="1,405" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="448" chips="368" seat="9" dealer="0" name="losetoomuch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="365" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="siljorepa" cards="" type="15" sum="10"/>
+   <action no="2" player="losetoomuch" cards="" type="15" sum="10"/>
+   <action no="3" player="Litvanyimaria" cards="" type="15" sum="10"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="5" player="changuillllo" cards="" type="15" sum="10"/>
+   <action no="6" player="ALVIN1956" cards="" type="15" sum="10"/>
+   <action no="7" player="LeeCTsinWH" cards="" type="15" sum="10"/>
+   <action no="8" player="chewbacca886" cards="" type="15" sum="10"/>
+   <action no="9" player="anhanga" cards="" type="15" sum="10"/>
+   <action no="10" player="siljorepa" cards="" type="1" sum="40"/>
+   <action no="11" player="losetoomuch" cards="" type="2" sum="80"/>
+  </round>
+  <round no="1">
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="12" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D8 DQ</cards>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="14" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">CK D10</cards>
+   <action no="15" player="ALVIN1956" cards="" type="23" sum="160"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="16" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="17" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="18" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="19" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="losetoomuch" type="Pocket">C3 C8</cards>
+   <action no="20" player="losetoomuch" cards="" type="23" sum="358"/>
+   <action no="21" player="ALVIN1956" cards="" type="3" sum="198"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S10 SQ S6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D2</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H9</cards>
+  </round>
+ </game>
+ <game gamecode="7679319655">
+  <general>
+   <startdate>2017-09-11 14:10:36</startdate>
+   <players>
+    <player bet="170" chips="3,109" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10" chips="2,480" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,986" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,450" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,375" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,390" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,355" seat="8" dealer="1" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="355" chips="355" seat="10" dealer="0" name="Litvanyimaria" win="585" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Litvanyimaria" cards="" type="15" sum="10"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="10"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="10"/>
+   <action no="5" player="LeeCTsinWH" cards="" type="15" sum="10"/>
+   <action no="6" player="chewbacca886" cards="" type="15" sum="10"/>
+   <action no="7" player="anhanga" cards="" type="15" sum="10"/>
+   <action no="8" player="siljorepa" cards="" type="15" sum="10"/>
+   <action no="9" player="Litvanyimaria" cards="" type="2" sum="80"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HK DJ</cards>
+   <action no="10" player="Peon384" cards="" type="23" sum="160"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="11" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="12" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="13" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="14" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="15" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="16" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="17" player="Litvanyimaria" cards="" type="3" sum="80"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H3 S3 C2</cards>
+   <action no="18" player="Litvanyimaria" cards="" type="5" sum="185"/>
+   <action no="19" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319753">
+  <general>
+   <startdate>2017-09-11 14:11:19</startdate>
+   <players>
+    <player bet="90" chips="2,939" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10" chips="2,470" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,976" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="186" chips="1,440" seat="4" dealer="0" name="LeeCTsinWH" win="376" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,365" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,380" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,345" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="585" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Litvanyimaria" cards="" type="15" sum="10"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="10"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="10"/>
+   <action no="5" player="LeeCTsinWH" cards="" type="15" sum="10"/>
+   <action no="6" player="chewbacca886" cards="" type="15" sum="10"/>
+   <action no="7" player="anhanga" cards="" type="15" sum="10"/>
+   <action no="8" player="siljorepa" cards="" type="15" sum="10"/>
+   <action no="9" player="Litvanyimaria" cards="" type="1" sum="40"/>
+   <action no="10" player="Peon384" cards="" type="2" sum="80"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="11" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="12" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="13" player="LeeCTsinWH" cards="" type="23" sum="176"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="14" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="15" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="16" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="17" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SJ S6</cards>
+   <action no="18" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679319820">
+  <general>
+   <startdate>2017-09-11 14:11:47</startdate>
+   <players>
+    <player bet="50" chips="2,849" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="90" chips="2,460" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="170" chips="1,966" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,630" chips="1,630" seat="4" dealer="0" name="LeeCTsinWH" win="1,095" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,355" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,370" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,335" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="535" chips="535" seat="10" dealer="1" name="Litvanyimaria" win="1,410" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="10"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="10"/>
+   <action no="4" player="LeeCTsinWH" cards="" type="15" sum="10"/>
+   <action no="5" player="chewbacca886" cards="" type="15" sum="10"/>
+   <action no="6" player="anhanga" cards="" type="15" sum="10"/>
+   <action no="7" player="siljorepa" cards="" type="15" sum="10"/>
+   <action no="8" player="Litvanyimaria" cards="" type="15" sum="10"/>
+   <action no="9" player="Peon384" cards="" type="1" sum="40"/>
+   <action no="10" player="changuillllo" cards="" type="2" sum="80"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="11" player="ALVIN1956" cards="" type="23" sum="160"/>
+   <cards player="LeeCTsinWH" type="Pocket">DA CK</cards>
+   <action no="12" player="LeeCTsinWH" cards="" type="23" sum="1,620"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="13" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="14" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="15" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">D10 CA</cards>
+   <action no="16" player="Litvanyimaria" cards="" type="7" sum="525"/>
+   <cards player="Peon384" type="Pocket">C9 D2</cards>
+   <action no="17" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="18" player="changuillllo" cards="" type="0" sum="0"/>
+   <action no="19" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DQ D9 C10</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S9</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S6</cards>
+  </round>
+ </game>
+ <game gamecode="7679319932">
+  <general>
+   <startdate>2017-09-11 14:12:30</startdate>
+   <players>
+    <player bet="10" chips="2,799" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="170" chips="2,370" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="250" chips="1,796" seat="3" dealer="0" name="ALVIN1956" win="560" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,095" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,345" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="1,360" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,325" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,410" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="10"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="10"/>
+   <action no="3" player="LeeCTsinWH" cards="" type="15" sum="10"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="10"/>
+   <action no="5" player="anhanga" cards="" type="15" sum="10"/>
+   <action no="6" player="siljorepa" cards="" type="15" sum="10"/>
+   <action no="7" player="Litvanyimaria" cards="" type="15" sum="10"/>
+   <action no="8" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="9" player="changuillllo" cards="" type="1" sum="40"/>
+   <action no="10" player="ALVIN1956" cards="" type="2" sum="80"/>
+  </round>
+  <round no="1">
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="11" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="12" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="13" player="anhanga" cards="" type="3" sum="80"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="14" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">X X</cards>
+   <action no="15" player="Litvanyimaria" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C3 HA</cards>
+   <action no="16" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="17" player="changuillllo" cards="" type="3" sum="40"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="18" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S5 D4 C2</cards>
+   <action no="19" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="20" player="ALVIN1956" cards="" type="5" sum="80"/>
+   <action no="21" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="22" player="changuillllo" cards="" type="3" sum="80"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H3</cards>
+   <action no="23" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="24" player="ALVIN1956" cards="" type="5" sum="80"/>
+   <action no="25" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329137">
+  <general>
+   <startdate>2017-09-11 14:13:35</startdate>
+   <players>
+    <player bet="15" chips="2,789" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="2,200" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,166" chips="2,106" seat="3" dealer="0" name="ALVIN1956" win="3,836" rebuy="0" reg_code="" addon="0"/>
+    <player bet="135" chips="1,085" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,335" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="135" chips="1,270" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,315" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,400" chips="1,400" seat="10" dealer="0" name="Litvanyimaria" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="2" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="4" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="5" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="6" player="Litvanyimaria" cards="" type="15" sum="15"/>
+   <action no="7" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="8" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="9" player="ALVIN1956" cards="" type="1" sum="60"/>
+   <action no="10" player="LeeCTsinWH" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="12" player="anhanga" cards="" type="3" sum="120"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="13" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Litvanyimaria" type="Pocket">H7 S7</cards>
+   <action no="14" player="Litvanyimaria" cards="" type="3" sum="120"/>
+   <cards player="Peon384" type="Pocket">SK S8</cards>
+   <action no="15" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="16" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">DK HK</cards>
+   <action no="17" player="ALVIN1956" cards="" type="23" sum="2,091"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="18" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <action no="19" player="anhanga" cards="" type="0" sum="0"/>
+   <action no="20" player="Litvanyimaria" cards="" type="7" sum="1,265"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HJ H3 DQ</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S4</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D4</cards>
+  </round>
+ </game>
+ <game gamecode="7679329281">
+  <general>
+   <startdate>2017-09-11 14:14:36</startdate>
+   <players>
+    <player bet="15" chips="2,774" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="2,185" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="3,836" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,010" chips="950" seat="4" dealer="0" name="LeeCTsinWH" win="1,160" rebuy="0" reg_code="" addon="0"/>
+    <player bet="135" chips="1,320" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,135" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,300" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="3" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="4" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="6" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="7" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="8" player="LeeCTsinWH" cards="" type="1" sum="60"/>
+   <action no="9" player="chewbacca886" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="10" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="11" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D5 C2</cards>
+   <action no="12" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="13" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="14" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="15" player="LeeCTsinWH" cards="" type="23" sum="935"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="16" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329316">
+  <general>
+   <startdate>2017-09-11 14:14:52</startdate>
+   <players>
+    <player bet="15" chips="2,759" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="2,170" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="3,821" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,160" seat="4" dealer="1" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="1,185" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="135" chips="1,120" seat="6" dealer="0" name="anhanga" win="285" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,285" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="2" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="3" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="5" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="6" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="7" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="8" player="chewbacca886" cards="" type="1" sum="60"/>
+   <action no="9" player="anhanga" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="10" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H7 H6</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="12" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="13" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="14" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="15" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329347">
+  <general>
+   <startdate>2017-09-11 14:15:04</startdate>
+   <players>
+    <player bet="15" chips="2,744" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="2,155" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="255" chips="3,806" seat="3" dealer="0" name="ALVIN1956" win="525" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,145" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,110" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="1,270" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="135" chips="1,270" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="2" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="5" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="6" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="7" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="8" player="anhanga" cards="" type="1" sum="60"/>
+   <action no="9" player="siljorepa" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CJ S5</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="11" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="12" player="ALVIN1956" cards="" type="23" sum="240"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="13" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="14" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="15" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="16" player="siljorepa" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329423">
+  <general>
+   <startdate>2017-09-11 14:15:35</startdate>
+   <players>
+    <player bet="135" chips="2,729" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="2,140" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="255" chips="4,076" seat="3" dealer="0" name="ALVIN1956" win="525" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,130" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,095" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,195" seat="6" dealer="1" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="1,135" seat="8" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="5" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="6" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="7" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="8" player="siljorepa" cards="" type="1" sum="60"/>
+   <action no="9" player="Peon384" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="11" player="ALVIN1956" cards="" type="23" sum="240"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="12" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="13" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="14" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="15" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C7 C6</cards>
+   <action no="16" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329463">
+  <general>
+   <startdate>2017-09-11 14:15:53</startdate>
+   <players>
+    <player bet="1,060" chips="2,594" seat="1" dealer="0" name="Peon384" win="3,360" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="135" chips="2,125" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,060" chips="4,346" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,115" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,080" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,180" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,060" chips="1,060" seat="8" dealer="1" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="4" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="5" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="6" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="7" player="siljorepa" cards="" type="15" sum="15"/>
+   <action no="8" player="Peon384" cards="" type="1" sum="60"/>
+   <action no="9" player="changuillllo" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">H8 SA</cards>
+   <action no="10" player="ALVIN1956" cards="" type="23" sum="240"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="11" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="12" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="13" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">C5 D5</cards>
+   <action no="14" player="siljorepa" cards="" type="23" sum="1,045"/>
+   <cards player="Peon384" type="Pocket">HJ SJ</cards>
+   <action no="15" player="Peon384" cards="" type="3" sum="985"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="16" player="changuillllo" cards="" type="0" sum="0"/>
+   <action no="17" player="ALVIN1956" cards="" type="3" sum="805"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S4 H3 C4</cards>
+   <action no="18" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="19" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D3</cards>
+   <action no="20" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="21" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HK</cards>
+   <action no="22" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="23" player="ALVIN1956" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329554">
+  <general>
+   <startdate>2017-09-11 14:16:30</startdate>
+   <players>
+    <player bet="495" chips="4,894" seat="1" dealer="1" name="Peon384" win="990" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="75" chips="1,990" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="375" chips="3,286" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,100" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,065" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,165" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="3" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="5" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="6" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="7" player="changuillllo" cards="" type="1" sum="60"/>
+   <action no="8" player="ALVIN1956" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="9" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="11" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HK CA</cards>
+   <action no="12" player="Peon384" cards="" type="23" sum="360"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="13" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="14" player="ALVIN1956" cards="" type="3" sum="240"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H5 D9 H10</cards>
+   <action no="15" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="16" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HA</cards>
+   <action no="17" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="18" player="Peon384" cards="" type="5" sum="120"/>
+   <action no="19" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329619">
+  <general>
+   <startdate>2017-09-11 14:16:57</startdate>
+   <players>
+    <player bet="135" chips="5,389" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="15" chips="1,915" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,095" chips="2,911" seat="3" dealer="0" name="ALVIN1956" win="2,360" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,085" chips="1,085" seat="4" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,050" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,150" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="15"/>
+   <action no="2" player="LeeCTsinWH" cards="" type="15" sum="15"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="15"/>
+   <action no="4" player="anhanga" cards="" type="15" sum="15"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="6" player="changuillllo" cards="" type="15" sum="15"/>
+   <action no="7" player="ALVIN1956" cards="" type="1" sum="60"/>
+   <action no="8" player="LeeCTsinWH" cards="" type="2" sum="120"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="10" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D8 H8</cards>
+   <action no="11" player="Peon384" cards="" type="3" sum="120"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="12" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">C2 C9</cards>
+   <action no="13" player="ALVIN1956" cards="" type="3" sum="60"/>
+   <cards player="LeeCTsinWH" type="Pocket">D3 HQ</cards>
+   <action no="14" player="LeeCTsinWH" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C5 S2 DQ</cards>
+   <action no="15" player="ALVIN1956" cards="" type="5" sum="120"/>
+   <action no="16" player="LeeCTsinWH" cards="" type="3" sum="120"/>
+   <action no="17" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C7</cards>
+   <action no="18" player="ALVIN1956" cards="" type="5" sum="120"/>
+   <action no="19" player="LeeCTsinWH" cards="" type="3" sum="120"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CA</cards>
+   <action no="20" player="ALVIN1956" cards="" type="5" sum="720"/>
+   <action no="21" player="LeeCTsinWH" cards="" type="7" sum="710"/>
+  </round>
+ </game>
+ <game gamecode="7679329738">
+  <general>
+   <startdate>2017-09-11 14:17:50</startdate>
+   <players>
+    <player bet="20" chips="5,254" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="20" chips="1,900" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="4,176" seat="3" dealer="1" name="ALVIN1956" win="900" rebuy="0" reg_code="" addon="0"/>
+    <player bet="180" chips="1,035" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,135" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="2" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="5" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="6" player="chewbacca886" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="7" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S6 SJ</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="23" sum="640"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329808">
+  <general>
+   <startdate>2017-09-11 14:18:18</startdate>
+   <players>
+    <player bet="20" chips="5,234" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="20" chips="1,880" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="340" chips="4,416" seat="3" dealer="0" name="ALVIN1956" win="660" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="855" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="180" chips="1,115" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="2" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="5" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="6" player="chewbacca886" cards="" type="1" sum="80"/>
+   <action no="7" player="anhanga" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D5 HQ</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="23" sum="320"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="12" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329840">
+  <general>
+   <startdate>2017-09-11 14:18:33</startdate>
+   <players>
+    <player bet="180" chips="5,214" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,860" chips="1,860" seat="2" dealer="0" name="changuillllo" win="2,180" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="4,736" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="755" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="935" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="5" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="6" player="anhanga" cards="" type="1" sum="80"/>
+   <action no="7" player="Peon384" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="23" sum="1,840"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="11" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D3 H2</cards>
+   <action no="12" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329886">
+  <general>
+   <startdate>2017-09-11 14:18:48</startdate>
+   <players>
+    <player bet="100" chips="5,034" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="180" chips="2,180" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="4,716" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="735" chips="735" seat="5" dealer="0" name="chewbacca886" win="1,055" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="835" seat="6" dealer="1" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="5" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="6" player="Peon384" cards="" type="1" sum="80"/>
+   <action no="7" player="changuillllo" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="23" sum="715"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="10" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C5 S5</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="12" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679329967">
+  <general>
+   <startdate>2017-09-11 14:19:19</startdate>
+   <players>
+    <player bet="20" chips="4,914" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="20" chips="2,240" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="4,516" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="180" chips="1,035" seat="5" dealer="0" name="chewbacca886" win="340" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="795" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="3" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="5" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="6" player="ALVIN1956" cards="" type="1" sum="80"/>
+   <action no="7" player="chewbacca886" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="8" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SQ C4</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="11" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330048">
+  <general>
+   <startdate>2017-09-11 14:19:50</startdate>
+   <players>
+    <player bet="20" chips="4,894" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,140" chips="2,220" seat="2" dealer="0" name="changuillllo" win="1,620" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="4,416" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="1,195" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="340" chips="775" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="2" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="5" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="6" player="chewbacca886" cards="" type="1" sum="80"/>
+   <action no="7" player="anhanga" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HQ H9</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="23" sum="320"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="11" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="12" player="anhanga" cards="" type="3" sum="160"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C3 D5 C2</cards>
+   <action no="13" player="anhanga" cards="" type="4" sum="0"/>
+   <action no="14" player="changuillllo" cards="" type="5" sum="800"/>
+   <action no="15" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330110">
+  <general>
+   <startdate>2017-09-11 14:20:17</startdate>
+   <players>
+    <player bet="180" chips="4,874" seat="1" dealer="0" name="Peon384" win="340" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="20" chips="2,700" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="4,396" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,095" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="435" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="5" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="6" player="anhanga" cards="" type="1" sum="80"/>
+   <action no="7" player="Peon384" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D8 C6</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="11" player="anhanga" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330188">
+  <general>
+   <startdate>2017-09-11 14:20:50</startdate>
+   <players>
+    <player bet="20" chips="4,934" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="100" chips="2,500" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="180" chips="4,356" seat="3" dealer="0" name="ALVIN1956" win="340" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,055" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="655" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="4" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="6" player="changuillllo" cards="" type="1" sum="80"/>
+   <action no="7" player="ALVIN1956" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="9" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C4 D10</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="11" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330266">
+  <general>
+   <startdate>2017-09-11 14:21:22</startdate>
+   <players>
+    <player bet="20" chips="4,914" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="2,400" chips="2,400" seat="2" dealer="1" name="changuillllo" win="3,335" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="4,516" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="180" chips="1,035" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="635" chips="635" seat="6" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="20"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="20"/>
+   <action no="3" player="anhanga" cards="" type="15" sum="20"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="5" player="changuillllo" cards="" type="15" sum="20"/>
+   <action no="6" player="ALVIN1956" cards="" type="1" sum="80"/>
+   <action no="7" player="chewbacca886" cards="" type="2" sum="160"/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">D10 SA</cards>
+   <action no="8" player="anhanga" cards="" type="23" sum="615"/>
+   <cards player="Peon384" type="Pocket">C9 H9</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">S10 DK</cards>
+   <action no="10" player="changuillllo" cards="" type="23" sum="2,380"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="11" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="12" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SK S8 CK</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CA</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C6</cards>
+  </round>
+ </game>
+ <game gamecode="7679330331">
+  <general>
+   <startdate>2017-09-11 14:21:49</startdate>
+   <players>
+    <player bet="225" chips="4,894" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="3,335" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="4,416" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="955" chips="855" seat="5" dealer="0" name="chewbacca886" win="1,330" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="5" player="chewbacca886" cards="" type="1" sum="100"/>
+   <action no="6" player="Peon384" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="3" sum="200"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="23" sum="830"/>
+   <cards player="Peon384" type="Pocket">H3 DQ</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <action no="11" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330375">
+  <general>
+   <startdate>2017-09-11 14:22:04</startdate>
+   <players>
+    <player bet="225" chips="4,669" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="475" chips="3,310" seat="2" dealer="0" name="changuillllo" win="750" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="4,191" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,330" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="5" player="Peon384" cards="" type="1" sum="100"/>
+   <action no="6" player="changuillllo" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="7" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S2 H2</cards>
+   <action no="9" player="Peon384" cards="" type="3" sum="100"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DJ H6 C3</cards>
+   <action no="11" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="12" player="changuillllo" cards="" type="5" sum="250"/>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330423">
+  <general>
+   <startdate>2017-09-11 14:22:23</startdate>
+   <players>
+    <player bet="25" chips="4,444" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="125" chips="3,585" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="4,166" seat="3" dealer="0" name="ALVIN1956" win="400" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,305" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="5" player="changuillllo" cards="" type="1" sum="100"/>
+   <action no="6" player="ALVIN1956" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="7" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D8 D6</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330469">
+  <general>
+   <startdate>2017-09-11 14:22:35</startdate>
+   <players>
+    <player bet="25" chips="4,419" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="3,460" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="4,341" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="1,280" seat="5" dealer="0" name="chewbacca886" win="500" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="5" player="ALVIN1956" cards="" type="1" sum="100"/>
+   <action no="6" player="chewbacca886" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C7 D7</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">D2 DJ</cards>
+   <action no="9" player="ALVIN1956" cards="" type="3" sum="100"/>
+   <cards player="chewbacca886" type="Pocket">S3 HQ</cards>
+   <action no="10" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SA H7 H6</cards>
+   <action no="11" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="12" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D5</cards>
+   <action no="13" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="14" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">DQ</cards>
+   <action no="15" player="ALVIN1956" cards="" type="4" sum="0"/>
+   <action no="16" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330593">
+  <general>
+   <startdate>2017-09-11 14:23:18</startdate>
+   <players>
+    <player bet="225" chips="4,394" seat="1" dealer="0" name="Peon384" win="400" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="3,435" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="4,116" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="125" chips="1,555" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="5" player="chewbacca886" cards="" type="1" sum="100"/>
+   <action no="6" player="Peon384" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C4 CA</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330626">
+  <general>
+   <startdate>2017-09-11 14:23:27</startdate>
+   <players>
+    <player bet="125" chips="4,569" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="3,610" chips="3,410" seat="2" dealer="0" name="changuillllo" win="6,970" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,410" chips="4,091" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,430" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="5" player="Peon384" cards="" type="1" sum="100"/>
+   <action no="6" player="changuillllo" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">DJ D9</cards>
+   <action no="7" player="ALVIN1956" cards="" type="23" sum="400"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C2 D6</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">SA CK</cards>
+   <action no="10" player="changuillllo" cards="" type="23" sum="3,385"/>
+   <action no="11" player="ALVIN1956" cards="" type="3" sum="2,985"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C6 S4 HK</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H3</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C4</cards>
+  </round>
+ </game>
+ <game gamecode="7679330686">
+  <general>
+   <startdate>2017-09-11 14:23:49</startdate>
+   <players>
+    <player bet="25" chips="4,444" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="125" chips="6,970" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="681" seat="3" dealer="0" name="ALVIN1956" win="400" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,405" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="5" player="changuillllo" cards="" type="1" sum="100"/>
+   <action no="6" player="ALVIN1956" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="7" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C2 HA</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330721">
+  <general>
+   <startdate>2017-09-11 14:24:01</startdate>
+   <players>
+    <player bet="25" chips="4,419" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="6,845" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="125" chips="856" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="1,380" seat="5" dealer="0" name="chewbacca886" win="400" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="5" player="ALVIN1956" cards="" type="1" sum="100"/>
+   <action no="6" player="chewbacca886" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">H6 C8</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330753">
+  <general>
+   <startdate>2017-09-11 14:24:11</startdate>
+   <players>
+    <player bet="225" chips="4,394" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="6,820" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="731" chips="731" seat="3" dealer="1" name="ALVIN1956" win="1,106" rebuy="0" reg_code="" addon="0"/>
+    <player bet="125" chips="1,555" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="5" player="chewbacca886" cards="" type="1" sum="100"/>
+   <action no="6" player="Peon384" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="23" sum="706"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H6 D5</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330787">
+  <general>
+   <startdate>2017-09-11 14:24:23</startdate>
+   <players>
+    <player bet="1,475" chips="4,169" seat="1" dealer="0" name="Peon384" win="2,000" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="475" chips="6,795" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,106" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,430" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="5" player="Peon384" cards="" type="1" sum="100"/>
+   <action no="6" player="changuillllo" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="7" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H4 DA</cards>
+   <action no="9" player="Peon384" cards="" type="3" sum="100"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="10" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DK S4 D8</cards>
+   <action no="11" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="12" player="changuillllo" cards="" type="5" sum="250"/>
+   <action no="13" player="Peon384" cards="" type="3" sum="250"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H8</cards>
+   <action no="14" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="15" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">SA</cards>
+   <action no="16" player="Peon384" cards="" type="5" sum="1,000"/>
+   <action no="17" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330876">
+  <general>
+   <startdate>2017-09-11 14:24:54</startdate>
+   <players>
+    <player bet="25" chips="4,694" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="6,420" chips="6,320" seat="2" dealer="0" name="changuillllo" win="6,595" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="1,081" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,405" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="5" player="changuillllo" cards="" type="1" sum="100"/>
+   <action no="6" player="ALVIN1956" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="7" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SQ H4</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="9" player="changuillllo" cards="" type="23" sum="6,295"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="10" player="ALVIN1956" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330919">
+  <general>
+   <startdate>2017-09-11 14:25:07</startdate>
+   <players>
+    <player bet="25" chips="4,669" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="6,595" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="956" chips="856" seat="3" dealer="0" name="ALVIN1956" win="1,131" rebuy="0" reg_code="" addon="0"/>
+    <player bet="225" chips="1,380" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="5" player="ALVIN1956" cards="" type="1" sum="100"/>
+   <action no="6" player="chewbacca886" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">H10 C3</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="9" player="ALVIN1956" cards="" type="23" sum="831"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="10" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330954">
+  <general>
+   <startdate>2017-09-11 14:25:21</startdate>
+   <players>
+    <player bet="225" chips="4,644" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="6,570" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,131" seat="3" dealer="1" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,255" chips="1,155" seat="5" dealer="0" name="chewbacca886" win="1,430" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="4" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="5" player="chewbacca886" cards="" type="1" sum="100"/>
+   <action no="6" player="Peon384" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="ALVIN1956" type="Pocket">X X</cards>
+   <action no="8" player="ALVIN1956" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="9" player="chewbacca886" cards="" type="23" sum="1,130"/>
+   <cards player="Peon384" type="Pocket">D9 C4</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679330986">
+  <general>
+   <startdate>2017-09-11 14:25:33</startdate>
+   <players>
+    <player bet="175" chips="4,419" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,106" chips="6,545" seat="2" dealer="0" name="changuillllo" win="2,412" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,106" chips="1,106" seat="3" dealer="0" name="ALVIN1956" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="1,430" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="ALVIN1956" cards="" type="15" sum="25"/>
+   <action no="4" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="5" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="6" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="ALVIN1956" type="Pocket">CK HK</cards>
+   <action no="7" player="ALVIN1956" cards="" type="23" sum="1,081"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H4 C2</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">C8 H8</cards>
+   <action no="10" player="changuillllo" cards="" type="3" sum="781"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HQ S6 D10</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S7</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D9</cards>
+  </round>
+ </game>
+ <game gamecode="7679331060">
+  <general>
+   <startdate>2017-09-11 14:25:58</startdate>
+   <players>
+    <player bet="25" chips="4,244" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="8,001" chips="7,851" seat="2" dealer="0" name="changuillllo" win="8,201" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="1,405" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="5" player="chewbacca886" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D10 D7</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="23" sum="7,826"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="8" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341495">
+  <general>
+   <startdate>2017-09-11 14:26:18</startdate>
+   <players>
+    <player bet="325" chips="4,219" seat="1" dealer="0" name="Peon384" win="525" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="25" chips="8,201" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="175" chips="1,080" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="4" player="chewbacca886" cards="" type="1" sum="150"/>
+   <action no="5" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CQ C9</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="7" player="chewbacca886" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341538">
+  <general>
+   <startdate>2017-09-11 14:26:32</startdate>
+   <players>
+    <player bet="325" chips="4,419" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="662" chips="8,176" seat="2" dealer="0" name="changuillllo" win="1,012" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="905" seat="5" dealer="1" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="4" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="5" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="6" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CK D10</cards>
+   <action no="7" player="Peon384" cards="" type="3" sum="150"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="8" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S8 HA S4</cards>
+   <action no="9" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="10" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">DA</cards>
+   <action no="11" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="12" player="changuillllo" cards="" type="5" sum="337"/>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341604">
+  <general>
+   <startdate>2017-09-11 14:26:59</startdate>
+   <players>
+    <player bet="4,094" chips="4,094" seat="1" dealer="1" name="Peon384" win="5,299" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="325" chips="8,526" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="880" chips="880" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="chewbacca886" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="5" player="chewbacca886" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">SJ SA</cards>
+   <action no="6" player="Peon384" cards="" type="3" sum="300"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="7" player="changuillllo" cards="" type="3" sum="150"/>
+   <cards player="chewbacca886" type="Pocket">C5 S6</cards>
+   <action no="8" player="chewbacca886" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S8 S5 S4</cards>
+   <action no="9" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="10" player="chewbacca886" cards="" type="5" sum="555"/>
+   <action no="11" player="Peon384" cards="" type="23" sum="3,769"/>
+   <action no="12" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CA</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HK</cards>
+  </round>
+ </game>
+ <game gamecode="7679341686">
+  <general>
+   <startdate>2017-09-11 14:27:32</startdate>
+   <players>
+    <player bet="325" chips="5,299" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="775" chips="8,201" seat="2" dealer="1" name="changuillllo" win="950" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="600"/>
+   <cards player="Peon384" type="Pocket">C4 S6</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341718">
+  <general>
+   <startdate>2017-09-11 14:27:43</startdate>
+   <players>
+    <player bet="175" chips="4,974" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="325" chips="8,526" seat="2" dealer="0" name="changuillllo" win="500" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">D6 S10</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341739">
+  <general>
+   <startdate>2017-09-11 14:27:53</startdate>
+   <players>
+    <player bet="325" chips="4,799" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="775" chips="8,701" seat="2" dealer="1" name="changuillllo" win="950" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="600"/>
+   <cards player="Peon384" type="Pocket">DQ S4</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341776">
+  <general>
+   <startdate>2017-09-11 14:28:06</startdate>
+   <players>
+    <player bet="175" chips="4,474" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="325" chips="9,026" seat="2" dealer="0" name="changuillllo" win="500" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">C5 D2</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341793">
+  <general>
+   <startdate>2017-09-11 14:28:12</startdate>
+   <players>
+    <player bet="325" chips="4,299" seat="1" dealer="0" name="Peon384" win="500" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="175" chips="9,201" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S8 DA</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341806">
+  <general>
+   <startdate>2017-09-11 14:28:18</startdate>
+   <players>
+    <player bet="325" chips="4,474" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="650" chips="9,026" seat="2" dealer="0" name="changuillllo" win="975" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">H7 SQ</cards>
+   <action no="5" player="Peon384" cards="" type="3" sum="150"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">CA H8 C6</cards>
+   <action no="7" player="changuillllo" cards="" type="5" sum="325"/>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341858">
+  <general>
+   <startdate>2017-09-11 14:28:37</startdate>
+   <players>
+    <player bet="325" chips="4,149" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="9,501" chips="9,351" seat="2" dealer="1" name="changuillllo" win="9,676" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="9,326"/>
+   <cards player="Peon384" type="Pocket">D10 C2</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341883">
+  <general>
+   <startdate>2017-09-11 14:28:47</startdate>
+   <players>
+    <player bet="175" chips="3,824" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="325" chips="9,676" seat="2" dealer="0" name="changuillllo" win="500" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">D4 C7</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679341895">
+  <general>
+   <startdate>2017-09-11 14:28:53</startdate>
+   <players>
+    <player bet="3,949" chips="3,649" seat="1" dealer="0" name="Peon384" win="7,298" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="3,649" chips="9,851" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="150"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">D9 H10</cards>
+   <action no="5" player="changuillllo" cards="" type="3" sum="150"/>
+   <cards player="Peon384" type="Pocket">S8 H6</cards>
+   <action no="6" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H7 D5 H9</cards>
+   <action no="7" player="Peon384" cards="" type="5" sum="300"/>
+   <action no="8" player="changuillllo" cards="" type="23" sum="775"/>
+   <action no="9" player="Peon384" cards="" type="23" sum="3,324"/>
+   <action no="10" player="changuillllo" cards="" type="3" sum="2,549"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D6</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CA</cards>
+  </round>
+ </game>
+ <game gamecode="7679342010">
+  <general>
+   <startdate>2017-09-11 14:29:31</startdate>
+   <players>
+    <player bet="625" chips="7,298" seat="1" dealer="1" name="Peon384" win="950" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="325" chips="6,202" seat="2" dealer="0" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C10 DQ</cards>
+   <action no="5" player="Peon384" cards="" type="3" sum="150"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S9 D6 C4</cards>
+   <action no="7" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="8" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S10</cards>
+   <action no="9" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="10" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S4</cards>
+   <action no="11" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="12" player="Peon384" cards="" type="5" sum="300"/>
+   <action no="13" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342128">
+  <general>
+   <startdate>2017-09-11 14:30:13</startdate>
+   <players>
+    <player bet="425" chips="7,623" seat="1" dealer="0" name="Peon384" win="650" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="225" chips="5,877" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">DQ S10</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342148">
+  <general>
+   <startdate>2017-09-11 14:30:20</startdate>
+   <players>
+    <player bet="425" chips="7,848" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="6,052" chips="5,652" seat="2" dealer="0" name="changuillllo" win="6,077" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HA C2</cards>
+   <action no="5" player="Peon384" cards="" type="3" sum="200"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="23" sum="5,627"/>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342188">
+  <general>
+   <startdate>2017-09-11 14:30:35</startdate>
+   <players>
+    <player bet="825" chips="7,423" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,025" chips="6,077" seat="2" dealer="1" name="changuillllo" win="1,650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">SQ S9</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="800"/>
+   <cards player="Peon384" type="Pocket">SJ CQ</cards>
+   <action no="6" player="Peon384" cards="" type="3" sum="400"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S10 C3 C4</cards>
+   <action no="7" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="8" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C9</cards>
+   <action no="9" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="10" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D7</cards>
+   <action no="11" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="12" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342303">
+  <general>
+   <startdate>2017-09-11 14:31:18</startdate>
+   <players>
+    <player bet="225" chips="6,598" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="425" chips="6,902" seat="2" dealer="0" name="changuillllo" win="650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">D5 S6</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342331">
+  <general>
+   <startdate>2017-09-11 14:31:25</startdate>
+   <players>
+    <player bet="425" chips="6,373" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,025" chips="7,127" seat="2" dealer="1" name="changuillllo" win="1,250" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="800"/>
+   <cards player="Peon384" type="Pocket">D6 C2</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342351">
+  <general>
+   <startdate>2017-09-11 14:31:32</startdate>
+   <players>
+    <player bet="225" chips="5,948" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="425" chips="7,552" seat="2" dealer="0" name="changuillllo" win="650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">C3 H6</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342370">
+  <general>
+   <startdate>2017-09-11 14:31:41</startdate>
+   <players>
+    <player bet="425" chips="5,723" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,025" chips="7,777" seat="2" dealer="1" name="changuillllo" win="1,250" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="800"/>
+   <cards player="Peon384" type="Pocket">D8 S10</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342412">
+  <general>
+   <startdate>2017-09-11 14:31:53</startdate>
+   <players>
+    <player bet="225" chips="5,298" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="425" chips="8,202" seat="2" dealer="0" name="changuillllo" win="650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">S2 S10</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342427">
+  <general>
+   <startdate>2017-09-11 14:31:59</startdate>
+   <players>
+    <player bet="425" chips="5,073" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="1,025" chips="8,427" seat="2" dealer="1" name="changuillllo" win="1,250" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="800"/>
+   <cards player="Peon384" type="Pocket">S4 S8</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342454">
+  <general>
+   <startdate>2017-09-11 14:32:10</startdate>
+   <players>
+    <player bet="225" chips="4,648" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="425" chips="8,852" seat="2" dealer="0" name="changuillllo" win="650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">D3 H4</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342477">
+  <general>
+   <startdate>2017-09-11 14:32:16</startdate>
+   <players>
+    <player bet="425" chips="4,423" seat="1" dealer="0" name="Peon384" win="650" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="225" chips="9,077" seat="2" dealer="1" name="changuillllo" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CA HJ</cards>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342507">
+  <general>
+   <startdate>2017-09-11 14:32:23</startdate>
+   <players>
+    <player bet="425" chips="4,648" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="825" chips="8,852" seat="2" dealer="0" name="changuillllo" win="1,250" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HQ D8</cards>
+   <action no="5" player="Peon384" cards="" type="3" sum="200"/>
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="6" player="changuillllo" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C10 CJ DA</cards>
+   <action no="7" player="changuillllo" cards="" type="4" sum="0"/>
+   <action no="8" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+   <action no="9" player="changuillllo" cards="" type="5" sum="400"/>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342555">
+  <general>
+   <startdate>2017-09-11 14:32:40</startdate>
+   <players>
+    <player bet="425" chips="4,223" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="850" chips="9,277" seat="2" dealer="1" name="changuillllo" win="1,275" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="3" sum="200"/>
+   <cards player="Peon384" type="Pocket">D10 HQ</cards>
+   <action no="6" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C7 DA S4</cards>
+   <action no="7" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="8" player="changuillllo" cards="" type="5" sum="425"/>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342614">
+  <general>
+   <startdate>2017-09-11 14:32:59</startdate>
+   <players>
+    <player bet="225" chips="3,798" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="425" chips="9,702" seat="2" dealer="0" name="changuillllo" win="650" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">S3 HJ</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342642">
+  <general>
+   <startdate>2017-09-11 14:33:07</startdate>
+   <players>
+    <player bet="425" chips="3,573" seat="1" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10,127" chips="9,927" seat="2" dealer="1" name="changuillllo" win="10,352" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="changuillllo" cards="" type="1" sum="200"/>
+   <action no="4" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="changuillllo" type="Pocket">X X</cards>
+   <action no="5" player="changuillllo" cards="" type="23" sum="9,902"/>
+   <cards player="Peon384" type="Pocket">S9 D2</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679342668">
+  <general>
+   <startdate>2017-09-11 14:33:16</startdate>
+   <players>
+    <player bet="3,148" chips="3,148" seat="1" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731707803" addon="0"/>
+    <player bet="10,752" chips="10,352" seat="2" dealer="0" name="changuillllo" win="13,500" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="changuillllo" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="4" player="changuillllo" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C8 SK</cards>
+   <action no="5" player="Peon384" cards="" type="3" sum="200"/>
+   <cards player="changuillllo" type="Pocket">H2 HA</cards>
+   <action no="6" player="changuillllo" cards="" type="23" sum="10,327"/>
+   <action no="7" player="Peon384" cards="" type="7" sum="2,723"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H9 D6 H3</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C6</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S5</cards>
+  </round>
+ </game>
+</session>

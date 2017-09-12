@@ -1,0 +1,3115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6731693991">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>$25 Booster, 910049941</tablename>
+  <tournamentcurrency>USD</tournamentcurrency>
+  <duration>01:10:31</duration>
+  <gamecount>21</gamecount>
+  <startdate>2017-09-11 13:00:34</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>33,940</bets>
+  <wins>13,970</wins>
+  <chipsin>20,000</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0</statuspoints>
+  <awardpoints>Club0</awardpoints>
+  <ipoints>Club0</ipoints>
+  <tournamentcode>909988026</tournamentcode>
+  <tournamentname>$25 Booster</tournamentname>
+  <place>21</place>
+  <buyin>$0 + $0</buyin>
+  <totalbuyin>$0</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7679254613">
+  <general>
+   <startdate>2017-09-11 13:00:34</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="1" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="20,000" seat="2" dealer="0" name="evgenkinglitl" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="20,000" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="300" chips="20,000" seat="4" dealer="0" name="fretsch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,000" chips="20,000" seat="5" dealer="0" name="revizorv" win="20,450" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="evgenkinglitl" cards="" type="1" sum="50"/>
+   <action no="2" player="Necrolancer1" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="fretsch" type="Pocket">X X</cards>
+   <action no="3" player="fretsch" cards="" type="23" sum="300"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="4" player="revizorv" cards="" type="23" sum="20,000"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="5" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="6" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="7" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CJ S8</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="9" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="evgenkinglitl" type="Pocket">X X</cards>
+   <action no="10" player="evgenkinglitl" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="11" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <action no="12" player="fretsch" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254640">
+  <general>
+   <startdate>2017-09-11 13:01:39</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,950" seat="2" dealer="1" name="evgenkinglitl" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="19,900" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="19,700" chips="19,700" seat="4" dealer="0" name="fretsch" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,450" chips="20,450" seat="5" dealer="0" name="revizorv" win="40,200" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Necrolancer1" cards="" type="1" sum="50"/>
+   <action no="2" player="fretsch" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="revizorv" type="Pocket">H9 D9</cards>
+   <action no="3" player="revizorv" cards="" type="23" sum="20,450"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="4" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="5" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="6" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D8 S8</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="8" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="evgenkinglitl" type="Pocket">X X</cards>
+   <action no="9" player="evgenkinglitl" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="10" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="fretsch" type="Pocket">SK C4</cards>
+   <action no="11" player="fretsch" cards="" type="7" sum="19,600"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DQ C8 S2</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S7</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">SQ</cards>
+  </round>
+ </game>
+ <game gamecode="7679254660">
+  <general>
+   <startdate>2017-09-11 13:02:33</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,950" seat="2" dealer="0" name="evgenkinglitl" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="19,850" seat="3" dealer="1" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40,300" chips="40,200" seat="5" dealer="0" name="revizorv" win="20,200" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,000" chips="20,000" seat="8" dealer="0" name="gasparyan19901" win="40,100" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="revizorv" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="2" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">SJ CJ</cards>
+   <action no="3" player="gasparyan19901" cards="" type="3" sum="100"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="4" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H9 S5</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="6" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="evgenkinglitl" type="Pocket">X X</cards>
+   <action no="7" player="evgenkinglitl" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="8" player="Necrolancer1" cards="" type="3" sum="100"/>
+   <cards player="revizorv" type="Pocket">C9 HA</cards>
+   <action no="9" player="revizorv" cards="" type="23" sum="40,200"/>
+   <action no="10" player="gasparyan19901" cards="" type="7" sum="19,900"/>
+   <action no="11" player="Necrolancer1" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D3 C10 H6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H8</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D6</cards>
+  </round>
+ </game>
+ <game gamecode="7679254672">
+  <general>
+   <startdate>2017-09-11 13:03:07</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,950" seat="2" dealer="0" name="evgenkinglitl" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="19,750" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,250" chips="20,200" seat="5" dealer="0" name="revizorv" win="20,400" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="20,000" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,100" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="revizorv" cards="" type="1" sum="50"/>
+   <action no="2" player="7Serge7" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="3" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="4" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HQ H2</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="6" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="evgenkinglitl" type="Pocket">X X</cards>
+   <action no="7" player="evgenkinglitl" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="8" player="Necrolancer1" cards="" type="3" sum="100"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="9" player="revizorv" cards="" type="23" sum="20,200"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="10" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="11" player="Necrolancer1" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254678">
+  <general>
+   <startdate>2017-09-11 13:03:33</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="19,950" chips="19,950" seat="2" dealer="0" name="evgenkinglitl" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,650" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,400" chips="20,400" seat="5" dealer="1" name="revizorv" win="40,500" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="19,900" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="40,100" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="7Serge7" cards="" type="1" sum="50"/>
+   <action no="2" player="gasparyan19901" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="3" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D9 CJ</cards>
+   <action no="4" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="5" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="evgenkinglitl" type="Pocket">CK DJ</cards>
+   <action no="6" player="evgenkinglitl" cards="" type="23" sum="200"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="7" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">S10 D4</cards>
+   <action no="8" player="revizorv" cards="" type="23" sum="20,400"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="9" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="10" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="11" player="evgenkinglitl" cards="" type="7" sum="19,750"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S2 H3 S6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S5</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HA</cards>
+  </round>
+ </game>
+ <game gamecode="7679254702">
+  <general>
+   <startdate>2017-09-11 13:04:25</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="550" chips="19,650" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,500" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,300" chips="19,850" seat="6" dealer="1" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,300" chips="40,000" seat="8" dealer="0" name="gasparyan19901" win="5,250" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="20,000" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="1" sum="50"/>
+   <action no="2" player="sssAvatarsss" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C2 CA</cards>
+   <action no="3" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="4" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="5" player="Necrolancer1" cards="" type="3" sum="100"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="6" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">S9 DJ</cards>
+   <action no="7" player="7Serge7" cards="" type="3" sum="100"/>
+   <cards player="gasparyan19901" type="Pocket">DA CQ</cards>
+   <action no="8" player="gasparyan19901" cards="" type="3" sum="50"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="9" player="sssAvatarsss" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HQ H9 D6</cards>
+   <action no="10" player="gasparyan19901" cards="" type="5" sum="100"/>
+   <action no="11" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <action no="12" player="Necrolancer1" cards="" type="3" sum="100"/>
+   <action no="13" player="7Serge7" cards="" type="3" sum="100"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SJ</cards>
+   <action no="14" player="gasparyan19901" cards="" type="5" sum="350"/>
+   <action no="15" player="Necrolancer1" cards="" type="3" sum="350"/>
+   <action no="16" player="7Serge7" cards="" type="3" sum="350"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">SA</cards>
+   <action no="17" player="gasparyan19901" cards="" type="5" sum="875"/>
+   <action no="18" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <action no="19" player="7Serge7" cards="" type="23" sum="1,750"/>
+   <action no="20" player="gasparyan19901" cards="" type="3" sum="875"/>
+  </round>
+ </game>
+ <game gamecode="7679254732">
+  <general>
+   <startdate>2017-09-11 13:05:52</startdate>
+   <players>
+    <player bet="0" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,100" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,500" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="42,950" seat="8" dealer="1" name="gasparyan19901" win="350" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="19,900" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="20,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="1" sum="50"/>
+   <action no="2" player="Peon384" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="3" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="4" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="5" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="6" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="7" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="8" player="gasparyan19901" cards="" type="3" sum="100"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="9" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S2 CJ</cards>
+   <action no="10" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S10 C3 D6</cards>
+   <action no="11" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="12" player="gasparyan19901" cards="" type="5" sum="100"/>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254746">
+  <general>
+   <startdate>2017-09-11 13:06:30</startdate>
+   <players>
+    <player bet="100" chips="20,000" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="19,100" seat="3" dealer="0" name="Necrolancer1" win="350" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,500" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="43,100" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="19,900" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="1" sum="50"/>
+   <action no="2" player="SBR14" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="3" player="Necrolancer1" cards="" type="23" sum="200"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="4" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="5" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="6" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="7" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="8" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S6 C2</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="10" player="SBR14" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254765">
+  <general>
+   <startdate>2017-09-11 13:07:24</startdate>
+   <players>
+    <player bet="50" chips="19,900" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="19,250" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40,500" chips="40,500" seat="5" dealer="0" name="revizorv" win="40,650" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="43,100" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SBR14" cards="" type="1" sum="50"/>
+   <action no="2" player="Necrolancer1" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="3" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="4" player="revizorv" cards="" type="23" sum="40,500"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="5" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="6" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="7" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CJ SJ</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="9" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="10" player="Necrolancer1" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254786">
+  <general>
+   <startdate>2017-09-11 13:08:11</startdate>
+   <players>
+    <player bet="0" chips="19,850" seat="1" dealer="1" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="50" chips="19,150" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,650" chips="19,850" seat="4" dealer="0" name="denysmolyar91" win="2,500" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,650" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="400" chips="43,100" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="400" chips="19,850" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Necrolancer1" cards="" type="1" sum="50"/>
+   <action no="2" player="denysmolyar91" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="3" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="4" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="5" player="gasparyan19901" cards="" type="3" sum="100"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="6" player="sssAvatarsss" cards="" type="3" sum="100"/>
+   <cards player="Peon384" type="Pocket">S9 D5</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="8" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="9" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="10" player="denysmolyar91" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C5 S10 D7</cards>
+   <action no="11" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="12" player="gasparyan19901" cards="" type="5" sum="100"/>
+   <action no="13" player="sssAvatarsss" cards="" type="3" sum="100"/>
+   <action no="14" player="denysmolyar91" cards="" type="3" sum="100"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SJ</cards>
+   <action no="15" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="16" player="gasparyan19901" cards="" type="5" sum="200"/>
+   <action no="17" player="sssAvatarsss" cards="" type="3" sum="200"/>
+   <action no="18" player="denysmolyar91" cards="" type="3" sum="200"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S4</cards>
+   <action no="19" player="denysmolyar91" cards="" type="5" sum="1,250"/>
+   <action no="20" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="21" player="sssAvatarsss" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254817">
+  <general>
+   <startdate>2017-09-11 13:09:43</startdate>
+   <players>
+    <player bet="0" chips="19,850" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,100" seat="3" dealer="1" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="20,700" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="40,650" seat="5" dealer="0" name="revizorv" win="225" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="42,700" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,450" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="1" sum="75"/>
+   <action no="2" player="revizorv" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="3" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="4" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="5" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CQ H5</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="7" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="8" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="9" player="denysmolyar91" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254829">
+  <general>
+   <startdate>2017-09-11 13:10:15</startdate>
+   <players>
+    <player bet="0" chips="19,850" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,100" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="20,625" seat="4" dealer="1" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40,725" chips="40,725" seat="5" dealer="0" name="revizorv" win="41,025" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="17,550" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="42,700" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,450" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="revizorv" cards="" type="1" sum="75"/>
+   <action no="2" player="7Serge7" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="3" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="4" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DA C3</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="6" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="7" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="8" player="denysmolyar91" cards="" type="3" sum="150"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="9" player="revizorv" cards="" type="3" sum="75"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="10" player="7Serge7" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HA S10 SQ</cards>
+   <action no="11" player="revizorv" cards="" type="5" sum="40,575"/>
+   <action no="12" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="13" player="denysmolyar91" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254843">
+  <general>
+   <startdate>2017-09-11 13:10:54</startdate>
+   <players>
+    <player bet="0" chips="19,850" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="26,951" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,132" chips="19,100" seat="3" dealer="0" name="Necrolancer1" win="2,339" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="41,025" seat="5" dealer="1" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="17,400" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,132" chips="42,700" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,450" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="7Serge7" cards="" type="1" sum="75"/>
+   <action no="2" player="gasparyan19901" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="3" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DA H6</cards>
+   <action no="4" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="5" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="6" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">C8 S8</cards>
+   <action no="7" player="Necrolancer1" cards="" type="23" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="8" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="9" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="10" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">C6 S3</cards>
+   <action no="11" player="gasparyan19901" cards="" type="3" sum="150"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D10 D5 D4</cards>
+   <action no="12" player="gasparyan19901" cards="" type="5" sum="150"/>
+   <action no="13" player="Necrolancer1" cards="" type="3" sum="150"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C10</cards>
+   <action no="14" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="15" player="Necrolancer1" cards="" type="5" sum="682"/>
+   <action no="16" player="gasparyan19901" cards="" type="3" sum="682"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H3</cards>
+   <action no="17" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="18" player="Necrolancer1" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254875">
+  <general>
+   <startdate>2017-09-11 13:12:20</startdate>
+   <players>
+    <player bet="150" chips="19,850" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="26,951" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="900" chips="20,307" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="41,025" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="17,325" seat="6" dealer="1" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="900" chips="41,568" seat="8" dealer="0" name="gasparyan19901" win="2,250" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="19,450" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="1" sum="75"/>
+   <action no="2" player="sssAvatarsss" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S4 H2</cards>
+   <action no="3" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="4" player="SBR14" cards="" type="3" sum="150"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="5" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">D7 HJ</cards>
+   <action no="6" player="Necrolancer1" cards="" type="3" sum="150"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="7" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="8" player="revizorv" cards="" type="3" sum="150"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="9" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">DJ D10</cards>
+   <action no="10" player="gasparyan19901" cards="" type="3" sum="75"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="11" player="sssAvatarsss" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S2 CJ D6</cards>
+   <action no="12" player="gasparyan19901" cards="" type="5" sum="150"/>
+   <action no="13" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <action no="14" player="SBR14" cards="" type="0" sum="0"/>
+   <action no="15" player="Necrolancer1" cards="" type="3" sum="150"/>
+   <action no="16" player="revizorv" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HA</cards>
+   <action no="17" player="gasparyan19901" cards="" type="5" sum="450"/>
+   <action no="18" player="Necrolancer1" cards="" type="3" sum="450"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C4</cards>
+   <action no="19" player="gasparyan19901" cards="" type="5" sum="150"/>
+   <action no="20" player="Necrolancer1" cards="" type="3" sum="150"/>
+  </round>
+ </game>
+ <game gamecode="7679254904">
+  <general>
+   <startdate>2017-09-11 13:13:39</startdate>
+   <players>
+    <player bet="0" chips="19,700" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="350" chips="26,951" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,407" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,875" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="350" chips="17,325" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,400" chips="42,918" seat="8" dealer="1" name="gasparyan19901" win="2,325" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="19,300" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="19,850" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="1" sum="75"/>
+   <action no="2" player="Peon384" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="3" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="4" player="SilentXWarrior" cards="" type="23" sum="350"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="5" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="6" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="7" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="8" player="7Serge7" cards="" type="3" sum="350"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="9" player="gasparyan19901" cards="" type="3" sum="350"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="10" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S5 SK</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D5 DK S6</cards>
+   <action no="12" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="13" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="14" player="gasparyan19901" cards="" type="5" sum="1,050"/>
+   <action no="15" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <action no="16" player="7Serge7" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254938">
+  <general>
+   <startdate>2017-09-11 13:15:05</startdate>
+   <players>
+    <player bet="2,400" chips="19,700" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="26,601" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,200" chips="19,407" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,875" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="16,975" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,400" chips="43,843" seat="8" dealer="0" name="gasparyan19901" win="6,075" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,225" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="75" chips="19,700" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="1" sum="75"/>
+   <action no="2" player="SBR14" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="3" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="4" player="Necrolancer1" cards="" type="23" sum="450"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="5" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="6" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="7" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">CA C9</cards>
+   <action no="8" player="gasparyan19901" cards="" type="23" sum="750"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="9" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H7 DQ</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">D4 S9</cards>
+   <action no="11" player="SBR14" cards="" type="3" sum="600"/>
+   <action no="12" player="Necrolancer1" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H8 H5 H9</cards>
+   <action no="13" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="14" player="Necrolancer1" cards="" type="4" sum="0"/>
+   <action no="15" player="gasparyan19901" cards="" type="5" sum="450"/>
+   <action no="16" player="SBR14" cards="" type="3" sum="450"/>
+   <action no="17" player="Necrolancer1" cards="" type="3" sum="450"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SA</cards>
+   <action no="18" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="19" player="Necrolancer1" cards="" type="4" sum="0"/>
+   <action no="20" player="gasparyan19901" cards="" type="5" sum="1,200"/>
+   <action no="21" player="SBR14" cards="" type="3" sum="1,200"/>
+   <action no="22" player="Necrolancer1" cards="" type="0" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C5</cards>
+   <action no="23" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="24" player="gasparyan19901" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254967">
+  <general>
+   <startdate>2017-09-11 13:16:30</startdate>
+   <players>
+    <player bet="3,870" chips="17,300" seat="1" dealer="0" name="SBR14" win="8,640" rebuy="0" reg_code="" addon="0"/>
+    <player bet="300" chips="26,601" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,870" chips="18,207" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,875" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="300" chips="16,975" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="300" chips="47,518" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,225" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SBR14" cards="" type="1" sum="75"/>
+   <action no="2" player="SilentXWarrior" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="Necrolancer1" type="Pocket">D10 DK</cards>
+   <action no="3" player="Necrolancer1" cards="" type="23" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="4" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="5" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="6" player="7Serge7" cards="" type="3" sum="300"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="7" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="8" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SQ H7</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">HA CJ</cards>
+   <action no="10" player="SBR14" cards="" type="3" sum="225"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="11" player="SilentXWarrior" cards="" type="3" sum="150"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HJ C2 S10</cards>
+   <action no="12" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="13" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="14" player="Necrolancer1" cards="" type="5" sum="1,050"/>
+   <action no="15" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="16" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="17" player="SBR14" cards="" type="3" sum="1,050"/>
+   <action no="18" player="SilentXWarrior" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H8</cards>
+   <action no="19" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="20" player="Necrolancer1" cards="" type="5" sum="2,520"/>
+   <action no="21" player="SBR14" cards="" type="3" sum="2,520"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D2</cards>
+   <action no="22" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="23" player="Necrolancer1" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679254993">
+  <general>
+   <startdate>2017-09-11 13:17:41</startdate>
+   <players>
+    <player bet="400" chips="22,070" seat="1" dealer="1" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="26,301" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,750" chips="14,337" seat="3" dealer="0" name="Necrolancer1" win="6,000" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="40,875" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="16,675" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,750" chips="47,218" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,225" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SilentXWarrior" cards="" type="1" sum="100"/>
+   <action no="2" player="Necrolancer1" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="3" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="4" player="revizorv" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="5" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">D4 S4</cards>
+   <action no="6" player="gasparyan19901" cards="" type="23" sum="400"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="7" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C8 C5</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="9" player="SBR14" cards="" type="3" sum="400"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="10" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">CA HJ</cards>
+   <action no="11" player="Necrolancer1" cards="" type="3" sum="200"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HA H9 H6</cards>
+   <action no="12" player="Necrolancer1" cards="" type="4" sum="0"/>
+   <action no="13" player="gasparyan19901" cards="" type="5" sum="200"/>
+   <action no="14" player="SBR14" cards="" type="0" sum="0"/>
+   <action no="15" player="Necrolancer1" cards="" type="3" sum="200"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D3</cards>
+   <action no="16" player="Necrolancer1" cards="" type="4" sum="0"/>
+   <action no="17" player="gasparyan19901" cards="" type="5" sum="200"/>
+   <action no="18" player="Necrolancer1" cards="" type="23" sum="400"/>
+   <action no="19" player="gasparyan19901" cards="" type="3" sum="200"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S2</cards>
+   <action no="20" player="Necrolancer1" cards="" type="5" sum="1,750"/>
+   <action no="21" player="gasparyan19901" cards="" type="3" sum="1,750"/>
+  </round>
+ </game>
+ <game gamecode="7679255022">
+  <general>
+   <startdate>2017-09-11 13:18:57</startdate>
+   <players>
+    <player bet="0" chips="21,670" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="26,201" seat="2" dealer="1" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="17,587" seat="3" dealer="0" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="20,475" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40,875" chips="40,875" seat="5" dealer="0" name="revizorv" win="41,175" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="16,675" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="44,468" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,225" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Necrolancer1" cards="" type="1" sum="100"/>
+   <action no="2" player="denysmolyar91" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="3" player="revizorv" cards="" type="23" sum="40,875"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="4" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="5" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="6" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DJ CJ</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="8" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="9" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="10" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="11" player="denysmolyar91" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255035">
+  <general>
+   <startdate>2017-09-11 13:19:35</startdate>
+   <players>
+    <player bet="1,400" chips="21,670" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,400" chips="26,201" seat="2" dealer="0" name="SilentXWarrior" win="3,900" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="17,487" seat="3" dealer="1" name="Necrolancer1" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="20,275" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="41,175" seat="5" dealer="0" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="16,675" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="44,468" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,225" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="1" sum="100"/>
+   <action no="2" player="revizorv" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="3" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="4" player="gasparyan19901" cards="" type="3" sum="200"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="5" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S8 S4</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">DA S7</cards>
+   <action no="7" player="SBR14" cards="" type="3" sum="200"/>
+   <cards player="SilentXWarrior" type="Pocket">H7 C10</cards>
+   <action no="8" player="SilentXWarrior" cards="" type="3" sum="200"/>
+   <cards player="Necrolancer1" type="Pocket">X X</cards>
+   <action no="9" player="Necrolancer1" cards="" type="3" sum="200"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="10" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">X X</cards>
+   <action no="11" player="revizorv" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D9 D6 SA</cards>
+   <action no="12" player="revizorv" cards="" type="4" sum="0"/>
+   <action no="13" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="14" player="SBR14" cards="" type="5" sum="200"/>
+   <action no="15" player="SilentXWarrior" cards="" type="3" sum="200"/>
+   <action no="16" player="Necrolancer1" cards="" type="0" sum="0"/>
+   <action no="17" player="revizorv" cards="" type="0" sum="0"/>
+   <action no="18" player="gasparyan19901" cards="" type="3" sum="200"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D8</cards>
+   <action no="19" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="20" player="SBR14" cards="" type="5" sum="200"/>
+   <action no="21" player="SilentXWarrior" cards="" type="3" sum="200"/>
+   <action no="22" player="gasparyan19901" cards="" type="3" sum="200"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+   <action no="23" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="24" player="SBR14" cards="" type="5" sum="200"/>
+   <action no="25" player="SilentXWarrior" cards="" type="23" sum="800"/>
+   <action no="26" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="27" player="SBR14" cards="" type="3" sum="600"/>
+  </round>
+ </game>
+ <game gamecode="7679255063">
+  <general>
+   <startdate>2017-09-11 13:21:22</startdate>
+   <players>
+    <player bet="20,270" chips="20,270" seat="1" dealer="0" name="SBR14" win="2,090" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="28,701" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="1" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40,975" chips="40,975" seat="5" dealer="0" name="revizorv" win="20,705" rebuy="0" reg_code="" addon="0"/>
+    <player bet="400" chips="16,675" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="400" chips="43,868" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="19,225" chips="19,225" seat="9" dealer="0" name="sssAvatarsss" win="58,475" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="revizorv" cards="" type="1" sum="100"/>
+   <action no="2" player="7Serge7" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="3" player="gasparyan19901" cards="" type="3" sum="200"/>
+   <cards player="sssAvatarsss" type="Pocket">D9 D7</cards>
+   <action no="4" player="sssAvatarsss" cards="" type="3" sum="200"/>
+   <cards player="Peon384" type="Pocket">HQ C4</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">D8 H6</cards>
+   <action no="6" player="SBR14" cards="" type="3" sum="200"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="7" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="8" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">C10 S3</cards>
+   <action no="9" player="revizorv" cards="" type="3" sum="100"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="10" player="7Serge7" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C9 H8 D6</cards>
+   <action no="11" player="revizorv" cards="" type="5" sum="200"/>
+   <action no="12" player="7Serge7" cards="" type="3" sum="200"/>
+   <action no="13" player="gasparyan19901" cards="" type="3" sum="200"/>
+   <action no="14" player="sssAvatarsss" cards="" type="23" sum="2,000"/>
+   <action no="15" player="SBR14" cards="" type="3" sum="2,000"/>
+   <action no="16" player="revizorv" cards="" type="3" sum="1,800"/>
+   <action no="17" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="18" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C8</cards>
+   <action no="19" player="revizorv" cards="" type="5" sum="38,775"/>
+   <action no="20" player="sssAvatarsss" cards="" type="7" sum="17,025"/>
+   <action no="21" player="SBR14" cards="" type="7" sum="18,070"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S9</cards>
+  </round>
+ </game>
+ <game gamecode="7679255093">
+  <general>
+   <startdate>2017-09-11 13:23:00</startdate>
+   <players>
+    <player bet="0" chips="2,090" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="28,701" chips="28,701" seat="2" dealer="0" name="SilentXWarrior" win="78,407" rebuy="0" reg_code="" addon="0"/>
+    <player bet="28,701" chips="95,250" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20,705" chips="20,705" seat="5" dealer="1" name="revizorv" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="100" chips="16,275" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="43,468" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="58,475" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="7Serge7" cards="" type="1" sum="100"/>
+   <action no="2" player="gasparyan19901" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="3" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S10 D5</cards>
+   <action no="4" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="5" player="SBR14" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">SA DA</cards>
+   <action no="6" player="SilentXWarrior" cards="" type="3" sum="200"/>
+   <cards player="vizuchii100" type="Pocket">HA SK</cards>
+   <action no="7" player="vizuchii100" cards="" type="23" sum="400"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="8" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="revizorv" type="Pocket">D9 CA</cards>
+   <action no="9" player="revizorv" cards="" type="23" sum="20,705"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="10" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="11" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="12" player="SilentXWarrior" cards="" type="7" sum="28,501"/>
+   <action no="13" player="vizuchii100" cards="" type="3" sum="28,301"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C6 S3 H6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H3</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+  </round>
+ </game>
+ <game gamecode="7679255112">
+  <general>
+   <startdate>2017-09-11 13:24:05</startdate>
+   <players>
+    <player bet="200" chips="2,090" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="78,407" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="200" chips="66,549" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="16,175" seat="6" dealer="1" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,000" chips="43,268" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,400" chips="58,475" seat="9" dealer="0" name="sssAvatarsss" win="4,800" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="1" sum="100"/>
+   <action no="2" player="sssAvatarsss" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">SJ C8</cards>
+   <action no="3" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="4" player="SBR14" cards="" type="3" sum="200"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="5" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="6" player="vizuchii100" cards="" type="3" sum="200"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="7" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="8" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="9" player="gasparyan19901" cards="" type="3" sum="100"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="10" player="sssAvatarsss" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S2 H4 H7</cards>
+   <action no="11" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="12" player="sssAvatarsss" cards="" type="5" sum="800"/>
+   <action no="13" player="SBR14" cards="" type="0" sum="0"/>
+   <action no="14" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="15" player="gasparyan19901" cards="" type="3" sum="800"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CA</cards>
+   <action no="16" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="17" player="sssAvatarsss" cards="" type="5" sum="2,400"/>
+   <action no="18" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255133">
+  <general>
+   <startdate>2017-09-11 13:25:15</startdate>
+   <players>
+    <player bet="1,200" chips="1,890" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="78,407" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,200" chips="66,349" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="16,175" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,100" chips="42,268" seat="8" dealer="1" name="gasparyan19901" win="5,550" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="59,875" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="300" chips="19,625" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="1" sum="150"/>
+   <action no="2" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="SBR14" type="Pocket">X X</cards>
+   <action no="3" player="SBR14" cards="" type="3" sum="300"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="4" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="5" player="vizuchii100" cards="" type="3" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="6" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="7" player="7Serge7" cards="" type="3" sum="300"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="8" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="9" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H3 SK</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <action no="11" player="SBR14" cards="" type="3" sum="300"/>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="300"/>
+   <action no="13" player="7Serge7" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D2 S7 C9</cards>
+   <action no="14" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="15" player="vizuchii100" cards="" type="5" sum="300"/>
+   <action no="16" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="17" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <action no="18" player="SBR14" cards="" type="3" sum="300"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CJ</cards>
+   <action no="19" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="20" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="21" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="22" player="SBR14" cards="" type="3" sum="300"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D9</cards>
+   <action no="24" player="SBR14" cards="" type="4" sum="0"/>
+   <action no="25" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="26" player="gasparyan19901" cards="" type="5" sum="900"/>
+   <action no="27" player="SBR14" cards="" type="0" sum="0"/>
+   <action no="28" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255149">
+  <general>
+   <startdate>2017-09-11 13:26:33</startdate>
+   <players>
+    <player bet="690" chips="690" seat="1" dealer="0" name="SBR14" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="690" chips="78,407" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="65,149" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,190" chips="15,575" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,790" chips="45,718" seat="8" dealer="0" name="gasparyan19901" win="9,510" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="59,725" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="19,325" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="2" player="SBR14" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="3" player="SilentXWarrior" cards="" type="23" sum="600"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="4" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="5" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="6" player="7Serge7" cards="" type="3" sum="600"/>
+   <cards player="gasparyan19901" type="Pocket">C7 S6</cards>
+   <action no="7" player="gasparyan19901" cards="" type="3" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="8" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DJ DQ</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SBR14" type="Pocket">S4 H8</cards>
+   <action no="10" player="SBR14" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S3 D3 D4</cards>
+   <action no="11" player="SBR14" cards="" type="7" sum="90"/>
+   <action no="12" player="SilentXWarrior" cards="" type="3" sum="90"/>
+   <action no="13" player="7Serge7" cards="" type="3" sum="90"/>
+   <action no="14" player="gasparyan19901" cards="" type="3" sum="90"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S5</cards>
+   <action no="15" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="16" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="17" player="gasparyan19901" cards="" type="5" sum="1,500"/>
+   <action no="18" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <action no="19" player="7Serge7" cards="" type="3" sum="1,500"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C8</cards>
+   <action no="20" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="21" player="gasparyan19901" cards="" type="5" sum="3,600"/>
+   <action no="22" player="7Serge7" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255173">
+  <general>
+   <startdate>2017-09-11 13:28:27</startdate>
+   <players>
+    <player bet="600" chips="77,717" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="65,149" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="13,385" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="49,438" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,500" chips="59,725" seat="9" dealer="0" name="sssAvatarsss" win="2,700" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,175" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SilentXWarrior" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="2" player="vizuchii100" cards="" type="3" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="3" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="4" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="5" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="6" player="sssAvatarsss" cards="" type="23" sum="600"/>
+   <cards player="Peon384" type="Pocket">H10 C3</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="8" player="SilentXWarrior" cards="" type="3" sum="300"/>
+   <action no="9" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C2 DJ H3</cards>
+   <action no="10" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="11" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="12" player="sssAvatarsss" cards="" type="5" sum="900"/>
+   <action no="13" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <action no="14" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255182">
+  <general>
+   <startdate>2017-09-11 13:29:13</startdate>
+   <players>
+    <player bet="150" chips="77,117" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,400" chips="64,549" seat="3" dealer="0" name="vizuchii100" win="4,950" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="13,385" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,400" chips="49,438" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="60,925" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,175" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SilentXWarrior" cards="" type="1" sum="150"/>
+   <action no="2" player="vizuchii100" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="3" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="4" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">DA DJ</cards>
+   <action no="5" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="6" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S7 S5</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="8" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">C3 D7</cards>
+   <action no="9" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H3 H2 HJ</cards>
+   <action no="10" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="11" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S10</cards>
+   <action no="13" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="14" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="15" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H7</cards>
+   <action no="16" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="17" player="gasparyan19901" cards="" type="5" sum="1,200"/>
+   <action no="18" player="vizuchii100" cards="" type="3" sum="1,200"/>
+  </round>
+ </game>
+ <game gamecode="7679255194">
+  <general>
+   <startdate>2017-09-11 13:30:12</startdate>
+   <players>
+    <player bet="0" chips="30,983" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="76,967" seat="2" dealer="1" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,625" chips="67,099" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,625" chips="20,175" seat="4" dealer="0" name="denysmolyar91" win="13,500" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="13,385" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,250" chips="47,038" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="60,925" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,175" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="vizuchii100" cards="" type="1" sum="150"/>
+   <action no="2" player="denysmolyar91" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="3" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="4" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="5" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D3 H6</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="7" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="8" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">CQ S6</cards>
+   <action no="9" player="vizuchii100" cards="" type="3" sum="450"/>
+   <cards player="denysmolyar91" type="Pocket">SA CA</cards>
+   <action no="10" player="denysmolyar91" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SQ DJ H10</cards>
+   <action no="11" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="12" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="13" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="14" player="vizuchii100" cards="" type="3" sum="300"/>
+   <action no="15" player="denysmolyar91" cards="" type="3" sum="300"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D4</cards>
+   <action no="16" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="17" player="denysmolyar91" cards="" type="5" sum="1,350"/>
+   <action no="18" player="gasparyan19901" cards="" type="3" sum="1,350"/>
+   <action no="19" player="vizuchii100" cards="" type="3" sum="1,350"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D5</cards>
+   <action no="20" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="21" player="denysmolyar91" cards="" type="5" sum="3,375"/>
+   <action no="22" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="3,375"/>
+  </round>
+ </game>
+ <game gamecode="7679255296">
+  <general>
+   <startdate>2017-09-11 13:31:44</startdate>
+   <players>
+    <player bet="600" chips="30,983" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="76,967" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,500" chips="61,474" seat="3" dealer="1" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="28,050" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,500" chips="13,385" seat="6" dealer="0" name="7Serge7" win="4,350" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="44,788" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="60,925" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="19,175" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="1" sum="150"/>
+   <action no="2" player="7Serge7" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="3" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="4" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DK H2</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="6" player="BlingBenzy" cards="" type="3" sum="600"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="7" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">C4 SA</cards>
+   <action no="8" player="vizuchii100" cards="" type="3" sum="600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="9" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">DJ S9</cards>
+   <action no="10" player="7Serge7" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">CJ D2 CK</cards>
+   <action no="11" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="12" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="13" player="BlingBenzy" cards="" type="4" sum="0"/>
+   <action no="14" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D10</cards>
+   <action no="15" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="16" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="17" player="BlingBenzy" cards="" type="4" sum="0"/>
+   <action no="18" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C6</cards>
+   <action no="19" player="7Serge7" cards="" type="5" sum="900"/>
+   <action no="20" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="21" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <action no="22" player="vizuchii100" cards="" type="3" sum="900"/>
+  </round>
+ </game>
+ <game gamecode="7679255312">
+  <general>
+   <startdate>2017-09-11 13:32:45</startdate>
+   <players>
+    <player bet="25" chips="30,383" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="76,967" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,225" chips="59,974" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,900" seat="4" dealer="1" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="175" chips="16,235" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,325" chips="44,188" seat="8" dealer="0" name="gasparyan19901" win="4,850" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="60,925" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="19,175" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="2" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="3" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="5" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="6" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="7" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="8" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="9" player="7Serge7" cards="" type="1" sum="150"/>
+   <action no="10" player="gasparyan19901" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="11" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D6 CQ</cards>
+   <action no="12" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="13" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="14" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="15" player="vizuchii100" cards="" type="3" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="16" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="17" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="18" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <action no="19" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D10 H10 D7</cards>
+   <action no="20" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="21" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H8</cards>
+   <action no="22" player="gasparyan19901" cards="" type="5" sum="300"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HJ</cards>
+   <action no="24" player="gasparyan19901" cards="" type="5" sum="2,100"/>
+   <action no="25" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255323">
+  <general>
+   <startdate>2017-09-11 13:33:36</startdate>
+   <players>
+    <player bet="25" chips="30,358" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,305" chips="76,942" seat="2" dealer="0" name="SilentXWarrior" win="2,380" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="58,749" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,875" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="16,060" seat="6" dealer="1" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="625" chips="45,713" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="60,900" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="19,150" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="2" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="4" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="5" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="6" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="7" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="8" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="9" player="gasparyan19901" cards="" type="1" sum="150"/>
+   <action no="10" player="sssAvatarsss" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CQ D9</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="12" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="13" player="SilentXWarrior" cards="" type="23" sum="600"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="14" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="15" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="16" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="17" player="gasparyan19901" cards="" type="3" sum="450"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="18" player="sssAvatarsss" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HK H7 CJ</cards>
+   <action no="19" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="20" player="SilentXWarrior" cards="" type="5" sum="680"/>
+   <action no="21" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255332">
+  <general>
+   <startdate>2017-09-11 13:34:24</startdate>
+   <players>
+    <player bet="25" chips="30,333" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,225" chips="78,017" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,475" chips="58,724" seat="3" dealer="0" name="vizuchii100" win="8,500" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,850" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="16,035" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,225" chips="45,088" seat="8" dealer="1" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="175" chips="60,575" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="19,125" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="3" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="4" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="5" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="6" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="7" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="8" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="9" player="sssAvatarsss" cards="" type="1" sum="150"/>
+   <action no="10" player="Peon384" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="11" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="12" player="SilentXWarrior" cards="" type="23" sum="600"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="13" player="vizuchii100" cards="" type="3" sum="600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="14" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="15" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="16" player="gasparyan19901" cards="" type="23" sum="900"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="17" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H2 D5</cards>
+   <action no="18" player="Peon384" cards="" type="0" sum="0"/>
+   <action no="19" player="SilentXWarrior" cards="" type="3" sum="300"/>
+   <action no="20" player="vizuchii100" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HK H9 HQ</cards>
+   <action no="21" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="22" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="23" player="gasparyan19901" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D7</cards>
+   <action no="24" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="25" player="vizuchii100" cards="" type="5" sum="300"/>
+   <action no="26" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <action no="27" player="SilentXWarrior" cards="" type="3" sum="300"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">DQ</cards>
+   <action no="28" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="29" player="vizuchii100" cards="" type="5" sum="4,250"/>
+   <action no="30" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <action no="31" player="SilentXWarrior" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255355">
+  <general>
+   <startdate>2017-09-11 13:36:06</startdate>
+   <players>
+    <player bet="325" chips="30,308" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="76,792" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,825" chips="61,749" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,825" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="16,010" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="6,325" chips="43,863" seat="8" dealer="0" name="gasparyan19901" win="8,750" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="60,400" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="175" chips="18,800" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="2" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="3" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="4" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="5" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="6" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="7" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="8" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="9" player="Peon384" cards="" type="1" sum="150"/>
+   <action no="10" player="BlingBenzy" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="11" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="14" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="15" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="16" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H8 H3</cards>
+   <action no="17" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="18" player="BlingBenzy" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HA S7 D5</cards>
+   <action no="19" player="BlingBenzy" cards="" type="4" sum="0"/>
+   <action no="20" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="21" player="gasparyan19901" cards="" type="5" sum="1,200"/>
+   <action no="22" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="1,200"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C5</cards>
+   <action no="24" player="vizuchii100" cards="" type="5" sum="300"/>
+   <action no="25" player="gasparyan19901" cards="" type="3" sum="300"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C3</cards>
+   <action no="26" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="27" player="gasparyan19901" cards="" type="5" sum="4,500"/>
+   <action no="28" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255364">
+  <general>
+   <startdate>2017-09-11 13:37:00</startdate>
+   <players>
+    <player bet="175" chips="29,983" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="625" chips="76,767" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="925" chips="59,924" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,800" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="625" chips="15,985" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="925" chips="46,288" seat="8" dealer="0" name="gasparyan19901" win="3,350" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="60,375" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="18,625" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="2" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="3" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="4" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="5" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="6" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="7" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="8" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="9" player="BlingBenzy" cards="" type="1" sum="150"/>
+   <action no="10" player="SilentXWarrior" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="vizuchii100" type="Pocket">HJ SA</cards>
+   <action no="11" player="vizuchii100" cards="" type="23" sum="600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="12" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="13" player="7Serge7" cards="" type="3" sum="600"/>
+   <cards player="gasparyan19901" type="Pocket">C8 D10</cards>
+   <action no="14" player="gasparyan19901" cards="" type="3" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="15" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D4 D3</cards>
+   <action no="16" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="17" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="18" player="SilentXWarrior" cards="" type="3" sum="300"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C7 HK H5</cards>
+   <action no="19" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="20" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="21" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="22" player="gasparyan19901" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D8</cards>
+   <action no="23" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="24" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="25" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="26" player="gasparyan19901" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">DK</cards>
+   <action no="27" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="28" player="vizuchii100" cards="" type="5" sum="300"/>
+   <action no="29" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="30" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <action no="31" player="SilentXWarrior" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255375">
+  <general>
+   <startdate>2017-09-11 13:38:14</startdate>
+   <players>
+    <player bet="25" chips="29,808" seat="1" dealer="1" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="925" chips="76,142" seat="2" dealer="0" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="58,999" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="27,775" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="925" chips="15,360" seat="6" dealer="0" name="7Serge7" win="3,200" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="48,713" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="60,350" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="625" chips="18,600" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="2" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="3" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="4" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="5" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="6" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="7" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="8" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="9" player="SilentXWarrior" cards="" type="1" sum="150"/>
+   <action no="10" player="vizuchii100" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="11" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">CA S3</cards>
+   <action no="12" player="7Serge7" cards="" type="3" sum="300"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="13" player="gasparyan19901" cards="" type="3" sum="300"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="14" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S10 S9</cards>
+   <action no="15" player="Peon384" cards="" type="3" sum="300"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="16" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">H4 S8</cards>
+   <action no="17" player="SilentXWarrior" cards="" type="3" sum="150"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="18" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">CK C6 C3</cards>
+   <action no="19" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="20" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="21" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="22" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="23" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D8</cards>
+   <action no="24" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="25" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="26" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="27" player="gasparyan19901" cards="" type="4" sum="0"/>
+   <action no="28" player="Peon384" cards="" type="5" sum="300"/>
+   <action no="29" player="SilentXWarrior" cards="" type="3" sum="300"/>
+   <action no="30" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="31" player="7Serge7" cards="" type="3" sum="300"/>
+   <action no="32" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+   <action no="33" player="SilentXWarrior" cards="" type="4" sum="0"/>
+   <action no="34" player="7Serge7" cards="" type="5" sum="300"/>
+   <action no="35" player="Peon384" cards="" type="0" sum="0"/>
+   <action no="36" player="SilentXWarrior" cards="" type="3" sum="300"/>
+  </round>
+ </game>
+ <game gamecode="7679255398">
+  <general>
+   <startdate>2017-09-11 13:40:17</startdate>
+   <players>
+    <player bet="25" chips="29,783" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="75,217" seat="2" dealer="1" name="SilentXWarrior" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="175" chips="58,674" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="325" chips="27,750" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="17,635" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="625" chips="48,388" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25" chips="60,325" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="925" chips="17,975" seat="10" dealer="0" name="Peon384" win="2,150" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="vizuchii100" cards="" type="15" sum="25"/>
+   <action no="2" player="denysmolyar91" cards="" type="15" sum="25"/>
+   <action no="3" player="7Serge7" cards="" type="15" sum="25"/>
+   <action no="4" player="gasparyan19901" cards="" type="15" sum="25"/>
+   <action no="5" player="sssAvatarsss" cards="" type="15" sum="25"/>
+   <action no="6" player="Peon384" cards="" type="15" sum="25"/>
+   <action no="7" player="BlingBenzy" cards="" type="15" sum="25"/>
+   <action no="8" player="SilentXWarrior" cards="" type="15" sum="25"/>
+   <action no="9" player="vizuchii100" cards="" type="1" sum="150"/>
+   <action no="10" player="denysmolyar91" cards="" type="2" sum="300"/>
+  </round>
+  <round no="1">
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="11" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="12" player="gasparyan19901" cards="" type="23" sum="600"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="13" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HQ SJ</cards>
+   <action no="14" player="Peon384" cards="" type="23" sum="900"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="15" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="SilentXWarrior" type="Pocket">X X</cards>
+   <action no="16" player="SilentXWarrior" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="17" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="18" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="19" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255413">
+  <general>
+   <startdate>2017-09-11 13:41:30</startdate>
+   <players>
+    <player bet="1,230" chips="29,758" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="58,499" seat="3" dealer="1" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,240" chips="27,425" seat="4" dealer="0" name="denysmolyar91" win="6,020" rebuy="0" reg_code="" addon="0"/>
+    <player bet="430" chips="17,610" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="47,763" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="60,300" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="19,200" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="2" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="3" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="4" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="6" player="BlingBenzy" cards="" type="15" sum="30"/>
+   <action no="7" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="8" player="denysmolyar91" cards="" type="1" sum="200"/>
+   <action no="9" player="7Serge7" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="10" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="11" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SQ H5</cards>
+   <action no="12" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="13" player="BlingBenzy" cards="" type="23" sum="1,200"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="14" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="15" player="denysmolyar91" cards="" type="3" sum="1,000"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="16" player="7Serge7" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C7 H4 SK</cards>
+   <action no="17" player="denysmolyar91" cards="" type="5" sum="3,010"/>
+   <action no="18" player="BlingBenzy" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255425">
+  <general>
+   <startdate>2017-09-11 13:42:44</startdate>
+   <players>
+    <player bet="30" chips="28,498" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,035" chips="58,439" seat="3" dealer="0" name="vizuchii100" win="8,620" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="29,175" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="16,950" seat="6" dealer="1" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,035" chips="48,113" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="430" chips="60,240" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="19,140" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="2" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="4" player="BlingBenzy" cards="" type="15" sum="30"/>
+   <action no="5" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="6" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="7" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="8" player="gasparyan19901" cards="" type="1" sum="200"/>
+   <action no="9" player="sssAvatarsss" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C6 SK</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="11" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">CK C3</cards>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="400"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="14" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">S10 CJ</cards>
+   <action no="15" player="gasparyan19901" cards="" type="23" sum="800"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="16" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <action no="17" player="vizuchii100" cards="" type="3" sum="400"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S7 H4 D3</cards>
+   <action no="18" player="gasparyan19901" cards="" type="5" sum="1,105"/>
+   <action no="19" player="vizuchii100" cards="" type="3" sum="1,105"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HA</cards>
+   <action no="20" player="gasparyan19901" cards="" type="5" sum="1,200"/>
+   <action no="21" player="vizuchii100" cards="" type="3" sum="1,200"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S4</cards>
+   <action no="22" player="gasparyan19901" cards="" type="5" sum="900"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="900"/>
+  </round>
+ </game>
+ <game gamecode="7679255439">
+  <general>
+   <startdate>2017-09-11 13:43:49</startdate>
+   <players>
+    <player bet="30" chips="28,468" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,230" chips="63,024" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="29,145" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="16,920" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,835" chips="44,078" seat="8" dealer="1" name="gasparyan19901" win="4,815" rebuy="0" reg_code="" addon="0"/>
+    <player bet="230" chips="59,810" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="430" chips="19,110" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="3" player="BlingBenzy" cards="" type="15" sum="30"/>
+   <action no="4" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="5" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="6" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="7" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="8" player="sssAvatarsss" cards="" type="1" sum="200"/>
+   <action no="9" player="Peon384" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="10" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="11" player="vizuchii100" cards="" type="3" sum="400"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="12" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="13" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="14" player="gasparyan19901" cards="" type="3" sum="400"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="15" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C7 H10</cards>
+   <action no="16" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DA SK D4</cards>
+   <action no="17" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="18" player="vizuchii100" cards="" type="5" sum="400"/>
+   <action no="19" player="gasparyan19901" cards="" type="3" sum="400"/>
+   <action no="20" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S7</cards>
+   <action no="21" player="vizuchii100" cards="" type="5" sum="400"/>
+   <action no="22" player="gasparyan19901" cards="" type="3" sum="400"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HK</cards>
+   <action no="23" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="24" player="gasparyan19901" cards="" type="5" sum="1,605"/>
+   <action no="25" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255450">
+  <general>
+   <startdate>2017-09-11 13:44:55</startdate>
+   <players>
+    <player bet="430" chips="28,438" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,700" chips="45,284" seat="2" dealer="0" name="4EJIHbI" win="12,210" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,700" chips="61,794" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="29,115" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="96,526" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="16,890" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="46,058" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="59,580" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="230" chips="18,680" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="2" player="BlingBenzy" cards="" type="15" sum="30"/>
+   <action no="3" player="4EJIHbI" cards="" type="15" sum="30"/>
+   <action no="4" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="5" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="6" player="varvar131" cards="" type="15" sum="30"/>
+   <action no="7" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="8" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="9" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="10" player="Peon384" cards="" type="1" sum="200"/>
+   <action no="11" player="BlingBenzy" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="4EJIHbI" type="Pocket">CJ HA</cards>
+   <action no="12" player="4EJIHbI" cards="" type="23" sum="1,600"/>
+   <cards player="vizuchii100" type="Pocket">D5 D2</cards>
+   <action no="13" player="vizuchii100" cards="" type="3" sum="1,600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="14" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="15" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="16" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="17" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="18" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C5 H3</cards>
+   <action no="19" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="20" player="BlingBenzy" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D9 DK S4</cards>
+   <action no="21" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="22" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C10</cards>
+   <action no="23" player="4EJIHbI" cards="" type="5" sum="4,070"/>
+   <action no="24" player="vizuchii100" cards="" type="3" sum="4,070"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S7</cards>
+   <action no="25" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="26" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255458">
+  <general>
+   <startdate>2017-09-11 13:45:51</startdate>
+   <players>
+    <player bet="230" chips="28,008" seat="1" dealer="0" name="BlingBenzy" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,430" chips="51,794" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="9,065" chips="56,094" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="830" chips="29,085" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="9,065" chips="96,496" seat="5" dealer="0" name="varvar131" win="23,340" rebuy="0" reg_code="" addon="0"/>
+    <player bet="830" chips="16,860" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="46,028" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="59,550" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="830" chips="18,450" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BlingBenzy" cards="" type="15" sum="30"/>
+   <action no="2" player="4EJIHbI" cards="" type="15" sum="30"/>
+   <action no="3" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="4" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="5" player="varvar131" cards="" type="15" sum="30"/>
+   <action no="6" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="7" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="8" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="9" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="10" player="BlingBenzy" cards="" type="1" sum="200"/>
+   <action no="11" player="4EJIHbI" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="vizuchii100" type="Pocket">CJ D4</cards>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="400"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="3" sum="400"/>
+   <cards player="varvar131" type="Pocket">C7 S8</cards>
+   <action no="14" player="varvar131" cards="" type="3" sum="400"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="15" player="7Serge7" cards="" type="3" sum="400"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="16" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="17" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C10 DQ</cards>
+   <action no="18" player="Peon384" cards="" type="23" sum="800"/>
+   <cards player="BlingBenzy" type="Pocket">X X</cards>
+   <action no="19" player="BlingBenzy" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="20" player="4EJIHbI" cards="" type="3" sum="400"/>
+   <action no="21" player="vizuchii100" cards="" type="3" sum="400"/>
+   <action no="22" player="denysmolyar91" cards="" type="3" sum="400"/>
+   <action no="23" player="varvar131" cards="" type="3" sum="400"/>
+   <action no="24" player="7Serge7" cards="" type="3" sum="400"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H3 D5 D6</cards>
+   <action no="25" player="4EJIHbI" cards="" type="5" sum="800"/>
+   <action no="26" player="vizuchii100" cards="" type="3" sum="800"/>
+   <action no="27" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="28" player="varvar131" cards="" type="3" sum="800"/>
+   <action no="29" player="7Serge7" cards="" type="0" sum="0"/>
+   <action no="30" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C2</cards>
+   <action no="31" player="4EJIHbI" cards="" type="5" sum="800"/>
+   <action no="32" player="vizuchii100" cards="" type="23" sum="1,600"/>
+   <action no="33" player="varvar131" cards="" type="3" sum="1,600"/>
+   <action no="34" player="4EJIHbI" cards="" type="0" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D9</cards>
+   <action no="35" player="vizuchii100" cards="" type="5" sum="5,835"/>
+   <action no="36" player="varvar131" cards="" type="3" sum="5,835"/>
+  </round>
+ </game>
+ <game gamecode="7679255479">
+  <general>
+   <startdate>2017-09-11 13:48:27</startdate>
+   <players>
+    <player bet="1,230" chips="49,364" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="7,470" chips="47,029" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="28,255" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,230" chips="110,771" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="16,030" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="45,998" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="7,470" chips="59,520" seat="9" dealer="0" name="sssAvatarsss" win="17,520" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="17,620" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="4EJIHbI" cards="" type="15" sum="30"/>
+   <action no="2" player="vizuchii100" cards="" type="15" sum="30"/>
+   <action no="3" player="denysmolyar91" cards="" type="15" sum="30"/>
+   <action no="4" player="varvar131" cards="" type="15" sum="30"/>
+   <action no="5" player="7Serge7" cards="" type="15" sum="30"/>
+   <action no="6" player="gasparyan19901" cards="" type="15" sum="30"/>
+   <action no="7" player="sssAvatarsss" cards="" type="15" sum="30"/>
+   <action no="8" player="Peon384" cards="" type="15" sum="30"/>
+   <action no="9" player="4EJIHbI" cards="" type="1" sum="200"/>
+   <action no="10" player="vizuchii100" cards="" type="2" sum="400"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="11" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="12" player="varvar131" cards="" type="3" sum="400"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="13" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="14" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">C7 CQ</cards>
+   <action no="15" player="sssAvatarsss" cards="" type="3" sum="400"/>
+   <cards player="Peon384" type="Pocket">S10 CK</cards>
+   <action no="16" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="17" player="4EJIHbI" cards="" type="3" sum="200"/>
+   <cards player="vizuchii100" type="Pocket">SK H6</cards>
+   <action no="18" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HK C5 C10</cards>
+   <action no="19" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="20" player="vizuchii100" cards="" type="5" sum="400"/>
+   <action no="21" player="varvar131" cards="" type="3" sum="400"/>
+   <action no="22" player="sssAvatarsss" cards="" type="3" sum="400"/>
+   <action no="23" player="4EJIHbI" cards="" type="3" sum="400"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SQ</cards>
+   <action no="24" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="25" player="vizuchii100" cards="" type="5" sum="400"/>
+   <action no="26" player="varvar131" cards="" type="3" sum="400"/>
+   <action no="27" player="sssAvatarsss" cards="" type="3" sum="400"/>
+   <action no="28" player="4EJIHbI" cards="" type="3" sum="400"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C9</cards>
+   <action no="29" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="30" player="vizuchii100" cards="" type="5" sum="400"/>
+   <action no="31" player="varvar131" cards="" type="0" sum="0"/>
+   <action no="32" player="sssAvatarsss" cards="" type="23" sum="6,240"/>
+   <action no="33" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <action no="34" player="vizuchii100" cards="" type="3" sum="5,840"/>
+  </round>
+ </game>
+ <game gamecode="7679255496">
+  <general>
+   <startdate>2017-09-11 13:50:11</startdate>
+   <players>
+    <player bet="40" chips="48,134" seat="2" dealer="1" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="39,559" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="2,360" chips="28,225" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="109,541" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="16,000" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="45,968" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="69,570" chips="69,570" seat="9" dealer="0" name="sssAvatarsss" win="72,670" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="17,590" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="2" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="3" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="4" player="7Serge7" cards="" type="15" sum="40"/>
+   <action no="5" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="6" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="7" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="8" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="9" player="vizuchii100" cards="" type="1" sum="250"/>
+   <action no="10" player="denysmolyar91" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="11" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="12" player="7Serge7" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="13" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="14" player="sssAvatarsss" cards="" type="3" sum="500"/>
+   <cards player="Peon384" type="Pocket">D9 C4</cards>
+   <action no="15" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="16" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="17" player="vizuchii100" cards="" type="3" sum="250"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="18" player="denysmolyar91" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H3 H8 S10</cards>
+   <action no="19" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="20" player="denysmolyar91" cards="" type="5" sum="1,820"/>
+   <action no="21" player="sssAvatarsss" cards="" type="23" sum="69,030"/>
+   <action no="22" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="23" player="denysmolyar91" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255502">
+  <general>
+   <startdate>2017-09-11 13:50:54</startdate>
+   <players>
+    <player bet="40" chips="48,094" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,040" chips="39,019" seat="3" dealer="1" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,540" chips="25,865" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="109,501" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,540" chips="15,960" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="45,928" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="72,670" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,040" chips="17,550" seat="10" dealer="0" name="Peon384" win="11,820" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="2" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="3" player="7Serge7" cards="" type="15" sum="40"/>
+   <action no="4" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="5" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="6" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="7" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="8" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="9" player="denysmolyar91" cards="" type="1" sum="250"/>
+   <action no="10" player="varvar131" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="7Serge7" type="Pocket">X X</cards>
+   <action no="11" player="7Serge7" cards="" type="3" sum="500"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="12" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="13" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HK DA</cards>
+   <action no="14" player="Peon384" cards="" type="23" sum="1,500"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="15" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">D5 D2</cards>
+   <action no="16" player="vizuchii100" cards="" type="3" sum="1,500"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="17" player="denysmolyar91" cards="" type="3" sum="1,250"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="18" player="varvar131" cards="" type="0" sum="0"/>
+   <action no="19" player="7Serge7" cards="" type="3" sum="1,000"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H5 SK D3</cards>
+   <action no="20" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="21" player="7Serge7" cards="" type="4" sum="0"/>
+   <action no="22" player="Peon384" cards="" type="5" sum="1,000"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="1,000"/>
+   <action no="24" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="25" player="7Serge7" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S10</cards>
+   <action no="26" player="Peon384" cards="" type="5" sum="1,500"/>
+   <action no="27" player="vizuchii100" cards="" type="3" sum="1,500"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">SQ</cards>
+   <action no="28" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="29" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255516">
+  <general>
+   <startdate>2017-09-11 13:52:17</startdate>
+   <players>
+    <player bet="40" chips="48,054" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="14,420" chips="34,979" seat="3" dealer="0" name="vizuchii100" win="30,080" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="24,325" seat="4" dealer="1" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,040" chips="108,961" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="14,420" chips="14,420" seat="6" dealer="0" name="7Serge7" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="45,888" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="72,630" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="25,330" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="2" player="7Serge7" cards="" type="15" sum="40"/>
+   <action no="3" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="4" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="6" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="7" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="8" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="9" player="varvar131" cards="" type="1" sum="250"/>
+   <action no="10" player="7Serge7" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="11" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="12" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C9 S3</cards>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="14" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">SJ DQ</cards>
+   <action no="15" player="vizuchii100" cards="" type="23" sum="1,000"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="16" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="17" player="varvar131" cards="" type="3" sum="750"/>
+   <cards player="7Serge7" type="Pocket">CA D3</cards>
+   <action no="18" player="7Serge7" cards="" type="3" sum="500"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">CK HJ SA</cards>
+   <action no="19" player="varvar131" cards="" type="4" sum="0"/>
+   <action no="20" player="7Serge7" cards="" type="5" sum="13,380"/>
+   <action no="21" player="vizuchii100" cards="" type="3" sum="13,380"/>
+   <action no="22" player="varvar131" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D4</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CQ</cards>
+  </round>
+ </game>
+ <game gamecode="7679255523">
+  <general>
+   <startdate>2017-09-11 13:53:21</startdate>
+   <players>
+    <player bet="40" chips="48,014" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="50,639" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="24,285" chips="24,285" seat="4" dealer="0" name="denysmolyar91" win="25,025" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="107,921" seat="5" dealer="1" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="45,848" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="72,590" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="25,290" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="2" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="4" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="5" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="6" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="7" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="8" player="gasparyan19901" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="9" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H3 C4</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="11" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="12" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="23" sum="24,245"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="14" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="15" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255529">
+  <general>
+   <startdate>2017-09-11 13:53:56</startdate>
+   <players>
+    <player bet="40" chips="47,974" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,040" chips="50,599" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="25,025" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,055" chips="107,881" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="290" chips="45,308" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="7,085" chips="72,550" seat="9" dealer="0" name="sssAvatarsss" win="12,090" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="25,250" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="2" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="4" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="5" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="6" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="7" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="8" player="gasparyan19901" cards="" type="1" sum="250"/>
+   <action no="9" player="sssAvatarsss" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CK C7</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="11" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="12" player="vizuchii100" cards="" type="3" sum="500"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="3" sum="500"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="14" player="varvar131" cards="" type="3" sum="500"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="15" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="16" player="sssAvatarsss" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D4 CQ S10</cards>
+   <action no="17" player="sssAvatarsss" cards="" type="5" sum="500"/>
+   <action no="18" player="vizuchii100" cards="" type="3" sum="500"/>
+   <action no="19" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="20" player="varvar131" cards="" type="3" sum="500"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S3</cards>
+   <action no="21" player="sssAvatarsss" cards="" type="5" sum="2,015"/>
+   <action no="22" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="23" player="varvar131" cards="" type="3" sum="2,015"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H6</cards>
+   <action no="24" player="sssAvatarsss" cards="" type="5" sum="4,030"/>
+   <action no="25" player="varvar131" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255559">
+  <general>
+   <startdate>2017-09-11 14:01:32</startdate>
+   <players>
+    <player bet="40" chips="47,934" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="49,559" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="24,485" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="104,826" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="45,018" seat="8" dealer="1" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="77,805" chips="77,555" seat="9" dealer="0" name="sssAvatarsss" win="78,295" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="25,210" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="3" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="4" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="5" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="6" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="7" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="8" player="sssAvatarsss" cards="" type="1" sum="250"/>
+   <action no="9" player="Peon384" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="10" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="11" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="12" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="13" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="14" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="15" player="sssAvatarsss" cards="" type="23" sum="77,515"/>
+   <cards player="Peon384" type="Pocket">DK D2</cards>
+   <action no="16" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255585">
+  <general>
+   <startdate>2017-09-11 14:02:47</startdate>
+   <players>
+    <player bet="540" chips="47,894" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="49,519" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="540" chips="24,445" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="3,070" chips="104,786" seat="5" dealer="0" name="varvar131" win="5,060" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="44,978" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="78,295" seat="9" dealer="1" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="290" chips="24,670" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="40"/>
+   <action no="2" player="4EJIHbI" cards="" type="15" sum="40"/>
+   <action no="3" player="vizuchii100" cards="" type="15" sum="40"/>
+   <action no="4" player="denysmolyar91" cards="" type="15" sum="40"/>
+   <action no="5" player="varvar131" cards="" type="15" sum="40"/>
+   <action no="6" player="gasparyan19901" cards="" type="15" sum="40"/>
+   <action no="7" player="sssAvatarsss" cards="" type="15" sum="40"/>
+   <action no="8" player="Peon384" cards="" type="1" sum="250"/>
+   <action no="9" player="4EJIHbI" cards="" type="2" sum="500"/>
+  </round>
+  <round no="1">
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="10" player="vizuchii100" cards="" type="3" sum="500"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="11" player="denysmolyar91" cards="" type="3" sum="500"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="12" player="varvar131" cards="" type="3" sum="500"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="13" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="14" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S4 H7</cards>
+   <action no="15" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="16" player="4EJIHbI" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S10 S7 D2</cards>
+   <action no="17" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="18" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="19" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="20" player="varvar131" cards="" type="5" sum="2,530"/>
+   <action no="21" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <action no="22" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="23" player="denysmolyar91" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255615">
+  <general>
+   <startdate>2017-09-11 14:03:59</startdate>
+   <players>
+    <player bet="360" chips="47,354" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="48,979" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="23,905" chips="23,905" seat="4" dealer="0" name="denysmolyar91" win="25,165" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="106,776" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="44,938" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="78,255" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="24,380" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="2" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="3" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="4" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="5" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="6" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="7" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="8" player="4EJIHbI" cards="" type="1" sum="300"/>
+   <action no="9" player="vizuchii100" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="10" player="denysmolyar91" cards="" type="23" sum="23,845"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="11" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="12" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="13" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C3 S8</cards>
+   <action no="14" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="15" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="16" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255628">
+  <general>
+   <startdate>2017-09-11 14:04:33</startdate>
+   <players>
+    <player bet="60" chips="46,994" seat="2" dealer="1" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="48,319" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="25,765" chips="25,165" seat="4" dealer="0" name="denysmolyar91" win="26,125" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="106,716" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="44,878" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="78,195" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="24,320" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="2" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="3" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="4" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="5" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="6" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="7" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="8" player="vizuchii100" cards="" type="1" sum="300"/>
+   <action no="9" player="denysmolyar91" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="10" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="11" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="12" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S5 C9</cards>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="14" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="15" player="vizuchii100" cards="" type="3" sum="300"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="16" player="denysmolyar91" cards="" type="23" sum="25,105"/>
+   <action no="17" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255641">
+  <general>
+   <startdate>2017-09-11 14:05:06</startdate>
+   <players>
+    <player bet="60" chips="46,934" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="47,659" seat="3" dealer="1" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="26,125" chips="26,125" seat="4" dealer="0" name="denysmolyar91" win="36,565" rebuy="0" reg_code="" addon="0"/>
+    <player bet="9,540" chips="106,656" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="44,818" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="78,135" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="24,260" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="2" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="3" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="4" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="6" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="7" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="8" player="denysmolyar91" cards="" type="1" sum="300"/>
+   <action no="9" player="varvar131" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="10" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="11" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">HQ C10</cards>
+   <action no="12" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="13" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="14" player="vizuchii100" cards="" type="3" sum="600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="15" player="denysmolyar91" cards="" type="3" sum="300"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="16" player="varvar131" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S4 C2 S6</cards>
+   <action no="17" player="denysmolyar91" cards="" type="5" sum="2,220"/>
+   <action no="18" player="varvar131" cards="" type="3" sum="2,220"/>
+   <action no="19" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C4</cards>
+   <action no="20" player="denysmolyar91" cards="" type="4" sum="0"/>
+   <action no="21" player="varvar131" cards="" type="5" sum="6,660"/>
+   <action no="22" player="denysmolyar91" cards="" type="3" sum="6,660"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CA</cards>
+   <action no="23" player="denysmolyar91" cards="" type="5" sum="16,585"/>
+   <action no="24" player="varvar131" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255662">
+  <general>
+   <startdate>2017-09-11 14:05:54</startdate>
+   <players>
+    <player bet="1,260" chips="46,874" seat="2" dealer="0" name="4EJIHbI" win="2,520" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="46,999" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="36,565" seat="4" dealer="1" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="360" chips="97,116" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="44,758" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="78,075" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="24,200" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="2" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="3" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="5" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="6" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="7" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="8" player="varvar131" cards="" type="1" sum="300"/>
+   <action no="9" player="gasparyan19901" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="10" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D8 DA</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="12" player="4EJIHbI" cards="" type="23" sum="1,200"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="13" player="vizuchii100" cards="" type="0" sum="0"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="14" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="15" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="16" player="gasparyan19901" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255674">
+  <general>
+   <startdate>2017-09-11 14:06:20</startdate>
+   <players>
+    <player bet="60" chips="48,134" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="46,939" chips="46,939" seat="3" dealer="0" name="vizuchii100" win="94,478" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="36,505" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="96,756" seat="5" dealer="1" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="360" chips="44,098" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="78,615" chips="78,015" seat="9" dealer="0" name="sssAvatarsss" win="31,076" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="24,140" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="2" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="4" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="5" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="6" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="7" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="8" player="gasparyan19901" cards="" type="1" sum="300"/>
+   <action no="9" player="sssAvatarsss" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C4 DJ</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="11" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">C10 CA</cards>
+   <action no="12" player="vizuchii100" cards="" type="23" sum="1,200"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="13" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="14" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="15" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">H8 C8</cards>
+   <action no="16" player="sssAvatarsss" cards="" type="23" sum="77,955"/>
+   <action no="17" player="vizuchii100" cards="" type="7" sum="45,679"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HA S6 D4</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S10</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S4</cards>
+  </round>
+ </game>
+ <game gamecode="7679255690">
+  <general>
+   <startdate>2017-09-11 14:06:58</startdate>
+   <players>
+    <player bet="60" chips="48,074" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="7,380" chips="94,478" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="36,445" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="23,340" chips="96,696" seat="5" dealer="0" name="varvar131" win="31,920" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="43,738" seat="8" dealer="1" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="360" chips="31,076" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="24,080" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="3" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="4" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="5" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="6" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="7" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="8" player="sssAvatarsss" cards="" type="1" sum="300"/>
+   <action no="9" player="Peon384" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="10" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="11" player="vizuchii100" cards="" type="3" sum="600"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="12" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="13" player="varvar131" cards="" type="3" sum="600"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="14" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="15" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C8 H5</cards>
+   <action no="16" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HA C4 DK</cards>
+   <action no="17" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="18" player="vizuchii100" cards="" type="5" sum="600"/>
+   <action no="19" player="varvar131" cards="" type="3" sum="600"/>
+   <action no="20" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+   <action no="21" player="vizuchii100" cards="" type="5" sum="600"/>
+   <action no="22" player="varvar131" cards="" type="23" sum="5,520"/>
+   <action no="23" player="vizuchii100" cards="" type="3" sum="4,920"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CA</cards>
+   <action no="24" player="vizuchii100" cards="" type="5" sum="600"/>
+   <action no="25" player="varvar131" cards="" type="23" sum="16,560"/>
+   <action no="26" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255720">
+  <general>
+   <startdate>2017-09-11 14:08:16</startdate>
+   <players>
+    <player bet="660" chips="48,014" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,260" chips="87,098" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="36,385" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="105,276" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="43,678" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30,716" chips="30,716" seat="9" dealer="1" name="sssAvatarsss" win="33,176" rebuy="0" reg_code="" addon="0"/>
+    <player bet="360" chips="23,420" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="2" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="3" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="4" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="5" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="6" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="7" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="8" player="Peon384" cards="" type="1" sum="300"/>
+   <action no="9" player="4EJIHbI" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="10" player="vizuchii100" cards="" type="23" sum="1,200"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="11" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="12" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="13" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="14" player="sssAvatarsss" cards="" type="23" sum="30,656"/>
+   <cards player="Peon384" type="Pocket">CA SJ</cards>
+   <action no="15" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="16" player="4EJIHbI" cards="" type="0" sum="0"/>
+   <action no="17" player="vizuchii100" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255738">
+  <general>
+   <startdate>2017-09-11 14:08:52</startdate>
+   <players>
+    <player bet="660" chips="47,354" seat="2" dealer="0" name="4EJIHbI" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,280" chips="85,838" seat="3" dealer="0" name="vizuchii100" win="12,060" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="36,325" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5,280" chips="105,216" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="43,618" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="33,176" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="23,060" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="2" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="3" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="4" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="5" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="6" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="7" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="8" player="4EJIHbI" cards="" type="1" sum="300"/>
+   <action no="9" player="vizuchii100" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="10" player="denysmolyar91" cards="" type="3" sum="600"/>
+   <cards player="varvar131" type="Pocket">SJ S5</cards>
+   <action no="11" player="varvar131" cards="" type="3" sum="600"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="12" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="13" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S9 D5</cards>
+   <action no="14" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="4EJIHbI" type="Pocket">X X</cards>
+   <action no="15" player="4EJIHbI" cards="" type="3" sum="300"/>
+   <cards player="vizuchii100" type="Pocket">S10 DJ</cards>
+   <action no="16" player="vizuchii100" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H7 H9 S4</cards>
+   <action no="17" player="4EJIHbI" cards="" type="4" sum="0"/>
+   <action no="18" player="vizuchii100" cards="" type="5" sum="600"/>
+   <action no="19" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="20" player="varvar131" cards="" type="3" sum="600"/>
+   <action no="21" player="4EJIHbI" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HK</cards>
+   <action no="22" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="23" player="varvar131" cards="" type="5" sum="4,020"/>
+   <action no="24" player="vizuchii100" cards="" type="3" sum="4,020"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D10</cards>
+   <action no="25" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="26" player="varvar131" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679255770">
+  <general>
+   <startdate>2017-09-11 14:10:17</startdate>
+   <players>
+    <player bet="46,694" chips="46,694" seat="2" dealer="1" name="4EJIHbI" win="75,514" rebuy="0" reg_code="" addon="0"/>
+    <player bet="4,980" chips="92,618" seat="3" dealer="0" name="vizuchii100" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="660" chips="35,665" seat="4" dealer="0" name="denysmolyar91" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="99,936" seat="5" dealer="0" name="varvar131" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="43,558" seat="8" dealer="0" name="gasparyan19901" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="33,116" seat="9" dealer="0" name="sssAvatarsss" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="23,000" chips="23,000" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731693991" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="vizuchii100" cards="" type="15" sum="60"/>
+   <action no="2" player="denysmolyar91" cards="" type="15" sum="60"/>
+   <action no="3" player="varvar131" cards="" type="15" sum="60"/>
+   <action no="4" player="gasparyan19901" cards="" type="15" sum="60"/>
+   <action no="5" player="sssAvatarsss" cards="" type="15" sum="60"/>
+   <action no="6" player="Peon384" cards="" type="15" sum="60"/>
+   <action no="7" player="4EJIHbI" cards="" type="15" sum="60"/>
+   <action no="8" player="vizuchii100" cards="" type="1" sum="300"/>
+   <action no="9" player="denysmolyar91" cards="" type="2" sum="600"/>
+  </round>
+  <round no="1">
+   <cards player="varvar131" type="Pocket">X X</cards>
+   <action no="10" player="varvar131" cards="" type="0" sum="0"/>
+   <cards player="gasparyan19901" type="Pocket">X X</cards>
+   <action no="11" player="gasparyan19901" cards="" type="0" sum="0"/>
+   <cards player="sssAvatarsss" type="Pocket">X X</cards>
+   <action no="12" player="sssAvatarsss" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DQ HJ</cards>
+   <action no="13" player="Peon384" cards="" type="23" sum="1,200"/>
+   <cards player="4EJIHbI" type="Pocket">SJ DA</cards>
+   <action no="14" player="4EJIHbI" cards="" type="23" sum="4,920"/>
+   <cards player="vizuchii100" type="Pocket">X X</cards>
+   <action no="15" player="vizuchii100" cards="" type="3" sum="4,620"/>
+   <cards player="denysmolyar91" type="Pocket">X X</cards>
+   <action no="16" player="denysmolyar91" cards="" type="0" sum="0"/>
+   <action no="17" player="Peon384" cards="" type="3" sum="3,720"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H6 C4 D6</cards>
+   <action no="18" player="vizuchii100" cards="" type="4" sum="0"/>
+   <action no="19" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="20" player="4EJIHbI" cards="" type="5" sum="41,714"/>
+   <action no="21" player="vizuchii100" cards="" type="0" sum="0"/>
+   <action no="22" player="Peon384" cards="" type="7" sum="18,020"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D5</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CK</cards>
+  </round>
+ </game>
+</session>

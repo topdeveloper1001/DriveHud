@@ -30,7 +30,14 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     {
                         { 414, 73 }, { 414, 501 }
                     }
-                },           
+                },
+                {
+                    3,
+                    new int[,]
+                    {
+                        { 770, 145 }, { 414, 501 }, { 50, 145 }
+                    }
+                },
                 {
                     4,
                     new int[,]
@@ -44,7 +51,7 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     {
                         { 770, 145 }, { 770, 420 }, { 414, 501 }, { 50, 420 }, { 50, 145 }, { 414, 73 }
                     }
-                },          
+                },
                 {
                     9,
                     new int[,]

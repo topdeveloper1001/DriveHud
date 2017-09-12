@@ -308,8 +308,11 @@ namespace DriveHUD.Importers
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
-            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled;
-            var moveLocation = settings.SiteSettings.ProcessedDataLocation;
+            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled && !string.IsNullOrEmpty(settings.SiteSettings.ProcessedDataLocation);
+
+            var siteFolder = Site.ToString();
+            var dateFolder = DateTime.Now.ToString("yyyy-MM");
+            var moveLocation = Path.Combine(settings.SiteSettings.ProcessedDataLocation, siteFolder, dateFolder);
 
             foreach (var capturedFile in capturedFiles)
             {

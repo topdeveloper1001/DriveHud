@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6732040485">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Wild Twister €0.50 SNG, 910107187</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:00:07</duration>
+  <gamecount>1</gamecount>
+  <startdate>2017-09-12 11:02:59</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>500</bets>
+  <wins>0</wins>
+  <chipsin>0</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0.60</statuspoints>
+  <awardpoints>Club0.60</awardpoints>
+  <ipoints>Club0.60</ipoints>
+  <tournamentcode>910107185</tournamentcode>
+  <tournamentname>Wild Twister €0.50 SNG</tournamentname>
+  <place>2</place>
+  <buyin>€0 + €0.03 + €0.47</buyin>
+  <totalbuyin>€0.50</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7680274162">
+  <general>
+   <startdate>2017-09-12 11:02:59</startdate>
+   <players>
+    <player name="GOCHEV1992" dealer="1" bet="500" seat="3" addon="0" reg_code="" win="1,500" chips="500" rebuy="0"/>
+    <player name="Peon384" dealer="0" bet="500" seat="6" addon="0" reg_code="6732040485" win="0" chips="500" rebuy="0"/>
+    <player name="rylai5" dealer="0" bet="500" seat="10" addon="0" reg_code="" win="0" chips="500" rebuy="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action sum="500" no="1" cards="" type="15" player="Peon384"/>
+   <action sum="500" no="2" cards="" type="15" player="rylai5"/>
+   <action sum="500" no="3" cards="" type="15" player="GOCHEV1992"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="GOCHEV1992">DA C2</cards>
+   <cards type="Pocket" player="Peon384">H4 SA</cards>
+   <cards type="Pocket" player="rylai5">S2 HK</cards>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">D2 S8 D6</cards>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">S10</cards>
+  </round>
+  <round no="4">
+   <cards type="River" player="">CA</cards>
+  </round>
+ </game>
+</session>

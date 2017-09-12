@@ -81,6 +81,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresTournamentSpeedAdjustment
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             // convert hand text to XML to be able to parse it string by string
@@ -789,7 +797,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private decimal GetValueFromActionLine(string actionLine)
         {
-            var startPos = actionLine.IndexOf("\" s", StringComparison.Ordinal) + 7;
+            var startPos = actionLine.IndexOf("sum=", StringComparison.Ordinal) + 5;
             var endPos = actionLine.IndexOf("\"", startPos, StringComparison.Ordinal) - 1;
             var value = actionLine.Substring(startPos, endPos - startPos + 1);
 
@@ -803,7 +811,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int actionStartPos = actionLine.IndexOf("type=", StringComparison.Ordinal) + 6;
             int actionEndPos = actionLine.IndexOf("\"", actionStartPos, StringComparison.Ordinal) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
-            return Int32.Parse(actionNumString);
+            return int.Parse(actionNumString);
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)
@@ -1080,6 +1088,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                             rake = ParserUtils.ParseMoney(buyinAndRake[1]);
                         }
 
+                        if (buyinAndRake.Length > 2)
+                        {
+                            prizePoolValue += ParserUtils.ParseMoney(buyinAndRake[2]);
+                        }
+
                         var currency = GetCurrency(handLines);
 
                         buyin = Buyin.FromBuyinRake(prizePoolValue, rake, currency);
@@ -1222,8 +1235,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     return;
                 }
 
-                // premium step are always 3-max (bet365)
-                if (tournamentName.IndexOf("Premium Step", StringComparison.OrdinalIgnoreCase) >= 0)
+                // twister are always 3-max && premium step are always 3-max (bet365)
+                if (tournamentName.IndexOf("Premium Step", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    tournamentName.IndexOf("Twister", StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(3);
                     return;
@@ -1293,6 +1307,33 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(6);
             }
+        }
+
+        protected override void AdjustTournamentSpeed(HandHistory handHistory)
+        {
+            if (!handHistory.GameDescription.IsTournament || handHistory.GameDescription.Tournament == null)
+            {
+                return;
+            }
+
+            var tournamentName = handHistory.GameDescription.Tournament.TournamentName;
+
+            if (string.IsNullOrEmpty(tournamentName) || tournamentName.IndexOf("Double Or Nothing", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return;
+            }
+
+            var chipsSum = handHistory.Players.Sum(x => x.StartingStack);
+
+            var initialStack = chipsSum / handHistory.GameDescription.SeatType.MaxPlayers;
+
+            if (initialStack < 1500)
+            {
+                handHistory.GameDescription.Tournament.Speed = TournamentSpeed.SuperTurbo;
+                return;
+            }
+
+            handHistory.GameDescription.Tournament.Speed = TournamentSpeed.Turbo;
         }
 
         private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)

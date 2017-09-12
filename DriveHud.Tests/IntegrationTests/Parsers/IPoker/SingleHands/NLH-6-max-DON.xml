@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6732023735">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Double Or Nothing (€0.10), 910104662</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:07:34</duration>
+  <gamecount>14</gamecount>
+  <startdate>2017-09-12 09:33:01</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>1,075</bets>
+  <wins>275</wins>
+  <chipsin>800</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0.20</statuspoints>
+  <awardpoints>Club0.20</awardpoints>
+  <ipoints>Club0.20</ipoints>
+  <tournamentcode>910104478</tournamentcode>
+  <tournamentname>Double Or Nothing (€0.10)</tournamentname>
+  <place>5</place>
+  <buyin>€0.09 + €0.01</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7680237555">
+  <general>
+   <startdate>2017-09-12 09:33:01</startdate>
+   <players>
+    <player win="0" name="zagi24093" chips="800" rebuy="0" addon="0" dealer="1" seat="1" reg_code="" bet="800"/>
+    <player win="0" name="a76105" chips="800" rebuy="0" addon="0" dealer="0" seat="3" reg_code="" bet="70"/>
+    <player win="0" name="EVILSEPPEL1" chips="800" rebuy="0" addon="0" dealer="0" seat="5" reg_code="" bet="20"/>
+    <player win="0" name="hadee" chips="800" rebuy="0" addon="0" dealer="0" seat="6" reg_code="" bet="20"/>
+    <player win="1,710" name="hermance007" chips="800" rebuy="0" addon="0" dealer="0" seat="8" reg_code="" bet="800"/>
+    <player win="0" name="Peon384" chips="800" rebuy="0" addon="0" dealer="0" seat="10" reg_code="6732023735" bet="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="a76105" cards="" sum="10" type="1"/>
+   <action no="2" player="EVILSEPPEL1" cards="" sum="20" type="2"/>
+  </round>
+  <round no="1">
+   <cards player="hadee" type="Pocket">X X</cards>
+   <action no="3" player="hadee" cards="" sum="20" type="3"/>
+   <cards player="hermance007" type="Pocket">DQ DJ</cards>
+   <action no="4" player="hermance007" cards="" sum="20" type="3"/>
+   <cards player="Peon384" type="Pocket">S8 C3</cards>
+   <action no="5" player="Peon384" cards="" sum="0" type="0"/>
+   <cards player="zagi24093" type="Pocket">CK S6</cards>
+   <action no="6" player="zagi24093" cards="" sum="20" type="3"/>
+   <cards player="a76105" type="Pocket">X X</cards>
+   <action no="7" player="a76105" cards="" sum="10" type="3"/>
+   <cards player="EVILSEPPEL1" type="Pocket">X X</cards>
+   <action no="8" player="EVILSEPPEL1" cards="" sum="0" type="4"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D2 C7 D5</cards>
+   <action no="9" player="a76105" cards="" sum="50" type="5"/>
+   <action no="10" player="EVILSEPPEL1" cards="" sum="0" type="0"/>
+   <action no="11" player="hadee" cards="" sum="0" type="0"/>
+   <action no="12" player="hermance007" cards="" sum="50" type="3"/>
+   <action no="13" player="zagi24093" cards="" sum="50" type="3"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D10</cards>
+   <action no="14" player="a76105" cards="" sum="0" type="4"/>
+   <action no="15" player="hermance007" cards="" sum="0" type="4"/>
+   <action no="16" player="zagi24093" cards="" sum="250" type="5"/>
+   <action no="17" player="a76105" cards="" sum="0" type="0"/>
+   <action no="18" player="hermance007" cards="" sum="250" type="3"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H3</cards>
+   <action no="19" player="hermance007" cards="" sum="0" type="4"/>
+   <action no="20" player="zagi24093" cards="" sum="480" type="5"/>
+   <action no="21" player="hermance007" cards="" sum="480" type="7"/>
+  </round>
+ </game>
+ </session>
