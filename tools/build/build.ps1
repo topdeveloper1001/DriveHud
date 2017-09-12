@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.1.1',
+    [string] $Version = '1.2.0',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -89,9 +89,9 @@ $session = @{
   WixSource = Join-Path $BaseDir (Join-Path $WixSource $Mode)
   Obfuscator = 'c:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.Console.exe'
   SignTool = 'c:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe'
-  Candle = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\candle.exe'
-  Light = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\Light.exe'
-  Insignia = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\insignia.exe'
+  Candle = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe'
+  Light = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\Light.exe'
+  Insignia = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\insignia.exe'
   MSBuild = 'c:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe'
   Nuget = '.\.nuget\Nuget.exe'
   Git = 'c:\Program Files\Git\bin\git.exe'
@@ -278,12 +278,20 @@ try
    Use-SignWixBundle($session)
    
    Write-LogInfo 'SETUP' 'Done.'
+   
+   Write-Host "Press any key to continue ..."
+
+   $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")   
 }
 catch
 {
     $ErrorMessage = $_.Exception.Message    
     Write-Host $ErrorMessage -ForegroundColor Red        
     
+	Write-Host "Press any key to continue ..."
+
+	$host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+	
     exit(1)
 }
 finally

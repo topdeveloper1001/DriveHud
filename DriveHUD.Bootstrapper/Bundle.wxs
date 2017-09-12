@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.1.1.1618" ?>
+  <?define ProductVersion = "1.2.0.1630" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -18,8 +18,8 @@
   <?ifndef Manufacturer?>
   <?define Manufacturer = "Ace Poker Solutions" ?>
   <?endif ?>
-  
-  
+
+
   <Bundle Name="$(var.ProductName)"
           Version="$(var.ProductVersion)"
           HelpUrl="$(var.ProductUrl)"
@@ -53,7 +53,7 @@
     <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
 
 
-    <Chain>
+    <Chain DisableSystemRestore='yes'>
       <PackageGroupRef Id="NetFx45Web"/>
       <RollbackBoundary/>
       <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes">
