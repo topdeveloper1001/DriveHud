@@ -192,6 +192,8 @@ namespace DriveHUD.Application.Licensing
 
             requestInfo.AdditionalServerProperties.Add("email", email);
 
+            var isExpired = false;
+
             try
             {
                 license = licenseManager.Validate(requestInfo);
@@ -218,6 +220,8 @@ namespace DriveHUD.Application.Licensing
                 if (exceptionData != null &&
                          exceptionData.ContainsKey("errorCode") && exceptionData["errorCode"].Equals("LCS_EXP"))
                 {
+                    isExpired = true;
+
                     LogProvider.Log.Error("Registration: License expired", ex);
                     throw new LicenseExpiredException();
                 }
@@ -248,6 +252,13 @@ namespace DriveHUD.Application.Licensing
             {
                 licenseInfo = new LicenseInfo(license, licenseType.Value);
                 licenseInfos.Add(licenseInfo);
+
+                // if license expired we must specify that
+                if (isExpired && license == null)
+                {
+                    licenseInfo.IsExpired = true;
+                    licenseInfo.Serial = serial;
+                }
 
                 LogProvider.Log.Info($"License limits: Cash={licenseInfo.CashLimit}, Tournament={licenseInfo.TournamentLimit}");
 
