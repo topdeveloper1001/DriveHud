@@ -32,7 +32,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
@@ -192,6 +191,7 @@ namespace DriveHUD.Importers
                         {
                             continue;
                         }
+
                         // update size and last write time
                         cf.Value.ImportedFile.FileSize = fs.Length;
                         cf.Value.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(cf.Value.ImportedFile.FileName);

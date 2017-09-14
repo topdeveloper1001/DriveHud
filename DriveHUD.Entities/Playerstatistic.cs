@@ -801,6 +801,9 @@ namespace DriveHUD.Entities
         [ProtoMember(292)]
         public virtual int CouldRiverCheckRaise { get; set; }
 
+        [ProtoMember(293)]
+        public virtual int MaxPlayers { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual

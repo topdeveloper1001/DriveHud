@@ -17,7 +17,7 @@
     Width="530"
     d:DesignHeight="680"
     d:DesignWidth="530">
-  
+
     <UserControl.Resources>
 
         <SolidColorBrush
@@ -376,7 +376,7 @@
         <TextBlock
             Grid.Column="1"
             Grid.Row="0"
-            Text="HUD Opacity"
+            Text="{ResX Key=Common_HudStatSettings_HudOpacity}"
             VerticalAlignment="Center" />
         <Slider
             Grid.Column="2"
@@ -390,7 +390,7 @@
         <TextBlock
             Grid.Column="1"
             Grid.Row="1"
-            Text="List of available settings"
+            Text="{ResX Key=Common_HudStatSettings_ListOfAvailableSettings}"
             VerticalAlignment="Center" />
 
         <StackPanel
@@ -399,7 +399,7 @@
             Orientation="Horizontal"
             HorizontalAlignment="Right">
             <TextBlock
-                Text="Current stat:"
+                Text="{ResX Common_HudStatSettings_CurrentStat}"
                 VerticalAlignment="Center" />
             <TextBlock
                 Text="{Binding SelectedItem.Caption}"
@@ -435,25 +435,64 @@
                 Orientation="Vertical"
                 Margin="0,16,0,0">
 
-                <!-- Min. Sample -->
-                <TextBlock
-                    Text="Min.Sample"
-                    Margin="0,0,0,12" />
-                <telerik:RadMaskedNumericInput
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    Width="190"
-                    Height="33"
-                    TextMode="PlainText"
-                    FormatString="N0"
-                    Mask=""
-                    Culture="en-US"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="9999999"
-                    Value="{Binding SelectedItem.MinSample}" />
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="94" />
+                        <ColumnDefinition
+                            Width="94" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Min. Sample -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="{ResX Key=Common_HudStatSettings_MinSample}"
+                        Margin="0,0,0,12" />
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        TextMode="PlainText"
+                        FormatString="N0"
+                        Mask=""
+                        Culture="en-US"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="9999999"
+                        Value="{Binding SelectedItem.MinSample}" />
+
+                    <!-- Decimal places -->
+                    <TextBlock
+                        Grid.Column="01"
+                        Grid.Row="0"
+                        Text="{ResX Key=Common_HudStatSettings_DecimalPlaces}"
+                        Margin="0,0,0,12" />
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        TextMode="PlainText"
+                        FormatString="N0"
+                        Mask=""
+                        Culture="en-US"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="2"
+                        Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
+
+                </Grid>
 
                 <!-- Label -->
                 <TextBlock
-                    Text="Label"
+                    Text="{ResX Key=Common_HudStatSettings_Label}"
                     Margin="0,18,0,12" />
                 <telerik:RadMaskedTextInput
                     Style="{StaticResource InputTextBoxStyle}"
@@ -461,23 +500,6 @@
                     Height="33"
                     Mask="a10"
                     Value="{Binding SelectedItem.Label}" />
-
-                <!-- Pop-up-->
-                <TextBlock
-                    Text="Decimal Places"
-                    Margin="0,18,0,12" />
-
-                <telerik:RadMaskedNumericInput
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    Width="190"
-                    Height="33"
-                    TextMode="PlainText"
-                    FormatString="N0"
-                    Mask=""
-                    Culture="en-US"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="2"
-                    Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
 
             </StackPanel>
 
@@ -501,7 +523,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Text="Color range"
+                        Text="{ResX Key=Common_HudStatSettings_ColorRange}"
                         Margin="0,0,0,12" />
 
                     <ListBox
@@ -599,7 +621,7 @@
                     </ListBox>
 
                     <TextBlock
-                        Text="Font"
+                        Text="{ResX Key=Common_HudStatSettings_Font}"
                         Margin="0,12,0,12" />
 
                     <Border
@@ -696,7 +718,7 @@
             </Border>
 
             <StackPanel
-                Grid.Row="1"
+                Grid.Row="1"                
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom">
@@ -705,7 +727,7 @@
                     Height="40"
                     Width="77"
                     Foreground="{StaticResource ActiveTextForeground}"
-                    Content="OK"
+                    Content="{ResX Key=Common_HudStatSettings_OK}"
                     Command="{Binding SaveCommand}" />
 
                 <Button
@@ -713,7 +735,7 @@
                     Height="40"
                     Width="112"
                     Foreground="{StaticResource ActiveTextForeground}"
-                    Content="Cancel"
+                    Content="{ResX Key=Common_HudStatSettings_Cancel}"
                     Command="{Binding CancelCommand}" />
 
             </StackPanel>
