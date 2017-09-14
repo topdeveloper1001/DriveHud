@@ -50,6 +50,7 @@ namespace Model.Settings
             IsSaveFiltersOnExit = true;
             IsAdvancedLoggingEnabled = false;
             IsHudSavedAtFirstTime = true;
+            IsSQLiteEnabled = true;
             TimeZoneOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).Hours;
             HudViewMode = (int)HudViewType.Vertical_1;
             RunSiteDetection = true;

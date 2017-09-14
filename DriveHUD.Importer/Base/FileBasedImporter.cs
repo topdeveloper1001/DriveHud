@@ -22,7 +22,9 @@ using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Settings;
+using NHibernate.Linq;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -30,6 +32,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
@@ -41,6 +44,8 @@ namespace DriveHUD.Importers
         protected IEventAggregator eventAggregator;
 
         protected const int ReadingTimeout = 3000;
+
+        protected static readonly ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
 
         public FileBasedImporter()
         {
@@ -87,6 +92,50 @@ namespace DriveHUD.Importers
                                                       where item == null && !filesToSkip.Contains(handHistoryFile.FullName)
                                                       select handHistoryFile).ToArray();
 
+                    // check if files were processed
+                    if (newlyDetectedHandHistories.Length > 0)
+                    {
+                        using (var session = ModelEntities.OpenStatelessSession())
+                        {
+                            var newlyDetectedHandHistoriesNames = newlyDetectedHandHistories.Select(x => x.FullName).ToArray();
+
+                            var processedFiles = session.Query<ImportedFile>()
+                                .Where(x => newlyDetectedHandHistoriesNames.Contains(x.FileName))
+                                .ToArray();
+
+                            var processedFilesToSkip = (from processedFile in processedFiles
+                                                        join newlyDetectedHandHistory in newlyDetectedHandHistories on
+                                                            new
+                                                            {
+                                                                FileName = processedFile.FileName,
+                                                                FileSize = processedFile.FileSize,
+                                                                LastWrite = DateTime.SpecifyKind(processedFile.LastWriteTime, DateTimeKind.Utc)
+                                                            } equals
+                                                            new
+                                                            {
+                                                                FileName = newlyDetectedHandHistory.FullName,
+                                                                FileSize = newlyDetectedHandHistory.Length,
+                                                                LastWrite = new DateTime(newlyDetectedHandHistory.LastWriteTimeUtc.Year,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Month,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Day,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Hour,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Minute,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Second,
+                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Kind)
+                                                            }
+                                                        select newlyDetectedHandHistory).ToArray();
+
+                            if (processedFilesToSkip.Length > 0)
+                            {
+                                newlyDetectedHandHistories = newlyDetectedHandHistories
+                                    .Except(processedFilesToSkip, new LambdaComparer<FileInfo>((x, y) => x.FullName == y.FullName))
+                                    .ToArray();
+
+                                filesToSkip.AddRange(processedFilesToSkip.Select(x => x.FullName).Distinct());
+                            }
+                        }
+                    }
+
                     // add new files and lock them
                     foreach (var hh in newlyDetectedHandHistories)
                     {
@@ -118,7 +167,11 @@ namespace DriveHUD.Importers
                             {
                                 FileStream = fs,
                                 Session = GetSessionForFile(hh.FullName),
-                                Encoding = encoding
+                                Encoding = encoding,
+                                ImportedFile = new ImportedFile
+                                {
+                                    FileName = hh.FullName
+                                }
                             };
 
                             capturedFiles.Add(hh.FullName, capturedFile);
@@ -141,6 +194,10 @@ namespace DriveHUD.Importers
                         {
                             continue;
                         }
+                        // update size and last write time
+                        cf.Value.ImportedFile.FileSize = fs.Length;
+                        cf.Value.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(cf.Value.ImportedFile.FileName);
+                        cf.Value.WasModified = true;
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)
@@ -175,6 +232,57 @@ namespace DriveHUD.Importers
                         }
 
                         ProcessHand(handText, cf.Value.GameInfo);
+                    }
+
+                    // update files info
+                    // check if file was modified since last check
+                    var modifiedCapturedFiles = capturedFiles.Values.Where(x => x.WasModified).ToArray();
+
+                    if (modifiedCapturedFiles.Length > 0)
+                    {
+                        using (var session = ModelEntities.OpenSession())
+                        {
+                            using (var transaction = session.BeginTransaction())
+                            {
+                                LogProvider.Log.Info($"{Site}: Open DB session");
+
+                                var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
+
+                                var existingImportedFiles = session.Query<ImportedFile>()
+                                    .Where(x => capturedImportedFileNames.Contains(x.FileName))
+                                    .ToArray();
+
+                                var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
+                                                                 join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
+                                                                    equals existingImportedFile.FileName into gj
+                                                                 from existingImportedFile in gj.DefaultIfEmpty()
+                                                                 select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
+
+                                capturedFilesWithExisting.ForEach(x =>
+                                {
+                                    if (x.ExistingImportedFile != null)
+                                    {
+                                        x.ExistingImportedFile.FileSize = x.CapturedFile.ImportedFile.FileSize;
+                                        x.ExistingImportedFile.LastWriteTime = x.CapturedFile.ImportedFile.LastWriteTime;
+
+                                        x.CapturedFile.ImportedFile = x.ExistingImportedFile;
+                                    }
+
+                                    session.Save(x.CapturedFile.ImportedFile);
+
+                                    x.CapturedFile.WasModified = false;
+                                });
+
+                                var rnd = new Random();
+
+#warning do not forget to remove
+                                Thread.Sleep(rnd.Next(100, 2000));
+
+                                transaction.Commit();
+
+                                LogProvider.Log.Info($"{Site}: Close DB session");
+                            }
+                        }
                     }
 
                     // remove invalid files from captured
@@ -481,6 +589,10 @@ namespace DriveHUD.Importers
             public Encoding Encoding { get; set; }
 
             public GameInfo GameInfo { get; set; }
+
+            public ImportedFile ImportedFile { get; set; }
+
+            public bool WasModified { get; set; }
         }
     }
 }
