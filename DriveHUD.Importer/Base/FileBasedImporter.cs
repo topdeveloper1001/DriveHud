@@ -45,8 +45,6 @@ namespace DriveHUD.Importers
 
         protected const int ReadingTimeout = 3000;
 
-        protected static readonly ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
-
         public FileBasedImporter()
         {
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -244,8 +242,6 @@ namespace DriveHUD.Importers
                         {
                             using (var transaction = session.BeginTransaction())
                             {
-                                LogProvider.Log.Info($"{Site}: Open DB session");
-
                                 var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
 
                                 var existingImportedFiles = session.Query<ImportedFile>()
@@ -273,14 +269,7 @@ namespace DriveHUD.Importers
                                     x.CapturedFile.WasModified = false;
                                 });
 
-                                var rnd = new Random();
-
-#warning do not forget to remove
-                                Thread.Sleep(rnd.Next(100, 2000));
-
-                                transaction.Commit();
-
-                                LogProvider.Log.Info($"{Site}: Close DB session");
+                                transaction.Commit();                                
                             }
                         }
                     }
