@@ -22,7 +22,7 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(Add("Reports_Column_GamesPlayed", ReflectionHelper.GetPath<Indicators>(o => o.Source.GameType), GetColumnWidth("0.00/0.00 NoLimitHoldem")));
+            gridView.Columns.Add(Add("Reports_Column_GamesPlayed", ReflectionHelper.GetPath<Indicators>(o => o.Source.GameType), GetColumnHeaderWidth("0.00/0.00 NoLimitHoldem")));
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
             gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
@@ -46,7 +46,7 @@ namespace DriveHUD.Application.ReportsLayout
             {
                 if (i == 0)
                     continue;
-                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i].Header as string);
+                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]);
             }
         }
     }

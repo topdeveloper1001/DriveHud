@@ -44,7 +44,7 @@ namespace DriveHUD.Application.ReportsLayout
 
             for (int i = 1; i < gridView.Columns.Count; i++)
             {
-                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i].Header as string) + 10;
+                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]) + 10;
             }
         }
     }
