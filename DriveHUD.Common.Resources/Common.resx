@@ -867,8 +867,14 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudStatSettings_CurrentStat" xml:space="preserve">
     <value>Current stat:</value>
   </data>
+  <data name="Common_HudStatSettings_DataFreshness" xml:space="preserve">
+    <value>Data Freshness</value>
+  </data>
   <data name="Common_HudStatSettings_DecimalPlaces" xml:space="preserve">
     <value>Decimal Places</value>
+  </data>
+  <data name="Common_HudStatSettings_FilterDataForOnly" xml:space="preserve">
+    <value>Filter data for only</value>
   </data>
   <data name="Common_HudStatSettings_Font" xml:space="preserve">
     <value>Font</value>

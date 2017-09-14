@@ -1142,11 +1142,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Freshness.
+        /// </summary>
+        internal static string Common_HudStatSettings_DataFreshness {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_DataFreshness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Decimal Places.
         /// </summary>
         internal static string Common_HudStatSettings_DecimalPlaces {
             get {
                 return ResourceManager.GetString("Common_HudStatSettings_DecimalPlaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter data for only.
+        /// </summary>
+        internal static string Common_HudStatSettings_FilterDataForOnly {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_FilterDataForOnly", resourceCulture);
             }
         }
         

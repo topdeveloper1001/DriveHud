@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:comboboxControl="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
@@ -350,6 +351,96 @@
             </Setter>
         </Style>
 
+        <ControlTemplate
+            x:Key="FilterComboBoxToggleButtonTemplate"
+            TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="30" />
+                </Grid.ColumnDefinitions>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup
+                        x:Name="CommonStates">
+                        <VisualState
+                            x:Name="Normal" />
+                        <VisualState
+                            x:Name="MouseOver" />
+                        <VisualState
+                            x:Name="Pressed" />
+                        <VisualState
+                            x:Name="Disabled">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                    Storyboard.TargetName="Arrow">
+                                    <EasingColorKeyFrame
+                                        KeyTime="0"
+                                        Value="{StaticResource DisabledForegroundColor}" />
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                    Storyboard.TargetName="Inner">
+                                    <EasingColorKeyFrame
+                                        KeyTime="0"
+                                        Value="{StaticResource DisabledBackgroundColor}" />
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup
+                        x:Name="CheckStates">
+                        <VisualState
+                            x:Name="Checked" />
+                        <VisualState
+                            x:Name="Unchecked" />
+                        <VisualState
+                            x:Name="Indeterminate" />
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border
+                    x:Name="Border"
+                    Grid.Column="1"
+                    CornerRadius="2"
+                    BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush
+                            Color="#181a1d" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush
+                            Color="#2a2d31" />
+                    </Border.Background>
+                </Border>
+                <Border
+                    x:Name="Inner"
+                    Grid.Column="0"
+                    CornerRadius="2"
+                    Background="{StaticResource ButtonBackground}" />
+                <Border
+                    x:Name="GlyphBorder"
+                    Grid.ColumnSpan="2"
+                    CornerRadius="2"
+                    BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush
+                            Color="#181a1d" />
+                    </Border.BorderBrush>
+                </Border>
+                <Path
+                    x:Name="Arrow"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Data="M 0 0 L 4 4 L 8 0 Z">
+                    <Path.Fill>
+                        <SolidColorBrush
+                            Color="{StaticResource GlyphColor}" />
+                    </Path.Fill>
+                </Path>
+            </Grid>
+        </ControlTemplate>
 
     </UserControl.Resources>
 
@@ -440,6 +531,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
@@ -470,7 +563,7 @@
 
                     <!-- Decimal places -->
                     <TextBlock
-                        Grid.Column="01"
+                        Grid.Column="1"
                         Grid.Row="0"
                         Text="{ResX Key=Common_HudStatSettings_DecimalPlaces}"
                         Margin="0,0,0,12" />
@@ -488,18 +581,52 @@
                         maskedInput:MaskedInputExtensions.Maximum="2"
                         Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
 
+                    <!-- Label -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="{ResX Key=Common_HudStatSettings_Label}"
+                        Margin="0,18,0,12" />
+                    <telerik:RadMaskedTextInput
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Style="{StaticResource InputTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        Mask="a10"
+                        Value="{Binding SelectedItem.Label}" />
+
+                    <!-- Data freshness -->
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="{ResX Key=Common_HudStatSettings_DataFreshness}"
+                        Margin="0,18,0,12" />
+
+                    <telerik:RadMaskedTextInput
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Style="{StaticResource InputTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        Mask="a10"
+                        Value="{Binding SelectedItem.Label}" />
+
                 </Grid>
 
-                <!-- Label -->
+                <!-- Filter data -->
                 <TextBlock
-                    Text="{ResX Key=Common_HudStatSettings_Label}"
+                    Text="{ResX Key=Common_HudStatSettings_FilterDataForOnly}"
                     Margin="0,18,0,12" />
-                <telerik:RadMaskedTextInput
-                    Style="{StaticResource InputTextBoxStyle}"
+
+                <comboboxControl:ComboBoxEx
                     Width="190"
                     Height="33"
-                    Mask="a10"
-                    Value="{Binding SelectedItem.Label}" />
+                    PopupMaxWidth="190"                    
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    ItemsBackgroundColor="{StaticResource ButtonBackground}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource FilterComboBoxToggleButtonTemplate}" />
 
             </StackPanel>
 
@@ -718,7 +845,7 @@
             </Border>
 
             <StackPanel
-                Grid.Row="1"                
+                Grid.Row="1"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom">
