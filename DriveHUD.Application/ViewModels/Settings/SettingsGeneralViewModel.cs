@@ -123,6 +123,19 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public bool IsAPIEnabled
+        {
+            get { return SettingsModel?.IsAPIEnabled ?? false; }
+            set
+            {
+                if (SettingsModel != null && SettingsModel.IsAPIEnabled != value)
+                {
+                    SettingsModel.IsAPIEnabled = value;
+                    OnPropertyChanged(nameof(IsAPIEnabled));
+                }
+            }
+        }
+
         public int TimeZoneOffset
         {
             get { return SettingsModel?.TimeZoneOffset ?? 0; }

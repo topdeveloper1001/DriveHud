@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable API.
+        /// </summary>
+        internal static string Settings_IsAPIEnabled {
+            get {
+                return ResourceManager.GetString("Settings_IsAPIEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Knowledge Base.
         /// </summary>
         internal static string Settings_KnowledgeBase {

@@ -153,6 +153,9 @@
   <data name="Settings_GrabRates" xml:space="preserve">
     <value>Grab latest rates</value>
   </data>
+  <data name="Settings_IsAPIEnabled" xml:space="preserve">
+    <value>Enable API</value>
+  </data>
   <data name="Settings_KnowledgeBase" xml:space="preserve">
     <value>Knowledge Base</value>
   </data>

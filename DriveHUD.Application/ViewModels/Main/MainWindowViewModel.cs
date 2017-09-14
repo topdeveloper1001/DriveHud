@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
 using DriveHUD.API;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
@@ -78,11 +79,7 @@ namespace DriveHUD.Application.ViewModels
 
         private IFilterModelManagerService filterModelManager;
 
-        private IAPIHost apiHost;
-
         private bool isAdvancedLoggingEnabled = false;
-
-        private bool isSetPlayerIdMessageShown = false;
 
         private const int ImportFileUpdateDelay = 750;
 
@@ -122,8 +119,13 @@ namespace DriveHUD.Application.ViewModels
 
             ConfigureResolutionDependentProperties();
 
-            apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
-            apiHost.StartAPIService();
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
+            if (settings != null && settings.GeneralSettings != null && settings.GeneralSettings.IsAPIEnabled)
+            {
+                var apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
+                apiHost.StartAPIService();
+            }
         }
 
         private void InitializeData()
@@ -1484,7 +1486,12 @@ namespace DriveHUD.Application.ViewModels
 
                 PokerStarsDetectorSingletonService.Instance.Stop();
 
-                apiHost.CloseAPIService();
+                var apiHost = ServiceLocator.Current.GetInstance<IAPIHost>();
+
+                if (apiHost != null && apiHost.IsRunning)
+                {
+                    apiHost.CloseAPIService();
+                }
 
                 if (ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsSaveFiltersOnExit)
                 {

@@ -283,6 +283,10 @@
                     Height="5" />
                 <RowDefinition
                     Height="Auto" />
+                <RowDefinition
+                    Height="5" />
+                <RowDefinition
+                    Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -324,6 +328,14 @@
                 HorizontalAlignment="Right"
                 Content="{ResX Key=Settings_RecoverStats}"
                 Command="{Binding RecoverStatsCommand}" />
+
+            <CheckBox
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource CheckBoxRight}"
+                IsChecked="{Binding IsAPIEnabled, Mode=TwoWay}"
+                Content="{ResX Key=Settings_IsAPIEnabled}"
+                Margin="15 5" />
 
         </Grid>
 

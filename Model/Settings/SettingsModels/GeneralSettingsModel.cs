@@ -38,6 +38,8 @@ namespace Model.Settings
 
         public bool RunSiteDetection { get; set; }
 
+        public bool IsAPIEnabled { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();
@@ -54,6 +56,7 @@ namespace Model.Settings
             TimeZoneOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).Hours;
             HudViewMode = (int)HudViewType.Vertical_1;
             RunSiteDetection = true;
+            IsAPIEnabled = false;
 
             StartDayOfWeek = DayOfWeek.Monday;
         }
