@@ -85,6 +85,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5569123611", "ThaGhostGoose", 1)]
         [TestCase("5569123611", "yako70", 3)]
         [TestCase("1705825174", "Peon347", 2560)]
+        [TestCase("910226258", "Peon384", 1)]
         public void TournamentsFinishPositionIsImported(string tournamentNumber, string playerName, int expectedFinishPosition)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsPlacesAreImported"))
@@ -109,6 +110,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5944035303", "WhiteRiderT", 42)]
         [TestCase("5944035303", "BOLL1X", 0)]
         [TestCase("5944035303", "AntoniAG9", 18)]
+        [TestCase("910226258", "Peon384", 18)]
         public void TournamentsWinIsImported(string tournamentNumber, string playerName, int winningInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsWinIsImported"))
@@ -230,6 +232,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"iPoker\NLH-6-max-DON-6732774762.xml", EnumPokerSites.IPoker),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)

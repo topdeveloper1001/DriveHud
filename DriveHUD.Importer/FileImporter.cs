@@ -908,9 +908,11 @@ namespace DriveHUD.Importers
         private int GetNumberOfWinnersForTournament(string tournamentName, int totalPlayers, TournamentsTags tournamentTag)
         {
             int numberOfWinningPlaces = 1;
+
             if (tournamentTag == TournamentsTags.STT)
             {
                 var sttType = Converter.ToSitNGoType(tournamentName);
+
                 switch (sttType)
                 {
                     case STTTypes.DoubleUp:

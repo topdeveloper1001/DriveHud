@@ -165,6 +165,22 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         }
 
         [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", 1)]
+        public void TournamentFinishPositionIsParsedTest(string handHistoryFile, int place)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.FinishPosition, Is.EqualTo(place));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", 0.18)]
+        public void TournamentWinningIsParsedTest(string handHistoryFile, decimal winning)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.Winning, Is.EqualTo(winning));
+        }
+
+        [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 6)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON.xml", 6)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-9-max-SNG-Turbo.xml", 9)]

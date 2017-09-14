@@ -504,7 +504,9 @@ namespace Model.Importer
                 return STTTypes.Beginner;
             }
 
-            if (tournamentName.IndexOf("Double-Up", StringComparison.OrdinalIgnoreCase) >= 0)
+            if (tournamentName.IndexOf("Double-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                tournamentName.IndexOf("1-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                tournamentName.IndexOf("Double Or Nothing", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.DoubleUp;
             }
@@ -512,12 +514,7 @@ namespace Model.Importer
             if (tournamentName.IndexOf("Triple-Up", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.TripleUp;
-            }
-
-            if (tournamentName.IndexOf("1-Up", StringComparison.OrdinalIgnoreCase) >= 0)
-            {
-                return STTTypes.DoubleUp;
-            }
+            }     
 
             return STTTypes.Normal;
         }
