@@ -622,11 +622,19 @@
                 <comboboxControl:ComboBoxEx
                     Width="190"
                     Height="33"
-                    PopupMaxWidth="190"                    
+                    SelectionMode="Multiple"
                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                     ItemsBackgroundColor="{StaticResource ButtonBackground}"
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                    ToggleButtonTemplate="{StaticResource FilterComboBoxToggleButtonTemplate}" />
+                    ToggleButtonTemplate="{StaticResource FilterComboBoxToggleButtonTemplate}"
+                    ItemsSource="{Binding FilterTableTypes}">
+                    <comboboxControl:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </comboboxControl:ComboBoxEx.ItemTemplate>
+                </comboboxControl:ComboBoxEx>
 
             </StackPanel>
 

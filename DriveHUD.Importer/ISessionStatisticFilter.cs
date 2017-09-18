@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SessionCacheStatistic.cs" company="Ace Poker Solutions">
+// <copyright file="ISessionStatisticFilter.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,16 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Data;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Importers
 {
-    public class SessionCacheStatistic
+    public interface ISessionStatisticFilter
     {
-        public HudIndicators PlayerData { get; set; } = new HudIndicators();
-
-        public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
-
-        public bool IsHero { get; set; }
+        bool Apply(Playerstatistic playerstatistic);
     }
 }

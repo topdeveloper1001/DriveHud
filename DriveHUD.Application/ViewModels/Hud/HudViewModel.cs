@@ -1253,6 +1253,17 @@ namespace DriveHUD.Application.ViewModels
 
             CurrentLayout.Opacity = hudStatSettings.HudOpacity;
 
+#warning change logic
+            // temp for testing
+            var filter = new HudLayoutFilter
+            {
+                StartDate = null,
+                EndDate = null,
+                TableTypes = new int[] { (int)EnumTableType.HU, (int)EnumTableType.Three }
+            };
+
+            CurrentLayout.Filter = filter.IsDefault ? null : filter;
+
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);

@@ -12,6 +12,7 @@
 
 using DriveHUD.Common;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
 using Model.Enums;
 using Model.Stats;
 using ReactiveUI;
@@ -52,6 +53,22 @@ namespace DriveHUD.Application.ViewModels.Hud
             HudOpacity = viewModelInfo.HudOpacity;
             items = new ObservableCollection<StatInfo>(clonedItems);
 
+            filterTableTypes = new ObservableCollection<EnumTableType>(Enum.GetValues(typeof(EnumTableType)).Cast<EnumTableType>());
+            selectedFilterTableTypes = new ObservableCollection<EnumTableType>();
+
+            InitializeCommands(viewModelInfo);
+
+            this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
+            {
+                if (selectedStatInfoOptionValueRange != null)
+                {
+                    selectedStatInfoOptionValueRange.Color = x.Value;
+                }
+            });
+        }
+
+        private void InitializeCommands(HudStatSettingsViewModelInfo viewModelInfo)
+        {
             SaveCommand = ReactiveCommand.Create();
             SaveCommand.Subscribe(x =>
             {
@@ -69,14 +86,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             PickerSelectColorCommand = ReactiveCommand.Create();
             PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
-
-            this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
-            {
-                if (selectedStatInfoOptionValueRange != null)
-                {
-                    selectedStatInfoOptionValueRange.Color = x.Value;
-                }
-            });
         }
 
         public ReactiveCommand<object> SaveCommand { get; private set; }
@@ -158,6 +167,30 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
+
+        private ObservableCollection<EnumTableType> filterTableTypes;
+
+        public ObservableCollection<EnumTableType> FilterTableTypes
+        {
+            get
+            {
+                return filterTableTypes;
+            }
+        }
+
+        private ObservableCollection<EnumTableType> selectedFilterTableTypes;
+
+        public ObservableCollection<EnumTableType> SelectedFilterTableTypes
+        {
+            get
+            {
+                return selectedFilterTableTypes;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedFilterTableTypes, value);
+            }
+        }
 
         private void SelectColor(StatInfoOptionValueRange statInfoValueRange)
         {

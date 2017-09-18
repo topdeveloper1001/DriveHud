@@ -462,7 +462,12 @@ namespace DriveHUD.Importers
                             IsHero = isHero
                         };
 
-                        importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
+                        if (gameInfo.PlayersCacheInfo == null)
+                        {
+                            gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+                        }
+
+                        gameInfo.PlayersCacheInfo.Add(cacheInfo);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 

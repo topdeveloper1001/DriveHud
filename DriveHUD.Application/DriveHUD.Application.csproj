@@ -510,6 +510,7 @@
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutBumperStickersTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutFilter.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutFourStatsBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGaugeIndicator.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGraphTool.cs" />
