@@ -6711,7 +6711,7 @@
                         </Border>
                         <Border x:Name="FocusedVisual"
                                 Visibility="Collapsed"
-                                BorderThickness="1"
+                                BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{x:Null}"
                                 BorderBrush="{StaticResource ControlOuterBorder_Focused}"
                                 CornerRadius="{StaticResource ControlOuterBorder_CornerRadius}"/>

@@ -74,6 +74,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             dataFreshnessItems = new ObservableCollection<HudStatsDataFreshness>(Enum.GetValues(typeof(HudStatsDataFreshness))
                 .Cast<HudStatsDataFreshness>());
 
+            DataFreshness = viewModelInfo.DataFreshness;
+
             InitializeCommands(viewModelInfo);
 
             this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
@@ -215,9 +217,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private int dataFreshness;
+        private bool isDataFreshnessLocked;
 
-        public int DataFreshness
+        private double? dataFreshness;
+
+        public double? DataFreshness
         {
             get
             {
@@ -226,6 +230,40 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref dataFreshness, value);
+
+                if (!isDataFreshnessLocked)
+                {
+                    isDataFreshnessLocked = true;
+
+                    SelectedDataFreshnessItem = value.HasValue && Enum.IsDefined(typeof(HudStatsDataFreshness), (int)value.Value) ?
+                        (HudStatsDataFreshness)(int)value.Value :
+                        value.HasValue ? (HudStatsDataFreshness?)null : HudStatsDataFreshness.All;
+
+                    isDataFreshnessLocked = false;
+                }
+            }
+        }
+
+        private HudStatsDataFreshness? selectedDataFreshnessItem;
+
+        public HudStatsDataFreshness? SelectedDataFreshnessItem
+        {
+            get
+            {
+                return selectedDataFreshnessItem;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedDataFreshnessItem, value);
+
+                if (!isDataFreshnessLocked)
+                {
+                    isDataFreshnessLocked = true;
+
+                    DataFreshness = selectedDataFreshnessItem.HasValue ? (int)selectedDataFreshnessItem : 0;
+
+                    isDataFreshnessLocked = false;
+                }
             }
         }
 

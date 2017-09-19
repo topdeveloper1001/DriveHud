@@ -698,4 +698,22 @@
   <data name="Enum_EnumPokerNetworks_IPoker" xml:space="preserve">
     <value>IPoker Network</value>
   </data>
+  <data name="Enum_HudStatsDataFreshness_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Enum_HudStatsDataFreshness_Last120Days" xml:space="preserve">
+    <value>Last 120 days</value>
+  </data>
+  <data name="Enum_HudStatsDataFreshness_Last30Days" xml:space="preserve">
+    <value>Last 30 days</value>
+  </data>
+  <data name="Enum_HudStatsDataFreshness_Last60Days" xml:space="preserve">
+    <value>Last 60 days</value>
+  </data>
+  <data name="Enum_HudStatsDataFreshness_Last90Days" xml:space="preserve">
+    <value>Last 90 days</value>
+  </data>
+  <data name="Enum_HudStatsDataFreshness_LastYear" xml:space="preserve">
+    <value>Last year</value>
+  </data>
 </root>

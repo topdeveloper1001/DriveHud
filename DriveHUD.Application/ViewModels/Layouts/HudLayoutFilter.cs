@@ -34,11 +34,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         public int[] TableTypes { get; set; }
 
-        public int? DataFreshness { get; set; }
+        public int DataFreshness { get; set; }
 
         public bool Apply(Playerstatistic playerstatistic)
         {
-            var result = (!DataFreshness.HasValue || DataFreshness.HasValue && (DateTime.Now - playerstatistic.Time).Days <= DataFreshness.Value) &&
+            var result = (DataFreshness == 0 || (DateTime.Now - playerstatistic.Time).Days <= DataFreshness) &&
                 (TableTypes == null || !TableTypes.Any() || TableTypes.Contains(playerstatistic.MaxPlayers));
 
             return result;
@@ -48,7 +48,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             get
             {
-                return !DataFreshness.HasValue && (TableTypes == null || !TableTypes.Any());
+                return DataFreshness == 0 && (TableTypes == null || !TableTypes.Any());
             }
         }
 
@@ -77,8 +77,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 return false;
             }
 
-            var result = (!DataFreshness.HasValue && !filter.DataFreshness.HasValue || DataFreshness == filter.DataFreshness) &&
-                CompareTableTypes(this, filter);
+            var result = (DataFreshness == filter.DataFreshness) && CompareTableTypes(this, filter);
 
             return result;
         }
@@ -88,7 +87,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             unchecked
             {
                 var hashcode = 23;
-                hashcode += hashcode * 31 + (DataFreshness.HasValue ? DataFreshness.GetHashCode() : 0);
+                hashcode += hashcode * 31 + DataFreshness.GetHashCode();
 
                 if (TableTypes != null && TableTypes.Any())
                 {
@@ -104,7 +103,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         public override string ToString()
         {
-            return string.Format("{0},{2}", DataFreshness, TableTypes != null ? string.Join(",", TableTypes.Distinct()) : string.Empty);
+            return string.Format("{0},{1}", DataFreshness, TableTypes != null ? string.Join(",", TableTypes.Distinct()) : string.Empty);
         }
 
         private static bool CompareTableTypes(HudLayoutFilter filter1, HudLayoutFilter filter2)

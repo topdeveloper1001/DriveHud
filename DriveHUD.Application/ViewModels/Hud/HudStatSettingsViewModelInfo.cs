@@ -28,6 +28,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public IEnumerable<EnumTableType> SelectedTableTypes { get; set; }
 
+        public int DataFreshness { get; set; }
+
         public double HudOpacity { get; set; }
 
         public Action Save { get; set; }

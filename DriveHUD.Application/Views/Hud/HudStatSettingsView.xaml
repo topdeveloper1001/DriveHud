@@ -7,6 +7,7 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:comboboxControl="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
     xmlns:telerikData="clr-namespace:Telerik.Windows.Data;assembly=Telerik.Windows.Data"
@@ -489,15 +490,27 @@
 
         <DataTemplate
             x:Key="DataFreshnessSelectionBoxTemplate">
-            <telerik:RadMaskedNumericInput
-                Width="60"
-                Style="{StaticResource NumericTextBoxStyle}"
-                TextMode="PlainText"
-                FormatString="N0"
-                Mask=""
-                Culture="en-US"
-                maskedInput:MaskedInputExtensions.Minimum="1"
-                maskedInput:MaskedInputExtensions.Maximum="2000" />
+            <Grid>
+                <telerik:RadMaskedNumericInput
+                    Width="60"
+                    BorderThickness="0"
+                    Style="{StaticResource NumericTextBoxStyle}"
+                    TextMode="PlainText"
+                    FormatString="N0"
+                    Mask=""
+                    Visibility="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:HudStatsDataFreshness.All}}"
+                    maskedInput:MaskedInputExtensions.AllowNull="True"
+                    Culture="en-US"
+                    Value="{Binding DataContext.DataFreshness, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                    maskedInput:MaskedInputExtensions.Minimum="0"
+                    maskedInput:MaskedInputExtensions.Maximum="9999" />
+
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    Visibility="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:HudStatsDataFreshness.All}}"
+                    Text="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumToLocalizedStringConverter}}" />
+
+            </Grid>
         </DataTemplate>
 
     </UserControl.Resources>
@@ -673,25 +686,19 @@
                         Foreground="{StaticResource ActiveTextForeground}"
                         Background="{StaticResource ButtonBackground}"
                         ItemsSource="{Binding DataFreshnessItems}"
+                        SelectedItem="{Binding SelectedDataFreshnessItem}"
                         ItemContainerStyle="{StaticResource DataFreshnessItemContainerStyle}">
                         <telerik:RadComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel />
                             </ItemsPanelTemplate>
                         </telerik:RadComboBox.ItemsPanel>
-                        <!--<telerik:RadComboBox.ItemTemplate>
+                        <telerik:RadComboBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock>
-                                    <TextBlock.Text>
-                                        <ResX
-                                            Key="Common_HudStatSettings_DataFreshnessLastDays">
-                                            <ResXParam
-                                                Path="." />
-                                        </ResX>
-                                    </TextBlock.Text>
-                                </TextBlock>
+                                <TextBlock
+                                    Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
                             </DataTemplate>
-                        </telerik:RadComboBox.ItemTemplate>-->
+                        </telerik:RadComboBox.ItemTemplate>
                     </telerik:RadComboBox>
 
                 </Grid>
