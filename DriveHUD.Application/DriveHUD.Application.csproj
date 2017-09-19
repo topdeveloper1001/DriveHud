@@ -488,6 +488,7 @@
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudHeatMapBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudStatsDataFreshness.cs" />
     <Compile Include="ViewModels\Hud\HudToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />

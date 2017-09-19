@@ -479,6 +479,27 @@
             </Grid>
         </ControlTemplate>
 
+        <DataTemplate
+            x:Key="FilterSelectionBoxTemplate">
+            <TextBlock
+                Padding="3,0,0,0"
+                Text="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                ToolTip="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="DataFreshnessSelectionBoxTemplate">
+            <telerik:RadMaskedNumericInput
+                Width="60"
+                Style="{StaticResource NumericTextBoxStyle}"
+                TextMode="PlainText"
+                FormatString="N0"
+                Mask=""
+                Culture="en-US"
+                maskedInput:MaskedInputExtensions.Minimum="1"
+                maskedInput:MaskedInputExtensions.Maximum="2000" />
+        </DataTemplate>
+
     </UserControl.Resources>
 
     <Grid>
@@ -647,6 +668,8 @@
                         Height="33"
                         IsEditable="False"
                         BorderBrush="Transparent"
+                        EmptySelectionBoxTemplate="{StaticResource DataFreshnessSelectionBoxTemplate}"
+                        SelectionBoxTemplate="{StaticResource DataFreshnessSelectionBoxTemplate}"
                         Foreground="{StaticResource ActiveTextForeground}"
                         Background="{StaticResource ButtonBackground}"
                         ItemsSource="{Binding DataFreshnessItems}"
@@ -656,7 +679,7 @@
                                 <VirtualizingStackPanel />
                             </ItemsPanelTemplate>
                         </telerik:RadComboBox.ItemsPanel>
-                        <telerik:RadComboBox.ItemTemplate>
+                        <!--<telerik:RadComboBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock>
                                     <TextBlock.Text>
@@ -668,34 +691,7 @@
                                     </TextBlock.Text>
                                 </TextBlock>
                             </DataTemplate>
-                        </telerik:RadComboBox.ItemTemplate>
-                        <telerik:RadComboBox.EmptySelectionBoxTemplate>
-                            <DataTemplate>
-                                <telerik:RadMaskedNumericInput
-                                    Width="60"
-                                    Style="{StaticResource NumericTextBoxStyle}"
-                                    TextMode="PlainText"
-                                    FormatString="N0"                                    
-                                    Mask=""
-                                    Culture="en-US"
-                                    maskedInput:MaskedInputExtensions.Minimum="1"
-                                    maskedInput:MaskedInputExtensions.Maximum="2000" />
-                            </DataTemplate>
-                        </telerik:RadComboBox.EmptySelectionBoxTemplate>
-                        <telerik:RadComboBox.SelectionBoxTemplate>
-                            <DataTemplate>
-                                <telerik:RadMaskedNumericInput
-                                    Width="60"
-                                    BorderThickness="0"
-                                    Style="{StaticResource NumericTextBoxStyle}"                                                                        
-                                    TextMode="PlainText"
-                                    FormatString="N0"
-                                    Mask=""
-                                    Culture="en-US"
-                                    maskedInput:MaskedInputExtensions.Minimum="1"
-                                    maskedInput:MaskedInputExtensions.Maximum="2000" />
-                            </DataTemplate>
-                        </telerik:RadComboBox.SelectionBoxTemplate>
+                        </telerik:RadComboBox.ItemTemplate>-->
                     </telerik:RadComboBox>
 
                 </Grid>
@@ -714,6 +710,8 @@
                     Foreground="{StaticResource ActiveTextForeground}"
                     Background="{StaticResource ButtonBackground}"
                     DisplayMemberPath="TableTypeText"
+                    EmptySelectionBoxTemplate="{StaticResource FilterSelectionBoxTemplate}"
+                    MultipleSelectionBoxTemplate="{StaticResource FilterSelectionBoxTemplate}"
                     ItemsSource="{Binding FilterTableTypes, Mode=OneWay}"
                     ItemContainerStyle="{StaticResource FilterItemContainerStyle}"
                     MultipleSelectionSeparator=" ">
@@ -722,22 +720,6 @@
                             <VirtualizingStackPanel />
                         </ItemsPanelTemplate>
                     </telerik:RadComboBox.ItemsPanel>
-                    <telerik:RadComboBox.EmptySelectionBoxTemplate>
-                        <DataTemplate>
-                            <TextBlock
-                                Padding="3,0,0,0"
-                                Text="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
-                                ToolTip="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
-                        </DataTemplate>
-                    </telerik:RadComboBox.EmptySelectionBoxTemplate>
-                    <telerik:RadComboBox.MultipleSelectionBoxTemplate>
-                        <DataTemplate>
-                            <TextBlock
-                                Padding="3,0,0,0"
-                                Text="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
-                                ToolTip="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
-                        </DataTemplate>
-                    </telerik:RadComboBox.MultipleSelectionBoxTemplate>
                 </telerik:RadComboBox>
 
             </StackPanel>

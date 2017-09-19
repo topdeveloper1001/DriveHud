@@ -71,7 +71,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
             });
 
-            dataFreshnessItems = new ObservableCollection<int> { 30, 60, 90, 120, 365 };
+            dataFreshnessItems = new ObservableCollection<HudStatsDataFreshness>(Enum.GetValues(typeof(HudStatsDataFreshness))
+                .Cast<HudStatsDataFreshness>());
 
             InitializeCommands(viewModelInfo);
 
@@ -228,9 +229,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private ObservableCollection<int> dataFreshnessItems;
+        private ObservableCollection<HudStatsDataFreshness> dataFreshnessItems;
 
-        public ObservableCollection<int> DataFreshnessItems
+        public ObservableCollection<HudStatsDataFreshness> DataFreshnessItems
         {
             get
             {
