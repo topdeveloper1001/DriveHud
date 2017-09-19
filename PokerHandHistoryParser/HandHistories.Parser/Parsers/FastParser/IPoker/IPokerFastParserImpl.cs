@@ -1217,80 +1217,78 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected override void AdjustSeatTypes(HandHistory handHistory)
         {
-            if (!handHistory.GameDescription.IsTournament || handHistory.GameDescription.Tournament == null)
+            if (handHistory.GameDescription.IsTournament && handHistory.GameDescription.Tournament != null)
             {
-                return;
-            }
-
-            // detect table size using tournament name
-            if (!string.IsNullOrEmpty(handHistory.GameDescription.Tournament.TournamentName))
-            {
-                var tournamentName = handHistory.GameDescription.Tournament.TournamentName.Trim();
-
-                // heads up are always 2-max
-                if (tournamentName.IndexOf("Heads Up", StringComparison.OrdinalIgnoreCase) > 0 ||
-                    tournamentName.IndexOf(" HU", StringComparison.OrdinalIgnoreCase) > 0)
+                // detect table size using tournament name
+                if (!string.IsNullOrEmpty(handHistory.GameDescription.Tournament.TournamentName))
                 {
-                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(2);
-                    return;
-                }
+                    var tournamentName = handHistory.GameDescription.Tournament.TournamentName.Trim();
 
-                // twister are always 3-max && premium step are always 3-max (bet365)
-                if (tournamentName.IndexOf("Premium Step", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    tournamentName.IndexOf("Twister", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(3);
-                    return;
-                }
-
-                // "SUPER TURBO" $100 Double Up*4 
-                var playerNumberIndex = tournamentName.LastIndexOf("*", StringComparison.Ordinal);
-
-                if (playerNumberIndex > 0 && tournamentName.Length > playerNumberIndex)
-                {
-                    var playerNumberText = tournamentName.Substring(playerNumberIndex + 1);
-
-                    if (TryParseSeatNumber(handHistory, playerNumberText))
+                    // heads up are always 2-max
+                    if (tournamentName.IndexOf("Heads Up", StringComparison.OrdinalIgnoreCase) > 0 ||
+                        tournamentName.IndexOf(" HU", StringComparison.OrdinalIgnoreCase) > 0)
                     {
+                        handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(2);
                         return;
+                    }
+
+                    // twister are always 3-max && premium step are always 3-max (bet365)
+                    if (tournamentName.IndexOf("Premium Step", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                        tournamentName.IndexOf("Twister", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(3);
+                        return;
+                    }
+
+                    // "SUPER TURBO" $100 Double Up*4 
+                    var playerNumberIndex = tournamentName.LastIndexOf("*", StringComparison.Ordinal);
+
+                    if (playerNumberIndex > 0 && tournamentName.Length > playerNumberIndex)
+                    {
+                        var playerNumberText = tournamentName.Substring(playerNumberIndex + 1);
+
+                        if (TryParseSeatNumber(handHistory, playerNumberText))
+                        {
+                            return;
+                        }
+                    }
+
+                    playerNumberIndex = tournamentName.LastIndexOf(" x", StringComparison.Ordinal);
+
+                    if (playerNumberIndex > 0 && tournamentName.Length > (playerNumberIndex + 1))
+                    {
+                        var playerNumberText = tournamentName.Substring(playerNumberIndex + 2);
+
+                        if (TryParseSeatNumber(handHistory, playerNumberText))
+                        {
+                            return;
+                        }
                     }
                 }
 
-                playerNumberIndex = tournamentName.LastIndexOf(" x", StringComparison.Ordinal);
+                // detect table size using predefined numbers
+                var chipsSum = handHistory.Players.Sum(x => x.StartingStack);
 
-                if (playerNumberIndex > 0 && tournamentName.Length > (playerNumberIndex + 1))
+                var maxPlayers = 0;
+
+                if (chipsSum == 13500)
                 {
-                    var playerNumberText = tournamentName.Substring(playerNumberIndex + 2);
-
-                    if (TryParseSeatNumber(handHistory, playerNumberText))
-                    {
-                        return;
-                    }
+                    maxPlayers = 9;
                 }
-            }
+                else if (chipsSum == 9000)
+                {
+                    maxPlayers = 6;
+                }
+                else if (chipsSum == 4800)
+                {
+                    maxPlayers = 6;
+                }
 
-            // detect table size using predefined numbers
-            var chipsSum = handHistory.Players.Sum(x => x.StartingStack);
-
-            var maxPlayers = 0;
-
-            if (chipsSum == 13500)
-            {
-                maxPlayers = 9;
-            }
-            else if (chipsSum == 9000)
-            {
-                maxPlayers = 6;
-            }
-            else if (chipsSum == 4800)
-            {
-                maxPlayers = 6;
-            }
-
-            if (maxPlayers != 0 && handHistory.Players.Count <= maxPlayers)
-            {
-                handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(maxPlayers);
-                return;
+                if (maxPlayers != 0 && handHistory.Players.Count <= maxPlayers)
+                {
+                    handHistory.GameDescription.SeatType = SeatType.FromMaxPlayers(maxPlayers);
+                    return;
+                }
             }
 
             var seatsSet = new HashSet<int>(handHistory.Players.Select(x => x.SeatNumber));
@@ -1335,7 +1333,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             handHistory.GameDescription.Tournament.Speed = TournamentSpeed.Turbo;
         }
-
+    
         private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)
         {
             int playerNumber;

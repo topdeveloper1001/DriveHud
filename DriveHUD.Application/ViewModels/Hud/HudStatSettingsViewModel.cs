@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
 using Model.Enums;
@@ -53,8 +54,24 @@ namespace DriveHUD.Application.ViewModels.Hud
             HudOpacity = viewModelInfo.HudOpacity;
             items = new ObservableCollection<StatInfo>(clonedItems);
 
-            filterTableTypes = new ObservableCollection<EnumTableType>(Enum.GetValues(typeof(EnumTableType)).Cast<EnumTableType>());
-            selectedFilterTableTypes = new ObservableCollection<EnumTableType>();
+            filterTableTypes = new ReactiveList<TableTypeFilterViewModel>(Enum.GetValues(typeof(EnumTableType))
+                .Cast<EnumTableType>()
+                .Select(x => new TableTypeFilterViewModel(x)
+                {
+                    IsSelected = viewModelInfo.SelectedTableTypes != null && viewModelInfo.SelectedTableTypes.Contains(x)
+                }));
+
+            filterTableTypes.ChangeTrackingEnabled = true;
+
+            filterTableTypes.ItemChanged.Subscribe(x =>
+            {
+                if (x.PropertyName == nameof(TableTypeFilterViewModel.IsSelected))
+                {
+                    RaisePropertyChanged(() => TableTypeFilterText);
+                }
+            });
+
+            dataFreshnessItems = new ObservableCollection<int> { 30, 60, 90, 120, 365 };
 
             InitializeCommands(viewModelInfo);
 
@@ -166,11 +183,30 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        public string TableTypeFilterText
+        {
+            get
+            {
+                if (FilterTableTypes == null || FilterTableTypes.All(x => !x.IsSelected))
+                {
+                    return CommonResourceManager.Instance.GetResourceString("Common_HudStatSettings_TableFilterEmptyText");
+                }
+
+                var tableTypeFilterText = string.Join(" ", FilterTableTypes
+                    .Where(x => x.IsSelected)
+                    .OrderBy(x => x.TableType)
+                    .Select(x => x.TableTypeText)
+                    .ToArray());
+
+                return tableTypeFilterText;
+            }
+        }
+
         private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
 
-        private ObservableCollection<EnumTableType> filterTableTypes;
+        private ReactiveList<TableTypeFilterViewModel> filterTableTypes;
 
-        public ObservableCollection<EnumTableType> FilterTableTypes
+        public ReactiveList<TableTypeFilterViewModel> FilterTableTypes
         {
             get
             {
@@ -178,17 +214,27 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private ObservableCollection<EnumTableType> selectedFilterTableTypes;
+        private int dataFreshness;
 
-        public ObservableCollection<EnumTableType> SelectedFilterTableTypes
+        public int DataFreshness
         {
             get
             {
-                return selectedFilterTableTypes;
+                return dataFreshness;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref selectedFilterTableTypes, value);
+                this.RaiseAndSetIfChanged(ref dataFreshness, value);
+            }
+        }
+
+        private ObservableCollection<int> dataFreshnessItems;
+
+        public ObservableCollection<int> DataFreshnessItems
+        {
+            get
+            {
+                return dataFreshnessItems;
             }
         }
 
@@ -196,6 +242,38 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             IsColorPickerPopupOpened = true;
             selectedStatInfoOptionValueRange = statInfoValueRange;
+        }
+
+        public class TableTypeFilterViewModel : ViewModelBase
+        {
+            public TableTypeFilterViewModel(EnumTableType tableType)
+            {
+                TableType = tableType;
+            }
+
+            public EnumTableType TableType { get; private set; }
+
+            public string TableTypeText
+            {
+                get
+                {
+                    return CommonResourceManager.Instance.GetEnumResource(TableType);
+                }
+            }
+
+            private bool isSelected;
+
+            public bool IsSelected
+            {
+                get
+                {
+                    return isSelected;
+                }
+                set
+                {
+                    this.RaiseAndSetIfChanged(ref isSelected, value);
+                }
+            }
         }
     }
 }

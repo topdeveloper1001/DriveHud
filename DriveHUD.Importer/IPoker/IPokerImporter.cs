@@ -246,6 +246,18 @@ namespace DriveHUD.Importers.IPoker
             importedHandsHistory.Clear();
         }
 
+        protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
+        {
+            var tableType = base.ParseTableType(parsingResult, gameInfo);
+
+            if (gameInfo.TableType > tableType)
+            {
+                return gameInfo.TableType;
+            }
+
+            return tableType;
+        }
+
         private void NormalizeSeats(PlayerList playerList, int maxPlayers)
         {
             // normalize seats
@@ -265,21 +277,33 @@ namespace DriveHUD.Importers.IPoker
             }
         }
 
+        private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
+        {
+            { 2, 2 },
+            { 3, 2 },
+            { 4, 2 },
+            { 6, 3 },
+            { 9, 5 },
+            { 10, 5 }
+        };
+
         private void ApplyPreferredSeating(PlayerList playerList, int maxPlayers, int heroSeat)
         {
-            var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
-                                       SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.IPoker)?.PrefferedSeats;
+            var isAutoCenter = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
+                                       SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.IPoker)?.IsAutoCenter;
 
-            var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
-
-            if (prefferedSeat != null)
+            if (!isAutoCenter.HasValue || !isAutoCenter.Value || !autoCenterSeats.ContainsKey(maxPlayers))
             {
-                var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
+                return;
+            }
 
-                foreach (var player in playerList)
-                {
-                    player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
-                }
+            var prefferedSeat = autoCenterSeats[maxPlayers];
+
+            var shift = (prefferedSeat - heroSeat) % maxPlayers;
+
+            foreach (var player in playerList)
+            {
+                player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
             }
         }
 

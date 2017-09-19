@@ -425,6 +425,8 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
 
+                gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
                     if (existingGameType.Istourney)
@@ -461,11 +463,6 @@ namespace DriveHUD.Importers
                             Stats = playerStatCopy,
                             IsHero = isHero
                         };
-
-                        if (gameInfo.PlayersCacheInfo == null)
-                        {
-                            gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
-                        }
 
                         gameInfo.PlayersCacheInfo.Add(cacheInfo);
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6734413305">
+	<general>
+		<client_version>17.5.5.19</client_version>
+		<uncalled_bet_enabled>false</uncalled_bet_enabled>
+		<mode>real</mode>
+		<gametype>Holdem NL €0.01/€0.02</gametype>
+		<tablename>Candidoni, 817747486</tablename>
+		<tablecurrency>EUR</tablecurrency>
+		<duration>00:08:40</duration>
+		<gamecount>8</gamecount>
+		<startdate>2017-09-18 18:14:13</startdate>
+		<currency>USD</currency>
+		<nickname>Peon384</nickname>
+		<bets>€0.17</bets>
+		<wins>€0</wins>
+		<chipsin>€0.78</chipsin>
+		<chipsout>€0.63</chipsout>
+		<statuspoints>0.00</statuspoints>
+		<awardpoints>0.00</awardpoints>
+		<ipoints>0.00</ipoints>
+	</general>
+	<game gamecode="7687111904">
+		<general>
+			<startdate>2017-09-18 18:19:05</startdate>
+			<players>
+				<player dealer="0" seat="2" name="alex08151" chips="€4.94" win="€0" bet="€0.02"/>
+				<player dealer="1" seat="4" name="fishwingz" chips="€2.93" win="€0" bet="€0.02"/>
+				<player dealer="0" seat="6" name="stupakd77" chips="€3.67" win="€0.24" bet="€0.17"/>
+				<player dealer="0" seat="8" name="TTR160783162" chips="€1.83" win="€0" bet="€0.02"/>
+				<player dealer="0" seat="9" name="Peon384" chips="€0.78" win="€0" bet="€0"/>
+				<player dealer="0" seat="10" name="scf48" chips="€0.81" win="€0" bet="€0.02"/>
+			</players>
+		</general>
+		<round no="0">
+			<action player="stupakd77" type="1" cards="" no="1" sum="€0.01"/>
+			<action player="TTR160783162" type="2" cards="" no="2" sum="€0.02"/>
+		</round>
+		<round no="1">
+			<cards player="Peon384" type="Pocket">D8 H5</cards>
+			<action player="Peon384" type="0" cards="" no="3" sum="€0"/>
+			<cards player="scf48" type="Pocket">X X</cards>
+			<action player="scf48" type="3" cards="" no="4" sum="€0.02"/>
+			<cards player="alex08151" type="Pocket">X X</cards>
+			<action player="alex08151" type="3" cards="" no="5" sum="€0.02"/>
+			<cards player="fishwingz" type="Pocket">X X</cards>
+			<action player="fishwingz" type="3" cards="" no="6" sum="€0.02"/>
+			<cards player="stupakd77" type="Pocket">X X</cards>
+			<action player="stupakd77" type="23" cards="" no="7" sum="€0.16"/>
+			<cards player="TTR160783162" type="Pocket">X X</cards>
+			<action player="TTR160783162" type="0" cards="" no="8" sum="€0"/>
+			<action player="scf48" type="0" cards="" no="9" sum="€0"/>
+			<action player="alex08151" type="0" cards="" no="10" sum="€0"/>
+			<action player="fishwingz" type="0" cards="" no="11" sum="€0"/>
+		</round>
+	</game>
+</session>

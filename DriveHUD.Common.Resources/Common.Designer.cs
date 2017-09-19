@@ -1151,6 +1151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last {0} days.
+        /// </summary>
+        internal static string Common_HudStatSettings_DataFreshnessLastDays {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_DataFreshnessLastDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Decimal Places.
         /// </summary>
         internal static string Common_HudStatSettings_DecimalPlaces {
@@ -1219,6 +1228,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudStatSettings_OK {
             get {
                 return ResourceManager.GetString("Common_HudStatSettings_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string Common_HudStatSettings_TableFilterEmptyText {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_TableFilterEmptyText", resourceCulture);
             }
         }
         

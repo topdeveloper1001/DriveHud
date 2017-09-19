@@ -641,6 +641,7 @@ namespace DriveHUD.Importers.Bovada
 
                 case "PLAY_ACCOUNT_CASH_RES":
                     playerHasSeat = cmdObj.cash > 0;
+                    HeroSeat = cmdObj.seat;
                     break;
 
                 default:

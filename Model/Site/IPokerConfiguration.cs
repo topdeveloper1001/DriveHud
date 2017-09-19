@@ -88,6 +88,14 @@ namespace Model.Site
         {
             get
             {
+                return false;
+            }
+        }
+
+        public bool IsAutoCenterAllowed
+        {
+            get
+            {
                 return true;
             }
         }

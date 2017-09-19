@@ -34,14 +34,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         public int[] TableTypes { get; set; }
 
-        public DateTime? StartDate { get; set; }
-
-        public DateTime? EndDate { get; set; }
+        public int? DataFreshness { get; set; }
 
         public bool Apply(Playerstatistic playerstatistic)
         {
-            var result = (!StartDate.HasValue || StartDate.HasValue && playerstatistic.Time >= StartDate.Value) &&
-                (!EndDate.HasValue || EndDate.HasValue && playerstatistic.Time <= EndDate.Value) &&
+            var result = (!DataFreshness.HasValue || DataFreshness.HasValue && (DateTime.Now - playerstatistic.Time).Days <= DataFreshness.Value) &&
                 (TableTypes == null || !TableTypes.Any() || TableTypes.Contains(playerstatistic.MaxPlayers));
 
             return result;
@@ -51,7 +48,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             get
             {
-                return !StartDate.HasValue && !EndDate.HasValue && (TableTypes == null || !TableTypes.Any());
+                return !DataFreshness.HasValue && (TableTypes == null || !TableTypes.Any());
             }
         }
 
@@ -59,8 +56,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             var clone = new HudLayoutFilter
             {
-                StartDate = StartDate,
-                EndDate = EndDate,
+                DataFreshness = DataFreshness,
                 TableTypes = TableTypes.ToArray()
             };
 
@@ -81,8 +77,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 return false;
             }
 
-            var result = (!StartDate.HasValue && !filter.StartDate.HasValue || StartDate == filter.StartDate) &&
-                (!EndDate.HasValue && !filter.EndDate.HasValue || EndDate == filter.EndDate) &&
+            var result = (!DataFreshness.HasValue && !filter.DataFreshness.HasValue || DataFreshness == filter.DataFreshness) &&
                 CompareTableTypes(this, filter);
 
             return result;
@@ -93,8 +88,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             unchecked
             {
                 var hashcode = 23;
-                hashcode += hashcode * 31 + (StartDate.HasValue ? StartDate.GetHashCode() : 0);
-                hashcode += hashcode * 31 + (EndDate.HasValue ? EndDate.GetHashCode() : 0);
+                hashcode += hashcode * 31 + (DataFreshness.HasValue ? DataFreshness.GetHashCode() : 0);
 
                 if (TableTypes != null && TableTypes.Any())
                 {
@@ -110,7 +104,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         public override string ToString()
         {
-            return string.Format("{0},{1},{2}", StartDate, EndDate, TableTypes != null ? string.Join(",", TableTypes.Distinct()) : string.Empty);
+            return string.Format("{0},{2}", DataFreshness, TableTypes != null ? string.Join(",", TableTypes.Distinct()) : string.Empty);
         }
 
         private static bool CompareTableTypes(HudLayoutFilter filter1, HudLayoutFilter filter2)

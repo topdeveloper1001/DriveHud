@@ -81,6 +81,14 @@ namespace Model.Site
             }
         }
 
+        public bool IsAutoCenterAllowed
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public virtual Dictionary<int, int> PreferredSeats
         {
             get

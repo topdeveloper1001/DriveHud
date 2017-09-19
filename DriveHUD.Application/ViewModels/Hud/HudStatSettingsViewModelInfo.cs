@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using Model.Stats;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public StatInfo SelectedStatInfo { get; set; }
 
         public IEnumerable<StatInfo> SelectedStatInfoCollection { get; set; }
+
+        public IEnumerable<EnumTableType> SelectedTableTypes { get; set; }
 
         public double HudOpacity { get; set; }
 

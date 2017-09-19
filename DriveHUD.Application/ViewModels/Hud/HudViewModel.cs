@@ -1225,6 +1225,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 SelectedStatInfo = selectedStatInfo,
                 SelectedStatInfoCollection = StatInfoObserveCollection,
+                SelectedTableTypes = CurrentLayout?.Filter?.TableTypes?.Select(x => (EnumTableType)x).ToArray(),
                 HudOpacity = opacity,
                 Save = SaveStatsSettings,
                 Cancel = ClosePopup
@@ -1253,13 +1254,14 @@ namespace DriveHUD.Application.ViewModels
 
             CurrentLayout.Opacity = hudStatSettings.HudOpacity;
 
-#warning change logic
-            // temp for testing
             var filter = new HudLayoutFilter
             {
-                StartDate = null,
-                EndDate = null,
-                TableTypes = new int[] { (int)EnumTableType.HU, (int)EnumTableType.Three }
+                DataFreshness = null,
+                TableTypes = hudStatSettings.FilterTableTypes
+                    .Where(x => x.IsSelected)
+                    .Select(x => (int)x.TableType)
+                    .OrderBy(x => x)
+                    .ToArray()
             };
 
             CurrentLayout.Filter = filter.IsDefault ? null : filter;

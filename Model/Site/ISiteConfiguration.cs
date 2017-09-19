@@ -32,6 +32,8 @@ namespace Model.Site
 
         bool IsPrefferedSeatsAllowed { get; }
 
+        bool IsAutoCenterAllowed { get; }
+
         string LogoSource { get; }
 
         #endregion
