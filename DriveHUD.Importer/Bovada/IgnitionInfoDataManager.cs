@@ -171,9 +171,15 @@ namespace DriveHUD.Importers.Bovada
                 var tournFistIndex = url.LastIndexOf("/", tournLastIndex - 1) + 1;
                 var tournamentText = url.Substring(tournFistIndex, tournLastIndex - tournFistIndex);
 
-                var tounamentId = uint.Parse(tournamentText);
+                uint tounamentId;
 
-                var seatText = ReadJsonData(data, "seats");
+                if (!uint.TryParse(tournamentText, out tounamentId))
+                {
+                    LogProvider.Log.Error(this, $"Tournament id couldn't be parsed from: {tournamentText}");
+                    return;
+                }
+
+                var seatText = ReadJsonData(data, "\"seats\"");
                 var maxPlayersText = ReadJsonData(data, "maxPlayers");
                 var limitText = ReadJsonTextData(data, "limit");
                 var gameTypeText = ReadJsonTextData(data, "gameType");
@@ -181,11 +187,25 @@ namespace DriveHUD.Importers.Bovada
 
                 if (string.IsNullOrEmpty(seatText) && string.IsNullOrEmpty(maxPlayersText))
                 {
+                    LogProvider.Log.Warn(this, $"Seat and max players data hasn't been found.");
                     return;
                 }
 
-                var seat = int.Parse(seatText);
-                var maxPlayers = int.Parse(maxPlayersText);
+                int seat;
+
+                if (!int.TryParse(seatText, out seat))
+                {
+                    LogProvider.Log.Error(this, $"Seat couldn't be parsed from: {seatText}");
+                    return;
+                }
+
+                int maxPlayers;
+
+                if (!int.TryParse(maxPlayersText, out maxPlayers))
+                {
+                    LogProvider.Log.Error(this, $"Max players couldn't be parsed from: {maxPlayersText}");
+                }
+
                 var gameLimit = BovadaConverters.ConvertGameLimit(limitText);
 
                 var table = new IgnitionTableData
