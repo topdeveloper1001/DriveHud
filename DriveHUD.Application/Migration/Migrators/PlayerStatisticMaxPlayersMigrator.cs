@@ -147,13 +147,16 @@ namespace DriveHUD.Application.MigrationService.Migrators
                 Directory.CreateDirectory(newStatFileDirectory);
             }
 
-            ProcessPlayerStatisticFile(file, newStatFile);
+            using (var streamWriter = new StreamWriter(newStatFile))
+            {
+                ProcessPlayerStatisticFile(file, streamWriter);
+            }
         }
 
         /// <summary>
         /// Reads and processes player statistic for the specified file
         /// </summary>      
-        private void ProcessPlayerStatisticFile(string srcFile, string dstFile)
+        private void ProcessPlayerStatisticFile(string srcFile, StreamWriter dstFileStreamWriter)
         {
             if (!File.Exists(srcFile))
             {
@@ -180,7 +183,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                             using (var ms = new MemoryStream(byteAfter64))
                             {
                                 var stat = Serializer.Deserialize<Playerstatistic>(ms);
-                                ProcessPlayerStatistic(dstFile, stat);
+                                ProcessPlayerStatistic(dstFileStreamWriter, stat);
                             }
                         }
                         catch (Exception ex)
@@ -202,7 +205,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         /// </summary>
         /// <param name="file">File to save updated player statistic</param>
         /// <param name="stat"><see cref="Playerstatistic"/> to update</param>
-        private void ProcessPlayerStatistic(string file, Playerstatistic stat)
+        private void ProcessPlayerStatistic(StreamWriter streamWriter, Playerstatistic stat)
         {
             var handNumberPokerSiteKey = new HandNumberPokerSiteKey(stat.GameNumber, stat.PokersiteId);
 
@@ -216,7 +219,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
             stat.MaxPlayers = tableSize;
 
-            StorePlayerStatistic(file, stat);
+            StorePlayerStatistic(streamWriter, stat);
         }
 
         /// <summary>
@@ -224,7 +227,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         /// </summary>
         /// <param name="file">File to append serialized <see cref="Playerstatistic"/></param>
         /// <param name="statistic"><see cref="Playerstatistic"/> to store in the specified file</param>
-        private void StorePlayerStatistic(string file, Playerstatistic statistic)
+        private void StorePlayerStatistic(StreamWriter streamWriter, Playerstatistic statistic)
         {
             var data = string.Empty;
 
@@ -236,7 +239,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
             if (!string.IsNullOrEmpty(data))
             {
-                File.AppendAllLines(file, new[] { data });
+                streamWriter.WriteLine(data);
             }
         }
 
@@ -263,6 +266,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
             if (Directory.Exists(playerStatisticDataFolder))
             {
                 Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+                LogProvider.Log.Info($"Backup '{playerStatisticBackupDataFolder}' has been created.");
             }
 
             Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
