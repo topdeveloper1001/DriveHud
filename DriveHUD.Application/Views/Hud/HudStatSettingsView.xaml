@@ -5,7 +5,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:comboboxControl="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
     xmlns:telerikData="clr-namespace:Telerik.Windows.Data;assembly=Telerik.Windows.Data"
@@ -17,7 +19,7 @@
     Width="530"
     d:DesignHeight="680"
     d:DesignWidth="530">
-  
+
     <UserControl.Resources>
 
         <SolidColorBrush
@@ -250,6 +252,43 @@
         </Style>
 
         <Style
+            x:Key="FilterItemContainerStyle"
+            TargetType="{x:Type telerik:RadComboBoxItem}"
+            BasedOn="{StaticResource RadComboBoxItemStyle}">
+            <Setter
+                Property="Background"
+                Value="{StaticResource ButtonBackground}" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Height"
+                Value="25" />
+            <Setter
+                Property="IsSelected"
+                Value="{Binding IsSelected, Mode=TwoWay}" />
+            <Setter
+                Property="Padding"
+                Value="3,0,0,0" />
+        </Style>
+
+        <Style
+            x:Key="DataFreshnessItemContainerStyle"
+            TargetType="{x:Type telerik:RadComboBoxItem}"
+            BasedOn="{StaticResource RadComboBoxItemStyle}">
+            <Setter
+                Property="Background"
+                Value="{StaticResource ButtonBackground}" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Height"
+                Value="25" />
+        </Style>
+
+
+        <Style
             x:Key="FontSampleBorderStyle"
             TargetType="{x:Type Border}">
             <Setter
@@ -350,6 +389,129 @@
             </Setter>
         </Style>
 
+        <ControlTemplate
+            x:Key="FilterComboBoxToggleButtonTemplate"
+            TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="30" />
+                </Grid.ColumnDefinitions>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup
+                        x:Name="CommonStates">
+                        <VisualState
+                            x:Name="Normal" />
+                        <VisualState
+                            x:Name="MouseOver" />
+                        <VisualState
+                            x:Name="Pressed" />
+                        <VisualState
+                            x:Name="Disabled">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                    Storyboard.TargetName="Arrow">
+                                    <EasingColorKeyFrame
+                                        KeyTime="0"
+                                        Value="{StaticResource DisabledForegroundColor}" />
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                    Storyboard.TargetName="Inner">
+                                    <EasingColorKeyFrame
+                                        KeyTime="0"
+                                        Value="{StaticResource DisabledBackgroundColor}" />
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup
+                        x:Name="CheckStates">
+                        <VisualState
+                            x:Name="Checked" />
+                        <VisualState
+                            x:Name="Unchecked" />
+                        <VisualState
+                            x:Name="Indeterminate" />
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border
+                    x:Name="Border"
+                    Grid.Column="1"
+                    CornerRadius="2"
+                    BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush
+                            Color="#181a1d" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush
+                            Color="#2a2d31" />
+                    </Border.Background>
+                </Border>
+                <Border
+                    x:Name="Inner"
+                    Grid.Column="0"
+                    CornerRadius="2"
+                    Background="{StaticResource ButtonBackground}" />
+                <Border
+                    x:Name="GlyphBorder"
+                    Grid.ColumnSpan="2"
+                    CornerRadius="2"
+                    BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush
+                            Color="#181a1d" />
+                    </Border.BorderBrush>
+                </Border>
+                <Path
+                    x:Name="Arrow"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Data="M 0 0 L 4 4 L 8 0 Z">
+                    <Path.Fill>
+                        <SolidColorBrush
+                            Color="{StaticResource GlyphColor}" />
+                    </Path.Fill>
+                </Path>
+            </Grid>
+        </ControlTemplate>
+
+        <DataTemplate
+            x:Key="FilterSelectionBoxTemplate">
+            <TextBlock
+                Padding="3,0,0,0"
+                Text="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                ToolTip="{Binding DataContext.TableTypeFilterText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
+        </DataTemplate>
+
+        <DataTemplate
+            x:Key="DataFreshnessSelectionBoxTemplate">
+            <Grid>
+                <telerik:RadMaskedNumericInput
+                    Width="60"
+                    BorderThickness="0"
+                    Style="{StaticResource NumericTextBoxStyle}"
+                    TextMode="PlainText"
+                    FormatString="N0"
+                    Mask=""
+                    Visibility="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:HudStatsDataFreshness.All}}"
+                    maskedInput:MaskedInputExtensions.AllowNull="True"
+                    Culture="en-US"
+                    Value="{Binding DataContext.DataFreshness, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                    maskedInput:MaskedInputExtensions.Minimum="0"
+                    maskedInput:MaskedInputExtensions.Maximum="9999" />
+
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    Visibility="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:HudStatsDataFreshness.All}}"
+                    Text="{Binding DataContext.SelectedDataFreshnessItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumToLocalizedStringConverter}}" />
+
+            </Grid>
+        </DataTemplate>
 
     </UserControl.Resources>
 
@@ -376,7 +538,7 @@
         <TextBlock
             Grid.Column="1"
             Grid.Row="0"
-            Text="HUD Opacity"
+            Text="{ResX Key=Common_HudStatSettings_HudOpacity}"
             VerticalAlignment="Center" />
         <Slider
             Grid.Column="2"
@@ -390,7 +552,7 @@
         <TextBlock
             Grid.Column="1"
             Grid.Row="1"
-            Text="List of available settings"
+            Text="{ResX Key=Common_HudStatSettings_ListOfAvailableSettings}"
             VerticalAlignment="Center" />
 
         <StackPanel
@@ -399,7 +561,7 @@
             Orientation="Horizontal"
             HorizontalAlignment="Right">
             <TextBlock
-                Text="Current stat:"
+                Text="{ResX Common_HudStatSettings_CurrentStat}"
                 VerticalAlignment="Center" />
             <TextBlock
                 Text="{Binding SelectedItem.Caption}"
@@ -435,49 +597,137 @@
                 Orientation="Vertical"
                 Margin="0,16,0,0">
 
-                <!-- Min. Sample -->
-                <TextBlock
-                    Text="Min.Sample"
-                    Margin="0,0,0,12" />
-                <telerik:RadMaskedNumericInput
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    Width="190"
-                    Height="33"
-                    TextMode="PlainText"
-                    FormatString="N0"
-                    Mask=""
-                    Culture="en-US"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="9999999"
-                    Value="{Binding SelectedItem.MinSample}" />
+                <Grid>
 
-                <!-- Label -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="94" />
+                        <ColumnDefinition
+                            Width="94" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Min. Sample -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="{ResX Key=Common_HudStatSettings_MinSample}"
+                        Margin="0,0,0,12" />
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        TextMode="PlainText"
+                        FormatString="N0"
+                        Mask=""
+                        Culture="en-US"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="9999999"
+                        Value="{Binding SelectedItem.MinSample}" />
+
+                    <!-- Decimal places -->
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="{ResX Key=Common_HudStatSettings_DecimalPlaces}"
+                        Margin="0,0,0,12" />
+                    <telerik:RadMaskedNumericInput
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        TextMode="PlainText"
+                        FormatString="N0"
+                        Mask=""
+                        Culture="en-US"
+                        maskedInput:MaskedInputExtensions.Minimum="0"
+                        maskedInput:MaskedInputExtensions.Maximum="2"
+                        Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
+
+                    <!-- Label -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="{ResX Key=Common_HudStatSettings_Label}"
+                        Margin="0,18,0,12" />
+                    <telerik:RadMaskedTextInput
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Style="{StaticResource InputTextBoxStyle}"
+                        Width="94"
+                        Height="33"
+                        Mask="a10"
+                        Value="{Binding SelectedItem.Label}" />
+
+                    <!-- Data freshness -->
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="{ResX Key=Common_HudStatSettings_DataFreshness}"
+                        Margin="0,18,0,12" />
+
+                    <telerik:RadComboBox
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Width="94"
+                        Height="33"
+                        IsEditable="False"
+                        BorderBrush="Transparent"
+                        EmptySelectionBoxTemplate="{StaticResource DataFreshnessSelectionBoxTemplate}"
+                        SelectionBoxTemplate="{StaticResource DataFreshnessSelectionBoxTemplate}"
+                        Foreground="{StaticResource ActiveTextForeground}"
+                        Background="{StaticResource ButtonBackground}"
+                        ItemsSource="{Binding DataFreshnessItems}"
+                        SelectedItem="{Binding SelectedDataFreshnessItem}"
+                        ItemContainerStyle="{StaticResource DataFreshnessItemContainerStyle}">
+                        <telerik:RadComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel />
+                            </ItemsPanelTemplate>
+                        </telerik:RadComboBox.ItemsPanel>
+                        <telerik:RadComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                            </DataTemplate>
+                        </telerik:RadComboBox.ItemTemplate>
+                    </telerik:RadComboBox>
+
+                </Grid>
+
+                <!-- Filter data -->
                 <TextBlock
-                    Text="Label"
+                    Text="{ResX Key=Common_HudStatSettings_FilterDataForOnly}"
                     Margin="0,18,0,12" />
-                <telerik:RadMaskedTextInput
-                    Style="{StaticResource InputTextBoxStyle}"
+
+                <telerik:RadComboBox
                     Width="190"
                     Height="33"
-                    Mask="a10"
-                    Value="{Binding SelectedItem.Label}" />
-
-                <!-- Pop-up-->
-                <TextBlock
-                    Text="Decimal Places"
-                    Margin="0,18,0,12" />
-
-                <telerik:RadMaskedNumericInput
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    Width="190"
-                    Height="33"
-                    TextMode="PlainText"
-                    FormatString="N0"
-                    Mask=""
-                    Culture="en-US"
-                    maskedInput:MaskedInputExtensions.Minimum="0"
-                    maskedInput:MaskedInputExtensions.Maximum="2"
-                    Value="{Binding SelectedItem.DigitsAfterDecimalPoint}" />
+                    IsEditable="False"
+                    AllowMultipleSelection="True"
+                    BorderBrush="Transparent"
+                    Foreground="{StaticResource ActiveTextForeground}"
+                    Background="{StaticResource ButtonBackground}"
+                    DisplayMemberPath="TableTypeText"
+                    EmptySelectionBoxTemplate="{StaticResource FilterSelectionBoxTemplate}"
+                    MultipleSelectionBoxTemplate="{StaticResource FilterSelectionBoxTemplate}"
+                    ItemsSource="{Binding FilterTableTypes, Mode=OneWay}"
+                    ItemContainerStyle="{StaticResource FilterItemContainerStyle}"
+                    MultipleSelectionSeparator=" ">
+                    <telerik:RadComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </telerik:RadComboBox.ItemsPanel>
+                </telerik:RadComboBox>
 
             </StackPanel>
 
@@ -501,7 +751,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Text="Color range"
+                        Text="{ResX Key=Common_HudStatSettings_ColorRange}"
                         Margin="0,0,0,12" />
 
                     <ListBox
@@ -599,7 +849,7 @@
                     </ListBox>
 
                     <TextBlock
-                        Text="Font"
+                        Text="{ResX Key=Common_HudStatSettings_Font}"
                         Margin="0,12,0,12" />
 
                     <Border
@@ -705,7 +955,7 @@
                     Height="40"
                     Width="77"
                     Foreground="{StaticResource ActiveTextForeground}"
-                    Content="OK"
+                    Content="{ResX Key=Common_HudStatSettings_OK}"
                     Command="{Binding SaveCommand}" />
 
                 <Button
@@ -713,7 +963,7 @@
                     Height="40"
                     Width="112"
                     Foreground="{StaticResource ActiveTextForeground}"
-                    Content="Cancel"
+                    Content="{ResX Key=Common_HudStatSettings_Cancel}"
                     Command="{Binding CancelCommand}" />
 
             </StackPanel>

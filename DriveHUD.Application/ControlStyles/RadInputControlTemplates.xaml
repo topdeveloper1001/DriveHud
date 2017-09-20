@@ -2843,12 +2843,26 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Grid>
-                            <Border x:Name="HighlightVisual"
-                                    Visibility="Collapsed"
-                                    CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"
+                            <Border
+                                x:Name="HighlightVisual"
+                                Visibility="Collapsed"
+                                CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"
+                                BorderThickness="0"
+                                BorderBrush="{StaticResource ControlOuterBorder_Highlighted}"
+                                Background="{StaticResource DHControlBackground_Highlighted}"
+                                AutomationProperties.AutomationId="HighlightVisual">
+                            </Border>
+                            <Border
+                                x:Name="SelectedVisual"
+                                Opacity="0"
+                                SnapsToDevicePixels="True"
+                                BorderThickness="0"
+                                CornerRadius="{StaticResource ControlOuterBorder_CornerRadius}">
+                                <Border
+                                    Background="{StaticResource DHControlBackground_Highlighted}"                                    
                                     BorderThickness="0"
-                                    BorderBrush="{StaticResource ControlOuterBorder_Highlighted}"
-                                    Background="{StaticResource DHControlBackground_Highlighted}">
+                                    CornerRadius="{StaticResource ControlInnerBorder_CornerRadius}"
+                                    SnapsToDevicePixels="True" />
                             </Border>
                             <ContentPresenter x:Name="Content"
                                     Margin="{TemplateBinding Padding}"
@@ -2856,6 +2870,28 @@
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition
+                                    Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerikInput:RadComboBox}}, Path=AllowMultipleSelection}"
+                                    Value="True" />
+                                <Condition
+                                    Binding="{Binding IsSelected, RelativeSource={RelativeSource Mode=Self}}"
+                                    Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter
+                                    TargetName="SelectedVisual"
+                                    Property="Opacity"
+                                    Value="1" />
+                                <Setter
+                                    TargetName="HighlightVisual"
+                                    Property="Opacity"
+                                    Value="0" />
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -6675,7 +6711,7 @@
                         </Border>
                         <Border x:Name="FocusedVisual"
                                 Visibility="Collapsed"
-                                BorderThickness="1"
+                                BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{x:Null}"
                                 BorderBrush="{StaticResource ControlOuterBorder_Focused}"
                                 CornerRadius="{StaticResource ControlOuterBorder_CornerRadius}"/>

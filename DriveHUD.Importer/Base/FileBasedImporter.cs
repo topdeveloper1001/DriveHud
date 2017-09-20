@@ -32,7 +32,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
@@ -192,6 +191,7 @@ namespace DriveHUD.Importers
                         {
                             continue;
                         }
+
                         // update size and last write time
                         cf.Value.ImportedFile.FileSize = fs.Length;
                         cf.Value.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(cf.Value.ImportedFile.FileName);
@@ -356,7 +356,7 @@ namespace DriveHUD.Importers
 
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
-                gameInfo.TableType = ParseTableType(result);
+                gameInfo.TableType = ParseTableType(result, gameInfo);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
 
                 var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero);
@@ -553,7 +553,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        protected virtual EnumTableType ParseTableType(ParsingResult parsingResult)
+        protected virtual EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
         {
             if (parsingResult.Source == null || parsingResult.Source.GameDescription == null)
             {

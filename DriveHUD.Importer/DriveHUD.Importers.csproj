@@ -234,6 +234,7 @@
     <Compile Include="IPoker\IIPokerImporter.cs" />
     <Compile Include="IPoker\IPokerImporter.cs" />
     <Compile Include="ISessionService.cs" />
+    <Compile Include="ISessionStatisticFilter.cs" />
     <Compile Include="IUserSession.cs" />
     <Compile Include="Loggers\FileImporterLogger.cs" />
     <Compile Include="Loggers\IFileImporterLogger.cs" />

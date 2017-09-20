@@ -114,6 +114,14 @@ namespace Model.Site
             }
         }
 
+        public bool IsAutoCenterAllowed
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public virtual string LogoSource
         {
             get

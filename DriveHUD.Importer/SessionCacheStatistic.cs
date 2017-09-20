@@ -19,5 +19,7 @@ namespace DriveHUD.Importers
         public HudIndicators PlayerData { get; set; } = new HudIndicators();
 
         public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
+
+        public bool IsHero { get; set; }
     }
 }

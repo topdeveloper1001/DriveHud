@@ -1225,6 +1225,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 SelectedStatInfo = selectedStatInfo,
                 SelectedStatInfoCollection = StatInfoObserveCollection,
+                SelectedTableTypes = CurrentLayout?.Filter?.TableTypes?.Select(x => (EnumTableType)x).ToArray(),
+                DataFreshness = CurrentLayout != null && CurrentLayout.Filter != null ? CurrentLayout.Filter.DataFreshness : 0,
                 HudOpacity = opacity,
                 Save = SaveStatsSettings,
                 Cancel = ClosePopup
@@ -1252,6 +1254,18 @@ namespace DriveHUD.Application.ViewModels
                                    select new { NewItem = item, OldItem = statInfo }).ToArray();
 
             CurrentLayout.Opacity = hudStatSettings.HudOpacity;
+
+            var filter = new HudLayoutFilter
+            {
+                DataFreshness = hudStatSettings.DataFreshness.HasValue ? (int)hudStatSettings.DataFreshness.Value : 0,
+                TableTypes = hudStatSettings.FilterTableTypes
+                    .Where(x => x.IsSelected)
+                    .Select(x => (int)x.TableType)
+                    .OrderBy(x => x)
+                    .ToArray()
+            };
+
+            CurrentLayout.Filter = filter.IsDefault ? null : filter;
 
             foreach (var mergeItem in statInfoToMerge)
             {

@@ -52,7 +52,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
-                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) }                
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) }
             };
 
             SelectedSiteViewModel = new SiteViewModel();
@@ -85,6 +85,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private SiteViewModel siteViewModel;
         private string selectedHandHistoryLocation;
         private bool isPreferredSeatingVisible;
+        private bool isAutoCenterVisible;
         private bool isHandHistoryLocationRequired;
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
@@ -117,6 +118,7 @@ namespace DriveHUD.Application.ViewModels.Settings
 
                 IsPreferredSeatingVisible = siteConfiguration.IsPrefferedSeatsAllowed;
                 IsHandHistoryLocationRequired = siteConfiguration.IsHandHistoryLocationRequired;
+                IsAutoCenterVisible = siteConfiguration.IsAutoCenterAllowed;
 
                 SetProperty(ref selectedSiteType, value);
             }
@@ -202,6 +204,19 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 SetProperty(ref isPreferredSeatingVisible, value);
+            }
+
+        }
+
+        public bool IsAutoCenterVisible
+        {
+            get
+            {
+                return isAutoCenterVisible;
+            }
+            set
+            {
+                SetProperty(ref isAutoCenterVisible, value);
             }
 
         }

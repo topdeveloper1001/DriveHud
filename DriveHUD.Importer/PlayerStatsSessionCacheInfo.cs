@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using Model;
+using System;
 
 namespace DriveHUD.Importers
 {
@@ -39,5 +40,10 @@ namespace DriveHUD.Importers
         /// Gets or sets whenever statistic belongs to hero
         /// </summary>
         public bool IsHero { get; set; }
+
+        /// <summary>
+        /// Gets or sets the active filter
+        /// </summary>
+        public ISessionStatisticFilter Filter { get; set; }    
     }
 }

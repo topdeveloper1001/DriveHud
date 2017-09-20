@@ -18,6 +18,7 @@ using DriveHUD.Application.Models;
 using DriveHUD.Application.Services;
 using DriveHUD.Application.ViewModels.Alias;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Update;
@@ -306,7 +307,6 @@ namespace DriveHUD.Application.ViewModels
             if (args.IsUpdatePlayersCollection)
             {
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-                // TODO : reading players from db.
                 StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
                 StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
 
@@ -458,6 +458,17 @@ namespace DriveHUD.Application.ViewModels
                         Name = player.PlayerName,
                         PokerSite = site
                     };
+
+                    var playerCacheInfo = gameInfo.PlayersCacheInfo.FirstOrDefault(x => x.Player == playerCollectionItem);
+
+                    if (playerCacheInfo != null)
+                    {
+                        playerCacheInfo.Filter = activeLayout.Filter != null ?
+                            activeLayout.Filter.Clone() :
+                            new HudLayoutFilter();
+
+                        importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
+                    }
 
                     var playerHudContent = new PlayerHudContent
                     {

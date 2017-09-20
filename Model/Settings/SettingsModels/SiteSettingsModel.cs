@@ -125,6 +125,9 @@ namespace Model.Settings
         [XmlArray]
         public List<PreferredSeatModel> PrefferedSeats { get; set; }
 
+        [XmlAttribute]
+        public bool IsAutoCenter { get; set; }
+
         public override object Clone()
         {
             var model = (SiteModel)MemberwiseClone();

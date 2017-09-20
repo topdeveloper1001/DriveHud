@@ -196,7 +196,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
         public virtual Tuple<double, double> GetInitialTableSize()
         {
-            return new Tuple<double, double>(812, 648);
+            return new Tuple<double, double>(811, 677);
         }
 
         public virtual Tuple<double, double> GetInitialTrackConditionMeterPosition()

@@ -64,6 +64,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public List<HudLayoutTool> LayoutTools { get; set; }
 
         /// <summary>
+        /// Gets or sets the <see cref="HudLayoutFilter"/> for this layout
+        /// </summary>
+        public HudLayoutFilter Filter { get; set; }
+
+        /// <summary>
         /// Creates a copy of the current <see cref="HudLayoutInfoV2"/> instance
         /// </summary>
         /// <returns>Copy of the current <see cref="HudLayoutInfoV2"/> instance</returns>
@@ -77,7 +82,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 TableType = TableType,
                 HudBumperStickerTypes = HudBumperStickerTypes.Select(x => x.Clone()).ToList(),
                 HudPlayerTypes = HudPlayerTypes.Select(x => x.Clone()).ToList(),
-                LayoutTools = LayoutTools.Select(x => x.Clone()).ToList()
+                LayoutTools = LayoutTools.Select(x => x.Clone()).ToList(),
+                Filter = Filter?.Clone()
             };
 
             return cloned;

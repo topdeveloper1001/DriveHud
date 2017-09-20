@@ -77,7 +77,7 @@ namespace DriveHUD.Importers.Bovada
             var url = dataText.Split(new[] { '\r', '\n' }).FirstOrDefault().Trim();
 
             if (url.Contains(cashUrlPattern))
-            {                
+            {
                 ProcessCashData(url, dataText);
                 return;
             }
@@ -105,7 +105,22 @@ namespace DriveHUD.Importers.Bovada
                 }
 
                 var tableText = ReadJsonData(data, "table");
-                var tableId = uint.Parse(tableText);
+
+                uint tableId;
+
+                if (!uint.TryParse(tableText, out tableId))
+                {
+                    LogProvider.Log.Error(this, $"Table id couldn't be parsed from: {tableText}");
+                    return;
+                }
+
+                int tableSize;
+
+                if (!int.TryParse(tableSeatsText, out tableSize))
+                {
+                    LogProvider.Log.Error(this, $"Table size couldn't be parsed from: {tableSeatsText}.");
+                    return;
+                }
 
                 rwLock.EnterUpgradeableReadLock();
 
@@ -123,7 +138,7 @@ namespace DriveHUD.Importers.Bovada
                         var table = new IgnitionTableData
                         {
                             Id = tableId,
-                            TableSize = int.Parse(tableSeatsText),
+                            TableSize = tableSize,
                             GameFormat = GameFormat.Cash,
                             GameLimit = BovadaConverters.ConvertGameLimit(limitText),
                             GameType = BovadaConverters.ConvertGameType(gameTypeText)

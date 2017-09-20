@@ -88,6 +88,14 @@ namespace Model.Site
             }
         }
 
+        public bool IsAutoCenterAllowed
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public TimeSpan TimeZoneOffset
         {
             get;
