@@ -391,10 +391,12 @@
     <Compile Include="Migration\Migrations\Migration0019_MoveLayoutsToLayoutV2.cs" />
     <Compile Include="Migration\Migrations\Migration0020_AddAliasTable.cs" />
     <Compile Include="Migration\Migrations\Migration0021_AddImportedFilesTable.cs" />
+    <Compile Include="Migration\Migrations\Migration0022_AddMaxPlayersToPlayerstatistic.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\MigrationUtils.cs" />
+    <Compile Include="Migration\Migrators\PlayerStatisticMaxPlayersMigrator.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />

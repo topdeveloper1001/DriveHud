@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
@@ -22,8 +23,6 @@ using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DriveHUD.Common.Linq;
-using NHibernate.Cfg.MappingSchema;
 
 namespace Model
 {
@@ -43,6 +42,7 @@ namespace Model
                 Numberofplayers = (short)parsedHand.NumPlayersActive,
                 PlayerId = u.PlayerId,
                 GametypeId = (short)result.GameType.GametypeId,
+                MaxPlayers = result.GameType.Tablesize
             };
 
             var currentPlayer = parsedHand.Players.FirstOrDefault(x => string.Equals(x.PlayerName, player, StringComparison.OrdinalIgnoreCase));

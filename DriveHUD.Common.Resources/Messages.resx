@@ -124,7 +124,7 @@
     <value>Rebuild stats</value>
   </data>
   <data name="Message_Migration0017_Status" xml:space="preserve">
-    <value>Rebuilding stats</value>
+    <value>Rebuilding stats...</value>
   </data>
   <data name="Message_Migration0017_Text" xml:space="preserve">
     <value>New stats have been added to DriveHUD. You'll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (1 - 10 minutes depending on database size), but it isn't mandatory to perform. You can skip it by clicking on Don't Rebuild Now. You can run the rebuild stats function at a later time from the settings menu.
@@ -172,5 +172,20 @@ COLD CALL
   </data>
   <data name="Message_Migration0019_Title" xml:space="preserve">
     <value>Migration error</value>
+  </data>
+  <data name="Message_Migration0022_Cancel" xml:space="preserve">
+    <value>Don't Update Now</value>
+  </data>
+  <data name="Message_Migration0022_Run" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="Message_Migration0022_Status" xml:space="preserve">
+    <value>Updating cached statistic...</value>
+  </data>
+  <data name="Message_Migration0022_Text" xml:space="preserve">
+    <value>New HUD filters have been added to DriveHUD. You'll need to update your cached statistic to be able to use new filters. This operation might take some time (1 - 30 minutes depending on database size and on you system), but it isn't mandatory to perform. You can skip it by clicking on Don't Update Now. You can run the rebuild stats function at a later time from the settings menu, but rebuild stats operation requires much more time than this migration. So it's highly recommended to run this migration.</value>
+  </data>
+  <data name="Message_Migration0022_Title" xml:space="preserve">
+    <value>DriveHUD: Action is required</value>
   </data>
 </root>
