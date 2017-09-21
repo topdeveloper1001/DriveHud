@@ -12,7 +12,6 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
-using Newtonsoft.Json;
 using Prism.Events;
 using System;
 using System.Collections.Generic;

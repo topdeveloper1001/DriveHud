@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SessionCacheStatistic.cs" company="Ace Poker Solutions">
+// <copyright file="PokerStarsZoomCacheData.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using Model.Data;
+using System;
 
-namespace DriveHUD.Importers
+namespace DriveHUD.Importers.PokerStars
 {
-    public class SessionCacheStatistic
+    internal class PokerStarsZoomCacheData
     {
-        public HudIndicators PlayerData { get; set; } = new HudIndicators();
+        public PokerStarsZoomDataObject Data { get; set; }
 
-        public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
+        public DateTime LastModified { get; set; }
 
-        public bool IsHero { get; set; }
-
-        public GameFormat GameFormat { get; set; }
+        public bool IsProcessed { get; set; }
     }
 }

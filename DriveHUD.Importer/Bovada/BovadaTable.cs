@@ -639,9 +639,20 @@ namespace DriveHUD.Importers.Bovada
                     ParseOptionInfo(cmdObj);
                     break;
 
+                case "PLAY_BUYIN_INFO":
+                    if (HeroSeat == 0)
+                    {
+                        HeroSeat = cmdObj.seat;
+                    }
+
+                    break;
+
                 case "PLAY_ACCOUNT_CASH_RES":
-                    playerHasSeat = cmdObj.cash > 0;
-                    HeroSeat = cmdObj.seat;
+                    if (!playerHasSeat && cmdObj.seat == HeroSeat)
+                    {
+                        playerHasSeat = HeroSeat != 0 && cmdObj.cash > 0;
+                    }
+
                     break;
 
                 default:

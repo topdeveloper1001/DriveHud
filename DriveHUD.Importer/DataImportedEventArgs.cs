@@ -33,5 +33,7 @@ namespace DriveHUD.Importers
         public Player Hero { get; private set; }
 
         public GameInfo GameInfo { get; private set; }
+
+        public bool DoNotUpdateHud { get; set; }
     }
 }

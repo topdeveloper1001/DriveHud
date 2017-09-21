@@ -250,6 +250,29 @@ namespace DriveHUD.Common.Utils
             }
 
             return date >= start && date <= end;
-        }      
+        }
+
+        /// <summary>
+        /// Removes trailing zeros from the specified byte array
+        /// </summary>
+        /// <param name="data">Byte array to remove trailing zeros</param>
+        /// <returns>Byte array without trailing zeros</returns>
+        public static byte[] RemoveTrailingZeros(byte[] data)
+        {
+            Check.Require(data != null, "data argument must be not null");
+
+            var i = data.Length - 1;
+
+            while (data[i] == 0)
+            {
+                --i;
+            }
+
+            var cleanData = new byte[i + 1];
+
+            Array.Copy(data, cleanData, i + 1);
+
+            return cleanData;
+        }
     }
 }

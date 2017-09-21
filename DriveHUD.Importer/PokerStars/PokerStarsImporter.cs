@@ -110,6 +110,17 @@ namespace DriveHUD.Importers.PokerStars
             return title.Contains(parsingResult.Source.TableName);
         }
 
+        protected override void PublishImportedResults(DataImportedEventArgs args)
+        {
+            // we don't publish imported data for zoom
+            if (args.GameInfo.GameFormat == GameFormat.Zoom)
+            {
+                args.DoNotUpdateHud = true;
+            }
+
+            base.PublishImportedResults(args);
+        }
+
         private void UpdateGameInfo(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
         {
             var parsingResult = parsingResults?.FirstOrDefault();
@@ -127,6 +138,7 @@ namespace DriveHUD.Importers.PokerStars
 
             var title = WinApi.GetWindowText(window);
 
+            gameInfo.Session = window.ToInt32().ToString();
             gameInfo.WindowHandle = window.ToInt32();
             gameInfo.TournamentSpeed = ParserUtils.ParseTournamentSpeed(title);
         }

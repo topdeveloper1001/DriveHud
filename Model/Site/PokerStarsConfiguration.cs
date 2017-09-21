@@ -24,7 +24,8 @@ namespace Model.Site
 {
     public class PokerStarsConfiguration : ISiteConfiguration
     {
-        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR" };
+        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR",
+            "PokerStars.DK", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.CZ" };
 
         private const string defaultHandHistoryFolder = "HandHistory";
         private const string defaultTourneySummaryFolder = "TournSummary";

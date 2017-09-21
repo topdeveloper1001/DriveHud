@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BetOnlineCatcher.cs" company="Ace Poker Solutions">
+// <copyright file="PokerStarsZoomCatcher.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -13,29 +13,24 @@
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using System;
 using System.Linq;
 
-namespace DriveHUD.Importers.BetOnline
+namespace DriveHUD.Importers.PokerStars
 {
     /// <summary>
-    /// Class for inject catching DLL in BetOnline processes
+    /// Class for inject catching DLL in PS process
     /// </summary>
-    internal class BetOnlineCatcher : PokerCatcher, IBetOnlineCatcher
+    internal class PokerStarsZoomCatcher : PokerCatcher, IPokerStarsZoomCatcher
     {
+        /// <summary>
         /// Dll to be injected
         /// </summary>
-        private const string dllToInject = "CapPipedB.dll";
+        private const string dllToInject = "CapPipedP.dll";
 
         /// <summary>
         /// Name of process in which dll will be injected
         /// </summary>
-        private const string processName = "GameClient";
-
-        /// <summary>
-        /// Class of window in which dll will be injected
-        /// </summary>
-        private const string windowClassName = "Antares Game Client Window Class";
+        private const string processName = "PokerStars";
 
         #region PokerCatcher members
 
@@ -59,7 +54,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             get
             {
-                return windowClassName;
+                return string.Empty;
             }
         }
 
@@ -67,7 +62,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             get
             {
-                return ImporterIdentifier.BetOnline;
+                return ImporterIdentifier.PokerStarsZoom;
             }
         }
 
@@ -75,21 +70,23 @@ namespace DriveHUD.Importers.BetOnline
         {
             get
             {
-                return new[] { ImporterIdentifier.BetOnline, ImporterIdentifier.BetOnlineTournament };
+                return new[] { ImporterIdentifier.PokerStarsZoom };
             }
         }
-
-        #endregion 
 
         protected override bool IsEnabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.PokerStars);
 
-            var siteSettings = settings.SiteSettings.SitesModelList?.Where(x => x.PokerSite == EnumPokerSites.BetOnline ||
-                x.PokerSite == EnumPokerSites.SportsBetting ||
-                x.PokerSite == EnumPokerSites.TigerGaming);
+            if (siteSettings != null && !siteSettings.Enabled)
+            {
+                return false;
+            }
 
-            return siteSettings != null && siteSettings.Any(x => x.Enabled);
+            return true;
         }
+
+        #endregion
     }
 }

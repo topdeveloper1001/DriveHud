@@ -415,6 +415,26 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                if (e.DoNotUpdateHud)
+                {
+                    // update cache if even we don't need to build HUD
+                    if (gameInfo.PlayersCacheInfo != null)
+                    {
+                        foreach (var playerCacheInfo in gameInfo.PlayersCacheInfo)
+                        {
+                            playerCacheInfo.GameFormat = gameInfo.GameFormat;
+
+                            playerCacheInfo.Filter = activeLayout.Filter != null ?
+                                activeLayout.Filter.Clone() :
+                                new HudLayoutFilter();
+
+                            importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
+                        }
+                    }
+
+                    return;
+                }
+
                 // stats involved into player types and bumper stickers
                 var nonToolLayoutStats = activeLayout
                     .HudPlayerTypes
@@ -459,10 +479,12 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = gameInfo.PlayersCacheInfo.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = gameInfo.PlayersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
 
                     if (playerCacheInfo != null)
                     {
+                        playerCacheInfo.GameFormat = gameInfo.GameFormat;
+
                         playerCacheInfo.Filter = activeLayout.Filter != null ?
                             activeLayout.Filter.Clone() :
                             new HudLayoutFilter();
@@ -536,7 +558,7 @@ namespace DriveHUD.Application.ViewModels
 
                     foreach (var graphTool in graphTools)
                     {
-                        if (graphTool.MainStat == null || !sessionStats.ContainsKey(graphTool.MainStat.Stat))
+                        if (graphTool.MainStat == null || sessionStats == null || !sessionStats.ContainsKey(graphTool.MainStat.Stat))
                         {
                             graphTool.StatSessionCollection = new ReactiveList<decimal>();
                             continue;
@@ -563,7 +585,7 @@ namespace DriveHUD.Application.ViewModels
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
 
-                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionStats.ContainsKey(Stat.NetWon) ?
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionStats != null && sessionStats.ContainsKey(Stat.NetWon) ?
                         new ObservableCollection<decimal>(sessionStats[Stat.NetWon]) :
                         new ObservableCollection<decimal>();
 
