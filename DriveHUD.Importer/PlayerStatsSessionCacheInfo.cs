@@ -45,5 +45,10 @@ namespace DriveHUD.Importers
         /// Gets or sets the active filter
         /// </summary>
         public ISessionStatisticFilter Filter { get; set; }    
+
+        /// <summary>
+        /// Gets or sets the game format
+        /// </summary>
+        public GameFormat GameFormat { get; set; }
     }
 }

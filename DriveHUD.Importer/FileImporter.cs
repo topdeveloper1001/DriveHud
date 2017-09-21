@@ -458,10 +458,11 @@ namespace DriveHUD.Importers
                             {
                                 PlayerId = existingPlayer.PlayerId,
                                 Name = existingPlayer.Playername,
-                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
+                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId,                                
                             },
                             Stats = playerStatCopy,
-                            IsHero = isHero
+                            IsHero = isHero,
+                            GameFormat = gameInfo.GameFormat
                         };
 
                         gameInfo.PlayersCacheInfo.Add(cacheInfo);

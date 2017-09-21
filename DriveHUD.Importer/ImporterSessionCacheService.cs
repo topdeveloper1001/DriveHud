@@ -141,12 +141,16 @@ namespace DriveHUD.Importers
                     {
                         sessionCacheStatistic = new SessionCacheStatistic
                         {
-                            IsHero = true
+                            IsHero = true,
+                            GameFormat = cacheInfo.GameFormat
                         };
                     }
                     else
                     {
-                        sessionCacheStatistic = new SessionCacheStatistic();
+                        sessionCacheStatistic = new SessionCacheStatistic
+                        {
+                            GameFormat = cacheInfo.GameFormat
+                        };
 
                         dataService.ActOnPlayerStatisticFromFile(cacheInfo.Player.PlayerId,
                             stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&

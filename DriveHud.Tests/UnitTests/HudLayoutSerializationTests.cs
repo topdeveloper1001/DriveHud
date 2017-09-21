@@ -683,9 +683,8 @@ namespace DriveHud.Tests.UnitTests
                 TableType = EnumTableType.HU,
                 Name = "TestLayout",
                 Filter = new HudLayoutFilter
-                {
-                    StartDate = DateTime.Now.AddDays(-1),
-                    EndDate = DateTime.Now.AddDays(1),
+                {                    
+                    DataFreshness = 30,
                     TableTypes = new[] { (int)EnumTableType.HU, (int)EnumTableType.Six }
                 }
             };

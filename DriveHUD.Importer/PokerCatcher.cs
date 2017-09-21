@@ -112,6 +112,7 @@ namespace DriveHUD.Importers
 
             if (!IsEnabled())
             {
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" catcher is disabled.", Identifier));
                 return;
             }
 
@@ -249,13 +250,16 @@ namespace DriveHUD.Importers
                 {
                     if (pokerClientProcess != null && !pokerClientProcess.HasExited)
                     {
-                        try
+                        if (injectedProcessModule != null)
                         {
-                            EjectDll(injectedProcessModule.BaseAddress);
-                        }
-                        catch (Exception e)
-                        {
-                            LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed", ProcessName), e);
+                            try
+                            {
+                                EjectDll(injectedProcessModule.BaseAddress);
+                            }
+                            catch (Exception e)
+                            {
+                                LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed", ProcessName), e);
+                            }
                         }
 
                         handle = IntPtr.Zero;
