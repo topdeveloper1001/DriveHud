@@ -114,10 +114,7 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
-
-                    ((RadWindow)Shell).Activated += MainWindow_Activated;
-
+                    ((RadWindow)Shell).DataContext = mainWindowViewModel;                    
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
                     ((RadWindow)Shell).IsTopmost = false;
@@ -192,20 +189,7 @@ namespace DriveHUD.Application
                 }
             }
             return false;
-        }
-
-        private void MainWindow_Activated(object sender, EventArgs e)
-        {
-            foreach (var v in RadWindowManager.Current.GetWindows())
-            {
-                if (v.Tag != null && v.Tag.ToString() == "PopupWindow")
-                {
-                    v.BringIntoView();
-                    v.BringToFront();
-                    v.Focus();
-                }
-            }
-        }
+        }      
 
         public static void RegisterRuntimeTypeModelTypes()
         {
