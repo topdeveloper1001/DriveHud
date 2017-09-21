@@ -24,7 +24,7 @@ namespace DriveHUD.Entities
     {
         public override string ToString()
         {
-            return $"Player: {PlayerName}; TotalHands: {Totalhands}";
+            return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon {NetWon}";
         }
 
         public virtual int CompiledplayerresultsId { get; set; }
@@ -800,6 +800,9 @@ namespace DriveHUD.Entities
 
         [ProtoMember(292)]
         public virtual int CouldRiverCheckRaise { get; set; }
+
+        [ProtoMember(293)]
+        public virtual int MaxPlayers { get; set; }
 
         #region Workarounds for broken stats
 

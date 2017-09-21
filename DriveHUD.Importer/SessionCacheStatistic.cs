@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using Model.Data;
 
 namespace DriveHUD.Importers
@@ -19,5 +20,9 @@ namespace DriveHUD.Importers
         public HudIndicators PlayerData { get; set; } = new HudIndicators();
 
         public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
+
+        public bool IsHero { get; set; }
+
+        public GameFormat GameFormat { get; set; }
     }
 }

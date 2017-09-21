@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using System.Windows.Controls;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.Views.Hud
 {
@@ -22,6 +23,6 @@ namespace DriveHUD.Application.Views.Hud
         public HudStatSettingsView()
         {
             InitializeComponent();
-        }       
+        }
     }   
 }

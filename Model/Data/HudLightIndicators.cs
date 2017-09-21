@@ -250,7 +250,7 @@ namespace Model.Data
                 {
                     Value = FoldFlopCBetFromThreeBetPot,
                     Occurred = Source.FoldedToFlopContinuationBetFromThreeBetPot,
-                    CouldOccurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    CouldOccurred = Source.FacingFlopContinuationBetFromThreeBetPot,
                 };
             }
         }
@@ -263,7 +263,7 @@ namespace Model.Data
                 {
                     Value = FoldFlopCBetFromFourBetPot,
                     Occurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
-                    CouldOccurred = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    CouldOccurred = Source.FacingFlopContinuationBetFromFourBetPot,
                 };
             }
         }

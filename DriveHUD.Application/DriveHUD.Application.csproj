@@ -391,10 +391,12 @@
     <Compile Include="Migration\Migrations\Migration0019_MoveLayoutsToLayoutV2.cs" />
     <Compile Include="Migration\Migrations\Migration0020_AddAliasTable.cs" />
     <Compile Include="Migration\Migrations\Migration0021_AddImportedFilesTable.cs" />
+    <Compile Include="Migration\Migrations\Migration0022_AddMaxPlayersToPlayerstatistic.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\MigrationUtils.cs" />
+    <Compile Include="Migration\Migrators\PlayerStatisticMaxPlayersMigrator.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -488,6 +490,7 @@
     <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\HudFourStatsBoxToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudHeatMapBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudStatsDataFreshness.cs" />
     <Compile Include="ViewModels\Hud\HudToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
@@ -510,6 +513,7 @@
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutBumperStickersTool.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutFilter.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutFourStatsBoxTool.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGaugeIndicator.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutGraphTool.cs" />
@@ -1437,6 +1441,9 @@
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
     <Content Include="Lib\CapPipedI2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\CapPipedP.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\clean_db.sql">

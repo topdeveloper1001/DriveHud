@@ -263,10 +263,27 @@
     </ControlTemplate>
 
     <Style
+        x:Key="DefaultComboBoxExListBoxStyle"
+        TargetType="{x:Type ListBox}">
+        <Setter
+            Property="Background"
+            Value="Transparent" />
+
+        <Setter
+            Property="BorderThickness"
+            Value="0" />
+
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+
+    </Style>
+    
+    <Style
         TargetType="controls:ComboBoxEx">
         <Setter
             Property="MultiselectListBoxStyle"
-            Value="{x:Null}" />
+            Value="{StaticResource DefaultComboBoxExListBoxStyle}" />
         <Setter
             Property="SnapsToDevicePixels"
             Value="True" />
@@ -416,6 +433,7 @@
                                     Margin="4,6,4,6"
                                     SnapsToDevicePixels="True">
                                     <Grid>
+                                        
                                         <StackPanel
                                             x:Name="PART_Singleselect"
                                             IsItemsHost="True"
@@ -424,10 +442,12 @@
                                         <ListBox
                                             x:Name="PART_Multiselect"
                                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                            Style="{TemplateBinding MultiselectListBoxStyle}"
+                                            Style="{TemplateBinding MultiselectListBoxStyle}"                                         
                                             KeyboardNavigation.DirectionalNavigation="Contained"
                                             DisplayMemberPath="{TemplateBinding DisplayMemberPath}"
-                                            SelectionMode="Multiple"
+                                            SelectionMode="Multiple"                                                   
+                                            Foreground="{TemplateBinding Foreground}"
+                                            ItemTemplate="{TemplateBinding ItemTemplate}"
                                             ItemsSource="{TemplateBinding ItemsSource}">
                                             <i:Interaction.Behaviors>
                                                 <ab:IgnoreMouseWheelBehavior />
@@ -504,7 +524,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 
     <Style
         x:Key="ComboboxItemContainerBlueStyle"

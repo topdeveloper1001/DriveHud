@@ -31,5 +31,10 @@ namespace DriveHUD.Common.Extensions
         {
             return Path.GetInvalidFileNameChars().Aggregate(text, (current, c) => current.Replace(c.ToString(), string.Empty));
         }
+
+        public static string RemoveControlChars(this string text)
+        {
+            return new string(text.Where(c => !char.IsControl(c)).ToArray());
+        }
     }
 }

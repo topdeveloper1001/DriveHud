@@ -28,14 +28,14 @@ namespace HandHistories.Objects.Actions
     {
         public static int IndexOfDigit(this string text)
         {
-            int ix = text.IndexOfAny(new[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'});
+            int ix = text.IndexOfAny(new[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' });
             return ix;
         }
 
-        public static int IndexOfDigit(this string text,int startingIndex)
+        public static int IndexOfDigit(this string text, int startingIndex)
         {
-            int ix = text.IndexOfAny(new[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' },startingIndex);
+            int ix = text.IndexOfAny(new[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' }, startingIndex);
             return ix;
-        }
+        }       
     }
 }

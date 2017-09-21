@@ -118,6 +118,13 @@ namespace DriveHUD.Importers
             {
                 var sessionData = GetOrAddSessionData(cacheInfo.Session);
 
+                // clear statistic for all players except for hero if filter was changed                
+                if (!cacheInfo.Filter.Equals(sessionData.Filter))
+                {
+                    sessionData.StatisticByPlayer.RemoveByCondition(x => !x.Value.IsHero);
+                    sessionData.Filter = cacheInfo.Filter;
+                }
+
                 SessionCacheStatistic sessionCacheStatistic = null;
 
                 bool skipAdding = false;
@@ -132,16 +139,24 @@ namespace DriveHUD.Importers
                     // if not hero read data from storage
                     if (cacheInfo.IsHero)
                     {
-                        sessionCacheStatistic = new SessionCacheStatistic();
+                        sessionCacheStatistic = new SessionCacheStatistic
+                        {
+                            IsHero = true,
+                            GameFormat = cacheInfo.GameFormat
+                        };
                     }
                     else
                     {
-                        sessionCacheStatistic = new SessionCacheStatistic();
+                        sessionCacheStatistic = new SessionCacheStatistic
+                        {
+                            GameFormat = cacheInfo.GameFormat
+                        };
 
                         dataService.ActOnPlayerStatisticFromFile(cacheInfo.Player.PlayerId,
                             stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
                                     stat.IsTourney == cacheInfo.Stats.IsTourney &&
-                                    GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId),
+                                    GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
+                                    (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat)),
                             stat =>
                             {
                                 var isCurrentGame = stat.GameNumber == cacheInfo.Stats.GameNumber;
@@ -163,9 +178,12 @@ namespace DriveHUD.Importers
                                     InitSessionStatCollections(sessionCacheStatistic.PlayerData, stat);
                                     InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, stat);
                                 }
-                            });
 
-                        skipAdding = true;
+                                if (!skipAdding)
+                                {
+                                    skipAdding = true;
+                                }
+                            });
                     }
 
                     sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic);
@@ -199,84 +217,6 @@ namespace DriveHUD.Importers
             finally
             {
                 cacheLock.ExitWriteLock();
-            }
-        }
-
-        /// <summary>
-        /// Store hand history record in cache
-        /// </summary>
-        /// <param name="session">Active session</param>
-        /// <param name="record">Record to be saved</param>
-        public void AddRecord(string session, HandHistoryRecord record)
-        {
-            if (!isStarted)
-            {
-                return;
-            }
-
-            cacheLock.EnterWriteLock();
-
-            try
-            {
-                var sessionData = GetOrAddSessionData(session);
-                sessionData.Records.Add(record);
-            }
-            finally
-            {
-                cacheLock.ExitWriteLock();
-            }
-        }
-
-        /// <summary>
-        /// Get all records from cache of specified session
-        /// </summary>
-        /// <param name="session">Session</param>
-        /// <returns>List of records from cache of specified session</returns>
-        public IList<HandHistoryRecord> GetRecords(string session)
-        {
-            if (!isStarted)
-            {
-                return new List<HandHistoryRecord>();
-            }
-
-            cacheLock.EnterReadLock();
-
-            try
-            {
-                if (cachedData.ContainsKey(session))
-                {
-                    return cachedData[session].Records.ToList();
-                }
-
-                return new List<HandHistoryRecord>();
-            }
-            finally
-            {
-                cacheLock.ExitReadLock();
-            }
-        }
-
-        /// <summary>
-        /// Get all records from cache
-        /// </summary>
-        /// <param name="session">Session</param>
-        /// <returns>List of records from cache</returns>
-        public IList<HandHistoryRecord> GetAllRecords()
-        {
-            if (!isStarted)
-            {
-                return new List<HandHistoryRecord>();
-            }
-
-            cacheLock.EnterReadLock();
-
-            try
-            {
-                return cachedData.SelectMany(x => x.Value.Records).ToList();
-            }
-            finally
-            {
-                cacheLock.ExitReadLock();
             }
         }
 

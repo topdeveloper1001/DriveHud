@@ -54,6 +54,8 @@ namespace DriveHUD.Importers
 
         public PlayerCollectionItem[] AddedPlayers { get; set; }
 
+        public List<PlayerStatsSessionCacheInfo> PlayersCacheInfo { get; set; }
+
         public string FileName { get; set; }
 
         public string FullFileName { get; set; }

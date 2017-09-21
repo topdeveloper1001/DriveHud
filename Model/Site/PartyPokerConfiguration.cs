@@ -89,6 +89,14 @@ namespace Model.Site
             get { return true; }
         }
 
+        public bool IsAutoCenterAllowed
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public string LogoSource
         {
             get { return "/DriveHUD.Common.Resources;Component/images/SiteLogos/partypoker_logo.png"; }

@@ -16,6 +16,7 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -32,7 +33,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
@@ -192,6 +192,7 @@ namespace DriveHUD.Importers
                         {
                             continue;
                         }
+
                         // update size and last write time
                         cf.Value.ImportedFile.FileSize = fs.Length;
                         cf.Value.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(cf.Value.ImportedFile.FileName);
@@ -269,7 +270,7 @@ namespace DriveHUD.Importers
                                     x.CapturedFile.WasModified = false;
                                 });
 
-                                transaction.Commit();                                
+                                transaction.Commit();
                             }
                         }
                     }
@@ -356,12 +357,12 @@ namespace DriveHUD.Importers
 
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
-                gameInfo.TableType = ParseTableType(result);
+                gameInfo.TableType = ParseTableType(result, gameInfo);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
 
                 var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero);
 
-                eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+                PublishImportedResults(dataImportedArgs);
             }
         }
 
@@ -492,9 +493,17 @@ namespace DriveHUD.Importers
 
         protected virtual GameFormat ParseGameFormat(ParsingResult parsingResult)
         {
-            if (parsingResult.Source != null && parsingResult.Source.GameDescription != null && parsingResult.Source.GameDescription.IsTournament)
+            if (parsingResult.Source != null && parsingResult.Source.GameDescription != null)
             {
-                return parsingResult.TournamentsTags == TournamentsTags.MTT ? GameFormat.MTT : GameFormat.SnG;
+                if (parsingResult.Source.GameDescription.IsTournament)
+                {
+                    return parsingResult.TournamentsTags == TournamentsTags.MTT ? GameFormat.MTT : GameFormat.SnG;
+                }
+
+                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.Zoom))
+                {
+                    return GameFormat.Zoom;
+                }
             }
 
             return GameFormat.Cash;
@@ -553,7 +562,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        protected virtual EnumTableType ParseTableType(ParsingResult parsingResult)
+        protected virtual EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
         {
             if (parsingResult.Source == null || parsingResult.Source.GameDescription == null)
             {
@@ -567,6 +576,11 @@ namespace DriveHUD.Importers
         protected virtual PlayerList GetPlayerList(HandHistory handHistory)
         {
             return handHistory.Players;
+        }
+
+        protected virtual void PublishImportedResults(DataImportedEventArgs args)
+        {
+            eventAggregator.GetEvent<DataImportedEvent>().Publish(args);
         }
 
         protected class CapturedFile

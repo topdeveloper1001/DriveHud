@@ -18,6 +18,7 @@ namespace DriveHUD.Importers
         Ignition,
         IgnitionInfo,
         BetOnline,
-        BetOnlineTournament
+        BetOnlineTournament,
+        PokerStarsZoom
     }
 }
