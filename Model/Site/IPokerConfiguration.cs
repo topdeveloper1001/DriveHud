@@ -176,7 +176,8 @@ namespace Model.Site
             {
                 IsNew = !siteModel.Configured,
                 HandHistoryLocations = new List<string>(),
-                IsEnabled = siteModel.Enabled
+                IsEnabled = siteModel.Enabled,
+                IsAutoCenter = true
             };
 
             var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
@@ -192,8 +193,12 @@ namespace Model.Site
                         LogProvider.Log.Info($"Site detection: IPoker[{siteName}]: {installPath}");
                     }
 
+                    var hhDirs = Directory.EnumerateDirectories(installPath, "*", SearchOption.AllDirectories)
+                        .Where(x => handHistoryLocationPattern.Value.IsMatch(x)).ToArray();
+
+                    validationResult.HandHistoryLocations.AddRange(hhDirs);
+
                     validationResult.IsDetected = true;
-                    break;
                 }
             }
 
