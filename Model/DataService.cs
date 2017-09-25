@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
@@ -18,6 +19,7 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Interfaces;
+using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
 using ProtoBuf;
@@ -449,6 +451,43 @@ namespace Model
                 var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == gameNumber && x.PokersiteId == pokersiteId);
 
                 return hh ?? null;
+            }
+        }
+
+        public IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames, ISession session)
+        {
+            Check.Require(fileNames != null, "fileNames must be not null");
+            Check.Require(session != null, "session must be not null");
+
+            var importedFiles = new List<ImportedFile>();
+
+            var importedFilesPerQuery = 100;
+
+            var importedFilesCount = fileNames.Count();
+
+            var numOfQueries = (int)Math.Ceiling((double)importedFilesCount / importedFilesPerQuery);
+
+            for (var i = 0; i < numOfQueries; i++)
+            {
+                var numOfRowToStartQuery = i * importedFilesPerQuery;
+
+                var tempFileNames = fileNames.Skip(numOfRowToStartQuery).Take(importedFilesPerQuery);
+
+                var tempImportedFiles = session.Query<ImportedFile>()
+                    .Where(x => tempFileNames.Contains(x.FileName))
+                    .ToList();
+
+                importedFiles.AddRange(tempImportedFiles);
+            }
+
+            return importedFiles;
+        }
+
+        public IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return GetImportedFiles(fileNames, session);
             }
         }
 

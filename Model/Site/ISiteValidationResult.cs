@@ -30,8 +30,10 @@ namespace Model.Site
 
         bool IsEnabled { get; }
 
-        IList<string> Issues { get; set; }
+        bool IsAutoCenter { get; set; }
 
-        IList<string> HandHistoryLocations { get; set; }
+        List<string> Issues { get; set; }
+
+        List<string> HandHistoryLocations { get; set; }
     }
 }

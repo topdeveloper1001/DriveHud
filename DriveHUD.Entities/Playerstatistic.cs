@@ -22,10 +22,12 @@ namespace DriveHUD.Entities
     [ProtoContract]
     public partial class Playerstatistic : INotifyPropertyChanged
     {
+#if DEBUG
         public override string ToString()
         {
             return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon {NetWon}";
         }
+#endif
 
         public virtual int CompiledplayerresultsId { get; set; }
         [Required, ProtoMember(232)]

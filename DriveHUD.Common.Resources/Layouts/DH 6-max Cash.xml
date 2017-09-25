@@ -1479,46 +1479,47 @@
         </HudPositionsInfo>
         <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
           <HudPositions>
+
             <HudPositionInfo>
               <Seat>1</Seat>
-              <Position>
-                <X>337</X>
-                <Y>-7</Y>
-              </Position>
-            </HudPositionInfo>
-            <HudPositionInfo>
-              <Seat>2</Seat>
               <Position>
                 <X>633</X>
                 <Y>50</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
-              <Seat>3</Seat>
+              <Seat>2</Seat>
               <Position>
                 <X>638</X>
                 <Y>219</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
-              <Seat>4</Seat>
+              <Seat>3</Seat>
               <Position>
                 <X>337</X>
                 <Y>317</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
-              <Seat>5</Seat>
+              <Seat>4</Seat>
               <Position>
                 <X>36</X>
                 <Y>224</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
-              <Seat>6</Seat>
+              <Seat>5</Seat>
               <Position>
                 <X>40</X>
                 <Y>49</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>337</X>
+                <Y>-7</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -4681,7 +4682,7 @@
           </HudPositions>
         </HudPositionsInfo>
         <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
-          <HudPositions>         
+          <HudPositions>
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>
@@ -5326,7 +5327,7 @@
           </HudPositions>
         </HudPositionsInfo>
         <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
-          <HudPositions>          
+          <HudPositions>
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>

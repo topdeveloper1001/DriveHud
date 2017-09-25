@@ -24,6 +24,7 @@ using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Interfaces;
 using Model.Settings;
 using NHibernate.Linq;
 using Prism.Events;
@@ -42,12 +43,14 @@ namespace DriveHUD.Importers
         protected Dictionary<string, CapturedFile> capturedFiles;
         protected HashSet<string> filesToSkip;
         protected IEventAggregator eventAggregator;
+        protected IDataService dataService;
 
         protected const int ReadingTimeout = 3000;
 
         public FileBasedImporter()
         {
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
             capturedFiles = new Dictionary<string, CapturedFile>();
             filesToSkip = new HashSet<string>();
         }
@@ -93,44 +96,37 @@ namespace DriveHUD.Importers
                     // check if files were processed
                     if (newlyDetectedHandHistories.Length > 0)
                     {
-                        using (var session = ModelEntities.OpenStatelessSession())
+                        var newlyDetectedHandHistoriesNames = newlyDetectedHandHistories.Select(x => x.FullName).ToArray();
+
+                        var processedFiles = dataService.GetImportedFiles(newlyDetectedHandHistoriesNames);
+
+                        var processedFilesToSkip = (from processedFile in processedFiles
+                                                    join newlyDetectedHandHistory in newlyDetectedHandHistories on
+                                                        new
+                                                        {
+                                                            FileName = processedFile.FileName,
+                                                            FileSize = processedFile.FileSize,
+                                                            LastWrite = DateTime.SpecifyKind(processedFile.LastWriteTime, DateTimeKind.Utc)
+                                                        } equals
+                                                        new
+                                                        {
+                                                            FileName = newlyDetectedHandHistory.FullName,
+                                                            FileSize = newlyDetectedHandHistory.Length,
+                                                            LastWrite = new DateTime(newlyDetectedHandHistory.LastWriteTimeUtc.Year,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Month,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Day,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Hour,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Minute,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Second,
+                                                                newlyDetectedHandHistory.LastWriteTimeUtc.Kind)
+                                                        }
+                                                    select newlyDetectedHandHistory).ToArray();
+
+                        if (processedFilesToSkip.Length > 0)
                         {
-                            var newlyDetectedHandHistoriesNames = newlyDetectedHandHistories.Select(x => x.FullName).ToArray();
-
-                            var processedFiles = session.Query<ImportedFile>()
-                                .Where(x => newlyDetectedHandHistoriesNames.Contains(x.FileName))
-                                .ToArray();
-
-                            var processedFilesToSkip = (from processedFile in processedFiles
-                                                        join newlyDetectedHandHistory in newlyDetectedHandHistories on
-                                                            new
-                                                            {
-                                                                FileName = processedFile.FileName,
-                                                                FileSize = processedFile.FileSize,
-                                                                LastWrite = DateTime.SpecifyKind(processedFile.LastWriteTime, DateTimeKind.Utc)
-                                                            } equals
-                                                            new
-                                                            {
-                                                                FileName = newlyDetectedHandHistory.FullName,
-                                                                FileSize = newlyDetectedHandHistory.Length,
-                                                                LastWrite = new DateTime(newlyDetectedHandHistory.LastWriteTimeUtc.Year,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Month,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Day,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Hour,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Minute,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Second,
-                                                                    newlyDetectedHandHistory.LastWriteTimeUtc.Kind)
-                                                            }
-                                                        select newlyDetectedHandHistory).ToArray();
-
-                            if (processedFilesToSkip.Length > 0)
-                            {
-                                newlyDetectedHandHistories = newlyDetectedHandHistories
-                                    .Except(processedFilesToSkip, new LambdaComparer<FileInfo>((x, y) => x.FullName == y.FullName))
-                                    .ToArray();
-
-                                filesToSkip.AddRange(processedFilesToSkip.Select(x => x.FullName).Distinct());
-                            }
+                            newlyDetectedHandHistories = newlyDetectedHandHistories
+                                .Except(processedFilesToSkip, new LambdaComparer<FileInfo>((x, y) => x.FullName == y.FullName))
+                                .ToArray();                            
                         }
                     }
 
@@ -245,9 +241,7 @@ namespace DriveHUD.Importers
                             {
                                 var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
 
-                                var existingImportedFiles = session.Query<ImportedFile>()
-                                    .Where(x => capturedImportedFileNames.Contains(x.FileName))
-                                    .ToArray();
+                                var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
 
                                 var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
                                                                  join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
@@ -280,6 +274,7 @@ namespace DriveHUD.Importers
                     {
                         if (capturedFiles.ContainsKey(fileToSkip))
                         {
+                            capturedFiles[fileToSkip].FileStream?.Close();
                             capturedFiles.Remove(fileToSkip);
                         }
                     });

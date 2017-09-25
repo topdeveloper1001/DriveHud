@@ -206,6 +206,7 @@ namespace DriveHUD.Application.ViewModels
                                 siteModel.HandHistoryLocationList = new ObservableCollection<string>(p.HandHistoryLocations);
                             }
 
+                            siteModel.IsAutoCenter = p.IsAutoCenter;
 
                             siteModel.Configured = true;
                         }

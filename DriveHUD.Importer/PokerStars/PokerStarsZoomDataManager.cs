@@ -124,7 +124,6 @@ namespace DriveHUD.Importers.PokerStars
                     Session = catcherDataObject.Handle.ToString(),
                     WindowHandle = catcherDataObject.Handle,
                     PokerSite = EnumPokerSites.PokerStars,
-                    GameFormat = GameFormat.Zoom,
                     GameType = BovadaConverters.ConvertGameTypeFromTitle(catcherDataObject.Title),
                     TableType = (EnumTableType)catcherDataObject.Size,
                     AddedPlayers = new PlayerCollectionItem[0]
@@ -136,9 +135,16 @@ namespace DriveHUD.Importers.PokerStars
                         PlayerId = playerNamePlayerIdMap.ContainsKey(x.Player) ? playerNamePlayerIdMap[x.Player] : 0
                     }));
 
+                var gameFormat = ParseGameFormatFromTitle(catcherDataObject.Title);
+
+                if (gameFormat.HasValue)
+                {
+                    gameInfo.GameFormat = gameFormat.Value;
+                }
+
                 var heroPlayer = ProcessPlayers(gameInfo, players, catcherDataObject);
 
-                if (heroPlayer == null)
+                if (heroPlayer == null || (gameInfo.GameFormat != GameFormat.Zoom && gameFormat != GameFormat.Cash))
                 {
                     return;
                 }
@@ -147,8 +153,9 @@ namespace DriveHUD.Importers.PokerStars
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(importedArgs);
 
                 cachedObject.IsProcessed = true;
-
+#if DEBUG
                 Console.WriteLine($"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
+#endif
             }
             catch (Exception ex)
             {
@@ -195,7 +202,6 @@ namespace DriveHUD.Importers.PokerStars
 
         public void Dispose()
         {
-
         }
 
         private static bool ComparePlayers(PokerStarsZoomDataObject data1, PokerStarsZoomDataObject data2)
@@ -266,11 +272,18 @@ namespace DriveHUD.Importers.PokerStars
         {
             Player heroPlayer = null;
 
+            var heroName = ParseHeroNameFromTitle(catcherDataObject.Title);
+
             foreach (var player in players)
             {
                 if (player.PlayerId == 0)
                 {
                     continue;
+                }
+
+                if (player.PlayerName.Equals(heroName))
+                {
+                    heroPlayer = player;
                 }
 
                 var playerCollectionItem = new PlayerCollectionItem
@@ -340,6 +353,60 @@ namespace DriveHUD.Importers.PokerStars
 
             return heroPlayer;
         }
+
+        private static string ParseHeroNameFromTitle(string title)
+        {
+            // Halley - $0.01/$0.02 USD - No Limit Hold'em - Logged In as Peon347
+            const string loggedInText = "Logged In as";
+
+            var heroNameStartIndex = title.IndexOf(loggedInText, StringComparison.OrdinalIgnoreCase) + loggedInText.Length + 1;
+
+            if (heroNameStartIndex < loggedInText.Length + 1)
+            {
+                return null;
+            }
+
+            var heroName = title.Substring(heroNameStartIndex);
+
+            return heroName;
+        }
+
+        private static GameFormat? ParseGameFormatFromTitle(string title)
+        {
+            var tableEndStartIndex = title.IndexOf("#", StringComparison.OrdinalIgnoreCase) - 1;
+
+            if (tableEndStartIndex <= 0)
+            {
+                tableEndStartIndex = title.IndexOf("-", StringComparison.OrdinalIgnoreCase) - 1;
+
+                if (tableEndStartIndex <= 0)
+                {
+                    return null;
+                }
+            }
+
+            var tableName = title.Substring(0, tableEndStartIndex);
+
+            if (ZoomTables.Contains(tableName))
+            {
+                return GameFormat.Zoom;
+            }
+            else if (!title.Contains("Tournament"))
+            {
+                return GameFormat.Cash;
+            }
+
+            return null;
+        }
+
+        private readonly static string[] ZoomTables = new[] { "McNaught", "Borrelllly", "Halley", "Lovejoy", "Hyakutake", "Donati", "Lynx", "Hartley", "Aludra", "Devanssay",
+            "Eulalia", "Nansen", "Amundsen", "Whirlpool", "Hydra", "Thyestes", "Arp", "Baade", "Aquarius Dwarf", "Serpens Caput", "Triangulum", "Gotha", "Aenaa", "Diotima",
+            "Lambda Velorum", "Humason", "Centaurus", "Dorado", "Lupus", "Coma Berenices", "Cassiopeia", "Perseus", "C Carinae", "Alpha Reticuli (CAP)", "Chi Sagittarii",
+            "Sirius", "Omicron Capricorni", "Beta Tucanae (CAP)", "Delta Antilae", "Theta Cancri", "Chi Draconis", "Sigam Aquilae (CAP)", "Iota Apodis", "Zeta Phoenicis",
+            "Delta Boötis", "Gamma Delphini (CAP)", "Phi Piscium", "Tau Hydrae", "Adhara", "Iota Cancri (CAP)", "Deneb el Okab", "Lambda Arietis", "Cetus", "Mira (CAP)",
+            "Crux", "Rho Capricorni", "Gamma Crateris", "Alpha Crucis (CAP)", "Norma", "Canes Venatici", "Draco", "Amália", "Eusébio", "Pessoa", "Cervantes", "Velazquez",
+            "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hears", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
+            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };
 
         private struct PokerStarsPlayer
         {

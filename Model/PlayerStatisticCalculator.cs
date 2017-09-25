@@ -110,7 +110,7 @@ namespace Model
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
             var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
-            var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player;
+            var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player && playedFlop;
 
             bool isBluffPreflop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
             bool isBluffFlop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Flop);
@@ -1989,7 +1989,7 @@ namespace Model
 
             var players = new List<string>();
 
-            foreach (var action in actions)
+            foreach (var action in actions.Where(x => x.HandActionType != HandActionType.POSTS))
             {
                 if (players.Contains(action.PlayerName))
                 {
