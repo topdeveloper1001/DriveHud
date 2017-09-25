@@ -106,6 +106,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(actualPosition.Width, Is.EqualTo(actualPosition.Width));
             Assert.That(actualPosition.Seat, Is.EqualTo(actualPosition.Seat));
             Assert.That(actualPosition.Height, Is.EqualTo(actualPosition.Height));
+            Assert.That(hudLayoutActual.Filter, Is.EqualTo(hudLayoutExpected.Filter));
         }
 
         /// <summary>
@@ -680,7 +681,12 @@ namespace DriveHud.Tests.UnitTests
             var hudLayoutInfo = new HudLayoutInfoV2
             {
                 TableType = EnumTableType.HU,
-                Name = "TestLayout"
+                Name = "TestLayout",
+                Filter = new HudLayoutFilter
+                {                    
+                    DataFreshness = 30,
+                    TableTypes = new[] { (int)EnumTableType.HU, (int)EnumTableType.Six }
+                }
             };
 
             var plainBoxTool = new HudLayoutPlainBoxTool

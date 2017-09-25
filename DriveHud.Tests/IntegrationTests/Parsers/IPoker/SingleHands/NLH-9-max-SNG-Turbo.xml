@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6730200747">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Turbo (€0.10), 909804634</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:36:17</duration>
+  <gamecount>1</gamecount>
+  <startdate>2017-09-07 16:46:42</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>  
+  <tournamentcode>909803596</tournamentcode>
+  <tournamentname>Turbo (€0.10)</tournamentname>
+  <place>5</place>
+  <buyin>€0.08 + €0.02</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>0</win>
+ </general>
+  <game gamecode="7675038752">
+  <general>
+   <startdate>2017-09-07 17:16:18</startdate>
+   <players>
+    <player dealer="0" chips="3,635" seat="1" rebuy="0" addon="0" win="1,475" bet="625" name="anhanga" reg_code=""/>
+    <player dealer="1" chips="1,715" seat="3" rebuy="0" addon="0" win="0" bet="25" name="LeeCTsinWH" reg_code=""/>
+    <player dealer="0" chips="2,580" seat="5" rebuy="0" addon="0" win="0" bet="175" name="cabler888" reg_code=""/>
+    <player dealer="0" chips="3,950" seat="6" rebuy="0" addon="0" win="0" bet="625" name="willybaldo" reg_code=""/>
+    <player dealer="0" chips="1,620" seat="8" rebuy="0" addon="0" win="0" bet="25" name="Peon384" reg_code="6730200745"/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="cabler888" cards="" sum="25" type="15" no="1"/>
+   <action player="willybaldo" cards="" sum="25" type="15" no="2"/>
+   <action player="Peon384" cards="" sum="25" type="15" no="3"/>
+   <action player="anhanga" cards="" sum="25" type="15" no="4"/>
+   <action player="LeeCTsinWH" cards="" sum="25" type="15" no="5"/>
+   <action player="cabler888" cards="" sum="150" type="1" no="6"/>
+   <action player="willybaldo" cards="" sum="300" type="2" no="7"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C9 D4</cards>
+   <action player="Peon384" cards="" sum="0" type="0" no="8"/>
+   <cards player="anhanga" type="Pocket">HK H8</cards>
+   <action player="anhanga" cards="" sum="300" type="3" no="9"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action player="LeeCTsinWH" cards="" sum="0" type="0" no="10"/>
+   <cards player="cabler888" type="Pocket">X X</cards>
+   <action player="cabler888" cards="" sum="0" type="0" no="11"/>
+   <cards player="willybaldo" type="Pocket">H2 C4</cards>
+   <action player="willybaldo" cards="" sum="0" type="4" no="12"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C3 S8 HQ</cards>
+   <action player="willybaldo" cards="" sum="0" type="4" no="13"/>
+   <action player="anhanga" cards="" sum="0" type="4" no="14"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D6</cards>
+   <action player="willybaldo" cards="" sum="300" type="5" no="15"/>
+   <action player="anhanga" cards="" sum="300" type="3" no="16"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D10</cards>
+   <action player="willybaldo" cards="" sum="0" type="4" no="17"/>
+   <action player="anhanga" cards="" sum="0" type="4" no="18"/>
+  </round>
+ </game>
+</session>

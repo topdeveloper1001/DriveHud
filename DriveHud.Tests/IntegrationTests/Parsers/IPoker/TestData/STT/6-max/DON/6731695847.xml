@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6731695847">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Double Or Nothing (€0.10), 910050416</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:10:39</duration>
+  <gamecount>21</gamecount>
+  <startdate>2017-09-11 13:07:01</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>3,505</bets>
+  <wins>2,705</wins>
+  <chipsin>870</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0.20</statuspoints>
+  <awardpoints>Club0.20</awardpoints>
+  <ipoints>Club0.20</ipoints>
+  <tournamentcode>910049259</tournamentcode>
+  <tournamentname>Double Or Nothing (€0.10)</tournamentname>
+  <place>4</place>
+  <buyin>€0.09 + €0.01</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>€0</win>
+ </general>
+ <game gamecode="7679272456">
+  <general>
+   <startdate>2017-09-11 13:07:01</startdate>
+   <players>
+    <player bet="0" chips="800" seat="1" dealer="1" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="800" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="800" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="800" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="40" chips="800" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="140" chips="800" seat="10" dealer="0" name="Peon384" win="210" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="NVS31" cards="" type="1" sum="10"/>
+   <action no="2" player="custbarb" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="3" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="4" player="BKLP" cards="" type="3" sum="20"/>
+   <cards player="Peon384" type="Pocket">HQ HK</cards>
+   <action no="5" player="Peon384" cards="" type="23" sum="40"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="6" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="7" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="8" player="custbarb" cards="" type="0" sum="0"/>
+   <action no="9" player="BKLP" cards="" type="3" sum="20"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SJ CQ C6</cards>
+   <action no="10" player="BKLP" cards="" type="4" sum="0"/>
+   <action no="11" player="Peon384" cards="" type="5" sum="100"/>
+   <action no="12" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272515">
+  <general>
+   <startdate>2017-09-11 13:07:34</startdate>
+   <players>
+    <player bet="0" chips="800" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="790" seat="3" dealer="1" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="780" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="80" chips="800" seat="6" dealer="0" name="Kitten111" win="170" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="760" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="870" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="custbarb" cards="" type="1" sum="10"/>
+   <action no="2" player="Kitten111" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="3" player="BKLP" cards="" type="3" sum="20"/>
+   <cards player="Peon384" type="Pocket">DJ C10</cards>
+   <action no="4" player="Peon384" cards="" type="23" sum="40"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="5" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="6" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="7" player="custbarb" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="8" player="Kitten111" cards="" type="3" sum="20"/>
+   <action no="9" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H6 S5 S3</cards>
+   <action no="10" player="Kitten111" cards="" type="5" sum="20"/>
+   <action no="11" player="Peon384" cards="" type="3" sum="20"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CA</cards>
+   <action no="12" player="Kitten111" cards="" type="5" sum="20"/>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272570">
+  <general>
+   <startdate>2017-09-11 13:08:07</startdate>
+   <players>
+    <player bet="0" chips="800" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="790" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="770" seat="5" dealer="1" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="890" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="740" seat="8" dealer="0" name="BKLP" win="80" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="810" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Kitten111" cards="" type="1" sum="10"/>
+   <action no="2" player="BKLP" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S3 DK</cards>
+   <action no="3" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="4" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">C7 C2</cards>
+   <action no="5" player="NVS31" cards="" type="3" sum="20"/>
+   <cards player="custbarb" type="Pocket">H3 C3</cards>
+   <action no="6" player="custbarb" cards="" type="3" sum="20"/>
+   <cards player="Kitten111" type="Pocket">D3 C5</cards>
+   <action no="7" player="Kitten111" cards="" type="3" sum="10"/>
+   <cards player="BKLP" type="Pocket">HQ S6</cards>
+   <action no="8" player="BKLP" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D9 HK SJ</cards>
+   <action no="9" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="10" player="BKLP" cards="" type="4" sum="0"/>
+   <action no="11" player="NVS31" cards="" type="4" sum="0"/>
+   <action no="12" player="custbarb" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H2</cards>
+   <action no="13" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="14" player="BKLP" cards="" type="4" sum="0"/>
+   <action no="15" player="NVS31" cards="" type="4" sum="0"/>
+   <action no="16" player="custbarb" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H6</cards>
+   <action no="17" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="18" player="BKLP" cards="" type="4" sum="0"/>
+   <action no="19" player="NVS31" cards="" type="4" sum="0"/>
+   <action no="20" player="custbarb" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272649">
+  <general>
+   <startdate>2017-09-11 13:08:54</startdate>
+   <players>
+    <player bet="65" chips="800" seat="1" dealer="0" name="HummerIII" win="180" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="770" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="65" chips="750" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="870" seat="6" dealer="1" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="800" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="810" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BKLP" cards="" type="1" sum="10"/>
+   <action no="2" player="Peon384" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="HummerIII" type="Pocket">H10 HK</cards>
+   <action no="3" player="HummerIII" cards="" type="3" sum="20"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="4" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="custbarb" type="Pocket">D10 S10</cards>
+   <action no="5" player="custbarb" cards="" type="3" sum="20"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="6" player="Kitten111" cards="" type="3" sum="20"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="7" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H8 H6</cards>
+   <action no="8" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C9 C5 S6</cards>
+   <action no="9" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="10" player="HummerIII" cards="" type="4" sum="0"/>
+   <action no="11" player="custbarb" cards="" type="5" sum="45"/>
+   <action no="12" player="Kitten111" cards="" type="0" sum="0"/>
+   <action no="13" player="Peon384" cards="" type="0" sum="0"/>
+   <action no="14" player="HummerIII" cards="" type="3" sum="45"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SQ</cards>
+   <action no="15" player="HummerIII" cards="" type="4" sum="0"/>
+   <action no="16" player="custbarb" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">DJ</cards>
+   <action no="17" player="HummerIII" cards="" type="4" sum="0"/>
+   <action no="18" player="custbarb" cards="" type="4" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272788">
+  <general>
+   <startdate>2017-09-11 13:10:14</startdate>
+   <players>
+    <player bet="30" chips="915" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="770" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="685" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="850" seat="6" dealer="0" name="Kitten111" win="255" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="790" seat="8" dealer="1" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="790" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="1" sum="15"/>
+   <action no="2" player="HummerIII" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="3" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="4" player="custbarb" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="5" player="Kitten111" cards="" type="3" sum="30"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="6" player="BKLP" cards="" type="3" sum="30"/>
+   <cards player="Peon384" type="Pocket">C10 D2</cards>
+   <action no="7" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="8" player="HummerIII" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D7 D6 DA</cards>
+   <action no="9" player="HummerIII" cards="" type="4" sum="0"/>
+   <action no="10" player="Kitten111" cards="" type="5" sum="30"/>
+   <action no="11" player="BKLP" cards="" type="3" sum="30"/>
+   <action no="12" player="HummerIII" cards="" type="0" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D9</cards>
+   <action no="13" player="Kitten111" cards="" type="5" sum="90"/>
+   <action no="14" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272834">
+  <general>
+   <startdate>2017-09-11 13:10:43</startdate>
+   <players>
+    <player bet="15" chips="885" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="770" seat="3" dealer="0" name="NVS31" win="45" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="685" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="955" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="730" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="775" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="HummerIII" cards="" type="1" sum="15"/>
+   <action no="2" player="NVS31" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="3" player="custbarb" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="4" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="5" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CK D4</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="7" player="HummerIII" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272856">
+  <general>
+   <startdate>2017-09-11 13:10:56</startdate>
+   <players>
+    <player bet="120" chips="870" seat="1" dealer="1" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="150" chips="785" seat="3" dealer="0" name="NVS31" win="390" rebuy="0" reg_code="" addon="0"/>
+    <player bet="30" chips="685" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="955" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="730" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="775" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="NVS31" cards="" type="1" sum="15"/>
+   <action no="2" player="custbarb" cards="" type="2" sum="30"/>
+  </round>
+  <round no="1">
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="3" player="Kitten111" cards="" type="3" sum="30"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="4" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D10 C9</cards>
+   <action no="5" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="6" player="HummerIII" cards="" type="3" sum="30"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="7" player="NVS31" cards="" type="23" sum="60"/>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="8" player="custbarb" cards="" type="0" sum="0"/>
+   <action no="9" player="Kitten111" cards="" type="3" sum="30"/>
+   <action no="10" player="HummerIII" cards="" type="3" sum="30"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D6 D3 SQ</cards>
+   <action no="11" player="NVS31" cards="" type="5" sum="30"/>
+   <action no="12" player="Kitten111" cards="" type="3" sum="30"/>
+   <action no="13" player="HummerIII" cards="" type="3" sum="30"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HQ</cards>
+   <action no="14" player="NVS31" cards="" type="5" sum="30"/>
+   <action no="15" player="Kitten111" cards="" type="0" sum="0"/>
+   <action no="16" player="HummerIII" cards="" type="3" sum="30"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C4</cards>
+   <action no="17" player="NVS31" cards="" type="5" sum="30"/>
+   <action no="18" player="HummerIII" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679272950">
+  <general>
+   <startdate>2017-09-11 13:11:52</startdate>
+   <players>
+    <player bet="5" chips="750" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="105" chips="1,025" seat="3" dealer="1" name="NVS31" win="330" rebuy="0" reg_code="" addon="0"/>
+    <player bet="55" chips="655" seat="5" dealer="0" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="55" chips="865" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="5" chips="730" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="105" chips="775" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="custbarb" cards="" type="15" sum="5"/>
+   <action no="2" player="Kitten111" cards="" type="15" sum="5"/>
+   <action no="3" player="BKLP" cards="" type="15" sum="5"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="5"/>
+   <action no="5" player="HummerIII" cards="" type="15" sum="5"/>
+   <action no="6" player="NVS31" cards="" type="15" sum="5"/>
+   <action no="7" player="custbarb" cards="" type="1" sum="25"/>
+   <action no="8" player="Kitten111" cards="" type="2" sum="50"/>
+  </round>
+  <round no="1">
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="9" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H10 CA</cards>
+   <action no="10" player="Peon384" cards="" type="3" sum="50"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="11" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">S10 DJ</cards>
+   <action no="12" player="NVS31" cards="" type="3" sum="50"/>
+   <cards player="custbarb" type="Pocket">X X</cards>
+   <action no="13" player="custbarb" cards="" type="3" sum="25"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="14" player="Kitten111" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C6 H2 D2</cards>
+   <action no="15" player="custbarb" cards="" type="4" sum="0"/>
+   <action no="16" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="17" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="18" player="NVS31" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D4</cards>
+   <action no="19" player="custbarb" cards="" type="4" sum="0"/>
+   <action no="20" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="21" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="22" player="NVS31" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+   <action no="23" player="custbarb" cards="" type="4" sum="0"/>
+   <action no="24" player="Kitten111" cards="" type="4" sum="0"/>
+   <action no="25" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="26" player="NVS31" cards="" type="5" sum="50"/>
+   <action no="27" player="custbarb" cards="" type="0" sum="0"/>
+   <action no="28" player="Kitten111" cards="" type="0" sum="0"/>
+   <action no="29" player="Peon384" cards="" type="3" sum="50"/>
+  </round>
+ </game>
+ <game gamecode="7679273072">
+  <general>
+   <startdate>2017-09-11 13:13:01</startdate>
+   <players>
+    <player bet="10" chips="745" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,250" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="600" seat="5" dealer="1" name="custbarb" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="810" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="600" chips="725" seat="8" dealer="0" name="BKLP" win="1,290" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="670" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="2" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="4" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="5" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="6" player="custbarb" cards="" type="15" sum="10"/>
+   <action no="7" player="Kitten111" cards="" type="1" sum="50"/>
+   <action no="8" player="BKLP" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S4 SJ</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="10" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="11" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="custbarb" type="Pocket">HQ CA</cards>
+   <action no="12" player="custbarb" cards="" type="23" sum="590"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="13" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">D8 S8</cards>
+   <action no="14" player="BKLP" cards="" type="3" sum="490"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DK S5 H6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H9</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H5</cards>
+  </round>
+ </game>
+ <game gamecode="7679273120">
+  <general>
+   <startdate>2017-09-11 13:13:36</startdate>
+   <players>
+    <player bet="10" chips="735" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,240" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="750" seat="6" dealer="1" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="1,415" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="110" chips="660" seat="10" dealer="0" name="Peon384" win="200" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="3" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="4" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="5" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="6" player="BKLP" cards="" type="1" sum="50"/>
+   <action no="7" player="Peon384" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">SQ SA</cards>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="8" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="9" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="10" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="11" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679273142">
+  <general>
+   <startdate>2017-09-11 13:13:48</startdate>
+   <players>
+    <player bet="110" chips="725" seat="1" dealer="0" name="HummerIII" win="200" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,230" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="740" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,355" seat="8" dealer="1" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="750" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="2" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="3" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="4" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="5" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="6" player="Peon384" cards="" type="1" sum="50"/>
+   <action no="7" player="HummerIII" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="8" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="9" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="10" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">S2 S10</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679273165">
+  <general>
+   <startdate>2017-09-11 13:14:00</startdate>
+   <players>
+    <player bet="60" chips="815" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="110" chips="1,220" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="730" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,345" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="310" chips="690" seat="10" dealer="1" name="Peon384" win="500" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="2" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="3" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="4" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="6" player="HummerIII" cards="" type="1" sum="50"/>
+   <action no="7" player="NVS31" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="8" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="9" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DJ SJ</cards>
+   <action no="10" player="Peon384" cards="" type="23" sum="300"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="11" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="12" player="NVS31" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679273187">
+  <general>
+   <startdate>2017-09-11 13:14:16</startdate>
+   <players>
+    <player bet="10" chips="755" seat="1" dealer="1" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="110" chips="1,110" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="210" chips="720" seat="6" dealer="0" name="Kitten111" win="350" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,335" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="880" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="2" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="3" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="5" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="6" player="NVS31" cards="" type="1" sum="50"/>
+   <action no="7" player="Kitten111" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="8" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">DA C7</cards>
+   <action no="9" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="10" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="11" player="NVS31" cards="" type="3" sum="50"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="12" player="Kitten111" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H5 S3 HK</cards>
+   <action no="13" player="NVS31" cards="" type="4" sum="0"/>
+   <action no="14" player="Kitten111" cards="" type="5" sum="100"/>
+   <action no="15" player="NVS31" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679273234">
+  <general>
+   <startdate>2017-09-11 13:14:43</startdate>
+   <players>
+    <player bet="10" chips="745" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,000" chips="1,000" seat="3" dealer="1" name="NVS31" win="1,190" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="860" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="110" chips="1,325" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="870" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Kitten111" cards="" type="15" sum="10"/>
+   <action no="2" player="BKLP" cards="" type="15" sum="10"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="10"/>
+   <action no="4" player="HummerIII" cards="" type="15" sum="10"/>
+   <action no="5" player="NVS31" cards="" type="15" sum="10"/>
+   <action no="6" player="Kitten111" cards="" type="1" sum="50"/>
+   <action no="7" player="BKLP" cards="" type="2" sum="100"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S5 H10</cards>
+   <action no="8" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="9" player="HummerIII" cards="" type="0" sum="0"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="10" player="NVS31" cards="" type="23" sum="990"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="11" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="12" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679273267">
+  <general>
+   <startdate>2017-09-11 13:15:02</startdate>
+   <players>
+    <player bet="315" chips="735" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,190" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="800" seat="6" dealer="1" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="1,215" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="315" chips="860" seat="10" dealer="0" name="Peon384" win="750" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BKLP" cards="" type="15" sum="15"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="3" player="HummerIII" cards="" type="15" sum="15"/>
+   <action no="4" player="NVS31" cards="" type="15" sum="15"/>
+   <action no="5" player="Kitten111" cards="" type="15" sum="15"/>
+   <action no="6" player="BKLP" cards="" type="1" sum="75"/>
+   <action no="7" player="Peon384" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="HummerIII" type="Pocket">SJ SK</cards>
+   <action no="8" player="HummerIII" cards="" type="3" sum="150"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="9" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="10" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="11" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H3 DQ</cards>
+   <action no="12" player="Peon384" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C4 S5 H5</cards>
+   <action no="13" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="14" player="HummerIII" cards="" type="4" sum="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HQ</cards>
+   <action no="15" player="Peon384" cards="" type="4" sum="0"/>
+   <action no="16" player="HummerIII" cards="" type="4" sum="0"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HA</cards>
+   <action no="17" player="Peon384" cards="" type="5" sum="150"/>
+   <action no="18" player="HummerIII" cards="" type="3" sum="150"/>
+  </round>
+ </game>
+ <game gamecode="7679282018">
+  <general>
+   <startdate>2017-09-11 13:15:34</startdate>
+   <players>
+    <player bet="165" chips="420" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,175" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="315" chips="785" seat="6" dealer="0" name="Kitten111" win="600" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,125" seat="8" dealer="1" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="1,295" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="2" player="HummerIII" cards="" type="15" sum="15"/>
+   <action no="3" player="NVS31" cards="" type="15" sum="15"/>
+   <action no="4" player="Kitten111" cards="" type="15" sum="15"/>
+   <action no="5" player="BKLP" cards="" type="15" sum="15"/>
+   <action no="6" player="Peon384" cards="" type="1" sum="75"/>
+   <action no="7" player="HummerIII" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="8" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="9" player="Kitten111" cards="" type="3" sum="150"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="10" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">C4 D7</cards>
+   <action no="11" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">X X</cards>
+   <action no="12" player="HummerIII" cards="" type="4" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DK S8 C5</cards>
+   <action no="13" player="HummerIII" cards="" type="4" sum="0"/>
+   <action no="14" player="Kitten111" cards="" type="5" sum="150"/>
+   <action no="15" player="HummerIII" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679282056">
+  <general>
+   <startdate>2017-09-11 13:15:54</startdate>
+   <players>
+    <player bet="255" chips="255" seat="1" dealer="0" name="HummerIII" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="255" chips="1,160" seat="3" dealer="0" name="NVS31" win="555" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,070" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,110" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,205" seat="10" dealer="1" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="HummerIII" cards="" type="15" sum="15"/>
+   <action no="2" player="NVS31" cards="" type="15" sum="15"/>
+   <action no="3" player="Kitten111" cards="" type="15" sum="15"/>
+   <action no="4" player="BKLP" cards="" type="15" sum="15"/>
+   <action no="5" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="6" player="HummerIII" cards="" type="1" sum="75"/>
+   <action no="7" player="NVS31" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="8" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="9" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">D2 D6</cards>
+   <action no="10" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="HummerIII" type="Pocket">S7 C10</cards>
+   <action no="11" player="HummerIII" cards="" type="7" sum="165"/>
+   <cards player="NVS31" type="Pocket">C4 C2</cards>
+   <action no="12" player="NVS31" cards="" type="3" sum="90"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H2 C3 SK</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D8</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CK</cards>
+  </round>
+ </game>
+ <game gamecode="7679282092">
+  <general>
+   <startdate>2017-09-11 13:16:20</startdate>
+   <players>
+    <player bet="90" chips="1,460" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="165" chips="1,055" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="15" chips="1,095" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="465" chips="1,190" seat="10" dealer="0" name="Peon384" win="735" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="NVS31" cards="" type="15" sum="15"/>
+   <action no="2" player="Kitten111" cards="" type="15" sum="15"/>
+   <action no="3" player="BKLP" cards="" type="15" sum="15"/>
+   <action no="4" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="5" player="NVS31" cards="" type="1" sum="75"/>
+   <action no="6" player="Kitten111" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="7" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">SA HA</cards>
+   <action no="8" player="Peon384" cards="" type="23" sum="450"/>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="9" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="10" player="Kitten111" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679282120">
+  <general>
+   <startdate>2017-09-11 13:16:35</startdate>
+   <players>
+    <player bet="1,370" chips="1,370" seat="3" dealer="1" name="NVS31" win="2,995" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="890" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="165" chips="1,080" seat="8" dealer="0" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,460" chips="1,460" seat="10" dealer="0" name="Peon384" win="90" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Kitten111" cards="" type="15" sum="15"/>
+   <action no="2" player="BKLP" cards="" type="15" sum="15"/>
+   <action no="3" player="Peon384" cards="" type="15" sum="15"/>
+   <action no="4" player="NVS31" cards="" type="15" sum="15"/>
+   <action no="5" player="Kitten111" cards="" type="1" sum="75"/>
+   <action no="6" player="BKLP" cards="" type="2" sum="150"/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C10 S10</cards>
+   <action no="7" player="Peon384" cards="" type="23" sum="450"/>
+   <cards player="NVS31" type="Pocket">DQ HQ</cards>
+   <action no="8" player="NVS31" cards="" type="3" sum="450"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="9" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="10" player="BKLP" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S9 DJ C6</cards>
+   <action no="11" player="Peon384" cards="" type="5" sum="995"/>
+   <action no="12" player="NVS31" cards="" type="7" sum="905"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H2</cards>
+  </round>
+ </game>
+ <game gamecode="7679282187">
+  <general>
+   <startdate>2017-09-11 13:17:08</startdate>
+   <players>
+    <player bet="20" chips="2,995" seat="3" dealer="0" name="NVS31" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="800" seat="6" dealer="1" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="120" chips="915" seat="8" dealer="0" name="BKLP" win="30" rebuy="0" reg_code="" addon="0"/>
+    <player bet="90" chips="90" seat="10" dealer="0" name="Peon384" win="220" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="BKLP" cards="" type="15" sum="20"/>
+   <action no="2" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="3" player="NVS31" cards="" type="15" sum="20"/>
+   <action no="4" player="Kitten111" cards="" type="15" sum="20"/>
+   <action no="5" player="BKLP" cards="" type="1" sum="100"/>
+   <action no="6" player="Peon384" cards="" type="2" sum="70"/>
+  </round>
+  <round no="1">
+   <cards player="BKLP" type="Pocket">DQ D5</cards>
+   <cards player="Peon384" type="Pocket">H3 H7</cards>
+   <cards player="NVS31" type="Pocket">X X</cards>
+   <action no="7" player="NVS31" cards="" type="0" sum="0"/>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="8" player="Kitten111" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S4 SA C6</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D3</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H8</cards>
+  </round>
+ </game>
+ <game gamecode="7679282217">
+  <general>
+   <startdate>2017-09-11 13:17:25</startdate>
+   <players>
+    <player bet="220" chips="2,975" seat="3" dealer="0" name="NVS31" win="480" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="780" seat="6" dealer="0" name="Kitten111" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="825" seat="8" dealer="1" name="BKLP" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="220" chips="220" seat="10" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731695847" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="Peon384" cards="" type="15" sum="20"/>
+   <action no="2" player="NVS31" cards="" type="15" sum="20"/>
+   <action no="3" player="Kitten111" cards="" type="15" sum="20"/>
+   <action no="4" player="BKLP" cards="" type="15" sum="20"/>
+   <action no="5" player="Peon384" cards="" type="1" sum="100"/>
+   <action no="6" player="NVS31" cards="" type="2" sum="200"/>
+  </round>
+  <round no="1">
+   <cards player="NVS31" type="Pocket">SA CA</cards>
+   <cards player="Kitten111" type="Pocket">X X</cards>
+   <action no="7" player="Kitten111" cards="" type="0" sum="0"/>
+   <cards player="BKLP" type="Pocket">X X</cards>
+   <action no="8" player="BKLP" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">H8 H3</cards>
+   <action no="9" player="Peon384" cards="" type="7" sum="100"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S7 D2 D5</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C10</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H5</cards>
+  </round>
+ </game>
+</session>

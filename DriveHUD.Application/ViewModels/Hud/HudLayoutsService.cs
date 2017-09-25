@@ -540,7 +540,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (!stickersStatistics.ContainsKey(sticker.Name))
                 {
-                  continue;
+                    continue;
                 }
 
                 var statistics = new HudLightIndicators(new[] { stickersStatistics[sticker.Name] });
@@ -750,21 +750,43 @@ namespace DriveHUD.Application.ViewModels.Hud
             // rename n-max to k-max in table name
             layoutName = layoutName.Replace(currentTableTypeText, duplicateTableTypeText);
 
-            var layouts = GetAllLayouts(tableType);
+            var copyIndex = 1;            
 
-            var copyIndex = 1;
+            // try to get if copyIndex exists
+            var startIndex = layoutName.LastIndexOf("(") + 1;
+            var lastIndex = layoutName.LastIndexOf(")");
+
+            if (startIndex > 0 && lastIndex > startIndex)
+            {
+                var copyIndexText = layoutName.Substring(startIndex, lastIndex - startIndex);
+
+                if (int.TryParse(copyIndexText, out copyIndex))
+                {
+                    layoutName = layoutName.Remove(startIndex - 1).Trim();
+                }
+                else
+                {
+                    copyIndex = 1;
+                }
+            }
+
+            var newLayoutName = layoutName;
+
+            var layoutsDirectory = GetLayoutsDirectory().FullName;
+            var layoutFile = Path.Combine(layoutsDirectory, GetLayoutFileName(newLayoutName));
 
             // name is busy
-            while (layouts.Any(x => x.Name == layoutName))
+            while (File.Exists(layoutFile))
             {
-                layoutName = $"{layoutName} ({copyIndex++})";
+                newLayoutName = $"{layoutName} ({copyIndex++})";
+                layoutFile = Path.Combine(layoutsDirectory, GetLayoutFileName(newLayoutName));
             }
 
             var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
 
             var duplicateLayout = layoutToDuplicate.Clone();
             duplicateLayout.TableType = tableType;
-            duplicateLayout.Name = layoutName;
+            duplicateLayout.Name = newLayoutName;
             duplicateLayout.IsDefault = false;
 
             foreach (var layoutTool in duplicateLayout.LayoutTools.OfType<HudLayoutNonPopupTool>())
@@ -790,7 +812,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return null;
             }
 
-            if (HudLayoutMappings.Mappings.Any(x => x.Name == layoutName))
+            if (HudLayoutMappings.Mappings.Any(x => x.Name == newLayoutName))
             {
                 return duplicateLayout;
             }
@@ -800,7 +822,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 FileName = Path.GetFileName(duplicateLayoutFile),
                 IsDefault = false,
                 IsSelected = false,
-                Name = layoutName,
+                Name = newLayoutName,
                 TableType = tableType
             };
 

@@ -8,10 +8,20 @@ namespace DriveHUD.API
     public class APIHost : IAPIHost
     {
         private WebServiceHost _apiServiceHost;
+        private bool isRunning;
+
+        public bool IsRunning
+        {
+            get
+            {
+                return isRunning;
+            }
+        }
 
         public void StartAPIService()
         {
             InitializeService();
+            isRunning = true;
         }
 
         public void CloseAPIService()
@@ -26,6 +36,8 @@ namespace DriveHUD.API
             {
                 _apiServiceHost.Abort();
             }
+
+            isRunning = false;
         }
 
         private void InitializeService()

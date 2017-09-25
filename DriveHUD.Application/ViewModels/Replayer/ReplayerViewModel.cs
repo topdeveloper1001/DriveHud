@@ -623,28 +623,42 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private void FacebookOAuthCommandHandler()
         {
             var frm = new Social.FacebookOAuth();
+            frm.Owner = System.Windows.Application.Current.MainWindow;
             frm.ShowDialog();
         }
 
         private void TwitterOAuthCommandHandler()
         {
             var frm = new Social.TwitterOAuth();
+            frm.Owner = System.Windows.Application.Current.MainWindow;
             frm.ShowDialog();
         }
 
         private void HandNoteShow()
         {
-            HandNoteViewModel viewModel = new HandNoteViewModel(CurrentHand.GameNumber, CurrentHand.PokersiteId);
+            var viewModel = new HandNoteViewModel(CurrentHand.GameNumber, CurrentHand.PokersiteId);
+
             var frm = new HandNoteView(viewModel);
-            ((dynamic)frm).ShowDialog();
+            frm.Owner = System.Windows.Application.Current.MainWindow;
+            frm.ShowDialog();
 
             CurrentHand.Statistic.HandNote = viewModel.HandNoteEntity;
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<HandNoteUpdatedEvent>().Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, CurrentHand.Statistic.PlayerName));
+
+            ServiceLocator.Current.GetInstance<IEventAggregator>()
+                .GetEvent<HandNoteUpdatedEvent>()
+                .Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, CurrentHand.Statistic.PlayerName));
         }
 
         private void ShowSupportForums(object obj)
         {
-            Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("SystemSettings_ForumsLink"));
+            try
+            {
+                Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("SystemSettings_ForumsLink"));
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't show support forum", e);
+            }
         }
         #endregion
 
@@ -827,7 +841,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 _activePlayerName = value;
             }
-        }      
+        }
 
         #endregion
     }

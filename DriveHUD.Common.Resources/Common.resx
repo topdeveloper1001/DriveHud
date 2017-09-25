@@ -855,4 +855,49 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudPlayerType_Import" xml:space="preserve">
     <value>Import</value>
   </data>
+  <data name="Common_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Common_HudStatSettings_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_HudStatSettings_ColorRange" xml:space="preserve">
+    <value>Color range</value>
+  </data>
+  <data name="Common_HudStatSettings_CurrentStat" xml:space="preserve">
+    <value>Current stat:</value>
+  </data>
+  <data name="Common_HudStatSettings_DataFreshness" xml:space="preserve">
+    <value>Data Freshness</value>
+  </data>
+  <data name="Common_HudStatSettings_DecimalPlaces" xml:space="preserve">
+    <value>Decimal Places</value>
+  </data>
+  <data name="Common_HudStatSettings_FilterDataForOnly" xml:space="preserve">
+    <value>Filter data for only</value>
+  </data>
+  <data name="Common_HudStatSettings_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Common_HudStatSettings_HudOpacity" xml:space="preserve">
+    <value>HUD Opacity</value>
+  </data>
+  <data name="Common_HudStatSettings_Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Common_HudStatSettings_ListOfAvailableSettings" xml:space="preserve">
+    <value>List of available settings</value>
+  </data>
+  <data name="Common_HudStatSettings_MinSample" xml:space="preserve">
+    <value>Min.Sample</value>
+  </data>
+  <data name="Common_HudStatSettings_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_HudStatSettings_TableFilterEmptyText" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Common_HudStatSettings_DataFreshnessLastDays" xml:space="preserve">
+    <value>Last {0} days</value>
+  </data>
 </root>

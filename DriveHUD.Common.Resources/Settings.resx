@@ -120,11 +120,23 @@
   <data name="Settings_AddActivation" xml:space="preserve">
     <value>Add Additional Activation</value>
   </data>
+  <data name="Settings_AmericasCardroomHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-31</value>
+  </data>
   <data name="Settings_ApplyFilters" xml:space="preserve">
     <value>Apply Filters to Tournament and Cash Games</value>
   </data>
   <data name="Settings_AttachLog" xml:space="preserve">
     <value>Attach log?</value>
+  </data>
+  <data name="Settings_BetOnlineHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-25</value>
+  </data>
+  <data name="Settings_BlackChipPokerHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-29</value>
+  </data>
+  <data name="Settings_BodogHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-26</value>
   </data>
   <data name="Settings_CurrentVersion" xml:space="preserve">
     <value>Current Version</value>
@@ -140,6 +152,9 @@
   </data>
   <data name="Settings_GrabRates" xml:space="preserve">
     <value>Grab latest rates</value>
+  </data>
+  <data name="Settings_IsAPIEnabled" xml:space="preserve">
+    <value>Enable API</value>
   </data>
   <data name="Settings_KnowledgeBase" xml:space="preserve">
     <value>Knowledge Base</value>
@@ -158,6 +173,15 @@
   </data>
   <data name="Settings_OnlineManual" xml:space="preserve">
     <value>Online Manual</value>
+  </data>
+  <data name="Settings_PartyPokerHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-23</value>
+  </data>
+  <data name="Settings_Poker888HelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-30</value>
+  </data>
+  <data name="Settings_PokerStarsHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-24</value>
   </data>
   <data name="Settings_RakeBack" xml:space="preserve">
     <value>RakeBack</value>
@@ -219,6 +243,9 @@
   <data name="Settings_ServiceCommands" xml:space="preserve">
     <value>Service commands</value>
   </data>
+  <data name="Settings_SportsBettingHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-28</value>
+  </data>
   <data name="Settings_StartOfWeekHeader" xml:space="preserve">
     <value>Start of week begins on</value>
   </data>
@@ -231,13 +258,25 @@
   <data name="Settings_SupportForums" xml:space="preserve">
     <value>Support Forums</value>
   </data>
+  <data name="Settings_TigerGamingHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-27</value>
+  </data>
   <data name="Settings_TimeZoneHeader" xml:space="preserve">
     <value>Time Zone Settings</value>
   </data>
   <data name="Settings_TimeZoneOffset" xml:space="preserve">
     <value>Time zone offset</value>
   </data>
+  <data name="Settings_TruePokerHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-31</value>
+  </data>
   <data name="Settings_Updates" xml:space="preserve">
     <value>Automatically download updates</value>
+  </data>
+  <data name="Settings_WinningPokerNetworkHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-31</value>
+  </data>
+  <data name="Settings_YaPokerHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-31</value>
   </data>
 </root>

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
@@ -22,8 +23,6 @@ using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DriveHUD.Common.Linq;
-using NHibernate.Cfg.MappingSchema;
 
 namespace Model
 {
@@ -43,6 +42,7 @@ namespace Model
                 Numberofplayers = (short)parsedHand.NumPlayersActive,
                 PlayerId = u.PlayerId,
                 GametypeId = (short)result.GameType.GametypeId,
+                MaxPlayers = result.GameType.Tablesize
             };
 
             var currentPlayer = parsedHand.Players.FirstOrDefault(x => string.Equals(x.PlayerName, player, StringComparison.OrdinalIgnoreCase));
@@ -110,7 +110,7 @@ namespace Model
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
             var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
-            var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player;
+            var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player && playedFlop;
 
             bool isBluffPreflop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
             bool isBluffFlop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Flop);
@@ -432,10 +432,19 @@ namespace Model
                 stat.Totalrakeincents = 0;
             }
 
-            stat.Buttonstealfaced = isDealer && stealAttempt.Faced ? 1 : 0;
-            stat.Buttonstealdefended = isDealer && stealAttempt.Defended ? 1 : 0;
-            stat.Buttonstealfolded = isDealer && stealAttempt.Folded ? 1 : 0;
-            stat.Buttonstealreraised = isDealer && stealAttempt.Raised ? 1 : 0;
+            if (cutoff != null)
+            {
+                var cutoffAction = preflops
+                    .Where(x => x.PlayerName == cutoff.PlayerName && x.HandActionType != HandActionType.ANTE)
+                    .FirstOrDefault();
+
+                var cutoffRaised = cutoffAction != null ? cutoffAction.IsRaise() : false;
+
+                stat.Buttonstealfaced = isDealer && cutoffRaised ? 1 : 0;
+                stat.Buttonstealdefended = isDealer && cutoffRaised && vpip ? 1 : 0;
+                stat.Buttonstealfolded = isDealer && cutoffRaised && !vpip ? 1 : 0;
+                stat.Buttonstealreraised = isDealer && cutoffRaised && pfr ? 1 : 0;
+            }
 
             stat.Bigblindstealfaced = isBigBlind && stealAttempt.Faced ? 1 : 0;
             stat.Bigblindstealdefended = isBigBlind && stealAttempt.Defended ? 1 : 0;
@@ -1980,7 +1989,7 @@ namespace Model
 
             var players = new List<string>();
 
-            foreach (var action in actions)
+            foreach (var action in actions.Where(x => x.HandActionType != HandActionType.POSTS))
             {
                 if (players.Contains(action.PlayerName))
                 {

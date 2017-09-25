@@ -20,7 +20,7 @@ namespace DriveHUD.Importers
 {
     internal class BaseDataManager
     {
-        protected string Decrypt(string encryptedXml)
+        protected virtual string Decrypt(string encryptedXml)
         {
             try
             {

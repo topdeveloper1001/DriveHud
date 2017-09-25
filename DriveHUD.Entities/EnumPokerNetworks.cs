@@ -19,6 +19,7 @@ namespace DriveHUD.Entities
         WPN,
         PokerStars,
         Poker888,
-        PartyPoker
+        PartyPoker,
+        IPoker
     }
 }

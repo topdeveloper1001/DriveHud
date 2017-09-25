@@ -27,7 +27,6 @@ using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Application.ViewModels.PopupContainers;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
@@ -115,10 +114,7 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
-
-                    ((RadWindow)Shell).Activated += MainWindow_Activated;
-
+                    ((RadWindow)Shell).DataContext = mainWindowViewModel;                    
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
                     ((RadWindow)Shell).IsTopmost = false;
@@ -193,20 +189,7 @@ namespace DriveHUD.Application
                 }
             }
             return false;
-        }
-
-        private void MainWindow_Activated(object sender, EventArgs e)
-        {
-            foreach (var v in RadWindowManager.Current.GetWindows())
-            {
-                if (v.Tag != null && v.Tag.ToString() == "PopupWindow")
-                {
-                    v.BringIntoView();
-                    v.BringToFront();
-                    v.Focus();
-                }
-            }
-        }
+        }      
 
         public static void RegisterRuntimeTypeModelTypes()
         {
@@ -257,7 +240,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             Container.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
-            Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
 
             // HUD designer 
@@ -293,6 +276,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

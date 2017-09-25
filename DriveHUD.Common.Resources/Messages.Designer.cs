@@ -79,7 +79,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rebuilding stats.
+        ///   Looks up a localized string similar to Rebuilding stats....
         /// </summary>
         internal static string Message_Migration0017_Status {
             get {
@@ -163,6 +163,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Message_Migration0019_Title {
             get {
                 return ResourceManager.GetString("Message_Migration0019_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t Update Now.
+        /// </summary>
+        internal static string Message_Migration0022_Cancel {
+            get {
+                return ResourceManager.GetString("Message_Migration0022_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run.
+        /// </summary>
+        internal static string Message_Migration0022_Run {
+            get {
+                return ResourceManager.GetString("Message_Migration0022_Run", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating cached statistic....
+        /// </summary>
+        internal static string Message_Migration0022_Status {
+            get {
+                return ResourceManager.GetString("Message_Migration0022_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New HUD filters have been added to DriveHUD. You&apos;ll need to update your cached statistic to be able to use new filters. This operation might take some time (1 - 30 minutes depending on database size and on you system), but it isn&apos;t mandatory to perform. You can skip it by clicking on Don&apos;t Update Now. You can run the rebuild stats function at a later time from the settings menu, but rebuild stats operation requires much more time than this migration. So it&apos;s highly recommended to run this migration..
+        /// </summary>
+        internal static string Message_Migration0022_Text {
+            get {
+                return ResourceManager.GetString("Message_Migration0022_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD: Action is required.
+        /// </summary>
+        internal static string Message_Migration0022_Title {
+            get {
+                return ResourceManager.GetString("Message_Migration0022_Title", resourceCulture);
             }
         }
     }

@@ -21,7 +21,7 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(Add("Reports_Column_ShowdownHand", nameof(ShowdownHandsReportRecord.ShowdownHandString), GetColumnWidth("Straight Flush: With 2 Pocket Cards")));
+            gridView.Columns.Add(Add("Reports_Column_ShowdownHand", nameof(ShowdownHandsReportRecord.ShowdownHandString), GetColumnHeaderWidth("Straight Flush: With 2 Pocket Cards")));
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(ShowdownHandsReportRecord.TotalHands)));
             gridView.Columns.Add(AddPercentile("Reports_Column_WonPercent", nameof(ShowdownHandsReportRecord.WonHandProc)));
             gridView.Columns.Add(AddFinancial("Reports_Column_NetWon", nameof(ShowdownHandsReportRecord.NetWon)));
@@ -40,7 +40,7 @@ namespace DriveHUD.Application.ReportsLayout
 
             for (int i = 1; i < gridView.Columns.Count; i++)
             {
-                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i].Header as string) + 10;
+                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]) + 10;
             }
         }
     }

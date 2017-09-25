@@ -53,7 +53,8 @@ namespace Model.Settings
                 EnumPokerSites.BlackChipPoker,
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
-                EnumPokerSites.PartyPoker
+                EnumPokerSites.PartyPoker,
+                EnumPokerSites.IPoker
             };
 
             SitesModelList = sites.Select(x => new SiteModel
@@ -123,6 +124,9 @@ namespace Model.Settings
 
         [XmlArray]
         public List<PreferredSeatModel> PrefferedSeats { get; set; }
+
+        [XmlAttribute]
+        public bool IsAutoCenter { get; set; }
 
         public override object Clone()
         {

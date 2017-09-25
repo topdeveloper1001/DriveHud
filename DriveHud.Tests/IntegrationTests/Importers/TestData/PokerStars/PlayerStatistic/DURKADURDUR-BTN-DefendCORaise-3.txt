@@ -1,0 +1,37 @@
+PokerStars Game #47185659847:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:52:10 ET
+Table 'Natalie' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($423.65 in chips)
+Seat 2: TODO ADENTR0 ($207.65 in chips)
+Seat 3: THEDUTCH4141 ($200 in chips)
+Seat 4: bluffinmyway ($196.80 in chips)
+Seat 6: leukehond ($214.45 in chips)
+TODO ADENTR0: posts small blind $1
+THEDUTCH4141: posts big blind $2
+*** HOLE CARDS ***
+bluffinmyway: folds
+bluffinmyway leaves the table
+leukehond: raises $3 to $5
+DURKADURDUR: folds
+TODO ADENTR0: folds
+THEDUTCH4141: calls $3
+*** FLOP *** [5h 2h 9s]
+THEDUTCH4141: checks
+leukehond: checks
+*** TURN *** [5h 2h 9s] [5d]
+THEDUTCH4141: checks
+leukehond: checks
+*** RIVER *** [5h 2h 9s 5d] [4c]
+THEDUTCH4141: checks
+leukehond: checks
+*** SHOW DOWN ***
+THEDUTCH4141: shows [Td Ad] (a pair of Fives)
+leukehond: shows [As Kh] (a pair of Fives - Ace+King kicker)
+leukehond collected $10.45 from pot
+*** SUMMARY ***
+Total pot $11 | Rake $0.55
+Board [5h 2h 9s 5d 4c]
+Seat 1: DURKADURDUR (button) folded before Flop (didn't bet)
+Seat 2: TODO ADENTR0 (small blind) folded before Flop
+Seat 3: THEDUTCH4141 (big blind) showed [Td Ad] and lost with a pair of Fives
+Seat 4: bluffinmyway folded before Flop (didn't bet)
+Seat 6: leukehond showed [As Kh] and won ($10.45) with a pair of Fives

@@ -331,7 +331,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://www.acepokersolutions.com/index.php?route=checkout/renewal&amp;code={0}.
+        ///   Looks up a localized string similar to https://www.acepokersolutions.com/index.php?route=checkout/renewal&amp;code={0}.
         /// </summary>
         internal static string SystemSettings_RenewLicenseLink {
             get {

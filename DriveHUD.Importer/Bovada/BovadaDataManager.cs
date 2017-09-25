@@ -91,7 +91,7 @@ namespace DriveHUD.Importers.Bovada
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Stream data has wrong format", ex);
+                LogProvider.Log.Error(this, "Stream data was in wrong format", ex);
             }
         }
 
@@ -176,7 +176,7 @@ namespace DriveHUD.Importers.Bovada
             }
 
             // skip not JSON data 
-            if (!dataText.Contains("{") || !dataText.Contains("}"))
+            if (!dataText.Contains("{") || !dataText.Contains("}") || dataText.Contains("|"))
             {
                 return null;
             }

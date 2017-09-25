@@ -294,7 +294,7 @@ namespace DriveHUD.Importers
                 Istourney = parsedHand.GameDescription.IsTournament,
                 PokergametypeId = (short)(parsedHand.GameDescription.GameType),
                 Smallblindincents = Utils.ConvertToCents(parsedHand.GameDescription.Limit.SmallBlind),
-                Tablesize = (short)parsedHand.GameDescription.SeatType.MaxPlayers
+                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers
             };
 
             var players = parsedHand.Players.Select(player => new Players
@@ -425,6 +425,8 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
 
+                gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
                     if (existingGameType.Istourney)
@@ -456,13 +458,14 @@ namespace DriveHUD.Importers
                             {
                                 PlayerId = existingPlayer.PlayerId,
                                 Name = existingPlayer.Playername,
-                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId
+                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId,                                
                             },
                             Stats = playerStatCopy,
-                            IsHero = isHero
+                            IsHero = isHero,
+                            GameFormat = gameInfo.GameFormat
                         };
 
-                        importSessionCacheService.AddOrUpdatePlayerStats(cacheInfo);
+                        gameInfo.PlayersCacheInfo.Add(cacheInfo);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -908,9 +911,11 @@ namespace DriveHUD.Importers
         private int GetNumberOfWinnersForTournament(string tournamentName, int totalPlayers, TournamentsTags tournamentTag)
         {
             int numberOfWinningPlaces = 1;
+
             if (tournamentTag == TournamentsTags.STT)
             {
                 var sttType = Converter.ToSitNGoType(tournamentName);
+
                 switch (sttType)
                 {
                     case STTTypes.DoubleUp:

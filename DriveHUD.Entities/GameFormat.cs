@@ -20,6 +20,7 @@ namespace DriveHUD.Entities
         Cash,
         SnG,
         MTT,
-        Zone
+        Zone,
+        Zoom
     }
 }

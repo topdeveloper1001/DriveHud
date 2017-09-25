@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6731701637">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Turbo (€0.10), 910052108</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:01:46</duration>
+  <gamecount>2</gamecount>
+  <startdate>2017-09-11 13:48:33</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>1,500</bets>
+  <wins>0</wins>
+  <chipsin>1,500</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>Club0.40</statuspoints>
+  <awardpoints>Club0.40</awardpoints>
+  <ipoints>Club0.40</ipoints>
+  <tournamentcode>910050889</tournamentcode>
+  <tournamentname>Turbo (€0.10)</tournamentname>
+  <place>9</place>
+  <buyin>€0.08 + €0.02</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7679309708">
+  <general>
+   <startdate>2017-09-11 13:48:33</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="1" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,500" seat="2" dealer="0" name="mark876" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,500" seat="3" dealer="0" name="kel196799" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="4" dealer="0" name="Fffuuuu" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="5" dealer="0" name="chewbacca886" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="60" chips="1,500" seat="6" dealer="0" name="Dmitrydk3" win="90" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="8" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731701637" addon="0"/>
+    <player bet="0" chips="1,500" seat="9" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="mark876" cards="" type="1" sum="10"/>
+   <action no="2" player="kel196799" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="Fffuuuu" type="Pocket">X X</cards>
+   <action no="3" player="Fffuuuu" cards="" type="0" sum="0"/>
+   <cards player="chewbacca886" type="Pocket">X X</cards>
+   <action no="4" player="chewbacca886" cards="" type="0" sum="0"/>
+   <cards player="Dmitrydk3" type="Pocket">X X</cards>
+   <action no="5" player="Dmitrydk3" cards="" type="23" sum="60"/>
+   <cards player="Peon384" type="Pocket">CA H3</cards>
+   <action no="6" player="Peon384" cards="" type="0" sum="0"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="7" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="8" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="9" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="mark876" type="Pocket">X X</cards>
+   <action no="10" player="mark876" cards="" type="0" sum="0"/>
+   <cards player="kel196799" type="Pocket">X X</cards>
+   <action no="11" player="kel196799" cards="" type="0" sum="0"/>
+  </round>
+ </game>
+ <game gamecode="7679309808">
+  <general>
+   <startdate>2017-09-11 13:49:20</startdate>
+   <players>
+    <player bet="0" chips="1,500" seat="1" dealer="0" name="siljorepa" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,490" seat="2" dealer="1" name="mark876" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="10" chips="1,480" seat="3" dealer="0" name="kel196799" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="20" chips="1,500" seat="4" dealer="0" name="Fffuuuu" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,500" chips="1,500" seat="5" dealer="0" name="chewbacca886" win="3,030" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,530" seat="6" dealer="0" name="Dmitrydk3" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="1,500" chips="1,500" seat="8" dealer="0" name="Peon384" win="0" rebuy="0" reg_code="6731701637" addon="0"/>
+    <player bet="0" chips="1,500" seat="9" dealer="0" name="LeeCTsinWH" win="0" rebuy="0" reg_code="" addon="0"/>
+    <player bet="0" chips="1,500" seat="10" dealer="0" name="anhanga" win="0" rebuy="0" reg_code="" addon="0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" player="kel196799" cards="" type="1" sum="10"/>
+   <action no="2" player="Fffuuuu" cards="" type="2" sum="20"/>
+  </round>
+  <round no="1">
+   <cards player="chewbacca886" type="Pocket">CA HA</cards>
+   <action no="3" player="chewbacca886" cards="" type="23" sum="1,500"/>
+   <cards player="Dmitrydk3" type="Pocket">X X</cards>
+   <action no="4" player="Dmitrydk3" cards="" type="0" sum="0"/>
+   <cards player="Peon384" type="Pocket">CQ DQ</cards>
+   <action no="5" player="Peon384" cards="" type="7" sum="1,500"/>
+   <cards player="LeeCTsinWH" type="Pocket">X X</cards>
+   <action no="6" player="LeeCTsinWH" cards="" type="0" sum="0"/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action no="7" player="anhanga" cards="" type="0" sum="0"/>
+   <cards player="siljorepa" type="Pocket">X X</cards>
+   <action no="8" player="siljorepa" cards="" type="0" sum="0"/>
+   <cards player="mark876" type="Pocket">X X</cards>
+   <action no="9" player="mark876" cards="" type="0" sum="0"/>
+   <cards player="kel196799" type="Pocket">X X</cards>
+   <action no="10" player="kel196799" cards="" type="0" sum="0"/>
+   <cards player="Fffuuuu" type="Pocket">X X</cards>
+   <action no="11" player="Fffuuuu" cards="" type="0" sum="0"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C10 S6 CJ</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S2</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C4</cards>
+  </round>
+ </game>
+</session>

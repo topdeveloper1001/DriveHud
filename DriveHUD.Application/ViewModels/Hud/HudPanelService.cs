@@ -196,7 +196,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
         public virtual Tuple<double, double> GetInitialTableSize()
         {
-            return new Tuple<double, double>(812, 648);
+            return new Tuple<double, double>(811, 677);
         }
 
         public virtual Tuple<double, double> GetInitialTrackConditionMeterPosition()
@@ -240,7 +240,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PokerSiteId, hudToolViewModel.Parent.PlayerName);
 
                 var playerNoteView = new PlayerNoteView(playerNoteViewModel);
-
+                playerNoteView.Owner = System.Windows.Application.Current.MainWindow;
                 playerNoteView.ShowDialog();
 
                 if (playerNoteViewModel.PlayerNoteEntity == null)

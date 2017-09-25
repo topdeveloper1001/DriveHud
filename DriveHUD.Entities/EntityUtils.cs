@@ -29,7 +29,7 @@ namespace DriveHUD.Entities
         {
             var supportedPokerSites = Enum.GetValues(typeof(EnumPokerSites))
                 .OfType<EnumPokerSites>()
-                .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker && p != EnumPokerSites.Bovada)
+                .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.Bovada)
                 .ToArray();
 
             return supportedPokerSites;
@@ -48,7 +48,8 @@ namespace DriveHUD.Entities
                 [EnumPokerNetworks.PokerStars] = new[] { EnumPokerSites.PokerStars },
                 [EnumPokerNetworks.PartyPoker] = new[] { EnumPokerSites.PartyPoker },
                 [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker },
-                [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 }
+                [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 },
+                [EnumPokerNetworks.IPoker] = new[] { EnumPokerSites.IPoker }
             };
 
             return networksDictionary;

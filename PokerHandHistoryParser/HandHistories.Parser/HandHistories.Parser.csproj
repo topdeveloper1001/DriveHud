@@ -69,6 +69,7 @@
     <Compile Include="Parsers\Base\IHandHistorySummaryParser.cs" />
     <Compile Include="Parsers\Exceptions\HandParseException.cs" />
     <Compile Include="Parsers\FastParser\Base\HandHistoryParserFastImpl.cs" />
+    <Compile Include="Parsers\FastParser\IPoker\IPokerBovadaFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
@@ -127,6 +128,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

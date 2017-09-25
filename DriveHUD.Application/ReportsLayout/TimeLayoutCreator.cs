@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ReportsLayout
 
             foreach (var column in gridView.Columns)
             {
-                column.Width = GetColumnWidth(column.Header as string) + 5;
+                column.Width = GetColumnWidth(column) + 5;
             }
         }
     }

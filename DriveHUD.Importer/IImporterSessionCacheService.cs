@@ -45,28 +45,7 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo);
-
-        /// <summary>
-        /// Store hand history record in cache
-        /// </summary>
-        /// <param name="session">Active session</param>
-        /// <param name="record">Record to be saved</param>
-        void AddRecord(string session, HandHistoryRecord record);
-
-        /// <summary>
-        /// Get all records from cache of specified session
-        /// </summary>
-        /// <param name="session">Session</param>
-        /// <returns>List of records from cache of specified session</returns>
-        IList<HandHistoryRecord> GetRecords(string session);
-
-        /// <summary>
-        /// Get all records from cache
-        /// </summary>
-        /// <param name="session">Session</param>
-        /// <returns>List of records from cache</returns>
-        IList<HandHistoryRecord> GetAllRecords();
+        void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo);      
 
         /// <summary>
         /// Gets statistic of the player's last hand

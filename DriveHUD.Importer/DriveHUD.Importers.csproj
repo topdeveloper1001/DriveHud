@@ -78,8 +78,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
@@ -234,6 +234,7 @@
     <Compile Include="IPoker\IIPokerImporter.cs" />
     <Compile Include="IPoker\IPokerImporter.cs" />
     <Compile Include="ISessionService.cs" />
+    <Compile Include="ISessionStatisticFilter.cs" />
     <Compile Include="IUserSession.cs" />
     <Compile Include="Loggers\FileImporterLogger.cs" />
     <Compile Include="Loggers\IFileImporterLogger.cs" />
@@ -253,8 +254,17 @@
     <Compile Include="PokerClientImporter.cs" />
     <Compile Include="PokerClientTableClosedEvent.cs" />
     <Compile Include="PokerClientTableClosedEventArgs.cs" />
+    <Compile Include="PokerStars\DataObjects\PlayerDataObject.cs" />
+    <Compile Include="PokerStars\DataObjects\PokerStarsZoomCacheData.cs" />
+    <Compile Include="PokerStars\DataObjects\PokerStarsZoomDataObject.cs" />
     <Compile Include="PokerStars\IPokerStarsImporter.cs" />
+    <Compile Include="PokerStars\IPokerStarsZoomCatcher.cs" />
+    <Compile Include="PokerStars\IPokerStarsZoomDataManager.cs" />
+    <Compile Include="PokerStars\IPokerStarsZoomImporter.cs" />
     <Compile Include="PokerStars\PokerStarsImporter.cs" />
+    <Compile Include="PokerStars\PokerStarsZoomCatcher.cs" />
+    <Compile Include="PokerStars\PokerStarsZoomDataManager.cs" />
+    <Compile Include="PokerStars\PokerStarsZoomImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="SessionCacheStatistic.cs" />

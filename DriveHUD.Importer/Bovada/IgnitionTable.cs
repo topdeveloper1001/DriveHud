@@ -61,7 +61,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetWindowHandle()
         {
-            if (WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero || (!IsTournament && !playerHasSeat))
             {
                 return;
             }
@@ -133,7 +133,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetTableCashName()
         {
-            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament)
+            if (WindowHandle != IntPtr.Zero && string.IsNullOrEmpty(TableName) && !IsTournament && TableId != 0)
             {
                 TableName = $"Table{TableId}";
             }
@@ -188,6 +188,13 @@ namespace DriveHUD.Importers.Bovada
             {
                 WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
                 {
+                    var parentHWnd = WinApi.GetParent(hWnd);
+
+                    if (parentHWnd != IntPtr.Zero)
+                    {
+                        return true;
+                    }
+
                     var sb = new StringBuilder(256);
 
                     if (WinApi.GetClassName(hWnd, sb, sb.Capacity) != 0)
@@ -213,6 +220,8 @@ namespace DriveHUD.Importers.Bovada
         {
             var match = !string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(className) &&
                 className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
+                title.IndexOf("Ignition", StringComparison.OrdinalIgnoreCase) < 0 &&
+                !title.StartsWith("Tournament", StringComparison.OrdinalIgnoreCase) &&
                 !title.StartsWith("#") && !title.Equals("Poker", StringComparison.OrdinalIgnoreCase) && title.IndexOf("Lobby", StringComparison.OrdinalIgnoreCase) < 0;
 
             return match;

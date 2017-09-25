@@ -170,6 +170,7 @@
       <LastGenOutput>SystemSettings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Database\drivehud.db" />
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -180,6 +181,10 @@
     <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
       <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
       <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -669,6 +674,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\SiteLogos\partypoker_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\ipoker_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

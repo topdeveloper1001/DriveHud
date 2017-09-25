@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ValueConverters;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Helpers;
 using Model.Data;
@@ -148,19 +149,40 @@ namespace DriveHUD.Application.ReportsLayout
             return column;
         }
 
-        public static double GetColumnWidth(string text)
+        public static double GetColumnWidth(Telerik.Windows.Controls.GridViewColumn column)
         {
-            double minWidth = TextMeasurer.MesureString(text);
+            var columnHeader = column.Header as string;
 
-            if (text.Length <= 2)
+            if (string.IsNullOrEmpty(columnHeader))
+            {
+                var dataColumn = column as GridViewDataColumn;
+
+                if (dataColumn == null)
+                {
+                    LogProvider.Log.Warn("Column header is null. Column type isn't data column type");
+                }
+                else
+                {
+                    LogProvider.Log.Warn($"Column header is null. Path: {dataColumn.DataMemberBinding?.Path?.Path}");
+                }
+            }
+
+            return GetColumnHeaderWidth(columnHeader);
+        }
+
+        public static double GetColumnHeaderWidth(string header)
+        {
+            double minWidth = TextMeasurer.MesureString(header);
+
+            if (string.IsNullOrEmpty(header) || header.Length <= 2)
             {
                 minWidth += 40;
             }
-            else if (text.Length <= 5)
+            else if (header.Length <= 5)
             {
                 minWidth += 20;
             }
-            else if (text.Length > 15)
+            else if (header.Length > 15)
             {
                 minWidth -= 20;
             }
@@ -264,7 +286,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_ColdCallVsCOOpen", nameof(Indicators.ColdCallVsCoOpen), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FloatFlop", nameof(Indicators.FloatFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopCheckRaise", nameof(Indicators.FlopCheckRaise), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_RaiseFlop%", nameof(Indicators.RaiseFlop), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_RaiseFlop", nameof(Indicators.RaiseFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_DelayedCBet", nameof(Indicators.DidDelayedTurnCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseTurn", nameof(Indicators.RaiseTurn), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_SeenTurn", nameof(Indicators.TurnSeen), ColumnType.Percentile),

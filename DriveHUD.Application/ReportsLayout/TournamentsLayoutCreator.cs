@@ -24,9 +24,9 @@ namespace DriveHUD.Application.ReportsLayout
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(Add("Reports_Column_Started", nameof(TournamentReportRecord.Started), GetColumnWidth(StringFormatter.GetDateTimeString(DateTime.Now)), new DateTimeToLocalizedDateTimeConverter()));
+            gridView.Columns.Add(Add("Reports_Column_Started", nameof(TournamentReportRecord.Started), GetColumnHeaderWidth(StringFormatter.GetDateTimeString(DateTime.Now)), new DateTimeToLocalizedDateTimeConverter()));
             gridView.Columns.Add(Add("Reports_Column_TableType", nameof(TournamentReportRecord.TableType)));
-            gridView.Columns.Add(Add("Reports_Column_GameType", nameof(TournamentReportRecord.GameType), GetColumnWidth("NoLimitHoldem")));
+            gridView.Columns.Add(Add("Reports_Column_GameType", nameof(TournamentReportRecord.GameType), GetColumnHeaderWidth("NoLimitHoldem")));
             gridView.Columns.Add(Add("Reports_Column_Speed", nameof(TournamentReportRecord.TournamentSpeed)));
             gridView.Columns.Add(AddFinancial("Reports_Column_Buyin", nameof(TournamentReportRecord.BuyIn)));
             gridView.Columns.Add(AddFinancial("Reports_Column_Rebuy", nameof(TournamentReportRecord.Rebuy)));
@@ -44,7 +44,7 @@ namespace DriveHUD.Application.ReportsLayout
                     continue;
                 }
 
-                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i].Header as string) + 18;
+                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]) + 18;
             }
         }
     }

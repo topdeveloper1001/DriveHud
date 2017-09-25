@@ -30,6 +30,8 @@ namespace Model.Site
 
         public bool IsEnabled { get; set; }
 
+        public bool IsAutoCenter { get; set; }
+
         public bool HasIssue
         {
             get
@@ -38,8 +40,8 @@ namespace Model.Site
             }
         }
 
-        public IList<string> Issues { get; set; } = new List<string>();
+        public List<string> Issues { get; set; } = new List<string>();
 
-        public IList<string> HandHistoryLocations { get; set; } = new List<string>();
+        public List<string> HandHistoryLocations { get; set; } = new List<string>();
     }
 }

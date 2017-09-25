@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
@@ -68,9 +69,13 @@ namespace DriveHUD.Importers
         /// </summary>
         protected bool isInjected;
 
+        private const int AllowedFailedAttempts = 4;
+
         protected CancellationTokenSource cancellationTokenSource;
 
         protected abstract ImporterIdentifier Identifier { get; }
+
+        protected abstract ImporterIdentifier[] PipeIdentifiers { get; }
 
         public virtual bool IsRunning
         {
@@ -109,6 +114,7 @@ namespace DriveHUD.Importers
 
             if (!IsEnabled())
             {
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" catcher is disabled.", Identifier));
                 return;
             }
 
@@ -167,8 +173,14 @@ namespace DriveHUD.Importers
 
                     if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
                     {
+                        var windowTitle = WinApi.GetWindowText(x.MainWindowHandle);
                         var windowClassName = sb.ToString();
-                        return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
+
+                        if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            LogProvider.Log.Info($"Found the process with main window = [{windowTitle}, {windowClassName}] [{Identifier}]");
+                            return true;
+                        }
                     }
 
                     return false;
@@ -185,7 +197,9 @@ namespace DriveHUD.Importers
         /// </summary>
         protected virtual void DoCatch()
         {
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Searching processes for \"{0}\"", ProcessName));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Searching processes for \"{0}\". [{1}]", ProcessName, Identifier));
+
+            var failedAttempts = 0;
 
             while (true)
             {
@@ -196,12 +210,15 @@ namespace DriveHUD.Importers
 
                 if (pokerClientProcess == null || pokerClientProcess.HasExited)
                 {
+                    failedAttempts = 0;
+
                     if (pokerClientProcess != null && pokerClientProcess.HasExited)
                     {
                         var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
-                        pipeManager.RemoveHandle(Identifier);
 
-                        LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has exited", ProcessName));
+                        PipeIdentifiers.ForEach(x => pipeManager.RemoveHandle(x));
+
+                        LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has exited. [{1}]", ProcessName, Identifier));
                     }
 
                     isInjected = false;
@@ -220,10 +237,10 @@ namespace DriveHUD.Importers
                         continue;
                     }
 
-                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has been found", ProcessName));
+                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" [{1}] has been found. [{2}]", ProcessName, pokerClientProcess.Id, Identifier));
                 }
 
-                if (!isInjected)
+                if (!isInjected && failedAttempts < AllowedFailedAttempts)
                 {
                     try
                     {
@@ -231,7 +248,14 @@ namespace DriveHUD.Importers
                     }
                     catch (Exception e)
                     {
-                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Injecting of processes \"{0}\" failed", ProcessName), e);
+                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Injecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
+
+                        failedAttempts++;
+
+                        if (failedAttempts >= AllowedFailedAttempts)
+                        {
+                            LogProvider.Log.Info(this, $"The limit of injecting into \"{ProcessName}\" attempts has been reached. Put catcher to sleep. [{Identifier}]");
+                        }
                     }
                 }
 
@@ -239,13 +263,16 @@ namespace DriveHUD.Importers
                 {
                     if (pokerClientProcess != null && !pokerClientProcess.HasExited)
                     {
-                        try
+                        if (injectedProcessModule != null)
                         {
-                            EjectDll(injectedProcessModule.BaseAddress);
-                        }
-                        catch (Exception e)
-                        {
-                            LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed", ProcessName), e);
+                            try
+                            {
+                                EjectDll(injectedProcessModule.BaseAddress);
+                            }
+                            catch (Exception e)
+                            {
+                                LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
+                            }
                         }
 
                         handle = IntPtr.Zero;
@@ -311,7 +338,7 @@ namespace DriveHUD.Importers
             // Eject dll from client process
             if (injectedDllProcessAddress != IntPtr.Zero)
             {
-                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Found already injected dll in \"{0}\" processes. Dll will be ejected.", ProcessName));
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Found already injected dll in \"{0}\" processes. Dll will be ejected. [{1}]", ProcessName, Identifier));
 
                 EjectDll(injectedDllProcessAddress);
                 Task.Delay(EjectDllTimeout).Wait();
@@ -406,7 +433,7 @@ namespace DriveHUD.Importers
 
                 isInjected = true;
 
-                LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Successfully injected into process \"{0}\"", ProcessName), LogMessageType.Info);
+                LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Successfully injected into process \"{0}\". [{1}]", ProcessName, Identifier), LogMessageType.Info);
             }
             finally
             {
@@ -418,7 +445,7 @@ namespace DriveHUD.Importers
 
         protected virtual void EjectDll(IntPtr injectedProcessAddress)
         {
-            LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Ejecting from process \"{0}\"", ProcessName), LogMessageType.Info);
+            LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Ejecting from process \"{0}\". [{1}]", ProcessName, Identifier), LogMessageType.Info);
 
             IntPtr hThread = IntPtr.Zero;
 
@@ -463,7 +490,7 @@ namespace DriveHUD.Importers
                     throw new Exception("FreeLibrary failed in remote process");
                 }
 
-                LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Successfully ejected from process \"{0}\"", ProcessName), LogMessageType.Info);
+                LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Successfully ejected from process \"{0}\". [{1}]", ProcessName, Identifier), LogMessageType.Info);
             }
             finally
             {

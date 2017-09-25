@@ -548,6 +548,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string Common_Help {
+            get {
+                return ResourceManager.GetString("Common_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Holdem.
         /// </summary>
         internal static string Common_Holdem {
@@ -1102,6 +1111,132 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudSideBar_Title {
             get {
                 return ResourceManager.GetString("Common_HudSideBar_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Common_HudStatSettings_Cancel {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color range.
+        /// </summary>
+        internal static string Common_HudStatSettings_ColorRange {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_ColorRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current stat:.
+        /// </summary>
+        internal static string Common_HudStatSettings_CurrentStat {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_CurrentStat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Freshness.
+        /// </summary>
+        internal static string Common_HudStatSettings_DataFreshness {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_DataFreshness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last {0} days.
+        /// </summary>
+        internal static string Common_HudStatSettings_DataFreshnessLastDays {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_DataFreshnessLastDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decimal Places.
+        /// </summary>
+        internal static string Common_HudStatSettings_DecimalPlaces {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_DecimalPlaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter data for only.
+        /// </summary>
+        internal static string Common_HudStatSettings_FilterDataForOnly {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_FilterDataForOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        internal static string Common_HudStatSettings_Font {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Opacity.
+        /// </summary>
+        internal static string Common_HudStatSettings_HudOpacity {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_HudOpacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label.
+        /// </summary>
+        internal static string Common_HudStatSettings_Label {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List of available settings.
+        /// </summary>
+        internal static string Common_HudStatSettings_ListOfAvailableSettings {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_ListOfAvailableSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Min.Sample.
+        /// </summary>
+        internal static string Common_HudStatSettings_MinSample {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_MinSample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string Common_HudStatSettings_OK {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string Common_HudStatSettings_TableFilterEmptyText {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_TableFilterEmptyText", resourceCulture);
             }
         }
         

@@ -11,7 +11,9 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
 using Model.Enums;
 using Model.Stats;
 using ReactiveUI;
@@ -52,6 +54,41 @@ namespace DriveHUD.Application.ViewModels.Hud
             HudOpacity = viewModelInfo.HudOpacity;
             items = new ObservableCollection<StatInfo>(clonedItems);
 
+            filterTableTypes = new ReactiveList<TableTypeFilterViewModel>(Enum.GetValues(typeof(EnumTableType))
+                .Cast<EnumTableType>()
+                .Select(x => new TableTypeFilterViewModel(x)
+                {
+                    IsSelected = viewModelInfo.SelectedTableTypes != null && viewModelInfo.SelectedTableTypes.Contains(x)
+                }));
+
+            filterTableTypes.ChangeTrackingEnabled = true;
+
+            filterTableTypes.ItemChanged.Subscribe(x =>
+            {
+                if (x.PropertyName == nameof(TableTypeFilterViewModel.IsSelected))
+                {
+                    RaisePropertyChanged(() => TableTypeFilterText);
+                }
+            });
+
+            dataFreshnessItems = new ObservableCollection<HudStatsDataFreshness>(Enum.GetValues(typeof(HudStatsDataFreshness))
+                .Cast<HudStatsDataFreshness>());
+
+            DataFreshness = viewModelInfo.DataFreshness;
+
+            InitializeCommands(viewModelInfo);
+
+            this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
+            {
+                if (selectedStatInfoOptionValueRange != null)
+                {
+                    selectedStatInfoOptionValueRange.Color = x.Value;
+                }
+            });
+        }
+
+        private void InitializeCommands(HudStatSettingsViewModelInfo viewModelInfo)
+        {
             SaveCommand = ReactiveCommand.Create();
             SaveCommand.Subscribe(x =>
             {
@@ -69,14 +106,6 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             PickerSelectColorCommand = ReactiveCommand.Create();
             PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
-
-            this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
-            {
-                if (selectedStatInfoOptionValueRange != null)
-                {
-                    selectedStatInfoOptionValueRange.Color = x.Value;
-                }
-            });
         }
 
         public ReactiveCommand<object> SaveCommand { get; private set; }
@@ -157,12 +186,133 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        public string TableTypeFilterText
+        {
+            get
+            {
+                if (FilterTableTypes == null || FilterTableTypes.All(x => !x.IsSelected))
+                {
+                    return CommonResourceManager.Instance.GetResourceString("Common_HudStatSettings_TableFilterEmptyText");
+                }
+
+                var tableTypeFilterText = string.Join(" ", FilterTableTypes
+                    .Where(x => x.IsSelected)
+                    .OrderBy(x => x.TableType)
+                    .Select(x => x.TableTypeText)
+                    .ToArray());
+
+                return tableTypeFilterText;
+            }
+        }
+
         private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
+
+        private ReactiveList<TableTypeFilterViewModel> filterTableTypes;
+
+        public ReactiveList<TableTypeFilterViewModel> FilterTableTypes
+        {
+            get
+            {
+                return filterTableTypes;
+            }
+        }
+
+        private bool isDataFreshnessLocked;
+
+        private double? dataFreshness;
+
+        public double? DataFreshness
+        {
+            get
+            {
+                return dataFreshness;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref dataFreshness, value);
+
+                if (!isDataFreshnessLocked)
+                {
+                    isDataFreshnessLocked = true;
+
+                    SelectedDataFreshnessItem = value.HasValue && Enum.IsDefined(typeof(HudStatsDataFreshness), (int)value.Value) ?
+                        (HudStatsDataFreshness)(int)value.Value :
+                        value.HasValue ? (HudStatsDataFreshness?)null : HudStatsDataFreshness.All;
+
+                    isDataFreshnessLocked = false;
+                }
+            }
+        }
+
+        private HudStatsDataFreshness? selectedDataFreshnessItem;
+
+        public HudStatsDataFreshness? SelectedDataFreshnessItem
+        {
+            get
+            {
+                return selectedDataFreshnessItem;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedDataFreshnessItem, value);
+
+                if (!isDataFreshnessLocked)
+                {
+                    isDataFreshnessLocked = true;
+
+                    DataFreshness = selectedDataFreshnessItem.HasValue ? (int)selectedDataFreshnessItem : 0;
+
+                    isDataFreshnessLocked = false;
+                }
+            }
+        }
+
+        private ObservableCollection<HudStatsDataFreshness> dataFreshnessItems;
+
+        public ObservableCollection<HudStatsDataFreshness> DataFreshnessItems
+        {
+            get
+            {
+                return dataFreshnessItems;
+            }
+        }
 
         private void SelectColor(StatInfoOptionValueRange statInfoValueRange)
         {
             IsColorPickerPopupOpened = true;
             selectedStatInfoOptionValueRange = statInfoValueRange;
+        }
+
+        public class TableTypeFilterViewModel : ViewModelBase
+        {
+            public TableTypeFilterViewModel(EnumTableType tableType)
+            {
+                TableType = tableType;
+            }
+
+            public EnumTableType TableType { get; private set; }
+
+            public string TableTypeText
+            {
+                get
+                {
+                    return CommonResourceManager.Instance.GetEnumResource(TableType);
+                }
+            }
+
+            private bool isSelected;
+
+            public bool IsSelected
+            {
+                get
+                {
+                    return isSelected;
+                }
+                set
+                {
+                    this.RaiseAndSetIfChanged(ref isSelected, value);
+                }
+            }
         }
     }
 }

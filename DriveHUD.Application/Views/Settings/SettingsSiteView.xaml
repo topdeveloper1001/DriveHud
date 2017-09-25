@@ -15,6 +15,10 @@
 
     <UserControl.Resources>
 
+        <SolidColorBrush
+            x:Key="ButtonBackground"
+            Color="#202125" />
+
         <Style
             x:Key="PokersiteComboboxStyle"
             TargetType="{x:Type control:ComboBoxEx}"
@@ -130,6 +134,42 @@
             </Style.Triggers>
         </Style>
 
+        <Style
+            x:Key="MoveProcessedTextBoxStyle"
+            TargetType="{x:Type TextBox}"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="FontSize"
+                Value="12px" />
+            <Setter
+                Property="Height"
+                Value="25" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource ButtonBackground}" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type TextBox}">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="2,0,4,0"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </UserControl.Resources>
 
     <StackPanel>
@@ -149,13 +189,17 @@
             </Grid.ColumnDefinitions>
 
             <TextBox
+                Style="{StaticResource MoveProcessedTextBoxStyle}"
                 Grid.Column="0"
                 IsReadOnly="True"
+                VerticalContentAlignment="Center"
                 Text="{Binding CustomProcessedDataLocation}" />
 
             <Button
                 Grid.Column="1"
+                Margin="2,0,0,0"
                 Width="50"
+                Height="25"
                 Content="Select"
                 Command="{Binding SelectDirectoryCommand}" />
 
@@ -263,7 +307,6 @@
             </telerik:RadGridView>
 
             <StackPanel
-                Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                 HorizontalAlignment="Right"
                 Orientation="Horizontal"
                 Margin="5 10">
@@ -272,6 +315,7 @@
                     Width="70"
                     Height="30"
                     Margin="5 0"
+                    Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Key=Common_Add}"
                     Command="{Binding AddHandHistoryLocationCommand}" />
 
@@ -279,6 +323,7 @@
                     Width="70"
                     Height="30"
                     Margin="5 0"
+                    Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Key=Common_Delete}"
                     Command="{Binding DeleteHandHistoryLocationCommand}">
                     <Button.Style>
@@ -302,14 +347,39 @@
                     Width="90"
                     Height="30"
                     Margin="5 0"
+                    Visibility="{Binding IsHandHistoryLocationRequired, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Key=Common_AutoDetect}"
                     Command="{Binding AutoDetectHandHistoryLocationCommand}" />
 
+                <Button
+                    Width="60"
+                    Height="30"
+                    Margin="5 0"
+                    Content="{ResX Key=Common_Help}"
+                    Command="{Binding HelpCommand}" />
+
             </StackPanel>
 
+            <!-- Auto center -->
             <Separator
-                Margin="5 15" />
+                Margin="5 15"
+                Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
+            <TextBlock
+                Text="Preferred Seating:"
+                Style="{StaticResource Title_H1}"
+                Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}" />
+
+            <CheckBox
+                IsChecked="{Binding SelectedSite.IsAutoCenter}"
+                Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}"
+                Content="Auto-Center" />
+
+            <Separator
+                Margin="5 15"
+                Visibility="{Binding IsPreferredSeatingVisible, Converter={dh:BoolToVisibilityConverter}}" />
+
+            <!-- Preferred Seating -->
             <TextBlock
                 Text="Preferred Seating:"
                 Style="{StaticResource Title_H1}"

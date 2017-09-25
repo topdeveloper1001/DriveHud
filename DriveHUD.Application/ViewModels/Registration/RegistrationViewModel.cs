@@ -849,6 +849,7 @@ namespace DriveHUD.Application.ViewModels.Registration
                 else
                 {
                     InitializeMessage("Common_RegistrationView_ExpiredText", serial);
+                    IsRenewButtonVisible = true;
                 }
 
                 return false;

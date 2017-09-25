@@ -13,6 +13,7 @@
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Model.Data;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -60,6 +61,10 @@ namespace Model.Interfaces
         IList<Handnotes> GetHandNotes(short pokersiteId);
 
         Handhistory GetHandHistory(long gameNumber, short pokersiteId);
+
+        IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames, ISession session);
+
+        IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames);
 
         void Purge();
 

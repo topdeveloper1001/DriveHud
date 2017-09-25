@@ -68,6 +68,8 @@ namespace DriveHUD.Importers.Bovada
 
         private IEventAggregator eventAggregator;
 
+        protected bool playerHasSeat = false;
+
         public BovadaTable(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
@@ -637,6 +639,22 @@ namespace DriveHUD.Importers.Bovada
                     ParseOptionInfo(cmdObj);
                     break;
 
+                case "PLAY_BUYIN_INFO":
+                    if (HeroSeat == 0)
+                    {
+                        HeroSeat = cmdObj.seat;
+                    }
+
+                    break;
+
+                case "PLAY_ACCOUNT_CASH_RES":
+                    if (!playerHasSeat && cmdObj.seat == HeroSeat)
+                    {
+                        playerHasSeat = HeroSeat != 0 && cmdObj.cash > 0;
+                    }
+
+                    break;
+
                 default:
                     break;
             }
@@ -845,7 +863,7 @@ namespace DriveHUD.Importers.Bovada
 
                     LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
 
-                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo);
+                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
 
                     eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
                 }

@@ -133,6 +133,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IPoker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_IPoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_IPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PartyPoker.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_PartyPoker {
@@ -489,6 +498,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_HandTag_None {
             get {
                 return ResourceManager.GetString("Enum_HandTag_None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_All {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last 120 days.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_Last120Days {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_Last120Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last 30 days.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_Last30Days {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_Last30Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last 60 days.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_Last60Days {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_Last60Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last 90 days.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_Last90Days {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_Last90Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last year.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_LastYear {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_LastYear", resourceCulture);
             }
         }
         

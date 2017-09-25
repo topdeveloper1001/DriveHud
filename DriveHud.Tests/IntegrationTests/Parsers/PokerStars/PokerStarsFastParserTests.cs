@@ -171,7 +171,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         public void PokerFormatIsParsedTest(string handHistoryFile, PokerFormat pokerFormat)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            Assert.That(handHistory.GameDescription.PokerFormat, Is.EqualTo(PokerFormat.Tournament));
+            Assert.That(handHistory.GameDescription.PokerFormat, Is.EqualTo(pokerFormat));
         }
 
         [Test]
@@ -192,11 +192,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", TableTypeDescription.Regular)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", TableTypeDescription.Zoom)]
         public void TableDescriptionIsParsedTest(string handHistoryFile, TableTypeDescription tableDescription)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var tableTypeDescription = handHistory.GameDescription.TableType.FirstOrDefault();
-            Assert.That(tableTypeDescription, Is.EqualTo(tableDescription));
+            Assert.IsTrue(handHistory.GameDescription.TableType.Contains(tableDescription));
         }
 
         [Test]
