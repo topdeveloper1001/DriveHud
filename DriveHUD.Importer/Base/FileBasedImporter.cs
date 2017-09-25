@@ -126,9 +126,7 @@ namespace DriveHUD.Importers
                         {
                             newlyDetectedHandHistories = newlyDetectedHandHistories
                                 .Except(processedFilesToSkip, new LambdaComparer<FileInfo>((x, y) => x.FullName == y.FullName))
-                                .ToArray();
-
-                            filesToSkip.AddRange(processedFilesToSkip.Select(x => x.FullName).Distinct());
+                                .ToArray();                            
                         }
                     }
 
