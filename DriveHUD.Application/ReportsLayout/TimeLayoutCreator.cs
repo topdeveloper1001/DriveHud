@@ -17,6 +17,10 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class TimeLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet), nameof(Indicators.ThreeBetCall),
+            nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.AggPr), nameof(Indicators.Agg), nameof(Indicators.WSWSF), nameof(Indicators.FlopCBet),
+            nameof(Indicators.Steal), nameof(Indicators.FourBetRange) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -38,7 +42,7 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("Reports_Column_Steal", nameof(Indicators.Steal)));
             gridView.Columns.Add(AddPercentile("Reports_Column_4BetRange", nameof(Indicators.FourBetRange)));
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
 
             foreach (var column in gridView.Columns)
             {

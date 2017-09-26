@@ -214,7 +214,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4Bet Range.
+        ///   Looks up a localized string similar to 4-Bet Range.
         /// </summary>
         internal static string Reports_Column_4BetRange {
             get {
@@ -259,6 +259,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP.
+        /// </summary>
+        internal static string Reports_Column_BetFlopCalled3BetPreflopIp {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetFlopCalled3BetPreflopIp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet/fold flop when PFR raiser.
+        /// </summary>
+        internal static string Reports_Column_BetFoldFlopPfrRaiser {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet When Checked To%.
         /// </summary>
         internal static string Reports_Column_BetWhenCheckedTo {
@@ -286,11 +304,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Defend to CO Raise.
+        /// </summary>
+        internal static string Reports_Column_BTNDefendCORaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNDefendCORaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buy-in.
         /// </summary>
         internal static string Reports_Column_Buyin {
             get {
                 return ResourceManager.GetString("Reports_Column_Buyin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_CBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_CBet", resourceCulture);
             }
         }
         
@@ -511,6 +547,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Donk Bet%.
+        /// </summary>
+        internal static string Reports_Column_DonkBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_DonkBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double Barrel%.
+        /// </summary>
+        internal static string Reports_Column_DoubleBarrel {
+            get {
+                return ResourceManager.GetString("Reports_Column_DoubleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Down Cards.
         /// </summary>
         internal static string Reports_Column_DownCards {
@@ -574,15 +628,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flop C-Bet%.
-        /// </summary>
-        internal static string Reports_Column_FlopToCBet {
-            get {
-                return ResourceManager.GetString("Reports_Column_FlopToCBet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Fold to 3-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldTo3Bet {
@@ -624,6 +669,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToFlopCBet {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To Flop Raise%.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To River C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldToRiverCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToRiverCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_FoldToSqueez {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToSqueez", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold To Turn Raise.
+        /// </summary>
+        internal static string Reports_Column_FoldToTurnRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTurnRaise", resourceCulture);
             }
         }
         
@@ -691,15 +772,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Donk Bet%.
-        /// </summary>
-        internal static string Reports_Column_Limp_DonkBet {
-            get {
-                return ResourceManager.GetString("Reports_Column_Limp_DonkBet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Limp EP%.
         /// </summary>
         internal static string Reports_Column_Limp_EP {
@@ -718,29 +790,11 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Raise Frequency Factor%.
-        /// </summary>
-        internal static string Reports_Column_Limp_RaiseFreqFactor {
-            get {
-                return ResourceManager.GetString("Reports_Column_Limp_RaiseFreqFactor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Limp SB%.
         /// </summary>
         internal static string Reports_Column_Limp_SB {
             get {
                 return ResourceManager.GetString("Reports_Column_Limp_SB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to True Aggression% (TAP).
-        /// </summary>
-        internal static string Reports_Column_Limp_TrueAgg {
-            get {
-                return ResourceManager.GetString("Reports_Column_Limp_TrueAgg", resourceCulture);
             }
         }
         
@@ -799,11 +853,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR.
+        ///   Looks up a localized string similar to PFR%.
         /// </summary>
         internal static string Reports_Column_PFR {
             get {
                 return ResourceManager.GetString("Reports_Column_PFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in BB.
+        /// </summary>
+        internal static string Reports_Column_PFR_BB {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_BB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in BTN.
+        /// </summary>
+        internal static string Reports_Column_PFR_BTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_BTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in CO.
+        /// </summary>
+        internal static string Reports_Column_PFR_CO {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_CO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in EP.
+        /// </summary>
+        internal static string Reports_Column_PFR_EP {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_EP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in MP.
+        /// </summary>
+        internal static string Reports_Column_PFR_MP {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in SB.
+        /// </summary>
+        internal static string Reports_Column_PFR_SB {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFR_SB", resourceCulture);
             }
         }
         
@@ -858,6 +966,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_RaiseFlop {
             get {
                 return ResourceManager.GetString("Reports_Column_RaiseFlop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raise Frequency Factor%.
+        /// </summary>
+        internal static string Reports_Column_RaiseFreqFactor {
+            get {
+                return ResourceManager.GetString("Reports_Column_RaiseFreqFactor", resourceCulture);
             }
         }
         
@@ -1078,6 +1195,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to True Aggression% (TAP).
+        /// </summary>
+        internal static string Reports_Column_TrueAgg {
+            get {
+                return ResourceManager.GetString("Reports_Column_TrueAgg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn AGG%.
         /// </summary>
         internal static string Reports_Column_TurnAgg {
@@ -1092,6 +1218,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_TurnCheckRaise {
             get {
                 return ResourceManager.GetString("Reports_Column_TurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UO-PFR BB%.
+        /// </summary>
+        internal static string Reports_Column_UO_PFR_BB {
+            get {
+                return ResourceManager.GetString("Reports_Column_UO_PFR_BB", resourceCulture);
             }
         }
         
@@ -1150,11 +1285,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VPIP.
+        ///   Looks up a localized string similar to VPIP%.
         /// </summary>
         internal static string Reports_Column_VPIP {
             get {
                 return ResourceManager.GetString("Reports_Column_VPIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP BB%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_BB {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_BB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP BTN%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_BTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_BTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP CO%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_CO {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_CO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP EP%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_EP {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_EP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP MP%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_MP {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP SB%.
+        /// </summary>
+        internal static string Reports_Column_VPIP_SB {
+            get {
+                return ResourceManager.GetString("Reports_Column_VPIP_SB", resourceCulture);
             }
         }
         

@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Reflection;
 using Model.Data;
 using Telerik.Windows.Controls;
 
@@ -18,6 +17,9 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class PokerSiteLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.Agg), nameof(Indicators.AggPr),
+            nameof(Indicators.ThreeBet), nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.WSWSF) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -31,16 +33,8 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(Add("Reports_Column_StdDevBB", nameof(Indicators.StdDevBB), false, stringFormat: "{0:n2}"));
             gridView.Columns.Add(Add("Reports_Column_StdDevBB100", nameof(Indicators.StdDevBBPer100Hands), false, stringFormat: "{0:n2}"));
             gridView.Columns.Add(AddFinancial("Reports_Column_UsdPerHour", nameof(Indicators.NetWonPerHour), false));
-            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(Indicators.VPIP)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(Indicators.PFR)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_Agg", nameof(Indicators.Agg)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(Indicators.AggPr)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(Indicators.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(Indicators.WTSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(Indicators.WSSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(Indicators.WSWSF)));
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
 
             for (int i = 1; i < gridView.Columns.Count; i++)
             {

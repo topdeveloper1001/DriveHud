@@ -23,6 +23,9 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class TournamentStackSizeLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet),
+             nameof(Indicators.AggPr), nameof(Indicators.Agg), nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.WSWSF) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -41,7 +44,7 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(MRatioReportRecord.WSSD)));
             gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(MRatioReportRecord.WSWSF)));
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
         }
 
         private GridViewDataColumn GetMRatioColumn(string resourceKey, string member, GridViewLength width)
