@@ -142,7 +142,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3-Bet vs. Steal.
+        ///   Looks up a localized string similar to 3-Bet vs. Steal%.
         /// </summary>
         internal static string Reports_Column_3BetVsSteal {
             get {
@@ -259,7 +259,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP.
+        ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP%.
         /// </summary>
         internal static string Reports_Column_BetFlopCalled3BetPreflopIp {
             get {
@@ -268,7 +268,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bet/fold flop when PFR raiser.
+        ///   Looks up a localized string similar to Bet/fold flop when PFR raiser%.
         /// </summary>
         internal static string Reports_Column_BetFoldFlopPfrRaiser {
             get {
@@ -286,7 +286,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blinds Fold to Steal.
+        ///   Looks up a localized string similar to Blinds Fold to Steal%.
         /// </summary>
         internal static string Reports_Column_BlindsFoldToSteal {
             get {
@@ -295,7 +295,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blinds Re-raise Steal.
+        ///   Looks up a localized string similar to Blinds Re-raise Steal%.
         /// </summary>
         internal static string Reports_Column_BlindsReRaiseSteal {
             get {
@@ -304,7 +304,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BTN Defend to CO Raise.
+        ///   Looks up a localized string similar to BTN Defend to CO Raise%.
         /// </summary>
         internal static string Reports_Column_BTNDefendCORaise {
             get {
@@ -628,6 +628,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to 3-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldTo3Bet {
@@ -700,7 +709,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Turn Raise.
+        ///   Looks up a localized string similar to Fold To Turn Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToTurnRaise {
             get {
@@ -862,7 +871,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in BB.
+        ///   Looks up a localized string similar to PFR in BB%.
         /// </summary>
         internal static string Reports_Column_PFR_BB {
             get {
@@ -871,7 +880,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in BTN.
+        ///   Looks up a localized string similar to PFR in BTN%.
         /// </summary>
         internal static string Reports_Column_PFR_BTN {
             get {
@@ -880,7 +889,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in CO.
+        ///   Looks up a localized string similar to PFR in CO%.
         /// </summary>
         internal static string Reports_Column_PFR_CO {
             get {
@@ -889,7 +898,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in EP.
+        ///   Looks up a localized string similar to PFR in EP%.
         /// </summary>
         internal static string Reports_Column_PFR_EP {
             get {
@@ -898,7 +907,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in MP.
+        ///   Looks up a localized string similar to PFR in MP%.
         /// </summary>
         internal static string Reports_Column_PFR_MP {
             get {
@@ -907,7 +916,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PFR in SB.
+        ///   Looks up a localized string similar to PFR in SB%.
         /// </summary>
         internal static string Reports_Column_PFR_SB {
             get {

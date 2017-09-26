@@ -124,7 +124,7 @@
     <value>3-Bet Call%</value>
   </data>
   <data name="Reports_Column_3BetVsSteal" xml:space="preserve">
-    <value>3-Bet vs. Steal</value>
+    <value>3-Bet vs. Steal%</value>
   </data>
   <data name="Reports_Column_3Bet_BB" xml:space="preserve">
     <value>3-Bet BB%</value>
@@ -187,10 +187,10 @@
     <value>Bet When Checked To%</value>
   </data>
   <data name="Reports_Column_BlindsFoldToSteal" xml:space="preserve">
-    <value>Blinds Fold to Steal</value>
+    <value>Blinds Fold to Steal%</value>
   </data>
   <data name="Reports_Column_BlindsReRaiseSteal" xml:space="preserve">
-    <value>Blinds Re-raise Steal</value>
+    <value>Blinds Re-raise Steal%</value>
   </data>
   <data name="Reports_Column_Buyin" xml:space="preserve">
     <value>Buy-in</value>
@@ -499,13 +499,13 @@
     <value>WTSD%</value>
   </data>
   <data name="Reports_Column_BetFlopCalled3BetPreflopIp" xml:space="preserve">
-    <value>Bets flop when X to in 3-bet pot IP</value>
+    <value>Bets flop when X to in 3-bet pot IP%</value>
   </data>
   <data name="Reports_Column_BetFoldFlopPfrRaiser" xml:space="preserve">
-    <value>Bet/fold flop when PFR raiser</value>
+    <value>Bet/fold flop when PFR raiser%</value>
   </data>
   <data name="Reports_Column_BTNDefendCORaise" xml:space="preserve">
-    <value>BTN Defend to CO Raise</value>
+    <value>BTN Defend to CO Raise%</value>
   </data>
   <data name="Reports_Column_DonkBet" xml:space="preserve">
     <value>Donk Bet%</value>
@@ -523,25 +523,25 @@
     <value>Fold To Squeeze%</value>
   </data>
   <data name="Reports_Column_FoldToTurnRaise" xml:space="preserve">
-    <value>Fold To Turn Raise</value>
+    <value>Fold To Turn Raise%</value>
   </data>
   <data name="Reports_Column_PFR_BB" xml:space="preserve">
-    <value>PFR in BB</value>
+    <value>PFR in BB%</value>
   </data>
   <data name="Reports_Column_PFR_BTN" xml:space="preserve">
-    <value>PFR in BTN</value>
+    <value>PFR in BTN%</value>
   </data>
   <data name="Reports_Column_PFR_CO" xml:space="preserve">
-    <value>PFR in CO</value>
+    <value>PFR in CO%</value>
   </data>
   <data name="Reports_Column_PFR_EP" xml:space="preserve">
-    <value>PFR in EP</value>
+    <value>PFR in EP%</value>
   </data>
   <data name="Reports_Column_PFR_MP" xml:space="preserve">
-    <value>PFR in MP</value>
+    <value>PFR in MP%</value>
   </data>
   <data name="Reports_Column_PFR_SB" xml:space="preserve">
-    <value>PFR in SB</value>
+    <value>PFR in SB%</value>
   </data>
   <data name="Reports_Column_UO_PFR_BB" xml:space="preserve">
     <value>UO-PFR BB%</value>
@@ -563,5 +563,8 @@
   </data>
   <data name="Reports_Column_VPIP_SB" xml:space="preserve">
     <value>VPIP SB%</value>
+  </data>
+  <data name="Reports_Column_FoldCBet" xml:space="preserve">
+    <value>Fold to C-Bet%</value>
   </data>
 </root>
