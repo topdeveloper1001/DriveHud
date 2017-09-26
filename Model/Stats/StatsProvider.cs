@@ -413,7 +413,7 @@ namespace Model.Stats
                                   select new { StatToUpdate = stat, OriginalStat = allStat }).ToArray();
 
             statsUpdateMap.ForEach(x =>
-            {                
+            {
                 x.StatToUpdate.GraphToolIconSource = x.OriginalStat.GraphToolIconSource;
             });
         }

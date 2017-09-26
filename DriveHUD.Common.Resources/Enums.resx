@@ -654,7 +654,7 @@
     <value>Fold To Flop Raise</value>
   </data>
   <data name="Enum_Stat_FoldToRiverCBet" xml:space="preserve">
-    <value>Fold To River  CBet</value>
+    <value>Fold To River C-Bet</value>
   </data>
   <data name="Enum_Stat_FoldToSqueez" xml:space="preserve">
     <value>Fold To Squeeze</value>

@@ -17,6 +17,11 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class TournamentStatsLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet),
+            nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.WSWSF), nameof(Indicators.AggPr), nameof(Indicators.Agg),  nameof(Indicators.FlopCBet),
+            nameof(Indicators.FoldCBet), nameof(Indicators.Steal), nameof(Indicators.BlindsReraiseSteal), nameof(Indicators.BlindsFoldSteal), nameof(Indicators.FourBet),
+            nameof(Indicators.UO_PFR_EP), nameof(Indicators.UO_PFR_MP), nameof(Indicators.UO_PFR_CO), nameof(Indicators.UO_PFR_BN), nameof(Indicators.UO_PFR_SB) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -25,6 +30,7 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(Add("Reports_Column_GameType", nameof(TournamentReportRecord.GameType)));
             gridView.Columns.Add(Add("Reports_Column_Speed", nameof(TournamentReportRecord.TournamentSpeed)));
             gridView.Columns.Add(AddFinancial("Reports_Column_Buyin", nameof(TournamentReportRecord.BuyIn)));
+
             gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(TournamentReportRecord.VPIP)));
             gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(TournamentReportRecord.PFR)));
             gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(TournamentReportRecord.AggPr)));
@@ -45,7 +51,7 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("Reports_Column_UO_PFR_BTN", nameof(TournamentReportRecord.UO_PFR_BN)));
             gridView.Columns.Add(AddPercentile("Reports_Column_UO_PFR_SB", nameof(TournamentReportRecord.UO_PFR_SB)));
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
 
             foreach (var column in gridView.Columns)
             {

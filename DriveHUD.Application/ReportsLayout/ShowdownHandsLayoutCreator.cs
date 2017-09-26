@@ -17,26 +17,21 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class ShowdownHandsLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.AggPr), nameof(Indicators.Agg),
+            nameof(Indicators.ThreeBet), nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.WSWSF) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
 
             gridView.Columns.Add(Add("Reports_Column_ShowdownHand", nameof(ShowdownHandsReportRecord.ShowdownHandString), GetColumnHeaderWidth("Straight Flush: With 2 Pocket Cards")));
-            gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(ShowdownHandsReportRecord.TotalHands)));
+            gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
             gridView.Columns.Add(AddPercentile("Reports_Column_WonPercent", nameof(ShowdownHandsReportRecord.WonHandProc)));
-            gridView.Columns.Add(AddFinancial("Reports_Column_NetWon", nameof(ShowdownHandsReportRecord.NetWon)));
-            gridView.Columns.Add(Add("Reports_Column_BB100", nameof(ShowdownHandsReportRecord.BB)));
+            gridView.Columns.Add(AddFinancial("Reports_Column_NetWon", nameof(Indicators.NetWon)));
+            gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
             gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(ShowdownHandsReportRecord.VPIP)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(ShowdownHandsReportRecord.PFR)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(ShowdownHandsReportRecord.AggPr)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_Agg", nameof(ShowdownHandsReportRecord.Agg)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(ShowdownHandsReportRecord.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(ShowdownHandsReportRecord.WTSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(ShowdownHandsReportRecord.WSSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(ShowdownHandsReportRecord.WSWSF)));
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
 
             for (int i = 1; i < gridView.Columns.Count; i++)
             {
