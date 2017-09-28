@@ -900,4 +900,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudStatSettings_DataFreshnessLastDays" xml:space="preserve">
     <value>Last {0} days</value>
   </data>
+  <data name="Common_Shop_Apps" xml:space="preserve">
+    <value>Apps</value>
+  </data>
 </root>

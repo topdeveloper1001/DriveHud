@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.AppStore.AppContainerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:xray="clr-namespace:DriveHUD.PlayerXRay;assembly=DriveHUD.PlayerXRay"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+
+        <DataTemplate
+            DataType="{x:Type xray:PlayerXRayMainViewModel}">
+            <xray:PlayerXRayMainView />
+        </DataTemplate>
+
+    </UserControl.Resources>
+
+    <ContentControl
+        Content="{Binding ContainerViewModel}" />
+
+</UserControl>

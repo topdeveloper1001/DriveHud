@@ -2070,6 +2070,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apps.
+        /// </summary>
+        internal static string Common_Shop_Apps {
+            get {
+                return ResourceManager.GetString("Common_Shop_Apps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUDs.
         /// </summary>
         internal static string Common_Shop_Huds {

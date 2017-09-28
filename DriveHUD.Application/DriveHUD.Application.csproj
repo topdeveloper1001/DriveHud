@@ -454,6 +454,9 @@
     <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModel.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModelInfo.cs" />
+    <Compile Include="ViewModels\AppStore\AppContainerViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\AppsAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\AppStoreBaseViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
@@ -569,6 +572,12 @@
     </Compile>
     <Compile Include="Views\Alias\AliasView.xaml.cs">
       <DependentUpon>AliasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\AppContainerView.xaml.cs">
+      <DependentUpon>AppContainerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\AppsAppStoreView.xaml.cs">
+      <DependentUpon>AppsAppStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
@@ -1019,6 +1028,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\AppStore\AppContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppStore\AppsAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1414,6 +1431,10 @@
     <ProjectReference Include="..\DriveHUD.EquityCalculator\DriveHUD.EquityCalculator.csproj">
       <Project>{efa4cfd3-8e01-494b-a274-f2092c922ef7}</Project>
       <Name>DriveHUD.EquityCalculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay.csproj">
+      <Project>{8bcc7610-1d61-4f3d-9d80-2df9daf375c5}</Project>
+      <Name>DriveHUD.PlayerXRay</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
       <Project>{C6A64D15-132D-46A6-8C95-42D8934FF6B4}</Project>

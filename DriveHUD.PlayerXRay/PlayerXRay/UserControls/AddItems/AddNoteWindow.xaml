@@ -1,0 +1,301 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:TreeConverters="clr-namespace:AcePokerSolutions.PlayerXRay.Converters"
+    xmlns:NotesTreeObjects="clr-namespace:AcePokerSolutions.DataTypes.NotesTreeObjects"
+    xmlns:Theme="clr-namespace:AcePokerSolutions.NotesApp.Theme"
+    mc:Ignorable="d"
+    x:Class="AcePokerSolutions.PlayerXRay.UserControls.AddItems.AddNoteWindow"
+    Title="Add Note"
+    Width="339"
+    Icon="/Player X-Ray;component/PlayerXrayIcon.ico"
+    Background="#FF545454"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    SizeToContent="Height"
+    Initialized="WindowInitialized">
+    <Window.Resources>
+        <TreeConverters:TreeMultiBindingConverter
+            x:Key="multiConverter" />
+        <TreeConverters:TreeDescriptionConverter
+            x:Key="descriptionConverter" />
+        <Style
+            TargetType="{x:Type TreeViewItem}">
+            <Setter
+                Property="Background"
+                Value="Transparent" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+            <Setter
+                Property="Padding"
+                Value="1,0,0,0" />
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource ButtonForeground}" />
+            <Setter
+                Property="FocusVisualStyle"
+                Value="{StaticResource TreeViewItemFocusVisual}" />
+            <Setter
+                Property="IsExpanded"
+                Value="False" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type TreeViewItem}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    MinWidth="19"
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="22" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <ToggleButton
+                                x:Name="Expander"
+                                Style="{StaticResource ExpandCollapseToggleStyle}"
+                                ClickMode="Press"
+                                IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Border
+                                SnapsToDevicePixels="true"
+                                x:Name="Bd"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="Stretch">
+                                <ContentPresenter
+                                    VerticalAlignment="Center"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    HorizontalAlignment="Stretch"
+                                    x:Name="PART_Header"
+                                    ContentSource="Header" />
+                            </Border>
+                            <ItemsPresenter
+                                x:Name="ItemsHost"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Grid.Row="1" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger
+                                Property="IsExpanded"
+                                Value="false">
+                                <Setter
+                                    Property="Visibility"
+                                    TargetName="ItemsHost"
+                                    Value="Collapsed" />
+                            </Trigger>
+                            <Trigger
+                                Property="HasItems"
+                                Value="false">
+                                <Setter
+                                    Property="Visibility"
+                                    TargetName="Expander"
+                                    Value="Hidden" />
+                            </Trigger>
+                            <Trigger
+                                Property="IsSelected"
+                                Value="true">
+                                <Setter
+                                    Property="Background"
+                                    TargetName="Bd"
+                                    Value="{StaticResource PressedButtonOuterBorder}" />
+                                <Setter
+                                    Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                            </Trigger>
+                            <Trigger
+                                Property="Theme:TreeViewHelper.IsMouseDirectlyOverItem"
+                                Value="true">
+                                <Setter
+                                    Property="Background"
+                                    TargetName="Bd"
+                                    Value="{StaticResource HoverButtonInnerBackground}" />
+                                <Setter
+                                    Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition
+                                        Property="IsSelected"
+                                        Value="true" />
+                                    <Condition
+                                        Property="IsSelectionActive"
+                                        Value="false" />
+                                </MultiTrigger.Conditions>
+                                <Setter
+                                    Property="Background"
+                                    TargetName="Bd"
+                                    Value="{StaticResource PressedButtonOuterBorder}" />
+                                <Setter
+                                    Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                            </MultiTrigger>
+
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition
+                                        Property="IsSelected"
+                                        Value="true" />
+                                    <Condition
+                                        Property="IsSelectionActive"
+                                        Value="true" />
+                                </MultiTrigger.Conditions>
+                                <Setter
+                                    Property="Background"
+                                    TargetName="Bd"
+                                    Value="{StaticResource PressedButtonOuterBorder}" />
+                                <Setter
+                                    Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                            </MultiTrigger>
+                            <Trigger
+                                Property="IsEnabled"
+                                Value="false">
+                                <Setter
+                                    Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <RadioButton
+            x:Name="rdoBlank"
+            Content="Blank"
+            HorizontalAlignment="Left"
+            Margin="8,4,0,4"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI"
+            FontSize="13.333"
+            IsChecked="True"
+            GroupName="1" />
+        <RadioButton
+            x:Name="rdoFromFile"
+            Content="From File"
+            HorizontalAlignment="Left"
+            Margin="73,4,0,4"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI"
+            FontSize="13.333"
+            Checked="RdoFromFileChecked"
+            GroupName="1" />
+        <TextBlock
+            HorizontalAlignment="Left"
+            Margin="8,8,0,0"
+            Grid.Row="2"
+            TextWrapping="Wrap"
+            Text="Name:"
+            VerticalAlignment="Top"
+            FontSize="13.333"
+            Foreground="White" />
+        <TextBox
+            x:Name="txtName"
+            Margin="59,4.153,8,0"
+            Grid.Row="2"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" />
+        <Button
+            x:Name="btnSave"
+            Content="Save"
+            Margin="86.04,5,0,5"
+            Grid.Row="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Width="75"
+            Click="BtnSaveClick"
+            d:LayoutOverrides="HorizontalAlignment" />
+        <Button
+            x:Name="btnCancel"
+            Content="Cancel"
+            Margin="0,5,81,5"
+            Grid.Row="3"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Width="75"
+            Click="BtnCancelClick"
+            d:LayoutOverrides="HorizontalAlignment" />
+        <RadioButton
+            x:Name="rdoFromTemplate"
+            Content="From Template"
+            Margin="158,4,0,0"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI"
+            FontSize="13.333"
+            GroupName="1"
+            Checked="RdoFromTemplateChecked"
+            Unchecked="RdoFromTemplateUnchecked"
+            d:LayoutOverrides="Width" />
+        <TreeView
+            ItemsSource="{Binding}"
+            x:Name="treeNotes"
+            Grid.Row="1"
+            Height="150"
+            Margin="8,0"
+            Visibility="Collapsed"
+            FontFamily="Calibri"
+            FontSize="14.667">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate
+                    DataType="{x:Type NotesTreeObjects:StageObject}">
+                    <HierarchicalDataTemplate.ItemsSource>
+                        <MultiBinding
+                            Converter="{StaticResource multiConverter}">
+                            <Binding
+                                Path="InnerGroups" />
+                            <Binding
+                                Path="Notes" />
+                        </MultiBinding>
+                    </HierarchicalDataTemplate.ItemsSource>
+                    <TextBlock
+                        Text="{Binding StageType}"
+                        VerticalAlignment="Center"
+                        Margin="3,0,0,0" />
+                </HierarchicalDataTemplate>
+                <HierarchicalDataTemplate
+                    DataType="{x:Type NotesTreeObjects:InnerGroupObject}"
+                    ItemsSource="{Binding Notes}">
+                    <TextBlock
+                        Text="{Binding Name}"
+                        VerticalAlignment="Center"
+                        Margin="3,0,0,0" />
+                </HierarchicalDataTemplate>
+                <DataTemplate
+                    DataType="{x:Type NotesTreeObjects:NoteObject}">
+                    <TextBlock
+                        Text="{Binding Name}"
+                        ToolTip="{Binding Description, Converter={StaticResource descriptionConverter}}" />
+                </DataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>

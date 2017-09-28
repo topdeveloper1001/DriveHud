@@ -1,0 +1,9 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="AcePokerSolutions.UIControls.CustomControls.ExitDialog" x:Name="Window" Title="Exit" Width="304.666" Height="129" Background="#FF3D3D3D" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderBrush="#FF4B4B4B" BorderThickness="3" Foreground="White" mc:Ignorable="d" KeyDown="WindowKeyDown">
+
+	<Grid x:Name="LayoutRoot">
+		<Button x:Name="btnQuit" HorizontalAlignment="Left" Margin="8,0,0,24.671" VerticalAlignment="Bottom" Width="85" Height="30" Content="Quit" Click="BtnQuitClick" />
+		<Button x:Name="btnRestart" Margin="104.328,0,108.671,24.671" Width="Auto" Content="Restart" VerticalAlignment="Bottom" Height="30" Click="BtnRestartClick" />
+		<TextBlock Margin="26.314,27.666,32.981,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14.667" Text="Which action would you like to execute?" TextWrapping="Wrap" d:LayoutOverrides="Width" />
+		<Button x:Name="btnCancel" Margin="0,0,11.314,24.671" Width="85" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="30" Click="BtnCancelClick" d:LayoutOverrides="Height" />
+	</Grid>
+</Window>

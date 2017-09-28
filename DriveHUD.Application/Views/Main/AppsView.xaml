@@ -34,6 +34,11 @@
             </DataTemplate>
 
             <DataTemplate
+                DataType="{x:Type vm:AppsAppStoreViewModel}">
+                <view:AppsAppStoreView />
+            </DataTemplate>
+
+            <DataTemplate
                 DataType="{x:Type vm:EmptyAppStoreViewModel}">
 
             </DataTemplate>
@@ -83,7 +88,7 @@
                     <RadioButton
                         GroupName="ShopGroup"
                         Height="32"
-                        Width="176"
+                        Width="156"
                         Content="{ResX Key=Common_Shop_Recommended}"
                         IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Recommended}}"
                         Style="{StaticResource RadioButtonSimpleLeft}" />
@@ -91,7 +96,7 @@
                     <RadioButton
                         GroupName="ShopGroup"
                         Height="32"
-                        Width="146"
+                        Width="126"
                         Content="{ResX Key=Common_Shop_Training}"
                         IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Training}}"
                         Style="{StaticResource RadioButtonSimple}" />
@@ -99,9 +104,17 @@
                     <RadioButton
                         GroupName="ShopGroup"
                         Height="32"
-                        Width="77"
+                        Width="87"
                         Content="{ResX Key=Common_Shop_Huds}"
                         IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Huds}}"
+                        Style="{StaticResource RadioButtonSimple}" />
+
+                    <RadioButton
+                        GroupName="ShopGroup"
+                        Height="32"
+                        Width="87"
+                        Content="{ResX Key=Common_Shop_Apps}"
+                        IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Apps}}"
                         Style="{StaticResource RadioButtonSimpleRight}" />
 
                 </StackPanel>

@@ -1,0 +1,22 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="AcePokerSolutions.PlayerXRay.CustomControls.MainMenuButton"
+	x:Name="UserControl"
+	d:DesignWidth="122" d:DesignHeight="69" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseEnter="UserControlMouseEnter" MouseLeave="UserControlMouseLeave" MouseLeftButtonUp="UserControlMouseLeftButtonUp" Height="40" BorderThickness="0" Cursor="Hand">
+	<UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="SelectedMenuBE" Color="Blue" Direction="320" ShadowDepth="1" Opacity=".6" Softness="2" />
+		<Storyboard x:Key="OnMouseEnter"/>
+		<Storyboard x:Key="OnMouseLeave"/>
+		<SolidColorBrush x:Key="brush"></SolidColorBrush>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Margin="0" Orientation="Horizontal">
+			<Image x:Name="img" Width="24" Height="24" Margin="5,0,0,0"/>
+			<TextBlock x:Name="lblHeader" Margin="5,0,10,0" TextWrapping="Wrap" Text="Topology" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center" Foreground="White"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

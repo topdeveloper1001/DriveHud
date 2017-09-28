@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="AcePokerSolutions.PlayerXRay.UserControls.BoardTexture.RiverBoardTextureUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="228.5" d:DesignWidth="665.5" Height="228.5" Width="Auto" VerticalAlignment="Top">
+    <Grid>
+            <Grid.RowDefinitions>
+            	<RowDefinition Height="25"/>
+				<RowDefinition></RowDefinition>         
+			</Grid.RowDefinitions>
+    	<Rectangle Fill="#FF5C5C5C" Margin="0"/>
+			
+    	<RadioButton x:Name="rdoAnyTexture" Content="Any Texture" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" IsChecked="True" Checked="RdoAnyTextureChecked"/>
+    	<RadioButton x:Name="rdoFilterBy" Content="Filter by Texture" Margin="105,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="RdoFilterByChecked"/>
+    	<Grid Margin="0,3,0,0" Grid.Row="1">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+				<RowDefinition Height="Auto"></RowDefinition> 		
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+    		<CheckBox x:Name="chkFlushCards" Content="Flush Cards" Margin="8,5,0,5" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="ChkFilterChecked" Unchecked="ChkFilterUnchecked"/>
+    		<CheckBox x:Name="chkPossibleStraights" Content="Number of Possible Straights" Margin="8,5,0,5" VerticalAlignment="Center" Grid.Row="3" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="ChkFilterChecked" Unchecked="ChkFilterUnchecked"/>
+    		<CheckBox x:Name="chkHighestCard" Content="Highest Card on River" Margin="8,5,0,5" VerticalAlignment="Center" Grid.Row="4" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="ChkFilterChecked" Unchecked="ChkFilterUnchecked"/>
+    		<CheckBox x:Name="chkFlopTexture" Content="Exact River Texture" Margin="8,5,0,5" VerticalAlignment="Center" Grid.Row="5" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="ChkFilterChecked" Unchecked="ChkFilterUnchecked"/>
+    		<CheckBox x:Name="chkFlopIsPaired" Content="River is Paired" Margin="8,5,0,5" VerticalAlignment="Center" Grid.Row="6" d:LayoutOverrides="Width" HorizontalAlignment="Left" Checked="ChkFilterChecked" Unchecked="ChkFilterUnchecked"/>
+    		<ComboBox x:Name="cmbPossibleStraights" IsEnabled="{Binding ElementName=chkPossibleStraights, Path=IsChecked}" HorizontalAlignment="Left" Margin="123.164,0,0,0" Width="60" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" SelectedIndex="0">
+    			<ComboBoxItem Content="0"/>
+    			<ComboBoxItem Content="1"/>
+    			<ComboBoxItem Content="2"/>
+    			<ComboBoxItem Content="3"/>
+    			<ComboBoxItem Content="4"/>
+    			<ComboBoxItem Content="5"/>
+    			<ComboBoxItem Content="6"/>
+    			<ComboBoxItem Content="7"/>
+    			<ComboBoxItem Content="8"/>
+    			<ComboBoxItem Content="9"/>
+                <ComboBoxItem Content="10"/>
+                <ComboBoxItem Content="11"/>
+                <ComboBoxItem Content="12"/>
+                <ComboBoxItem Content="13"/>
+                <ComboBoxItem Content="14"/>
+                <ComboBoxItem Content="15"/>
+                <ComboBoxItem Content="16"/>
+                <ComboBoxItem Content="17"/>
+                <ComboBoxItem Content="18"/>
+                <ComboBoxItem Content="19"/>
+                <ComboBoxItem Content="20"/>
+            </ComboBox>
+    		<ComboBox x:Name="cmbPossibleCompare" IsEnabled="{Binding ElementName=chkPossibleStraights, Path=IsChecked}" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" SelectedIndex="0" Width="105">
+    			<ComboBoxItem Content="Equal To"/>
+    			<ComboBoxItem Content="Greater Then"/>
+    			<ComboBoxItem Content="Less Than"/>
+    		</ComboBox>
+    		<ComboBox x:Name="cmbHighestCard" IsEnabled="{Binding ElementName=chkHighestCard, Path=IsChecked}" HorizontalAlignment="Left" Margin="8,0,0,0" Width="60" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" SelectedIndex="0">
+    			<ComboBoxItem Content="2"/>
+    			<ComboBoxItem Content="3"/>
+    			<ComboBoxItem Content="4"/>
+    			<ComboBoxItem Content="5"/>
+    			<ComboBoxItem Content="6"/>
+    			<ComboBoxItem Content="7"/>
+    			<ComboBoxItem Content="8"/>
+    			<ComboBoxItem Content="9"/>
+                <ComboBoxItem Content="10"/>
+                <ComboBoxItem Content="J"/>
+                <ComboBoxItem Content="Q"/>
+                <ComboBoxItem Content="K"/>
+                <ComboBoxItem Content="A"/>
+            </ComboBox>
+    		<StackPanel x:Name="stackCards" Grid.Column="1" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center">
+    			<CheckBox Content="A" Margin="0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="K" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="Q" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="J" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="10" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="9" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="8" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="7" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="6" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="5" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="4" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="3" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    			<CheckBox Content="2" Margin="7,0,0,0" VerticalAlignment="Stretch" FontFamily="Segoe UI" IsEnabled="{Binding IsChecked, ElementName=chkFlopTexture}"/>
+    		</StackPanel>
+    		<StackPanel IsEnabled="{Binding Path=IsChecked, ElementName=chkFlushCards}" Grid.Column="1" HorizontalAlignment="Left" Margin="8,0,0,0">
+    			<Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="rdoNoFlush" Grid.Row="0" Grid.Column="0"  Content="No Flush Possible" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" IsChecked="True" d:LayoutOverrides="Width"/>
+                    <RadioButton x:Name="rdoThreeCardsOneSuit" Grid.Row="0" Grid.Column="1" Content="Three Cards One Suit" Margin="22.5,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" d:LayoutOverrides="Width"/>
+                    <RadioButton x:Name="rdoFourCardsOneSuit" Grid.Row="1" Grid.Column="0" Content="Four Cards One Suit" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Left"/>
+                    <RadioButton x:Name="rdoFiveCardsOneSuit" Grid.Row="1" Grid.Column="1" Content="Five Cards One Suit" Margin="22.5,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalMargin"/>
+
+                </Grid>
+                <!--<StackPanel Orientation="Horizontal">
+    				<RadioButton x:Name="rdoNoFlush"  Content="No Flush Possible" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" IsChecked="True" d:LayoutOverrides="Width"/>
+    				<RadioButton x:Name="rdoThreeCardsOneSuit" Content="Three Cards One Suit" Margin="22.5,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" d:LayoutOverrides="Width"/>
+    			</StackPanel>
+    			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+    				<RadioButton x:Name="rdoFourCardsOneSuit" Content="Four Cards One Suit" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Left"/>
+    				<RadioButton x:Name="rdoFiveCardsOneSuit" Content="Five Cards One Suit" Margin="10,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalMargin"/>
+    			</StackPanel>-->
+    		</StackPanel>
+    		<StackPanel  IsEnabled="{Binding IsChecked, ElementName=chkFlopIsPaired}" Grid.Column="1" Margin="8,5,0,0" Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+    			<RadioButton x:Name="rdoPairedTrue" Content="True" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" IsChecked="True"/>
+    			<RadioButton x:Name="rdoPairedFalse" Content="False" Margin="10,0,0,0" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12"/>
+    		</StackPanel>
+    	</Grid>
+			
+    </Grid>
+</UserControl>

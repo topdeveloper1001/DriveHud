@@ -16,6 +16,7 @@ namespace Model.AppStore
     {
         Recommended,
         Training,
-        Huds
+        Huds, 
+        Apps
     }
 }

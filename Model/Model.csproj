@@ -139,7 +139,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AliasCollectionItem.cs" />
+    <Compile Include="AppStore\AppsAppStoreModel.cs" />
+    <Compile Include="AppStore\AppsAppStoreRepository.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
+    <Compile Include="AppStore\IAppsAppStoreModel.cs" />
+    <Compile Include="AppStore\IAppsAppStoreRepository.cs" />
     <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
     <Compile Include="AppStore\ITrainingAppStoreRepository.cs" />
     <Compile Include="AppStore\TrainingAppStoreModel .cs" />

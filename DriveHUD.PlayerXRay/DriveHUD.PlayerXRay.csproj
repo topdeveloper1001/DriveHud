@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BCC7610-1D61-4F3D-9D80-2DF9DAF375C5}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.PlayerXRay</RootNamespace>
+    <AssemblyName>DriveHUD.PlayerXRay</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reactiveui-core.6.5.0\lib\Net45\ReactiveUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Transitionals">
+      <HintPath>..\dependencies\Transitionals.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\dependencies\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessHelper\TextureHelpers\BoardTextureAnalyzerHelpers.cs" />
+    <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
+    <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
+    <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
+    <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />
+    <Compile Include="PlayerXRay\CustomControls\MainMenu.xaml.cs" />
+    <Compile Include="PlayerXRay\CustomControls\MainMenuButton.xaml.cs" />
+    <Compile Include="PlayerXRay\CustomControls\MessageBoxHelper.cs" />
+    <Compile Include="PlayerXRay\Helpers\UIHelpers.cs" />
+    <Compile Include="PlayerXRay\MainWindow.xaml.cs" />
+    <Compile Include="PlayerXRay\Theme\TreeViewHelper.cs" />
+    <Compile Include="PlayerXRay\UserControls\AddItems\AddGroupWindow.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\AddItems\AddNoteWindow.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\BoardTexture\BoardTextureUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\BoardTexture\FlopBoardTextureUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\BoardTexture\RiverBoardTextureUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\BoardTexture\TurnBoardTextureUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\DebugModeUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\ComparisonFiltersWindow.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\NoteFilterValueAdd.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\NotesActionsUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\NotesHv.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\NotesPage.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\NotesSettings.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\PlayerSettingUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Notes\StakesUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\ProfilesUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\RunPage.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\SettingsUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Settings\BackupRestoreUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Settings\DatabaseSettingsUC.xaml.cs" />
+    <Compile Include="PlayerXRay\UserControls\Settings\GeneralSettingsUC.xaml.cs" />
+    <Compile Include="UIControls\Core\Converters\InverseBoolConverter.cs" />
+    <Compile Include="UIControls\Core\Primitives\InputBase.cs" />
+    <Compile Include="UIControls\Core\UIElementAdorner.cs" />
+    <Compile Include="UIControls\CustomControls\CircularAnimator.xaml.cs" />
+    <Compile Include="UIControls\CustomControls\ExitDialog.xaml.cs" />
+    <Compile Include="UIControls\CustomControls\HoleCardsUC.xaml.cs" />
+    <Compile Include="UIControls\MessageBox\MessageBox.cs" />
+    <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
+    <Compile Include="UIControls\VisualStates.cs" />
+    <Page Include="HUDHelper\HUDWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRayMainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="BusinessHelper\ApplicationSettings\NotesAppSettings.cs" />
+    <Compile Include="BusinessHelper\ApplicationSettings\NotesAppSettingsHelper.cs" />
+    <Compile Include="BusinessHelper\ApplicationSettings\StaticStorage.cs" />
+    <Compile Include="BusinessHelper\DAL.cs" />
+    <Compile Include="BusinessHelper\EncryptionHelper.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\FlushAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\FlushDrawAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\FourOfAKindAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\FullHouseAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\HighCardAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\OnePairAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\StraightAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\StraightDrawAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\StraightFlushAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\ThreeOfAKindAnalyzers.cs" />
+    <Compile Include="BusinessHelper\HandAnalyzer\TwoPairAnalyzers.cs" />
+    <Compile Include="BusinessHelper\NoteManager.cs" />
+    <Compile Include="BusinessHelper\NoteManagerHelper.cs" />
+    <Compile Include="BusinessHelper\NotesInsertManager.cs" />
+    <Compile Include="BusinessHelper\OtherAnalyzers\BetSizeAnalyzers.cs" />
+    <Compile Include="BusinessHelper\OtherAnalyzers\NotClassifiedAnalyzers.cs" />
+    <Compile Include="BusinessHelper\OtherAnalyzers\PotSizeAnalyzers.cs" />
+    <Compile Include="BusinessHelper\Player.cs" />
+    <Compile Include="BusinessHelper\Resources.Designer.cs" />
+    <Compile Include="BusinessHelper\Serializer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\FiveOfOneSuitFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\FourOfOneSuitFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\NoPossibleFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\RainbowFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\ThreeOfOneSuitFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\TwoOfOneSuitFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Flush\TwoOfTwoSuitFlushTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Straight\GutShotTextureAnalizer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Straight\OpenEndedStraightTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\TextureAnalyzers\Straight\PossibleStraightTextureAnalyzer.cs" />
+    <Compile Include="BusinessHelper\WcfHelper.cs" />
+    <Compile Include="ClientHelpers\DriveHUD\DriveHudConfiguration.cs" />
+    <Compile Include="ClientHelpers\HoldemManager\HoldemManagerConfiguration.cs" />
+    <Compile Include="ClientHelpers\PokerTracker\PokerTrackerConfiguration.cs" />
+    <Compile Include="DataAccessHelper\DriveHUD\HandHistory.cs" />
+    <Compile Include="DataAccessHelper\DriveHUD\HudLightIndicators.cs" />
+    <Compile Include="DataAccessHelper\DriveHUD\Indicators.cs" />
+    <Compile Include="DataAccessHelper\DriveHUD\PlayerStatistic.cs" />
+    <Compile Include="DataAccessHelper\DriveHUD\StatDto.cs" />
+    <Compile Include="DataTypes\Card.cs" />
+    <Compile Include="DataTypes\CompareHelpers.cs" />
+    <Compile Include="DataTypes\Enums.cs" />
+    <Compile Include="DataTypes\EnumsHelpers.cs" />
+    <Compile Include="DataTypes\HoleCardsHelper.cs" />
+    <Compile Include="DataTypes\InsertManagerObjects\DatabaseNote.cs" />
+    <Compile Include="DataTypes\InsertManagerObjects\ProcessNoteObject.cs" />
+    <Compile Include="DataTypes\InsertManagerObjects\ProcessPlayerObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\ActionsObjects\ActionSettings.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\FilterObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\HandValueSettings.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\InnerGroupObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\NoteObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\NoteSettingsObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\PlayerObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\ProfileObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\StageObject.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\FlopTextureSettings.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\RiverTextureSettings.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\TextureSettings.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\TurnTextureSettings.cs" />
+    <Compile Include="DataTypes\ObjectsHelper.cs" />
+    <Compile Include="DataTypes\ServerDatabase.cs" />
+    <Compile Include="DataTypes\ServerDatabaseList.cs" />
+    <Compile Include="DataTypes\Stake.cs" />
+    <Compile Include="Helpers\AssemblyHelpers.cs" />
+    <Compile Include="HUDHelper\HudManager.cs" />
+    <Compile Include="HUDHelper\HUDWindow.xaml.cs" />
+    <Compile Include="PlayerXRayMainView.xaml.cs">
+      <DependentUpon>PlayerXRayMainView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PlayerXRay\CustomControls\MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\CustomControls\MainMenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\NumericUpDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\TabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ThemeFile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\ToolTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\Theme\TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\AddItems\AddGroupWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\AddItems\AddNoteWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\BoardTexture\BoardTextureUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\BoardTexture\FlopBoardTextureUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\BoardTexture\RiverBoardTextureUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\BoardTexture\TurnBoardTextureUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\DebugModeUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\ComparisonFiltersWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\NoteFilterValueAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\NotesActionsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\NotesHv.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\NotesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\NotesSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\PlayerSettingUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Notes\StakesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\ProfilesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\RunPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\SettingsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Settings\BackupRestoreUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Settings\DatabaseSettingsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerXRay\UserControls\Settings\GeneralSettingsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControls\CustomControls\CircularAnimator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControls\CustomControls\ExitDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControls\CustomControls\HoleCardsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControls\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlayerXRayMainViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="BusinessHelper\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessHelper\config\defaultNotes.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Wpf\DriveHUD.Common.Wpf.csproj">
+      <Project>{ab1a2f50-a5c0-4ccd-bf93-26c2a1d5f0e4}</Project>
+      <Name>DriveHUD.Common.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Controls\DriveHUD.Controls.csproj">
+      <Project>{86ac9d11-047a-49c6-805c-d76bf68ada7a}</Project>
+      <Name>DriveHUD.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
+      <Project>{c6a64d15-132d-46a6-8c95-42d8934ff6b4}</Project>
+      <Name>DriveHUD.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Parser\HandHistories.Parser.csproj">
+      <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
+      <Name>HandHistories.Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UIControls\MessageBox\Icons\Error48.png" />
+    <Resource Include="UIControls\MessageBox\Icons\Information48.png" />
+    <Resource Include="UIControls\MessageBox\Icons\Question48.png" />
+    <Resource Include="UIControls\MessageBox\Icons\Warning48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
