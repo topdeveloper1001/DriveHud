@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Windows;
 using AcePokerSolutions.Helpers;
 using DriveHUD.Common.Log;
+using System.Windows.Controls;
 
 #endregion
 
@@ -23,7 +24,7 @@ namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
 
         public static NotesAppSettings CurrentNotesAppSettings { get; private set; }
 
-        public static Window MainWindow { get; set; }
+        public static ContentControl MainWindow { get; set; }
 
         public static string ConnectionString
         {

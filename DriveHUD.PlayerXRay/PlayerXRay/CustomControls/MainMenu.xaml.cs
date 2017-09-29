@@ -21,7 +21,7 @@ namespace AcePokerSolutions.PlayerXRay.CustomControls
 
         void MainMenuInitialized(object sender, System.EventArgs e)
         {
-            img.Source = UIHelpers.GetBitmapSource(Properties.Resources.tabMainBack);
+            img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.tabMainBack);
         }
 
         public void SelectMenu(MainMenuType type)
@@ -93,37 +93,37 @@ namespace AcePokerSolutions.PlayerXRay.CustomControls
                 case MainMenuType.Run:
                     btn.Header = "Run";
                     btn.MenuType = MainMenuType.Run;
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.runImage);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.runImage);
                     break;
                 case MainMenuType.Help:
                     btn.Header = "Help";
                     btn.MenuType = MainMenuType.Help;
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.helpImage);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.helpImage);
                     break;
                 case MainMenuType.Settings:
                     btn.MenuType = MainMenuType.Settings;
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.settingsImage);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.settingsImage);
                     btn.Header = "Settings";
                     break;
                 case MainMenuType.HUD:
                     btn.MenuType = MainMenuType.HUD;
                     btn.Header = "HUD";
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.noteImage);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.noteImage);
                     break;
                 case MainMenuType.Notes:
                     btn.MenuType = MainMenuType.Notes;
                     btn.Header = "Notes";
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.noteImage);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.noteImage);
                     break;
                 case MainMenuType.Profiles:
                     btn.MenuType = MainMenuType.Profiles;
                     btn.Header = "Profiles";
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.profiles);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.profiles);
                     break;
                 case MainMenuType.Debug:
                     btn.MenuType = MainMenuType.Debug;
                     btn.Header = "Debug";
-                    btn.img.Source = UIHelpers.GetBitmapSource(Properties.Resources.database);
+                    btn.img.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.database);
                     break;
             }
         }

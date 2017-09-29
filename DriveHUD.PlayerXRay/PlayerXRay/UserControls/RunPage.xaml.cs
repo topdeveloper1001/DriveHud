@@ -40,7 +40,7 @@ namespace AcePokerSolutions.PlayerXRay.UserControls
         void RunPageInitialized(object sender, System.EventArgs e)
         {
             m_stageType = NoteStageType.PreFlop;
-            imgLogo.Source = UIHelpers.GetBitmapSource(Properties.Resources.PlayerXrayLogo);
+            imgLogo.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PlayerXrayLogo);
         }
 
         private void RefreshTree()
@@ -90,12 +90,12 @@ namespace AcePokerSolutions.PlayerXRay.UserControls
                                                          btnPause.Visibility = Visibility.Visible;
                                                          btnStop.Visibility = Visibility.Visible;
                                                          btnPause.Source =
-                                                             UIHelpers.GetBitmapSource(Properties.Resources.pause24);
+                                                             UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.pause24);
                                                          break;
                                                      case WorkerState.Paused:
                                                          lblStatus.Text = "Paused";
                                                          btnPause.Source =
-                                                             UIHelpers.GetBitmapSource(Properties.Resources.play24);
+                                                             UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.play24);
                                                          break;
                                                      case WorkerState.Idle:
                                                          stackOptions.IsEnabled = true;

@@ -10,8 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Windows.Controls;
+
 namespace DriveHUD.Common.Wpf.Actions
 {
+    public interface IViewContainer
+    {
+        ContentControl Window { get; set; }
+    }
+
     public interface IViewModelContainer<out TViewModel>
     {
         TViewModel ViewModel { get; }

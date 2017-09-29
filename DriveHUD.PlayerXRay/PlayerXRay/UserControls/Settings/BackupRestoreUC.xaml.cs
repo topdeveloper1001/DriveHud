@@ -68,8 +68,7 @@ namespace AcePokerSolutions.PlayerXRay.UserControls.Settings
             }
 
             if (!result) return;
-
-            NotesAppSettingsHelper.MainWindow.Hide();
+            
             Process p = new Process();
             ProcessStartInfo info = new ProcessStartInfo
             {

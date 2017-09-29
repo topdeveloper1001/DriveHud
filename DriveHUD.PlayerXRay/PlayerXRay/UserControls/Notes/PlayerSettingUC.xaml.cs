@@ -67,25 +67,25 @@ namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
             switch (m_playerObject.PlayerType)
             {
                 case PlayerTypeEnum.Fish:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_FISH);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_FISH);
                     break;
                 case PlayerTypeEnum.Gambler:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_GAMBLER);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_GAMBLER);
                     break;
                 case PlayerTypeEnum.Lag:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_LAG1);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_LAG1);
                     break;
                 case PlayerTypeEnum.Nit:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_TIGHT_TAG);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_TIGHT_TAG);
                     break;
                 case PlayerTypeEnum.Rock:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_NIT);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_NIT);
                     break;
                 case PlayerTypeEnum.Tag:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_TAG);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_TAG);
                     break;
                 case PlayerTypeEnum.Whale:
-                    imgPlayer.Source = UIHelpers.GetBitmapSource(Properties.Resources.PLR_WHALE);
+                    imgPlayer.Source = UIHelpers.GetBitmapSource(DriveHUD.PlayerXRay.Properties.Resources.PLR_WHALE);
                     break;
             }
         }

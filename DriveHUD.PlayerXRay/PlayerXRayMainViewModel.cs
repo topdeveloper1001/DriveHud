@@ -30,7 +30,7 @@ namespace DriveHUD.PlayerXRay
 
         public void Initialize()
         {
-            Console.WriteLine($"{this} was initialized");
+            
         }
 
         #region INotification implementation
