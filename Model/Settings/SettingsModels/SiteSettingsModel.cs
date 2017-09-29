@@ -128,6 +128,9 @@ namespace Model.Settings
         [XmlAttribute]
         public bool IsAutoCenter { get; set; }
 
+        [XmlAttribute]
+        public bool FastPokerEnabled { get; set; }
+
         public override object Clone()
         {
             var model = (SiteModel)MemberwiseClone();

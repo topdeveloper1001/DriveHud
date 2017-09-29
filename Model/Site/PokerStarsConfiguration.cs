@@ -22,7 +22,7 @@ using System.Linq;
 
 namespace Model.Site
 {
-    public class PokerStarsConfiguration : ISiteConfiguration
+    public class PokerStarsConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR",
             "PokerStars.DK", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.CZ" };
@@ -55,7 +55,7 @@ namespace Model.Site
             };
         }
 
-        public EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -65,7 +65,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -73,15 +73,9 @@ namespace Model.Site
             }
         }
 
-        public string HeroName
-        {
-            get;
-            set;
-        }
-
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
@@ -89,21 +83,7 @@ namespace Model.Site
             }
         }
 
-        public bool IsAutoCenterAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public bool IsHandHistoryLocationRequired
+        public override bool IsHandHistoryLocationRequired
         {
             get
             {
@@ -111,7 +91,7 @@ namespace Model.Site
             }
         }
 
-        public bool IsPrefferedSeatsAllowed
+        public override bool IsPrefferedSeatsAllowed
         {
             get
             {
@@ -119,7 +99,23 @@ namespace Model.Site
             }
         }
 
-        public virtual string LogoSource
+        public override bool FastPokerAllowed
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override string FastPokerModeName
+        {
+            get
+            {
+                return CommonResourceManager.Instance.GetResourceString("Settings_FastPoker_PokerStarsName");
+            }
+        }
+
+        public override string LogoSource
         {
             get
             {
@@ -131,7 +127,7 @@ namespace Model.Site
         /// Gets the paths to hand histories folders
         /// </summary>
         /// <returns>The array of paths to hand histories folders</returns>
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();
 
@@ -167,7 +163,7 @@ namespace Model.Site
         /// </summary>
         /// <param name="siteModel">Model with site settings</param>
         /// <returns>The result of validation</returns>
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             if (siteModel == null)
             {
@@ -181,7 +177,8 @@ namespace Model.Site
                 IsNew = !siteModel.Configured,
                 HandHistoryLocations = GetHandHistoryFolders().ToList(),
                 IsDetected = configurationDirectories.Count > 0,
-                IsEnabled = siteModel.Enabled
+                IsEnabled = siteModel.Enabled,
+                FastPokerEnabled = true
             };
 
             foreach (var configurationDirectory in configurationDirectories)

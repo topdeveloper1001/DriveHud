@@ -86,6 +86,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private string selectedHandHistoryLocation;
         private bool isPreferredSeatingVisible;
         private bool isAutoCenterVisible;
+        private bool fastPokerVisible;
         private bool isHandHistoryLocationRequired;
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
@@ -119,6 +120,8 @@ namespace DriveHUD.Application.ViewModels.Settings
                 IsPreferredSeatingVisible = siteConfiguration.IsPrefferedSeatsAllowed;
                 IsHandHistoryLocationRequired = siteConfiguration.IsHandHistoryLocationRequired;
                 IsAutoCenterVisible = siteConfiguration.IsAutoCenterAllowed;
+                FastPokerVisible = siteConfiguration.FastPokerAllowed;
+                FastPokerModeName = siteConfiguration.FastPokerModeName;
 
                 SetProperty(ref selectedSiteType, value);
             }
@@ -219,6 +222,32 @@ namespace DriveHUD.Application.ViewModels.Settings
                 SetProperty(ref isAutoCenterVisible, value);
             }
 
+        }
+
+        public bool FastPokerVisible
+        {
+            get
+            {
+                return fastPokerVisible;
+            }
+            set
+            {
+                SetProperty(ref fastPokerVisible, value);
+            }
+        }
+
+        private string fastPokerModeName;
+
+        public string FastPokerModeName
+        {
+            get
+            {
+                return fastPokerModeName;
+            }
+            set
+            {
+                SetProperty(ref fastPokerModeName, value);
+            }
         }
 
         public bool IsHandHistoryLocationRequired

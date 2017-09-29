@@ -32,6 +32,8 @@ namespace Model.Site
 
         bool IsAutoCenter { get; set; }
 
+        bool FastPokerEnabled { get; set; }
+
         List<string> Issues { get; set; }
 
         List<string> HandHistoryLocations { get; set; }

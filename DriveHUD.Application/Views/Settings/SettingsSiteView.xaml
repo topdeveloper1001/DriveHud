@@ -360,28 +360,38 @@
 
             </StackPanel>
 
+            <!-- Fast poker -->
+            <Separator
+                Margin="5 15"
+                Visibility="{Binding FastPokerVisible, Converter={dh:BoolToVisibilityConverter}}" />
+      
+            <CheckBox
+                IsChecked="{Binding SelectedSite.FastPokerEnabled}"
+                Visibility="{Binding FastPokerVisible, Converter={dh:BoolToVisibilityConverter}}"
+                Content="{Binding FastPokerModeName}" />
+
             <!-- Auto center -->
             <Separator
                 Margin="5 15"
                 Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
             <TextBlock
-                Text="Preferred Seating:"
+                Text="{ResX Key=Settings_PreferredSeating}"
                 Style="{StaticResource Title_H1}"
                 Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
             <CheckBox
                 IsChecked="{Binding SelectedSite.IsAutoCenter}"
                 Visibility="{Binding IsAutoCenterVisible, Converter={dh:BoolToVisibilityConverter}}"
-                Content="Auto-Center" />
+                Content="{ResX Key=Settings_AutoCenter}" />
 
+            <!-- Preferred Seating -->
             <Separator
                 Margin="5 15"
                 Visibility="{Binding IsPreferredSeatingVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
-            <!-- Preferred Seating -->
             <TextBlock
-                Text="Preferred Seating:"
+                Text="{ResX Key=Settings_PreferredSeating}"
                 Style="{StaticResource Title_H1}"
                 Visibility="{Binding IsPreferredSeatingVisible, Converter={dh:BoolToVisibilityConverter}}" />
 
