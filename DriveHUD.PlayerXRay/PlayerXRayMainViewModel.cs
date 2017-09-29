@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Wpf.Mvvm;
+using Prism.Interactivity.InteractionRequest;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +21,49 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.PlayerXRay
 {
-    public class PlayerXRayMainViewModel : WindowViewModelBase
+    public class PlayerXRayMainViewModel : WindowViewModelBase, INotification
     {
+        public PlayerXRayMainViewModel()
+        {
+            title = "Player X-Ray";
+        }
+
+        public void Initialize()
+        {
+            Console.WriteLine($"{this} was initialized");
+        }
+
+        #region INotification implementation
+
+        private string title;
+
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+
+            set
+            {
+                this.RaiseAndSetIfChanged(ref title, value);
+            }
+        }
+
+        private object content;
+
+        public object Content
+        {
+            get
+            {
+                return content;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref content, value);
+            }
+        }
+
+        #endregion
     }
 }

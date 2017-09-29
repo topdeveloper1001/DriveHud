@@ -14,6 +14,7 @@ using DriveHUD.Common.Wpf.Events;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
+using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 
@@ -89,8 +90,22 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private InteractionRequest<INotification> viewRequest;
+
+        public InteractionRequest<INotification> ViewRequest
+        {
+            get
+            {
+                return viewRequest;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewRequest, value);
+            }
+        }
+
         #endregion
-      
+
         #region IAppStoreViewModel implementation
 
         public virtual void Initialize()
@@ -124,7 +139,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         }
 
         protected abstract void InitializeCommands();
-        
+
         protected virtual void OnUpdated()
         {
             Updated?.Invoke(this, EventArgs.Empty);

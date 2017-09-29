@@ -1,15 +1,43 @@
-﻿using System.Windows.Controls;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PlayerXRayMainView.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Wpf.Actions;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace DriveHUD.PlayerXRay
 {
     /// <summary>
     /// Interaction logic for PlayerXRayMainView.xaml
     /// </summary>
-    public partial class PlayerXRayMainView : UserControl
+    public partial class PlayerXRayMainView : UserControl, IViewContainer
     {
         public PlayerXRayMainView()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            Loaded += PlayerXRayMainView_Loaded;
+        }
+
+        protected PlayerXRayMainViewModel ViewModel
+        {
+            get
+            {
+                return DataContext as PlayerXRayMainViewModel;
+            }
+        }
+
+        private void PlayerXRayMainView_Loaded(object sender, RoutedEventArgs e)
+        {
+            ViewModel?.Initialize();
         }
     }
 }

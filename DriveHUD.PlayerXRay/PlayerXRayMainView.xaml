@@ -10,6 +10,6 @@
     d:DesignWidth="300">
     <Grid>
         <Label
-            Content="Hello world!" Foreground="White" />
+            Content="Hey" Foreground="White" />
     </Grid>
 </UserControl>

@@ -454,7 +454,6 @@
     <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModel.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModelInfo.cs" />
-    <Compile Include="ViewModels\AppStore\AppContainerViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppsAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreBaseViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
@@ -572,9 +571,6 @@
     </Compile>
     <Compile Include="Views\Alias\AliasView.xaml.cs">
       <DependentUpon>AliasView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AppStore\AppContainerView.xaml.cs">
-      <DependentUpon>AppContainerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AppStore\AppsAppStoreView.xaml.cs">
       <DependentUpon>AppsAppStoreView.xaml</DependentUpon>
@@ -1027,10 +1023,6 @@
     <Page Include="Views\Alias\AliasView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\AppStore\AppContainerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AppStore\AppsAppStoreView.xaml">
       <SubType>Designer</SubType>

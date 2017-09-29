@@ -11,22 +11,22 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.PlayerXRay;
+using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Regions;
 using ReactiveUI;
 using System;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
     public class AppsAppStoreViewModel : AppStoreBaseViewModel<IAppsAppStoreModel>
-    {
-        public InteractionRequest<INotification> OpenAppRequest { get; private set; }
-
+    {        
         public override void Initialize()
         {
             base.Initialize();
 
-            OpenAppRequest = new InteractionRequest<INotification>();
+            ViewRequest = new InteractionRequest<INotification>();
 
             GridColumns = 2;
             GridRows = 3;
@@ -58,12 +58,11 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 return;
             }
 
-            var appContainerViewModel = new AppContainerViewModel(appStoreProduct)
-            {
-                ContainerViewModel = new PlayerXRayMainViewModel()
-            };
+            var rnd = new Random();
 
-            OpenAppRequest?.Raise(appContainerViewModel);
+            var appViewModel = new PlayerXRayMainViewModel();
+
+            ViewRequest?.Raise(appViewModel);
         }
     }
 }

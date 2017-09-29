@@ -29,12 +29,15 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Application.Views.AppStore;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
+using DriveHUD.PlayerXRay;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -114,7 +117,7 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;                    
+                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
                     ((RadWindow)Shell).IsTopmost = false;
@@ -189,7 +192,7 @@ namespace DriveHUD.Application
                 }
             }
             return false;
-        }      
+        }
 
         public static void RegisterRuntimeTypeModelTypes()
         {
@@ -277,6 +280,9 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
+
+            // Register container views
+            Container.RegisterType<IViewContainer, PlayerXRayMainView>("PlayerXRayMainView");
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

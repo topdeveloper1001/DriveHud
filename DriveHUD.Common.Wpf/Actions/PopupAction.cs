@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Controls;
+using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Windows;
@@ -29,6 +31,17 @@ namespace DriveHUD.Common.Wpf.Actions
                 typeof(FrameworkElement),
                 typeof(PopupAction<T>),
                 new PropertyMetadata(null));
+
+        /// <summary>
+        /// The name of view of the child window to display
+        /// </summary>
+        public static readonly DependencyProperty ViewNameProperty =
+        DependencyProperty.Register(
+            "ViewName",
+            typeof(string),
+            typeof(PopupAction<T>),
+            new UIPropertyMetadata(null));
+
 
         /// <summary>
         /// Determines if the content should be shown in a modal window or not.
@@ -64,6 +77,15 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             get { return (FrameworkElement)GetValue(WindowContentProperty); }
             set { SetValue(WindowContentProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the name of view of the content of the window
+        /// </summary>
+        public string ViewName
+        {
+            get { return (string)GetValue(ViewNameProperty); }
+            set { SetValue(ViewNameProperty, value); }
         }
 
         /// <summary>
@@ -131,18 +153,25 @@ namespace DriveHUD.Common.Wpf.Actions
                 {
                     wrapperWindow.SizeChanged -= sizeHandler;
 
-                    var view = AssociatedObject;
-                    var position = view.PointToScreen(new Point(0, 0));
+                    try
+                    {
+                        var view = AssociatedObject;
+                        var position = view.PointToScreen(new Point(0, 0));
 
-                    var top = position.Y + ((view.ActualHeight - wrapperWindow.ActualHeight) / 2);
-                    var left = position.X + ((view.ActualWidth - wrapperWindow.ActualWidth) / 2);
+                        var top = position.Y + ((view.ActualHeight - wrapperWindow.ActualHeight) / 2);
+                        var left = position.X + ((view.ActualWidth - wrapperWindow.ActualWidth) / 2);
 
-                    SetWindowPosition(wrapperWindow, left, top);
+                        SetWindowPosition(wrapperWindow, left, top);
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Popup window couldn't be centered", ex);
+                    }
                 };
 
                 wrapperWindow.SizeChanged += sizeHandler;
             }
-          
+
             Show(wrapperWindow);
         }
 
@@ -153,11 +182,6 @@ namespace DriveHUD.Common.Wpf.Actions
         /// <returns></returns>
         protected virtual T GetWindow(INotification notification)
         {
-            if (WindowContent == null)
-            {
-                throw new NullReferenceException("WindowContent has to be set");
-            }
-
             var wrapperWindow = CreateWindow();
 
             ApplyStyles(wrapperWindow, notification);
@@ -198,27 +222,43 @@ namespace DriveHUD.Common.Wpf.Actions
         /// <param name="wrapperWindow">The HostWindow</param>
         protected virtual void PrepareContentForWindow(INotification notification, T wrapperWindow)
         {
-            if (WindowContent == null || wrapperWindow == null)
+            if (wrapperWindow == null)
             {
                 return;
             }
 
+            FrameworkElement contentView;
+
+            if (WindowContent == null)
+            {
+                if (string.IsNullOrEmpty(ViewName))
+                {
+                    return;
+                }
+
+                contentView = ServiceLocator.Current.GetInstance<IViewContainer>(ViewName) as FrameworkElement;
+            }
+            else
+            {
+                contentView = WindowContent;
+            }
+
             // We set the WindowContent as the content of the window. 
-            wrapperWindow.Content = WindowContent;
+            wrapperWindow.Content = contentView;
 
             // If the WindowContent's DataContext implements IInteractionRequestAware we set the corresponding properties.
-            var interactionAware = WindowContent.DataContext as IInteractionRequestAware;
+            var interactionAware = contentView.DataContext as IInteractionRequestAware;
 
             if (interactionAware == null)
             {
                 // If the WindowContent implements IInteractionRequestAware we set the corresponding properties.
-                interactionAware = WindowContent as IInteractionRequestAware;
+                interactionAware = contentView as IInteractionRequestAware;
 
                 if (interactionAware == null)
                 {
-                    if (WindowContent.DataContext is PopupActionNotification)
+                    if (contentView.DataContext is PopupActionNotification)
                     {
-                        var dataContext = WindowContent.DataContext as PopupActionNotification;
+                        var dataContext = contentView.DataContext as PopupActionNotification;
                         dataContext.OnCloseRaised = () => CloseWindow(wrapperWindow);
                     }
 
