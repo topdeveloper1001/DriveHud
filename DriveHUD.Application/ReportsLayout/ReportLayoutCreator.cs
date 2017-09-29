@@ -373,7 +373,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_VPIP_MP", nameof(Indicators.VPIP_MP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_VPIP_SB", nameof(Indicators.VPIP_SB), ColumnType.Percentile),
             // W
-            new Tuple<string, string, ColumnType>("Reports_Column_WSSD", nameof(Indicators.WSSD), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_WTSD", nameof(Indicators.WTSD), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_WSWSF", nameof(Indicators.WSWSF), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_WSSD", nameof(Indicators.WSSD), ColumnType.Percentile),
         };
