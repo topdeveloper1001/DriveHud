@@ -114,7 +114,7 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;                    
+                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
                     ((RadWindow)Shell).IsTopmost = false;
@@ -156,14 +156,21 @@ namespace DriveHUD.Application
 
                     if (settingsModel != null && settingsModel.GeneralSettings != null && settingsModel.GeneralSettings.RunSiteDetection)
                     {
-                        var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
-                            .ValidateSiteConfigurations()
-                            .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
-
-                        if (validationResults.Any())
+                        try
                         {
-                            var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
-                            mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                            var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                                .ValidateSiteConfigurations()
+                                .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+
+                            if (validationResults.Any())
+                            {
+                                var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
+                                mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogProvider.Log.Error(this, "Site validation failed.", ex);
                         }
                     }
 
@@ -189,7 +196,7 @@ namespace DriveHUD.Application
                 }
             }
             return false;
-        }      
+        }
 
         public static void RegisterRuntimeTypeModelTypes()
         {

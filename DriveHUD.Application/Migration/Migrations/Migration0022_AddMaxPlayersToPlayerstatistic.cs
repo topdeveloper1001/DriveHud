@@ -67,13 +67,13 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, "Migration #22 failed.", e);
+                    LogProvider.Log.Error(string.Empty, "Migration #22 failed.", e);
                 }
             }
             else
             {
                 LogProvider.Log.Info("Migration #22 has been skipped by user.");
-            }      
+            }
         }
     }
 }

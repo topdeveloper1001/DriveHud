@@ -193,10 +193,17 @@ namespace Model.Site
                         LogProvider.Log.Info($"Site detection: IPoker[{siteName}]: {installPath}");
                     }
 
-                    var hhDirs = Directory.EnumerateDirectories(installPath, "*", SearchOption.AllDirectories)
-                        .Where(x => handHistoryLocationPattern.Value.IsMatch(x)).ToArray();
+                    try
+                    {
+                        var hhDirs = Directory.EnumerateDirectories(installPath, "*", SearchOption.AllDirectories)
+                            .Where(x => handHistoryLocationPattern.Value.IsMatch(x)).ToArray();
 
-                    validationResult.HandHistoryLocations.AddRange(hhDirs);
+                        validationResult.HandHistoryLocations.AddRange(hhDirs);
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Couldn't get hand history locations for {siteName} at {installPath}", e);
+                    }
 
                     validationResult.IsDetected = true;
                 }
@@ -226,7 +233,7 @@ namespace Model.Site
                 {
                     var registryInstallPath = softwareRegistryKey.GetValue(RegistryInstallFolderKey) as string;
 
-                    if (!string.IsNullOrEmpty(registryInstallPath))
+                    if (!string.IsNullOrEmpty(registryInstallPath) && Directory.Exists(registryInstallPath))
                     {
                         return registryInstallPath;
                     }
