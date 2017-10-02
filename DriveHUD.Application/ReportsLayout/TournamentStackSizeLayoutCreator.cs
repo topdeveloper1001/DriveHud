@@ -23,6 +23,9 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class TournamentStackSizeLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet),
+             nameof(Indicators.AggPr), nameof(Indicators.Agg), nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.WSWSF) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -31,17 +34,9 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(MRatioReportRecord.TotalHands)));
             gridView.Columns.Add(AddFinancial("Reports_Column_NetWon", nameof(MRatioReportRecord.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(MRatioReportRecord.BB)));
-            gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(MRatioReportRecord.VPIP)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(MRatioReportRecord.PFR)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_Agg", nameof(MRatioReportRecord.Agg)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(MRatioReportRecord.AggPr)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(MRatioReportRecord.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(MRatioReportRecord.WTSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(MRatioReportRecord.WSSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(MRatioReportRecord.WSWSF)));
+            gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));          
 
-            base.AddDefaultStats(gridView);
+            AddDefaultStats(gridView, defaultColumns);
         }
 
         private GridViewDataColumn GetMRatioColumn(string resourceKey, string member, GridViewLength width)

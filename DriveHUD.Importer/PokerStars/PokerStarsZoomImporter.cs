@@ -12,6 +12,8 @@
 
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System.Linq;
 
 namespace DriveHUD.Importers.PokerStars
 {
@@ -21,7 +23,7 @@ namespace DriveHUD.Importers.PokerStars
 
         private const int pipeReadingTimeout = 5000;
 
-        private const string site = "PokerStars";
+        private const string site = "PokerStarsZoom";
 
         private const string pipeName = @"\\.\pipe\APSPokerStars";
 
@@ -87,6 +89,14 @@ namespace DriveHUD.Importers.PokerStars
             {
                 return pipeName;
             }
+        }
+
+        protected override bool IsDisabled()
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            return siteSettings != null && (!siteSettings.Enabled || !siteSettings.FastPokerEnabled);
         }
     }
 }

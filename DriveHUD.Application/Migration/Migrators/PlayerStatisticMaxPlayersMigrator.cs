@@ -69,7 +69,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         {
             try
             {
-                LogProvider.Log.Info("Starting statistic update.");
+                LogProvider.Log.Info(this, "Starting statistic update.");
 
                 PrepareTemporaryPlayerStatisticData();
                 PrepareHandHistoryTableSizeMap();
@@ -77,7 +77,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                 var statFiles = Directory.EnumerateFiles(playerStatisticDataFolder, "*.stat", SearchOption.AllDirectories);
                 var statFileCounter = 0;
 
-                LogProvider.Log.Info("Processing statistic files.");
+                LogProvider.Log.Info(this, "Processing statistic files.");
 
                 Parallel.ForEach(statFiles, file =>
                 {
@@ -85,7 +85,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                     Interlocked.Increment(ref statFileCounter);
                 });
 
-                LogProvider.Log.Info($"Processed {statFileCounter} statistic files.");
+                LogProvider.Log.Info(this, $"Processed {statFileCounter} statistic files.");
 
                 ReplaceOriginalPlayerstatistic();
             }
@@ -101,7 +101,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         /// </summary>
         private void PrepareHandHistoryTableSizeMap()
         {
-            LogProvider.Log.Info("Loading hand histories map.");
+            LogProvider.Log.Info(this, "Loading hand histories map.");
 
             using (var session = ModelEntities.OpenStatelessSession())
             {
@@ -111,7 +111,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                                               select new { HandNumberPokerSiteKey = handNumberPokerSiteKey, TableSize = gameInfo.Tablesize })
                                      .ToDictionary(x => x.HandNumberPokerSiteKey, x => x.TableSize);
 
-                LogProvider.Log.Info($"Loaded {handHistoryNumberTableSize.Count} hand histories.");
+                LogProvider.Log.Info(this, $"Loaded {handHistoryNumberTableSize.Count} hand histories.");
             }
         }
 
@@ -120,18 +120,18 @@ namespace DriveHUD.Application.MigrationService.Migrators
         /// </summary>
         private void PrepareTemporaryPlayerStatisticData()
         {
-            LogProvider.Log.Info("Creating temp folder for statistic files.");
+            LogProvider.Log.Info(this, "Creating temp folder for statistic files.");
 
             if (Directory.Exists(playerStatisticTempDataFolder))
             {
-                LogProvider.Log.Info($"'{playerStatisticTempDataFolder}' exists. Deleting...");
+                LogProvider.Log.Info(this, $"'{playerStatisticTempDataFolder}' exists. Deleting...");
 
                 Directory.Delete(playerStatisticTempDataFolder, true);
             }
 
             Directory.CreateDirectory(playerStatisticTempDataFolder);
 
-            LogProvider.Log.Info("Temp folder for statistic files has been created.");
+            LogProvider.Log.Info(this, "Temp folder for statistic files has been created.");
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                         }
                         catch (Exception ex)
                         {
-                            LogProvider.Log.Error($"Could not process the file: {srcFile}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                            LogProvider.Log.Error(this, $"Could not process the file: {srcFile}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
                         }
                     }
                 }
@@ -211,7 +211,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
 
             if (!handHistoryNumberTableSize.ContainsKey(handNumberPokerSiteKey))
             {
-                LogProvider.Log.Warn($"Hand hasn't been found in db. It will be saved as is. Hand={stat.GameNumber}, PokerSite={(EnumPokerSites)stat.PokersiteId}");
+                LogProvider.Log.Warn(this, $"Hand hasn't been found in db. It will be saved as is. Hand={stat.GameNumber}, PokerSite={(EnumPokerSites)stat.PokersiteId}");
                 return;
             }
 
@@ -248,7 +248,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         /// </summary>
         private void ReplaceOriginalPlayerstatistic()
         {
-            LogProvider.Log.Info($"Replacing '{playerStatisticDataFolder}' with '{playerStatisticTempDataFolder}'.");
+            LogProvider.Log.Info(this, $"Replacing '{playerStatisticDataFolder}' with '{playerStatisticTempDataFolder}'.");
 
             var newPlayerStatisticBackupDataFolder = playerStatisticBackupDataFolder;
             var backupFolderIndex = 1;
@@ -266,12 +266,29 @@ namespace DriveHUD.Application.MigrationService.Migrators
             if (Directory.Exists(playerStatisticDataFolder))
             {
                 Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
-                LogProvider.Log.Info($"Backup '{playerStatisticBackupDataFolder}' has been created.");
+                LogProvider.Log.Info(this, $"Backup '{playerStatisticBackupDataFolder}' has been created.");
             }
 
-            Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
+            try
+            {
+                Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
+            }
+            catch
+            {
+                try
+                {
+                    Directory.Move(playerStatisticBackupDataFolder, playerStatisticDataFolder);
+                    LogProvider.Log.Error(this, $"Couldn't move temp data. Data from backup has been restored.");
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Couldn't move temp data. Data from backup couldn't be restored.", e);
+                }
 
-            LogProvider.Log.Info("Replacing completed.");
+                throw;
+            }
+
+            LogProvider.Log.Info(this, "Replacing completed.");
         }
 
         #region Class helpers

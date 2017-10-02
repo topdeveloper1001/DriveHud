@@ -97,6 +97,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto-Center.
+        /// </summary>
+        internal static string Settings_AutoCenter {
+            get {
+                return ResourceManager.GetString("Settings_AutoCenter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-25.
         /// </summary>
         internal static string Settings_BetOnlineHelpLink {
@@ -156,6 +165,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_ExchangeRate {
             get {
                 return ResourceManager.GetString("Settings_ExchangeRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable Zoom .
+        /// </summary>
+        internal static string Settings_FastPoker_PokerStarsName {
+            get {
+                return ResourceManager.GetString("Settings_FastPoker_PokerStarsName", resourceCulture);
             }
         }
         
@@ -255,6 +273,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_PokerStarsHelpLink {
             get {
                 return ResourceManager.GetString("Settings_PokerStarsHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferred Seating:.
+        /// </summary>
+        internal static string Settings_PreferredSeating {
+            get {
+                return ResourceManager.GetString("Settings_PreferredSeating", resourceCulture);
             }
         }
         

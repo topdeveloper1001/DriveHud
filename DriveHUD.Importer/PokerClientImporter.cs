@@ -77,7 +77,7 @@ namespace DriveHUD.Importers
                         // If pipe hasn't been created then exit from task
                         if (pipeServerHandle == IntPtr.Zero)
                         {
-                            LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Stop importing \"{0}\" data", SiteString));
+                            LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Stop importing \"{0}\" data", Identifier));
                             RaiseProcessStopped();
                             return;
                         }
@@ -109,7 +109,7 @@ namespace DriveHUD.Importers
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, string.Format("Data processing of \"{0}\" failed", SiteString), e);
+                    LogProvider.Log.Error(this, string.Format("Data processing of \"{0}\" failed", Identifier), e);
                 }
             }
 
@@ -129,7 +129,7 @@ namespace DriveHUD.Importers
         {
             Check.Require(string.IsNullOrWhiteSpace(PipeName), "Pipe name must be not empty.");
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Creating pipe server to get \"{0}\" data.", SiteString));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Creating pipe server to get \"{0}\" data.", Identifier));
 
             // Create and initialize security descriptor
             SecurityDescriptor sd;
@@ -171,7 +171,7 @@ namespace DriveHUD.Importers
                 return IntPtr.Zero;
             }
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Pipe server to get \"{0}\" data has been created.", SiteString));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Pipe server to get \"{0}\" data has been created.", Identifier));
 
             return pipeServerHandle;
         }

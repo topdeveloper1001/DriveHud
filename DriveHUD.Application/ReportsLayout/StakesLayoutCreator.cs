@@ -18,6 +18,10 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class StakesLayoutCreator : ReportLayoutCreator
     {
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet), nameof(Indicators.ThreeBetCall),
+            nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.AggPr), nameof(Indicators.Agg), nameof(Indicators.WSWSF), nameof(Indicators.FlopCBet),
+            nameof(Indicators.Steal), nameof(Indicators.FourBetRange) };
+
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
@@ -27,25 +31,16 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
             gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_VPIP", nameof(Indicators.VPIP)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_PFR", nameof(Indicators.PFR)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_3Bet", nameof(Indicators.ThreeBet)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_3BetCall", nameof(Indicators.ThreeBetCall)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WTSD", nameof(Indicators.WTSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSSD", nameof(Indicators.WSSD)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_AggPercent", nameof(Indicators.AggPr)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_AF", nameof(Indicators.Agg)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_WSWSF", nameof(Indicators.WSWSF)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_FlopToCBet", nameof(Indicators.FlopCBet)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_Steal", nameof(Indicators.Steal)));
-            gridView.Columns.Add(AddPercentile("Reports_Column_4BetRange", nameof(Indicators.FourBetRange)));
 
-            base.AddDefaultStats(gridView);
+            base.AddDefaultStats(gridView, defaultColumns);
 
             for (int i = 0; i < gridView.Columns.Count; i++)
             {
                 if (i == 0)
+                {
                     continue;
+                }
+
                 gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]);
             }
         }

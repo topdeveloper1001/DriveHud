@@ -207,6 +207,7 @@ namespace DriveHUD.Application.ViewModels
                             }
 
                             siteModel.IsAutoCenter = p.IsAutoCenter;
+                            siteModel.FastPokerEnabled = p.FastPokerEnabled;
 
                             siteModel.Configured = true;
                         }

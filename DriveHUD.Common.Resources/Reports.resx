@@ -124,7 +124,7 @@
     <value>3-Bet Call%</value>
   </data>
   <data name="Reports_Column_3BetVsSteal" xml:space="preserve">
-    <value>3-Bet vs. Steal</value>
+    <value>3-Bet vs. Steal%</value>
   </data>
   <data name="Reports_Column_3Bet_BB" xml:space="preserve">
     <value>3-Bet BB%</value>
@@ -151,7 +151,7 @@
     <value>4-Bet%</value>
   </data>
   <data name="Reports_Column_4BetRange" xml:space="preserve">
-    <value>4Bet Range</value>
+    <value>4-Bet Range</value>
   </data>
   <data name="Reports_Column_4Bet_BB" xml:space="preserve">
     <value>4-Bet BB%</value>
@@ -187,10 +187,10 @@
     <value>Bet When Checked To%</value>
   </data>
   <data name="Reports_Column_BlindsFoldToSteal" xml:space="preserve">
-    <value>Blinds Fold to Steal</value>
+    <value>Blinds Fold to Steal%</value>
   </data>
   <data name="Reports_Column_BlindsReRaiseSteal" xml:space="preserve">
-    <value>Blinds Re-raise Steal</value>
+    <value>Blinds Re-raise Steal%</value>
   </data>
   <data name="Reports_Column_Buyin" xml:space="preserve">
     <value>Buy-in</value>
@@ -288,8 +288,8 @@
   <data name="Reports_Column_FlopCheckRaise" xml:space="preserve">
     <value>Flop Check-Raise%</value>
   </data>
-  <data name="Reports_Column_FlopToCBet" xml:space="preserve">
-    <value>Flop C-Bet%</value>
+  <data name="Reports_Column_CBet" xml:space="preserve">
+    <value>C-Bet%</value>
   </data>
   <data name="Reports_Column_FoldTo3Bet" xml:space="preserve">
     <value>Fold to 3-Bet%</value>
@@ -336,22 +336,19 @@
   <data name="Reports_Column_Limp_CO" xml:space="preserve">
     <value>Limp CO%</value>
   </data>
-  <data name="Reports_Column_Limp_DonkBet" xml:space="preserve">
-    <value>Donk Bet%</value>
-  </data>
   <data name="Reports_Column_Limp_EP" xml:space="preserve">
     <value>Limp EP%</value>
   </data>
   <data name="Reports_Column_Limp_MP" xml:space="preserve">
     <value>Limp MP%</value>
   </data>
-  <data name="Reports_Column_Limp_RaiseFreqFactor" xml:space="preserve">
+  <data name="Reports_Column_RaiseFreqFactor" xml:space="preserve">
     <value>Raise Frequency Factor%</value>
   </data>
   <data name="Reports_Column_Limp_SB" xml:space="preserve">
     <value>Limp SB%</value>
   </data>
-  <data name="Reports_Column_Limp_TrueAgg" xml:space="preserve">
+  <data name="Reports_Column_TrueAgg" xml:space="preserve">
     <value>True Aggression% (TAP)</value>
   </data>
   <data name="Reports_Column_MRatio" xml:space="preserve">
@@ -364,7 +361,7 @@
     <value>Net Won</value>
   </data>
   <data name="Reports_Column_PFR" xml:space="preserve">
-    <value>PFR</value>
+    <value>PFR%</value>
   </data>
   <data name="Reports_Column_Place" xml:space="preserve">
     <value>Place</value>
@@ -481,7 +478,7 @@
     <value>$/h</value>
   </data>
   <data name="Reports_Column_VPIP" xml:space="preserve">
-    <value>VPIP</value>
+    <value>VPIP%</value>
   </data>
   <data name="Reports_Column_Winning" xml:space="preserve">
     <value>Winning%</value>
@@ -500,5 +497,74 @@
   </data>
   <data name="Reports_Column_WTSD" xml:space="preserve">
     <value>WTSD%</value>
+  </data>
+  <data name="Reports_Column_BetFlopCalled3BetPreflopIp" xml:space="preserve">
+    <value>Bets flop when X to in 3-bet pot IP%</value>
+  </data>
+  <data name="Reports_Column_BetFoldFlopPfrRaiser" xml:space="preserve">
+    <value>Bet/fold flop when PFR raiser%</value>
+  </data>
+  <data name="Reports_Column_BTNDefendCORaise" xml:space="preserve">
+    <value>BTN Defend to CO Raise%</value>
+  </data>
+  <data name="Reports_Column_DonkBet" xml:space="preserve">
+    <value>Donk Bet%</value>
+  </data>
+  <data name="Reports_Column_DoubleBarrel" xml:space="preserve">
+    <value>Double Barrel%</value>
+  </data>
+  <data name="Reports_Column_FoldToFlopRaise" xml:space="preserve">
+    <value>Fold To Flop Raise%</value>
+  </data>
+  <data name="Reports_Column_FoldToRiverCBet" xml:space="preserve">
+    <value>Fold To River C-Bet%</value>
+  </data>
+  <data name="Reports_Column_FoldToSqueez" xml:space="preserve">
+    <value>Fold To Squeeze%</value>
+  </data>
+  <data name="Reports_Column_FoldToTurnRaise" xml:space="preserve">
+    <value>Fold To Turn Raise%</value>
+  </data>
+  <data name="Reports_Column_PFR_BB" xml:space="preserve">
+    <value>PFR in BB%</value>
+  </data>
+  <data name="Reports_Column_PFR_BTN" xml:space="preserve">
+    <value>PFR in BTN%</value>
+  </data>
+  <data name="Reports_Column_PFR_CO" xml:space="preserve">
+    <value>PFR in CO%</value>
+  </data>
+  <data name="Reports_Column_PFR_EP" xml:space="preserve">
+    <value>PFR in EP%</value>
+  </data>
+  <data name="Reports_Column_PFR_MP" xml:space="preserve">
+    <value>PFR in MP%</value>
+  </data>
+  <data name="Reports_Column_PFR_SB" xml:space="preserve">
+    <value>PFR in SB%</value>
+  </data>
+  <data name="Reports_Column_UO_PFR_BB" xml:space="preserve">
+    <value>UO-PFR BB%</value>
+  </data>
+  <data name="Reports_Column_VPIP_BB" xml:space="preserve">
+    <value>VPIP BB%</value>
+  </data>
+  <data name="Reports_Column_VPIP_BTN" xml:space="preserve">
+    <value>VPIP BTN%</value>
+  </data>
+  <data name="Reports_Column_VPIP_CO" xml:space="preserve">
+    <value>VPIP CO%</value>
+  </data>
+  <data name="Reports_Column_VPIP_EP" xml:space="preserve">
+    <value>VPIP EP%</value>
+  </data>
+  <data name="Reports_Column_VPIP_MP" xml:space="preserve">
+    <value>VPIP MP%</value>
+  </data>
+  <data name="Reports_Column_VPIP_SB" xml:space="preserve">
+    <value>VPIP SB%</value>
+  </data>
+  <data name="Reports_Column_FoldCBet" xml:space="preserve">
+    <value>Fold to C-Bet%</value>
   </data>
 </root>

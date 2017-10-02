@@ -79,7 +79,7 @@ namespace DriveHUD.Importers.PokerStars
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.PokerStars);
 
-            if (siteSettings != null && !siteSettings.Enabled)
+            if (siteSettings != null && (!siteSettings.Enabled || !siteSettings.FastPokerEnabled))
             {
                 return false;
             }

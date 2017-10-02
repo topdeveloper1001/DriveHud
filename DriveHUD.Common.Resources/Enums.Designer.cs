@@ -1150,7 +1150,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To River  CBet.
+        ///   Looks up a localized string similar to Fold To River C-Bet.
         /// </summary>
         internal static string Enum_Stat_FoldToRiverCBet {
             get {
