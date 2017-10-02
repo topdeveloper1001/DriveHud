@@ -11,167 +11,181 @@
     d:DesignHeight="300"
     d:DesignWidth="676">
     <UserControl.Resources>
-        <TreeConverters:TreeMultiBindingConverter
-            x:Key="multiConverter" />
-        <TreeConverters:TreeDescriptionConverter
-            x:Key="descriptionConverter" />
-        <Style
-            TargetType="{x:Type TreeViewItem}">
-            <Setter
-                Property="Background"
-                Value="Transparent" />
-            <Setter
-                Property="HorizontalContentAlignment"
-                Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
-            <Setter
-                Property="VerticalContentAlignment"
-                Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
-            <Setter
-                Property="Padding"
-                Value="1,0,0,0" />
-            <Setter
-                Property="Foreground"
-                Value="{StaticResource ButtonForeground}" />
-            <Setter
-                Property="FocusVisualStyle"
-                Value="{StaticResource TreeViewItemFocusVisual}" />
-            <Setter
-                Property="IsExpanded"
-                Value="False" />
-            <Setter
-                Property="Template">
-                <Setter.Value>
-                    <ControlTemplate
-                        TargetType="{x:Type TreeViewItem}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition
-                                    MinWidth="19"
-                                    Width="Auto" />
-                                <ColumnDefinition
-                                    Width="Auto" />
-                                <ColumnDefinition
-                                    Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition
-                                    Height="22" />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <ToggleButton
-                                x:Name="Expander"
-                                Style="{StaticResource ExpandCollapseToggleStyle}"
-                                ClickMode="Press"
-                                IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
-                            <Border
-                                SnapsToDevicePixels="true"
-                                x:Name="Bd"
-                                Grid.Column="1"
-                                Grid.ColumnSpan="2"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                Padding="{TemplateBinding Padding}"
-                                HorizontalAlignment="Stretch">
-                                <ContentPresenter
-                                    VerticalAlignment="Center"
-                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                    HorizontalAlignment="Stretch"
-                                    x:Name="PART_Header"
-                                    ContentSource="Header" />
-                            </Border>
-                            <ItemsPresenter
-                                x:Name="ItemsHost"
-                                Grid.Column="1"
-                                Grid.ColumnSpan="2"
-                                Grid.Row="1" />
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger
-                                Property="IsExpanded"
-                                Value="false">
-                                <Setter
-                                    Property="Visibility"
-                                    TargetName="ItemsHost"
-                                    Value="Collapsed" />
-                            </Trigger>
-                            <Trigger
-                                Property="HasItems"
-                                Value="false">
-                                <Setter
-                                    Property="Visibility"
-                                    TargetName="Expander"
-                                    Value="Hidden" />
-                            </Trigger>
-                            <Trigger
-                                Property="IsSelected"
-                                Value="true">
-                                <Setter
-                                    Property="Background"
-                                    TargetName="Bd"
-                                    Value="{StaticResource PressedButtonOuterBorder}" />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
-                            </Trigger>
-                            <Trigger
-                                Property="Theme:TreeViewHelper.IsMouseDirectlyOverItem"
-                                Value="true">
-                                <Setter
-                                    Property="Background"
-                                    TargetName="Bd"
-                                    Value="{StaticResource HoverButtonInnerBackground}" />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
-                            </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition
-                                        Property="IsSelected"
-                                        Value="true" />
-                                    <Condition
-                                        Property="IsSelectionActive"
-                                        Value="false" />
-                                </MultiTrigger.Conditions>
-                                <Setter
-                                    Property="Background"
-                                    TargetName="Bd"
-                                    Value="{StaticResource PressedButtonOuterBorder}" />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
-                            </MultiTrigger>
 
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition
-                                        Property="IsSelected"
-                                        Value="true" />
-                                    <Condition
-                                        Property="IsSelectionActive"
-                                        Value="true" />
-                                </MultiTrigger.Conditions>
-                                <Setter
-                                    Property="Background"
-                                    TargetName="Bd"
-                                    Value="{StaticResource PressedButtonOuterBorder}" />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
-                            </MultiTrigger>
-                            <Trigger
-                                Property="IsEnabled"
-                                Value="false">
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.PlayerXRay;component/PlayerXRay/Theme/ThemeFile.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.PlayerXRay;component/PlayerXRay/Simple Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <TreeConverters:TreeMultiBindingConverter
+                x:Key="multiConverter" />
+            
+            <TreeConverters:TreeDescriptionConverter
+                x:Key="descriptionConverter" />
+            
+            <Style
+                TargetType="{x:Type TreeViewItem}">
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+                <Setter
+                    Property="HorizontalContentAlignment"
+                    Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter
+                    Property="VerticalContentAlignment"
+                    Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter
+                    Property="Padding"
+                    Value="1,0,0,0" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ButtonForeground}" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{StaticResource TreeViewItemFocusVisual}" />
+                <Setter
+                    Property="IsExpanded"
+                    Value="False" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TreeViewItem}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        MinWidth="19"
+                                        Width="Auto" />
+                                    <ColumnDefinition
+                                        Width="Auto" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="22" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <ToggleButton
+                                    x:Name="Expander"
+                                    Style="{StaticResource ExpandCollapseToggleStyle}"
+                                    ClickMode="Press"
+                                    IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <Border
+                                    SnapsToDevicePixels="true"
+                                    x:Name="Bd"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Padding="{TemplateBinding Padding}"
+                                    HorizontalAlignment="Stretch">
+                                    <ContentPresenter
+                                        VerticalAlignment="Center"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        HorizontalAlignment="Stretch"
+                                        x:Name="PART_Header"
+                                        ContentSource="Header" />
+                                </Border>
+                                <ItemsPresenter
+                                    x:Name="ItemsHost"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    Grid.Row="1" />
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+                                    Property="IsExpanded"
+                                    Value="false">
+                                    <Setter
+                                        Property="Visibility"
+                                        TargetName="ItemsHost"
+                                        Value="Collapsed" />
+                                </Trigger>
+                                <Trigger
+                                    Property="HasItems"
+                                    Value="false">
+                                    <Setter
+                                        Property="Visibility"
+                                        TargetName="Expander"
+                                        Value="Hidden" />
+                                </Trigger>
+                                <Trigger
+                                    Property="IsSelected"
+                                    Value="true">
+                                    <Setter
+                                        Property="Background"
+                                        TargetName="Bd"
+                                        Value="{StaticResource PressedButtonOuterBorder}" />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                                </Trigger>
+                                <Trigger
+                                    Property="Theme:TreeViewHelper.IsMouseDirectlyOverItem"
+                                    Value="true">
+                                    <Setter
+                                        Property="Background"
+                                        TargetName="Bd"
+                                        Value="{StaticResource HoverButtonInnerBackground}" />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition
+                                            Property="IsSelected"
+                                            Value="true" />
+                                        <Condition
+                                            Property="IsSelectionActive"
+                                            Value="false" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="Background"
+                                        TargetName="Bd"
+                                        Value="{StaticResource PressedButtonOuterBorder}" />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                                </MultiTrigger>
+
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition
+                                            Property="IsSelected"
+                                            Value="true" />
+                                        <Condition
+                                            Property="IsSelectionActive"
+                                            Value="true" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter
+                                        Property="Background"
+                                        TargetName="Bd"
+                                        Value="{StaticResource PressedButtonOuterBorder}" />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                                </MultiTrigger>
+                                <Trigger
+                                    Property="IsEnabled"
+                                    Value="false">
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>

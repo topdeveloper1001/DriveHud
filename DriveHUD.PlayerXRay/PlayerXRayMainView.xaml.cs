@@ -12,18 +12,15 @@
 
 using AcePokerSolutions.BusinessHelper;
 using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.ClientHelpers.DriveHUD;
 using AcePokerSolutions.DataTypes;
 using AcePokerSolutions.Helpers;
 using AcePokerSolutions.PlayerXRay.CustomControls;
 using AcePokerSolutions.PlayerXRay.UserControls;
 using AcePokerSolutions.PlayerXRay.UserControls.Notes;
-using AcePokerSolutions.UIControls.CustomControls;
 using DriveHUD.Common.Wpf.Actions;
 using Model;
 using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
