@@ -29,6 +29,7 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
@@ -47,6 +48,7 @@ using Model.Site;
 using Prism.Unity;
 using ProtoBuf.Meta;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -108,8 +110,8 @@ namespace DriveHUD.Application
                 if (IsUninstall())
                 {
                     LogProvider.Log.Info(this, "Uninstalling all user's data...");
-                    DataRemoverViewModel dr = new DataRemoverViewModel();
-                    dr.UninstallCommand.Execute(null);
+                    var dataRemoverViewModel = new DataRemoverViewModel();
+                    dataRemoverViewModel.UninstallCommand.Execute(null);
                 }
                 else
                 {
@@ -158,9 +160,24 @@ namespace DriveHUD.Application
                     {
                         try
                         {
-                            var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                            var detectedSites = new List<ISiteValidationResult>();
+                            var notConfiguredSites = new List<ISiteValidationResult>();
+
+                            ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
                                 .ValidateSiteConfigurations()
-                                .Where(x => x.IsNew || (x.HasIssue && x.IsEnabled));
+                                .ForEach(x =>
+                                {
+                                    if (x.IsNew)
+                                    {
+                                        detectedSites.Add(x);
+                                    }
+
+                                    if (x.HasIssue && x.IsEnabled)
+                                    {
+                                        notConfiguredSites.Add(x);
+                                    }
+                                });
+
 
                             if (validationResults.Any())
                             {
@@ -186,6 +203,7 @@ namespace DriveHUD.Application
         private bool IsUninstall()
         {
             string[] args = Environment.GetCommandLineArgs();
+
             foreach (string arg in args.Skip(1))
             {
                 LogProvider.Log.Info(this, string.Format("Argument found {0}", arg));
