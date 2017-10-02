@@ -129,6 +129,9 @@
   <data name="Settings_AttachLog" xml:space="preserve">
     <value>Attach log?</value>
   </data>
+  <data name="Settings_AutoCenter" xml:space="preserve">
+    <value>Auto-Center</value>
+  </data>
   <data name="Settings_BetOnlineHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#document-25</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="Settings_ExchangeRate" xml:space="preserve">
     <value>Exchange Rate</value>
+  </data>
+  <data name="Settings_FastPoker_PokerStarsName" xml:space="preserve">
+    <value>Enable Zoom </value>
   </data>
   <data name="Settings_GrabRates" xml:space="preserve">
     <value>Grab latest rates</value>
@@ -182,6 +188,9 @@
   </data>
   <data name="Settings_PokerStarsHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#document-24</value>
+  </data>
+  <data name="Settings_PreferredSeating" xml:space="preserve">
+    <value>Preferred Seating:</value>
   </data>
   <data name="Settings_RakeBack" xml:space="preserve">
     <value>RakeBack</value>

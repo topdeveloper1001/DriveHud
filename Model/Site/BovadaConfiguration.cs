@@ -23,7 +23,7 @@ using System.Linq;
 
 namespace Model.Site
 {
-    public class BovadaConfiguration : ISiteConfiguration
+    public class BovadaConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] registryKeys = new[] { "{D7CA2DF8-95CE-4C80-9296-98E21219A1E4}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E5}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E7}}_is1" };
 
@@ -41,7 +41,7 @@ namespace Model.Site
             HeroName = heroName;
         }
 
-        public EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -51,7 +51,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -59,37 +59,21 @@ namespace Model.Site
             }
         }
 
-        public string HeroName
+        public override string HeroName
         {
             get;
             set;
         }
-
-        public bool IsHandHistoryLocationRequired
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public bool IsPrefferedSeatsAllowed
+    
+        public override bool IsPrefferedSeatsAllowed
         {
             get
             {
                 return true;
             }
-        }
+        }    
 
-        public bool IsAutoCenterAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public virtual Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
@@ -110,14 +94,8 @@ namespace Model.Site
                 return seatsDictonary;
             }
         }
-
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public virtual string LogoSource
+      
+        public override string LogoSource
         {
             get
             {
@@ -125,12 +103,12 @@ namespace Model.Site
             }
         }
 
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             return new string[] { };
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var validationResult = new SiteValidationResult(Site)
             {

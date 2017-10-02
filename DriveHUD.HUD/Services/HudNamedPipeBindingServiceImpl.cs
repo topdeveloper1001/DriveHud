@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.WinApi;
 using DriveHUD.HUD.Service;
 using ProtoBuf;
 using System;
@@ -33,18 +34,19 @@ namespace DriveHUD.HUD.Services
         {
             try
             {
-                HudLayout hudLayout;                
+                HudLayout hudLayout;
 
                 using (var afterStream = new MemoryStream(data))
                 {
-                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);                    
+                    hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
                 }
 
-                LogProvider.Log.Debug(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
+                var windowTitle = WinApi.GetWindowText(new IntPtr(hudLayout.WindowId));
+                LogProvider.Log.Debug($"Sent data to '{windowTitle}'[{hudLayout.WindowId}]: s={hudLayout.PokerSite};mp={hudLayout.TableType};gt={hudLayout.GameType};gn={hudLayout.GameNumber};l='{hudLayout.LayoutName}' [{data.Length} bytes]");
 
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {
-                    HudPainter.UpdateHud(hudLayout);                    
+                    HudPainter.UpdateHud(hudLayout);
                 });
             }
             catch (Exception e)

@@ -20,7 +20,7 @@ namespace DriveHUD.Importers.BetOnline
 {
     internal class BetOnlineTournamentImporter : PokerClientImporter, IBetOnlineTournamentImporter
     {
-        private const string site = "BetOnline";
+        private const string site = "BetOnlineTournament";
 
         private const uint bufferSize = 262144;
 

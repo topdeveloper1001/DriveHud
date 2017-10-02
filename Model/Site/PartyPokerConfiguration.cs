@@ -1,18 +1,26 @@
-﻿using DriveHUD.Entities;
-using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PartyPokerConfiguration.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Microsoft.Win32;
+using Model.Settings;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Settings;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.Log;
-using Microsoft.Win32;
 
 namespace Model.Site
 {
-    public class PartyPokerConfiguration : ISiteConfiguration
+    public class PartyPokerConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ" };
         private static string[] pathRegistryKeys = new[]
@@ -42,7 +50,7 @@ namespace Model.Site
             };
         }
 
-        public EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -52,7 +60,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -60,49 +68,38 @@ namespace Model.Site
             }
         }
 
-        public string HeroName
-        {
-            get;
-            set;
-        }
-
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
-        {
-            get { return prefferedSeat; }
-        }
-
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public bool IsHandHistoryLocationRequired
-        {
-            get { return true; }
-        }
-
-        public bool IsPrefferedSeatsAllowed
-        {
-            get { return true; }
-        }
-
-        public bool IsAutoCenterAllowed
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
-                return false;
+                return prefferedSeat;
             }
         }
 
-        public string LogoSource
+        public override bool IsHandHistoryLocationRequired
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override bool IsPrefferedSeatsAllowed
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override string LogoSource
         {
             get { return "/DriveHUD.Common.Resources;Component/images/SiteLogos/partypoker_logo.png"; }
         }
 
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();
 
@@ -127,7 +124,7 @@ namespace Model.Site
             return handHistoryFolders.Distinct().ToArray();
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var validationResult = new SiteValidationResult(Site)
             {

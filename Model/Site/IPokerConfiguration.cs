@@ -23,7 +23,7 @@ using System.Text.RegularExpressions;
 
 namespace Model.Site
 {
-    public class IPokerConfiguration : ISiteConfiguration
+    public class IPokerConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] SiteNames = new string[]
         {
@@ -71,12 +71,7 @@ namespace Model.Site
             };
         }
 
-        public string HeroName
-        {
-            get; set;
-        }
-
-        public bool IsHandHistoryLocationRequired
+        public override bool IsHandHistoryLocationRequired
         {
             get
             {
@@ -84,15 +79,7 @@ namespace Model.Site
             }
         }
 
-        public bool IsPrefferedSeatsAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public bool IsAutoCenterAllowed
+        public override bool IsAutoCenterAllowed
         {
             get
             {
@@ -100,7 +87,7 @@ namespace Model.Site
             }
         }
 
-        public string LogoSource
+        public override string LogoSource
         {
             get
             {
@@ -110,7 +97,7 @@ namespace Model.Site
 
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
@@ -118,7 +105,7 @@ namespace Model.Site
             }
         }
 
-        public EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -128,7 +115,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -136,13 +123,7 @@ namespace Model.Site
             }
         }
 
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();
 
@@ -164,7 +145,7 @@ namespace Model.Site
             return handHistoryFolders.Distinct().ToArray();
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             if (siteModel == null)
             {
@@ -193,10 +174,17 @@ namespace Model.Site
                         LogProvider.Log.Info($"Site detection: IPoker[{siteName}]: {installPath}");
                     }
 
-                    var hhDirs = Directory.EnumerateDirectories(installPath, "*", SearchOption.AllDirectories)
-                        .Where(x => handHistoryLocationPattern.Value.IsMatch(x)).ToArray();
+                    try
+                    {
+                        var hhDirs = Directory.EnumerateDirectories(installPath, "*", SearchOption.AllDirectories)
+                            .Where(x => handHistoryLocationPattern.Value.IsMatch(x)).ToArray();
 
-                    validationResult.HandHistoryLocations.AddRange(hhDirs);
+                        validationResult.HandHistoryLocations.AddRange(hhDirs);
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Couldn't get hand history locations for {siteName} at {installPath}", e);
+                    }
 
                     validationResult.IsDetected = true;
                 }
@@ -226,7 +214,7 @@ namespace Model.Site
                 {
                     var registryInstallPath = softwareRegistryKey.GetValue(RegistryInstallFolderKey) as string;
 
-                    if (!string.IsNullOrEmpty(registryInstallPath))
+                    if (!string.IsNullOrEmpty(registryInstallPath) && Directory.Exists(registryInstallPath))
                     {
                         return registryInstallPath;
                     }

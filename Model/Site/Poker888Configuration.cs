@@ -18,20 +18,18 @@ using Microsoft.Win32;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml;
 
 namespace Model.Site
 {
-    public class Poker888Configuration : ISiteConfiguration
+    public class Poker888Configuration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] PossibleFolders = new string[] { "888poker" };
 
         private static string[] registryKeys = new[] { "{8C4CF142-0807-473A-A0E5-08FE1CA14BBC}", "{4D7C3811-3AC4-4B8A-BA1B-416A5133E6A1}" };
-        //HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{4D7C3811-3AC4-4B8A-BA1B-416A5133E6A1}
-        //7.3.02003 105.0.0.9
+        
         private const string LanguageRegistryKey = @"SOFTWARE\pacificpoker\poker\INIT";
         private const string LanguageRegistryKeyValue = "CURRENT_LANG_ID";
 
@@ -58,7 +56,7 @@ namespace Model.Site
             };
         }
 
-        public EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -68,7 +66,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -76,15 +74,9 @@ namespace Model.Site
             }
         }
 
-        public string HeroName
-        {
-            get;
-            set;
-        }
-
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
@@ -92,13 +84,7 @@ namespace Model.Site
             }
         }
 
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public bool IsHandHistoryLocationRequired
+        public override bool IsHandHistoryLocationRequired
         {
             get
             {
@@ -106,7 +92,7 @@ namespace Model.Site
             }
         }
 
-        public bool IsPrefferedSeatsAllowed
+        public override bool IsPrefferedSeatsAllowed
         {
             get
             {
@@ -114,15 +100,7 @@ namespace Model.Site
             }
         }
 
-        public bool IsAutoCenterAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public virtual string LogoSource
+        public override string LogoSource
         {
             get
             {
@@ -130,7 +108,7 @@ namespace Model.Site
             }
         }
 
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();
 
@@ -173,12 +151,12 @@ namespace Model.Site
             return handHistoryFolders.Distinct().ToArray();
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
-                IsDetected = RegistryUtils.UninstallRegistryKeysExist(registryKeys),
+                IsDetected = IsInstalled(),
                 IsEnabled = siteModel.Enabled
             };
 
@@ -247,6 +225,25 @@ namespace Model.Site
             }
 
             return validationResult;
+        }
+
+        /// <summary>
+        /// Determines whenever poker client is installed
+        /// </summary>
+        /// <returns>True - if installed, otherwise - false</returns>
+        private bool IsInstalled()
+        {
+            try
+            {
+                var isInstalled = RegistryUtils.UninstallRegistryKeysExist(registryKeys) || Registry.CurrentUser.OpenSubKey(LanguageRegistryKey) != null;
+                return isInstalled;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Couldn't detect if 888 poker is installed.", e);
+            }
+
+            return false;
         }
 
         /// <summary>

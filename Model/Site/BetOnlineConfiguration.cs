@@ -18,7 +18,7 @@ using System.Collections.Generic;
 
 namespace Model.Site
 {
-    public class BetOnlineConfiguration : ISiteConfiguration
+    public class BetOnlineConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private readonly string[] registryKeys = new[] { "BetOnline 0" };
 
@@ -42,7 +42,7 @@ namespace Model.Site
             HeroName = heroName;
         }
 
-        public virtual EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -52,7 +52,7 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
@@ -60,53 +60,23 @@ namespace Model.Site
             }
         }
 
-        public string HeroName
+        public override string HeroName
         {
             get;
             set;
         }
 
-        public bool IsHandHistoryLocationRequired
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public bool IsPrefferedSeatsAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public bool IsAutoCenterAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
                 return prefferedSeat;
             }
         }
-
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public virtual string LogoSource
+       
+        public override string LogoSource
         {
             get
             {
@@ -114,7 +84,7 @@ namespace Model.Site
             }
         }
 
-        public string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             return new string[] { };
         }
@@ -127,7 +97,7 @@ namespace Model.Site
             }
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var validationResult = new SiteValidationResult(Site)
             {
