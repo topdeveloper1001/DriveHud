@@ -286,4 +286,22 @@
   <data name="stop24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HelpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotesButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotesButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProfilesButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProfilesButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RunButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RunButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayerXRayBigLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerXRayBigLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -28,8 +28,7 @@ namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
 
         public string ServerConnectionString { get; set; }
         public string DatabaseName { get; set; }
-
-        public ClientType ClientType { get; set; }
+      
         public DateTime LastBackupDate { get; set; }
         public List<StageObject> StagesList { get; set; }
         public List<ProfileObject> Profiles { get; set; }

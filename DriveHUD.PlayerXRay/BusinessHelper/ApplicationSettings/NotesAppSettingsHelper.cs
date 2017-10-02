@@ -24,25 +24,7 @@ namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
 
         public static NotesAppSettings CurrentNotesAppSettings { get; private set; }
 
-        public static ContentControl MainWindow { get; set; }
-
-        public static string ConnectionString
-        {
-            get
-            {
-                string connectionString = CurrentNotesAppSettings.ServerConnectionString;
-
-                if (!connectionString.EndsWith(";"))
-                    connectionString += ";";
-                connectionString += "Database=" + CurrentNotesAppSettings.DatabaseName + ";";
-                if (!connectionString.Contains("Timeout="))
-                    connectionString += "Timeout=1024;";
-                if (!connectionString.Contains("CommandTimeout="))
-                    connectionString += "CommandTimeout=99999999";
-
-                return connectionString;
-            }
-        }
+        public static ContentControl MainWindow { get; set; }   
 
         private static string AppDataPath
         {

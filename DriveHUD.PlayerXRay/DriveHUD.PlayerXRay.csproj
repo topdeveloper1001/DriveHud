@@ -119,6 +119,7 @@
   <ItemGroup>
     <Compile Include="BusinessHelper\TextureHelpers\BoardTextureAnalyzerHelpers.cs" />
     <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
+    <Compile Include="Controls\MenuButton.cs" />
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />
@@ -126,7 +127,6 @@
     <Compile Include="PlayerXRay\CustomControls\MainMenuButton.xaml.cs" />
     <Compile Include="PlayerXRay\CustomControls\MessageBoxHelper.cs" />
     <Compile Include="PlayerXRay\Helpers\UIHelpers.cs" />
-    <Compile Include="PlayerXRay\MainWindow.xaml.cs" />
     <Compile Include="PlayerXRay\Theme\TreeViewHelper.cs" />
     <Compile Include="PlayerXRay\UserControls\AddItems\AddGroupWindow.xaml.cs" />
     <Compile Include="PlayerXRay\UserControls\AddItems\AddNoteWindow.xaml.cs" />
@@ -145,10 +145,6 @@
     <Compile Include="PlayerXRay\UserControls\Notes\StakesUC.xaml.cs" />
     <Compile Include="PlayerXRay\UserControls\ProfilesUC.xaml.cs" />
     <Compile Include="PlayerXRay\UserControls\RunPage.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\SettingsUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Settings\BackupRestoreUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Settings\DatabaseSettingsUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Settings\GeneralSettingsUC.xaml.cs" />
     <Compile Include="UIControls\Core\Converters\InverseBoolConverter.cs" />
     <Compile Include="UIControls\Core\Primitives\InputBase.cs" />
     <Compile Include="UIControls\Core\UIElementAdorner.cs" />
@@ -158,10 +154,12 @@
     <Compile Include="UIControls\MessageBox\MessageBox.cs" />
     <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
     <Compile Include="UIControls\VisualStates.cs" />
-    <Page Include="HUDHelper\HUDWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="ViewModels\RunViewModel.cs" />
+    <Compile Include="Views\RunView.xaml.cs">
+      <DependentUpon>RunView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkspaceType.cs" />
+    <Compile Include="WorkspaceViewModel.cs" />
     <Page Include="PlayerXRayMainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -202,9 +200,6 @@
     <Compile Include="BusinessHelper\TextureAnalyzers\Straight\OpenEndedStraightTextureAnalyzer.cs" />
     <Compile Include="BusinessHelper\TextureAnalyzers\Straight\PossibleStraightTextureAnalyzer.cs" />
     <Compile Include="BusinessHelper\WcfHelper.cs" />
-    <Compile Include="ClientHelpers\DriveHUD\DriveHudConfiguration.cs" />
-    <Compile Include="ClientHelpers\HoldemManager\HoldemManagerConfiguration.cs" />
-    <Compile Include="ClientHelpers\PokerTracker\PokerTrackerConfiguration.cs" />
     <Compile Include="DataAccessHelper\DriveHUD\HandHistory.cs" />
     <Compile Include="DataAccessHelper\DriveHUD\HudLightIndicators.cs" />
     <Compile Include="DataAccessHelper\DriveHUD\Indicators.cs" />
@@ -236,21 +231,19 @@
     <Compile Include="DataTypes\ServerDatabaseList.cs" />
     <Compile Include="DataTypes\Stake.cs" />
     <Compile Include="Helpers\AssemblyHelpers.cs" />
-    <Compile Include="HUDHelper\HudManager.cs" />
-    <Compile Include="HUDHelper\HUDWindow.xaml.cs" />
     <Compile Include="PlayerXRayMainView.xaml.cs">
       <DependentUpon>PlayerXRayMainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PlayerXRayStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PlayerXRay\CustomControls\MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PlayerXRay\CustomControls\MainMenuButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -414,22 +407,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PlayerXRay\UserControls\SettingsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Settings\BackupRestoreUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Settings\DatabaseSettingsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Settings\GeneralSettingsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="UIControls\CustomControls\CircularAnimator.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -445,6 +422,10 @@
     <Page Include="UIControls\Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RunView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +449,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <Resource Include="Fonts\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -527,6 +509,24 @@
     <Resource Include="UIControls\MessageBox\Icons\Information48.png" />
     <Resource Include="UIControls\MessageBox\Icons\Question48.png" />
     <Resource Include="UIControls\MessageBox\Icons\Warning48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RunButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HelpButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NotesButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ProfilesButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SettingsButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PlayerXRayBigLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

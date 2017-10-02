@@ -24,15 +24,7 @@ using DriveHUD.Common.Log;
 namespace AcePokerSolutions.BusinessHelper
 {
     public static class DAL
-    {
-        #region Delegates
-
-        public delegate void DalErrorDelegate(string message, bool fatal);
-
-        #endregion
-
-        public static event DalErrorDelegate DalError;
-
+    {        
         private static string ListToQueryList(IEnumerable<long> values)
         {
             string result = "(";

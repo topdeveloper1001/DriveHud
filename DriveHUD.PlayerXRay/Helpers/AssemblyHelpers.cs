@@ -37,14 +37,6 @@ namespace AcePokerSolutions.Helpers
             return t.ToShortDateString();
         }
 
-        public static bool Is64Bit(Assembly assembly)
-        {
-            PortableExecutableKinds kinds;
-            ImageFileMachine imgFileMachine;
-            assembly.ManifestModule.GetPEKind(out kinds, out imgFileMachine);
-            return kinds.ToString().Contains("PE32Plus");
-        }
-
         #endregion
 
         #region Private Methods

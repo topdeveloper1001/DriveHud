@@ -1,0 +1,86 @@
+﻿<UserControl
+    x:Class="DriveHUD.PlayerXRay.Views.RunView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DriveHUD.PlayerXRay.Views"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="../PlayerXRayStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+
+        <StackPanel
+            Orientation="Vertical"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+
+            <Image
+                Source="/DriveHUD.PlayerXRay;component/Resources/PlayerXRayBigLogo.png"
+                Width="460"
+                Height="193" />
+
+            <Border
+                BorderBrush="{StaticResource BorderBrush}"
+                Background="{StaticResource PanelBackgroundBrush}"
+                Height="75"
+                Margin="0,49,0,49"
+                BorderThickness="1"
+                CornerRadius="1">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton
+                        Grid.Column="0"
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource RadioButtonNormalStyle}"
+                        GroupName="RunByGroup"
+                        Content="By Profile" />
+
+                    <RadioButton
+                        Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource RadioButtonNormalStyle}"
+                        GroupName="RunByGroup"
+                        Content="By Note" />
+
+                    <RadioButton
+                        Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource RadioButtonNormalStyle}"
+                        GroupName="RunByGroup"
+                        Content="All Notes" />
+
+                </Grid>
+
+            </Border>
+
+            <Button
+                Content="Start"
+                Width="172"
+                Height="59" />
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -4,9 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:CustomControls1="clr-namespace:AcePokerSolutions.PlayerXRay.CustomControls"
-    xmlns:CustomControls="clr-namespace:AcePokerSolutions.UIControls.CustomControls"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:ctl="clr-namespace:DriveHUD.PlayerXRay.Controls"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay"
+    xmlns:vm="clr-namespace:DriveHUD.PlayerXRay.ViewModels"
+    xmlns:v="clr-namespace:DriveHUD.PlayerXRay.Views"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
@@ -15,128 +17,154 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
-                    Source="PlayerXRay\Theme\ThemeFile.xaml" />
-                <ResourceDictionary
-                    Source="PlayerXRay\Simple Styles.xaml" />
+                    Source="PlayerXRayStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate
+                DataType="{x:Type vm:RunViewModel}">
+                <v:RunView />
+            </DataTemplate>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid
+        Background="{StaticResource WindowBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="Auto" />
+                Height="70" />
             <RowDefinition
                 Height="*" />
             <RowDefinition
-                Height="30" />
+                Height="35" />
         </Grid.RowDefinitions>
-        <Rectangle
-            Fill="#FF606060"
-            Margin="0"
-            Grid.Row="2"
-            Stroke="Black" />
-        <Rectangle
-            Fill="#FF474747"
-            Margin="0"
-            Opacity="0.43"
-            StrokeThickness="0" />
-        <CustomControls1:MainMenu
-            x:Name="mainMenu"
-            Margin="0"
-            VerticalAlignment="Top" />
-        <Rectangle
-            Fill="Silver"
-            Margin="0"
-            Grid.Row="1"
-            StrokeThickness="0"
-            VerticalAlignment="Top"
-            Height="2" />
-        <ContentPresenter
-            x:Name="panel"
-            Margin="8"
-            Grid.Row="1" />
-        <Grid
-            x:Name="gridOverlay"
-            Margin="0,-24.6,0,0"
-            Background="#FF474747"
-            Opacity="0.885"
-            Visibility="Hidden"
-            Grid.RowSpan="2">
-            <CustomControls:CircularAnimator
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-            <TextBlock
-                x:Name="lblStatus"
-                HorizontalAlignment="Center"
-                Margin="0,60,0,0"
-                TextWrapping="Wrap"
-                Text="TextBlock"
-                VerticalAlignment="Center"
-                Foreground="White"
-                FontSize="24" />
-        </Grid>
+
         <StackPanel
-            HorizontalAlignment="Left"
-            Margin="8,0,0,0"
-            Grid.Row="2"
-            Orientation="Horizontal"
-            VerticalAlignment="Center">
-            <TextBlock
-                TextWrapping="Wrap"
-                Text="Version:"
-                Foreground="White"
-                VerticalAlignment="Center"
-                FontSize="13.333" />
-            <TextBlock
-                x:Name="lblVersion"
-                TextWrapping="Wrap"
-                Foreground="#FFB6B6B6"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                TextWrapping="Wrap"
-                Text="Build Date:"
-                Foreground="White"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                x:Name="lblBuildDate"
-                TextWrapping="Wrap"
-                Foreground="#FFB6B6B6"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                TextWrapping="Wrap"
-                Text="Client:"
-                Foreground="White"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                x:Name="lblClient"
-                TextWrapping="Wrap"
-                Foreground="#FFB6B6B6"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                TextWrapping="Wrap"
-                Text="Player:"
-                Foreground="White"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
-            <TextBlock
-                x:Name="lblPlayer"
-                TextWrapping="Wrap"
-                Foreground="#FFB6B6B6"
-                VerticalAlignment="Center"
-                FontSize="13.333"
-                Margin="7,0,0,0" />
+            Grid.Row="0"
+            Orientation="Vertical">
+
+            <Border
+                Background="{StaticResource MenuBackgroundBrush}"
+                BorderBrush="{StaticResource BorderBrush}"
+                BorderThickness="0,0,0,1"
+                Height="62" />
+
+            <Border
+                Height="8"
+                Background="{StaticResource OuterGlowDarkBrush}"
+                BorderThickness="0" />
+
         </StackPanel>
+
+        <StackPanel
+            Margin="14,0,0,0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Left"
+            Grid.Row="0">
+
+            <ctl:MenuButton
+                Style="{StaticResource MenuButtonStyle}"
+                Width="106"
+                Height="62"
+                ImageSource="/DriveHUD.PlayerXRay;component/Resources/RunButton.png"
+                ImageWidth="22"
+                ImageHeight="26"
+                IsChecked="{Binding Workspace.WorkspaceType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static local:WorkspaceType.Run}, Mode=OneWay}"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static local:WorkspaceType.Run}"
+                Content="RUN" />
+
+            <ctl:MenuButton
+                Style="{StaticResource MenuButtonStyle}"
+                Width="106"
+                Height="62"
+                ImageSource="/DriveHUD.PlayerXRay;component/Resources/NotesButton.png"
+                ImageWidth="22"
+                ImageHeight="26"
+                IsChecked="{Binding Workspace.WorkspaceType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static local:WorkspaceType.Notes}, Mode=OneWay}"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static local:WorkspaceType.Notes}"
+                Content="NOTES" />
+
+            <ctl:MenuButton
+                Style="{StaticResource MenuButtonStyle}"
+                Width="106"
+                Height="62"
+                ImageSource="/DriveHUD.PlayerXRay;component/Resources/ProfilesButton.png"
+                ImageWidth="25"
+                ImageHeight="25"
+                IsChecked="{Binding Workspace.WorkspaceType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static local:WorkspaceType.Profiles}, Mode=OneWay}"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static local:WorkspaceType.Profiles}"
+                Content="PROFILES" />
+
+            <ctl:MenuButton
+                Style="{StaticResource MenuButtonStyle}"
+                Width="106"
+                Height="62"
+                ImageSource="/DriveHUD.PlayerXRay;component/Resources/SettingsButton.png"
+                ImageWidth="24"
+                ImageHeight="24"
+                IsChecked="{Binding Workspace.WorkspaceType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static local:WorkspaceType.Settings}, Mode=OneWay}"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static local:WorkspaceType.Settings}"
+                Content="SETTINGS" />
+
+            <ctl:MenuButton
+                Style="{StaticResource MenuButtonStyle}"
+                Width="106"
+                Height="62"
+                ImageSource="/DriveHUD.PlayerXRay;component/Resources/HelpButton.png"
+                ImageWidth="25"
+                ImageHeight="25"
+                IsChecked="{Binding Workspace.WorkspaceType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static local:WorkspaceType.Help}, Mode=OneWay}"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static local:WorkspaceType.Help}"
+                Content="HELP" />
+
+        </StackPanel>
+
+        <ContentControl
+            Grid.Row="1"
+            Content="{Binding Workspace}" />
+
+        <Border
+            Grid.Row="2"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="0,1,0,0">
+
+            <StackPanel
+                Margin="12,0,0,0"
+                Orientation="Horizontal"
+                VerticalAlignment="Center">
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="Version:" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding Version}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="Build Date:" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding BuildDate}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="Player:" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding StorageModel.PlayerSelectedItem.DecodedName}" />
+
+            </StackPanel>
+
+        </Border>
+
     </Grid>
 </UserControl>

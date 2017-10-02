@@ -144,9 +144,7 @@ namespace AcePokerSolutions.BusinessHelper
 
         private void WorkerDoWork(object sender, DoWorkEventArgs e)
         {
-            m_worker.ReportProgress(0, "Process started");   
-
-            ClientType client = NotesAppSettingsHelper.CurrentNotesAppSettings.ClientType;
+            m_worker.ReportProgress(0, "Process started");               
 
             List<ProcessNoteObject> processNotes = new List<ProcessNoteObject>();
             List<DatabaseNote> databaseNotes = new List<DatabaseNote>();

@@ -10,12 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using AcePokerSolutions.BusinessHelper.ApplicationSettings;
+using AcePokerSolutions.DataTypes;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.PlayerXRay.ViewModels;
+using Microsoft.Practices.ServiceLocation;
+using Model;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,15 +29,78 @@ namespace DriveHUD.PlayerXRay
 {
     public class PlayerXRayMainViewModel : WindowViewModelBase, INotification
     {
+        private readonly Dictionary<WorkspaceType, WorkspaceViewModel> workspaces;
+
+        private readonly SingletonStorageModel storageModel;
+
         public PlayerXRayMainViewModel()
         {
             title = "Player X-Ray";
+
+            workspaces = new Dictionary<WorkspaceType, WorkspaceViewModel>();
+            storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+
+            NavigateCommand = ReactiveCommand.Create();
+            NavigateCommand.Subscribe(x => Navigate((WorkspaceType)x));
         }
 
         public void Initialize()
         {
-            
+            NotesAppSettingsHelper.LoadAppSettings();
+
+            StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
+            StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
+
+            Navigate(WorkspaceType.Run);
         }
+
+        #region Properties
+
+        public Version Version
+        {
+            get
+            {
+                return Assembly.GetAssembly(typeof(PlayerXRayMainViewModel)).GetName().Version;
+            }
+        }
+
+        public string BuildDate
+        {
+            get
+            {
+                return "2017/10/02";
+            }
+        }
+
+        public SingletonStorageModel StorageModel
+        {
+            get
+            {
+                return storageModel;
+            }
+        }
+
+        private WorkspaceViewModel workspace;
+
+        public WorkspaceViewModel Workspace
+        {
+            get
+            {
+                return workspace;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref workspace, value);
+            }
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ReactiveCommand<object> NavigateCommand { get; private set; }
+
+        #endregion
 
         #region INotification implementation
 
@@ -62,6 +131,36 @@ namespace DriveHUD.PlayerXRay
             {
                 this.RaiseAndSetIfChanged(ref content, value);
             }
+        }
+
+        #endregion
+
+        #region Infrastructure
+
+        private void Navigate(WorkspaceType workspaceType)
+        {
+            if (workspaces.ContainsKey(workspaceType))
+            {
+                Workspace = workspaces[workspaceType];
+                return;
+            }
+
+            WorkspaceViewModel workspace = null;
+
+            switch (workspaceType)
+            {
+                case WorkspaceType.Run:
+                    workspace = new RunViewModel();
+                    break;
+            }
+
+            if (workspace == null)
+            {
+                return;
+            }
+
+            workspaces.Add(workspaceType, workspace);
+            Workspace = workspace;
         }
 
         #endregion
