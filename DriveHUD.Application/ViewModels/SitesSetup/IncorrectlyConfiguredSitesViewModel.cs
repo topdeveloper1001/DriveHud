@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
@@ -19,21 +20,65 @@ using Model.Settings;
 using Model.Site;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
-using Remotion.Linq.Collections;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
-namespace DriveHUD.Application.ViewModels.SitesSetup
+namespace DriveHUD.Application.ViewModels
 {
-    public class NotConfiguredSitesViewModel : ViewModelBase, INotification, IInteractionRequestAware
+    public class IncorrectlyConfiguredSitesViewModel : ViewModelBase, INotification, IInteractionRequestAware
     {
         private readonly IEnumerable<ISiteValidationResult> validationResults;
 
-        public NotConfiguredSitesViewModel(IEnumerable<ISiteValidationResult> validationResults)
+        private SettingsModel settingsModel;
+
+        public IncorrectlyConfiguredSitesViewModel(IEnumerable<ISiteValidationResult> validationResults)
         {
             this.validationResults = validationResults;
             Initialize();
         }
+
+        #region Properties
+
+        private ObservableCollection<SiteSetupViewModel> sites;
+
+        public ObservableCollection<SiteSetupViewModel> Sites
+        {
+            get
+            {
+                return sites;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref sites, value);
+            }
+        }
+
+        public bool DoNotShowForm
+        {
+            get
+            {
+                return settingsModel != null && settingsModel.GeneralSettings != null ? !settingsModel.GeneralSettings.RunSiteDetection : false;
+            }
+            set
+            {
+                if (settingsModel != null && settingsModel.GeneralSettings != null)
+                {
+                    settingsModel.GeneralSettings.RunSiteDetection = !value;
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Commands
+
+        public IReactiveCommand<object> ApplyCommand { get; private set; }
+
+        #endregion
 
         #region Infrastructure
 
@@ -41,50 +86,31 @@ namespace DriveHUD.Application.ViewModels.SitesSetup
         {
             Title = CommonResourceManager.Instance.GetResourceString("Common_SiteSetup_Header");
 
-            networkSetups = new ObservableCollection<NetworkSetupViewModel>();
+            sites = new ObservableCollection<SiteSetupViewModel>();
 
-            var networks = EntityUtils.GetNetworkSites();
+            var allSites = EntityUtils.GetNetworkSites().SelectMany(x => x.Value);
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             settingsModel = settingsService.GetSettings();
 
             var siteModels = settingsModel.SiteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
 
-            foreach (var network in networks.Keys)
+            var sitesToAdd = (from site in allSites
+                              join validationResult in validationResults on site equals validationResult.PokerSite
+                              where siteModels.ContainsKey(site)
+                              select new SiteSetupViewModel(validationResult, siteModels[site])
+                              {
+                                  Enabled = validationResult.IsDetected
+                              }).ToArray();
+
+            sites.AddRange(sitesToAdd);
+
+            ApplyCommand = ReactiveCommand.Create();
+            ApplyCommand.Subscribe(x =>
             {
-                try
-                {
-                    var networkSetupViewModel = new NetworkSetupViewModel(network);
-
-                    if (!networks.ContainsKey(network))
-                    {
-                        continue;
-                    }
-
-                    var sitesToAdd = (from site in networks[network]
-                                      join validationResult in validationResults on site equals validationResult.PokerSite
-                                      where siteModels.ContainsKey(site)
-                                      select new SiteSetupViewModel(validationResult, siteModels[site])
-                                      {
-                                          Enabled = validationResult.IsDetected
-                                      }).ToArray();
-
-                    if (sitesToAdd.Length == 0)
-                    {
-                        continue;
-                    }
-
-                    networkSetupViewModel.NetworkSites.AddRange(sitesToAdd);
-
-                    networkSetups.Add(networkSetupViewModel);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, e);
-                }
-            }
-
-            
+                settingsService.SaveSettings(settingsModel);
+                FinishInteraction?.Invoke();
+            });
         }
 
         #endregion

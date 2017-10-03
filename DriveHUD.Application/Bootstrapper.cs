@@ -156,33 +156,29 @@ namespace DriveHUD.Application
                     var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
                     var settingsModel = settingsService.GetSettings();
 
-                    if (settingsModel != null && settingsModel.GeneralSettings != null && settingsModel.GeneralSettings.RunSiteDetection)
+                    if (settingsModel != null && settingsModel.GeneralSettings != null)
                     {
                         try
                         {
-                            var detectedSites = new List<ISiteValidationResult>();
-                            var notConfiguredSites = new List<ISiteValidationResult>();
+                            var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                                 .ValidateSiteConfigurations().ToArray();
 
-                            ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
-                                .ValidateSiteConfigurations()
-                                .ForEach(x =>
-                                {
-                                    if (x.IsNew)
-                                    {
-                                        detectedSites.Add(x);
-                                    }
+                            var detectedSites = validationResults.Where(x => x.IsNew && x.IsDetected).ToArray();
 
-                                    if (x.HasIssue && x.IsEnabled)
-                                    {
-                                        notConfiguredSites.Add(x);
-                                    }
-                                });
-
-
-                            if (validationResults.Any())
+                            if (detectedSites.Length > 0)
                             {
-                                var sitesSetupViewModel = new SitesSetupViewModel(validationResults);
+                                var sitesSetupViewModel = new SitesSetupViewModel(detectedSites);
                                 mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
+                            }
+
+                            var incorrectlyConfiguredSites = validationResults
+                                .Where(x => x.HasIssue && x.IsEnabled && settingsModel.GeneralSettings.RunSiteDetection)
+                                .ToArray();
+
+                            if (incorrectlyConfiguredSites.Length > 0)
+                            {
+                                var incorrectlyConfiguredSitesViewModel = new IncorrectlyConfiguredSitesViewModel(incorrectlyConfiguredSites);
+                                mainWindowViewModel.IncorrectlyConfiguredSitesViewRequest?.Raise(incorrectlyConfiguredSitesViewModel);
                             }
                         }
                         catch (Exception ex)

@@ -28,10 +28,7 @@
             TargetType="{x:Type TextBlock}">
             <Setter
                 Property="FontSize"
-                Value="14" />
-            <Setter
-                Property="FontWeight"
-                Value="Bold" />
+                Value="12" />
         </Style>
 
         <Style
@@ -39,13 +36,13 @@
             TargetType="{x:Type Button}">
             <Setter
                 Property="Margin"
-                Value="25,15,25,15" />
+                Value="25,5,25,5" />
             <Setter
                 Property="Width"
-                Value="25" />
+                Value="20" />
             <Setter
                 Property="Height"
-                Value="25" />
+                Value="20" />
             <Setter
                 Property="VerticalContentAlignment"
                 Value="Stretch" />
@@ -100,6 +97,8 @@
                     <RowDefinition
                         Height="Auto" />
                     <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
                         Height="*" />
                     <RowDefinition
                         Height="Auto" />
@@ -122,6 +121,7 @@
                             Grid.Column="0"
                             Text="{ResX Key=Common_SiteSetup_Header}"
                             FontSize="16"
+                            FontWeight="Bold"
                             Margin="0,0,0,5"
                             Style="{StaticResource HeaderTextBlockStyle}" />
 
@@ -150,190 +150,59 @@
 
                 </Border>
 
-                <ScrollViewer
+                <TextBlock
                     Grid.Row="1"
+                    Style="{StaticResource HeaderTextBlockStyle}"
+                    TextWrapping="Wrap"
+                    Margin="0,4,0,0"
+                    Text="{ResX Key=Common_SiteSetup_IntroText}" />
+
+                <ScrollViewer
+                    Grid.Row="2"
                     Padding="3"
                     MaxHeight="590"
                     Margin="0,10,0,0"
                     HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Auto">
                     <ItemsControl
-                        ItemsSource="{Binding NetworkSetups}">
+                        ItemsSource="{Binding Sites}">
 
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition
-                                            Height="60" />
-                                        <RowDefinition
-                                            Height="Auto" />
-                                    </Grid.RowDefinitions>
+                                <Grid
+                                    MinHeight="30">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="*" />
+                                        <ColumnDefinition
+                                            Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                                    <StackPanel
-                                        Orientation="Vertical"
-                                        VerticalAlignment="Center">
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        VerticalAlignment="Center"
+                                        Margin="5,0,0,0"
+                                        Style="{StaticResource HeaderTextBlockStyle}"
+                                        Text="{Binding PokerSite, Converter={dh:EnumToLocalizedStringConverter}}" />
 
-                                        <Border
-                                            Margin="0,5,0,10"
-                                            Padding="0,5,0,5"
-                                            BorderBrush="#FFFFFF"
-                                            Height="1"
-                                            Visibility="{Binding RelativeSource={RelativeSource PreviousData}, Converter={dh:NullToVisibilityConverter}}"
-                                            BorderThickness="0,1,0,0" />
-
-                                        <StackPanel
-                                            Orientation="Horizontal"
-                                            Margin="0,0,0,3"
-                                            Grid.Row="0">
-
-                                            <Image
-                                                Source="{Binding SiteLogo}"
-                                                VerticalAlignment="Center"
-                                                Width="100" />
-
-                                            <TextBlock
-                                                VerticalAlignment="Center"
-                                                Margin="5,0,0,0"
-                                                Style="{StaticResource HeaderTextBlockStyle}"
-                                                Text="{Binding Network, Converter={dh:EnumToLocalizedStringConverter}}" />
-
-                                        </StackPanel>
-                                    </StackPanel>
-
-                                    <ItemsControl
-                                        Grid.Row="1"
-                                        ItemsSource="{Binding NetworkSites}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-
-                                                <Grid
-                                                    MinHeight="70">
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition
-                                                            Height="Auto" />
-                                                        <RowDefinition
-                                                            Height="*" />
-                                                    </Grid.RowDefinitions>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition
-                                                            Width="*" />
-                                                        <ColumnDefinition
-                                                            Width="Auto" />
-                                                    </Grid.ColumnDefinitions>
-
-                                                    <Border
-                                                        Grid.Row="0"
-                                                        Grid.ColumnSpan="2"
-                                                        Height="1"
-                                                        Margin="0,5,0,5"
-                                                        BorderThickness="0,1,0,0"
-                                                        BorderBrush="#FFFFFF" />
-
-                                                    <Grid
-                                                        Grid.Row="1"
-                                                        Grid.Column="0"
-                                                        Margin="10,0,0,0">
-
-                                                        <Grid.RowDefinitions>
-                                                            <RowDefinition
-                                                                Height="*" />
-                                                            <RowDefinition
-                                                                Height="Auto" />
-                                                            <RowDefinition
-                                                                Height="Auto" />
-                                                        </Grid.RowDefinitions>
-
-                                                        <StackPanel
-                                                            Orientation="Horizontal"
-                                                            Margin="0,0,0,3"
-                                                            Grid.Row="0">
-
-                                                            <TextBlock
-                                                                VerticalAlignment="Center"
-                                                                Margin="5,0,0,0"
-                                                                Style="{StaticResource HeaderTextBlockStyle}"
-                                                                Text="{Binding PokerSite, Converter={dh:EnumToLocalizedStringConverter}}" />
-
-                                                            <TextBlock
-                                                                VerticalAlignment="Center"
-                                                                Margin="5,0,0,0"
-                                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}"
-                                                                Text="{ResX Key=Common_SiteSetup_SiteDetected}" />
-
-                                                            <TextBlock
-                                                                VerticalAlignment="Center"
-                                                                Margin="5,0,0,0"
-                                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                                                Text="{ResX Key=Common_SiteSetup_NoSiteDetected}" />
-
-                                                            <StackPanel
-                                                                Orientation="Horizontal"
-                                                                Visibility="{Binding IsDetected, Converter={dh:BoolToVisibilityConverter}}">
-
-                                                                <TextBlock
-                                                                    VerticalAlignment="Center"
-                                                                    Margin="5,0,0,0"
-                                                                    Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}}"
-                                                                    Foreground="Green"
-                                                                    Text="{ResX Key=Common_SiteSetup_ConfigurationCorrect}" />
-
-                                                                <TextBlock
-                                                                    VerticalAlignment="Center"
-                                                                    Margin="5,0,0,0"
-                                                                    Visibility="{Binding IsConfigurationCorrect, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                                                    Foreground="#db5050"
-                                                                    Text="{ResX Key=Common_SiteSetup_ConfigurationIncorrect}" />
-                                                            </StackPanel>
-
-                                                        </StackPanel>
-
-                                                        <TextBlock
-                                                            Grid.Row="1"
-                                                            Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
-                                                            Margin="5,0,0,0"
-                                                            Style="{StaticResource BaseSiteSetupTextBlockStyle}"
-                                                            Text="{ResX Key=Common_SiteSetup_FoundIssues}" />
-
-                                                        <ItemsControl
-                                                            Grid.Row="2"
-                                                            Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
-                                                            ItemsSource="{Binding Issues}"
-                                                            Margin="25,0,0,0"
-                                                            Foreground="#db5050" />
-
-                                                    </Grid>
-
-                                                    <StackPanel
-                                                        Grid.Row="1"
-                                                        Grid.Column="1"
-                                                        Orientation="Vertical">
-
-                                                        <Button
-                                                            Command="{Binding EnableCommand}"
-                                                            Style="{StaticResource EnableButtonStyle}">
-                                                            <Button.Template>
-                                                                <ControlTemplate
-                                                                    TargetType="{x:Type Button}">
-                                                                    <Border
-                                                                        CornerRadius="3">
-                                                                        <Border.Background>
-                                                                            <SolidColorBrush
-                                                                                Color="{Binding Enabled, Converter={dh:BoolToGreenRedColorConverter}}" />
-                                                                        </Border.Background>
-                                                                    </Border>
-                                                                </ControlTemplate>
-                                                            </Button.Template>
-                                                        </Button>
-                                                    </StackPanel>
-
-                                                </Grid>
-
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-
-                                    </ItemsControl>
+                                    <Button
+                                        Grid.Column="1"
+                                        Command="{Binding EnableCommand}"
+                                        Style="{StaticResource EnableButtonStyle}">
+                                        <Button.Template>
+                                            <ControlTemplate
+                                                TargetType="{x:Type Button}">
+                                                <Border
+                                                    CornerRadius="3">
+                                                    <Border.Background>
+                                                        <SolidColorBrush
+                                                            Color="{Binding Enabled, Converter={dh:BoolToGreenRedColorConverter}}" />
+                                                    </Border.Background>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
 
                                 </Grid>
 
@@ -344,7 +213,7 @@
                 </ScrollViewer>
 
                 <Border
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Margin="0,5,0,0"
                     BorderBrush="#FFFFFF"
                     BorderThickness="0,1,0,0">
@@ -356,12 +225,6 @@
                             <ColumnDefinition
                                 Width="Auto" />
                         </Grid.ColumnDefinitions>
-
-                        <CheckBox
-                            Grid.Column="0"
-                            Content="{ResX Key=Common_SiteSetup_DoNotShow}"
-                            IsChecked="{Binding DoNotShowForm}"
-                            Margin="5,15" />
 
                         <Button
                             Grid.Column="1"

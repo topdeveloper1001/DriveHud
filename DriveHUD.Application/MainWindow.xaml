@@ -1339,7 +1339,7 @@
                             Value="CanResize" />
                         <Setter
                             Property="Width"
-                            Value="760" />
+                            Value="700" />
                         <Setter
                             Property="UseLayoutRounding"
                             Value="True" />
@@ -1362,6 +1362,59 @@
                 </infra:PopupWindowAction.HasBorder>
                 <infra:PopupWindowAction.WindowContent>
                     <v:SitesSetupView />
+                </infra:PopupWindowAction.WindowContent>
+            </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding IncorrectlyConfiguredSitesViewRequest,Mode=OneWay}">
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type Window}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource PopupBackground}" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="250" />
+                        <Setter
+                            Property="MaxHeight"
+                            Value="680" />
+                        <Setter
+                            Property="SizeToContent"
+                            Value="Height" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="CanResize" />
+                        <Setter
+                            Property="Width"
+                            Value="700" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="ShowInTaskbar"
+                            Value="True" />
+                        <Setter
+                            Property="Icon"
+                            Value="{markupext:IconExtension  /images/drivehud.ico, 32}" />
+                    </Style>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
+                    <system:Boolean>True</system:Boolean>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.HasBorder>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+                <infra:PopupWindowAction.WindowContent>
+                    <v:IncorrectlyConfiguredSitesView />
                 </infra:PopupWindowAction.WindowContent>
             </infra:PopupWindowAction>
         </prism:InteractionRequestTrigger>
