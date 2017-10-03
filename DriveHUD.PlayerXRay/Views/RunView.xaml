@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay.Views"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="300">
+    d:DesignHeight="1000"
+    d:DesignWidth="500">
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -16,12 +16,192 @@
                     Source="../PlayerXRayStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+            <Style
+                x:Key="ProfilesListBoxStyle"
+                TargetType="{x:Type ListBox}">
+
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ForegroundBrush}" />
+
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+
+                <Setter
+                    Property="Height"
+                    Value="82" />
+
+                <Setter
+                    Property="ScrollViewer.CanContentScroll"
+                    Value="True" />
+
+                <Setter
+                    Property="ScrollViewer.HorizontalScrollBarVisibility"
+                    Value="Disabled" />
+
+                <Setter
+                    Property="ScrollViewer.VerticalScrollBarVisibility"
+                    Value="Auto" />
+
+                <Setter
+                    Property="SelectionMode"
+                    Value="Single" />
+
+            </Style>
+
+            <Style
+                x:Key="ProfilesListBoxItemStyle"
+                TargetType="{x:Type ListBoxItem}">
+
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource BorderBrush}" />
+
+                <Setter
+                    Property="Padding"
+                    Value="10,0,0,0" />
+
+                <Setter
+                    Property="Height"
+                    Value="24" />
+
+                <Setter
+                    Property="FontSize"
+                    Value="12" />
+
+                <Setter
+                    Property="VerticalContentAlignment"
+                    Value="Center" />
+
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+
+                <Setter
+                    Property="Template"
+                    Value="{DynamicResource ProfilesListBoxItemControlTemplate}" />
+
+            </Style>
+
+            <ControlTemplate
+                x:Key="ProfilesListBoxItemControlTemplate"
+                TargetType="{x:Type ListBoxItem}">
+                <Grid>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup
+                            x:Name="CommonStates">
+                            <VisualState
+                                x:Name="Normal" />
+                            <VisualState
+                                x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames
+                                        Duration="0:0:0"
+                                        Storyboard.TargetName="SelectedBorder"
+                                        Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame
+                                            KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState
+                                x:Name="Disabled">
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Duration="0"
+                                        To="0.3"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Storyboard.TargetName="contentPresenter" />
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup
+                            x:Name="SelectionStates">
+                            <VisualState
+                                x:Name="Unselected" />
+                            <VisualState
+                                x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames
+                                        Duration="0:0:0"
+                                        Storyboard.TargetName="SelectedBorder"
+                                        Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame
+                                            KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup
+                            x:Name="SelectionStates">
+                            <VisualState
+                                x:Name="Selected">
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Duration="0"
+                                        To="0.4"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Storyboard.TargetName="FocusVisual" />
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState
+                                x:Name="Unselected" />
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <!-- normal-->
+                    <Border
+                        x:Name="SelectedBorder"
+                        Opacity="0.7"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding BorderBrush}"
+                        Visibility="Collapsed" />
+                    <!-- Focus -->
+                    <Border
+                        x:Name="FocusVisual"
+                        Opacity="0"
+                        Margin="0"
+                        BorderThickness="0"
+                        Background="{TemplateBinding BorderBrush}" />
+                    <!-- Content -->
+                    <ContentControl
+                        x:Name="contentPresenter"
+                        Margin="{TemplateBinding Padding}"
+                        Foreground="{TemplateBinding Foreground}"
+                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                        Content="{TemplateBinding Content}"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Grid>
+            </ControlTemplate>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+
         <StackPanel
+            Grid.Row="0"
             Orientation="Vertical"
             VerticalAlignment="Center"
             HorizontalAlignment="Center">
@@ -76,11 +256,134 @@
             </Border>
 
             <Button
-                Content="Start"
+                Content="START"
                 Width="172"
                 Height="59" />
 
         </StackPanel>
+
+        <Border
+            Grid.Row="1"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="0,1,0,0"
+            Background="{StaticResource MenuBackgroundBrush}">
+
+            <StackPanel>
+                <!-- Profiles -->
+                <Border
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1"
+                    Margin="16"
+                    Height="107"
+                    Background="{StaticResource PanelBackgroundBrush}">
+
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="7"
+                            ShadowDepth="0"
+                            Color="{DynamicResource DropShadowColor}" />
+                    </Border.Effect>
+
+                    <StackPanel>
+
+                        <Border
+                            BorderThickness="0"
+                            Background="{StaticResource BorderBrush}"
+                            Padding="10,0,0,0"
+                            Height="24">
+
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                FontSize="12"
+                                Text="Profiles" />
+
+                        </Border>
+                        <ListBox
+                            Style="{StaticResource ProfilesListBoxStyle}"
+                            ItemContainerStyle="{StaticResource ProfilesListBoxItemStyle}">
+                            <ListBoxItem
+                                Content="Profile 1" />
+                            <ListBoxItem
+                                Content="Profile 2" />
+                            <ListBoxItem
+                                Content="Profile 3" />
+                            <ListBoxItem
+                                Content="Profile 4" />
+                            <ListBoxItem
+                                Content="Profile 5" />
+                            <ListBoxItem
+                                Content="Profile 6" />
+                        </ListBox>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- Notes -->
+
+                <!-- Status -->
+                <Border
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1"
+                    Margin="16"
+                    Height="107"
+                    Background="{StaticResource PanelBackgroundBrush}">
+
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="7"
+                            ShadowDepth="0"
+                            Color="{DynamicResource DropShadowColor}" />
+                    </Border.Effect>
+
+                    <StackPanel>
+
+                        <Border
+                            BorderThickness="0"
+                            Background="{StaticResource BorderBrush}"
+                            Padding="10,0,0,0"
+                            Height="24">
+
+                            <StackPanel
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    FontSize="12"
+                                    Text="Status: " />
+
+                                <TextBlock
+                                    FontSize="12"
+                                    Foreground="#6e45d7"
+                                    Text="Idle" />
+                            </StackPanel>
+
+                        </Border>
+
+                        <ProgressBar
+                            Height="39"
+                            Margin="15,22,15,0"
+                            Foreground="{StaticResource SelectionBackgroundBrush}"
+                            BorderBrush="{StaticResource BorderBrush}"
+                            Background="{StaticResource MenuBackgroundBrush}"
+                            Maximum="100"
+                            Value="35">
+
+                            <ProgressBar.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="7"
+                                    ShadowDepth="0"
+                                    Color="{DynamicResource DropShadowColor}" />
+                            </ProgressBar.Effect>
+
+                        </ProgressBar>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </Border>
 
     </Grid>
 </UserControl>
