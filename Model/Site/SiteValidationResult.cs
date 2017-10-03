@@ -32,6 +32,8 @@ namespace Model.Site
 
         public bool IsAutoCenter { get; set; }
 
+        public bool FastPokerEnabled { get; set; }
+
         public bool HasIssue
         {
             get

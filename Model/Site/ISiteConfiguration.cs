@@ -34,6 +34,10 @@ namespace Model.Site
 
         bool IsAutoCenterAllowed { get; }
 
+        bool FastPokerAllowed { get; }
+
+        string FastPokerModeName { get; }
+
         string LogoSource { get; }
 
         #endregion

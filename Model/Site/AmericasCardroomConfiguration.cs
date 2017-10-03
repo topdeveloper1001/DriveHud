@@ -24,7 +24,7 @@ using System.Xml;
 
 namespace Model.Site
 {
-    public class AmericasCardroomConfiguration : ISiteConfiguration
+    public class AmericasCardroomConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private const string DisplayNameKeyValue = "DisplayName";
         private const string InstallLocationKeyValue = "InstallLocation";
@@ -49,7 +49,7 @@ namespace Model.Site
             };
         }
 
-        public string HeroName
+        public override string HeroName
         {
             get;
             set;
@@ -57,7 +57,7 @@ namespace Model.Site
 
         private readonly Dictionary<int, int> prefferedSeat;
 
-        public Dictionary<int, int> PreferredSeats
+        public override Dictionary<int, int> PreferredSeats
         {
             get
             {
@@ -65,7 +65,7 @@ namespace Model.Site
             }
         }
 
-        public virtual EnumPokerSites Site
+        public override EnumPokerSites Site
         {
             get
             {
@@ -75,21 +75,15 @@ namespace Model.Site
 
         private readonly IEnumerable<EnumTableType> tableTypes;
 
-        public IEnumerable<EnumTableType> TableTypes
+        public override IEnumerable<EnumTableType> TableTypes
         {
             get
             {
                 return tableTypes;
             }
         }
-
-        public TimeSpan TimeZoneOffset
-        {
-            get;
-            set;
-        }
-
-        public bool IsHandHistoryLocationRequired
+   
+        public override bool IsHandHistoryLocationRequired
         {
             get
             {
@@ -97,23 +91,15 @@ namespace Model.Site
             }
         }
 
-        public bool IsPrefferedSeatsAllowed
+        public override bool IsPrefferedSeatsAllowed
         {
             get
             {
                 return true;
             }
-        }
+        }    
 
-        public bool IsAutoCenterAllowed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public virtual string LogoSource
+        public override string LogoSource
         {
             get
             {
@@ -129,7 +115,7 @@ namespace Model.Site
             }
         }
 
-        public virtual string[] GetHandHistoryFolders()
+        public override string[] GetHandHistoryFolders()
         {
             var handHistoryFolders = new List<string>();
 
@@ -202,7 +188,7 @@ namespace Model.Site
             return string.Empty;
         }
 
-        public ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
+        public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var installedPath = GetInstalledPath(RegistryDisplayName);
 
