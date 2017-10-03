@@ -2187,6 +2187,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There were the following errors with auto setup for these sites:.
+        /// </summary>
+        internal static string Common_SiteSetup_IncofiguredIntroText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_IncofiguredIntroText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD has located the following poker sites installed on your system. Auto import will be enabled by default for them unless you&apos;d prefer to disable them. To disable them click on the activate/deactivate button(s) below and check them as red (disabled)..
+        /// </summary>
+        internal static string Common_SiteSetup_IntroText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_IntroText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [No site detected].
         /// </summary>
         internal static string Common_SiteSetup_NoSiteDetected {

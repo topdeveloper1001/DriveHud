@@ -28,7 +28,7 @@ namespace Model.Site
 
         bool IsDetected { get; set; }
 
-        bool IsEnabled { get; }
+        bool IsEnabled { get; set; }
 
         bool IsAutoCenter { get; set; }
 

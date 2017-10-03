@@ -900,4 +900,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_HudStatSettings_DataFreshnessLastDays" xml:space="preserve">
     <value>Last {0} days</value>
   </data>
+  <data name="Common_SiteSetup_IncofiguredIntroText" xml:space="preserve">
+    <value>There were the following errors with auto setup for these sites:</value>
+  </data>
+  <data name="Common_SiteSetup_IntroText" xml:space="preserve">
+    <value>DriveHUD has located the following poker sites installed on your system. Auto import will be enabled by default for them unless you'd prefer to disable them. To disable them click on the activate/deactivate button(s) below and check them as red (disabled).</value>
+  </data>
 </root>
