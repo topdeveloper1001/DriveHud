@@ -5,6 +5,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay.Views"
+    xmlns:vm="clr-namespace:DriveHUD.PlayerXRay.ViewModels"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     mc:Ignorable="d"
     d:DesignHeight="1000"
     d:DesignWidth="500">
@@ -141,14 +143,6 @@
                                             </DiscreteObjectKeyFrame.Value>
                                         </DiscreteObjectKeyFrame>
                                     </ObjectAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </VisualState>
-                        </VisualStateGroup>
-                        <VisualStateGroup
-                            x:Name="SelectionStates">
-                            <VisualState
-                                x:Name="Selected">
-                                <Storyboard>
                                     <DoubleAnimation
                                         Duration="0"
                                         To="0.4"
@@ -156,8 +150,6 @@
                                         Storyboard.TargetName="FocusVisual" />
                                 </Storyboard>
                             </VisualState>
-                            <VisualState
-                                x:Name="Unselected" />
                         </VisualStateGroup>
                     </VisualStateManager.VisualStateGroups>
                     <!-- normal-->
@@ -233,6 +225,7 @@
                     <RadioButton
                         Grid.Column="0"
                         HorizontalAlignment="Center"
+                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByProfile}}"
                         Style="{StaticResource RadioButtonNormalStyle}"
                         GroupName="RunByGroup"
                         Content="By Profile" />
@@ -240,6 +233,7 @@
                     <RadioButton
                         Grid.Column="1"
                         HorizontalAlignment="Center"
+                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByNote}}"
                         Style="{StaticResource RadioButtonNormalStyle}"
                         GroupName="RunByGroup"
                         Content="By Note" />
@@ -247,6 +241,7 @@
                     <RadioButton
                         Grid.Column="2"
                         HorizontalAlignment="Center"
+                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.AllNotes}}"
                         Style="{StaticResource RadioButtonNormalStyle}"
                         GroupName="RunByGroup"
                         Content="All Notes" />
@@ -275,7 +270,8 @@
                     BorderThickness="1"
                     Margin="16"
                     Height="107"
-                    Background="{StaticResource PanelBackgroundBrush}">
+                    Background="{StaticResource PanelBackgroundBrush}"
+                    Visibility="{Binding RunMode, Converter={dh:EnumToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:RunMode.ByProfile}}">
 
                     <Border.Effect>
                         <DropShadowEffect
@@ -300,19 +296,17 @@
                         </Border>
                         <ListBox
                             Style="{StaticResource ProfilesListBoxStyle}"
-                            ItemContainerStyle="{StaticResource ProfilesListBoxItemStyle}">
-                            <ListBoxItem
-                                Content="Profile 1" />
-                            <ListBoxItem
-                                Content="Profile 2" />
-                            <ListBoxItem
-                                Content="Profile 3" />
-                            <ListBoxItem
-                                Content="Profile 4" />
-                            <ListBoxItem
-                                Content="Profile 5" />
-                            <ListBoxItem
-                                Content="Profile 6" />
+                            ItemContainerStyle="{StaticResource ProfilesListBoxItemStyle}"
+                            ItemsSource="{Binding Profiles}"
+                            SelectedItem="{Binding SelectedProfile}">
+
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock
+                                        Text="{Binding Name}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+
                         </ListBox>
 
                     </StackPanel>

@@ -154,6 +154,7 @@
     <Compile Include="UIControls\MessageBox\MessageBox.cs" />
     <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
     <Compile Include="UIControls\VisualStates.cs" />
+    <Compile Include="ViewModels\RunMode.cs" />
     <Compile Include="ViewModels\RunViewModel.cs" />
     <Compile Include="Views\RunView.xaml.cs">
       <DependentUpon>RunView.xaml</DependentUpon>
