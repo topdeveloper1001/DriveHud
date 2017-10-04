@@ -2,7 +2,7 @@
 using ProtoBuf;
 using System.ComponentModel.DataAnnotations;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
 namespace AcePokerSolutions.DataAccessHelper
 {

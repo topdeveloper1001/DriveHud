@@ -68,7 +68,7 @@
                             Value="{StaticResource BackgroundBrush1}" />
                         <Setter
                             Property="MinHeight"
-                            Value="900" />
+                            Value="950" />
                         <Setter
                             Property="ResizeMode"
                             Value="CanResize" />

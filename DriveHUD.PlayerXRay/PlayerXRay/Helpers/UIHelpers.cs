@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 
-namespace AcePokerSolutions.PlayerXRay.Helpers
+namespace DriveHUD.PlayerXRay.Helpers
 {
     public static class UIHelpers
     {

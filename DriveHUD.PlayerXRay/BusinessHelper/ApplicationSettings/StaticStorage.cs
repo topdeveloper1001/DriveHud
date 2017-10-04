@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
+namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 {
     public static class StaticStorage
     {

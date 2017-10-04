@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.BusinessHelper.HandAnalyzer;
-using AcePokerSolutions.BusinessHelper.OtherAnalyzers;
-using AcePokerSolutions.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer;
+using DriveHUD.PlayerXRay.BusinessHelper.OtherAnalyzers;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class NoteManagerHelper
     {

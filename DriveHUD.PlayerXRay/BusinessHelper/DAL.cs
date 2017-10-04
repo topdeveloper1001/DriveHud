@@ -11,17 +11,17 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Xml.XPath;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.InsertManagerObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
 using Newtonsoft.Json;
 using DriveHUD.Common.Log;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public static class DAL
     {        

@@ -10,10 +10,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for ComparisionFiltersWindow.xaml

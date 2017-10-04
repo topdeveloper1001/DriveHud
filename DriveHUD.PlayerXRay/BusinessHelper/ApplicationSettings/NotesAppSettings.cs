@@ -3,12 +3,12 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
+namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 {
     [Serializable]
     public class NotesAppSettings

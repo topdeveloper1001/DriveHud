@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes
+namespace DriveHUD.PlayerXRay.DataTypes
 {
     public class Stake : INotifyPropertyChanged
     {

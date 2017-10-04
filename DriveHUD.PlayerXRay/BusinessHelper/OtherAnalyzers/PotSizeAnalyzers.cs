@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.OtherAnalyzers
+namespace DriveHUD.PlayerXRay.BusinessHelper.OtherAnalyzers
 {
     public class PotSizeAnalyzers
     {
@@ -93,7 +93,7 @@ namespace AcePokerSolutions.BusinessHelper.OtherAnalyzers
                         break;
                 }
 
-                DataAccessHelper.DriveHUD.Player playerHand = playerstatistic.HandHistory.Players.FirstOrDefault(x => x.PlayerName == player);
+                AcePokerSolutions.DataAccessHelper.DriveHUD.Player playerHand = playerstatistic.HandHistory.Players.FirstOrDefault(x => x.PlayerName == player);
                 if (playerHand == null)
                     return 0;
 

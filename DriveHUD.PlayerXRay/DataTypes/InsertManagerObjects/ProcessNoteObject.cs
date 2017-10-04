@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 
-namespace AcePokerSolutions.DataTypes.InsertManagerObjects
+namespace DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects
 {
     public class ProcessNoteObject
     {

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Media;
-using AcePokerSolutions.BusinessHelper;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.PlayerXRay.CustomControls;
+using DriveHUD.PlayerXRay.BusinessHelper;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.CustomControls;
 using Microsoft.Win32;
 using DriveHUD.Common.Log;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.AddItems
+namespace DriveHUD.PlayerXRay.UserControls.AddItems
 {
     /// <summary>
     /// Interaction logic for AddNoteWindow.xaml

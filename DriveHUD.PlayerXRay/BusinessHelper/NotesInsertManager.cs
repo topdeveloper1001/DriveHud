@@ -5,18 +5,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using AcePokerSolutions.DataAccessHelper;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.InsertManagerObjects;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using System.Linq;
 using System.Windows.Documents;
 using Microsoft.Windows.Controls;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class NotesInsertManager
     {

@@ -6,11 +6,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.PlayerXRay.CustomControls;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.CustomControls;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls
+namespace DriveHUD.PlayerXRay.UserControls
 {
     /// <summary>
     /// Interaction logic for ProfilesUC.xaml

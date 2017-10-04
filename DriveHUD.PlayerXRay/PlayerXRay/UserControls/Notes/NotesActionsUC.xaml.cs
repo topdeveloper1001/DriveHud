@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects.ActionsObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for NotesActionsUC.xaml

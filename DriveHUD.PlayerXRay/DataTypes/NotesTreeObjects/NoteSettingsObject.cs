@@ -3,12 +3,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
-using AcePokerSolutions.DataTypes.NotesTreeObjects.ActionsObjects;
-using AcePokerSolutions.DataTypes.NotesTreeObjects.TextureObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes.NotesTreeObjects
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
     public class NoteSettingsObject
     {

@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace AcePokerSolutions.PlayerXRay.CustomControls
+namespace DriveHUD.PlayerXRay.CustomControls
 {
 	/// <summary>
 	/// Interaction logic for MainMenuButton.xaml

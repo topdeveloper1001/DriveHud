@@ -10,11 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.Common.Linq;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Reactive.Linq;
 
 namespace DriveHUD.PlayerXRay.ViewModels
@@ -24,10 +27,12 @@ namespace DriveHUD.PlayerXRay.ViewModels
         public RunViewModel()
         {
             profiles = new ObservableCollection<ProfileObject>(NotesAppSettingsHelper.CurrentNotesAppSettings.Profiles);
-            stages = new ObservableCollection<StageObject>(NotesAppSettingsHelper.CurrentNotesAppSettings.StagesList);
+            stages = new ObservableCollection<StageObject>();
 
             RunCommand = ReactiveCommand.Create();
             RunCommand.Subscribe(x => Run());
+
+            ReloadStages();
         }
 
         public override WorkspaceType WorkspaceType
@@ -49,6 +54,21 @@ namespace DriveHUD.PlayerXRay.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref runMode, value);
+            }
+        }
+
+        private NoteStageType noteStageType;
+
+        public NoteStageType NoteStageType
+        {
+            get
+            {
+                return noteStageType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref noteStageType, value);
+                ReloadStages();
             }
         }
 
@@ -74,7 +94,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             {
                 return selectedProfile;
             }
-            set
+            private set
             {
                 this.RaiseAndSetIfChanged(ref selectedProfile, value);
             }
@@ -88,7 +108,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             {
                 return stages;
             }
-            set
+            private set
             {
                 this.RaiseAndSetIfChanged(ref stages, value);
             }
@@ -96,9 +116,26 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         public ReactiveCommand<object> RunCommand { get; private set; }
 
+        /// <summary>
+        /// Runs notes engine
+        /// </summary>
         private void Run()
         {
             // add run logic here
+        }
+
+        /// <summary>
+        /// Reloads <see cref="Stages"/> collection accordingly to selected <see cref="NoteStageType"/>
+        /// </summary>
+        private void ReloadStages()
+        {
+            Stages?.ForEach(x => x.IsSelected = false);
+
+            Stages?.Clear();
+
+            Stages?.AddRange(NotesAppSettingsHelper
+                .CurrentNotesAppSettings.StagesList
+                .Where(x => x.StageType == NoteStageType));
         }
     }
 }

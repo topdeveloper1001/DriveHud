@@ -5,7 +5,7 @@ using System.Collections.Specialized;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes
+namespace DriveHUD.PlayerXRay.DataTypes
 {
     public sealed class ServerDatabaseList : ObservableCollection<ServerDatabase>
     {

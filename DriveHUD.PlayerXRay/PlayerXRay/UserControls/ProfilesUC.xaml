@@ -3,10 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:NotesTreeObjects="clr-namespace:AcePokerSolutions.DataTypes.NotesTreeObjects"
+    xmlns:NotesTreeObjects="clr-namespace:DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects"
     xmlns:Theme="clr-namespace:AcePokerSolutions.NotesApp.Theme"
-    xmlns:TreeConverters="clr-namespace:AcePokerSolutions.PlayerXRay.Converters"
-    x:Class="AcePokerSolutions.PlayerXRay.UserControls.ProfilesUC"
+    xmlns:TreeConverters="clr-namespace:DriveHUD.PlayerXRay.Converters"
+    x:Class="DriveHUD.PlayerXRay.UserControls.ProfilesUC"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="676">

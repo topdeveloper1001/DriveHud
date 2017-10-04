@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Data;
 
-namespace AcePokerSolutions.PlayerXRay.Converters
+namespace DriveHUD.PlayerXRay.Converters
 {
     public class TreeDescriptionConverter : IValueConverter
     {

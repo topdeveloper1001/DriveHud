@@ -1,4 +1,4 @@
-﻿namespace AcePokerSolutions.DataTypes.InsertManagerObjects
+﻿namespace DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects
 {
     public class DatabaseNote
     {

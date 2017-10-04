@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes.NotesTreeObjects
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
     [Serializable]
     public class FilterObject : INotifyPropertyChanged

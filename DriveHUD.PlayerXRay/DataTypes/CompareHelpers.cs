@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes
+namespace DriveHUD.PlayerXRay.DataTypes
 {
     public static class CompareHelpers
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AcePokerSolutions.BusinessHelper.TextureHelpers;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.HandAnalyzer
+namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
 #region Three of a kind
     public class ThreeOfAKindTopSetAnalyzer

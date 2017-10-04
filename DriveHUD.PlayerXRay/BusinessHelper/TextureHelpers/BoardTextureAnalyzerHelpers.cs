@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.TextureHelpers
+namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
 {
     public static class BoardTextureAnalyzerHelpers
     {

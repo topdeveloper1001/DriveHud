@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper.ApplicationSettings
+namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 {
     public static class NotesAppSettingsHelper
     {

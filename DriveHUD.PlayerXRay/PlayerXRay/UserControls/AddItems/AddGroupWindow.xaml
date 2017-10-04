@@ -1,7 +1,7 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="AcePokerSolutions.PlayerXRay.UserControls.AddItems.AddGroupWindow"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="DriveHUD.PlayerXRay.UserControls.AddItems.AddGroupWindow"
         Title="Add Group" Height="126" Width="300" Icon="/Player X-Ray;component/PlayerXrayIcon.ico" Background="#FF545454" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 	<Grid>
 		<Grid.RowDefinitions>

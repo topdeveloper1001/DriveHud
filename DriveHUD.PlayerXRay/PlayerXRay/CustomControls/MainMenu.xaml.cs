@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using AcePokerSolutions.PlayerXRay.Helpers;
+using DriveHUD.PlayerXRay.Helpers;
 
-namespace AcePokerSolutions.PlayerXRay.CustomControls
+namespace DriveHUD.PlayerXRay.CustomControls
 {
     /// <summary>
     /// Interaction logic for MainMenu.xaml

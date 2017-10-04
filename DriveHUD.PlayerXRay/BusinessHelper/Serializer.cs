@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     /// <summary>
     /// Provides serialization and file IO support for all domain

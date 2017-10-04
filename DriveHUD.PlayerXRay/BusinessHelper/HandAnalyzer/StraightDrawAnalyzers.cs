@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Media;
-using AcePokerSolutions.BusinessHelper.TextureAnalyzers.Straight;
-using AcePokerSolutions.BusinessHelper.TextureHelpers;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.HandAnalyzer
+namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     public class StraightDrawTwoCardOpenEndedAnalyzer
     {

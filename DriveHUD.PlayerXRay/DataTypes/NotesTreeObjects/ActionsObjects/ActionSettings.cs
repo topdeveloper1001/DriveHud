@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes.NotesTreeObjects.ActionsObjects
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
 {
     public class ActionSettings
     {

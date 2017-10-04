@@ -1,8 +1,8 @@
-﻿using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.PlayerXRay.Helpers;
+﻿using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.Helpers;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for PlayerSettingUC.xaml

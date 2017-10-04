@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.PlayerXRay.ViewModels;
 using Microsoft.Practices.ServiceLocation;

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.BusinessHelper.TextureAnalyzers.Flush;
-using AcePokerSolutions.BusinessHelper.TextureAnalyzers.Straight;
-using AcePokerSolutions.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Flush;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.InsertManagerObjects;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.DataTypes.NotesTreeObjects.ActionsObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
 using DriveHUD.Common.Log;
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class NoteManager
     {

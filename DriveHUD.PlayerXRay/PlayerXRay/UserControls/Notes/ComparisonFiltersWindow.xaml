@@ -1,8 +1,8 @@
 ﻿<Window
-    x:Class="AcePokerSolutions.PlayerXRay.UserControls.Notes.ComparisonFiltersWindow"
+    x:Class="DriveHUD.PlayerXRay.UserControls.Notes.ComparisonFiltersWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:NotesTreeObjects="clr-namespace:AcePokerSolutions.DataTypes.NotesTreeObjects"
+    xmlns:NotesTreeObjects="clr-namespace:DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects"
     Title="Comparison Filters"
     Height="300"
     Width="300"

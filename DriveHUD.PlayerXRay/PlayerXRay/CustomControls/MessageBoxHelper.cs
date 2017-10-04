@@ -1,9 +1,9 @@
-﻿using AcePokerSolutions.BusinessHelper.ApplicationSettings;
+﻿using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using System;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace AcePokerSolutions.PlayerXRay.CustomControls
+namespace DriveHUD.PlayerXRay.CustomControls
 {
     public static class MessageBoxHelper
     {
@@ -34,7 +34,7 @@ namespace AcePokerSolutions.PlayerXRay.CustomControls
 
         private static void ShowMessageBox(string message, string header, MessageBoxImage icon, DispatcherObject owner)
         {
-            owner.Dispatcher.Invoke(new Action(() => UIControls.MessageBox.MessageBox.Show(message, header, MessageBoxButton.OK, icon)));
+            owner.Dispatcher.Invoke(new Action(() => AcePokerSolutions.UIControls.MessageBox.MessageBox.Show(message, header, MessageBoxButton.OK, icon)));
         }
 
         public static bool ShowYesNoDialogBox(string message, DispatcherObject owner)
@@ -44,7 +44,7 @@ namespace AcePokerSolutions.PlayerXRay.CustomControls
             owner.Dispatcher.Invoke(new Action(delegate
             {
                 result =
-                    UIControls.MessageBox.MessageBox.Show(message, "Confirmation dialog",
+                    AcePokerSolutions.UIControls.MessageBox.MessageBox.Show(message, "Confirmation dialog",
                                     MessageBoxButton.YesNo,
                                     MessageBoxImage.Question) ==
                     MessageBoxResult.Yes;

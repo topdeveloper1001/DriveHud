@@ -3,16 +3,16 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using AcePokerSolutions.BusinessHelper;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.PlayerXRay.CustomControls;
-using AcePokerSolutions.PlayerXRay.UserControls.AddItems;
+using DriveHUD.PlayerXRay.BusinessHelper;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.CustomControls;
+using DriveHUD.PlayerXRay.UserControls.AddItems;
 using Microsoft.Win32;
 using DriveHUD.Common.Log;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for NotesPage.xaml

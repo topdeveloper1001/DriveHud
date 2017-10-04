@@ -1,4 +1,4 @@
-﻿namespace AcePokerSolutions.DataTypes.NotesTreeObjects.TextureObjects
+﻿namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
     public class TurnTextureSettings : TextureSettings
     {

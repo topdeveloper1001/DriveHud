@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.DataTypes.NotesTreeObjects.TextureObjects;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.BoardTexture
+namespace DriveHUD.PlayerXRay.UserControls.BoardTexture
 {
     public partial class FlopBoardTextureUC
     {

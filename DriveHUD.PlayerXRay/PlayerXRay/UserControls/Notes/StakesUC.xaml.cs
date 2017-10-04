@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
 using System.Linq;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for StakesUC.xaml

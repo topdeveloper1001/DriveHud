@@ -1,4 +1,4 @@
-﻿namespace AcePokerSolutions.PlayerXRay.UserControls.Notes
+﻿namespace DriveHUD.PlayerXRay.UserControls.Notes
 {
     /// <summary>
     /// Interaction logic for NoteFilterValueAdd.xaml

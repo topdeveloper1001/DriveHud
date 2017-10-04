@@ -1,8 +1,8 @@
-﻿<UserControl x:Class="AcePokerSolutions.PlayerXRay.UserControls.Notes.NotesHv"
+﻿<UserControl x:Class="DriveHUD.PlayerXRay.UserControls.Notes.NotesHv"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Converters="clr-namespace:AcePokerSolutions.PlayerXRay.Converters" mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Converters="clr-namespace:DriveHUD.PlayerXRay.Converters" mc:Ignorable="d" 
              d:DesignHeight="341" d:DesignWidth="429">
     <UserControl.Resources>
         <Converters:OppositeBoolConverter x:Key="oppositeBoolConv"/>

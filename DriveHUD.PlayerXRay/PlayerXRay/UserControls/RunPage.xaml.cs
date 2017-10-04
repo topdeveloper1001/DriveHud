@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using AcePokerSolutions.BusinessHelper;
-using AcePokerSolutions.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
-using AcePokerSolutions.PlayerXRay.CustomControls;
-using AcePokerSolutions.PlayerXRay.Helpers;
+using DriveHUD.PlayerXRay.BusinessHelper;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.CustomControls;
+using DriveHUD.PlayerXRay.Helpers;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls
+namespace DriveHUD.PlayerXRay.UserControls
 {
     /// <summary>
     /// Interaction logic for RunPage.xaml

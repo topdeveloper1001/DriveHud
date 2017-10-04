@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes.NotesTreeObjects
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
 
     public class ProfileObject

@@ -1,11 +1,11 @@
 ﻿<UserControl
-    x:Class="AcePokerSolutions.PlayerXRay.UserControls.Notes.NotesPage"
+    x:Class="DriveHUD.PlayerXRay.UserControls.Notes.NotesPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:NotesTreeObjects="clr-namespace:AcePokerSolutions.DataTypes.NotesTreeObjects"
-    xmlns:TreeConverters="clr-namespace:AcePokerSolutions.PlayerXRay.Converters"
+    xmlns:NotesTreeObjects="clr-namespace:DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects"
+    xmlns:TreeConverters="clr-namespace:DriveHUD.PlayerXRay.Converters"
     mc:Ignorable="d"
     d:DesignHeight="563.5"
     d:DesignWidth="957.333">

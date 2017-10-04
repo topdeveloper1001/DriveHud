@@ -7,7 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using DriveHUD.Common.Log;
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class WcfHelper
     {

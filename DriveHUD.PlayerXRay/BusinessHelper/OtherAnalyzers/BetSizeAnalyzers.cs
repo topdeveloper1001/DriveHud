@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using AcePokerSolutions.DataAccessHelper;
 using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.OtherAnalyzers
+namespace DriveHUD.PlayerXRay.BusinessHelper.OtherAnalyzers
 {
     public class BetSizeAnalyzers
     {

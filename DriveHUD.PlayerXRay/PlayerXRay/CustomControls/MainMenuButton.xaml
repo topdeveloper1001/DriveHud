@@ -4,7 +4,7 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
-	x:Class="AcePokerSolutions.PlayerXRay.CustomControls.MainMenuButton"
+	x:Class="DriveHUD.PlayerXRay.CustomControls.MainMenuButton"
 	x:Name="UserControl"
 	d:DesignWidth="122" d:DesignHeight="69" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseEnter="UserControlMouseEnter" MouseLeave="UserControlMouseLeave" MouseLeftButtonUp="UserControlMouseLeftButtonUp" Height="40" BorderThickness="0" Cursor="Hand">
 	<UserControl.Resources>

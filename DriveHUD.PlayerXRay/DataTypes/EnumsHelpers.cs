@@ -1,4 +1,4 @@
-﻿namespace AcePokerSolutions.DataTypes
+﻿namespace DriveHUD.PlayerXRay.DataTypes
 {
     public static class EnumsHelpers
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AcePokerSolutions.BusinessHelper.TextureHelpers;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.BusinessHelper.TextureAnalyzers.Straight
+namespace DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight
 {
     public class GutShotBeatNutsTextureAnalyzer
     {

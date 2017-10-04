@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 #endregion
 
-namespace AcePokerSolutions.DataTypes
+namespace DriveHUD.PlayerXRay.DataTypes
 {
     public enum RangeCardSuit
     {

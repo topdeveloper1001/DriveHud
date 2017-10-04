@@ -1,49 +1,95 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="NoteObject.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using System.ComponentModel;
-using System.Xml.Serialization;
+using ReactiveUI;
 
-#endregion
-
-namespace AcePokerSolutions.DataTypes.NotesTreeObjects
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
-    public class NoteObject : INotifyPropertyChanged
+    public class NoteObject : NoteTreeObjectBase
     {
-        private bool m_isSelected;
-
         public NoteObject()
         {
             Settings = new NoteSettingsObject();
             DisplayedNote = "Unknown";
         }
 
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string DisplayedNote { get; set; }
-        
-        public NoteSettingsObject Settings { get; set; }
+        private int id;
 
-        [XmlIgnore]
-        public bool IsSelected
+        public int ID
         {
+            get
+            {
+                return id;
+            }
             set
             {
-                if (m_isSelected == value)
-                    return;
-                m_isSelected = value;
-
-                if (PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs("IsSelected"));
-                }
+                this.RaiseAndSetIfChanged(ref id, value);
             }
         }
 
-        #region INotifyPropertyChanged Members
+        private string name;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref name, value);
+            }
+        }
 
-        #endregion
+        private string description;
+
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref description, value);
+            }
+        }
+
+        private string displayedNote;
+
+        public string DisplayedNote
+        {
+            get
+            {
+                return displayedNote;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref displayedNote, value);
+            }
+        }
+
+        private NoteSettingsObject settings;
+
+        public NoteSettingsObject Settings
+        {
+            get
+            {
+                return settings;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref settings, value);
+            }
+        }
     }
 }

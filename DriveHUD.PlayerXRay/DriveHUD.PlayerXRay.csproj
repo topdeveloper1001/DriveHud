@@ -120,6 +120,9 @@
     <Compile Include="BusinessHelper\TextureHelpers\BoardTextureAnalyzerHelpers.cs" />
     <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
     <Compile Include="Controls\MenuButton.cs" />
+    <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
+    <Compile Include="Converters\TreeViewItemExtensions.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />

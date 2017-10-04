@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AcePokerSolutions.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes;
 
-namespace AcePokerSolutions.DataTypes
+namespace DriveHUD.PlayerXRay.DataTypes
 {
     public class Card
     {

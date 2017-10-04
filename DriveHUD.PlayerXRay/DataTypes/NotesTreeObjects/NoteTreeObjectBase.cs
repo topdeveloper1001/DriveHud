@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="InnerGroupObject.cs" company="Ace Poker Solutions">
+// <copyright file="NoteTreeObjectBase.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,43 +11,29 @@
 //----------------------------------------------------------------------
 
 using ReactiveUI;
-using System.Collections.ObjectModel;
+using System.Xml.Serialization;
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
-    public class InnerGroupObject : NoteTreeObjectBase
+    public abstract class NoteTreeObjectBase : ReactiveObject
     {
-        public InnerGroupObject()
-        {
-            notes = new ObservableCollection<NoteObject>();
-        }
+        #region Properties
 
-        private string name;
+        private bool isSelected;
 
-        public string Name
+        [XmlIgnore]
+        public bool IsSelected
         {
             get
             {
-                return name;
+                return isSelected;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref name, value);
+                this.RaiseAndSetIfChanged(ref isSelected, value);
             }
         }
 
-        private ObservableCollection<NoteObject> notes;
-
-        public ObservableCollection<NoteObject> Notes
-        {
-            get
-            {
-                return notes;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref notes, value);
-            }
-        }
+        #endregion
     }
 }

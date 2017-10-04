@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace AcePokerSolutions.PlayerXRay.Converters
+namespace DriveHUD.PlayerXRay.Converters
 {
     public class OppositeBoolConverter : IValueConverter
     {

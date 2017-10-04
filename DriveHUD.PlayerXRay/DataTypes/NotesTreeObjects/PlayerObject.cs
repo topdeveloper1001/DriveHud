@@ -1,4 +1,4 @@
-﻿namespace AcePokerSolutions.DataTypes.NotesTreeObjects
+﻿namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
     public class PlayerObject
     {

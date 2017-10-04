@@ -1,9 +1,9 @@
-﻿using AcePokerSolutions.BusinessHelper.ApplicationSettings;
+﻿using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using AcePokerSolutions.DataAccessHelper;
-using AcePokerSolutions.DataTypes;
-using AcePokerSolutions.PlayerXRay.CustomControls;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.CustomControls;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls
+namespace DriveHUD.PlayerXRay.UserControls
 {
     /// <summary>
     /// Interaction logic for SettingsUC.xaml

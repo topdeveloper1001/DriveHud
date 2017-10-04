@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
-using AcePokerSolutions.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 
-namespace AcePokerSolutions.PlayerXRay.UserControls.BoardTexture
+namespace DriveHUD.PlayerXRay.UserControls.BoardTexture
 {
     /// <summary>
     /// Interaction logic for BoardTextureUC.xaml

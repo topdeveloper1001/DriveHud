@@ -7,7 +7,7 @@ using System.Text;
 
 #endregion
 
-namespace AcePokerSolutions.BusinessHelper
+namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class EncryptionHelper
     {
