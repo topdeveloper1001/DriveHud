@@ -150,16 +150,16 @@
         TargetType="Button">
         <Setter
             Property="Height"
-            Value="25"></Setter>
+            Value="25" />
         <Setter
             Property="Width"
-            Value="85"></Setter>
+            Value="85" />
         <Setter
             Property="Background"
-            Value="#84c940"></Setter>
+            Value="#84c940" />
         <Setter
             Property="FontSize"
-            Value="13"></Setter>
+            Value="13" />
         <Setter
             Property="Foreground"
             Value="White" />
