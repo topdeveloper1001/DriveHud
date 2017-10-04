@@ -909,4 +909,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_SiteSetup_HelpToolTip" xml:space="preserve">
     <value>Open {0} online manual</value>
   </data>
+  <data name="Common_SiteSetup_SetupHelpButtonText" xml:space="preserve">
+    <value>{0} Setup Help</value>
+  </data>
 </root>

@@ -230,6 +230,7 @@
                             Grid.Column="1"
                             Width="60"
                             Height="27"
+                            Foreground="{StaticResource MouseOverForegroundBrush}"
                             HorizontalAlignment="Right"
                             Margin="0,10,10,10"
                             Content="{ResX Key=Common_SiteSetup_OK}"

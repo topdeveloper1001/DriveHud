@@ -2241,6 +2241,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Setup Help.
+        /// </summary>
+        internal static string Common_SiteSetup_SetupHelpButtonText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_SetupHelpButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [Site detected].
         /// </summary>
         internal static string Common_SiteSetup_SiteDetected {
