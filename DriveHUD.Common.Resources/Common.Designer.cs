@@ -2187,7 +2187,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There were the following errors with auto setup for these sites:.
+        ///   Looks up a localized string similar to Open {0} online manual.
+        /// </summary>
+        internal static string Common_SiteSetup_HelpToolTip {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_HelpToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The following sites still need setup to be completed, in order for DriveHUD to track hands and display a HUD:.
         /// </summary>
         internal static string Common_SiteSetup_IncofiguredIntroText {
             get {

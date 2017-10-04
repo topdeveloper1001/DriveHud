@@ -13,6 +13,7 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -23,6 +24,7 @@ using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DriveHUD.Application.ViewModels
@@ -78,6 +80,8 @@ namespace DriveHUD.Application.ViewModels
 
         public IReactiveCommand<object> ApplyCommand { get; private set; }
 
+        public IReactiveCommand<object> HelpCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -111,6 +115,22 @@ namespace DriveHUD.Application.ViewModels
                 settingsService.SaveSettings(settingsModel);
                 FinishInteraction?.Invoke();
             });
+
+            HelpCommand = ReactiveCommand.Create();
+            HelpCommand.Subscribe(x => OpenHelp(x as SiteSetupViewModel));
+        }
+
+        private void OpenHelp(SiteSetupViewModel siteSetupViewModel)
+        {
+            if (siteSetupViewModel == null || !ResourceStrings.PokerSiteHelpLinks.ContainsKey(siteSetupViewModel.PokerSite))
+            {
+                return;
+            }
+
+            var helpLinkKey = ResourceStrings.PokerSiteHelpLinks[siteSetupViewModel.PokerSite];
+            var helpLink = CommonResourceManager.Instance.GetResourceString(helpLinkKey);
+
+            BrowserHelper.OpenLinkInBrowser(helpLink);
         }
 
         #endregion
