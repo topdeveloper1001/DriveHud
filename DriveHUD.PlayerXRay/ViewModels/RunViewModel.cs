@@ -19,6 +19,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Threading;
 
 namespace DriveHUD.PlayerXRay.ViewModels
 {
@@ -114,6 +115,35 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private double progress;
+
+        public double Progress
+        {
+            get
+            {
+                return progress;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref progress, value);
+            }
+        }
+
+
+        private bool isRunning;
+
+        public bool IsRunning
+        {
+            get
+            {
+                return isRunning;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isRunning, value);
+            }
+        }
+
         public ReactiveCommand<object> RunCommand { get; private set; }
 
         /// <summary>
@@ -121,7 +151,21 @@ namespace DriveHUD.PlayerXRay.ViewModels
         /// </summary>
         private void Run()
         {
-            // add run logic here
+            if (IsRunning)
+            {
+                return;
+            }
+
+            IsRunning = true;
+
+            StartAsyncOperation(() =>
+            {
+                
+            }, () =>
+            {
+                Progress = 100;
+                IsRunning = false;
+            });
         }
 
         /// <summary>

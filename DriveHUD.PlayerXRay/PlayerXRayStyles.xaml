@@ -461,14 +461,7 @@
                             CornerRadius="1"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            Background="{TemplateBinding Background}">
-                            <TextBlock
-                                FontSize="{TemplateBinding FontSize}"
-                                Foreground="{StaticResource ForegroundBrush}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Value, StringFormat={}{0}%}" />
-                        </Border>
+                            Background="{TemplateBinding Background}" />
                         <Rectangle
                             x:Name="PART_Track" />
                         <Grid
@@ -493,6 +486,12 @@
                                 </Rectangle.RenderTransform>
                             </Rectangle>
                         </Grid>
+                        <TextBlock
+                            FontSize="{TemplateBinding FontSize}"
+                            Foreground="{StaticResource ForegroundBrush}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Value, StringFormat={}{0}%}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger

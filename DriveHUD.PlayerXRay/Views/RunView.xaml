@@ -229,7 +229,9 @@
             <Button
                 Content="START"
                 Width="172"
-                Height="59" />
+                Height="59"
+                IsEnabled="{Binding IsRunning, Converter={dh:BoolNotConverter}}"
+                Command="{Binding RunCommand}" />
 
         </StackPanel>
 
@@ -438,23 +440,28 @@
 
                         </Border>
 
-                        <ProgressBar
-                            Height="39"
-                            Margin="15,22,15,0"
-                            Foreground="{StaticResource SelectionBackgroundBrush}"
-                            BorderBrush="{StaticResource BorderBrush}"
-                            Background="{StaticResource MenuBackgroundBrush}"
-                            Maximum="100"
-                            Value="35">
+                        <Grid
+                            Margin="15,22,15,0">
 
-                            <ProgressBar.Effect>
-                                <DropShadowEffect
-                                    BlurRadius="7"
-                                    ShadowDepth="0"
-                                    Color="{DynamicResource DropShadowColor}" />
-                            </ProgressBar.Effect>
+                            <ProgressBar
+                                Height="39"
+                                Foreground="{StaticResource SelectionBackgroundBrush}"
+                                BorderBrush="{StaticResource BorderBrush}"
+                                Background="{StaticResource MenuBackgroundBrush}"
+                                Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"
+                                Maximum="100"
+                                Value="{Binding Progress}">
 
-                        </ProgressBar>
+                                <ProgressBar.Effect>
+                                    <DropShadowEffect
+                                        BlurRadius="7"
+                                        ShadowDepth="0"
+                                        Color="{DynamicResource DropShadowColor}" />
+                                </ProgressBar.Effect>
+
+                            </ProgressBar>
+
+                        </Grid>
 
                     </StackPanel>
 
