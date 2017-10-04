@@ -178,6 +178,7 @@ namespace DriveHUD.Application.ViewModels
             UpdateViewRequest = new InteractionRequest<INotification>();
             NotificationRequest = new InteractionRequest<INotification>();
             SitesSetupViewRequest = new InteractionRequest<INotification>();
+            IncorrectlyConfiguredSitesViewRequest = new InteractionRequest<INotification>();
 
             SortedPlayers = (CollectionView)CollectionViewSource.GetDefaultView(StorageModel.PlayerCollection);
             SortedPlayers.SortDescriptions.Add(new SortDescription(nameof(IPlayer.DecodedName), ListSortDirection.Ascending));
@@ -1564,6 +1565,8 @@ namespace DriveHUD.Application.ViewModels
         public InteractionRequest<INotification> UpdateViewRequest { get; private set; }
 
         public InteractionRequest<INotification> SitesSetupViewRequest { get; private set; }
+
+        public InteractionRequest<INotification> IncorrectlyConfiguredSitesViewRequest { get; private set; }
 
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {

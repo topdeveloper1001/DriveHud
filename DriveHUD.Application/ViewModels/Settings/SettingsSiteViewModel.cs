@@ -359,14 +359,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             var helpLinkKey = ResourceStrings.PokerSiteHelpLinks[SelectedSite.PokerSite];
             var helpLink = CommonResourceManager.Instance.GetResourceString(helpLinkKey);
 
-            try
-            {
-                Process.Start(BrowserHelper.GetDefaultBrowserPath(), helpLink);
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Link {helpLink} couldn't be opened", e);
-            }
+            BrowserHelper.OpenLinkInBrowser(helpLink);
         }
 
         private string GetTableTypeString(EnumTableType tableType)

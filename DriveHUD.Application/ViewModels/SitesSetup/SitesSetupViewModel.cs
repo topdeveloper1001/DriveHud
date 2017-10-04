@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Entities;
@@ -41,34 +40,17 @@ namespace DriveHUD.Application.ViewModels
 
         #region Properties
 
-        private ObservableCollection<NetworkSetupViewModel> networkSetups;
+        private ObservableCollection<SiteSetupViewModel> sites;
 
-        public ObservableCollection<NetworkSetupViewModel> NetworkSetups
+        public ObservableCollection<SiteSetupViewModel> Sites
         {
             get
             {
-                return networkSetups;
+                return sites;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref networkSetups, value);
-            }
-        }
-
-        public bool DoNotShowForm
-        {
-            get
-            {
-                return settingsModel != null && settingsModel.GeneralSettings != null ? !settingsModel.GeneralSettings.RunSiteDetection : false;
-            }
-            set
-            {
-                if (settingsModel != null && settingsModel.GeneralSettings != null)
-                {
-                    settingsModel.GeneralSettings.RunSiteDetection = !value;
-                }
-
-                this.RaisePropertyChanged();
+                this.RaiseAndSetIfChanged(ref sites, value);
             }
         }
 
@@ -147,48 +129,24 @@ namespace DriveHUD.Application.ViewModels
         {
             Title = CommonResourceManager.Instance.GetResourceString("Common_SiteSetup_Header");
 
-            networkSetups = new ObservableCollection<NetworkSetupViewModel>();
+            sites = new ObservableCollection<SiteSetupViewModel>();
 
-            var networks = EntityUtils.GetNetworkSites();
+            var allSites = EntityUtils.GetNetworkSites().SelectMany(x => x.Value);
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             settingsModel = settingsService.GetSettings();
 
             var siteModels = settingsModel.SiteSettings.SitesModelList.ToDictionary(x => x.PokerSite);
 
-            foreach (var network in networks.Keys)
-            {
-                try
-                {
-                    var networkSetupViewModel = new NetworkSetupViewModel(network);
+            var sitesToAdd = (from site in allSites
+                              join validationResult in validationResults on site equals validationResult.PokerSite
+                              where siteModels.ContainsKey(site)
+                              select new SiteSetupViewModel(validationResult, siteModels[site])
+                              {
+                                  Enabled = validationResult.IsDetected
+                              }).ToArray();
 
-                    if (!networks.ContainsKey(network))
-                    {
-                        continue;
-                    }
-
-                    var sitesToAdd = (from site in networks[network]
-                                      join validationResult in validationResults on site equals validationResult.PokerSite
-                                      where siteModels.ContainsKey(site)
-                                      select new SiteSetupViewModel(validationResult, siteModels[site])
-                                      {
-                                          Enabled = validationResult.IsDetected
-                                      }).ToArray();
-
-                    if (sitesToAdd.Length == 0)
-                    {
-                        continue;
-                    }
-
-                    networkSetupViewModel.NetworkSites.AddRange(sitesToAdd);
-
-                    networkSetups.Add(networkSetupViewModel);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, e);
-                }
-            }
+            sites.AddRange(sitesToAdd);
 
             ApplyCommand = ReactiveCommand.Create();
             ApplyCommand.Subscribe(x =>

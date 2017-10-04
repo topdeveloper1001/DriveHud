@@ -9,7 +9,7 @@
 
     <!--Control colors.-->
     <Color x:Key="ForegroundColor">#7D7F84</Color>
-    <Color x:Key="MouseOverForegroundColor">White</Color>
+    <Color x:Key="MouseOverForegroundColor">#FFFFFF</Color>
     <Color x:Key="SelectedForegroundColor">#5671b6</Color>
 
     <Color x:Key="WindowColor">#FFE8EDF9</Color>
