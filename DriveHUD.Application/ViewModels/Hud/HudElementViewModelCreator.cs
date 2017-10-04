@@ -12,10 +12,10 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
-using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -52,9 +52,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     ApplyRestrictions(x, creationInfo);
                 });
             }
-            catch (DHBusinessException e)
+            catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not configure positions for {creationInfo.HudLayoutInfo.Name}", e);
+                LogProvider.Log.Error(this, $"Could not configure positions for seat #{creationInfo.SeatNumber} using {creationInfo.HudLayoutInfo.Name}, {(int)creationInfo.HudLayoutInfo.TableType}-max", e);
             }
 
             return hudElementViewModel;

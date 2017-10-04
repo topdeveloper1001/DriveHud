@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ISiteValidationResult.cs" company="Ace Poker Solutions">
+// <copyright file="IncorrectlyConfiguredSitesView.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,32 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using System.Collections.Generic;
+using System.Windows.Controls;
 
-namespace Model.Site
+namespace DriveHUD.Application.Views
 {
     /// <summary>
-    /// Represents the result of the validation of the site
+    /// Interaction logic for IncorrectlyConfiguredSitesView.xaml
     /// </summary>
-    public interface ISiteValidationResult
+    public partial class IncorrectlyConfiguredSitesView : UserControl
     {
-        EnumPokerSites PokerSite { get; }
-
-        bool IsNew { get; set; }
-
-        bool HasIssue { get; }
-
-        bool IsDetected { get; set; }
-
-        bool IsEnabled { get; set; }
-
-        bool IsAutoCenter { get; set; }
-
-        bool FastPokerEnabled { get; set; }
-
-        List<string> Issues { get; set; }
-
-        List<string> HandHistoryLocations { get; set; }
+        public IncorrectlyConfiguredSitesView()
+        {
+            InitializeComponent();
+        }
     }
 }

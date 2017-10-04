@@ -95,7 +95,8 @@ namespace DriveHUD.Common.Resources
             [EnumPokerSites.TigerGaming] = "Settings_TigerGamingHelpLink",
             [EnumPokerSites.TruePoker] = "Settings_TruePokerHelpLink",
             [EnumPokerSites.WinningPokerNetwork] = "Settings_WinningPokerNetworkHelpLink",
-            [EnumPokerSites.YaPoker] = "Settings_YaPokerHelpLink"
+            [EnumPokerSites.YaPoker] = "Settings_YaPokerHelpLink",
+            [EnumPokerSites.IPoker] = "Settings_IPokerHelpLink"
         };
 
         #endregion

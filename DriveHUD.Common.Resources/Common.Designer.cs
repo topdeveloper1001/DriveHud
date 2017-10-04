@@ -2196,6 +2196,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open {0} online manual.
+        /// </summary>
+        internal static string Common_SiteSetup_HelpToolTip {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_HelpToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The following sites still need setup to be completed, in order for DriveHUD to track hands and display a HUD:.
+        /// </summary>
+        internal static string Common_SiteSetup_IncofiguredIntroText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_IncofiguredIntroText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD has located the following poker sites installed on your system. Auto import will be enabled by default for them unless you&apos;d prefer to disable them. To disable them click on the activate/deactivate button(s) below and check them as red (disabled)..
+        /// </summary>
+        internal static string Common_SiteSetup_IntroText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_IntroText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [No site detected].
         /// </summary>
         internal static string Common_SiteSetup_NoSiteDetected {
@@ -2219,6 +2246,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_SiteSetup_RedDisabled {
             get {
                 return ResourceManager.GetString("Common_SiteSetup_RedDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Setup Help.
+        /// </summary>
+        internal static string Common_SiteSetup_SetupHelpButtonText {
+            get {
+                return ResourceManager.GetString("Common_SiteSetup_SetupHelpButtonText", resourceCulture);
             }
         }
         

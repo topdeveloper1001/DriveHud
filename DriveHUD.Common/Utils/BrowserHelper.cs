@@ -10,12 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using Microsoft.Win32;
+using System;
+using System.Diagnostics;
 
 namespace DriveHUD.Common.Utils
 {
+    /// <summary>
+    /// Provides methods to work with browsers
+    /// </summary>
     public class BrowserHelper
-    {        
+    {
+        /// <summary>
+        /// Gets path to the executable file of the default browser of system
+        /// </summary>
+        /// <returns>Path to the executable file of the default browser</returns>
         public static string GetDefaultBrowserPath()
         {
             var urlAssociation = @"Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http";
@@ -69,6 +79,22 @@ namespace DriveHUD.Common.Utils
             catch
             {
                 return "iexplorer.exe";
+            }
+        }
+
+        /// <summary>
+        /// Opens the specified link in the default browser
+        /// </summary>
+        /// <param name="link">The link to open</param>
+        public static void OpenLinkInBrowser(string link)
+        {
+            try
+            {
+                Process.Start(GetDefaultBrowserPath(), link);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(BrowserHelper), $"Link {link} couldn't be opened", e);
             }
         }
 
