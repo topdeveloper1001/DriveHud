@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RunView.xaml.cs" company="Ace Poker Solutions">
+// <copyright file="NotesViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
+using DriveHUD.Common.Linq;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using ReactiveUI;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reactive.Linq;
 
-namespace DriveHUD.PlayerXRay.Views
+namespace DriveHUD.PlayerXRay.ViewModels
 {
-    /// <summary>
-    /// Interaction logic for RunView.xaml
-    /// </summary>
-    public partial class RunView : UserControl
+    public class NotesViewModel : WorkspaceViewModel
     {
-        public RunView()
+        public override WorkspaceType WorkspaceType
         {
-            InitializeComponent();
+            get
+            {
+                return WorkspaceType.Notes;
+            }
         }
     }
 }

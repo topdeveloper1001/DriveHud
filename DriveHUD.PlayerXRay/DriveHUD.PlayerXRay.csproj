@@ -157,8 +157,12 @@
     <Compile Include="UIControls\MessageBox\MessageBox.cs" />
     <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
     <Compile Include="UIControls\VisualStates.cs" />
+    <Compile Include="ViewModels\NotesViewModel.cs" />
     <Compile Include="ViewModels\RunMode.cs" />
     <Compile Include="ViewModels\RunViewModel.cs" />
+    <Compile Include="Views\NotesView.xaml.cs">
+      <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RunView.xaml.cs">
       <DependentUpon>RunView.xaml</DependentUpon>
     </Compile>
@@ -426,6 +430,10 @@
     <Page Include="UIControls\Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NotesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RunView.xaml">
       <SubType>Designer</SubType>

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RunView.xaml.cs" company="Ace Poker Solutions">
+// <copyright file="NotesView.xaml.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,11 +15,11 @@ using System.Windows.Controls;
 namespace DriveHUD.PlayerXRay.Views
 {
     /// <summary>
-    /// Interaction logic for RunView.xaml
+    /// Interaction logic for NotesView.xaml
     /// </summary>
-    public partial class RunView : UserControl
+    public partial class NotesView : UserControl
     {
-        public RunView()
+        public NotesView()
         {
             InitializeComponent();
         }

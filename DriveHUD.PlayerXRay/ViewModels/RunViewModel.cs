@@ -19,7 +19,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
-using System.Threading;
 
 namespace DriveHUD.PlayerXRay.ViewModels
 {

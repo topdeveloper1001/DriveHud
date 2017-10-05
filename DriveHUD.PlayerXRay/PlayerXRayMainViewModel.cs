@@ -49,7 +49,7 @@ namespace DriveHUD.PlayerXRay
             NotesAppSettingsHelper.LoadAppSettings();
 
             StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
-            StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;            
+            StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
             Navigate(WorkspaceType.Run);
         }
 
@@ -150,6 +150,9 @@ namespace DriveHUD.PlayerXRay
             {
                 case WorkspaceType.Run:
                     workspace = new RunViewModel();
+                    break;
+                case WorkspaceType.Notes:
+                    workspace = new NotesViewModel();
                     break;
             }
 
