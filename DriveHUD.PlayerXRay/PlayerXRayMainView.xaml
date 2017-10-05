@@ -25,6 +25,11 @@
                 <v:RunView />
             </DataTemplate>
 
+            <DataTemplate
+                DataType="{x:Type vm:NotesViewModel}">
+                <v:NotesView />
+            </DataTemplate>
+
         </ResourceDictionary>
     </UserControl.Resources>
 

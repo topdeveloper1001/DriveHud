@@ -20,10 +20,216 @@
                 <ResourceDictionary
                     Source="../PlayerXRayStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+
+            <Style
+                x:Key="StreetHeaderMenuButtonStyle"
+                TargetType="{x:Type ctl:MenuButton}"
+                BasedOn="{StaticResource MenuButtonStyle}">
+
+                <Setter
+                    Property="Height"
+                    Value="40" />
+
+                <Setter
+                    Property="Margin"
+                    Value="0,0,18,0" />
+
+                <Setter
+                    Property="GroupName"
+                    Value="NoteStageGroup" />
+
+            </Style>
+
+            <Style
+                x:Key="NoteSettingsHeaderMenuButtonStyle"
+                TargetType="{x:Type ctl:MenuButton}"
+                BasedOn="{StaticResource StreetHeaderMenuButtonStyle}">
+
+                <Setter
+                    Property="Margin"
+                    Value="0,0,18,0" />
+
+                <Setter
+                    Property="GroupName"
+                    Value="NoteSettingsGroup" />
+
+            </Style>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid
+        Margin="8,9,8,9">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="340" />
+            <ColumnDefinition
+                Width="15" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Notes -->
+        <Border
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="1"
+            Background="{StaticResource PanelBackgroundBrush}">
+
+            <Border.Effect>
+                <DropShadowEffect
+                    BlurRadius="7"
+                    ShadowDepth="0"
+                    Color="{DynamicResource DropShadowColor}" />
+            </Border.Effect>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
+
+                <Border
+                    BorderThickness="0,0,0,1"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    Height="40" />
+
+                <StackPanel
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+
+                    <ctl:MenuButton
+                        Style="{StaticResource StreetHeaderMenuButtonStyle}"
+                        Width="70"
+                        IsChecked="{Binding NoteStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.PreFlop}}"
+                        Content="PRE-FLOP" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource StreetHeaderMenuButtonStyle}"
+                        Width="60"
+                        IsChecked="{Binding NoteStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.Flop}}"
+                        Content="FLOP" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource StreetHeaderMenuButtonStyle}"
+                        Width="60"
+                        IsChecked="{Binding NoteStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.Turn}}"
+                        Content="TURN" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource StreetHeaderMenuButtonStyle}"
+                        Width="65"
+                        IsChecked="{Binding NoteStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.River}}"
+                        Content="RIVER" />
+
+                </StackPanel>
+
+                <TreeView
+                    Grid.Row="1"
+                    Margin="0,10,0,0"
+                    Foreground="{StaticResource ForegroundBrush}"
+                    FontFamily="/Fonts/#Roboto Regular"
+                    ItemsSource="{Binding Stages, Mode=OneWay}"
+                    FontSize="12">
+
+                    <TreeView.Resources>
+                        <HierarchicalDataTemplate
+                            DataType="{x:Type nt:StageObject}">
+                            <TextBlock
+                                Text="{Binding StageType}"
+                                VerticalAlignment="Center"
+                                Margin="3,0,0,0" />
+                            <HierarchicalDataTemplate.ItemsSource>
+                                <MultiBinding
+                                    Converter="{StaticResource TreeMultiBindingConverter}">
+                                    <Binding
+                                        Path="InnerGroups" />
+                                    <Binding
+                                        Path="Notes" />
+                                </MultiBinding>
+                            </HierarchicalDataTemplate.ItemsSource>
+                        </HierarchicalDataTemplate>
+                        <HierarchicalDataTemplate
+                            DataType="{x:Type nt:InnerGroupObject}"
+                            ItemsSource="{Binding Notes}">
+                            <TextBlock
+                                Text="{Binding Name}"
+                                VerticalAlignment="Center"
+                                Margin="3,0,0,0" />
+                        </HierarchicalDataTemplate>
+                        <DataTemplate
+                            DataType="{x:Type nt:NoteObject}">
+                            <TextBlock
+                                Text="{Binding Name}" />
+                        </DataTemplate>
+                    </TreeView.Resources>
+                </TreeView>
+
+            </Grid>
+
+        </Border>
+
+        <!-- Note settings -->
+        <Border
+            Grid.Column="2"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="1"
+            Background="{StaticResource PanelBackgroundBrush}">
+
+            <Border.Effect>
+                <DropShadowEffect
+                    BlurRadius="7"
+                    ShadowDepth="0"
+                    Color="{DynamicResource DropShadowColor}" />
+            </Border.Effect>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
+
+                <Border
+                    BorderThickness="0,0,0,1"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    Height="40" />
+
+                <StackPanel
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="90"
+                        GroupName="NoteSettingsGroup"
+                        Content="GENERAL" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="130"
+                        GroupName="NoteSettingsGroup"
+                        Content="HOLE CARDS" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="185"
+                        GroupName="NoteSettingsGroup"
+                        Content="DISPLAYED NOTE" />
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
 
     </Grid>
 </UserControl>

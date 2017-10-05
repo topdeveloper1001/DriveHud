@@ -140,6 +140,10 @@ namespace DriveHUD.Application.ViewModels
             Pages = new ObservableCollection<AppStorePageViewModel>();
             InitializeObservables();
             InitializeCommands();
+
+            // temp
+            appStoreType = AppStoreType.Apps;
+
             Load();
         }
 
