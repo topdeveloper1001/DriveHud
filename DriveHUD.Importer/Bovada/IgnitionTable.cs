@@ -221,6 +221,7 @@ namespace DriveHUD.Importers.Bovada
             var match = !string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(className) &&
                 className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
                 title.IndexOf("Ignition", StringComparison.OrdinalIgnoreCase) < 0 &&
+                title.IndexOf("Zone Poker", StringComparison.OrdinalIgnoreCase) < 0 &&
                 !title.StartsWith("Tournament", StringComparison.OrdinalIgnoreCase) &&
                 !title.StartsWith("#") && !title.Equals("Poker", StringComparison.OrdinalIgnoreCase) && title.IndexOf("Lobby", StringComparison.OrdinalIgnoreCase) < 0;
 
