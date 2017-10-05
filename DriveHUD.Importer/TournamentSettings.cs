@@ -30,6 +30,13 @@ namespace DriveHUD.Importers
             { 9, new decimal[] { 0.5m, 0.3m, 0.2m } }
         };
 
+        private static readonly Dictionary<int, decimal[]> IPokerSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        {
+            { 2, new decimal[] { 1m } },
+            { 6, new decimal[] { 0.7m, 0.3m } },
+            { 9, new decimal[] { 0.5m, 0.3m, 0.2m } }
+        };
+
         private static readonly Dictionary<int, decimal[]> BovadaBeginnerSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 6, new decimal[] { 0.5m, 0.3m, 0.2m} }
@@ -66,12 +73,15 @@ namespace DriveHUD.Importers
             {
                 case EnumPokerSites.Unknown:
                     break;
+                case EnumPokerSites.IPoker:
+                    return IPokerSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.Ignition:
                 case EnumPokerSites.Bovada:
-                case EnumPokerSites.IPoker:
                 case EnumPokerSites.Bodog:
-                    return isBeginner ? BovadaBeginnerSnGWinningsMultiplierDictionary : BovadaSnGWinningsMultiplierDictionary;               
+                    return isBeginner ? BovadaBeginnerSnGWinningsMultiplierDictionary : BovadaSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.BetOnline:
+                case EnumPokerSites.SportsBetting:
+                case EnumPokerSites.TigerGaming:
                     return BetOnlineSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
@@ -79,7 +89,6 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.TruePoker:
                 case EnumPokerSites.YaPoker:
                     return WinningPokerNetworkSnGWinningsMultiplierDictionary;
-                case EnumPokerSites.SportsBetting:
                 default:
                     break;
             }
