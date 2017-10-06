@@ -119,6 +119,7 @@
   <ItemGroup>
     <Compile Include="BusinessHelper\TextureHelpers\BoardTextureAnalyzerHelpers.cs" />
     <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
+    <Compile Include="Controls\BoxPanel.cs" />
     <Compile Include="Controls\MenuButton.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />

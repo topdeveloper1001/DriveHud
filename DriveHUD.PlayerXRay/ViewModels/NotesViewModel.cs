@@ -24,6 +24,13 @@ namespace DriveHUD.PlayerXRay.ViewModels
 {
     public class NotesViewModel : WorkspaceViewModel
     {
+        public NotesViewModel()
+        {
+
+        }
+
+        #region Properties
+
         public override WorkspaceType WorkspaceType
         {
             get
@@ -31,5 +38,65 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 return WorkspaceType.Notes;
             }
         }
+
+        private bool isAdvancedMode;
+
+        public bool IsAdvancedMode
+        {
+            get
+            {
+                return isAdvancedMode;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isAdvancedMode, value);
+            }
+        }
+
+        private ObservableCollection<StageObject> stages;
+
+        public ObservableCollection<StageObject> Stages
+        {
+            get
+            {
+                return stages;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref stages, value);
+            }
+        }
+
+        private NoteStageType noteStageType;
+
+        public NoteStageType NoteStageType
+        {
+            get
+            {
+                return noteStageType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref noteStageType, value);
+            }
+        }
+
+
+
+
+        #endregion
+
+        #region Commands
+
+        public ReactiveCommand<object> AddNoteCommand { get; private set; }
+
+        public ReactiveCommand<object> EditNoteCommand { get; private set; }
+
+        public ReactiveCommand<object> RemoveNoteCommand { get; private set; }
+
+        public ReactiveCommand<object> ExportCommand { get; private set; }
+
+        #endregion 
+
     }
 }

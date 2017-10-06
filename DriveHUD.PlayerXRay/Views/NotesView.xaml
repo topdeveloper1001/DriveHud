@@ -12,15 +12,14 @@
     xmlns:nt="clr-namespace:DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects"
     xmlns:dt="clr-namespace:DriveHUD.PlayerXRay.DataTypes"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="300">
+    d:DesignHeight="800"
+    d:DesignWidth="1000">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
                     Source="../PlayerXRayStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
 
             <Style
                 x:Key="StreetHeaderMenuButtonStyle"
@@ -48,12 +47,163 @@
 
                 <Setter
                     Property="Margin"
-                    Value="0,0,18,0" />
+                    Value="0,0,10,0" />
 
                 <Setter
                     Property="GroupName"
                     Value="NoteSettingsGroup" />
 
+            </Style>
+
+            <Style
+                x:Key="NoteSettingsTabControlStyle"
+                TargetType="{x:Type TabControl}">
+                <Setter
+                    Property="Padding"
+                    Value="0,15,0,0" />
+                <Setter
+                    Property="HorizontalContentAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="VerticalContentAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TabControl}">
+                            <Grid
+                                ClipToBounds="true"
+                                SnapsToDevicePixels="true">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="Auto" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+                                <TabPanel
+                                    Background="Transparent"
+                                    IsItemsHost="true" />
+                                <Border
+                                    Grid.Row="1"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter
+                                        x:Name="PART_SelectedContentHost"
+                                        ContentSource="SelectedContent"                                        
+                                        Margin="{TemplateBinding Padding}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="NoteSettingsTabItemStyle"
+                TargetType="{x:Type TabItem}">
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{x:Null}" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ForegroundBrush}" />
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource SelectionBackgroundBrush}" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="0,0,0,4" />
+                <Setter
+                    Property="Margin"
+                    Value="0" />
+                <Setter
+                    Property="Height"
+                    Value="40" />
+                <Setter
+                    Property="HorizontalContentAlignment"
+                    Value="Stretch" />
+                <Setter
+                    Property="VerticalContentAlignment"
+                    Value="Stretch" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TabItem}">
+                            <Grid
+                                x:Name="templateRoot"
+                                Cursor="Hand"
+                                SnapsToDevicePixels="true">
+                                <Border
+                                    x:Name="mainBorder"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="Transparent"
+                                    Opacity="0.5"
+                                    Margin="5,0,5,0">
+                                    <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        ContentSource="Header"
+                                        Focusable="False"
+                                        HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                        Margin="{TemplateBinding Padding}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                                    Value="true">
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="BorderBrush"
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrush}" />
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="Opacity"
+                                        Value="1" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}"
+                                    Value="true">
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="BorderBrush"
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrush}" />
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="Opacity"
+                                        Value="1" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}"
+                                    Value="true">
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="BorderBrush"
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrush}" />
+                                    <Setter
+                                        TargetName="mainBorder"
+                                        Property="Opacity"
+                                        Value="1" />
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
 
         </ResourceDictionary>
@@ -190,19 +340,68 @@
 
             <Grid>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition
-                        Height="40" />
-                    <RowDefinition
-                        Height="*" />
-                </Grid.RowDefinitions>
-
                 <Border
+                    VerticalAlignment="Top"
                     BorderThickness="0,0,0,1"
                     BorderBrush="{StaticResource BorderBrush}"
                     Height="40" />
 
-                <StackPanel
+                <TabControl
+                    BorderThickness="0"
+                    Margin="10,0,10,0"
+                    ItemContainerStyle="{DynamicResource NoteSettingsTabItemStyle}"
+                    Style="{DynamicResource NoteSettingsTabControlStyle}">
+
+                    <TabItem
+                        Width="90"
+                        VerticalContentAlignment="Top"
+                        Header="GENERAL">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height=" Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Text="3-BETS LIGHT"
+                                FontWeight="Bold" />
+
+                            <StackPanel
+                                HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+                                <CheckBox
+                                    Style="{StaticResource CheckBoxStyle}"
+                                    Content="No-Limits" />
+                                <CheckBox
+                                    Style="{StaticResource CheckBoxStyle}"
+                                    Margin="15,0,0,0"
+                                    Content="Pot-Limits" />
+                                <CheckBox
+                                    Style="{StaticResource CheckBoxStyle}"
+                                    Margin="15,0,0,0"
+                                    Content="Limits" />
+                            </StackPanel>
+
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem
+                        Width="100"
+                        Header="HOLE CARDS">
+                        <TextBlock
+                            Text="Hole cards" />
+                    </TabItem>
+
+
+                    <TabItem
+                        Width="120"
+                        Header="DISPLAYED NOTE" />
+
+                </TabControl>
+
+                <!--<StackPanel
                     Margin="10,0,0,0"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
@@ -215,17 +414,41 @@
 
                     <ctl:MenuButton
                         Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
-                        Width="130"
+                        Width="100"
                         GroupName="NoteSettingsGroup"
                         Content="HOLE CARDS" />
 
                     <ctl:MenuButton
                         Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
-                        Width="185"
+                        Width="120"
                         GroupName="NoteSettingsGroup"
                         Content="DISPLAYED NOTE" />
 
-                </StackPanel>
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="85"
+                        GroupName="NoteSettingsGroup"
+                        Content="ACTIONS" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="85"
+                        GroupName="NoteSettingsGroup"
+                        Content="FILTERS" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="100"
+                        GroupName="NoteSettingsGroup"
+                        Content="HAND VALUES" />
+
+                    <ctl:MenuButton
+                        Style="{StaticResource NoteSettingsHeaderMenuButtonStyle}"
+                        Width="110"
+                        GroupName="NoteSettingsGroup"
+                        Content="BOARD TEXTURE" />
+
+                </StackPanel>-->
 
             </Grid>
 

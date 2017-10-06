@@ -805,4 +805,163 @@
         </Setter>
     </Style>
 
+    <Style
+        x:Key="CheckBoxStyle"
+        TargetType="{x:Type CheckBox}">
+
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+        <Setter
+            Property="SnapsToDevicePixels"
+            Value="true" />
+        <Setter
+            Property="OverridesDefaultStyle"
+            Value="true" />
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{x:Null}" />
+        <Setter
+            Property="Height"
+            Value="20" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type CheckBox}">
+                    <BulletDecorator
+                        Background="Transparent">
+                        <BulletDecorator.Bullet>
+                            <Border
+                                x:Name="Border"
+                                Width="20"
+                                Height="20"
+                                CornerRadius="1"
+                                Background="{StaticResource WindowBackgroundBrush}"
+                                BorderBrush="{StaticResource BorderBrush}"
+                                BorderThickness="1">
+                                <Grid>
+                                    <Path
+                                        Visibility="Collapsed"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        x:Name="CheckMark"
+                                        SnapsToDevicePixels="False"
+                                        Stroke="{StaticResource SelectionBackgroundBrush}"
+                                        Fill="{StaticResource SelectionBackgroundBrush}"
+                                        Data="F1M1,5L3,7 4,7 10,0 11,1 4,9 3,9 0,6z">
+                                    </Path>
+                                    <Path
+                                        Visibility="Collapsed"
+                                        Width="7"
+                                        Height="7"
+                                        x:Name="InderminateMark"
+                                        SnapsToDevicePixels="False"
+                                        StrokeThickness="2"
+                                        Data="M 0 7 L 7 0">
+                                        <Path.Stroke>
+                                            <SolidColorBrush
+                                                Color="{StaticResource GlyphColor}" />
+                                        </Path.Stroke>
+                                    </Path>
+                                </Grid>
+                            </Border>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter
+                            Margin="8,0,0,0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            RecognizesAccessKey="True" />
+                    </BulletDecorator>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{StaticResource MenuBackgroundBrush}" />
+
+                        </Trigger>
+
+                        <Trigger
+                            Property="IsChecked"
+                            Value="True">
+
+                            <Setter
+                                Property="Visibility"
+                                TargetName="CheckMark"
+                                Value="Visible" />
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style
+        TargetType="{x:Type ctl:BoxPanel}">
+
+        <Setter
+            Property="FontSize"
+            Value="12" />
+
+        <Setter
+            Property="Foreground"
+            Value="{StaticResource ForegroundBrush}" />
+
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type ctl:BoxPanel}">
+                    <Border
+                        BorderBrush="{StaticResource BorderBrush}"
+                        BorderThickness="1"
+                        Margin="16"
+                        Height="107"
+                        Background="{StaticResource PanelBackgroundBrush}">
+
+                        <Border.Effect>
+                            <DropShadowEffect
+                                BlurRadius="7"
+                                ShadowDepth="0"
+                                Color="{DynamicResource DropShadowColor}" />
+                        </Border.Effect>
+
+                        <StackPanel>
+
+                            <Border
+                                BorderThickness="0"
+                                Background="{StaticResource BorderBrush}"
+                                Padding="10,0,0,0"
+                                Height="24">
+
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    FontSize="{TemplateBinding FontSize}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Text="{TemplateBinding Header}" />
+
+                            </Border>
+
+                            <ContentPresenter
+                                Margin="{TemplateBinding Padding}"
+                                Content="{TemplateBinding Content}" />
+
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
 </ResourceDictionary>
