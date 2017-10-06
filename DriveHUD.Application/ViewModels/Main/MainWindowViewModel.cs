@@ -647,7 +647,8 @@ namespace DriveHUD.Application.ViewModels
                             Player = playerCollectionItem,
                             Layout = activeLayout.Name,
                             Statistic = lastHandStatistic,
-                            StickerFilters = stickers
+                            StickerFilters = stickers,
+                            IsHero = sessionCacheStatistic.IsHero
                         };
 
                         if (stickers.Count > 0)
