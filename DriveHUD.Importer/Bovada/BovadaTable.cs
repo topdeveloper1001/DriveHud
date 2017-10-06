@@ -433,6 +433,7 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "CO_ZONE_CHANGE_TABLE_INFO":
+                    IsZonePokerTable = true;
                     ClearInfo();
                     break;
 
@@ -587,10 +588,10 @@ namespace DriveHUD.Importers.Bovada
                     AddAnteCommands(cmdObj);
                     break;
 
-                case "CO_ZONE_NO_INFO":
+                case "CO_ZONE_NO_INFO":                
+                case "CO_ZONE_WAITING_PLAYERS_INFO":
                     IsZonePokerTable = true;
                     break;
-
 
                 case "PLAY_CLEAR_INFO":
 

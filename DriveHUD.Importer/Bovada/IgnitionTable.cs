@@ -61,7 +61,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         private void SetWindowHandle()
         {
-            if (WindowHandle != IntPtr.Zero || (!IsTournament && !playerHasSeat))
+            if (WindowHandle != IntPtr.Zero || (!IsTournament && !playerHasSeat) || IsZonePokerTable)
             {
                 return;
             }
@@ -160,9 +160,9 @@ namespace DriveHUD.Importers.Bovada
             // if info didn't come for some reason trying to use title of window            
             if (!isConnectedInfoParsed)
             {
-                LogProvider.Log.Warn($"Table data hasn't been detected from stream. Use table title. [{Identifier}]");
-
                 var title = WinApi.GetWindowText(WindowHandle);
+
+                LogProvider.Log.Warn($"Table data hasn't been detected from stream. Use table title '{title}' [{WindowHandle}] [{Identifier}]");
 
                 GameType = BovadaConverters.ConvertGameTypeFromTitle(title);
                 GameFormat = BovadaConverters.ConvertGameFormatFromTitle(title);
