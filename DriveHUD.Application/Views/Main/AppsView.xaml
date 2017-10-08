@@ -67,14 +67,17 @@
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
                         <Setter
-                            Property="MinHeight"
-                            Value="950" />
+                            Property="Height"
+                            Value="750" />
                         <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
                         <Setter
-                            Property="MinWidth"
-                            Value="1000" />
+                            Property="Width"
+                            Value="950" />
+                        <Setter
+                            Property="SnapsToDevicePixels"
+                            Value="True" />
                         <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />

@@ -3,8 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:AcePokerSolutions_PlayerXRay_CustomControls="clr-namespace:DriveHUD.PlayerXRay.CustomControls"
-    xmlns:Controls="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended"
+    xmlns:AcePokerSolutions_PlayerXRay_CustomControls="clr-namespace:DriveHUD.PlayerXRay.CustomControls"    
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     xmlns:System="clr-namespace:System;assembly=mscorlib"
     x:Class="DriveHUD.PlayerXRay.UserControls.Notes.PlayerSettingUC"
     mc:Ignorable="d"
@@ -118,8 +118,7 @@
             Foreground="White"
             FontWeight="Bold"
             Grid.Row="2" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown            
             FormatString="F1"
             x:Name="txtVpIpMin"
             Grid.Column="2"
@@ -137,8 +136,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
             Foreground="White" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown            
             FormatString="F1"
             x:Name="txtVpIpMax"
             Grid.Column="4"
@@ -149,8 +147,7 @@
             Maximum="100"
             TabIndex="1"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown            
             FormatString="F1"
             x:Name="txtAggMin"
             Grid.Column="2"
@@ -171,8 +168,7 @@
             VerticalAlignment="Center"
             Foreground="White"
             Grid.Row="1" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown           
             FormatString="F1"
             x:Name="txtAggMax"
             Grid.Column="4"
@@ -184,8 +180,7 @@
             Maximum="100"
             TabIndex="3"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtWtsdMin"
             Grid.Column="2"
@@ -206,8 +201,7 @@
             VerticalAlignment="Center"
             Foreground="White"
             Grid.Row="2" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtWtsdMax"
             Grid.Column="4"
@@ -219,8 +213,7 @@
             Maximum="100"
             TabIndex="5"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtWwsfMin"
             Grid.Column="2"
@@ -241,8 +234,7 @@
             VerticalAlignment="Center"
             Foreground="White"
             Grid.Row="3" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtWwsfMax"
             Grid.Column="4"
@@ -254,8 +246,7 @@
             Maximum="100"
             TabIndex="7"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtPfrMin"
             Grid.Column="6"
@@ -274,8 +265,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
             Foreground="White" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtPfrMax"
             Grid.Column="8"
@@ -286,8 +276,7 @@
             Maximum="100"
             TabIndex="9"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtThreeBetMin"
             Grid.Column="6"
@@ -308,8 +297,7 @@
             VerticalAlignment="Center"
             Foreground="White"
             Grid.Row="1" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtThreeBetMax"
             Grid.Column="8"
@@ -321,8 +309,7 @@
             Maximum="100"
             TabIndex="11"
             Minimum="0" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown
             FormatString="F1"
             x:Name="txtWsdMin"
             Grid.Column="6"
@@ -343,8 +330,7 @@
             VerticalAlignment="Center"
             Foreground="White"
             Grid.Row="2" />
-        <Controls:NumericUpDown
-            ValueType="{x:Type System:Double}"
+        <xctk:DoubleUpDown            
             FormatString="F1"
             x:Name="txtWsdMax"
             Grid.Column="8"

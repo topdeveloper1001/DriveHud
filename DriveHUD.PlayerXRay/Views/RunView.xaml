@@ -230,6 +230,7 @@
                 Content="START"
                 Width="172"
                 Height="59"
+                FontSize="24"
                 IsEnabled="{Binding IsRunning, Converter={dh:BoolNotConverter}}"
                 Command="{Binding RunCommand}" />
 

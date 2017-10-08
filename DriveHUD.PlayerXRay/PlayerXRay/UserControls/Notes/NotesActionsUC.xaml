@@ -1,74 +1,332 @@
 ﻿<UserControl
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Controls="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="DriveHUD.PlayerXRay.UserControls.Notes.NotesActionsUC" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="496" Background="#FF353535" Width="496">
-	<Canvas>
-		<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="First Action:" Canvas.Top="10" Foreground="White"/>
-		<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Second Action:" Canvas.Top="43" Foreground="White"/>
-		<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Third Action:" Canvas.Top="76" Foreground="White"/>
-		<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Fourth Action:" Canvas.Top="110" Foreground="White"/>
-		<ComboBox x:Name="cmbAction1" Canvas.Left="109" Margin="0" Canvas.Top="4.62" Width="85" SelectedIndex="0" Height="26" SelectionChanged="CmbAction1SelectionChanged">
-			<ComboBoxItem Content="Any"/>
-			<ComboBoxItem Content="Bet"/>
-			<ComboBoxItem Content="Check"/>
-			<ComboBoxItem Content="Call"/>
-			<ComboBoxItem Content="Raise"/>
-		</ComboBox>
-		<ComboBox x:Name="cmbAction2" Canvas.Left="109" Margin="0" Canvas.Top="37.62" Width="85" SelectedIndex="0" Height="26" SelectionChanged="CmbAction2SelectionChanged">
-			<ComboBoxItem Content="Any"/>
-			<ComboBoxItem Content="Bet"/>
-			<ComboBoxItem Content="Check"/>
-			<ComboBoxItem Content="Call"/>
-			<ComboBoxItem Content="Raise"/>
-		</ComboBox>
-		<ComboBox x:Name="cmbAction3" Canvas.Left="109" Margin="0" Canvas.Top="70.62" Width="85" SelectedIndex="0" Height="26" SelectionChanged="CmbAction3SelectionChanged">
-			<ComboBoxItem Content="Any"/>
-			<ComboBoxItem Content="Bet"/>
-			<ComboBoxItem Content="Check"/>
-			<ComboBoxItem Content="Call"/>
-			<ComboBoxItem Content="Raise"/>
-		</ComboBox>
-		<ComboBox x:Name="cmbAction4" Canvas.Left="109" Margin="0" Canvas.Top="104.62" Width="85" SelectedIndex="0" Height="26" SelectionChanged="CmbAction4SelectionChanged">
-			<ComboBoxItem Content="Any"/>
-			<ComboBoxItem Content="Bet"/>
-			<ComboBoxItem Content="Check"/>
-			<ComboBoxItem Content="Call"/>
-			<ComboBoxItem Content="Raise"/>
-		</ComboBox>
-		<StackPanel x:Name="stackFirstAction" Canvas.Left="208" Canvas.Top="4.62" Orientation="Horizontal" Height="26" Visibility="Hidden">
-			<TextBlock x:Name="lblAction1" TextWrapping="Wrap" Text="Bet" Foreground="White" Margin="0" d:LayoutOverrides="Height" VerticalAlignment="Center" Width="32"/>
-			<TextBlock TextWrapping="Wrap" Text="between" Foreground="White" Margin="3,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtFirstMin" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="and" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtFirstMax" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="% of the pot" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-		</StackPanel>
-		<StackPanel x:Name="stackSecondAction" Canvas.Left="208" Canvas.Top="37.62" Orientation="Horizontal" Height="26" Visibility="Hidden">
-			<TextBlock x:Name="lblAction2" TextWrapping="Wrap" Text="Bet" Foreground="White" Margin="0" d:LayoutOverrides="Height" VerticalAlignment="Center" Width="32"/>
-			<TextBlock TextWrapping="Wrap" Text="between" Foreground="White" Margin="3,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtSecondMin" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="and" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtSecondMax" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="% of the pot" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-		</StackPanel>
-		<StackPanel x:Name="stackThirdAction" Canvas.Left="208" Canvas.Top="70.62" Orientation="Horizontal" Height="26" Visibility="Hidden">
-			<TextBlock x:Name="lblAction3" TextWrapping="Wrap" Text="Bet" Foreground="White" Margin="0" d:LayoutOverrides="Height" VerticalAlignment="Center" Width="32"/>
-			<TextBlock TextWrapping="Wrap" Text="between" Foreground="White" Margin="3,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtThirdMin" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="and" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtThirdMax" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="% of the pot" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-		</StackPanel>
-		<StackPanel x:Name="stackFourthAction" Canvas.Left="208" Canvas.Top="104.62" Orientation="Horizontal" Height="26" Visibility="Hidden">
-			<TextBlock x:Name="lblAction4" TextWrapping="Wrap" Text="Bet" Foreground="White" Margin="0" d:LayoutOverrides="Height" VerticalAlignment="Center" Width="32"/>
-			<TextBlock TextWrapping="Wrap" Text="between" Foreground="White" Margin="3,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtFourthMin" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="and" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-            <Controls:NumericUpDown ValueType="{x:Type System:Double}" FormatString="F1" x:Name="txtFourthMax" Height="Auto" Width="61" Margin="6,0,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100"/>
-			<TextBlock TextWrapping="Wrap" Text="% of the pot" Foreground="White" Margin="6,0,0,0" VerticalAlignment="Center"/>
-		</StackPanel>
-	</Canvas>
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    x:Class="DriveHUD.PlayerXRay.UserControls.Notes.NotesActionsUC"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="496"
+    Background="#FF353535"
+    Width="496">
+    <Canvas>
+        <TextBlock
+            Canvas.Left="8"
+            TextWrapping="Wrap"
+            Text="First Action:"
+            Canvas.Top="10"
+            Foreground="White" />
+        <TextBlock
+            Canvas.Left="8"
+            TextWrapping="Wrap"
+            Text="Second Action:"
+            Canvas.Top="43"
+            Foreground="White" />
+        <TextBlock
+            Canvas.Left="8"
+            TextWrapping="Wrap"
+            Text="Third Action:"
+            Canvas.Top="76"
+            Foreground="White" />
+        <TextBlock
+            Canvas.Left="8"
+            TextWrapping="Wrap"
+            Text="Fourth Action:"
+            Canvas.Top="110"
+            Foreground="White" />
+        <ComboBox
+            x:Name="cmbAction1"
+            Canvas.Left="109"
+            Margin="0"
+            Canvas.Top="4.62"
+            Width="85"
+            SelectedIndex="0"
+            Height="26"
+            SelectionChanged="CmbAction1SelectionChanged">
+            <ComboBoxItem
+                Content="Any" />
+            <ComboBoxItem
+                Content="Bet" />
+            <ComboBoxItem
+                Content="Check" />
+            <ComboBoxItem
+                Content="Call" />
+            <ComboBoxItem
+                Content="Raise" />
+        </ComboBox>
+        <ComboBox
+            x:Name="cmbAction2"
+            Canvas.Left="109"
+            Margin="0"
+            Canvas.Top="37.62"
+            Width="85"
+            SelectedIndex="0"
+            Height="26"
+            SelectionChanged="CmbAction2SelectionChanged">
+            <ComboBoxItem
+                Content="Any" />
+            <ComboBoxItem
+                Content="Bet" />
+            <ComboBoxItem
+                Content="Check" />
+            <ComboBoxItem
+                Content="Call" />
+            <ComboBoxItem
+                Content="Raise" />
+        </ComboBox>
+        <ComboBox
+            x:Name="cmbAction3"
+            Canvas.Left="109"
+            Margin="0"
+            Canvas.Top="70.62"
+            Width="85"
+            SelectedIndex="0"
+            Height="26"
+            SelectionChanged="CmbAction3SelectionChanged">
+            <ComboBoxItem
+                Content="Any" />
+            <ComboBoxItem
+                Content="Bet" />
+            <ComboBoxItem
+                Content="Check" />
+            <ComboBoxItem
+                Content="Call" />
+            <ComboBoxItem
+                Content="Raise" />
+        </ComboBox>
+        <ComboBox
+            x:Name="cmbAction4"
+            Canvas.Left="109"
+            Margin="0"
+            Canvas.Top="104.62"
+            Width="85"
+            SelectedIndex="0"
+            Height="26"
+            SelectionChanged="CmbAction4SelectionChanged">
+            <ComboBoxItem
+                Content="Any" />
+            <ComboBoxItem
+                Content="Bet" />
+            <ComboBoxItem
+                Content="Check" />
+            <ComboBoxItem
+                Content="Call" />
+            <ComboBoxItem
+                Content="Raise" />
+        </ComboBox>
+        <StackPanel
+            x:Name="stackFirstAction"
+            Canvas.Left="208"
+            Canvas.Top="4.62"
+            Orientation="Horizontal"
+            Height="26"
+            Visibility="Hidden">
+            <TextBlock
+                x:Name="lblAction1"
+                TextWrapping="Wrap"
+                Text="Bet"
+                Foreground="White"
+                Margin="0"
+                d:LayoutOverrides="Height"
+                VerticalAlignment="Center"
+                Width="32" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="between"
+                Foreground="White"
+                Margin="3,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtFirstMin"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="and"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtFirstMax"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="% of the pot"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+        </StackPanel>
+        <StackPanel
+            x:Name="stackSecondAction"
+            Canvas.Left="208"
+            Canvas.Top="37.62"
+            Orientation="Horizontal"
+            Height="26"
+            Visibility="Hidden">
+            <TextBlock
+                x:Name="lblAction2"
+                TextWrapping="Wrap"
+                Text="Bet"
+                Foreground="White"
+                Margin="0"
+                d:LayoutOverrides="Height"
+                VerticalAlignment="Center"
+                Width="32" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="between"
+                Foreground="White"
+                Margin="3,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtSecondMin"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="and"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtSecondMax"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="% of the pot"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+        </StackPanel>
+        <StackPanel
+            x:Name="stackThirdAction"
+            Canvas.Left="208"
+            Canvas.Top="70.62"
+            Orientation="Horizontal"
+            Height="26"
+            Visibility="Hidden">
+            <TextBlock
+                x:Name="lblAction3"
+                TextWrapping="Wrap"
+                Text="Bet"
+                Foreground="White"
+                Margin="0"
+                d:LayoutOverrides="Height"
+                VerticalAlignment="Center"
+                Width="32" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="between"
+                Foreground="White"
+                Margin="3,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtThirdMin"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="and"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtThirdMax"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="% of the pot"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+        </StackPanel>
+        <StackPanel
+            x:Name="stackFourthAction"
+            Canvas.Left="208"
+            Canvas.Top="104.62"
+            Orientation="Horizontal"
+            Height="26"
+            Visibility="Hidden">
+            <TextBlock
+                x:Name="lblAction4"
+                TextWrapping="Wrap"
+                Text="Bet"
+                Foreground="White"
+                Margin="0"
+                d:LayoutOverrides="Height"
+                VerticalAlignment="Center"
+                Width="32" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="between"
+                Foreground="White"
+                Margin="3,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtFourthMin"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="and"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+            <xctk:DoubleUpDown
+                FormatString="F1"
+                x:Name="txtFourthMax"
+                Height="Auto"
+                Width="61"
+                Margin="6,0,0,0"
+                VerticalAlignment="Top"
+                Minimum="0"
+                Maximum="100" />
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="% of the pot"
+                Foreground="White"
+                Margin="6,0,0,0"
+                VerticalAlignment="Center" />
+        </StackPanel>
+    </Canvas>
 </UserControl>

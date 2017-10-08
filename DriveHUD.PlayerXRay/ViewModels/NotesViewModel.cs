@@ -26,7 +26,13 @@ namespace DriveHUD.PlayerXRay.ViewModels
     {
         public NotesViewModel()
         {
+            InitializeCommands();
+        }
 
+        private void InitializeCommands()
+        {
+            SwitchModeCommand = ReactiveCommand.Create();
+            SwitchModeCommand.Subscribe(x => IsAdvancedMode = !IsAdvancedMode);
         }
 
         #region Properties
@@ -95,6 +101,8 @@ namespace DriveHUD.PlayerXRay.ViewModels
         public ReactiveCommand<object> RemoveNoteCommand { get; private set; }
 
         public ReactiveCommand<object> ExportCommand { get; private set; }
+
+        public ReactiveCommand<object> SwitchModeCommand { get; private set; }
 
         #endregion 
 

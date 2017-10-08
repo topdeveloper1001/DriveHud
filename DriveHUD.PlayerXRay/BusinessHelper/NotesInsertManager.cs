@@ -12,7 +12,6 @@ using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using System.Linq;
 using System.Windows.Documents;
-using Microsoft.Windows.Controls;
 
 #endregion
 

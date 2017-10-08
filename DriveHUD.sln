@@ -19,6 +19,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandHistories.Objects", "PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj", "{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.Application", "DriveHUD.Application\DriveHUD.Application.csproj", "{9B9115F6-C76E-4F23-B050-295287D140C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BCC7610-1D61-4F3D-9D80-2DF9DAF375C5} = {8BCC7610-1D61-4F3D-9D80-2DF9DAF375C5}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.ViewModels", "DriveHUD.ViewModels\DriveHUD.ViewModels.csproj", "{C6A64D15-132D-46A6-8C95-42D8934FF6B4}"
 EndProject

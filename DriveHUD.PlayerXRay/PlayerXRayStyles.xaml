@@ -4,7 +4,9 @@
     xmlns:ctl="clr-namespace:DriveHUD.PlayerXRay.Controls"
     xmlns:cnv="clr-namespace:DriveHUD.PlayerXRay.Converters"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-    xmlns:local="clr-namespace:DriveHUD.PlayerXRay">
+    xmlns:local="clr-namespace:DriveHUD.PlayerXRay"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:Themes="clr-namespace:Xceed.Wpf.Toolkit.Themes;assembly=Xceed.Wpf.Toolkit">
 
     <!-- Colors -->
     <Color
@@ -137,7 +139,7 @@
                                 Height="{TemplateBinding ImageHeight}"
                                 Stretch="Fill"
                                 VerticalAlignment="Center"
-                                Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource, Converter={dh:NullToVisibilityConverter}}"
+                                Visibility="{Binding ImageSource, Converter={dh:NullToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                 Source="{TemplateBinding ImageSource}" />
 
                             <ContentPresenter
@@ -148,14 +150,14 @@
                                         TargetType="{x:Type ContentPresenter}">
                                         <Style.Triggers>
                                             <DataTrigger
-                                                Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource, Converter={dh:NullToBoolConverter}}"
+                                                Binding="{Binding ImageSource, Converter={dh:NullToBoolConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                                 Value="False">
                                                 <Setter
                                                     Property="Margin"
                                                     Value="0" />
                                             </DataTrigger>
                                             <DataTrigger
-                                                Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource, Converter={dh:NullToBoolConverter}}"
+                                                Binding="{Binding ImageSource, Converter={dh:NullToBoolConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                                 Value="True">
                                                 <Setter
                                                     Property="Margin"
@@ -179,7 +181,7 @@
                             <Setter
                                 TargetName="MenuButton_Border"
                                 Property="BorderBrush"
-                                Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrush}" />
+                                Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}" />
 
                             <Setter
                                 TargetName="MenuButton_Border"
@@ -195,7 +197,7 @@
                             <Setter
                                 TargetName="MenuButton_Border"
                                 Property="BorderBrush"
-                                Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrush}" />
+                                Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}" />
 
                             <Setter
                                 TargetName="MenuButton_Border"
@@ -346,7 +348,7 @@
             Value="{StaticResource ForegroundBrush}" />
         <Setter
             Property="FontSize"
-            Value="24" />
+            Value="12" />
         <Setter
             Property="FontFamily"
             Value="./Fonts/#Roboto Regular" />
@@ -360,7 +362,7 @@
             Property="Template">
             <Setter.Value>
                 <ControlTemplate
-                    TargetType="Button">
+                    TargetType="{x:Type Button}">
                     <Border
                         x:Name="Border"
                         TextBlock.Foreground="{TemplateBinding Foreground}"
@@ -491,7 +493,7 @@
                             Foreground="{StaticResource ForegroundBrush}"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
-                            Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Value, StringFormat={}{0}%}" />
+                            Text="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, StringFormat=\{0\}%}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger
@@ -596,8 +598,7 @@
                             HorizontalAlignment="Center"
                             Fill="{StaticResource ForegroundBrush}"
                             StrokeThickness="0"
-                            Data="M0,0 L0,13 L6,6 L6,7 z">
-                        </Path>
+                            Data="M0,0 L0,13 L6,6 L6,7 z" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger
@@ -629,10 +630,10 @@
             Value="Transparent" />
         <Setter
             Property="HorizontalContentAlignment"
-            Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+            Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
         <Setter
             Property="VerticalContentAlignment"
-            Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+            Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
         <Setter
             Property="Padding"
             Value="1,0,0,0" />
@@ -682,7 +683,7 @@
                                     x:Name="Expander"
                                     Style="{StaticResource ExpandCollapseToggleStyle}"
                                     ClickMode="Press"
-                                    IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
+                                    IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
 
                                 <ContentPresenter
                                     x:Name="PART_Header"
@@ -825,6 +826,12 @@
             Property="Height"
             Value="20" />
         <Setter
+            Property="FontSize"
+            Value="12" />
+        <Setter
+            Property="FontFamily"
+            Value="./Fonts/#Roboto Regular" />
+        <Setter
             Property="Template">
             <Setter.Value>
                 <ControlTemplate
@@ -849,8 +856,7 @@
                                         SnapsToDevicePixels="False"
                                         Stroke="{StaticResource SelectionBackgroundBrush}"
                                         Fill="{StaticResource SelectionBackgroundBrush}"
-                                        Data="F1M1,5L3,7 4,7 10,0 11,1 4,9 3,9 0,6z">
-                                    </Path>
+                                        Data="F1M1,5L3,7 4,7 10,0 11,1 4,9 3,9 0,6z" />
                                     <Path
                                         Visibility="Collapsed"
                                         Width="7"
@@ -907,7 +913,7 @@
     </Style>
 
     <Style
-        TargetType="{x:Type ctl:BoxPanel}">
+        TargetType="{x:Type GroupBox}">
 
         <Setter
             Property="FontSize"
@@ -921,11 +927,11 @@
             Property="Template">
             <Setter.Value>
                 <ControlTemplate
-                    TargetType="{x:Type ctl:BoxPanel}">
+                    TargetType="{x:Type GroupBox}">
                     <Border
                         BorderBrush="{StaticResource BorderBrush}"
                         BorderThickness="1"
-                        Margin="16"
+                        CornerRadius="1"
                         Height="107"
                         Background="{StaticResource PanelBackgroundBrush}">
 
@@ -944,15 +950,17 @@
                                 Padding="10,0,0,0"
                                 Height="24">
 
-                                <TextBlock
+                                <ContentPresenter
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    ContentSource="Header"
                                     VerticalAlignment="Center"
-                                    FontSize="{TemplateBinding FontSize}"
-                                    Foreground="{TemplateBinding Foreground}"
-                                    Text="{TemplateBinding Header}" />
+                                    TextBlock.FontSize="{TemplateBinding FontSize}"
+                                    TextBlock.Foreground="{TemplateBinding Foreground}" />
 
                             </Border>
 
                             <ContentPresenter
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                 Margin="{TemplateBinding Padding}"
                                 Content="{TemplateBinding Content}" />
 
@@ -962,6 +970,365 @@
             </Setter.Value>
         </Setter>
 
+    </Style>
+
+    <Style
+        TargetType="{x:Type xctk:ButtonSpinner}">
+        <Setter
+            Property="BorderThickness"
+            Value="1" />
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Stretch" />
+        <Setter
+            Property="IsTabStop"
+            Value="True" />
+        <Setter
+            Property="Padding"
+            Value="1" />
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type xctk:ButtonSpinner}">
+                    <Border
+                        x:Name="Border"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="1"
+                        SnapsToDevicePixels="True">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    x:Name="firstContentColumn"
+                                    Width="*" />
+                                <ColumnDefinition
+                                    x:Name="secondContentColumn"
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Content="{TemplateBinding Content}"
+                                Focusable="False"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            <Grid
+                                x:Name="gridContent"
+                                Grid.Column="1"
+                                Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="*" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+                                <RepeatButton
+                                    x:Name="PART_IncreaseButton"
+                                    IsTabStop="{TemplateBinding IsTabStop}"
+                                    BorderThickness="1,0,0,0"
+                                    Height="11"
+                                    Cursor="Hand"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    VerticalContentAlignment="Bottom"
+                                    Background="Transparent">
+                                    <RepeatButton.Template>
+                                        <ControlTemplate>
+                                            <Border
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                Background="{TemplateBinding Background}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                                <Path
+                                                    Data="M0,5L4,0 8,5z"
+                                                    Focusable="False"
+                                                    Fill="#9b9b9b"
+                                                    HorizontalAlignment="Center"
+                                                    Height="5"
+                                                    Margin="0,0,0,2"
+                                                    SnapsToDevicePixels="True"
+                                                    VerticalAlignment="Bottom"
+                                                    Width="8" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </RepeatButton.Template>
+                                </RepeatButton>
+                                <RepeatButton
+                                    x:Name="PART_DecreaseButton"
+                                    IsTabStop="{TemplateBinding IsTabStop}"
+                                    BorderThickness="1,0,0,0"
+                                    Height="11"
+                                    Cursor="Hand"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Background="Transparent"
+                                    VerticalContentAlignment="Top"
+                                    Grid.Row="1">
+                                    <RepeatButton.Template>
+                                        <ControlTemplate
+                                            TargetType="{x:Type RepeatButton}">
+                                            <Border
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                Background="{TemplateBinding Background}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                                <Path
+                                                    Data="M0,0L8,0 4,5z"
+                                                    Focusable="False"
+                                                    Fill="#9b9b9b"
+                                                    HorizontalAlignment="Center"
+                                                    Height="5"
+                                                    Margin="0,2,0,0"
+                                                    SnapsToDevicePixels="True"
+                                                    VerticalAlignment="Top"
+                                                    Width="8" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </RepeatButton.Template>
+                                </RepeatButton>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        TargetType="{x:Type xctk:ByteUpDown}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource WindowBackgroundBrush}" />
+        <Setter
+            Property="Foreground"
+            Value="{StaticResource ForegroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource BorderBrush}" />
+        <Setter
+            Property="BorderThickness"
+            Value="1" />
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Right" />
+        <Setter
+            Property="IsTabStop"
+            Value="False" />
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center" />
+        <Setter
+            Property="TextAlignment"
+            Value="Right" />
+        <Setter
+            Property="Width"
+            Value="48" />
+        <Setter
+            Property="Height"
+            Value="24" />
+        <Setter
+            Property="WatermarkTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl
+                        Content="{Binding}"
+                        Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                        Focusable="False"
+                        Margin="0,0,3,0" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type xctk:ByteUpDown}">
+                    <xctk:ButtonSpinner
+                        x:Name="PART_Spinner"
+                        AllowSpin="{Binding AllowSpin, RelativeSource={RelativeSource TemplatedParent}}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        ButtonSpinnerLocation="{Binding ButtonSpinnerLocation, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="{TemplateBinding Background}"
+                        HorizontalContentAlignment="Stretch"
+                        IsTabStop="False"
+                        ShowButtonSpinner="{Binding ShowButtonSpinner, RelativeSource={RelativeSource TemplatedParent}}"
+                        VerticalContentAlignment="Stretch">
+                        <xctk:WatermarkTextBox
+                            x:Name="PART_TextBox"
+                            AutoMoveFocus="{Binding AutoMoveFocus, RelativeSource={RelativeSource TemplatedParent}}"
+                            AutoSelectBehavior="{Binding AutoSelectBehavior, RelativeSource={RelativeSource TemplatedParent}}"
+                            AcceptsReturn="False"
+                            BorderThickness="0"
+                            Background="Transparent"
+                            ContextMenu="{TemplateBinding ContextMenu}"
+                            Foreground="{TemplateBinding Foreground}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            FontStyle="{TemplateBinding FontStyle}"
+                            FontStretch="{TemplateBinding FontStretch}"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontFamily="{TemplateBinding FontFamily}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            IsTabStop="True"
+                            IsUndoEnabled="True"
+                            MinWidth="20"
+                            Padding="{TemplateBinding Padding}"
+                            TextAlignment="{Binding TextAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                            TextWrapping="NoWrap"
+                            TabIndex="{TemplateBinding TabIndex}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            WatermarkTemplate="{Binding WatermarkTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                            Watermark="{Binding Watermark, RelativeSource={RelativeSource TemplatedParent}}" />
+                    </xctk:ButtonSpinner>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger
+                            Binding="{Binding IsReadOnly, RelativeSource={RelativeSource Self}}"
+                            Value="True">
+                            <Setter
+                                Property="IsReadOnly"
+                                TargetName="PART_TextBox"
+                                Value="True" />
+                        </DataTrigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Foreground"
+                                Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsFocused"
+                            Value="True">
+                            <Setter
+                                Property="FocusManager.FocusedElement"
+                                TargetName="PART_TextBox"
+                                Value="{Binding ElementName=PART_TextBox}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        TargetType="{x:Type xctk:DoubleUpDown}">
+        <Setter
+            Property="Background"
+            Value="{StaticResource WindowBackgroundBrush}" />
+        <Setter
+            Property="Foreground"
+            Value="{StaticResource ForegroundBrush}" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource BorderBrush}" />
+        <Setter
+            Property="BorderThickness"
+            Value="1" />
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Right" />
+        <Setter
+            Property="IsTabStop"
+            Value="False" />
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center" />
+        <Setter
+            Property="TextAlignment"
+            Value="Right" />
+        <Setter
+            Property="Width"
+            Value="72" />
+        <Setter
+            Property="Height"
+            Value="24" />
+        <Setter
+            Property="WatermarkTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl
+                        Content="{Binding}"
+                        Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                        Focusable="False"
+                        Margin="0,0,3,0" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type xctk:DoubleUpDown}">
+                    <xctk:ButtonSpinner
+                        x:Name="PART_Spinner"
+                        AllowSpin="{Binding AllowSpin, RelativeSource={RelativeSource TemplatedParent}}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        ButtonSpinnerLocation="{Binding ButtonSpinnerLocation, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="{TemplateBinding Background}"
+                        HorizontalContentAlignment="Stretch"
+                        IsTabStop="False"
+                        ShowButtonSpinner="{Binding ShowButtonSpinner, RelativeSource={RelativeSource TemplatedParent}}"
+                        VerticalContentAlignment="Stretch">
+                        <xctk:WatermarkTextBox
+                            x:Name="PART_TextBox"
+                            AutoMoveFocus="{Binding AutoMoveFocus, RelativeSource={RelativeSource TemplatedParent}}"
+                            AutoSelectBehavior="{Binding AutoSelectBehavior, RelativeSource={RelativeSource TemplatedParent}}"
+                            AcceptsReturn="False"
+                            BorderThickness="0"
+                            Background="Transparent"
+                            ContextMenu="{TemplateBinding ContextMenu}"
+                            Foreground="{TemplateBinding Foreground}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            FontStyle="{TemplateBinding FontStyle}"
+                            FontStretch="{TemplateBinding FontStretch}"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontFamily="{TemplateBinding FontFamily}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            IsTabStop="True"
+                            IsUndoEnabled="True"
+                            MinWidth="20"
+                            Padding="{TemplateBinding Padding}"
+                            TextAlignment="{Binding TextAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                            TextWrapping="NoWrap"
+                            TabIndex="{TemplateBinding TabIndex}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            WatermarkTemplate="{Binding WatermarkTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                            Watermark="{Binding Watermark, RelativeSource={RelativeSource TemplatedParent}}" />
+                    </xctk:ButtonSpinner>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger
+                            Binding="{Binding IsReadOnly, RelativeSource={RelativeSource Self}}"
+                            Value="True">
+                            <Setter
+                                Property="IsReadOnly"
+                                TargetName="PART_TextBox"
+                                Value="True" />
+                        </DataTrigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Foreground"
+                                Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsFocused"
+                            Value="True">
+                            <Setter
+                                Property="FocusManager.FocusedElement"
+                                TargetName="PART_TextBox"
+                                Value="{Binding ElementName=PART_TextBox}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>
