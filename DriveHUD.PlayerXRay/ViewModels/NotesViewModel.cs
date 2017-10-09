@@ -28,6 +28,19 @@ namespace DriveHUD.PlayerXRay.ViewModels
         {
             InitializeHoleCardsCollection();
             InitializeCommands();
+            InitializeActions();
+
+            IsAdvancedMode = true;
+        }
+
+        private void InitializeActions()
+        {
+            var actions = Enum.GetValues(typeof(ActionTypeEnum)).Cast<ActionTypeEnum>().Where(x => x != ActionTypeEnum.Fold);
+
+            firstActions = new ObservableCollection<ActionTypeEnum>(actions);
+            secondActions = new ObservableCollection<ActionTypeEnum>(actions);
+            thirdActions = new ObservableCollection<ActionTypeEnum>(actions);
+            fourthActions = new ObservableCollection<ActionTypeEnum>(actions);
         }
 
         private void InitializeCommands()
@@ -169,6 +182,20 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private NoteStageType actionStageType;
+
+        public NoteStageType ActionStageType
+        {
+            get
+            {
+                return actionStageType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref actionStageType, value);
+            }
+        }
+
         private ObservableCollection<HoleCardsViewModel> holeCardsCollection;
 
         public ObservableCollection<HoleCardsViewModel> HoleCardsCollection
@@ -180,6 +207,103 @@ namespace DriveHUD.PlayerXRay.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref holeCardsCollection, value);
+            }
+        }
+
+        private ActionTypeEnum firstAction;
+
+        public ActionTypeEnum FirstAction
+        {
+            get
+            {
+                return firstAction;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref firstAction, value);
+            }
+        }
+
+        private ObservableCollection<ActionTypeEnum> firstActions;
+
+        public ObservableCollection<ActionTypeEnum> FirstActions
+        {
+            get
+            {
+                return firstActions;
+            }
+        }
+
+        private ActionTypeEnum secondAction;
+
+        public ActionTypeEnum SecondAction
+        {
+            get
+            {
+                return secondAction;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref secondAction, value);
+            }
+        }
+
+        private ObservableCollection<ActionTypeEnum> secondActions;
+
+        public ObservableCollection<ActionTypeEnum> SecondActions
+        {
+            get
+            {
+                return secondActions;
+            }
+        }
+
+        private ActionTypeEnum thirdAction;
+
+        public ActionTypeEnum ThirdAction
+        {
+            get
+            {
+                return thirdAction;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref thirdAction, value);
+            }
+        }
+
+        private ObservableCollection<ActionTypeEnum> thirdActions;
+
+        public ObservableCollection<ActionTypeEnum> ThirdActions
+        {
+            get
+            {
+                return thirdActions;
+            }
+        }
+
+        private ActionTypeEnum fourthAction;
+
+        public ActionTypeEnum FourthAction
+        {
+            get
+            {
+                return fourthAction;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref fourthAction, value);
+
+            }
+        }
+
+        private ObservableCollection<ActionTypeEnum> fourthActions;
+
+        public ObservableCollection<ActionTypeEnum> FourthActions
+        {
+            get
+            {
+                return fourthActions;
             }
         }
 

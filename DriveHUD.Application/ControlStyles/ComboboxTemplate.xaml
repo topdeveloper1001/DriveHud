@@ -278,7 +278,7 @@
             Value="Hand" />
 
     </Style>
-    
+
     <Style
         TargetType="controls:ComboBoxEx">
         <Setter
@@ -433,7 +433,7 @@
                                     Margin="4,6,4,6"
                                     SnapsToDevicePixels="True">
                                     <Grid>
-                                        
+
                                         <StackPanel
                                             x:Name="PART_Singleselect"
                                             IsItemsHost="True"
@@ -442,10 +442,10 @@
                                         <ListBox
                                             x:Name="PART_Multiselect"
                                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                            Style="{TemplateBinding MultiselectListBoxStyle}"                                         
+                                            Style="{TemplateBinding MultiselectListBoxStyle}"
                                             KeyboardNavigation.DirectionalNavigation="Contained"
                                             DisplayMemberPath="{TemplateBinding DisplayMemberPath}"
-                                            SelectionMode="Multiple"                                                   
+                                            SelectionMode="Multiple"
                                             Foreground="{TemplateBinding Foreground}"
                                             ItemTemplate="{TemplateBinding ItemTemplate}"
                                             ItemsSource="{TemplateBinding ItemsSource}">
@@ -700,15 +700,10 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
                                             Storyboard.TargetName="Border"
-                                            Storyboard.TargetProperty="(Panel.Background).
-                    (SolidColorBrush.Color)">
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
                                                 Value="{StaticResource ComboboxSelectedItemColor}" />
-                                            <!--<EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource ControlMediumColor}"/>
-                                            <EasingColorKeyFrame KeyTime="0"
-                                         Value="{Binding RelativeSource={RelativeSource TemplatedParent},Path=SelectedItemColor,Mode=OneWay,Converter={StaticResource TestConverter}}"/>-->
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -717,8 +712,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
                                             Storyboard.TargetName="Border"
-                                            Storyboard.TargetProperty="(Panel.Background).
-                    (SolidColorBrush.Color)">
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
                                                 Value="{StaticResource SelectedUnfocusedColor}" />

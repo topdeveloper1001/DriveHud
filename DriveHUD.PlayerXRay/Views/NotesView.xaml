@@ -256,6 +256,24 @@
 
             </Style>
 
+            <Style
+                x:Key="StreetMenuButtonStyle"
+                TargetType="{x:Type ctl:MenuButton}"
+                BasedOn="{StaticResource MenuButtonStyle}">
+
+                <Setter
+                    Property="Height"
+                    Value="30" />
+
+                <Setter
+                    Property="Margin"
+                    Value="0,0,5,0" />
+
+            </Style>
+
+            <cnv:ActionToBetweenVisibilityConverter
+                x:Key="ActionToBetweenVisibilityConverter" />
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -397,7 +415,7 @@
                 <TabControl
                     BorderThickness="0"
                     Margin="0"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Stretch"
                     ItemContainerStyle="{DynamicResource NoteSettingsTabItemStyle}"
                     Style="{DynamicResource NoteSettingsTabControlStyle}">
 
@@ -903,7 +921,6 @@
                     </TabItem>
 
                     <TabItem
-                        IsSelected="True"
                         Width="100"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                         Header="HOLE CARDS">
@@ -990,7 +1007,7 @@
                                 <ItemsControl
                                     Grid.Row="2"
                                     Grid.ColumnSpan="2"
-                                    Width="537"
+                                    Width="533"
                                     Margin="0,5,0,0"
                                     HorizontalAlignment="Left"
                                     ItemsSource="{Binding HoleCardsCollection}">
@@ -1065,18 +1082,375 @@
                     <TabItem
                         Width="120"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                        Header="DISPLAYED NOTE" />
+                        Header="DISPLAYED NOTE">
+
+                        <TextBox
+                            Margin="7,0,7,0"
+                            Height="100"
+                            AcceptsReturn="True"
+                            VerticalAlignment="Top"
+                            TextWrapping="Wrap">
+                            <TextBox.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="7"
+                                    ShadowDepth="0"
+                                    Color="{DynamicResource DropShadowColor}" />
+                            </TextBox.Effect>
+                        </TextBox>
+
+                    </TabItem>
 
                     <!-- ADVANCED SETTINGS -->
                     <TabItem
+                        IsSelected="True"
                         Width="85"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
-                        Header="ACTIONS" />
+                        Header="ACTIONS">
+
+                        <Border
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1"
+                            Margin="9,0,9,0"
+                            MinHeight="107"
+                            MaxHeight="200"
+                            VerticalAlignment="Top"
+                            Background="{StaticResource PanelBackgroundBrush}">
+
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="7"
+                                    ShadowDepth="0"
+                                    Color="{DynamicResource DropShadowColor}" />
+                            </Border.Effect>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="10" />
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="10" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="120" />
+                                    <ColumnDefinition
+                                        Width="75" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.Resources>
+                                    <Style
+                                        TargetType="TextBlock"
+                                        BasedOn="{StaticResource {x:Type TextBlock}}">
+                                        <Setter
+                                            Property="FontSize"
+                                            Value="12" />
+                                        <Setter
+                                            Property="FontFamily"
+                                            Value="/Fonts/#Roboto Regular" />
+                                        <Setter
+                                            Property="Margin"
+                                            Value="10,0,0,0" />
+                                    </Style>
+                                </Grid.Resources>
+
+                                <Border
+                                    Grid.ColumnSpan="3"
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{StaticResource BorderBrush}"
+                                    Height="30" />
+
+                                <StackPanel
+                                    Grid.ColumnSpan="3"
+                                    Margin="10,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    Orientation="Horizontal">
+
+                                    <ctl:MenuButton
+                                        Style="{StaticResource StreetMenuButtonStyle}"
+                                        Width="70"
+                                        GroupName="ActionStageGroup"
+                                        IsChecked="{Binding ActionStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.PreFlop}}"
+                                        Content="PRE-FLOP" />
+
+                                    <ctl:MenuButton
+                                        Style="{StaticResource StreetMenuButtonStyle}"
+                                        Width="50"
+                                        GroupName="ActionStageGroup"
+                                        IsChecked="{Binding ActionStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.Flop}}"
+                                        Content="FLOP" />
+
+                                    <ctl:MenuButton
+                                        Style="{StaticResource StreetMenuButtonStyle}"
+                                        Width="50"
+                                        GroupName="ActionStageGroup"
+                                        IsChecked="{Binding ActionStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.Turn}}"
+                                        Content="TURN" />
+
+                                    <ctl:MenuButton
+                                        Style="{StaticResource StreetMenuButtonStyle}"
+                                        Width="50"
+                                        GroupName="ActionStageGroup"
+                                        IsChecked="{Binding ActionStageType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:NoteStageType.River}}"
+                                        Content="RIVER" />
+
+                                </StackPanel>
+
+                                <TextBlock
+                                    Grid.Row="2"
+                                    Text="First Action:" />
+
+                                <TextBlock
+                                    Grid.Row="3"
+                                    Text="Second Action:" />
+
+                                <TextBlock
+                                    Grid.Row="4"
+                                    Text="Third Action:" />
+
+                                <TextBlock
+                                    Grid.Row="5"
+                                    Text="Fourth Action:" />
+
+                                <ComboBox
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Style="{StaticResource ComboBoxStyle}"
+                                    SelectedItem="{Binding FirstAction}"
+                                    ItemsSource="{Binding FirstActions}" />
+
+                                <ComboBox
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Style="{StaticResource ComboBoxStyle}"
+                                    SelectedItem="{Binding SecondAction}"
+                                    ItemsSource="{Binding SecondActions}" />
+
+                                <ComboBox
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Style="{StaticResource ComboBoxStyle}"
+                                    SelectedItem="{Binding ThirdAction}"
+                                    ItemsSource="{Binding ThirdActions}" />
+
+                                <ComboBox
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    Style="{StaticResource ComboBoxStyle}"
+                                    SelectedItem="{Binding FourthAction}"
+                                    ItemsSource="{Binding FourthActions}" />
+
+                                <StackPanel
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    Orientation="Horizontal"
+                                    Visibility="{Binding FirstAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+
+                                    <TextBlock
+                                        Text="between" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="and" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="% of the pot" />
+
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Row="3"
+                                    Grid.Column="2"
+                                    Orientation="Horizontal"
+                                    Visibility="{Binding SecondAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+
+                                    <TextBlock
+                                        Text="between" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="and" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="% of the pot" />
+
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Row="4"
+                                    Grid.Column="2"
+                                    Orientation="Horizontal"
+                                    Visibility="{Binding ThirdAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+
+                                    <TextBlock
+                                        Text="between" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="and" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="% of the pot" />
+
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Row="5"
+                                    Grid.Column="2"
+                                    Orientation="Horizontal"
+                                    Visibility="{Binding FourthAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+
+                                    <TextBlock
+                                        Text="between" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="and" />
+
+                                    <xctk:DoubleUpDown
+                                        Margin="3,0,3,0"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Increment="0.1"
+                                        Width="55"
+                                        Value="0"
+                                        FormatString="F1" />
+
+                                    <TextBlock
+                                        Margin="0"
+                                        Text="% of the pot" />
+
+                                </StackPanel>
+
+                            </Grid>
+
+                        </Border>
+
+                    </TabItem>
 
                     <TabItem
                         Width="85"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
-                        Header="FILTERS" />
+                        Header="FILTERS">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="41" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <GroupBox
+                                Style="{StaticResource BoxStyle}"
+                                Margin="15,0,0,0"
+                                Header="Filters">
+                                <GroupBox.Height>
+                                    <sys:Double>NaN</sys:Double>
+                                </GroupBox.Height>
+
+                                <TextBlock
+                                    Text="Preflop" />
+
+                            </GroupBox>
+
+
+                            <GroupBox
+                                Grid.Column="2"
+                                Margin="0,0,15,0"
+                                Style="{StaticResource BoxStyle}"
+                                Header="Filters">
+                                <GroupBox.Height>
+                                    <sys:Double>NaN</sys:Double>
+                                </GroupBox.Height>
+
+                                <TextBlock
+                                    Text="Preflop" />
+
+                            </GroupBox>
+
+                        </Grid>
+
+                    </TabItem>
 
                     <TabItem
                         Width="100"

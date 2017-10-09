@@ -142,6 +142,7 @@
     <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
     <Compile Include="Controls\BoxPanel.cs" />
     <Compile Include="Controls\MenuButton.cs" />
+    <Compile Include="Converters\ActionToBetweenVisibilityConverter.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
