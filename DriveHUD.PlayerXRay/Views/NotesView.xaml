@@ -13,6 +13,7 @@
     xmlns:dt="clr-namespace:DriveHUD.PlayerXRay.DataTypes"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d"
     d:DesignWidth="1000"
     d:DesignHeight="999">
@@ -71,7 +72,7 @@
                 TargetType="{x:Type TabControl}">
                 <Setter
                     Property="Padding"
-                    Value="0,15,0,0" />
+                    Value="0,15,0,15" />
                 <Setter
                     Property="HorizontalContentAlignment"
                     Value="Center" />
@@ -341,7 +342,6 @@
                             DataType="{x:Type nt:StageObject}">
                             <TextBlock
                                 Text="{Binding StageType}"
-                                VerticalAlignment="Center"
                                 Margin="3,0,0,0" />
                             <HierarchicalDataTemplate.ItemsSource>
                                 <MultiBinding
@@ -358,7 +358,6 @@
                             ItemsSource="{Binding Notes}">
                             <TextBlock
                                 Text="{Binding Name}"
-                                VerticalAlignment="Center"
                                 Margin="3,0,0,0" />
                         </HierarchicalDataTemplate>
                         <DataTemplate
@@ -397,7 +396,7 @@
 
                 <TabControl
                     BorderThickness="0"
-                    Margin="0"                    
+                    Margin="0"
                     VerticalAlignment="Top"
                     ItemContainerStyle="{DynamicResource NoteSettingsTabItemStyle}"
                     Style="{DynamicResource NoteSettingsTabControlStyle}">
@@ -434,9 +433,9 @@
 
                                 <TextBlock
                                     Margin="15,0,0,0"
-                                    VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
                                     Text="3-BETS LIGHT"
+                                    FontSize="14"
                                     FontWeight="Bold" />
 
                                 <StackPanel
@@ -558,7 +557,6 @@
 
                                             <TextBlock
                                                 FontSize="12"
-                                                VerticalAlignment="Center"
                                                 Text="Between" />
 
                                             <xctk:ByteUpDown
@@ -570,7 +568,6 @@
 
                                             <TextBlock
                                                 FontSize="12"
-                                                VerticalAlignment="Center"
                                                 Text="and" />
 
                                             <xctk:ByteUpDown
@@ -582,7 +579,6 @@
 
                                             <TextBlock
                                                 FontSize="12"
-                                                VerticalAlignment="Center"
                                                 Text="number of players" />
 
                                         </StackPanel>
@@ -857,18 +853,23 @@
                                             Orientation="Horizontal">
 
                                             <TextBlock
-                                                Text="Minimum size of pot"></TextBlock>
+                                                FontSize="12"
+                                                Text="Minimum size of pot" />
 
                                             <xctk:DoubleUpDown
                                                 Margin="3,0,3,0"
                                                 Minimum="0"
+                                                FormatString="F2"
+                                                Increment="0.01"
+                                                Maximum="1000"
                                                 Value="0" />
 
                                             <TextBlock
-                                                Text="BBs"></TextBlock>
+                                                FontSize="12"
+                                                Text="BBs" />
 
                                         </StackPanel>
-                                        
+
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="2"
@@ -902,12 +903,164 @@
                     </TabItem>
 
                     <TabItem
+                        IsSelected="True"
                         Width="100"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                         Header="HOLE CARDS">
 
-                    </TabItem>
+                        <ScrollViewer
+                            VerticalScrollBarVisibility="Auto"
+                            HorizontalScrollBarVisibility="Auto"
+                            VerticalAlignment="Top">
 
+                            <Grid
+                                Margin="9,0,9,0">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <StackPanel
+                                    Orientation="Horizontal">
+
+                                    <Button
+                                        Content="SUITED 1 GAPPERS"
+                                        Width="140"
+                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Command="{Binding HoleCardsSelectSuitedGappersCommand}" />
+
+                                    <Button
+                                        Content="SUITED CONNECTORS"
+                                        Width="155"
+                                        Margin="5,0,0,0"
+                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Command="{Binding HoleCardsSelectSuitedConnectorsCommand}" />
+
+                                    <Button
+                                        Content="POCKET PAIRS"
+                                        Width="95"
+                                        Margin="5,0,0,0"
+                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Command="{Binding HoleCardsSelectPocketPairsCommand}" />
+
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Row="1"
+                                    Margin="0,5,0,0"
+                                    Orientation="Horizontal">
+
+                                    <Button
+                                        Content="OFF SUITED 1 GAPPERS"
+                                        Width="140"
+                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Command="{Binding HoleCardsSelectOffSuitedGappersCommand}" />
+
+                                    <Button
+                                        Content="OFF SUITED CONNECTORS"
+                                        Width="155"
+                                        Margin="5,0,0,0"
+                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Command="{Binding HoleCardsSelectOffSuitedConnectorsCommand}" />
+
+                                </StackPanel>
+
+                                <Button
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    Content="SELECT ALL"
+                                    Width="125"
+                                    Style="{StaticResource SwitchModeButtonStyle}"
+                                    Command="{Binding HoleCardsSelectAllCommand}" />
+                                <Button
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    Content="SELECT NONE"
+                                    Width="125"
+                                    Margin="0,5,0,0"
+                                    Command="{Binding HoleCardsSelectNoneCommand}"
+                                    Style="{StaticResource SwitchModeButtonStyle}" />
+
+                                <ItemsControl
+                                    Grid.Row="2"
+                                    Grid.ColumnSpan="2"
+                                    Width="537"
+                                    Margin="0,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    ItemsSource="{Binding HoleCardsCollection}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <UniformGrid
+                                                Columns="13" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid
+                                                Height="30"
+                                                Width="39"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                MouseEnter="Grid_MouseEnter"
+                                                Margin="1">
+
+                                                <Grid.Style>
+                                                    <Style
+                                                        TargetType="Grid">
+                                                        <Setter
+                                                            Property="Background"
+                                                            Value="{StaticResource BorderBrush}" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger
+                                                                Binding="{Binding Path=IsChecked}"
+                                                                Value="True">
+                                                                <Setter
+                                                                    Property="Background"
+                                                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Grid.Style>
+                                                <Grid.InputBindings>
+                                                    <MouseBinding
+                                                        Gesture="LeftDoubleClick"
+                                                        Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.HoleCardsDoubleLeftClickCommand}"
+                                                        CommandParameter="{Binding}" />
+                                                    <MouseBinding
+                                                        Gesture="LeftClick"
+                                                        Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.HoleCardsLeftClickCommand}"
+                                                        CommandParameter="{Binding}" />
+
+                                                </Grid.InputBindings>
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger
+                                                        EventName="MouseEnter">
+                                                        <i:InvokeCommandAction
+                                                            Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.HoleCardsMouseEnterCommand}"
+                                                            CommandParameter="{Binding}" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+
+                                                <TextBlock
+                                                    Text="{Binding Name}"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </Grid>
+
+                        </ScrollViewer>
+
+                    </TabItem>
 
                     <TabItem
                         Width="120"

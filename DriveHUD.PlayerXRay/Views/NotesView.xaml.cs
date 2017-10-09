@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace DriveHUD.PlayerXRay.Views
 {
@@ -22,6 +23,17 @@ namespace DriveHUD.PlayerXRay.Views
         public NotesView()
         {
             InitializeComponent();
+        }
+
+        private void Grid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Released)
+            {
+                e.Handled = true;
+                return;
+            }
+
+            e.Handled = false;
         }
     }
 }

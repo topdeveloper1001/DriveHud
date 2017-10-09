@@ -267,8 +267,7 @@
                             Padding="10,0,0,0"
                             Height="24">
 
-                            <TextBlock
-                                VerticalAlignment="Center"
+                            <TextBlock                                
                                 FontSize="12"
                                 Text="Profiles" />
 
@@ -370,8 +369,7 @@
                                 <HierarchicalDataTemplate
                                     DataType="{x:Type nt:StageObject}">
                                     <TextBlock
-                                        Text="{Binding StageType}"
-                                        VerticalAlignment="Center"
+                                        Text="{Binding StageType}"                                        
                                         Margin="3,0,0,0" />
                                     <HierarchicalDataTemplate.ItemsSource>
                                         <MultiBinding
@@ -387,8 +385,7 @@
                                     DataType="{x:Type nt:InnerGroupObject}"
                                     ItemsSource="{Binding Notes}">
                                     <TextBlock
-                                        Text="{Binding Name}"
-                                        VerticalAlignment="Center"
+                                        Text="{Binding Name}"                                        
                                         Margin="3,0,0,0" />
                                 </HierarchicalDataTemplate>
                                 <DataTemplate

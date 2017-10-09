@@ -1,11 +1,7 @@
-﻿#region Usings
-
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Reflection;
 using System.Xml.Serialization;
-
-#endregion
 
 namespace DriveHUD.PlayerXRay.DataTypes
 {
@@ -13,12 +9,14 @@ namespace DriveHUD.PlayerXRay.DataTypes
     {
         None = -1, Clubs = 0, Diamonds = 1, Hearts = 2, Spades = 3
     }
+
     //old ranking system
     public enum RangeCardRank
     {
         None = -1, Two = 0, Three = 1, Four = 2, Five = 3, Six = 4, Seven = 5, Eight = 6,
         Nine = 7, Ten = 8, Jack = 9, Queen = 10, King = 11, Ace = 12
     }
+
     //new ranking system
     public enum CardRank
     {
@@ -49,7 +47,7 @@ namespace DriveHUD.PlayerXRay.DataTypes
                 case RangeCardSuit.Hearts:
                     return "h";
                 case RangeCardSuit.Spades:
-                    return "s";     
+                    return "s";
                 default:
                     return "x";
             }
@@ -484,54 +482,82 @@ namespace DriveHUD.PlayerXRay.DataTypes
 
     public enum ClientType
     {
-        [XmlEnum("0")] DriveHUD,
-        [XmlEnum("1")] HoldemManager,
-        [XmlEnum("2")] PokerTracker
+        [XmlEnum("0")]
+        DriveHUD,
+        [XmlEnum("1")]
+        HoldemManager,
+        [XmlEnum("2")]
+        PokerTracker
     }
 
     public enum NoteStageType
     {
-        [XmlEnum("0")] PreFlop,
-        [XmlEnum("1")] Flop,
-        [XmlEnum("2")] Turn,
-        [XmlEnum("3")] River,
-        [XmlEnum("4")] Other
+        [XmlEnum("0")]
+        PreFlop,
+        [XmlEnum("1")]
+        Flop,
+        [XmlEnum("2")]
+        Turn,
+        [XmlEnum("3")]
+        River,
+        [XmlEnum("4")]
+        Other
     }
 
     public enum PlayerTypeEnum
     {
-        [XmlEnum("0")] Tag,
-        [XmlEnum("1")] Fish,
-        [XmlEnum("2")] Whale,
-        [XmlEnum("3")] Gambler,
-        [XmlEnum("4")] Lag,
-        [XmlEnum("5")] Rock,
-        [XmlEnum("6")] Nit
+        [XmlEnum("0")]
+        Tag,
+        [XmlEnum("1")]
+        Fish,
+        [XmlEnum("2")]
+        Whale,
+        [XmlEnum("3")]
+        Gambler,
+        [XmlEnum("4")]
+        Lag,
+        [XmlEnum("5")]
+        Rock,
+        [XmlEnum("6")]
+        Nit
     }
 
     public enum TableTypeEnum
     {
-        [XmlEnum("0")] NoLimit,
-        [XmlEnum("1")] PotLimit,
-        [XmlEnum("2")] Limit
+        [XmlEnum("0")]
+        NoLimit,
+        [XmlEnum("1")]
+        PotLimit,
+        [XmlEnum("2")]
+        Limit
     }
 
     public enum TableSizeEnum
     {
-        [XmlEnum("2")] HeadsUp = 2,
-        [XmlEnum("4")] Players34 = 4,
-        [XmlEnum("6")] Players56 = 6,
-        [XmlEnum("10")] Player710 = 10
+        [XmlEnum("2")]
+        HeadsUp = 2,
+        [XmlEnum("4")]
+        Players34 = 4,
+        [XmlEnum("6")]
+        Players56 = 6,
+        [XmlEnum("10")]
+        Player710 = 10
     }
 
     public enum ActionTypeEnum
     {
-        [XmlEnum("0")] Any,
-        [XmlEnum("1")] Bet,
-        [XmlEnum("2")] Check,
-        [XmlEnum("3")] Call,
-        [XmlEnum("4")] Raise,
-        [XmlEnum("5")] Fold
+        [XmlEnum("0")]
+        Any,
+        [XmlEnum("1")]
+        Bet,
+        [XmlEnum("2")]
+        Check,
+        [XmlEnum("3")]
+        Call,
+        [XmlEnum("4")]
+        Raise,
+        [XmlEnum("5")]
+        Fold
     }
 
     public enum FilterEnum
@@ -853,33 +879,48 @@ namespace DriveHUD.PlayerXRay.DataTypes
 
     public enum CompareEnum
     {
-        [XmlEnum("0")] EqualTo,
-        [XmlEnum("1")] GreaterThan,
-        [XmlEnum("2")] LessThan
+        [XmlEnum("0")]
+        EqualTo,
+        [XmlEnum("1")]
+        GreaterThan,
+        [XmlEnum("2")]
+        LessThan
     }
 
     public enum FlopFlushCardsEnum
     {
-        [XmlEnum("1")] Rainbow = 1,
-        [XmlEnum("2")] TwoOfOneSuit = 2,
-        [XmlEnum("3")] ThreeOfOneSuit = 3
+        [XmlEnum("1")]
+        Rainbow = 1,
+        [XmlEnum("2")]
+        TwoOfOneSuit = 2,
+        [XmlEnum("3")]
+        ThreeOfOneSuit = 3
     }
 
     public enum TurnFlushCardsEnum
     {
-        [XmlEnum("1")] Rainbow = 1,
-        [XmlEnum("2")] TwoOfOneSuit = 2,
-        [XmlEnum("0")] TwoOfTwoSuits = 0,
-        [XmlEnum("3")] ThreeOfOneSuit = 3,
-        [XmlEnum("4")] FourOfOneSuit = 4
+        [XmlEnum("1")]
+        Rainbow = 1,
+        [XmlEnum("2")]
+        TwoOfOneSuit = 2,
+        [XmlEnum("0")]
+        TwoOfTwoSuits = 0,
+        [XmlEnum("3")]
+        ThreeOfOneSuit = 3,
+        [XmlEnum("4")]
+        FourOfOneSuit = 4
     }
 
     public enum RiverFlushCardsEnum
     {
-        [XmlEnum("0")] NoFlush,
-        [XmlEnum("3")] ThreeCardsOneSuit = 3,
-        [XmlEnum("4")] FourCardsOneSuit = 4,
-        [XmlEnum("5")] FiveCardsOneSuit = 5
+        [XmlEnum("0")]
+        NoFlush,
+        [XmlEnum("3")]
+        ThreeCardsOneSuit = 3,
+        [XmlEnum("4")]
+        FourCardsOneSuit = 4,
+        [XmlEnum("5")]
+        FiveCardsOneSuit = 5
     }
 
     public enum QueryHmPositionEnum
