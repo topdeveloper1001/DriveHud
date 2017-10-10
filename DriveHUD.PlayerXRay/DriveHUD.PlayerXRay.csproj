@@ -145,6 +145,7 @@
     <Compile Include="Converters\ActionToBetweenVisibilityConverter.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />
+    <Compile Include="DataTypes\FiltersHelper.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
@@ -180,6 +181,7 @@
     <Compile Include="UIControls\MessageBox\MessageBox.cs" />
     <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
     <Compile Include="UIControls\VisualStates.cs" />
+    <Compile Include="ViewModels\FilterObjectViewModel.cs" />
     <Compile Include="ViewModels\HoleCardsViewModel.cs" />
     <Compile Include="ViewModels\NotesViewModel.cs" />
     <Compile Include="ViewModels\RunMode.cs" />
@@ -563,6 +565,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\PlayerXRayBigLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ArrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ArrowRight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

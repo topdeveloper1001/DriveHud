@@ -1102,7 +1102,6 @@
 
                     <!-- ADVANCED SETTINGS -->
                     <TabItem
-                        IsSelected="True"
                         Width="85"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="ACTIONS">
@@ -1405,6 +1404,7 @@
                     </TabItem>
 
                     <TabItem
+                        IsSelected="True"
                         Width="85"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="FILTERS">
@@ -1423,28 +1423,113 @@
                             <GroupBox
                                 Style="{StaticResource BoxStyle}"
                                 Margin="15,0,0,0"
+                                Padding="0"
                                 Header="Filters">
                                 <GroupBox.Height>
                                     <sys:Double>NaN</sys:Double>
                                 </GroupBox.Height>
 
-                                <TextBlock
-                                    Text="Preflop" />
+                                <TreeView
+                                    Foreground="{StaticResource ForegroundBrush}"
+                                    FontFamily="/Fonts/#Roboto Regular"
+                                    ItemsSource="{Binding FiltersCollectionView.Groups}"
+                                    Margin="0"                                  
+                                    FontSize="12">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger
+                                            EventName="MouseDoubleClick">
+                                            <i:InvokeCommandAction
+                                                Command="{Binding AddToSelectedFiltersCommand}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <TreeView.Resources>
+                                        <DataTemplate
+                                            x:Key="FilterTemplate">
+                                            <TextBlock
+                                                Text="{Binding Description}" />
+                                        </DataTemplate>
+                                    </TreeView.Resources>
+
+                                    <TreeView.ItemTemplate>
+                                        <HierarchicalDataTemplate
+                                            ItemsSource="{Binding Path=Items}"
+                                            ItemTemplate="{StaticResource FilterTemplate}">
+                                            <TextBlock
+                                                Text="{Binding Name}"
+                                                Margin="3,0,0,0" />
+                                        </HierarchicalDataTemplate>
+                                    </TreeView.ItemTemplate>
+                                </TreeView>
 
                             </GroupBox>
 
+                            <StackPanel
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Grid.Column="1">
+
+                                <Button
+                                    Command="{Binding AddToSelectedFiltersCommand}"
+                                    Style="{StaticResource SimpleImageButtonStyle}">
+                                    <Image
+                                        Source="/DriveHUD.PlayerXRay;component/Resources/ArrowRight.png"
+                                        Width="24"
+                                        Height="24" />
+                                </Button>
+
+                                <Button
+                                    Command="{Binding RemoveFromSelectedFiltersCommand}"
+                                    Style="{StaticResource SimpleImageButtonStyle}"
+                                    Margin="0,14,0,0">
+                                    <Image
+                                        Source="/DriveHUD.PlayerXRay;component/Resources/ArrowLeft.png"
+                                        Width="24"
+                                        Height="24" />
+                                </Button>
+
+                            </StackPanel>
 
                             <GroupBox
                                 Grid.Column="2"
                                 Margin="0,0,15,0"
                                 Style="{StaticResource BoxStyle}"
-                                Header="Filters">
+                                Padding="0"
+                                Header="Selected Filters">
                                 <GroupBox.Height>
                                     <sys:Double>NaN</sys:Double>
                                 </GroupBox.Height>
 
-                                <TextBlock
-                                    Text="Preflop" />
+                                <TreeView
+                                    Foreground="{StaticResource ForegroundBrush}"
+                                    FontFamily="/Fonts/#Roboto Regular"
+                                    ItemsSource="{Binding SelectedFiltersCollectionView.Groups}"
+                                    Margin="0"
+                                    FontSize="12">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger
+                                            EventName="MouseDoubleClick">
+                                            <i:InvokeCommandAction
+                                                Command="{Binding RemoveFromSelectedFiltersCommand}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <TreeView.Resources>
+                                        <DataTemplate
+                                            x:Key="FilterTemplate">
+                                            <TextBlock
+                                                Text="{Binding Description}" />
+                                        </DataTemplate>
+                                    </TreeView.Resources>
+
+                                    <TreeView.ItemTemplate>
+                                        <HierarchicalDataTemplate
+                                            ItemsSource="{Binding Path=Items}"
+                                            ItemTemplate="{StaticResource FilterTemplate}">
+                                            <TextBlock
+                                                Text="{Binding Name}"
+                                                Margin="3,0,0,0" />
+                                        </HierarchicalDataTemplate>
+                                    </TreeView.ItemTemplate>
+                                </TreeView>
 
                             </GroupBox>
 

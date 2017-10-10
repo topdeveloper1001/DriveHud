@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.PlayerXRay.ViewModels;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -34,6 +35,11 @@ namespace DriveHUD.PlayerXRay.Views
             }
 
             e.Handled = false;
+        }
+
+        private void TreeView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            (DataContext as NotesViewModel).AddToSelectedFiltersCommand.Execute(null);
         }
     }
 }

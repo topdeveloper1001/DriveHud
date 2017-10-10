@@ -42,7 +42,7 @@ namespace DriveHUD.PlayerXRay.UserControls.Notes
                 foreach (FilterObject obj in parent.ItemsSource)
                 {
                     if (Note.Settings.SelectedFiltersComparison.Find(p => p.Tag == obj.Tag) != null)
-                        obj.Selected = true;
+                        obj.IsSelected = true;
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace DriveHUD.PlayerXRay.UserControls.Notes
             {
                 foreach (FilterObject filter in parent.ItemsSource)
                 {
-                    if (filter.Selected)
+                    if (filter.IsSelected)
                         Note.Settings.SelectedFiltersComparison.Add(filter);
                 }
             }

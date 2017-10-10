@@ -16,9 +16,11 @@ using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Windows.Data;
 
 namespace DriveHUD.PlayerXRay.ViewModels
 {
@@ -29,6 +31,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             InitializeHoleCardsCollection();
             InitializeCommands();
             InitializeActions();
+            InitializeFilters();
 
             IsAdvancedMode = true;
         }
@@ -41,6 +44,17 @@ namespace DriveHUD.PlayerXRay.ViewModels
             secondActions = new ObservableCollection<ActionTypeEnum>(actions);
             thirdActions = new ObservableCollection<ActionTypeEnum>(actions);
             fourthActions = new ObservableCollection<ActionTypeEnum>(actions);
+        }
+
+        private void InitializeFilters()
+        {
+            filters = new ObservableCollection<FilterObject>(FiltersHelper.GetFiltersObjects());
+            filtersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(filters);
+            filtersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObjectViewModel.Stage)));
+
+            selectedFilters = new ObservableCollection<FilterObject>();
+            selectedFiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(selectedFilters);
+            selectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObjectViewModel.Stage)));
         }
 
         private void InitializeCommands()
@@ -77,6 +91,31 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
             HoleCardsSelectOffSuitedConnectorsCommand = ReactiveCommand.Create();
             HoleCardsSelectOffSuitedConnectorsCommand.Subscribe(x => SelectOffSuitedConnectors());
+
+            AddToSelectedFiltersCommand = ReactiveCommand.Create();
+            AddToSelectedFiltersCommand.Subscribe(x =>
+            {
+                var selectedItem = filters.FirstOrDefault(f => f.IsSelected);
+
+                if (selectedItem != null && !selectedFilters.Any(f => f.Filter == selectedItem.Filter))
+                {
+                    var filterToAdd = selectedItem.Clone();
+                    filterToAdd.IsSelected = false;
+
+                    selectedFilters.Add(filterToAdd);
+                }
+            });
+
+            RemoveFromSelectedFiltersCommand = ReactiveCommand.Create();
+            RemoveFromSelectedFiltersCommand.Subscribe(x =>
+            {
+                var selectedItem = selectedFilters.FirstOrDefault(f => f.IsSelected);
+
+                if (selectedItem != null)
+                {
+                    selectedFilters.Remove(selectedItem);
+                }
+            });
         }
 
         private void InitializeHoleCardsCollection()
@@ -307,6 +346,38 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private ObservableCollection<FilterObject> filters;
+
+        private CollectionView filtersCollectionView;
+
+        public CollectionView FiltersCollectionView
+        {
+            get
+            {
+                return filtersCollectionView;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref filtersCollectionView, value);
+            }
+        }
+
+        private ObservableCollection<FilterObject> selectedFilters;
+
+        private CollectionView selectedFiltersCollectionView;
+
+        public CollectionView SelectedFiltersCollectionView
+        {
+            get
+            {
+                return selectedFiltersCollectionView;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedFiltersCollectionView, value);
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -340,6 +411,10 @@ namespace DriveHUD.PlayerXRay.ViewModels
         public ReactiveCommand<object> HoleCardsSelectAllCommand { get; private set; }
 
         public ReactiveCommand<object> HoleCardsSelectNoneCommand { get; private set; }
+
+        public ReactiveCommand<object> AddToSelectedFiltersCommand { get; private set; }
+
+        public ReactiveCommand<object> RemoveFromSelectedFiltersCommand { get; private set; }
 
         #endregion
 

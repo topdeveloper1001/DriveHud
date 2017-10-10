@@ -79,6 +79,9 @@
                             Property="SnapsToDevicePixels"
                             Value="True" />
                         <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />
                     </Style>
