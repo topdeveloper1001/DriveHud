@@ -1,16 +1,25 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="NoteSettingsObject.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects;
+using ReactiveUI;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
-using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
-using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects;
-
-#endregion
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
-    public class NoteSettingsObject
+    public class NoteSettingsObject : ReactiveObject
     {
         public NoteSettingsObject()
         {
@@ -84,7 +93,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
                            ? new List<string>(ExcludedCards.Split(','))
                            : string.IsNullOrEmpty(ExcludedCards)
                                  ? new List<string>()
-                                 : new List<string> {ExcludedCards};
+                                 : new List<string> { ExcludedCards };
             }
             set
             {
@@ -105,13 +114,108 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
         public bool Cash { get; set; }
         public bool Tournament { get; set; }
 
-        public bool PlayersNoHeadsUp { get; set; }
-        public bool PlayersNo34 { get; set; }
-        public bool PlayersNo56 { get; set; }
-        public bool PlayersNoMax { get; set; }
-        public bool PlayersNoCustom { get; set; }
-        public int PlayersNoMinVal { get; set; }
-        public int PlayersNoMaxVal { get; set; }
+        #region Number of players
+
+        private bool playersNoHeadsUp;
+
+        public bool PlayersNoHeadsUp
+        {
+            get
+            {
+                return playersNoHeadsUp;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNoHeadsUp, value);
+            }
+        }
+
+        private bool playersNo34;
+
+        public bool PlayersNo34
+        {
+            get
+            {
+                return playersNo34;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNo34, value);
+            }
+        }
+
+        private bool playersNo56;
+
+        public bool PlayersNo56
+        {
+            get
+            {
+                return playersNo56;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNo56, value);
+            }
+        }
+
+        private bool playersNoMax;
+
+        public bool PlayersNoMax
+        {
+            get
+            {
+                return playersNoMax;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNoMax, value);
+            }
+        }
+
+        private bool playersNoCustom;
+
+        public bool PlayersNoCustom
+        {
+            get
+            {
+                return playersNoCustom;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNoCustom, value);
+                PlayersNoHeadsUp = PlayersNo34 = PlayersNo56 = PlayersNoMax = !playersNoCustom;
+            }
+        }
+
+        private int playersNoMinVal;
+
+        public int PlayersNoMinVal
+        {
+            get
+            {
+                return playersNoMinVal;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNoMinVal, value);
+            }
+        }
+
+        private int playersNoMaxVal;
+
+        public int PlayersNoMaxVal
+        {
+            get
+            {
+                return playersNoMaxVal;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playersNoMaxVal, value);
+            }
+        }
+
+        #endregion
 
         public bool PositionSB { get; set; }
         public bool PositionEarly { get; set; }
@@ -146,13 +250,13 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
         [XmlIgnore]
         public bool MBCWentToShowdown
         {
-            get { return SelectedFilters.Where(p => p.Tag == (int) FilterEnum.SawShowdown).Count() > 0; }
+            get { return SelectedFilters.Any(p => p.Filter == FilterEnum.SawShowdown); }
         }
 
         [XmlIgnore]
         public bool MBCAllInPreFlop
         {
-            get { return SelectedFilters.Where(p => p.Tag == (int) FilterEnum.AllinPreflop).Count() > 0; }
+            get { return SelectedFilters.Any(p => p.Filter == FilterEnum.AllinPreflop); }
         }
 
         public PlayerObject TagPlayer { get; set; }
@@ -178,7 +282,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 
         public override bool Equals(object x)
         {
-            NoteSettingsObject x1 = (NoteSettingsObject) x;
+            NoteSettingsObject x1 = (NoteSettingsObject)x;
             NoteSettingsObject x2 = this;
 
             return x1.MBCAllInPreFlop == x2.MBCAllInPreFlop &&

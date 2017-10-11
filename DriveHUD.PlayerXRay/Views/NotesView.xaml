@@ -274,6 +274,9 @@
             <cnv:ActionToBetweenVisibilityConverter
                 x:Key="ActionToBetweenVisibilityConverter" />
 
+            <cnv:TreeMultiBindingConverter
+                x:Key="TreeMultiBindingConverter" />
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -355,6 +358,11 @@
                     ItemsSource="{Binding Stages, Mode=OneWay}"
                     FontSize="12">
 
+                    <i:Interaction.Behaviors>
+                        <cnv:TreeViewSelectItemBehavior
+                            SelectedItem="{Binding SelectedStage}" />
+                    </i:Interaction.Behaviors>
+
                     <TreeView.Resources>
                         <HierarchicalDataTemplate
                             DataType="{x:Type nt:StageObject}">
@@ -404,7 +412,8 @@
                     Color="{DynamicResource DropShadowColor}" />
             </Border.Effect>
 
-            <Grid>
+            <Grid
+                Visibility="{Binding SelectedNote, Converter={dh:NullToVisibilityConverter}}">
 
                 <Border
                     VerticalAlignment="Top"
@@ -452,7 +461,7 @@
                                 <TextBlock
                                     Margin="15,0,0,0"
                                     HorizontalAlignment="Left"
-                                    Text="3-BETS LIGHT"
+                                    Text="{Binding SelectedNote.Name}"
                                     FontSize="14"
                                     FontWeight="Bold" />
 
@@ -462,18 +471,21 @@
                                     Orientation="Horizontal">
                                     <CheckBox
                                         Style="{StaticResource CheckBoxStyle}"
+                                        IsChecked="{Binding SelectedNote.Settings.TypeNoLimit}"
                                         Content="No-Limits" />
                                     <CheckBox
                                         Style="{StaticResource CheckBoxStyle}"
+                                        IsChecked="{Binding SelectedNote.Settings.TypePotLimit}"
                                         Margin="15,0,0,0"
                                         Content="Pot-Limits" />
                                     <CheckBox
                                         Style="{StaticResource CheckBoxStyle}"
+                                        IsChecked="{Binding SelectedNote.Settings.TypeLimit}"
                                         Margin="15,0,0,0"
                                         Content="Limits" />
                                 </StackPanel>
 
-                                <GroupBox
+                                <!--<GroupBox
                                     Grid.Row="1"
                                     Style="{StaticResource BoxStyle}"
                                     Header="Stakes">
@@ -516,10 +528,11 @@
 
                                     </Grid>
 
-                                </GroupBox>
+                                </GroupBox>-->
 
                                 <GroupBox
                                     Grid.Row="2"
+                                    Height="110"
                                     Style="{StaticResource BoxStyle}"
                                     Header="Number of players">
 
@@ -535,41 +548,54 @@
                                                 Width="*" />
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="Auto" />
                                             <RowDefinition
                                                 Height="{StaticResource SpaceBetweenRows}" />
-                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <CheckBox
                                             Grid.Column="0"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PlayersNoHeadsUp}"
+                                            IsEnabled="{Binding SelectedNote.Settings.PlayersNoCustom, Converter={dh:BoolNotConverter}}"
                                             Content="Heads-Up" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PlayersNo34}"
+                                            IsEnabled="{Binding SelectedNote.Settings.PlayersNoCustom, Converter={dh:BoolNotConverter}}"
                                             Content="3-4 handed" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PlayersNo56}"
+                                            IsEnabled="{Binding SelectedNote.Settings.PlayersNoCustom, Converter={dh:BoolNotConverter}}"
                                             Content="5-6" />
 
                                         <CheckBox
                                             Grid.Column="3"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PlayersNoMax}"
+                                            IsEnabled="{Binding SelectedNote.Settings.PlayersNoCustom, Converter={dh:BoolNotConverter}}"
                                             Content="7-10" />
 
                                         <CheckBox
+                                            x:Name="cbCustom"
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PlayersNoCustom}"
                                             Content="Custom" />
 
                                         <StackPanel
                                             Grid.Column="1"
                                             Grid.ColumnSpan="3"
                                             Grid.Row="2"
+                                            IsEnabled="{Binding SelectedNote.Settings.PlayersNoCustom}"
                                             Orientation="Horizontal"
                                             VerticalAlignment="Center">
 
@@ -580,7 +606,7 @@
                                             <xctk:ByteUpDown
                                                 Margin="9,0,9,0"
                                                 VerticalAlignment="Center"
-                                                Value="2"
+                                                Value="{Binding SelectedNote.Settings.PlayersNoMinVal}"
                                                 Minimum="2"
                                                 Maximum="10" />
 
@@ -591,7 +617,7 @@
                                             <xctk:ByteUpDown
                                                 Margin="9,0,9,0"
                                                 VerticalAlignment="Center"
-                                                Value="10"
+                                                Value="{Binding SelectedNote.Settings.PlayersNoMaxVal}"
                                                 Minimum="2"
                                                 Maximum="10" />
 
@@ -630,33 +656,39 @@
                                         <CheckBox
                                             Grid.Column="0"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionSB}"
                                             Content="Small Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionEarly}"
                                             Content="Early" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionCutoff}"
                                             Content="Cutoff" />
 
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionBB}"
                                             Content="Big Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionMiddle}"
                                             Content="Middle" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Grid.Row="2"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionButton}"
                                             Style="{StaticResource CheckBoxStyle}"
                                             Content="Button" />
 
@@ -689,34 +721,41 @@
                                         <CheckBox
                                             Grid.Column="0"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.FacingUnopened}"
                                             Content="Unopened" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Facing2PlusLimpers}"
                                             Content="2+ Limpers" />
 
                                         <CheckBox
                                             Grid.Column="2"
+                                            Grid.ColumnSpan="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.FacingRaisersCallers}"
                                             Content="Raisers+Caller(s)" />
 
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Facing1Limper}"
                                             Content="1 Limper" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Facing1Raiser}"
                                             Content="1 Raiser" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Facing2Raisers}"
                                             Content="2 Raisers" />
 
                                     </Grid>
@@ -748,34 +787,40 @@
                                         <CheckBox
                                             Grid.Column="0"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionSBRaiser}"
                                             Content="Small Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionEarlyRaiser}"
                                             Content="Early" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionCutoffRaiser}"
                                             Content="Cutoff" />
 
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionBBRaiser}"
                                             Content="Big Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionMiddleRaiser}"
                                             Content="Middle" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionButtonRaiser}"
                                             Content="Button" />
 
                                     </Grid>
@@ -807,34 +852,40 @@
                                         <CheckBox
                                             Grid.Column="0"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionSB3Bet}"
                                             Content="Small Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionEarly3Bet}"
                                             Content="Early" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionCutoff3Bet}"
                                             Content="Cutoff" />
 
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionBB3Bet}"
                                             Content="Big Blind" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionMiddle3Bet}"
                                             Content="Middle" />
 
                                         <CheckBox
                                             Grid.Column="2"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.PositionButton3Bet}"
                                             Content="Button" />
 
                                     </Grid>
@@ -843,6 +894,7 @@
 
                                 <GroupBox
                                     Grid.Row="7"
+                                    Height="145"
                                     Style="{StaticResource BoxStyle}"
                                     Header="Misc">
 
@@ -858,14 +910,18 @@
                                                 Width="*" />
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="Auto" />
                                             <RowDefinition
                                                 Height="{StaticResource SpaceBetweenRows}" />
-                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="Auto" />
                                             <RowDefinition
                                                 Height="{StaticResource SpaceBetweenRows}" />
-                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="Auto" />
                                         </Grid.RowDefinitions>
+
                                         <StackPanel
                                             Grid.ColumnSpan="2"
                                             Orientation="Horizontal">
@@ -880,7 +936,7 @@
                                                 FormatString="F2"
                                                 Increment="0.01"
                                                 Maximum="1000"
-                                                Value="0" />
+                                                Value="{Binding SelectedNote.Settings.MBCMinSizeOfPot}" />
 
                                             <TextBlock
                                                 FontSize="12"
@@ -892,24 +948,28 @@
                                             Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding MBCWentToShowdown}"
                                             Content="Went to showdown" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="2"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Cash}"
                                             Content="Cash" />
 
                                         <CheckBox
                                             Grid.Column="0"
                                             Grid.Row="4"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding MBCAllInPreFlop}"
                                             Content="All-in Pre-flop" />
 
                                         <CheckBox
                                             Grid.Column="1"
                                             Grid.Row="4"
                                             Style="{StaticResource CheckBoxStyle}"
+                                            IsChecked="{Binding SelectedNote.Settings.Tournament}"
                                             Content="Tournaments" />
 
                                     </Grid>
@@ -1089,6 +1149,7 @@
                             Height="100"
                             AcceptsReturn="True"
                             VerticalAlignment="Top"
+                            Text="{Binding SelectedNote.DisplayedNote}"
                             TextWrapping="Wrap">
                             <TextBox.Effect>
                                 <DropShadowEffect
@@ -1404,7 +1465,6 @@
                     </TabItem>
 
                     <TabItem
-                        IsSelected="True"
                         Width="85"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="FILTERS">
@@ -1433,7 +1493,7 @@
                                     Foreground="{StaticResource ForegroundBrush}"
                                     FontFamily="/Fonts/#Roboto Regular"
                                     ItemsSource="{Binding FiltersCollectionView.Groups}"
-                                    Margin="0"                                  
+                                    Margin="0"
                                     FontSize="12">
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger
@@ -1522,7 +1582,7 @@
 
                                     <TreeView.ItemTemplate>
                                         <HierarchicalDataTemplate
-                                            ItemsSource="{Binding Path=Items}"
+                                            ItemsSource="{Binding Path=Items}"                                            
                                             ItemTemplate="{StaticResource FilterTemplate}">
                                             <TextBlock
                                                 Text="{Binding Name}"

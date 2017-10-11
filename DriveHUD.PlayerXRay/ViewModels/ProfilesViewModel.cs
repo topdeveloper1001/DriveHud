@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="NotesView.xaml.cs" company="Ace Poker Solutions">
+// <copyright file="ProfilesViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,30 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
-using System.Windows.Input;
-
-namespace DriveHUD.PlayerXRay.Views
+namespace DriveHUD.PlayerXRay.ViewModels
 {
-    /// <summary>
-    /// Interaction logic for NotesView.xaml
-    /// </summary>
-    public partial class NotesView : UserControl
+    public class ProfilesViewModel : WorkspaceViewModel
     {
-        public NotesView()
+        public override WorkspaceType WorkspaceType
         {
-            InitializeComponent();
-        }
-
-        private void Grid_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Released)
+            get
             {
-                e.Handled = true;
-                return;
+                return WorkspaceType.Profiles;
             }
-
-            e.Handled = false;
-        }    
+        }
     }
 }

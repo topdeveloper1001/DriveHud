@@ -150,6 +150,7 @@
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />
+    <Compile Include="PlayerXRay\Converters\TreeViewSelectItemBehavior.cs" />
     <Compile Include="PlayerXRay\CustomControls\MainMenu.xaml.cs" />
     <Compile Include="PlayerXRay\CustomControls\MainMenuButton.xaml.cs" />
     <Compile Include="PlayerXRay\CustomControls\MessageBoxHelper.cs" />
@@ -181,13 +182,18 @@
     <Compile Include="UIControls\MessageBox\MessageBox.cs" />
     <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
     <Compile Include="UIControls\VisualStates.cs" />
-    <Compile Include="ViewModels\FilterObjectViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
     <Compile Include="ViewModels\HoleCardsViewModel.cs" />
     <Compile Include="ViewModels\NotesViewModel.cs" />
+    <Compile Include="ViewModels\ProfilesViewModel.cs" />
     <Compile Include="ViewModels\RunMode.cs" />
     <Compile Include="ViewModels\RunViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="Views\NotesView.xaml.cs">
       <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfilesView.xaml.cs">
+      <DependentUpon>ProfilesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RunView.xaml.cs">
       <DependentUpon>RunView.xaml</DependentUpon>
@@ -458,6 +464,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\NotesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProfilesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

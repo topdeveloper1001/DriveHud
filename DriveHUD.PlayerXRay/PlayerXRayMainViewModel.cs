@@ -154,6 +154,15 @@ namespace DriveHUD.PlayerXRay
                 case WorkspaceType.Notes:
                     workspace = new NotesViewModel();
                     break;
+                case WorkspaceType.Profiles:
+                    workspace = new ProfilesViewModel();
+                    break;
+                case WorkspaceType.Settings:
+                    workspace = new SettingsViewModel();
+                    break;
+                case WorkspaceType.Help:
+                    workspace = new HelpViewModel();
+                    break;
             }
 
             if (workspace == null)

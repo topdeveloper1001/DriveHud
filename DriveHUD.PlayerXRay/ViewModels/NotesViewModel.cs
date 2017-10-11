@@ -28,12 +28,17 @@ namespace DriveHUD.PlayerXRay.ViewModels
     {
         public NotesViewModel()
         {
+            InitializeStages();
             InitializeHoleCardsCollection();
             InitializeCommands();
             InitializeActions();
             InitializeFilters();
+        }
 
-            IsAdvancedMode = true;
+        private void InitializeStages()
+        {
+            stages = new ReactiveList<StageObject>();
+            ReloadStages();
         }
 
         private void InitializeActions()
@@ -50,11 +55,11 @@ namespace DriveHUD.PlayerXRay.ViewModels
         {
             filters = new ObservableCollection<FilterObject>(FiltersHelper.GetFiltersObjects());
             filtersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(filters);
-            filtersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObjectViewModel.Stage)));
+            filtersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObject.Stage)));
 
             selectedFilters = new ObservableCollection<FilterObject>();
             selectedFiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(selectedFilters);
-            selectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObjectViewModel.Stage)));
+            selectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObject.Stage)));
         }
 
         private void InitializeCommands()
@@ -120,7 +125,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void InitializeHoleCardsCollection()
         {
-            HoleCardsCollection = new ObservableCollection<HoleCardsViewModel>();
+            HoleCardsCollection = new ReactiveList<HoleCardsViewModel>();
 
             var rankValues = HandHistories.Objects.Cards.Card.PossibleRanksHighCardFirst;
 
@@ -167,6 +172,43 @@ namespace DriveHUD.PlayerXRay.ViewModels
                     }
                 }
             }
+
+            HoleCardsCollection.ChangeTrackingEnabled = true;
+            HoleCardsCollection.ItemChanged
+                .Where(x => x.PropertyName == nameof(HoleCardsViewModel.IsChecked))
+                .Select(x => x.Sender)
+                .Subscribe(x =>
+                {
+                    if (SelectedNote != null && SelectedNote.Settings != null)
+                    {
+                        var excludedCardsList = SelectedNote.Settings.ExcludedCardsList;
+
+                        if (!x.IsChecked && !excludedCardsList.Contains(x.Name))
+                        {
+                            excludedCardsList.Add(x.Name);
+                            SelectedNote.Settings.ExcludedCardsList = excludedCardsList;
+                        }
+                        else if (x.IsChecked && excludedCardsList.Contains(x.Name))
+                        {
+                            excludedCardsList.Remove(x.Name);
+                            SelectedNote.Settings.ExcludedCardsList = excludedCardsList;
+                        }
+                    }
+                });
+        }
+
+        /// <summary>
+        /// Reloads <see cref="Stages"/> collection accordingly to selected <see cref="NoteStageType"/>
+        /// </summary>
+        private void ReloadStages()
+        {
+            Stages?.ForEach(x => x.IsSelected = false);
+
+            Stages?.Clear();
+
+            Stages?.AddRange(NotesAppSettingsHelper
+                .CurrentNotesAppSettings.StagesList
+                .Where(x => x.StageType == NoteStageType));
         }
 
         #region Properties
@@ -193,9 +235,9 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
-        private ObservableCollection<StageObject> stages;
+        private ReactiveList<StageObject> stages;
 
-        public ObservableCollection<StageObject> Stages
+        public ReactiveList<StageObject> Stages
         {
             get
             {
@@ -218,6 +260,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref noteStageType, value);
+                ReloadStages();
             }
         }
 
@@ -235,9 +278,9 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
-        private ObservableCollection<HoleCardsViewModel> holeCardsCollection;
+        private ReactiveList<HoleCardsViewModel> holeCardsCollection;
 
-        public ObservableCollection<HoleCardsViewModel> HoleCardsCollection
+        public ReactiveList<HoleCardsViewModel> HoleCardsCollection
         {
             get
             {
@@ -378,6 +421,89 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private NoteTreeObjectBase selectedStage;
+
+        public NoteTreeObjectBase SelectedStage
+        {
+            get
+            {
+                return selectedStage;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedStage, value);
+                SelectedNote = SelectedStage as NoteObject;
+            }
+        }
+
+        private NoteObject selectedNote;
+
+        public NoteObject SelectedNote
+        {
+            get
+            {
+                return selectedNote;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref selectedNote, value);
+                LoadNote();
+            }
+        }
+
+        private void LoadNote()
+        {
+            if (SelectedNote != null)
+            {
+                HoleCardsCollection.ForEach(x => x.IsChecked = !SelectedNote.Settings.ExcludedCardsList.Contains(x.Name));
+            }
+
+            this.RaisePropertyChanged(nameof(MBCWentToShowdown));
+            this.RaisePropertyChanged(nameof(MBCAllInPreFlop));
+        }
+
+        public bool MBCWentToShowdown
+        {
+            get
+            {
+                return SelectedNote != null ? SelectedNote.Settings.MBCWentToShowdown : false;
+            }
+            set
+            {
+                if (value)
+                {
+                    AddFilterItem(FilterEnum.SawShowdown);
+                }
+                else
+                {
+                    RemoveFilterItem(FilterEnum.SawShowdown);
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        public bool MBCAllInPreFlop
+        {
+            get
+            {
+                return SelectedNote != null ? SelectedNote.Settings.MBCAllInPreFlop : false;
+            }
+            set
+            {
+                if (value)
+                {
+                    AddFilterItem(FilterEnum.AllinPreflop);
+                }
+                else
+                {
+                    RemoveFilterItem(FilterEnum.AllinPreflop);
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -467,6 +593,35 @@ namespace DriveHUD.PlayerXRay.ViewModels
             for (var i = 0; i < length; i++)
             {
                 HoleCardsCollection.ElementAt(i * length + i).IsChecked = true;
+            }
+        }
+
+        #endregion
+
+        #region Helpers
+
+        private void AddFilterItem(FilterEnum filter)
+        {
+            var selectedfilterItem = selectedFilters.FirstOrDefault(x => x.Filter == filter);
+
+            if (selectedfilterItem == null)
+            {
+                var filterItem = filters.FirstOrDefault(x => x.Filter == filter);
+
+                if (filterItem != null)
+                {
+                    selectedFilters.Add(filterItem.Clone());
+                }
+            }
+        }
+
+        private void RemoveFilterItem(FilterEnum filter)
+        {
+            var selectedfilterItem = selectedFilters.FirstOrDefault(x => x.Filter == filter);
+
+            if (selectedfilterItem != null)
+            {
+                selectedFilters.Remove(selectedfilterItem);
             }
         }
 

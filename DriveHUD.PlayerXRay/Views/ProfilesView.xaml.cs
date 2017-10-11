@@ -11,29 +11,17 @@
 //----------------------------------------------------------------------
 
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace DriveHUD.PlayerXRay.Views
 {
     /// <summary>
-    /// Interaction logic for NotesView.xaml
+    /// Interaction logic for ProfilesView.xaml
     /// </summary>
-    public partial class NotesView : UserControl
+    public partial class ProfilesView : UserControl
     {
-        public NotesView()
+        public ProfilesView()
         {
             InitializeComponent();
         }
-
-        private void Grid_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Released)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            e.Handled = false;
-        }    
     }
 }
