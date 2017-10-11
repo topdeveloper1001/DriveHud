@@ -10,10 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Data;
 
@@ -25,23 +29,31 @@ namespace DriveHUD.PlayerXRay.Converters
 
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            var result = new List<object>();
+            var result = new ReactiveList<object>();
 
             foreach (var obj in values)
             {
-                if (obj is IEnumerable<InnerGroupObject>)
+                if (obj is ReactiveList<InnerGroupObject>)
                 {
-                    foreach (var group in (IEnumerable<InnerGroupObject>)obj)
+                    var groups = (ReactiveList<InnerGroupObject>)obj;
+
+                    foreach (var group in groups)
                     {
                         result.Add(group);
                     }
+
+                    groups.Changed.Subscribe(x => OnCollectionChanged<InnerGroupObject>(result, x));
                 }
-                else if (obj is IEnumerable<NoteObject>)
+                else if (obj is ReactiveList<NoteObject>)
                 {
-                    foreach (var note in (IEnumerable<NoteObject>)obj)
+                    var notes = (ReactiveList<NoteObject>)obj;
+
+                    foreach (var note in notes)
                     {
                         result.Add(note);
                     }
+
+                    notes.Changed.Subscribe(x => OnCollectionChanged<NoteObject>(result, x));
                 }
             }
 
@@ -51,6 +63,28 @@ namespace DriveHUD.PlayerXRay.Converters
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
             return new[] { DependencyProperty.UnsetValue };
+        }
+
+        private void OnCollectionChanged<T>(ReactiveList<object> result, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == NotifyCollectionChangedAction.Add && e.NewItems != null)
+            {
+                var addedItems = e.NewItems.OfType<T>();
+
+                if (addedItems != null)
+                {
+                    addedItems.ForEach(p => result.Add(p));
+                }
+            }
+            else if (e.Action == NotifyCollectionChangedAction.Remove && e.OldItems != null)
+            {
+                var removedItems = e.OldItems.OfType<T>();
+
+                if (removedItems != null)
+                {
+                    removedItems.ForEach(p => result.Remove(p));
+                }
+            }
         }
 
         #endregion

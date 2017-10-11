@@ -279,7 +279,6 @@
 
         </ResourceDictionary>
     </UserControl.Resources>
-
     <Grid
         Margin="8,9,8,9">
 
@@ -312,6 +311,8 @@
                         Height="40" />
                     <RowDefinition
                         Height="*" />
+                    <RowDefinition
+                        Height="33" />
                 </Grid.RowDefinitions>
 
                 <Border
@@ -393,6 +394,107 @@
                         </DataTemplate>
                     </TreeView.Resources>
                 </TreeView>
+
+                <Border
+                    Grid.Row="2"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1"
+                    Background="{StaticResource BorderBrush}">
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="7"
+                            ShadowDepth="0"
+                            Color="{DynamicResource DropShadowColor}" />
+                    </Border.Effect>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button
+                            Style="{StaticResource SimpleImageButtonStyle}"
+                            HorizontalAlignment="Center"
+                            Command="{Binding AddNoteCommand}"
+                            Visibility="{Binding SelectedNote, Converter={dh:NullToVisibilityConverter}, ConverterParameter=1}"
+                            VerticalAlignment="Center">
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="/DriveHUD.PlayerXRay;component/Resources/EditButton.png"
+                                    Height="20"
+                                    Width="19" />
+                                <TextBlock
+                                    Margin="8,0,0,0"
+                                    FontSize="12"
+                                    Text="ADD" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button
+                            Style="{StaticResource SimpleImageButtonStyle}"
+                            HorizontalAlignment="Center"
+                            Command="{Binding EditNoteCommand}"
+                            Visibility="{Binding SelectedNote, Converter={dh:NullToVisibilityConverter}}"
+                            VerticalAlignment="Center">
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="/DriveHUD.PlayerXRay;component/Resources/EditButton.png"
+                                    Height="20"
+                                    Width="19" />
+                                <TextBlock
+                                    Margin="8,0,0,0"
+                                    FontSize="12"
+                                    Text="EDIT" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button
+                            Grid.Column="1"
+                            Style="{StaticResource SimpleImageButtonStyle}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="/DriveHUD.PlayerXRay;component/Resources/ExportButton.png"
+                                    Height="20"
+                                    Width="20" />
+                                <TextBlock
+                                    Margin="8,0,0,0"
+                                    FontSize="12"
+                                    Text="EXPORT" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button
+                            Grid.Column="2"
+                            Style="{StaticResource SimpleImageButtonStyle}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Command="{Binding RemoveNoteCommand}">
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="/DriveHUD.PlayerXRay;component/Resources/DeleteButton.png"
+                                    Height="20"
+                                    Width="16" />
+                                <TextBlock
+                                    Margin="8,0,0,0"
+                                    FontSize="12"
+                                    Text="DELETE" />
+                            </StackPanel>
+                        </Button>
+
+                    </Grid>
+
+                </Border>
 
             </Grid>
 
@@ -1286,35 +1388,35 @@
                                     Grid.Row="2"
                                     Grid.Column="1"
                                     Style="{StaticResource ComboBoxStyle}"
-                                    SelectedItem="{Binding FirstAction}"
+                                    SelectedItem="{Binding CurrentActionSettings.FirstType}"
                                     ItemsSource="{Binding FirstActions}" />
 
                                 <ComboBox
                                     Grid.Row="3"
                                     Grid.Column="1"
                                     Style="{StaticResource ComboBoxStyle}"
-                                    SelectedItem="{Binding SecondAction}"
+                                    SelectedItem="{Binding CurrentActionSettings.SecondType}"
                                     ItemsSource="{Binding SecondActions}" />
 
                                 <ComboBox
                                     Grid.Row="4"
                                     Grid.Column="1"
                                     Style="{StaticResource ComboBoxStyle}"
-                                    SelectedItem="{Binding ThirdAction}"
+                                    SelectedItem="{Binding CurrentActionSettings.ThirdType}"
                                     ItemsSource="{Binding ThirdActions}" />
 
                                 <ComboBox
                                     Grid.Row="5"
                                     Grid.Column="1"
                                     Style="{StaticResource ComboBoxStyle}"
-                                    SelectedItem="{Binding FourthAction}"
+                                    SelectedItem="{Binding CurrentActionSettings.FourthType}"
                                     ItemsSource="{Binding FourthActions}" />
 
                                 <StackPanel
                                     Grid.Row="2"
                                     Grid.Column="2"
                                     Orientation="Horizontal"
-                                    Visibility="{Binding FirstAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+                                    Visibility="{Binding CurrentActionSettings.FirstType, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
 
                                     <TextBlock
                                         Text="between" />
@@ -1325,7 +1427,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.FirstMinValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1338,7 +1440,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.FirstMaxValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1351,7 +1453,7 @@
                                     Grid.Row="3"
                                     Grid.Column="2"
                                     Orientation="Horizontal"
-                                    Visibility="{Binding SecondAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+                                    Visibility="{Binding CurrentActionSettings.SecondType, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
 
                                     <TextBlock
                                         Text="between" />
@@ -1362,7 +1464,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.SecondMinValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1375,7 +1477,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.SecondMaxValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1388,7 +1490,7 @@
                                     Grid.Row="4"
                                     Grid.Column="2"
                                     Orientation="Horizontal"
-                                    Visibility="{Binding ThirdAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+                                    Visibility="{Binding CurrentActionSettings.ThirdType, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
 
                                     <TextBlock
                                         Text="between" />
@@ -1399,7 +1501,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.ThirdMinValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1412,7 +1514,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.ThirdMaxValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1425,7 +1527,7 @@
                                     Grid.Row="5"
                                     Grid.Column="2"
                                     Orientation="Horizontal"
-                                    Visibility="{Binding FourthAction, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
+                                    Visibility="{Binding CurrentActionSettings.FourthType, Converter={StaticResource ActionToBetweenVisibilityConverter}}">
 
                                     <TextBlock
                                         Text="between" />
@@ -1436,7 +1538,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.FourthMinValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1449,7 +1551,7 @@
                                         Maximum="100"
                                         Increment="0.1"
                                         Width="55"
-                                        Value="0"
+                                        Value="{Binding CurrentActionSettings.FourthMaxValue}"
                                         FormatString="F1" />
 
                                     <TextBlock
@@ -1582,7 +1684,7 @@
 
                                     <TreeView.ItemTemplate>
                                         <HierarchicalDataTemplate
-                                            ItemsSource="{Binding Path=Items}"                                            
+                                            ItemsSource="{Binding Path=Items}"
                                             ItemTemplate="{StaticResource FilterTemplate}">
                                             <TextBlock
                                                 Text="{Binding Name}"

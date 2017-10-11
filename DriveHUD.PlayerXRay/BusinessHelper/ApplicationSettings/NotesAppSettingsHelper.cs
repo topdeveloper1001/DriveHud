@@ -1,14 +1,21 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="NotesAppSettingsHelper.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
+using AcePokerSolutions.Helpers;
+using DriveHUD.Common.Log;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Windows;
-using AcePokerSolutions.Helpers;
-using DriveHUD.Common.Log;
 using System.Windows.Controls;
-
-#endregion
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 {
@@ -24,7 +31,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 
         public static NotesAppSettings CurrentNotesAppSettings { get; private set; }
 
-        public static ContentControl MainWindow { get; set; }   
+        public static ContentControl MainWindow { get; set; }
 
         private static string AppDataPath
         {
@@ -59,8 +66,15 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 
         public static void SaveAppSettings()
         {
-            string xml = Serializer.ToXml(CurrentNotesAppSettings, typeof(NotesAppSettings));
-            File.WriteAllText(ConfigurationFilePath, xml);
+            try
+            {
+                var xml = Serializer.ToXml(CurrentNotesAppSettings, typeof(NotesAppSettings));
+                File.WriteAllText(ConfigurationFilePath, xml);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(NotesAppSettingsHelper), $"Couldn't save setting into '{ConfigurationFilePath}'", e);
+            }
         }
 
         public static void LoadAppSettings()
@@ -81,8 +95,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
                 SaveAppSettings();
             }
 
-            if (CurrentNotesAppSettings.StagesList == null || CurrentNotesAppSettings.StagesList.Count == 0)
+            if (CurrentNotesAppSettings.StagesList == null ||
+                CurrentNotesAppSettings.StagesList.Count == 0)
+            {
                 InitializeDefaultNotes();
+            }
         }
 
         #endregion

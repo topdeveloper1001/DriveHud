@@ -35,8 +35,7 @@ namespace DriveHUD.Common.Wpf.Actions
         /// <summary>
         /// The name of view of the child window to display
         /// </summary>
-        public static readonly DependencyProperty ViewNameProperty =
-        DependencyProperty.Register(
+        public static readonly DependencyProperty ViewNameProperty = DependencyProperty.Register(
             "ViewName",
             typeof(string),
             typeof(PopupAction<T>),

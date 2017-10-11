@@ -24,6 +24,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Events;
+using DriveHUD.PlayerXRay.Events;
+using DriveHUD.PlayerXRay.Views;
 
 namespace DriveHUD.PlayerXRay
 {
@@ -33,15 +36,21 @@ namespace DriveHUD.PlayerXRay
 
         private readonly SingletonStorageModel storageModel;
 
+        private readonly IEventAggregator eventAggregator;
+
         public PlayerXRayMainViewModel()
         {
             title = "Player X-Ray";
+
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
             workspaces = new Dictionary<WorkspaceType, WorkspaceViewModel>();
             storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
             NavigateCommand = ReactiveCommand.Create();
             NavigateCommand.Subscribe(x => Navigate((WorkspaceType)x));
+
+            eventAggregator.GetEvent<RaisePopupEvent>().Subscribe(RaisePopup);
         }
 
         public void Initialize()
@@ -91,6 +100,49 @@ namespace DriveHUD.PlayerXRay
             {
                 this.RaiseAndSetIfChanged(ref workspace, value);
             }
+        }
+
+        private string popupTitle;
+
+        public string PopupTitle
+        {
+            get
+            {
+                return popupTitle;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref popupTitle, value);
+            }
+        }
+
+        private object popupContent;
+
+        public object PopupContent
+        {
+            get
+            {
+                return popupContent;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref popupContent, value);
+            }
+        }
+
+        private bool popupIsOpen;
+
+        public bool PopupIsOpen
+        {
+            get
+            {
+                return popupIsOpen;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref popupIsOpen, value);
+            }
+
         }
 
         #endregion
@@ -172,6 +224,27 @@ namespace DriveHUD.PlayerXRay
 
             workspaces.Add(workspaceType, workspace);
             Workspace = workspace;
+        }
+
+        private void RaisePopup(RaisePopupEventArgs e)
+        {
+            var containerView = e.Content as IPopupContainerView;
+
+            if (containerView != null && containerView.ViewModel != null)
+            {
+                containerView.ViewModel.FinishInteraction = () => ClosePopup();
+            }
+
+            PopupTitle = e.Title;
+            PopupContent = containerView;
+            PopupIsOpen = true;
+        }
+
+        private void ClosePopup()
+        {
+            PopupIsOpen = false;
+            PopupContent = null;
+            PopupTitle = null;
         }
 
         #endregion

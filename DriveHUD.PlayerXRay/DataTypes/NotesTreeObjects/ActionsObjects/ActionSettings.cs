@@ -1,27 +1,92 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="ActionSettings.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
+using ReactiveUI;
 using System.Collections.Generic;
-
-#endregion
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
 {
-    public class ActionSettings
+    public class ActionSettings : ReactiveObject
     {
-        public ActionTypeEnum FirstType { get; set; }
+        private ActionTypeEnum firstType;
+
+        public ActionTypeEnum FirstType
+        {
+            get
+            {
+                return firstType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref firstType, value);
+            }
+        }
+
         public double FirstMinValue { get; set; }
+
         public double FirstMaxValue { get; set; }
 
-        public ActionTypeEnum SecondType { get; set; }
+        private ActionTypeEnum secondType;
+
+        public ActionTypeEnum SecondType
+        {
+            get
+            {
+                return secondType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref secondType, value);
+            }
+        }
+
         public double SecondMinValue { get; set; }
+
         public double SecondMaxValue { get; set; }
 
-        public ActionTypeEnum ThirdType { get; set; }
+        private ActionTypeEnum thirdType;
+
+        public ActionTypeEnum ThirdType
+        {
+            get
+            {
+                return thirdType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref thirdType, value);
+            }
+        }
+
         public double ThirdMinValue { get; set; }
+
         public double ThirdMaxValue { get; set; }
 
-        public ActionTypeEnum FourthType { get; set; }
+        private ActionTypeEnum fourthType;
+
+        public ActionTypeEnum FourthType
+        {
+            get
+            {
+                return fourthType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref fourthType, value);
+            }
+        }
+
         public double FourthMinValue { get; set; }
+
         public double FourthMaxValue { get; set; }
 
         public bool Equals(ActionSettings x2)
@@ -50,27 +115,32 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                 FourthType == ActionTypeEnum.Any)
                 return null;
 
-            List<long> result = new List<long>();
+            var result = new List<long>();
 
-            List<string> values = new List<string>();
+            var values = new List<string>();
 
             switch (FirstType)
             {
                 case ActionTypeEnum.Bet:
                     values.Add("Bet");
                     break;
+
                 case ActionTypeEnum.Call:
                     values.Add("Call");
                     break;
+
                 case ActionTypeEnum.Raise:
                     values.Add("Raise");
                     break;
+
                 case ActionTypeEnum.Check:
                     values.Add("Check");
                     break;
+
                 case ActionTypeEnum.Fold:
                     values.Add("Fold");
-                    goto End;
+                    return result;
+
                 case ActionTypeEnum.Any:
                     values.Add("Bet");
                     values.Add("Call");
@@ -87,19 +157,25 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                     {
                         values[i] += "Call";
                     }
+
                     break;
+
                 case ActionTypeEnum.Raise:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Raise";
                     }
                     break;
+
+
                 case ActionTypeEnum.Fold:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Fold";
                     }
-                    goto End;
+
+                    return result;
+
                 case ActionTypeEnum.Any:
                     if (ThirdType == ActionTypeEnum.Any &&
                         FourthType == ActionTypeEnum.Any)
@@ -114,6 +190,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                         values.Add(val + "Raise");
                         values.Add(val + "Fold");
                     }
+
                     break;
             }
 
@@ -124,19 +201,25 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                     {
                         values[i] += "Call";
                     }
+
                     break;
+
                 case ActionTypeEnum.Raise:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Raise";
                     }
+
                     break;
+
                 case ActionTypeEnum.Fold:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Fold";
                     }
-                    goto End;
+
+                    return result;
+
                 case ActionTypeEnum.Any:
                     if (FourthType == ActionTypeEnum.Any)
                         break;
@@ -150,6 +233,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                         values.Add(val + "Raise");
                         values.Add(val + "Fold");
                     }
+
                     break;
             }
 
@@ -160,19 +244,25 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                     {
                         values[i] += "Call";
                     }
+
                     break;
+
                 case ActionTypeEnum.Raise:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Raise";
                     }
+
                     break;
+
                 case ActionTypeEnum.Fold:
                     for (int i = 0; i < values.Count; i++)
                     {
                         values[i] += "Fold";
                     }
-                    goto End;
+
+                    return result;
+
                 case ActionTypeEnum.Any:
                     List<string> tempList = new List<string>(values);
                     values.Clear();
@@ -460,7 +550,6 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects
                 }
             }
 
-            End:
             return result;
         }
     }

@@ -31,7 +31,14 @@ namespace DriveHUD.Common.Wpf.Converters
 
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return value == null ? NullVisibility : NotNullVisibility;
+            var result = value == null;
+
+            if (parameter != null)
+            {
+                result = !result;
+            }
+
+            return result ? NullVisibility : NotNullVisibility;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

@@ -213,6 +213,26 @@ namespace DriveHUD.PlayerXRay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DeleteButton {
+            get {
+                object obj = ResourceManager.GetObject("DeleteButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditButton {
+            get {
+                object obj = ResourceManager.GetObject("EditButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expandIcon {
             get {
                 object obj = ResourceManager.GetObject("expandIcon", resourceCulture);
@@ -226,6 +246,16 @@ namespace DriveHUD.PlayerXRay.Properties {
         internal static System.Drawing.Bitmap export {
             get {
                 object obj = ResourceManager.GetObject("export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ExportButton {
+            get {
+                object obj = ResourceManager.GetObject("ExportButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

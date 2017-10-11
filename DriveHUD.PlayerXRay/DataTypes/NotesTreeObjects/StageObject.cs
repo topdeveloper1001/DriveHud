@@ -19,8 +19,8 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
     {
         public StageObject()
         {
-            innerGroups = new ObservableCollection<InnerGroupObject>();
-            notes = new ObservableCollection<NoteObject>();
+            innerGroups = new ReactiveList<InnerGroupObject>();
+            notes = new ReactiveList<NoteObject>();
         }
 
         private NoteStageType stageType;
@@ -37,9 +37,9 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
             }
         }
 
-        private ObservableCollection<InnerGroupObject> innerGroups;
+        private ReactiveList<InnerGroupObject> innerGroups;
 
-        public ObservableCollection<InnerGroupObject> InnerGroups
+        public ReactiveList<InnerGroupObject> InnerGroups
         {
             get
             {
@@ -51,9 +51,9 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
             }
         }
 
-        private ObservableCollection<NoteObject> notes;
+        private ReactiveList<NoteObject> notes;
 
-        public ObservableCollection<NoteObject> Notes
+        public ReactiveList<NoteObject> Notes
         {
             get
             {

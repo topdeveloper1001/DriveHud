@@ -168,73 +168,85 @@
                 Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel
+        <ScrollViewer
             Grid.Row="0"
-            Orientation="Vertical"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center">
+            VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
 
-            <Image
-                Source="/DriveHUD.PlayerXRay;component/Resources/PlayerXRayBigLogo.png"
-                Width="460"
-                Height="193" />
+                <Image
+                    Source="/DriveHUD.PlayerXRay;component/Resources/PlayerXRayBigLogo.png"
+                    Width="460"
+                    Height="193" />
 
-            <Border
-                BorderBrush="{StaticResource BorderBrush}"
-                Background="{StaticResource PanelBackgroundBrush}"
-                Height="75"
-                Margin="0,49,0,49"
-                BorderThickness="1"
-                CornerRadius="1">
+                <Border
+                    Grid.Row="1"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    Background="{StaticResource PanelBackgroundBrush}"
+                    Height="75"
+                    Width="460"
+                    Margin="0,10,0,10"
+                    BorderThickness="1"
+                    CornerRadius="1">
 
-                <Grid>
+                    <Grid>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition
-                            Width="*" />
-                        <ColumnDefinition
-                            Width="*" />
-                        <ColumnDefinition
-                            Width="*" />
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <RadioButton
-                        Grid.Column="0"
-                        HorizontalAlignment="Center"
-                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByProfile}}"
-                        Style="{StaticResource RadioButtonNormalStyle}"
-                        GroupName="RunByGroup"
-                        Content="By Profile" />
+                        <RadioButton
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByProfile}}"
+                            Style="{StaticResource RadioButtonNormalStyle}"
+                            GroupName="RunByGroup"
+                            Content="By Profile" />
 
-                    <RadioButton
-                        Grid.Column="1"
-                        HorizontalAlignment="Center"
-                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByNote}}"
-                        Style="{StaticResource RadioButtonNormalStyle}"
-                        GroupName="RunByGroup"
-                        Content="By Note" />
+                        <RadioButton
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByNote}}"
+                            Style="{StaticResource RadioButtonNormalStyle}"
+                            GroupName="RunByGroup"
+                            Content="By Note" />
 
-                    <RadioButton
-                        Grid.Column="2"
-                        HorizontalAlignment="Center"
-                        IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.AllNotes}}"
-                        Style="{StaticResource RadioButtonNormalStyle}"
-                        GroupName="RunByGroup"
-                        Content="All Notes" />
+                        <RadioButton
+                            Grid.Column="2"
+                            HorizontalAlignment="Center"
+                            IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.AllNotes}}"
+                            Style="{StaticResource RadioButtonNormalStyle}"
+                            GroupName="RunByGroup"
+                            Content="All Notes" />
 
-                </Grid>
+                    </Grid>
 
-            </Border>
+                </Border>
 
-            <Button
-                Content="START"
-                Width="172"
-                Height="59"
-                FontSize="24"
-                IsEnabled="{Binding IsRunning, Converter={dh:BoolNotConverter}}"
-                Command="{Binding RunCommand}" />
+                <Button
+                    Grid.Row="2"
+                    Content="START"
+                    Width="172"
+                    Height="59"
+                    FontSize="24"
+                    IsEnabled="{Binding IsRunning, Converter={dh:BoolNotConverter}}"
+                    Command="{Binding RunCommand}" />
 
-        </StackPanel>
+            </Grid>
+
+        </ScrollViewer>
 
         <Border
             Grid.Row="1"
@@ -267,7 +279,7 @@
                             Padding="10,0,0,0"
                             Height="24">
 
-                            <TextBlock                                
+                            <TextBlock
                                 FontSize="12"
                                 Text="Profiles" />
 
@@ -369,7 +381,7 @@
                                 <HierarchicalDataTemplate
                                     DataType="{x:Type nt:StageObject}">
                                     <TextBlock
-                                        Text="{Binding StageType}"                                        
+                                        Text="{Binding StageType}"
                                         Margin="3,0,0,0" />
                                     <HierarchicalDataTemplate.ItemsSource>
                                         <MultiBinding
@@ -385,7 +397,7 @@
                                     DataType="{x:Type nt:InnerGroupObject}"
                                     ItemsSource="{Binding Notes}">
                                     <TextBlock
-                                        Text="{Binding Name}"                                        
+                                        Text="{Binding Name}"
                                         Margin="3,0,0,0" />
                                 </HierarchicalDataTemplate>
                                 <DataTemplate

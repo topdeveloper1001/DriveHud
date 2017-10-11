@@ -144,9 +144,12 @@
     <Compile Include="Controls\MenuButton.cs" />
     <Compile Include="Converters\ActionToBetweenVisibilityConverter.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
+    <Compile Include="Converters\PopupBehavior.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />
     <Compile Include="DataTypes\FiltersHelper.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
+    <Compile Include="Events\RaisePopupEvent.cs" />
+    <Compile Include="Events\RaisePopupEventArgs.cs" />
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />
@@ -184,13 +187,23 @@
     <Compile Include="UIControls\VisualStates.cs" />
     <Compile Include="ViewModels\HelpViewModel.cs" />
     <Compile Include="ViewModels\HoleCardsViewModel.cs" />
+    <Compile Include="ViewModels\IPopupInteractionAware.cs" />
     <Compile Include="ViewModels\NotesViewModel.cs" />
+    <Compile Include="ViewModels\PopupViewModels\AddEditNoteViewModel.cs" />
+    <Compile Include="ViewModels\PopupViewModels\YesNoConfirmationViewModel.cs" />
     <Compile Include="ViewModels\ProfilesViewModel.cs" />
     <Compile Include="ViewModels\RunMode.cs" />
     <Compile Include="ViewModels\RunViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Views\IPopupContainerView.cs" />
     <Compile Include="Views\NotesView.xaml.cs">
       <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupViews\AddEditNoteView.xaml.cs">
+      <DependentUpon>AddEditNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupViews\YesNoConfirmationView.xaml.cs">
+      <DependentUpon>YesNoConfirmationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProfilesView.xaml.cs">
       <DependentUpon>ProfilesView.xaml</DependentUpon>
@@ -467,6 +480,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PopupViews\AddEditNoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupViews\YesNoConfirmationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ProfilesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -582,6 +603,16 @@
   <ItemGroup>
     <Resource Include="Resources\ArrowRight.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DeleteButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ExportButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditButton.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,10 +14,17 @@ using DriveHUD.Common.Linq;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
+using DriveHUD.PlayerXRay.Events;
+using DriveHUD.PlayerXRay.ViewModels.PopupViewModels;
+using DriveHUD.PlayerXRay.Views.PopupViews;
+using Microsoft.Practices.ServiceLocation;
+using Prism.Events;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Windows.Data;
@@ -26,8 +33,12 @@ namespace DriveHUD.PlayerXRay.ViewModels
 {
     public class NotesViewModel : WorkspaceViewModel
     {
+        private readonly IEventAggregator eventAggregator;
+
         public NotesViewModel()
         {
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
             InitializeStages();
             InitializeHoleCardsCollection();
             InitializeCommands();
@@ -57,13 +68,72 @@ namespace DriveHUD.PlayerXRay.ViewModels
             filtersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(filters);
             filtersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObject.Stage)));
 
-            selectedFilters = new ObservableCollection<FilterObject>();
+            selectedFilters = new ReactiveList<FilterObject>();
+            selectedFilters.Changed.Subscribe(x =>
+            {
+                if (SelectedNote == null || SelectedNote.Settings == null)
+                {
+                    return;
+                }
+
+                if (x.Action == NotifyCollectionChangedAction.Add)
+                {
+                    var addedItems = x.NewItems.OfType<FilterObject>();
+
+                    if (addedItems != null)
+                    {
+                        foreach (var addedItem in addedItems)
+                        {
+                            if (!SelectedNote.Settings.SelectedFilters.Any(f => f.Filter == addedItem.Filter))
+                            {
+                                SelectedNote.Settings.SelectedFilters.Add(addedItem);
+                            }
+                        }
+                    }
+
+                }
+                else if (x.Action == NotifyCollectionChangedAction.Remove)
+                {
+                    var removedItems = x.OldItems.OfType<FilterObject>();
+
+                    if (removedItems != null)
+                    {
+                        foreach (var removeItem in removedItems)
+                        {
+                            var itemToRemove = SelectedNote.Settings
+                                .SelectedFilters
+                                .FirstOrDefault(f => f.Filter == removeItem.Filter);
+
+                            if (itemToRemove != null)
+                            {
+                                SelectedNote.Settings.SelectedFilters.Remove(itemToRemove);
+                            }
+                        }
+                    }
+                }
+            });
+
             selectedFiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(selectedFilters);
             selectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterObject.Stage)));
         }
 
         private void InitializeCommands()
         {
+            var canAdd = this.WhenAny(x => x.SelectedNote, x => x.SelectedStage, (x1, x2) => x1.Value == null && x2.Value != null);
+
+            AddNoteCommand = ReactiveCommand.Create(canAdd);
+            AddNoteCommand.Subscribe(x => AddNote());
+
+            var canEdit = this.WhenAny(x => x.SelectedNote, x => x.Value != null);
+
+            EditNoteCommand = ReactiveCommand.Create(canEdit);
+            EditNoteCommand.Subscribe(x => EditNote());
+
+            var canRemove = this.WhenAny(x => x.SelectedStage, x => (x.Value is InnerGroupObject) || (x.Value is NoteObject));
+
+            RemoveNoteCommand = ReactiveCommand.Create(canRemove);
+            RemoveNoteCommand.Subscribe(x => RemoveNote());
+
             SwitchModeCommand = ReactiveCommand.Create();
             SwitchModeCommand.Subscribe(x => IsAdvancedMode = !IsAdvancedMode);
 
@@ -211,6 +281,64 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 .Where(x => x.StageType == NoteStageType));
         }
 
+        private void LoadNote()
+        {
+            if (SelectedNote != null)
+            {
+                HoleCardsCollection.ForEach(x => x.IsChecked = !SelectedNote.Settings.ExcludedCardsList.Contains(x.Name));
+            }
+
+            RefreshCurrentActionSettings();
+            RefreshFiltersSettings();
+
+            this.RaisePropertyChanged(nameof(MBCWentToShowdown));
+            this.RaisePropertyChanged(nameof(MBCAllInPreFlop));
+        }
+
+        private void SaveNote()
+        {
+            NotesAppSettingsHelper.SaveAppSettings();
+        }
+
+        private void RefreshFiltersSettings()
+        {
+            if (SelectedNote == null || SelectedNote.Settings == null)
+            {
+                return;
+            }
+
+            selectedFilters.Clear();
+            SelectedNote.Settings.SelectedFilters.ForEach(x =>
+            {
+                x.IsSelected = false;
+                selectedFilters.Add(x);
+            });
+        }
+
+        private void RefreshCurrentActionSettings()
+        {
+            if (SelectedNote == null || SelectedNote.Settings == null)
+            {
+                return;
+            }
+
+            switch (ActionStageType)
+            {
+                case NoteStageType.PreFlop:
+                    CurrentActionSettings = SelectedNote.Settings.PreflopActions;
+                    return;
+                case NoteStageType.Flop:
+                    CurrentActionSettings = SelectedNote.Settings.FlopActions;
+                    return;
+                case NoteStageType.Turn:
+                    CurrentActionSettings = SelectedNote.Settings.TurnActions;
+                    return;
+                case NoteStageType.River:
+                    CurrentActionSettings = SelectedNote.Settings.RiverActions;
+                    return;
+            }
+        }
+
         #region Properties
 
         public override WorkspaceType WorkspaceType
@@ -275,6 +403,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref actionStageType, value);
+                RefreshCurrentActionSettings();
             }
         }
 
@@ -405,7 +534,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
-        private ObservableCollection<FilterObject> selectedFilters;
+        private ReactiveList<FilterObject> selectedFilters;
 
         private CollectionView selectedFiltersCollectionView;
 
@@ -446,20 +575,10 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
             private set
             {
+                SaveNote();
                 this.RaiseAndSetIfChanged(ref selectedNote, value);
                 LoadNote();
             }
-        }
-
-        private void LoadNote()
-        {
-            if (SelectedNote != null)
-            {
-                HoleCardsCollection.ForEach(x => x.IsChecked = !SelectedNote.Settings.ExcludedCardsList.Contains(x.Name));
-            }
-
-            this.RaisePropertyChanged(nameof(MBCWentToShowdown));
-            this.RaisePropertyChanged(nameof(MBCAllInPreFlop));
         }
 
         public bool MBCWentToShowdown
@@ -501,6 +620,20 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 }
 
                 this.RaisePropertyChanged();
+            }
+        }
+
+        private ActionSettings currentActionSettings;
+
+        public ActionSettings CurrentActionSettings
+        {
+            get
+            {
+                return currentActionSettings;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref currentActionSettings, value);
             }
         }
 
@@ -594,6 +727,98 @@ namespace DriveHUD.PlayerXRay.ViewModels
             {
                 HoleCardsCollection.ElementAt(i * length + i).IsChecked = true;
             }
+        }
+
+        private void AddNote()
+        {
+            var addNoteViewModel = new AddEditNoteViewModel();
+
+            addNoteViewModel.OnSaveAction = () =>
+            {
+                var note = new NoteObject
+                {
+                    Name = addNoteViewModel.Note,
+                    IsSelected = true
+                };
+
+                if (SelectedStage is StageObject)
+                {
+                    (SelectedStage as StageObject).Notes.Add(note);
+                }
+                else if (SelectedStage is InnerGroupObject)
+                {
+                    (SelectedStage as InnerGroupObject).Notes.Add(note);
+                }
+            };
+
+            var popupEventArgs = new RaisePopupEventArgs()
+            {
+                Title = "Add Note",
+                Content = new AddEditNoteView(addNoteViewModel)
+            };
+
+            eventAggregator.GetEvent<RaisePopupEvent>().Publish(popupEventArgs);
+        }
+
+        private void EditNote()
+        {
+            var addNoteViewModel = new AddEditNoteViewModel
+            {
+                Note = SelectedNote.Name
+            };
+
+            addNoteViewModel.OnSaveAction = () =>
+            {
+                SelectedNote.Name = addNoteViewModel.Note;
+            };
+
+            var popupEventArgs = new RaisePopupEventArgs()
+            {
+                Title = "Edit Note",
+                Content = new AddEditNoteView(addNoteViewModel)
+            };
+
+            eventAggregator.GetEvent<RaisePopupEvent>().Publish(popupEventArgs);
+        }
+
+        private void RemoveNote()
+        {
+            var confirmationViewModel = new YesNoConfirmationViewModel
+            {
+                ConfirmationMessage = "Are you sure you want to delete the selected item?"
+            };
+
+            confirmationViewModel.OnYesAction = () =>
+            {
+                foreach (var stage in Stages)
+                {
+                    if (SelectedStage is NoteObject)
+                    {
+                        var noteToRemove = SelectedStage as NoteObject;
+
+                        stage.Notes.Remove(noteToRemove);
+
+                        foreach (var group in stage.InnerGroups)
+                        {
+                            group.Notes.Remove(noteToRemove);
+                        }
+                    }
+                    else if (SelectedStage is InnerGroupObject)
+                    {
+                        var groupToRemove = SelectedStage as InnerGroupObject;
+
+                        stage.InnerGroups.Remove(groupToRemove);
+                    }
+                }
+            };
+
+            var popupEventArgs = new RaisePopupEventArgs()
+            {
+                Title = "Confirm Delete",
+                Content = new YesNoConfirmationView(confirmationViewModel)
+            };
+
+            eventAggregator.GetEvent<RaisePopupEvent>().Publish(popupEventArgs);
         }
 
         #endregion
