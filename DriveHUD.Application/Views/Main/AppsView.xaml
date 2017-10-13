@@ -15,6 +15,7 @@
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.AppStore"
     xmlns:view="clr-namespace:DriveHUD.Application.Views.AppStore"
     xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     HorizontalAlignment="Stretch"
     VerticalAlignment="Stretch"
     d:DesignWidth="1920"
@@ -55,11 +56,11 @@
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=AppStoreViewModel.ViewRequest, Mode=OneWay}">
-            <infra:PopupTelerikWindowAction
+            <infra:PopupWindowAction
                 ViewName="PlayerXRayMainView">
-                <infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupWindowAction.WindowStyle>
                     <Style
-                        TargetType="{x:Type telerik:RadWindow}">
+                        TargetType="{x:Type Window}">
                         <Setter
                             Property="Foreground"
                             Value="{StaticResource ForegroundBrush}" />
@@ -82,17 +83,20 @@
                             Property="UseLayoutRounding"
                             Value="True" />
                         <Setter
-                            Property="IconTemplate"
-                            Value="{StaticResource IconTemplate}" />
+                            Property="ShowInTaskbar"
+                            Value="True" />
+                        <Setter
+                            Property="Icon"
+                            Value="{markupext:IconExtension  /images/drivehud.ico, 32}" />
                     </Style>
-                </infra:PopupTelerikWindowAction.WindowStyle>
-                <infra:PopupTelerikWindowAction.IsModal>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <system:Boolean>False</system:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
                     <system:Boolean>True</system:Boolean>
-                </infra:PopupTelerikWindowAction.IsModal>
-                <infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-                    <system:Boolean>True</system:Boolean>
-                </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
-            </infra:PopupTelerikWindowAction>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+            </infra:PopupWindowAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 

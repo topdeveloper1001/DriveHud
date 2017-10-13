@@ -20,6 +20,7 @@ namespace DriveHUD.Entities
         PokerStars,
         Poker888,
         PartyPoker,
-        IPoker
+        IPoker,
+        Unknown
     }
 }

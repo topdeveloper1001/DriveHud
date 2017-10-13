@@ -17,8 +17,7 @@ namespace DriveHUD.Entities
     public partial class Playernotes
     {
         public virtual int PlayerNoteId { get; set; }
-
-        [Required]
+     
         public virtual Players Player { get; set; }
 
         public virtual string Note { get; set; }

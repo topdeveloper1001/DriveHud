@@ -78,12 +78,45 @@
 
         </StackPanel>
 
-        <StackPanel
-            IsEnabled="{Binding PopupIsOpen, Converter={dh:BoolNotConverter}}"
+        <StackPanel            
             Margin="14,0,0,0"
             Orientation="Horizontal"
             HorizontalAlignment="Left"
             Grid.Row="0">
+            <StackPanel.Style>
+                <Style
+                    TargetType="StackPanel">
+                    <Style.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Workspace.OperationInfo.IsBusy}"
+                            Value="True">
+                            <Setter
+                                Property="IsEnabled"
+                                Value="False" />
+                        </DataTrigger>
+                        <DataTrigger
+                            Binding="{Binding PopupIsOpen}"
+                            Value="True">
+                            <Setter
+                                Property="IsEnabled"
+                                Value="False" />
+                        </DataTrigger>
+                        <MultiDataTrigger >
+                            <MultiDataTrigger.Conditions>
+                                <Condition
+                                    Binding="{Binding Workspace.OperationInfo.IsBusy}"
+                                    Value="False" />
+                                <Condition
+                                    Binding="{Binding PopupIsOpen}"
+                                    Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter
+                                Property="IsEnabled"
+                                Value="True" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
 
             <ctl:MenuButton
                 Style="{StaticResource MenuButtonStyle}"

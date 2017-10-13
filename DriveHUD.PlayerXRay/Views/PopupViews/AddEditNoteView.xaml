@@ -42,7 +42,7 @@
             Margin="5,0,0,0"
             MaxLength="100"
             FontSize="12"
-            Text="{Binding Name}" />
+            Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
 
         <CheckBox
             Grid.Row="2"
@@ -65,7 +65,7 @@
                 Height="25"
                 Width="70"
                 Command="{Binding SaveCommand}"
-                Content="ADD" />
+                Content="SAVE" />
 
             <Button
                 Margin="10,0,0,0"

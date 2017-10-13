@@ -19,7 +19,9 @@ namespace DriveHUD.PlayerXRay.ViewModels.PopupViewModels
     {
         public AddEditNoteViewModel()
         {
-            SaveCommand = ReactiveCommand.Create();
+            var canSave = this.WhenAny(x => x.Name, x => !string.IsNullOrWhiteSpace(x.Value));
+
+            SaveCommand = ReactiveCommand.Create(canSave);
             SaveCommand.Subscribe(x =>
             {
                 OnSaveAction?.Invoke();

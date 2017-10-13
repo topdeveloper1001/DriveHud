@@ -47,36 +47,36 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
         
 
-        public static string GetPlayerPosition(string playerName, long gameNumber, int pokerSite, DateTime time)
-        {
-            string playerPosition = "";
+        //public static string GetPlayerPosition(string playerName, long gameNumber, int pokerSite, DateTime time)
+        //{
+        //    string playerPosition = "";
 
-            Playerstatistic[] result = { };
+        //    Playerstatistic[] result = { };
 
-            string url = Resources.WcfUrl + Resources.StatisticsPath
-                            + playerName + "/"
-                            + pokerSite + "/"
-                            + gameNumber;
-            WebRequest request = WebRequest.Create(url);
-            request.Method = "GET";
+        //    string url = Resources.WcfUrl + Resources.StatisticsPath
+        //                    + playerName + "/"
+        //                    + pokerSite + "/"
+        //                    + gameNumber;
+        //    WebRequest request = WebRequest.Create(url);
+        //    request.Method = "GET";
 
-            try
-            {
-                WebResponse response = request.GetResponse();
+        //    try
+        //    {
+        //        WebResponse response = request.GetResponse();
 
-                using (StreamReader stream = new StreamReader(response.GetResponseStream()))
-                {
-                    playerPosition = stream.ReadToEnd().Replace("\"", "");
-                }
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(typeof(DAL), "Player position failed to load", ex);
-            }
+        //        using (StreamReader stream = new StreamReader(response.GetResponseStream()))
+        //        {
+        //            playerPosition = stream.ReadToEnd().Replace("\"", "");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogProvider.Log.Error(typeof(DAL), "Player position failed to load", ex);
+        //    }
 
-            return playerPosition;
+        //    return playerPosition;
 
-        }     
+        //}     
 
         private static string GetDriveHudCurrentPlayer(out string playerName)
         {

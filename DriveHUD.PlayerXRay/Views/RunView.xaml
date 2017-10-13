@@ -157,6 +157,9 @@
             <cnv:TreeMultiBindingConverter
                 x:Key="TreeMultiBindingConverter" />
 
+            <cnv:StatusToColorConverter
+                x:Key="StatusToColorConverter" />
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -451,8 +454,9 @@
 
                                 <TextBlock
                                     FontSize="12"
-                                    Foreground="#6e45d7"
-                                    Text="Idle" />
+                                    Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
+                                    Text="{Binding Status}" />
+
                             </StackPanel>
 
                         </Border>

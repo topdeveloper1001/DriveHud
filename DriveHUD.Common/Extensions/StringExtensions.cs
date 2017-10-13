@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -35,6 +36,24 @@ namespace DriveHUD.Common.Extensions
         public static string RemoveControlChars(this string text)
         {
             return new string(text.Where(c => !char.IsControl(c)).ToArray());
+        }
+
+        public static IEnumerable<string> GetLines(this string str, bool removeEmptyLines = false)
+        {
+            using (var sr = new StringReader(str))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (removeEmptyLines && string.IsNullOrWhiteSpace(line))
+                    {
+                        continue;
+                    }
+
+                    yield return line;
+                }
+            }
         }
     }
 }

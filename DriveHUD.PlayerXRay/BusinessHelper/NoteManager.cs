@@ -22,6 +22,7 @@ using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -588,18 +589,23 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
         private static List<PlayerstatisticExtended> FilterByPositionRaiserCondition(List<PlayerstatisticExtended> playerStatistics, NoteSettingsObject settings)
         {
-            List<PlayerstatisticExtended> fileteredList = new List<PlayerstatisticExtended>();
-
-            //if everything is unchecked return entry list of Playerstatistics
-            if (!settings.PositionBBRaiser && !settings.PositionButtonRaiser && !settings.PositionCutoffRaiser && !settings.PositionEarlyRaiser && !settings.PositionMiddleRaiser && !settings.PositionSBRaiser)
+            // if everything is unchecked return entry list of Playerstatistics
+            if (!settings.PositionBBRaiser && !settings.PositionButtonRaiser &&
+                !settings.PositionCutoffRaiser && !settings.PositionEarlyRaiser &&
+                !settings.PositionMiddleRaiser && !settings.PositionSBRaiser)
+            {
                 return playerStatistics;
+            }
+
+            var fileteredList = new List<PlayerstatisticExtended>();
 
             foreach (var playerStatistic in playerStatistics)
             {
-                List<HandAction> facedHandActions = new List<HandAction>();
+                var facedHandActions = new List<HandAction>();
 
-                foreach (HandAction hA in playerStatistic.HandHistory.HandActions
-                    .Where(hA => hA.HandActionType != HandActionType.SMALL_BLIND && hA.HandActionType != HandActionType.BIG_BLIND))
+                foreach (var hA in playerStatistic.HandHistory.HandActions
+                    .Where(hA => hA.HandActionType != HandActionType.SMALL_BLIND && hA.HandActionType != HandActionType.BIG_BLIND &&
+                            hA.HandActionType != HandActionType.ANTE && hA.HandActionType != HandActionType.POSTS))
                 {
                     if (hA.PlayerName != playerStatistic.Playerstatistic.PlayerName)
                     {
@@ -610,16 +616,31 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                         break;
                     }
                 }
-                HandAction handAction = facedHandActions.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE);
-                string positionFirstRaiser = "";
+
+                var handAction = facedHandActions.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE);
+
+                var firstRaiserPositionString = string.Empty;
 
                 if (handAction != null)
                 {
-                    positionFirstRaiser = DAL.GetPlayerPosition(handAction.PlayerName, playerStatistic.Playerstatistic.GameNumber, playerStatistic.Playerstatistic.PokersiteId, playerStatistic.Playerstatistic.Time);
+                    var firstRaiserPosition = Converter.ToPosition(playerStatistic.HandHistory, handAction.PlayerName);
+                    firstRaiserPositionString = Converter.ToPositionString(firstRaiserPosition);
                 }
 
-                if ((positionFirstRaiser == "SB" && settings.PositionSBRaiser) || (positionFirstRaiser == "BB" && settings.PositionBBRaiser) || (positionFirstRaiser == "EP" && settings.PositionEarlyRaiser) || (positionFirstRaiser == "MP" && settings.PositionMiddleRaiser) || (positionFirstRaiser == "CO" && settings.PositionCutoffRaiser) || (positionFirstRaiser == "BTN" && settings.PositionButtonRaiser))
+                if (string.IsNullOrEmpty(firstRaiserPositionString))
+                {
+                    return fileteredList;
+                }
+
+                if ((firstRaiserPositionString == "SB" && settings.PositionSBRaiser) ||
+                    (firstRaiserPositionString == "BB" && settings.PositionBBRaiser) ||
+                    (firstRaiserPositionString == "EP" && settings.PositionEarlyRaiser) ||
+                    (firstRaiserPositionString == "MP" && settings.PositionMiddleRaiser) ||
+                    (firstRaiserPositionString == "CO" && settings.PositionCutoffRaiser) ||
+                    (firstRaiserPositionString == "BTN" && settings.PositionButtonRaiser))
+                {
                     fileteredList.Add(playerStatistic);
+                }
             }
 
             return fileteredList;
@@ -628,34 +649,51 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
         private static List<PlayerstatisticExtended> FilterByPositionThreeBetCondition(List<PlayerstatisticExtended> playerStatistics, NoteSettingsObject settings)
         {
-            List<PlayerstatisticExtended> fileteredList = new List<PlayerstatisticExtended>();
-
-            if (!settings.PositionBB3Bet && !settings.PositionSB3Bet && !settings.PositionButton3Bet && !settings.PositionCutoff3Bet && !settings.PositionEarly3Bet && !settings.PositionMiddle3Bet)
+            if (!settings.PositionBB3Bet && !settings.PositionSB3Bet && !settings.PositionButton3Bet &&
+                    !settings.PositionCutoff3Bet && !settings.PositionEarly3Bet && !settings.PositionMiddle3Bet)
+            {
                 return playerStatistics;
+            }
+
+            var fileteredList = new List<PlayerstatisticExtended>();
 
             foreach (var playerStatistic in playerStatistics)
             {
-                List<HandAction> facedHandActions = new List<HandAction>();
+                var facedHandActions = new List<HandAction>();
 
-                foreach (HandAction hA in playerStatistic.HandHistory.HandActions.Where(hA => hA.HandActionType != HandActionType.SMALL_BLIND && hA.HandActionType != HandActionType.BIG_BLIND))
+                foreach (var hA in playerStatistic.HandHistory.HandActions
+                    .Where(hA => hA.HandActionType != HandActionType.SMALL_BLIND && hA.HandActionType != HandActionType.BIG_BLIND &&
+                            hA.HandActionType != HandActionType.ANTE && hA.HandActionType != HandActionType.POSTS))
                 {
                     if (hA.PlayerName != playerStatistic.Playerstatistic.PlayerName)
+                    {
                         facedHandActions.Add(hA);
+                    }
                     else
+                    {
                         break;
+                    }
                 }
 
-                int raisesNumber = facedHandActions.Count(x => x.HandActionType == HandActionType.RAISE);
+                var raisesNumber = facedHandActions.Count(x => x.HandActionType == HandActionType.RAISE);
 
                 if (raisesNumber < 2)
                     continue;
 
-                HandAction handAction = facedHandActions.Where(x => x.HandActionType == HandActionType.RAISE).ElementAt(1);
+                var handAction = facedHandActions.Where(x => x.HandActionType == HandActionType.RAISE).ElementAt(1);
 
-                string positionFirstRaiser = DAL.GetPlayerPosition(handAction?.PlayerName, playerStatistic.Playerstatistic.GameNumber, playerStatistic.Playerstatistic.PokersiteId, playerStatistic.Playerstatistic.Time);
+                var firstRaiserPosition = Converter.ToPosition(playerStatistic.HandHistory, handAction.PlayerName);
+                var firstRaiserPositionString = Converter.ToPositionString(firstRaiserPosition);
 
-                if ((positionFirstRaiser == "SB" && settings.PositionSB3Bet) || (positionFirstRaiser == "BB" && settings.PositionBB3Bet) || (positionFirstRaiser == "EP" && settings.PositionEarly3Bet) || (positionFirstRaiser == "MP" && settings.PositionMiddle3Bet) || (positionFirstRaiser == "CO" && settings.PositionCutoff3Bet) || (positionFirstRaiser == "BTN" && settings.PositionButton3Bet))
+                if ((firstRaiserPositionString == "SB" && settings.PositionSB3Bet) ||
+                    (firstRaiserPositionString == "BB" && settings.PositionBB3Bet) ||
+                    (firstRaiserPositionString == "EP" && settings.PositionEarly3Bet) ||
+                    (firstRaiserPositionString == "MP" && settings.PositionMiddle3Bet) ||
+                    (firstRaiserPositionString == "CO" && settings.PositionCutoff3Bet) ||
+                    (firstRaiserPositionString == "BTN" && settings.PositionButton3Bet))
+                {
                     fileteredList.Add(playerStatistic);
+                }
             }
 
             return fileteredList;
@@ -749,7 +787,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 cards.Add(playerstatistic.Playerstatistic.Cards);
             }
 
-            string card = "{"; //beginning of the note message
+            string card = "["; //beginning of the note message
 
             foreach (var c in cards.Where(x => !string.IsNullOrEmpty(x)))
             {
@@ -759,11 +797,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 }
                 else
                 {
-                    card += c + "}"; //closing part of the note message
+                    card += c + "]"; //closing part of the note message
                 }
             }
 
-            message += card + $" ({cards.Count})";
+            if (card.Length > 1)
+            {
+                message += card;
+            }
 
             return message;
         }

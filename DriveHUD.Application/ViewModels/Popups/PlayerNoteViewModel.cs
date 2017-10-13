@@ -85,6 +85,7 @@ namespace DriveHUD.Application.ViewModels.Popups
             if (PlayerNoteEntity == null)
             {
                 var player = _dataService.GetPlayer(PlayerName, PokersiteId);
+
                 if(player == null)
                 {
                     CloseAction?.Invoke();
@@ -93,7 +94,7 @@ namespace DriveHUD.Application.ViewModels.Popups
 
                 _playerNoteEntity = new Playernotes
                 {
-                    Player = _dataService.GetPlayer(PlayerName, PokersiteId),
+                    PlayerId = player.PlayerId,
                     PokersiteId = PokersiteId,
                 };
             }

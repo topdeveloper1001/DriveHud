@@ -216,7 +216,9 @@ namespace DriveHUD.Importers
 
             var pokerSite = (EnumPokerSites)handHistory.PokersiteId;
 
-            var handHistoryParser = pokerSite == EnumPokerSites.Unknown ?
+            var pokerSiteNetwork = EntityUtils.GetSiteNetwork(pokerSite);
+
+            var handHistoryParser = pokerSite == EnumPokerSites.Unknown || pokerSiteNetwork == EnumPokerNetworks.WPN ?
                 handHistoryParserFactory.GetFullHandHistoryParser(handHistory.HandhistoryVal) :
                 handHistoryParserFactory.GetFullHandHistoryParser(pokerSite);
 

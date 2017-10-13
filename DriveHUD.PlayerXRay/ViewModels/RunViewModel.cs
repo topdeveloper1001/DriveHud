@@ -165,6 +165,20 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private RunningStatus status;
+
+        public RunningStatus Status
+        {
+            get
+            {
+                return status;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref status, value);
+            }
+        }
+
         public ReactiveCommand<object> RunCommand { get; private set; }
 
         /// <summary>
@@ -178,6 +192,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
 
             IsRunning = true;
+            Status = RunningStatus.Processing;
 
             StartAsyncOperation(() =>
             {
@@ -210,6 +225,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             {
                 Progress = 100;
                 IsRunning = false;
+                Status = RunningStatus.Completed;
             });
         }
 
