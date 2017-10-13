@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+﻿using DriveHUD.Entities;
 using DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer;
 using DriveHUD.PlayerXRay.BusinessHelper.OtherAnalyzers;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
-using AcePokerSolutions.DataAccessHelper;
-using AcePokerSolutions.DataAccessHelper.DriveHUD;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class NoteManagerHelper
     {
-        public static List<Playerstatistic> HelperHandValueAnalyzer(Func<List<Card>, List<Card>, Street, bool> filter, Street targetStreet, List<Playerstatistic> incomingPlayerStatistics)
+        public static List<PlayerstatisticExtended> HelperHandValueAnalyzer(Func<List<DataTypes.Card>, List<DataTypes.Card>, Street, bool> filter, Street targetStreet, List<PlayerstatisticExtended> incomingPlayerStatistics)
         {
-            List<Playerstatistic> itemsAfterLocalFilter = new List<Playerstatistic>();
-            foreach (Playerstatistic playerstatistic in incomingPlayerStatistics)
+            List<PlayerstatisticExtended> itemsAfterLocalFilter = new List<PlayerstatisticExtended>();
+            foreach (var playerstatistic in incomingPlayerStatistics)
             {
-                if (!filter(BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(playerstatistic.Cards),
-                            BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(playerstatistic.Board),
+                if (!filter(BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(playerstatistic.Playerstatistic.Cards),
+                            BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(playerstatistic.Playerstatistic.Board),
                             targetStreet))
                     continue;
 
@@ -31,9 +29,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             return itemsAfterLocalFilter;
         }
 
-        public static List<Playerstatistic> HandValueFilterHelper(List<Playerstatistic> incomingPlayerStatistics, HandValueEnum handValueEnum, Street targetStreet)
+        public static List<PlayerstatisticExtended> HandValueFilterHelper(List<PlayerstatisticExtended> incomingPlayerStatistics, HandValueEnum handValueEnum, Street targetStreet)
         {
-            List<Playerstatistic> fileteredList = incomingPlayerStatistics;
+            List<PlayerstatisticExtended> fileteredList = incomingPlayerStatistics;
             switch (handValueEnum)
             {
 
@@ -224,14 +222,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     fileteredList = HelperHandValueAnalyzer(new StraightFlushOnBoardAnalyzer().Analyze, targetStreet, fileteredList);
                     break;
                 default:
-                    return new List<Playerstatistic>();
+                    return new List<PlayerstatisticExtended>();
             }
             return fileteredList;
         }
 
-        internal static List<Playerstatistic> HandValueFilterFlushDrawHelper(List<Playerstatistic> incomingPlayerStatistics, HandValueFlushDrawEnum handValueFlushDrawEnum, Street targetStreet)
+        internal static List<PlayerstatisticExtended> HandValueFilterFlushDrawHelper(List<PlayerstatisticExtended> incomingPlayerStatistics, HandValueFlushDrawEnum handValueFlushDrawEnum, Street targetStreet)
         {
-            List<Playerstatistic> fileteredList = incomingPlayerStatistics;
+            List<PlayerstatisticExtended> fileteredList = incomingPlayerStatistics;
             switch (handValueFlushDrawEnum)
             {
                 case HandValueFlushDrawEnum.TwoCardNutFlushDraw:
@@ -265,15 +263,15 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     fileteredList = HelperHandValueAnalyzer(new FlushDrawNoFlushDrawAnalyzer().Analyze, targetStreet, fileteredList);
                     break;
                 default:
-                    return new List<Playerstatistic>();
+                    return new List<PlayerstatisticExtended>();
             }
 
             return fileteredList;
         }
 
-        public static List<Playerstatistic> HandValueFilterStraightDrawHelper(List<Playerstatistic> incomingPlayerStatistics, HandValueStraightDraw handValueStraightDrawEnum, Street targetStreet)
+        public static List<PlayerstatisticExtended> HandValueFilterStraightDrawHelper(List<PlayerstatisticExtended> incomingPlayerStatistics, HandValueStraightDraw handValueStraightDrawEnum, Street targetStreet)
         {
-            List<Playerstatistic> fileteredList = incomingPlayerStatistics;
+            List<PlayerstatisticExtended> fileteredList = incomingPlayerStatistics;
 
             switch (handValueStraightDrawEnum)
             {
@@ -296,15 +294,15 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     fileteredList = HelperHandValueAnalyzer(new StraightDrawNoStraightDrawAnalyzer().Analyze, targetStreet, fileteredList);
                     break;
                 default:
-                    return new List<Playerstatistic>();
+                    return new List<PlayerstatisticExtended>();
             }
 
             return fileteredList;
         }
 
-        public static List<Playerstatistic> FilterByASelectedFilter(List<Playerstatistic> incomingPlayerstatistics, FilterObject filter)
+        public static List<PlayerstatisticExtended> FilterByASelectedFilter(List<PlayerstatisticExtended> incomingPlayerstatistics, FilterObject filter)
         {
-            List<Playerstatistic> filteredList = new List<Playerstatistic>();
+            List<PlayerstatisticExtended> filteredList = new List<PlayerstatisticExtended>();
 
             FilterEnum filterEnum = (FilterEnum)filter.Tag;
 
@@ -313,79 +311,79 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             {
                 //Preflop   
                 case FilterEnum.VPIP:
-                    return incomingPlayerstatistics.Where(x => x.Vpiphands > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Vpiphands > 0).ToList();
                 case FilterEnum.PutMoneyinPot:
-                    return incomingPlayerstatistics.Where(x => x.Vpiphands > 0 || x.Position == EnumPosition.BB || x.Position == EnumPosition.SB).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Vpiphands > 0 || x.Playerstatistic.Position == EnumPosition.BB || x.Playerstatistic.Position == EnumPosition.SB).ToList();
                 case FilterEnum.PFR:
-                    return incomingPlayerstatistics.Where(x => x.Pfrhands > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Pfrhands > 0).ToList();
                 case FilterEnum.PFRFalse:
-                    return incomingPlayerstatistics.Where(x => x.Pfrhands == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Pfrhands == 0).ToList();
                 case FilterEnum.Did3Bet:
-                    return incomingPlayerstatistics.Where(x => x.Didthreebet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Didthreebet > 0).ToList();
                 case FilterEnum.DidSqueeze:
-                    return incomingPlayerstatistics.Where(x => x.Didsqueeze > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Didsqueeze > 0).ToList();
                 case FilterEnum.DidColdCall:
-                    return incomingPlayerstatistics.Where(x => x.Didcoldcall > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Didcoldcall > 0).ToList();
                 case FilterEnum.CouldColdCall:
-                    return incomingPlayerstatistics.Where(x => x.Couldcoldcall > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Couldcoldcall > 0).ToList();
                 case FilterEnum.CouldColdCallFalse:
-                    return incomingPlayerstatistics.Where(x => x.Couldcoldcall == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Couldcoldcall == 0).ToList();
                 case FilterEnum.FacedPreflop3Bet:
-                    return incomingPlayerstatistics.Where(x => x.Facedthreebetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facedthreebetpreflop > 0).ToList();
                 case FilterEnum.FoldedToPreflop3Bet:
-                    return incomingPlayerstatistics.Where(x => x.Facedthreebetpreflop > 0 && x.Calledthreebetpreflop == 0 && x.Raisedthreebetpreflop == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facedthreebetpreflop > 0 && x.Playerstatistic.Calledthreebetpreflop == 0 && x.Playerstatistic.Raisedthreebetpreflop == 0).ToList();
                 case FilterEnum.CalledPreflop3Bet:
-                    return incomingPlayerstatistics.Where(x => x.Calledthreebetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Calledthreebetpreflop > 0).ToList();
                 case FilterEnum.RaisedPreflop3Bet:
-                    return incomingPlayerstatistics.Where(x => x.Raisedthreebetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Raisedthreebetpreflop > 0).ToList();
                 case FilterEnum.FacedPreflop4Bet:
-                    return incomingPlayerstatistics.Where(x => x.Facedfourbetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facedfourbetpreflop > 0).ToList();
                 case FilterEnum.FoldedToPreflop4Bet:
-                    return incomingPlayerstatistics.Where(x => x.Facedfourbetpreflop > 0 && x.Calledfourbetpreflop == 0 && x.Raisedfourbetpreflop == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facedfourbetpreflop > 0 && x.Playerstatistic.Calledfourbetpreflop == 0 && x.Playerstatistic.Raisedfourbetpreflop == 0).ToList();
                 case FilterEnum.CalledPreflop4Bbet:
-                    return incomingPlayerstatistics.Where(x => x.Calledfourbetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Calledfourbetpreflop > 0).ToList();
                 case FilterEnum.RaisedPreflop4Bet:
-                    return incomingPlayerstatistics.Where(x => x.Raisedfourbetpreflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Raisedfourbetpreflop > 0).ToList();
                 case FilterEnum.InBBandStealAttempted:
-                    return incomingPlayerstatistics.Where(x => x.Bigblindstealfaced > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Bigblindstealfaced > 0).ToList();
                 case FilterEnum.InBBandStealDefended:
-                    return incomingPlayerstatistics.Where(x => x.Bigblindstealdefended > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Bigblindstealdefended > 0).ToList();
                 case FilterEnum.InBBandStealReraised:
-                    return incomingPlayerstatistics.Where(x => x.Bigblindstealreraised > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Bigblindstealreraised > 0).ToList();
                 case FilterEnum.InSBandStealAttempted:
-                    return incomingPlayerstatistics.Where(x => x.Smallblindstealattempted > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Smallblindstealattempted > 0).ToList();
                 case FilterEnum.InSBandStealDefended:
-                    return incomingPlayerstatistics.Where(x => x.Smallblindstealdefended > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Smallblindstealdefended > 0).ToList();
                 case FilterEnum.InSBandStealReraised:
-                    return incomingPlayerstatistics.Where(x => x.Smallblindstealreraised > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Smallblindstealreraised > 0).ToList();
                 case FilterEnum.LimpReraised:
-                    return incomingPlayerstatistics.Where(x => x.LimpReraised > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.LimpReraised > 0).ToList();
 
 
                 case FilterEnum.BBsBetPreflopisBiggerThan:      //check if it should be called bbRaise.. instead of the bbBet..
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                  Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Preflop && y.PlayerName == x.PlayerName)
-                                                       .FirstOrDefault(y => y.HandActionType == HandActionType.RAISE)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                  Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                       .FirstOrDefault(y => y.HandActionType == HandActionType.RAISE)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsBetPreflopisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                   Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Preflop && y.PlayerName == x.PlayerName)
-                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.RAISE)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                   Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.RAISE)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledPreflopisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Preflop)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop)
                                                                                                                      .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                                      .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                                     .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                                     .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledPreflopisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Preflop)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop)
                                                                                                  .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                  .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                 .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                 .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutInPreflopisBiggerThan:   //todo check this kind of stat for correct calculation
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Preflop &&
-                                                                  y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop &&
+                                                                  y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutInPreflopisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Preflop &&
-                                                             y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Preflop &&
+                                                             y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
 
 
                 case FilterEnum.PreflopRaiseSizePotisBiggerThan:
@@ -399,49 +397,49 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     return incomingPlayerstatistics.Where(x => filter.Value != null && BetSizeAnalyzers.GetFacingRaiseSizePot(x, Street.Preflop) < (decimal)filter.Value).ToList();
 
                 case FilterEnum.AllinPreflop:
-                    return incomingPlayerstatistics.Where(x => x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
-                                                               x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.PlayerName && y.HandActionType != HandActionType.FOLD) != null).ToList();
+                    return incomingPlayerstatistics.Where(x => x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
+                                                               x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null).ToList();
 
                 //Flop
                 case FilterEnum.SawFlop:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0).ToList();
                 case FilterEnum.LasttoActionFlop:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && LastToActOnStreetTrue(x, Street.Flop)).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && LastToActOnStreetTrue(x, Street.Flop)).ToList();
                 case FilterEnum.LasttoActionFlopFalse:
                     return incomingPlayerstatistics.Where(x => LastToActOnFlopFalse(x, Street.Flop)).ToList();
                 case FilterEnum.FlopUnopened:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                     .All(y => y.HandActionType != HandActionType.BET &&
                                                                                               y.HandActionType != HandActionType.RAISE &&
                                                                                               y.HandActionType != HandActionType.ALL_IN)).ToList();
 
 
                 case FilterEnum.PlayersonFlopisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                              .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                              .Count() > filter.Value).ToList();
                 case FilterEnum.PlayersonFlopisLessThan:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() < filter.Value).ToList();
                 case FilterEnum.PlayersonFlopisEqualTo:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() == filter.Value).ToList();
 
 
                 case FilterEnum.FlopContinuationBetPossible:
-                    return incomingPlayerstatistics.Where(x => x.Flopcontinuationbetpossible > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Flopcontinuationbetpossible > 0).ToList();
                 case FilterEnum.FlopContinuationBetMade:
-                    return incomingPlayerstatistics.Where(x => x.Flopcontinuationbetmade > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Flopcontinuationbetmade > 0).ToList();
                 case FilterEnum.FacingFlopContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingflopcontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingflopcontinuationbet > 0).ToList();
                 case FilterEnum.FoldedtoFlopContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingflopcontinuationbet > 0 && x.Calledflopcontinuationbet == 0 && x.Raisedflopcontinuationbet == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingflopcontinuationbet > 0 && x.Playerstatistic.Calledflopcontinuationbet == 0 && x.Playerstatistic.Raisedflopcontinuationbet == 0).ToList();
                 case FilterEnum.CalledFlopContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Calledflopcontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Calledflopcontinuationbet > 0).ToList();
                 case FilterEnum.RaisedFlopContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Raisedflopcontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Raisedflopcontinuationbet > 0).ToList();
 
                 case FilterEnum.FlopBet:
                     return incomingPlayerstatistics.Where(x => PlayerStreetAction(x, Street.Flop, HandActionType.BET)).ToList();
@@ -487,33 +485,33 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.BBsBetFlopisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                      Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName)
-                                                                           .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                                      Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                                           .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsBetFlopisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                     Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName)
-                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                                     Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledFlopisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                                  .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                  .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                 .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                 .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledFlopisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop)
                                                                                                  .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                  .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                 .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                 .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutinFlopisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Flop &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutinFlopisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Flop &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Flop &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
 
                 case FilterEnum.FlopPotSizeinBBsisBiggerThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Flop) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Flop) : new List<PlayerstatisticExtended>();
                 case FilterEnum.FlopPotSizeinBBsisLessThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Flop) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Flop) : new List<PlayerstatisticExtended>();
 
                 case FilterEnum.FlopStackPotRatioisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null && PotSizeAnalyzers.StackPotRatio(x, Street.Flop) > (decimal)filter.Value).ToList();
@@ -522,11 +520,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.FlopBetSizePotisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                      Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName)
+                                                      Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName)
                                                                            .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value).ToList();
                 case FilterEnum.FlopBetSizePotisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                                          Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName)
+                                                                          Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName)
                                                                                                .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value).ToList();
 
                 case FilterEnum.FlopRaiseSizePotisBiggerThan:
@@ -546,61 +544,61 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
 
                 case FilterEnum.AllinOnFlop:
-                    return incomingPlayerstatistics.Where(x => x.Sawflop > 0 && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).Any(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName)).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).Any(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName)).ToList();
                 case FilterEnum.AllinOnFlopOrEarlier:
-                    return incomingPlayerstatistics.Where(x => (x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
-                                                                x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
-                                                               (x.Sawflop > 0 && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null
-                                                                              && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName != x.PlayerName && y.HandActionType != HandActionType.FOLD) != null)).ToList();
+                    return incomingPlayerstatistics.Where(x => (x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
+                                                                x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
+                                                               (x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null
+                                                                              && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName != x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null)).ToList();
 
 
 
 
                 //Turn
                 case FilterEnum.SawTurn:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0).ToList();
                 case FilterEnum.LasttoActonTurn:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                                      .Select(y => y.PlayerName)
-                                                                                                     .Distinct().LastOrDefault() == x.PlayerName).ToList();
+                                                                                                     .Distinct().LastOrDefault() == x.Playerstatistic.PlayerName).ToList();
                 case FilterEnum.LasttoActonTurnFalse:
                     return incomingPlayerstatistics.Where(x => LastToActOnFlopFalse(x, Street.Turn)).ToList();
                 case FilterEnum.TurnUnopened:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                     .All(y => y.HandActionType != HandActionType.BET &&
                                                                                               y.HandActionType != HandActionType.RAISE &&
                                                                                               y.HandActionType != HandActionType.ALL_IN &&
                                                                                               y.HandActionType != HandActionType.UNCALLED_BET)).ToList();
                 case FilterEnum.TurnUnopenedFalse:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                     .Any(y => y.HandActionType != HandActionType.BET ||
                                                                                               y.HandActionType != HandActionType.RAISE ||
                                                                                               y.HandActionType != HandActionType.ALL_IN ||
                                                                                               y.HandActionType != HandActionType.UNCALLED_BET)).ToList();
                 case FilterEnum.PlayersonTurnisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                    .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                    .Count() > filter.Value).ToList();
                 case FilterEnum.PlayersonTurnisLessThan:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() < filter.Value).ToList();
                 case FilterEnum.PlayersonTurnisEqualTo:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() == filter.Value).ToList();
                 case FilterEnum.TurnContinuationBetPossible:
-                    return incomingPlayerstatistics.Where(x => x.Turncontinuationbetpossible > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Turncontinuationbetpossible > 0).ToList();
                 case FilterEnum.TurnContinuationBetMade:
-                    return incomingPlayerstatistics.Where(x => x.Turncontinuationbetmade > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Turncontinuationbetmade > 0).ToList();
                 case FilterEnum.FacingTurnContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingturncontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingturncontinuationbet > 0).ToList();
                 case FilterEnum.FoldedtoTurnContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingturncontinuationbet > 0 && x.Calledturncontinuationbet == 0 && x.Raisedturncontinuationbet == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingturncontinuationbet > 0 && x.Playerstatistic.Calledturncontinuationbet == 0 && x.Playerstatistic.Raisedturncontinuationbet == 0).ToList();
                 case FilterEnum.CalledTurnContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Calledturncontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Calledturncontinuationbet > 0).ToList();
                 case FilterEnum.RaisedTurnContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Raisedturncontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Raisedturncontinuationbet > 0).ToList();
 
                 case FilterEnum.TurnBet:
                     return incomingPlayerstatistics.Where(x => PlayerStreetAction(x, Street.Turn, HandActionType.BET)).ToList();
@@ -646,33 +644,33 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.BBsBetTurnisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                     Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName)
-                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                                     Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsBetTurnisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                     Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName)
-                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                                     Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName)
+                                                                          .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledTurnisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                                   .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                   .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                  .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                  .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsCalledTurnisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn)
                                                                                                  .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                  .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                 .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.BigBlind).ToList();
+                                                                                                 .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutinTurnisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Turn &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutinTurnisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.Turn &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.Turn &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
 
                 case FilterEnum.TurnPotSizeinBBsisBiggerThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Turn) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Turn) : new List<PlayerstatisticExtended>();
                 case FilterEnum.TurnPotSizeinBBsisLessThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Turn) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.Turn) : new List<PlayerstatisticExtended>();
                 case FilterEnum.TurnStackPotRatioisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null && PotSizeAnalyzers.StackPotRatio(x, Street.Turn) > (decimal)filter.Value).ToList();
                 case FilterEnum.TurnStackPotRatioisLessThan:
@@ -680,11 +678,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.TurnBetSizePotisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                  Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName)
+                                  Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName)
                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value).ToList();
                 case FilterEnum.TurnBetSizePotisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                  Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName)
+                                  Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName)
                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value).ToList();
 
                 case FilterEnum.TurnRaiseSizePotisBiggerThan:
@@ -703,61 +701,61 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     return incomingPlayerstatistics.Where(x => filter.Value != null && BetSizeAnalyzers.GetFacingRaiseSizePot(x, Street.Turn) < (decimal)filter.Value).ToList();
 
                 case FilterEnum.AllinonTurn:
-                    return incomingPlayerstatistics.Where(x => x.SawTurn > 0 && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).Any(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName)).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).Any(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName)).ToList();
                 case FilterEnum.AllinonTurnOrEarlier:
-                    return incomingPlayerstatistics.Where(x => (x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
-                                                                x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
-                                                               (x.Sawflop > 0 && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null
-                                                                              && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName != x.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
-                                                               (x.SawTurn > 0 && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null
-                                                                              && x.HandHistory.Actions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Turn && y.PlayerName == x.PlayerName && y.HandActionType != HandActionType.FOLD) != null)).ToList();
+                    return incomingPlayerstatistics.Where(x => (x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null &&
+                                                                x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Preflop && y.PlayerName != x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
+                                                               (x.Playerstatistic.Sawflop > 0 && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null
+                                                                              && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Flop && y.PlayerName != x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null) ||
+                                                               (x.Playerstatistic.SawTurn > 0 && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null
+                                                                              && x.HandHistory.HandActions.SkipWhile(y => !y.IsAllIn).FirstOrDefault(y => y.Street == Street.Turn && y.PlayerName == x.Playerstatistic.PlayerName && y.HandActionType != HandActionType.FOLD) != null)).ToList();
 
                 //River
                 case FilterEnum.SawRiver:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0).ToList();
                 case FilterEnum.LasttoActonRiver:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                                      .Select(y => y.PlayerName)
-                                                                                                     .Distinct().LastOrDefault() == x.PlayerName).ToList();
+                                                                                                     .Distinct().LastOrDefault() == x.Playerstatistic.PlayerName).ToList();
                 case FilterEnum.LasttoActonRiverFalse:
                     return incomingPlayerstatistics.Where(x => LastToActOnFlopFalse(x, Street.River)).ToList();
                 case FilterEnum.RiverUnopened:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                     .All(y => y.HandActionType != HandActionType.BET &&
                                                                                               y.HandActionType != HandActionType.RAISE &&
                                                                                               y.HandActionType != HandActionType.ALL_IN &&
                                                                                               y.HandActionType != HandActionType.UNCALLED_BET)).ToList();
                 case FilterEnum.RiverUnopenedFalse:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                     .Any(y => y.HandActionType != HandActionType.BET ||
                                                                                               y.HandActionType != HandActionType.RAISE ||
                                                                                               y.HandActionType != HandActionType.ALL_IN ||
                                                                                               y.HandActionType != HandActionType.UNCALLED_BET)).ToList();
                 case FilterEnum.PlayersonRiverisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River) 
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                              .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                              .Count() > filter.Value).ToList();
                 case FilterEnum.PlayersonRiverisLessThan:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() < filter.Value).ToList();
                 case FilterEnum.PlayersonRiverisEqualTo:
-                    return incomingPlayerstatistics.Where(x => x.SawRiver > 0 && x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.SawRiver > 0 && x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                     .GroupBy(y => y.PlayerName).Select(y => y.First())
                                                                                     .Count() == filter.Value).ToList();
 
                 case FilterEnum.RiverContinuationBetPossible:
-                    return incomingPlayerstatistics.Where(x => x.Rivercontinuationbetpossible > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Rivercontinuationbetpossible > 0).ToList();
                 case FilterEnum.RiverContinuationBetMade:
-                    return incomingPlayerstatistics.Where(x => x.Rivercontinuationbetmade > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Rivercontinuationbetmade > 0).ToList();
                 case FilterEnum.FacingRiverContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingrivercontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingrivercontinuationbet > 0).ToList();
                 case FilterEnum.FoldedtoRiverContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Facingrivercontinuationbet > 0 && x.Calledrivercontinuationbet == 0 && x.Raisedrivercontinuationbet == 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Facingrivercontinuationbet > 0 && x.Playerstatistic.Calledrivercontinuationbet == 0 && x.Playerstatistic.Raisedrivercontinuationbet == 0).ToList();
                 case FilterEnum.CalledRiverContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Calledrivercontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Calledrivercontinuationbet > 0).ToList();
                 case FilterEnum.RaisedRiverContinuationBet:
-                    return incomingPlayerstatistics.Where(x => x.Raisedrivercontinuationbet > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Raisedrivercontinuationbet > 0).ToList();
 
                 case FilterEnum.RiverBet:
                     return incomingPlayerstatistics.Where(x => PlayerStreetAction(x, Street.River, HandActionType.BET)).ToList();
@@ -803,33 +801,33 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.BBsBetRiverisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                     Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River && y.PlayerName == x.PlayerName)
+                                                     Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River && y.PlayerName == x.Playerstatistic.PlayerName)
                                                                           .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value).ToList();
                 case FilterEnum.BBsBetRiverisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                     Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River && y.PlayerName == x.PlayerName)
+                                                     Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River && y.PlayerName == x.Playerstatistic.PlayerName)
                                                                           .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value).ToList();
                 case FilterEnum.BBsCalledRiverisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                                  .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                  .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                 .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) > (decimal)filter.Value).ToList();
+                                                                                                 .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) > (decimal)filter.Value).ToList();
                 case FilterEnum.BBsCalledRiverisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River)
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River)
                                                                                                   .SkipWhile(y => y.HandActionType != HandActionType.CALL)
                                                                                                   .TakeWhile(y => y.HandActionType == HandActionType.CALL)
-                                                                                                  .FirstOrDefault(y => y.PlayerName == x.PlayerName)?.Amount ?? 0) < (decimal)filter.Value).ToList();
+                                                                                                  .FirstOrDefault(y => y.PlayerName == x.Playerstatistic.PlayerName)?.Amount ?? 0) < (decimal)filter.Value).ToList();
                 case FilterEnum.BBsPutinRiverisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.River &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.River &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.BBsPutinRiverisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.Actions.Where(y => y.Street == Street.River &&
-                                                            y.PlayerName == x.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.HandHistory.HandActions.Where(y => y.Street == Street.River &&
+                                                            y.PlayerName == x.Playerstatistic.PlayerName).Sum(y => Math.Abs(y.Amount)) < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
 
                 case FilterEnum.RiverPotSizeinBBsisBiggerThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.River) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisBiggerThan(incomingPlayerstatistics, (decimal)filter.Value, Street.River) : new List<PlayerstatisticExtended>();
                 case FilterEnum.RiverPotSizeinBBsisLessThan:
-                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.River) : new List<Playerstatistic>();
+                    return filter.Value != null ? PotSizeAnalyzers.BBPotSizeisLessThan(incomingPlayerstatistics, (decimal)filter.Value, Street.River) : new List<PlayerstatisticExtended>();
                 case FilterEnum.RiverStackPotRatioisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null && PotSizeAnalyzers.StackPotRatio(x, Street.River) > (decimal)filter.Value).ToList();
                 case FilterEnum.RiverStackPotRatioisLessThan:
@@ -837,11 +835,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 case FilterEnum.RiverBetSizePotisBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                  Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River && y.PlayerName == x.PlayerName)
+                                  Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River && y.PlayerName == x.Playerstatistic.PlayerName)
                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) > (decimal)filter.Value).ToList();
                 case FilterEnum.RiverBetSizePotisLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                  Math.Abs(x.HandHistory.Actions.Where(y => y.Street == Street.River && y.PlayerName == x.PlayerName)
+                                  Math.Abs(x.HandHistory.HandActions.Where(y => y.Street == Street.River && y.PlayerName == x.Playerstatistic.PlayerName)
                                                        .FirstOrDefault(y => y.HandActionType == HandActionType.BET)?.Amount ?? 0) < (decimal)filter.Value).ToList();
 
                 case FilterEnum.RiverRaiseSizePotisBiggerThan:
@@ -864,107 +862,107 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 //Other
                 case FilterEnum.SawShowdown:
-                    return incomingPlayerstatistics.Where(x => x.Sawshowdown > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawshowdown > 0).ToList();
                 case FilterEnum.WonHand:
-                    return incomingPlayerstatistics.Where(x => x.Wonhand > 0).ToList();
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Wonhand > 0).ToList();
                 case FilterEnum.FinalPotSizeinBBsisBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Pot > (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Playerstatistic.Pot > (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.FinalPotSizeinBBsisLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Pot < (decimal)filter.Value * x.BigBlind).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Playerstatistic.Pot < (decimal)filter.Value * x.Playerstatistic.BigBlind).ToList();
                 case FilterEnum.PlayerWonBBsIsBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                               x.Totalamountwonincents > 0 &&
-                                                               x.Totalamountwonincents > (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                               x.Playerstatistic.Totalamountwonincents > 0 &&
+                                                               x.Playerstatistic.Totalamountwonincents > (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayerWonBBsIsLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                               x.Totalamountwonincents > 0 &&
-                                                               x.Totalamountwonincents < (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                               x.Playerstatistic.Totalamountwonincents > 0 &&
+                                                               x.Playerstatistic.Totalamountwonincents < (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayerLostBBsIsBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                               x.Totalamountwonincents < 0 &&
-                                                               Math.Abs(x.Totalamountwonincents) > (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                               x.Playerstatistic.Totalamountwonincents < 0 &&
+                                                               Math.Abs(x.Playerstatistic.Totalamountwonincents) > (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayerLostBBsIsLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                               x.Totalamountwonincents < 0 &&
-                                                               Math.Abs(x.Totalamountwonincents) < (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                               x.Playerstatistic.Totalamountwonincents < 0 &&
+                                                               Math.Abs(x.Playerstatistic.Totalamountwonincents) < (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayerWonOrLostBBsIsBiggerThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                                Math.Abs(x.Totalamountwonincents) > (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                                Math.Abs(x.Playerstatistic.Totalamountwonincents) > (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayerWonOrLostBBsIsLessThan:
                     return incomingPlayerstatistics.Where(x => filter.Value != null &&
-                                                                Math.Abs(x.Totalamountwonincents) < (decimal)filter.Value * x.BigBlind * 100).ToList();
+                                                                Math.Abs(x.Playerstatistic.Totalamountwonincents) < (decimal)filter.Value * x.Playerstatistic.BigBlind * 100).ToList();
                 case FilterEnum.PlayersSawShowdownIsBiggerThan:
-                    return incomingPlayerstatistics.Where(x => x.HandHistory.Actions.Count(y => y.Street == Street.Showdown) > filter.Value).ToList();
+                    return incomingPlayerstatistics.Where(x => x.HandHistory.HandActions.Count(y => y.Street == Street.Showdown) > filter.Value).ToList();
                 case FilterEnum.PlayersSawShowdownIsLessThan:
-                    return incomingPlayerstatistics.Where(x => x.HandHistory.Actions.Count(y => y.Street == Street.Showdown) < filter.Value).ToList();
+                    return incomingPlayerstatistics.Where(x => x.HandHistory.HandActions.Count(y => y.Street == Street.Showdown) < filter.Value).ToList();
                 case FilterEnum.PlayersSawShowdownIsEqualTo:
-                    return incomingPlayerstatistics.Where(x => x.HandHistory.Actions.Count(y => y.Street == Street.Showdown) == filter.Value).ToList();
+                    return incomingPlayerstatistics.Where(x => x.HandHistory.HandActions.Count(y => y.Street == Street.Showdown) == filter.Value).ToList();
                 case FilterEnum.AllinWinIsBiggerThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Equity > (decimal)filter.Value).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Playerstatistic.Equity > (decimal)filter.Value).ToList();
                 case FilterEnum.AllinWinIsLessThan:
-                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Equity < (decimal)filter.Value).ToList();
+                    return incomingPlayerstatistics.Where(x => filter.Value != null && x.Playerstatistic.Equity < (decimal)filter.Value).ToList();
             }
 
             return filteredList;
         }
 
-        private static bool LastToActOnStreetTrue(Playerstatistic playerstatistic, Street targetStreet)
+        private static bool LastToActOnStreetTrue(PlayerstatisticExtended playerstatistic, Street targetStreet)
         {
-            return playerstatistic.HandHistory.Actions.Where(y => y.Street == targetStreet)
+            return playerstatistic.HandHistory.HandActions.Where(y => y.Street == targetStreet)
                 .Select(y => y.PlayerName)
-                .Distinct().LastOrDefault() == playerstatistic.PlayerName;
+                .Distinct().LastOrDefault() == playerstatistic.Playerstatistic.PlayerName;
         }
 
-        private static bool LastToActOnFlopFalse(Playerstatistic playerstatistic, Street targetStreet)
+        private static bool LastToActOnFlopFalse(PlayerstatisticExtended playerstatistic, Street targetStreet)
         {
-            List< string> playerListPreflop = new List<string>();
-            List< string> playerListAllinPreflop = new List<string>();
-            List< string> playerListAllinFlop = new List<string>();
-            List< string> playerListAllinTurn = new List<string>();
+            List<string> playerListPreflop = new List<string>();
+            List<string> playerListAllinPreflop = new List<string>();
+            List<string> playerListAllinFlop = new List<string>();
+            List<string> playerListAllinTurn = new List<string>();
             switch (targetStreet)
             {
                 case Street.Flop:
-                    
-                   playerListPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
-                   playerListAllinPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
-                   
 
-                    if ((playerstatistic.Sawflop > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
-                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.PlayerName))
+                    playerListPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+
+
+                    if ((playerstatistic.Playerstatistic.Sawflop > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
+                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName))
                         return true;
                     break;
                 case Street.Turn:
-                    playerListPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
-                    playerListAllinPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
-                    playerListAllinFlop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Flop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinFlop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Flop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
 
 
-                    if ((playerstatistic.SawTurn > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
-                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.PlayerName) || 
-                       (playerListAllinFlop.Count > 0 && playerListAllinFlop.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinFlop.Any(y => y == x)) != playerstatistic.PlayerName)) 
+                    if ((playerstatistic.Playerstatistic.SawTurn > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
+                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName) ||
+                       (playerListAllinFlop.Count > 0 && playerListAllinFlop.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinFlop.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName))
                         return true;
                     break;
                 case Street.River:
-                    playerListPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
-                    playerListAllinPreflop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
-                    playerListAllinFlop = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Flop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
-                    playerListAllinTurn = playerstatistic.HandHistory.Actions.Where(y => y.Street == Street.Turn).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinPreflop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Preflop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinFlop = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Flop).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
+                    playerListAllinTurn = playerstatistic.HandHistory.HandActions.Where(y => y.Street == Street.Turn).SkipWhile(y => !y.IsAllIn).Select(y => y.PlayerName).Distinct().ToList();
 
-                    if ((playerstatistic.SawRiver > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
-                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.PlayerName) ||
-                       (playerListAllinFlop.Count > 0 && playerListAllinFlop.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinFlop.Any(y => y == x)) != playerstatistic.PlayerName) ||
-                       (playerListAllinTurn.Count > 0 && playerListAllinTurn.Any(x => x == playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinTurn.Any(y => y == x)) != playerstatistic.PlayerName))
+                    if ((playerstatistic.Playerstatistic.SawRiver > 0 && !LastToActOnStreetTrue(playerstatistic, targetStreet)) ||
+                       (playerListAllinPreflop.Count > 0 && playerListAllinPreflop.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinPreflop.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName) ||
+                       (playerListAllinFlop.Count > 0 && playerListAllinFlop.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinFlop.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName) ||
+                       (playerListAllinTurn.Count > 0 && playerListAllinTurn.Any(x => x == playerstatistic.Playerstatistic.PlayerName) && playerListPreflop.LastOrDefault(x => playerListAllinTurn.Any(y => y == x)) != playerstatistic.Playerstatistic.PlayerName))
                         return true;
                     break;
-            }    
+            }
 
             return false;
         }
 
-        private static bool PlayerStreetAction(Playerstatistic playerstatistic, Street targetStreet, HandActionType firstActionType, HandActionType secondActionType = HandActionType.UNKNOWN)
+        private static bool PlayerStreetAction(PlayerstatisticExtended playerstatistic, Street targetStreet, HandActionType firstActionType, HandActionType secondActionType = HandActionType.UNKNOWN)
         {
             //actions did by hero
-            List<HandAction> consideredActions = playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet && x.PlayerName == playerstatistic.PlayerName).ToList();
+            List<HandAction> consideredActions = playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet && x.PlayerName == playerstatistic.Playerstatistic.PlayerName).ToList();
 
             if (!consideredActions.Any())
                 return false;

@@ -4,8 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay.Views.PopupViews"
-    mc:Ignorable="d"
+    mc:Ignorable="d"   
     Width="400">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -32,14 +33,26 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock
-            Text="Note: " />
+            FontSize="12"
+            Text="Name: " />
 
-        <TextBox
+        <TextBox            
             Grid.Column="2"
             VerticalContentAlignment="Center"
             Margin="5,0,0,0"
             MaxLength="100"
-            Text="{Binding Note}" />
+            FontSize="12"
+            Text="{Binding Name}" />
+
+        <CheckBox
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Style="{StaticResource CheckBoxStyle}"
+            IsChecked="{Binding IsGroup}"
+            Visibility="{Binding IsGroupPossible, Converter={dh:BoolToVisibilityConverter}}"
+            Content="Group" />
 
         <StackPanel
             Grid.ColumnSpan="2"

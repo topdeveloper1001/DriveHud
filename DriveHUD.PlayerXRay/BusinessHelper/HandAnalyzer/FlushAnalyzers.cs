@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     public class FlushTwoCardNutAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
                 return false;
@@ -28,7 +29,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
                 if (playerCards.All(x => flushBoardCards.Any(f => f.CardSuit == x.CardSuit)))
                 {
                     var nutCardSuit = flushBoardCards.First().CardSuit;
-                    var nutCardRank = Card.CardRankList.First(x => boardCards.Where(b => b.CardSuit == nutCardSuit).All(b => b.Rank != (int) x));
+                    var nutCardRank = DataTypes.Card.CardRankList.First(x => boardCards.Where(b => b.CardSuit == nutCardSuit).All(b => b.Rank != (int) x));
                     return playerCards.Any(x => x.Rank == (int) nutCardRank);
                 }
             }
@@ -40,9 +41,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushTwoCardHighAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
                 return false;
@@ -67,9 +68,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushTwoCardLowAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
                 return false;
@@ -94,9 +95,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOneCardNutAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -111,7 +112,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
                     && playerCards.Any(x => !flushBoardCards.Any(f => f.CardSuit == x.CardSuit)))
                 {
                     var nutCardSuit = flushBoardCards.First().CardSuit;
-                    var nutCardRank = Card.CardRankList.First(rank => boardCards.Where(b => b.CardSuit == nutCardSuit).All(b => b.Rank != (int) rank));
+                    var nutCardRank = DataTypes.Card.CardRankList.First(rank => boardCards.Where(b => b.CardSuit == nutCardSuit).All(b => b.Rank != (int) rank));
                     return playerCards.Any(x => x.Rank == (int) nutCardRank && x.CardSuit == nutCardSuit);
                 }
             }
@@ -121,9 +122,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOneCardHighAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -146,9 +147,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOneCardLowAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -171,9 +172,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOnBoardNutAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -186,7 +187,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
                 var flushBoardCards = suitGroup.First(g => g.Count() >= 5).OrderByDescending(x => x.Rank).Take(5);
                 if (playerCards.All(x => flushBoardCards.All(f => f.CardSuit != x.CardSuit)))
                 {
-                    return flushBoardCards.Max(x => x.Rank) == (int) Card.GetCardRank("A");
+                    return flushBoardCards.Max(x => x.Rank) == (int)DataTypes.Card.GetCardRank("A");
                 }
             }
             return false;
@@ -195,9 +196,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOnBoardHighAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -219,9 +220,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushOnBoardLowAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;

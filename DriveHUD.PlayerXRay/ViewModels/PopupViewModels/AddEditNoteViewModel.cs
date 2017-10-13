@@ -30,17 +30,45 @@ namespace DriveHUD.PlayerXRay.ViewModels.PopupViewModels
             CancelCommand.Subscribe(x => FinishInteraction?.Invoke());
         }
 
-        private string note;
+        private string name;
 
-        public string Note
+        public string Name
         {
             get
             {
-                return note;
+                return name;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref note, value);
+                this.RaiseAndSetIfChanged(ref name, value);
+            }
+        }
+
+        private bool isGroupPossible;
+
+        public bool IsGroupPossible
+        {
+            get
+            {
+                return isGroupPossible;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isGroupPossible, value);
+            }
+        }
+
+        private bool isGroup;
+
+        public bool IsGroup
+        {
+            get
+            {
+                return isGroup;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isGroup, value);
             }
         }
 

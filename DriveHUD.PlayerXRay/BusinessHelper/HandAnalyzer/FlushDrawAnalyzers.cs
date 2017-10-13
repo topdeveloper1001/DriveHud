@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     #region Two Card
     public class FlushDrawTwoCardNutAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 2))
             {
@@ -25,9 +26,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawTwoCardHighAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 2))
             {
@@ -40,9 +41,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawTwoCardLowAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 2))
             {
@@ -57,9 +58,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
     #region One Card
     public class FlushDrawOneCardNutAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 1))
             {
@@ -74,9 +75,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawOneCardHighAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 1))
             {
@@ -90,9 +91,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawOneCardLowAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 1))
             {
@@ -108,9 +109,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
     #region Backdoor
     public class FlushDrawBackdoorTwoCardNutAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 2, isBackdoor: true))
             {
@@ -124,9 +125,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawBackdoorTwoCardAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             return HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 2, isBackdoor: true);
         }  
@@ -134,9 +135,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawBackdoorOneCardNutAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (!HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 1, isBackdoor: true))
             {
@@ -152,9 +153,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FlushDrawNoFlushDrawAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             return !HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 0)
                 && !HandAnalyzerHelpers.IsFlushDraw(playerCards, boardCards, 1)

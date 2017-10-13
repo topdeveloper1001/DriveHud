@@ -806,6 +806,7 @@ namespace DriveHUD.Entities
         [ProtoMember(293)]
         public virtual int MaxPlayers { get; set; }
 
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual

@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     public class FullHousePocketPairNoTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -45,9 +46,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHousePocketPairTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -82,9 +83,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHouseNoPocketPairNoTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -116,9 +117,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHouseOneHoleCardTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -155,9 +156,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHouseOneHoleCardTopPairNoTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -189,9 +190,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHouseOneHoleCardLowPairNoTripsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || !boardCards.Any())
                 return false;
@@ -223,9 +224,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class FullHouseNoHoleCardsOnBoardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (boardCards == null || !boardCards.Any())
                 return false;

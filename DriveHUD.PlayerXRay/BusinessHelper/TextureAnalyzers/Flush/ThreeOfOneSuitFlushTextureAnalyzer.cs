@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Flush
 {
@@ -11,7 +12,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Flush
     {
         public bool Analyze(string boardCards, Street targetStreet)
         {
-            List<Card> cards = BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(boardCards);
+            var cards = BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(boardCards);
             cards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(cards, targetStreet);
 
             if (!BoardTextureAnalyzerHelpers.IsStreetAvailable(cards, targetStreet))

@@ -10,12 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.PlayerXRay.Services;
+using Microsoft.Practices.ServiceLocation;
+using System;
 
 namespace DriveHUD.PlayerXRay
 {
     public abstract class WorkspaceViewModel : WindowViewModelBase
     {
+        private Lazy<IPlayerXRayNoteService> noteService = new Lazy<IPlayerXRayNoteService>(() => ServiceLocator.Current.GetInstance<IPlayerNotesService>() as IPlayerXRayNoteService);
+
+        public IPlayerXRayNoteService NoteService
+        {
+            get
+            {
+                return noteService.Value;
+            }
+        }
+
         public abstract WorkspaceType WorkspaceType
         {
             get;

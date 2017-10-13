@@ -55,11 +55,9 @@ namespace DriveHUD.PlayerXRay
 
         public void Initialize()
         {
-            NotesAppSettingsHelper.LoadAppSettings();
-
             StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
             StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
-            Navigate(WorkspaceType.Notes);
+            Navigate(WorkspaceType.Run);
         }
 
         #region Properties

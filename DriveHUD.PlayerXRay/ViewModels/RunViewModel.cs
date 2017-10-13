@@ -14,8 +14,11 @@ using DriveHUD.Common.Linq;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.Services;
+using Microsoft.Practices.ServiceLocation;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
@@ -26,13 +29,18 @@ namespace DriveHUD.PlayerXRay.ViewModels
     {
         public RunViewModel()
         {
-            profiles = new ObservableCollection<ProfileObject>(NotesAppSettingsHelper.CurrentNotesAppSettings.Profiles);
+            profiles = new ObservableCollection<ProfileObject>(NoteService.CurrentNotesAppSettings.Profiles);
             stages = new ObservableCollection<StageObject>();
 
-            RunCommand = ReactiveCommand.Create();
+            var canRun = this.WhenAny(x => x.RunMode, x => x.SelectedNoteObject,
+                (x1, x2) => (x1.Value == RunMode.AllNotes) || (x1.Value == RunMode.ByNote && x2.Value != null && x2.Value is NoteObject));
+
+            RunCommand = ReactiveCommand.Create(canRun);
             RunCommand.Subscribe(x => Run());
 
             ReloadStages();
+
+            RunMode = RunMode.AllNotes;
         }
 
         public override WorkspaceType WorkspaceType
@@ -114,6 +122,20 @@ namespace DriveHUD.PlayerXRay.ViewModels
             }
         }
 
+        private NoteTreeObjectBase selectedNoteObject;
+
+        public NoteTreeObjectBase SelectedNoteObject
+        {
+            get
+            {
+                return selectedNoteObject;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedNoteObject, value);
+            }
+        }
+
         private double progress;
 
         public double Progress
@@ -159,7 +181,31 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
             StartAsyncOperation(() =>
             {
-                
+                List<NoteObject> notes;
+
+                // get all notes
+                if (RunMode == RunMode.ByNote && selectedNoteObject != null && selectedNoteObject is NoteObject)
+                {
+                    notes = new List<NoteObject> { selectedNoteObject as NoteObject };
+                }
+                else if (RunMode == RunMode.AllNotes)
+                {
+                    notes = NoteService.CurrentNotesAppSettings.AllNotes;
+                }
+                else
+                {
+                    return;
+                }
+
+                var noteProcessingService = ServiceLocator.Current.GetInstance<INoteProcessingService>();
+
+                noteProcessingService.ProgressChanged += (s, e) =>
+                {
+                    Progress = e.Progress;
+                };
+
+                noteProcessingService.ProcessNotes(notes);
+
             }, () =>
             {
                 Progress = 100;
@@ -176,8 +222,11 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
             Stages?.Clear();
 
-            Stages?.AddRange(NotesAppSettingsHelper
-                .CurrentNotesAppSettings.StagesList
+            SelectedNoteObject = null;
+
+            Stages?.AddRange(NoteService
+                .CurrentNotesAppSettings
+                .StagesList
                 .Where(x => x.StageType == NoteStageType));
         }
     }

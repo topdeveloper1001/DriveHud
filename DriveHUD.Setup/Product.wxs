@@ -140,6 +140,12 @@
       <Component Id="DriveHUD.HUD.Service.dll" Guid="{88B7F75A-8018-4187-A199-993DF44153C0}">
         <File Id="DriveHUD.HUD.Service.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.Service.dll" />
       </Component>
+      <Component Id="DriveHUD.PlayerXRay.dll" Guid="{E26FF75F-87F3-44E9-ABA6-A1FC3D1F9BB1}">
+        <File Id="DriveHUD.PlayerXRay.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PlayerXRay.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.Toolkit.dll" Guid="{5E51C286-A865-4A26-9998-AE01C55CBE03}">
+        <File Id="Xceed.Wpf.Toolkit.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Xceed.Wpf.Toolkit.dll" />
+      </Component>
       <Component Id="Model.dll" Guid="{87680A6E-E263-4CA5-BE3D-88F4999F8A1D}">
         <File Id="Model.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Model.dll" />
       </Component>
@@ -450,6 +456,8 @@
       <ComponentRef Id="DriveHUD.Application.exe" />
       <ComponentRef Id="DriveHUD.HUD.exe" />
       <ComponentRef Id="DriveHUD.HUD.Service.dll" />
+      <ComponentRef Id="DriveHUD.PlayerXRay.dll" />
+      <ComponentRef Id="Xceed.Wpf.Toolkit.dll" />
       <ComponentRef Id="DriveHUD.HUD.exe.config"/>
       <ComponentRef Id="DriveHUD.DBMigration.exe" />
       <ComponentRef Id="DriveHUD.DBMigration.exe.config" />

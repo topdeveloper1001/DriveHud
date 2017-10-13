@@ -1,25 +1,24 @@
-﻿using System;
+﻿using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using HandHistories.Objects.Cards;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
-using DriveHUD.PlayerXRay.DataTypes;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     public class HighCardAnalyzer
     {
-        public virtual bool Analyze(List<Card> playerCards, List<Card> allboardCards, Street targetStreet)
+        public virtual bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allboardCards, Street targetStreet)
         {
             //retain only that card that we need for flop, turn or river calculations
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allboardCards, targetStreet);
+            var boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allboardCards, targetStreet);
             
             if (playerCards == null || boardCards == null || playerCards.Count != 2 || boardCards.Count < 3)
             {
                 return false;
             }
 
-            List<Card> allCards = boardCards.ToList();
+            var allCards = boardCards.ToList();
+
             allCards.AddRange(playerCards);
 
             if (!HandAnalyzerHelpers.HasPair(allCards, 1) && !HandAnalyzerHelpers.HasPair(allCards, 2) && 
@@ -36,7 +35,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
         public class HighCardNoOvercardAnalyzer : HighCardAnalyzer
         {
-            public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+            public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
             { 
                 if (base.Analyze(playerCards, boardCards, targetStreet))
                 {
@@ -49,7 +48,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
         public class HighCardOneOvercardAnalyzer : HighCardAnalyzer
         {
-            public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+            public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
             {
                 if (base.Analyze(playerCards, boardCards, targetStreet))
                 {
@@ -62,7 +61,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
         public class HighCardTwoOvercardAnalyzer : HighCardAnalyzer
         {
-            public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+            public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
             {
                 if (base.Analyze(playerCards, boardCards, targetStreet))
                 {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.Entities;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper
 {   /// <summary>

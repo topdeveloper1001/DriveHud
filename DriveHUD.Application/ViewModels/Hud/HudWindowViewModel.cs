@@ -244,7 +244,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private async void TagHand(object obj)
         {
-            if (layout == null)
+            if (layout == null || obj == null)
             {
                 return;
             }
@@ -255,12 +255,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     EnumHandTag tag = EnumHandTag.None;
 
-                    if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
+                    if (!Enum.TryParse(obj.ToString(), out tag))
                     {
                         return;
                     }
 
-                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} [{layout.PokerSite}]");
+                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} for {obj} [{layout.PokerSite}]");
 
                     HudNamedPipeBindingService.TagHand(layout.GameNumber, (short)layout.PokerSite, (int)tag);
                 }
@@ -446,7 +446,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             await Task.Run(() =>
             {
                 using (var readToken = readerWriterLock.Read())
-                {                   
+                {
                     var tableType = (EnumTableType)obj;
                     TableType = tableType;
                     HudNamedPipeBindingService.TreatTableAs(WindowHandle, tableType);

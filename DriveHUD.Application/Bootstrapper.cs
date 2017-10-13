@@ -56,6 +56,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows;
 using Telerik.Windows.Controls;
+using DriveHUD.Common.Infrastructure.Modules;
 
 namespace DriveHUD.Application
 {
@@ -99,6 +100,9 @@ namespace DriveHUD.Application
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
             sqliteBootstrapper.InitializeDatabase();
+            
+            var playerXRayModule = ServiceLocator.Current.GetInstance<IDHModule>(CustomModulesNames.PlayerXRay);
+            playerXRayModule.ConfigureContainer(Container);
 
             ShowMainWindow();
         }
@@ -306,6 +310,9 @@ namespace DriveHUD.Application
             Container.RegisterType<IViewContainer, PlayerXRayMainView>("PlayerXRayMainView");
 
             ImporterBootstrapper.ConfigureImporter(Container);
+
+            // temp register modules
+            Container.RegisterType<IDHModule, PlayerXRayModule>(CustomModulesNames.PlayerXRay);
         }
     }
 }

@@ -1,19 +1,24 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="NotesInsertManager.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
-using AcePokerSolutions.DataAccessHelper;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
-using System.Windows.Documents;
-
-#endregion
+using System.Text;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper
 {
@@ -47,9 +52,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
         }
 
         public List<NoteObject> Notes { private get; set; }
+
         public event ManagerStateChangedDelegate ManagerStateChanged;
         public event ManagerMessageDelegate ManagerMessageReceived;
         public event ManagerProgressChangedDelegate ManagerProgressChanged;
+
         private bool m_paused;
 
         public void StartWork()
@@ -63,8 +70,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             m_worker.WorkerReportsProgress = true;
             m_worker.WorkerSupportsCancellation = true;
 
-            if (ManagerStateChanged != null)
-                ManagerStateChanged(WorkerState.Working);
+            ManagerStateChanged?.Invoke(WorkerState.Working);
 
             m_worker.RunWorkerAsync();
         }
@@ -90,8 +96,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
         {
             if (m_paused)
             {
-                if (ManagerStateChanged != null)
-                    ManagerStateChanged(WorkerState.Paused);
+                ManagerStateChanged?.Invoke(WorkerState.Paused);
             }
 
             while (m_paused)
@@ -99,8 +104,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 System.Threading.Thread.Sleep(100);
             }
 
-            if (ManagerStateChanged != null)
-                ManagerStateChanged(WorkerState.Working);
+            ManagerStateChanged?.Invoke(WorkerState.Working);
         }
 
         private void WorkerProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -121,8 +125,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
         private void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (ManagerStateChanged != null)
-                ManagerStateChanged(WorkerState.Idle);
+            ManagerStateChanged?.Invoke(WorkerState.Idle);
 
             if (e.Cancelled)
             {
@@ -130,9 +133,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             }
 
             SendMsg(
-                (int) e.Result == 0
+                (int)e.Result == 0
                     ? "Operation completed succesfully"
-                    : $"Operation failed. {(int) e.Result} note messages were not added to database",
+                    : $"Operation failed. {(int)e.Result} note messages were not added to database",
                 true);
 
             Idle:
@@ -143,7 +146,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
         private void WorkerDoWork(object sender, DoWorkEventArgs e)
         {
-            m_worker.ReportProgress(0, "Process started");               
+            m_worker.ReportProgress(0, "Process started");
 
             List<ProcessNoteObject> processNotes = new List<ProcessNoteObject>();
             List<DatabaseNote> databaseNotes = new List<DatabaseNote>();
@@ -155,72 +158,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     e.Cancel = true;
                     return;
                 }
+
                 CheckPause();
+
                 m_worker.ReportProgress((int)Math.Round(Notes.IndexOf(note) / (double)Notes.Count * 25),
                                         "Processing " + note.Name);
 
-                //m_worker.ReportProgress(28, "Creating list of players");
-                //m_worker.ReportProgress(-1, "Retrieving existing notes");
-                //m_worker.ReportProgress((int)Math.Round((processNotes.IndexOf(note) / (double)processNotes.Count * 50 + 30)),
-                //                        "Generating note message for " + note.Note.Name);
-                //m_worker.ReportProgress(30);
-                databaseNotes.Add(NoteManager.GetPlayerNote(note));   
+             //   databaseNotes.Add(NoteManager.GetPlayerNote(note));
             }
-
-
-//foreach (NoteObject note in Notes)
-//            {
-//                if (m_worker.CancellationPending)
-//                {
-//                    e.Cancel = true;
-//                    return;
-//                }
-//                CheckPause();
-//                m_worker.ReportProgress((int) Math.Round((Notes.IndexOf(note)/(double) Notes.Count*25)),
-//                                        "Processing " + note.Name);
-
-//                if (note.Settings.Cash)
-//                {
-//                    if (client == ClientType.HoldemManager)
-//                    {
-//                        ProcessNoteObject pn = GetProcessHmNote(note, true, processNotes);
-//                        GC.Collect();
-//                        if (pn != null)
-//                        {
-//                            processNotes.Add(pn);
-//                        }
-//                    }
-//                    else
-//                    {
-//                        ProcessNoteObject pn = GetProcessPtNote(note, true, processNotes);
-//                        GC.Collect();
-//                        if (pn != null)
-//                        {
-//                            processNotes.Add(pn);
-//                        }
-//                    }
-//                }
-
-//                if (!note.Settings.Tournament) continue;
-//                if (client == ClientType.HoldemManager)
-//                {
-//                    ProcessNoteObject pn = GetProcessHmNote(note, false, processNotes);
-//                    GC.Collect();
-//                    if (pn != null)
-//                    {
-//                        processNotes.Add(pn);
-//                    }
-//                }
-//                else
-//                {
-//                    ProcessNoteObject pn = GetProcessPtNote(note, false, processNotes);
-//                    GC.Collect();
-//                    if (pn != null)
-//                    {
-//                        processNotes.Add(pn);
-//                    }
-//                }
-//            }            
 
             List<long> allPlayersIDsList = new List<long>();
 
@@ -265,7 +210,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             //                            "Generating note message for " + note.Note.Name);
 
             //    IEnumerable<long> pl = note.PlayerIDs.Distinct();
-                
+
             //    foreach (long player in pl)
             //    {
             //        DatabaseNote dbNote = databaseNotes.FirstOrDefault(p => p.PlayerID == player);
@@ -322,7 +267,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 e.Cancel = true;
                 return;
             }
-            
+
             m_worker.ReportProgress(100);
 
             e.Result = fails;
@@ -351,7 +296,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                     continue;
                 cardOccurences.Add(card, playerCards.Where(p => p == card).Count());
             }
-            var sortedCardOccurences = (from entry in cardOccurences orderby entry.Value descending ,entry.Key ascending select entry);
+            var sortedCardOccurences = (from entry in cardOccurences orderby entry.Value descending, entry.Key ascending select entry);
 
             List<string> result = new List<string>();
 
@@ -386,7 +331,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
         {
             List<int> cardsList = new List<int>();
 
-            for (int i=startingIndex; i<startingIndex + count; i++)
+            for (int i = startingIndex; i < startingIndex + count; i++)
             {
                 if (i >= cards.Count())
                     break;
@@ -415,12 +360,12 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
             int headerPosition = GetNoteStageHeaderPosition(lines, stage, true);
             if (lines.FirstOrDefault(p => p.Contains(pn.Note.DisplayedNote)) == null)
-                lines.Insert(headerPosition+1, message);
+                lines.Insert(headerPosition + 1, message);
             else
             {
                 int existingNotePosition = lines.IndexOf(lines.First(p => p.Contains(pn.Note.DisplayedNote)));
                 lines.RemoveAt(existingNotePosition);
-                while (existingNotePosition <lines.Count && lines[existingNotePosition].StartsWith("{"))
+                while (existingNotePosition < lines.Count && lines[existingNotePosition].StartsWith("{"))
                 {
                     lines.RemoveAt(existingNotePosition);
                 }
@@ -503,7 +448,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                         lines.Insert(forwardHeader != 0 ? forwardHeader - 1 : forwardHeader, header);
                     return GetNoteStageHeaderPosition(lines, NoteStageType.Flop, false);
                 case NoteStageType.Turn:
-                     forwardHeader = GetNoteStageHeaderPosition(lines, NoteStageType.River, false);
+                    forwardHeader = GetNoteStageHeaderPosition(lines, NoteStageType.River, false);
                     if (forwardHeader == -1)
                         lines.Add(header);
                     else
@@ -540,7 +485,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             return NoteStageType.PreFlop;
         }
 
-       
+
         private static DatabaseNote GetDbNote(ProcessNoteObject pn, DatabaseNote dbNote, long playerID)
         {
             string message = pn.Note.DisplayedNote;
@@ -557,12 +502,12 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
                 if (compVal > 0)
                 {
-                    int perc = (int) (((double) val/(double) compVal)*100);
+                    int perc = (int)(((double)val / (double)compVal) * 100);
                     if (perc > 0)
                         message += string.Format("/{0} [{1}%]", compVal, perc);
                     else
                     {
-                        double percDbl = (((double) val/(double) compVal)*100);
+                        double percDbl = (((double)val / (double)compVal) * 100);
                         message += string.Format("/{0} [{1}%]", compVal, Math.Round(percDbl, 1));
                     }
                 }
@@ -601,7 +546,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 dbNote.Modified = true;
             }
 
-            AppendMessageToNote(pn, message, dbNote); 
+            AppendMessageToNote(pn, message, dbNote);
             return dbNote;
         }
 
@@ -620,7 +565,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             }
             return builder.ToString();
         }
-     
+
         private static List<ProcessPlayerObject> GetExistingComparison(NoteSettingsObject settings, IEnumerable<ProcessNoteObject> existingNotes, bool cash)
         {
             foreach (ProcessNoteObject note in existingNotes)
@@ -659,11 +604,6 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
             return null;
         }
-
-        private void ProcessPtNote(NoteObject note)
-        {
-        }
-
     }
 
     public enum WorkerState

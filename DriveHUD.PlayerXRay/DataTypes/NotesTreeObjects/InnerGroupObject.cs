@@ -15,30 +15,16 @@ using System.Collections.ObjectModel;
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
-    public class InnerGroupObject : NoteTreeObjectBase
+    public class InnerGroupObject : NoteTreeEditableObject
     {
         public InnerGroupObject()
         {
-            notes = new ObservableCollection<NoteObject>();
-        }
+            notes = new ReactiveList<NoteObject>();
+        }      
 
-        private string name;
+        private ReactiveList<NoteObject> notes;
 
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref name, value);
-            }
-        }
-
-        private ObservableCollection<NoteObject> notes;
-
-        public ObservableCollection<NoteObject> Notes
+        public ReactiveList<NoteObject> Notes
         {
             get
             {

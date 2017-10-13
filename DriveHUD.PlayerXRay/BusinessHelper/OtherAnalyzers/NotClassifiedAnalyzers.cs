@@ -1,59 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using System.Linq;
-using System.Text;
-using AcePokerSolutions.DataAccessHelper;
-using AcePokerSolutions.DataAccessHelper.DriveHUD;
-using DriveHUD.PlayerXRay.DataTypes;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.OtherAnalyzers
 {
     public class NotClassifiedAnalyzers
     {
-        public static bool WasRaisedAnalyzer(Playerstatistic playerstatistic, Street targetStreet)
+        public static bool WasRaisedAnalyzer(PlayerstatisticExtended playerstatistic, Street targetStreet)
         {
             HandAction raiseAction =
-              playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+              playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                   .FirstOrDefault(x => x.HandActionType == HandActionType.RAISE);
 
-            if (raiseAction == null || raiseAction.PlayerName == playerstatistic.PlayerName)
+            if (raiseAction == null || raiseAction.PlayerName == playerstatistic.Playerstatistic.PlayerName)
                 return false;
 
-            return playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+            return playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                 .SkipWhile(x => x != raiseAction).Skip(1)
-                .Any(x => x.PlayerName == playerstatistic.PlayerName);
+                .Any(x => x.PlayerName == playerstatistic.Playerstatistic.PlayerName);
         }
 
-        public static bool WasBetIntoAnalyzer(Playerstatistic playerstatistic, Street targetStreet)
+        public static bool WasBetIntoAnalyzer(PlayerstatisticExtended playerstatistic, Street targetStreet)
         {
             HandAction betAction =
-              playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+              playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                   .FirstOrDefault(x => x.HandActionType == HandActionType.BET);
 
-            if (betAction == null || betAction.PlayerName == playerstatistic.PlayerName)
+            if (betAction == null || betAction.PlayerName == playerstatistic.Playerstatistic.PlayerName)
                 return false;
 
-            return playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+            return playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                 .SkipWhile(x => x != betAction).Skip(1)
-                .Any(x => x.PlayerName == playerstatistic.PlayerName);
+                .Any(x => x.PlayerName == playerstatistic.Playerstatistic.PlayerName);
 
         }
 
-        public static bool WasCheckAndRaiseAnalyzer(Playerstatistic playerstatistic, Street targetStreet)
+        public static bool WasCheckAndRaiseAnalyzer(PlayerstatisticExtended playerstatistic, Street targetStreet)
         {
             HandAction raiseAction =
-              playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+              playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                   .FirstOrDefault(x => x.HandActionType == HandActionType.RAISE);
 
-            if (raiseAction == null || raiseAction.PlayerName == playerstatistic.PlayerName)
+            if (raiseAction == null || raiseAction.PlayerName == playerstatistic.Playerstatistic.PlayerName)
                 return false;
 
-            return playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+            return playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                                                       .TakeWhile(x => x != raiseAction)
                                                       .Count(x => x.HandActionType == HandActionType.CHECK) == 1
-                && playerstatistic.HandHistory.Actions.Where(x => x.Street == targetStreet)
+                && playerstatistic.HandHistory.HandActions.Where(x => x.Street == targetStreet)
                                                       .SkipWhile(x => x != raiseAction).Skip(1)
-                                                      .Any(x => x.PlayerName == playerstatistic.PlayerName);
+                                                      .Any(x => x.PlayerName == playerstatistic.Playerstatistic.PlayerName);
 
         }
     }

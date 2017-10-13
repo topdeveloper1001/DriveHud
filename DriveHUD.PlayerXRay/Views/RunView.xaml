@@ -11,6 +11,7 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:nt="clr-namespace:DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects"
     xmlns:dt="clr-namespace:DriveHUD.PlayerXRay.DataTypes"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d"
     d:DesignHeight="1000"
     d:DesignWidth="500">
@@ -192,7 +193,7 @@
                     Background="{StaticResource PanelBackgroundBrush}"
                     Height="75"
                     Width="460"
-                    Margin="0,10,0,10"
+                    Margin="0,5,0,5"
                     BorderThickness="1"
                     CornerRadius="1">
 
@@ -210,6 +211,7 @@
                         <RadioButton
                             Grid.Column="0"
                             HorizontalAlignment="Center"
+                            IsEnabled="False"
                             IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByProfile}}"
                             Style="{StaticResource RadioButtonNormalStyle}"
                             GroupName="RunByGroup"
@@ -238,6 +240,7 @@
                 <Button
                     Grid.Row="2"
                     Content="START"
+                    Margin="0,0,0,5"
                     Width="172"
                     Height="59"
                     FontSize="24"
@@ -376,6 +379,10 @@
                             FontFamily="/Fonts/#Roboto Regular"
                             ItemsSource="{Binding Stages, Mode=OneWay}"
                             FontSize="12">
+                            <i:Interaction.Behaviors>
+                                <cnv:TreeViewSelectItemBehavior
+                                    SelectedItem="{Binding SelectedNoteObject}" />
+                            </i:Interaction.Behaviors>
 
                             <TreeView.Resources>
                                 <HierarchicalDataTemplate

@@ -27,26 +27,27 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
         /// </returns>
         public static string ToXml(object obj, Type objType)
         {
-            //ser = new XmlSerializer(ObjType, Serializer.TargetNamespace);
-            XmlSerializer ser = new XmlSerializer(objType);
-            MemoryStream memStream = new MemoryStream();
+            var ser = new XmlSerializer(objType);
 
-            XmlTextWriter xmlWriter = new XmlTextWriter(memStream, Encoding.UTF8)
-                                          {
-                                              Formatting = Formatting.Indented,
-                                              Indentation = 1,
-                                              IndentChar = Convert.ToChar(9),
-                                              Namespaces = true
-                                          };
+            var memStream = new MemoryStream();
+
+            var xmlWriter = new XmlTextWriter(memStream, Encoding.UTF8)
+            {
+                Formatting = Formatting.Indented,
+                Indentation = 1,
+                IndentChar = Convert.ToChar(9),
+                Namespaces = true
+            };
 
             ser.Serialize(xmlWriter, obj);
 
             xmlWriter.Close();
             memStream.Close();
-            string xml = Encoding.UTF8.GetString(memStream.GetBuffer());
+
+            var xml = Encoding.UTF8.GetString(memStream.GetBuffer());
+
             xml = xml.Substring(xml.IndexOf(Convert.ToChar(60)));
             xml = xml.Substring(0, (xml.LastIndexOf(Convert.ToChar(62)) + 1));
-
             xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n", string.Empty);
             xml = xml.Replace("xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" ", string.Empty);
 

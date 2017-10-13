@@ -1,9 +1,7 @@
-﻿using System;
+﻿using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using HandHistories.Objects.Cards;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
-using DriveHUD.PlayerXRay.DataTypes;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight
 {
@@ -11,7 +9,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight
     {
         public int Analyze(string boardCards, Street targetStreet)
         {
-            List<Card> cards = BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(boardCards);
+            var cards = BoardTextureAnalyzerHelpers.ParseStringSequenceOfCards(boardCards);
 
             if (string.IsNullOrEmpty(boardCards) || !BoardTextureAnalyzerHelpers.IsStreetAvailable(cards, targetStreet))
                 return 0;

@@ -5,9 +5,7 @@
     xmlns:cnv="clr-namespace:DriveHUD.PlayerXRay.Converters"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay"
-    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-    xmlns:Themes="clr-namespace:Xceed.Wpf.Toolkit.Themes;assembly=Xceed.Wpf.Toolkit"
-    xmlns:Themes1="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
 
     <!-- Colors -->
     <Color
@@ -425,6 +423,16 @@
                             VerticalAlignment="Center"
                             RecognizesAccessKey="True" />
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                TargetName="Border"
+                                Property="Opacity"
+                                Value="0.4" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

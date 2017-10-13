@@ -161,6 +161,7 @@
     <Compile Include="ChartData\TournamentChartData.cs" />
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
+    <Compile Include="CustomModulesNames.cs" />
     <Compile Include="Data\HeatMapStatDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />

@@ -14,7 +14,7 @@ using ReactiveUI;
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
 {
-    public class NoteObject : NoteTreeObjectBase
+    public class NoteObject : NoteTreeEditableObject
     {
         public NoteObject()
         {
@@ -34,21 +34,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
             {
                 this.RaiseAndSetIfChanged(ref id, value);
             }
-        }
-
-        private string name;
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref name, value);
-            }
-        }
+        }      
 
         private string description;
 

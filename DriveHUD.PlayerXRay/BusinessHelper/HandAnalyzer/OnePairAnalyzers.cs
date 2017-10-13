@@ -1,9 +1,8 @@
-﻿using System;
+﻿using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
+using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
-using DriveHUD.PlayerXRay.DataTypes;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
@@ -11,14 +10,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
     #region Pocket Pair
     public class PocketPairOverpairAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1) && HandAnalyzerHelpers.HasPair(consideredCards, 1))
@@ -34,14 +33,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PocketPairSecondPairAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1) && HandAnalyzerHelpers.HasPair(consideredCards, 1))
             {
@@ -58,14 +57,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PocketPairLowPairAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1)
                 && HandAnalyzerHelpers.HasPair(consideredCards, 1)
@@ -83,14 +82,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class TopPairAnalyzer
     {
-        public virtual bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public virtual bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1) || !HandAnalyzerHelpers.HasPair(consideredCards, 1))
             {
@@ -108,7 +107,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class TopPairTopKickerAnalyzer : TopPairAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, boardCards, targetStreet))
             {
@@ -125,7 +124,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class TopPairGoodKickerAnalyzer : TopPairAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, boardCards, targetStreet))
             {
@@ -143,7 +142,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class TopPairWeakKickerAnalyzer : TopPairAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, boardCards, targetStreet))
             {
@@ -164,14 +163,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class SecondPairAnalyzer
     {
-        public virtual bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public virtual bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1) || !HandAnalyzerHelpers.HasPair(consideredCards, 1))
             {
@@ -190,7 +189,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class SecondPairAceKickerAnalyzer : SecondPairAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, boardCards, targetStreet))
             {
@@ -207,7 +206,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class SecondPairNonAceKickerAnalyzer : SecondPairAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, boardCards, targetStreet))
             {
@@ -228,14 +227,14 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class BottomPairAnalyzer
     {
-        public virtual bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public virtual bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
 
-            List<Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
+            List<DataTypes.Card> consideredCards = HandAnalyzerHelpers.CombineCardLists(boardCards, playerCards);
 
             if (HandAnalyzerHelpers.HasPair(playerCards, 1) || !HandAnalyzerHelpers.HasPair(consideredCards, 1))
             {
@@ -252,7 +251,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
         public class BottomPairAceKickerAnalyzer : BottomPairAnalyzer
         {
-            public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+            public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
             {
                 if (base.Analyze(playerCards, boardCards, targetStreet))
                 {
@@ -268,7 +267,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
         public class BottomPairNonAceKickerAnalyzer : BottomPairAnalyzer
         {
-            public override bool Analyze(List<Card> playerCards, List<Card> boardCards, Street targetStreet)
+            public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> boardCards, Street targetStreet)
             {
                 if (base.Analyze(playerCards, boardCards, targetStreet))
                 {
@@ -290,9 +289,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PairedBoardAnalyzer
     {
-        public virtual bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public virtual bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || !boardCards.Any())
                 return false;
@@ -305,7 +304,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PairedBoardNoOvercardsAnalyzer : PairedBoardAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, allBoardCards, targetStreet))
             {
@@ -318,7 +317,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PairedBoardOneOvercardAnalyzer : PairedBoardAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, allBoardCards, targetStreet))
             {
@@ -331,7 +330,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class PairedBoardTwoOvercardsAnalyzer : PairedBoardAnalyzer
     {
-        public override bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public override bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
             if (base.Analyze(playerCards, allBoardCards, targetStreet))
             {

@@ -929,6 +929,7 @@ namespace DriveHUD.Application.ViewModels
                 allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
             }
 
+#warning inefficient code            
             foreach (var player in allPlayers)
             {
                 notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));

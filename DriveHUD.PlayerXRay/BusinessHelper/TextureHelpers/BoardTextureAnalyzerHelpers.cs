@@ -1,16 +1,15 @@
-﻿using System;
+﻿using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DriveHUD.PlayerXRay.DataTypes;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
 {
     public static class BoardTextureAnalyzerHelpers
     {
-        public static List<int> GetOrderedBoardNumericRanks(List<Card> boardCards, Street targetStreet)
+        public static List<int> GetOrderedBoardNumericRanks(List<DataTypes.Card> boardCards, Street targetStreet)
         {
-            List<Card> board = GetCardsAccoringStreet(boardCards, targetStreet);
+            List<DataTypes.Card> board = GetCardsAccoringStreet(boardCards, targetStreet);
 
             var orderedRanks = board.OrderBy(x => x.Rank).Select(x => x.Rank).Distinct().ToList();
             if (board.Any(x => x.Rank == (int)CardRank.Ace))
@@ -21,7 +20,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
             return orderedRanks;
         }
 
-        public static List<Card> GetCardsAccoringStreet(List<Card> boardCards, Street targetStreet)
+        public static List<DataTypes.Card> GetCardsAccoringStreet(List<DataTypes.Card> boardCards, Street targetStreet)
         {
             switch (targetStreet)
             {
@@ -38,7 +37,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
                         return boardCards;
                     break;
             }
-            return new List<Card>();
+            return new List<DataTypes.Card>();
         }
 
 
@@ -48,7 +47,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
         /// <param name="boardCards">All board cards</param>
         /// <param name="targetStreet">Street where we expect to have enought cards</param>
         /// <returns></returns>
-        public static bool IsStreetAvailable(List<Card> boardCards, Street targetStreet)
+        public static bool IsStreetAvailable(List<DataTypes.Card> boardCards, Street targetStreet)
         {
             var count = boardCards.Count;
 
@@ -95,13 +94,13 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
             return false;
         }
 
-        public static List<Card> ParseStringSequenceOfCards(string boardCards)
+        public static List<DataTypes.Card> ParseStringSequenceOfCards(string boardCards)
         {
-            List<Card> list = new List<Card>();
+            List<DataTypes.Card> list = new List<DataTypes.Card>();
 
             for (int i = 0; i < boardCards.Length; i += 2)
             {
-                list.Add(new Card("" + boardCards[i] + boardCards[i + 1]));
+                list.Add(new DataTypes.Card("" + boardCards[i] + boardCards[i + 1]));
             }
 
             return list;
@@ -109,30 +108,30 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers
 
         public static CardRank HighestBoardCardRank(string boardCards, Street targetStreet)
         {
-            List<Card> cards = ParseStringSequenceOfCards(boardCards);
-            List<Card> board = GetCardsAccoringStreet(cards, targetStreet);
+            List<DataTypes.Card> cards = ParseStringSequenceOfCards(boardCards);
+            List<DataTypes.Card> board = GetCardsAccoringStreet(cards, targetStreet);
             return board.Count == 0 ? CardRank.None : board.Max(x => x.CardValue);
         }
 
         public static bool BoardContainsExactTextureCards(string boardCards, List<string> selectedCardTextureList, Street targetStreet)
         {
-            List<Card> cards = ParseStringSequenceOfCards(boardCards);
-            List<Card> board = GetCardsAccoringStreet(cards, targetStreet);
+            List<DataTypes.Card> cards = ParseStringSequenceOfCards(boardCards);
+            List<DataTypes.Card> board = GetCardsAccoringStreet(cards, targetStreet);
 
             List<int> orderedRanks = board.OrderBy(x => x.Rank).Select(x => x.Rank).Distinct().ToList();
             if (orderedRanks.Count < selectedCardTextureList.Count)
                 return false;
 
             foreach (string card in selectedCardTextureList)
-                orderedRanks.RemoveAll(x => x == (int)Card.GetCardRank(card));  
+                orderedRanks.RemoveAll(x => x == (int)DataTypes.Card.GetCardRank(card));  
 
             return orderedRanks.Count == 0;
         }
 
         public static bool BoardContainsAPair(string boardCards, Street targetStreet)
         {
-            List<Card> cards = ParseStringSequenceOfCards(boardCards);
-            List<Card> board = GetCardsAccoringStreet(cards, targetStreet);
+            List<DataTypes.Card> cards = ParseStringSequenceOfCards(boardCards);
+            List<DataTypes.Card> board = GetCardsAccoringStreet(cards, targetStreet);
             List<int> orderedRanks = board.OrderBy(x => x.Rank).Select(x => x.Rank).Distinct().ToList();
 
             return board.Count > orderedRanks.Count;

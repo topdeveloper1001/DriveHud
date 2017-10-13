@@ -22,6 +22,10 @@ namespace DriveHUD.Entities
         public virtual Players Player { get; set; }
 
         public virtual string Note { get; set; }
+
+        [Required]
+        public virtual int PlayerId { get; set; }
+
         [Required]
         public virtual short PokersiteId { get; set; }
 

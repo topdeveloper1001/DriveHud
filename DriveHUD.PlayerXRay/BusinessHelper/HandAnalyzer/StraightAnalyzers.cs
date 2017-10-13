@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
+using HandHistories.Objects.Cards;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 {
     public class StraightTwoCardNutAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
                 return false;
@@ -48,7 +49,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
             return false;
         }
 
-        private IEnumerable<int> GetNutStraightForCards(IEnumerable<Card> boardCards)
+        private IEnumerable<int> GetNutStraightForCards(IEnumerable<DataTypes.Card> boardCards)
         {
             if (boardCards == null || boardCards.Count() != 3)
             {
@@ -58,7 +59,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
             var boardRanks = boardCards.Select(x => x.Rank).ToList();
             boardRanks.Sort();
 
-            int highestRank = (int) Card.GetCardRank("A");
+            int highestRank = (int)DataTypes.Card.GetCardRank("A");
 
             /* 
                for Ace (14) - 1 iteration;
@@ -112,9 +113,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class StraightTwoCardAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 3)
                 return false;
@@ -126,10 +127,10 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
             var sortedBoard = boardCards.OrderBy(x => x.Rank).ToList();
 
-            if (sortedBoard.Any(x => x.Rank == (int) Card.GetCardRank("A"))
-                && sortedBoard.Any(x => x.Rank == (int)Card.GetCardRank("2")))
+            if (sortedBoard.Any(x => x.Rank == (int)DataTypes.Card.GetCardRank("A"))
+                && sortedBoard.Any(x => x.Rank == (int)DataTypes.Card.GetCardRank("2")))
             {
-                sortedBoard.Insert(0, new Card("Ac"));
+                sortedBoard.Insert(0, new DataTypes.Card("Ac"));
             }
 
             for (int i = sortedBoard.Count() - 1; i >= 2; i--)
@@ -152,15 +153,15 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class StraightOneCardNutAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
 
-            var ten = (int) Card.GetCardRank("T");
-            var ace = (int) Card.GetCardRank("A");
+            var ten = (int)DataTypes.Card.GetCardRank("T");
+            var ace = (int)DataTypes.Card.GetCardRank("A");
             var sortedBoardRanks = boardCards.Select(x => x.Rank).Where(x => x >= ten && x <= ace).Distinct().ToList();
             sortedBoardRanks.Sort();
 
@@ -190,9 +191,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class StraightOneCardAnalyzer
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (playerCards == null || boardCards == null || playerCards.Count() != 2 || boardCards.Count() < 4)
                 return false;
@@ -203,9 +204,9 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
     public class StraightOnBoardAnalyzer 
     {
-        public bool Analyze(List<Card> playerCards, List<Card> allBoardCards, Street targetStreet)
+        public bool Analyze(List<DataTypes.Card> playerCards, List<DataTypes.Card> allBoardCards, Street targetStreet)
         {
-            List<Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
+            List<DataTypes.Card> boardCards = BoardTextureAnalyzerHelpers.GetCardsAccoringStreet(allBoardCards, targetStreet);
 
             if (boardCards == null || boardCards.Count != 5)
             {
@@ -214,11 +215,11 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.HandAnalyzer
 
             if (HandAnalyzerHelpers.IsStraight(boardCards, true))
             {
-                if (boardCards.Any(x => x.Rank == (int) Card.GetCardRank("A")) &&
-                    boardCards.Any(x => x.Rank == (int)Card.GetCardRank("2")))
+                if (boardCards.Any(x => x.Rank == (int)DataTypes.Card.GetCardRank("A")) &&
+                    boardCards.Any(x => x.Rank == (int)DataTypes.Card.GetCardRank("2")))
                 {
                     return !playerCards.Any(x => x.Rank == (boardCards
-                        .Where(b => b.Rank != (int)Card.GetCardRank("A"))
+                        .Where(b => b.Rank != (int)DataTypes.Card.GetCardRank("A"))
                         .Max(m => m.Rank) + 1));
                 }
                 else

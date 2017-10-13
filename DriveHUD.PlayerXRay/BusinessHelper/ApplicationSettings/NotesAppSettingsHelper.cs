@@ -19,6 +19,7 @@ using System.Windows.Controls;
 
 namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
 {
+    [Obsolete]
     public static class NotesAppSettingsHelper
     {
         #region Private Members

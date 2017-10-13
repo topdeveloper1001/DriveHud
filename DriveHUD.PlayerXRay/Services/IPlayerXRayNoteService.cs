@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IDHModule.cs" company="Ace Poker Solutions">
+// <copyright file="IPlayerXRayNoteService.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Common.Modules
+using DriveHUD.Common.Infrastructure.CustomServices;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+
+namespace DriveHUD.PlayerXRay.Services
 {
-    public interface IDHModule
+    public interface IPlayerXRayNoteService : IPlayerNotesService
     {
-        void Initialize();
+        void SaveAppSettings();
+
+        void LoadAppSettings();
+
+        NotesAppSettings CurrentNotesAppSettings { get; }
     }
 }

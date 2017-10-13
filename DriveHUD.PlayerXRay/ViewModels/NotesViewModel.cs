@@ -124,7 +124,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             AddNoteCommand = ReactiveCommand.Create(canAdd);
             AddNoteCommand.Subscribe(x => AddNote());
 
-            var canEdit = this.WhenAny(x => x.SelectedNote, x => x.Value != null);
+            var canEdit = this.WhenAny(x => x.SelectedStage, x => x.Value != null && x.Value is NoteTreeEditableObject);
 
             EditNoteCommand = ReactiveCommand.Create(canEdit);
             EditNoteCommand.Subscribe(x => EditNote());
@@ -276,8 +276,9 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
             Stages?.Clear();
 
-            Stages?.AddRange(NotesAppSettingsHelper
-                .CurrentNotesAppSettings.StagesList
+            Stages?.AddRange(NoteService
+                .CurrentNotesAppSettings
+                .StagesList
                 .Where(x => x.StageType == NoteStageType));
         }
 
@@ -297,7 +298,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void SaveNote()
         {
-            NotesAppSettingsHelper.SaveAppSettings();
+            NoteService.SaveAppSettings();
         }
 
         private void RefreshFiltersSettings()
@@ -731,29 +732,53 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void AddNote()
         {
-            var addNoteViewModel = new AddEditNoteViewModel();
+            var addNoteViewModel = new AddEditNoteViewModel
+            {
+                IsGroupPossible = SelectedStage is StageObject
+            };
 
             addNoteViewModel.OnSaveAction = () =>
             {
-                var note = new NoteObject
-                {
-                    Name = addNoteViewModel.Note,
-                    IsSelected = true
-                };
+                ReactiveList<NoteObject> noteList = null;
 
                 if (SelectedStage is StageObject)
                 {
-                    (SelectedStage as StageObject).Notes.Add(note);
+                    if (addNoteViewModel.IsGroup)
+                    {
+                        var group = new InnerGroupObject
+                        {
+                            Name = addNoteViewModel.Name,
+                            IsSelected = true
+                        };
+
+                        (SelectedStage as StageObject).InnerGroups.Add(group);
+                        return;
+                    }
+
+                    noteList = (SelectedStage as StageObject).Notes;
                 }
                 else if (SelectedStage is InnerGroupObject)
                 {
-                    (SelectedStage as InnerGroupObject).Notes.Add(note);
+                    noteList = (SelectedStage as InnerGroupObject).Notes;
                 }
+
+                if (noteList == null)
+                {
+                    return;
+                }
+
+                var note = new NoteObject
+                {
+                    Name = addNoteViewModel.Name,
+                    IsSelected = true
+                };
+
+                noteList.Add(note);
             };
 
             var popupEventArgs = new RaisePopupEventArgs()
             {
-                Title = "Add Note",
+                Title = "Add Note/Group",
                 Content = new AddEditNoteView(addNoteViewModel)
             };
 
@@ -762,19 +787,26 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void EditNote()
         {
+            var treeEditableObject = SelectedStage as NoteTreeEditableObject;
+
+            if (treeEditableObject == null)
+            {
+                return;
+            }
+
             var addNoteViewModel = new AddEditNoteViewModel
             {
-                Note = SelectedNote.Name
+                Name = treeEditableObject.Name
             };
 
             addNoteViewModel.OnSaveAction = () =>
             {
-                SelectedNote.Name = addNoteViewModel.Note;
+                treeEditableObject.Name = addNoteViewModel.Name;
             };
 
             var popupEventArgs = new RaisePopupEventArgs()
             {
-                Title = "Edit Note",
+                Title = treeEditableObject is NoteObject ? "Edit Note" : "Edit Group",
                 Content = new AddEditNoteView(addNoteViewModel)
             };
 
