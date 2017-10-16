@@ -219,6 +219,16 @@
             </Style>
 
             <Style
+                x:Key="HandValuesSettingsTabItemStyle"
+                TargetType="{x:Type TabItem}"
+                BasedOn="{StaticResource NoteSettingsTabItemStyle}">
+
+                <Setter
+                    Property="Height"
+                    Value="30" />
+            </Style>
+
+            <Style
                 x:Key="SwitchModeButtonStyle"
                 TargetType="{x:Type Button}"
                 BasedOn="{StaticResource {x:Type Button}}">
@@ -268,6 +278,72 @@
                 <Setter
                     Property="Margin"
                     Value="0,0,5,0" />
+
+            </Style>
+
+            <Style
+                x:Key="HandValuesListBoxStyle"
+                TargetType="{x:Type ListBox}"
+                BasedOn="{StaticResource {x:Type ListBox}}">
+
+                <Setter
+                    Property="Margin"
+                    Value="0,5,0,0" />
+
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ForegroundBrush}" />
+
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource BorderBrush}" />
+
+                <Setter
+                    Property="BorderThickness"
+                    Value="1" />
+
+                <Setter
+                    Property="Height"
+                    Value="82" />
+
+                <Setter
+                    Property="Width"
+                    Value="350" />
+
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Left" />
+
+                <Setter
+                    Property="ScrollViewer.CanContentScroll"
+                    Value="True" />
+
+                <Setter
+                    Property="ScrollViewer.HorizontalScrollBarVisibility"
+                    Value="Disabled" />
+
+                <Setter
+                    Property="ScrollViewer.VerticalScrollBarVisibility"
+                    Value="Auto" />
+
+                <Setter
+                    Property="SelectionMode"
+                    Value="Extended" />
+
+            </Style>
+
+            <Style
+                x:Key="HandValueListBoxItemStyle"
+                BasedOn="{StaticResource ListBoxItemStyle}"
+                TargetType="{x:Type ListBoxItem}">
+
+                <Setter
+                    Property="IsSelected"
+                    Value="{Binding IsSelected}" />
 
             </Style>
 
@@ -422,7 +498,7 @@
                         <Button
                             Style="{StaticResource SimpleImageButtonStyle}"
                             HorizontalAlignment="Center"
-                            Command="{Binding AddNoteCommand}"                            
+                            Command="{Binding AddNoteCommand}"
                             VerticalAlignment="Center">
                             <StackPanel
                                 Orientation="Horizontal">
@@ -441,7 +517,7 @@
                             Grid.Column="1"
                             Style="{StaticResource SimpleImageButtonStyle}"
                             HorizontalAlignment="Center"
-                            Command="{Binding EditNoteCommand}"                            
+                            Command="{Binding EditNoteCommand}"
                             VerticalAlignment="Center">
                             <StackPanel
                                 Orientation="Horizontal">
@@ -1703,12 +1779,313 @@
                     <TabItem
                         Width="100"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
-                        Header="HAND VALUES" />
+                        Header="HAND VALUES">
+
+                        <Border
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1"
+                            Margin="9,0,9,0"
+                            Background="{StaticResource PanelBackgroundBrush}">
+
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="7"
+                                    ShadowDepth="0"
+                                    Color="{DynamicResource DropShadowColor}" />
+                            </Border.Effect>
+
+                            <Grid>
+
+                                <Border
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{StaticResource BorderBrush}"
+                                    VerticalAlignment="Top"
+                                    Height="30" />
+
+                                <TabControl
+                                    BorderThickness="0"
+                                    Margin="0"
+                                    VerticalAlignment="Stretch"
+                                    ItemContainerStyle="{DynamicResource HandValuesSettingsTabItemStyle}"
+                                    Style="{DynamicResource NoteSettingsTabControlStyle}">
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="FLOP">
+
+                                        <StackPanel
+                                            Margin="10,0,0,0">
+
+                                            <CheckBox
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Hand Value"
+                                                IsChecked="{Binding FlopAnyHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.FlopHvSettings.AnyHv, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                Height="205"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding FlopHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                            <CheckBox
+                                                Margin="0,5,0,0"
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Flush Draw Value"
+                                                IsChecked="{Binding FlopAnyFlushDrawsHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.FlopHvSettings.AnyFlushDraws, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding FlopFlushDrawHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                            <CheckBox
+                                                Margin="0,5,0,0"
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Straight Draw Value"
+                                                IsChecked="{Binding FlopAnyStraightDrawsHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.FlopHvSettings.AnyStraightDraws, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding FlopStraightDrawHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                        </StackPanel>
+
+                                    </TabItem>
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="TURN">
+
+                                        <StackPanel
+                                            Margin="10,0,0,0">
+
+                                            <CheckBox
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Hand Value"
+                                                IsChecked="{Binding TurnAnyHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.TurnHvSettings.AnyHv, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                Height="205"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding TurnHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                            <CheckBox
+                                                Margin="0,5,0,0"
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Flush Draw Value"
+                                                IsChecked="{Binding TurnAnyFlushDrawsHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.TurnHvSettings.AnyFlushDraws, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding TurnFlushDrawHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                            <CheckBox
+                                                Margin="0,5,0,0"
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Straight Draw Value"
+                                                IsChecked="{Binding TurnAnyStraightDrawsHandValue}" />
+
+                                            <ListBox
+                                                IsEnabled="{Binding SelectedNote.Settings.TurnHvSettings.AnyStraightDraws, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding TurnStraightDrawHandValues, Mode=OneWay}">
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                        </StackPanel>
+
+                                    </TabItem>
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="RIVER">
+
+                                        <Grid
+                                            Margin="10,0,0,0">
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="Auto" />
+                                                <RowDefinition
+                                                    Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <CheckBox
+                                                Grid.Row="0"
+                                                Style="{StaticResource CheckBoxStyle}"
+                                                Content="Any Hand Value"
+                                                IsChecked="{Binding RiverAnyHandValue}" />
+
+                                            <ListBox
+                                                Grid.Row="1"
+                                                IsEnabled="{Binding SelectedNote.Settings.RiverHvSettings.AnyHv, Converter={dh:BoolNotConverter}}"
+                                                Style="{StaticResource HandValuesListBoxStyle}"
+                                                SelectionMode="Extended"
+                                                ItemContainerStyle="{StaticResource HandValueListBoxItemStyle}"
+                                                ItemsSource="{Binding RiverHandValues, Mode=OneWay}">
+                                                <ListBox.Height>
+                                                    <sys:Double>NaN</sys:Double>
+                                                </ListBox.Height>
+
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                            Text="{Binding Name}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+
+                                            </ListBox>
+
+                                        </Grid>
+
+                                    </TabItem>
+
+                                </TabControl>
+
+                            </Grid>
+                        </Border>
+
+                    </TabItem>
 
                     <TabItem
                         Width="110"
                         Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
-                        Header="BOARD TEXTURE" />
+                        Header="BOARD TEXTURE">
+
+                        <Border
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1"
+                            Margin="9,0,9,0"
+                            Background="{StaticResource PanelBackgroundBrush}">
+
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="7"
+                                    ShadowDepth="0"
+                                    Color="{DynamicResource DropShadowColor}" />
+                            </Border.Effect>
+
+                            <Grid>
+
+                                <Border
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{StaticResource BorderBrush}"
+                                    VerticalAlignment="Top"
+                                    Height="30" />
+
+                                <TabControl
+                                    BorderThickness="0"
+                                    Margin="0"
+                                    VerticalAlignment="Stretch"
+                                    ItemContainerStyle="{DynamicResource HandValuesSettingsTabItemStyle}"
+                                    Style="{DynamicResource NoteSettingsTabControlStyle}">
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="FLOP">
+
+                                        <local:BoardTextureView
+                                            VerticalAlignment="Top"
+                                            Margin="10,0,0,0"
+                                            DataContext="{Binding SelectedNote.Settings.FlopTextureSettings}" />
+
+                                    </TabItem>
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="TURN">
+
+                                        <local:BoardTextureView
+                                            VerticalAlignment="Top"
+                                            Margin="10,0,0,0"
+                                            DataContext="{Binding SelectedNote.Settings.TurnTextureSettings}" />
+
+                                    </TabItem>
+
+                                    <TabItem
+                                        Width="70"
+                                        Header="RIVER">
+
+                                        <local:BoardTextureView
+                                            VerticalAlignment="Top"
+                                            Margin="10,0,0,0"
+                                            DataContext="{Binding SelectedNote.Settings.RiverTextureSettings}" />
+
+                                    </TabItem>
+
+                                </TabControl>
+
+                            </Grid>
+                        </Border>
+
+                    </TabItem>
 
                 </TabControl>
 

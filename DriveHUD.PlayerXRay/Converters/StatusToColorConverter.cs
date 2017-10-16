@@ -29,16 +29,20 @@ namespace DriveHUD.PlayerXRay.Converters
                 return new SolidColorBrush(Colors.White);
             }
 
-            if(status == RunningStatus.Idle)
+            if (status == RunningStatus.Idle)
             {
                 return (SolidColorBrush)(new BrushConverter().ConvertFrom("#6e45d7"));
             }
-            else if(status == RunningStatus.Processing)
+            else if (status == RunningStatus.Processing)
             {
                 return (SolidColorBrush)(new BrushConverter().ConvertFrom("#3cb01d"));
             }
+            else if (status == RunningStatus.Completed)
+            {
+                return (SolidColorBrush)(new BrushConverter().ConvertFrom("#40aadf"));
+            }
 
-            return (SolidColorBrush)(new BrushConverter().ConvertFrom("#40aadf"));
+            return new SolidColorBrush(Colors.Red);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

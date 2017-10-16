@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
@@ -221,10 +222,18 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
                 noteProcessingService.ProcessNotes(notes);
 
-            }, () =>
+            }, e =>
             {
-                Progress = 100;
                 IsRunning = false;
+
+                if (e != null)
+                {
+                    LogProvider.Log.Error(this, $"Could not process notes.", e);
+                    Status = RunningStatus.Failed;
+                    return;
+                }
+
+                Progress = 100;
                 Status = RunningStatus.Completed;
             });
         }

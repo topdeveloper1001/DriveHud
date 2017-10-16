@@ -43,11 +43,18 @@ namespace DriveHUD.Common.Wpf.Converters
                 return DependencyProperty.UnsetValue;
             }
 
+            if (!Enum.IsDefined(value.GetType(), strParameter))
+            {
+                return false;
+            }
+
             try
             {
                 return Enum.Parse(value.GetType(), strParameter).Equals(value);
             }
-            catch (ArgumentException) { }
+            catch (ArgumentException)
+            {
+            }
 
             return DependencyProperty.UnsetValue;
         }
@@ -84,6 +91,11 @@ namespace DriveHUD.Common.Wpf.Converters
                 if (cTargetType != null)
                 {
                     targetType = cTargetType;
+                }
+
+                if (!Enum.IsDefined(targetType, strParameter))
+                {
+                    return DependencyProperty.UnsetValue; ;
                 }
 
                 return Enum.Parse(targetType, strParameter);

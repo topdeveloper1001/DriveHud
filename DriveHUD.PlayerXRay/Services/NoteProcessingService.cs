@@ -10,29 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Common.Log;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using DriveHUD.PlayerXRay.BusinessHelper;
+using DriveHUD.PlayerXRay.DataTypes;
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using DriveHUD.PlayerXRay.Helpers;
+using HandHistories.Objects.Hand;
+using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Factory;
+using Microsoft.Practices.ServiceLocation;
+using Model;
+using NHibernate;
+using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
-using HandHistories.Objects.Hand;
-using System.Threading;
-using Model;
-using DriveHUD.PlayerXRay.BusinessHelper;
-using DriveHUD.PlayerXRay.DataTypes;
-using Microsoft.Practices.ServiceLocation;
-using Model.Interfaces;
-using NHibernate.Linq;
-using DriveHUD.Common.Linq;
-using HandHistories.Parser.Parsers;
-using DriveHUD.Common.Log;
-using HandHistories.Parser.Parsers.Factory;
-using DriveHud.Common.Log;
-using NHibernate;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.Extensions;
 
 namespace DriveHUD.PlayerXRay.Services
 {
@@ -153,8 +149,7 @@ namespace DriveHUD.PlayerXRay.Services
                                                 if (playersNotesDictionary.ContainsKey(playerNoteKey))
                                                 {
                                                     var playersNote = playersNotesDictionary[playerNoteKey].FirstOrDefault();
-
-                                                    CombineNotes(playersNote, playerNote);
+                                                    playersNote.Note = NoteHelper.CombineNotes(playersNote, playerNote);
                                                 }
                                                 else
                                                 {
@@ -307,101 +302,6 @@ namespace DriveHUD.PlayerXRay.Services
                     transaction.Commit();
                 }
             }
-        }
-
-        private void CombineNotes(Playernotes existingNote, Playernotes note)
-        {
-            var noteName = GetNoteName(note.Note);
-            var noteCardRange = GetCardRange(note.Note);
-
-            var noteLines = existingNote.Note.GetLines(true).ToArray();
-
-            var isNewNote = true;
-
-            for (var i = 0; i < noteLines.Length; i++)
-            {
-                if (!noteLines[i].StartsWith(noteName))
-                {
-                    continue;
-                }
-
-                isNewNote = false;
-
-                var existingNoteCardRange = GetCardRange(noteLines[i]);
-                var existingNoteCount = GetNoteCount(noteLines[i]);
-
-                if (string.IsNullOrEmpty(existingNoteCardRange))
-                {
-                    existingNoteCardRange = $" [{noteCardRange}]";
-                }
-                else if (!existingNoteCardRange.Contains(noteCardRange))
-                {
-                    existingNoteCardRange = $" [{existingNoteCardRange},{noteCardRange}]";
-                }
-
-                existingNoteCount++;
-
-                noteLines[i] = $"{noteName}{existingNoteCardRange} ({existingNoteCount})";
-            }
-
-            if (isNewNote)
-            {
-                existingNote.Note = $"{existingNote.Note}{Environment.NewLine}{note.Note}";
-                return;
-            }
-
-            existingNote.Note = string.Join(Environment.NewLine, noteLines);
-        }
-
-        private static string GetNoteName(string noteText)
-        {
-            var cardRangeStartIndex = noteText.LastIndexOf("[");
-
-            if (cardRangeStartIndex < 1)
-            {
-                return noteText;
-            }
-
-            var noteName = noteText.Substring(0, cardRangeStartIndex - 1).Trim();
-
-            return noteName;
-        }
-
-        private static string GetCardRange(string noteText)
-        {
-            var cardRangeStartIndex = noteText.LastIndexOf("[");
-            var cardRangeEndIndex = noteText.LastIndexOf("]");
-
-            if (cardRangeStartIndex < 1 || cardRangeEndIndex < 1)
-            {
-                return string.Empty;
-            }
-
-            var cardRange = noteText.Substring(cardRangeStartIndex + 1, cardRangeEndIndex - cardRangeStartIndex - 1).Trim();
-
-            return cardRange;
-        }
-
-        private int GetNoteCount(string noteText)
-        {
-            var noteCountStartIndex = noteText.LastIndexOf("(");
-            var noteCountEndIndex = noteText.LastIndexOf(")");
-
-            if (noteCountStartIndex < 1 || noteCountEndIndex < 1)
-            {
-                return 1;
-            }
-
-            var noteCount = noteText.Substring(noteCountStartIndex + 1, noteCountEndIndex - noteCountStartIndex - 1).Trim();
-
-            int count;
-
-            if (int.TryParse(noteCount, out count))
-            {
-                return count;
-            }
-
-            return 1;
         }
 
         #region Class helpers

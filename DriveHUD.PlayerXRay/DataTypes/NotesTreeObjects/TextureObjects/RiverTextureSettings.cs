@@ -1,33 +1,64 @@
-﻿namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
+﻿//-----------------------------------------------------------------------
+// <copyright file="RiverTextureSettings.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using ReactiveUI;
+
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
     public class RiverTextureSettings : TextureSettings
-    {
-        public bool IsFlushCardFilter { get; set; }
-        public RiverFlushCardsEnum FlushCard { get; set; }
+    {       
+        private RiverFlushCardsEnum flushCard;
 
-        public override bool Equals(object x)
+        public RiverFlushCardsEnum FlushCard
         {
-            TextureSettings x1Base = (TextureSettings) x;
-            TextureSettings x2Base = this;
-
-            RiverTextureSettings x1 = (RiverTextureSettings) x;
-            RiverTextureSettings x2 = this;
-
-            if (!x1Base.EqualsBase(x2Base))
-                goto False;
-
-            if (x1.IsFlushCardFilter != x2.IsFlushCardFilter)
-                goto False;
-            if (x1.IsFlushCardFilter)
+            get
             {
-                if (x1.FlushCard != x2.FlushCard)
-                    goto False;
+                return flushCard;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref flushCard, value);
+            }
+        }
+
+        public override NoteStageType StageType
+        {
+            get
+            {
+                return NoteStageType.River;
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            var riverTextureSettings = obj as RiverTextureSettings;
+
+            if (riverTextureSettings == null)
+            {
+                return false;
             }
 
-            return true;
+            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == riverTextureSettings.FlushCard || !IsFlushCardFilter);
+        }
 
-            False:
-            return false;
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = base.GetHashCode();
+                hash += hash * 31 + FlushCard.GetHashCode();
+
+                return hash;
+            }
         }
     }
 }

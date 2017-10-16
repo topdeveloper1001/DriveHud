@@ -57,7 +57,7 @@ namespace DriveHUD.PlayerXRay
         {
             StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
             StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
-            Navigate(WorkspaceType.Run);
+            Navigate(WorkspaceType.Notes);
         }
 
         #region Properties

@@ -14,6 +14,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.PlayerXRay.BusinessHelper;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.Helpers;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -35,11 +36,16 @@ namespace DriveHUD.PlayerXRay.Services
             LoadAppSettings();
         }
 
-        public Playernotes BuildNotes(Playerstatistic stats, HandHistory handHistory)
+        public Playernotes BuildNotes(Playernotes existingNotes, Playerstatistic stats, HandHistory handHistory)
         {
             var noteProcessingService = ServiceLocator.Current.GetInstance<INoteProcessingService>();
 
             var playerNotes = noteProcessingService.ProcessHand(CurrentNotesAppSettings.AllNotes, stats, handHistory);
+
+            if (playerNotes != null && existingNotes != null)
+            {
+                playerNotes.Note = NoteHelper.CombineNotes(existingNotes, playerNotes);
+            }
 
             return playerNotes;
         }

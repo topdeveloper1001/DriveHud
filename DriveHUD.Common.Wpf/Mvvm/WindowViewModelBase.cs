@@ -77,7 +77,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
             Observable
                 .Start(action)
                 .ObserveOnDispatcher(DispatcherPriority.ContextIdle)
-                .Subscribe(x => callback(null), e => { callback(e); asyncOperation.CompleteFailed(e); }, asyncOperation.CompleteSuccess);
+                .Subscribe(x => callback(null), e => { callback(e); asyncOperation.CompleteFailed(null); }, asyncOperation.CompleteSuccess);
 
             return asyncOperation;
         }

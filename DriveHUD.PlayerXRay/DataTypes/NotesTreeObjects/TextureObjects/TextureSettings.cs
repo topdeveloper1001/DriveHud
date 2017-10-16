@@ -1,27 +1,243 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="TextureSettings.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
+using ReactiveUI;
 using System.Collections.Generic;
+using System.Reactive.Linq;
+using System.Linq;
+using System;
 using System.Xml.Serialization;
-
-#endregion
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
-    public class TextureSettings
+    public abstract class TextureSettings : ReactiveObject
     {
-        public bool IsPairedFilter { get; set; }
-        public bool IsGutshotsFilter { get; set; }
-        public bool IsCardTextureFilter { get; set; }
-        public bool IsHighcardFilter { get; set; }
-        public bool IsPossibleStraightsFilter { get; set; }
+        public TextureSettings()
+        {
+            Changed
+                .Where(x => x.PropertyName != nameof(BoardTextureFilterType))
+                .Subscribe(x => this.RaisePropertyChanged(nameof(BoardTextureFilterType)));
+        }
 
-        public CompareEnum PossibleStraightsCompare { get; set; }
-        public int PossibleStraights { get; set; }
+        private bool isFlushCardFilter;
 
-        public int Gutshots { get; set; }
-        public string HighestCard { get; set; }
-        public string SelectedCardTexture { get; set; }
-        public bool IsPairedFilterTrue { get; set; }
+        public bool IsFlushCardFilter
+        {
+            get
+            {
+                return isFlushCardFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isFlushCardFilter, value);
+            }
+        }
+
+        private bool isOpenEndedStraightDrawsFilter;
+
+        public bool IsOpenEndedStraightDrawsFilter
+        {
+            get
+            {
+                return isOpenEndedStraightDrawsFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isOpenEndedStraightDrawsFilter, value);
+            }
+        }
+
+        private bool isPairedFilter;
+
+        public bool IsPairedFilter
+        {
+            get
+            {
+                return isPairedFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isPairedFilter, value);
+            }
+        }
+
+        private bool isGutshotsFilter;
+
+        public bool IsGutshotsFilter
+        {
+            get
+            {
+                return isGutshotsFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isGutshotsFilter, value);
+            }
+        }
+
+        private bool isCardTextureFilter;
+
+        public bool IsCardTextureFilter
+        {
+            get
+            {
+                return isCardTextureFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isCardTextureFilter, value);
+            }
+        }
+
+        private bool isHighcardFilter;
+
+        public bool IsHighcardFilter
+        {
+            get
+            {
+                return isHighcardFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isHighcardFilter, value);
+            }
+        }
+
+        private bool isPossibleStraightsFilter;
+
+        public bool IsPossibleStraightsFilter
+        {
+            get
+            {
+                return isPossibleStraightsFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isPossibleStraightsFilter, value);
+            }
+        }
+
+        private CompareEnum possibleStraightsCompare;
+
+        public CompareEnum PossibleStraightsCompare
+        {
+            get
+            {
+                return possibleStraightsCompare;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref possibleStraightsCompare, value);
+            }
+        }
+
+        private int possibleStraights;
+
+        public int PossibleStraights
+        {
+            get
+            {
+                return possibleStraights;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref possibleStraights, value);
+            }
+        }
+
+        private int gutshots;
+
+        public int Gutshots
+        {
+            get
+            {
+                return gutshots;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref gutshots, value);
+            }
+        }
+
+        private string highestCard;
+
+        public string HighestCard
+        {
+            get
+            {
+                return highestCard;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref highestCard, value);
+            }
+        }
+
+        private string selectedCardTexture;
+
+        public string SelectedCardTexture
+        {
+            get
+            {
+                return selectedCardTexture;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedCardTexture, value);
+            }
+        }
+
+        private bool isPairedFilterTrue;
+
+        public bool IsPairedFilterTrue
+        {
+            get
+            {
+                return isPairedFilterTrue;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isPairedFilterTrue, value);
+            }
+        }
+
+        public abstract NoteStageType StageType { get; }
+
+        private BoardTextureFilterType boardTextureFilterType;
+
+        [XmlIgnore]
+        public virtual BoardTextureFilterType BoardTextureFilterType
+        {
+            get
+            {
+                if (IsFlushCardFilter || IsOpenEndedStraightDrawsFilter || IsPairedFilter || IsGutshotsFilter || IsCardTextureFilter || IsHighcardFilter || IsPossibleStraightsFilter || IsPairedFilterTrue)
+                {
+                    return BoardTextureFilterType.FilterByTexture;
+                }
+
+                return BoardTextureFilterType.Any;
+            }
+            set
+            {
+                if (value == BoardTextureFilterType.FilterByTexture)
+                {
+                    return;
+                }
+
+                Reset();
+
+                this.RaiseAndSetIfChanged(ref boardTextureFilterType, value);
+            }
+        }
 
         [XmlIgnore]
         public List<string> SelectedCardTextureList
@@ -29,9 +245,12 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             get
             {
                 if (string.IsNullOrEmpty(SelectedCardTexture))
+                {
                     return new List<string>();
+                }
+
                 return !SelectedCardTexture.Contains(",")
-                           ? new List<string> {SelectedCardTexture}
+                           ? new List<string> { SelectedCardTexture }
                            : new List<string>(SelectedCardTexture.Split(','));
             }
             set
@@ -42,61 +261,73 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
                 {
                     SelectedCardTexture += card + ',';
                 }
+
                 if (SelectedCardTexture.Contains(","))
+                {
                     SelectedCardTexture = SelectedCardTexture.Remove(SelectedCardTexture.LastIndexOf(','), 1);
+                }
             }
         }
 
-        public bool EqualsBase(object x)
+        public virtual void Reset()
         {
-            TextureSettings x1 = (TextureSettings) x;
-            TextureSettings x2 = this;
+            IsFlushCardFilter = IsOpenEndedStraightDrawsFilter = IsPairedFilter = IsGutshotsFilter = IsCardTextureFilter = IsHighcardFilter = IsPossibleStraightsFilter = IsPairedFilterTrue = false;
+        }
 
-            if (x1.IsGutshotsFilter != x2.IsGutshotsFilter)
-                goto False;
-            if (x1.IsGutshotsFilter)
+        public override bool Equals(object obj)
+        {
+            var textureSettings = obj as TextureSettings;
+
+            if (textureSettings == null)
             {
-                if (x1.Gutshots != x2.Gutshots)
-                    goto False;
+                return false;
             }
 
-            if (x1.IsHighcardFilter != x2.IsHighcardFilter)
-                goto False;
-            if (x1.IsHighcardFilter)
+            return IsFlushCardFilter == textureSettings.IsFlushCardFilter &&
+                IsOpenEndedStraightDrawsFilter == textureSettings.IsOpenEndedStraightDrawsFilter &&
+                IsGutshotsFilter == textureSettings.IsGutshotsFilter &&
+                (IsGutshotsFilter && Gutshots == textureSettings.Gutshots || !IsGutshotsFilter) &&
+                IsHighcardFilter == textureSettings.IsHighcardFilter &&
+                (IsHighcardFilter && HighestCard == textureSettings.HighestCard || !IsHighcardFilter) &&
+                IsPairedFilter == textureSettings.IsPairedFilter &&
+                (IsPairedFilter && IsPairedFilterTrue == textureSettings.IsPairedFilterTrue || !IsPairedFilter) &&
+                IsPossibleStraightsFilter == textureSettings.IsPossibleStraightsFilter &&
+                (IsPossibleStraightsFilter && (PossibleStraights == textureSettings.PossibleStraights && PossibleStraightsCompare == textureSettings.PossibleStraightsCompare) || !IsPossibleStraightsFilter) &&
+                IsCardTextureFilter == textureSettings.IsCardTextureFilter &&
+                (IsCardTextureFilter && CompareHelpers.CompareStringLists(SelectedCardTextureList, textureSettings.SelectedCardTextureList) || !IsCardTextureFilter);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
             {
-                if (x1.HighestCard != x2.HighestCard)
-                    goto False;
+                var hash = 19;
+                hash += hash * 31 + IsFlushCardFilter.GetHashCode();
+                hash += hash * 31 + IsPairedFilter.GetHashCode();
+                hash += hash * 31 + IsOpenEndedStraightDrawsFilter.GetHashCode();
+                hash += hash * 31 + IsGutshotsFilter.GetHashCode();
+                hash += hash * 31 + IsCardTextureFilter.GetHashCode();
+                hash += hash * 31 + IsHighcardFilter.GetHashCode();
+                hash += hash * 31 + IsPossibleStraightsFilter.GetHashCode();
+                hash += hash * 31 + PossibleStraightsCompare.GetHashCode();
+                hash += hash * 31 + PossibleStraights.GetHashCode();
+                hash += hash * 31 + Gutshots.GetHashCode();
+
+                if (!string.IsNullOrEmpty(HighestCard))
+                {
+                    hash += hash * 31 + HighestCard.GetHashCode();
+                }
+
+                if (!string.IsNullOrEmpty(SelectedCardTexture))
+                {
+                    hash += hash * 31 + SelectedCardTexture.GetHashCode();
+                }
+
+                hash += hash * 31 + IsPairedFilterTrue.GetHashCode();
+                hash += hash * 31 + StageType.GetHashCode();
+
+                return hash;
             }
-
-            if (x1.IsPairedFilter != x2.IsPairedFilter)
-                goto False;
-            if (x1.IsPairedFilter)
-            {
-                if (x1.IsPairedFilterTrue != x2.IsPairedFilterTrue)
-                    goto False;
-            }
-
-            if (x1.IsPossibleStraightsFilter != x2.IsPossibleStraightsFilter)
-                goto False;
-            if (x1.IsPossibleStraightsFilter)
-            {
-                if (x1.PossibleStraights != x2.PossibleStraights ||
-                    x1.PossibleStraightsCompare != x2.PossibleStraightsCompare)
-                    goto False;
-            }
-
-            if (x1.IsCardTextureFilter != x2.IsCardTextureFilter)
-                goto False;
-            if (x1.IsCardTextureFilter)
-            {
-                if (!CompareHelpers.CompareStringLists(x1.SelectedCardTextureList, x2.SelectedCardTextureList))
-                    goto False;
-            }
-
-            return true;
-
-            False:
-            return false;
         }
     }
 }

@@ -17,6 +17,6 @@ namespace DriveHUD.Common.Infrastructure.CustomServices
 {
     public interface IPlayerNotesService
     {
-        Playernotes BuildNotes(Playerstatistic stats, HandHistory handHistory);
+        Playernotes BuildNotes(Playernotes existingNotes, Playerstatistic stats, HandHistory handHistory);
     }
 }

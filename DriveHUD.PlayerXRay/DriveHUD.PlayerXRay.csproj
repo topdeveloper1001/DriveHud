@@ -166,17 +166,22 @@
     <Compile Include="BusinessHelper\TextureHelpers\HandAnalyzerHelpers.cs" />
     <Compile Include="Controls\BoxPanel.cs" />
     <Compile Include="Controls\MenuButton.cs" />
+    <Compile Include="Controls\ResizableRadioButton.cs" />
     <Compile Include="Converters\ActionToBetweenVisibilityConverter.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Converters\PopupBehavior.cs" />
     <Compile Include="Converters\StatusToColorConverter.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />
     <Compile Include="DataTypes\FiltersHelper.cs" />
+    <Compile Include="DataTypes\HandValuesHelper.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\HandValueObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeEditableObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\BoardTextureFilterType.cs" />
     <Compile Include="DataTypes\PlayerstatisticExtended.cs" />
     <Compile Include="Events\RaisePopupEvent.cs" />
     <Compile Include="Events\RaisePopupEventArgs.cs" />
+    <Compile Include="Helpers\NoteHelper.cs" />
     <Compile Include="PlayerXRayModule.cs" />
     <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
     <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
@@ -229,6 +234,9 @@
     <Compile Include="ViewModels\RunMode.cs" />
     <Compile Include="ViewModels\RunViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Views\BoardTextureView.xaml.cs">
+      <DependentUpon>BoardTextureView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IPopupContainerView.cs" />
     <Compile Include="Views\NotesView.xaml.cs">
       <DependentUpon>NotesView.xaml</DependentUpon>
@@ -504,6 +512,10 @@
     <Page Include="UIControls\Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BoardTextureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NotesView.xaml">
       <SubType>Designer</SubType>

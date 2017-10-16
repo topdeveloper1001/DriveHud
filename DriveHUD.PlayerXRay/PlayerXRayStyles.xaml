@@ -76,7 +76,7 @@
         TargetType="{x:Type TextBlock}">
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="Foreground"
             Value="{StaticResource ForegroundBrush}" />
@@ -92,7 +92,7 @@
         TargetType="{x:Type TextBox}">
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="Foreground"
             Value="{StaticResource ForegroundBrush}" />
@@ -286,7 +286,7 @@
 
     <Style
         x:Key="RadioButtonNormalStyle"
-        TargetType="{x:Type RadioButton}">
+        TargetType="{x:Type ctl:ResizableRadioButton}">
 
         <Setter
             Property="Foreground"
@@ -294,11 +294,19 @@
 
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
 
         <Setter
             Property="FontSize"
             Value="12" />
+
+        <Setter
+            Property="OuterDiameter"
+            Value="20" />
+
+        <Setter
+            Property="InnerDiameter"
+            Value="8" />
 
         <Setter
             Property="Cursor"
@@ -308,25 +316,25 @@
             Property="Template">
             <Setter.Value>
                 <ControlTemplate
-                    TargetType="{x:Type RadioButton}">
+                    TargetType="{x:Type ctl:ResizableRadioButton}">
 
                     <Border
                         x:Name="MainBody"
                         Background="Transparent"
-                        Height="20">
+                        Height="{TemplateBinding Height}">
 
                         <DockPanel>
                             <Grid
-                                Width="20"
-                                Height="20"
+                                Width="{TemplateBinding OuterDiameter}"
+                                Height="{TemplateBinding OuterDiameter}"
                                 DockPanel.Dock="Left"
                                 HorizontalAlignment="Left"
                                 Margin="0,0,10,0">
 
                                 <Ellipse
                                     x:Name="OuterEllipse"
-                                    Width="20"
-                                    Height="20"
+                                    Width="{TemplateBinding OuterDiameter}"
+                                    Height="{TemplateBinding OuterDiameter}"
                                     Fill="{StaticResource WindowBackgroundBrush}"
                                     Stroke="{StaticResource DarkBorderBrush}"
                                     StrokeThickness="1"
@@ -335,8 +343,8 @@
 
                                 <Ellipse
                                     x:Name="InnerEllipse"
-                                    Width="8"
-                                    Height="8"
+                                    Width="{TemplateBinding InnerDiameter}"
+                                    Height="{TemplateBinding InnerDiameter}"
                                     Fill="{StaticResource SelectionBackgroundBrush}"
                                     Visibility="Collapsed"
                                     HorizontalAlignment="Center"
@@ -369,6 +377,18 @@
                                 Property="Visibility"
                                 Value="Visible" />
                         </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="false">
+                            <Setter
+                                TargetName="MainContent"
+                                Property="TextBlock.Foreground"
+                                Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            <Setter
+                                TargetName="InnerEllipse"
+                                Property="Fill"
+                                Value="{DynamicResource DarkBorderBrush}" />
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -395,7 +415,7 @@
             Value="12" />
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="Background"
             Value="{StaticResource SelectionBackgroundBrush}" />
@@ -640,7 +660,7 @@
             Value="11" />
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="Padding"
             Value="1" />
@@ -931,7 +951,7 @@
             Value="12" />
         <Setter
             Property="FontFamily"
-            Value="./Fonts/#Roboto Regular" />
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="Template">
             <Setter.Value>
@@ -1879,6 +1899,127 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style
+        x:Key="ListBoxItemStyle"
+        TargetType="{x:Type ListBoxItem}">
+
+        <Setter
+            Property="Padding"
+            Value="10,0,0,0" />
+
+        <Setter
+            Property="Height"
+            Value="24" />
+
+        <Setter
+            Property="FontSize"
+            Value="12" />
+
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center" />
+
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+
+        <Setter
+            Property="Template"
+            Value="{DynamicResource ListBoxItemControlTemplate}" />
+
+    </Style>
+
+    <ControlTemplate
+        x:Key="ListBoxItemControlTemplate"
+        TargetType="{x:Type ListBoxItem}">
+        <Grid>
+            <!-- normal-->
+            <Border
+                x:Name="SelectedBorder"
+                BorderBrush="Transparent"
+                BorderThickness="1"
+                Background="Transparent" />
+            <!-- Content -->
+            <ContentControl
+                x:Name="contentPresenter"
+                Margin="{TemplateBinding Padding}"
+                Foreground="{TemplateBinding Foreground}"
+                ContentTemplate="{TemplateBinding ContentTemplate}"
+                Content="{TemplateBinding Content}"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger
+                Property="IsSelected"
+                Value="True">
+                <Setter
+                    TargetName="SelectedBorder"
+                    Property="Background"
+                    Value="{StaticResource SelectionBackgroundBrush}" />
+                <Setter
+                    TargetName="SelectedBorder"
+                    Property="BorderBrush"
+                    Value="{StaticResource SelectionBackgroundBrush}" />
+            </Trigger>
+            <Trigger
+                Property="IsMouseOver"
+                Value="True">
+                <Setter
+                    TargetName="SelectedBorder"
+                    Property="Background"
+                    Value="{StaticResource SelectionBackgroundBrush}" />
+                <Setter
+                    TargetName="SelectedBorder"
+                    Property="BorderBrush"
+                    Value="{StaticResource LightBlueBrush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style
+        TargetType="{x:Type ListBox}">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type ListBox}">
+                    <Border
+                        x:Name="Bd"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        Padding="1"
+                        SnapsToDevicePixels="True">
+                        <ScrollViewer
+                            Focusable="False"
+                            Padding="{TemplateBinding Padding}">
+                            <ItemsPresenter
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsGrouping"
+                                    Value="True" />
+                                <Condition
+                                    Property="VirtualizingPanel.IsVirtualizingWhenGrouping"
+                                    Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="ScrollViewer.CanContentScroll"
+                                Value="False" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
     </Style>
 
 </ResourceDictionary>

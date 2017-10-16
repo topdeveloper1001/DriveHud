@@ -1,51 +1,91 @@
-﻿namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
+﻿//-----------------------------------------------------------------------
+// <copyright file="FlopTextureSettings.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using ReactiveUI;
+
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
     public class FlopTextureSettings : TextureSettings
     {
         public FlopTextureSettings()
         {
             FlushCard = FlopFlushCardsEnum.Rainbow;
+        }      
+
+        private FlopFlushCardsEnum flushCard;
+
+        public FlopFlushCardsEnum FlushCard
+        {
+            get
+            {
+                return flushCard;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref flushCard, value);
+            }
         }
 
-        public bool IsFlushCardFilter { get; set; }
-        public bool IsOpenEndedStraightDrawsFilter { get; set; }
+        private int openEndedStraightDraws;
 
-        public FlopFlushCardsEnum FlushCard { get; set; }
-        public int OpenEndedStraightDraws { get; set; }
-
-        public override bool Equals(object x)
+        public int OpenEndedStraightDraws
         {
-            TextureSettings x1Base = (TextureSettings) x;
-            TextureSettings x2Base = this;
-
-            FlopTextureSettings x1 = (FlopTextureSettings) x;
-            FlopTextureSettings x2 = this;
-
-            if (!x1Base.EqualsBase(x2Base))
-                goto False;
-
-            if (x1.IsFlushCardFilter != x2.IsFlushCardFilter)
-                goto False;
-
-            if (x1.IsFlushCardFilter)
+            get
             {
-                if (x1.FlushCard != x2.FlushCard)
-                    goto False;
+                return openEndedStraightDraws;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref openEndedStraightDraws, value);
+            }
+        }
+
+        public override NoteStageType StageType
+        {
+            get
+            {
+                return NoteStageType.Flop;
+            }
+        }       
+
+        public override void Reset()
+        {
+            base.Reset();
+            IsOpenEndedStraightDrawsFilter = false;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var flopTextureSettings = obj as FlopTextureSettings;
+
+            if (flopTextureSettings == null)
+            {
+                return false;
             }
 
-            if (x1.IsOpenEndedStraightDrawsFilter != x2.IsOpenEndedStraightDrawsFilter)
-                goto False;
+            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == flopTextureSettings.FlushCard || !IsFlushCardFilter) &&                
+                (IsOpenEndedStraightDrawsFilter && OpenEndedStraightDraws == flopTextureSettings.OpenEndedStraightDraws || !IsOpenEndedStraightDrawsFilter);
+        }
 
-            if (x1.IsOpenEndedStraightDrawsFilter)
+        public override int GetHashCode()
+        {
+            unchecked
             {
-                if (x1.OpenEndedStraightDraws != x2.OpenEndedStraightDraws)
-                    goto False;
+                var hash = base.GetHashCode();               
+                hash += hash * 31 + FlushCard.GetHashCode();
+                hash += hash * 31 + OpenEndedStraightDraws.GetHashCode();
+
+                return hash;
             }
-
-            return true;
-
-            False:
-            return false;
         }
     }
 }

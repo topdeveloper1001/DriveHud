@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RunningStatus.cs" company="Ace Poker Solutions">
+// <copyright file="BoardTextureFilterType.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,13 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.PlayerXRay
+namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
-    public enum RunningStatus
+    public enum BoardTextureFilterType
     {
-        Idle,
-        Processing,
-        Completed,
-        Failed
+        Any,
+        FilterByTexture
     }
 }

@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Reflection;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
@@ -26,6 +27,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reactive.Linq;
 using System.Windows.Data;
 
@@ -44,6 +46,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
             InitializeCommands();
             InitializeActions();
             InitializeFilters();
+            InitializeHandValues();
         }
 
         private void InitializeStages()
@@ -267,6 +270,53 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 });
         }
 
+        private void InitializeHandValues()
+        {
+            flopHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetHandValueObjects(NoteStageType.Flop));
+            SubscribeOnHandValuesChanges(flopHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.FlopHvSettings.SelectedHv));
+
+            flopFlushDrawHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetFlushHandValueObjects());
+            SubscribeOnHandValuesChanges(flopFlushDrawHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.FlopHvSettings.SelectedFlushDraws));
+
+            flopStraightDrawHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetStraightHandValueObjects());
+            SubscribeOnHandValuesChanges(flopStraightDrawHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.FlopHvSettings.SelectedStraighDraws));
+
+            turnHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetHandValueObjects(NoteStageType.Turn));
+            SubscribeOnHandValuesChanges(turnHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.TurnHvSettings.SelectedHv));
+
+            turnFlushDrawHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetFlushHandValueObjects());
+            SubscribeOnHandValuesChanges(turnFlushDrawHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.TurnHvSettings.SelectedFlushDraws));
+
+            turnStraightDrawHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetStraightHandValueObjects());
+            SubscribeOnHandValuesChanges(turnStraightDrawHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.TurnHvSettings.SelectedStraighDraws));
+
+            riverHandValues = new ReactiveList<HandValueObject>(HandValuesHelper.GetHandValueObjects(NoteStageType.River));
+            SubscribeOnHandValuesChanges(riverHandValues, ReflectionHelper.GetPath<NotesViewModel>(x => x.SelectedNote.Settings.RiverHvSettings.SelectedHv));
+        }
+
+        private void SubscribeOnHandValuesChanges(ReactiveList<HandValueObject> source, string valuePath)
+        {
+            source.ChangeTrackingEnabled = true;
+            source.ItemChanged
+                .Where(x => x.PropertyName == nameof(HandValueObject.IsSelected))
+                .Subscribe(x =>
+                {
+                    var collectionToChange = (ICollection<int>)ReflectionHelper.GetMemberValue(this, valuePath);
+
+                    if (collectionToChange == null)
+                    {
+                        return;
+                    }
+
+                    collectionToChange.Remove(x.Sender.Value);
+
+                    if (x.Sender.IsSelected)
+                    {
+                        collectionToChange.Add(x.Sender.Value);
+                    }
+                });
+        }
+
         /// <summary>
         /// Reloads <see cref="Stages"/> collection accordingly to selected <see cref="NoteStageType"/>
         /// </summary>
@@ -291,6 +341,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
             RefreshCurrentActionSettings();
             RefreshFiltersSettings();
+            RefreshCurrentHandValuesSettings();
 
             this.RaisePropertyChanged(nameof(MBCWentToShowdown));
             this.RaisePropertyChanged(nameof(MBCAllInPreFlop));
@@ -338,6 +389,40 @@ namespace DriveHUD.PlayerXRay.ViewModels
                     CurrentActionSettings = SelectedNote.Settings.RiverActions;
                     return;
             }
+        }
+
+        private void RefreshCurrentHandValuesSettings()
+        {
+            if (SelectedNote == null || SelectedNote.Settings == null || SelectedNote.Settings.FlopHvSettings == null)
+            {
+                return;
+            }
+
+            SetIsSelectedHandValues(FlopHandValues, SelectedNote.Settings.FlopHvSettings.SelectedHv);
+            SetIsSelectedHandValues(FlopFlushDrawHandValues, SelectedNote.Settings.FlopHvSettings.SelectedFlushDraws);
+            SetIsSelectedHandValues(FlopStraightDrawHandValues, SelectedNote.Settings.FlopHvSettings.SelectedStraighDraws);
+            SetIsSelectedHandValues(TurnHandValues, SelectedNote.Settings.TurnHvSettings.SelectedHv);
+            SetIsSelectedHandValues(TurnFlushDrawHandValues, SelectedNote.Settings.TurnHvSettings.SelectedFlushDraws);
+            SetIsSelectedHandValues(TurnStraightDrawHandValues, SelectedNote.Settings.TurnHvSettings.SelectedStraighDraws);
+            SetIsSelectedHandValues(RiverHandValues, SelectedNote.Settings.RiverHvSettings.SelectedHv);
+
+            this.RaisePropertyChanged(nameof(FlopAnyHandValue));
+            this.RaisePropertyChanged(nameof(FlopAnyFlushDrawsHandValue));
+            this.RaisePropertyChanged(nameof(FlopAnyStraightDrawsHandValue));
+            this.RaisePropertyChanged(nameof(TurnAnyHandValue));
+            this.RaisePropertyChanged(nameof(TurnAnyFlushDrawsHandValue));
+            this.RaisePropertyChanged(nameof(TurnAnyStraightDrawsHandValue));
+            this.RaisePropertyChanged(nameof(RiverAnyHandValue));
+        }
+
+        private static void SetIsSelectedHandValues(IEnumerable<HandValueObject> source, IEnumerable<int> selectedValues)
+        {
+            if (selectedValues == null || source == null)
+            {
+                return;
+            }
+
+            source.ForEach(x => x.IsSelected = selectedValues.Contains(x.Value));
         }
 
         #region Properties
@@ -637,6 +722,289 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 this.RaiseAndSetIfChanged(ref currentActionSettings, value);
             }
         }
+
+        #region Hand Values
+
+
+        #region Flop
+
+        public bool FlopAnyHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null && SelectedNote.Settings.FlopHvSettings.AnyHv;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null)
+                {
+                    SelectedNote.Settings.FlopHvSettings.AnyHv = value;
+
+                    if (value)
+                    {
+                        FlopHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> flopHandValues;
+
+        public ReactiveList<HandValueObject> FlopHandValues
+        {
+            get
+            {
+                return flopHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref flopHandValues, value);
+            }
+        }
+
+        public bool FlopAnyFlushDrawsHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null && SelectedNote.Settings.FlopHvSettings.AnyFlushDraws;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null)
+                {
+                    SelectedNote.Settings.FlopHvSettings.AnyFlushDraws = value;
+
+                    if (value)
+                    {
+                        FlopFlushDrawHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> flopFlushDrawHandValues;
+
+        public ReactiveList<HandValueObject> FlopFlushDrawHandValues
+        {
+            get
+            {
+                return flopFlushDrawHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref flopFlushDrawHandValues, value);
+            }
+        }
+
+        public bool FlopAnyStraightDrawsHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null && SelectedNote.Settings.FlopHvSettings.AnyStraightDraws;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.FlopHvSettings != null)
+                {
+                    SelectedNote.Settings.FlopHvSettings.AnyStraightDraws = value;
+
+                    if (value)
+                    {
+                        FlopStraightDrawHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> flopStraightDrawHandValues;
+
+        public ReactiveList<HandValueObject> FlopStraightDrawHandValues
+        {
+            get
+            {
+                return flopStraightDrawHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref flopStraightDrawHandValues, value);
+            }
+        }
+
+        #endregion
+
+        #region Turn
+
+        public bool TurnAnyHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null && SelectedNote.Settings.TurnHvSettings.AnyHv;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null)
+                {
+                    SelectedNote.Settings.TurnHvSettings.AnyHv = value;
+
+                    if (value)
+                    {
+                        TurnHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> turnHandValues;
+
+        public ReactiveList<HandValueObject> TurnHandValues
+        {
+            get
+            {
+                return turnHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref turnHandValues, value);
+            }
+        }
+
+        public bool TurnAnyFlushDrawsHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null && SelectedNote.Settings.TurnHvSettings.AnyFlushDraws;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null)
+                {
+                    SelectedNote.Settings.TurnHvSettings.AnyFlushDraws = value;
+
+                    if (value)
+                    {
+                        TurnFlushDrawHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> turnFlushDrawHandValues;
+
+        public ReactiveList<HandValueObject> TurnFlushDrawHandValues
+        {
+            get
+            {
+                return turnFlushDrawHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref turnFlushDrawHandValues, value);
+            }
+        }
+
+        public bool TurnAnyStraightDrawsHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null && SelectedNote.Settings.TurnHvSettings.AnyStraightDraws;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.TurnHvSettings != null)
+                {
+                    SelectedNote.Settings.TurnHvSettings.AnyStraightDraws = value;
+
+                    if (value)
+                    {
+                        TurnStraightDrawHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> turnStraightDrawHandValues;
+
+        public ReactiveList<HandValueObject> TurnStraightDrawHandValues
+        {
+            get
+            {
+                return turnStraightDrawHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref turnStraightDrawHandValues, value);
+            }
+        }
+
+        #endregion
+
+        #region River
+
+        public bool RiverAnyHandValue
+        {
+            get
+            {
+                return SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.RiverHvSettings != null && SelectedNote.Settings.RiverHvSettings.AnyHv;
+            }
+            set
+            {
+                if (SelectedNote != null && SelectedNote.Settings != null &&
+                    SelectedNote.Settings.RiverHvSettings != null)
+                {
+                    SelectedNote.Settings.RiverHvSettings.AnyHv = value;
+
+                    if (value)
+                    {
+                        RiverHandValues.ForEach(x => x.IsSelected = false);
+                    }
+                }
+
+                this.RaisePropertyChanged();
+            }
+        }
+
+        private ReactiveList<HandValueObject> riverHandValues;
+
+        public ReactiveList<HandValueObject> RiverHandValues
+        {
+            get
+            {
+                return riverHandValues;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref riverHandValues, value);
+            }
+        }
+
+        #endregion
+
+        #endregion
 
         #endregion
 
