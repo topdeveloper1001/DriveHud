@@ -392,6 +392,7 @@
     <Compile Include="Migration\Migrations\Migration0020_AddAliasTable.cs" />
     <Compile Include="Migration\Migrations\Migration0021_AddImportedFilesTable.cs" />
     <Compile Include="Migration\Migrations\Migration0022_AddMaxPlayersToPlayerstatistic.cs" />
+    <Compile Include="Migration\Migrations\Migration0023_AddAutoNoteColumnToPlayerNotes.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />

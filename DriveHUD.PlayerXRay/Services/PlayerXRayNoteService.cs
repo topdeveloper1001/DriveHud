@@ -44,7 +44,7 @@ namespace DriveHUD.PlayerXRay.Services
 
             if (playerNotes != null && existingNotes != null)
             {
-                playerNotes.Note = NoteHelper.CombineNotes(existingNotes, playerNotes);
+                playerNotes.AutoNote = NoteHelper.CombineAutoNotes(existingNotes, playerNotes);
             }
 
             return playerNotes;

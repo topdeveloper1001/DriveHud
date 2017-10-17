@@ -10,23 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
-using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
+using DriveHUD.PlayerXRay.Events;
 using DriveHUD.PlayerXRay.ViewModels;
+using DriveHUD.PlayerXRay.Views;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Prism.Events;
-using DriveHUD.PlayerXRay.Events;
-using DriveHUD.PlayerXRay.Views;
 
 namespace DriveHUD.PlayerXRay
 {
@@ -59,7 +55,7 @@ namespace DriveHUD.PlayerXRay
         {
             StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
             StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
-            Navigate(WorkspaceType.Profiles);
+            Navigate(WorkspaceType.Run);
         }
 
         #region Properties

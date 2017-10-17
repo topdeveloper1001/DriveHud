@@ -24,7 +24,7 @@ namespace DriveHUD.PlayerXRay.Helpers
         /// </summary>
         /// <param name="existingNote">Note to combine</param>
         /// <param name="note">Note to combine</param>
-        public static string CombineNotes(Playernotes existingNote, Playernotes note)
+        public static string CombineAutoNotes(Playernotes existingNote, Playernotes note)
         {
             if (existingNote == null)
             {
@@ -36,10 +36,10 @@ namespace DriveHUD.PlayerXRay.Helpers
                 throw new ArgumentNullException(nameof(note));
             }
 
-            var noteName = ParseNoteName(note.Note);
-            var noteCardRange = ParseCardRange(note.Note);
+            var noteName = ParseNoteName(note.AutoNote);
+            var noteCardRange = ParseCardRange(note.AutoNote);
 
-            var noteLines = existingNote.Note.GetLines(true).ToArray();
+            var noteLines = existingNote.AutoNote.GetLines(true).ToArray();
 
             var isNewNote = true;
 
@@ -71,7 +71,7 @@ namespace DriveHUD.PlayerXRay.Helpers
 
             if (isNewNote)
             {
-                return $"{existingNote.Note}{Environment.NewLine}{note.Note}";
+                return $"{existingNote.AutoNote}{Environment.NewLine}{note.AutoNote}";
             }
 
             return string.Join(Environment.NewLine, noteLines);

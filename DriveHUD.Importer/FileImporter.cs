@@ -1046,7 +1046,7 @@ namespace DriveHUD.Importers
 
                 if (existingNotes != null)
                 {
-                    existingNotes.Note = playerNotes.Note;
+                    existingNotes.AutoNote = playerNotes.AutoNote;
                     session.Update(existingNotes);
                     return;
                 }

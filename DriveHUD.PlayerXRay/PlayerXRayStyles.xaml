@@ -420,6 +420,9 @@
             Property="Background"
             Value="{StaticResource SelectionBackgroundBrush}" />
         <Setter
+            Property="BorderThickness"
+            Value="0" />
+        <Setter
             Property="Padding"
             Value="2" />
         <Setter
@@ -435,7 +438,8 @@
                         TextBlock.Foreground="{TemplateBinding Foreground}"
                         Padding="{TemplateBinding Padding}"
                         CornerRadius="2"
-                        BorderThickness="0"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
                         Background="{TemplateBinding Background}">
                         <ContentPresenter
                             Margin="{TemplateBinding Padding}"

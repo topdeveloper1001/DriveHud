@@ -15,7 +15,7 @@ namespace Model.Mapping
             Table("\"PlayerNotes\"");
             LazyLoad();
             Id(x => x.PlayerNoteId).GeneratedBy.Sequence("\"PlayerNotes_PlayerNoteId_seq\"").Column("\"PlayerNoteId\"");
-            Map(x => x.Note).Column("\"Note\"");
+            Map(x => x.ManualNote).Column("\"Note\"");
             Map(x => x.PokersiteId).Column("\"PokerSiteId\"").Not.Nullable();
             References(x => x.Player).Column("\"PlayerId\"").ForeignKey("\"PlayerId\"");
         }

@@ -21,7 +21,8 @@ namespace DriveHUD.Entities.Mapping
             Table("PlayerNotes");
             LazyLoad();
             Id(x => x.PlayerNoteId).GeneratedBy.Native().Column("PlayerNoteId");
-            Map(x => x.Note).Column("Note");
+            Map(x => x.ManualNote).Column("Note").Nullable();
+            Map(x => x.AutoNote).Column("AutoNote").Nullable();
             Map(x => x.PokersiteId).Column("PokerSiteId").Not.Nullable();
             Map(x => x.PlayerId).Column("PlayerId").Not.Nullable();
             References(x => x.Player).ReadOnly().Column("PlayerId").ForeignKey("PlayerId");

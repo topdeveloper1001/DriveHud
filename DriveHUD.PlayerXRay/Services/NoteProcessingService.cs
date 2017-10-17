@@ -78,7 +78,7 @@ namespace DriveHUD.PlayerXRay.Services
             {
                 PlayerId = stats.PlayerId,
                 PokersiteId = (short)stats.PokersiteId,
-                Note = string.Join(Environment.NewLine, notesMessages)
+                AutoNote = string.Join(Environment.NewLine, notesMessages)
             };
 
             return playerNotes;
@@ -149,7 +149,7 @@ namespace DriveHUD.PlayerXRay.Services
                                                 if (playersNotesDictionary.ContainsKey(playerNoteKey))
                                                 {
                                                     var playersNote = playersNotesDictionary[playerNoteKey].FirstOrDefault();
-                                                    playersNote.Note = NoteHelper.CombineNotes(playersNote, playerNote);
+                                                    playersNote.AutoNote = NoteHelper.CombineAutoNotes(playersNote, playerNote);
                                                 }
                                                 else
                                                 {
@@ -298,7 +298,7 @@ namespace DriveHUD.PlayerXRay.Services
             {
                 using (var transaction = session.BeginTransaction())
                 {
-                    session.CreateSQLQuery($"DELETE FROM \"PlayerNotes\"").ExecuteUpdate();
+                    session.CreateSQLQuery($"UPDATE \"PlayerNotes\" SET AutoNote=null").ExecuteUpdate();
                     transaction.Commit();
                 }
             }

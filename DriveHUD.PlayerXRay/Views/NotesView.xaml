@@ -252,6 +252,25 @@
             </Style>
 
             <Style
+                x:Key="SwitchModeButtonStyleNoBackground"
+                TargetType="{x:Type Button}"
+                BasedOn="{StaticResource SwitchModeButtonStyle}">
+
+                <Setter
+                    Property="BorderThickness"
+                    Value="1" />
+
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource ForegroundBrush}" />
+
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+
+            </Style>
+
+            <Style
                 x:Key="BoxStyle"
                 TargetType="{x:Type GroupBox}"
                 BasedOn="{StaticResource {x:Type GroupBox}}">
@@ -1188,21 +1207,21 @@
                                     <Button
                                         Content="SUITED 1 GAPPERS"
                                         Width="140"
-                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Style="{StaticResource SwitchModeButtonStyleNoBackground}"
                                         Command="{Binding HoleCardsSelectSuitedGappersCommand}" />
 
                                     <Button
                                         Content="SUITED CONNECTORS"
                                         Width="155"
                                         Margin="5,0,0,0"
-                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Style="{StaticResource SwitchModeButtonStyleNoBackground}"
                                         Command="{Binding HoleCardsSelectSuitedConnectorsCommand}" />
 
                                     <Button
                                         Content="POCKET PAIRS"
                                         Width="95"
                                         Margin="5,0,0,0"
-                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Style="{StaticResource SwitchModeButtonStyleNoBackground}"
                                         Command="{Binding HoleCardsSelectPocketPairsCommand}" />
 
                                 </StackPanel>
@@ -1215,14 +1234,14 @@
                                     <Button
                                         Content="OFF SUITED 1 GAPPERS"
                                         Width="140"
-                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Style="{StaticResource SwitchModeButtonStyleNoBackground}"
                                         Command="{Binding HoleCardsSelectOffSuitedGappersCommand}" />
 
                                     <Button
                                         Content="OFF SUITED CONNECTORS"
                                         Width="155"
                                         Margin="5,0,0,0"
-                                        Style="{StaticResource SwitchModeButtonStyle}"
+                                        Style="{StaticResource SwitchModeButtonStyleNoBackground}"
                                         Command="{Binding HoleCardsSelectOffSuitedConnectorsCommand}" />
 
                                 </StackPanel>
