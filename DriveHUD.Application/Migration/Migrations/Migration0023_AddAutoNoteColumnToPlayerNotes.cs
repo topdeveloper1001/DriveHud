@@ -61,11 +61,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 Create.Index(playerNotesIndexName).OnTable(playerNotesTableName).OnColumn("PlayerId");
 
-                if (Schema.Table(playerNotesTempTableName).Exists())
-                {
-                    Execute.Sql($"INSERT INTO {playerNotesTableName} SELECT PlayerNoteId, PlayerId, Note, null, PokerSiteId FROM {playerNotesTempTableName}");
-                    Delete.Table(playerNotesTempTableName);
-                }
+                Execute.Sql($"INSERT INTO {playerNotesTableName} SELECT PlayerNoteId, PlayerId, Note, null, PokerSiteId FROM {playerNotesTempTableName}");
+                Delete.Table(playerNotesTempTableName);
             }
             catch (Exception e)
             {

@@ -299,6 +299,7 @@ namespace DriveHUD.PlayerXRay.Services
                 using (var transaction = session.BeginTransaction())
                 {
                     session.CreateSQLQuery($"UPDATE \"PlayerNotes\" SET AutoNote=null").ExecuteUpdate();
+                    session.CreateSQLQuery($"DELETE FROM \"PlayerNotes\" WHERE AutoNote is null and Note is null").ExecuteUpdate();
                     transaction.Commit();
                 }
             }
