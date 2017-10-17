@@ -12,7 +12,6 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
-using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
@@ -27,7 +26,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reactive.Linq;
 using System.Windows.Data;
 
@@ -1137,6 +1135,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
                 var note = new NoteObject
                 {
+                    ID = ObjectsHelper.GetNextID(NoteService.CurrentNotesAppSettings.AllNotes),
                     Name = addNoteViewModel.Name,
                     IsSelected = true
                 };

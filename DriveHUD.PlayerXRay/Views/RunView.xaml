@@ -134,8 +134,7 @@
 
                         <ctl:ResizableRadioButton
                             Grid.Column="0"
-                            HorizontalAlignment="Center"
-                            IsEnabled="False"
+                            HorizontalAlignment="Center"                            
                             IsChecked="{Binding RunMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:RunMode.ByProfile}}"
                             Style="{StaticResource RadioButtonNormalStyle}"
                             GroupName="RunByGroup"

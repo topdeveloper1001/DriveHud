@@ -30,13 +30,15 @@ using DriveHUD.PlayerXRay.Views;
 
 namespace DriveHUD.PlayerXRay
 {
-    public class PlayerXRayMainViewModel : WindowViewModelBase, INotification
+    public class PlayerXRayMainViewModel : WindowViewModelBase, INotification, IDisposable
     {
         private readonly Dictionary<WorkspaceType, WorkspaceViewModel> workspaces;
 
         private readonly SingletonStorageModel storageModel;
 
         private readonly IEventAggregator eventAggregator;
+
+        private readonly SubscriptionToken raisePopupSubscriptionToken;
 
         public PlayerXRayMainViewModel()
         {
@@ -50,14 +52,14 @@ namespace DriveHUD.PlayerXRay
             NavigateCommand = ReactiveCommand.Create();
             NavigateCommand.Subscribe(x => Navigate((WorkspaceType)x));
 
-            eventAggregator.GetEvent<RaisePopupEvent>().Subscribe(RaisePopup);
+            raisePopupSubscriptionToken = eventAggregator.GetEvent<RaisePopupEvent>().Subscribe(RaisePopup, false);
         }
 
         public void Initialize()
         {
             StaticStorage.CurrentPlayer = StorageModel.PlayerSelectedItem?.PlayerId.ToString();
             StaticStorage.CurrentPlayerName = StorageModel.PlayerSelectedItem?.Name;
-            Navigate(WorkspaceType.Notes);
+            Navigate(WorkspaceType.Profiles);
         }
 
         #region Properties
@@ -74,7 +76,7 @@ namespace DriveHUD.PlayerXRay
         {
             get
             {
-                return "2017/10/02";
+                return "2017/10/17";
             }
         }
 
@@ -180,6 +182,17 @@ namespace DriveHUD.PlayerXRay
             {
                 this.RaiseAndSetIfChanged(ref content, value);
             }
+        }
+
+        #endregion
+
+        #region IDisposable implementation
+
+        protected override void Disposing()
+        {
+            base.Disposing();
+
+            eventAggregator.GetEvent<RaisePopupEvent>().Unsubscribe(raisePopupSubscriptionToken);
         }
 
         #endregion

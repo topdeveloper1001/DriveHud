@@ -149,8 +149,8 @@ namespace DriveHUD.PlayerXRay.UserControls
             if (!MessageBoxHelper.ShowYesNoDialogBox("Do you want to save pending changes?", NotesAppSettingsHelper.MainWindow))
                 return;
 
-            m_selectedObject.ContainingNotes = selectedNotes;
-            NotesAppSettingsHelper.SaveAppSettings();
+            //m_selectedObject.ContainingNotes = selectedNotes;
+            //NotesAppSettingsHelper.SaveAppSettings();
         }
 
         private void ListBoxSelectionChanged(object sender, SelectionChangedEventArgs e)

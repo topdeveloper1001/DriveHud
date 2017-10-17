@@ -1,49 +1,33 @@
-﻿#region Usings
+﻿//-----------------------------------------------------------------------
+// <copyright file="ObjectsHelper.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using System;
-using System.Collections;
-using System.Reflection;
-
-#endregion
+using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.PlayerXRay.DataTypes
 {
     public static class ObjectsHelper
     {
-        public static int GetNextID(IList list)
+        public static int GetNextID(IList<NoteObject> list)
         {
-            int id = 1;
-
-            if (list == null)
-                return 1;
-
-            Type listType = list.GetType();
-            Type elemTypes = listType.GetGenericArguments()[0];
-
-            MemberInfo[] members = elemTypes.GetMember("ID");
-
-            if (members.Length <= 0)
-                return -1;
-
-            PropertyInfo info = (PropertyInfo) members[0];
-
-            while (IDExists(id, list, info))
-                id++;
-
-            return id;
-        }
-
-        private static bool IDExists(int id, IList list, PropertyInfo info)
-        {
-            foreach (var obj in list)
+            if (list == null || list.Count == 0)
             {
-                if ((int) info.GetValue(obj, null) == id)
-                {
-                    return true;
-                }
+                return 1;
             }
 
-            return false;
+            var id = list.Max(x => x.ID) + 1;
+
+            return id;
         }
     }
 }

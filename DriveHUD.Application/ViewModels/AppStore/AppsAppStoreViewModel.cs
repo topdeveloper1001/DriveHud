@@ -21,7 +21,7 @@ using System;
 namespace DriveHUD.Application.ViewModels.AppStore
 {
     public class AppsAppStoreViewModel : AppStoreBaseViewModel<IAppsAppStoreModel>
-    {        
+    {
         public override void Initialize()
         {
             base.Initialize();
@@ -62,7 +62,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
             var appViewModel = new PlayerXRayMainViewModel();
 
-            ViewRequest?.Raise(appViewModel);
+            ViewRequest?.Raise(appViewModel, x => appViewModel.Dispose());
         }
     }
 }

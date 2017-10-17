@@ -33,8 +33,10 @@ namespace DriveHUD.PlayerXRay.ViewModels
             profiles = new ObservableCollection<ProfileObject>(NoteService.CurrentNotesAppSettings.Profiles);
             stages = new ObservableCollection<StageObject>();
 
-            var canRun = this.WhenAny(x => x.RunMode, x => x.SelectedNoteObject,
-                (x1, x2) => (x1.Value == RunMode.AllNotes) || (x1.Value == RunMode.ByNote && x2.Value != null && x2.Value is NoteObject));
+            var canRun = this.WhenAny(x => x.RunMode, x => x.SelectedNoteObject, x => x.SelectedProfile,
+                (x1, x2, x3) => (x1.Value == RunMode.AllNotes) ||
+                    (x1.Value == RunMode.ByNote && x2.Value != null && x2.Value is NoteObject) ||
+                    (x1.Value == RunMode.ByProfile && x3.Value != null));
 
             RunCommand = ReactiveCommand.Create(canRun);
             RunCommand.Subscribe(x => Run());
@@ -207,6 +209,12 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 else if (RunMode == RunMode.AllNotes)
                 {
                     notes = NoteService.CurrentNotesAppSettings.AllNotes;
+                }
+                else if (RunMode == RunMode.ByProfile && SelectedProfile != null)
+                {
+                    notes = (from noteId in SelectedProfile.ContainingNotes
+                             join note in NoteService.CurrentNotesAppSettings.AllNotes on noteId equals note.ID
+                             select note).ToList();
                 }
                 else
                 {
