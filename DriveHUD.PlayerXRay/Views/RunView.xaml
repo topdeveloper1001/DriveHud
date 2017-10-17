@@ -369,12 +369,10 @@
                             <StackPanel
                                 VerticalAlignment="Center"
                                 Orientation="Horizontal">
-                                <TextBlock
-                                    FontSize="12"
+                                <TextBlock                                    
                                     Text="Status: " />
 
-                                <TextBlock
-                                    FontSize="12"
+                                <TextBlock                                    
                                     Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
                                     Text="{Binding Status}" />
 

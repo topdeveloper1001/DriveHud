@@ -16,20 +16,6 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
     public class TurnTextureSettings : TextureSettings
     {
-        private bool isOpenEndedStraightDrawsFilter;
-
-        public bool IsOpenEndedStraightDrawsFilter
-        {
-            get
-            {
-                return isOpenEndedStraightDrawsFilter;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isOpenEndedStraightDrawsFilter, value);
-            }
-        }
-
         private TurnFlushCardsEnum flushCard;
 
         public TurnFlushCardsEnum FlushCard
@@ -44,32 +30,12 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             }
         }
 
-        private int openEndedStraightDraws;
-
-        public int OpenEndedStraightDraws
-        {
-            get
-            {
-                return openEndedStraightDraws;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref openEndedStraightDraws, value);
-            }
-        }
-       
         public override NoteStageType StageType
         {
             get
             {
                 return NoteStageType.Turn;
             }
-        }
-
-        public override void Reset()
-        {
-            base.Reset();
-            IsOpenEndedStraightDrawsFilter = false;
         }
 
         public override bool Equals(object obj)
@@ -81,17 +47,15 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
                 return false;
             }
 
-            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == turnTextureSettings.FlushCard || !IsFlushCardFilter) &&                
-                  (IsOpenEndedStraightDrawsFilter && OpenEndedStraightDraws == turnTextureSettings.OpenEndedStraightDraws || !IsOpenEndedStraightDrawsFilter);
+            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == turnTextureSettings.FlushCard || !IsFlushCardFilter);
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                var hash = base.GetHashCode();             
-                hash += hash * 31 + FlushCard.GetHashCode();
-                hash += hash * 31 + OpenEndedStraightDraws.GetHashCode();
+                var hash = base.GetHashCode();
+                hash += hash * 31 + FlushCard.GetHashCode();                
 
                 return hash;
             }

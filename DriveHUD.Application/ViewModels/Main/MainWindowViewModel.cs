@@ -858,59 +858,63 @@ namespace DriveHUD.Application.ViewModels
 
         private void SwitchViewModel(EnumViewModelType viewModelType)
         {
-            IsShowEquityCalculator = false;
-            if (viewModelType == EnumViewModelType.DashboardViewModel)
+            using (var pf = new PerformanceMonitor($"SwitchViewModel.{viewModelType}"))
             {
-                if (this.DashboardViewModel == null)
+                IsShowEquityCalculator = false;
+
+                if (viewModelType == EnumViewModelType.DashboardViewModel)
                 {
-                    this.DashboardViewModel = new DashboardViewModel(synchronizationContext)
+                    if (DashboardViewModel == null)
                     {
-                        Type = EnumViewModelType.DashboardViewModel,
-                    };
+                        DashboardViewModel = new DashboardViewModel(synchronizationContext)
+                        {
+                            Type = EnumViewModelType.DashboardViewModel,
+                        };
+                    }
+
+                    CurrentViewModel = DashboardViewModel;
+                    ReportGadgetViewModel.IsShowTournamentData = false;
+                    UpdateCurrentView();
+
+                    filterModelManager.SetFilterType(EnumFilterType.Cash);
+                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
                 }
-
-                this.CurrentViewModel = this.DashboardViewModel;
-                this.ReportGadgetViewModel.IsShowTournamentData = false;
-                UpdateCurrentView();
-
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
-            }
-            if (viewModelType == EnumViewModelType.TournamentViewModel)
-            {
-                if (this.TournamentViewModel == null)
+                else if (viewModelType == EnumViewModelType.TournamentViewModel)
                 {
-                    this.TournamentViewModel = new TournamentViewModel()
+                    if (TournamentViewModel == null)
                     {
-                        Type = EnumViewModelType.TournamentViewModel,
-                    };
+                        TournamentViewModel = new TournamentViewModel()
+                        {
+                            Type = EnumViewModelType.TournamentViewModel,
+                        };
+                    }
+
+                    CurrentViewModel = TournamentViewModel;
+                    ReportGadgetViewModel.IsShowTournamentData = true;
+                    UpdateCurrentView();
+
+                    filterModelManager.SetFilterType(EnumFilterType.Tournament);
+                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
                 }
-
-                this.CurrentViewModel = this.TournamentViewModel;
-                this.ReportGadgetViewModel.IsShowTournamentData = true;
-                UpdateCurrentView();
-
-                filterModelManager.SetFilterType(EnumFilterType.Tournament);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
-            }
-            if (viewModelType == EnumViewModelType.HudViewModel)
-            {
-                if (this.HudViewModel == null)
+                else if (viewModelType == EnumViewModelType.HudViewModel)
                 {
-                    this.HudViewModel = new HudViewModel();
-                }
+                    if (HudViewModel == null)
+                    {
+                        HudViewModel = new HudViewModel();
+                    }
 
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
-                this.CurrentViewModel = this.HudViewModel;
-            }
-            if (viewModelType == EnumViewModelType.AppsViewModel)
-            {
-                if (this.AppsViewModel == null)
+                    filterModelManager.SetFilterType(EnumFilterType.Cash);
+                    CurrentViewModel = HudViewModel;
+                }
+                else if (viewModelType == EnumViewModelType.AppsViewModel)
                 {
-                    this.AppsViewModel = new AppsViewModel();
-                }
+                    if (AppsViewModel == null)
+                    {
+                        AppsViewModel = new AppsViewModel();
+                    }
 
-                this.CurrentViewModel = this.AppsViewModel;
+                    CurrentViewModel = AppsViewModel;
+                }
             }
         }
 

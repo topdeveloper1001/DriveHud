@@ -16,6 +16,8 @@ using System.Reactive.Linq;
 using System.Linq;
 using System;
 using System.Xml.Serialization;
+using System.Collections.ObjectModel;
+using DriveHUD.Common.Linq;
 
 namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 {
@@ -26,6 +28,22 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             Changed
                 .Where(x => x.PropertyName != nameof(BoardTextureFilterType))
                 .Subscribe(x => this.RaisePropertyChanged(nameof(BoardTextureFilterType)));
+
+            openEndedStraightDrawsCollection = new ObservableCollection<int>(Enumerable.Range(0, 10));
+            gutshotsCollection = new ObservableCollection<int>(Enumerable.Range(0, 10));
+            possibleStraightsCompareCollection = new ObservableCollection<CompareEnum>(Enum.GetValues(typeof(CompareEnum)).OfType<CompareEnum>());
+            possibleStraightsCollection = new ObservableCollection<int>(Enumerable.Range(0, 21));
+            highestCardCollection = new ObservableCollection<string>(HandHistories.Objects.Cards.Card.PossibleRanksHighCardFirst.Reverse());
+
+            cardTextureCollection = new ReactiveList<CardTexture>(HandHistories.Objects.Cards.Card.PossibleRanksHighCardFirst.Select(x => new CardTexture { Card = x, IsChecked = false }));
+            cardTextureCollection.ChangeTrackingEnabled = true;
+            cardTextureCollection.ItemChanged
+                .Where(x => x.PropertyName == nameof(CardTexture.IsChecked))
+                .Subscribe(x =>
+                {
+                    selectedCardTexture = string.Join(",", cardTextureCollection.Where(c => c.IsChecked).Select(c => c.Card).ToArray());
+                    this.RaisePropertyChanged(nameof(SelectedCardTexture));
+                });
         }
 
         private bool isFlushCardFilter;
@@ -53,6 +71,20 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             set
             {
                 this.RaiseAndSetIfChanged(ref isOpenEndedStraightDrawsFilter, value);
+            }
+        }
+
+        private int openEndedStraightDraws;
+
+        public int OpenEndedStraightDraws
+        {
+            get
+            {
+                return openEndedStraightDraws;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref openEndedStraightDraws, value);
             }
         }
 
@@ -193,6 +225,10 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             set
             {
                 this.RaiseAndSetIfChanged(ref selectedCardTexture, value);
+
+                var selectedCards = selectedCardTexture.Split(',');
+
+                cardTextureCollection.ForEach(x => x.IsChecked = selectedCards.Contains(x.Card));
             }
         }
 
@@ -219,7 +255,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
         {
             get
             {
-                if (IsFlushCardFilter || IsOpenEndedStraightDrawsFilter || IsPairedFilter || IsGutshotsFilter || IsCardTextureFilter || IsHighcardFilter || IsPossibleStraightsFilter || IsPairedFilterTrue)
+                if (IsFlushCardFilter || IsOpenEndedStraightDrawsFilter || IsPairedFilter || IsGutshotsFilter || IsCardTextureFilter || IsHighcardFilter || IsPossibleStraightsFilter)
                 {
                     return BoardTextureFilterType.FilterByTexture;
                 }
@@ -244,28 +280,80 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
         {
             get
             {
-                if (string.IsNullOrEmpty(SelectedCardTexture))
-                {
-                    return new List<string>();
-                }
-
-                return !SelectedCardTexture.Contains(",")
-                           ? new List<string> { SelectedCardTexture }
-                           : new List<string>(SelectedCardTexture.Split(','));
+                return CardTextureCollection
+                    .Where(x => x.IsChecked)
+                    .Select(x => x.Card)
+                    .ToList();
             }
-            set
+        }
+
+        private ReactiveList<CardTexture> cardTextureCollection;
+
+        [XmlIgnore]
+        public ReactiveList<CardTexture> CardTextureCollection
+        {
+            get
             {
-                SelectedCardTexture = string.Empty;
+                return cardTextureCollection;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref cardTextureCollection, value);
+            }
+        }
 
-                foreach (string card in value)
-                {
-                    SelectedCardTexture += card + ',';
-                }
+        private ObservableCollection<int> openEndedStraightDrawsCollection;
 
-                if (SelectedCardTexture.Contains(","))
-                {
-                    SelectedCardTexture = SelectedCardTexture.Remove(SelectedCardTexture.LastIndexOf(','), 1);
-                }
+        [XmlIgnore]
+        public ObservableCollection<int> OpenEndedStraightDrawsCollection
+        {
+            get
+            {
+                return openEndedStraightDrawsCollection;
+            }
+        }
+
+        private ObservableCollection<int> gutshotsCollection;
+
+        [XmlIgnore]
+        public ObservableCollection<int> GutshotsCollection
+        {
+            get
+            {
+                return gutshotsCollection;
+            }
+        }
+
+        private ObservableCollection<CompareEnum> possibleStraightsCompareCollection;
+
+        [XmlIgnore]
+        public ObservableCollection<CompareEnum> PossibleStraightsCompareCollection
+        {
+            get
+            {
+                return possibleStraightsCompareCollection;
+            }
+        }
+
+        private ObservableCollection<int> possibleStraightsCollection;
+
+        [XmlIgnore]
+        public ObservableCollection<int> PossibleStraightsCollection
+        {
+            get
+            {
+                return possibleStraightsCollection;
+            }
+        }
+
+        private ObservableCollection<string> highestCardCollection;
+
+        [XmlIgnore]
+        public ObservableCollection<string> HighestCardCollection
+        {
+            get
+            {
+                return highestCardCollection;
             }
         }
 
@@ -285,6 +373,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
 
             return IsFlushCardFilter == textureSettings.IsFlushCardFilter &&
                 IsOpenEndedStraightDrawsFilter == textureSettings.IsOpenEndedStraightDrawsFilter &&
+                (IsOpenEndedStraightDrawsFilter && OpenEndedStraightDraws == textureSettings.OpenEndedStraightDraws || !IsOpenEndedStraightDrawsFilter) &&
                 IsGutshotsFilter == textureSettings.IsGutshotsFilter &&
                 (IsGutshotsFilter && Gutshots == textureSettings.Gutshots || !IsGutshotsFilter) &&
                 IsHighcardFilter == textureSettings.IsHighcardFilter &&
@@ -309,6 +398,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
                 hash += hash * 31 + IsCardTextureFilter.GetHashCode();
                 hash += hash * 31 + IsHighcardFilter.GetHashCode();
                 hash += hash * 31 + IsPossibleStraightsFilter.GetHashCode();
+                hash += hash * 31 + OpenEndedStraightDraws.GetHashCode();
                 hash += hash * 31 + PossibleStraightsCompare.GetHashCode();
                 hash += hash * 31 + PossibleStraights.GetHashCode();
                 hash += hash * 31 + Gutshots.GetHashCode();
@@ -327,6 +417,37 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
                 hash += hash * 31 + StageType.GetHashCode();
 
                 return hash;
+            }
+        }
+
+        public class CardTexture : ReactiveObject
+        {
+            private string card;
+
+            public string Card
+            {
+                get
+                {
+                    return card;
+                }
+                set
+                {
+                    this.RaiseAndSetIfChanged(ref card, value);
+                }
+            }
+
+            private bool isChecked;
+
+            public bool IsChecked
+            {
+                get
+                {
+                    return isChecked;
+                }
+                set
+                {
+                    this.RaiseAndSetIfChanged(ref isChecked, value);
+                }
             }
         }
     }

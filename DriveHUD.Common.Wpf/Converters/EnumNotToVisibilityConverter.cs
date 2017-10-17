@@ -49,6 +49,11 @@ namespace DriveHUD.Common.Wpf.Converters
                 return HiddenVisibility;
             }
 
+            if (!Enum.IsDefined(value.GetType(), strParameter))
+            {
+                return HiddenVisibility;
+            }
+
             try
             {
                 return Enum.Parse(value.GetType(), strParameter).Equals(value) ? HiddenVisibility : Visibility.Visible;
@@ -62,7 +67,7 @@ namespace DriveHUD.Common.Wpf.Converters
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            return DependencyProperty.UnsetValue;
         }
     }
 

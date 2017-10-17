@@ -43,6 +43,20 @@
                     Property="Margin"
                     Value="0,0,10,0" />
 
+                <Setter
+                    Property="Height"
+                    Value="25 " />
+
+            </Style>
+
+            <Style
+                TargetType="{x:Type CheckBox}"
+                BasedOn="{StaticResource CheckBoxStyle}">
+
+                <Setter
+                    Property="Height"
+                    Value="30 " />
+
             </Style>
 
         </ResourceDictionary>
@@ -52,28 +66,20 @@
 
         <Grid.RowDefinitions>
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
             <RowDefinition
-                MinHeight="30"
                 Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -88,13 +94,11 @@
             Grid.ColumnSpan="2">
 
             <ctl:ResizableRadioButton
-                GroupName="FilterByTextureGroup"
                 IsChecked="{Binding BoardTextureFilterType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static nt:BoardTextureFilterType.Any}}"
                 Content="Any Texture"
                 Style="{StaticResource RadioButtonStyle}" />
 
-            <ctl:ResizableRadioButton               
-                GroupName="FilterByTextureGroup"
+            <ctl:ResizableRadioButton
                 IsChecked="{Binding BoardTextureFilterType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static nt:BoardTextureFilterType.FilterByTexture}}"
                 Content="Filter By Texture"
                 Style="{StaticResource RadioButtonStyle}" />
@@ -105,7 +109,6 @@
         <CheckBox
             Grid.Row="1"
             IsChecked="{Binding IsFlushCardFilter}"
-            Style="{StaticResource CheckBoxStyle}"
             Content="Flush Cards" />
 
         <!-- Flop Flush cards -->
@@ -118,22 +121,19 @@
             Visibility="{Binding StageType, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static dt:NoteStageType.Flop}}">
 
             <ctl:ResizableRadioButton
-                Style="{StaticResource RadioButtonStyle}"          
+                Style="{StaticResource RadioButtonStyle}"
                 Content="Rainbow"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.Rainbow}}"
-                GroupName="FlushFlopCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.Rainbow}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Two of One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.TwoOfOneSuit}}"
-                GroupName="FlushFlopCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.TwoOfOneSuit}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Three of One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.ThreeOfOneSuit}}"
-                GroupName="FlushFlopCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:FlopFlushCardsEnum.ThreeOfOneSuit}}" />
 
         </WrapPanel>
 
@@ -149,32 +149,27 @@
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Rainbow"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.Rainbow}}"
-                GroupName="FlushTurnCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.Rainbow}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Two of One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.TwoOfOneSuit}}"
-                GroupName="FlushTurnCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.TwoOfOneSuit}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Two of Two Suits"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.TwoOfTwoSuits}}"
-                GroupName="FlushTurnCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.TwoOfTwoSuits}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Three of One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.ThreeOfOneSuit}}"
-                GroupName="FlushTurnCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.ThreeOfOneSuit}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Four of One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.FourOfOneSuit}}"
-                GroupName="FlushTurnCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:TurnFlushCardsEnum.FourOfOneSuit}}" />
 
         </WrapPanel>
 
@@ -190,70 +185,160 @@
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="No Flush Possible"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.NoFlush}}"
-                GroupName="FlushRiverCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.NoFlush}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Three Cards One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.ThreeCardsOneSuit}}"
-                GroupName="FlushRiverCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.ThreeCardsOneSuit}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Four Cards One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.FourCardsOneSuit}}"
-                GroupName="FlushRiverCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.FourCardsOneSuit}}" />
 
             <ctl:ResizableRadioButton
                 Style="{StaticResource RadioButtonStyle}"
                 Content="Five Cards One Suit"
-                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.FiveCardsOneSuit}}"
-                GroupName="FlushRiverCardsGroup" />
+                IsChecked="{Binding FlushCard, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static dt:RiverFlushCardsEnum.FiveCardsOneSuit}}" />
 
         </WrapPanel>
 
-        <!-- Number of Open Ended Straight Draws--> 
+        <!-- Number of Open Ended Straight Draws -->
         <CheckBox
             Grid.Row="2"
             IsChecked="{Binding IsOpenEndedStraightDrawsFilter}"
-            Style="{StaticResource CheckBoxStyle}"
             Visibility="{Binding StageType, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static dt:NoteStageType.River}}"
             Content="Number of Open Ended Straight Draws" />
 
+        <ComboBox
+            Grid.Row="2"
+            Grid.Column="2"
+            Width="40"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            Visibility="{Binding StageType, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static dt:NoteStageType.River}}"
+            IsEnabled="{Binding IsOpenEndedStraightDrawsFilter}"
+            SelectedItem="{Binding OpenEndedStraightDraws}"
+            ItemsSource="{Binding OpenEndedStraightDrawsCollection}"
+            Style="{StaticResource ComboBoxStyle}" />
+
+        <!-- Number of  Gutshots -->
         <CheckBox
             Grid.Row="3"
             IsChecked="{Binding IsGutshotsFilter}"
-            Style="{StaticResource CheckBoxStyle}"
             Visibility="{Binding StageType, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static dt:NoteStageType.River}}"
             Content="Number of Gutshots" />
 
+        <ComboBox
+            Grid.Row="3"
+            Grid.Column="2"
+            Width="40"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            Visibility="{Binding StageType, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static dt:NoteStageType.River}}"
+            IsEnabled="{Binding IsGutshotsFilter}"
+            SelectedItem="{Binding Gutshots}"
+            ItemsSource="{Binding GutshotsCollection}"
+            Style="{StaticResource ComboBoxStyle}" />
+
+        <!-- Number of Possible Straights -->
         <CheckBox
             Grid.Row="4"
             IsChecked="{Binding IsPossibleStraightsFilter}"
-            Style="{StaticResource CheckBoxStyle}"            
             Content="Number of Possible Straights" />
+
+        <ComboBox
+            Grid.Row="4"
+            Grid.Column="2"
+            Width="100"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            IsEnabled="{Binding IsPossibleStraightsFilter}"
+            SelectedItem="{Binding PossibleStraightsCompare}"
+            ItemsSource="{Binding PossibleStraightsCompareCollection}"
+            Style="{StaticResource ComboBoxStyle}" />
+
+        <ComboBox
+            Grid.Row="4"
+            Grid.Column="2"
+            Width="50"
+            Margin="110,0,0,0"
+            HorizontalAlignment="Left"
+            IsEnabled="{Binding IsPossibleStraightsFilter}"
+            SelectedItem="{Binding PossibleStraights}"
+            ItemsSource="{Binding PossibleStraightsCollection}"
+            Style="{StaticResource ComboBoxStyle}" />
 
         <!-- Highest Card -->
         <CheckBox
             Grid.Row="5"
             IsChecked="{Binding IsHighcardFilter}"
-            Style="{StaticResource CheckBoxStyle}"            
             Content="Highest Card" />
-     
+
+        <ComboBox
+            Grid.Row="5"
+            Grid.Column="2"
+            Width="40"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            IsEnabled="{Binding IsHighcardFilter}"
+            SelectedItem="{Binding HighestCard}"
+            ItemsSource="{Binding HighestCardCollection}"
+            Style="{StaticResource ComboBoxStyle}" />
+
         <!-- Exact Texture Card -->
         <CheckBox
             Grid.Row="6"
             IsChecked="{Binding IsCardTextureFilter}"
-            Style="{StaticResource CheckBoxStyle}"
             Content="Exact Texture" />
+
+        <ItemsControl
+            Grid.Row="6"
+            Grid.Column="2"
+            Margin="5,0,0,0"
+            VerticalAlignment="Center"
+            ItemsSource="{Binding CardTextureCollection}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox
+                        Margin="0,0,5,0"
+                        Content="{Binding Card}"
+                        IsChecked="{Binding IsChecked}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel
+                        Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
 
         <!-- Is Paired -->
         <CheckBox
             Grid.Row="7"
             IsChecked="{Binding IsPairedFilter}"
-            Style="{StaticResource CheckBoxStyle}"
             Content="Is Paired" />
+
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="7"
+            IsEnabled="{Binding IsPairedFilter}"
+            Orientation="Horizontal"
+            Margin="5,0,0,0">
+
+            <ctl:ResizableRadioButton
+                Style="{StaticResource RadioButtonStyle}"
+                IsChecked="{Binding IsPairedFilterTrue}"
+                Content="True" />
+
+            <ctl:ResizableRadioButton
+                Style="{StaticResource RadioButtonStyle}"
+                IsChecked="{Binding IsPairedFilterTrue, Converter={dh:BoolNotConverter}}"
+                Content="False" />
+
+        </StackPanel>
 
     </Grid>
 </UserControl>

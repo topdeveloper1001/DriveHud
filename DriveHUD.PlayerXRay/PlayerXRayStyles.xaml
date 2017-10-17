@@ -82,7 +82,7 @@
             Value="{StaticResource ForegroundBrush}" />
         <Setter
             Property="FontSize"
-            Value="14" />
+            Value="12" />
         <Setter
             Property="VerticalAlignment"
             Value="Center" />
@@ -958,6 +958,7 @@
                 <ControlTemplate
                     TargetType="{x:Type CheckBox}">
                     <BulletDecorator
+                        VerticalAlignment="Center"
                         Background="Transparent">
                         <BulletDecorator.Bullet>
                             <Border
@@ -1607,6 +1608,8 @@
                             </Canvas>
                             <ItemsPresenter
                                 x:Name="ItemsPresenter"
+                                TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                                TextBlock.FontSize="{TemplateBinding FontSize}"
                                 KeyboardNavigation.DirectionalNavigation="Contained"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Grid>
@@ -1625,6 +1628,7 @@
 
             <ContentPresenter
                 x:Name="contentPresenter"
+                TextBlock.FontSize="12"
                 ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                 ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                 Content="{TemplateBinding SelectionBoxItem}"
@@ -1670,6 +1674,15 @@
                     TargetName="opaqueRect"
                     Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
             </Trigger>
+            <Trigger
+                Property="IsEnabled"
+                Value="False">
+                <Setter
+                    Property="TextElement.Foreground"
+                    TargetName="templateRoot"
+                    Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+            </Trigger>
+
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
@@ -1694,6 +1707,12 @@
         <Setter
             Property="Height"
             Value="25" />
+        <Setter
+            Property="FontSize"
+            Value="12" />
+        <Setter
+            Property="FontFamily"
+            Value="/Fonts/#Roboto Regular" />
         <Setter
             Property="VerticalContentAlignment"
             Value="Center" />
@@ -1721,6 +1740,7 @@
         <Setter
             Property="Template"
             Value="{StaticResource ComboBoxTemplate}" />
+
     </Style>
 
     <Style
@@ -1748,6 +1768,12 @@
             Property="BorderThickness"
             Value="1" />
         <Setter
+            Property="FontSize"
+            Value="12" />
+        <Setter
+            Property="FontFamily"
+            Value="/Fonts/#Roboto Regular" />
+        <Setter
             Property="FocusVisualStyle"
             Value="{x:Null}" />
         <Setter
@@ -1763,6 +1789,7 @@
                         Padding="{TemplateBinding Padding}"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
+                            TextBlock.FontSize="12"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />

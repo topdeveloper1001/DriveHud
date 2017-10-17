@@ -19,7 +19,7 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
         public FlopTextureSettings()
         {
             FlushCard = FlopFlushCardsEnum.Rainbow;
-        }      
+        }
 
         private FlopFlushCardsEnum flushCard;
 
@@ -35,32 +35,12 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
             }
         }
 
-        private int openEndedStraightDraws;
-
-        public int OpenEndedStraightDraws
-        {
-            get
-            {
-                return openEndedStraightDraws;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref openEndedStraightDraws, value);
-            }
-        }
-
         public override NoteStageType StageType
         {
             get
             {
                 return NoteStageType.Flop;
             }
-        }       
-
-        public override void Reset()
-        {
-            base.Reset();
-            IsOpenEndedStraightDrawsFilter = false;
         }
 
         public override bool Equals(object obj)
@@ -72,17 +52,15 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.TextureObjects
                 return false;
             }
 
-            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == flopTextureSettings.FlushCard || !IsFlushCardFilter) &&                
-                (IsOpenEndedStraightDrawsFilter && OpenEndedStraightDraws == flopTextureSettings.OpenEndedStraightDraws || !IsOpenEndedStraightDrawsFilter);
+            return base.Equals(obj) && (IsFlushCardFilter && FlushCard == flopTextureSettings.FlushCard || !IsFlushCardFilter);
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                var hash = base.GetHashCode();               
+                var hash = base.GetHashCode();
                 hash += hash * 31 + FlushCard.GetHashCode();
-                hash += hash * 31 + OpenEndedStraightDraws.GetHashCode();
 
                 return hash;
             }

@@ -90,11 +90,11 @@ namespace DriveHUD.PlayerXRay.UserControls.BoardTexture
                     if ((bool)((CheckBox)elem).IsChecked)
                         selectedCards.Add(((CheckBox)elem).Content.ToString());
                 }
-                texture.SelectedCardTextureList = selectedCards;
+             //   texture.SelectedCardTextureList = selectedCards;
             }
             else
             {
-                texture.SelectedCardTextureList = new List<string>();
+             //   texture.SelectedCardTextureList = new List<string>();
                 texture.IsCardTextureFilter = false;
             }
 
