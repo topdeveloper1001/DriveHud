@@ -41,9 +41,7 @@ namespace DriveHUD.PlayerXRay
         }
 
         private void PlayerXRayMainView_Loaded(object sender, EventArgs e)
-        {
-            tbRand.Text = (new Random()).Next(0, 1000).ToString();
-
+        {         
             Loaded -= PlayerXRayMainView_Loaded;
             ViewModel?.Initialize();
         }

@@ -1462,6 +1462,7 @@
     <Resource Include="images\splashscreen.png" />
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
+    <Resource Include="images\xray.ico" />
     <Content Include="Lib\CapPipedI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

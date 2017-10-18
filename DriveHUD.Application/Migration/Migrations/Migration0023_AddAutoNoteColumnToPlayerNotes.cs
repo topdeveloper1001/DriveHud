@@ -10,15 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
-using DriveHUD.Common.Resources;
 using FluentMigrator;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {

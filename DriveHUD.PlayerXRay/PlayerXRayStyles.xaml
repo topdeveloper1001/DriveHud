@@ -1932,36 +1932,6 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="ListBoxItemStyle"
-        TargetType="{x:Type ListBoxItem}">
-
-        <Setter
-            Property="Padding"
-            Value="10,0,0,0" />
-
-        <Setter
-            Property="Height"
-            Value="24" />
-
-        <Setter
-            Property="FontSize"
-            Value="12" />
-
-        <Setter
-            Property="VerticalContentAlignment"
-            Value="Center" />
-
-        <Setter
-            Property="Cursor"
-            Value="Hand" />
-
-        <Setter
-            Property="Template"
-            Value="{DynamicResource ListBoxItemControlTemplate}" />
-
-    </Style>
-
     <ControlTemplate
         x:Key="ListBoxItemControlTemplate"
         TargetType="{x:Type ListBoxItem}">
@@ -2017,6 +1987,38 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    
+    <Style
+        x:Key="ListBoxItemStyle"
+        TargetType="{x:Type ListBoxItem}">
+
+        <Setter
+            Property="Padding"
+            Value="10,0,0,0" />
+
+        <Setter
+            Property="Height"
+            Value="24" />
+
+        <Setter
+            Property="FontSize"
+            Value="12" />
+
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center" />
+
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+
+        <Setter
+            Property="Template"
+            Value="{StaticResource ListBoxItemControlTemplate}" />
+
+    </Style>
+
+    
 
     <Style
         TargetType="{x:Type ListBox}">

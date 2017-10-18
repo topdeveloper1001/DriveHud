@@ -372,6 +372,9 @@
             <cnv:TreeMultiBindingConverter
                 x:Key="TreeMultiBindingConverter" />
 
+            <cnv:CollectionViewGroupConverter
+                x:Key="CollectionViewGroupConverter" />
+
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid
@@ -1690,7 +1693,7 @@
                                 <TreeView
                                     Foreground="{StaticResource ForegroundBrush}"
                                     FontFamily="/Fonts/#Roboto Regular"
-                                    ItemsSource="{Binding FiltersCollectionView.Groups}"
+                                    ItemsSource="{Binding FiltersCollectionView.Groups, Converter={StaticResource CollectionViewGroupConverter}}"
                                     Margin="0"
                                     FontSize="12">
                                     <i:Interaction.Triggers>

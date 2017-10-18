@@ -168,12 +168,14 @@
     <Compile Include="Controls\MenuButton.cs" />
     <Compile Include="Controls\ResizableRadioButton.cs" />
     <Compile Include="Converters\ActionToBetweenVisibilityConverter.cs" />
+    <Compile Include="Converters\CollectionViewGroupConverter.cs" />
     <Compile Include="Converters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Converters\PopupBehavior.cs" />
     <Compile Include="Converters\StatusToColorConverter.cs" />
     <Compile Include="Converters\TreeViewItemExtensions.cs" />
     <Compile Include="DataTypes\FiltersHelper.cs" />
     <Compile Include="DataTypes\HandValuesHelper.cs" />
+    <Compile Include="DataTypes\NotesTreeObjects\CollectionViewGroupWrapper.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\HandValueObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeEditableObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />

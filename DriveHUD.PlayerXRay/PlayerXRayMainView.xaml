@@ -219,9 +219,6 @@
                     Style="{StaticResource BottomActiveTextStyle}"
                     Text="{Binding StorageModel.PlayerSelectedItem.DecodedName}" />
 
-                <TextBlock
-                    x:Name="tbRand" />
-
             </StackPanel>
 
         </Border>
