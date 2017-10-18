@@ -87,7 +87,7 @@
                             Value="True" />
                         <Setter
                             Property="Icon"
-                            Value="{markupext:IconExtension  /images/drivehud.ico, 32}" />
+                            Value="{markupext:IconExtension  /images/xray.ico, 32}" />
                     </Style>
                 </infra:PopupWindowAction.WindowStyle>
                 <infra:PopupWindowAction.IsModal>
