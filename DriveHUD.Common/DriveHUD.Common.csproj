@@ -105,6 +105,7 @@
     <Compile Include="Security\ILicenseManager.cs" />
     <Compile Include="Security\SecurityUtils.cs" />
     <Compile Include="Utils\BrowserHelper.cs" />
+    <Compile Include="Utils\CertificateHelper.cs" />
     <Compile Include="Utils\CurrencyConverter.cs" />
     <Compile Include="Utils\DateTimeHelper.cs" />
     <Compile Include="Utils\EncodingDetector.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="WinApi\StartupInfo.cs" />
     <Compile Include="WinApi\ThreadWaitValue.cs" />
     <Compile Include="WinApi\WinApi.cs" />
+    <Compile Include="WinApi\WinTrust.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

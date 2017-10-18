@@ -100,7 +100,7 @@ namespace DriveHUD.Application
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
             sqliteBootstrapper.InitializeDatabase();
-            
+
             var playerXRayModule = ServiceLocator.Current.GetInstance<IDHModule>(CustomModulesNames.PlayerXRay);
             playerXRayModule.ConfigureContainer(Container);
 
@@ -111,7 +111,7 @@ namespace DriveHUD.Application
         {
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
             LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
-
+         
             try
             {
                 if (IsUninstall())
