@@ -130,9 +130,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Transitionals">
-      <HintPath>..\dependencies\Transitionals.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -185,47 +182,14 @@
     <Compile Include="Events\RaisePopupEventArgs.cs" />
     <Compile Include="Helpers\NoteHelper.cs" />
     <Compile Include="PlayerXRayModule.cs" />
-    <Compile Include="PlayerXRay\Converters\OppositeBoolConverter.cs" />
-    <Compile Include="PlayerXRay\Converters\TreeDescriptionConverter.cs" />
-    <Compile Include="PlayerXRay\Converters\TreeMultiBindingConverter.cs" />
-    <Compile Include="PlayerXRay\Converters\TreeViewSelectItemBehavior.cs" />
-    <Compile Include="PlayerXRay\CustomControls\MainMenu.xaml.cs" />
-    <Compile Include="PlayerXRay\CustomControls\MainMenuButton.xaml.cs" />
-    <Compile Include="PlayerXRay\CustomControls\MessageBoxHelper.cs" />
-    <Compile Include="PlayerXRay\Helpers\UIHelpers.cs" />
-    <Compile Include="PlayerXRay\Theme\TreeViewHelper.cs" />
-    <Compile Include="PlayerXRay\UserControls\AddItems\AddGroupWindow.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\AddItems\AddNoteWindow.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\BoardTexture\BoardTextureUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\BoardTexture\FlopBoardTextureUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\BoardTexture\RiverBoardTextureUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\BoardTexture\TurnBoardTextureUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\DebugModeUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\ComparisonFiltersWindow.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\NoteFilterValueAdd.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\NotesActionsUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\NotesHv.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\NotesPage.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\NotesSettings.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\PlayerSettingUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\Notes\StakesUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\ProfilesUC.xaml.cs" />
-    <Compile Include="PlayerXRay\UserControls\RunPage.xaml.cs" />
+    <Compile Include="Converters\TreeMultiBindingConverter.cs" />
+    <Compile Include="Converters\TreeViewSelectItemBehavior.cs" />
     <Compile Include="RunningStatus.cs" />
     <Compile Include="Services\INoteProcessingService.cs" />
     <Compile Include="Services\IPlayerXRayNoteService.cs" />
     <Compile Include="Services\NoteProcessingService.cs" />
     <Compile Include="Services\NoteProcessingServiceProgressChangedEventArgs.cs" />
     <Compile Include="Services\PlayerXRayNoteService.cs" />
-    <Compile Include="UIControls\Core\Converters\InverseBoolConverter.cs" />
-    <Compile Include="UIControls\Core\Primitives\InputBase.cs" />
-    <Compile Include="UIControls\Core\UIElementAdorner.cs" />
-    <Compile Include="UIControls\CustomControls\CircularAnimator.xaml.cs" />
-    <Compile Include="UIControls\CustomControls\ExitDialog.xaml.cs" />
-    <Compile Include="UIControls\CustomControls\HoleCardsUC.xaml.cs" />
-    <Compile Include="UIControls\MessageBox\MessageBox.cs" />
-    <Compile Include="UIControls\MessageBox\VisualStates.MessageBox.cs" />
-    <Compile Include="UIControls\VisualStates.cs" />
     <Compile Include="ViewModels\HelpViewModel.cs" />
     <Compile Include="ViewModels\HoleCardsViewModel.cs" />
     <Compile Include="ViewModels\IPopupInteractionAware.cs" />
@@ -262,10 +226,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="BusinessHelper\ApplicationSettings\NotesAppSettings.cs" />
-    <Compile Include="BusinessHelper\ApplicationSettings\NotesAppSettingsHelper.cs" />
     <Compile Include="BusinessHelper\ApplicationSettings\StaticStorage.cs" />
-    <Compile Include="BusinessHelper\DAL.cs" />
-    <Compile Include="BusinessHelper\EncryptionHelper.cs" />
     <Compile Include="BusinessHelper\HandAnalyzer\FlushAnalyzers.cs" />
     <Compile Include="BusinessHelper\HandAnalyzer\FlushDrawAnalyzers.cs" />
     <Compile Include="BusinessHelper\HandAnalyzer\FourOfAKindAnalyzers.cs" />
@@ -279,12 +240,10 @@
     <Compile Include="BusinessHelper\HandAnalyzer\TwoPairAnalyzers.cs" />
     <Compile Include="BusinessHelper\NoteManager.cs" />
     <Compile Include="BusinessHelper\NoteManagerHelper.cs" />
-    <Compile Include="BusinessHelper\NotesInsertManager.cs" />
     <Compile Include="BusinessHelper\OtherAnalyzers\BetSizeAnalyzers.cs" />
     <Compile Include="BusinessHelper\OtherAnalyzers\NotClassifiedAnalyzers.cs" />
     <Compile Include="BusinessHelper\OtherAnalyzers\PotSizeAnalyzers.cs" />
     <Compile Include="BusinessHelper\Player.cs" />
-    <Compile Include="BusinessHelper\Resources.Designer.cs" />
     <Compile Include="BusinessHelper\Serializer.cs" />
     <Compile Include="BusinessHelper\TextureAnalyzers\Flush\FiveOfOneSuitFlushTextureAnalyzer.cs" />
     <Compile Include="BusinessHelper\TextureAnalyzers\Flush\FourOfOneSuitFlushTextureAnalyzer.cs" />
@@ -296,15 +255,11 @@
     <Compile Include="BusinessHelper\TextureAnalyzers\Straight\GutShotTextureAnalizer.cs" />
     <Compile Include="BusinessHelper\TextureAnalyzers\Straight\OpenEndedStraightTextureAnalyzer.cs" />
     <Compile Include="BusinessHelper\TextureAnalyzers\Straight\PossibleStraightTextureAnalyzer.cs" />
-    <Compile Include="BusinessHelper\WcfHelper.cs" />
     <Compile Include="DataTypes\Card.cs" />
     <Compile Include="DataTypes\CompareHelpers.cs" />
     <Compile Include="DataTypes\Enums.cs" />
     <Compile Include="DataTypes\EnumsHelpers.cs" />
     <Compile Include="DataTypes\HoleCardsHelper.cs" />
-    <Compile Include="DataTypes\InsertManagerObjects\DatabaseNote.cs" />
-    <Compile Include="DataTypes\InsertManagerObjects\ProcessNoteObject.cs" />
-    <Compile Include="DataTypes\InsertManagerObjects\ProcessPlayerObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\ActionsObjects\ActionSettings.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\FilterObject.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\HandValueSettings.cs" />
@@ -319,8 +274,6 @@
     <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\TextureSettings.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\TurnTextureSettings.cs" />
     <Compile Include="DataTypes\ObjectsHelper.cs" />
-    <Compile Include="DataTypes\ServerDatabase.cs" />
-    <Compile Include="DataTypes\ServerDatabaseList.cs" />
     <Compile Include="DataTypes\Stake.cs" />
     <Compile Include="Helpers\AssemblyHelpers.cs" />
     <Compile Include="PlayerXRayMainView.xaml.cs">
@@ -330,190 +283,6 @@
     <Page Include="PlayerXRayStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PlayerXRay\CustomControls\MainMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\CustomControls\MainMenuButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Simple Styles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\Button.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\CheckBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ComboBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\Common.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\GroupBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\Label.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ListBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ListView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\MessageBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\NumericUpDown.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ProgressBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\RadioButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ScrollBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\Slider.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\TabControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\TabItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\TextBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ThemeFile.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ToolBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\ToolTip.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\Theme\TreeView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\AddItems\AddGroupWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\AddItems\AddNoteWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\BoardTexture\BoardTextureUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\BoardTexture\FlopBoardTextureUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\BoardTexture\RiverBoardTextureUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\BoardTexture\TurnBoardTextureUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\DebugModeUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\ComparisonFiltersWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\NoteFilterValueAdd.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\NotesActionsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\NotesHv.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\NotesPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\NotesSettings.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\PlayerSettingUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\Notes\StakesUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\ProfilesUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PlayerXRay\UserControls\RunPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UIControls\CustomControls\CircularAnimator.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UIControls\CustomControls\ExitDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UIControls\CustomControls\HoleCardsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UIControls\Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\BoardTextureView.xaml">
       <SubType>Designer</SubType>
@@ -555,7 +324,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="BusinessHelper\Resources.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -613,12 +381,6 @@
       <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
       <Name>HandHistories.Parser</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="UIControls\MessageBox\Icons\Error48.png" />
-    <Resource Include="UIControls\MessageBox\Icons\Information48.png" />
-    <Resource Include="UIControls\MessageBox\Icons\Question48.png" />
-    <Resource Include="UIControls\MessageBox\Icons\Warning48.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\RunButton.png" />

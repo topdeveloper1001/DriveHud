@@ -17,7 +17,6 @@ using DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Flush;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureAnalyzers.Straight;
 using DriveHUD.PlayerXRay.BusinessHelper.TextureHelpers;
 using DriveHUD.PlayerXRay.DataTypes;
-using DriveHUD.PlayerXRay.DataTypes.InsertManagerObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
 using HandHistories.Objects.Actions;
