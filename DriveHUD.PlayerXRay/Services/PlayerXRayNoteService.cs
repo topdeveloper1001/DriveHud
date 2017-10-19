@@ -40,14 +40,22 @@ namespace DriveHUD.PlayerXRay.Services
         {
             var noteProcessingService = ServiceLocator.Current.GetInstance<INoteProcessingService>();
 
-            var playerNotes = noteProcessingService.ProcessHand(CurrentNotesAppSettings.AllNotes, stats, handHistory);
-
-            if (playerNotes != null && existingNotes != null)
+            try
             {
-                playerNotes.AutoNote = NoteHelper.CombineAutoNotes(existingNotes, playerNotes);
-            }
+                var playerNotes = noteProcessingService.ProcessHand(CurrentNotesAppSettings.AllNotes, stats, handHistory);
 
-            return playerNotes;
+                if (playerNotes != null && existingNotes != null)
+                {
+                    playerNotes.AutoNote = NoteHelper.CombineAutoNotes(existingNotes, playerNotes);
+                }
+
+                return playerNotes;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Could not build notes", e);
+                return null;
+            }
         }
 
         #region Properties
@@ -67,7 +75,7 @@ namespace DriveHUD.PlayerXRay.Services
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"Couldn't save settings in '{configurationFile}'", e);
+                    LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Couldn't save settings in '{configurationFile}'", e);
                 }
             }
         }
@@ -85,12 +93,12 @@ namespace DriveHUD.PlayerXRay.Services
                     }
                     else
                     {
-                        LogProvider.Log.Info(this, "Could not find existing configuration file. Load defaults.");
+                        LogProvider.Log.Info(CustomModulesNames.PlayerXRay, "Could not find existing configuration file. Load defaults.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(this, "Could not load existing configuration file. Load defaults.", ex);
+                    LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Could not load existing configuration file. Load defaults.", ex);
                 }
 
                 if (CurrentNotesAppSettings == null || CurrentNotesAppSettings.StagesList == null ||
@@ -117,7 +125,7 @@ namespace DriveHUD.PlayerXRay.Services
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Could not initialize default notes. Empty notes will be created.", e);
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Could not initialize default notes. Empty notes will be created.", e);
                 CurrentNotesAppSettings = new NotesAppSettings();
             }
 

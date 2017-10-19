@@ -113,6 +113,7 @@
       <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
       <Private>True</Private>
@@ -187,13 +188,35 @@
     <Compile Include="DataTypes\NotesTreeObjects\NoteTreeObjectBase.cs" />
     <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\BoardTextureFilterType.cs" />
     <Compile Include="DataTypes\PlayerstatisticExtended.cs" />
+    <Compile Include="DeployLXKeys.cs" />
     <Compile Include="Events\RaisePopupEvent.cs" />
     <Compile Include="Events\RaisePopupEventArgs.cs" />
     <Compile Include="Helpers\NoteHelper.cs" />
+    <Compile Include="Licensing\DeployLXLicensingServer.cs" />
+    <Compile Include="Licensing\ILicenseInfo.cs" />
+    <Compile Include="Licensing\ILicenseService.cs" />
+    <Compile Include="Licensing\LicenseCouldNotActivateException.cs" />
+    <Compile Include="Licensing\LicenseException.cs" />
+    <Compile Include="Licensing\LicenseExpiredException.cs" />
+    <Compile Include="Licensing\LicenseInfo.cs" />
+    <Compile Include="Licensing\LicenseInvalidSerialException.cs" />
+    <Compile Include="Licensing\LicenseNoConnectionException.cs" />
+    <Compile Include="Licensing\LicenseService.cs" />
+    <Compile Include="Licensing\LicenseSubType.cs" />
+    <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="PlayerXRayModule.cs" />
     <Compile Include="Converters\TreeMultiBindingConverter.cs" />
     <Compile Include="Converters\TreeViewSelectItemBehavior.cs" />
+    <Compile Include="Resources\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
     <Compile Include="RunningStatus.cs" />
+    <Compile Include="Security\XRCReg.cs" />
+    <Compile Include="Security\XRHReg.cs" />
+    <Compile Include="Security\XROReg.cs" />
+    <Compile Include="Security\XRTReg.cs" />
     <Compile Include="Services\INoteProcessingService.cs" />
     <Compile Include="Services\IPlayerXRayNoteService.cs" />
     <Compile Include="Services\NoteProcessingService.cs" />
@@ -204,6 +227,8 @@
     <Compile Include="ViewModels\IPopupInteractionAware.cs" />
     <Compile Include="ViewModels\NotesViewModel.cs" />
     <Compile Include="ViewModels\PopupViewModels\AddEditNoteViewModel.cs" />
+    <Compile Include="ViewModels\PopupViewModels\LicenseInfoViewModel.cs" />
+    <Compile Include="ViewModels\PopupViewModels\RegistrationViewModel.cs" />
     <Compile Include="ViewModels\PopupViewModels\YesNoConfirmationViewModel.cs" />
     <Compile Include="ViewModels\ProfilesViewModel.cs" />
     <Compile Include="ViewModels\RunMode.cs" />
@@ -221,6 +246,9 @@
     </Compile>
     <Compile Include="Views\PopupViews\AddEditNoteView.xaml.cs">
       <DependentUpon>AddEditNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupViews\RegistrationView.xaml.cs">
+      <DependentUpon>RegistrationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PopupViews\YesNoConfirmationView.xaml.cs">
       <DependentUpon>YesNoConfirmationView.xaml</DependentUpon>
@@ -315,6 +343,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PopupViews\RegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PopupViews\YesNoConfirmationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -352,6 +384,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <EmbeddedResource Include="Resources\Common.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="runtime.lic" />
     <Resource Include="Fonts\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -441,7 +478,9 @@
   <ItemGroup>
     <Resource Include="Resources\AddButton.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Log\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

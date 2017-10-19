@@ -21,6 +21,7 @@ using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects.ActionsObjects;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using Model;
 using Model.Importer;
 using System;
 using System.Collections.Generic;
@@ -462,7 +463,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 case ActionTypeEnum.Fold:
                     return HandActionType.FOLD;
                 default:
-                    LogProvider.Log.Error(typeof(NoteManager), "Current player failed to load");
+                    LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Current player failed to load");
                     return HandActionType.UNKNOWN;
             }
         }
@@ -580,7 +581,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(typeof(NoteManager), "FilterByNoOfPlayerCondition method exception", ex);
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "FilterByNoOfPlayerCondition method exception", ex);
             }
 
             return filteredList;

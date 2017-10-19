@@ -17,6 +17,7 @@ using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.Services;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -236,7 +237,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
                 if (e != null)
                 {
-                    LogProvider.Log.Error(this, $"Could not process notes.", e);
+                    LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Could not process notes.", e);
                     Status = RunningStatus.Failed;
                     return;
                 }

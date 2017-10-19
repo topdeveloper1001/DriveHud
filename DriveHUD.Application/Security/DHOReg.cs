@@ -11,14 +11,13 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DHORegistration;
 using DriveHUD.Common.Security;
 
 namespace DriveHUD.Application.Security
 {
-    internal class DHORegWrapper : ILicenseManager
+    internal class DHOReg : ILicenseManager
     {
-        private readonly DHOReg licenseManager = new DHOReg();
+        private readonly DHORegistration.DHOReg licenseManager = new DHORegistration.DHOReg();
 
         public void ResetCacheForLicense(SecureLicense license)
         {

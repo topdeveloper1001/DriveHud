@@ -11,14 +11,17 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Common.Log;
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.PlayerXRay.BusinessHelper;
 using DriveHUD.PlayerXRay.DataTypes;
 using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using DriveHUD.PlayerXRay.Helpers;
+using DriveHUD.PlayerXRay.Licensing;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
@@ -37,6 +40,7 @@ namespace DriveHUD.PlayerXRay.Services
         private const int handHistoryRowsPerQuery = 1000;
         private readonly IHandHistoryParserFactory handHistoryParserFactory;
         private readonly SingletonStorageModel storageModel;
+        private readonly ILicenseService licenseService;
 
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
         private Dictionary<PlayerPokerSiteKey, List<Playernotes>> playersNotesDictionary;
@@ -45,12 +49,93 @@ namespace DriveHUD.PlayerXRay.Services
         {
             handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
             storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+            licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+            InitializeLimits();
         }
+
+        private void InitializeLimits()
+        {
+            var registeredLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
+
+            // if any license is not trial
+            if (registeredLicenses.Any(x => !x.IsTrial))
+            {
+                registeredLicenses = registeredLicenses.Where(x => !x.IsTrial).ToArray();
+            }
+
+            var gameTypes = registeredLicenses.SelectMany(x => ConvertLicenseType(x.LicenseType)).Distinct().ToArray();
+
+            Limit = new LicenseLimit
+            {
+                TournamentLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.TournamentLimit) : 0,
+                CashLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.CashLimit) : 0,
+                AllowedGameTypes = gameTypes
+            };
+        }
+
+        private static IEnumerable<HandHistories.Objects.GameDescription.GameType> ConvertLicenseType(LicenseType licenseType)
+        {
+            var gameTypes = new List<HandHistories.Objects.GameDescription.GameType>();
+
+            switch (licenseType)
+            {
+                case LicenseType.Holdem:
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.CapNoLimitHoldem);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FixedLimitHoldem);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.NoLimitHoldem);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.PotLimitHoldem);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.SpreadLimitHoldem);
+                    break;
+                case LicenseType.Omaha:
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.CapPotLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmahaHiLo);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FixedLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.FixedLimitOmahaHiLo);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.NoLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.NoLimitOmahaHiLo);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.PotLimitOmaha);
+                    gameTypes.Add(HandHistories.Objects.GameDescription.GameType.PotLimitOmahaHiLo);
+                    break;
+                case LicenseType.Combo:
+                case LicenseType.Trial:
+                    foreach (HandHistories.Objects.GameDescription.GameType gameType in Enum.GetValues(typeof(HandHistories.Objects.GameDescription.GameType)))
+                    {
+                        gameTypes.Add(gameType);
+                    }
+                    break;
+                default:
+                    throw new DHInternalException(new NonLocalizableString("Not supported license type"));
+            }
+
+            return gameTypes;
+        }
+
+        private LicenseLimit Limit { get; set; }
 
         public event EventHandler<NoteProcessingServiceProgressChangedEventArgs> ProgressChanged;
 
         public Playernotes ProcessHand(IEnumerable<NoteObject> notes, Playerstatistic stats, HandHistory handHistory)
         {
+            if (!licenseService.IsRegistered)
+            {
+                return null;
+            }
+
+            var matchInfo = new GameMatchInfo
+            {
+                GameType = handHistory.GameDescription.GameType,
+                CashBuyIn = !handHistory.GameDescription.IsTournament ? Utils.ConvertToCents(handHistory.GameDescription.Limit.BigBlind) : 0,
+                TournamentBuyIn = handHistory.GameDescription.IsTournament ? handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue : 0
+            };
+
+            if (!Limit.IsMatch(matchInfo))
+            {
+                return null;
+            }
+
             var notesMessages = new List<string>();
 
             foreach (var note in notes)
@@ -88,6 +173,11 @@ namespace DriveHUD.PlayerXRay.Services
         {
             try
             {
+                if (!licenseService.IsRegistered)
+                {
+                    return;
+                }
+
                 ClearAllNotes();
 
                 var currentPlayerIds = new HashSet<int>(storageModel.PlayerSelectedItem.PlayerIds);
@@ -123,6 +213,20 @@ namespace DriveHUD.PlayerXRay.Services
 
                                 if (parsingResult != null)
                                 {
+                                    var matchInfo = new GameMatchInfo
+                                    {
+                                        GameType = parsingResult.Source.GameDescription.GameType,
+                                        CashBuyIn = !parsingResult.Source.GameDescription.IsTournament ?
+                                            Utils.ConvertToCents(parsingResult.Source.GameDescription.Limit.BigBlind) : 0,
+                                        TournamentBuyIn = parsingResult.Source.GameDescription.IsTournament ?
+                                            parsingResult.Source.GameDescription.Tournament.BuyIn.PrizePoolValue : 0
+                                    };
+
+                                    if (!Limit.IsMatch(matchInfo))
+                                    {
+                                        continue;
+                                    }
+
                                     foreach (var player in parsingResult.Players)
                                     {
                                         // skip notes for current player (need to check setting)
@@ -159,7 +263,7 @@ namespace DriveHUD.PlayerXRay.Services
                             }
                             catch (Exception hhEx)
                             {
-                                LogProvider.Log.Error(this, $"Hand history {handHistory.Gamenumber} has not been processed", hhEx);
+                                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Hand history {handHistory.Gamenumber} has not been processed", hhEx);
                             }
 
                             // reporting progress
@@ -181,7 +285,7 @@ namespace DriveHUD.PlayerXRay.Services
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Notes has not been processed.", e);
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Notes has not been processed.", e);
             }
         }
 
@@ -200,7 +304,7 @@ namespace DriveHUD.PlayerXRay.Services
         {
             if (string.IsNullOrEmpty(handHistory.HandhistoryVal))
             {
-                LogProvider.Log.Warn($"Hand #{handHistory.Gamenumber} has been skipped, because it has no history.");
+                LogProvider.Log.Warn(CustomModulesNames.PlayerXRay, $"Hand #{handHistory.Gamenumber} has been skipped, because it has no history.");
                 return null;
             }
 
@@ -357,6 +461,56 @@ namespace DriveHUD.PlayerXRay.Services
 
                 return PlayerId == obj.PlayerId && PokerSite == obj.PokerSite && PlayerName == obj.PlayerName;
             }
+        }
+
+        private class LicenseLimit
+        {
+            public HandHistories.Objects.GameDescription.GameType[] AllowedGameTypes
+            {
+                get;
+                set;
+            }
+
+            public decimal TournamentLimit
+            {
+                get;
+                set;
+            }
+
+            public int CashLimit
+            {
+                get;
+                set;
+            }
+
+            public bool IsMatch(GameMatchInfo gameInfo)
+            {
+                if (gameInfo == null)
+                {
+                    return false;
+                }
+
+                var match = AllowedGameTypes.Contains(gameInfo.GameType) &&
+                                gameInfo.CashBuyIn <= CashLimit &&
+                                    gameInfo.TournamentBuyIn <= TournamentLimit;
+
+                return match;
+            }
+        }
+
+        private class GameMatchInfo
+        {
+            public HandHistories.Objects.GameDescription.GameType GameType { get; set; }
+
+            /// <summary>
+            /// Tournament buyin in $ (or other currency)
+            /// </summary>
+            public decimal TournamentBuyIn { get; set; }
+
+            /// <summary>
+            /// Max table buyin in NL (100NL = 1$)
+            /// </summary>
+            public int CashBuyIn { get; set; }
         }
 
         #endregion

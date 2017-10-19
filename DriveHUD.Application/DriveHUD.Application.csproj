@@ -405,9 +405,9 @@
     <Compile Include="Modules\IModuleService.cs" />
     <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
-    <Compile Include="Security\DHCRegWrapper.cs" />
-    <Compile Include="Security\DHHRegWrapper.cs" />
-    <Compile Include="Security\DHORegWrapper.cs" />
+    <Compile Include="Security\DHCReg.cs" />
+    <Compile Include="Security\DHHReg.cs" />
+    <Compile Include="Security\DHOReg.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />

@@ -276,9 +276,9 @@ namespace DriveHUD.Application
 
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());
-            Container.RegisterType<ILicenseManager, DHHRegWrapper>(LicenseType.Holdem.ToString());
-            Container.RegisterType<ILicenseManager, DHORegWrapper>(LicenseType.Omaha.ToString());
-            Container.RegisterType<ILicenseManager, DHCRegWrapper>(LicenseType.Combo.ToString());
+            Container.RegisterType<ILicenseManager, DHHReg>(LicenseType.Holdem.ToString());
+            Container.RegisterType<ILicenseManager, DHOReg>(LicenseType.Omaha.ToString());
+            Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

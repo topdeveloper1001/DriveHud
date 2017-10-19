@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DHHRegWrapper.cs" company="Ace Poker Solutions">
+// <copyright file="XRTReg.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,23 +11,26 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DHHRegistration;
 using DriveHUD.Common.Security;
+using System.ComponentModel;
 
-namespace DriveHUD.Application.Security
+namespace DriveHUD.PlayerXRay.Security
 {
-    internal class DHHRegWrapper : ILicenseManager
+    /// <summary>
+    /// Trial license manager
+    /// </summary>
+    [LicenseProvider(typeof(SecureLicenseManager))]
+    internal class XRTReg : ILicenseManager
     {
-        private readonly DHHReg licenseManager = new DHHReg();
-
         public void ResetCacheForLicense(SecureLicense license)
         {
-            licenseManager.ResetCacheForLicense(license);
+            SecureLicenseManager.ResetCacheForLicense(license);
         }
 
         public SecureLicense Validate(LicenseValidationRequestInfo requestInfo)
         {
-            return licenseManager.Validate(requestInfo);
+            var license = SecureLicenseManager.Validate(this, typeof(XRTReg), requestInfo);
+            return license;
         }
     }
 }

@@ -209,7 +209,7 @@
 
                 <TextBlock
                     Style="{StaticResource BottomActiveTextStyle}"
-                    Text="{Binding BuildDate}" />
+                    Text="{Binding BuildDate, StringFormat=d, ConverterCulture=en-US}" />
 
                 <TextBlock
                     Style="{StaticResource BottomTextStyle}"

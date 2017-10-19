@@ -235,10 +235,18 @@ namespace DriveHUD.Common.Wpf.Actions
                     return;
                 }
 
-                var viewContainer = ServiceLocator.Current.GetInstance<IViewContainer>(ViewName);
-                viewContainer.Window = wrapperWindow;
+                try
+                {
+                    var viewContainer = ServiceLocator.Current.GetInstance<IViewContainer>(ViewName);
+                    viewContainer.Window = wrapperWindow;
 
-                contentView = viewContainer as FrameworkElement;
+                    contentView = viewContainer as FrameworkElement;
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could find load view '{ViewName}'", e);
+                    contentView = WindowContent;
+                }
             }
             else
             {

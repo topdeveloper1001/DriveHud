@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DHORegWrapper.cs" company="Ace Poker Solutions">
+// <copyright file="LicenseNoConnectionException.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,24 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DeployLX.Licensing.v5;
-using DHCRegistration;
-using DriveHUD.Common.Security;
+using System;
+using System.Runtime.Serialization;
 
-namespace DriveHUD.Application.Security
+namespace DriveHUD.PlayerXRay.Licensing
 {
-    internal class DHCRegWrapper : ILicenseManager
+    internal class LicenseNoConnectionException : Exception
     {
-        private readonly DHCReg licenseManager = new DHCReg();
-
-        public void ResetCacheForLicense(SecureLicense license)
+        public LicenseNoConnectionException()
         {
-            licenseManager.ResetCacheForLicense(license);
         }
 
-        public SecureLicense Validate(LicenseValidationRequestInfo requestInfo)
+        public LicenseNoConnectionException(string message) : base(message)
         {
-            return licenseManager.Validate(requestInfo);
+        }
+        public LicenseNoConnectionException(string message, Exception inner) : base(message, inner)
+        {
+        }
+
+        protected LicenseNoConnectionException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
         }
     }
 }
