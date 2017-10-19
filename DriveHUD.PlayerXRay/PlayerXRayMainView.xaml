@@ -39,12 +39,12 @@
 
             <DataTemplate
                 DataType="{x:Type vm:SettingsViewModel}">
-                <v:ProfilesView />
+                <v:SettingsView />
             </DataTemplate>
 
             <DataTemplate
                 DataType="{x:Type vm:HelpViewModel}">
-                <v:ProfilesView />
+                <v:HelpView />
             </DataTemplate>
 
         </ResourceDictionary>
@@ -78,7 +78,7 @@
 
         </StackPanel>
 
-        <StackPanel            
+        <StackPanel
             Margin="14,0,0,0"
             Orientation="Horizontal"
             HorizontalAlignment="Left"
@@ -101,7 +101,7 @@
                                 Property="IsEnabled"
                                 Value="False" />
                         </DataTrigger>
-                        <MultiDataTrigger >
+                        <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition
                                     Binding="{Binding Workspace.OperationInfo.IsBusy}"

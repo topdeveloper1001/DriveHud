@@ -2070,7 +2070,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apps.
+        ///   Looks up a localized string similar to Installed Apps.
         /// </summary>
         internal static string Common_Shop_Apps {
             get {

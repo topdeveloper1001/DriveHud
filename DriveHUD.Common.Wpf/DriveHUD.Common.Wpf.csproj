@@ -124,7 +124,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\IPopupContainerView.cs" />
+    <Compile Include="Actions\IViewContainer.cs" />
     <Compile Include="Actions\PopupAction.cs" />
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
@@ -199,6 +199,7 @@
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />
     <Compile Include="Mvvm\IAsyncOperationItem.cs" />
+    <Compile Include="Mvvm\IModuleEntryViewModel.cs" />
     <Compile Include="Mvvm\IOperationViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />

@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Common.Security;
 using System.ComponentModel;
 
 namespace DHHRegistration
@@ -20,7 +19,7 @@ namespace DHHRegistration
     /// Holdem license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    public class DHHReg : ILicenseManager
+    public class DHHReg
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

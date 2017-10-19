@@ -18,11 +18,12 @@ namespace Model.AppStore
     {
         public IEnumerable<AppStoreProduct> GetAllProducts()
         {
-            var playerXRayApp = new AppStoreProduct
+            var playerXRayApp = new AppStoreModule
             {
                 ProductName = "Player X-Ray",
-                ProductDescription = "Player X-Ray Description",
-                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/player-xray-logo.jpg"
+                ProductDescription = "An automated note taking application that will allow you to see right through your opponents strategies in order to make the best possible adjustments to their game.",
+                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/player-xray-logo.png",
+                ModuleName = CustomModulesNames.PlayerXRay
             };
 
             return new[] { playerXRayApp };

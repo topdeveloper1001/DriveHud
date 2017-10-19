@@ -104,6 +104,20 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private string viewName;
+
+        public string ViewName
+        {
+            get
+            {
+                return viewName;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewName, value);
+            }
+        }
+
         #endregion
 
         #region IAppStoreViewModel implementation

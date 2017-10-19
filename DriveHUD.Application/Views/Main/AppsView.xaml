@@ -55,9 +55,9 @@
 
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
-            SourceObject="{Binding Path=AppStoreViewModel.ViewRequest, Mode=OneWay}">
+            SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
             <infra:PopupWindowAction
-                ViewName="PlayerXRayMainView">
+                ViewName="{Binding AppStoreViewModel.ViewName}">
                 <infra:PopupWindowAction.WindowStyle>
                     <Style
                         TargetType="{x:Type Window}">
@@ -165,7 +165,7 @@
                     <RadioButton
                         GroupName="ShopGroup"
                         Height="32"
-                        Width="87"
+                        Width="107"
                         Content="{ResX Key=Common_Shop_Apps}"
                         IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Apps}}"
                         Style="{StaticResource RadioButtonSimpleRight}" />

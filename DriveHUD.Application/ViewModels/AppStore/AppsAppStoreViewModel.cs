@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.PlayerXRay;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
 using Prism.Interactivity.InteractionRequest;
-using Prism.Regions;
 using ReactiveUI;
 using System;
 
@@ -51,18 +51,24 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         private void Launch(object item)
         {
-            var appStoreProduct = item as AppStoreProduct;
+            var appStoreModule = item as AppStoreModule;
 
-            if (appStoreProduct == null)
+            if (appStoreModule == null || string.IsNullOrEmpty(appStoreModule.ModuleName))
             {
                 return;
             }
 
-            var rnd = new Random();
+            try
+            {
+                ViewName = appStoreModule.ModuleName;
 
-            var appViewModel = new PlayerXRayMainViewModel();
-
-            ViewRequest?.Raise(appViewModel, x => appViewModel.Dispose());
+                var moduleViewModel = ServiceLocator.Current.GetInstance<IModuleEntryViewModel>(appStoreModule.ModuleName);
+                ViewRequest?.Raise(moduleViewModel, x => moduleViewModel.Dispose());
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not launch module '{appStoreModule.ModuleName}'", e);
+            }
         }
     }
 }

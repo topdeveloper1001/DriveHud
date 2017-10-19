@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
+using System;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -38,8 +40,9 @@ namespace DriveHUD.Common.Utils
 
                 return isVerified && cert.Equals(assemblyCertificate);
             }
-            catch
+            catch (Exception e)
             {
+                LogProvider.Log.Error(typeof(CertificateHelper), $"Could not verify assembly at '{assemblyPath}'", e);
             }
 
             return false;

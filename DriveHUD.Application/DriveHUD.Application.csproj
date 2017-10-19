@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.3.0.1724, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.3.0.1728, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.3.0.1724, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.3.0.1728, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.3.0.1724, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.3.0.1728, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -400,7 +400,14 @@
     <Compile Include="Migration\Migrators\PlayerStatisticMaxPlayersMigrator.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
+    <Compile Include="Modules\CustomModule.cs" />
+    <Compile Include="Modules\CustomModulesFactory.cs" />
+    <Compile Include="Modules\IModuleService.cs" />
+    <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
+    <Compile Include="Security\DHCRegWrapper.cs" />
+    <Compile Include="Security\DHHRegWrapper.cs" />
+    <Compile Include="Security\DHORegWrapper.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />
@@ -1432,10 +1439,6 @@
     <ProjectReference Include="..\DriveHUD.EquityCalculator\DriveHUD.EquityCalculator.csproj">
       <Project>{efa4cfd3-8e01-494b-a274-f2092c922ef7}</Project>
       <Name>DriveHUD.EquityCalculator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay.csproj">
-      <Project>{8bcc7610-1d61-4f3d-9d80-2df9daf375c5}</Project>
-      <Name>DriveHUD.PlayerXRay</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
       <Project>{C6A64D15-132D-46A6-8C95-42D8934FF6B4}</Project>

@@ -11,9 +11,7 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Common.Security;
 using System.ComponentModel;
-using System;
 
 namespace DHCRegistration
 {
@@ -21,7 +19,7 @@ namespace DHCRegistration
     /// Combo license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    public class DHCReg : ILicenseManager
+    public class DHCReg
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

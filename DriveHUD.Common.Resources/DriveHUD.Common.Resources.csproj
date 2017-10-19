@@ -682,7 +682,7 @@
     <Resource Include="images\icons\HelpButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\Shop\player-xray-logo.jpg" />
+    <Resource Include="images\Shop\player-xray-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

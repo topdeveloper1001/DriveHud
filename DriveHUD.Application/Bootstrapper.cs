@@ -10,9 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DHCRegistration;
-using DHHRegistration;
-using DHORegistration;
 using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
@@ -20,6 +17,7 @@ using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
+using DriveHUD.Application.Modules;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Services;
 using DriveHUD.Application.Surrogates;
@@ -29,16 +27,12 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
-using DriveHUD.Common.Linq;
-using DriveHUD.Application.Views.AppStore;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
-using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
-using DriveHUD.PlayerXRay;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -51,12 +45,10 @@ using Model.Site;
 using Prism.Unity;
 using ProtoBuf.Meta;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows;
 using Telerik.Windows.Controls;
-using DriveHUD.Common.Infrastructure.Modules;
 
 namespace DriveHUD.Application
 {
@@ -101,8 +93,8 @@ namespace DriveHUD.Application
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
             sqliteBootstrapper.InitializeDatabase();
 
-            var playerXRayModule = ServiceLocator.Current.GetInstance<IDHModule>(CustomModulesNames.PlayerXRay);
-            playerXRayModule.ConfigureContainer(Container);
+            var moduleService = ServiceLocator.Current.GetInstance<IModuleService>();
+            moduleService.InitializeModules(Container);
 
             ShowMainWindow();
         }
@@ -111,7 +103,7 @@ namespace DriveHUD.Application
         {
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
             LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
-         
+
             try
             {
                 if (IsUninstall())
@@ -150,9 +142,7 @@ namespace DriveHUD.Application
 
                     if (!licenseService.IsRegistered)
                     {
-#if !DEBUG
-                         System.Windows.Application.Current.Shutdown();
-#endif
+                        System.Windows.Application.Current.Shutdown();
                     }
 
                     mainWindowViewModel.IsTrial = licenseService.IsTrial;
@@ -247,6 +237,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
+            RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
@@ -285,9 +276,9 @@ namespace DriveHUD.Application
 
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());
-            Container.RegisterType<ILicenseManager, DHHReg>(LicenseType.Holdem.ToString());
-            Container.RegisterType<ILicenseManager, DHOReg>(LicenseType.Omaha.ToString());
-            Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
+            Container.RegisterType<ILicenseManager, DHHRegWrapper>(LicenseType.Holdem.ToString());
+            Container.RegisterType<ILicenseManager, DHORegWrapper>(LicenseType.Omaha.ToString());
+            Container.RegisterType<ILicenseManager, DHCRegWrapper>(LicenseType.Combo.ToString());
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
@@ -306,13 +297,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
 
-            // Register container views
-            Container.RegisterType<IViewContainer, PlayerXRayMainView>("PlayerXRayMainView");
-
             ImporterBootstrapper.ConfigureImporter(Container);
-
-            // temp register modules
-            Container.RegisterType<IDHModule, PlayerXRayModule>(CustomModulesNames.PlayerXRay);
         }
     }
 }

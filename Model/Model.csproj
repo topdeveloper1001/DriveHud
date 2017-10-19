@@ -141,6 +141,7 @@
     <Compile Include="AliasCollectionItem.cs" />
     <Compile Include="AppStore\AppsAppStoreModel.cs" />
     <Compile Include="AppStore\AppsAppStoreRepository.cs" />
+    <Compile Include="AppStore\AppStoreModule.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
     <Compile Include="AppStore\IAppsAppStoreModel.cs" />
     <Compile Include="AppStore\IAppsAppStoreRepository.cs" />

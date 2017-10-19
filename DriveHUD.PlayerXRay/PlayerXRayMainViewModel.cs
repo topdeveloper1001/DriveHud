@@ -10,6 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Security;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.Events;
@@ -22,12 +26,15 @@ using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 
 namespace DriveHUD.PlayerXRay
 {
-    public class PlayerXRayMainViewModel : WindowViewModelBase, INotification, IDisposable
+    public class PlayerXRayMainViewModel : WindowViewModelBase, IModuleEntryViewModel
     {
+        private const string binDirectory = "bin";
+
         private readonly Dictionary<WorkspaceType, WorkspaceViewModel> workspaces;
 
         private readonly SingletonStorageModel storageModel;
@@ -38,6 +45,10 @@ namespace DriveHUD.PlayerXRay
 
         public PlayerXRayMainViewModel()
         {
+#if !DEBUG
+            ValidateLicenseAssemblies();
+#endif
+
             title = "Player X-Ray";
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -194,6 +205,30 @@ namespace DriveHUD.PlayerXRay
         #endregion
 
         #region Infrastructure
+
+        private void ValidateLicenseAssemblies()
+        {
+            var assemblies = new string[] { "DeployLX.Licensing.v5.dll", "XRCReg.dll", "XRReg.dll", "XROReg.dll" };
+            var assembliesHashes = new string[] { "c1d67b8e8d38540630872e9d4e44450ce2944700", "41eefbf5455fc80e9f56fa7495f2d1a4e0d30a52", "af7320210803634d0cc182face213af077670f2c", "f157a0fed2ed9707a1e8e84f239068e35e907d7b" };
+            var assemblySizes = new int[] { 1032192, 53592, 54616, 53592 };
+
+            for (var i = 0; i < assemblies.Length; i++)
+            {
+                var assemblyInfo = new FileInfo(assemblies[i]);
+
+                if (!assemblyInfo.Exists)
+                {
+                    assemblyInfo = new FileInfo(Path.Combine(binDirectory, assemblies[i]));
+                }
+
+                var isValid = SecurityUtils.ValidateFileHash(assemblyInfo.FullName, assembliesHashes[i]) && assemblyInfo.Length == assemblySizes[i];
+
+                if (!isValid)
+                {
+                    throw new DHInternalException(new NonLocalizableString("PlayerXRay could not be initialized"));
+                }
+            }
+        }
 
         private void Navigate(WorkspaceType workspaceType)
         {

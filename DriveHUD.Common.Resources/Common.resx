@@ -913,6 +913,6 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>{0} Setup Help</value>
   </data>
   <data name="Common_Shop_Apps" xml:space="preserve">
-    <value>Apps</value>
+    <value>Installed Apps</value>
   </data>
 </root>

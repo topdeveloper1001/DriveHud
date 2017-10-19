@@ -28,7 +28,7 @@ param
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
-    [string] $ObfuscatorStrongNamedAssemblies = 'DriveHUD.Common.dll',
+    [string] $ObfuscatorStrongNamedAssemblies = '',
 
     [string] $ObfuscatorExcludeFilter = 'vshost',
 

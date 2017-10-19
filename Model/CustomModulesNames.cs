@@ -15,5 +15,7 @@ namespace Model
     public static class CustomModulesNames
     {
         public const string PlayerXRay = "PlayerXRay";
+
+        public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
     }
 }
