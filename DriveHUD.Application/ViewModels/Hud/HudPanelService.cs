@@ -243,7 +243,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 playerNoteView.Owner = System.Windows.Application.Current.MainWindow;
                 playerNoteView.ShowDialog();
 
-                if (playerNoteViewModel.PlayerNoteEntity == null)
+                if (!playerNoteViewModel.HasNotes)
                 {
                     return;
                 }

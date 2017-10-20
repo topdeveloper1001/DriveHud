@@ -193,9 +193,11 @@
     <Compile Include="Helpers\ResolutionSettings.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
     <Compile Include="Interactivity\IViewInteractionRequest.cs" />
+    <Compile Include="Interactivity\IWindowController.cs" />
     <Compile Include="Interactivity\ViewInteractionRequest.cs" />
     <Compile Include="Interactivity\ViewInteractionRequestEventArgs.cs" />
     <Compile Include="Interactivity\ViewModelInfo.cs" />
+    <Compile Include="Interactivity\WindowController.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />
     <Compile Include="Mvvm\IAsyncOperationItem.cs" />

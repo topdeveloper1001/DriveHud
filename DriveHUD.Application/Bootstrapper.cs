@@ -30,6 +30,7 @@ using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -238,6 +239,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
             RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);
+            RegisterTypeIfMissing(typeof(IWindowController), typeof(WindowController), true);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());

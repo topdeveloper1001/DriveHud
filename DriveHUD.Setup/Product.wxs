@@ -84,6 +84,15 @@
       <Component Id="DHOReg.dll" Guid="{DA7A9861-E9EC-43CC-B6B4-937DE1FB2670}">
         <File Id="DHOReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DHOReg.dll" />
       </Component>
+      <Component Id="XRCReg.dll" Guid="{C2ACDDF9-D3CB-4121-A340-34E3B90F5772}">
+        <File Id="XRCReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\XRCReg.dll" />
+      </Component>
+      <Component Id="XRHReg.dll" Guid="{733A6A5C-F02D-4CF9-802E-E2336F82BA5A}">
+        <File Id="XRHReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\XRHReg.dll" />
+      </Component>
+      <Component Id="XROReg.dll" Guid="{82375140-3197-4247-BD51-C1B06267DC2A}">
+        <File Id="XROReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\XROReg.dll" />
+      </Component>
       <Component Id="DriveHUD.Updater.exe" Guid="{F62CC064-5D14-4AEA-9A77-FFD13398AFEA}">
         <File Id="DriveHUD.Updater.exe" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Updater.exe" />
       </Component>
@@ -476,6 +485,9 @@
       <ComponentRef Id="DHCReg.dll" />
       <ComponentRef Id="DHHReg.dll" />
       <ComponentRef Id="DHOReg.dll" />
+      <ComponentRef Id="XRCReg.dll" />
+      <ComponentRef Id="XRHReg.dll" />
+      <ComponentRef Id="XROReg.dll" />
       <ComponentRef Id="DriveHUD.Updater.exe"/>
       <ComponentRef Id="DriveHUD.Updater.exe.config"/>
       <ComponentRef Id="DriveHUD.Updater.Core.dll"/>

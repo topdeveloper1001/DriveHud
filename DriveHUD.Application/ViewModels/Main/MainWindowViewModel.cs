@@ -31,11 +31,13 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.Helpers;
+using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
@@ -549,8 +551,11 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
                     playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
+
+                    var playerNotes = dataService.GetPlayerNotes(player.PlayerName, (short)site);
+                    playerHudContent.HudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
+                    playerHudContent.HudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 
                     // configure data for graph tool
                     var sessionStats = sessionData.StatsSessionCollection;
@@ -1533,6 +1538,9 @@ namespace DriveHUD.Application.ViewModels
                 {
                     eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
                 }
+
+                var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                windowController.CloseAllWindows();
             }
             catch (Exception ex)
             {

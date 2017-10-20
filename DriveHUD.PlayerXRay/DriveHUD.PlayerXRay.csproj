@@ -158,13 +158,13 @@
       <HintPath>..\packages\Extended.Wpf.Toolkit.3.2.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="XRCReg">
+    <Reference Include="XRCReg, Version=1.0.0.1730, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XRCReg.dll</HintPath>
     </Reference>
-    <Reference Include="XRHReg">
+    <Reference Include="XRHReg, Version=1.0.0.1730, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XRHReg.dll</HintPath>
     </Reference>
-    <Reference Include="XROReg">
+    <Reference Include="XROReg, Version=1.0.0.1730, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XROReg.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -191,7 +191,6 @@
     <Compile Include="DeployLXKeys.cs" />
     <Compile Include="Events\RaisePopupEvent.cs" />
     <Compile Include="Events\RaisePopupEventArgs.cs" />
-    <Compile Include="Helpers\NoteHelper.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />
     <Compile Include="Licensing\ILicenseInfo.cs" />
     <Compile Include="Licensing\ILicenseService.cs" />
@@ -318,7 +317,6 @@
     <Compile Include="DataTypes\NotesTreeObjects\TextureObjects\TurnTextureSettings.cs" />
     <Compile Include="DataTypes\ObjectsHelper.cs" />
     <Compile Include="DataTypes\Stake.cs" />
-    <Compile Include="Helpers\AssemblyHelpers.cs" />
     <Compile Include="PlayerXRayMainView.xaml.cs">
       <DependentUpon>PlayerXRayMainView.xaml</DependentUpon>
       <SubType>Code</SubType>

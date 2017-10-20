@@ -120,7 +120,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void InitializeCommands()
         {
-            var canAdd = this.WhenAny(x => x.SelectedNote, x => x.SelectedStage, (x1, x2) => x1.Value == null && x2.Value != null);
+            var canAdd = this.WhenAny(x => x.SelectedStage, x => x.Value != null);
 
             AddNoteCommand = ReactiveCommand.Create(canAdd);
             AddNoteCommand.Subscribe(x => AddNote());
@@ -1126,6 +1126,26 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 else if (SelectedStage is InnerGroupObject)
                 {
                     noteList = (SelectedStage as InnerGroupObject).Notes;
+                }
+                else
+                {
+                    foreach (var stage in stages)
+                    {
+                        if (stage.Notes.Contains(SelectedStage))
+                        {
+                            noteList = stage.Notes;
+                            break;
+                        }
+
+                        foreach (var group in stage.InnerGroups)
+                        {
+                            if (group.Notes.Contains(SelectedStage))
+                            {
+                                noteList = group.Notes;
+                                break;
+                            }
+                        }
+                    }
                 }
 
                 if (noteList == null)

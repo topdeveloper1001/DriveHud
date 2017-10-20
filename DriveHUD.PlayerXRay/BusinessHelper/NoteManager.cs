@@ -31,12 +31,20 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 {
     public class NoteManager
     {
-        public static string GetPlayerNote(NoteObject note, List<PlayerstatisticExtended> selectedPlayerStatistics)
+        /// <summary>
+        /// Checks whenever the specified <see cref="PlayerstatisticExtended"/> matches the specified <see cref="NoteObject"/>
+        /// </summary>
+        /// <param name="note"><see cref="NoteObject"/> to match</param>
+        /// <param name="playerstatistic"><see cref="PlayerstatisticExtended"/> to match</param>
+        /// <returns>True if matches, otherwise - false</returns>
+        public static bool IsMatch(NoteObject note, PlayerstatisticExtended playerstatistic)
         {
+            var selectedPlayerStatistics = new List<PlayerstatisticExtended> { playerstatistic };
+
             selectedPlayerStatistics = FilterByPositionCondition(selectedPlayerStatistics, note.Settings);
-            selectedPlayerStatistics = FilterByPreflopFacingCondition(selectedPlayerStatistics, note.Settings); //todo to finish
-            selectedPlayerStatistics = FilterByPositionThreeBetCondition(selectedPlayerStatistics, note.Settings); //todo to finish
-            selectedPlayerStatistics = FilterByPositionRaiserCondition(selectedPlayerStatistics, note.Settings); //todo to finish
+            selectedPlayerStatistics = FilterByPreflopFacingCondition(selectedPlayerStatistics, note.Settings);
+            selectedPlayerStatistics = FilterByPositionThreeBetCondition(selectedPlayerStatistics, note.Settings);
+            selectedPlayerStatistics = FilterByPositionRaiserCondition(selectedPlayerStatistics, note.Settings);
             selectedPlayerStatistics = FilterByNoOfPlayerCondition(selectedPlayerStatistics, note.Settings);
             selectedPlayerStatistics = FilterByStakeCondition(selectedPlayerStatistics, note.Settings);
 
@@ -57,11 +65,13 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
 
             selectedPlayerStatistics = FilterByAllSelectedFilters(selectedPlayerStatistics, note.Settings.SelectedFilters, note.Settings.SelectedFiltersComparison);
 
-            var dbNote = BuildNote(note, selectedPlayerStatistics);
+            if (selectedPlayerStatistics.Count == 0)
+            {
+                return false;
+            }
 
-            return dbNote;
+            return true;
         }
-
 
         #region hand value analyzers
         //todo 100% tested for flop;  need to test for turn and river 
@@ -762,51 +772,6 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             return fileteredList;
         }
 
-        #endregion
-
-        /// <summary>
-        /// build note(string) from available data
-        /// </summary>
-        /// <param name="note">this is note (NoteObject)</param>        
-        /// <param name="selectedPlayerstatistics">List of statistics that participate in creation of note (string)</param>
-        /// <returns></returns>
-        private static string BuildNote(NoteObject note, List<PlayerstatisticExtended> selectedPlayerstatistics)
-        {
-            if (selectedPlayerstatistics.Count == 0)
-            {
-                return string.Empty;
-            }
-
-            var message = note.Name + " ";
-
-            var cards = new List<string>();
-
-            foreach (var playerstatistic in selectedPlayerstatistics.Where(x => !string.IsNullOrEmpty(x.Playerstatistic.Cards)))
-            {
-                //todo check if we need to display cases when hole cards are absent
-                cards.Add(playerstatistic.Playerstatistic.Cards);
-            }
-
-            string card = "["; //beginning of the note message
-
-            foreach (var c in cards.Where(x => !string.IsNullOrEmpty(x)))
-            {
-                if (cards.IndexOf(c) != cards.Count - 1)
-                {
-                    card += c + ", "; //middle part of the note message 
-                }
-                else
-                {
-                    card += c + "]"; //closing part of the note message
-                }
-            }
-
-            if (card.Length > 1)
-            {
-                message += card;
-            }
-
-            return message;
-        }
+        #endregion      
     }
 }

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHandNotesService.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IWindowController.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,14 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using HandHistories.Objects.Hand;
-using System.Collections.Generic;
+using System;
 
-namespace DriveHUD.Common.Infrastructure.CustomServices
+namespace DriveHUD.Common.Wpf.Interactivity
 {
-    public interface IPlayerNotesService
+    public interface IWindowController
     {
-        IEnumerable<Playernotes> BuildNotes(Playerstatistic stats, HandHistory handHistory);
+        object GetWindow(string viewName);
+
+        void AddWindow(string viewName, object window, Action close);
+
+        void RemoveWindow(string viewName);
+
+        void CloseAllWindows();
     }
 }

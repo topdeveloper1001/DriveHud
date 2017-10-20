@@ -24,6 +24,6 @@ namespace DriveHUD.PlayerXRay.Services
 
         void ProcessNotes(IEnumerable<NoteObject> notes);
 
-        Playernotes ProcessHand(IEnumerable<NoteObject> notes, Playerstatistic stats, HandHistory handHistory);
+        IEnumerable<Playernotes> ProcessHand(IEnumerable<NoteObject> notes, Playerstatistic stats, HandHistory handHistory);
     }   
 }

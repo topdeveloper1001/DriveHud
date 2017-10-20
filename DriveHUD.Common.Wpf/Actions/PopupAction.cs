@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Controls;
+using DriveHUD.Common.Wpf.Interactivity;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
@@ -47,6 +48,15 @@ namespace DriveHUD.Common.Wpf.Actions
         /// </summary>
         public static readonly DependencyProperty IsModalProperty = DependencyProperty.Register(
                 "IsModal",
+                typeof(bool),
+                typeof(PopupAction<T>),
+                new PropertyMetadata(null));
+
+        /// <summary>
+        /// Determines if only one instance of window is allowed
+        /// </summary>
+        public static readonly DependencyProperty IsSingleProperty = DependencyProperty.Register(
+                "IsSingle",
                 typeof(bool),
                 typeof(PopupAction<T>),
                 new PropertyMetadata(null));
@@ -97,6 +107,15 @@ namespace DriveHUD.Common.Wpf.Actions
         }
 
         /// <summary>
+        /// Gets or sets if the only one instance of window is allowed
+        /// </summary>
+        public bool IsSingle
+        {
+            get { return (bool)GetValue(IsSingleProperty); }
+            set { SetValue(IsModalProperty, value); }
+        }
+
+        /// <summary>
         /// Gets or sets if the window will be initially shown centered over the view that raised the interaction request or not.
         /// </summary>
         public bool CenterOverAssociatedObject
@@ -131,6 +150,19 @@ namespace DriveHUD.Common.Wpf.Actions
             if (WindowContent != null && WindowContent.Parent != null)
             {
                 return;
+            }
+
+            // don't create new window if there is opened window
+            if (IsSingle && !string.IsNullOrEmpty(ViewName))
+            {
+                var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                var existingWindow = windowController.GetWindow(ViewName) as T;
+
+                if (existingWindow != null)
+                {
+                    Activate(existingWindow);
+                    return;
+                }
             }
 
             var wrapperWindow = GetWindow(args.Context);
@@ -287,5 +319,7 @@ namespace DriveHUD.Common.Wpf.Actions
         protected abstract void SetWindowPosition(T window, double left, double top);
 
         protected abstract void Show(T window);
+
+        protected abstract void Activate(T window);
     }
 }

@@ -1034,24 +1034,14 @@ namespace DriveHUD.Importers
 
             try
             {
-                var existingNotes = session.Query<Playernotes>()
-                    .FirstOrDefault(x => x.PokersiteId == stats.PokersiteId && x.Player.PlayerId == stats.PlayerId);
-
-                var playerNotes = handNotesService.BuildNotes(existingNotes, stats, handHistory);
+                var playerNotes = handNotesService.BuildNotes(stats, handHistory);
 
                 if (playerNotes == null)
                 {
                     return;
                 }
 
-                if (existingNotes != null)
-                {
-                    existingNotes.AutoNote = playerNotes.AutoNote;
-                    session.Update(existingNotes);
-                    return;
-                }
-
-                session.Insert(playerNotes);
+                playerNotes.ForEach(x => session.Insert(x));
             }
             catch (Exception e)
             {

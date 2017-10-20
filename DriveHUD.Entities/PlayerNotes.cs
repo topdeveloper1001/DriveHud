@@ -16,60 +16,27 @@ using System.ComponentModel.DataAnnotations;
 namespace DriveHUD.Entities
 {
     public partial class Playernotes
-    {
-        private const string autoNoteSeparateLine = "---- XRay Notes ----";
-
+    {        
         public virtual int PlayerNoteId { get; set; }
 
         public virtual Players Player { get; set; }
 
-        public virtual string Note
-        {
-            get
-            {
-                if (!string.IsNullOrWhiteSpace(AutoNote))
-                {
-                    return $"{ManualNote}{Environment.NewLine}{autoNoteSeparateLine}{Environment.NewLine}{AutoNote}";
-                }
-
-                return ManualNote;
-            }
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    ManualNote = AutoNote = null;
-                }
-
-                var splittedNotes = value.Split(new[] { autoNoteSeparateLine }, StringSplitOptions.RemoveEmptyEntries);
-
-                if (splittedNotes.Length == 0)
-                {
-                    ManualNote = AutoNote = null;
-                }
-
-                if (splittedNotes.Length > 1)
-                {
-                    AutoNote = splittedNotes[1];
-                }
-                else
-                {
-                    AutoNote = null;
-                }
-
-                ManualNote = splittedNotes[0];
-            }
-        }
-
-        public virtual string ManualNote { get; set; }
-
-        public virtual string AutoNote { get; set; }
+        [Required]
+        public virtual string Note { get; set; }
 
         [Required]
         public virtual int PlayerId { get; set; }
 
         [Required]
         public virtual short PokersiteId { get; set; }
+
+        public virtual string CardRange { get; set; }
+
+        public virtual DateTime? Timestamp { get; set; }
+
+        public virtual bool IsAutoNote { get; set; }
+
+        public virtual long GameNumber { get; set; }
 
         public virtual string PlayerName
         {

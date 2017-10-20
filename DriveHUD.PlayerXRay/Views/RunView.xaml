@@ -115,7 +115,7 @@
                     Grid.Row="1"
                     BorderBrush="{StaticResource BorderBrush}"
                     Background="{StaticResource PanelBackgroundBrush}"
-                    Height="75"
+                    Height="55"
                     Width="460"
                     Margin="0,5,0,5"
                     BorderThickness="1"
@@ -164,8 +164,8 @@
                     Grid.Row="2"
                     Content="START"
                     Margin="0,0,0,5"
-                    Width="172"
-                    Height="59"
+                    Width="152"
+                    Height="49"
                     FontSize="24"
                     IsEnabled="{Binding IsRunning, Converter={dh:BoolNotConverter}}"
                     Command="{Binding RunCommand}" />
@@ -185,7 +185,7 @@
                 <Border
                     BorderBrush="{StaticResource BorderBrush}"
                     BorderThickness="1"
-                    Margin="16"
+                    Margin="16,10,16,0"
                     Height="107"
                     Background="{StaticResource PanelBackgroundBrush}"
                     Visibility="{Binding RunMode, Converter={dh:EnumToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static vm:RunMode.ByProfile}}">
@@ -233,7 +233,7 @@
                 <Border
                     BorderBrush="{StaticResource BorderBrush}"
                     BorderThickness="1"
-                    Margin="16"
+                    Margin="16,10,16,0"
                     MinHeight="107"
                     MaxHeight="150"
                     Background="{StaticResource PanelBackgroundBrush}"
@@ -346,7 +346,7 @@
                 <Border
                     BorderBrush="{StaticResource BorderBrush}"
                     BorderThickness="1"
-                    Margin="16"
+                    Margin="16,10,16,10"
                     Height="107"
                     Background="{StaticResource PanelBackgroundBrush}">
 

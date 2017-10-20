@@ -49,13 +49,16 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 Create.Table(playerNotesTableName)
                     .WithColumn("PlayerNoteId").AsInt32().PrimaryKey().NotNullable()
                     .WithColumn("PlayerId").AsInt32().NotNullable()
-                    .WithColumn("Note").AsString().Nullable()
-                    .WithColumn("AutoNote").AsString().Nullable()
+                    .WithColumn("Note").AsString().NotNullable()
+                    .WithColumn("CardRange").AsString().Nullable()
+                    .WithColumn("Timestamp").AsDateTime().Nullable()
+                    .WithColumn("IsAutoNote").AsBoolean().NotNullable().WithDefaultValue(false)
+                    .WithColumn("GameNumber").AsInt64().Nullable()
                     .WithColumn("PokerSiteId").AsInt32().NotNullable();
 
                 Create.Index(playerNotesIndexName).OnTable(playerNotesTableName).OnColumn("PlayerId");
 
-                Execute.Sql($"INSERT INTO {playerNotesTableName} SELECT PlayerNoteId, PlayerId, Note, null, PokerSiteId FROM {playerNotesTempTableName}");
+                Execute.Sql($"INSERT INTO {playerNotesTableName} (PlayerNoteId, PlayerId, Note, PokerSiteId) SELECT PlayerNoteId, PlayerId, Note, PokerSiteId FROM {playerNotesTempTableName} WHERE Note is not null");
                 Delete.Table(playerNotesTempTableName);
             }
             catch (Exception e)

@@ -12,34 +12,20 @@ param
     [ValidateSet('Debug','Release')]
     [string] $Mode = 'Release',
 
-    [string] $Source = 'DriveHUD.Application\bin',
+    [string] $Source = 'DriveHUD.PlayerXRay\bin',
 	
-	[string] $MsiSource = 'DriveHUD.Setup\bin',
-	
-	[string] $WixSource = 'DriveHUD.Bootstrapper\bin',
-
-    [string] $Solution = 'DriveHUD.sln',                       
+    [string] $Solution = 'PlayerXRay.sln',                             
     
-    [string] $InstallerWix = 'DriveHUD.Bootstrapper\DriveHUD.Bootstrapper.wixproj',
+    [string] $Version = '1.0.0',
 
-    [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
-    
-    [string] $Version = '1.3.0',
-
-    [string] $VersionExlcudeFilter = 'PlayerXRay,XR*Reg',
-
-    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
+    [string] $ObfuscatorIncludeFilter = 'DriveHUD.PlayerXRay.dll',
 
     [string] $ObfuscatorStrongNamedAssemblies = '',
 
-    [string] $ObfuscatorExcludeFilter = 'vshost,DriveHUD.PlayerXRay.dll,XR*Reg.dll',
+    [string] $ObfuscatorExcludeFilter = 'vshost',
 
-    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll,CapPipedIP.dll',
+    [string] $SigningIncludeFilter = 'DriveHUD.PlayerXRay.dll',
 	
-	[string] $MsiName = 'DriveHUD.msi',
-	
-	[string] $WixName = 'DriveHUD-install.exe',
-
     [string] $SigningExcludeFilter = 'vshost',
 
     [string] $SigningCertificate = 'Certificates/APSCertificate.pfx',
@@ -55,15 +41,15 @@ param
 
     [int] $StartRevision = 512,
 
-    [string] $LicSolution = 'DriveHUDReg.sln',
+    [string] $LicSolution = 'PlayerXRayReg.sln',
 
-    [string] $LicSource = 'DHCReg\bin',
+    [string] $LicSource = 'XRCReg\bin',
 
-    [string] $LicObfuscatorIncludeFilter = 'DH*Reg.dll',        
+    [string] $LicObfuscatorIncludeFilter = 'XR*Reg.dll',        
 
-    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj',
+    [string] $LicProjectsToUpdate = 'DriveHUD.PlayerXRay\DriveHUD.PlayerXRay.csproj',
 
-    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs',
+    [string] $LicCSFileToUpdate = 'DriveHUD.PlayerXRay\PlayerXRayModule.cs',
 
     [string] $LicOutputPath = 'dependencies',
 
@@ -73,13 +59,7 @@ param
 
     [string] $HashTool = 'BuildFileHash.exe',
 
-    [bool] $UpdateOnlyLic = $false,
-	
-	[string] $PlayerXRaySource = 'DriveHUD.PlayerXRay\bin',
-	
-	[string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
-	
-	[string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll'
+    [bool] $UpdateOnlyLic = $false
 )
 
 Set-StrictMode -Version Latest
@@ -92,9 +72,7 @@ Set-Location $script:BaseDir
 
 $session = @{
   BaseDir = $BaseDir
-  Source = Join-Path $BaseDir (Join-Path $Source $Mode)
-  MsiSource = Join-Path $BaseDir (Join-Path $MsiSource $Mode)
-  WixSource = Join-Path $BaseDir (Join-Path $WixSource $Mode)
+  Source = Join-Path $BaseDir (Join-Path $Source $Mode) 
   Obfuscator = 'c:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.Console.exe'
   SignTool = 'c:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe'
   Candle = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe'
@@ -105,16 +83,11 @@ $session = @{
   Git = 'c:\Program Files\Git\bin\git.exe'
   Mode = $Mode
   Solution = Join-Path $BaseDir $Solution  
-  InstallerMSI = Join-Path $BaseDir $InstallerMSI
-  InstallerWix = Join-Path $BaseDir $InstallerWix
   Version = $Version
-  VersionExlcudeFilter = $VersionExlcudeFilter
   ObfuscatorIncludeFilter = $ObfuscatorIncludeFilter
   ObfuscatorExcludeFilter = $ObfuscatorExcludeFilter
   ObfuscatorStrongNamedAssemblies = $ObfuscatorStrongNamedAssemblies
-  SigningIncludeFilter = $SigningIncludeFilter
-  MsiName = $MsiName
-  WixName = $WixName
+  SigningIncludeFilter = $SigningIncludeFilter  
   SigningExcludeFilter = $SigningExcludeFilter 
   SigningCertificate = Join-Path $BaseDir $SigningCertificate
   SigningPassword= $SigningPassword
@@ -130,9 +103,6 @@ $session = @{
   LicOutputPath = Join-Path $BaseDir $LicOutputPath
   HashToolSolution = Join-Path $BaseDir $HashToolSolution  
   HashTool = Join-Path $BaseDir (Join-Path $HashToolPath (Join-Path $Mode $HashTool)) 
-  PlayerXRaySource = Join-Path $BaseDir (Join-Path $PlayerXRaySource $Mode)
-  PlayerXRayLicIncludeFilter = $PlayerXRayLicIncludeFilter
-  PlayerXRayIncludeFilter = $PlayerXRayIncludeFilter
 }
 
 Import-Module BuildRunner-Log
@@ -203,17 +173,7 @@ try
    if(-Not (Test-Path($session.Git)))
    {
        throw "Git not found '$($session.Git)'"
-   }
-  
-   if(-Not (Test-Path($session.InstallerWix)))
-   {
-       throw "Installer wix not found '$($session.InstallerWix)'"
-   }
-   
-   if(-Not (Test-Path($session.InstallerMSI)))
-   {
-		throw "InstallerMSI not found '$($session.InstallerMSI)'"
-   }
+   }     
 
    if(-Not (Test-Path($session.Nuget)))
    {
@@ -225,29 +185,7 @@ try
        Write-LogInfo 'SETUP' 'Clearing source directory'
        Remove-Item -Path $session.Source -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
-   
-   if(Test-Path($session.MsiSource))
-   {
-       Write-LogInfo 'SETUP' 'Clearing MSI source directory'
-       Remove-Item -Path $session.MsiSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
-   }
-   
-   if(Test-Path($session.WixSource))
-   {
-       Write-LogInfo 'SETUP' 'Clearing Wix source directory'
-       Remove-Item -Path $session.WixSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
-   }
-
-   #build xray   
-   #& .\tools\build\xray-build.ps1
-   
-   # copy xray dlls
-   &robocopy $session.PlayerXRaySource $session.Source $session.PlayerXRayLicIncludeFilter /s | Out-Null
-
-   $session.PlayerXRayIncludeFilter -split ',' | ForEach-Object {
-        &robocopy $session.PlayerXRaySource $session.Source $_ /s | Out-Null
-   }     
-      
+     
    # setup version
    Set-Version($session)  
        
@@ -285,20 +223,8 @@ try
    Use-Obfuscator $session $session.Source $session.ObfuscatorIncludeFilter $session.ObfuscatorExcludeFilter $session.ObfuscatorStrongNamedAssemblies
 
    # sign
-   Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter   
-   
-   # build msi installer 
-   Use-MSbuild $session $session.InstallerMSI 'msbuild_msi.log'
-   
-   # sign msi installer
-   Use-Sign $session $session.MsiSource $session.MsiName $session.SigningExcludeFilter
-
-   # build wix installer   
-   Use-MSbuild $session $session.InstallerWix 'msbuild_installer.log'      
-
-   # sign wix installer
-   Use-SignWixBundle($session)
-   
+   Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter
+        
    Write-LogInfo 'SETUP' 'Done.'
    
    Write-Host "Press any key to continue ..."

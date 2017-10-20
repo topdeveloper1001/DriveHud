@@ -57,6 +57,7 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
             <infra:PopupWindowAction
+                IsSingle="True"
                 ViewName="{Binding AppStoreViewModel.ViewName}">
                 <infra:PopupWindowAction.WindowStyle>
                     <Style

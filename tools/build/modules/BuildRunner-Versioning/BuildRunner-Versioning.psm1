@@ -34,7 +34,7 @@ function Set-Version($session)
 
    foreach($fileTemplate in $versionFiles)
    {
-        Get-ChildItem -Path $session.BaseDir -Filter $fileTemplate -Recurse | ForEach-Object {
+        Get-ChildItem -Path $session.BaseDir -Filter $fileTemplate  -Recurse | ForEach-Object {
             
             Write-LogInfo $ModuleName "Updating $($_.FullName)"
 

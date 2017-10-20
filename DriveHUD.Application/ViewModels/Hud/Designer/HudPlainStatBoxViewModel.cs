@@ -18,6 +18,7 @@ using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Windows.Input;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -137,6 +138,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return true;
+            }
+        }
+
+        [ProtoMember(6)]
+        private bool isNoteIconEnabled;
+
+        public bool IsNoteIconEnabled
+        {
+            get
+            {
+                return isNoteIconEnabled;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isNoteIconEnabled, value);
             }
         }
 
