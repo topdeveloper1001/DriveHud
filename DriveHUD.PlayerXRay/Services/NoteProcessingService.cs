@@ -197,9 +197,7 @@ namespace DriveHUD.PlayerXRay.Services
                         {
                             var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
 
-                            var handHistories = session.Query<Handhistory>()
-                                .Where(x => x.PokersiteId == (int)EnumPokerSites.Ignition)
-                                .OrderBy(x => x.HandhistoryId)
+                            var handHistories = session.Query<Handhistory>()                                                            
                                 .Skip(numOfRowToStartQuery)
                                 .Take(handHistoryRowsPerQuery)
                                 .ToArray();
@@ -227,7 +225,7 @@ namespace DriveHUD.PlayerXRay.Services
                                         }
 
                                         foreach (var player in parsingResult.Players)
-                                        {                                         
+                                        {
                                             // skip notes for current player (need to check setting)
                                             if (currentPlayerIds.Contains(player.PlayerId))
                                             {
