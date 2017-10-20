@@ -227,7 +227,7 @@ namespace DriveHUD.PlayerXRay.Services
                                         }
 
                                         foreach (var player in parsingResult.Players)
-                                        {
+                                        {                                         
                                             // skip notes for current player (need to check setting)
                                             if (currentPlayerIds.Contains(player.PlayerId))
                                             {

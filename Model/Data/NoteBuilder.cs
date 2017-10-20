@@ -75,14 +75,20 @@ namespace Model.Data
                 new Tuple<string, string>(null, null);
             }
 
-            var splittedNotes = noteText.Split(new[] { autoNoteSeparateLine }, StringSplitOptions.None);
+            var indexOfSeparateLine = noteText.LastIndexOf(autoNoteSeparateLine);
 
-            if (splittedNotes.Length != 2)
+            if (indexOfSeparateLine < 0)
             {
-                return new Tuple<string, string>(splittedNotes[0].Trim(), null);
+                return new Tuple<string, string>(noteText, null);
             }
 
-            return new Tuple<string, string>(splittedNotes[0].Trim(), splittedNotes[1].Trim());
+            var autoNotes = noteText.Length > indexOfSeparateLine + autoNoteSeparateLine.Length ?
+                noteText.Substring(indexOfSeparateLine + autoNoteSeparateLine.Length).Trim() :
+                null;
+
+            var manualNotes = indexOfSeparateLine > 0 ? noteText.Substring(0, indexOfSeparateLine).Trim() : null;
+
+            return new Tuple<string, string>(manualNotes, autoNotes);
         }
     }
 }
