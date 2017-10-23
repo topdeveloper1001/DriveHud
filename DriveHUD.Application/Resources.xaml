@@ -59,12 +59,28 @@
     <Style
         x:Key="{x:Type ToolTip}"
         TargetType="{x:Type ToolTip}">
+        <Style.Resources>
+            <Style
+                TargetType="ContentPresenter">
+                <Style.Resources>
+                    <Style
+                        TargetType="TextBlock">
+                        <Setter
+                            Property="TextWrapping"
+                            Value="Wrap" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </Style.Resources>
         <Setter
             Property="Foreground"
             Value="{StaticResource ForegroundBrush}" />
         <Setter
             Property="Background"
             Value="{StaticResource PopupBackground}" />
+        <Setter
+            Property="MaxWidth"
+            Value="450" />
     </Style>
 
 </ResourceDictionary>
