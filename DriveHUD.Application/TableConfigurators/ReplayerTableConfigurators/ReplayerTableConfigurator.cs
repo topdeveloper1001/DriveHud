@@ -14,6 +14,7 @@ using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Data;
 using Model.Enums;
 using Model.Interfaces;
@@ -72,15 +73,17 @@ namespace DriveHUD.Application.TableConfigurators
         };
 
         private RadDiagramShape table;
-
         private IHudLayoutsService hudLayoutsService;
         private IDataService dataService;
+        private SingletonStorageModel storageModel;
+
         #endregion
 
         public ReplayerTableConfigurator()
         {
             hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
         }
 
         public void ConfigureTable(RadDiagram diagram, ReplayerViewModel viewModel)
@@ -289,9 +292,19 @@ namespace DriveHUD.Application.TableConfigurators
         private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection, IDataService dataService)
         {
             replayerPlayer.StatInfoCollection.Clear();
+            
+            HudLightIndicators hudIndicators;
 
-            var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
-            var hudIndicators = new HudLightIndicators(statisticCollection);
+            if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
+                (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
+            {
+                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection);
+            }
+            else
+            {
+                hudIndicators = new HudLightIndicators();
+                dataService.ActOnPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId, null, stat => hudIndicators.AddStatistic(stat));
+            }
 
             if (hudIndicators != null)
             {
