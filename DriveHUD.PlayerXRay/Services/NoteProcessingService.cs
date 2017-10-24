@@ -12,6 +12,7 @@
 
 using DriveHud.Common.Log;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -29,8 +30,10 @@ using Model;
 using NHibernate;
 using NHibernate.Linq;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.PlayerXRay.Services
@@ -138,7 +141,7 @@ namespace DriveHUD.PlayerXRay.Services
 
             var playernotes = new List<Playernotes>();
 
-            Parallel.ForEach(notes, note =>
+            foreach (var note in notes)
             {
                 var playerstatistic = new PlayerstatisticExtended
                 {
@@ -161,141 +164,209 @@ namespace DriveHUD.PlayerXRay.Services
 
                     playernotes.Add(playerNote);
                 }
-            });
+            }
 
             return playernotes;
         }
 
-        public void ProcessNotes(IEnumerable<NoteObject> notes)
+        public void ProcessNotes(IEnumerable<NoteObject> notes, CancellationTokenSource cancellationTokenSource)
         {
             try
             {
-                if (!licenseService.IsRegistered)
+                if (!licenseService.IsRegistered || (cancellationTokenSource != null && cancellationTokenSource.IsCancellationRequested))
                 {
                     return;
                 }
 
-                ClearAllNotes();
-
                 var currentPlayerIds = new HashSet<int>(storageModel.PlayerSelectedItem.PlayerIds);
+
+                var noteService = ServiceLocator.Current.GetInstance<IPlayerNotesService>() as IPlayerXRayNoteService;
+
+                var sinceDate = noteService.CurrentNotesAppSettings.IsNoteCreationSinceDate ?
+                        noteService.CurrentNotesAppSettings.NoteCreationSinceDate : (DateTime?)null;
+
+                var takesNotesOnHero = noteService.CurrentNotesAppSettings.TakesNotesOnHero;
 
                 using (var session = ModelEntities.OpenStatelessSession())
                 {
-
                     BuildPlayersDictonary(session);
                     BuildPlayersNotesDictonary(session);
 
-                    var entitiesCount = session.Query<Handhistory>().Count();
+                    var entitiesCount = sinceDate != null ?
+                        session.Query<Handhistory>().Count(x => x.Handtimestamp >= sinceDate.Value) :
+                        session.Query<Handhistory>().Count();
 
                     var progressCounter = 0;
                     var progress = 0;
 
                     var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
 
+                    LogProvider.Log.Info(CustomModulesNames.PlayerXRay, $"Processing notes [{notes.Count()}] for {entitiesCount} hands.");
+
                     for (var i = 0; i < numOfQueries; i++)
                     {
-                        using (var pm = new PerformanceMonitor($"iteration {i}/{numOfQueries}"))
+                        if (cancellationTokenSource != null && cancellationTokenSource.IsCancellationRequested)
                         {
-                            using (var transaction = session.BeginTransaction())
-                            {
-                                var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
+                            LogProvider.Log.Info(CustomModulesNames.PlayerXRay, $"The note processing has been canceled [{i}/{numOfQueries}].");
+                            break;
+                        }
 
-                                var handHistories = session.Query<Handhistory>()
+                        using (var transaction = session.BeginTransaction())
+                        {
+                            var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
+
+                            var handHistories = sinceDate != null ?
+                                session.Query<Handhistory>()
+                                    .Where(x => x.Handtimestamp >= sinceDate.Value)
+                                    .Skip(numOfRowToStartQuery)
+                                    .Take(handHistoryRowsPerQuery)
+                                    .ToArray() :
+                                session.Query<Handhistory>()
                                     .Skip(numOfRowToStartQuery)
                                     .Take(handHistoryRowsPerQuery)
                                     .ToArray();
 
-                                Parallel.ForEach(handHistories, handHistory =>
+                            var notesToInsert = new ConcurrentBag<Playernotes>();
+
+                            Parallel.ForEach(handHistories, handHistory =>
+                            {
+                                try
                                 {
-                                    try
+                                    var parsingResult = ParseHandHistory(handHistory);
+
+                                    if (parsingResult != null)
                                     {
-                                        var parsingResult = ParseHandHistory(handHistory);
-
-                                        if (parsingResult != null)
+                                        var matchInfo = new GameMatchInfo
                                         {
-                                            var matchInfo = new GameMatchInfo
-                                            {
-                                                GameType = parsingResult.Source.GameDescription.GameType,
-                                                CashBuyIn = !parsingResult.Source.GameDescription.IsTournament ?
-                                                    Utils.ConvertToCents(parsingResult.Source.GameDescription.Limit.BigBlind) : 0,
-                                                TournamentBuyIn = parsingResult.Source.GameDescription.IsTournament ?
-                                                    parsingResult.Source.GameDescription.Tournament.BuyIn.PrizePoolValue : 0
-                                            };
+                                            GameType = parsingResult.Source.GameDescription.GameType,
+                                            CashBuyIn = !parsingResult.Source.GameDescription.IsTournament ?
+                                                Utils.ConvertToCents(parsingResult.Source.GameDescription.Limit.BigBlind) : 0,
+                                            TournamentBuyIn = parsingResult.Source.GameDescription.IsTournament ?
+                                                parsingResult.Source.GameDescription.Tournament.BuyIn.PrizePoolValue : 0
+                                        };
 
-                                            if (!Limit.IsMatch(matchInfo))
+                                        if (!Limit.IsMatch(matchInfo))
+                                        {
+                                            return;
+                                        }
+
+                                        foreach (var player in parsingResult.Players)
+                                        {
+                                            // skip notes for current player (need to check setting)
+                                            if (!takesNotesOnHero && currentPlayerIds.Contains(player.PlayerId))
                                             {
-                                                return;
+                                                continue;
                                             }
 
-                                            foreach (var player in parsingResult.Players)
+                                            if (player.PlayerId != 0)
                                             {
-                                                // skip notes for current player (need to check setting)
-                                                if (currentPlayerIds.Contains(player.PlayerId))
+                                                var playerNoteKey = new PlayerPokerSiteKey(player.PlayerId, player.PokersiteId);
+
+                                                var playerStatistic = BuildPlayerStatistic(parsingResult, player);
+
+                                                var playerNotes = ProcessHand(notes, playerStatistic, parsingResult.Source);
+
+                                                if (playerNotes.Count() == 0)
                                                 {
                                                     continue;
                                                 }
 
-                                                if (player.PlayerId != 0)
+                                                // if player has no notes, then just save all new notes
+                                                if (!playersNotesDictionary.ContainsKey(playerNoteKey)
+                                                || (playersNotesDictionary.ContainsKey(playerNoteKey) &&
+                                                    !playersNotesDictionary[playerNoteKey].ContainsKey(handHistory.Gamenumber)))
                                                 {
-                                                    var playerNoteKey = new PlayerPokerSiteKey(player.PlayerId, player.PokersiteId);
-
-                                                    var playerStatistic = BuildPlayerStatistic(parsingResult, player);
-
-                                                    var playerNotes = ProcessHand(notes, playerStatistic, parsingResult.Source);
-
-                                                    if (playerNotes.Count() == 0)
-                                                    {
-                                                        continue;
-                                                    }
-
-                                                    // if player has no notes, then just save all new notes
-                                                    if (!playersNotesDictionary.ContainsKey(playerNoteKey)
-                                                        || (playersNotesDictionary.ContainsKey(playerNoteKey) &&
-                                                            !playersNotesDictionary[playerNoteKey].ContainsKey(handHistory.Gamenumber)))
-                                                    {
-                                                        playerNotes.ForEach(note => session.Insert(note));
-                                                        continue;
-                                                    }
-
-                                                    var existingNotes = playersNotesDictionary[playerNoteKey][handHistory.Gamenumber];
-
-                                                    var notesToAdd = (from playerNote in playerNotes
-                                                                      join existingNote in existingNotes on playerNote.Note equals existingNote.Note into gj
-                                                                      from note in gj.DefaultIfEmpty()
-                                                                      where note == null
-                                                                      select playerNote).ToArray();
-
-                                                    notesToAdd.ForEach(note => session.Insert(note));
+                                                    playerNotes.ForEach(note => notesToInsert.Add(note));
+                                                    continue;
                                                 }
-                                            };
-                                        }
+
+                                                var existingNotes = playersNotesDictionary[playerNoteKey][handHistory.Gamenumber];
+
+                                                var notesToAdd = (from playerNote in playerNotes
+                                                                  join existingNote in existingNotes on playerNote.Note equals existingNote.Note into gj
+                                                                  from note in gj.DefaultIfEmpty()
+                                                                  where note == null
+                                                                  select playerNote).ToArray();
+
+                                                notesToAdd.ForEach(note => notesToInsert.Add(note));
+                                            }
+                                        };
                                     }
-                                    catch (Exception hhEx)
-                                    {
-                                        LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Hand history {handHistory.Gamenumber} has not been processed", hhEx);
-                                    }
+                                }
+                                catch (Exception hhEx)
+                                {
+                                    LogProvider.Log.Error(CustomModulesNames.PlayerXRay, $"Hand history {handHistory.Gamenumber} has not been processed", hhEx);
+                                }
 
-                                    // reporting progress
-                                    progressCounter++;
+                                // reporting progress
+                                progressCounter++;
 
-                                    var currentProgress = progressCounter * 100 / entitiesCount;
+                                var currentProgress = progressCounter * 100 / entitiesCount;
 
-                                    if (progress < currentProgress)
-                                    {
-                                        progress = currentProgress;
-                                        ProgressChanged?.Invoke(this, new NoteProcessingServiceProgressChangedEventArgs(progress));
-                                    }
-                                });
+                                if (progress < currentProgress)
+                                {
+                                    progress = currentProgress;
+                                    ProgressChanged?.Invoke(this, new NoteProcessingServiceProgressChangedEventArgs(progress));
+                                }
+                            });
 
-                                transaction.Commit();
-                            }
+                            notesToInsert.ForEach(x => session.Insert(x));
+
+                            transaction.Commit();
                         }
                     }
+
+                    LogProvider.Log.Info(CustomModulesNames.PlayerXRay, $"Notes have been processed.");
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Notes has not been processed.", e);
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Notes have not been processed.", e);
+            }
+        }
+
+        /// <summary>
+        /// Deletes notes before the specified date
+        /// </summary>
+        /// <param name="sinceDate"></param>
+        public void DeletesNotes(DateTime? beforeDate)
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var date = beforeDate.HasValue ? beforeDate : DateTime.MaxValue;
+
+                        var entitiesToDelete = session.Query<Playernotes>().Where(x => x.IsAutoNote && x.Timestamp <= date).ToArray();
+
+                        LogProvider.Log.Info(CustomModulesNames.PlayerXRay, $"Deleting {entitiesToDelete.Length} notes.");
+
+                        var progress = 0;
+
+                        for (var i = 0; i < entitiesToDelete.Length; i++)
+                        {
+                            session.Delete(entitiesToDelete[i]);
+
+                            var currentProgress = i * 100 / entitiesToDelete.Length;
+
+                            if (progress < currentProgress)
+                            {
+                                progress = currentProgress;
+                                ProgressChanged?.Invoke(this, new NoteProcessingServiceProgressChangedEventArgs(progress));
+                            }
+                        }
+
+                        transaction.Commit();
+                    }
+
+                    LogProvider.Log.Info(CustomModulesNames.PlayerXRay, "Notes have been deleted.");
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(CustomModulesNames.PlayerXRay, "Notes haven't been deleted.", e);
             }
         }
 

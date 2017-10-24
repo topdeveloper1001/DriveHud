@@ -73,7 +73,8 @@
     </LinearGradientBrush>
 
     <Style
-        TargetType="{x:Type TextBlock}">
+        x:Key="BaseFontStyle"
+        TargetType="{x:Type Control}">
         <Setter
             Property="FontFamily"
             Value="/Fonts/#Roboto Regular" />
@@ -83,6 +84,10 @@
         <Setter
             Property="FontSize"
             Value="12" />
+    </Style>
+
+    <Style
+        TargetType="{x:Type TextBlock}">
         <Setter
             Property="VerticalAlignment"
             Value="Center" />
@@ -948,6 +953,9 @@
             Property="FocusVisualStyle"
             Value="{x:Null}" />
         <Setter
+            Property="Foreground"
+            Value="{StaticResource ForegroundBrush}" />
+        <Setter
             Property="Height"
             Value="20" />
         <Setter
@@ -1007,7 +1015,7 @@
                     </BulletDecorator>
 
                     <ControlTemplate.Triggers>
-
+                                            
                         <Trigger
                             Property="IsMouseOver"
                             Value="True">
@@ -1028,6 +1036,15 @@
                                 TargetName="CheckMark"
                                 Value="Visible" />
 
+                        </Trigger>
+
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+
+                            <Setter
+                                Property="Foreground"
+                                Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -1129,6 +1146,9 @@
             Property="Padding"
             Value="1" />
         <Setter
+            Property="ShowButtonSpinner"
+            Value="True" />
+        <Setter
             Property="VerticalContentAlignment"
             Value="Center" />
         <Setter
@@ -1163,7 +1183,8 @@
                             <Grid
                                 x:Name="gridContent"
                                 Grid.Column="1"
-                                Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+                                Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"
+                                Visibility="{TemplateBinding ShowButtonSpinner, Converter={dh:BoolToVisibilityConverter}}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition
                                         Height="*" />
@@ -1638,7 +1659,7 @@
                 Content="{TemplateBinding SelectionBoxItem}"
                 ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                IsHitTestVisible="false"
+                IsHitTestVisible="false"                
                 Margin="{TemplateBinding Padding}"
                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
@@ -1682,8 +1703,7 @@
                 Property="IsEnabled"
                 Value="False">
                 <Setter
-                    Property="TextElement.Foreground"
-                    TargetName="templateRoot"
+                    Property="Foreground"
                     Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
             </Trigger>
 
@@ -1799,6 +1819,125 @@
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Border>
                     <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="True" />
+                                <Condition
+                                    Property="IsKeyboardFocused"
+                                    Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="Background"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource LightBlueBrush}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="True" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsKeyboardFocused"
+                                    Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="Background"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource LightBlueBrush}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="True" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="Background"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource LightBlueBrush}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="True" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsKeyboardFocused"
+                                    Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="Background"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsKeyboardFocused"
+                                    Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource LightBlueBrush}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition
+                                    Property="IsSelected"
+                                    Value="False" />
+                                <Condition
+                                    Property="IsMouseOver"
+                                    Value="True" />
+                                <Condition
+                                    Property="IsKeyboardFocused"
+                                    Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter
+                                Property="Background"
+                                TargetName="Bd"
+                                Value="{StaticResource SelectionBackgroundBrush}" />
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Bd"
+                                Value="{StaticResource LightBlueBrush}" />
+                        </MultiTrigger>
                         <Trigger
                             Property="IsEnabled"
                             Value="False">
@@ -1807,125 +1946,6 @@
                                 TargetName="Bd"
                                 Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
                         </Trigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="True" />
-                                <Condition
-                                    Property="IsKeyboardFocused"
-                                    Value="False" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="Background"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource LightBlueBrush}" />
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="True" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsKeyboardFocused"
-                                    Value="True" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="Background"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource LightBlueBrush}" />
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="True" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="True" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="Background"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource LightBlueBrush}" />
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="True" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsKeyboardFocused"
-                                    Value="False" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="Background"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsKeyboardFocused"
-                                    Value="True" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource LightBlueBrush}" />
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition
-                                    Property="IsSelected"
-                                    Value="False" />
-                                <Condition
-                                    Property="IsMouseOver"
-                                    Value="True" />
-                                <Condition
-                                    Property="IsKeyboardFocused"
-                                    Value="True" />
-                            </MultiTrigger.Conditions>
-                            <Setter
-                                Property="Background"
-                                TargetName="Bd"
-                                Value="{StaticResource SelectionBackgroundBrush}" />
-                            <Setter
-                                Property="BorderBrush"
-                                TargetName="Bd"
-                                Value="{StaticResource LightBlueBrush}" />
-                        </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

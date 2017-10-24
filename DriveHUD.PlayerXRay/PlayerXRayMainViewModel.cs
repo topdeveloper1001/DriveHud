@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Security;
@@ -18,6 +19,7 @@ using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings;
 using DriveHUD.PlayerXRay.Events;
 using DriveHUD.PlayerXRay.Licensing;
+using DriveHUD.PlayerXRay.Services;
 using DriveHUD.PlayerXRay.ViewModels;
 using DriveHUD.PlayerXRay.ViewModels.PopupViewModels;
 using DriveHUD.PlayerXRay.Views;
@@ -220,9 +222,14 @@ namespace DriveHUD.PlayerXRay
 
         protected override void Disposing()
         {
-            base.Disposing();
+            var playerNotesService = ServiceLocator.Current.GetInstance<IPlayerNotesService>() as IPlayerXRayNoteService;
+            playerNotesService.SaveAppSettings();
 
             eventAggregator.GetEvent<RaisePopupEvent>().Unsubscribe(raisePopupSubscriptionToken);
+
+            Workspace?.Dispose();
+
+            base.Disposing();
         }
 
         #endregion

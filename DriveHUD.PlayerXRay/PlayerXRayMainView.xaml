@@ -12,6 +12,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d"
+    Style="{DynamicResource BaseFontStyle}"
     d:DesignHeight="300"
     d:DesignWidth="300">
 
@@ -50,7 +51,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid
+    <Grid       
         Background="{StaticResource WindowBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition
@@ -218,6 +219,14 @@
                 <TextBlock
                     Style="{StaticResource BottomActiveTextStyle}"
                     Text="{Binding StorageModel.PlayerSelectedItem.DecodedName}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="Site:" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding StorageModel.PlayerSelectedItem.Description}" />
 
             </StackPanel>
 

@@ -71,6 +71,17 @@ namespace DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects
             set
             {
                 this.RaiseAndSetIfChanged(ref filterValue, value);
+                this.RaisePropertyChanged(nameof(ToolTip));
+            }
+        }
+
+        public string ToolTip
+        {
+            get
+            {
+                return Value != null ?
+                    $"{Description} ({Value})" :
+                    Description;
             }
         }
 

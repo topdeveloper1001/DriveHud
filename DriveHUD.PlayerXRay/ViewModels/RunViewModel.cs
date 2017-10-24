@@ -24,11 +24,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Threading;
 
 namespace DriveHUD.PlayerXRay.ViewModels
 {
     public class RunViewModel : WorkspaceViewModel
     {
+        private CancellationTokenSource cancellationTokenSource;
+
         public RunViewModel()
         {
             profiles = new ObservableCollection<ProfileObject>(NoteService.CurrentNotesAppSettings.Profiles);
@@ -222,6 +225,8 @@ namespace DriveHUD.PlayerXRay.ViewModels
                     return;
                 }
 
+                cancellationTokenSource = new CancellationTokenSource();
+
                 var noteProcessingService = ServiceLocator.Current.GetInstance<INoteProcessingService>();
 
                 noteProcessingService.ProgressChanged += (s, e) =>
@@ -229,7 +234,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
                     Progress = e.Progress;
                 };
 
-                noteProcessingService.ProcessNotes(notes);
+                noteProcessingService.ProcessNotes(notes, cancellationTokenSource);
 
             }, e =>
             {
@@ -262,6 +267,16 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 .CurrentNotesAppSettings
                 .StagesList
                 .Where(x => x.StageType == NoteStageType));
+        }
+
+        protected override void Disposing()
+        {
+            if (cancellationTokenSource != null)
+            {
+                cancellationTokenSource.Cancel();
+            }
+
+            base.Disposing();
         }
     }
 }

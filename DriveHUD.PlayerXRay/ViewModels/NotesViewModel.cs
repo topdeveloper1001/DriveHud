@@ -178,7 +178,32 @@ namespace DriveHUD.PlayerXRay.ViewModels
                     var filterToAdd = selectedItem.Clone();
                     filterToAdd.IsSelected = false;
 
-                    selectedFilters.Add(filterToAdd);
+                    // if filter requires value
+                    if (FiltersHelper.FiltersWithValueRequired.Contains(filterToAdd.Filter))
+                    {
+                        var setFilterValueViewModel = new SetFilterValueViewModel
+                        {
+                            Filter = filterToAdd.Filter
+                        };
+
+                        setFilterValueViewModel.OnSaveAction = () =>
+                        {
+                            filterToAdd.Value = setFilterValueViewModel.FilterValue;
+                            selectedFilters.Add(filterToAdd);
+                        };
+
+                        var popupEventArgs = new RaisePopupEventArgs()
+                        {
+                            Title = "Set filter value",
+                            Content = new SetFilterValueView(setFilterValueViewModel)
+                        };
+
+                        eventAggregator.GetEvent<RaisePopupEvent>().Publish(popupEventArgs);
+                    }
+                    else
+                    {
+                        selectedFilters.Add(filterToAdd);
+                    }
                 }
             });
 

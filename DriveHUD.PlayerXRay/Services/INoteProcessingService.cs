@@ -15,6 +15,7 @@ using DriveHUD.PlayerXRay.DataTypes.NotesTreeObjects;
 using HandHistories.Objects.Hand;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DriveHUD.PlayerXRay.Services
 {
@@ -22,8 +23,10 @@ namespace DriveHUD.PlayerXRay.Services
     {
         event EventHandler<NoteProcessingServiceProgressChangedEventArgs> ProgressChanged;
 
-        void ProcessNotes(IEnumerable<NoteObject> notes);
+        void ProcessNotes(IEnumerable<NoteObject> notes, CancellationTokenSource cancellationTokenSource);
 
         IEnumerable<Playernotes> ProcessHand(IEnumerable<NoteObject> notes, Playerstatistic stats, HandHistory handHistory);
-    }   
+
+        void DeletesNotes(DateTime? beforeDate);
+    }
 }

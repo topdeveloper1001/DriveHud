@@ -27,7 +27,17 @@ namespace DriveHUD.PlayerXRay.BusinessHelper.ApplicationSettings
             StagesList = new List<StageObject>();
             ShowHoleCards = true;
             HoleCardsNumber = 3;
+            AutoNotesEnabled = true;
+            NoteCreationSinceDate = DateTime.Today.AddMonths(-2);
         }
+
+        public bool AutoNotesEnabled { get; set; }
+
+        public bool TakesNotesOnHero { get; set; }
+
+        public bool IsNoteCreationSinceDate { get; set; }
+
+        public DateTime NoteCreationSinceDate { get; set; }
 
         public bool ShowHoleCards { get; set; }
 

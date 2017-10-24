@@ -38,11 +38,16 @@ namespace DriveHUD.PlayerXRay.Services
 
         public IEnumerable<Playernotes> BuildNotes(Playerstatistic stats, HandHistory handHistory)
         {
+            if (CurrentNotesAppSettings == null || !CurrentNotesAppSettings.AutoNotesEnabled)
+            {
+                return null;
+            }
+
             var noteProcessingService = ServiceLocator.Current.GetInstance<INoteProcessingService>();
 
             try
             {
-                var playerNotes = noteProcessingService.ProcessHand(CurrentNotesAppSettings.AllNotes, stats, handHistory);             
+                var playerNotes = noteProcessingService.ProcessHand(CurrentNotesAppSettings.AllNotes, stats, handHistory);
                 return playerNotes;
             }
             catch (Exception e)

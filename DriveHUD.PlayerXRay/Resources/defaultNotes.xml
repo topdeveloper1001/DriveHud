@@ -4,6 +4,7 @@
 	<AllHoleCards>false</AllHoleCards>
 	<HoleCardsNumber>3</HoleCardsNumber>
 	<LastBackupDate>0001-01-01T00:00:00</LastBackupDate>
+  <AutoNotesEnabled>true</AutoNotesEnabled>
 	<StagesList>
 		<StageObject>
 			<StageType>0</StageType>

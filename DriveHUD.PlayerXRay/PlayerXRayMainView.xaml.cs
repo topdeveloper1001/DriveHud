@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Wpf.Actions;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace DriveHUD.PlayerXRay
@@ -41,7 +42,7 @@ namespace DriveHUD.PlayerXRay
         }
 
         private void PlayerXRayMainView_Loaded(object sender, EventArgs e)
-        {         
+        {
             Loaded -= PlayerXRayMainView_Loaded;
             ViewModel?.Initialize();
         }

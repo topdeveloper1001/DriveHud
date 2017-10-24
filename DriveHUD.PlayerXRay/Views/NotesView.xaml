@@ -622,19 +622,19 @@
                     BorderBrush="{StaticResource BorderBrush}"
                     Height="40" />
 
+                <!-- SIMPLE SETTINGS  -->
                 <TabControl
                     BorderThickness="0"
                     Margin="0"
                     VerticalAlignment="Stretch"
+                    Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     ItemContainerStyle="{DynamicResource NoteSettingsTabItemStyle}"
                     Style="{DynamicResource NoteSettingsTabControlStyle}">
 
-                    <!-- SIMPLE SETTINGS  -->
                     <!-- GENERAL settings -->
                     <TabItem
                         Width="90"
                         VerticalContentAlignment="Top"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                         Header="GENERAL">
                         <ScrollViewer
                             VerticalScrollBarVisibility="Auto"
@@ -1183,7 +1183,6 @@
 
                     <TabItem
                         Width="100"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                         Header="HOLE CARDS">
 
                         <ScrollViewer
@@ -1342,7 +1341,6 @@
 
                     <TabItem
                         Width="120"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                         Header="DISPLAYED NOTE">
 
                         <TextBox
@@ -1361,11 +1359,19 @@
                         </TextBox>
 
                     </TabItem>
+                </TabControl>
 
-                    <!-- ADVANCED SETTINGS -->
+                <!-- ADVANCED SETTINGS -->
+                <TabControl
+                    BorderThickness="0"
+                    Margin="0"
+                    VerticalAlignment="Stretch"
+                    Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
+                    ItemContainerStyle="{DynamicResource NoteSettingsTabItemStyle}"
+                    Style="{DynamicResource NoteSettingsTabControlStyle}">
+
                     <TabItem
                         Width="85"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="ACTIONS">
 
                         <Border
@@ -1667,7 +1673,6 @@
 
                     <TabItem
                         Width="85"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="FILTERS">
 
                         <Grid>
@@ -1776,8 +1781,21 @@
                                     <TreeView.Resources>
                                         <DataTemplate
                                             x:Key="FilterTemplate">
-                                            <TextBlock
-                                                Text="{Binding Description}" />
+                                            <StackPanel
+                                                ToolTip="{Binding ToolTip}"
+                                                Orientation="Horizontal">
+                                                <TextBlock
+                                                    Text="{Binding Description}" />
+                                                <TextBlock
+                                                    Visibility="{Binding Value, Converter={dh:NullToVisibilityConverter}}">
+                                                    <Run
+                                                        Text=" (" />
+                                                    <Run
+                                                        Text="{Binding Value}" />
+                                                     <Run
+                                                        Text=")" />
+                                                </TextBlock>
+                                            </StackPanel>
                                         </DataTemplate>
                                     </TreeView.Resources>
 
@@ -1800,7 +1818,6 @@
 
                     <TabItem
                         Width="100"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="HAND VALUES">
 
                         <Border
@@ -2038,7 +2055,6 @@
 
                     <TabItem
                         Width="110"
-                        Visibility="{Binding IsAdvancedMode, Converter={dh:BoolToVisibilityConverter}}"
                         Header="BOARD TEXTURE">
 
                         <Border

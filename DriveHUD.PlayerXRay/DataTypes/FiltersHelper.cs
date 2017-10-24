@@ -122,7 +122,7 @@ namespace DriveHUD.PlayerXRay.DataTypes
                 Create(NoteStageType.PreFlop, "Could Cold Call", FilterEnum.CouldColdCall),
                 Create(NoteStageType.PreFlop, "Could Cold Call = False", FilterEnum.CouldColdCallFalse),
                 Create(NoteStageType.PreFlop, "Faced Preflop 3 bet", FilterEnum.FacedPreflop3Bet),
-                Create(NoteStageType.PreFlop, "Folded to Preflop 3 bet", FilterEnum.FoldedToPreflop4Bet),
+                Create(NoteStageType.PreFlop, "Folded to Preflop 3 bet", FilterEnum.FoldedToPreflop3Bet),
                 Create(NoteStageType.PreFlop, "Called Preflop 3 bet", FilterEnum.CalledPreflop3Bet),
                 Create(NoteStageType.PreFlop, "Raised Preflop 3 bet", FilterEnum.RaisedPreflop3Bet),
                 Create(NoteStageType.PreFlop, "Faced Preflop 4 bet", FilterEnum.FacedPreflop4Bet),
@@ -146,7 +146,7 @@ namespace DriveHUD.PlayerXRay.DataTypes
                 Create(NoteStageType.PreFlop, "Preflop Raise Size / Pot is Less Than...", FilterEnum.PreflopRaiseSizePotisLessThan),
                 Create(NoteStageType.PreFlop, "Preflop Facing Raise Size / Pot is Bigger Than...", FilterEnum.PreflopFacingRaiseSizePotisBiggerThan),
                 Create(NoteStageType.PreFlop, "Preflop Facing Raise Size / Pot is Less Than...", FilterEnum.PreflopFacingRaiseSizePotisLessThan),
-                Create(NoteStageType.PreFlop, "Allin Preflop.", FilterEnum.AllinPreflop),
+                Create(NoteStageType.PreFlop, "Allin Preflop", FilterEnum.AllinPreflop),
                 // FLOP
                 Create(NoteStageType.Flop, "Saw Flop", FilterEnum.SawFlop),
                 Create(NoteStageType.Flop, "Last to Act on Flop", FilterEnum.LasttoActionFlop),
