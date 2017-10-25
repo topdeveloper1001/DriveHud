@@ -403,6 +403,8 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
                 //Flop
                 case FilterEnum.SawFlop:
                     return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0).ToList();
+                case FilterEnum.SawFlopFalse:
+                    return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop == 0).ToList();
                 case FilterEnum.LasttoActionFlop:
                     return incomingPlayerstatistics.Where(x => x.Playerstatistic.Sawflop > 0 && LastToActOnStreetTrue(x, Street.Flop)).ToList();
                 case FilterEnum.LasttoActionFlopFalse:

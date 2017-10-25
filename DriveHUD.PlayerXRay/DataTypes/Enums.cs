@@ -361,6 +361,7 @@ namespace DriveHUD.PlayerXRay.DataTypes
         //FLOP
 
         SawFlop = 32,
+        SawFlopFalse = 308,
         LasttoActionFlop = 33,
         LasttoActionFlopFalse = 305,
         FlopUnopened = 34,

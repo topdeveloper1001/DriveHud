@@ -149,6 +149,7 @@ namespace DriveHUD.PlayerXRay.DataTypes
                 Create(NoteStageType.PreFlop, "Allin Preflop", FilterEnum.AllinPreflop),
                 // FLOP
                 Create(NoteStageType.Flop, "Saw Flop", FilterEnum.SawFlop),
+                Create(NoteStageType.Flop, "Saw Flop = False", FilterEnum.SawFlopFalse),
                 Create(NoteStageType.Flop, "Last to Act on Flop", FilterEnum.LasttoActionFlop),
                 Create(NoteStageType.Flop, "Last to Act on Flop = False", FilterEnum.LasttoActionFlopFalse),
                 Create(NoteStageType.Flop, "Flop Unopened", FilterEnum.FlopUnopened),
