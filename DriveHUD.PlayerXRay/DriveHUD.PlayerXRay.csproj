@@ -158,13 +158,13 @@
       <HintPath>..\packages\Extended.Wpf.Toolkit.3.2.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="XRCReg, Version=1.0.0.1735, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="XRCReg, Version=1.0.0.1737, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XRCReg.dll</HintPath>
     </Reference>
-    <Reference Include="XRHReg, Version=1.0.0.1735, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="XRHReg, Version=1.0.0.1737, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XRHReg.dll</HintPath>
     </Reference>
-    <Reference Include="XROReg, Version=1.0.0.1735, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="XROReg, Version=1.0.0.1737, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\XROReg.dll</HintPath>
     </Reference>
   </ItemGroup>
