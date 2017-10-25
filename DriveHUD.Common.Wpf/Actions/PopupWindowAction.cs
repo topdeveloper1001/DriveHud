@@ -111,6 +111,12 @@ namespace DriveHUD.Common.Wpf.Actions
 
         protected override void Activate(Window window)
         {
+            if (!window.IsVisible)
+            {
+                window.Show();
+                return;
+            }
+
             window.Activate();
         }
 

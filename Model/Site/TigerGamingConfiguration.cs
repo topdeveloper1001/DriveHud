@@ -18,6 +18,8 @@ namespace Model.Site
     {
         private readonly string[] registryKeys = new[] { "TigerGaming 0" };
 
+        private readonly string[] defaultUninstallDisplayNames = new[] { "TigerGaming" };
+
         public override EnumPokerSites Site
         {
             get
@@ -39,6 +41,14 @@ namespace Model.Site
             get
             {
                 return registryKeys;
+            }
+        }
+
+        protected override string[] UninstallDisplayNames
+        {
+            get
+            {
+                return defaultUninstallDisplayNames;
             }
         }
     }

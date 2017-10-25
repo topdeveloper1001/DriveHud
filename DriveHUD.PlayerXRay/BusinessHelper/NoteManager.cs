@@ -366,7 +366,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             foreach (var playerstatistic in playerStatistics)
             {
                 var riverActions = playerstatistic.HandHistory.HandActions
-                    .Where(x => x.Street == Street.River && x.PlayerName == StaticStorage.CurrentPlayerName).ToList();
+                    .Where(x => x.Street == Street.River && x.PlayerName == playerstatistic.Playerstatistic.PlayerName).ToList();
 
                 if (CompareHandActionsWithObligatoryHandActions(riverActions, riverObligatoryActions))
                 {
@@ -386,7 +386,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             foreach (var playerstatistic in playerStatistics)
             {
                 var turnActions = playerstatistic.HandHistory.HandActions
-                    .Where(x => x.Street == Street.Turn && x.PlayerName == StaticStorage.CurrentPlayerName).ToList();
+                    .Where(x => x.Street == Street.Turn && x.PlayerName == playerstatistic.Playerstatistic.PlayerName).ToList();
 
                 if (CompareHandActionsWithObligatoryHandActions(turnActions, turnObligatoryActions))
                 {
@@ -406,7 +406,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             foreach (var playerstatistic in playerStatistics)
             {
                 var flopActions = playerstatistic.HandHistory.HandActions
-                    .Where(x => x.Street == Street.Flop && x.PlayerName == StaticStorage.CurrentPlayerName).ToList();
+                    .Where(x => x.Street == Street.Flop && x.PlayerName == playerstatistic.Playerstatistic.PlayerName).ToList();
 
                 if (CompareHandActionsWithObligatoryHandActions(flopActions, flopObligatoryActions))
                 {
@@ -425,7 +425,7 @@ namespace DriveHUD.PlayerXRay.BusinessHelper
             foreach (var playerstatistic in playerStatistics)
             {
                 List<HandAction> preflopActions = playerstatistic.HandHistory.HandActions
-                    .Where(x => x.Street == Street.Preflop && x.PlayerName == StaticStorage.CurrentPlayerName &&
+                    .Where(x => x.Street == Street.Preflop && x.PlayerName == playerstatistic.Playerstatistic.PlayerName &&
                         x.HandActionType != HandActionType.SMALL_BLIND && x.HandActionType != HandActionType.BIG_BLIND).ToList();
 
                 if (CompareHandActionsWithObligatoryHandActions(preflopActions, preflopObligatoryActions))

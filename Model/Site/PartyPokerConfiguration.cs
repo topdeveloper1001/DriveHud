@@ -129,7 +129,7 @@ namespace Model.Site
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
-                IsDetected = RegistryUtils.UninstallRegistryKeysExist(uninstallRegistryKeys),
+                IsDetected = RegistryUtils.UninstallRegistryContainsKeys(uninstallRegistryKeys),
                 IsEnabled = siteModel.Enabled,
                 HandHistoryLocations = GetHandHistoryFolders().ToList(),
             };

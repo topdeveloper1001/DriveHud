@@ -10,15 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
-using Microsoft.Win32;
 using Model.Settings;
-using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Model.Site
@@ -26,6 +23,10 @@ namespace Model.Site
     public class BovadaConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] registryKeys = new[] { "{D7CA2DF8-95CE-4C80-9296-98E21219A1E4}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E5}}_is1", "{D7CA2DF8-95CE-4C80-9296-98E21219A1E7}}_is1" };
+
+        private static readonly string[] defaultInstallFolders = new[] { "c:\\Bodog", "c:\\Bovada", "c:\\Ignition" };
+
+        private static readonly string[] defaultUninstallDisplayNames = new[] { "Ignition Casino", "BovadaPoker", "BodogPoker" };
 
         private const string heroName = "Hero";
 
@@ -64,14 +65,14 @@ namespace Model.Site
             get;
             set;
         }
-    
+
         public override bool IsPrefferedSeatsAllowed
         {
             get
             {
                 return true;
             }
-        }    
+        }
 
         public override Dictionary<int, int> PreferredSeats
         {
@@ -94,7 +95,7 @@ namespace Model.Site
                 return seatsDictonary;
             }
         }
-      
+
         public override string LogoSource
         {
             get
@@ -113,11 +114,35 @@ namespace Model.Site
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
-                IsDetected = RegistryUtils.UninstallRegistryKeysExist(registryKeys),
+                IsDetected = DetectSite(),
                 IsEnabled = siteModel.Enabled,
             };
 
             return validationResult;
+        }
+
+        /// <summary>
+        /// Detects whenever Ignition/Bodog/Bovada poker client is installed
+        /// </summary>
+        /// <returns>True if installed, otherwise - false</returns>
+        private bool DetectSite()
+        {
+            // check the registry for the specific keys
+            var result = RegistryUtils.UninstallRegistryContainsKeys(registryKeys);
+
+            if (result)
+            {
+                return true;
+            }
+
+            // check for default paths
+            if (defaultInstallFolders.Any(x => Directory.Exists(x)))
+            {
+                return true;
+            }
+
+            // check registry for installed programs
+            return RegistryUtils.UninstallRegistryContainsDisplayNames(defaultUninstallDisplayNames);
         }
     }
 }

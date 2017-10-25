@@ -55,9 +55,9 @@ namespace DriveHUD.PlayerXRay.ViewModels
 
         private void InitializeActions()
         {
-            var actions = Enum.GetValues(typeof(ActionTypeEnum)).Cast<ActionTypeEnum>().Where(x => x != ActionTypeEnum.Fold);
+            var actions = Enum.GetValues(typeof(ActionTypeEnum)).Cast<ActionTypeEnum>();
 
-            firstActions = new ObservableCollection<ActionTypeEnum>(actions);
+            firstActions = new ObservableCollection<ActionTypeEnum>(actions.Where(x => x != ActionTypeEnum.Fold));
             secondActions = new ObservableCollection<ActionTypeEnum>(actions);
             thirdActions = new ObservableCollection<ActionTypeEnum>(actions);
             fourthActions = new ObservableCollection<ActionTypeEnum>(actions);
@@ -1182,6 +1182,7 @@ namespace DriveHUD.PlayerXRay.ViewModels
                 {
                     ID = ObjectsHelper.GetNextID(NoteService.CurrentNotesAppSettings.AllNotes),
                     Name = addNoteViewModel.Name,
+                    DisplayedNote = addNoteViewModel.Name,
                     IsSelected = true
                 };
 
