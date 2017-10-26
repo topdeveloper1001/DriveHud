@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.PlayerXRay.Views.PopupViews"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     mc:Ignorable="d"
@@ -52,6 +53,12 @@
                 Increment="0.01"
                 Maximum="10000"
                 Value="{Binding FilterValue}" />
+
+            <TextBlock
+                Visibility="{Binding PercentBase, Converter={dh:BoolToVisibilityConverter}}"
+                Margin="2,0,0,0"
+                VerticalAlignment="Center"
+                Text="%" />
 
             <Button
                 Margin="5,0,0,0"

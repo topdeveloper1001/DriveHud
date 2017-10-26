@@ -107,8 +107,15 @@ namespace DriveHUD.PlayerXRay
         {
             get
             {
-                var fileInfo = new FileInfo(Assembly.Location);
-                return fileInfo.CreationTime;
+                try
+                {
+                    var fileInfo = new FileInfo(Assembly.Location);
+                    return fileInfo.LastWriteTimeUtc;
+                }
+                catch
+                {
+                    return DateTime.MinValue;
+                }
             }
         }
 

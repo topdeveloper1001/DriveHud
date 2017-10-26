@@ -107,6 +107,32 @@ namespace DriveHUD.PlayerXRay.DataTypes
             FilterEnum.AllinWinIsLessThan
         };
 
+        public static HashSet<FilterEnum> PercentBasedFilters = new HashSet<FilterEnum>
+        {          
+            FilterEnum.PreflopRaiseSizePotisBiggerThan,
+            FilterEnum.PreflopRaiseSizePotisLessThan,
+            FilterEnum.PreflopFacingRaiseSizePotisBiggerThan,
+            FilterEnum.PreflopFacingRaiseSizePotisLessThan,                            
+            FilterEnum.FlopRaiseSizePotisBiggerThan,
+            FilterEnum.FlopRaiseSizePotisLessThan,
+            FilterEnum.FlopFacingBetSizePotisBiggerThan,
+            FilterEnum.FlopFacingBetSizePotisLessThan,
+            FilterEnum.FlopFacingRaiseSizePotisBiggerThan,
+            FilterEnum.FlopFacingRaiseSizePotisLessThan,                                    
+            FilterEnum.TurnRaiseSizePotisBiggerThan,
+            FilterEnum.TurnRaiseSizePotisLessThan,
+            FilterEnum.TurnFacingBetSizePotisBiggerThan,
+            FilterEnum.TurnFacingBetSizePotisLessThan,
+            FilterEnum.TurnFacingRaiseSizePotisBiggerThan,
+            FilterEnum.TurnFacingRaiseSizePotisLessThan,             
+            FilterEnum.RiverRaiseSizePotisBiggerThan,
+            FilterEnum.RiverRaiseSizePotisLessThan,
+            FilterEnum.RiverFacingBetSizePotisBiggerThan,
+            FilterEnum.RiverFacingBetSizePotisLessThan,
+            FilterEnum.RiverFacingRaiseSizePotisBiggerThan,
+            FilterEnum.RiverFacingRaiseSizePotisLessThan                      
+        };
+
         public static IEnumerable<FilterObject> GetFiltersObjects()
         {
             return new[]

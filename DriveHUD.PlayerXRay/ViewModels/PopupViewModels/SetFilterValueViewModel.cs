@@ -23,7 +23,7 @@ namespace DriveHUD.PlayerXRay.ViewModels.PopupViewModels
         private Dictionary<FilterEnum, string> filtersDictionary;
 
         public SetFilterValueViewModel()
-        {            
+        {
             filtersDictionary = FiltersHelper.GetFiltersObjects().ToDictionary(x => x.Filter, x => x.Description);
 
             SaveCommand = ReactiveCommand.Create();
@@ -81,6 +81,14 @@ namespace DriveHUD.PlayerXRay.ViewModels.PopupViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref filterValue, value);
+            }
+        }
+
+        public bool PercentBase
+        {
+            get
+            {
+                return FiltersHelper.PercentBasedFilters.Contains(filter);
             }
         }
 
