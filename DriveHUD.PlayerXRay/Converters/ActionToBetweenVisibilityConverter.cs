@@ -35,8 +35,7 @@ namespace DriveHUD.PlayerXRay.Converters
             {
                 case ActionTypeEnum.Bet:
                 case ActionTypeEnum.Call:
-                case ActionTypeEnum.Raise:
-                case ActionTypeEnum.Fold:
+                case ActionTypeEnum.Raise:             
                     return Visibility.Visible;
                 default:
                     return HiddenVisibility;
