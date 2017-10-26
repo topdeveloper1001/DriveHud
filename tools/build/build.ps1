@@ -75,7 +75,7 @@ param
 
     [bool] $UpdateOnlyLic = $false,
 	
-	[string] $PlayerXRaySource = 'DriveHUD.PlayerXRay\bin',
+	[string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
 	
 	[string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
 	
@@ -238,9 +238,6 @@ try
        Remove-Item -Path $session.WixSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
 
-   #build xray   
-   #& .\tools\build\xray-build.ps1
-   
    # copy xray dlls
    &robocopy $session.PlayerXRaySource $session.Source $session.PlayerXRayLicIncludeFilter /s | Out-Null
 
