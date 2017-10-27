@@ -24,8 +24,24 @@ namespace DriveHud.Common.Log
 
         private readonly long initialMemory;
 
-        public PerformanceMonitor(string message)
+        private readonly bool isEnabled;
+
+        private readonly string logger;
+
+        public PerformanceMonitor(string message) : this(message, true, null)
         {
+        }
+
+        public PerformanceMonitor(string message, bool isEnabled, string logger)
+        {
+            this.isEnabled = isEnabled;
+            this.logger = logger;
+
+            if (!isEnabled)
+            {
+                return;
+            }
+
             initialMemory = GC.GetTotalMemory(false);
             this.message = message;
             stopwatch.Start();
@@ -33,6 +49,11 @@ namespace DriveHud.Common.Log
 
         public void Dispose()
         {
+            if (!isEnabled)
+            {
+                return;
+            }
+
             if (stopwatch.IsRunning)
             {
                 stopwatch.Stop();
@@ -44,8 +65,8 @@ namespace DriveHud.Common.Log
             Console.WriteLine(durationMessage);
             Console.WriteLine(memoryMessage);
 
-            LogProvider.Log.Info(durationMessage);
-            LogProvider.Log.Info(memoryMessage);
+            LogProvider.Log.Info(logger, durationMessage);
+            LogProvider.Log.Info(logger, memoryMessage);
         }
     }
 }

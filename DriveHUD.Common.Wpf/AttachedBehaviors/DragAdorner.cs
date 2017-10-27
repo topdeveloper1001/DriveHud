@@ -28,7 +28,8 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             Check.ArgumentNotNull(() => adornment);
 
             adornerLayer = AdornerLayer.GetAdornerLayer(adornedElement);
-            adornerLayer.Add(this);
+         
+            adornerLayer?.Add(this);            
 
             this.adornment = adornment;
             IsHitTestVisible = false;
@@ -51,14 +52,14 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 if (mousePosition != value)
                 {
                     mousePosition = value;
-                    adornerLayer.Update(AdornedElement);
+                    adornerLayer?.Update(AdornedElement);
                 }
             }
         }
 
         public void Detatch()
         {
-            adornerLayer.Remove(this);
+            adornerLayer?.Remove(this);
         }
 
         protected override Size ArrangeOverride(Size finalSize)

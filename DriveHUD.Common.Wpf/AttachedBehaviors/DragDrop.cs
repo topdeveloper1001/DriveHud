@@ -221,6 +221,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             }
 
             DragAdorner = null;
+            dragInfo = null;
             e.Handled = true;
         }
 
@@ -263,7 +264,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         }
 
         private static void OnDragEnter(object sender, DragEventArgs e)
-        {            
+        {
             OnDragOver(sender, e);
         }
 
@@ -283,6 +284,12 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             }
 
             var contentPresenter = new ContentPresenter();
+
+            if (uiElement is FrameworkElement)
+            {
+                contentPresenter.Content = (uiElement as FrameworkElement).DataContext;
+            }
+
             contentPresenter.ContentTemplate = template;
 
             DragAdorner = new DragAdorner(uiElement, contentPresenter);
