@@ -13,6 +13,7 @@
 using DriveHUD.Common.Log;
 using FluentMigrator;
 using System;
+using System.Data;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
@@ -54,12 +55,15 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     .WithColumn("Timestamp").AsDateTime().Nullable()
                     .WithColumn("IsAutoNote").AsBoolean().NotNullable().WithDefaultValue(false)
                     .WithColumn("GameNumber").AsInt64().Nullable()
-                    .WithColumn("PokerSiteId").AsInt32().NotNullable();
+                    .WithColumn("PokerSiteId").AsInt32().NotNullable();            
 
-                Create.Index(playerNotesIndexName).OnTable(playerNotesTableName).OnColumn("PlayerId");
+                Create.Index(playerNotesIndexName).OnTable(playerNotesTableName).OnColumn("PlayerId");               
 
-                Execute.Sql($"INSERT INTO {playerNotesTableName} (PlayerNoteId, PlayerId, Note, PokerSiteId) SELECT PlayerNoteId, PlayerId, Note, PokerSiteId FROM {playerNotesTempTableName} WHERE Note is not null");
-                Delete.Table(playerNotesTempTableName);
+                if (Schema.Table(playerNotesTempTableName).Exists())
+                {
+                    Execute.Sql($"INSERT INTO {playerNotesTableName} (PlayerNoteId, PlayerId, Note, PokerSiteId) SELECT PlayerNoteId, PlayerId, Note, PokerSiteId FROM {playerNotesTempTableName} WHERE Note is not null");
+                    Delete.Table(playerNotesTempTableName);
+                }
             }
             catch (Exception e)
             {
