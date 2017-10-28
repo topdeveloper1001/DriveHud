@@ -93,6 +93,19 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             target.SetValue(DragDropDataProperty, value);
         }
 
+        public static readonly DependencyProperty PassClickEventToParentProperty = DependencyProperty.RegisterAttached("PassClickEventToParent", typeof(bool),
+            typeof(DragDrop));
+
+        public static bool GetPassClickEventToParent(UIElement target)
+        {
+            return (bool)target.GetValue(PassClickEventToParentProperty);
+        }
+
+        public static void SetPassClickEventToParent(UIElement target, object value)
+        {
+            target.SetValue(PassClickEventToParentProperty, value);
+        }
+
         private static DragAdorner dragAdorner;
 
         public static DragAdorner DragAdorner
@@ -163,7 +176,21 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public static void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             dragInfo = new DragInfo(sender, e);
-            e.Handled = true;
+
+            var uiElement = sender as UIElement;
+
+            if (uiElement == null)
+            {
+                e.Handled = true;
+                return;
+            }
+
+            var passClickEventToParent = GetPassClickEventToParent(uiElement);
+
+            if (!passClickEventToParent)
+            {
+                e.Handled = true;
+            }
         }
 
         private static void OnPreviewMouseMove(object sender, MouseEventArgs e)
