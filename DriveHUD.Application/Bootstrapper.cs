@@ -10,9 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DHCRegistration;
-using DHHRegistration;
-using DHORegistration;
 using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
@@ -20,6 +17,7 @@ using DriveHUD.Application.Licensing;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
+using DriveHUD.Application.Modules;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Services;
 using DriveHUD.Application.Surrogates;
@@ -29,10 +27,10 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
-using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -48,7 +46,6 @@ using Model.Site;
 using Prism.Unity;
 using ProtoBuf.Meta;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -97,6 +94,9 @@ namespace DriveHUD.Application
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
             sqliteBootstrapper.InitializeDatabase();
 
+            var moduleService = ServiceLocator.Current.GetInstance<IModuleService>();
+            moduleService.InitializeModules(Container);
+
             ShowMainWindow();
         }
 
@@ -143,9 +143,7 @@ namespace DriveHUD.Application
 
                     if (!licenseService.IsRegistered)
                     {
-#if !DEBUG
-                         System.Windows.Application.Current.Shutdown();
-#endif
+                        System.Windows.Application.Current.Shutdown();
                     }
 
                     mainWindowViewModel.IsTrial = licenseService.IsTrial;
@@ -240,6 +238,8 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
+            RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);
+            RegisterTypeIfMissing(typeof(IWindowController), typeof(WindowController), true);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());

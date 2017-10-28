@@ -235,7 +235,7 @@ namespace Model.Site
         {
             try
             {
-                var isInstalled = RegistryUtils.UninstallRegistryKeysExist(registryKeys) || Registry.CurrentUser.OpenSubKey(LanguageRegistryKey) != null;
+                var isInstalled = RegistryUtils.UninstallRegistryContainsKeys(registryKeys) || Registry.CurrentUser.OpenSubKey(LanguageRegistryKey) != null;
                 return isInstalled;
             }
             catch (Exception e)

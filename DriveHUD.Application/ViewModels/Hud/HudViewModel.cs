@@ -1017,14 +1017,26 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void DataImport()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml", Multiselect = true };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                var importedLayout = HudLayoutsService.Import(openFileDialog.FileName);
+                HudLayoutInfoV2 importedLayout = null;
+
+                foreach (var fileName in openFileDialog.FileNames)
+                {
+                    importedLayout = HudLayoutsService.Import(fileName);
+                }
 
                 if (importedLayout == null)
                 {
+                    return;
+                }
+
+                if (CurrentTableType != importedLayout.TableType)
+                {
+                    CurrentTableType = importedLayout.TableType;
+                    CurrentLayout = Layouts.FirstOrDefault(x => x.Name == importedLayout.Name && x.TableType == importedLayout.TableType);
                     return;
                 }
 

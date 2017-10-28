@@ -123,9 +123,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             to.ActionString = from.ActionString;
 
-            to.CurrentStreet = from.CurrentStreet;
-
-            to.NoteToolTip = from.NoteToolTip;
+            to.CurrentStreet = from.CurrentStreet;            
         }
 
         #region Properties

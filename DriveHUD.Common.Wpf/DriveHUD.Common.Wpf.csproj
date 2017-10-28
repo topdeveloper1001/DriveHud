@@ -124,6 +124,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\IViewContainer.cs" />
     <Compile Include="Actions\PopupAction.cs" />
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />
     <Compile Include="AttachedBehaviors\MainScrollBarBehavior.cs" />
     <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
+    <Compile Include="AttachedBehaviors\MouseDragPopupBehavior.cs" />
     <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
@@ -190,12 +192,20 @@
     <Compile Include="Helpers\ColorsHelper.cs" />
     <Compile Include="Helpers\ResolutionSettings.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
+    <Compile Include="Interactivity\IViewInteractionRequest.cs" />
+    <Compile Include="Interactivity\IWindowController.cs" />
+    <Compile Include="Interactivity\ViewInteractionRequest.cs" />
+    <Compile Include="Interactivity\ViewInteractionRequestEventArgs.cs" />
+    <Compile Include="Interactivity\ViewModelInfo.cs" />
+    <Compile Include="Interactivity\WindowController.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />
     <Compile Include="Mvvm\IAsyncOperationItem.cs" />
+    <Compile Include="Mvvm\IModuleEntryViewModel.cs" />
     <Compile Include="Mvvm\IOperationViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
     <Compile Include="Mvvm\WindowViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

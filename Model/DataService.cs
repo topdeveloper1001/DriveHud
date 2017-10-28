@@ -404,12 +404,58 @@ namespace Model
             }
         }
 
-        public Playernotes GetPlayerNote(string playerName, short pokersiteId)
+        public IEnumerable<Playernotes> GetPlayerNotes(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
             {
-                var pn = session.Query<Playernotes>().FirstOrDefault(x => x.Player.Playername == playerName && x.PokersiteId == pokersiteId);
-                return pn;
+                var playerNotes = session.Query<Playernotes>()
+                    .Where(x => x.Player.Playername == playerName && x.PokersiteId == pokersiteId)
+                    .ToArray();
+
+                return playerNotes;
+            }
+        }
+
+        public IEnumerable<Playernotes> GetPlayerNotes(int playerId)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                var playerNotes = session.Query<Playernotes>()
+                    .Where(x => x.PlayerId == playerId)
+                    .ToArray();
+
+                return playerNotes;
+            }
+        }
+
+        public void DeletePlayerNotes(IEnumerable<Playernotes> playernotes)
+        {
+            if (playernotes == null || playernotes.Count() == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                using (var session = ModelEntities.OpenSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var playernotesIds = playernotes.Select(x => x.PlayerNoteId).Distinct().ToArray();
+
+                        var playernotesToDelete = session.Query<Playernotes>()
+                             .Where(x => playernotesIds.Contains(x.PlayerNoteId))
+                             .ToArray();
+
+                        playernotesToDelete.ForEach(x => session.Delete(x));
+
+                        transaction.Commit();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not delete player notes", e);
             }
         }
 

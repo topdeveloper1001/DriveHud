@@ -54,12 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
-      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
-      <Name>DriveHUD.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="runtime.lic" />
   </ItemGroup>
   <ItemGroup>

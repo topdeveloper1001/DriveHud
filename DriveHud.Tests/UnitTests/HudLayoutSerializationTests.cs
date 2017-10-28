@@ -144,7 +144,7 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.PFR },
                     new StatInfo { Stat = Stat.S3Bet },
                     new StatInfo { Stat = Stat.ColdCall }
-                }
+                }                
             };
 
             var hudElement = new HudElementViewModel
@@ -157,6 +157,7 @@ namespace DriveHud.Tests.UnitTests
             hudToolViewModelExpected.Height = 150;
             hudToolViewModelExpected.Position = new System.Windows.Point(10, 10);
             hudToolViewModelExpected.Opacity = 50;
+            hudToolViewModelExpected.IsNoteIconEnabled = true;
 
             Assert.IsNotNull(hudToolViewModelExpected);
 
@@ -169,6 +170,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
             Assert.That(hudToolViewModelActual.Opacity, Is.EqualTo(hudToolViewModelExpected.Opacity));
+            Assert.That(hudToolViewModelActual.IsNoteIconEnabled, Is.EqualTo(hudToolViewModelExpected.IsNoteIconEnabled));
         }
 
         /// <summary>

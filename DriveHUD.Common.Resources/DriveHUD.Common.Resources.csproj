@@ -681,6 +681,12 @@
   <ItemGroup>
     <Resource Include="images\icons\HelpButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Shop\player-xray-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\xray-note-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

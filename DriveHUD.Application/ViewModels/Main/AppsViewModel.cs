@@ -140,6 +140,10 @@ namespace DriveHUD.Application.ViewModels
             Pages = new ObservableCollection<AppStorePageViewModel>();
             InitializeObservables();
             InitializeCommands();
+
+            // temp
+            appStoreType = AppStoreType.Apps;
+
             Load();
         }
 
@@ -217,20 +221,23 @@ namespace DriveHUD.Application.ViewModels
             {
                 case AppStoreType.Recommended:
                     AppStoreViewModel = new ProductAppStoreViewModel();
-                    AppStoreViewModel.Updated += OnAppStoreViewModelUpdated;
-                    AppStoreViewModel.Initialize();
                     break;
 
                 case AppStoreType.Training:
                     AppStoreViewModel = new TrainingAppStoreViewModel();
-                    AppStoreViewModel.Updated += OnAppStoreViewModelUpdated;
-                    AppStoreViewModel.Initialize();
+                    break;
+
+                case AppStoreType.Apps:
+                    AppStoreViewModel = new AppsAppStoreViewModel();
                     break;
 
                 default:
                     AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;
             }
+
+            AppStoreViewModel.Updated += OnAppStoreViewModelUpdated;
+            AppStoreViewModel.Initialize();
 
             RefreshPages();
         }

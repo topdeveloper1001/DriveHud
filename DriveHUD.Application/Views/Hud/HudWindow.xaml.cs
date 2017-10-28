@@ -131,8 +131,16 @@ namespace DriveHUD.Application.Views
                     continue;
                 }
 
+                var isNoteIconSet = false;
+
                 foreach (var toolViewModel in playerHudContent.HudElement.Tools.Where(x => x is IHudNonPopupToolViewModel).ToArray())
                 {
+                    if (!isNoteIconSet && toolViewModel is HudPlainStatBoxViewModel && !(toolViewModel is HudFourStatsBoxViewModel))
+                    {
+                        (toolViewModel as HudPlainStatBoxViewModel).IsNoteIconEnabled = true;
+                        isNoteIconSet = true;
+                    }
+
                     var toolKey = HudWindowViewModel.HudToolKey.BuildKey(toolViewModel);
 
                     if (!ViewModel.PanelOffsets.ContainsKey(toolKey))

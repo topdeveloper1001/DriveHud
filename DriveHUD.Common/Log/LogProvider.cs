@@ -10,13 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using log4net;
 using log4net.Config;
-using System.IO;
 using log4net.Util;
-using log4net.Repository.Hierarchy;
-using log4net.Core;
+using System;
+using System.IO;
 
 namespace DriveHUD.Common.Log
 {

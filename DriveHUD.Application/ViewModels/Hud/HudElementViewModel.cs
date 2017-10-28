@@ -157,6 +157,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(7)]
+        private bool isXRayNoteVisible;
+
+        public bool IsXRayNoteVisible
+        {
+            get { return isXRayNoteVisible; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isXRayNoteVisible, value);
+            }
+        }
+
         /// <summary>
         /// Note menu item name in the Context menu
         /// </summary>

@@ -10,7 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Controls;
+using DriveHUD.Common.Wpf.Interactivity;
+using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Windows;
@@ -31,10 +34,29 @@ namespace DriveHUD.Common.Wpf.Actions
                 new PropertyMetadata(null));
 
         /// <summary>
+        /// The name of view of the child window to display
+        /// </summary>
+        public static readonly DependencyProperty ViewNameProperty = DependencyProperty.Register(
+            "ViewName",
+            typeof(string),
+            typeof(PopupAction<T>),
+            new UIPropertyMetadata(null));
+
+
+        /// <summary>
         /// Determines if the content should be shown in a modal window or not.
         /// </summary>
         public static readonly DependencyProperty IsModalProperty = DependencyProperty.Register(
                 "IsModal",
+                typeof(bool),
+                typeof(PopupAction<T>),
+                new PropertyMetadata(null));
+
+        /// <summary>
+        /// Determines if only one instance of window is allowed
+        /// </summary>
+        public static readonly DependencyProperty IsSingleProperty = DependencyProperty.Register(
+                "IsSingle",
                 typeof(bool),
                 typeof(PopupAction<T>),
                 new PropertyMetadata(null));
@@ -67,11 +89,29 @@ namespace DriveHUD.Common.Wpf.Actions
         }
 
         /// <summary>
+        /// Gets or sets the name of view of the content of the window
+        /// </summary>
+        public string ViewName
+        {
+            get { return (string)GetValue(ViewNameProperty); }
+            set { SetValue(ViewNameProperty, value); }
+        }
+
+        /// <summary>
         /// Gets or sets if the window will be modal or not.
         /// </summary>
         public bool IsModal
         {
             get { return (bool)GetValue(IsModalProperty); }
+            set { SetValue(IsModalProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets if the only one instance of window is allowed
+        /// </summary>
+        public bool IsSingle
+        {
+            get { return (bool)GetValue(IsSingleProperty); }
             set { SetValue(IsModalProperty, value); }
         }
 
@@ -112,6 +152,19 @@ namespace DriveHUD.Common.Wpf.Actions
                 return;
             }
 
+            // don't create new window if there is opened window
+            if (IsSingle && !string.IsNullOrEmpty(ViewName))
+            {
+                var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                var existingWindow = windowController.GetWindow(ViewName) as T;
+
+                if (existingWindow != null)
+                {
+                    Activate(existingWindow);
+                    return;
+                }
+            }
+
             var wrapperWindow = GetWindow(args.Context);
 
             wrapperWindow.BorderBrush = null;
@@ -131,18 +184,25 @@ namespace DriveHUD.Common.Wpf.Actions
                 {
                     wrapperWindow.SizeChanged -= sizeHandler;
 
-                    var view = AssociatedObject;
-                    var position = view.PointToScreen(new Point(0, 0));
+                    try
+                    {
+                        var view = AssociatedObject;
+                        var position = view.PointToScreen(new Point(0, 0));
 
-                    var top = position.Y + ((view.ActualHeight - wrapperWindow.ActualHeight) / 2);
-                    var left = position.X + ((view.ActualWidth - wrapperWindow.ActualWidth) / 2);
+                        var top = position.Y + ((view.ActualHeight - wrapperWindow.ActualHeight) / 2);
+                        var left = position.X + ((view.ActualWidth - wrapperWindow.ActualWidth) / 2);
 
-                    SetWindowPosition(wrapperWindow, left, top);
+                        SetWindowPosition(wrapperWindow, left, top);
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Popup window couldn't be centered", ex);
+                    }
                 };
 
                 wrapperWindow.SizeChanged += sizeHandler;
             }
-          
+
             Show(wrapperWindow);
         }
 
@@ -153,11 +213,6 @@ namespace DriveHUD.Common.Wpf.Actions
         /// <returns></returns>
         protected virtual T GetWindow(INotification notification)
         {
-            if (WindowContent == null)
-            {
-                throw new NullReferenceException("WindowContent has to be set");
-            }
-
             var wrapperWindow = CreateWindow();
 
             ApplyStyles(wrapperWindow, notification);
@@ -198,27 +253,54 @@ namespace DriveHUD.Common.Wpf.Actions
         /// <param name="wrapperWindow">The HostWindow</param>
         protected virtual void PrepareContentForWindow(INotification notification, T wrapperWindow)
         {
-            if (WindowContent == null || wrapperWindow == null)
+            if (wrapperWindow == null)
             {
                 return;
             }
 
+            FrameworkElement contentView;
+
+            if (WindowContent == null)
+            {
+                if (string.IsNullOrEmpty(ViewName))
+                {
+                    return;
+                }
+
+                try
+                {
+                    var viewContainer = ServiceLocator.Current.GetInstance<IViewContainer>(ViewName);
+                    viewContainer.Window = wrapperWindow;
+
+                    contentView = viewContainer as FrameworkElement;
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could find load view '{ViewName}'", e);
+                    contentView = WindowContent;
+                }
+            }
+            else
+            {
+                contentView = WindowContent;
+            }
+
             // We set the WindowContent as the content of the window. 
-            wrapperWindow.Content = WindowContent;
+            wrapperWindow.Content = contentView;
 
             // If the WindowContent's DataContext implements IInteractionRequestAware we set the corresponding properties.
-            var interactionAware = WindowContent.DataContext as IInteractionRequestAware;
+            var interactionAware = contentView.DataContext as IInteractionRequestAware;
 
             if (interactionAware == null)
             {
                 // If the WindowContent implements IInteractionRequestAware we set the corresponding properties.
-                interactionAware = WindowContent as IInteractionRequestAware;
+                interactionAware = contentView as IInteractionRequestAware;
 
                 if (interactionAware == null)
                 {
-                    if (WindowContent.DataContext is PopupActionNotification)
+                    if (contentView.DataContext is PopupActionNotification)
                     {
-                        var dataContext = WindowContent.DataContext as PopupActionNotification;
+                        var dataContext = contentView.DataContext as PopupActionNotification;
                         dataContext.OnCloseRaised = () => CloseWindow(wrapperWindow);
                     }
 
@@ -237,5 +319,7 @@ namespace DriveHUD.Common.Wpf.Actions
         protected abstract void SetWindowPosition(T window, double left, double top);
 
         protected abstract void Show(T window);
+
+        protected abstract void Activate(T window);
     }
 }

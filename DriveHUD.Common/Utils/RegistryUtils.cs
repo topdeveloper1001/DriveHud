@@ -14,6 +14,7 @@ using DriveHUD.Common.Log;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Common.Utils
 {
@@ -22,7 +23,7 @@ namespace DriveHUD.Common.Utils
         public static string UninstallRegistryPath64Bit = @"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall";
         public static string UninstallRegistryPath32Bit = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
 
-        public static bool UninstallRegistryKeysExist(IEnumerable<string> registryKeys)
+        public static bool UninstallRegistryContainsKeys(IEnumerable<string> registryKeys)
         {
             try
             {
@@ -60,6 +61,45 @@ namespace DriveHUD.Common.Utils
             catch (Exception ex)
             {
                 LogProvider.Log.Error(typeof(RegistryUtils), $"Could not read uninstall registry key", ex);
+            }
+
+            return false;
+        }
+
+        public static bool UninstallRegistryContainsDisplayNames(IEnumerable<string> displayNames)
+        {
+            try
+            {
+                var uninstallKeys = new RegistryKey[]
+                {
+                    Registry.LocalMachine.OpenSubKey(UninstallRegistryPath64Bit),
+                    Registry.LocalMachine.OpenSubKey(UninstallRegistryPath32Bit),
+                };
+
+                foreach (var uninstallKey in uninstallKeys)
+                {
+                    if (uninstallKey == null)
+                    {
+                        continue;
+                    }
+
+                    foreach (var subKey in uninstallKey.GetSubKeyNames())
+                    {
+                        var productKey = uninstallKey.OpenSubKey(subKey);
+
+                        var displayNameValue = productKey.GetValue("DisplayName");
+                        var displayName = displayNameValue != null ? displayNameValue.ToString() : null;
+
+                        if (!string.IsNullOrEmpty(displayName) && displayNames.Contains(displayName))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(typeof(RegistryUtils), $"Could not read uninstall registry display names", ex);
             }
 
             return false;

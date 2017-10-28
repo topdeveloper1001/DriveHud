@@ -24,15 +24,17 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.2.2',
+    [string] $Version = '1.3.0',
+
+    [string] $VersionExlcudeFilter = 'PlayerXRay,XR*Reg',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
-    [string] $ObfuscatorStrongNamedAssemblies = 'DriveHUD.Common.dll',
+    [string] $ObfuscatorStrongNamedAssemblies = '',
 
-    [string] $ObfuscatorExcludeFilter = 'vshost',
+    [string] $ObfuscatorExcludeFilter = 'vshost,DriveHUD.PlayerXRay.dll,XR*Reg.dll',
 
-    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll',
+    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll,CapPipedIP.dll',
 	
 	[string] $MsiName = 'DriveHUD.msi',
 	
@@ -71,7 +73,13 @@ param
 
     [string] $HashTool = 'BuildFileHash.exe',
 
-    [bool] $UpdateOnlyLic = $false
+    [bool] $UpdateOnlyLic = $false,
+	
+	[string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
+	
+	[string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
+	
+	[string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll'
 )
 
 Set-StrictMode -Version Latest
@@ -100,6 +108,7 @@ $session = @{
   InstallerMSI = Join-Path $BaseDir $InstallerMSI
   InstallerWix = Join-Path $BaseDir $InstallerWix
   Version = $Version
+  VersionExlcudeFilter = $VersionExlcudeFilter
   ObfuscatorIncludeFilter = $ObfuscatorIncludeFilter
   ObfuscatorExcludeFilter = $ObfuscatorExcludeFilter
   ObfuscatorStrongNamedAssemblies = $ObfuscatorStrongNamedAssemblies
@@ -121,6 +130,9 @@ $session = @{
   LicOutputPath = Join-Path $BaseDir $LicOutputPath
   HashToolSolution = Join-Path $BaseDir $HashToolSolution  
   HashTool = Join-Path $BaseDir (Join-Path $HashToolPath (Join-Path $Mode $HashTool)) 
+  PlayerXRaySource = Join-Path $BaseDir (Join-Path $PlayerXRaySource $Mode)
+  PlayerXRayLicIncludeFilter = $PlayerXRayLicIncludeFilter
+  PlayerXRayIncludeFilter = $PlayerXRayIncludeFilter
 }
 
 Import-Module BuildRunner-Log
@@ -226,6 +238,13 @@ try
        Remove-Item -Path $session.WixSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
 
+   # copy xray dlls
+   &robocopy $session.PlayerXRaySource $session.Source $session.PlayerXRayLicIncludeFilter /s | Out-Null
+
+   $session.PlayerXRayIncludeFilter -split ',' | ForEach-Object {
+        &robocopy $session.PlayerXRaySource $session.Source $_ /s | Out-Null
+   }     
+      
    # setup version
    Set-Version($session)  
        
@@ -239,7 +258,7 @@ try
    Use-MSBuild $session $session.LicSolution 'lic-msbuild.log'
 
    # obfuscate lic dlls
-    Use-Obfuscator $session $session.LicSource $session.LicObfuscatorIncludeFilter '' $session.LicObfuscatorIncludeFilter
+   Use-Obfuscator $session $session.LicSource $session.LicObfuscatorIncludeFilter '' $session.LicObfuscatorIncludeFilter
 
    # sign lic dlls
    Use-Sign $session $session.LicSource $session.LicObfuscatorIncludeFilter ''
@@ -263,7 +282,7 @@ try
    Use-Obfuscator $session $session.Source $session.ObfuscatorIncludeFilter $session.ObfuscatorExcludeFilter $session.ObfuscatorStrongNamedAssemblies
 
    # sign
-   Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter
+   Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter   
    
    # build msi installer 
    Use-MSbuild $session $session.InstallerMSI 'msbuild_msi.log'

@@ -32,7 +32,9 @@ namespace Model
             container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
             container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
             container.RegisterType<ITrainingAppStoreRepository, TrainingAppStoreRepository>();
-            container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();            
+            container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();
+            container.RegisterType<IAppsAppStoreRepository, AppsAppStoreRepository>();
+            container.RegisterType<IAppsAppStoreModel, AppsAppStoreModel>();
         }
     }
 }

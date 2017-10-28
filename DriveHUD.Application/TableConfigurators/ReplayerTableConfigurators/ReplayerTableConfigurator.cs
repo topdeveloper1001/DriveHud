@@ -14,6 +14,7 @@ using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Data;
 using Model.Enums;
 using Model.Interfaces;
@@ -72,15 +73,17 @@ namespace DriveHUD.Application.TableConfigurators
         };
 
         private RadDiagramShape table;
-
         private IHudLayoutsService hudLayoutsService;
         private IDataService dataService;
+        private SingletonStorageModel storageModel;
+
         #endregion
 
         public ReplayerTableConfigurator()
         {
             hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
         }
 
         public void ConfigureTable(RadDiagram diagram, ReplayerViewModel viewModel)
@@ -242,7 +245,9 @@ namespace DriveHUD.Application.TableConfigurators
             panel.Height = double.NaN;
             panel.Width = double.NaN;
 
-            player.NoteToolTip = dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty;
+            var playerNotes = dataService.GetPlayerNotes(player.Name, viewModel.CurrentHand.PokersiteId);
+            player.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
+            player.Parent.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 
             var contextMenu = CreateContextMenu(viewModel.CurrentHand.PokersiteId, player.Name, player);
             contextMenu.EventName = "MouseRightButtonUp";
@@ -268,20 +273,17 @@ namespace DriveHUD.Application.TableConfigurators
                 frm.Owner = System.Windows.Application.Current.MainWindow;
                 frm.ShowDialog();
 
-                if (viewModel.PlayerNoteEntity == null)
-                {
-                    return;
-                }
-
                 var clickedItem = s as FrameworkElement;
+
                 if (clickedItem == null || !(clickedItem.DataContext is ReplayerPlayerViewModel))
                 {
                     return;
                 }
 
                 var hudElement = clickedItem.DataContext as ReplayerPlayerViewModel;
-                hudElement.NoteToolTip = viewModel.Note;
+                hudElement.NoteToolTip = viewModel.HasNotes ? viewModel.Note : string.Empty;
             };
+
             radMenu.Items.Add(item);
 
             return radMenu;
@@ -290,9 +292,19 @@ namespace DriveHUD.Application.TableConfigurators
         private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection, IDataService dataService)
         {
             replayerPlayer.StatInfoCollection.Clear();
+            
+            HudLightIndicators hudIndicators;
 
-            var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
-            var hudIndicators = new HudLightIndicators(statisticCollection);
+            if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
+                (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
+            {
+                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection);
+            }
+            else
+            {
+                hudIndicators = new HudLightIndicators();
+                dataService.ActOnPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId, null, stat => hudIndicators.AddStatistic(stat));
+            }
 
             if (hudIndicators != null)
             {
