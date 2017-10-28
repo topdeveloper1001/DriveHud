@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using Model.Data;
+using System.Collections.Generic;
 
 namespace DriveHUD.Importers
 {
@@ -24,5 +25,7 @@ namespace DriveHUD.Importers
         public bool IsHero { get; set; }
 
         public GameFormat GameFormat { get; set; }
+
+        public HashSet<long> SessionHands { get; set; } = new HashSet<long>();
     }
 }

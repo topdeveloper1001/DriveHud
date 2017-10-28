@@ -80,6 +80,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 siteModel.Enabled = value;
+                validationResult.IsEnabled = value;
 
                 this.RaisePropertyChanged();
             }

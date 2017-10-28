@@ -1,25 +1,30 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="DataRemoverViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Interfaces;
-using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class DataRemoverViewModel : BaseViewModel
     {
-        private static string scriptPath = ConfigurationManager.AppSettings["cleanDbScriptPath"];
-
         public ICommand UninstallCommand { get; set; }
+
         public ICommand CancelCommand { get; set; }
 
         public DataRemoverViewModel()
@@ -35,57 +40,37 @@ namespace DriveHUD.Application.ViewModels
 
         private void Uninstall(object obj)
         {
+            LogProvider.Log.Info(this, "Uninstalling DriveHUD.");
+
             var dataService = ServiceLocator.Current.GetInstance<IDataService>();
             dataService.RemoveAppData();
-            RemoveDBData();
+
+            RemoveSqliteDatabase();
+
+            LogProvider.Log.Info(this, "DriveHUD has been uninstalled.");
         }
 
-        private void RemoveDBData()
+        private void RemoveSqliteDatabase()
         {
-            NpgsqlConnection conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["DriveHudDB"].ConnectionString);
+            LogProvider.Log.Debug(this, "Removing DB Data");
+
             try
             {
-                CleanDb(conn);
-            }
-            catch (NpgsqlException ex)
-            {
-                if (ex.ErrorCode == 0x3D000)
+                var dbFile = StringFormatter.GetSQLiteDbFilePath();
+
+                if (File.Exists(dbFile))
                 {
-                    conn.Close();
-                    LogProvider.Log.Debug("DB doesn't exist");
+                    File.Delete(dbFile);
+                    LogProvider.Log.Debug("Database has been deleted.");
                 }
                 else
                 {
-                    LogProvider.Log.Error(this, String.Format("Error : {0}", ex.Message));
+                    LogProvider.Log.Debug("Database file has not been found.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                LogProvider.Log.Error(this, String.Format("Error : {0}", ex.Message));
-            }
-            finally
-            {
-                Cancel(null);
-            }
-        }
-
-        private void CleanDb(NpgsqlConnection conn)
-        {
-            NpgsqlConnectionStringBuilder builder = new NpgsqlConnectionStringBuilder(conn.ConnectionString);
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, scriptPath);
-            string script = File.ReadAllText(path);
-            LogProvider.Log.Debug("Removing DB Data");
-            try
-            {
-                NpgsqlCommand command =
-                                new NpgsqlCommand(script, conn);
-                conn.Open();
-                command.ExecuteNonQuery();
-                LogProvider.Log.Debug("DB Data Removed");
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, String.Format("Error : {0}", ex.Message));
+                LogProvider.Log.Error(this, "Database has not been removed.", e);
             }
         }
     }

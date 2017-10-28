@@ -125,7 +125,7 @@ namespace DriveHUD.Common.Wpf.Controls
         private void SetTopmostState(bool isTop)
         {
             // Don’t apply state if it’s the same as incoming state
-            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || DisableTopMost)
+            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || DisableTopMost && isTop)
             {
                 return;
             }

@@ -1,0 +1,263 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.IncorrectlyConfiguredSitesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
+    mc:Ignorable="d"
+    d:DesignHeight="575"
+    d:DesignWidth="740"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.PopupContainers">
+
+    <UserControl.Resources>
+
+        <Style
+            x:Key="BaseSiteSetupTextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFF" />
+        </Style>
+
+        <Style
+            x:Key="HeaderTextBlockStyle"
+            BasedOn="{StaticResource BaseSiteSetupTextBlockStyle}"
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="FontSize"
+                Value="12" />
+        </Style>
+
+        <Style
+            x:Key="HelpButtonStyle"
+            TargetType="{x:Type Button}"
+            >
+
+            <Setter
+                Property="FontSize"
+                Value="12" />
+
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource BackgroundBrush3}" />
+
+            <Setter
+                Property="Background"
+                Value="{StaticResource MouseOverForegroundBrush}" />
+
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+
+            <Setter
+                Property="Margin"
+                Value="10,0,0,0" />
+
+            <Setter
+                Property="Padding"
+                Value="4,1,4,1" />
+
+            <Setter
+                Property="Cursor"
+                Value="Hand" />
+
+            <Setter
+                Property="ToolTip">
+                <Setter.Value>
+                    <ResX
+                        Key="Common_SiteSetup_HelpToolTip">
+                        <ResXParam
+                            Path="PokerSite"
+                            Converter="{dh:EnumToLocalizedStringConverter}" />
+                    </ResX>
+                </Setter.Value>
+            </Setter>
+
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="Button">
+                        <Border
+                            x:Name="Border"
+                            TextBlock.Foreground="{TemplateBinding Foreground}"
+                            Padding="{TemplateBinding Padding}"
+                            CornerRadius="2"
+                            BorderThickness="0"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter
+                                Margin="2"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Border
+            Grid.Column="0"
+            CornerRadius="4"
+            Background="#335199"
+            Height="12"
+            VerticalAlignment="Top" />
+
+        <Border
+            Grid.Column="0"
+            Margin="0,5,0,0"
+            Background="#191a1e"
+            BorderThickness="1,0,1,1"
+            BorderBrush="#335199">
+
+            <Grid
+                Margin="7">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border
+                    BorderBrush="#FFFFFF"
+                    BorderThickness="0,0,0,1">
+
+                    <TextBlock
+                        Text="{ResX Key=Common_SiteSetup_Header}"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Margin="0,0,0,5"
+                        Style="{StaticResource HeaderTextBlockStyle}" />
+
+                </Border>
+
+                <TextBlock
+                    Grid.Row="1"
+                    Style="{StaticResource HeaderTextBlockStyle}"
+                    TextWrapping="Wrap"
+                    Margin="0,4,0,0"
+                    Text="{ResX Key=Common_SiteSetup_IncofiguredIntroText}" />
+
+                <ScrollViewer
+                    Grid.Row="2"
+                    Padding="3"
+                    MaxHeight="590"
+                    Margin="0,5,0,0"
+                    HorizontalScrollBarVisibility="Disabled"
+                    VerticalScrollBarVisibility="Auto">
+                    <ItemsControl
+                        ItemsSource="{Binding Sites}">
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+
+                                <Grid>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                            Height="*" />
+                                        <RowDefinition
+                                            Height="Auto" />
+                                        <RowDefinition
+                                            Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <StackPanel
+                                        Orientation="Horizontal"
+                                        Margin="0,5,0,0">
+                                        <TextBlock
+                                            VerticalAlignment="Center"
+                                            Style="{StaticResource HeaderTextBlockStyle}"
+                                            FontSize="14"
+                                            FontWeight="Bold"
+                                            Text="{Binding PokerSite, Converter={dh:EnumToLocalizedStringConverter}}" />
+
+                                        <Button
+                                            Style="{DynamicResource HelpButtonStyle}"
+                                            Command="{Binding DataContext.HelpCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding}">
+                                            <Button.Content>
+                                                <ResX
+                                                    Key="Common_SiteSetup_SetupHelpButtonText">
+                                                    <ResXParam
+                                                        Path="PokerSite"
+                                                        Converter="{dh:EnumToLocalizedStringConverter}" />
+                                                </ResX>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+
+                                    <TextBlock
+                                        Grid.Row="1"
+                                        Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
+                                        Margin="5,0,0,0"
+                                        Style="{StaticResource BaseSiteSetupTextBlockStyle}"
+                                        Text="{ResX Key=Common_SiteSetup_FoundIssues}" />
+
+                                    <ItemsControl
+                                        Grid.Row="2"
+                                        Visibility="{Binding HasIssues, Converter={dh:BoolToVisibilityConverter}}"
+                                        ItemsSource="{Binding Issues}"
+                                        Margin="25,0,0,0"
+                                        Foreground="#db5050" />
+
+                                </Grid>
+
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                    </ItemsControl>
+                </ScrollViewer>
+
+                <Border
+                    Grid.Row="3"
+                    Margin="0,5,0,0"
+                    BorderBrush="#FFFFFF"
+                    BorderThickness="0,1,0,0">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox
+                            Grid.Column="0"
+                            Content="{ResX Key=Common_SiteSetup_DoNotShow}"
+                            IsChecked="{Binding DoNotShowForm}"
+                            Margin="5,15" />
+
+                        <Button
+                            Grid.Column="1"
+                            Width="60"
+                            Height="27"
+                            Foreground="{StaticResource MouseOverForegroundBrush}"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,10,10"
+                            Content="{ResX Key=Common_SiteSetup_OK}"
+                            Command="{Binding ApplyCommand}" />
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>
