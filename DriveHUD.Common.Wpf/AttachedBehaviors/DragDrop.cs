@@ -208,7 +208,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
             if (e.LeftButton == MouseButtonState.Pressed && ((Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance) ||
                 (Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)))
             {
-                var data = GetDragDropData(uiElement);
+                var data = GetDragDropData(dragInfo.VisualSource);           
 
                 var dataObject = new DataObject(DataFormat.Name, data ?? new object());
 

@@ -20,6 +20,8 @@ using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model.Interfaces;
+using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
 using System;
@@ -493,6 +495,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         {
             var unityContainer = new UnityContainer();
             unityContainer.RegisterType<IEventAggregator, EventAggregator>();
+
+            var dataService = Substitute.For<IDataService>();
+            unityContainer.RegisterInstance<IDataService>(dataService);
 
             var locator = new UnityServiceLocator(unityContainer);
             ServiceLocator.SetLocatorProvider(() => locator);

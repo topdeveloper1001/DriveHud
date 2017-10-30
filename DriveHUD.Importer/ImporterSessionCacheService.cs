@@ -203,6 +203,11 @@ namespace DriveHUD.Importers
                     return;
                 }
 
+                if (cacheInfo.IsHero && !sessionCacheStatistic.SessionHands.Contains(cacheInfo.Stats.GameNumber))
+                {
+                    sessionCacheStatistic.SessionHands.Add(cacheInfo.Stats.GameNumber);
+                }
+
                 sessionCacheStatistic.PlayerData.AddStatistic(cacheInfo.Stats);
                 InitSessionCardsCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
                 InitSessionStatCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
@@ -275,7 +280,7 @@ namespace DriveHUD.Importers
                 }
 
                 var layoutWasChanged = !sessionData.LayoutByPlayer.ContainsKey(playerStickersCacheData.Player) ||
-                    sessionData.LayoutByPlayer[playerStickersCacheData.Player] != playerStickersCacheData.Layout;
+                     sessionData.LayoutByPlayer[playerStickersCacheData.Player] != playerStickersCacheData.Layout;
 
                 if (layoutWasChanged)
                 {
@@ -328,9 +333,14 @@ namespace DriveHUD.Importers
 
                 if (layoutWasChanged)
                 {
+                    var sessionHands = sessionData.StatisticByPlayer.ContainsKey(playerStickersCacheData.Player) ?
+                            sessionData.StatisticByPlayer[playerStickersCacheData.Player].SessionHands :
+                            new HashSet<long>();
+
                     dataService.ActOnPlayerStatisticFromFile(playerStickersCacheData.Player.PlayerId,
                           stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
                                   stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
+                                  ((playerStickersCacheData.IsHero && sessionHands.Contains(stat.GameNumber)) || !playerStickersCacheData.IsHero) &&
                                   GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId),
                           stat =>
                           {

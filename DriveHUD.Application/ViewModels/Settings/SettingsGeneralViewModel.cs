@@ -41,6 +41,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             SendLogsCommand = new RelayCommand(SendLogs);
             RebuildStatsCommand = new RelayCommand(RebuildStats, x => CanRunStatsCommand());
             RecoverStatsCommand = new RelayCommand(RecoverStats, x => CanRunStatsCommand());
+            VacuumDatabaseCommand = new RelayCommand(VacuumDatabase, x => CanRunStatsCommand());
 
             SettingsSendLogViewModel.OnClose += PopupModel.ClosePopup;
 
@@ -220,6 +221,8 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         public ICommand RecoverStatsCommand { get; private set; }
 
+        public ICommand VacuumDatabaseCommand { get; private set; }
+
         #endregion
 
         #region ICommand Implementation
@@ -241,6 +244,13 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             var mainViewModel = App.GetMainViewModel();
             mainViewModel?.RecoverStats();
+            parent.FinishInteraction?.Invoke();
+        }
+
+        private void VacuumDatabase(object obj)
+        {
+            var mainViewModel = App.GetMainViewModel();
+            mainViewModel?.VacuumDatabase();
             parent.FinishInteraction?.Invoke();
         }
 

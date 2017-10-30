@@ -22,7 +22,7 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction
-                IsModal="True">
+                IsModal="True" CenterOverAssociatedObject="True">
                 <infra:PopupTelerikWindowAction.WindowStyle>
                     <Style
                         TargetType="{x:Type telerik:RadWindow}">

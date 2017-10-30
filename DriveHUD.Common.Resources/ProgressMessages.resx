@@ -147,4 +147,7 @@
   <data name="Progress_UpdatingData" xml:space="preserve">
     <value>Updating statistic {0}/{1} Duplicate hands: {2}</value>
   </data>
+  <data name="Progress_VacuumingDatabase" xml:space="preserve">
+    <value>Vacuuming database</value>
+  </data>
 </root>

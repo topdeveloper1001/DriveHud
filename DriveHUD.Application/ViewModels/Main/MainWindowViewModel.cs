@@ -652,7 +652,8 @@ namespace DriveHUD.Application.ViewModels
                             Player = playerCollectionItem,
                             Layout = activeLayout.Name,
                             Statistic = lastHandStatistic,
-                            StickerFilters = stickers
+                            StickerFilters = stickers,
+                            IsHero = sessionCacheStatistic.IsHero
                         };
 
                         if (stickers.Count > 0)
@@ -1040,6 +1041,35 @@ namespace DriveHUD.Application.ViewModels
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics recovering failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void VacuumDatabase()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_VacuumingDatabase"));
+
+                    LogProvider.Log.Info("Vacuuming database");
+
+                    dataService.VacuumDatabase();
+
+                    LogProvider.Log.Info("Database has been vacuumed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Database vacuuming failed.", e);
                 }
             });
 

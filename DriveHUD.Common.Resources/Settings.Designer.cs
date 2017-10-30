@@ -565,6 +565,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vacuum database.
+        /// </summary>
+        internal static string Settings_VacuumDatabase {
+            get {
+                return ResourceManager.GetString("Settings_VacuumDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacuum database (Import must be stopped, before executing. Click the STOP button on the HUD tab).
+        /// </summary>
+        internal static string Settings_VacuumDatabaseTitle {
+            get {
+                return ResourceManager.GetString("Settings_VacuumDatabaseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
         /// </summary>
         internal static string Settings_WinningPokerNetworkHelpLink {

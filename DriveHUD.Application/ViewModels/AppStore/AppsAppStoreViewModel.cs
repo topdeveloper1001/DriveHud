@@ -44,7 +44,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         #endregion
 
         protected override void InitializeCommands()
-        {
+        {            
             LaunchCommand = ReactiveCommand.Create();
             LaunchCommand.Subscribe(x => Launch(x));
         }
@@ -59,7 +59,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
 
             try
-            {
+            {            
                 ViewName = appStoreModule.ModuleName;
 
                 var moduleViewModel = ServiceLocator.Current.GetInstance<IModuleEntryViewModel>(appStoreModule.ModuleName);

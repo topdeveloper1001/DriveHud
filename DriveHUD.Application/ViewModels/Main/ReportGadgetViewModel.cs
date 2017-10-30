@@ -399,6 +399,11 @@ namespace DriveHUD.Application.ViewModels
             get { return _reportSelectedItem; }
             set
             {
+                if (ReferenceEquals(_reportSelectedItem, value))
+                {
+                    return;
+                }
+
                 _reportSelectedItem = value;
                 OnPropertyChanged();
 
@@ -591,7 +596,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             var item = ReportSelectedItemStatisticsCollection_Filtered.FirstOrDefault(x => x.Statistic.GameNumber == obj.GameNumber && x.Statistic.PlayerName == obj.PlayerName);
-            
+
             if (item != null)
             {
                 item.UpdateHandNoteText();
