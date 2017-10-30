@@ -85,14 +85,23 @@
                     Margin="0 -10 -10 0"
                     ToolTip="{Binding NoteToolTip}"
                     Visibility="{Binding IsNoteIconVisible, Converter={dh:BoolToVisibilityConverter}}">
-                    <Path
-                        Style="{StaticResource PlayerNotePathStyle}"
-                        Width="20"
-                        Stretch="Uniform"
-                        Fill="{StaticResource ForegroundBrush}" />
+                    <Grid>
+                        <Path
+                            Style="{StaticResource PlayerNotePathStyle}"
+                            Width="20"
+                            Stretch="Uniform"
+                            Visibility="{Binding Parent.IsXRayNoteVisible, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                            Fill="{StaticResource ForegroundBrush}" />
+                        <Image
+                            Opacity="0.7"
+                            Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/icons/xray-note-icon.png"
+                            Width="20"
+                            Visibility="{Binding Parent.IsXRayNoteVisible, Converter={dh:BoolToVisibilityConverter}}"
+                            Stretch="Uniform" />
+                    </Grid>
                 </Border>
                 <WrapPanel
-                    Margin="0,0,3,3"                   
+                    Margin="0,0,3,3"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Orientation="Vertical">

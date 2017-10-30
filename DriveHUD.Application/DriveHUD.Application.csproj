@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.2.2.1695, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.3.0.1754, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.2.2.1695, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.3.0.1754, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.2.2.1695, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.3.0.1754, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -392,6 +392,7 @@
     <Compile Include="Migration\Migrations\Migration0020_AddAliasTable.cs" />
     <Compile Include="Migration\Migrations\Migration0021_AddImportedFilesTable.cs" />
     <Compile Include="Migration\Migrations\Migration0022_AddMaxPlayersToPlayerstatistic.cs" />
+    <Compile Include="Migration\Migrations\Migration0024_AddAutoNoteColumnToPlayerNotes.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
@@ -399,7 +400,14 @@
     <Compile Include="Migration\Migrators\PlayerStatisticMaxPlayersMigrator.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
+    <Compile Include="Modules\CustomModule.cs" />
+    <Compile Include="Modules\CustomModulesFactory.cs" />
+    <Compile Include="Modules\IModuleService.cs" />
+    <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
+    <Compile Include="Security\DHCReg.cs" />
+    <Compile Include="Security\DHHReg.cs" />
+    <Compile Include="Security\DHOReg.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />
@@ -454,6 +462,8 @@
     <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModel.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModelInfo.cs" />
+    <Compile Include="ViewModels\AppStore\AppsAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\AppStoreBaseViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
@@ -570,6 +580,9 @@
     </Compile>
     <Compile Include="Views\Alias\AliasView.xaml.cs">
       <DependentUpon>AliasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\AppsAppStoreView.xaml.cs">
+      <DependentUpon>AppsAppStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
@@ -1023,6 +1036,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\AppStore\AppsAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1448,6 +1465,7 @@
     <Resource Include="images\splashscreen.png" />
     <Resource Include="images\delete.png" />
     <Resource Include="images\edit.png" />
+    <Resource Include="images\xray.ico" />
     <Content Include="Lib\CapPipedI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1485,7 +1503,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>tasklist /fi "imagename eq DriveHUD.HUD.exe" | find ":" &gt; nul
-if errorlevel 1 taskkill /f /im "DriveHUD.HUD.exe"
+if errorlevel 1 taskkill /f /t /im "DriveHUD.HUD.exe"
 exit</PreBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net45\System.Data.SQLite.Core.targets')" />

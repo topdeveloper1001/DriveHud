@@ -264,3 +264,9 @@ __pycache__/
 *.pyc
 /.gitattributes
 /temp
+/DriveHUD.PlayerXRay
+/PlayerXRay.sln
+/PlayerXRayReg.sln
+/dependencies/XRCReg.dll
+/dependencies/XRHReg.dll
+/dependencies/XROReg.dll

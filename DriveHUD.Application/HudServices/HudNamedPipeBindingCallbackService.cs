@@ -155,7 +155,9 @@ namespace DriveHUD.Application.HudServices
             try
             {
                 var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
                 var handNote = dataService.GetHandNote(gameNumber, pokerSiteId);
+
                 if (handNote == null)
                 {
                     handNote = new Handnotes()
@@ -164,11 +166,15 @@ namespace DriveHUD.Application.HudServices
                         PokersiteId = pokerSiteId
                     };
                 }
+
                 handNote.HandTag = tag;
+
                 dataService.Store(handNote);
 
                 var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+
                 var statistic = storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gameNumber && x.PokersiteId == pokerSiteId);
+
                 if (statistic != null)
                 {
                     statistic.HandNote = handNote;

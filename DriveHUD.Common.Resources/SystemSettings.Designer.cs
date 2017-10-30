@@ -277,6 +277,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bin.
+        /// </summary>
+        internal static string SystemSettings_ModulesFolder {
+            get {
+                return ResourceManager.GetString("SystemSettings_ModulesFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
         /// </summary>
         internal static string SystemSettings_OnlineManual {

@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Common.Security;
 using System.ComponentModel;
 
 namespace DHORegistration
@@ -20,7 +19,7 @@ namespace DHORegistration
     /// Omaha license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    public class DHOReg : ILicenseManager
+    public class DHOReg
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

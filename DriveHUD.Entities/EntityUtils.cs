@@ -47,12 +47,32 @@ namespace DriveHUD.Entities
                 [EnumPokerNetworks.Chico] = new[] { EnumPokerSites.BetOnline, EnumPokerSites.SportsBetting, EnumPokerSites.TigerGaming },
                 [EnumPokerNetworks.PokerStars] = new[] { EnumPokerSites.PokerStars },
                 [EnumPokerNetworks.PartyPoker] = new[] { EnumPokerSites.PartyPoker },
-                [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker },
+                [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker, EnumPokerSites.WinningPokerNetwork },
                 [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 },
                 [EnumPokerNetworks.IPoker] = new[] { EnumPokerSites.IPoker }
             };
 
             return networksDictionary;
+        }
+
+        /// <summary>
+        /// Gets the network of the specified site
+        /// </summary>
+        /// <param name="site"></param>
+        /// <returns></returns>
+        public static EnumPokerNetworks GetSiteNetwork(EnumPokerSites site)
+        {
+            var networks = GetNetworkSites();
+
+            foreach (var network in networks.Keys)
+            {
+                if (networks[network].Contains(site))
+                {
+                    return network;
+                }
+            }
+
+            return EnumPokerNetworks.Unknown;
         }
     }
 }

@@ -46,6 +46,20 @@ namespace DriveHUD.Common.Wpf.Controls
         }
 
         /// <summary>
+        /// IgnoreDisableTopmost dependency property
+        /// </summary>
+        public static readonly DependencyProperty IgnoreDisableTopmostProperty = DependencyProperty.Register("IgnoreDisableTopmost", typeof(bool), typeof(NonTopmostPopup), new FrameworkPropertyMetadata(false));
+
+        /// <summary>
+        /// Get/Set IgnoreDisableTopmost
+        /// </summary>
+        public bool IgnoreDisableTopmost
+        {
+            get { return (bool)GetValue(IgnoreDisableTopmostProperty); }
+            set { SetValue(IgnoreDisableTopmostProperty, value); }
+        }
+
+        /// <summary>
         /// ctor
         /// </summary>
         public NonTopmostPopup()
@@ -125,7 +139,7 @@ namespace DriveHUD.Common.Wpf.Controls
         private void SetTopmostState(bool isTop)
         {
             // Don’t apply state if it’s the same as incoming state
-            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || DisableTopMost && isTop)
+            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || (DisableTopMost && !IgnoreDisableTopmost))
             {
                 return;
             }

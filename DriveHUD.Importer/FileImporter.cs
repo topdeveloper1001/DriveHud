@@ -13,6 +13,7 @@
 using DriveHud.Common.Log;
 using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
@@ -458,7 +459,7 @@ namespace DriveHUD.Importers
                             {
                                 PlayerId = existingPlayer.PlayerId,
                                 Name = existingPlayer.Playername,
-                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId,                                
+                                PokerSite = (EnumPokerSites)existingPlayer.PokersiteId,
                             },
                             Stats = playerStatCopy,
                             IsHero = isHero,
@@ -475,6 +476,8 @@ namespace DriveHUD.Importers
                             hh.Player = existingPlayer;
                             session.Insert(hh);
                         }
+
+                        BuildAutoNotes(playerStatCopy, handHistory.Source, session);
                     }
 
                     #region Process tournament data
@@ -1013,6 +1016,37 @@ namespace DriveHUD.Importers
             }
 
             return 0;
+        }
+
+        /// <summary>
+        /// Creates auto notes, then stores them into db
+        /// </summary>
+        /// <param name="stats"><see cref="Playerstatistic"/> to build notes</param>
+        /// <param name="session">DB session to save notes</param>
+        private void BuildAutoNotes(Playerstatistic stats, HandHistories.Objects.Hand.HandHistory handHistory, IStatelessSession session)
+        {
+            var handNotesService = ServiceLocator.Current.TryResolve<IPlayerNotesService>();
+
+            if (handNotesService == null)
+            {
+                return;
+            }
+
+            try
+            {
+                var playerNotes = handNotesService.BuildNotes(stats, handHistory);
+
+                if (playerNotes == null)
+                {
+                    return;
+                }
+
+                playerNotes.ForEach(x => session.Insert(x));
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not build auto notes", e);
+            }
         }
     }
 }

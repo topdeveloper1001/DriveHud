@@ -120,6 +120,16 @@ namespace Model
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, logsFolder);
         }
 
+        /// <summary>
+        /// Gets the path to the folder with modules
+        /// </summary>
+        /// <returns>Path to the folder with modules</returns>
+        public static string GetModulesFolderPath()
+        {
+            var modulesFolder = CommonResourceManager.Instance.GetResourceString(ResourceStrings.ModulesFolder);
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, modulesFolder);
+        }
+
         #region DB strings
 
         public static string GetConnectionString(string server, string port, string database, string user, string password)

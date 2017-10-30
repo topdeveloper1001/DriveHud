@@ -149,5 +149,14 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Progress_UpdatingData", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacuuming database.
+        /// </summary>
+        internal static string Progress_VacuumingDatabase {
+            get {
+                return ResourceManager.GetString("Progress_VacuumingDatabase", resourceCulture);
+            }
+        }
     }
 }

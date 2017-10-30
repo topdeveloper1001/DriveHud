@@ -224,4 +224,7 @@
   <data name="SystemSettings_PlayerTypeFileDialogFilter" xml:space="preserve">
     <value>Player types (.xml)|*.xml</value>
   </data>
+  <data name="SystemSettings_ModulesFolder" xml:space="preserve">
+    <value>bin</value>
+  </data>
 </root>

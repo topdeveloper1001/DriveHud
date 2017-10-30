@@ -31,11 +31,13 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.Helpers;
+using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
@@ -549,8 +551,11 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
                     playerHudContent.HudElement.PlayerName = player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(player.PlayerName, (short)site)?.Note ?? string.Empty;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
+
+                    var playerNotes = dataService.GetPlayerNotes(player.PlayerName, (short)site);
+                    playerHudContent.HudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
+                    playerHudContent.HudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 
                     // configure data for graph tool
                     var sessionStats = sessionData.StatsSessionCollection;
@@ -860,58 +865,59 @@ namespace DriveHUD.Application.ViewModels
         private void SwitchViewModel(EnumViewModelType viewModelType)
         {
             IsShowEquityCalculator = false;
+
             if (viewModelType == EnumViewModelType.DashboardViewModel)
             {
-                if (this.DashboardViewModel == null)
+                if (DashboardViewModel == null)
                 {
-                    this.DashboardViewModel = new DashboardViewModel(synchronizationContext)
+                    DashboardViewModel = new DashboardViewModel(synchronizationContext)
                     {
                         Type = EnumViewModelType.DashboardViewModel,
                     };
                 }
 
-                this.CurrentViewModel = this.DashboardViewModel;
-                this.ReportGadgetViewModel.IsShowTournamentData = false;
+                CurrentViewModel = DashboardViewModel;
+                ReportGadgetViewModel.IsShowTournamentData = false;
                 UpdateCurrentView();
 
                 filterModelManager.SetFilterType(EnumFilterType.Cash);
                 eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
             }
-            if (viewModelType == EnumViewModelType.TournamentViewModel)
+            else if (viewModelType == EnumViewModelType.TournamentViewModel)
             {
-                if (this.TournamentViewModel == null)
+                if (TournamentViewModel == null)
                 {
-                    this.TournamentViewModel = new TournamentViewModel()
+                    TournamentViewModel = new TournamentViewModel()
                     {
                         Type = EnumViewModelType.TournamentViewModel,
                     };
                 }
 
-                this.CurrentViewModel = this.TournamentViewModel;
-                this.ReportGadgetViewModel.IsShowTournamentData = true;
+                CurrentViewModel = TournamentViewModel;
+                ReportGadgetViewModel.IsShowTournamentData = true;
                 UpdateCurrentView();
 
                 filterModelManager.SetFilterType(EnumFilterType.Tournament);
                 eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
             }
-            if (viewModelType == EnumViewModelType.HudViewModel)
+            else if (viewModelType == EnumViewModelType.HudViewModel)
             {
-                if (this.HudViewModel == null)
+                if (HudViewModel == null)
                 {
-                    this.HudViewModel = new HudViewModel();
+                    HudViewModel = new HudViewModel();
                 }
 
                 filterModelManager.SetFilterType(EnumFilterType.Cash);
-                this.CurrentViewModel = this.HudViewModel;
+                CurrentViewModel = HudViewModel;
             }
-            if (viewModelType == EnumViewModelType.AppsViewModel)
+            else if (viewModelType == EnumViewModelType.AppsViewModel)
             {
-                if (this.AppsViewModel == null)
+                if (AppsViewModel == null)
                 {
-                    this.AppsViewModel = new AppsViewModel();
+                    AppsViewModel = new AppsViewModel();
                 }
 
-                this.CurrentViewModel = this.AppsViewModel;
+                CurrentViewModel = AppsViewModel;
             }
         }
 
@@ -930,6 +936,7 @@ namespace DriveHUD.Application.ViewModels
                 allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
             }
 
+#warning inefficient code            
             foreach (var player in allPlayers)
             {
                 notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
@@ -1034,6 +1041,35 @@ namespace DriveHUD.Application.ViewModels
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics recovering failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void VacuumDatabase()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_VacuumingDatabase"));
+
+                    LogProvider.Log.Info("Vacuuming database");
+
+                    dataService.VacuumDatabase();
+
+                    LogProvider.Log.Info("Database has been vacuumed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Database vacuuming failed.", e);
                 }
             });
 
@@ -1532,6 +1568,9 @@ namespace DriveHUD.Application.ViewModels
                 {
                     eventAggregator.GetEvent<SaveDefaultFilterRequestedEvent>().Publish(new SaveDefaultFilterRequestedEvetnArgs());
                 }
+
+                var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                windowController.CloseAllWindows();
             }
             catch (Exception ex)
             {

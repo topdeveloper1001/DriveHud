@@ -139,7 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AliasCollectionItem.cs" />
+    <Compile Include="AppStore\AppsAppStoreModel.cs" />
+    <Compile Include="AppStore\AppsAppStoreRepository.cs" />
+    <Compile Include="AppStore\AppStoreModule.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
+    <Compile Include="AppStore\IAppsAppStoreModel.cs" />
+    <Compile Include="AppStore\IAppsAppStoreRepository.cs" />
     <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
     <Compile Include="AppStore\ITrainingAppStoreRepository.cs" />
     <Compile Include="AppStore\TrainingAppStoreModel .cs" />
@@ -157,6 +162,7 @@
     <Compile Include="ChartData\TournamentChartData.cs" />
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
+    <Compile Include="CustomModulesNames.cs" />
     <Compile Include="Data\HeatMapStatDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
@@ -164,6 +170,7 @@
     <Compile Include="Data\Indicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
+    <Compile Include="Data\NoteBuilder.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />

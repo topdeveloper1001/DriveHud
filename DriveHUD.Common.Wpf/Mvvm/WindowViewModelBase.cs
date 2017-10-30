@@ -18,7 +18,7 @@ using System.Windows.Threading;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public class WindowViewModelBase : ViewModelBase
+    public abstract class WindowViewModelBase : ViewModelBase
     {
         private ReactiveOperation currentOperation;
 
@@ -50,7 +50,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
         }
 
         protected virtual void ConfigureOperationViewModel(OperationViewModel operationViewModel)
-        {            
+        {
             operationViewModel.SetOperationBinding(this, vm => vm.CurrentOperation);
         }
 
@@ -77,7 +77,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
             Observable
                 .Start(action)
                 .ObserveOnDispatcher(DispatcherPriority.ContextIdle)
-                .Subscribe(x => callback(null), e => { callback(e); asyncOperation.CompleteFailed(e); }, asyncOperation.CompleteSuccess);
+                .Subscribe(x => callback(null), e => { callback(e); asyncOperation.CompleteFailed(null); }, asyncOperation.CompleteSuccess);
 
             return asyncOperation;
         }

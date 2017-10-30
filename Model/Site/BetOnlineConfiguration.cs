@@ -22,6 +22,8 @@ namespace Model.Site
     {
         private readonly string[] registryKeys = new[] { "BetOnline 0" };
 
+        private readonly string[] defaultUninstallDisplayNames = new[] { "BetOnline" };
+
         private const string heroName = "Hero";
 
         public BetOnlineConfiguration()
@@ -75,7 +77,7 @@ namespace Model.Site
                 return prefferedSeat;
             }
         }
-       
+
         public override string LogoSource
         {
             get
@@ -97,16 +99,43 @@ namespace Model.Site
             }
         }
 
+        protected virtual string[] UninstallDisplayNames
+        {
+            get
+            {
+                return defaultUninstallDisplayNames;
+            }
+        }
+
+
         public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
-                IsDetected = RegistryUtils.UninstallRegistryKeysExist(RegistryKeys),
+                IsDetected = DetectSite(),
                 IsEnabled = siteModel.Enabled,
             };
 
             return validationResult;
+        }
+
+        /// <summary>
+        /// Detects whenever Betonline poker client is installed
+        /// </summary>
+        /// <returns>True if installed, otherwise - false</returns>
+        protected virtual bool DetectSite()
+        {
+            // check the registry for the specific keys
+            var result = RegistryUtils.UninstallRegistryContainsKeys(RegistryKeys);
+
+            if (result)
+            {
+                return true;
+            }
+
+            // check registry for installed programs
+            return RegistryUtils.UninstallRegistryContainsDisplayNames(UninstallDisplayNames);
         }
     }
 }

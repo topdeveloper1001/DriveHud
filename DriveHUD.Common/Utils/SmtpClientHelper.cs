@@ -106,6 +106,7 @@ namespace DriveHUD.Common.Utils
                 if (Directory.Exists(logsFolder))
                 {
                     logs.AddRange(Directory.GetFiles(logsFolder, "drivehud*log*"));
+                    logs.AddRange(Directory.GetFiles(logsFolder, "playerxray*log*"));
                     logs.AddRange(Directory.GetFiles(logsFolder, "hud*log*"));
                 }
             }

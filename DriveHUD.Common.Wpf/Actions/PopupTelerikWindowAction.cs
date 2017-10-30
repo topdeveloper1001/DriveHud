@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Wpf.Controls;
+using DriveHUD.Common.Wpf.Interactivity;
+using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Windows;
@@ -49,6 +51,12 @@ namespace DriveHUD.Common.Wpf.Actions
                 window.Closed -= handler;
                 window.Content = null;
 
+                if (IsSingle && !string.IsNullOrEmpty(ViewName))
+                {
+                    var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                    windowController.RemoveWindow(ViewName);
+                }
+
                 callback?.Invoke();
             };
 
@@ -60,13 +68,24 @@ namespace DriveHUD.Common.Wpf.Actions
             NonTopmostPopup.DisableTopMost = true;
 
             if (IsModal)
-            {                
+            {
                 window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }
 
+            if (IsSingle && !string.IsNullOrEmpty(ViewName))
+            {
+                var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
+                windowController.AddWindow(ViewName, window, () => window.Close());
+            }
+
             window.Show();
+        }
+
+        protected override void Activate(RadWindow window)
+        {
+            window.BringToFront();
         }
 
         protected override void SetWindowPosition(RadWindow window, double left, double top)

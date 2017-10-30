@@ -22,3 +22,4 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition("http://www.acepokersolutions.com/winfx/2015/xaml/presentation", "DriveHUD.Common.Wpf.Controls")]
 [assembly: XmlnsDefinition("http://www.acepokersolutions.com/winfx/2015/xaml/presentation", "DriveHUD.Common.Wpf.AttachedBehaviors")]
 [assembly: XmlnsDefinition("http://www.acepokersolutions.com/winfx/2015/xaml/presentation", " DriveHUD.Common.Wpf.WpfAnimatedGif")]
+[assembly: XmlnsDefinition("http://www.acepokersolutions.com/winfx/2015/xaml/presentation", " DriveHUD.Common.Wpf.Actions")]

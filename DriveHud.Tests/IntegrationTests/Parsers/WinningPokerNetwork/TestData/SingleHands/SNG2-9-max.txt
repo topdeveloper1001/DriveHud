@@ -1,0 +1,28 @@
+Game Hand #12910011 - Tournament #8034884 - Holdem(No Limit) - Level 9 (200.00/400.00)- 2017/05/08 09:13:36 UTC
+Title 'SNG 2.0 $5.5'
+Table '1' 9-max Seat #4 is the button
+Seat 2: Villain1 (1710.00)
+Seat 4: Peon_84 (1628.00)
+Seat 6: Villain2 (1738.00)
+Seat 9: Villain3 (8424.00)
+Villain1 posts ante 25.00
+Peon_84 posts ante 25.00
+Villain2 posts ante 25.00
+Villain3 posts ante 25.00
+Villain2 posts the small blind 200.00
+Villain3 posts the big blind 400.00
+*** HOLE CARDS ***
+Main pot 100.00
+Dealt to Peon_84 [Td 9d]
+Villain1 raises 1685.00 to 1685.00 and is all-in
+Peon_84 folds
+Villain2 folds
+Villain3 folds
+Uncalled bet (1285.00) returned to Villain1
+Villain1 does not show
+*** SUMMARY ***
+Total pot 1100.00 | Rake 0.00
+Seat 2: Villain1 did not show and won 1100.00
+Seat 4: Peon_84 (button) folded on the Pre-Flop
+Seat 6: Villain2 (small blind) folded on the Pre-Flop
+Seat 9: Villain3 (big blind) folded on the Pre-Flop

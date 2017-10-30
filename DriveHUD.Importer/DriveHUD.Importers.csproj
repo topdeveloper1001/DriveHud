@@ -281,6 +281,10 @@
     <Compile Include="WinningPokerNetwork\YaPokerImporter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{B7BB6A80-DE1E-463D-8A4A-EC010262E567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
       <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
       <Name>DriveHUD.Common.Resources</Name>

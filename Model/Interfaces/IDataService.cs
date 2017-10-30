@@ -54,7 +54,11 @@ namespace Model.Interfaces
 
         Handnotes GetHandNote(long gameNumber, short pokersiteId);
 
-        Playernotes GetPlayerNote(string playerName, short pokersiteId);
+        IEnumerable<Playernotes> GetPlayerNotes(string playerName, short pokersiteId);
+
+        IEnumerable<Playernotes> GetPlayerNotes(int playerId);
+
+        void DeletePlayerNotes(IEnumerable<Playernotes> playernotes);
 
         IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers, short pokersiteId);
 
@@ -97,6 +101,8 @@ namespace Model.Interfaces
         IPlayer GetActivePlayer();
 
         void SaveActivePlayer(string playerName, short? pokersiteId);
+
+        void VacuumDatabase();
 
         #region Aliases
 

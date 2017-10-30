@@ -53,7 +53,7 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
-            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase) 
+            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase)
                 || handText.StartsWith("Game #", StringComparison.InvariantCultureIgnoreCase))
             {
                 siteName = EnumPokerSites.PartyPoker;
@@ -67,7 +67,8 @@ namespace HandHistories.Parser.Utils.Extensions
             }
 
             if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase) ||
-                handText.StartsWith("<Game Information>", StringComparison.InvariantCultureIgnoreCase))
+                handText.StartsWith("<Game Information>", StringComparison.InvariantCultureIgnoreCase) ||
+                handText.StartsWith("Game Hand", StringComparison.InvariantCultureIgnoreCase))
             {
                 siteName = EnumPokerSites.WinningPokerNetwork;
                 return true;

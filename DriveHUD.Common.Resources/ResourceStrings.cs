@@ -46,6 +46,7 @@ namespace DriveHUD.Common.Resources
         public static string LayoutsExtension = "SystemSettings_LayoutsExtension";
         public static string LayoutsMappings = "SystemSettings_LayoutsMappings";
         public static string LogsFolder = "SystemSettings_LogsFolder";
+        public static string ModulesFolder = "SystemSettings_ModulesFolder";
 
         #endregion
 

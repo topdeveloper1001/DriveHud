@@ -21,9 +21,14 @@ namespace DriveHUD.Entities.Mapping
             Table("PlayerNotes");
             LazyLoad();
             Id(x => x.PlayerNoteId).GeneratedBy.Native().Column("PlayerNoteId");
-            Map(x => x.Note).Column("Note");
+            Map(x => x.PlayerId).Column("PlayerId").Not.Nullable();
+            Map(x => x.Note).Column("Note").Not.Nullable();
+            Map(x => x.CardRange).Column("CardRange").Nullable();
+            Map(x => x.Timestamp).Column("Timestamp").Nullable();
+            Map(x => x.IsAutoNote).Column("IsAutoNote").Not.Nullable();
+            Map(x => x.GameNumber).Column("GameNumber").Not.Nullable();
             Map(x => x.PokersiteId).Column("PokerSiteId").Not.Nullable();
-            References(x => x.Player).Column("PlayerId").ForeignKey("PlayerId");
+            References(x => x.Player).ReadOnly().Column("PlayerId").ForeignKey("PlayerId");
         }
     }
 }
