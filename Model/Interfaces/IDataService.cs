@@ -102,6 +102,8 @@ namespace Model.Interfaces
 
         void SaveActivePlayer(string playerName, short? pokersiteId);
 
+        void VacuumDatabase();
+
         #region Aliases
 
         Aliases GetAlias(string aliasName);

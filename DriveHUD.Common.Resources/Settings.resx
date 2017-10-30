@@ -285,6 +285,12 @@
   <data name="Settings_Updates" xml:space="preserve">
     <value>Automatically download updates</value>
   </data>
+  <data name="Settings_VacuumDatabase" xml:space="preserve">
+    <value>Vacuum database</value>
+  </data>
+  <data name="Settings_VacuumDatabaseTitle" xml:space="preserve">
+    <value>Vacuum database (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
+  </data>
   <data name="Settings_WinningPokerNetworkHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#document-32</value>
   </data>

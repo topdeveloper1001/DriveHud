@@ -1048,6 +1048,35 @@ namespace DriveHUD.Application.ViewModels
             IsEnabled = true;
         }
 
+        internal async void VacuumDatabase()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_VacuumingDatabase"));
+
+                    LogProvider.Log.Info("Vacuuming database");
+
+                    dataService.VacuumDatabase();
+
+                    LogProvider.Log.Info("Database has been vacuumed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Database vacuuming failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
         internal void ShowUpdate()
         {
             var updateViewModel = new UpdateViewModel(App.UpdateApplicationInfo);

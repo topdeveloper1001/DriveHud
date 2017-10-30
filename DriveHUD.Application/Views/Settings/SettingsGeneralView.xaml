@@ -287,6 +287,10 @@
                     Height="5" />
                 <RowDefinition
                     Height="Auto" />
+                <RowDefinition
+                    Height="5" />
+                <RowDefinition
+                    Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -329,8 +333,26 @@
                 Content="{ResX Key=Settings_RecoverStats}"
                 Command="{Binding RecoverStatsCommand}" />
 
-            <CheckBox
+            <TextBlock
                 Grid.Row="4"
+                Text="{ResX Key=Settings_VacuumDatabaseTitle}"
+                TextWrapping="Wrap"
+                VerticalAlignment="Center"
+                Style="{StaticResource Title_H2}"
+                Foreground="{StaticResource ForegroundBrush}"
+                Margin="15 5" />
+
+            <Button
+                Grid.Row="4"
+                Grid.Column="1"
+                Width="100"
+                Height="30"
+                HorizontalAlignment="Right"
+                Content="{ResX Key=Settings_VacuumDatabase}"
+                Command="{Binding VacuumDatabaseCommand}" />
+
+            <CheckBox
+                Grid.Row="6"
                 Grid.ColumnSpan="2"
                 Style="{StaticResource CheckBoxRight}"
                 IsChecked="{Binding IsAPIEnabled, Mode=TwoWay}"

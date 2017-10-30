@@ -1087,6 +1087,21 @@ namespace Model
             }
         }
 
+        public void VacuumDatabase()
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    session.CreateSQLQuery("vacuum").ExecuteUpdate();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Vacuuming failed.", ex);
+            }
+        }
+
         private string[] GetPlayerFiles(int playerId)
         {
             try
