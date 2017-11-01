@@ -21,6 +21,7 @@ namespace DriveHUD.Entities
         Poker888,
         PartyPoker,
         IPoker,
+        GGN,
         Unknown
     }
 }

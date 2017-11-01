@@ -106,7 +106,7 @@ namespace Model.Site
 
         public override string[] GetHandHistoryFolders()
         {
-            return new string[] { };
+            return new string[0];
         }
 
         public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)

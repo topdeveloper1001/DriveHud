@@ -246,6 +246,7 @@ namespace DriveHUD.Application.ViewModels
         {
             importerService.StopImport();
             IsHudRunning = false;
+            RefreshCommandsCanExecute();
         }
 
         private void OnImportingStopped(object sender, EventArgs e)

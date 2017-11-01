@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.2\lib\net4\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
@@ -98,6 +102,10 @@
       <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="StreamExtended, Version=1.0.1.0, Culture=neutral, PublicKeyToken=bbfa0f1d54f50043, processorArchitecture=MSIL">
+      <HintPath>..\packages\StreamExtended.1.0.18\lib\net45\StreamExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -112,10 +120,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Titanium.Web.Proxy, Version=3.0.130.0, Culture=neutral, PublicKeyToken=8e41e1f1c790d7cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Titanium.Web.Proxy.3.0.130\lib\net45\Titanium.Web.Proxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseImporter.cs" />
     <Compile Include="Base\BaseDataManager.cs" />
+    <Compile Include="Base\GenericImporter.cs" />
     <Compile Include="BetOnline\BetOnlineCatcher.cs" />
     <Compile Include="BetOnline\BetOnlineDataManager.cs" />
     <Compile Include="BetOnline\BetOnlineImporter.cs" />
@@ -212,6 +225,49 @@
     <Compile Include="FileImporter.cs" />
     <Compile Include="GameInfo.cs" />
     <Compile Include="GameMatchInfo.cs" />
+    <Compile Include="GGNetwork\ConverterUtils.cs" />
+    <Compile Include="GGNetwork\GGNConverter.cs" />
+    <Compile Include="GGNetwork\GGNDataType.cs" />
+    <Compile Include="GGNetwork\GGNImporter.cs" />
+    <Compile Include="GGNetwork\GGNUtils.cs" />
+    <Compile Include="GGNetwork\HandHistoriesInformation.cs" />
+    <Compile Include="GGNetwork\HandHistoryInformation.cs" />
+    <Compile Include="GGNetwork\IGGNImporter.cs" />
+    <Compile Include="GGNetwork\Model\Action.cs" />
+    <Compile Include="GGNetwork\Model\ActionType.cs" />
+    <Compile Include="GGNetwork\Model\AfterAction.cs" />
+    <Compile Include="GGNetwork\Model\Board.cs" />
+    <Compile Include="GGNetwork\Model\BoardCards.cs" />
+    <Compile Include="GGNetwork\Model\BountyInformation.cs" />
+    <Compile Include="GGNetwork\Model\Card.cs" />
+    <Compile Include="GGNetwork\Model\CardInfo.cs" />
+    <Compile Include="GGNetwork\Model\CardKind.cs" />
+    <Compile Include="GGNetwork\Model\Configuration.cs" />
+    <Compile Include="GGNetwork\Model\GameLimitType.cs" />
+    <Compile Include="GGNetwork\Model\GameType.cs" />
+    <Compile Include="GGNetwork\Model\GuaranteedTicket.cs" />
+    <Compile Include="GGNetwork\Model\HandHistory.cs" />
+    <Compile Include="GGNetwork\Model\HandIdInfo.cs" />
+    <Compile Include="GGNetwork\Model\HandIdPlayType.cs" />
+    <Compile Include="GGNetwork\Model\HandInformation.cs" />
+    <Compile Include="GGNetwork\Model\History.cs" />
+    <Compile Include="GGNetwork\Model\HoleCard.cs" />
+    <Compile Include="GGNetwork\Model\LifeCycleData.cs" />
+    <Compile Include="GGNetwork\Model\NameInfo.cs" />
+    <Compile Include="GGNetwork\Model\Player.cs" />
+    <Compile Include="GGNetwork\Model\PlayerPositionType.cs" />
+    <Compile Include="GGNetwork\Model\Pot.cs" />
+    <Compile Include="GGNetwork\Model\PrizeSummary.cs" />
+    <Compile Include="GGNetwork\Model\PvtInfo.cs" />
+    <Compile Include="GGNetwork\Model\RabbitCard.cs" />
+    <Compile Include="GGNetwork\Model\RegisterPolicyInformation.cs" />
+    <Compile Include="GGNetwork\Model\RoundType.cs" />
+    <Compile Include="GGNetwork\Model\Sequence.cs" />
+    <Compile Include="GGNetwork\Model\ServiceProviderACLItem.cs" />
+    <Compile Include="GGNetwork\Model\Summary.cs" />
+    <Compile Include="GGNetwork\Model\TableActionType.cs" />
+    <Compile Include="GGNetwork\Model\TournamentInformation.cs" />
+    <Compile Include="GGNetwork\PlayerUtils.cs" />
     <Compile Include="Helpers\BovadaHelper.cs" />
     <Compile Include="Helpers\GeneralHelpers.cs" />
     <Compile Include="IAutoImporter.cs" />
@@ -312,6 +368,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EmbeddedResource Include="GGNetwork\rootCert.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

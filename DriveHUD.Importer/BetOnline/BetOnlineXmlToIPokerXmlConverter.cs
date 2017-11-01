@@ -161,7 +161,7 @@ namespace DriveHUD.Importers.BetOnline
 
                 AdjustHandHistory(handHistory);
 
-                var convertedXml = SerializationHelper.SerializeObject(handHistory, Encoding.UTF8);
+                var convertedXml = SerializationHelper.SerializeObject(handHistory);
 
                 var result = new ConvertedResult
                 {

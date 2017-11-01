@@ -410,6 +410,9 @@
     <Content Include="UnitTests\TestData\FilterModelSerializedData\FilterHoleCardsModel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\GGN-6-max-cash.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

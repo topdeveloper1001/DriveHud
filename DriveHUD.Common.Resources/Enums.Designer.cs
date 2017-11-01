@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GGNetwork.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_GGN {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_GGN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignition/Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Ignition {
