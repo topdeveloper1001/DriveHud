@@ -41,3 +41,10 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.3.0.1754")]
 [assembly: AssemblyVersion("1.3.0.1754")]
 [assembly: AssemblyFileVersion("1.3.0.1754")]
+
+#if DEBUG
+
+[assembly: InternalsVisibleTo("DriveHUD.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+
+#endif

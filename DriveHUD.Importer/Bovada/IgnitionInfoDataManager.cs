@@ -231,7 +231,7 @@ namespace DriveHUD.Importers.Bovada
                     try
                     {
                         tableData.Add(tounamentId, table);
-                        LogProvider.Log.Info($"Tournament table info has been read from client: {table} [{site}]");
+                        LogProvider.Log.Info(this, $"Tournament table info has been read from client: {table} [{site}]");
                     }
                     finally
                     {
