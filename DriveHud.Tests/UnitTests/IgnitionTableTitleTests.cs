@@ -28,6 +28,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Tournament #19308657 GSPO5 Mini Main Event Satellite 1 Seat Gtd info", false)]
         [TestCase("Ignition Casino - Poker Lobby", false)]
         [TestCase("$0.25/$0.50 No limit Hold'em", true)]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", true)]
         public void TestIgnitionTableTitleIsValid(string title, bool expected)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -38,6 +39,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Jackpot Sit & Go $2.00 10/20 No limit Hold'em  Tournament 19320964", true)]
         [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", true)]
         [TestCase("$0.25/$0.50 No limit Hold'em", false)]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", true)]
         public void TestIgnitionTableTitleIsTournament(string title, bool expected)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -48,6 +50,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Jackpot Sit & Go $2.00 10/20 No limit Hold'em  Tournament 19320964", "No limit Hold'em")]
         [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", "No limit Hold'em")]
         [TestCase("$0.25/$0.50 No limit Hold'em", "No limit Hold'em")]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", "No limit Hold'em")]
         public void TestIgnitionTableTitleGameType(string title, string gameType)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -58,6 +61,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Jackpot Sit & Go $2.00 10/20 No limit Hold'em  Tournament 19320964", "Jackpot Sit & Go $2.00")]
         [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", "$2,000 Guaranteed (Turbo SS)")]
         [TestCase("50/100 No limit Hold'em - Satellite To Any $7 + $0.70 -  TBL #13", "Satellite To Any $7 + $0.70")]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", "Hyper Turbo (500 Chips)")]
         public void TestIgnitionTableTitleTableName(string title, string tableName)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -69,6 +73,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", "400/800")]
         [TestCase("50/100 No limit Hold'em - Satellite To Any $7 + $0.70 -  TBL #13", "50/100")]
         [TestCase("$0.25/$0.50 No limit Hold'em", "$0.25/$0.50")]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", "10/20")]
         public void TestIgnitionTableTitleStacks(string title, string stacks)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -79,6 +84,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Jackpot Sit & Go $2.00 10/20 No limit Hold'em  Tournament 19320964", "1")]
         [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", "1")]
         [TestCase("50/100 No limit Hold'em - Satellite To Any $7 + $0.70 -  TBL #13", "13")]
+        [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", "1")]
         public void TestTableTitleTableId(string title, string tableId)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);

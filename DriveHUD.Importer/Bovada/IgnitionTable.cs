@@ -297,7 +297,7 @@ namespace DriveHUD.Importers.Bovada
             int tableId;
 
             var match = tableTitleData.TableName.Equals(TableName, StringComparison.OrdinalIgnoreCase) &&
-                int.TryParse(tableTitleData.TableId, out tableId) && tableId == TableIndex;
+                int.TryParse(tableTitleData.TableId, out tableId) && (TableIndex == 0 || (TableIndex != 0 && tableId == TableIndex));
 
             if (IsAdvancedLoggingEnabled && match)
             {

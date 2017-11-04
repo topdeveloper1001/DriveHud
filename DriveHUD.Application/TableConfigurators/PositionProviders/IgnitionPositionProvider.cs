@@ -32,6 +32,13 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     }
                 },
                 {
+                    3,
+                    new[,]
+                    {
+                        { 43, 253 }, { 617, 253 }, { 331, 450 }
+                    }
+                },
+                {
                     6,
                     new[,]
                     {
