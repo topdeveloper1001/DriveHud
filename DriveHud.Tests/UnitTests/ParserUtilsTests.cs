@@ -38,6 +38,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("2000.75 $", 2000.75)]
         [TestCase("$ 2000.75", 2000.75)]
         [TestCase("6h.4d", 0)]
+        [TestCase("Qd, Ah, Td, 3c", 0)]
         public void TryParseMoneyTest(string moneyText, decimal expectedMoney)
         {
             decimal money;
@@ -60,6 +61,6 @@ namespace DriveHud.Tests.UnitTests
         {
             var actualRange = ParserUtils.ConvertToCardRange(cards);
             Assert.That(actualRange, Is.EqualTo(expectedRange));
-        }      
+        }
     }
 }
