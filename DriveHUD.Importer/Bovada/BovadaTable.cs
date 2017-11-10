@@ -439,8 +439,7 @@ namespace DriveHUD.Importers.Bovada
                     break;
 
                 case "JACKPOT_PRIZE":
-                case "JACKPOT_NEXT_LEVEL":
-                    if (IsJackpotTable)
+                    if (IsJackpotTable || isConnectedInfoParsed)
                     {
                         break;
                     }
