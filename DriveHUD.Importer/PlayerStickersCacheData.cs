@@ -48,6 +48,11 @@ namespace DriveHUD.Importers
         public Playerstatistic Statistic { get; set; }
 
         /// <summary>
+        /// Gets or sets whenever player is hero
+        /// </summary>
+        public bool IsHero { get; set; }
+
+        /// <summary>
         /// Checks if <see cref="PlayerStickersCacheData"/> is valid
         /// </summary>
         /// <returns>True if data is valid, otherwise - false</returns>
