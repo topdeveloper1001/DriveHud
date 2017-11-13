@@ -150,8 +150,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             get { return noteToolTip; }
             set
             {
-                this.RaiseAndSetIfChanged(ref noteToolTip,
-                    value.Length > 50 ? string.Format("{0}...", value.Substring(0, 50)) : value);
+                this.RaiseAndSetIfChanged(ref noteToolTip, value);
                 this.RaisePropertyChanged(nameof(IsNoteIconVisible));
                 this.RaisePropertyChanged(nameof(NoteMenuItemText));
             }

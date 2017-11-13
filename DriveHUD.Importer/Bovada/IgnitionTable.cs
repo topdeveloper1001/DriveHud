@@ -15,6 +15,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using Prism.Events;
 using System;
 using System.Diagnostics;
@@ -28,12 +29,20 @@ namespace DriveHUD.Importers.Bovada
         private IImporterService importerService;
         private IIgnitionWindowCache ignitionWindowCache;
         private const string WindowClassName = "Chrome_WidgetWin_1";
-        private bool isConnectedInfoParsed;
 
         public IgnitionTable(IEventAggregator eventAggregator) : base(eventAggregator)
         {
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
             ignitionWindowCache = ServiceLocator.Current.GetInstance<IIgnitionWindowCache>();
+
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            IsAdvancedLoggingEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
+        }
+
+        private bool IsAdvancedLoggingEnabled
+        {
+            get;
+            set;
         }
 
         public override ImporterIdentifier Identifier
@@ -124,7 +133,7 @@ namespace DriveHUD.Importers.Bovada
 
                 isConnectedInfoParsed = true;
 
-                LogProvider.Log.Info($"Table info has been set: {tableData} [{Identifier}]");
+                LogProvider.Log.Info(this, $"Table info has been set: {tableData} [{Identifier}]");
             }
         }
 
@@ -204,6 +213,11 @@ namespace DriveHUD.Importers.Bovada
 
                         if (IsWindowMatch(windowTitle, windowClassName) && !ignitionWindowCache.IsWindowCached(hWnd))
                         {
+                            if (IsAdvancedLoggingEnabled)
+                            {
+                                LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}] does match table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+                            }
+
                             windowHandle = hWnd;
                             return false;
                         }
@@ -218,14 +232,89 @@ namespace DriveHUD.Importers.Bovada
 
         private bool IsWindowMatch(string title, string className)
         {
-            var match = !string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(className) &&
-                className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
-                title.IndexOf("Ignition", StringComparison.OrdinalIgnoreCase) < 0 &&
-                title.IndexOf("Zone Poker", StringComparison.OrdinalIgnoreCase) < 0 &&
-                !title.StartsWith("Tournament", StringComparison.OrdinalIgnoreCase) &&
-                !title.StartsWith("#") && !title.Equals("Poker", StringComparison.OrdinalIgnoreCase) && title.IndexOf("Lobby", StringComparison.OrdinalIgnoreCase) < 0;
+            if (IsAdvancedLoggingEnabled)
+            {
+                LogProvider.Log.Info(this, $"Checking if window [{title}, {className}] matches table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+            }
+
+            if (string.IsNullOrWhiteSpace(className) ||
+                !className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+
+            var tableTitleData = new IgnitionTableTitle(title);
+
+            if (!tableTitleData.IsValid)
+            {
+                return false;
+            }
+
+            if (IsZonePokerTable)
+            {
+                return ZonePokerTableMatch(tableTitleData);
+            }
+
+            if (IsJackpotTable)
+            {
+                return JackpotTableMatch(tableTitleData);
+            }
+
+            if (IsTournament)
+            {
+                return TournamentTableMatch(tableTitleData);
+            }
+
+            if (IsAdvancedLoggingEnabled)
+            {
+                LogProvider.Log.Info(this, $"Cash table is detected. [{tableTitleData.OriginalTitle}]");
+            }
+
+            return true;
+        }
+
+        private bool JackpotTableMatch(IgnitionTableTitle tableTitleData)
+        {
+            uint tournamentId;
+
+            if (!uint.TryParse(tableTitleData.TournamentId, out tournamentId))
+            {
+                return false;
+            }
+
+            if (TournamentId != tournamentId)
+            {
+                return false;
+            }
+
+            TableName = tableTitleData.TableName;
+
+            if (IsAdvancedLoggingEnabled)
+            {
+                LogProvider.Log.Info(this, $"Jackpot table is detected: {tableTitleData.TableName}, {tableTitleData.TournamentId} [{tableTitleData.OriginalTitle}] [{Identifier}]");
+            }
+
+            return true;
+        }
+
+        private bool TournamentTableMatch(IgnitionTableTitle tableTitleData)
+        {
+            int tableId;
+
+            var match = tableTitleData.TableName.Equals(TableName, StringComparison.OrdinalIgnoreCase) &&
+                int.TryParse(tableTitleData.TableId, out tableId) && (TableIndex == 0 || (TableIndex != 0 && tableId == TableIndex));
+
+            if (IsAdvancedLoggingEnabled && match)
+            {
+                LogProvider.Log.Info(this, $"Tournament table is detected: {tableTitleData.TableName}, {tableTitleData.TableId} [{tableTitleData.OriginalTitle}] [{Identifier}]");
+            }
 
             return match;
+        }
+
+        private bool ZonePokerTableMatch(IgnitionTableTitle tableTitleData)
+        {
+            return false;
         }
     }
 }
