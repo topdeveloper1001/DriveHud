@@ -489,6 +489,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Bakermansam", -220, HandActionType.ALL_IN, Street.Flop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "leandro5678", -220, HandActionType.ALL_IN, Street.Flop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "leandro5678", 2120, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\WrongSummaryHeroName.txt", "maxgmus", 3, HandActionType.WINS, Street.Summary, 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\WrongSummaryHeroName.txt", "leoAKK", 4.10, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\WrongSummaryHeroName.txt", "OPAYDO", 2.89, HandActionType.WINS, Street.Summary, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

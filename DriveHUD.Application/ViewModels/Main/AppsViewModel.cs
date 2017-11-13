@@ -141,9 +141,6 @@ namespace DriveHUD.Application.ViewModels
             InitializeObservables();
             InitializeCommands();
 
-            // temp
-            appStoreType = AppStoreType.Apps;
-
             Load();
         }
 
