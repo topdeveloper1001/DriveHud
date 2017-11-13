@@ -250,6 +250,11 @@ namespace DriveHUD.Importers.Bovada
                 return false;
             }
 
+            if (IsZonePokerTable)
+            {
+                return ZonePokerTableMatch(tableTitleData);
+            }
+
             if (IsJackpotTable)
             {
                 return JackpotTableMatch(tableTitleData);
@@ -305,6 +310,11 @@ namespace DriveHUD.Importers.Bovada
             }
 
             return match;
+        }
+
+        private bool ZonePokerTableMatch(IgnitionTableTitle tableTitleData)
+        {
+            return false;
         }
     }
 }

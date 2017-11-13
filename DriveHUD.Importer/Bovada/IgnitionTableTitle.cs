@@ -37,6 +37,13 @@ namespace DriveHUD.Importers.Bovada
 
             try
             {
+                // Zone title
+                if (title.IndexOf("Zone Poker", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    IsZone = true;
+                    return;
+                }
+
                 // Jackpot title
                 if (title.StartsWith("Jackpot"))
                 {
@@ -170,6 +177,12 @@ namespace DriveHUD.Importers.Bovada
         }
 
         public bool IsJackpot
+        {
+            get;
+            private set;
+        }
+
+        public bool IsZone
         {
             get;
             private set;

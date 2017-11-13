@@ -29,6 +29,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("Ignition Casino - Poker Lobby", false)]
         [TestCase("$0.25/$0.50 No limit Hold'em", true)]
         [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", true)]
+        [TestCase("$0.25/$0.50 No limit Hold'em - Zone Poker - Bengals - #956", false)]
         public void TestIgnitionTableTitleIsValid(string title, bool expected)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
@@ -127,6 +128,17 @@ namespace DriveHud.Tests.UnitTests
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);
             Assert.That(IgnitionTableTitle.IsPlayMoney, Is.EqualTo(expected));
+        }
+
+        [Test]
+        [TestCase("Jackpot Sit & Go $2.00 10/20 No limit Hold'em  Tournament 19320964", false)]
+        [TestCase("400/800, 80 Ante No limit Hold'em - $2,000 Guaranteed (Turbo SS) -  TBL #1", false)]
+        [TestCase("Play 2/4 No limit Hold'em", false)]
+        [TestCase("$0.25/$0.50 No limit Hold'em - Zone Poker - Bengals - #956", true)]
+        public void TestTableTitleIsZone(string title, bool expected)
+        {
+            var IgnitionTableTitle = new IgnitionTableTitle(title);
+            Assert.That(IgnitionTableTitle.IsZone, Is.EqualTo(expected));
         }
     }
 }
