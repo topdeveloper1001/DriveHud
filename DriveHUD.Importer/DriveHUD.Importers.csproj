@@ -168,6 +168,7 @@
     <Compile Include="Bovada\IgnitionInfoImporter.cs" />
     <Compile Include="Bovada\IgnitionTable.cs" />
     <Compile Include="Bovada\IgnitionTableData.cs" />
+    <Compile Include="Bovada\IgnitionTableTitle.cs" />
     <Compile Include="Bovada\IgnitionWindowCache.cs" />
     <Compile Include="Bovada\IIgnitionCatcher.cs" />
     <Compile Include="Bovada\IIgnitionDataManager.cs" />

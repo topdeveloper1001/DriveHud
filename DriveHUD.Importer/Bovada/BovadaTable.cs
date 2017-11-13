@@ -40,6 +40,8 @@ namespace DriveHUD.Importers.Bovada
     {
         private const int delayBeforeImport = 5000;
 
+        protected const int JackpotMaxSeats = 3;
+
         private ManualResetEventSlim importHandResetEvent = new ManualResetEventSlim(false);
 
         private List<Command> commands;
@@ -69,6 +71,8 @@ namespace DriveHUD.Importers.Bovada
         private IEventAggregator eventAggregator;
 
         protected bool playerHasSeat = false;
+
+        protected bool isConnectedInfoParsed;
 
         public BovadaTable(IEventAggregator eventAggregator)
         {
@@ -217,6 +221,12 @@ namespace DriveHUD.Importers.Bovada
         {
             get;
             set;
+        }
+
+        public bool IsJackpotTable
+        {
+            get;
+            private set;
         }
 
         #endregion
@@ -426,6 +436,20 @@ namespace DriveHUD.Importers.Bovada
                 case "T_CONNECT_INFO":
                 case "CONNECT_INFO":
                     ParseConnectInfo(cmdObj);
+                    break;
+
+                case "JACKPOT_PRIZE":
+                    if (IsJackpotTable || isConnectedInfoParsed)
+                    {
+                        break;
+                    }
+
+                    IsJackpotTable = true;
+                    MaxSeat = JackpotMaxSeats;
+                    GameFormat = GameFormat.SnG;
+                    GameType = GameType.Holdem;
+                    GameLimit = GameLimit.NL;
+                    isConnectedInfoParsed = true;
                     break;
 
                 case "PLAY_TABLE_NUMBER":

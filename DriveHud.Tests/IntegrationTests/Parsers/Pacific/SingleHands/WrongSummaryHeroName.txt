@@ -1,0 +1,39 @@
+#Game No : 589318195
+***** 888poker Hand History for Game 589318195 *****
+$0.02/$0.05 Blinds Pot Limit Omaha - *** 06 11 2017 19:23:58
+Table Orlando 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: NoProKer16 ( $3.98 )
+Seat 4: corbujo ( $5.65 )
+Seat 5: OPAYDO ( $2.95 )
+Seat 6: maxgmus ( $24.20 )
+Seat 9: benz63AMG ( $3.31 )
+Seat 10: leoAKK ( $1.43 )
+corbujo posts small blind [$0.02]
+OPAYDO posts big blind [$0.05]
+** Dealing down cards **
+Dealt to maxgmus [ Qd, Ah, Td, 3c ]
+maxgmus raises [$0.17]
+benz63AMG folds
+leoAKK calls [$0.17]
+NoProKer16 folds
+corbujo folds
+OPAYDO calls [$0.12]
+** Dealing flop ** [ Ad, 4d, Tc ]
+OPAYDO checks
+maxgmus bets [$0.39]
+leoAKK calls [$0.39]
+OPAYDO calls [$0.39]
+** Dealing turn ** [ 5c ]
+OPAYDO bets [$1.70]
+maxgmus raises [$6.80]
+leoAKK calls [$0.87]
+OPAYDO calls [$0.69]
+** Dealing river ** [ 4c ]
+** Summary **
+OPAYDO shows [ Kh, 3d, 2c, Jc ]
+maxgmus shows [ Qd, Ah, Td, 3c ]
+leoAKK shows [ 8d, Kd, 6c, Qc ]
+leoAKK collected [ $4.10 ]
+OPAYDO collected [ $2.89 ]

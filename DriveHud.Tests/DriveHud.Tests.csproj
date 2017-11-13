@@ -241,6 +241,7 @@
     <Compile Include="UnitTests\HudLayoutMigrationTests.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
+    <Compile Include="UnitTests\IgnitionTableTitleTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />

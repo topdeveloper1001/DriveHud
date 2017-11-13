@@ -98,6 +98,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void Update()
         {
+
+
             TableStateList.Clear();
             SetPlayersDefaults();
             TotalPotChipsContainer = new ReplayerChipsContainer();
@@ -528,9 +530,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void LoadGame(ReplayerDataModel value)
         {
-            CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber, value.PokersiteId);
-
-            Update();
+            try
+            {
+                CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber, value.PokersiteId);
+                Update();
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not load game in replayer.", ex);
+            }
         }
 
         internal void RaiseNotification(string content, string title)

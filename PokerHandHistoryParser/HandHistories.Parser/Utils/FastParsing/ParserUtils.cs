@@ -67,7 +67,7 @@ namespace HandHistories.Parser.Utils.FastParsing
             return defaultValue;
         }
 
-        private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);
+        private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d\.]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);
 
         public static bool TryParseMoney(string moneyText, out decimal money, out Currency currency, NumberFormatInfo numberFormatInfo = null)
         {

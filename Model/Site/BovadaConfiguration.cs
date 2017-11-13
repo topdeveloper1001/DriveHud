@@ -35,6 +35,7 @@ namespace Model.Site
             tableTypes = new EnumTableType[]
             {
                 EnumTableType.HU,
+                EnumTableType.Three,
                 EnumTableType.Six,
                 EnumTableType.Nine
             };
