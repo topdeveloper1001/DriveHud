@@ -59,7 +59,9 @@ namespace DriveHUD.Importers.GGNetwork
             HandHistories.Objects.Cards.BoardCards cards = null;
 
             if (handHistory.HandHistory.Summary.Board != null && handHistory.HandHistory.Summary.Board.Count != 0)
+            {
                 cards = ConvertCards(handHistory.HandHistory.Summary.Board[0]);
+            }
 
             var winner = ConverterUtils.GetWinner(handHistory.HandHistory.Players, handHistory.HandHistory.Pots);
 
@@ -85,7 +87,11 @@ namespace DriveHUD.Importers.GGNetwork
         /// <returns></returns>
         public static HandHistories.Objects.Hand.HandHistory ConvertCashHandHistory(History handHistory)
         {
-            var tableName = $"{handHistory.NameInfo.Id.Remove(0, 9)} {handHistory.NameInfo.Suffix}";
+            var tableNumber = handHistory.NameInfo.Suffix < 10 ?
+               $"0{handHistory.NameInfo.Suffix}" :
+               handHistory.NameInfo.Suffix.ToString();
+
+            var tableName = $"{handHistory.NameInfo.Id.Remove(0, 9)} {tableNumber}";
 
             var gameType = ConvertGameType((GameType)handHistory.GameType, (GameLimitType)handHistory.LimitType);
 
@@ -155,6 +161,7 @@ namespace DriveHUD.Importers.GGNetwork
             var handActions = new List<HandHistories.Objects.Actions.HandAction>();
 
             handActions.AddRange(ConvertInitStage(handHistory.HandHistory.Players));
+
             handActions.AddRange(ConvertActions(handHistory.HandHistory.Players,
                 handHistory.HandHistory.HandInformation.Sequences, handHistory.HandHistory.Pots));
 

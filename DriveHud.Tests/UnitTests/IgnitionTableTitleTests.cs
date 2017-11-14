@@ -30,6 +30,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("$0.25/$0.50 No limit Hold'em", true)]
         [TestCase("10/20 No limit Hold'em - Hyper Turbo (500 Chips) -  TBL #1", true)]
         [TestCase("$0.25/$0.50 No limit Hold'em - Zone Poker - Bengals - #956", false)]
+        [TestCase("Hand History Viewer", false)]
         public void TestIgnitionTableTitleIsValid(string title, bool expected)
         {
             var IgnitionTableTitle = new IgnitionTableTitle(title);

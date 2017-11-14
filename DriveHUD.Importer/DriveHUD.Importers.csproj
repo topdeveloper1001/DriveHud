@@ -124,6 +124,10 @@
       <HintPath>..\packages\Titanium.Web.Proxy.3.0.130\lib\net45\Titanium.Web.Proxy.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="websocket-sharp, Version=1.0.4.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharpFork.1.0.4.0\lib\net35\websocket-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseImporter.cs" />
@@ -227,12 +231,15 @@
     <Compile Include="GameInfo.cs" />
     <Compile Include="GameMatchInfo.cs" />
     <Compile Include="GGNetwork\ConverterUtils.cs" />
+    <Compile Include="GGNetwork\GGNCacheService.cs" />
     <Compile Include="GGNetwork\GGNConverter.cs" />
     <Compile Include="GGNetwork\GGNDataType.cs" />
     <Compile Include="GGNetwork\GGNImporter.cs" />
+    <Compile Include="GGNetwork\GGNTournamentReader.cs" />
     <Compile Include="GGNetwork\GGNUtils.cs" />
     <Compile Include="GGNetwork\HandHistoriesInformation.cs" />
     <Compile Include="GGNetwork\HandHistoryInformation.cs" />
+    <Compile Include="GGNetwork\IGGNCacheService.cs" />
     <Compile Include="GGNetwork\IGGNImporter.cs" />
     <Compile Include="GGNetwork\Model\Action.cs" />
     <Compile Include="GGNetwork\Model\ActionType.cs" />
