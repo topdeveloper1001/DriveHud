@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistory.cs" company="Ace Poker Solutions">
+// <copyright file="GGNHandHistory.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Importers.GGNetwork.Model
 {
-    internal class HandHistory
+    internal class GGNHandHistory
     {
         public string Version { get; set; }
 
@@ -27,7 +27,7 @@ namespace DriveHUD.Importers.GGNetwork.Model
 
         public string TourneyId { get; set; }
 
-        public string TourneyBrandName { get; set; } 
+        public string TourneyBrandName { get; set; }
 
         public int TourneyEventNumber { get; set; }
 
@@ -80,5 +80,13 @@ namespace DriveHUD.Importers.GGNetwork.Model
         public int MegaSpinMultiplier { get; set; }
 
         public int FortuneSpinMultiplier { get; set; }
+
+        public bool IsTournament
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(TourneyBrandName);
+            }
+        }
     }
 }

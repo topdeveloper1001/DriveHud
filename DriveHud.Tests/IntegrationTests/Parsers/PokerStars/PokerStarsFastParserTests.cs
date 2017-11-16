@@ -460,7 +460,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", "Donati - $0.02/$0.05 USD - No Limit Hold'em", true)]
         public void ParsedHistoryMatchedWindowTitleTest(string handHistoryFile, string title, bool match)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);
+            var handHistory = ParseHandHistory(handHistoryFile);            
 
             var parsingResult = new ParsingResult
             {

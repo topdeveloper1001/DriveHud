@@ -72,6 +72,8 @@ namespace DriveHUD.Importers
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
             container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
             container.RegisterType<IGGNImporter, GGNImporter>();
+            container.RegisterType<IGGNCacheService, GGNCacheService>();
+            container.RegisterType<IGGNTournamentReader, GGNTournamentReader>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());

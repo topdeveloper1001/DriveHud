@@ -10,14 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Importers.GGNetwork.Model;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Importers.GGNetwork.Model;
 using System.Threading;
-using DriveHUD.Common.Log;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.GGNetwork
 {
@@ -30,9 +29,38 @@ namespace DriveHUD.Importers.GGNetwork
         /// <summary>
         /// Refreshes cache data
         /// </summary>
-        public void Refresh()
+        public async Task RefreshAsync()
         {
+            try
+            {
+                var tournamentsReader = ServiceLocator.Current.GetInstance<IGGNTournamentReader>();
 
+                var tournaments = await tournamentsReader.ReadAllTournamentsAsync();
+
+                rwLock.EnterWriteLock();
+
+                try
+                {
+                    foreach (var tournament in tournaments)
+                    {
+                        if (!tournamentsCacheInfo.ContainsKey(tournament.Id))
+                        {
+                            tournamentsCacheInfo.Add(tournament.Id, tournament);
+                            continue;
+                        }
+
+                        tournamentsCacheInfo[tournament.Id] = tournament;
+                    }
+                }
+                finally
+                {
+                    rwLock.ExitWriteLock();
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could refresh GGN cache data.", e);
+            }
         }
 
         /// <summary>

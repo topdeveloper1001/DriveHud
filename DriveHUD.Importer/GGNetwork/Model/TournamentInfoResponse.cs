@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistoriesInformation.cs" company="Ace Poker Solutions">
+// <copyright file="TournamentInfoResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.GGNetwork.Model;
-using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace DriveHUD.Importers.GGNetwork
+namespace DriveHUD.Importers.GGNetwork.Model
 {
-    internal class HandHistoriesInformation
+    public class TournamentInfoResponse
     {
-        public IList<GGNHandHistory> Histories { get; set; }
+        [JsonProperty("List")]
+        public TournamentInformation[] Tournaments { get; set; }
 
-        public string UserId { get; set; }
-
-        public string TableId { get; set; }
+        public int Result { get; set; }
     }
 }

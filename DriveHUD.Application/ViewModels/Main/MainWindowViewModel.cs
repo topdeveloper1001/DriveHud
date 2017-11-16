@@ -419,12 +419,14 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+
                 if (e.DoNotUpdateHud)
                 {
                     // update cache if even we don't need to build HUD
-                    if (gameInfo.PlayersCacheInfo != null)
+                    if (playersCacheInfo != null)
                     {
-                        foreach (var playerCacheInfo in gameInfo.PlayersCacheInfo)
+                        foreach (var playerCacheInfo in playersCacheInfo)
                         {
                             playerCacheInfo.GameFormat = gameInfo.GameFormat;
 
@@ -483,7 +485,7 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = gameInfo.PlayersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
 
                     if (playerCacheInfo != null)
                     {

@@ -12,6 +12,7 @@
 
 using Newtonsoft.Json;
 using System;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -153,6 +154,41 @@ namespace DriveHUD.Importers.GGNetwork
         public static HandHistoriesInformation DeserializeHandHistories(string data)
         {
             return JsonConvert.DeserializeObject<HandHistoriesInformation>(data);
+        }
+
+        public static string ReplaceMoneyWithChipsInTitle(string tableName)
+        {
+            var lastHyphenIndex = tableName.LastIndexOf('-');
+
+            if (lastHyphenIndex <= 0)
+            {
+                return tableName;
+            }
+
+            var tournamentName = tableName.Substring(0, lastHyphenIndex - 1).Trim();
+            var tableNumber = tableName.Substring(lastHyphenIndex).Trim();
+
+            var dollarIndex = tournamentName.LastIndexOf('$');
+
+            if (dollarIndex <= 0)
+            {
+                return tableName;
+            }
+
+            var buyinText = tournamentName.Substring(dollarIndex + 1);
+
+            decimal buyin = 0;
+
+            if (!decimal.TryParse(buyinText, NumberStyles.Any, new CultureInfo("en-US"), out buyin))
+            {
+                return tableName;
+            }
+
+            buyin *= 1000;
+
+            tournamentName = tournamentName.Substring(0, dollarIndex).Trim();
+
+            return $"{tournamentName} {buyin.ToString("N0", new CultureInfo("en-US"))} {tableNumber}";
         }
     }
 }

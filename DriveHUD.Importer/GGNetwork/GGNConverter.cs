@@ -14,265 +14,142 @@ using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers.GGNetwork.Model;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HandHistories.Objects.Hand;
 
 namespace DriveHUD.Importers.GGNetwork
 {
+    /// <summary>
+    /// Defines methods to convert GGN hand histories into DH hand histories
+    /// </summary>
     internal class GGNConverter
     {
-        /// <summary>
-        /// </summary>
-        /// <param name="handHistory"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Hand.HandHistory ConvertCashHandHistory(HandHistoryInformation handHistory)
+        public static HandHistories.Objects.Hand.HandHistory ConvertHandHistory(GGNHandHistory ggnHandHistory, IGGNCacheService cacheService)
         {
-            var tableNumber = handHistory.HandHistory.NameInfo.Suffix < 10 ?
-                $"0{handHistory.HandHistory.NameInfo.Suffix}" :
-                handHistory.HandHistory.NameInfo.Suffix.ToString();
+            HandHistories.Objects.GameDescription.TournamentDescriptor tournamentDescriptor = null;
 
-            var tableName = $"{handHistory.HandHistory.NameInfo.Id.Remove(0, 9)} {tableNumber}";
+            if (ggnHandHistory.IsTournament)
+            {
+                var tournamentInformation = cacheService.GetTournament(ggnHandHistory.TourneyId);
 
-            var gameType = ConvertGameType((GameType)handHistory.HandHistory.GameType, (GameLimitType)handHistory.HandHistory.LimitType);
+                if (tournamentInformation == null)
+                {
+                    cacheService.RefreshAsync().Wait();
 
-            var limit = ConvertLimit(ConvertAmount(handHistory.HandHistory.SmallBlind),
-                ConvertAmount(handHistory.HandHistory.BigBlind),
-                handHistory.HandHistory.Ante);
+                    tournamentInformation = cacheService.GetTournament(ggnHandHistory.TourneyId);
+
+                    if (tournamentInformation == null)
+                    {
+                        // create descriptor using only existing data (something might be missed, but hand history will be built)
+                        tournamentDescriptor = new HandHistories.Objects.GameDescription.TournamentDescriptor
+                        {
+                            TournamentId = ggnHandHistory.TourneyId,
+                            TournamentInGameId = ggnHandHistory.TourneyId,
+                            TournamentName = ggnHandHistory.TourneyBrandName,
+                            BuyIn = HandHistories.Objects.GameDescription.Buyin.FromBuyinRake(ConvertAmount(ggnHandHistory.TourneyBuyIn), 0, HandHistories.Objects.GameDescription.Currency.USD),
+                            StartDate = ggnHandHistory.StartTime,
+                            Speed = ParserUtils.ParseTournamentSpeed(ggnHandHistory.TourneyBrandName)
+                        };
+                    }
+                    else
+                    {
+                        tournamentDescriptor = ConvertTournamentDescriptor(tournamentInformation);
+                    }
+                }
+                else
+                {
+                    tournamentDescriptor = ConvertTournamentDescriptor(tournamentInformation);
+                }
+            }
+
+            var pokerFormat = ggnHandHistory.IsTournament ?
+                HandHistories.Objects.GameDescription.PokerFormat.Tournament :
+                HandHistories.Objects.GameDescription.PokerFormat.CashGame;
+
+            var gameType = ConvertGameType((GameType)ggnHandHistory.GameType, (GameLimitType)ggnHandHistory.LimitType);
+
+            // small & bing blinds for cash are stored in 0.1 cents, but for tourney are stored in chips
+            var smallBlind = ggnHandHistory.IsTournament ? ggnHandHistory.SmallBlind : ConvertAmount(ggnHandHistory.SmallBlind);
+            var bigBlind = ggnHandHistory.IsTournament ? ggnHandHistory.BigBlind : ConvertAmount(ggnHandHistory.BigBlind);
+
+            var limit = ConvertLimit(smallBlind, bigBlind, ggnHandHistory.Ante);
 
             var tableType = ConverterUtils.GetTableType();
 
-            var seatType = ConverterUtils.GetSeatType((HandIdPlayType)handHistory.HandHistory.HandIdInfo.PlayType);
+            var seatType = HandHistories.Objects.GameDescription.SeatType.FromMaxPlayers(ggnHandHistory.MaxPlayer);
 
-            var gameDescriptor = new HandHistories.Objects.GameDescription.GameDescriptor(EnumPokerSites.GGN, gameType, limit, tableType, seatType, null);
+            var gameDescriptor = new HandHistories.Objects.GameDescription.GameDescriptor(pokerFormat, EnumPokerSites.GGN, gameType, limit,
+                tableType, seatType, tournamentDescriptor);
 
-            var dealerPos = ConverterUtils.GetDealerPos(handHistory.HandHistory.Players);
-
-            var handActions = new List<HandHistories.Objects.Actions.HandAction>();
-
-            handActions.AddRange(ConvertInitStage(handHistory.HandHistory.Players));
-
-            handActions.AddRange(ConvertActions(handHistory.HandHistory.Players, handHistory.HandHistory.HandInformation.Sequences, handHistory.HandHistory.Pots));
-
-            var playerList = ConvertPlayers(handHistory.HandHistory.Players);
-
-            HandHistories.Objects.Cards.BoardCards cards = null;
-
-            if (handHistory.HandHistory.Summary.Board != null && handHistory.HandHistory.Summary.Board.Count != 0)
+            var handHistory = new HandHistories.Objects.Hand.HandHistory(gameDescriptor)
             {
-                cards = ConvertCards(handHistory.HandHistory.Summary.Board[0]);
+                DateOfHandUtc = ggnHandHistory.StartTime,
+                HandId = ggnHandHistory.HandIdInfo.SequenceId,
+                DealerButtonPosition = ConverterUtils.GetDealerPosition(ggnHandHistory.Players),
+                NumPlayersSeated = ggnHandHistory.Players.Count,
+                TotalPot = ggnHandHistory.IsTournament ? ggnHandHistory.Summary.TotalPot : ConvertAmount(ggnHandHistory.Summary.TotalPot),
+                Rake = ConvertAmount(ggnHandHistory.Summary.Rake)
+            };
+
+            // convert table name
+            if (ggnHandHistory.IsTournament)
+            {
+                handHistory.TableName = $"{handHistory.GameDescription.Tournament.TournamentName} - Table {ggnHandHistory.NameInfo.Suffix}";
+            }
+            else
+            {
+                var tableNumber = ggnHandHistory.NameInfo.Suffix < 10 ?
+                    $"0{ggnHandHistory.NameInfo.Suffix}" :
+                    ggnHandHistory.NameInfo.Suffix.ToString();
+
+                handHistory.TableName = $"{ggnHandHistory.NameInfo.Id.Remove(0, 9)} {tableNumber}";
             }
 
-            var winner = ConverterUtils.GetWinner(handHistory.HandHistory.Players, handHistory.HandHistory.Pots);
-
-            return new HandHistories.Objects.Hand.HandHistory(gameDescriptor)
-            {
-                DateOfHandUtc = handHistory.HandHistory.StartTime,
-                HandId = handHistory.HandHistory.HandIdInfo.SequenceId,
-                DealerButtonPosition = dealerPos,
-                TableName = tableName,
-                NumPlayersSeated = handHistory.HandHistory.Players.Count,
-                TotalPot = ConvertAmount(handHistory.HandHistory.Summary.TotalPot),
-                Rake = ConvertAmount(handHistory.HandHistory.Summary.Rake),
-                HandActions = handActions,
-                Players = playerList,
-                CommunityCards = cards,
-                Hero = winner
-            };
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="handHistory"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Hand.HandHistory ConvertCashHandHistory(History handHistory)
-        {
-            var tableNumber = handHistory.NameInfo.Suffix < 10 ?
-               $"0{handHistory.NameInfo.Suffix}" :
-               handHistory.NameInfo.Suffix.ToString();
-
-            var tableName = $"{handHistory.NameInfo.Id.Remove(0, 9)} {tableNumber}";
-
-            var gameType = ConvertGameType((GameType)handHistory.GameType, (GameLimitType)handHistory.LimitType);
-
-            var limit = ConvertLimit(ConvertAmount(handHistory.SmallBlind), ConvertAmount(handHistory.BigBlind),
-                handHistory.Ante);
-
-            var tableType = ConverterUtils.GetTableType();
-            var seatType = ConverterUtils.GetSeatType((HandIdPlayType)handHistory.HandIdInfo.PlayType);
-
-            var gameDescriptor = new HandHistories.Objects.GameDescription.GameDescriptor(EnumPokerSites.GGN, gameType, limit, tableType, seatType, null);
-
-            var dealerPos = ConverterUtils.GetDealerPos(handHistory.Players);
-
+            // convert actions
             var handActions = new List<HandHistories.Objects.Actions.HandAction>();
+            handActions.AddRange(ConvertInitStage(ggnHandHistory.Players, ggnHandHistory.IsTournament));
+            handActions.AddRange(ConvertActions(ggnHandHistory.Players, ggnHandHistory.HandInformation.Sequences, ggnHandHistory.Pots, ggnHandHistory.IsTournament));
+            handHistory.HandActions = handActions;
 
-            handActions.AddRange(ConvertInitStage(handHistory.Players));
-            handActions.AddRange(ConvertActions(handHistory.Players, handHistory.HandInformation.Sequences, handHistory.Pots));
+            // convert players
+            handHistory.Players = ConvertPlayers(ggnHandHistory.Players, ggnHandHistory.IsTournament);
 
-            var playerList = ConvertPlayers(handHistory.Players);
-
-            HandHistories.Objects.Cards.BoardCards cards = null;
-
-            if (handHistory.Summary.Board != null && handHistory.Summary.Board.Count != 0)
+            // convert community cards
+            if (ggnHandHistory.Summary.Board != null && ggnHandHistory.Summary.Board.Count != 0)
             {
-                cards = ConvertCards(handHistory.Summary.Board[0]);
+                handHistory.CommunityCards = ConvertCards(ggnHandHistory.Summary.Board[0]);
             }
 
-            var winner = ConverterUtils.GetWinner(handHistory.Players, handHistory.Pots);
+            // calculate and update some data which aren't presented in original format
+            AdjustHandHistory(handHistory);
 
-            return new HandHistories.Objects.Hand.HandHistory(gameDescriptor)
-            {
-                DateOfHandUtc = handHistory.StartTime,
-                HandId = handHistory.HandIdInfo.SequenceId,
-                DealerButtonPosition = dealerPos,
-                TableName = tableName,
-                NumPlayersSeated = handHistory.Players.Count,
-                TotalPot = ConvertAmount(handHistory.Summary.TotalPot),
-                Rake = ConvertAmount(handHistory.Summary.Rake),
-                HandActions = handActions,
-                Players = playerList,
-                CommunityCards = cards,
-                Hero = winner
-            };
+            return handHistory;
         }
 
-        /// <summary>
-        /// </summary>
-        /// <param name="handHistory"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Hand.HandHistory ConvertTournamentHandHistory(HandHistoryInformation handHistory)
+        private static void AdjustHandHistory(HandHistory handHistory)
         {
-            var tableName = $"{handHistory.HandHistory.TourneyBrandName} {ConvertAmount(handHistory.HandHistory.TourneyBuyIn)}";
-
-            var gameType = ConvertGameType((GameType)handHistory.HandHistory.GameType, (GameLimitType)handHistory.HandHistory.LimitType);
-
-            var limit = ConvertLimit(ConvertAmount(handHistory.HandHistory.SmallBlind),
-                ConvertAmount(handHistory.HandHistory.BigBlind),
-                handHistory.HandHistory.Ante);
-
-            var tableType = ConverterUtils.GetTableType();
-            var seatType = ConverterUtils.GetSeatType((HandIdPlayType)handHistory.HandHistory.HandIdInfo.PlayType);
-
-            var gameDescriptor = new HandHistories.Objects.GameDescription.GameDescriptor(EnumPokerSites.GGN, gameType, limit, tableType, seatType, null);
-
-            var dealerPos = ConverterUtils.GetDealerPos(handHistory.HandHistory.Players);
-
-            var handActions = new List<HandHistories.Objects.Actions.HandAction>();
-
-            handActions.AddRange(ConvertInitStage(handHistory.HandHistory.Players));
-
-            handActions.AddRange(ConvertActions(handHistory.HandHistory.Players,
-                handHistory.HandHistory.HandInformation.Sequences, handHistory.HandHistory.Pots));
-
-            var playerList = ConvertPlayers(handHistory.HandHistory.Players);
-
-            HandHistories.Objects.Cards.BoardCards cards = null;
-
-            if (handHistory.HandHistory.Summary.Board != null && handHistory.HandHistory.Summary.Board.Count != 0)
+            // adjust player bets
+            foreach (var player in handHistory.Players)
             {
-                cards = ConvertCards(handHistory.HandHistory.Summary.Board[0]);
+                var playerActions = handHistory.HandActions.Where(x => x.PlayerName.Equals(player.PlayerName));
+
+                if (playerActions != null && playerActions.Any())
+                {
+                    player.Bet = Math.Abs(playerActions.Where(x => x.Amount < 0).Sum(x => x.Amount));
+                }
             }
-
-            var winner = ConverterUtils.GetWinner(handHistory.HandHistory.Players, handHistory.HandHistory.Pots);
-
-            return new HandHistories.Objects.Hand.HandHistory(gameDescriptor)
-            {
-                DateOfHandUtc = handHistory.HandHistory.StartTime,
-                HandId = handHistory.HandHistory.HandIdInfo.SequenceId,
-                DealerButtonPosition = dealerPos,
-                TableName = tableName,
-                NumPlayersSeated = handHistory.HandHistory.Players.Count,
-                TotalPot = ConvertAmount(handHistory.HandHistory.Summary.TotalPot),
-                Rake = ConvertAmount(handHistory.HandHistory.Summary.Rake),
-                HandActions = handActions,
-                Players = playerList,
-                CommunityCards = cards,
-                Hero = winner
-            };
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="handHistory"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Hand.HandHistory ConvertTournamentHandHistory(History handHistory)
-        {
-            var tableName = $"{handHistory.TourneyBrandName} {handHistory.NameInfo.Suffix}";
-
-            // PokerFormat pokerFormat = GetHandHistoryFormat((Enums.HandIdPlayType)handHistory.CashGameHandHistory.HandIdInfo.PlayType);
-
-            var gameType = ConvertGameType((GameType)handHistory.GameType, (GameLimitType)handHistory.LimitType);
-
-            var limit = ConvertLimit(ConvertAmount(handHistory.SmallBlind), ConvertAmount(handHistory.BigBlind),
-                handHistory.Ante);
-
-            var tableType = ConverterUtils.GetTableType();
-            var seatType = ConverterUtils.GetSeatType((HandIdPlayType)handHistory.HandIdInfo.PlayType);
-
-            var gameDescriptor = new HandHistories.Objects.GameDescription.GameDescriptor(EnumPokerSites.GGN, gameType, limit, tableType, seatType, null);
-
-            var dealerPos = ConverterUtils.GetDealerPos(handHistory.Players);
-
-            var handActions = new List<HandHistories.Objects.Actions.HandAction>();
-
-            handActions.AddRange(ConvertInitStage(handHistory.Players));
-            handActions.AddRange(ConvertActions(handHistory.Players,
-                handHistory.HandInformation.Sequences, handHistory.Pots));
-
-            var playerList = ConvertPlayers(handHistory.Players);
-
-            HandHistories.Objects.Cards.BoardCards cards = null;
-
-            if (handHistory.Summary.Board != null && handHistory.Summary.Board.Count != 0)
-            {
-                cards = ConvertCards(handHistory.Summary.Board[0]);
-            }
-
-            var winner = ConverterUtils.GetWinner(handHistory.Players, handHistory.Pots);
-
-            return new HandHistories.Objects.Hand.HandHistory(gameDescriptor)
-            {
-                DateOfHandUtc = handHistory.StartTime,
-                HandId = handHistory.HandIdInfo.SequenceId,
-                DealerButtonPosition = dealerPos,
-                TableName = tableName,
-                NumPlayersSeated = handHistory.Players.Count,
-                TotalPot = ConvertAmount(handHistory.Summary.TotalPot),
-                Rake = ConvertAmount(handHistory.Summary.Rake),
-                HandActions = handActions,
-                Players = playerList,
-                CommunityCards = cards,
-                Hero = winner
-            };
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="histories"></param>
-        /// <returns></returns>
-        public static List<HandHistories.Objects.Hand.HandHistory> ConvertTournamentHandHistories(HandHistoriesInformation histories)
-        {
-            return histories.Histories.Select(ConvertTournamentHandHistory).ToList();
         }
 
         /// <summary>
         /// </summary>
         /// <param name="handHistories"></param>
         /// <returns></returns>
-        public static List<HandHistories.Objects.Hand.HandHistory> ConvertCashHandHistories(HandHistoriesInformation handHistories)
+        public static List<HandHistories.Objects.Hand.HandHistory> ConvertHandHistories(HandHistoriesInformation handHistories, IGGNCacheService cacheService)
         {
-            return handHistories.Histories.Select(ConvertCashHandHistory).ToList();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="tournaments"></param>
-        /// <returns></returns>
-        public static List<HandHistories.Objects.GameDescription.TournamentDescriptor> ConvertTournamentDescriptors(IList<TournamentInformation> tournaments)
-        {
-            return tournaments.Select(ConvertTournamentDescriptor).ToList();
+            return handHistories.Histories.Select(x => ConvertHandHistory(x, cacheService)).ToList();
         }
 
         /// <summary>
@@ -287,15 +164,15 @@ namespace DriveHUD.Importers.GGNetwork
                 TournamentId = tournament.Id,
                 TournamentInGameId = tournament.Id,
                 TournamentName = tournament.Name,
-                BuyIn = HandHistories.Objects.GameDescription.Buyin.FromBuyinRake(0, ConvertAmount(tournament.PrizeSummary.TotalPrizeAmount),
+                BuyIn = HandHistories.Objects.GameDescription.Buyin.FromBuyinRake(ConvertAmount(tournament.BuyIn + tournament.BountyInformation.BountyAmount),
+                    ConvertAmount(tournament.EntranceFee),
                     HandHistories.Objects.GameDescription.Currency.USD),
                 Bounty = ConvertAmount(tournament.BountyInformation.BountyAmount),
                 Rebuy = ConvertAmount(tournament.RebuyAmount),
                 Addon = ConvertAmount(tournament.AddOnAmount),
-                Winning = ConvertAmount(tournament.PrizeSummary.TotalPrizeAmount),
                 TotalPlayers = (short)tournament.RegisteredPlayers,
                 StartDate = tournament.LifeCycleData.StartTime,
-                Speed = HandHistories.Objects.GameDescription.TournamentSpeed.Regular
+                Speed = ParserUtils.ParseTournamentSpeed(tournament.Name)
             };
         }
 
@@ -438,55 +315,61 @@ namespace DriveHUD.Importers.GGNetwork
         /// <param name="state"></param>
         /// <param name="sidePot"></param>
         /// <returns></returns>
-        public static HandHistories.Objects.Actions.HandAction ConvertHandAction(string nickName, Model.Action action, int state, bool sidePot = false)
+        public static HandHistories.Objects.Actions.HandAction ConvertHandAction(string nickName, Model.Action action, int state, bool sidePot, bool isTournament)
         {
             try
             {
-                var actionType = HandHistories.Objects.Actions.HandActionType.UNKNOWN;
-
-                switch ((TableActionType)action.TableActionType)
+                if (action.TableActionType != (int)TableActionType.Turn)
                 {
-                    case TableActionType.Unknown:
-                        switch ((AfterAction)action.AfterAction)
-                        {
-                            case AfterAction.Unknown:
-                                actionType = HandHistories.Objects.Actions.HandActionType.UNKNOWN;
-                                break;
-                            case AfterAction.UncalledBet:
-                                actionType = HandHistories.Objects.Actions.HandActionType.UNCALLED_BET;
-                                break;
-                            case AfterAction.Show:
-                                actionType = HandHistories.Objects.Actions.HandActionType.SHOW;
-                                break;
-                            case AfterAction.Collect:
-                                actionType = sidePot ?
-                                    HandHistories.Objects.Actions.HandActionType.WINS_SIDE_POT :
-                                    HandHistories.Objects.Actions.HandActionType.WINS;
-                                break;
-                            default:
-                                throw new ArgumentOutOfRangeException();
-                        }
-
-                        break;
-                    case TableActionType.Turn:
-                        {
-                            actionType = action.IsAllIn
-                                ? HandHistories.Objects.Actions.HandActionType.ALL_IN
-                                : ConvertActionType((ActionType)action.TurnActionType);
-                            break;
-                        }
-                    default:
-                        break;
+                    return null;
                 }
 
                 var street = ConvertState((RoundType)state);
+
+                var actionType = HandHistories.Objects.Actions.HandActionType.UNKNOWN;
+
+                // normal action
+                if (action.TurnActionType != (int)ActionType.Unknown)
+                {
+                    actionType = ConvertActionType((ActionType)action.TurnActionType);
+
+                    if (action.IsAllIn)
+                    {
+                        return new HandHistories.Objects.Actions.AllInAction(nickName,
+                            isTournament ? action.ActionAmount : ConvertAmount(action.ActionAmount),
+                            street,
+                            actionType == HandHistories.Objects.Actions.HandActionType.RAISE,
+                            actionType);
+                    }
+                }
+                else
+                {
+                    switch ((AfterAction)action.AfterAction)
+                    {
+                        case AfterAction.UncalledBet:
+                            actionType = HandHistories.Objects.Actions.HandActionType.UNCALLED_BET;
+                            break;
+                        case AfterAction.Show:
+                            actionType = HandHistories.Objects.Actions.HandActionType.SHOW;
+                            break;
+                        case AfterAction.Collect:
+                            actionType = sidePot ?
+                                HandHistories.Objects.Actions.HandActionType.WINS_SIDE_POT :
+                                HandHistories.Objects.Actions.HandActionType.WINS;
+                            break;
+                        default:
+                            actionType = HandHistories.Objects.Actions.HandActionType.UNKNOWN;
+                            break;
+                    }
+                }
 
                 if (actionType == HandHistories.Objects.Actions.HandActionType.UNKNOWN)
                 {
                     return null;
                 }
 
-                return new HandHistories.Objects.Actions.HandAction(nickName, actionType, ConvertAmount(action.ActionAmount),
+                return new HandHistories.Objects.Actions.HandAction(nickName, actionType,
+                    isTournament ? action.ActionAmount : ConvertAmount(action.ActionAmount),
                     street, action.IsAllIn);
             }
             catch (Exception e)
@@ -501,7 +384,7 @@ namespace DriveHUD.Importers.GGNetwork
         /// <param name="sequences"></param>
         /// <param name="pots"></param>
         /// <returns></returns>
-        public static List<HandHistories.Objects.Actions.HandAction> ConvertActions(IList<Player> players, IList<Sequence> sequences, IList<Pot> pots)
+        public static List<HandHistories.Objects.Actions.HandAction> ConvertActions(IList<Player> players, IList<Sequence> sequences, IList<Pot> pots, bool isTournament)
         {
             try
             {
@@ -515,7 +398,7 @@ namespace DriveHUD.Importers.GGNetwork
 
                         var winsSidePot = PlayerUtils.IsWinsSidePot(player, pots);
 
-                        var handAction = ConvertHandAction(player?.NickName, action, sequence.State, winsSidePot);
+                        var handAction = ConvertHandAction(player?.NickName, action, sequence.State, winsSidePot, isTournament);
 
                         if (handAction == null)
                         {
@@ -627,16 +510,18 @@ namespace DriveHUD.Importers.GGNetwork
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
-        public static HandHistories.Objects.Players.Player ConvertPlayer(Player player)
+        public static HandHistories.Objects.Players.Player ConvertPlayer(Player player, bool isTournament)
         {
-            var startingStack = ConvertAmount(player.InitialBalance);
+            var startingStack = isTournament ? player.InitialBalance : ConvertAmount(player.InitialBalance);
             var seatNumber = player.SeatIndex;
 
             var winAmount = 0m;
 
             if (player.IsWinner)
             {
-                winAmount = ConvertAmount(player.TotalEarnedAmount);
+                winAmount = isTournament ?
+                    (player.TotalEarnedAmount + player.ContributedPot) :
+                    ConvertAmount(player.TotalEarnedAmount + player.ContributedPot);
             }
 
             return new HandHistories.Objects.Players.Player
@@ -654,9 +539,9 @@ namespace DriveHUD.Importers.GGNetwork
         /// </summary>
         /// <param name="players"></param>
         /// <returns></returns>
-        public static HandHistories.Objects.Players.PlayerList ConvertPlayers(IList<Player> players)
+        public static HandHistories.Objects.Players.PlayerList ConvertPlayers(IList<Player> players, bool isTournament)
         {
-            return new HandHistories.Objects.Players.PlayerList(players.Select(ConvertPlayer).ToList());
+            return new HandHistories.Objects.Players.PlayerList(players.Select(x => ConvertPlayer(x, isTournament)).ToList());
         }
 
         /// <summary>
@@ -670,64 +555,15 @@ namespace DriveHUD.Importers.GGNetwork
 
         /// <summary>
         /// </summary>
-        /// <param name="player"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Actions.HandAction ConvertInit2Action(Player player)
-        {
-            try
-            {
-                if (player.PostedSmallBlind > 0 && player.PostedBigBlind == 0)
-                {
-                    return new HandHistories.Objects.Actions.HandAction(player.NickName,
-                        HandHistories.Objects.Actions.HandActionType.SMALL_BLIND, ConvertAmount(player.PostedSmallBlind),
-                        HandHistories.Objects.Cards.Street.Preflop);
-                }
-
-                if (player.PostedBigBlind > 0 && player.PostedSmallBlind == 0)
-                {
-                    return new HandHistories.Objects.Actions.HandAction(player.NickName,
-                        HandHistories.Objects.Actions.HandActionType.BIG_BLIND, ConvertAmount(player.PostedBigBlind),
-                        HandHistories.Objects.Cards.Street.Preflop);
-                }
-
-                if (player.PostedSmallBlind > 0 && player.PostedBigBlind > 0)
-                {
-                    return new HandHistories.Objects.Actions.HandAction(player.NickName,
-                        HandHistories.Objects.Actions.HandActionType.POSTS, ConvertAmount(player.PostedSmallBlind + player.PostedBigBlind),
-                        HandHistories.Objects.Cards.Street.Preflop);
-                }
-
-                if (player.PostedAnte > 0)
-                {
-                    return new HandHistories.Objects.Actions.HandAction(player.NickName,
-                        HandHistories.Objects.Actions.HandActionType.ANTE, ConvertAmount(player.PostedAnte),
-                        HandHistories.Objects.Cards.Street.Preflop);
-                }
-
-                if (player.PostedStraddle > 0)
-                {
-                    return new HandHistories.Objects.Actions.HandAction(player.NickName,
-                        HandHistories.Objects.Actions.HandActionType.RAISE, ConvertAmount(player.PostedStraddle),
-                        HandHistories.Objects.Cards.Street.Preflop);
-                }
-
-                return null;
-            }
-            catch (Exception e)
-            {
-                throw new DHInternalException(new NonLocalizableString("Could not convert initial actions."), e);
-            }
-        }
-
-        /// <summary>
-        /// </summary>
         /// <param name="players"></param>
         /// <returns></returns>
-        public static List<HandHistories.Objects.Actions.HandAction> ConvertInitStage(IList<Player> players)
+        public static List<HandHistories.Objects.Actions.HandAction> ConvertInitStage(IList<Player> players, bool isTournament)
         {
             try
             {
-                var initStageActions = new List<HandHistories.Objects.Actions.HandAction>();
+                var anteActions = new List<HandHistories.Objects.Actions.HandAction>();
+                var blindActions = new List<HandHistories.Objects.Actions.HandAction>();
+                var straddleActions = new List<HandHistories.Objects.Actions.HandAction>();
 
                 foreach (var player in players)
                 {
@@ -736,81 +572,52 @@ namespace DriveHUD.Importers.GGNetwork
                         continue;
                     }
 
-                    var initStageAction = ConvertInit2Action(player);
-
-                    if (initStageAction == null)
+                    if (player.PostedSmallBlind > 0 && player.PostedBigBlind == 0)
                     {
-                        continue;
+                        blindActions.Insert(0, new HandHistories.Objects.Actions.HandAction(player.NickName,
+                            HandHistories.Objects.Actions.HandActionType.SMALL_BLIND,
+                            isTournament ? player.PostedSmallBlind : ConvertAmount(player.PostedSmallBlind),
+                            HandHistories.Objects.Cards.Street.Preflop));
                     }
 
-                    initStageActions.Add(initStageAction);
+                    if (player.PostedBigBlind > 0 && player.PostedSmallBlind == 0)
+                    {
+                        blindActions.Add(new HandHistories.Objects.Actions.HandAction(player.NickName,
+                            HandHistories.Objects.Actions.HandActionType.BIG_BLIND,
+                            isTournament ? player.PostedBigBlind : ConvertAmount(player.PostedBigBlind),
+                            HandHistories.Objects.Cards.Street.Preflop));
+                    }
+
+                    if (player.PostedSmallBlind > 0 && player.PostedBigBlind > 0)
+                    {
+                        blindActions.Add(new HandHistories.Objects.Actions.HandAction(player.NickName,
+                            HandHistories.Objects.Actions.HandActionType.POSTS,
+                            isTournament ? (player.PostedSmallBlind + player.PostedBigBlind) : ConvertAmount(player.PostedSmallBlind + player.PostedBigBlind),
+                            HandHistories.Objects.Cards.Street.Preflop));
+                    }
+
+                    if (player.PostedAnte > 0)
+                    {
+                        anteActions.Add(new HandHistories.Objects.Actions.HandAction(player.NickName,
+                            HandHistories.Objects.Actions.HandActionType.ANTE,
+                            isTournament ? player.PostedAnte : ConvertAmount(player.PostedAnte),
+                            HandHistories.Objects.Cards.Street.Preflop));
+                    }
+
+                    if (player.PostedStraddle > 0)
+                    {
+                        straddleActions.Add(new HandHistories.Objects.Actions.HandAction(player.NickName,
+                            HandHistories.Objects.Actions.HandActionType.RAISE,
+                            isTournament ? player.PostedStraddle : ConvertAmount(player.PostedStraddle),
+                            HandHistories.Objects.Cards.Street.Preflop));
+                    }
                 }
 
-                return initStageActions;
+                return anteActions.Concat(blindActions).Concat(straddleActions).ToList();
             }
             catch (Exception e)
             {
                 throw new DHInternalException(new NonLocalizableString("Could not convert initial stage."), e);
-            }
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="playType"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.GameDescription.SeatType.SeatTypeEnum ConvertSeatType(HandIdPlayType playType)
-        {
-            try
-            {
-                switch (playType)
-                {
-                    case HandIdPlayType.Unknown:
-                        return HandHistories.Objects.GameDescription.SeatType.SeatTypeEnum.Unknown;
-                    case HandIdPlayType.Cash:
-                        return HandHistories.Objects.GameDescription.SeatType.SeatTypeEnum._6Max;
-                    case HandIdPlayType.SitAndGo:
-                    case HandIdPlayType.Tournament:
-                        return HandHistories.Objects.GameDescription.SeatType.SeatTypeEnum._FullRing_9Handed;
-                    case HandIdPlayType.MegaSpin:
-                    case HandIdPlayType.FortuneSpin:
-                        break;
-                }
-                return HandHistories.Objects.GameDescription.SeatType.SeatTypeEnum.Unknown;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="playType"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.GameDescription.PokerFormat GetHandHistoryFormat(HandIdPlayType playType)
-        {
-            try
-            {
-                switch (playType)
-                {
-                    case HandIdPlayType.Cash:
-                        return HandHistories.Objects.GameDescription.PokerFormat.CashGame;
-                    case HandIdPlayType.SitAndGo:
-                    case HandIdPlayType.Tournament:
-                        return HandHistories.Objects.GameDescription.PokerFormat.Tournament;
-                    case HandIdPlayType.MegaSpin:
-                        break;
-                    case HandIdPlayType.FortuneSpin:
-                        break;
-                }
-
-                return HandHistories.Objects.GameDescription.PokerFormat.Unknown;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
             }
         }
     }

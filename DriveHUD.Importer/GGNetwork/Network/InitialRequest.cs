@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistoriesInformation.cs" company="Ace Poker Solutions">
+// <copyright file="InitialRequest.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.GGNetwork.Model;
-using System.Collections.Generic;
-
-namespace DriveHUD.Importers.GGNetwork
+namespace DriveHUD.Importers.GGNetwork.Network
 {
-    internal class HandHistoriesInformation
-    {
-        public IList<GGNHandHistory> Histories { get; set; }
+    internal class InitialRequest
+    {     
+        public string Token { get; set; }
 
-        public string UserId { get; set; }
+        public string BrandId { get; set; }
 
-        public string TableId { get; set; }
+        public string ProtocolVersion { get; set; }
+
+        public string HardwareSerialNumber { get; set; }
+
+        public string MacAddress { get; set; }
+
+        public int UserDeviceType { get; set; }
+
+        public int UserOsType { get; set; }
     }
 }

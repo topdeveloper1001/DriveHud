@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistoriesInformation.cs" company="Ace Poker Solutions">
+// <copyright file="IGGNTournamentReader.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -12,15 +12,12 @@
 
 using DriveHUD.Importers.GGNetwork.Model;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.GGNetwork
 {
-    internal class HandHistoriesInformation
+    internal interface IGGNTournamentReader
     {
-        public IList<GGNHandHistory> Histories { get; set; }
-
-        public string UserId { get; set; }
-
-        public string TableId { get; set; }
+        Task<IEnumerable<TournamentInformation>> ReadAllTournamentsAsync();
     }
 }

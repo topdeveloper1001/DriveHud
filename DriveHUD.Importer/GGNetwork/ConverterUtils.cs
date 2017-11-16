@@ -20,38 +20,7 @@ using System.Linq;
 namespace DriveHUD.Importers.GGNetwork
 {
     internal class ConverterUtils
-    {
-        /// <summary>
-        /// </summary>
-        /// <param name="players"></param>
-        /// <param name="pots"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.Players.Player GetWinner(IList<Player> players, IList<Pot> pots)
-        {
-            try
-            {
-                var mainPot = pots.Max(p => p.Amount);
-
-                foreach (var pot in pots)
-                {
-                    if (pot.Amount != mainPot)
-                    {
-                        continue;
-                    }
-
-                    var winner = players.FirstOrDefault(p => p.Id == pot.Winners[0]);
-
-                    return GGNConverter.ConvertPlayer(winner);
-                }
-
-                return null;
-            }
-            catch (Exception e)
-            {
-                throw new DHInternalException(new NonLocalizableString("Could not get winner."), e);
-            }
-        }
-
+    {       
         /// <summary>        
         /// </summary>
         /// <param name="cardKind"></param>
@@ -86,7 +55,7 @@ namespace DriveHUD.Importers.GGNetwork
         /// </summary>
         /// <param name="players"></param>
         /// <returns></returns>
-        public static int GetDealerPos(IList<Player> players)
+        public static int GetDealerPosition(IList<Player> players)
         {
             foreach (var player in players)
             {
@@ -106,9 +75,12 @@ namespace DriveHUD.Importers.GGNetwork
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<HandHistories.Objects.GameDescription.TableTypeDescription> GetTableTypeDescription()
+        private static IEnumerable<HandHistories.Objects.GameDescription.TableTypeDescription> GetTableTypeDescription()
         {
-            return new List<HandHistories.Objects.GameDescription.TableTypeDescription> { HandHistories.Objects.GameDescription.TableTypeDescription.Regular }.AsEnumerable();
+            return new List<HandHistories.Objects.GameDescription.TableTypeDescription>
+            {
+                HandHistories.Objects.GameDescription.TableTypeDescription.Regular
+            };
         }
 
         /// <summary>
@@ -117,36 +89,6 @@ namespace DriveHUD.Importers.GGNetwork
         public static HandHistories.Objects.GameDescription.TableType GetTableType()
         {
             return new HandHistories.Objects.GameDescription.TableType(GetTableTypeDescription());
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="playType"></param>
-        /// <returns></returns>
-        public static HandHistories.Objects.GameDescription.SeatType GetSeatType(HandIdPlayType playType)
-        {
-            try
-            {
-                switch (playType)
-                {
-                    case HandIdPlayType.Unknown:
-                        break;
-                    case HandIdPlayType.Cash:
-                        return HandHistories.Objects.GameDescription.SeatType.FromMaxPlayers(6);
-                    case HandIdPlayType.SitAndGo:
-                    case HandIdPlayType.Tournament:
-                        return HandHistories.Objects.GameDescription.SeatType.FromMaxPlayers(9);
-                    case HandIdPlayType.MegaSpin:
-                    case HandIdPlayType.FortuneSpin:
-                        break;
-                }
-
-                return HandHistories.Objects.GameDescription.SeatType.FromMaxPlayers(0);
-            }
-            catch (Exception e)
-            {
-                throw new DHInternalException(new NonLocalizableString("Could not get seat type."), e);
-            }
-        }
+        }       
     }
 }

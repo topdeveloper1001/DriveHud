@@ -426,7 +426,7 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
 
-                gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+                gameInfo.ResetPlayersCacheInfo();
 
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
@@ -466,7 +466,7 @@ namespace DriveHUD.Importers
                             GameFormat = gameInfo.GameFormat
                         };
 
-                        gameInfo.PlayersCacheInfo.Add(cacheInfo);
+                        gameInfo.AddToPlayersCacheInfo(cacheInfo);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -624,6 +624,7 @@ namespace DriveHUD.Importers
                 Filename = processingFile != null ? processingFile.FullName : string.Empty,
                 Tourneynumber = parsedHand.GameDescription.Tournament.TournamentId,
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
+                Tourneysize = parsedHand.GameDescription.Tournament.TotalPlayers,
                 Tourneytagscsv = string.Empty,
                 SiteId = parsingResult.HandHistory.PokersiteId,
                 SpeedtypeId = gameInfo.TournamentSpeed.HasValue ? (short)gameInfo.TournamentSpeed.Value : (short)parsedHand.GameDescription.Tournament.Speed,
@@ -794,8 +795,14 @@ namespace DriveHUD.Importers
                 return;
             }
 
+            var tourneySize = tournaments.Select(x => x.Tourneysize).Max();
             var totalPlayers = tournaments.Select(x => x.Player.PlayerId).Count();
 
+            if (tourneySize > totalPlayers)
+            {
+                totalPlayers = tourneySize;
+            }
+      
             // max players among all new hands and existing
             var tableSize = parsingResult.Select(x => (short)x.Source.GameDescription.SeatType.MaxPlayers).Concat(tournaments.Select(x => x.Tablesize)).Max();
 

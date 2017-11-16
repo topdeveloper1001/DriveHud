@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2017-11-15T16:48:53.23Z</DateOfHandUtc>
+  <HandId>117955831</HandId>
+  <DealerButtonPosition>5</DealerButtonPosition>
+  <TableName>Bounty Hunters $2.10 - Table 17</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>GGN</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>USD</Currency>
+      <SmallBlind>1800</SmallBlind>
+      <BigBlind>3600</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>360</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableTypeDescriptors>
+      <TableTypeDescription>Regular</TableTypeDescription>
+    </TableTypeDescriptors>
+    <Tournament>
+      <TournamentId>0000000e-0000-0000-0000-0000f9fd1800</TournamentId>
+      <TournamentInGameId>0000000e-0000-0000-0000-0000f9fd1800</TournamentInGameId>
+      <TournamentName>Bounty Hunters $2.10</TournamentName>
+      <BuyIn>
+        <Currency>USD</Currency>
+        <PrizePoolValue>2</PrizePoolValue>
+        <Rake>0.1</Rake>
+        <IsKnockout>false</IsKnockout>
+        <KnockoutValue>0</KnockoutValue>
+      </BuyIn>
+      <Bounty>1</Bounty>
+      <Rebuy>0</Rebuy>
+      <Addon>0</Addon>
+      <Winning>0</Winning>
+      <FinishPosition>0</FinishPosition>
+      <TotalPlayers>128</TotalPlayers>
+      <StartDate>2017-11-15T15:00:00Z</StartDate>
+      <Speed>Regular</Speed>
+    </Tournament>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>7</NumPlayersSeated>
+  <TotalPot>27720</TotalPot>
+  <Rake>0</Rake>
+  <Actions>
+    <HandAction PlayerName="silviuACE" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="silver_eyes" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Moschino" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Hoadaica6789" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="liwen1314006" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="luntikkk" HandActionType="ANTE" Amount="-360" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="liwen1314006" HandActionType="SMALL_BLIND" Amount="-1800" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="BIG_BLIND" Amount="-3600" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="luntikkk" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="silviuACE" HandActionType="CALL" Amount="-3600" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="silver_eyes" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Moschino" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Hoadaica6789" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="liwen1314006" HandActionType="CALL" Amount="-1800" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="liwen1314006" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="silviuACE" HandActionType="BET" Amount="-7200" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="liwen1314006" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="MatzeM21" HandActionType="ALL_IN" Amount="-114246" Street="Flop" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="silviuACE" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="UNCALLED_BET" Amount="107046" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="MatzeM21" HandActionType="WINS" Amount="27720" Street="Summary" IsAllIn="false" />
+  </Actions>
+  <CommunityCards>5d7h8s</CommunityCards>
+  <Players>
+    <Player PlayerName="silviuACE" StartingStack="34620" Bet="11160" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="silver_eyes" StartingStack="37584" Bet="360" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Moschino" StartingStack="36421" Bet="360" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Hoadaica6789" StartingStack="118001" Bet="360" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="liwen1314006" StartingStack="68374" Bet="3960" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="MatzeM21" StartingStack="118206" Bet="118206" Win="27720" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="luntikkk" StartingStack="43213" Bet="360" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

@@ -23,6 +23,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -42,6 +43,8 @@ namespace DriveHUD.Importers.GGNetwork
         private const string processName = "GGNet";
 
         private ProxyServer proxyServer;
+
+        private IGGNCacheService cacheService;
 
         protected override EnumPokerSites Site
         {
@@ -63,6 +66,13 @@ namespace DriveHUD.Importers.GGNetwork
         {
             try
             {
+#if DEBUG
+                if (!Directory.Exists("GGNHands"))
+                {
+                    Directory.CreateDirectory("GGNHands");
+                }
+#endif
+
                 // get settings
                 var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
@@ -70,6 +80,14 @@ namespace DriveHUD.Importers.GGNetwork
                 {
                     IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
                 }
+
+                if (cacheService == null)
+                {
+                    cacheService = ServiceLocator.Current.GetInstance<IGGNCacheService>();
+                }
+
+                // refresh cache data
+                cacheService.RefreshAsync().Wait();
 
                 // install certificate
                 var certificate = InitializeCertificate();
@@ -90,17 +108,12 @@ namespace DriveHUD.Importers.GGNetwork
                     IncludedHttpsHostNameRegex = GetHttpsHostNames()
                 };
 
-                if (IsAdvancedLogEnabled)
-                {
-                    proxyServer.ExceptionFunc = ex => LogProvider.Log.Error(this, $"Proxy server returned the error.", ex);
-                }
-
                 proxyServer.AddEndPoint(endPoint);
                 proxyServer.BeforeRequest += OnProxyServerBeforeRequest;
 
                 // start proxy
                 proxyServer.Start();
-                proxyServer.SetAsSystemProxy(endPoint, ProxyProtocolType.AllHttp);
+                proxyServer.SetAsSystemProxy(endPoint, ProxyProtocolType.AllHttp);               
             }
             catch (Exception e)
             {
@@ -191,6 +204,32 @@ namespace DriveHUD.Importers.GGNetwork
                 return false;
             }
 
+            if (parsingResult.Source.GameDescription.IsTournament)
+            {
+                var colonIndex = title.IndexOf(':');
+                var lastHyphenIndex = title.LastIndexOf('-');
+
+                if (colonIndex <= 0 || lastHyphenIndex <= 0)
+                {
+                    return false;
+                }
+
+                var tournamentName = title.Substring(0, colonIndex - 1).Replace("undefined", string.Empty).Trim();
+                var tableNumber = title.Substring(lastHyphenIndex).Trim();
+
+                var titleToCompare = $"{tournamentName} {tableNumber}";
+
+                var result = titleToCompare.Equals(parsingResult.Source.TableName, StringComparison.OrdinalIgnoreCase);
+
+                if (!result)
+                {
+                    var tableName = GGNUtils.ReplaceMoneyWithChipsInTitle(parsingResult.Source.TableName);
+                    result = titleToCompare.Equals(tableName, StringComparison.OrdinalIgnoreCase);
+                }
+
+                return result;
+            }
+
             return title.Contains(parsingResult.Source.TableName);
         }
 
@@ -231,77 +270,113 @@ namespace DriveHUD.Importers.GGNetwork
 
                 var dataType = GGNUtils.GetDataType(jsonStr);
 
-                switch (dataType)
-                {
-                    case GGNDataType.CashGameHandHistory:
-                        {
-                            var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
-
-                            if (handHistoryInfo?.HandHistory == null)
-                            {
-                                return;
-                            }
-
-                            var handHistory = GGNConverter.ConvertCashHandHistory(handHistoryInfo);
-
-                            ProcessHands(new[] { handHistory });
-
-                            break;
-                        }
-                    case GGNDataType.CashGameHandHistories:
-                        {
-                            var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
-
-                            if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
-                            {
-                                return;
-                            }
-
-                            var handHistories = GGNConverter.ConvertCashHandHistories(handHistoriesInfo);
-
-                            ProcessHands(handHistories);
-
-                            break;
-                        }
-                    case GGNDataType.TourneyHandHistory:
-                        {
-                            var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
-
-                            if (handHistoryInfo?.HandHistory == null)
-                            {
-                                return;
-                            }
-
-                            var handHistory = GGNConverter.ConvertTournamentHandHistory(handHistoryInfo);
-
-                            break;
-                        }
-                    case GGNDataType.TourneyHandHistories:
-                        {
-                            var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
-
-                            if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
-                            {
-                                return;
-                            }
-
-                            var handHistories = GGNConverter.ConvertTournamentHandHistories(handHistoriesInfo);
-
-                            break;
-                        }
-                    case GGNDataType.TourneyInfo:
-                        {
-                            break;
-                        }
-                    case GGNDataType.Unknown:
-                        break;
-                }
-
+                ProcessJsonData(jsonStr, dataType);
             }
             catch (Exception ex)
             {
                 LogProvider.Log.Error(this, $"{SiteString} data couldn't be parsed", ex);
             }
+        }
+
+        /// <summary>
+        /// Processes json data
+        /// </summary>
+        /// <param name="jsonStr"></param>
+        protected void ProcessJsonData(string jsonStr, GGNDataType dataType)
+        {
+            Task.Run(() =>
+            {
+                try
+                {
+                    switch (dataType)
+                    {
+                        case GGNDataType.CashGameHandHistory:
+                            {
+                                var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
+
+                                if (handHistoryInfo?.HandHistory == null)
+                                {
+                                    return;
+                                }
+
+                                var handHistory = GGNConverter.ConvertHandHistory(handHistoryInfo.HandHistory, cacheService);
+
+#if DEBUG
+
+                                File.WriteAllText($"GGNHands\\hand-{handHistory.HandId}.json", jsonStr);
+                                File.WriteAllText($"GGNHands\\hand-{handHistory.HandId}.xml", SerializationHelper.SerializeObject(handHistory));
+
+#endif
+
+                                ProcessHands(new[] { handHistory });
+
+                                break;
+                            }
+                        case GGNDataType.CashGameHandHistories:
+                            {
+                                var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
+
+                                if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
+                                {
+                                    return;
+                                }
+
+                                var handHistories = GGNConverter.ConvertHandHistories(handHistoriesInfo, cacheService);
+
+                                ProcessHands(handHistories);
+
+                                break;
+                            }
+                        case GGNDataType.TourneyHandHistory:
+                            {
+                                var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
+
+                                if (handHistoryInfo?.HandHistory == null)
+                                {
+                                    return;
+                                }
+
+                                var handHistory = GGNConverter.ConvertHandHistory(handHistoryInfo.HandHistory, cacheService);
+
+#if DEBUG
+
+                                File.WriteAllText($"GGNHands\\tourn-hand-{handHistory.HandId}.json", jsonStr);
+                                File.WriteAllText($"GGNHands\\tourn-hand-{handHistory.HandId}.xml", SerializationHelper.SerializeObject(handHistory));
+
+#endif
+
+                                ProcessHands(new[] { handHistory });
+
+                                break;
+                            }
+                        case GGNDataType.TourneyHandHistories:
+                            {
+                                var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
+
+                                if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
+                                {
+                                    return;
+                                }
+
+                                var handHistories = GGNConverter.ConvertHandHistories(handHistoriesInfo, cacheService);
+
+                                ProcessHands(handHistories);
+
+                                break;
+                            }
+                        case GGNDataType.TourneyInfo:
+                            {
+                                break;
+                            }
+                        case GGNDataType.Unknown:
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"{SiteString} hand data has not been parsed.", e);
+                }
+            });
         }
 
         /// <summary>
@@ -376,6 +451,11 @@ namespace DriveHUD.Importers.GGNetwork
                 {
                     proxyServer.Stop();
                 }
+            }
+
+            if (cacheService != null)
+            {
+                cacheService.Clear();
             }
         }
     }
