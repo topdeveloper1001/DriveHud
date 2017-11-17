@@ -325,7 +325,7 @@
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
       </Component>
       <Component Id="websocket.sharp.dll" Guid="{6BCD74FE-B3FB-413B-BC82-460F4B67B238}">
-        <File Id="websocket.sharp.dll" Name="websocket.sharp.dll" Source="$(var.BuildDirectory)\websocket-sharp.dll" />
+        <File Id="websocket.sharp.dll" Name="websocket-sharp.dll" Source="$(var.BuildDirectory)\websocket-sharp.dll" />
       </Component>
       <Component Id="Titanium.Web.Proxy.dll" Guid="{7B159201-D224-4EE2-BC89-A1155D621869}">
         <File Id="Titanium.Web.Proxy.dll" Name="Titanium.Web.Proxy.dll" Source="$(var.BuildDirectory)\Titanium.Web.Proxy.dll" />

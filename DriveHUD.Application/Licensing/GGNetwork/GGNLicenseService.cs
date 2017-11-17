@@ -83,7 +83,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
 
                     if (!license.IsTrial)
                     {
-                        LogProvider.Log.Info(EnumPokerSites.GGN, string.Format("Found license: {0}-*", license.SerialNumber.Substring(0, 4)));
+                        LogProvider.Log.Info(EnumPokerSites.GGN.ToString(), string.Format("Found license: {0}-*", license.SerialNumber.Substring(0, 4)));
                     }
                 }
                 catch (NoLicenseException ex)
@@ -101,7 +101,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(EnumPokerSites.GGN, "Validation: License validation error", ex);
+                    LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Validation: License validation error", ex);
                 }
 
                 // Trial license - check if real trial is expired or does not exists
@@ -212,7 +212,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
                     throw new LicenseCouldNotActivateException();
                 }
 
-                LogProvider.Log.Info(EnumPokerSites.GGN, $"License has been registered: {license.SerialNumber.Substring(0, 5)}");
+                LogProvider.Log.Info(EnumPokerSites.GGN.ToString(), $"License has been registered: {license.SerialNumber.Substring(0, 5)}");
 
                 return true;
             }
@@ -226,7 +226,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
                 {
                     isExpired = true;
 
-                    LogProvider.Log.Error(EnumPokerSites.GGN, "Registration: License expired", ex);
+                    LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Registration: License expired", ex);
                     throw new LicenseExpiredException();
                 }
 
@@ -235,21 +235,21 @@ namespace DriveHUD.Application.Licensing.GGNetwork
 
                 if (errorCodes.Any(x => x.Equals("E_CouldNotActivateAtServer") || x.Equals("E_CannotValidateAtServer")))
                 {
-                    LogProvider.Log.Error(EnumPokerSites.GGN, "Registration: License wasn't activated", ex);
+                    LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Registration: License wasn't activated", ex);
                     throw new LicenseCouldNotActivateException();
                 }
 
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Registration: License not found or expired", ex);
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Registration: License not found or expired", ex);
                 throw new LicenseInvalidSerialException("License not found or expired", ex);
             }
             catch (LicenseCouldNotActivateException)
             {
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Registration: License wasn't activated");
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Registration: License wasn't activated");
                 throw;
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Registration: License validation error", ex);
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Registration: License validation error", ex);
                 throw new LicenseException("Unexpected license validation exception", ex);
             }
             finally
@@ -297,7 +297,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Could not parse exception", e);
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Could not parse exception", e);
             }
 
             return parseResult;
@@ -339,7 +339,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
 
             if (serialHashes.Length != expiryDates.Length)
             {
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Getting expiration date failed - collections do not match");
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Getting expiration date failed - collections do not match");
                 return;
             }
 
@@ -370,7 +370,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(EnumPokerSites.GGN, "Could not obtain expiry dates", e);
+                LogProvider.Log.Error(EnumPokerSites.GGN.ToString(), "Could not obtain expiry dates", e);
                 var expiryDates = serialHashes.Select(x => DateTime.MaxValue).ToArray();
                 return expiryDates;
             }
