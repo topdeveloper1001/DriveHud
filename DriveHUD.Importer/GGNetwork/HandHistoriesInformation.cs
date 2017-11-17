@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Importers.GGNetwork
 {
-    internal class HandHistoriesInformation
+    public class HandHistoriesInformation
     {
         public IList<GGNHandHistory> Histories { get; set; }
 

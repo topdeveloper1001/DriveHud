@@ -248,7 +248,7 @@ namespace DriveHUD.Importers.GGNetwork
                 return;
             }
 
-            var packet = PacketUtils.BuildPacket(message, protocolId, MagicKey, SerialMode, ref packetIdSeq, relayId, JunkData, SendHeaderSize);
+            var packet = PacketUtils.BuildPacket(message, protocolId, MagicKey, SerialMode, ref packetIdSeq, relayId, JunkData, SendHeaderSize);       
 
             webSocket.Send(packet);
         }

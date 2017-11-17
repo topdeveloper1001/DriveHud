@@ -341,6 +341,11 @@ namespace DriveHUD.Importers.GGNetwork
 
                                 if (handHistoryInfo?.HandHistory == null)
                                 {
+                                    if (IsAdvancedLogEnabled)
+                                    {
+                                        LogProvider.Log.Error(this, $"Hand history [{dataType}] has not been deserialized");
+                                    }
+
                                     return;
                                 }
 
@@ -361,6 +366,11 @@ namespace DriveHUD.Importers.GGNetwork
 
                                 if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
                                 {
+                                    if (IsAdvancedLogEnabled)
+                                    {
+                                        LogProvider.Log.Error(this, $"Hand histories [{dataType}] has not been deserialized");
+                                    }
+
                                     return;
                                 }
 

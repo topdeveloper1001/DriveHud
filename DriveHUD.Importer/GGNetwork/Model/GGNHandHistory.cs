@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Importers.GGNetwork.Model
 {
-    internal class GGNHandHistory
+    public class GGNHandHistory
     {
         public string Version { get; set; }
 

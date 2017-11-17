@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers.GGNetwork.Network
 {
-    internal class InitialRequest
+    public class InitialRequest
     {     
         public string Token { get; set; }
 
