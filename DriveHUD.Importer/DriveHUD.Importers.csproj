@@ -242,6 +242,9 @@
     <Compile Include="GGNetwork\IGGNCacheService.cs" />
     <Compile Include="GGNetwork\IGGNImporter.cs" />
     <Compile Include="GGNetwork\IGGNTournamentReader.cs" />
+    <Compile Include="GGNetwork\Model\Account.cs" />
+    <Compile Include="GGNetwork\Model\AccountInfo.cs" />
+    <Compile Include="GGNetwork\Model\AccountInformation.cs" />
     <Compile Include="GGNetwork\Model\Action.cs" />
     <Compile Include="GGNetwork\Model\ActionType.cs" />
     <Compile Include="GGNetwork\Model\AfterAction.cs" />
@@ -252,6 +255,7 @@
     <Compile Include="GGNetwork\Model\CardInfo.cs" />
     <Compile Include="GGNetwork\Model\CardKind.cs" />
     <Compile Include="GGNetwork\Model\Configuration.cs" />
+    <Compile Include="GGNetwork\Model\FishBuffetRank.cs" />
     <Compile Include="GGNetwork\Model\GameLimitType.cs" />
     <Compile Include="GGNetwork\Model\GameType.cs" />
     <Compile Include="GGNetwork\Model\GuaranteedTicket.cs" />

@@ -16,11 +16,13 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using DriveHUD.Importers.GGNetwork.Model;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -44,7 +46,11 @@ namespace DriveHUD.Importers.GGNetwork
 
         private ProxyServer proxyServer;
 
+        private ExplicitProxyEndPoint proxyEndPoint;
+
         private IGGNCacheService cacheService;
+
+        private string heroName;
 
         protected override EnumPokerSites Site
         {
@@ -78,6 +84,13 @@ namespace DriveHUD.Importers.GGNetwork
 
                 if (settings != null)
                 {
+                    var ggnSettings = settings?.SiteSettings?.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.GGN);
+
+                    if (ggnSettings != null)
+                    {
+                        heroName = ggnSettings.HeroName;
+                    }
+
                     IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
                 }
 
@@ -93,27 +106,34 @@ namespace DriveHUD.Importers.GGNetwork
                 var certificate = InitializeCertificate();
 
                 // create proxy
-                proxyServer = new ProxyServer
+                if (proxyServer == null)
                 {
-                    RootCertificate = certificate,
-                    TrustRootCertificate = true,
-                    ForwardToUpstreamGateway = true
-                };
+                    proxyServer = new ProxyServer
+                    {
+                        RootCertificate = certificate,
+                        TrustRootCertificate = true,
+                        ForwardToUpstreamGateway = true
+                    };
 
-                // configure proxy
-                var port = GetAvailablePort();
+                    // configure proxy
+                    var port = GetAvailablePort();
 
-                var endPoint = new ExplicitProxyEndPoint(IPAddress.Any, port, true)
+                    proxyEndPoint = new ExplicitProxyEndPoint(IPAddress.Any, port, true)
+                    {
+                        IncludedHttpsHostNameRegex = GetHttpsHostNames()
+                    };
+                }
+
+                if (!proxyServer.ProxyEndPoints.Contains(proxyEndPoint))
                 {
-                    IncludedHttpsHostNameRegex = GetHttpsHostNames()
-                };
+                    proxyServer.AddEndPoint(proxyEndPoint);
+                }
 
-                proxyServer.AddEndPoint(endPoint);
                 proxyServer.BeforeRequest += OnProxyServerBeforeRequest;
 
                 // start proxy
                 proxyServer.Start();
-                proxyServer.SetAsSystemProxy(endPoint, ProxyProtocolType.AllHttp);               
+                proxyServer.SetAsSystemProxy(proxyEndPoint, ProxyProtocolType.AllHttp);
             }
             catch (Exception e)
             {
@@ -162,6 +182,8 @@ namespace DriveHUD.Importers.GGNetwork
 
             foreach (var handHistory in handHistories)
             {
+                handHistory.HeroName = heroName;
+
                 var handHistoryText = SerializationHelper.SerializeObject(handHistory);
                 ProcessHand(handHistoryText, gameInfo);
             }
@@ -270,6 +292,16 @@ namespace DriveHUD.Importers.GGNetwork
 
                 var dataType = GGNUtils.GetDataType(jsonStr);
 
+
+#if DEBUG
+                try
+                {
+                    File.AppendAllText("ggn-all.json", $"{jsonStr}{Environment.NewLine}");
+                }
+                catch
+                { }
+#endif           
+
                 ProcessJsonData(jsonStr, dataType);
             }
             catch (Exception ex)
@@ -291,42 +323,6 @@ namespace DriveHUD.Importers.GGNetwork
                     switch (dataType)
                     {
                         case GGNDataType.CashGameHandHistory:
-                            {
-                                var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
-
-                                if (handHistoryInfo?.HandHistory == null)
-                                {
-                                    return;
-                                }
-
-                                var handHistory = GGNConverter.ConvertHandHistory(handHistoryInfo.HandHistory, cacheService);
-
-#if DEBUG
-
-                                File.WriteAllText($"GGNHands\\hand-{handHistory.HandId}.json", jsonStr);
-                                File.WriteAllText($"GGNHands\\hand-{handHistory.HandId}.xml", SerializationHelper.SerializeObject(handHistory));
-
-#endif
-
-                                ProcessHands(new[] { handHistory });
-
-                                break;
-                            }
-                        case GGNDataType.CashGameHandHistories:
-                            {
-                                var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
-
-                                if (handHistoriesInfo?.Histories == null || handHistoriesInfo.Histories.Count <= 0)
-                                {
-                                    return;
-                                }
-
-                                var handHistories = GGNConverter.ConvertHandHistories(handHistoriesInfo, cacheService);
-
-                                ProcessHands(handHistories);
-
-                                break;
-                            }
                         case GGNDataType.TourneyHandHistory:
                             {
                                 var handHistoryInfo = GGNUtils.DeserializeHandHistory(jsonStr);
@@ -339,16 +335,14 @@ namespace DriveHUD.Importers.GGNetwork
                                 var handHistory = GGNConverter.ConvertHandHistory(handHistoryInfo.HandHistory, cacheService);
 
 #if DEBUG
-
-                                File.WriteAllText($"GGNHands\\tourn-hand-{handHistory.HandId}.json", jsonStr);
-                                File.WriteAllText($"GGNHands\\tourn-hand-{handHistory.HandId}.xml", SerializationHelper.SerializeObject(handHistory));
-
+                                File.WriteAllText($"GGNHands\\{handHistory.TableName}-{handHistory.HandId}.json", jsonStr);
+                                File.WriteAllText($"GGNHands\\{handHistory.TableName}-{handHistory.HandId}.xml", SerializationHelper.SerializeObject(handHistory));
 #endif
-
                                 ProcessHands(new[] { handHistory });
 
                                 break;
                             }
+                        case GGNDataType.CashGameHandHistories:
                         case GGNDataType.TourneyHandHistories:
                             {
                                 var handHistoriesInfo = GGNUtils.DeserializeHandHistories(jsonStr);
@@ -364,17 +358,38 @@ namespace DriveHUD.Importers.GGNetwork
 
                                 break;
                             }
-                        case GGNDataType.TourneyInfo:
+                        case GGNDataType.AccountInfo:
+
+                            var accountInformation = JsonConvert.DeserializeObject<AccountInformation>(jsonStr);
+
+                            if (accountInformation.AccountInfo != null && accountInformation.AccountInfo.Account != null)
                             {
-                                break;
+                                var account = accountInformation.AccountInfo.Account;
+
+                                if (account.IsNickNameExists && !account.NickName.Equals("GUEST"))
+                                {
+                                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                                    var settings = settingsService.GetSettings();
+
+                                    var ggnSettings = settings?.SiteSettings?.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.GGN);
+
+                                    if (ggnSettings != null)
+                                    {
+                                        heroName = ggnSettings.HeroName = account.NickName;
+                                        settingsService.SaveSettings(settings);
+                                    }
+                                }
                             }
+
+                            break;
+                        case GGNDataType.TourneyInfo:
                         case GGNDataType.Unknown:
                             break;
                     }
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"{SiteString} hand data has not been parsed.", e);
+                    LogProvider.Log.Error(this, $"{SiteString} hand data [{dataType}] has not been parsed.", e);
                 }
             });
         }

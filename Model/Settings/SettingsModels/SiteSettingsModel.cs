@@ -132,6 +132,9 @@ namespace Model.Settings
         [XmlAttribute]
         public bool FastPokerEnabled { get; set; }
 
+        [XmlAttribute]
+        public string HeroName { get; set; }
+
         public override object Clone()
         {
             var model = (SiteModel)MemberwiseClone();

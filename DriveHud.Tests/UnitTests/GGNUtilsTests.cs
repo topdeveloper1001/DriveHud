@@ -26,5 +26,15 @@ namespace DriveHud.Tests.UnitTests
             var actual = GGNUtils.ReplaceMoneyWithChipsInTitle(tableName);
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+        [Test]
+        [TestCase("Chinese Zodiac #10 9Max $0 Freeroll - Table 41", "Chinese Zodiac Rooster - Table 41")]
+        [TestCase("Chinese Zodiac #12 9Max $0 Freeroll - Table 41", "Chinese Zodiac Pig - Table 41")]
+        [TestCase("Chinese Zodiac #10 9Max $0 Freeroll", "Chinese Zodiac Rooster")]
+        public void PurgeTournamentNameTest(string tournamentName, string expected)
+        {
+            var actual = GGNUtils.PurgeTournamentName(tournamentName);
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }

@@ -17,6 +17,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.GGNetwork
@@ -133,6 +134,12 @@ namespace DriveHUD.Importers.GGNetwork
             if (input.StartsWith("{\"HandHistory\"") && input.Contains("TourneyBrandName"))
             {
                 return GGNDataType.TourneyHandHistory;
+
+            }
+
+            if (input.StartsWith("{\"AccountInfo\""))
+            {
+                return GGNDataType.AccountInfo;
             }
 
             return GGNDataType.Unknown;
@@ -190,5 +197,65 @@ namespace DriveHUD.Importers.GGNetwork
 
             return $"{tournamentName} {buyin.ToString("N0", new CultureInfo("en-US"))} {tableNumber}";
         }
+
+        public static string PurgeTournamentName(string tournamentName)
+        {
+            if (string.IsNullOrEmpty(tournamentName))
+            {
+                return tournamentName;
+            }
+
+            tournamentName = tournamentName
+                .Replace("$0 Freeroll", string.Empty)
+                .Replace("9Max", string.Empty)
+                .Replace("6Max", string.Empty);
+
+            // workaround for zodiac tables
+            if (tournamentName.IndexOf("Chinese Zodiac", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                var hashtagIndex = tournamentName.IndexOf("#");
+
+                if (hashtagIndex > 0)
+                {
+                    var spaceIndex = tournamentName.IndexOf(' ', hashtagIndex + 1);
+
+                    var zodiacNumberText = spaceIndex > 0 ?
+                        tournamentName.Substring(hashtagIndex + 1, spaceIndex - hashtagIndex) :
+                        tournamentName.Substring(hashtagIndex + 1);
+
+                    int zodiacNumber = 0;
+
+                    if (int.TryParse(zodiacNumberText, out zodiacNumber))
+                    {
+                        zodiacNumber--;
+
+                        if (zodiacs.Length > zodiacNumber)
+                        {
+                            tournamentName = tournamentName.Replace($"#{zodiacNumberText}", zodiacs[zodiacNumber]);
+                        }
+                    }
+                }
+            }
+
+            tournamentName = Regex.Replace(tournamentName, @"\s+", " ");
+
+            return tournamentName.Trim();
+        }
+
+        private static readonly string[] zodiacs = new[]
+        {
+            "Rat",
+            "Ox",
+            "Tiger",
+            "Rabbit",
+            "Dragon",
+            "Snake",
+            "Horse",
+            "Goat",
+            "Monkey",
+            "Rooster",
+            "Dog",
+            "Pig"
+        };
     }
 }

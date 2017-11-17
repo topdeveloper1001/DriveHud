@@ -90,10 +90,10 @@ namespace Model.Site
             var potentialLaunchFiles = networkSites.Select(path => Path.Combine(installDir, path, defaultLaunchFile)).ToArray();
 
             // check for default paths
-            //if (potentialLaunchFiles.Any(x => File.Exists(x)))
-            //{
-            //    return true;
-            //}
+            if (potentialLaunchFiles.Any(x => File.Exists(x)))
+            {
+                return true;
+            }
 
             // check registry for installed programs
             return RegistryUtils.UninstallRegistryContainsDisplayNames(networkSites);

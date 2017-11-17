@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="GGNDataType.cs" company="Ace Poker Solutions">
+// <copyright file="AccountInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,16 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.GGNetwork
+namespace DriveHUD.Importers.GGNetwork.Model
 {
-    internal enum GGNDataType
+    public class AccountInfo
     {
-        CashGameHandHistory = 0,
-        CashGameHandHistories = 1,
-        TourneyHandHistory = 2,
-        TourneyHandHistories = 3,
-        TourneyInfo = 4,        
-        AccountInfo = 5,
-        Unknown = 255
+        public Account Account { get; set; }
     }
 }

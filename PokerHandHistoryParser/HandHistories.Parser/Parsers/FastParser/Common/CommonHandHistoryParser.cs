@@ -21,6 +21,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HandHistories.Parser.Parsers.FastParser.Common
 {
@@ -47,7 +48,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Common
             try
             {
                 var handHistory = SerializationHelper.DeserializeObject<HandHistory>(handText);
+
+                if (!string.IsNullOrEmpty(handHistory.HeroName))
+                {
+                    handHistory.Hero = handHistory.Players.FirstOrDefault(x => x.PlayerName.Equals(handHistory.HeroName));
+                }
+
                 handHistory.FullHandHistoryText = handText;
+
                 return handHistory;
             }
             catch (Exception ex)

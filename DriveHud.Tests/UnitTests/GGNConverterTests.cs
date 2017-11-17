@@ -39,6 +39,8 @@ namespace DriveHud.Tests.UnitTests
         [Test]
         [TestCase("TournamentHandHistory.json", "TournamentHandHistoryExpected.xml")]
         [TestCase("Tourn-hand-117999074.json", "Tourn-hand-117999074.xml")]
+        [TestCase("Tourn-hand-118033657.json", "Tourn-hand-118033657.xml")]
+        [TestCase("Tourn-hand-118044556.json", "Tourn-hand-118044556.xml")]
         public void HandHistoryInfoIsConvertered(string actualJsonFile, string expectedXmlFile)
         {
             var handHistoryJson = File.ReadAllText(GetTestDataFilePath(actualJsonFile));

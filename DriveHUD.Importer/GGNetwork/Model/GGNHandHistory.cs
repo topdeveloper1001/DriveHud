@@ -85,7 +85,8 @@ namespace DriveHUD.Importers.GGNetwork.Model
         {
             get
             {
-                return !string.IsNullOrEmpty(TourneyBrandName);
+                return !string.IsNullOrEmpty(TourneyBrandName) ||
+                    (!string.IsNullOrEmpty(TourneyId) && !TourneyId.Equals("00000000-0000-0000-0000-000000000000"));
             }
         }
     }

@@ -48,7 +48,7 @@ namespace DriveHUD.Importers.GGNetwork
                         {
                             TournamentId = ggnHandHistory.TourneyId,
                             TournamentInGameId = ggnHandHistory.TourneyId,
-                            TournamentName = ggnHandHistory.TourneyBrandName,
+                            TournamentName = GGNUtils.PurgeTournamentName(ggnHandHistory.TourneyBrandName),
                             BuyIn = HandHistories.Objects.GameDescription.Buyin.FromBuyinRake(ConvertAmount(ggnHandHistory.TourneyBuyIn), 0, HandHistories.Objects.GameDescription.Currency.USD),
                             StartDate = ggnHandHistory.StartTime,
                             Speed = ParserUtils.ParseTournamentSpeed(ggnHandHistory.TourneyBrandName)
@@ -163,7 +163,7 @@ namespace DriveHUD.Importers.GGNetwork
             {
                 TournamentId = tournament.Id,
                 TournamentInGameId = tournament.Id,
-                TournamentName = tournament.Name,
+                TournamentName = GGNUtils.PurgeTournamentName(tournament.Name),
                 BuyIn = HandHistories.Objects.GameDescription.Buyin.FromBuyinRake(ConvertAmount(tournament.BuyIn + tournament.BountyInformation.BountyAmount),
                     ConvertAmount(tournament.EntranceFee),
                     HandHistories.Objects.GameDescription.Currency.USD),
