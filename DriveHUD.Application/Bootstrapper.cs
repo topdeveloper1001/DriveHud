@@ -290,10 +290,10 @@ namespace DriveHUD.Application
             Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
 
             // GGN importer licenses
-            Container.RegisterType<ILicenseManager, GGNTReg>(GGNLicenseType.GGNTrial.ToString());
-            Container.RegisterType<ILicenseManager, GGNHReg>(GGNLicenseType.GGNHoldem.ToString());
-            Container.RegisterType<ILicenseManager, GGNOReg>(GGNLicenseType.GGNOmaha.ToString());
-            Container.RegisterType<ILicenseManager, GGNCReg>(GGNLicenseType.GGNCombo.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNTReg>(GGNLicenseType.GGNTrial.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNHReg>(GGNLicenseType.GGNHoldem.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNOReg>(GGNLicenseType.GGNOmaha.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNCReg>(GGNLicenseType.GGNCombo.ToString());
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

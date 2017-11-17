@@ -70,7 +70,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
                 var isExpired = false;
                 var serial = string.Empty;
 
-                var licenseManager = ServiceLocator.Current.GetInstance<ILicenseManager>(licenseType.ToString());
+                var licenseManager = ServiceLocator.Current.GetInstance<IGGNLicenseManager>(licenseType.ToString());
 
                 try
                 {
@@ -168,7 +168,7 @@ namespace DriveHUD.Application.Licensing.GGNetwork
                 throw new DHBusinessException(new NonLocalizableString("Serial is not defined."));
             }
 
-            var licenseManager = ServiceLocator.Current.GetInstance<ILicenseManager>(licenseType.ToString());
+            var licenseManager = ServiceLocator.Current.GetInstance<IGGNLicenseManager>(licenseType.ToString());
 
             var licenseInfo = licenseInfos.FirstOrDefault(x => x.LicenseType == licenseType);
 

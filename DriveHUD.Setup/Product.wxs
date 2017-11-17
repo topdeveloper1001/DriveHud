@@ -324,9 +324,8 @@
       <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
       </Component>
-
-      <Component Id="websocket-sharp.dll" Guid="{6BCD74FE-B3FB-413B-BC82-460F4B67B238}">
-        <File Id="websocket-sharp.dll" Name="websocket-sharp.dll" Source="$(var.BuildDirectory)\websocket-sharp.dll" />
+      <Component Id="websocket.sharp.dll" Guid="{6BCD74FE-B3FB-413B-BC82-460F4B67B238}">
+        <File Id="websocket.sharp.dll" Name="websocket.sharp.dll" Source="$(var.BuildDirectory)\websocket-sharp.dll" />
       </Component>
       <Component Id="Titanium.Web.Proxy.dll" Guid="{7B159201-D224-4EE2-BC89-A1155D621869}">
         <File Id="Titanium.Web.Proxy.dll" Name="Titanium.Web.Proxy.dll" Source="$(var.BuildDirectory)\Titanium.Web.Proxy.dll" />
@@ -337,7 +336,6 @@
       <Component Id="BouncyCastle.Crypto.dll" Guid="{0DE922F8-86F4-4A97-BDE3-62C2813451B7}">
         <File Id="BouncyCastle.Crypto.dll" Name="BouncyCastle.Crypto.dll" Source="$(var.BuildDirectory)\BouncyCastle.Crypto.dll" />
       </Component>
-
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -567,7 +565,7 @@
       <ComponentRef Id="Microsoft.Expression.Interactions.dll" />
       <ComponentRef Id="ReactiveUI.dll" />
       <ComponentRef Id="Splat.dll" />
-      <ComponentRef Id="websocket-sharp.dll" />
+      <ComponentRef Id="websocket.sharp.dll" />
       <ComponentRef Id="Titanium.Web.Proxy.dll" />
       <ComponentRef Id="StreamExtended.dll" />
       <ComponentRef Id="BouncyCastle.Crypto.dll" />            

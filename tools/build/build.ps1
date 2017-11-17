@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.3.0',
+    [string] $Version = '1.4.0',
 
     [string] $VersionExlcudeFilter = 'PlayerXRay,XR*Reg',
 
@@ -73,7 +73,7 @@ param
 
     [string] $HashTool = 'BuildFileHash.exe',
 
-    [bool] $UpdateOnlyLic = $true,
+    [bool] $UpdateOnlyLic = $false,
 	
 	[string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
 	

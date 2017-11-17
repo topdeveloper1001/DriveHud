@@ -11,11 +11,11 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Common.Security;
+using DriveHUD.Application.Licensing.GGNetwork;
 
 namespace DriveHUD.Application.Security
 {
-    internal class GGNTReg : ILicenseManager
+    internal class GGNTReg : IGGNLicenseManager
     {
         private readonly GGNTRegistration.GGNTReg licenseManager = new GGNTRegistration.GGNTReg();
 
