@@ -41,6 +41,7 @@ namespace DriveHUD.Importers.GGNetwork
         private const int RecvHeaderSize = 36;
         private const int Timeout = 15000;
         private const int DelayInterval = 100;
+        private const int MaxConnectionAttempts = 5;
 
         private const string EmptyRequest = "{}";
 
@@ -77,7 +78,19 @@ namespace DriveHUD.Importers.GGNetwork
                 webSocket.OnMessage += WebSocketOnMessage;
                 webSocket.OnError += WebSocket_OnError;
 
-                webSocket.Connect();
+                var connectionAttempts = 0;
+
+                while (webSocket.ReadyState != WebSocketState.Open &&
+                    connectionAttempts < MaxConnectionAttempts)
+                {
+                    webSocket.Connect();
+                    connectionAttempts++;
+                }
+
+                if (isAdvancedLogging)
+                {
+                    LogProvider.Log.Info(this, $"Connected to tournaments info server on {connectionAttempts} attempt. [{EnumPokerSites.GGN}].");
+                }
 
                 var initialRequest = NetworkRequests.CreateInitialRequest();
 
@@ -97,7 +110,7 @@ namespace DriveHUD.Importers.GGNetwork
 
                 if (!IsDataReceived)
                 {
-                    LogProvider.Log.Warn(this, $"Tournaments info has not been received. [{EnumPokerSites.GGN}]");                    
+                    LogProvider.Log.Warn(this, $"Tournaments info has not been received. [{EnumPokerSites.GGN}]");
                     return new TournamentInformation[0];
                 }
 
@@ -130,10 +143,10 @@ namespace DriveHUD.Importers.GGNetwork
                     }
                 }
             }
-        }       
+        }
 
         private void WebSocket_OnError(object sender, ErrorEventArgs e)
-        {         
+        {
         }
 
         private void WebSocketOnMessage(object sender, MessageEventArgs e)
@@ -207,8 +220,8 @@ namespace DriveHUD.Importers.GGNetwork
                             break;
                         }
                     case ResponseDataType.TournamentsInfo:
-                        {                            
-                            tournamentsInfoMessage = message;                            
+                        {
+                            tournamentsInfoMessage = message;
                             break;
                         }
 

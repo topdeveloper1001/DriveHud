@@ -10,14 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Settings;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Model.Site
 {
     public class GGNConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
+        private static readonly string defaultLaunchFile = "bin\\GGnet.exe";
+
+        private static readonly string[] networkSites = new[] { "Natural8", "AllNewPoker", "BestPoker", "DakaPoker", "LotosPoker", "Pokamania", "PPI POKER",
+            "Tianlong", "TiltKing Poker", "W88", "YouLe" };        
+
         public GGNConfiguration()
         {
             tableTypes = new EnumTableType[]
@@ -76,7 +85,18 @@ namespace Model.Site
         /// <returns>True if installed, otherwise - false</returns>
         private bool DetectSite()
         {
-            return true;
+            var installDir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+
+            var potentialLaunchFiles = networkSites.Select(path => Path.Combine(installDir, path, defaultLaunchFile)).ToArray();
+
+            // check for default paths
+            //if (potentialLaunchFiles.Any(x => File.Exists(x)))
+            //{
+            //    return true;
+            //}
+
+            // check registry for installed programs
+            return RegistryUtils.UninstallRegistryContainsDisplayNames(networkSites);
         }
     }
 }
