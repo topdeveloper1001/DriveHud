@@ -68,6 +68,14 @@ namespace Model.Site
             }
         }
 
+        public virtual bool IsAddon
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public abstract string LogoSource
         {
             get;

@@ -92,7 +92,7 @@
       </Component>
       <Component Id="XROReg.dll" Guid="{82375140-3197-4247-BD51-C1B06267DC2A}">
         <File Id="XROReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\XROReg.dll" />
-      </Component>
+      </Component>   
       <Component Id="DriveHUD.Updater.exe" Guid="{F62CC064-5D14-4AEA-9A77-FFD13398AFEA}">
         <File Id="DriveHUD.Updater.exe" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Updater.exe" />
       </Component>
@@ -164,6 +164,18 @@
       </Component>
       <Component Id="HandHistories.Parser.dll" Guid="{B399D6FC-3E00-4C42-A9BC-8FD2C2F719B3}">
         <File Id="HandHistories.Parser.dll" KeyPath="yes" Source="$(var.BuildDirectory)\HandHistories.Parser.dll" />
+      </Component>
+      <Component Id="GGNTReg.dll" Guid="{CE299D97-AC19-491D-BC16-EB0E28DC51FF}">
+        <File Id="GGNTReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\GGNTReg.dll" />
+      </Component>
+      <Component Id="GGNHReg.dll" Guid="{3E212942-5445-4877-9533-43307F97AE81}">
+        <File Id="GGNHReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\GGNHReg.dll" />
+      </Component>
+      <Component Id="GGNOReg.dll" Guid="{85CE20B7-D82A-4AD3-906D-DEEB124E8C50}">
+        <File Id="GGNOReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\GGNOReg.dll" />
+      </Component>
+      <Component Id="GGNCReg.dll" Guid="{3F8F9859-5CB9-4ED6-BFC4-A3391F219C33}">
+        <File Id="GGNCReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\GGNCReg.dll" />
       </Component>
     </DirectoryRef>
 
@@ -312,6 +324,20 @@
       <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
       </Component>
+
+      <Component Id="websocket-sharp.dll" Guid="{6BCD74FE-B3FB-413B-BC82-460F4B67B238}">
+        <File Id="websocket-sharp.dll" Name="websocket-sharp.dll" Source="$(var.BuildDirectory)\websocket-sharp.dll" />
+      </Component>
+      <Component Id="Titanium.Web.Proxy.dll" Guid="{7B159201-D224-4EE2-BC89-A1155D621869}">
+        <File Id="Titanium.Web.Proxy.dll" Name="Titanium.Web.Proxy.dll" Source="$(var.BuildDirectory)\Titanium.Web.Proxy.dll" />
+      </Component>
+      <Component Id="StreamExtended.dll" Guid="{16041656-FDCC-444A-A23D-B492C1AF0464}">
+        <File Id="StreamExtended.dll" Name="StreamExtended.dll" Source="$(var.BuildDirectory)\StreamExtended.dll" />
+      </Component>
+      <Component Id="BouncyCastle.Crypto.dll" Guid="{0DE922F8-86F4-4A97-BDE3-62C2813451B7}">
+        <File Id="BouncyCastle.Crypto.dll" Name="BouncyCastle.Crypto.dll" Source="$(var.BuildDirectory)\BouncyCastle.Crypto.dll" />
+      </Component>
+
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -488,6 +514,10 @@
       <ComponentRef Id="XRCReg.dll" />
       <ComponentRef Id="XRHReg.dll" />
       <ComponentRef Id="XROReg.dll" />
+      <ComponentRef Id="GGNCReg.dll" />
+      <ComponentRef Id="GGNHReg.dll" />
+      <ComponentRef Id="GGNOReg.dll" />
+      <ComponentRef Id="GGNTReg.dll" />
       <ComponentRef Id="DriveHUD.Updater.exe"/>
       <ComponentRef Id="DriveHUD.Updater.exe.config"/>
       <ComponentRef Id="DriveHUD.Updater.Core.dll"/>
@@ -537,6 +567,10 @@
       <ComponentRef Id="Microsoft.Expression.Interactions.dll" />
       <ComponentRef Id="ReactiveUI.dll" />
       <ComponentRef Id="Splat.dll" />
+      <ComponentRef Id="websocket-sharp.dll" />
+      <ComponentRef Id="Titanium.Web.Proxy.dll" />
+      <ComponentRef Id="StreamExtended.dll" />
+      <ComponentRef Id="BouncyCastle.Crypto.dll" />            
       <ComponentRef Id="System.Reactive.Core.dll" />
       <ComponentRef Id="System.Reactive.Interfaces.dll" />
       <ComponentRef Id="System.Reactive.Linq.dll" />

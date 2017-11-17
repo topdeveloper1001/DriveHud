@@ -34,6 +34,8 @@ namespace Model.Site
 
         bool IsAutoCenterAllowed { get; }
 
+        bool IsAddon { get; }
+
         bool FastPokerAllowed { get; }
 
         string FastPokerModeName { get; }

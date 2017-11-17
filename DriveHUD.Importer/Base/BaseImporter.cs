@@ -12,15 +12,9 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
-using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Hand;
-using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using Prism.Events;
 using System;
-using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading;

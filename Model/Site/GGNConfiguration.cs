@@ -25,7 +25,7 @@ namespace Model.Site
         private static readonly string defaultLaunchFile = "bin\\GGnet.exe";
 
         private static readonly string[] networkSites = new[] { "Natural8", "AllNewPoker", "BestPoker", "DakaPoker", "LotosPoker", "Pokamania", "PPI POKER",
-            "Tianlong", "TiltKing Poker", "W88", "YouLe" };        
+            "Tianlong", "TiltKing Poker", "W88", "YouLe" };
 
         public GGNConfiguration()
         {
@@ -59,6 +59,14 @@ namespace Model.Site
             get
             {
                 return tableTypes;
+            }
+        }
+
+        public override bool IsAddon
+        {
+            get
+            {
+                return true;
             }
         }
 

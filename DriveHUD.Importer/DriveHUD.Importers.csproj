@@ -241,6 +241,7 @@
     <Compile Include="GGNetwork\HandHistoryInformation.cs" />
     <Compile Include="GGNetwork\IGGNCacheService.cs" />
     <Compile Include="GGNetwork\IGGNImporter.cs" />
+    <Compile Include="GGNetwork\IGGNLicenseBaseService.cs" />
     <Compile Include="GGNetwork\IGGNTournamentReader.cs" />
     <Compile Include="GGNetwork\Model\Account.cs" />
     <Compile Include="GGNetwork\Model\AccountInfo.cs" />

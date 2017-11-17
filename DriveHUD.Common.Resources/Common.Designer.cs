@@ -548,6 +548,43 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GG CATCHER
+        ///GG Catcher to import hands from GGNetwork poker clients..
+        /// </summary>
+        internal static string Common_GGNRegistrationView_GreetingText {
+            get {
+                return ResourceManager.GetString("Common_GGNRegistrationView_GreetingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter the following data to register your version of GG Catcher:.
+        /// </summary>
+        internal static string Common_GGNRegistrationView_RegisterText {
+            get {
+                return ResourceManager.GetString("Common_GGNRegistrationView_RegisterText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GG Catcher Registration.
+        /// </summary>
+        internal static string Common_GGNRegistrationView_Title {
+            get {
+                return ResourceManager.GetString("Common_GGNRegistrationView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You trial period is over. Please register your version of GG Catcher.
+        /// </summary>
+        internal static string Common_GGNRegistrationView_TrialExpiredText {
+            get {
+                return ResourceManager.GetString("Common_GGNRegistrationView_TrialExpiredText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         internal static string Common_Help {

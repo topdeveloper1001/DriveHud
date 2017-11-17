@@ -59,7 +59,7 @@ param
 
     [string] $LicSource = 'DHCReg\bin',
 
-    [string] $LicObfuscatorIncludeFilter = 'DH*Reg.dll',        
+    [string] $LicObfuscatorIncludeFilter = '*Reg.dll',        
 
     [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj',
 
@@ -73,7 +73,7 @@ param
 
     [string] $HashTool = 'BuildFileHash.exe',
 
-    [bool] $UpdateOnlyLic = $false,
+    [bool] $UpdateOnlyLic = $true,
 	
 	[string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
 	

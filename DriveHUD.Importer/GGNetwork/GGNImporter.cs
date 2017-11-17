@@ -180,8 +180,20 @@ namespace DriveHUD.Importers.GGNetwork
                 UpdateAction = UpdateGameInfo
             };
 
+            var licenseService = ServiceLocator.Current.GetInstance<IGGNLicenseBaseService>();
+
             foreach (var handHistory in handHistories)
             {
+                if (!licenseService.IsMatch(handHistory))
+                {
+                    if (IsAdvancedLogEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"License doesn't support hand [{handHistory.GameDescription?.GameType}] [{SiteString}]");
+                    }
+
+                    continue;
+                }
+
                 handHistory.HeroName = heroName;
 
                 var handHistoryText = SerializationHelper.SerializeObject(handHistory);
@@ -472,6 +484,28 @@ namespace DriveHUD.Importers.GGNetwork
             {
                 cacheService.Clear();
             }
+        }
+
+        protected override bool IsDisabled()
+        {
+            var isDisabled = base.IsDisabled();
+
+            if (!isDisabled)
+            {
+                var licenseService = ServiceLocator.Current.GetInstance<IGGNLicenseBaseService>();
+
+                if (!licenseService.IsRegistered)
+                {
+                    if (IsAdvancedLogEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"License has not been found [{SiteString}]");
+                    }
+
+                    return true;
+                }
+            }
+
+            return isDisabled;
         }
     }
 }

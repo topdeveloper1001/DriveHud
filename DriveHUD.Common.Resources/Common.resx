@@ -915,4 +915,17 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Shop_Apps" xml:space="preserve">
     <value>Installed Apps</value>
   </data>
+  <data name="Common_GGNRegistrationView_GreetingText" xml:space="preserve">
+    <value>GG CATCHER
+GG Catcher to import hands from GGNetwork poker clients.</value>
+  </data>
+  <data name="Common_GGNRegistrationView_RegisterText" xml:space="preserve">
+    <value>Please enter the following data to register your version of GG Catcher:</value>
+  </data>
+  <data name="Common_GGNRegistrationView_Title" xml:space="preserve">
+    <value>GG Catcher Registration</value>
+  </data>
+  <data name="Common_GGNRegistrationView_TrialExpiredText" xml:space="preserve">
+    <value>You trial period is over. Please register your version of GG Catcher</value>
+  </data>
 </root>

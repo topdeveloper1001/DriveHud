@@ -14,6 +14,7 @@ using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.Licensing.GGNetwork;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
@@ -34,6 +35,7 @@ using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
+using DriveHUD.Importers.GGNetwork;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -82,6 +84,9 @@ namespace DriveHUD.Application
 
             var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
             isLicenseValid = licenseService.Validate();
+
+            var ggnLicenseService = ServiceLocator.Current.GetInstance<IGGNLicenseBaseService>();
+            ggnLicenseService.Validate();
 
             var sessionService = ServiceLocator.Current.GetInstance<ISessionService>();
             sessionService.Initialize();
@@ -228,6 +233,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
+            RegisterTypeIfMissing(typeof(IGGNLicenseBaseService), typeof(GGNLicenseService), true);
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
@@ -282,6 +288,12 @@ namespace DriveHUD.Application
             Container.RegisterType<ILicenseManager, DHHReg>(LicenseType.Holdem.ToString());
             Container.RegisterType<ILicenseManager, DHOReg>(LicenseType.Omaha.ToString());
             Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
+
+            // GGN importer licenses
+            Container.RegisterType<ILicenseManager, GGNTReg>(GGNLicenseType.GGNTrial.ToString());
+            Container.RegisterType<ILicenseManager, GGNHReg>(GGNLicenseType.GGNHoldem.ToString());
+            Container.RegisterType<ILicenseManager, GGNOReg>(GGNLicenseType.GGNOmaha.ToString());
+            Container.RegisterType<ILicenseManager, GGNCReg>(GGNLicenseType.GGNCombo.ToString());
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

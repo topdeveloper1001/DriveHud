@@ -18,9 +18,9 @@ namespace DriveHUD.Application.ViewModels.Registration
 {
     public class LicenseInfoViewModel : ViewModelBase
     {
-        private ILicenseInfo licenseInfo;
+        private IBaseLicenseInfo licenseInfo;
 
-        internal LicenseInfoViewModel(ILicenseInfo licenseInfo)
+        internal LicenseInfoViewModel(IBaseLicenseInfo licenseInfo)
         {
             Check.ArgumentNotNull(() => licenseInfo);
 
