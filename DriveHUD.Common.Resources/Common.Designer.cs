@@ -549,7 +549,7 @@ namespace DriveHUD.Common.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to GG CATCHER
-        ///GG Catcher to import hands from GGNetwork poker clients..
+        ///The GG catcher is an add-on application that will allow you to capture and run a HUD through DriveHUD. It includes a fully functional 7 day trial. Click Try to enable the trial..
         /// </summary>
         internal static string Common_GGNRegistrationView_GreetingText {
             get {
