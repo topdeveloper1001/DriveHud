@@ -90,7 +90,10 @@ namespace DriveHUD.Importers
         /// </summary>
         public virtual void Stop()
         {
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping \"{0}\" importer", SiteString));
+            if (IsRunning)
+            {
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping \"{0}\" importer", SiteString));
+            }
 
             if (cancellationTokenSource != null)
             {
@@ -126,7 +129,7 @@ namespace DriveHUD.Importers
 
             return siteSettings != null && !siteSettings.Enabled;
         }
-      
+
         #endregion
 
         #region IDisposable implementation

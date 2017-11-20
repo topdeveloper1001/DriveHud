@@ -29,13 +29,13 @@ namespace DriveHUD.Importers.GGNetwork
         /// <summary>
         /// Refreshes cache data
         /// </summary>
-        public async Task RefreshAsync()
+        public async Task RefreshAsync(CancellationToken cancellationToken)
         {
             try
             {
                 var tournamentsReader = ServiceLocator.Current.GetInstance<IGGNTournamentReader>();
 
-                var tournaments = await tournamentsReader.ReadAllTournamentsAsync();
+                var tournaments = await tournamentsReader.ReadAllTournamentsAsync(cancellationToken);
 
                 rwLock.EnterWriteLock();
 

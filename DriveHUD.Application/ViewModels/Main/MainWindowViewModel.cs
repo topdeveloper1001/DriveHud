@@ -246,33 +246,37 @@ namespace DriveHUD.Application.ViewModels
         {
             importerService.StopImport();
             IsHudRunning = false;
-            RefreshCommandsCanExecute();
         }
 
         private void OnImportingStopped(object sender, EventArgs e)
         {
-            hudTransmitter.Dispose();
-
-            importerSessionCacheService.End();
-
-            System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+            try
             {
-                try
-                {
-                    // update data after hud is stopped
-                    CreatePositionReport();
-                    UpdateCurrentView();
+                hudTransmitter.Dispose();
 
-                    RefreshCommandsCanExecute();
-                }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(this, ex);
-                }
-            });
+                importerSessionCacheService.End();
 
-            GC.Collect();
-            LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+                System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+                {
+                    try
+                    {
+                        // update data after hud is stopped
+                        CreatePositionReport();
+                        UpdateCurrentView();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Reports has not been updated after HUD stopped.", ex);
+                    }
+                });
+
+                GC.Collect();
+                LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+            }
+            finally
+            {
+                System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+            }
         }
 
         internal void Load()

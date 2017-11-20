@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Settings;
@@ -67,6 +68,22 @@ namespace Model.Site
             get
             {
                 return true;
+            }
+        }
+
+        public override string AddonText
+        {
+            get
+            {
+                return CommonResourceManager.Instance.GetResourceString("Settings_GGNAddonText");
+            }
+        }
+
+        public override string AddonTooltip
+        {
+            get
+            {
+                return CommonResourceManager.Instance.GetResourceString("Settings_GGNAddonTooltip");
             }
         }
 

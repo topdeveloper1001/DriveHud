@@ -81,6 +81,22 @@ namespace Model.Site
             get;
         }
 
+        public virtual string AddonText
+        {
+            get
+            {
+                return string.Empty;
+            }
+        }
+
+        public virtual string AddonTooltip
+        {
+            get
+            {
+                return string.Empty;
+            }
+        }
+
         public virtual Dictionary<int, int> PreferredSeats
         {
             get

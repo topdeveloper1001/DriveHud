@@ -36,6 +36,10 @@ namespace Model.Site
 
         bool IsAddon { get; }
 
+        string AddonText { get; }
+
+        string AddonTooltip { get; }
+
         bool FastPokerAllowed { get; }
 
         string FastPokerModeName { get; }

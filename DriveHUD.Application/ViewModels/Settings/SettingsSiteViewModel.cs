@@ -95,6 +95,8 @@ namespace DriveHUD.Application.ViewModels.Settings
         private bool fastPokerVisible;
         private bool isHandHistoryLocationRequired;
         private bool isAddonButtonVisible;
+        private string addonText;
+        private string addonTooltip;
 
         public InteractionRequest<INotification> AddonViewRequest { get; private set; }
 
@@ -132,6 +134,8 @@ namespace DriveHUD.Application.ViewModels.Settings
                 IsAutoCenterVisible = siteConfiguration.IsAutoCenterAllowed;
                 FastPokerVisible = siteConfiguration.FastPokerAllowed;
                 FastPokerModeName = siteConfiguration.FastPokerModeName;
+                AddonText = siteConfiguration.AddonText;
+                AddonTooltip = siteConfiguration.AddonTooltip;
 
                 SetProperty(ref selectedSiteType, value);
             }
@@ -272,6 +276,30 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public string AddonText
+        {
+            get
+            {
+                return addonText;
+            }
+            set
+            {
+                SetProperty(ref addonText, value);
+            }
+        }
+
+        public string AddonTooltip
+        {
+            get
+            {
+                return addonTooltip;
+            }
+            set
+            {
+                SetProperty(ref addonTooltip, value);
+            }
+        }
+
         public bool IsAddonButtonVisible
         {
             get
@@ -393,8 +421,11 @@ namespace DriveHUD.Application.ViewModels.Settings
                 return;
             }
 
-            var registrationViewModel = new GGNRegistrationViewModel(false);
-            AddonViewRequest?.Raise(registrationViewModel);
+            if (SelectedSite.PokerSite == EnumPokerSites.GGN)
+            {
+                var registrationViewModel = new GGNRegistrationViewModel(false);
+                AddonViewRequest?.Raise(registrationViewModel);
+            }
         }
 
         private string GetTableTypeString(EnumTableType tableType)

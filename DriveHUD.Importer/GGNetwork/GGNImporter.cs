@@ -25,7 +25,6 @@ using Model.Settings;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -40,6 +39,8 @@ namespace DriveHUD.Importers.GGNetwork
 {
     internal class GGNImporter : GenericImporter, IGGNImporter
     {
+        private static readonly object locker = new object();
+
         private const string CertificateResourceName = "DriveHUD.Importers.GGNetwork.rootCert.pfx";
 
         private const string processName = "GGNet";
@@ -70,77 +71,88 @@ namespace DriveHUD.Importers.GGNetwork
 
         protected override void DoImport()
         {
-            try
+            lock (locker)
             {
-#if DEBUG
-                if (!Directory.Exists("GGNHands"))
+                try
                 {
-                    Directory.CreateDirectory("GGNHands");
-                }
+#if DEBUG
+                    if (!Directory.Exists("GGNHands"))
+                    {
+                        Directory.CreateDirectory("GGNHands");
+                    }
 #endif
 
-                // get settings
-                var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+                    // get settings
+                    var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
-                if (settings != null)
-                {
-                    var ggnSettings = settings?.SiteSettings?.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.GGN);
-
-                    if (ggnSettings != null)
+                    if (settings != null)
                     {
-                        heroName = ggnSettings.HeroName;
+                        var ggnSettings = settings?.SiteSettings?.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.GGN);
+
+                        if (ggnSettings != null)
+                        {
+                            heroName = ggnSettings.HeroName;
+                        }
+
+                        IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
                     }
 
-                    IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
-                }
-
-                if (cacheService == null)
-                {
-                    cacheService = ServiceLocator.Current.GetInstance<IGGNCacheService>();
-                }
-
-                // refresh cache data
-                cacheService.RefreshAsync().Wait();
-
-                // install certificate
-                var certificate = InitializeCertificate();
-
-                // create proxy
-                if (proxyServer == null)
-                {
-                    proxyServer = new ProxyServer
+                    if (cacheService == null)
                     {
-                        RootCertificate = certificate,
-                        TrustRootCertificate = true,
-                        ForwardToUpstreamGateway = true
-                    };
+                        cacheService = ServiceLocator.Current.GetInstance<IGGNCacheService>();
+                    }
 
-                    // configure proxy
-                    var port = GetAvailablePort();
+                    // refresh cache data
+                    cacheService
+                        .RefreshAsync(cancellationTokenSource.Token)
+                        .Wait();
 
-                    proxyEndPoint = new ExplicitProxyEndPoint(IPAddress.Any, port, true)
+                    if (cancellationTokenSource != null &&
+                        cancellationTokenSource.IsCancellationRequested)
                     {
-                        IncludedHttpsHostNameRegex = GetHttpsHostNames()
-                    };
-                }
+                        return;
+                    }
 
-                if (!proxyServer.ProxyEndPoints.Contains(proxyEndPoint))
+                    // install certificate
+                    var certificate = InitializeCertificate();
+
+                    // create proxy
+                    if (proxyServer == null)
+                    {
+                        proxyServer = new ProxyServer
+                        {
+                            RootCertificate = certificate,
+                            TrustRootCertificate = true,
+                            ForwardToUpstreamGateway = true
+                        };
+
+                        // configure proxy
+                        var port = GetAvailablePort();
+
+                        proxyEndPoint = new ExplicitProxyEndPoint(IPAddress.Any, port, true)
+                        {
+                            IncludedHttpsHostNameRegex = GetHttpsHostNames()
+                        };
+                    }
+
+                    if (!proxyServer.ProxyEndPoints.Contains(proxyEndPoint))
+                    {
+                        proxyServer.AddEndPoint(proxyEndPoint);
+                    }
+
+                    proxyServer.BeforeRequest += OnProxyServerBeforeRequest;
+
+                    // start proxy
+                    proxyServer.Start();
+                    proxyServer.SetAsSystemProxy(proxyEndPoint, ProxyProtocolType.AllHttp);
+                }
+                catch (Exception e)
                 {
-                    proxyServer.AddEndPoint(proxyEndPoint);
+                    LogProvider.Log.Error(this, $"{SiteString} auto-import failed.", e);
+
+                    Clean();
+                    RaiseProcessStopped();
                 }
-
-                proxyServer.BeforeRequest += OnProxyServerBeforeRequest;
-
-                // start proxy
-                proxyServer.Start();
-                proxyServer.SetAsSystemProxy(proxyEndPoint, ProxyProtocolType.AllHttp);
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"{SiteString} auto-import failed.", e);
-
-                Clean();
-                RaiseProcessStopped();
             }
         }
 
@@ -150,8 +162,11 @@ namespace DriveHUD.Importers.GGNetwork
 
             Task.Run(() =>
             {
-                Clean();
-                RaiseProcessStopped();
+                lock (locker)
+                {                  
+                    Clean();
+                    RaiseProcessStopped();
+                }
             });
         }
 

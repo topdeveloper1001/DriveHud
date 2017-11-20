@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HandHistories.Objects.Hand;
+using System.Threading;
 
 namespace DriveHUD.Importers.GGNetwork
 {
@@ -37,7 +38,9 @@ namespace DriveHUD.Importers.GGNetwork
 
                 if (tournamentInformation == null)
                 {
-                    cacheService.RefreshAsync().Wait();
+                    cacheService
+                        .RefreshAsync(CancellationToken.None)
+                        .Wait();
 
                     tournamentInformation = cacheService.GetTournament(ggnHandHistory.TourneyId);
 

@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Importers.GGNetwork.Model;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.GGNetwork
@@ -23,7 +24,7 @@ namespace DriveHUD.Importers.GGNetwork
         /// <summary>
         /// Refreshes cache data
         /// </summary>
-        Task RefreshAsync();
+        Task RefreshAsync(CancellationToken cancellationToken);
 
         /// <summary>
         /// Gets <see cref="TournamentInformation"/> for the specified tournament id

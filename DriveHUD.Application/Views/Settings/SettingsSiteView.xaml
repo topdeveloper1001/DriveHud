@@ -191,7 +191,7 @@
                             Value="{StaticResource PopupBackground}" />
                         <Setter
                             Property="Height"
-                            Value="320" />
+                            Value="180" />
                         <Setter
                             Property="ResizeMode"
                             Value="NoResize" />
@@ -312,7 +312,8 @@
                     HorizontalAlignment="Left"
                     Visibility="{Binding IsAddonButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Command="{Binding AddonCommand}"
-                    Content="Get GG Catcher" />
+                    Content="{Binding AddonText}"
+                    ToolTip="{Binding AddonTooltip}"/>
 
                 <StackPanel
                     Grid.Column="1"

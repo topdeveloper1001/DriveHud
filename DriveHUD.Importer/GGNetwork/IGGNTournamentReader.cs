@@ -12,12 +12,13 @@
 
 using DriveHUD.Importers.GGNetwork.Model;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.GGNetwork
 {
     internal interface IGGNTournamentReader
     {
-        Task<IEnumerable<TournamentInformation>> ReadAllTournamentsAsync();
+        Task<IEnumerable<TournamentInformation>> ReadAllTournamentsAsync(CancellationToken cancellationToken);
     }
 }

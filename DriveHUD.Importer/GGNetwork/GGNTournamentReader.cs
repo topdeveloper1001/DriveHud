@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Security.Authentication;
+using System.Threading;
 using System.Threading.Tasks;
 using WebSocketSharp;
 
@@ -67,7 +68,7 @@ namespace DriveHUD.Importers.GGNetwork
             }
         }
 
-        public async Task<IEnumerable<TournamentInformation>> ReadAllTournamentsAsync()
+        public async Task<IEnumerable<TournamentInformation>> ReadAllTournamentsAsync(CancellationToken cancellationToken)
         {
             try
             {
@@ -103,6 +104,12 @@ namespace DriveHUD.Importers.GGNetwork
 
                     while (!IsDataReceived && interval < maxIntervals)
                     {
+                        if (cancellationToken != null && cancellationToken.IsCancellationRequested)
+                        {
+                            LogProvider.Log.Warn(this, $"Reading of tournaments info has been aborted. [{EnumPokerSites.GGN}]");
+                            return;
+                        }
+
                         Task.Delay(DelayInterval).Wait();
                         interval++;
                     }
@@ -130,17 +137,21 @@ namespace DriveHUD.Importers.GGNetwork
             }
             finally
             {
-                try
+                if (webSocket != null)
                 {
-                    webSocket.OnMessage -= WebSocketOnMessage;
-                    webSocket.Close(CloseStatusCode.Away);
-                }
-                catch (Exception e)
-                {
-                    if (isAdvancedLogging)
+                    try
                     {
-                        LogProvider.Log.Error(this, $"Websocket was closed with error [{EnumPokerSites.GGN}].", e);
+                        webSocket.OnMessage -= WebSocketOnMessage;
+                        webSocket.Close(CloseStatusCode.Away);
                     }
+                    catch (Exception e)
+                    {
+                        if (isAdvancedLogging)
+                        {
+                            LogProvider.Log.Error(this, $"Websocket was closed with error [{EnumPokerSites.GGN}].", e);
+                        }
+                    }
+
                 }
             }
         }
@@ -248,7 +259,7 @@ namespace DriveHUD.Importers.GGNetwork
                 return;
             }
 
-            var packet = PacketUtils.BuildPacket(message, protocolId, MagicKey, SerialMode, ref packetIdSeq, relayId, JunkData, SendHeaderSize);       
+            var packet = PacketUtils.BuildPacket(message, protocolId, MagicKey, SerialMode, ref packetIdSeq, relayId, JunkData, SendHeaderSize);
 
             webSocket.Send(packet);
         }
