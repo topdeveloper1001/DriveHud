@@ -1363,6 +1363,73 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="GGN" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>259</X>
+                <Y>-19</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>453</X>
+                <Y>-19</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>619</X>
+                <Y>36</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>662</X>
+                <Y>196</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>563</X>
+                <Y>321</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>351</X>
+                <Y>404</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>139</X>
+                <Y>321</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>44</X>
+                <Y>196</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>83</X>
+                <Y>36</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -1763,6 +1830,73 @@
               <Position>
                 <X>7</X>
                 <Y>124</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="GGN" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>239</X>
+                <Y>-9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>433</X>
+                <Y>-9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>599</X>
+                <Y>46</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>637</X>
+                <Y>206</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>543</X>
+                <Y>331</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>331</X>
+                <Y>414</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>119</X>
+                <Y>331</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>24</X>
+                <Y>206</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>63</X>
+                <Y>46</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -5084,6 +5218,73 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="GGN" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>210</X>
+                <Y>-9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>404</X>
+                <Y>-9</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>570</X>
+                <Y>46</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>613</X>
+                <Y>206</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>514</X>
+                <Y>331</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>302</X>
+                <Y>414</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>90</X>
+                <Y>331</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>8</X>
+                <Y>206</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>34</X>
+                <Y>46</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
       </Positions>
       <UIPositions>
         <HudPositionInfo>
@@ -5839,6 +6040,73 @@
               <Position>
                 <X>126</X>
                 <Y>144</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+        <HudPositionsInfo PokerSite="GGN" GameType="MTTHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>377</X>
+                <Y>-6</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>571</X>
+                <Y>-6</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>737</X>
+                <Y>49</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>775</X>
+                <Y>209</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>681</X>
+                <Y>334</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>469</X>
+                <Y>417</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>257</X>
+                <Y>334</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>167</X>
+                <Y>209</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>9</Seat>
+              <Position>
+                <X>201</X>
+                <Y>49</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
