@@ -548,6 +548,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/product/gg-hud.
+        /// </summary>
+        internal static string Common_GGNBuyLink {
+            get {
+                return ResourceManager.GetString("Common_GGNBuyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GG CATCHER
         ///The GG catcher is an add-on application that will allow you to capture and run a HUD through DriveHUD. It includes a fully functional 7 day trial. Click Try to enable the trial..
         /// </summary>

@@ -928,4 +928,7 @@ The GG catcher is an add-on application that will allow you to capture and run a
   <data name="Common_GGNRegistrationView_TrialExpiredText" xml:space="preserve">
     <value>You trial period is over. Please register your version of GG Catcher</value>
   </data>
+  <data name="Common_GGNBuyLink" xml:space="preserve">
+    <value>http://drivehud.com/product/gg-hud</value>
+  </data>
 </root>
