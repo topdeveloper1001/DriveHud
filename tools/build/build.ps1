@@ -26,7 +26,7 @@ param
     
     [string] $Version = '1.4.0',
 
-    [string] $VersionExlcudeFilter = 'PlayerXRay,XR*Reg',
+    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -244,10 +244,10 @@ try
    $session.PlayerXRayIncludeFilter -split ',' | ForEach-Object {
         &robocopy $session.PlayerXRaySource $session.Source $_ /s | Out-Null
    }     
-      
+         
    # setup version
    Set-Version($session)  
-       
+        
    # nuget
    Use-Nuget $session $session.Solution 'nuget.log'   
 
