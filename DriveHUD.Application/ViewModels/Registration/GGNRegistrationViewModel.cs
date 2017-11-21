@@ -133,7 +133,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             {
                 try
                 {
-                    Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_BuyLink"));
+                    Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("Common_GGNBuyLink"));
                 }
                 catch (Exception ex)
                 {
