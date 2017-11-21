@@ -230,7 +230,8 @@
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
-    <Compile Include="UnitTests\BovadaTableTests.cs" />
+    <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />
+    <Compile Include="UnitTests\IgnitionTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\ExportFunctionsTests.cs" />
@@ -376,6 +377,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-118044556.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-info.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-21.log">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

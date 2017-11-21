@@ -12,6 +12,8 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Bovada.DataObjects;
+using Newtonsoft.Json;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -29,8 +31,9 @@ namespace DriveHUD.Importers.Bovada
         private const string cashUrlPattern = @"/pokeragp/cash/play?authToken";
         private const string tournUrlPattern = @"/services/api/poker-lobby-api/tournaments";
         private const string tournEndUrlPattern = @"info";
+        private const string zoneUrlPattern = @"/poker-lobby-api/zone/games/all";
 
-        public Dictionary<uint, IgnitionTableData> tableData = new Dictionary<uint, IgnitionTableData>();
+        private Dictionary<uint, IgnitionTableData> tableData = new Dictionary<uint, IgnitionTableData>();
 
         public IgnitionInfoDataManager(IEventAggregator eventAggregator)
             : base(eventAggregator)
@@ -84,6 +87,11 @@ namespace DriveHUD.Importers.Bovada
             if (url.Contains(tournUrlPattern) && url.EndsWith(tournEndUrlPattern))
             {
                 ProcessTournamentData(url, dataText);
+            }
+
+            if (url.Contains(zoneUrlPattern))
+            {
+                ProcessZoneData(url, dataText);
             }
         }
 
@@ -158,7 +166,7 @@ namespace DriveHUD.Importers.Bovada
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Cash info could not be processed {site}", e);
             }
         }
 
@@ -246,7 +254,61 @@ namespace DriveHUD.Importers.Bovada
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Tournament info could not be processed {site}", e);
+            }
+        }
+
+        private void ProcessZoneData(string url, string data)
+        {
+            try
+            {
+                data = data.Remove(0, url.Length).Trim();
+
+                var zoneTableInfoList = JsonConvert.DeserializeObject<IEnumerable<ZoneTableInfo>>(data);
+
+                rwLock.EnterUpgradeableReadLock();
+
+                try
+                {
+                    foreach (var zoneTableInfo in zoneTableInfoList)
+                    {
+                        if (tableData.ContainsKey(zoneTableInfo.gameId))
+                        {
+                            continue;
+                        }
+
+                        if (!rwLock.IsWriteLockHeld)
+                        {
+                            rwLock.EnterWriteLock();
+                        }
+
+                        var table = new IgnitionTableData
+                        {
+                            Id = zoneTableInfo.gameId,
+                            TableName = zoneTableInfo.gameName,
+                            IsZone = true,
+                            TableSize = zoneTableInfo.seats,
+                            GameType = BovadaConverters.ConvertGameType(zoneTableInfo.gameType),
+                            GameLimit = BovadaConverters.ConvertGameLimit(zoneTableInfo.limit),
+                            GameFormat = GameFormat.Zone
+                        };
+
+                        tableData.Add(zoneTableInfo.gameId, table);
+                    }
+                }
+                finally
+                {
+                    if (rwLock.IsWriteLockHeld)
+                    {
+                        rwLock.ExitWriteLock();
+                    }
+
+                    rwLock.ExitUpgradeableReadLock();
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Zone info could not be processed {site}", e);
             }
         }
 

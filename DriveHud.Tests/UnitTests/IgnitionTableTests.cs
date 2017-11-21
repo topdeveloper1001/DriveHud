@@ -34,7 +34,7 @@ using System;
 namespace DriveHud.Tests.UnitTests
 {
     [TestFixture]
-    class BovadaTableTests
+    class IgnitionTableTests
     {
         private IUnityContainer unityContainer;
 
@@ -71,12 +71,13 @@ namespace DriveHud.Tests.UnitTests
         /// <summary>
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
         /// </summary>        
-        //[Test]
-        //[TestCase("bovada-MTT-moving")]
-        public void TestProcessCommand(string testData)
+        [Test]
+        [TestCase("ign-zone-2017-11-21.log")]
+        public void ZoneHandsIsImported(string testData)
         {
             // Read source
             var source = File.ReadAllLines(GetTestDataFilePath(testData));
+
             // Convert source to list of commands
             var bovadaCatcherDataObjects = SplitByDataObjects(source);
 
@@ -84,11 +85,11 @@ namespace DriveHud.Tests.UnitTests
             var importedEvent = new DataImportedEvent();
             eventAggregator.GetEvent<DataImportedEvent>().ReturnsForAnyArgs(importedEvent);
 
-            var bovadaTable = new BovadaTable(eventAggregator);
+            var ignitionTable = new IgnitionTable(eventAggregator);
 
             foreach (var bovadaCatcherDataObject in bovadaCatcherDataObjects)
             {
-                bovadaTable.ProcessCommand(bovadaCatcherDataObject);
+                ignitionTable.ProcessCommand(bovadaCatcherDataObject);
             }
 
             var fileImporter = ServiceLocator.Current.GetInstance<IFileImporter>() as FileImporterStub;
@@ -96,6 +97,11 @@ namespace DriveHud.Tests.UnitTests
             var xml = fileImporter.Xml;
 
             Assert.IsNotNull(xml);
+        }
+
+        private void InitializeInfoDataManager(string fileName)
+        {
+
         }
 
         private IEnumerable<BovadaCatcherDataObject> SplitByDataObjects(string[] textLines)
@@ -124,8 +130,10 @@ namespace DriveHud.Tests.UnitTests
 
         private static string GetTestDataFilePath(string name)
         {
-            return string.Format("UnitTests\\TestData\\Bovada\\{0}.log", name);
+            return string.Format("UnitTests\\TestData\\Ignition\\{0}", name);
         }
+
+        #region Stubs
 
         private class FileImporterStub : IFileImporter
         {
@@ -181,5 +189,7 @@ namespace DriveHud.Tests.UnitTests
                 }
             }
         }
+
+        #endregion
     }
 }
