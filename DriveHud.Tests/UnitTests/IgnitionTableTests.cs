@@ -30,6 +30,9 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 using System;
+using DriveHud.Tests.UnitTests.Helpers;
+using Model.Settings;
+using DriveHUD.Common.Resources;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -43,9 +46,12 @@ namespace DriveHud.Tests.UnitTests
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
 
+            ResourceRegistrator.Initialization();
+
             unityContainer = new UnityContainer();
 
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
+            unityContainer.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
             unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
@@ -57,8 +63,25 @@ namespace DriveHud.Tests.UnitTests
             unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, GGNConfiguration>(EnumPokerSites.GGN.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IFileImporter, FileImporterStub>(new ContainerControlledLifetimeManager());
+
+            var eventAggregator = Substitute.For<IEventAggregator>();
+            var ignitionInfoDataManager = new IgnitionInfoDataManagerStub(eventAggregator);
+
+            var ignitionInfoImporter = Substitute.For<IIgnitionInfoImporter>();
+            ignitionInfoImporter.InfoDataManager.Returns(ignitionInfoDataManager);
+
+            var importerService = Substitute.For<IImporterService>();
+            importerService.GetRunningImporter<IIgnitionInfoImporter>().Returns(ignitionInfoImporter);
+            unityContainer.RegisterInstance(importerService);
+
+            var settingsService = Substitute.For<ISettingsService>();
+            settingsService.GetSettings().Returns(new SettingsModel());
+            unityContainer.RegisterInstance(settingsService);
 
             var locator = new UnityServiceLocator(unityContainer);
 
@@ -68,21 +91,35 @@ namespace DriveHud.Tests.UnitTests
             configurationService.Initialize();
         }
 
+        [TearDown]
+        public void TearDown()
+        {
+            var fileImporter = ServiceLocator.Current.GetInstance<IFileImporter>() as FileImporterStub;
+            fileImporter.Clear();
+
+            var infoDataManager = GetInfoDataManager();
+            infoDataManager.Clear();
+        }
+
         /// <summary>
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
         /// </summary>        
         [Test]
-        [TestCase("ign-zone-2017-11-21.log")]
-        public void ZoneHandsIsImported(string testData)
+        [TestCase("ign-zone-2017-11-21.log", "ign-info.log", 4)]
+        public void ZoneHandsIsImported(string testData, string infoTestData, int expectedHandsAmount)
         {
+            // initialize info manager with test data
+            InitializeInfoDataManager(infoTestData);
+
             // Read source
             var source = File.ReadAllLines(GetTestDataFilePath(testData));
 
             // Convert source to list of commands
             var bovadaCatcherDataObjects = SplitByDataObjects(source);
 
-            var eventAggregator = Substitute.For<IEventAggregator>();
             var importedEvent = new DataImportedEvent();
+
+            var eventAggregator = Substitute.For<IEventAggregator>();
             eventAggregator.GetEvent<DataImportedEvent>().ReturnsForAnyArgs(importedEvent);
 
             var ignitionTable = new IgnitionTable(eventAggregator);
@@ -96,12 +133,30 @@ namespace DriveHud.Tests.UnitTests
 
             var xml = fileImporter.Xml;
 
-            Assert.IsNotNull(xml);
+            Assert.IsNotNull(xml, "Result must be not null");
+            Assert.That(fileImporter.ImportedHands.Count, Is.EqualTo(expectedHandsAmount), "Imported hands amount must be equal to expected");
         }
 
         private void InitializeInfoDataManager(string fileName)
         {
+            var infoDataManager = GetInfoDataManager();
 
+            var infoData = IgnitionTestsHelper.PrepareInfoTestData(GetTestDataFilePath(fileName));
+
+            foreach (var data in infoData)
+            {
+                infoDataManager.ProcessData(data);
+            }
+        }
+
+        private IgnitionInfoDataManagerStub GetInfoDataManager()
+        {
+            var importerService = ServiceLocator.Current.GetInstance<IImporterService>();
+            var ignitionInfoImporter = importerService.GetRunningImporter<IIgnitionInfoImporter>();
+
+            var infoDataManager = ignitionInfoImporter.InfoDataManager as IgnitionInfoDataManagerStub;
+
+            return infoDataManager;
         }
 
         private IEnumerable<BovadaCatcherDataObject> SplitByDataObjects(string[] textLines)
@@ -115,11 +170,17 @@ namespace DriveHud.Tests.UnitTests
                 if (string.IsNullOrWhiteSpace(textLine))
                 {
                     var dataText = sb.ToString();
-                    var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObject>(dataText);
+                    var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObjectWithTime>(dataText);
 
                     bovadaCatcherDataObjects.Add(catcherDataObject);
 
                     sb.Clear();
+                }
+
+                if (textLine.StartsWith("\"timestamp\""))
+                {
+                    sb.AppendLine(textLine + ",");
+                    continue;
                 }
 
                 sb.AppendLine(textLine);
@@ -135,12 +196,30 @@ namespace DriveHud.Tests.UnitTests
 
         #region Stubs
 
+        public class BovadaCatcherDataObjectWithTime : BovadaCatcherDataObject
+        {
+            public string timestamp { get; set; }
+        }
+
         private class FileImporterStub : IFileImporter
         {
+            private static readonly object locker = new object();
+
+            public FileImporterStub()
+            {
+                ImportedHands = new List<ImportedHand>();
+            }
+
             public XDocument Xml
             {
                 get;
                 set;
+            }
+
+            public List<ImportedHand> ImportedHands
+            {
+                get;
+                private set;
             }
 
             public void Import(DirectoryInfo directory, IDHProgress progress)
@@ -157,25 +236,35 @@ namespace DriveHud.Tests.UnitTests
 
             public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo)
             {
-                throw new NotImplementedException();
-            }
-
-            public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands)
-            {
-                var handXml = XDocument.Parse(text);
-
-                if (Xml == null)
+                lock (locker)
                 {
-                    Xml = handXml;
+                    var handXml = XDocument.Parse(text);
+
+                    ImportedHands.Add(new ImportedHand
+                    {
+                        HandXml = handXml,
+                        GameInfo = gameInfo
+                    });
+
+                    if (Xml == null)
+                    {
+                        Xml = handXml;
+                        return null;
+                    }
+
+                    var sessionNode = Xml.Descendants("session").FirstOrDefault();
+                    var gameNode = handXml.Descendants("game").FirstOrDefault();
+
+                    sessionNode.Add(gameNode);
+
                     return null;
                 }
+            }
 
-                var sessionNode = Xml.Descendants("session").FirstOrDefault();
-                var gameNode = handXml.Descendants("game").FirstOrDefault();
-
-                sessionNode.Add(gameNode);
-
-                return null;
+            public void Clear()
+            {
+                Xml = null;
+                ImportedHands.Clear();
             }
         }
 
@@ -187,6 +276,18 @@ namespace DriveHud.Tests.UnitTests
                 {
                     return new Dictionary<int, int>(); ;
                 }
+            }
+        }
+
+        private class ImportedHand
+        {
+            public XDocument HandXml { get; set; }
+
+            public GameInfo GameInfo { get; set; }
+
+            public override string ToString()
+            {
+                return GameInfo.GameNumber.ToString();
             }
         }
 

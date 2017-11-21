@@ -74,6 +74,8 @@ namespace DriveHUD.Importers.Bovada
 
         protected bool isConnectedInfoParsed;
 
+        private int heroAccount = 0;
+
         public BovadaTable(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
@@ -104,7 +106,9 @@ namespace DriveHUD.Importers.Bovada
         {
             get
             {
-                return CurrentHandNumber != 0 && TableId != 0 && WindowHandle != IntPtr.Zero && !string.IsNullOrEmpty(TableName);
+                return CurrentHandNumber != 0 && TableId != 0 &&
+                    (WindowHandle != IntPtr.Zero || IsZonePokerTable) &&
+                    !string.IsNullOrEmpty(TableName);
             }
         }
 
@@ -612,15 +616,34 @@ namespace DriveHUD.Importers.Bovada
                     AddAnteCommands(cmdObj);
                     break;
 
-                case "CO_ZONE_NO_INFO":                
+                case "CO_ZONE_NO_INFO":
                 case "CO_ZONE_WAITING_PLAYERS_INFO":
                     IsZonePokerTable = true;
                     break;
 
+                case "PLAY_ACCOUNT_INFO":
+                    if (IsZonePokerTable && commands.Count > 0)
+                    {
+                        heroAccount = int.Parse(cmdObj.account.ToString());
+                    }
+
+                    break;
                 case "PLAY_CLEAR_INFO":
 
                     if (IsZonePokerTable && commands.Count > 0)
                     {
+                        if (!hasResultCommand)
+                        {
+                            var foldObj = new BovadaCommandDataObject
+                            {
+                                btn = (int)BovadaPlayerActionType.Fold,
+                                seat = HeroSeat,
+                                account = heroAccount
+                            };
+
+                            AddPlayerActionCommand(foldObj);
+                        }
+
                         isResultCommand = true;
                     }
 
@@ -701,17 +724,11 @@ namespace DriveHUD.Importers.Bovada
                     // Push hand                    
                     var handModel = new HandModel2(commands.ToList());
 
-                    // skip zone poker
-                    if (handModel.IsZonePoker || IsZonePokerTable)
-                    {
-                        return;
-                    }
-
                     handModel.GameType = GameType;
                     handModel.GameLimit = GameLimit;
                     handModel.GameFormat = GameFormat;
 
-                    var configuration = configurationService.Get("Bovada");
+                    var configuration = configurationService.Get(EnumPokerSites.Ignition);
 
                     TryToFixCommunityCardsCommands(handModel);
                     UpdatePlayersOnTable(handModel, configuration);
@@ -746,6 +763,8 @@ namespace DriveHUD.Importers.Bovada
                     importHandResetEvent.Reset();
 
                     ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
+
+                    ClearInfo();
                 }
             }
         }
@@ -803,7 +822,7 @@ namespace DriveHUD.Importers.Bovada
         protected virtual void ParsePlayTableNumber(BovadaCommandDataObject cmdObj)
         {
             // remember that hero was moved, so in history builder we don't need to update seat if preferred seat is set 
-            if ((GameFormat == GameFormat.MTT || GameFormat == GameFormat.SnG) && TableIndex != 0 && TableIndex != cmdObj.tableNo)
+            if ((GameFormat == GameFormat.MTT || GameFormat == GameFormat.SnG || IsZonePokerTable) && TableIndex != 0 && TableIndex != cmdObj.tableNo)
             {
                 HeroWasMoved = true;
             }

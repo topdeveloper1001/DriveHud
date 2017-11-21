@@ -1,0 +1,165 @@
+<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.02/$0.05</gametype>
+    <tablename>Zone Poker - Patriots</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-11-21 20:40:48</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>$0+$0</buyin>
+    <totalbuyin>$0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="3531068283">
+    <general>
+      <startdate>2017-11-21 20:40:48</startdate>
+      <players>
+        <player seat="1" name="P1_738750FS" chips="5.66" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="P2_522994IB" chips="2.36" dealer="1" win="0" bet="0.15" rebuy="0" addon="0" />
+        <player seat="3" name="P3_967554YY" chips="7.92" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+        <player seat="4" name="Hero" chips="2.5" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="5" name="P5_783005SP" chips="5.5" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="P6_909416QU" chips="7.19" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P3_967554YY" type="1" sum="0.02" cards="[cards]" />
+      <action no="2" player="Hero" type="2" sum="0.05" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P1_738750FS">X X</cards>
+      <cards type="Pocket" player="P2_522994IB">X X</cards>
+      <cards type="Pocket" player="P3_967554YY">X X</cards>
+      <cards type="Pocket" player="Hero">S7 C7</cards>
+      <cards type="Pocket" player="P5_783005SP">X X</cards>
+      <cards type="Pocket" player="P6_909416QU">X X</cards>
+      <action no="3" player="P5_783005SP" type="0" sum="0" cards="" />
+      <action no="4" player="P6_909416QU" type="0" sum="0" cards="" />
+      <action no="5" player="P1_738750FS" type="0" sum="0" cards="" />
+      <action no="6" player="P2_522994IB" type="3" sum="0.05" cards="" />
+      <action no="7" player="P3_967554YY" type="0" sum="0" cards="" />
+      <action no="8" player="Hero" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">HJ D8 D3</cards>
+      <action no="9" player="Hero" type="4" sum="0" cards="" />
+      <action no="10" player="P2_522994IB" type="5" sum="0.1" cards="" />
+      <action no="11" player="Hero" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3531068362">
+    <general>
+      <startdate>2017-11-21 20:40:48</startdate>
+      <players>
+        <player seat="1" name="P1_788349YH" chips="9.59" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="Hero" chips="2.45" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="P3_978267CC" chips="9.1" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+        <player seat="4" name="P4_526366LT" chips="6.01" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="5" name="P5_381098LQ" chips="11.92" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="P6_477721TA" chips="4.18" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P3_978267CC" type="1" sum="0.02" cards="[cards]" />
+      <action no="2" player="P4_526366LT" type="2" sum="0.05" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P1_788349YH">X X</cards>
+      <cards type="Pocket" player="Hero">H4 D8</cards>
+      <cards type="Pocket" player="P3_978267CC">X X</cards>
+      <cards type="Pocket" player="P4_526366LT">X X</cards>
+      <cards type="Pocket" player="P5_381098LQ">X X</cards>
+      <cards type="Pocket" player="P6_477721TA">X X</cards>
+      <action no="3" player="P5_381098LQ" type="0" sum="0" cards="" />
+      <action no="4" player="P1_788349YH" type="0" sum="0" cards="" />
+      <action no="5" player="P6_477721TA" type="0" sum="0" cards="" />
+      <action no="6" player="Hero" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3531068389">
+    <general>
+      <startdate>2017-11-21 20:40:48</startdate>
+      <players>
+        <player seat="1" name="P1_543625YO" chips="4.94" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+        <player seat="2" name="P2_432271AV" chips="7.77" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="Hero" chips="2.45" dealer="0" win="0.21" bet="0.1" rebuy="0" addon="0" />
+        <player seat="4" name="P4_374223AV" chips="11.92" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="P5_375906DH" chips="4.82" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="P6_232736RM" chips="4.18" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P6_232736RM" type="1" sum="0.02" cards="[cards]" />
+      <action no="2" player="P1_543625YO" type="2" sum="0.05" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P1_543625YO">X X</cards>
+      <cards type="Pocket" player="P2_432271AV">X X</cards>
+      <cards type="Pocket" player="Hero">HJ HA</cards>
+      <cards type="Pocket" player="P4_374223AV">X X</cards>
+      <cards type="Pocket" player="P5_375906DH">X X</cards>
+      <cards type="Pocket" player="P6_232736RM">X X</cards>
+      <action no="3" player="P2_432271AV" type="0" sum="0" cards="" />
+      <action no="4" player="Hero" type="3" sum="0.05" cards="" />
+      <action no="5" player="P4_374223AV" type="0" sum="0" cards="" />
+      <action no="6" player="P5_375906DH" type="0" sum="0" cards="" />
+      <action no="7" player="P6_232736RM" type="0" sum="0" cards="" />
+      <action no="8" player="P1_543625YO" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H10 H7 S2</cards>
+      <action no="9" player="P1_543625YO" type="4" sum="0" cards="" />
+      <action no="10" player="Hero" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">C8</cards>
+      <action no="11" player="P1_543625YO" type="4" sum="0" cards="" />
+      <action no="12" player="Hero" type="4" sum="0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">H9</cards>
+      <action no="13" player="P1_543625YO" type="4" sum="0" cards="" />
+      <action no="14" player="Hero" type="5" sum="0.05" cards="" />
+      <action no="15" player="P1_543625YO" type="3" sum="0.05" cards="" />
+    </round>
+  </game>
+  <game gamecode="3531068482">
+    <general>
+      <startdate>2017-11-21 20:40:48</startdate>
+      <players>
+        <player seat="1" name="Hero" chips="2.56" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="P2_247258EU" chips="2.27" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+        <player seat="3" name="P3_335578AJ" chips="8.72" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="4" name="P4_270403VQ" chips="11.8" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="P5_615271FS" chips="2.06" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+        <player seat="6" name="P6_961187DW" chips="5.77" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P2_247258EU" type="1" sum="0.02" cards="[cards]" />
+      <action no="2" player="P3_335578AJ" type="2" sum="0.05" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Hero">DK C4</cards>
+      <cards type="Pocket" player="P2_247258EU">X X</cards>
+      <cards type="Pocket" player="P3_335578AJ">X X</cards>
+      <cards type="Pocket" player="P4_270403VQ">X X</cards>
+      <cards type="Pocket" player="P5_615271FS">X X</cards>
+      <cards type="Pocket" player="P6_961187DW">X X</cards>
+      <action no="3" player="P4_270403VQ" type="0" sum="0" cards="" />
+      <action no="4" player="P5_615271FS" type="23" sum="0.1" cards="" />
+      <action no="5" player="P6_961187DW" type="0" sum="0" cards="" />
+      <action no="6" player="Hero" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

@@ -33,7 +33,7 @@ namespace DriveHUD.Importers.Bovada
         private const string tournEndUrlPattern = @"info";
         private const string zoneUrlPattern = @"/poker-lobby-api/zone/games/all";
 
-        private Dictionary<uint, IgnitionTableData> tableData = new Dictionary<uint, IgnitionTableData>();
+        protected Dictionary<uint, IgnitionTableData> tableData = new Dictionary<uint, IgnitionTableData>();
 
         public IgnitionInfoDataManager(IEventAggregator eventAggregator)
             : base(eventAggregator)

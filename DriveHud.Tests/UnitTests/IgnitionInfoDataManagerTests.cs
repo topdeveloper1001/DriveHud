@@ -10,15 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Importers.Bovada;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -39,7 +36,7 @@ namespace DriveHud.Tests.UnitTests
         public void ZoneDataIsRead(string fileName, uint expectedGameId, string expectedName, GameType expectedGameType,
             GameLimit expectedLimit, int expectedSeats, bool isZone)
         {
-            var infoData = PrepareTestData(fileName);
+            var infoData = IgnitionTestsHelper.PrepareInfoTestData(GetTestDataFilePath(fileName));
 
             // create mock for event aggregator
             var eventAggregator = Substitute.For<IEventAggregator>();
@@ -59,37 +56,11 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(tableData.GameLimit, Is.EqualTo(expectedLimit));
             Assert.That(tableData.TableSize, Is.EqualTo(expectedSeats));
             Assert.That(tableData.IsZone, Is.EqualTo(isZone));
-        }
-
-        private List<byte[]> PrepareTestData(string fileName)
-        {
-            // read test data from file
-            var infoDataText = File.ReadAllText(GetTestDataFilePath(fileName));
-
-            // split data by new lines
-            var splittedInfoData = infoDataText.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            // convert string to bytes (utf-8)
-            var testData = splittedInfoData.Select(s => Encoding.UTF8.GetBytes(s)).ToList();
-
-            return testData;
-        }
+        }      
 
         private static string GetTestDataFilePath(string name)
         {
             return string.Format("UnitTests\\TestData\\Ignition\\{0}", name);
-        }
-
-        private class IgnitionInfoDataManagerStub : IgnitionInfoDataManager
-        {
-            public IgnitionInfoDataManagerStub(IEventAggregator eventAggregator) : base(eventAggregator)
-            {
-            }
-
-            protected override string Decrypt(string encryptedXml)
-            {
-                return encryptedXml;
-            }
-        }
+        }       
     }
 }
