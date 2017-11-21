@@ -87,9 +87,29 @@ namespace HandHistories.Objects.Hand
         [XmlArray]
         [XmlArrayItem(ElementName = "Player")]
         public PlayerList Players { get; set; }
+        
+        private Player hero;
 
         [XmlIgnore]
-        public Player Hero { get; set; }
+        public Player Hero
+        {
+            get
+            {
+                return hero;
+            }
+            set
+            {
+                if (ReferenceEquals(hero, value))
+                {
+                    return;
+                }
+
+                hero = value;
+                HeroName = hero?.PlayerName;
+            }
+        }
+
+        public string HeroName { get; set; }
 
         [XmlIgnore]
         public Exception Exception { get; set; }

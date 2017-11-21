@@ -132,7 +132,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 25)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);
+            var handHistory = ParseHandHistory(handHistoryFile);            
             Assert.That(handHistory.GameDescription.Limit.SmallBlind, Is.EqualTo(smallBlind));
         }
 
@@ -168,7 +168,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", 1)]
         public void TournamentFinishPositionIsParsedTest(string handHistoryFile, int place)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);
+            var handHistory = ParseHandHistory(handHistoryFile);            
             Assert.That(handHistory.GameDescription.Tournament.FinishPosition, Is.EqualTo(place));
         }
 

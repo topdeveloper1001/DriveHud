@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -19,6 +20,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Settings;
 using Model.Site;
+using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,10 +54,13 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
-                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) }
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
+                { EnumPokerSites.GGN, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.GGN) }
             };
 
             SelectedSiteViewModel = new SiteViewModel();
+
+            AddonViewRequest = new InteractionRequest<INotification>();
         }
 
         public void InitializeCommands()
@@ -65,6 +70,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
             AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
             EnableCommand = new RelayCommand(x => SelectedSite.Enabled = !SelectedSite.Enabled);
+            AddonCommand = new RelayCommand(ShowAddon);
             HelpCommand = new RelayCommand(Help);
         }
 
@@ -88,6 +94,11 @@ namespace DriveHUD.Application.ViewModels.Settings
         private bool isAutoCenterVisible;
         private bool fastPokerVisible;
         private bool isHandHistoryLocationRequired;
+        private bool isAddonButtonVisible;
+        private string addonText;
+        private string addonTooltip;
+
+        public InteractionRequest<INotification> AddonViewRequest { get; private set; }
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
         {
@@ -119,9 +130,12 @@ namespace DriveHUD.Application.ViewModels.Settings
 
                 IsPreferredSeatingVisible = siteConfiguration.IsPrefferedSeatsAllowed;
                 IsHandHistoryLocationRequired = siteConfiguration.IsHandHistoryLocationRequired;
+                IsAddonButtonVisible = siteConfiguration.IsAddon;
                 IsAutoCenterVisible = siteConfiguration.IsAutoCenterAllowed;
                 FastPokerVisible = siteConfiguration.FastPokerAllowed;
                 FastPokerModeName = siteConfiguration.FastPokerModeName;
+                AddonText = siteConfiguration.AddonText;
+                AddonTooltip = siteConfiguration.AddonTooltip;
 
                 SetProperty(ref selectedSiteType, value);
             }
@@ -262,6 +276,42 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public string AddonText
+        {
+            get
+            {
+                return addonText;
+            }
+            set
+            {
+                SetProperty(ref addonText, value);
+            }
+        }
+
+        public string AddonTooltip
+        {
+            get
+            {
+                return addonTooltip;
+            }
+            set
+            {
+                SetProperty(ref addonTooltip, value);
+            }
+        }
+
+        public bool IsAddonButtonVisible
+        {
+            get
+            {
+                return isAddonButtonVisible;
+            }
+            set
+            {
+                SetProperty(ref isAddonButtonVisible, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -275,6 +325,8 @@ namespace DriveHUD.Application.ViewModels.Settings
         public ICommand AutoDetectHandHistoryLocationCommand { get; set; }
 
         public ICommand EnableCommand { get; set; }
+
+        public ICommand AddonCommand { get; set; }
 
         public ICommand HelpCommand { get; set; }
 
@@ -360,6 +412,20 @@ namespace DriveHUD.Application.ViewModels.Settings
             var helpLink = CommonResourceManager.Instance.GetResourceString(helpLinkKey);
 
             BrowserHelper.OpenLinkInBrowser(helpLink);
+        }
+
+        private void ShowAddon(object obj)
+        {
+            if (SelectedSite == null)
+            {
+                return;
+            }
+
+            if (SelectedSite.PokerSite == EnumPokerSites.GGN)
+            {
+                var registrationViewModel = new GGNRegistrationViewModel(false);
+                AddonViewRequest?.Raise(registrationViewModel);
+            }
         }
 
         private string GetTableTypeString(EnumTableType tableType)

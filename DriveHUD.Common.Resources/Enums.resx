@@ -716,4 +716,7 @@
   <data name="Enum_HudStatsDataFreshness_LastYear" xml:space="preserve">
     <value>Last year</value>
   </data>
+  <data name="Enum_EnumPokerSites_GGN" xml:space="preserve">
+    <value>GGNetwork</value>
+  </data>
 </root>

@@ -12,14 +12,10 @@
 
 using DeployLX.Licensing.v5;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.Licensing
 {
-    internal interface ILicenseInfo
+    internal interface ILicenseInfo : IBaseLicenseInfo
     {
         /// <summary>
         /// License 
@@ -49,17 +45,7 @@ namespace DriveHUD.Application.Licensing
         /// <summary>
         /// True if trial has expired
         /// </summary>
-        bool IsTrialExpired { get; }
-
-        /// <summary>
-        /// Serial number
-        /// </summary>
-        string Serial { get; set; }
-
-        /// <summary>
-        /// Time remaining to be expired
-        /// </summary>
-        TimeSpan TimeRemaining { get; }
+        bool IsTrialExpired { get; }      
 
         /// <summary>
         /// Expiry date

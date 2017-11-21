@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;

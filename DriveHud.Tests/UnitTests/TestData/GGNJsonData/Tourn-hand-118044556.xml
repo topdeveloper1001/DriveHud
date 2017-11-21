@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2017-11-17T14:03:02.988Z</DateOfHandUtc>
+  <HandId>118044556</HandId>
+  <DealerButtonPosition>1</DealerButtonPosition>
+  <TableName>$50 VIP Club Members Freeroll - Table 1</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>GGN</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>USD</Currency>
+      <SmallBlind>200</SmallBlind>
+      <BigBlind>400</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>50</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableTypeDescriptors>
+      <TableTypeDescription>Regular</TableTypeDescription>
+    </TableTypeDescriptors>
+    <Tournament>
+      <TournamentId>0000000e-0000-0000-0000-00001c1c1900</TournamentId>
+      <TournamentInGameId>0000000e-0000-0000-0000-00001c1c1900</TournamentInGameId>
+      <TournamentName>$50 VIP Club Members Freeroll</TournamentName>
+      <BuyIn>
+        <Currency>USD</Currency>
+        <PrizePoolValue>0</PrizePoolValue>
+        <Rake>0</Rake>
+        <IsKnockout>false</IsKnockout>
+        <KnockoutValue>0</KnockoutValue>
+      </BuyIn>
+      <Bounty>0</Bounty>
+      <Rebuy>0</Rebuy>
+      <Addon>0</Addon>
+      <Winning>0</Winning>
+      <FinishPosition>0</FinishPosition>
+      <TotalPlayers>3</TotalPlayers>
+      <StartDate>2017-11-17T13:00:00Z</StartDate>
+      <Speed>Regular</Speed>
+    </Tournament>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>4</NumPlayersSeated>
+  <TotalPot>1200</TotalPot>
+  <Rake>0</Rake>
+  <Actions>
+    <HandAction PlayerName="Greyfish" HandActionType="ANTE" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ASON87" HandActionType="ANTE" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="chrissummers" HandActionType="ANTE" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="porszivo" HandActionType="ANTE" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ASON87" HandActionType="SMALL_BLIND" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="chrissummers" HandActionType="BIG_BLIND" Amount="-400" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="porszivo" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Greyfish" HandActionType="RAISE" Amount="-800" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ASON87" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="chrissummers" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Greyfish" HandActionType="UNCALLED_BET" Amount="400" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Greyfish" HandActionType="WINS" Amount="1200" Street="Summary" IsAllIn="false" />
+  </Actions>
+  <CommunityCards />
+  <Players>
+    <Player PlayerName="Greyfish" StartingStack="6345" Bet="850" Win="1200" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="ASON87" StartingStack="12448" Bet="250" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="chrissummers" StartingStack="9547" Bet="450" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="porszivo" StartingStack="11660" Bet="50" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

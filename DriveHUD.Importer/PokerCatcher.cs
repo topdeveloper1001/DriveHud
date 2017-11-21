@@ -130,7 +130,10 @@ namespace DriveHUD.Importers
 
         public virtual void Stop()
         {
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping  \"{0}\" catcher", Identifier));
+            if (isRunning)
+            {
+                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping  \"{0}\" catcher", Identifier));
+            }
 
             if (cancellationTokenSource != null)
             {

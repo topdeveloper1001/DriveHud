@@ -54,7 +54,8 @@ namespace Model.Settings
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
-                EnumPokerSites.IPoker
+                EnumPokerSites.IPoker,
+                EnumPokerSites.GGN
             };
 
             SitesModelList = sites.Select(x => new SiteModel
@@ -130,6 +131,9 @@ namespace Model.Settings
 
         [XmlAttribute]
         public bool FastPokerEnabled { get; set; }
+
+        [XmlAttribute]
+        public string HeroName { get; set; }
 
         public override object Clone()
         {

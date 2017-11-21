@@ -12,14 +12,12 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using System;
 using System.Globalization;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Linq;
-using HandHistories.Objects.Cards;
+using System.Text.RegularExpressions;
 
 namespace HandHistories.Parser.Utils.FastParsing
 {

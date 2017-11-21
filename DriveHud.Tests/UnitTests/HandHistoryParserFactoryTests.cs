@@ -37,6 +37,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("888PokerHands.txt", EnumPokerSites.Poker888)]
         [TestCase("888PokerSummary.txt", EnumPokerSites.Poker888)]
         [TestCase("ACR-SnG2.txt", EnumPokerSites.WinningPokerNetwork)]
+        [TestCase("GGN-6-max-cash.xml", EnumPokerSites.GGN)]
         public void GetFullHandHistoryParserReturnsExpectedParser(string fileName, EnumPokerSites expectedSite)
         {
             var file = Path.Combine(testFolder, fileName);
@@ -53,6 +54,6 @@ namespace DriveHud.Tests.UnitTests
             var parser = handHistoryParserFactory.GetFullHandHistoryParser(handText);
 
             Assert.That(parser.SiteName, Is.EqualTo(expectedSite));
-        }      
+        }
     }
 }

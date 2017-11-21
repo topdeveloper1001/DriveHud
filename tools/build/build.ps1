@@ -24,9 +24,9 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.3.0',
+    [string] $Version = '1.4.0',
 
-    [string] $VersionExlcudeFilter = 'PlayerXRay,XR*Reg',
+    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -59,7 +59,7 @@ param
 
     [string] $LicSource = 'DHCReg\bin',
 
-    [string] $LicObfuscatorIncludeFilter = 'DH*Reg.dll',        
+    [string] $LicObfuscatorIncludeFilter = '*Reg.dll',        
 
     [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj',
 
@@ -244,10 +244,10 @@ try
    $session.PlayerXRayIncludeFilter -split ',' | ForEach-Object {
         &robocopy $session.PlayerXRaySource $session.Source $_ /s | Out-Null
    }     
-      
+         
    # setup version
    Set-Version($session)  
-       
+        
    # nuget
    Use-Nuget $session $session.Solution 'nuget.log'   
 

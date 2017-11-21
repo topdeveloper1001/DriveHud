@@ -8,8 +8,12 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     mc:Ignorable="d"
+    xmlns:v="clr-namespace:DriveHUD.Application.Views"
     xmlns:control="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     d:DesignHeight="600"
     d:DesignWidth="660.625">
 
@@ -172,6 +176,49 @@
 
     </UserControl.Resources>
 
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding AddonViewRequest,Mode=OneWay}">
+            <infra:PopupWindowAction>
+                <infra:PopupWindowAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type Window}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource PopupBackground}" />
+                        <Setter
+                            Property="Height"
+                            Value="180" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
+                            Property="Width"
+                            Value="560" />
+                        <Setter
+                            Property="ShowInTaskbar"
+                            Value="False" />
+                    </Style>
+                </infra:PopupWindowAction.WindowStyle>
+                <infra:PopupWindowAction.IsModal>
+                    <sys:Boolean>True</sys:Boolean>
+                </infra:PopupWindowAction.IsModal>
+                <infra:PopupWindowAction.CenterOverAssociatedObject>
+                    <sys:Boolean>True</sys:Boolean>
+                </infra:PopupWindowAction.CenterOverAssociatedObject>
+                <infra:PopupWindowAction.WindowContent>
+                    <v:GGNRegistrationView />
+                </infra:PopupWindowAction.WindowContent>
+                <infra:PopupWindowAction.HasBorder>
+                    <sys:Boolean>False</sys:Boolean>
+                </infra:PopupWindowAction.HasBorder>
+            </infra:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+
     <StackPanel>
 
         <TextBlock
@@ -251,33 +298,52 @@
                 </Style>
             </StackPanel.Style>
 
-            <StackPanel
-                HorizontalAlignment="Right"
-                Orientation="Horizontal">
-
-                <TextBlock
-                    VerticalAlignment="Center"
-                    Foreground="{StaticResource ForegroundBrush}"
-                    Text="Activate/Deactivate" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
 
                 <Button
-                    Command="{Binding EnableCommand}"
-                    Style="{StaticResource EnableButtonStyle}">
-                    <Button.Template>
-                        <ControlTemplate
-                            TargetType="{x:Type Button}">
-                            <Border
-                                CornerRadius="3">
-                                <Border.Background>
-                                    <SolidColorBrush
-                                        Color="{Binding SelectedSite.Enabled, Converter={dh:BoolToGreenRedColorConverter}}" />
-                                </Border.Background>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                    Width="100"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Visibility="{Binding IsAddonButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Command="{Binding AddonCommand}"
+                    Content="{Binding AddonText}"
+                    ToolTip="{Binding AddonTooltip}"/>
 
-            </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Foreground="{StaticResource ForegroundBrush}"
+                        Text="Activate/Deactivate" />
+
+                    <Button
+                        Command="{Binding EnableCommand}"
+                        Style="{StaticResource EnableButtonStyle}">
+                        <Button.Template>
+                            <ControlTemplate
+                                TargetType="{x:Type Button}">
+                                <Border
+                                    CornerRadius="3">
+                                    <Border.Background>
+                                        <SolidColorBrush
+                                            Color="{Binding SelectedSite.Enabled, Converter={dh:BoolToGreenRedColorConverter}}" />
+                                    </Border.Background>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+            </Grid>
 
             <telerik:RadGridView
                 IsReadOnly="True"
@@ -364,7 +430,7 @@
             <Separator
                 Margin="5 15"
                 Visibility="{Binding FastPokerVisible, Converter={dh:BoolToVisibilityConverter}}" />
-      
+
             <CheckBox
                 IsChecked="{Binding SelectedSite.FastPokerEnabled}"
                 Visibility="{Binding FastPokerVisible, Converter={dh:BoolToVisibilityConverter}}"

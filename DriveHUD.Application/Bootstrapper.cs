@@ -14,6 +14,7 @@ using DriveHUD.API;
 using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.Licensing.GGNetwork;
 using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.MigrationService.Migrators;
@@ -34,6 +35,7 @@ using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
+using DriveHUD.Importers.GGNetwork;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -82,6 +84,9 @@ namespace DriveHUD.Application
 
             var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
             isLicenseValid = licenseService.Validate();
+
+            var ggnLicenseService = ServiceLocator.Current.GetInstance<IGGNLicenseBaseService>();
+            ggnLicenseService.Validate();
 
             var sessionService = ServiceLocator.Current.GetInstance<ISessionService>();
             sessionService.Initialize();
@@ -228,6 +233,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
+            RegisterTypeIfMissing(typeof(IGGNLicenseBaseService), typeof(GGNLicenseService), true);
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
@@ -263,6 +269,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, GGNConfiguration>(EnumPokerSites.GGN.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -282,6 +289,12 @@ namespace DriveHUD.Application
             Container.RegisterType<ILicenseManager, DHOReg>(LicenseType.Omaha.ToString());
             Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
 
+            // GGN importer licenses
+            Container.RegisterType<IGGNLicenseManager, GGNTReg>(GGNLicenseType.GGNTrial.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNHReg>(GGNLicenseType.GGNHoldem.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNOReg>(GGNLicenseType.GGNOmaha.ToString());
+            Container.RegisterType<IGGNLicenseManager, GGNCReg>(GGNLicenseType.GGNCombo.ToString());
+
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
 
@@ -298,6 +311,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

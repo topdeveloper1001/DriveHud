@@ -250,28 +250,33 @@ namespace DriveHUD.Application.ViewModels
 
         private void OnImportingStopped(object sender, EventArgs e)
         {
-            hudTransmitter.Dispose();
-
-            importerSessionCacheService.End();
-
-            System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+            try
             {
-                try
-                {
-                    // update data after hud is stopped
-                    CreatePositionReport();
-                    UpdateCurrentView();
+                hudTransmitter.Dispose();
 
-                    RefreshCommandsCanExecute();
-                }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(this, ex);
-                }
-            });
+                importerSessionCacheService.End();
 
-            GC.Collect();
-            LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+                System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+                {
+                    try
+                    {
+                        // update data after hud is stopped
+                        CreatePositionReport();
+                        UpdateCurrentView();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Reports has not been updated after HUD stopped.", ex);
+                    }
+                });
+
+                GC.Collect();
+                LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+            }
+            finally
+            {
+                System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+            }
         }
 
         internal void Load()
@@ -418,12 +423,14 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+
                 if (e.DoNotUpdateHud)
                 {
                     // update cache if even we don't need to build HUD
-                    if (gameInfo.PlayersCacheInfo != null)
+                    if (playersCacheInfo != null)
                     {
-                        foreach (var playerCacheInfo in gameInfo.PlayersCacheInfo)
+                        foreach (var playerCacheInfo in playersCacheInfo)
                         {
                             playerCacheInfo.GameFormat = gameInfo.GameFormat;
 
@@ -482,7 +489,7 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = gameInfo.PlayersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
 
                     if (playerCacheInfo != null)
                     {

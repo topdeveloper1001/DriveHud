@@ -178,6 +178,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get GG Catcher.
+        /// </summary>
+        internal static string Settings_GGNAddonText {
+            get {
+                return ResourceManager.GetString("Settings_GGNAddonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add-on needed to enable HUD for GG network.
+        /// </summary>
+        internal static string Settings_GGNAddonTooltip {
+            get {
+                return ResourceManager.GetString("Settings_GGNAddonTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grab latest rates.
         /// </summary>
         internal static string Settings_GrabRates {

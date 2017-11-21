@@ -156,6 +156,12 @@
   <data name="Settings_FastPoker_PokerStarsName" xml:space="preserve">
     <value>Enable Zoom </value>
   </data>
+  <data name="Settings_GGNAddonText" xml:space="preserve">
+    <value>Get GG Catcher</value>
+  </data>
+  <data name="Settings_GGNAddonTooltip" xml:space="preserve">
+    <value>Add-on needed to enable HUD for GG network</value>
+  </data>
   <data name="Settings_GrabRates" xml:space="preserve">
     <value>Grab latest rates</value>
   </data>

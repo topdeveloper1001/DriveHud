@@ -90,7 +90,7 @@ namespace DriveHUD.Common.Utils
                         var displayNameValue = productKey.GetValue("DisplayName");
                         var displayName = displayNameValue != null ? displayNameValue.ToString() : null;
 
-                        if (!string.IsNullOrEmpty(displayName) && displayNames.Contains(displayName))
+                        if (!string.IsNullOrEmpty(displayName) && displayNames.Contains(displayName, StringComparer.OrdinalIgnoreCase))
                         {
                             return true;
                         }
@@ -103,6 +103,6 @@ namespace DriveHUD.Common.Utils
             }
 
             return false;
-        }
+        }     
     }
 }
