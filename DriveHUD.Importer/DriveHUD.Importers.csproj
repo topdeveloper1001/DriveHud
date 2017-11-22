@@ -163,6 +163,7 @@
     <Compile Include="Bovada\DataObjects\BovadaTableState.cs" />
     <Compile Include="Bovada\DataObjects\GameLimit.cs" />
     <Compile Include="Bovada\DataObjects\GameType.cs" />
+    <Compile Include="Bovada\DataObjects\ZoneTableInfo.cs" />
     <Compile Include="Bovada\IBovadaCatcher.cs" />
     <Compile Include="Bovada\IBovadaDataManager.cs" />
     <Compile Include="Bovada\IBovadaImporter.cs" />

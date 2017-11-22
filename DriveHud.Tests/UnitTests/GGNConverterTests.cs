@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHud.Tests.UnitTests
@@ -129,7 +130,7 @@ namespace DriveHud.Tests.UnitTests
                 return null;
             }
 
-            public Task RefreshAsync()
+            public Task RefreshAsync(CancellationToken cancellationToken)
             {
                 throw new NotImplementedException();
             }

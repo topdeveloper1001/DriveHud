@@ -696,12 +696,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         }
 
         private string GetTableName()
-        {
-            if (handModel.IsZonePoker)
-            {
-                return string.Format(PokerConfiguration.ZonePokerTableTemplate, handModel.TableName);
-            }
-
+        {           
             if (handModel.CashOrTournament == CashOrTournament.Tournament)
             {
                 return string.Format(PokerConfiguration.TournamentTableTitleTemplate, handModel.TableName, handModel.TournamentNumber);

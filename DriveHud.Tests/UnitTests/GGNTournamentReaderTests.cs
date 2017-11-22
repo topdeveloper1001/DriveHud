@@ -14,6 +14,7 @@ using DriveHud.Common.Log;
 using DriveHUD.Importers.GGNetwork;
 using NUnit.Framework;
 using System.Linq;
+using System.Threading;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -27,7 +28,7 @@ namespace DriveHud.Tests.UnitTests
             {
                 var tournamentReader = new GGNTournamentReader();
 
-                var readAllTournamentsTask = tournamentReader.ReadAllTournamentsAsync();
+                var readAllTournamentsTask = tournamentReader.ReadAllTournamentsAsync(CancellationToken.None);
                 readAllTournamentsTask.Wait();
 
                 var tournaments = readAllTournamentsTask.Result;
