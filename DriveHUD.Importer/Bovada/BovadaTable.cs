@@ -571,6 +571,9 @@ namespace DriveHUD.Importers.Bovada
                         var accountJArray = cmdObj.account as JArray;
                         var account = accountJArray.Values<int>().ToArray();
 
+                        var mySeatJArray = cmdObj.mySeat as JArray;
+                        var mySeat = mySeatJArray?.Values<int>().FirstOrDefault();
+
                         for (var i = 0; i < account.Length; i++)
                         {
                             if (account[i] == 0)
@@ -585,6 +588,12 @@ namespace DriveHUD.Importers.Bovada
                             };
 
                             AddPlayerAddedCommand(newCmbObj);
+
+                            // set hero account amount
+                            if (i + 1 == mySeat)
+                            {
+                                heroAccount = account[i];
+                            }
                         }
                     }
 
@@ -621,19 +630,27 @@ namespace DriveHUD.Importers.Bovada
                     IsZonePokerTable = true;
                     break;
 
-                case "PLAY_ACCOUNT_INFO":
-                    if (IsZonePokerTable && commands.Count > 0)
-                    {
-                        heroAccount = int.Parse(cmdObj.account.ToString());
-                    }
-
-                    break;
                 case "PLAY_CLEAR_INFO":
 
                     if (IsZonePokerTable && commands.Count > 0)
                     {
                         if (!hasResultCommand)
                         {
+                            var lastSetStackCommand = commands.FilterCommands<Stack>(CommandCodeEnum.SetStack).LastOrDefault(x => x.SeatNumber == HeroSeat);
+
+                            if (lastSetStackCommand != null)
+                            {
+                                heroAccount = Utils.ConvertToCents(lastSetStackCommand.StackValue);
+                            }
+                            else if (initialAfterBlindStacks.ContainsKey(HeroSeat))
+                            {
+                                heroAccount = initialAfterBlindStacks[HeroSeat];
+                            }
+                            else if (initialStacks.ContainsKey(HeroSeat))
+                            {
+                                heroAccount = initialStacks[HeroSeat];
+                            }
+
                             var foldObj = new BovadaCommandDataObject
                             {
                                 btn = (int)BovadaPlayerActionType.Fold,
@@ -762,7 +779,7 @@ namespace DriveHUD.Importers.Bovada
 
                     importHandResetEvent.Reset();
 
-                    ImportHand(handHistoryXml, handModel.HandNumber, gameInfo, game);
+                    ImportHandAsync(handHistoryXml, handModel.HandNumber, gameInfo, game);
 
                     ClearInfo();
                 }
@@ -832,86 +849,88 @@ namespace DriveHUD.Importers.Bovada
 
         #endregion
 
-        private void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
+        protected virtual void ImportHandAsync(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
         {
-            Task.Run(() =>
+            Task.Run(() => ImportHand(handHistoryXml, handNumber, gameInfo, game));
+        }
+
+        protected virtual void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
+        {
+            // wait for tournament results
+            if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
             {
-                // wait for tournament results
-                if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
+                importHandResetEvent.Wait(delayBeforeImport);
+
+                if (playersFinalPositions.ContainsKey(HeroSeat))
                 {
-                    importHandResetEvent.Wait(delayBeforeImport);
-
-                    if (playersFinalPositions.ContainsKey(HeroSeat))
+                    try
                     {
-                        try
+                        var heroFinalPosition = playersFinalPositions[HeroSeat];
+
+                        var placeNode = handHistoryXml.SelectSingleNode("//place");
+                        var winNode = handHistoryXml.SelectSingleNode("//win");
+
+                        if (placeNode != null)
                         {
-                            var heroFinalPosition = playersFinalPositions[HeroSeat];
-
-                            var placeNode = handHistoryXml.SelectSingleNode("//place");
-                            var winNode = handHistoryXml.SelectSingleNode("//win");
-
-                            if (placeNode != null)
-                            {
-                                placeNode.InnerText = heroFinalPosition.Place.ToString();
-                            }
-
-                            if (winNode != null)
-                            {
-                                winNode.InnerText = heroFinalPosition.Prize.ToString();
-                            }
+                            placeNode.InnerText = heroFinalPosition.Place.ToString();
                         }
-                        catch (Exception e)
+
+                        if (winNode != null)
                         {
-                            LogProvider.Log.Error(this, string.Format("Hand {0} final place has not been processed [{1}]", handNumber, Identifier), e);
+                            winNode.InnerText = heroFinalPosition.Prize.ToString();
                         }
                     }
-                }
-
-                var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
-                var progress = new DHProgress();
-
-                IEnumerable<ParsingResult> parsingResult = null;
-
-                try
-                {
-                    parsingResult = dbImporter.Import(handHistoryXml.InnerXml, progress, gameInfo);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported. [{1}]", handNumber, Identifier), e);
-                }
-
-                if (parsingResult == null)
-                {
-                    return;
-                }
-
-                foreach (var result in parsingResult)
-                {
-                    if (result.HandHistory == null)
+                    catch (Exception e)
                     {
-                        continue;
+                        LogProvider.Log.Error(this, string.Format("Hand {0} final place has not been processed [{1}]", handNumber, Identifier), e);
                     }
-
-                    if (result.IsDuplicate)
-                    {
-                        LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, Identifier));
-                        continue;
-                    }
-
-                    if (!result.WasImported)
-                    {
-                        LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
-                        continue;
-                    }
-
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
-
-                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
-
-                    eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
                 }
-            });
+            }
+
+            var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
+            var progress = new DHProgress();
+
+            IEnumerable<ParsingResult> parsingResult = null;
+
+            try
+            {
+                parsingResult = dbImporter.Import(handHistoryXml.InnerXml, progress, gameInfo);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported. [{1}]", handNumber, Identifier), e);
+            }
+
+            if (parsingResult == null)
+            {
+                return;
+            }
+
+            foreach (var result in parsingResult)
+            {
+                if (result.HandHistory == null)
+                {
+                    continue;
+                }
+
+                if (result.IsDuplicate)
+                {
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, Identifier));
+                    continue;
+                }
+
+                if (!result.WasImported)
+                {
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+                    continue;
+                }
+
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
+
+                eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+            }
         }
 
         private int GetHeroSeat(string heroName, HandModel2 handModel, Game game)

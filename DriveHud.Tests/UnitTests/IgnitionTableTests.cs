@@ -33,6 +33,8 @@ using System;
 using DriveHud.Tests.UnitTests.Helpers;
 using Model.Settings;
 using DriveHUD.Common.Resources;
+using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -105,8 +107,9 @@ namespace DriveHud.Tests.UnitTests
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
         /// </summary>        
         [Test]
-        [TestCase("ign-zone-2017-11-21.log", "ign-info.log", 4)]
-        public void ZoneHandsIsImported(string testData, string infoTestData, int expectedHandsAmount)
+        [TestCase("ign-zone-2017-11-21.log", "ign-info.log", "ign-zone-2017-11-21.xml")]
+        [TestCase("ign-zone-2017-11-21-2.log", "ign-info.log", "ign-zone-2017-11-21-2.xml")]
+        public void ZoneHandsIsImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data
             InitializeInfoDataManager(infoTestData);
@@ -122,7 +125,7 @@ namespace DriveHud.Tests.UnitTests
             var eventAggregator = Substitute.For<IEventAggregator>();
             eventAggregator.GetEvent<DataImportedEvent>().ReturnsForAnyArgs(importedEvent);
 
-            var ignitionTable = new IgnitionTable(eventAggregator);
+            var ignitionTable = new IgnitionTableStub(eventAggregator);
 
             foreach (var bovadaCatcherDataObject in bovadaCatcherDataObjects)
             {
@@ -134,7 +137,11 @@ namespace DriveHud.Tests.UnitTests
             var xml = fileImporter.Xml;
 
             Assert.IsNotNull(xml, "Result must be not null");
-            Assert.That(fileImporter.ImportedHands.Count, Is.EqualTo(expectedHandsAmount), "Imported hands amount must be equal to expected");
+
+            var actualXml = ObfuscateXml(xml.ToString());
+            var expectedXml = ObfuscateXml(File.ReadAllText(GetTestDataFilePath(expectedFile)));
+
+            Assert.That(actualXml, Is.EqualTo(expectedXml), "Xml must be equal to expected.");
         }
 
         private void InitializeInfoDataManager(string fileName)
@@ -183,6 +190,11 @@ namespace DriveHud.Tests.UnitTests
                     continue;
                 }
 
+                if (Regex.IsMatch(textLine, @"\d{2}:\d{2}:\d{2}"))
+                {
+                    continue;
+                }
+
                 sb.AppendLine(textLine);
             }
 
@@ -192,6 +204,16 @@ namespace DriveHud.Tests.UnitTests
         private static string GetTestDataFilePath(string name)
         {
             return string.Format("UnitTests\\TestData\\Ignition\\{0}", name);
+        }
+
+        private static readonly DateTime predefinedDate = new DateTime(2017, 11, 22);
+
+        private static string ObfuscateXml(string xml)
+        {
+            xml = Regex.Replace(xml, "<startdate>[^<]+</startdate>", $"<startdate>{predefinedDate}</startdate>");
+            xml = Regex.Replace(xml, @"(name|player)=""P(\d+)_[^""]+", "$1=\"P$2");
+
+            return xml;
         }
 
         #region Stubs
@@ -288,6 +310,18 @@ namespace DriveHud.Tests.UnitTests
             public override string ToString()
             {
                 return GameInfo.GameNumber.ToString();
+            }
+        }
+
+        private class IgnitionTableStub : IgnitionTable
+        {
+            public IgnitionTableStub(IEventAggregator eventAggregator) : base(eventAggregator)
+            {
+            }
+
+            protected override void ImportHandAsync(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
+            {
+                ImportHand(handHistoryXml, handNumber, gameInfo, game);
             }
         }
 
