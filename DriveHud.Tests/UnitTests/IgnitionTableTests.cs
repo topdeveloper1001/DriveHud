@@ -109,6 +109,9 @@ namespace DriveHud.Tests.UnitTests
         [Test]
         [TestCase("ign-zone-2017-11-21.log", "ign-info.log", "ign-zone-2017-11-21.xml")]
         [TestCase("ign-zone-2017-11-21-2.log", "ign-info.log", "ign-zone-2017-11-21-2.xml")]
+        [TestCase("ign-zone-2017-11-22-1.log", "ign-info.log", "ign-zone-2017-11-22-1.xml")]
+        [TestCase("ign-zone-2017-11-22-2.log", "ign-info.log", "ign-zone-2017-11-22-2.xml")]
+        [TestCase("ign-zone-2017-11-22-3.log", "ign-info.log", "ign-zone-2017-11-22-3.xml")]
         public void ZoneHandsIsImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data

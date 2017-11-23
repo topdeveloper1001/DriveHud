@@ -46,6 +46,7 @@
 			<action no="3" player="P5_771937QM" type="0" sum="0" cards="" />
 			<action no="4" player="P1_710481LV" type="0" sum="0" cards="" />
 			<action no="5" player="P6_490398XM" type="0" sum="0" cards="" />
+			<action no="6" player="Hero" type="0" sum="0" cards="" />
 		</round>
 	</game>
 </session>

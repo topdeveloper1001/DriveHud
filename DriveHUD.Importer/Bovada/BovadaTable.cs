@@ -634,7 +634,7 @@ namespace DriveHUD.Importers.Bovada
 
                     if (IsZonePokerTable && commands.Count > 0)
                     {
-                        if (!hasResultCommand)
+                        if (!hasResultCommand && HeroSeat != 0)
                         {
                             var lastSetStackCommand = commands.FilterCommands<Stack>(CommandCodeEnum.SetStack).LastOrDefault(x => x.SeatNumber == HeroSeat);
 
@@ -716,6 +716,19 @@ namespace DriveHUD.Importers.Bovada
                     if (!playerHasSeat && cmdObj.seat == HeroSeat)
                     {
                         playerHasSeat = HeroSeat != 0 && cmdObj.cash > 0;
+                    }
+
+                    if (IsZonePokerTable &&
+                        (TableState == BovadaTableState.Unknown || TableState == BovadaTableState.Preparing))
+                    {
+                        if (initialStacks.ContainsKey(cmdObj.seat))
+                        {
+                            initialStacks[cmdObj.seat] = cmdObj.cash;
+                        }
+                        else
+                        {
+                            initialStacks.Add(cmdObj.seat, cmdObj.cash);
+                        }
                     }
 
                     break;
@@ -1219,9 +1232,9 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        private void InitializeStacks(BovadaCommandDataObject cmdObj)
+        private void InitializeStacks(BovadaCommandDataObject cmdObj, bool updateExisting = false)
         {
-            if (initialStacks.ContainsKey(cmdObj.seat))
+            if (initialStacks.ContainsKey(cmdObj.seat) && !updateExisting)
             {
                 return;
             }
@@ -1236,7 +1249,14 @@ namespace DriveHUD.Importers.Bovada
 
             var initialStack = account + addToAccount + ante + dead;
 
-            initialStacks.Add(cmdObj.seat, initialStack);
+            if (initialStacks.ContainsKey(cmdObj.seat))
+            {
+                initialStacks[cmdObj.seat] = initialStack;
+            }
+            else
+            {
+                initialStacks.Add(cmdObj.seat, initialStack);
+            }
         }
 
         private void AddSetStackCommand(BovadaCommandDataObject cmdObj)
@@ -1299,7 +1319,7 @@ namespace DriveHUD.Importers.Bovada
                     seat = cmdObj.seat
                 };
 
-                InitializeStacks(cmdObj);
+                InitializeStacks(cmdObj, true);
             }
         }
 
@@ -1348,6 +1368,13 @@ namespace DriveHUD.Importers.Bovada
         {
             // check header command
             if (!commands.Any(x => x.CommandCodeEnum == CommandCodeEnum.HandNumberTableName))
+            {
+                IsInvalid = true;
+                return;
+            }
+
+            // check if there is any action command
+            if (!commands.Any(x => x.CommandCodeEnum == CommandCodeEnum.PlayerAction))
             {
                 IsInvalid = true;
                 return;
@@ -1617,11 +1644,11 @@ namespace DriveHUD.Importers.Bovada
 
             if (communityCardsCommands.Count > 3 && handModel.TurnCommands != null)
             {
-                handModel.TurnCommands.InsertRange(1, communityCardsCommands.Skip(3).Take(1));
+                handModel.TurnCommands.InsertRange(handModel.TurnCommands.Count == 0 ? 0 : 1, communityCardsCommands.Skip(3).Take(1));
 
                 if (communityCardsCommands.Count > 4 && handModel.RiverCommands != null)
                 {
-                    handModel.RiverCommands.InsertRange(1, communityCardsCommands.Skip(4).Take(1));
+                    handModel.RiverCommands.InsertRange(handModel.RiverCommands.Count == 0 ? 0 : 1, communityCardsCommands.Skip(4).Take(1));
                 }
             }
         }
