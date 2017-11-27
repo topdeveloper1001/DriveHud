@@ -10,6 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Web;
+using DriveHUD.Entities;
+using Model;
 using System;
 using System.Text;
 
@@ -17,11 +21,42 @@ namespace DriveHUD.Importers.GGNetwork.Network
 {
     internal class RequestUtils
     {
+        private const int ProtocolVersionWebRequestTimeout = 3000;
+
+        private const int AttemptsToReadProtocolVersion = 3;
+
         private static readonly Random rnd = new Random();
+
+        private static string protocolVersion = string.Empty;
 
         public static string GetProtocolVersion()
         {
-            return "a4e41d3c-aa3d-e10f-7b50-80559cff640e";
+            if (!string.IsNullOrEmpty(protocolVersion))
+            {
+                return protocolVersion;
+            }
+
+            string downloadedProtocolVersion = null;
+
+            var attemptToReadProtocolVersion = 0;
+
+            while (string.IsNullOrEmpty(downloadedProtocolVersion) &&
+                attemptToReadProtocolVersion < AttemptsToReadProtocolVersion)
+            {
+                downloadedProtocolVersion = DownloadProtocolVersion();
+
+                if (!string.IsNullOrEmpty(downloadedProtocolVersion))
+                {
+                    protocolVersion = downloadedProtocolVersion;
+                    return protocolVersion;
+                }
+
+                attemptToReadProtocolVersion++;
+            }
+
+            LogProvider.Log.Error(typeof(RequestUtils), $"Protocol version has not been obtained after {attemptToReadProtocolVersion} attempts.");
+
+            return protocolVersion;
         }
 
         public static string CreateFakeHardwareSerialNumber()
@@ -94,6 +129,26 @@ namespace DriveHUD.Importers.GGNetwork.Network
         public static int GetRandomNumber()
         {
             return rnd.Next(0, 9);
+        }
+
+        private static string DownloadProtocolVersion()
+        {
+            try
+            {
+                var protocolVersionUrl = StringFormatter.GetGGNProtocolVersionUrl();
+
+                using (var webClient = new WebClientWithTimeout(ProtocolVersionWebRequestTimeout))
+                {
+                    var protocolVersion = webClient.DownloadString(protocolVersionUrl);
+                    return protocolVersion;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(RequestUtils), $"Protocol version has not been obtained. [{EnumPokerSites.GGN}]", e);
+            }
+
+            return null;
         }
     }
 }

@@ -227,4 +227,7 @@
   <data name="SystemSettings_ModulesFolder" xml:space="preserve">
     <value>bin</value>
   </data>
+  <data name="SystemSettings_GGNProtocolVersionUrl" xml:space="preserve">
+    <value>http://drivehud.com/appstore/ggn.hash</value>
+  </data>
 </root>
