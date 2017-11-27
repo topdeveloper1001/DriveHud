@@ -1,145 +1,134 @@
-﻿using DriveHUD.Common.Annotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ChartSeriesItem.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace DriveHUD.ViewModels
 {
     [Serializable]
-    public class ChartSeriesItem : INotifyPropertyChanged
+    public class ChartSeriesItem : ReactiveObject
     {
-        public ChartSeriesItem()
-        {
-        }
-
         #region Properties
 
-        private decimal _value;
-        private string _valueText;
-        private DateTime _date;
-        private Color _pointColor = new Color();
-        private Color _trackBallColor = new Color();
-        private Color _tooltipColor = new Color();
+        private decimal itemValue;
 
         public decimal Value
         {
-            get { return _value; }
+            get
+            {
+                return itemValue;
+            }
             set
             {
-                if (value == _value) return;
-                _value = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref itemValue, value);
+            }
+        }
+
+        private string format;
+
+        public string Format
+        {
+            get
+            {
+                return format;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref format, value);
             }
         }
 
         public string ValueText
         {
-            get { return _valueText; }
-            set
+            get
             {
-                if (value == _valueText) return;
-                _valueText = value;
-                OnPropertyChanged();
+                return !string.IsNullOrEmpty(format) ?
+                    string.Format(format, Value) :
+                    string.Empty;
             }
         }
 
+        private object category;
+
+        public object Category
+        {
+            get
+            {
+                return category;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref category, value);
+            }
+        }
+
+        private DateTime date;
 
         public DateTime Date
         {
-            get { return _date; }
+            get
+            {
+                return date;
+            }
             set
             {
-                if (value == _date) return;
-                _date = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref date, value);
             }
         }
+
+        private Color pointColor = new Color();
 
         public Color PointColor
         {
             get
             {
-                return _pointColor;
+                return pointColor;
             }
-
             set
             {
-                if (value == _pointColor) return;
-                _pointColor = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref pointColor, value);
             }
         }
 
-        public SolidColorBrush PointColorBrush
-        {
-            get
-            {
-                return new SolidColorBrush(PointColor);
-            }
-        }
+        private Color trackBallColor = new Color();
 
         public Color TrackBallColor
         {
             get
             {
-                return _trackBallColor;
+                return trackBallColor;
             }
-
             set
             {
-                if (value == _trackBallColor) return;
-                _trackBallColor = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref trackBallColor, value);
             }
         }
 
-        public SolidColorBrush TrackBallColorBrush
-        {
-            get { return new SolidColorBrush(TrackBallColor); }
-        }
+        private Color tooltipColor = new Color();
 
         public Color TooltipColor
         {
             get
             {
-                return _tooltipColor;
+                return tooltipColor;
             }
-
             set
             {
-                if (value == _tooltipColor) return;
-                _tooltipColor = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref tooltipColor, value);
             }
         }
 
-        public SolidColorBrush TooltipColorBrush
-        {
-            get { return new SolidColorBrush(TooltipColor); }
-        }
-
-
-        #endregion
-
-        #region Events
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        #endregion
+        #endregion       
     }
 }

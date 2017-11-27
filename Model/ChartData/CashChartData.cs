@@ -18,7 +18,7 @@ using System.Linq;
 
 namespace Model.ChartData
 {
-    public abstract class BaseChardData : ICashChartData
+    public abstract class BaseChartData : ICashChartData
     {
         public virtual IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
         {
@@ -106,7 +106,7 @@ namespace Model.ChartData
         }
     }
 
-    public class DayChartData : BaseChardData, ICashChartData
+    public class DayChartData : BaseChartData, ICashChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
@@ -133,7 +133,7 @@ namespace Model.ChartData
         }
     }
 
-    public class WeekChartData : BaseChardData, ICashChartData
+    public class WeekChartData : BaseChartData, ICashChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
@@ -159,7 +159,7 @@ namespace Model.ChartData
         }
     }
 
-    public class MonthChartData : BaseChardData, ICashChartData
+    public class MonthChartData : BaseChartData, ICashChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)
         {
@@ -185,7 +185,7 @@ namespace Model.ChartData
         }
     }
 
-    public class YearChartData : BaseChardData, ICashChartData
+    public class YearChartData : BaseChartData, ICashChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)
         {

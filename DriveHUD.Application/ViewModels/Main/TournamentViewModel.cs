@@ -35,7 +35,7 @@ namespace DriveHUD.Application.ViewModels
         private bool _isShowLabelsEnabled = true;
         private ObservableCollection<ChartSeries> _chartSeriesCollection;
         private ChartSeries _chartSeriesSelectedItem;
-        private EnumTelerikRadChartDisplayRange _chartSeriesDisplayRange = EnumTelerikRadChartDisplayRange.Month;
+        private ChartDisplayRange _chartSeriesDisplayRange = ChartDisplayRange.Month;
         private Bracelet _goldenBracelet = new Bracelet();
         private Bracelet _silverBracelet = new Bracelet();
         private Bracelet _bronzeBracelet = new Bracelet();
@@ -101,7 +101,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public EnumTelerikRadChartDisplayRange ChartSeriesDisplayRange
+        public ChartDisplayRange ChartSeriesDisplayRange
         {
             get
             {
@@ -336,7 +336,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void SetSerieData(IEnumerable<ChartSeries> chartCollection, EnumTelerikRadChartDisplayRange displayRange)
+        private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
         {
             foreach (var serie in chartCollection)
             {
@@ -351,7 +351,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 Date = stat.Started,
                                 Value = stat.ITM,
-                                ValueText = string.Format("{0:0.##}%", stat.ITM),
+                                Format = "{0:0.##}%",
                                 PointColor = blueResource.PointColor,
                                 TrackBallColor = blueResource.TrackBallColor,
                                 TooltipColor = blueResource.TooltipColor
@@ -363,7 +363,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 Date = stat.Started,
                                 Value = stat.ROI,
-                                ValueText = string.Format("{0:0.##}%", stat.ROI),
+                                Format = "{0:0.##}%",
                                 PointColor = yellowResource.PointColor,
                                 TrackBallColor = yellowResource.TrackBallColor,
                                 TooltipColor = yellowResource.TooltipColor
@@ -375,7 +375,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 Date = stat.Started,
                                 Value = stat.Won,
-                                ValueText = string.Format("{0:0.##}$", stat.Won),
+                                Format = "{0:0.##}$",
                                 PointColor = greenResource.PointColor,
                                 TrackBallColor = greenResource.TrackBallColor,
                                 TooltipColor = greenResource.TooltipColor
@@ -387,7 +387,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 Date = stat.Started,
                                 Value = 0,
-                                ValueText = string.Format("{0:0.##}%", 0),
+                                Format = "{0:0.##}%",
                                 PointColor = orangeResource.PointColor,
                                 TrackBallColor = orangeResource.TrackBallColor,
                                 TooltipColor = orangeResource.TooltipColor
@@ -399,18 +399,18 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private IEnumerable<TournamentReportRecord> GetGroupedStats(EnumTelerikRadChartDisplayRange range)
+        private IEnumerable<TournamentReportRecord> GetGroupedStats(ChartDisplayRange range)
         {
             List<TournamentReportRecord> indicators = null;
             switch (range)
             {
-                case EnumTelerikRadChartDisplayRange.Year:
+                case ChartDisplayRange.Year:
                     indicators = new List<TournamentReportRecord>(new YearTournamentChartData().Create());
                     break;
-                case EnumTelerikRadChartDisplayRange.Month:
+                case ChartDisplayRange.Month:
                     indicators = new List<TournamentReportRecord>(new MonthTournamentChartData().Create());
                     break;
-                case EnumTelerikRadChartDisplayRange.Week:
+                case ChartDisplayRange.Week:
                     indicators = new List<TournamentReportRecord>(new WeekTournamentChartData().Create());
                     break;
             }

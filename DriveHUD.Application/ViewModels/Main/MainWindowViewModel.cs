@@ -90,7 +90,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Constructor
 
-        internal MainWindowViewModel(SynchronizationContext _synchronizationContext)
+        internal MainWindowViewModel()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
@@ -100,7 +100,6 @@ namespace DriveHUD.Application.ViewModels
 
             hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
-            synchronizationContext = _synchronizationContext;
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Subscribe(ShowCalculateEquityView);
@@ -877,7 +876,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (DashboardViewModel == null)
                 {
-                    DashboardViewModel = new DashboardViewModel(synchronizationContext)
+                    DashboardViewModel = new DashboardViewModel
                     {
                         Type = EnumViewModelType.DashboardViewModel,
                     };

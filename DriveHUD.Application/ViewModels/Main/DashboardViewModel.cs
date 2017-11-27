@@ -1,54 +1,70 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
+﻿//-----------------------------------------------------------------------
+// <copyright file="DashboardViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using Model;
-using Model.Enums;
-
-using DriveHUD.ViewModels;
+using DriveHud.Common.Log;
 using DriveHUD.Common.Infrastructure.Base;
-using System.Collections.Generic;
-using Prism.Events;
-using Model.Events;
+using DriveHUD.Common.Linq;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
-using System;
-using System.Windows.Input;
-using Model.Data;
-using Model.Reports;
-using System.Diagnostics;
 using Model.ChartData;
+using Model.Data;
+using Model.Enums;
+using Model.Events;
+using Prism.Events;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
         #region Fields
-        private ObservableCollection<ChartSeries> _firstChartCollection = new ObservableCollection<ChartSeries>();
-        private ObservableCollection<ChartSeries> _secondChartCollection = new ObservableCollection<ChartSeries>();
-        private EnumTelerikRadChartDisplayRange _firstChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
-        private EnumTelerikRadChartDisplayRange _secondChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
-        private LightIndicators _indicatorCollection;
-        private bool _isExpanded = true;
+
+        private ObservableCollection<ChartSeries> winningsChartCollection;
+        private ObservableCollection<ChartSeries> secondChartCollection = new ObservableCollection<ChartSeries>();
+        private ChartDisplayRange winningsChartDisplayRange = ChartDisplayRange.Week;
+        private ChartDisplayRange secondChartDisplayRange = ChartDisplayRange.Month;
+        private LightIndicators indicatorCollection;
+        private bool isExpanded = true;
+
         #endregion
 
         #region Properties
 
         public bool IsExpanded
         {
-            get { return _isExpanded; }
-            set { SetProperty(ref _isExpanded, value); }
+            get
+            {
+                return isExpanded;
+            }
+            set
+            {
+                SetProperty(ref isExpanded, value);
+            }
         }
 
-        public ObservableCollection<ChartSeries> FirstChartCollection
+        public ObservableCollection<ChartSeries> WinningsChartCollection
         {
             get
             {
-                return _firstChartCollection;
+                return winningsChartCollection;
             }
-
             set
             {
-                _firstChartCollection = value;
+                SetProperty(ref winningsChartCollection, value);
             }
         }
 
@@ -56,34 +72,38 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _secondChartCollection;
+                return secondChartCollection;
             }
 
             set
             {
-                _secondChartCollection = value;
-            }
-        }
-
-        public EnumTelerikRadChartDisplayRange FirstChartDisplayRange
-        {
-            get { return _firstChartDisplayRange; }
-            set
-            {
-                if (value != _firstChartDisplayRange)
-                    SetProperty(ref _firstChartDisplayRange, value);
-
-                SetSerieData(FirstChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), FirstChartDisplayRange);
+                secondChartCollection = value;
             }
         }
 
-        public EnumTelerikRadChartDisplayRange SecondChartDisplayRange
+        public ChartDisplayRange WinningsChartDisplayRange
         {
-            get { return _secondChartDisplayRange; }
+            get
+            {
+                return winningsChartDisplayRange;
+            }
             set
             {
-                if (value != _secondChartDisplayRange)
-                    SetProperty(ref _secondChartDisplayRange, value);
+                SetProperty(ref winningsChartDisplayRange, value);
+
+                SetSerieData(WinningsChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), WinningsChartDisplayRange);
+            }
+        }
+
+        public ChartDisplayRange SecondChartDisplayRange
+        {
+            get
+            {
+                return secondChartDisplayRange;
+            }
+            set
+            {
+                SetProperty(ref secondChartDisplayRange, value);
 
                 SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
             }
@@ -91,62 +111,88 @@ namespace DriveHUD.Application.ViewModels
 
         public LightIndicators IndicatorCollection
         {
-            get { return _indicatorCollection; }
+            get
+            {
+                return indicatorCollection;
+            }
             set
             {
-                SetProperty(ref _indicatorCollection, value);
+                SetProperty(ref indicatorCollection, value);
             }
         }
+
         #endregion
 
-        internal DashboardViewModel(SynchronizationContext _synchronizationContext)
+        internal DashboardViewModel()
         {
-            synchronizationContext = _synchronizationContext;
+            ServiceLocator.Current
+                .GetInstance<IEventAggregator>()
+                .GetEvent<BuiltFilterChangedEvent>()
+                .Subscribe(UpdateFilteredData);
 
-            Init();
+            InitializeCharts();
         }
 
-        private void Init()
+        private void SetSerieData(IEnumerable<ChartSeries> chartSeriesCollection, ChartSerieResourceHelper resource, ChartDisplayRange displayRange)
         {
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateFilteredData);
-
-            InitCharts();
-        }
-
-        private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartSerieResourceHelper resource, EnumTelerikRadChartDisplayRange displayRange)
-        {
-            foreach (var serie in chartCollection)
+            using (var pf = new PerformanceMonitor(nameof(SetSerieData)))
             {
-                List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-                foreach (var stat in GetGroupedStats(displayRange))
+                // filter stats if necessary (only for date ranges)
+                // sort stats by date asc
+                // loop stats
+                //      build key from (stat, range, stat index)
+                //      loop chart series
+                //          if key equals to previous then update current item with Action<current, stat, previous> or Func<decimal, stat, previous>
+                //          if key not equals to previous the create new item and update it with Action<current, stat, previous> or Func<decimal, stat, previous>
+                // i=50, i=51, ... bb/100(50)= sum(nw1/bb1+...)/50, bb/100(51) = (bb/100(50)*50+nw51/bb51)/51 ...
+
+                // clear all data
+                chartSeriesCollection.ForEach(x => x.ItemsCollection?.Clear());
+
+                var chartItemDataBuilder = CreateCharItemDataBuilder(displayRange);
+
+                // filter and orders
+                var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney));
+
+                object previousGroupKey = null;
+
+                for (var statIndex = 0; statIndex < stats.Length; statIndex++)
                 {
-                    switch (serie.FunctionName)
+                    var stat = stats[statIndex];
+
+                    var currentGroupKey = chartItemDataBuilder.BuildGroupKey(stat, statIndex);
+
+                    var isNew = !currentGroupKey.Equals(previousGroupKey);
+
+                    previousGroupKey = currentGroupKey;
+
+                    foreach (var chartSerie in chartSeriesCollection)
                     {
-                        case EnumTelerikRadChartFunctionType.MoneyWon:
-                            itemsList.Add(new ChartSeriesItem()
+                        ChartSeriesItem previousChartSeriesItem = null;
+                        ChartSeriesItem chartSeriesItem = null;
+
+                        if (isNew)
+                        {
+                            chartSeriesItem = new ChartSeriesItem
                             {
-                                Date = stat.Source.Time,
-                                Value = stat.TotalWon,
-                                ValueText = string.Format("{0:0.##}$", stat.TotalWon),
+                                Format = chartSerie.Format,
                                 PointColor = resource.PointColor,
                                 TrackBallColor = resource.TrackBallColor,
-                                TooltipColor = resource.TooltipColor
-                            });
-                            break;
-                        case EnumTelerikRadChartFunctionType.BB:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Source.Time,
-                                Value = stat.BB,
-                                ValueText = string.Format("{0:0.##}", stat.BB),
-                                PointColor = resource.PointColor,
-                                TrackBallColor = resource.TrackBallColor,
-                                TooltipColor = resource.TooltipColor
-                            });
-                            break;
+                                TooltipColor = resource.TooltipColor,
+                                Category = chartItemDataBuilder.GetValueFromGroupKey(currentGroupKey)
+                            };
+
+                            previousChartSeriesItem = chartSerie.ItemsCollection.LastOrDefault();
+                            chartSerie.ItemsCollection.Add(chartSeriesItem);
+                        }
+                        else
+                        {
+                            previousChartSeriesItem = chartSeriesItem = chartSerie.ItemsCollection.LastOrDefault();
+                        }
+
+                        chartSerie.UpdateChartSeriesItem(chartSeriesItem, previousChartSeriesItem, stat);
                     }
                 }
-                serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
             }
         }
 
@@ -181,57 +227,133 @@ namespace DriveHUD.Application.ViewModels
 
             UpdateFilteredData(null);
 
-            SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
-            SetSerieData(FirstChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), FirstChartDisplayRange);
+            SetSerieData(WinningsChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), WinningsChartDisplayRange);
+
+            //SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
         }
 
-        private void InitCharts()
+        private void InitializeCharts()
         {
-            ChartSerieResourceHelper resource = ChartSerieResourceHelper.GetSerieGreenPalette();
-            ChartSeries series0 = new ChartSeries()
+            if (WinningsChartCollection == null)
             {
-                IsVisible = true,
-                Caption = "Money Won",
-                FunctionName = EnumTelerikRadChartFunctionType.MoneyWon,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = resource.LineColor,
-                AreaStyle = resource.AreaBrush
-            };
-
-            resource = ChartSerieResourceHelper.GetSerieOrangePalette();
-            ChartSeries series1 = new ChartSeries()
+                WinningsChartCollection = new ObservableCollection<ChartSeries>();
+            }
+            else
             {
-                IsVisible = true,
-                Caption = "bb/100",
-                FunctionName = EnumTelerikRadChartFunctionType.BB,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = resource.LineColor,
-                AreaStyle = resource.AreaBrush
-            };
-
-            FirstChartCollection.Clear();
-            FirstChartCollection.Add(series0);
-            SecondChartCollection.Clear();
-            SecondChartCollection.Add(series1);
-        }
-
-        private IEnumerable<Indicators> GetGroupedStats(EnumTelerikRadChartDisplayRange range)
-        {
-            List<Indicators> indicators = null;
-            switch (range)
-            {
-                case EnumTelerikRadChartDisplayRange.Year:
-                    indicators = new List<Indicators>(new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
-                case EnumTelerikRadChartDisplayRange.Month:
-                    indicators = new List<Indicators>(new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
-                case EnumTelerikRadChartDisplayRange.Week:
-                    indicators = new List<Indicators>(new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
+                WinningsChartCollection.Clear();
             }
 
-            return indicators;
+            var resource = ChartSerieResourceHelper.GetSerieGreenPalette();
+
+            WinningsChartCollection.Add(new ChartSeries
+            {
+                ChartSeriesType = ChartSeriesType.Winnings,
+                LineColor = resource.LineColor,
+                AreaStyle = resource.AreaBrush,
+                Format = "{0:0.##}$",
+                UpdateChartSeriesItem = (current, previous, stat) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.NetWon;
+                }
+            });
+
+            //WinningsChartCollection.Add(new ChartSeries
+            //{
+            //    ChartSeriesType = ChartSeriesType.WinningsNonShowdown,
+            //    LineColor = Colors.Red,
+            //    Format = "{0:0.##}",
+            //    AreaStyle = resource.AreaBrush,
+            //    UpdateChartSeriesItem = (current, previous, stat) =>
+            //    {
+            //        if (current == null)
+            //        {
+            //            return;
+            //        }
+
+            //        if (previous != null)
+            //        {
+            //            current.Value = previous.Value;
+            //        }
+
+            //        if (stat.Sawshowdown == 0)
+            //        {
+            //            current.Value += stat.NetWon;
+            //        }
+            //    }
+            //});
+
+            //WinningsChartCollection.Add(new ChartSeries
+            //{
+            //    ChartSeriesType = ChartSeriesType.WinningsShowdown,
+            //    LineColor = Colors.Yellow,
+            //    Format = "{0:0.##}",
+            //    AreaStyle = resource.AreaBrush,
+            //    UpdateChartSeriesItem = (current, previous, stat) =>
+            //    {
+            //        if (current == null)
+            //        {
+            //            return;
+            //        }
+
+            //        if (previous != null)
+            //        {
+            //            current.Value = previous.Value;
+            //        }
+
+            //        if (stat.Sawshowdown == 1)
+            //        {
+            //            current.Value += stat.NetWon;
+            //        }
+            //    }
+            //});
+
+            //WinningsChartCollection.Add(new ChartSeries
+            //{
+            //    ChartSeriesType = ChartSeriesType.WinningsInBB,
+            //    LineColor = resource.LineColor,
+            //    AreaStyle = resource.AreaBrush
+            //});
+
+            //WinningsChartCollection.Add(new ChartSeries
+            //{
+            //    ChartSeriesType = ChartSeriesType.WinningsInBBNonShowdown,
+            //    LineColor = Colors.Red,
+            //    AreaStyle = resource.AreaBrush
+            //});
+
+            //WinningsChartCollection.Add(new ChartSeries
+            //{
+            //    ChartSeriesType = ChartSeriesType.WinningsInBBShowdown,
+            //    LineColor = Colors.Yellow,
+            //    AreaStyle = resource.AreaBrush
+            //});
+        }
+
+        private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)
+        {
+            switch (displayRange)
+            {
+                case ChartDisplayRange.Hands:
+                    return new HandsItemDataBuilder();
+                case ChartDisplayRange.Month:
+                    return new MonthItemDataBuilder();
+                case ChartDisplayRange.Week:
+                    return new WeekItemDataBuilder();
+                case ChartDisplayRange.Year:
+                    return new YearItemDataBuilder();
+                default:
+                    throw new ArgumentException("Unknown char display range type");
+            }
         }
     }
 }

@@ -931,4 +931,16 @@ The GG catcher is an add-on application that will allow you to capture and run a
   <data name="Common_GGNBuyLink" xml:space="preserve">
     <value>http://drivehud.com/product/gg-hud</value>
   </data>
+  <data name="Common_Chart_Hands" xml:space="preserve">
+    <value>Hands</value>
+  </data>
+  <data name="Common_Chart_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Common_Chart_Week" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="Common_Chart_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
 </root>

@@ -297,14 +297,16 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Bootstrappers\ISQLiteBootstrapper.cs" />
     <Compile Include="Bootstrappers\SQLiteBootstrapper.cs" />
-    <Compile Include="BraceletControl.xaml.cs">
+    <Compile Include="Controls\BraceletControl.xaml.cs">
       <DependentUpon>BraceletControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="CardUC.cs" />
-    <Compile Include="ChartGadget.xaml.cs">
+    <Compile Include="Controls\CashChart.xaml.cs">
+      <DependentUpon>CashChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChartGadget.xaml.cs">
       <DependentUpon>ChartGadget.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChartSeriesTypeSwitch.cs" />
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
     </Compile>
@@ -886,15 +888,15 @@
     <Compile Include="Views\Update\UpdateView.xaml.cs">
       <DependentUpon>UpdateView.xaml</DependentUpon>
     </Compile>
-    <Page Include="BraceletControl.xaml">
+    <Page Include="Controls\BraceletControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Brushes.xaml">
+    <Page Include="Controls\CashChart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChartGadget.xaml">
+    <Page Include="Controls\ChartGadget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1219,7 +1221,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="GadgetPanel.xaml">
+    <Page Include="Controls\GadgetPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1235,7 +1237,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GadgetPanel.xaml.cs">
+    <Compile Include="Controls\GadgetPanel.xaml.cs">
       <DependentUpon>GadgetPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -1287,10 +1289,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Social\TwitterOAuth.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Steel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1392,7 +1390,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PaletteManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -928,7 +928,7 @@
                         Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <app:GadgetPanel
+                <controls:GadgetPanel
                     Grid.Row="0"
                     Grid.Column="0"
                     Width="270"
@@ -970,9 +970,9 @@
 
                         </Grid>
                     </Grid>
-                </app:GadgetPanel>
+                </controls:GadgetPanel>
 
-                <app:GadgetPanel
+                <controls:GadgetPanel
                     Grid.Row="0"
                     Grid.Column="2"
                     HeaderColor="#76a134">
@@ -1186,7 +1186,7 @@
 
                     </Grid>
 
-                </app:GadgetPanel>
+                </controls:GadgetPanel>
 
             </Grid>
 

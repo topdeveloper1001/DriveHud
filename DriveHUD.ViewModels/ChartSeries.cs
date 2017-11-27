@@ -1,205 +1,170 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ChartSeries.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using DriveHUD.Common.Annotations;
+using DriveHUD.Entities;
 using Model.Enums;
+using ReactiveUI;
+using System;
+using System.Collections.ObjectModel;
 using System.Windows.Media;
-using System.Resources;
 
 namespace DriveHUD.ViewModels
 {
-    public class ChartSerieResourceHelper
-    {
-        public Color LineColor { get; set; }
-        public Color PointColor { get; set; }
-        public Color TrackBallColor { get; set; }
-        public Color TooltipColor { get; set; }
-        public VisualBrush AreaBrush { get; set; }
-
-        public ChartSerieResourceHelper()
-        {
-        }
-
-        public static ChartSerieResourceHelper GetSeriesBluePalette()
-        {
-            return new ChartSerieResourceHelper()
-            {
-                LineColor = (Color)ColorConverter.ConvertFromString("#34519C"),
-                PointColor = (Color)ColorConverter.ConvertFromString("#115576"),
-                TrackBallColor = (Color)ColorConverter.ConvertFromString("#115576"),
-                TooltipColor = (Color)ColorConverter.ConvertFromString("#34519C"),
-                AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushBlue")
-            };
-
-        }
-
-        public static ChartSerieResourceHelper GetSeriesYellowPalette()
-        {
-            return new ChartSerieResourceHelper()
-            {
-                LineColor = (Color)ColorConverter.ConvertFromString("#FDE40F"),
-                PointColor = (Color)ColorConverter.ConvertFromString("#FFF714"),
-                TrackBallColor = (Color)ColorConverter.ConvertFromString("#FFF714"),
-                TooltipColor = (Color)ColorConverter.ConvertFromString("#FDE40F"),
-                AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushYellow")
-
-            };
-
-        }
-
-        public static ChartSerieResourceHelper GetSerieOrangePalette()
-        {
-            return new ChartSerieResourceHelper()
-            {
-                LineColor = (Color)ColorConverter.ConvertFromString("#bd5922"),
-                PointColor = (Color)ColorConverter.ConvertFromString("#ffdc50"),
-                TrackBallColor = (Color)ColorConverter.ConvertFromString("#ffbf43"),
-                TooltipColor = (Color)ColorConverter.ConvertFromString("#bd5922"),
-                AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushOrange")
-            };
-        }
-
-        public static ChartSerieResourceHelper GetSerieGreenPalette()
-        {
-            return new ChartSerieResourceHelper()
-            {
-                LineColor = (Color)ColorConverter.ConvertFromString("#4BA516"),
-                PointColor = (Color)ColorConverter.ConvertFromString("#93c940"),
-                TrackBallColor = (Color)ColorConverter.ConvertFromString("#92c840"),
-                TooltipColor = (Color)ColorConverter.ConvertFromString("#4BA516"),
-                AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushGreen")
-            };
-        }
-    }
-
     [Serializable]
-    public class ChartSeries : INotifyPropertyChanged
+    public class ChartSeries : ReactiveObject
     {
-
-        public ChartSeries()
-        {
-        }
-
         #region Properties
 
-        private string _caption;
-        private EnumTelerikRadChartFunctionType _functionName;
-        private EnumTelerikRadChartSeriesType _type = EnumTelerikRadChartSeriesType.Area;
-        private Color _lineColor = new Color();
-        private VisualBrush _areaStyle;
-        private ObservableCollection<ChartSeriesItem> _itemsCollection;
-        private bool _isVisible = true;
+        private string caption;
 
         public string Caption
         {
-            get { return _caption; }
+            get
+            {
+                return caption;
+            }
             set
             {
-                if (value == _caption) return;
-                _caption = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref caption, value);
             }
         }
 
-        public EnumTelerikRadChartFunctionType FunctionName
+        private string format;
+
+        public string Format
         {
-            get { return _functionName; }
+            get
+            {
+                return format;
+            }
             set
             {
-                if (value == _functionName) return;
-                _functionName = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref format, value);
             }
         }
 
-        public EnumTelerikRadChartSeriesType Type
+        private ChartSeriesType chartSeriesType;
+
+        public ChartSeriesType ChartSeriesType
         {
-            get { return _type; }
+            get
+            {
+                return chartSeriesType;
+            }
             set
             {
-                if (value == _type) return;
-                _type = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref chartSeriesType, value);
             }
         }
+
+        private ObservableCollection<ChartSeriesItem> itemsCollection = new ObservableCollection<ChartSeriesItem>();
 
         public ObservableCollection<ChartSeriesItem> ItemsCollection
         {
-            get { return _itemsCollection; }
+            get
+            {
+                return itemsCollection;
+            }
             set
             {
-                if (value == _itemsCollection) return;
-                _itemsCollection = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref itemsCollection, value);
             }
         }
 
+        private bool isVisible = true;
+
         public bool IsVisible
         {
-            get { return _isVisible; }
+            get
+            {
+                return isVisible;
+            }
             set
             {
-                if (value == _isVisible) return;
-                _isVisible = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref isVisible, value);
             }
         }
+
+        private Color lineColor = new Color();
 
         public Color LineColor
         {
             get
             {
-                return _lineColor;
+                return lineColor;
             }
 
             set
             {
-                if (value == LineColor) return;
-                _lineColor = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref lineColor, value);
             }
         }
 
-        public SolidColorBrush LineColorBrush
-        {
-            get
-            {
-                return new SolidColorBrush(LineColor);
-            }
-        }
+        private VisualBrush areaStyle;
 
         public VisualBrush AreaStyle
         {
             get
             {
-                return _areaStyle;
+                return areaStyle;
             }
 
             set
             {
-                if (value == _areaStyle) return;
-                _areaStyle = value;
-                OnPropertyChanged();
+                this.RaiseAndSetIfChanged(ref areaStyle, value);
+            }
+        }
+
+        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic> UpdateChartSeriesItem
+        {
+            get;
+            set;
+        }
+
+        #region Obsolete
+
+        [Obsolete]
+        private EnumTelerikRadChartFunctionType functionName;
+
+        [Obsolete]
+        public EnumTelerikRadChartFunctionType FunctionName
+        {
+            get
+            {
+                return functionName;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref functionName, value);
+            }
+        }
+
+        [Obsolete]
+        private EnumTelerikRadChartSeriesType type = EnumTelerikRadChartSeriesType.Area;
+
+        [Obsolete]
+        public EnumTelerikRadChartSeriesType Type
+        {
+            get
+            {
+                return type;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref type, value);
             }
         }
 
         #endregion
-
-        #region Events
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
 
         #endregion
     }

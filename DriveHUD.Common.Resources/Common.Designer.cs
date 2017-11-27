@@ -376,6 +376,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hands.
+        /// </summary>
+        internal static string Common_Chart_Hands {
+            get {
+                return ResourceManager.GetString("Common_Chart_Hands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        internal static string Common_Chart_Month {
+            get {
+                return ResourceManager.GetString("Common_Chart_Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Week.
+        /// </summary>
+        internal static string Common_Chart_Week {
+            get {
+                return ResourceManager.GetString("Common_Chart_Week", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        internal static string Common_Chart_Year {
+            get {
+                return ResourceManager.GetString("Common_Chart_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check.
         /// </summary>
         internal static string Common_Check {

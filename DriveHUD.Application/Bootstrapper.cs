@@ -120,7 +120,7 @@ namespace DriveHUD.Application
                 }
                 else
                 {
-                    mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
+                    mainWindowViewModel = new MainWindowViewModel();
                     ((RadWindow)Shell).DataContext = mainWindowViewModel;
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
