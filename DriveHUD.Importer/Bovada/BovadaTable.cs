@@ -751,6 +751,13 @@ namespace DriveHUD.Importers.Bovada
                     AddInitialStacks();
                     AddStacksAfterBlind();
 
+                    if (IsZonePokerTable)
+                    {
+                        RemoveNotEnoughPlayersCommand();
+                    }
+
+                    var rs = string.Join(Environment.NewLine, commands.Select(x => $"[{x.CommandCodeEnum}] {x.CommandObject}").ToArray());
+
                     // Push hand                    
                     var handModel = new HandModel2(commands.ToList());
 
@@ -796,6 +803,18 @@ namespace DriveHUD.Importers.Bovada
 
                     ClearInfo();
                 }
+            }
+        }
+
+        private void RemoveNotEnoughPlayersCommand()
+        {
+            var notEnoughPlayersCommands = commands.Where(x => x.CommandCodeEnum == CommandCodeEnum.HandPhaseV2 &&
+                x.CommandObject != null && x.CommandObject is HandPhaseV2 &&
+                (x.CommandObject as HandPhaseV2).HandPhaseEnum == HandPhaseEnum.NotEnoughPlayers).ToArray();
+
+            foreach (var notEnoughPlayersCommand in notEnoughPlayersCommands)
+            {
+                commands.Remove(notEnoughPlayersCommand);
             }
         }
 
