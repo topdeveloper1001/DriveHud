@@ -754,9 +754,7 @@ namespace DriveHUD.Importers.Bovada
                     if (IsZonePokerTable)
                     {
                         RemoveNotEnoughPlayersCommand();
-                    }
-
-                    var rs = string.Join(Environment.NewLine, commands.Select(x => $"[{x.CommandCodeEnum}] {x.CommandObject}").ToArray());
+                    }                    
 
                     // Push hand                    
                     var handModel = new HandModel2(commands.ToList());
