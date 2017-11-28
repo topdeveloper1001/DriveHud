@@ -214,6 +214,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/ggn.hash.
+        /// </summary>
+        internal static string SystemSettings_GGNProtocolVersionUrl {
+            get {
+                return ResourceManager.GetString("SystemSettings_GGNProtocolVersionUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hero.
         /// </summary>
         internal static string SystemSettings_HeroName {

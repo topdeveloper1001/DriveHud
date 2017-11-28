@@ -730,7 +730,7 @@
         <player seat="2" name="P2_558528KD" chips="45.39" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
         <player seat="3" name="Hero" chips="49.75" dealer="0" win="0" bet="5.62" rebuy="0" addon="0" />
         <player seat="4" name="P4_914973FG" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="5" name="P5_842238HS" chips="19.87" dealer="0" win="0" bet="5.62" rebuy="0" addon="0" />
+        <player seat="5" name="P5_842238HS" chips="19.87" dealer="0" win="10.92" bet="5.62" rebuy="0" addon="0" />
         <player seat="6" name="P6_220941DT" chips="82.3" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
       </players>
     </general>
@@ -1047,7 +1047,7 @@
       <startdate>2017-11-23 04:18:30</startdate>
       <players>
         <player seat="1" name="P1_746513KP" chips="69.67" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
-        <player seat="2" name="Hero" chips="54.95" dealer="0" win="0" bet="1.75" rebuy="0" addon="0" />
+        <player seat="2" name="Hero" chips="54.95" dealer="0" win="2.44" bet="1.75" rebuy="0" addon="0" />
         <player seat="3" name="P3_289724RP" chips="66.08" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="P4_574226LK" chips="52.05" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_347906XX" chips="50.74" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
@@ -1851,12 +1851,12 @@
     <general>
       <startdate>2017-11-23 04:18:44</startdate>
       <players>
-        <player seat="1" name="P1_702113LK" chips="122.75" dealer="0" win="0.5" bet="0.5" rebuy="0" addon="0" />
+        <player seat="1" name="P1_702113LK" chips="122.75" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
         <player seat="2" name="P2_552524WU" chips="50.76" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="3" name="P3_145401PU" chips="68.32" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="Hero" chips="62.66" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_562227JW" chips="45.32" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="6" name="P6_592265EW" chips="44.65" dealer="0" win="0.25" bet="0.25" rebuy="0" addon="0" />
+        <player seat="6" name="P6_592265EW" chips="44.65" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
       </players>
     </general>
     <round no="0">
@@ -5996,9 +5996,9 @@
       <players>
         <player seat="1" name="P1_717496MH" chips="108.42" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="2" name="Hero" chips="63.23" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="3" name="P3_725176EV" chips="49.75" dealer="0" win="0.25" bet="0.25" rebuy="0" addon="0" />
-        <player seat="4" name="P4_919251NB" chips="87.62" dealer="0" win="0.5" bet="0.5" rebuy="0" addon="0" />
-        <player seat="5" name="P5_233494OE" chips="47.4" dealer="0" win="1.75" bet="1.75" rebuy="0" addon="0" />
+        <player seat="3" name="P3_725176EV" chips="49.75" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+        <player seat="4" name="P4_919251NB" chips="87.62" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+        <player seat="5" name="P5_233494OE" chips="47.4" dealer="0" win="0" bet="1.75" rebuy="0" addon="0" />
         <player seat="6" name="P6_539148FF" chips="21.57" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
       </players>
     </general>
@@ -6804,7 +6804,7 @@
       <players>
         <player seat="1" name="P1_207139WV" chips="50.69" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="2" name="P2_179459VW" chips="26.15" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="3" name="Hero" chips="49" dealer="0" win="0" bet="1.5" rebuy="0" addon="0" />
+        <player seat="3" name="Hero" chips="49" dealer="0" win="2.25" bet="1.5" rebuy="0" addon="0" />
         <player seat="4" name="P4_483777RC" chips="65.02" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_719561RH" chips="22.88" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
         <player seat="6" name="P6_311956SB" chips="50" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
@@ -9253,12 +9253,12 @@
     <general>
       <startdate>2017-11-23 04:18:46</startdate>
       <players>
-        <player seat="1" name="P1_174960PH" chips="41.32" dealer="0" win="0.5" bet="0.5" rebuy="0" addon="0" />
+        <player seat="1" name="P1_174960PH" chips="41.32" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
         <player seat="2" name="P2_269037CN" chips="49.36" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="3" name="P3_705748AW" chips="32.71" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="P4_691921AI" chips="81.57" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="Hero" chips="101.71" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="6" name="P6_511677KH" chips="74.08" dealer="0" win="0.25" bet="0.25" rebuy="0" addon="0" />
+        <player seat="6" name="P6_511677KH" chips="74.08" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
       </players>
     </general>
     <round no="0">
@@ -9281,10 +9281,10 @@
       <players>
         <player seat="1" name="P1_247613DT" chips="60.73" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="2" name="Hero" chips="101.71" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
-        <player seat="3" name="P3_532192FH" chips="50.07" dealer="0" win="0.5" bet="0.5" rebuy="0" addon="0" />
+        <player seat="3" name="P3_532192FH" chips="50.07" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
         <player seat="4" name="P4_195315HG" chips="52.15" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_612236KU" chips="48.25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="6" name="P6_493147NS" chips="52.23" dealer="0" win="2" bet="2" rebuy="0" addon="0" />
+        <player seat="6" name="P6_493147NS" chips="52.23" dealer="0" win="0" bet="2" rebuy="0" addon="0" />
       </players>
     </general>
     <round no="0">
@@ -9516,7 +9516,7 @@
         <player seat="2" name="P2_474925FB" chips="184.87" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="3" name="P3_781454EY" chips="52.64" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="P4_103635VG" chips="49" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
-        <player seat="5" name="Hero" chips="101.21" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+        <player seat="5" name="Hero" chips="101.21" dealer="0" win="0.75" bet="0.5" rebuy="0" addon="0" />
         <player seat="6" name="P6_295081FT" chips="49.55" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
       </players>
     </general>
@@ -12347,8 +12347,8 @@
     <general>
       <startdate>2017-11-23 04:18:47</startdate>
       <players>
-        <player seat="1" name="P1_701394XH" chips="73.93" dealer="0" win="0.25" bet="0.25" rebuy="0" addon="0" />
-        <player seat="2" name="P2_875042CA" chips="45.13" dealer="0" win="0.5" bet="0.5" rebuy="0" addon="0" />
+        <player seat="1" name="P1_701394XH" chips="73.93" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+        <player seat="2" name="P2_875042CA" chips="45.13" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
         <player seat="3" name="P3_728597AU" chips="195.22" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="Hero" chips="83.95" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_799978IF" chips="9.84" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
