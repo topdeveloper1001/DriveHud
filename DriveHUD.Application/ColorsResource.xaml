@@ -1,113 +1,189 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="BackgroundBrush1" Color="#181a1d"/>
-    <SolidColorBrush x:Key="BackgroundBrush2" Color="#303134"/>
-    <SolidColorBrush x:Key="BackgroundBrush3" Color="#2a2d31"/>
-    <SolidColorBrush x:Key="BackgroundBrush4" Color="#FF314c96"/>
-    <Color x:Key="BackgroundBrushColor4" >#FFBDC3C7</Color>
+    <SolidColorBrush
+        x:Key="BackgroundBrush1"
+        Color="#181a1d" />
+    <SolidColorBrush
+        x:Key="BackgroundBrush2"
+        Color="#303134" />
+    <SolidColorBrush
+        x:Key="BackgroundBrush3"
+        Color="#2a2d31" />
+    <SolidColorBrush
+        x:Key="BackgroundBrush4"
+        Color="#FF314c96" />
+    <Color
+        x:Key="BackgroundBrushColor4">#FFBDC3C7</Color>
 
     <!--Control colors.-->
-    <Color x:Key="ForegroundColor">#7D7F84</Color>
-    <Color x:Key="MouseOverForegroundColor">#FFFFFF</Color>
-    <Color x:Key="SelectedForegroundColor">#5671b6</Color>
+    <Color
+        x:Key="ForegroundColor">#7D7F84</Color>
+    <Color
+        x:Key="MouseOverForegroundColor">#FFFFFF</Color>
+    <Color
+        x:Key="SelectedForegroundColor">#5671b6</Color>
 
-    <Color x:Key="WindowColor">#FFE8EDF9</Color>
-    <Color x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
-    <Color x:Key="ContentAreaColorDark">#FF7381F9</Color>
+    <Color
+        x:Key="WindowColor">#FFE8EDF9</Color>
+    <Color
+        x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
+    <Color
+        x:Key="ContentAreaColorDark">#FF7381F9</Color>
 
-    <Color x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
-    <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
-    <Color x:Key="DisabledForegroundColor">#FF888888</Color>
-    <Color x:Key="DisabledBackgroundColor">#FF2a2d31</Color>
+    <Color
+        x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
+    <Color
+        x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
+    <Color
+        x:Key="DisabledForegroundColor">#FF888888</Color>
+    <Color
+        x:Key="DisabledBackgroundColor">#FF2a2d31</Color>
 
-    <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
-    <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+    <Color
+        x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+    <Color
+        x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
 
-    <Color x:Key="ControlLightColor">#212327</Color>
-    <Color x:Key="ControlMediumColor">#314C96</Color>
-    <Color x:Key="ControlDarkColor">#FF211AA9</Color>
+    <Color
+        x:Key="ControlLightColor">#212327</Color>
+    <Color
+        x:Key="ControlMediumColor">#314C96</Color>
+    <Color
+        x:Key="ControlDarkColor">#FF211AA9</Color>
 
-    <Color x:Key="ControlMouseOverColor">#35383e</Color>
-    <Color x:Key="ControlPressedColor">#FF211AA9</Color>
+    <Color
+        x:Key="ControlMouseOverColor">#35383e</Color>
+    <Color
+        x:Key="ControlPressedColor">#FF211AA9</Color>
 
 
-    <Color x:Key="GlyphColor">White</Color>
-    <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
+    <Color
+        x:Key="GlyphColor">White</Color>
+    <Color
+        x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
 
     <!--Border colors-->
-    <Color x:Key="BorderLightColor">#FFCCCCCC</Color>
-    <Color x:Key="BorderMediumColor">#FF888888</Color>
-    <Color x:Key="BorderDarkColor">#FF444444</Color>
+    <Color
+        x:Key="BorderLightColor">#FFCCCCCC</Color>
+    <Color
+        x:Key="BorderMediumColor">#FF888888</Color>
+    <Color
+        x:Key="BorderDarkColor">#FF444444</Color>
 
-    <Color x:Key="PressedBorderLightColor">#FF888888</Color>
-    <Color x:Key="PressedBorderDarkColor">#FF444444</Color>
+    <Color
+        x:Key="PressedBorderLightColor">#FF888888</Color>
+    <Color
+        x:Key="PressedBorderDarkColor">#FF444444</Color>
 
-    <Color x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
-    <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
+    <Color
+        x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
+    <Color
+        x:Key="DisabledBorderDarkColor">#FF888888</Color>
 
-    <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
-    <Color x:Key="PopupBackgroundColor">#191a1e</Color>
+    <Color
+        x:Key="DefaultBorderBrushDarkColor">Black</Color>
+    <Color
+        x:Key="PopupBackgroundColor">#191a1e</Color>
 
-    <Color x:Key="XButtonColor">#b81d1d</Color>
-    <SolidColorBrush x:Key="XButtonColorBrush" Color="{StaticResource XButtonColor}" />
+    <Color
+        x:Key="XButtonColor">#b81d1d</Color>
+    <SolidColorBrush
+        x:Key="XButtonColorBrush"
+        Color="{StaticResource XButtonColor}" />
 
     <!-- Popup colors -->
-    <SolidColorBrush x:Key="PopupBackground" Color="{StaticResource PopupBackgroundColor}" />
-    <SolidColorBrush x:Key="MouseOverForegroundBrush" Color="{StaticResource MouseOverForegroundColor}" />
+    <SolidColorBrush
+        x:Key="PopupBackground"
+        Color="{StaticResource PopupBackgroundColor}" />
+    <SolidColorBrush
+        x:Key="MouseOverForegroundBrush"
+        Color="{StaticResource MouseOverForegroundColor}" />
 
     <!--Control-specific resources.-->
-    <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
-    <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
-    <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
+    <Color
+        x:Key="HeaderTopColor">#FFC5CBF9</Color>
+    <Color
+        x:Key="DatagridCurrentCellBorderColor">Black</Color>
+    <Color
+        x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
 
-    <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
+    <Color
+        x:Key="NavButtonFrameColor">#FF3843C4</Color>
 
-    <Color x:Key="ComboboxBackGroundColor">#FF212327</Color>
+    <Color
+        x:Key="ComboboxBackGroundColor">#FF212327</Color>
 
-    <SolidColorBrush x:Key="ComboboxBackGroundBrush" Color="{StaticResource ComboboxBackGroundColor}" />
+    <SolidColorBrush
+        x:Key="ComboboxBackGroundBrush"
+        Color="{StaticResource ComboboxBackGroundColor}" />
 
-    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}" />
+    <SolidColorBrush
+        x:Key="ForegroundBrush"
+        Color="{StaticResource ForegroundColor}" />
 
-    <LinearGradientBrush x:Key="MenuPopupBrush"
-                     EndPoint="0.5,1"
-                     StartPoint="0.5,0">
-        <GradientStop Color="{StaticResource ControlLightColor}"
-                Offset="0" />
-        <GradientStop Color="{StaticResource ControlMediumColor}"
-                Offset="0.5" />
-        <GradientStop Color="{StaticResource ControlLightColor}"
-                Offset="1" />
+    <LinearGradientBrush
+        x:Key="MenuPopupBrush"
+        EndPoint="0.5,1"
+        StartPoint="0.5,0">
+        <GradientStop
+            Color="{StaticResource ControlLightColor}"
+            Offset="0" />
+        <GradientStop
+            Color="{StaticResource ControlMediumColor}"
+            Offset="0.5" />
+        <GradientStop
+            Color="{StaticResource ControlLightColor}"
+            Offset="1" />
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill"
-                     StartPoint="0,0"
-                     EndPoint="1,0">
+    <LinearGradientBrush
+        x:Key="ProgressBarIndicatorAnimatedFill"
+        StartPoint="0,0"
+        EndPoint="1,0">
         <LinearGradientBrush.GradientStops>
             <GradientStopCollection>
-                <GradientStop Color="#000000FF"
+                <GradientStop
+                    Color="#000000FF"
                     Offset="0" />
-                <GradientStop Color="#600000FF"
+                <GradientStop
+                    Color="#600000FF"
                     Offset="0.4" />
-                <GradientStop Color="#600000FF"
+                <GradientStop
+                    Color="#600000FF"
                     Offset="0.6" />
-                <GradientStop Color="#000000FF"
+                <GradientStop
+                    Color="#000000FF"
                     Offset="1" />
             </GradientStopCollection>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
-    <VisualBrush x:Key="AreaVisualBrushBlue"  TileMode="Tile" Viewport="0,0,0.01,1"  ViewportUnits="RelativeToBoundingBox" 
-                                                      Viewbox="0,0,10,10" ViewboxUnits="Absolute">
+    <VisualBrush
+        x:Key="AreaVisualBrushBlue"
+        TileMode="Tile"
+        Viewport="0,0,0.01,1"
+        ViewportUnits="RelativeToBoundingBox"
+        Viewbox="0,0,10,10"
+        ViewboxUnits="Absolute">
         <VisualBrush.Visual>
-            <Canvas >
-                <Path Data="M 0 0 l 0 10" StrokeThickness="2">
+            <Canvas>
+                <Path
+                    Data="M 0 0 l 0 10"
+                    StrokeThickness="2">
                     <Path.Stroke>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
                             <LinearGradientBrush.GradientStops>
                                 <GradientStopCollection>
-                                    <GradientStop Color="#115576" Offset="0" />
-                                    <GradientStop Color="#004BA516" Offset="1" />
+                                    <GradientStop
+                                        Color="#115576"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="#004BA516"
+                                        Offset="1" />
                                 </GradientStopCollection>
                             </LinearGradientBrush.GradientStops>
                         </LinearGradientBrush>
@@ -117,17 +193,30 @@
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="AreaVisualBrushYellow"  TileMode="Tile" Viewport="0,0,0.01,1"  ViewportUnits="RelativeToBoundingBox" 
-                                                      Viewbox="0,0,10,10" ViewboxUnits="Absolute">
+    <VisualBrush
+        x:Key="AreaVisualBrushYellow"
+        TileMode="Tile"
+        Viewport="0,0,0.01,1"
+        ViewportUnits="RelativeToBoundingBox"
+        Viewbox="0,0,10,10"
+        ViewboxUnits="Absolute">
         <VisualBrush.Visual>
-            <Canvas >
-                <Path Data="M 0 0 l 0 10" StrokeThickness="2">
+            <Canvas>
+                <Path
+                    Data="M 0 0 l 0 10"
+                    StrokeThickness="2">
                     <Path.Stroke>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
                             <LinearGradientBrush.GradientStops>
                                 <GradientStopCollection>
-                                    <GradientStop Color="#FDE40F" Offset="0" />
-                                    <GradientStop Color="#004BA516" Offset="1" />
+                                    <GradientStop
+                                        Color="#FDE40F"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="#004BA516"
+                                        Offset="1" />
                                 </GradientStopCollection>
                             </LinearGradientBrush.GradientStops>
                         </LinearGradientBrush>
@@ -137,17 +226,30 @@
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="AreaVisualBrushOrange"  TileMode="Tile" Viewport="0,0,0.01,1"  ViewportUnits="RelativeToBoundingBox" 
-                                                      Viewbox="0,0,10,10" ViewboxUnits="Absolute">
+    <VisualBrush
+        x:Key="AreaVisualBrushOrange"
+        TileMode="Tile"
+        Viewport="0,0,0.01,1"
+        ViewportUnits="RelativeToBoundingBox"
+        Viewbox="0,0,10,10"
+        ViewboxUnits="Absolute">
         <VisualBrush.Visual>
-            <Canvas >
-                <Path Data="M 0 0 l 0 10" StrokeThickness="2">
+            <Canvas>
+                <Path
+                    Data="M 0 0 l 0 10"
+                    StrokeThickness="2">
                     <Path.Stroke>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
                             <LinearGradientBrush.GradientStops>
                                 <GradientStopCollection>
-                                    <GradientStop Color="#bd5922" Offset="0" />
-                                    <GradientStop Color="#004BA516" Offset="1" />
+                                    <GradientStop
+                                        Color="#bd5922"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="#004BA516"
+                                        Offset="1" />
                                 </GradientStopCollection>
                             </LinearGradientBrush.GradientStops>
                         </LinearGradientBrush>
@@ -157,17 +259,30 @@
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="AreaVisualBrushGreen"  TileMode="Tile" Viewport="0,0,0.01,1"  ViewportUnits="RelativeToBoundingBox" 
-                                                      Viewbox="0,0,10,10" ViewboxUnits="Absolute">
+    <VisualBrush
+        x:Key="AreaVisualBrushGreen"
+        TileMode="Tile"
+        Viewport="0,0,0.01,1"
+        ViewportUnits="RelativeToBoundingBox"
+        Viewbox="0,0,10,10"
+        ViewboxUnits="Absolute">
         <VisualBrush.Visual>
-            <Canvas >
-                <Path Data="M 0 0 l 0 10" StrokeThickness="2">
+            <Canvas>
+                <Path
+                    Data="M 0 0 l 0 10"
+                    StrokeThickness="2">
                     <Path.Stroke>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
                             <LinearGradientBrush.GradientStops>
                                 <GradientStopCollection>
-                                    <GradientStop Color="#93c940" Offset="0" />
-                                    <GradientStop Color="#004BA516" Offset="1" />
+                                    <GradientStop
+                                        Color="#93c940"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="#004BA516"
+                                        Offset="1" />
                                 </GradientStopCollection>
                             </LinearGradientBrush.GradientStops>
                         </LinearGradientBrush>
@@ -177,51 +292,112 @@
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="HudPlayerBrush">
+    <VisualBrush
+        x:Key="HudPlayerBrush">
         <VisualBrush.Visual>
-            <Border  Height="45" Width="110"  x:Name="Rounded_Rectangle_1" CornerRadius="1" Grid.RowSpan="2" BorderThickness="0">
+            <Border
+                Height="45"
+                Width="110"
+                x:Name="Rounded_Rectangle_1"
+                CornerRadius="1"
+                Grid.RowSpan="2"
+                BorderThickness="0">
                 <Border.Effect>
-                    <DropShadowEffect BlurRadius="5" Color="Black" Direction="-90" Opacity="0.34" ShadowDepth="2"/>
+                    <DropShadowEffect
+                        BlurRadius="5"
+                        Color="Black"
+                        Direction="-90"
+                        Opacity="0.34"
+                        ShadowDepth="2" />
                 </Border.Effect>
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                        <GradientStop Color="#dddee0" Offset="0"/>
-                        <GradientStop Color="#939597" Offset="1"/>
+                    <LinearGradientBrush
+                        StartPoint="0.5,0"
+                        EndPoint="0.5,1">
+                        <GradientStop
+                            Color="#dddee0"
+                            Offset="0" />
+                        <GradientStop
+                            Color="#939597"
+                            Offset="1" />
                     </LinearGradientBrush>
                 </Border.Background>
-                <Grid >
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition
+                            Height="*" />
+                        <RowDefinition
+                            Height="*" />
                     </Grid.RowDefinitions>
-                    <Rectangle x:Name="Layer_3" Height="1"  Fill="#949698" Grid.Row="0" VerticalAlignment="Bottom"/>
-                    <Rectangle x:Name="Layer_4" Height="1"  Fill="#d1d1d2" Grid.Row="1" VerticalAlignment="Top"/>
+                    <Rectangle
+                        x:Name="Layer_3"
+                        Height="1"
+                        Fill="#949698"
+                        Grid.Row="0"
+                        VerticalAlignment="Bottom" />
+                    <Rectangle
+                        x:Name="Layer_4"
+                        Height="1"
+                        Fill="#d1d1d2"
+                        Grid.Row="1"
+                        VerticalAlignment="Top" />
                 </Grid>
             </Border>
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="HudPlayerBrushDisabled">
+    <VisualBrush
+        x:Key="HudPlayerBrushDisabled">
         <VisualBrush.Visual>
-            <Grid  Height="45" Width="110">
-                <Rectangle Stroke="#FF222527" RadiusX="1" RadiusY="1">
+            <Grid
+                Height="45"
+                Width="110">
+                <Rectangle
+                    Stroke="#FF222527"
+                    RadiusX="1"
+                    RadiusY="1">
                     <Rectangle.Effect>
-                        <DropShadowEffect Direction="280" ShadowDepth="4" BlurRadius="6" Opacity="0.8"/>
+                        <DropShadowEffect
+                            Direction="280"
+                            ShadowDepth="4"
+                            BlurRadius="6"
+                            Opacity="0.8" />
                     </Rectangle.Effect>
                     <Rectangle.Fill>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF8A8A8A" Offset="0"/>
-                            <GradientStop Color="#FFBCBCBC" Offset="1"/>
-                            <GradientStop Color="#FFA3A3A3" Offset="0.5"/>
-                            <GradientStop Color="#FF888888" Offset="0.5"/>
+                        <LinearGradientBrush
+                            EndPoint="0.5,1"
+                            StartPoint="0.5,0">
+                            <GradientStop
+                                Color="#FF8A8A8A"
+                                Offset="0" />
+                            <GradientStop
+                                Color="#FFBCBCBC"
+                                Offset="1" />
+                            <GradientStop
+                                Color="#FFA3A3A3"
+                                Offset="0.5" />
+                            <GradientStop
+                                Color="#FF888888"
+                                Offset="0.5" />
                         </LinearGradientBrush>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Border BorderBrush="#FF222527" BorderThickness="3,0" Opacity="0.22" Height="2" VerticalAlignment="Center">
+                <Border
+                    BorderBrush="#FF222527"
+                    BorderThickness="3,0"
+                    Opacity="0.22"
+                    Height="2"
+                    VerticalAlignment="Center">
                     <Border.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#B2FFFFFF" Offset="0.5"/>
-                            <GradientStop Color="#43000000" Offset="0.5"/>
+                        <LinearGradientBrush
+                            EndPoint="0.5,1"
+                            StartPoint="0.5,0">
+                            <GradientStop
+                                Color="#B2FFFFFF"
+                                Offset="0.5" />
+                            <GradientStop
+                                Color="#43000000"
+                                Offset="0.5" />
                         </LinearGradientBrush>
                     </Border.Background>
                 </Border>
@@ -229,35 +405,76 @@
         </VisualBrush.Visual>
     </VisualBrush>
 
-
-    <VisualBrush x:Key="HudElementPlayerBrush">
+    <VisualBrush
+        x:Key="HudElementPlayerBrush">
         <VisualBrush.Visual>
-            <Border CornerRadius="3"  Height="35" Width="110">
+            <Border
+                CornerRadius="3"
+                Height="35"
+                Width="110">
                 <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.65"/>
+                    <SolidColorBrush
+                        Color="Black"
+                        Opacity="0.65" />
                 </Border.Background>
-                <Path x:Name="Rectangle_1" Data="F1M2,0C2,0 72,0 72,0 72,6 72,47 72,47 72,47 30,47 30,47 30,47 0,0 0,0z" HorizontalAlignment="Right" Fill="White" Opacity="0.129" Width="68" Stretch="Fill"/>
+                <Path
+                    x:Name="Rectangle_1"
+                    Data="F1M2,0C2,0 72,0 72,0 72,6 72,47 72,47 72,47 30,47 30,47 30,47 0,0 0,0z"
+                    HorizontalAlignment="Right"
+                    Fill="White"
+                    Opacity="0.129"
+                    Width="68"
+                    Stretch="Fill" />
             </Border>
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <VisualBrush x:Key="HudElementSimpleBrush">
+    <VisualBrush
+        x:Key="HudElementSimpleBrush">
         <VisualBrush.Visual>
-            <Border CornerRadius="3"  Height="35" Width="110">
+            <Border
+                CornerRadius="3"
+                Height="35"
+                Width="110">
                 <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    <SolidColorBrush
+                        Color="Black"
+                        Opacity="0.3" />
                 </Border.Background>
             </Border>
         </VisualBrush.Visual>
     </VisualBrush>
 
-    <LinearGradientBrush x:Key="CheckBoxMarkFill" StartPoint="0,0" EndPoint="0,1">
+    <LinearGradientBrush
+        x:Key="CheckBoxMarkFill"
+        StartPoint="0,0"
+        EndPoint="0,1">
         <LinearGradientBrush.GradientStops>
             <GradientStopCollection>
-                <GradientStop Color="#4568b4" />
-                <GradientStop Color="#3f60b6" Offset="1.0" />
+                <GradientStop
+                    Color="#4568b4" />
+                <GradientStop
+                    Color="#3f60b6"
+                    Offset="1.0" />
             </GradientStopCollection>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
+
+    <!--#region Graph colors -->
+    <SolidColorBrush
+        x:Key="GraphToogleButtonForegroundBrush"
+        Color="#e4e4e4" />
+
+    <SolidColorBrush
+        x:Key="GraphToogleButtonBackgroundBrush"
+        Color="#2a2d31" />
+
+    <Color
+        x:Key="GraphToogleButtonMouseOverColor">#34519c</Color>
+
+    <Color
+        x:Key="GraphToogleButtonDisabledColor">#aea5a5</Color>
+
+    <!--#endregion-->
 
 </ResourceDictionary>

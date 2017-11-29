@@ -376,6 +376,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bb/100.
+        /// </summary>
+        internal static string Common_Chart_BB100Caption {
+            get {
+                return ResourceManager.GetString("Common_Chart_BB100Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB.
+        /// </summary>
+        internal static string Common_Chart_BBSign {
+            get {
+                return ResourceManager.GetString("Common_Chart_BBSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $.
+        /// </summary>
+        internal static string Common_Chart_DollarSign {
+            get {
+                return ResourceManager.GetString("Common_Chart_DollarSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hands.
         /// </summary>
         internal static string Common_Chart_Hands {
@@ -385,11 +412,83 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Money Won.
+        /// </summary>
+        internal static string Common_Chart_MoneyWonCaption {
+            get {
+                return ResourceManager.GetString("Common_Chart_MoneyWonCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Month.
         /// </summary>
         internal static string Common_Chart_Month {
             get {
                 return ResourceManager.GetString("Common_Chart_Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Common_Chart_NetWonSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_NetWonSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non Showdown.
+        /// </summary>
+        internal static string Common_Chart_NonShowdownSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_NonShowdownSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NSD.
+        /// </summary>
+        internal static string Common_Chart_NSD {
+            get {
+                return ResourceManager.GetString("Common_Chart_NSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SD.
+        /// </summary>
+        internal static string Common_Chart_SD {
+            get {
+                return ResourceManager.GetString("Common_Chart_SD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown.
+        /// </summary>
+        internal static string Common_Chart_ShowdownSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_ShowdownSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date:.
+        /// </summary>
+        internal static string Common_Chart_TrackBallInfoHeader_Date {
+            get {
+                return ResourceManager.GetString("Common_Chart_TrackBallInfoHeader_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hand:.
+        /// </summary>
+        internal static string Common_Chart_TrackBallInfoHeader_Hand {
+            get {
+                return ResourceManager.GetString("Common_Chart_TrackBallInfoHeader_Hand", resourceCulture);
             }
         }
         

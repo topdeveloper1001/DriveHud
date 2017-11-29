@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Prism.Mvvm;
 using ReactiveUI;
 using System;
 using System.Windows.Media;
@@ -17,7 +18,7 @@ using System.Windows.Media;
 namespace DriveHUD.ViewModels
 {
     [Serializable]
-    public class ChartSeriesItem : ReactiveObject
+    public class ChartSeriesItem : BindableBase
     {
         #region Properties
 
@@ -31,7 +32,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref itemValue, value);
+                SetProperty(ref itemValue, value);
             }
         }
 
@@ -45,7 +46,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref format, value);
+                SetProperty(ref format, value);
             }
         }
 
@@ -69,7 +70,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref category, value);
+                SetProperty(ref category, value);
             }
         }
 
@@ -83,7 +84,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref date, value);
+                SetProperty(ref date, value);
             }
         }
 
@@ -97,7 +98,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref pointColor, value);
+                SetProperty(ref pointColor, value);
             }
         }
 
@@ -111,7 +112,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref trackBallColor, value);
+                SetProperty(ref trackBallColor, value);
             }
         }
 
@@ -125,7 +126,7 @@ namespace DriveHUD.ViewModels
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref tooltipColor, value);
+                SetProperty(ref tooltipColor, value);
             }
         }
 

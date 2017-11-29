@@ -52,17 +52,31 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        private ChartSeriesType chartSeriesType;
+        private ChartCashSeriesWinningType chartCashSeriesWinningType;
 
-        public ChartSeriesType ChartSeriesType
+        public ChartCashSeriesWinningType ChartCashSeriesWinningType
         {
             get
             {
-                return chartSeriesType;
+                return chartCashSeriesWinningType;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref chartSeriesType, value);
+                this.RaiseAndSetIfChanged(ref chartCashSeriesWinningType, value);
+            }
+        }
+
+        private ChartCashSeriesValueType chartCashSeriesValueType;
+
+        public ChartCashSeriesValueType ChartCashSeriesValueType
+        {
+            get
+            {
+                return chartCashSeriesValueType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref chartCashSeriesValueType, value);
             }
         }
 
@@ -80,7 +94,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        private bool isVisible = true;
+        private bool isVisible = false;
 
         public bool IsVisible
         {
@@ -94,41 +108,25 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        private Color lineColor = new Color();
+        private ChartSerieResourceHelper colorsPalette;
 
-        public Color LineColor
+        public ChartSerieResourceHelper ColorsPalette
         {
             get
             {
-                return lineColor;
+                return colorsPalette;
             }
-
             set
             {
-                this.RaiseAndSetIfChanged(ref lineColor, value);
+                this.RaiseAndSetIfChanged(ref colorsPalette, value);
             }
         }
 
-        private VisualBrush areaStyle;
-
-        public VisualBrush AreaStyle
-        {
-            get
-            {
-                return areaStyle;
-            }
-
-            set
-            {
-                this.RaiseAndSetIfChanged(ref areaStyle, value);
-            }
-        }
-
-        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic> UpdateChartSeriesItem
+        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic, int> UpdateChartSeriesItem
         {
             get;
             set;
-        }
+        }     
 
         #region Obsolete
 

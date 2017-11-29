@@ -229,8 +229,7 @@ namespace DriveHUD.Application.ViewModels
                 Caption = "ITM%",
                 FunctionName = EnumTelerikRadChartFunctionType.ITM,
                 Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = blueResource.LineColor,
-                AreaStyle = blueResource.AreaBrush
+                ColorsPalette = blueResource
             };
 
             ChartSeries series1 = new ChartSeries()
@@ -239,8 +238,7 @@ namespace DriveHUD.Application.ViewModels
                 Caption = "ROI%",
                 FunctionName = EnumTelerikRadChartFunctionType.ROI,
                 Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = yellowResource.LineColor,
-                AreaStyle = yellowResource.AreaBrush
+                ColorsPalette = yellowResource
             };
 
             ChartSeries series2 = new ChartSeries()
@@ -249,8 +247,7 @@ namespace DriveHUD.Application.ViewModels
                 Caption = "$",
                 FunctionName = EnumTelerikRadChartFunctionType.MoneyWon,
                 Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = greenResource.LineColor,
-                AreaStyle = greenResource.AreaBrush
+                ColorsPalette = greenResource,
             };
 
             ChartSeries series3 = new ChartSeries()
@@ -259,8 +256,7 @@ namespace DriveHUD.Application.ViewModels
                 Caption = "Luck",
                 FunctionName = EnumTelerikRadChartFunctionType.Luck,
                 Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = orangeResource.LineColor,
-                AreaStyle = orangeResource.AreaBrush
+                ColorsPalette = orangeResource
             };
 
             ChartSeriesCollection = new ObservableCollection<ChartSeries>();
@@ -346,51 +342,48 @@ namespace DriveHUD.Application.ViewModels
                     switch (serie.FunctionName)
                     {
                         case EnumTelerikRadChartFunctionType.ITM:
-                            var blueResource = ChartSerieResourceHelper.GetSeriesBluePalette();
+
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
                                 Value = stat.ITM,
                                 Format = "{0:0.##}%",
-                                PointColor = blueResource.PointColor,
-                                TrackBallColor = blueResource.TrackBallColor,
-                                TooltipColor = blueResource.TooltipColor
+                                PointColor = serie.ColorsPalette.PointColor,
+                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
+                                TooltipColor = serie.ColorsPalette.TooltipColor
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.ROI:
-                            var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
                                 Value = stat.ROI,
                                 Format = "{0:0.##}%",
-                                PointColor = yellowResource.PointColor,
-                                TrackBallColor = yellowResource.TrackBallColor,
-                                TooltipColor = yellowResource.TooltipColor
+                                PointColor = serie.ColorsPalette.PointColor,
+                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
+                                TooltipColor = serie.ColorsPalette.TooltipColor
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.MoneyWon:
-                            var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
                                 Value = stat.Won,
                                 Format = "{0:0.##}$",
-                                PointColor = greenResource.PointColor,
-                                TrackBallColor = greenResource.TrackBallColor,
-                                TooltipColor = greenResource.TooltipColor
+                                PointColor = serie.ColorsPalette.PointColor,
+                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
+                                TooltipColor = serie.ColorsPalette.TooltipColor
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.Luck:
-                            var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
                                 Value = 0,
                                 Format = "{0:0.##}%",
-                                PointColor = orangeResource.PointColor,
-                                TrackBallColor = orangeResource.TrackBallColor,
-                                TooltipColor = orangeResource.TooltipColor
+                                PointColor = serie.ColorsPalette.PointColor,
+                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
+                                TooltipColor = serie.ColorsPalette.TooltipColor
                             });
                             break;
                     }

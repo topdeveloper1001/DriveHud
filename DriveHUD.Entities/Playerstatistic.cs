@@ -25,7 +25,7 @@ namespace DriveHUD.Entities
 #if DEBUG
         public override string ToString()
         {
-            return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon {NetWon}";
+            return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon: {NetWon}; Time: {Time}";
         }
 #endif
 

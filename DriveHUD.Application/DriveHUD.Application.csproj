@@ -572,6 +572,7 @@
     <Compile Include="ViewModels\Layouts\HudPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudPositionsInfo.cs" />
     <Compile Include="ViewModels\Main\AppsViewModel.cs" />
+    <Compile Include="ViewModels\Main\CashGraphViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />

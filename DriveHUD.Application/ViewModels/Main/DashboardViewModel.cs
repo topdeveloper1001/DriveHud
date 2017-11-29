@@ -10,39 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
+using DriveHUD.Application.ViewModels.Main;
 using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Common.Linq;
-using DriveHUD.Entities;
+using DriveHUD.Common.Resources;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
-using Model.ChartData;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Prism.Events;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
-        #region Fields
-
-        private ObservableCollection<ChartSeries> winningsChartCollection;
-        private ObservableCollection<ChartSeries> secondChartCollection = new ObservableCollection<ChartSeries>();
-        private ChartDisplayRange winningsChartDisplayRange = ChartDisplayRange.Week;
-        private ChartDisplayRange secondChartDisplayRange = ChartDisplayRange.Month;
-        private LightIndicators indicatorCollection;
-        private bool isExpanded = true;
-
-        #endregion
-
         #region Properties
+
+        private bool isExpanded = true;
 
         public bool IsExpanded
         {
@@ -56,58 +42,35 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public ObservableCollection<ChartSeries> WinningsChartCollection
+        private CashGraphViewModel winningsGraphViewModel;
+
+        public CashGraphViewModel WinningsGraphViewModel
         {
             get
             {
-                return winningsChartCollection;
+                return winningsGraphViewModel;
             }
-            set
+            private set
             {
-                SetProperty(ref winningsChartCollection, value);
+                SetProperty(ref winningsGraphViewModel, value);
             }
         }
 
-        public ObservableCollection<ChartSeries> SecondChartCollection
+        private CashGraphViewModel bb100GraphViewModel;
+
+        public CashGraphViewModel BB100GraphViewModel
         {
             get
             {
-                return secondChartCollection;
+                return bb100GraphViewModel;
             }
-
-            set
+            private set
             {
-                secondChartCollection = value;
+                SetProperty(ref bb100GraphViewModel, value);
             }
         }
 
-        public ChartDisplayRange WinningsChartDisplayRange
-        {
-            get
-            {
-                return winningsChartDisplayRange;
-            }
-            set
-            {
-                SetProperty(ref winningsChartDisplayRange, value);
-
-                SetSerieData(WinningsChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), WinningsChartDisplayRange);
-            }
-        }
-
-        public ChartDisplayRange SecondChartDisplayRange
-        {
-            get
-            {
-                return secondChartDisplayRange;
-            }
-            set
-            {
-                SetProperty(ref secondChartDisplayRange, value);
-
-                SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
-            }
-        }
+        private LightIndicators indicatorCollection;
 
         public LightIndicators IndicatorCollection
         {
@@ -130,74 +93,17 @@ namespace DriveHUD.Application.ViewModels
                 .GetEvent<BuiltFilterChangedEvent>()
                 .Subscribe(UpdateFilteredData);
 
-            InitializeCharts();
-        }
-
-        private void SetSerieData(IEnumerable<ChartSeries> chartSeriesCollection, ChartSerieResourceHelper resource, ChartDisplayRange displayRange)
-        {
-            using (var pf = new PerformanceMonitor(nameof(SetSerieData)))
-            {
-                // filter stats if necessary (only for date ranges)
-                // sort stats by date asc
-                // loop stats
-                //      build key from (stat, range, stat index)
-                //      loop chart series
-                //          if key equals to previous then update current item with Action<current, stat, previous> or Func<decimal, stat, previous>
-                //          if key not equals to previous the create new item and update it with Action<current, stat, previous> or Func<decimal, stat, previous>
-                // i=50, i=51, ... bb/100(50)= sum(nw1/bb1+...)/50, bb/100(51) = (bb/100(50)*50+nw51/bb51)/51 ...
-
-                // clear all data
-                chartSeriesCollection.ForEach(x => x.ItemsCollection?.Clear());
-
-                var chartItemDataBuilder = CreateCharItemDataBuilder(displayRange);
-
-                // filter and orders
-                var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney));
-
-                object previousGroupKey = null;
-
-                for (var statIndex = 0; statIndex < stats.Length; statIndex++)
-                {
-                    var stat = stats[statIndex];
-
-                    var currentGroupKey = chartItemDataBuilder.BuildGroupKey(stat, statIndex);
-
-                    var isNew = !currentGroupKey.Equals(previousGroupKey);
-
-                    previousGroupKey = currentGroupKey;
-
-                    foreach (var chartSerie in chartSeriesCollection)
-                    {
-                        ChartSeriesItem previousChartSeriesItem = null;
-                        ChartSeriesItem chartSeriesItem = null;
-
-                        if (isNew)
-                        {
-                            chartSeriesItem = new ChartSeriesItem
-                            {
-                                Format = chartSerie.Format,
-                                PointColor = resource.PointColor,
-                                TrackBallColor = resource.TrackBallColor,
-                                TooltipColor = resource.TooltipColor,
-                                Category = chartItemDataBuilder.GetValueFromGroupKey(currentGroupKey)
-                            };
-
-                            previousChartSeriesItem = chartSerie.ItemsCollection.LastOrDefault();
-                            chartSerie.ItemsCollection.Add(chartSeriesItem);
-                        }
-                        else
-                        {
-                            previousChartSeriesItem = chartSeriesItem = chartSerie.ItemsCollection.LastOrDefault();
-                        }
-
-                        chartSerie.UpdateChartSeriesItem(chartSeriesItem, previousChartSeriesItem, stat);
-                    }
-                }
-            }
+            InitializeWinningsChart();
+            InitializeBB100Chart();
         }
 
         internal void UpdateFilteredData(BuiltFilterChangedEventArgs args)
         {
+            if (!IsActive)
+            {
+                return;
+            }
+
             if (IndicatorCollection == null)
             {
                 IndicatorCollection = new LightIndicators();
@@ -227,31 +133,22 @@ namespace DriveHUD.Application.ViewModels
 
             UpdateFilteredData(null);
 
-            SetSerieData(WinningsChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), WinningsChartDisplayRange);
-
-            //SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
+            WinningsGraphViewModel?.Update();
+            BB100GraphViewModel?.Update();
         }
 
-        private void InitializeCharts()
+        private void InitializeWinningsChart()
         {
-            if (WinningsChartCollection == null)
-            {
-                WinningsChartCollection = new ObservableCollection<ChartSeries>();
-            }
-            else
-            {
-                WinningsChartCollection.Clear();
-            }
+            var winningsChartCollection = new List<ChartSeries>();
 
-            var resource = ChartSerieResourceHelper.GetSerieGreenPalette();
-
-            WinningsChartCollection.Add(new ChartSeries
+            winningsChartCollection.Add(new ChartSeries
             {
-                ChartSeriesType = ChartSeriesType.Winnings,
-                LineColor = resource.LineColor,
-                AreaStyle = resource.AreaBrush,
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
                 Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat) =>
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
                     if (current == null)
                     {
@@ -267,13 +164,179 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
-            //WinningsChartCollection.Add(new ChartSeries
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
+                Format = "{0:0.##}",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    if (stat.Sawshowdown == 0)
+                    {
+                        current.Value += stat.NetWon;
+                    }
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+                ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
+                Format = "{0:0.##}",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    if (stat.Sawshowdown == 1)
+                    {
+                        current.Value += stat.NetWon;
+                    }
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
+                Format = "{0:0}$",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.NetWon / stat.BigBlind;
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
+                Format = "{0:0.##}",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    if (stat.Sawshowdown == 0)
+                    {
+                        current.Value += stat.NetWon / stat.BigBlind;
+                    }
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
+                ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
+                Format = "{0:0.##}",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    if (stat.Sawshowdown == 1)
+                    {
+                        current.Value += stat.NetWon / stat.BigBlind;
+                    }
+                }
+            });
+
+            WinningsGraphViewModel = new CashGraphViewModel(winningsChartCollection);
+        }
+
+        private void InitializeBB100Chart()
+        {
+            var bb100ChartCollection = new List<ChartSeries>();
+
+            var bb100Indicator = new LightIndicators();
+
+            bb100ChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieOrangePalette(),
+                Format = "{0:0.##}$",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {                     
+                        current.Value = previous.Value;
+                    }
+                    else
+                    {
+                        bb100Indicator = new LightIndicators();
+                    }
+
+                    bb100Indicator.AddStatistic(stat);
+
+                    current.Value = bb100Indicator.BB; //(current.Value * index * 100 + stat.NetWon / stat.BigBlind) / ((index + 1) * 100);
+                }
+            });
+
+            //bb100ChartCollection.Add(new ChartSeries
             //{
-            //    ChartSeriesType = ChartSeriesType.WinningsNonShowdown,
-            //    LineColor = Colors.Red,
+            //    Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
+            //    ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
+            //    ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+            //    ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
             //    Format = "{0:0.##}",
-            //    AreaStyle = resource.AreaBrush,
-            //    UpdateChartSeriesItem = (current, previous, stat) =>
+            //    UpdateChartSeriesItem = (current, previous, stat, index) =>
             //    {
             //        if (current == null)
             //        {
@@ -292,13 +355,14 @@ namespace DriveHUD.Application.ViewModels
             //    }
             //});
 
-            //WinningsChartCollection.Add(new ChartSeries
+            //bb100ChartCollection.Add(new ChartSeries
             //{
-            //    ChartSeriesType = ChartSeriesType.WinningsShowdown,
-            //    LineColor = Colors.Yellow,
+            //    Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
+            //    ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
+            //    ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+            //    ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
             //    Format = "{0:0.##}",
-            //    AreaStyle = resource.AreaBrush,
-            //    UpdateChartSeriesItem = (current, previous, stat) =>
+            //    UpdateChartSeriesItem = (current, previous, stat, index) =>
             //    {
             //        if (current == null)
             //        {
@@ -317,43 +381,7 @@ namespace DriveHUD.Application.ViewModels
             //    }
             //});
 
-            //WinningsChartCollection.Add(new ChartSeries
-            //{
-            //    ChartSeriesType = ChartSeriesType.WinningsInBB,
-            //    LineColor = resource.LineColor,
-            //    AreaStyle = resource.AreaBrush
-            //});
-
-            //WinningsChartCollection.Add(new ChartSeries
-            //{
-            //    ChartSeriesType = ChartSeriesType.WinningsInBBNonShowdown,
-            //    LineColor = Colors.Red,
-            //    AreaStyle = resource.AreaBrush
-            //});
-
-            //WinningsChartCollection.Add(new ChartSeries
-            //{
-            //    ChartSeriesType = ChartSeriesType.WinningsInBBShowdown,
-            //    LineColor = Colors.Yellow,
-            //    AreaStyle = resource.AreaBrush
-            //});
-        }
-
-        private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)
-        {
-            switch (displayRange)
-            {
-                case ChartDisplayRange.Hands:
-                    return new HandsItemDataBuilder();
-                case ChartDisplayRange.Month:
-                    return new MonthItemDataBuilder();
-                case ChartDisplayRange.Week:
-                    return new WeekItemDataBuilder();
-                case ChartDisplayRange.Year:
-                    return new YearItemDataBuilder();
-                default:
-                    throw new ArgumentException("Unknown char display range type");
-            }
+            BB100GraphViewModel = new CashGraphViewModel(bb100ChartCollection);
         }
     }
 }

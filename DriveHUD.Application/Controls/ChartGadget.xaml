@@ -76,16 +76,22 @@
             TargetType="RadioButton"
             BasedOn="{StaticResource RadioButtonStyle}">
             <Setter
+                Property="Foreground"
+                Value="{StaticResource GraphToogleButtonForegroundBrush}" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource GraphToogleButtonBackgroundBrush}" />
+            <Setter
                 Property="Template">
                 <Setter.Value>
                     <ControlTemplate
                         TargetType="RadioButton">
                         <Border
-                            TextBlock.Foreground="#a2a5ae"
                             x:Name="Border"
+                            TextBlock.Foreground="{TemplateBinding Foreground}"
                             CornerRadius="1"
                             BorderThickness="0"
-                            Background="#2a2d31">
+                            Background="{TemplateBinding Background}">
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup
                                     x:Name="CommonStates">
@@ -155,72 +161,6 @@
                                 RecognizesAccessKey="True" />
                         </Border>
                     </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style
-            x:Key="CategoricalSeriesDescriptorStyle"
-            TargetType="telerik:AreaSeries">
-            <Setter
-                Property="Stroke"
-                Value="{Binding LineColorBrush}" />
-            <Setter
-                Property="Visibility"
-                Value="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}" />
-            <Setter
-                Property="StrokeThickness"
-                Value="1" />
-            <Setter
-                Property="Fill"
-                Value="{Binding AreaStyle}" />
-            <Setter
-                Property="PointTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <Ellipse
-                            Height="7"
-                            Width="7"
-                            Fill="{Binding DataItem.PointColorBrush, Mode=OneTime}" />
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter
-                Property="TrackBallTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <Border
-                            BorderBrush="White"
-                            BorderThickness="3"
-                            CornerRadius="8">
-                            <Ellipse
-                                Height="7"
-                                Width="7"
-                                Fill="{Binding DataPoint.DataItem.TrackBallColorBrush, Mode=OneTime}" />
-                        </Border>
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter
-                Property="TooltipTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <Grid
-                            HorizontalAlignment="Center">
-                            <Path
-                                Data="M -15,15 L 15,15 15,33 -15,33 -15,20 -22.5,24.375 z"
-                                Stretch="Fill"
-                                Fill="{Binding Path=DataItem.TooltipColorBrush, Mode=OneTime}"
-                                Stroke="{Binding Path=DataItem.TooltipColorBrush, Mode=OneTime}"
-                                StrokeThickness="2" />
-                            <TextBlock
-                                Foreground="White"
-                                Margin="15, 5, 5, 5"
-                                Text="{Binding DataItem.ValueText, Mode=OneTime}"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center" />
-                        </Grid>
-                    </DataTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
@@ -296,6 +236,64 @@
                         </TextBlock.Foreground>
                     </TextBlock>
 
+                    <Border
+                        DockPanel.Dock="Left"
+                        VerticalAlignment="Center">
+
+                        <Grid
+                            VerticalAlignment="Stretch">
+                            <ItemsControl
+                                ItemsSource="{Binding}">
+                                <ItemsControl.Style>
+                                    <Style
+                                        TargetType="ItemsControl">
+                                        <Setter
+                                            Property="Visibility"
+                                            Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding Count}"
+                                                Value="1">
+                                                <Setter
+                                                    Property="Visibility"
+                                                    Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ItemsControl.Style>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel
+                                            Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox
+                                            Foreground="{StaticResource GraphToogleButtonForegroundBrush}"
+                                            IsChecked="{Binding IsVisible, Mode=TwoWay}"
+                                            Margin="10">
+                                            <CheckBox.Content>
+                                                <StackPanel
+                                                    Orientation="Horizontal">
+                                                    <Ellipse
+                                                        Width="7"
+                                                        Height="7"
+                                                        Fill="{Binding ColorsPalette.LineColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                                        Margin="0 0 5 0" />
+                                                    <TextBlock
+                                                        Text="{Binding Caption}" />
+                                                </StackPanel>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+
+                    </Border>
+
+
                     <StackPanel
                         DockPanel.Dock="Right"
                         Height="40"
@@ -315,6 +313,7 @@
                             Style="{StaticResource DateRadioButton}" />
                     </StackPanel>
                 </DockPanel>
+
 
                 <Grid
                     Grid.Row="2"
@@ -367,10 +366,76 @@
                                 <telerik:ChartSeriesProvider.SeriesDescriptors>
 
                                     <telerik:CategoricalSeriesDescriptor
-                                        Style="{StaticResource CategoricalSeriesDescriptorStyle}"
                                         ItemsSourcePath="ItemsCollection"
                                         ValuePath="Value"
-                                        CategoryPath="Date" />
+                                        CategoryPath="Date">
+                                        <telerik:CategoricalSeriesDescriptor.Style>
+                                            <Style
+                                                TargetType="telerik:AreaSeries">
+                                                <Setter
+                                                    Property="Stroke"
+                                                    Value="{Binding ColorsPalette.LineColor, Converter={dh:ColorToSolidBrushConverter}}" />
+                                                <Setter
+                                                    Property="Visibility"
+                                                    Value="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}" />
+                                                <Setter
+                                                    Property="StrokeThickness"
+                                                    Value="1" />
+                                                <Setter
+                                                    Property="Fill"
+                                                    Value="{Binding ColorsPalette.AreaBrush}" />
+                                                <Setter
+                                                    Property="PointTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Ellipse
+                                                                Height="7"
+                                                                Width="7"
+                                                                Fill="{Binding DataItem.PointColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}" />
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter
+                                                    Property="TrackBallTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Border
+                                                                BorderBrush="White"
+                                                                BorderThickness="3"
+                                                                CornerRadius="8">
+                                                                <Ellipse
+                                                                    Height="7"
+                                                                    Width="7"
+                                                                    Fill="{Binding DataPoint.DataItem.TrackBallColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}" />
+                                                            </Border>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter
+                                                    Property="TooltipTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Grid
+                                                                HorizontalAlignment="Center">
+                                                                <Path
+                                                                    Data="M -15,15 L 15,15 15,33 -15,33 -15,20 -22.5,24.375 z"
+                                                                    Stretch="Fill"
+                                                                    Fill="{Binding Path=DataItem.TooltipColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
+                                                                    Stroke="{Binding Path=DataItem.TooltipColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
+                                                                    StrokeThickness="2" />
+                                                                <TextBlock
+                                                                    Foreground="White"
+                                                                    Margin="15, 5, 5, 5"
+                                                                    Text="{Binding DataItem.ValueText, Mode=OneTime}"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center" />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </telerik:CategoricalSeriesDescriptor.Style>
+                                    </telerik:CategoricalSeriesDescriptor>
 
                                 </telerik:ChartSeriesProvider.SeriesDescriptors>
                             </telerik:ChartSeriesProvider>

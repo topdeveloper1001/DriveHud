@@ -76,5 +76,17 @@ namespace DriveHUD.ViewModels
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushGreen")
             };
         }
+
+        public static ChartSerieResourceHelper GetSerieRedPalette()
+        {
+            return new ChartSerieResourceHelper()
+            {
+                LineColor = (Color)ColorConverter.ConvertFromString("#e60909"),
+                PointColor = (Color)ColorConverter.ConvertFromString("#f32e2e"),
+                TrackBallColor = (Color)ColorConverter.ConvertFromString("#f32e2e"),
+                TooltipColor = (Color)ColorConverter.ConvertFromString("#e60909"),
+                AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushOrange")
+            };
+        }
     }
 }

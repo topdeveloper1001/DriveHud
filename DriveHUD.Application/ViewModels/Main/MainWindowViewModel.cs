@@ -882,6 +882,7 @@ namespace DriveHUD.Application.ViewModels
                     };
                 }
 
+                DashboardViewModel.IsActive = true;
                 CurrentViewModel = DashboardViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = false;
                 UpdateCurrentView();
@@ -897,6 +898,11 @@ namespace DriveHUD.Application.ViewModels
                     {
                         Type = EnumViewModelType.TournamentViewModel,
                     };
+                }
+
+                if (DashboardViewModel != null)
+                {
+                    DashboardViewModel.IsActive = false;
                 }
 
                 CurrentViewModel = TournamentViewModel;

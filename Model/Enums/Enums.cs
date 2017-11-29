@@ -81,18 +81,32 @@ namespace Model.Enums
         BB
     }
 
-    public enum ChartSeriesType
+    //public enum ChartSeriesType
+    //{
+    //    Winnings,
+    //    WinningsShowdown,
+    //    WinningsNonShowdown,
+    //    WinningsInBB,
+    //    WinningsInBBShowdown,
+    //    WinningsInBBNonShowdown
+    //}
+
+    public enum ChartCashSeriesWinningType
     {
-        Winnings,
-        WinningsShowdown,
-        WinningsNonShowdown,
-        WinningsInBB,
-        WinningsInBBShowdown,
-        WinningsInBBNonShowdown
+        Netwon,
+        Showdown,
+        NonShowdown
+    }
+
+    public enum ChartCashSeriesValueType
+    {
+        Currency,
+        BB
     }
 
     public enum ChartDisplayRange
-    {
+    {     
+        None,   
         Week,
         Month,
         Year,

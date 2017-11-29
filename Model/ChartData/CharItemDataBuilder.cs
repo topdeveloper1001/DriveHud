@@ -14,6 +14,7 @@ using DriveHUD.Entities;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using Model.Importer;
 
 namespace Model.ChartData
 {
@@ -57,9 +58,17 @@ namespace Model.ChartData
             return GetDateTimeFromGroupKey(charItemDateKey);
         }
 
+        public override object BuildGroupKey(Playerstatistic stat, int index)
+        {
+            var time = Converter.ToLocalizedDateTime(stat.Time);
+            return BuildGroupKey(time);
+        }
+
         protected abstract DateTime GetDateTimeFromGroupKey(CharItemDateKey groupKey);
 
         protected abstract DateTime GetStartDate(DateTime maxDateTime);
+
+        protected abstract object BuildGroupKey(DateTime time);
 
         protected class CharItemDateKey
         {
@@ -105,12 +114,12 @@ namespace Model.ChartData
 
     public class YearItemDataBuilder : DateItemDataBuilder
     {
-        public override object BuildGroupKey(Playerstatistic stat, int index)
+        protected override object BuildGroupKey(DateTime time)
         {
             var dateKey = new CharItemDateKey
             {
-                Year = stat.Time.Year,
-                Month = stat.Time.Month
+                Year = time.Year,
+                Month = time.Month
             };
 
             return dateKey;
@@ -130,13 +139,13 @@ namespace Model.ChartData
 
     public class MonthItemDataBuilder : DateItemDataBuilder
     {
-        public override object BuildGroupKey(Playerstatistic stat, int index)
+        protected override object BuildGroupKey(DateTime time)
         {
             var dateKey = new CharItemDateKey
             {
-                Year = stat.Time.Year,
-                Month = stat.Time.Month,
-                Day = stat.Time.Day
+                Year = time.Year,
+                Month = time.Month,
+                Day = time.Day
             };
 
             return dateKey;

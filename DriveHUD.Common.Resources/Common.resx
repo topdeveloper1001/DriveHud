@@ -943,4 +943,37 @@ The GG catcher is an add-on application that will allow you to capture and run a
   <data name="Common_Chart_Year" xml:space="preserve">
     <value>Year</value>
   </data>
+  <data name="Common_Chart_NetWonSeries" xml:space="preserve">
+    <value>Net Won</value>
+  </data>
+  <data name="Common_Chart_NonShowdownSeries" xml:space="preserve">
+    <value>Non Showdown</value>
+  </data>
+  <data name="Common_Chart_ShowdownSeries" xml:space="preserve">
+    <value>Showdown</value>
+  </data>
+  <data name="Common_Chart_TrackBallInfoHeader_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="Common_Chart_TrackBallInfoHeader_Hand" xml:space="preserve">
+    <value>Hand:</value>
+  </data>
+  <data name="Common_Chart_BB100Caption" xml:space="preserve">
+    <value>bb/100</value>
+  </data>
+  <data name="Common_Chart_BBSign" xml:space="preserve">
+    <value>BB</value>
+  </data>
+  <data name="Common_Chart_DollarSign" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="Common_Chart_MoneyWonCaption" xml:space="preserve">
+    <value>Money Won</value>
+  </data>
+  <data name="Common_Chart_NSD" xml:space="preserve">
+    <value>NSD</value>
+  </data>
+  <data name="Common_Chart_SD" xml:space="preserve">
+    <value>SD</value>
+  </data>
 </root>

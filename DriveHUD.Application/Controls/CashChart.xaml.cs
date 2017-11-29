@@ -10,13 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using DriveHUD.Common.Linq;
 using Model.Enums;
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System;
+using Telerik.Charting;
 using Telerik.Windows.Controls.ChartView;
 
 namespace DriveHUD.Application.Controls
@@ -34,7 +36,7 @@ namespace DriveHUD.Application.Controls
         #region Dependency Properties
 
         public static readonly DependencyProperty ItemsSourceProperty = DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<DriveHUD.ViewModels.ChartSeries>),
-            typeof(CashChart));
+            typeof(CashChart), new PropertyMetadata(null, OnItemsSourceChanged));
 
         public ObservableCollection<DriveHUD.ViewModels.ChartSeries> ItemsSource
         {
@@ -49,7 +51,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty DisplayRangeProperty = DependencyProperty.Register("DisplayRange", typeof(ChartDisplayRange),
-            typeof(CashChart), new FrameworkPropertyMetadata(ChartDisplayRange.Month, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDisplayRangeChanged));
+            typeof(CashChart), new FrameworkPropertyMetadata(ChartDisplayRange.None, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDisplayRangeChanged));
 
         public ChartDisplayRange DisplayRange
         {
@@ -60,6 +62,81 @@ namespace DriveHUD.Application.Controls
             set
             {
                 SetValue(DisplayRangeProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty ShowShowdownProperty = DependencyProperty.Register("ShowShowdown", typeof(bool), typeof(CashChart),
+            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnShowShowdownChanged));
+
+        public bool ShowShowdown
+        {
+            get
+            {
+                return (bool)GetValue(ShowShowdownProperty);
+            }
+            set
+            {
+                SetValue(ShowShowdownProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty ShowNonShowdownProperty = DependencyProperty.Register("ShowNonShowdown", typeof(bool), typeof(CashChart),
+            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnShowShowdownChanged));
+
+        public bool ShowNonShowdown
+        {
+            get
+            {
+                return (bool)GetValue(ShowNonShowdownProperty);
+            }
+            set
+            {
+                SetValue(ShowNonShowdownProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty ShowNonShowdownEnabledProperty = DependencyProperty.Register("ShowNonShowdownEnabled", typeof(bool), typeof(CashChart),
+          new FrameworkPropertyMetadata(false));
+
+        public bool ShowNonShowdownEnabled
+        {
+            get
+            {
+                return (bool)GetValue(ShowNonShowdownEnabledProperty);
+            }
+            set
+            {
+                SetValue(ShowNonShowdownEnabledProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty ValueTypeProperty = DependencyProperty.Register("ValueType", typeof(ChartCashSeriesValueType), typeof(CashChart),
+            new PropertyMetadata(ChartCashSeriesValueType.Currency, OnValueTypeChanged));
+
+        public ChartCashSeriesValueType ValueType
+        {
+            get
+            {
+                return (ChartCashSeriesValueType)GetValue(ValueTypeProperty);
+            }
+            set
+            {
+                SetValue(ValueTypeProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty WinningValueTypeEnabledProperty = DependencyProperty.Register("WinningValueTypeEnabled", typeof(bool), typeof(CashChart),
+         new FrameworkPropertyMetadata(false));
+
+        public bool WinningValueTypeEnabled
+        {
+            get
+            {
+                return (bool)GetValue(WinningValueTypeEnabledProperty);
+            }
+            set
+            {
+                SetValue(WinningValueTypeEnabledProperty, value);
             }
         }
 
@@ -123,6 +200,36 @@ namespace DriveHUD.Application.Controls
             }
         }
 
+        public static readonly DependencyProperty HandsAxisMaxValuelProperty = DependencyProperty.Register("HandsAxisMaxValue", typeof(int), typeof(CashChart),
+            new PropertyMetadata(1, OnHandsAxisMaxValueChanged));
+
+        public int HandsAxisMaxValue
+        {
+            get
+            {
+                return (int)GetValue(HandsAxisMaxValuelProperty);
+            }
+            set
+            {
+                SetValue(HandsAxisMaxValuelProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty HandsAxisLabelsCountProperty = DependencyProperty.Register("HandsAxisLabelsCount", typeof(int), typeof(CashChart),
+           new PropertyMetadata(1, OnHandsAxisMaxValueChanged));
+
+        public int HandsAxisLabelsCount
+        {
+            get
+            {
+                return (int)GetValue(HandsAxisLabelsCountProperty);
+            }
+            set
+            {
+                SetValue(HandsAxisLabelsCountProperty, value);
+            }
+        }
+
         #endregion
 
         private static readonly string monthFormatString = "MMM";
@@ -140,16 +247,20 @@ namespace DriveHUD.Application.Controls
             switch (chartGadget.DisplayRange)
             {
                 case ChartDisplayRange.Year:
+                    chartGadget.MainSeriesDescriptor.Style = chartGadget.FindResource("CategoricalLineSeriesDescriptorWithPointsStyle") as Style;
                     chartGadget.MainChart.HorizontalAxis = CreateDateTimeCategoricalAxis(monthFormatString);
                     break;
 
                 case ChartDisplayRange.Month:
                 case ChartDisplayRange.Week:
+                    chartGadget.MainSeriesDescriptor.Style = chartGadget.FindResource("CategoricalLineSeriesDescriptorWithPointsStyle") as Style;
                     chartGadget.MainChart.HorizontalAxis = CreateDateTimeCategoricalAxis(dayFormatString);
                     break;
 
                 case ChartDisplayRange.Hands:
-                    chartGadget.MainChart.HorizontalAxis = CreateCategoricalAxis();
+                    var interval = chartGadget.GetHandsTicksInterval();
+                    chartGadget.MainSeriesDescriptor.Style = chartGadget.FindResource("CategoricalLineSeriesDescriptorStyle") as Style;
+                    chartGadget.MainChart.HorizontalAxis = CreateCategoricalAxis(interval);
                     break;
             }
         }
@@ -158,7 +269,7 @@ namespace DriveHUD.Application.Controls
         {
             return new DateTimeCategoricalAxis
             {
-                LabelFitMode = Telerik.Charting.AxisLabelFitMode.MultiLine,
+                LabelFitMode = AxisLabelFitMode.MultiLine,
                 TickThickness = 0,
                 ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#303134")),
                 LabelFormat = labelFormat,
@@ -166,17 +277,153 @@ namespace DriveHUD.Application.Controls
             };
         }
 
-        private static CategoricalAxis CreateCategoricalAxis()
+        private static CategoricalAxis CreateCategoricalAxis(int majorTickInterval)
         {
             return new CategoricalAxis
             {
-                LabelFitMode = Telerik.Charting.AxisLabelFitMode.None,
-                MajorTickInterval = 500,
+                LabelFitMode = AxisLabelFitMode.None,
+                MajorTickInterval = majorTickInterval,
                 TickThickness = 0,
                 ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#303134")),
-                IsStepRecalculationOnZoomEnabled = true,
-                FontSize = 11
+                FontSize = 10
             };
+        }
+
+        private void ChartTrackBallBehavior_TrackInfoUpdated(object sender, TrackBallInfoEventArgs e)
+        {
+            if (e.Context == null || e.Context.ClosestDataPoint == null)
+            {
+                return;
+            }
+
+            var dataPoint = e.Context.ClosestDataPoint.DataPoint as CategoricalDataPoint;
+
+            if (dataPoint == null)
+            {
+                return;
+            }
+
+            switch (DisplayRange)
+            {
+                case ChartDisplayRange.Hands:
+                    e.Header = dataPoint.Category.ToString();
+                    return;
+                case ChartDisplayRange.Month:
+                case ChartDisplayRange.Week:
+                    e.Header = ConvertDataPointCategoryToDateString(dataPoint.Category, dayFormatString);
+                    return;
+                case ChartDisplayRange.Year:
+                    e.Header = ConvertDataPointCategoryToDateString(dataPoint.Category, monthFormatString);
+                    return;
+            }
+        }
+
+        private static string ConvertDataPointCategoryToDateString(object category, string format)
+        {
+            if (category is DateTime)
+            {
+                var categoryDateTime = (DateTime)category;
+                return categoryDateTime.ToString(format);
+            }
+
+            return category.ToString();
+        }
+
+        private static void OnValueTypeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as CashChart)?.UpdateSeriesVisibility();
+        }
+
+        private void UpdateSeriesVisibility()
+        {
+            if (ItemsSource == null)
+            {
+                return;
+            }
+
+            foreach (var chartSerie in ItemsSource)
+            {
+                if (ValueType != chartSerie.ChartCashSeriesValueType)
+                {
+                    chartSerie.IsVisible = false;
+                    continue;
+                }
+
+                var result = chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.Netwon ||
+                    (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.Showdown && ShowShowdown) ||
+                    (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.NonShowdown && ShowNonShowdown);
+
+                chartSerie.IsVisible = result;
+            }
+        }
+
+        private static void OnItemsSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var cashChart = d as CashChart;
+
+            if (cashChart == null)
+            {
+                return;
+            }
+
+            var oldItemsSource = e.OldValue as ObservableCollection<DriveHUD.ViewModels.ChartSeries>;
+
+            if (oldItemsSource != null)
+            {
+                oldItemsSource.CollectionChanged -= cashChart.OnItemsSourceCollectionChanged;
+            }
+
+            var itemsSource = e.NewValue as ObservableCollection<DriveHUD.ViewModels.ChartSeries>;
+
+            if (itemsSource == null)
+            {
+                return;
+            }
+
+            itemsSource.CollectionChanged += cashChart.OnItemsSourceCollectionChanged;
+            cashChart.UpdateSeriesVisibility();
+        }
+
+        private void OnItemsSourceCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            UpdateSeriesVisibility();
+        }
+
+        private static void OnShowShowdownChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as CashChart)?.UpdateSeriesVisibility();
+        }
+
+        private static void OnHandsAxisMaxValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var chartGadget = d as CashChart;
+
+            if (chartGadget == null)
+            {
+                return;
+            }
+
+            if (chartGadget.DisplayRange != ChartDisplayRange.Hands)
+            {
+                return;
+            }
+
+            var categoricalAxis = chartGadget.MainChart.HorizontalAxis as CategoricalAxis;
+
+            if (categoricalAxis == null)
+            {
+                return;
+            }
+
+            categoricalAxis.MajorTickInterval = chartGadget.GetHandsTicksInterval();
+        }
+
+        private int GetHandsTicksInterval()
+        {
+            var interval = HandsAxisMaxValue > 0 && HandsAxisLabelsCount > 0 && HandsAxisMaxValue > HandsAxisLabelsCount ?
+                HandsAxisMaxValue / HandsAxisLabelsCount : 1;
+
+            return interval;
         }
     }
 }
