@@ -24,9 +24,10 @@ namespace DriveHUD.Application.ViewModels.Main
 {
     public class CashGraphViewModel : BaseViewModel
     {
-        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries)
+        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries, ChartDisplayRange defaultDisplayRange = ChartDisplayRange.Hands)
         {
             chartCollection = new ObservableCollection<ChartSeries>(chartSeries);
+            chartDisplayRange = defaultDisplayRange;
         }
 
         private ObservableCollection<ChartSeries> chartCollection;
@@ -43,7 +44,7 @@ namespace DriveHUD.Application.ViewModels.Main
             }
         }
 
-        private ChartDisplayRange chartDisplayRange = ChartDisplayRange.Hands;
+        private ChartDisplayRange chartDisplayRange;
 
         public ChartDisplayRange ChartDisplayRange
         {
@@ -93,7 +94,6 @@ namespace DriveHUD.Application.ViewModels.Main
             }
         }
 
-
         private bool showNonShowdown;
 
         public bool ShowNonShowdown
@@ -129,7 +129,7 @@ namespace DriveHUD.Application.ViewModels.Main
             if (ChartDisplayRange == ChartDisplayRange.Hands)
             {
                 HandsCount = stats.Length;
-            }           
+            }
 
             var chartSeriesItems = new Dictionary<ChartSeries, List<ChartSeriesItem>>();
 

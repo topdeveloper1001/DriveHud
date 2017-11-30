@@ -48,6 +48,9 @@
                 Property="MinWidth"
                 Value="20" />
             <Setter
+                Property="Width"
+                Value="40" />
+            <Setter
                 Property="Template">
                 <Setter.Value>
                     <ControlTemplate
@@ -138,6 +141,9 @@
             <Setter
                 Property="MinWidth"
                 Value="20" />
+            <Setter
+                Property="Width"
+                Value="45" />
             <Setter
                 Property="Foreground"
                 Value="{StaticResource GraphToogleButtonForegroundBrush}" />
@@ -472,28 +478,27 @@
 
                     <StackPanel
                         DockPanel.Dock="Right"
-                        Height="40"
+                        Height="30"
                         Orientation="Horizontal"
                         HorizontalAlignment="Right">
 
                         <RadioButton
                             Content="{ResX Key=Common_Chart_Hands}"
-                            Width="43"
+                            Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Hands}}"
                             Style="{StaticResource DisplayRangeRadioButton}" />
                         <RadioButton
                             Content="{ResX Key=Common_Chart_Year}"
-                            Width="43"
+                            Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Year}}"
                             Style="{StaticResource DisplayRangeRadioButton}" />
                         <RadioButton
                             Content="{ResX Key=Common_Chart_Month}"
-                            Width="43"
+                            Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Month}}"
                             Style="{StaticResource DisplayRangeRadioButton}" />
                         <RadioButton
                             Content="{ResX Key=Common_Chart_Week}"
-                            Width="43"
                             IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Week}}"
                             Style="{StaticResource DisplayRangeRadioButton}" />
 
@@ -501,7 +506,7 @@
 
                     <StackPanel
                         DockPanel.Dock="Right"
-                        Height="40"
+                        Height="30"
                         Margin="0,0,50,0"
                         Orientation="Horizontal"
                         Visibility="{Binding ElementName=CashChartControl, Path=ShowNonShowdownEnabled, Converter={dh:BoolToVisibilityConverter}}"
@@ -509,12 +514,11 @@
 
                         <ToggleButton
                             Content="{ResX Key=Common_Chart_NSD}"
-                            Width="40"
+                            Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=ShowShowdown}"
                             Style="{StaticResource GraphToggleButtonStyle}" />
                         <ToggleButton
                             Content="{ResX Key=Common_Chart_SD}"
-                            Width="40"
                             IsChecked="{Binding ElementName=CashChartControl, Path=ShowNonShowdown}"
                             Style="{StaticResource GraphToggleButtonStyle}" />
 
@@ -544,6 +548,7 @@
                             Content="{ResX Key=Common_Chart_DollarSign}"
                             Width="30"
                             Height="30"
+                            Margin="0,0,0,5"
                             IsChecked="{Binding ElementName=CashChartControl, Path=ValueType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartCashSeriesValueType.Currency}}"
                             Style="{StaticResource DisplayRangeRadioButton}" />
                         <RadioButton

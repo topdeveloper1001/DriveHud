@@ -315,7 +315,7 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     if (previous != null)
-                    {                     
+                    {
                         current.Value = previous.Value;
                     }
                     else
@@ -325,63 +325,11 @@ namespace DriveHUD.Application.ViewModels
 
                     bb100Indicator.AddStatistic(stat);
 
-                    current.Value = bb100Indicator.BB; //(current.Value * index * 100 + stat.NetWon / stat.BigBlind) / ((index + 1) * 100);
+                    current.Value = bb100Indicator.BB;
                 }
             });
 
-            //bb100ChartCollection.Add(new ChartSeries
-            //{
-            //    Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
-            //    ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
-            //    ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-            //    ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
-            //    Format = "{0:0.##}",
-            //    UpdateChartSeriesItem = (current, previous, stat, index) =>
-            //    {
-            //        if (current == null)
-            //        {
-            //            return;
-            //        }
-
-            //        if (previous != null)
-            //        {
-            //            current.Value = previous.Value;
-            //        }
-
-            //        if (stat.Sawshowdown == 0)
-            //        {
-            //            current.Value += stat.NetWon;
-            //        }
-            //    }
-            //});
-
-            //bb100ChartCollection.Add(new ChartSeries
-            //{
-            //    Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
-            //    ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
-            //    ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-            //    ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
-            //    Format = "{0:0.##}",
-            //    UpdateChartSeriesItem = (current, previous, stat, index) =>
-            //    {
-            //        if (current == null)
-            //        {
-            //            return;
-            //        }
-
-            //        if (previous != null)
-            //        {
-            //            current.Value = previous.Value;
-            //        }
-
-            //        if (stat.Sawshowdown == 1)
-            //        {
-            //            current.Value += stat.NetWon;
-            //        }
-            //    }
-            //});
-
-            BB100GraphViewModel = new CashGraphViewModel(bb100ChartCollection);
+            BB100GraphViewModel = new CashGraphViewModel(bb100ChartCollection, ChartDisplayRange.Month);
         }
     }
 }
