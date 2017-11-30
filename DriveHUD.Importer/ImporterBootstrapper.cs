@@ -13,7 +13,6 @@
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Builders.iPoker;
-using DriveHUD.Importers.GGNetwork;
 using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
@@ -70,10 +69,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IFileImporter, FileImporter>();
             container.RegisterType<IFileImporterLogger, FileImporterLogger>();
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
-            container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
-            container.RegisterType<IGGNImporter, GGNImporter>();
-            container.RegisterType<IGGNCacheService, GGNCacheService>();
-            container.RegisterType<IGGNTournamentReader, GGNTournamentReader>();
+            container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());        
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -105,8 +101,7 @@ namespace DriveHUD.Importers
             importerService.Register<IYaPokerImporter>();
             importerService.Register<IPacific888Importer>();
             importerService.Register<IPartyPokerImporter>();
-            importerService.Register<IIPokerImporter>();
-            importerService.Register<IGGNImporter>();
+            importerService.Register<IIPokerImporter>();           
         }
     }
 }

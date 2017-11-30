@@ -54,8 +54,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
-                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
-                { EnumPokerSites.GGN, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.GGN) }
+                { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) }
             };
 
             SelectedSiteViewModel = new SiteViewModel();
@@ -416,16 +415,6 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         private void ShowAddon(object obj)
         {
-            if (SelectedSite == null)
-            {
-                return;
-            }
-
-            if (SelectedSite.PokerSite == EnumPokerSites.GGN)
-            {
-                var registrationViewModel = new GGNRegistrationViewModel(false);
-                AddonViewRequest?.Raise(registrationViewModel);
-            }
         }
 
         private string GetTableTypeString(EnumTableType tableType)

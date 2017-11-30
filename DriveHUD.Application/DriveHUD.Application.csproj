@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.4.0.1814, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.4.0.1814, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.4.0.1814, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -90,18 +90,6 @@
     <Reference Include="FluentMigrator.Runner, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentMigrator.Runner.1.6.2\lib\40\FluentMigrator.Runner.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="GGNCReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
-      <HintPath>..\dependencies\GGNCReg.dll</HintPath>
-    </Reference>
-    <Reference Include="GGNHReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
-      <HintPath>..\dependencies\GGNHReg.dll</HintPath>
-    </Reference>
-    <Reference Include="GGNOReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
-      <HintPath>..\dependencies\GGNOReg.dll</HintPath>
-    </Reference>
-    <Reference Include="GGNTReg, Version=1.4.0.1813, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
-      <HintPath>..\dependencies\GGNTReg.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
@@ -387,13 +375,6 @@
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />
-    <Compile Include="Licensing\GGNetwork\GGNDeployLXLicensingServer.cs" />
-    <Compile Include="Licensing\GGNetwork\IGGNLicenseInfo.cs" />
-    <Compile Include="Licensing\GGNetwork\IGGNLicenseManager.cs" />
-    <Compile Include="Licensing\GGNetwork\IGGNLicenseService.cs" />
-    <Compile Include="Licensing\GGNetwork\GGNLicenseInfo.cs" />
-    <Compile Include="Licensing\GGNetwork\GGNLicenseService.cs" />
-    <Compile Include="Licensing\GGNetwork\GGNLicenseType.cs" />
     <Compile Include="Licensing\IBaseLicenseInfo.cs" />
     <Compile Include="Licensing\ILicenseInfo.cs" />
     <Compile Include="Licensing\LicenseCouldNotActivateException.cs" />
@@ -431,10 +412,6 @@
     <Compile Include="Security\DHHReg.cs" />
     <Compile Include="Security\DHOReg.cs" />
     <Compile Include="Security\DHTReg.cs" />
-    <Compile Include="Security\GGNCReg.cs" />
-    <Compile Include="Security\GGNHReg.cs" />
-    <Compile Include="Security\GGNOReg.cs" />
-    <Compile Include="Security\GGNTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />
@@ -579,7 +556,6 @@
     <Compile Include="ViewModels\PopupContainers\PopupContainerAliasViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBumperStickerFiltersViewModel.cs" />
-    <Compile Include="ViewModels\Registration\GGNRegistrationViewModel.cs" />
     <Compile Include="ViewModels\SitesSetup\NetworkSetupViewModel.cs" />
     <Compile Include="ViewModels\SitesSetup\IncorrectlyConfiguredSitesViewModel.cs" />
     <Compile Include="ViewModels\SitesSetup\SiteSetupViewModel.cs" />
@@ -635,9 +611,6 @@
     </Compile>
     <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
       <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Registration\GGNRegistrationView.xaml.cs">
-      <DependentUpon>GGNRegistrationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SitesSetup\IncorrectlyConfiguredSitesView.xaml.cs">
       <DependentUpon>IncorrectlyConfiguredSitesView.xaml</DependentUpon>
@@ -1103,10 +1076,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Registration\GGNRegistrationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
