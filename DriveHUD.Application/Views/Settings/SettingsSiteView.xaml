@@ -176,49 +176,6 @@
 
     </UserControl.Resources>
 
-    <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger
-            SourceObject="{Binding AddonViewRequest,Mode=OneWay}">
-            <infra:PopupWindowAction>
-                <infra:PopupWindowAction.WindowStyle>
-                    <Style
-                        TargetType="{x:Type Window}">
-                        <Setter
-                            Property="Foreground"
-                            Value="{StaticResource ForegroundBrush}" />
-                        <Setter
-                            Property="Background"
-                            Value="{StaticResource PopupBackground}" />
-                        <Setter
-                            Property="Height"
-                            Value="180" />
-                        <Setter
-                            Property="ResizeMode"
-                            Value="NoResize" />
-                        <Setter
-                            Property="Width"
-                            Value="560" />
-                        <Setter
-                            Property="ShowInTaskbar"
-                            Value="False" />
-                    </Style>
-                </infra:PopupWindowAction.WindowStyle>
-                <infra:PopupWindowAction.IsModal>
-                    <sys:Boolean>True</sys:Boolean>
-                </infra:PopupWindowAction.IsModal>
-                <infra:PopupWindowAction.CenterOverAssociatedObject>
-                    <sys:Boolean>True</sys:Boolean>
-                </infra:PopupWindowAction.CenterOverAssociatedObject>
-                <infra:PopupWindowAction.WindowContent>
-                    <v:GGNRegistrationView />
-                </infra:PopupWindowAction.WindowContent>
-                <infra:PopupWindowAction.HasBorder>
-                    <sys:Boolean>False</sys:Boolean>
-                </infra:PopupWindowAction.HasBorder>
-            </infra:PopupWindowAction>
-        </prism:InteractionRequestTrigger>
-    </i:Interaction.Triggers>
-
     <StackPanel>
 
         <TextBlock

@@ -118,16 +118,19 @@ namespace DriveHUD.Application.ViewModels
             foreach (var serie in chartCollection)
             {
                 List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-                foreach (var stat in GetGroupedStats(displayRange))
+
+                var groupedResults = GetGroupedStats(displayRange);
+
+                foreach (var stat in groupedResults)
                 {
                     switch (serie.FunctionName)
                     {
                         case EnumTelerikRadChartFunctionType.MoneyWon:
                             itemsList.Add(new ChartSeriesItem()
                             {
-                                Date = stat.Source.Time,
-                                Value = stat.TotalWon,
-                                ValueText = string.Format("{0:0.##}$", stat.TotalWon),
+                                Date = stat.Item1,
+                                Value = stat.Item2,
+                                ValueText = string.Format("{0:0.##}$", stat.Item2),
                                 PointColor = resource.PointColor,
                                 TrackBallColor = resource.TrackBallColor,
                                 TooltipColor = resource.TooltipColor
@@ -136,9 +139,9 @@ namespace DriveHUD.Application.ViewModels
                         case EnumTelerikRadChartFunctionType.BB:
                             itemsList.Add(new ChartSeriesItem()
                             {
-                                Date = stat.Source.Time,
-                                Value = stat.BB,
-                                ValueText = string.Format("{0:0.##}", stat.BB),
+                                Date = stat.Item1,
+                                Value = stat.Item3,
+                                ValueText = string.Format("{0:0.##}", stat.Item3),
                                 PointColor = resource.PointColor,
                                 TrackBallColor = resource.TrackBallColor,
                                 TooltipColor = resource.TooltipColor
@@ -146,6 +149,7 @@ namespace DriveHUD.Application.ViewModels
                             break;
                     }
                 }
+
                 serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
             }
         }
@@ -215,23 +219,19 @@ namespace DriveHUD.Application.ViewModels
             SecondChartCollection.Add(series1);
         }
 
-        private IEnumerable<Indicators> GetGroupedStats(EnumTelerikRadChartDisplayRange range)
+        private IEnumerable<Tuple<DateTime, decimal, decimal>> GetGroupedStats(EnumTelerikRadChartDisplayRange range)
         {
-            List<Indicators> indicators = null;
             switch (range)
             {
                 case EnumTelerikRadChartDisplayRange.Year:
-                    indicators = new List<Indicators>(new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
+                    return new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList());
                 case EnumTelerikRadChartDisplayRange.Month:
-                    indicators = new List<Indicators>(new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
+                    return new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList());
                 case EnumTelerikRadChartDisplayRange.Week:
-                    indicators = new List<Indicators>(new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
+                    return new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList());
             }
 
-            return indicators;
+            return null;
         }
     }
 }

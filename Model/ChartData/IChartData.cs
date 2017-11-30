@@ -12,13 +12,14 @@
 
 using DriveHUD.Entities;
 using Model.Data;
+using System;
 using System.Collections.Generic;
 
 namespace Model.ChartData
 {
     public interface ICashChartData
     {
-        IEnumerable<Indicators> Create(IList<Playerstatistic> statistics);
+        IEnumerable<Tuple<DateTime, decimal, decimal>> Create(IList<Playerstatistic> statistics);
     }
 
     public interface ITournamentChartData

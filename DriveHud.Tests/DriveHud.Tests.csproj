@@ -170,10 +170,6 @@
     <Reference Include="System.Windows" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="websocket-sharp, Version=1.0.4.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebSocketSharpFork.1.0.4.0\lib\net35\websocket-sharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <Choose>
@@ -238,9 +234,6 @@
     <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\ExportFunctionsTests.cs" />
     <Compile Include="UnitTests\FiltersModelSerializationTests.cs" />
-    <Compile Include="UnitTests\GGNConverterTests.cs" />
-    <Compile Include="UnitTests\GGNSerializationTests.cs" />
-    <Compile Include="UnitTests\GGNUtilsTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
@@ -259,7 +252,6 @@
     <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
     <Compile Include="UnitTests\ReportCreatorTests.cs" />
     <Compile Include="UnitTests\StatInfoTests.cs" />
-    <Compile Include="UnitTests\GGNTournamentReaderTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
@@ -348,39 +340,6 @@
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-117999074.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-118033657.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-118044556.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\TournamentHandHistoryExpected.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\TournamentsInfo.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\TournamentHandHistory.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\MultipleHandHistoriesInfo.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\SingleHandHistoryInfo.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-117999074.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-118033657.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\GGNJsonData\Tourn-hand-118044556.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-info.log">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -50,8 +50,7 @@ namespace Model.Site
                 EnumPokerSites.BlackChipPoker,
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
-                EnumPokerSites.PartyPoker,
-                EnumPokerSites.GGN
+                EnumPokerSites.PartyPoker                
             };
 
             foreach (EnumPokerSites site in sites)

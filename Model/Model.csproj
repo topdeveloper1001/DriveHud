@@ -320,7 +320,6 @@
     <Compile Include="SingletonStorageModel.cs" />
     <Compile Include="Site\BaseSiteConfiguration.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
-    <Compile Include="Site\GGNConfiguration.cs" />
     <Compile Include="Site\IPokerConfiguration.cs" />
     <Compile Include="Site\PartyPokerConfiguration.cs" />
     <Compile Include="Site\ISiteValidationResult.cs" />

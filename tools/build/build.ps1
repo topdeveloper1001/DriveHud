@@ -226,6 +226,12 @@ try
        Remove-Item -Path $session.Source -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
    
+   if(Test-Path($session.LicSource))
+   {
+       Write-LogInfo 'SETUP' 'Clearing license source directory'
+       Remove-Item -Path $session.LicSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+   }
+   
    if(Test-Path($session.MsiSource))
    {
        Write-LogInfo 'SETUP' 'Clearing MSI source directory'

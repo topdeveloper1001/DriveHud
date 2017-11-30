@@ -207,13 +207,7 @@ namespace Model
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteTrainingProductHash);
             return data;
-        }
-
-        public static string GetGGNProtocolVersionUrl()
-        {
-            var url = CommonResourceManager.Instance.GetResourceString(ResourceStrings.GGNProtocolVersionUrl);
-            return url;
-        }
+        }     
 
         #endregion
     }

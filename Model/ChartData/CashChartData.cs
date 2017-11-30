@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using Model.Data;
+using Model.Importer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,18 +21,18 @@ namespace Model.ChartData
 {
     public abstract class BaseChardData : ICashChartData
     {
-        public virtual IEnumerable<Indicators> Create(IList<Playerstatistic> statistics)
+        public virtual IEnumerable<Tuple<DateTime, decimal, decimal>> Create(IList<Playerstatistic> statistics)
         {
-            var report = new List<Indicators>();
+            var report = new List<Tuple<DateTime, decimal, decimal>>();
 
             if (statistics == null || statistics.Count == 0)
             {
                 return report;
             }
 
-            var firstDate = GetFirstDate(statistics.Max(x => x.Time));
+            var firstDate = Converter.ToLocalizedDateTime(GetFirstDate(statistics.Max(x => x.Time)));
 
-            var aggregatingStats = new LightIndicators();
+            var aggregatedStats = new LightIndicators();
 
             var groupedStatistics = statistics
                .Where(x => x.Time >= firstDate)
@@ -40,27 +41,26 @@ namespace Model.ChartData
 
             foreach (var group in groupedStatistics)
             {
-                var aggregatingStatsSourceCopy = aggregatingStats.Source.Copy();
-
-                var stat = new LightIndicators(new[] { aggregatingStatsSourceCopy });
-
                 foreach (var playerstatistic in group)
                 {
-                    stat.AddStatistic(playerstatistic);
-                    aggregatingStats.AddStatistic(playerstatistic);
+                    aggregatedStats.AddStatistic(playerstatistic);
                 }
 
-                stat.Source.Time = CreateDateTimeFromDateKey(group.Key);
-
-                report.Add(stat);
+                report.Add(Tuple.Create(CreateDateTimeFromDateKey(group.Key), aggregatedStats.NetWon, aggregatedStats.BB));
             }
 
             return report;
         }
 
+        protected GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        {
+            var time = Converter.ToLocalizedDateTime(statistic.Time);
+            return BuildGroupedDateKey(time);
+        }
+
         protected abstract DateTime GetFirstDate(DateTime maxDateTime);
 
-        protected abstract GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic);
+        protected abstract GroupedDateKey BuildGroupedDateKey(DateTime time);
 
         protected abstract DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey);
 
@@ -113,14 +113,14 @@ namespace Model.ChartData
             return maxDateTime.AddDays(-1);
         }
 
-        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        protected override GroupedDateKey BuildGroupedDateKey(DateTime time)
         {
             var dateKey = new GroupedDateKey
             {
-                Year = statistic.Time.Year,
-                Month = statistic.Time.Month,
-                Day = statistic.Time.Day,
-                Hour = statistic.Time.Hour
+                Year = time.Year,
+                Month = time.Month,
+                Day = time.Day,
+                Hour = time.Hour
             };
 
             return dateKey;
@@ -140,13 +140,13 @@ namespace Model.ChartData
             return maxDateTime.AddDays(-7);
         }
 
-        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        protected override GroupedDateKey BuildGroupedDateKey(DateTime time)
         {
             var dateKey = new GroupedDateKey
             {
-                Year = statistic.Time.Year,
-                Month = statistic.Time.Month,
-                Day = statistic.Time.Day
+                Year = time.Year,
+                Month = time.Month,
+                Day = time.Day
             };
 
             return dateKey;
@@ -166,13 +166,13 @@ namespace Model.ChartData
             return maxDateTime.AddMonths(-1);
         }
 
-        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        protected override GroupedDateKey BuildGroupedDateKey(DateTime time)
         {
             var dateKey = new GroupedDateKey
             {
-                Year = statistic.Time.Year,
-                Month = statistic.Time.Month,
-                Day = statistic.Time.Day
+                Year = time.Year,
+                Month = time.Month,
+                Day = time.Day
             };
 
             return dateKey;
@@ -192,12 +192,12 @@ namespace Model.ChartData
             return maxDateTime.AddYears(-1);
         }
 
-        protected override GroupedDateKey BuildGroupedDateKey(Playerstatistic statistic)
+        protected override GroupedDateKey BuildGroupedDateKey(DateTime time)
         {
             var dateKey = new GroupedDateKey
             {
-                Year = statistic.Time.Year,
-                Month = statistic.Time.Month
+                Year = time.Year,
+                Month = time.Month
             };
 
             return dateKey;
