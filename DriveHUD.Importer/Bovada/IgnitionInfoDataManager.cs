@@ -117,7 +117,11 @@ namespace DriveHUD.Importers.Bovada
 
                 if (!uint.TryParse(tableText, out tableId))
                 {
-                    LogProvider.Log.Error(this, $"Table id couldn't be parsed from: {tableText}");
+                    if (isLoggingEnabled)
+                    {
+                        LogProvider.Log.Error(this, $"Table id couldn't be parsed from: {tableText} [{data}]");
+                    }
+
                     return;
                 }
 
@@ -125,7 +129,11 @@ namespace DriveHUD.Importers.Bovada
 
                 if (!int.TryParse(tableSeatsText, out tableSize))
                 {
-                    LogProvider.Log.Error(this, $"Table size couldn't be parsed from: {tableSeatsText}.");
+                    if (isLoggingEnabled)
+                    {
+                        LogProvider.Log.Error(this, $"Table size couldn't be parsed from: {tableSeatsText} [{data}].");
+                    }
+
                     return;
                 }
 
@@ -182,7 +190,11 @@ namespace DriveHUD.Importers.Bovada
 
                 if (!uint.TryParse(tournamentText, out tounamentId))
                 {
-                    LogProvider.Log.Error(this, $"Tournament id couldn't be parsed from: {tournamentText}");
+                    if (isLoggingEnabled)
+                    {
+                        LogProvider.Log.Error(this, $"Tournament id couldn't be parsed from: {tournamentText}");
+                    }
+
                     return;
                 }
 
@@ -194,7 +206,11 @@ namespace DriveHUD.Importers.Bovada
 
                 if (string.IsNullOrEmpty(seatText) && string.IsNullOrEmpty(maxPlayersText))
                 {
-                    LogProvider.Log.Warn(this, $"Seat and max players data hasn't been found.");
+                    if (isLoggingEnabled)
+                    {
+                        LogProvider.Log.Warn(this, $"Seat and max players data hasn't been found.");
+                    }
+
                     return;
                 }
 
@@ -202,13 +218,17 @@ namespace DriveHUD.Importers.Bovada
 
                 if (!int.TryParse(seatText, out seat))
                 {
-                    LogProvider.Log.Error(this, $"Seat couldn't be parsed from: {seatText}");
+                    if (isLoggingEnabled)
+                    {
+                        LogProvider.Log.Error(this, $"Seat couldn't be parsed from: {seatText}");
+                    }
+
                     return;
                 }
 
                 int maxPlayers;
 
-                if (!int.TryParse(maxPlayersText, out maxPlayers))
+                if (!int.TryParse(maxPlayersText, out maxPlayers) && isLoggingEnabled)
                 {
                     LogProvider.Log.Error(this, $"Max players couldn't be parsed from: {maxPlayersText}");
                 }
@@ -338,7 +358,7 @@ namespace DriveHUD.Importers.Bovada
         {
             var nameIndex = data.IndexOf(name, StringComparison.OrdinalIgnoreCase) + 1;
 
-            if (nameIndex < 0)
+            if (nameIndex < 1)
             {
                 return string.Empty;
             }

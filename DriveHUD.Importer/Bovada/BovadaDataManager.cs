@@ -38,7 +38,7 @@ namespace DriveHUD.Importers.Bovada
 
         private SubscriptionToken pokerClientTableClosedSubsciption;
 
-        private bool isLoggingEnabled;
+        protected bool isLoggingEnabled;
 
         public BovadaDataManager(IEventAggregator eventAggregator)
         {
