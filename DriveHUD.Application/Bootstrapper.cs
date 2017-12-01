@@ -24,12 +24,16 @@ using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Graphs;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Application.Views;
+using DriveHUD.Application.Views.Graphs;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
@@ -47,7 +51,6 @@ using Prism.Unity;
 using ProtoBuf.Meta;
 using System;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using Telerik.Windows.Controls;
 
@@ -82,7 +85,7 @@ namespace DriveHUD.Application
 
             var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
             isLicenseValid = licenseService.Validate();
-          
+
             var sessionService = ServiceLocator.Current.GetInstance<ISessionService>();
             sessionService.Initialize();
 
@@ -227,7 +230,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
-            RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);            
+            RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
@@ -262,7 +265,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
-            Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());            
+            Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -280,7 +283,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());
             Container.RegisterType<ILicenseManager, DHHReg>(LicenseType.Holdem.ToString());
             Container.RegisterType<ILicenseManager, DHOReg>(LicenseType.Omaha.ToString());
-            Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());        
+            Container.RegisterType<ILicenseManager, DHCReg>(LicenseType.Combo.ToString());
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
@@ -299,6 +302,12 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
+
+            // Register views containers
+            Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
+
+            // Register view models
+            Container.RegisterType<ICashGraphPopupViewModel, CashGraphPopupViewModel>();
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

@@ -10,23 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Main;
+using DriveHUD.Application.ViewModels.Graphs;
 using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Common.Resources;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Prism.Events;
-using System.Collections.Generic;
+using Prism.Interactivity.InteractionRequest;
 using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
         #region Properties
+
+        public InteractionRequest<INotification> ShowMoneyWonGraphPopupRequest { get; private set; }
 
         private bool isExpanded = true;
 
@@ -42,17 +44,17 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private CashGraphViewModel winningsGraphViewModel;
+        private CashGraphViewModel moneyWonGraphViewModel;
 
-        public CashGraphViewModel WinningsGraphViewModel
+        public CashGraphViewModel MoneyWonGraphViewModel
         {
             get
             {
-                return winningsGraphViewModel;
+                return moneyWonGraphViewModel;
             }
             private set
             {
-                SetProperty(ref winningsGraphViewModel, value);
+                SetProperty(ref moneyWonGraphViewModel, value);
             }
         }
 
@@ -84,6 +86,8 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public ICommand ShowMoneyWonGraphPopupCommand { get; private set; }
+
         #endregion
 
         internal DashboardViewModel()
@@ -92,6 +96,19 @@ namespace DriveHUD.Application.ViewModels
                 .GetInstance<IEventAggregator>()
                 .GetEvent<BuiltFilterChangedEvent>()
                 .Subscribe(UpdateFilteredData);
+
+            ShowMoneyWonGraphPopupRequest = new InteractionRequest<INotification>();
+            ShowMoneyWonGraphPopupCommand = new RelayCommand(() =>
+            {
+                var cashGraphPopupViewModelInfo = new CashGraphPopupViewModelInfo
+                {
+                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel
+                };
+
+                var cashGraphPopupRequestInfo = new CashGraphPopupRequestInfo(cashGraphPopupViewModelInfo);
+
+                ShowMoneyWonGraphPopupRequest.Raise(cashGraphPopupRequestInfo);
+            });
 
             InitializeWinningsChart();
             InitializeBB100Chart();
@@ -133,203 +150,20 @@ namespace DriveHUD.Application.ViewModels
 
             UpdateFilteredData(null);
 
-            WinningsGraphViewModel?.Update();
+            MoneyWonGraphViewModel?.Update();
             BB100GraphViewModel?.Update();
         }
 
         private void InitializeWinningsChart()
         {
-            var winningsChartCollection = new List<ChartSeries>();
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
-                Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    current.Value += stat.NetWon;
-                }
-            });
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
-                Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    if (stat.Sawshowdown == 0)
-                    {
-                        current.Value += stat.NetWon;
-                    }
-                }
-            });
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-                ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
-                Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    if (stat.Sawshowdown == 1)
-                    {
-                        current.Value += stat.NetWon;
-                    }
-                }
-            });
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
-                Format = "{0:0}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    current.Value += stat.NetWon / stat.BigBlind;
-                }
-            });
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieRedPalette(),
-                Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    if (stat.Sawshowdown == 0)
-                    {
-                        current.Value += stat.NetWon / stat.BigBlind;
-                    }
-                }
-            });
-
-            winningsChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
-                ColorsPalette = ChartSerieResourceHelper.GetSeriesYellowPalette(),
-                Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-
-                    if (stat.Sawshowdown == 1)
-                    {
-                        current.Value += stat.NetWon / stat.BigBlind;
-                    }
-                }
-            });
-
-            WinningsGraphViewModel = new CashGraphViewModel(winningsChartCollection);
+            var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
+            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries);
         }
 
         private void InitializeBB100Chart()
         {
-            var bb100ChartCollection = new List<ChartSeries>();
-
-            var bb100Indicator = new LightIndicators();
-
-            bb100ChartCollection.Add(new ChartSeries
-            {
-                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
-                ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieOrangePalette(),
-                Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
-                {
-                    if (current == null)
-                    {
-                        return;
-                    }
-
-                    if (previous != null)
-                    {
-                        current.Value = previous.Value;
-                    }
-                    else
-                    {
-                        bb100Indicator = new LightIndicators();
-                    }
-
-                    bb100Indicator.AddStatistic(stat);
-
-                    current.Value = bb100Indicator.BB;
-                }
-            });
-
-            BB100GraphViewModel = new CashGraphViewModel(bb100ChartCollection, ChartDisplayRange.Month);
+            var bb100ChartSeries = ChartSeriesProvider.CreateBB100ChartSeries();
+            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, ChartDisplayRange.Month);
         }
     }
 }

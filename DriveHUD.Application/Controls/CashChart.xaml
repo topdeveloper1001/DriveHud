@@ -512,6 +512,12 @@
                         Visibility="{Binding ElementName=CashChartControl, Path=ShowNonShowdownEnabled, Converter={dh:BoolToVisibilityConverter}}"
                         HorizontalAlignment="Right">
 
+                        <Button
+                            Content="+"
+                            Visibility="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand, Converter={dh:NullToVisibilityConverter}}"
+                            Margin="0,0,20,0"
+                            Command="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand}" />
+
                         <ToggleButton
                             Content="{ResX Key=Common_Chart_NSD}"
                             Margin="0,0,5,0"
@@ -574,8 +580,17 @@
                                 SnapMode="ClosestPoint" />
                         </telerik:RadCartesianChart.Behaviors>
 
+                        <telerik:RadCartesianChart.Annotations>
+                            <telerik:CartesianGridLineAnnotation
+                                Axis="{Binding ElementName=verticalAxis}"
+                                Value="0"
+                                Stroke="Gray"
+                                StrokeThickness="0.1" />
+                        </telerik:RadCartesianChart.Annotations>
+
                         <telerik:RadCartesianChart.VerticalAxis>
                             <telerik:LinearAxis
+                                x:Name="verticalAxis"
                                 TickThickness="0"
                                 ElementBrush="#303134"
                                 FontSize="10">

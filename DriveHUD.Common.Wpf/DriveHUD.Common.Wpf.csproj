@@ -129,6 +129,9 @@
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
     <Compile Include="Actions\PopupWindowAction.cs" />
+    <Compile Include="Actions\ShowViewActionBase.cs" />
+    <Compile Include="Actions\ShowWindowViewAction.cs" />
+    <Compile Include="Actions\StartupLocationOption.cs" />
     <Compile Include="AttachedBehaviors\DragAdorner.cs" />
     <Compile Include="AttachedBehaviors\DragDrop.cs" />
     <Compile Include="AttachedBehaviors\DragDropDataObject.cs" />
@@ -201,9 +204,14 @@
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />
     <Compile Include="Mvvm\IAsyncOperationItem.cs" />
+    <Compile Include="Mvvm\ICloseableViewModel.cs" />
+    <Compile Include="Mvvm\IConfigurableViewModel.cs" />
+    <Compile Include="Mvvm\IInitializedViewModel.cs" />
     <Compile Include="Mvvm\IModuleEntryViewModel.cs" />
     <Compile Include="Mvvm\IOperationViewModel.cs" />
+    <Compile Include="Mvvm\IPopupWindowViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
+    <Compile Include="Mvvm\PopupWindowViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
     <Compile Include="Mvvm\WindowViewModelBase.cs" />

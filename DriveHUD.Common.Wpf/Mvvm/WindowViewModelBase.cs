@@ -19,7 +19,7 @@ using System.Windows.Threading;
 namespace DriveHUD.Common.Wpf.Mvvm
 {
     public abstract class WindowViewModelBase : ViewModelBase
-    {
+    {      
         private ReactiveOperation currentOperation;
 
         public ReactiveOperation CurrentOperation

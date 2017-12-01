@@ -21,7 +21,7 @@ using System.Windows.Controls;
 using System.Windows.Interactivity;
 
 namespace DriveHUD.Common.Wpf.Actions
-{
+{    
     public abstract class PopupAction<T> : TriggerAction<FrameworkElement> where T : ContentControl
     {
         /// <summary>
@@ -112,7 +112,7 @@ namespace DriveHUD.Common.Wpf.Actions
         public bool IsSingle
         {
             get { return (bool)GetValue(IsSingleProperty); }
-            set { SetValue(IsModalProperty, value); }
+            set { SetValue(IsSingleProperty, value); }
         }
 
         /// <summary>

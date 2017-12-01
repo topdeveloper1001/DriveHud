@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace DriveHUD.Application.ViewModels.Main
+namespace DriveHUD.Application.ViewModels.Graphs
 {
     public class CashGraphViewModel : BaseViewModel
     {
@@ -88,7 +88,7 @@ namespace DriveHUD.Application.ViewModels.Main
             {
                 return showShowdown;
             }
-            private set
+            set
             {
                 SetProperty(ref showShowdown, value);
             }
@@ -102,23 +102,14 @@ namespace DriveHUD.Application.ViewModels.Main
             {
                 return showNonShowdown;
             }
-            private set
+            set
             {
                 SetProperty(ref showNonShowdown, value);
             }
         }
 
         internal void Update()
-        {
-            // filter stats if necessary (only for date ranges)
-            // sort stats by date asc
-            // loop stats
-            //      build key from (stat, range, stat index)
-            //      loop chart series
-            //          if key equals to previous then update current item with Action<current, stat, previous> or Func<decimal, stat, previous>
-            //          if key not equals to previous the create new item and update it with Action<current, stat, previous> or Func<decimal, stat, previous>
-            // i=50, i=51, ... bb/100(50)= sum(nw1/bb1+...)/50, bb/100(51) = (bb/100(50)*50+nw51/bb51)/51 ...
-
+        {           
             var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
 
             // filter and orders
@@ -180,7 +171,7 @@ namespace DriveHUD.Application.ViewModels.Main
             {
                 charSerie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(chartSeriesItems[charSerie]);
             });
-        }
+        }     
 
         private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)
         {

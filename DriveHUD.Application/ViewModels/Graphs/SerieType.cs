@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPopupContainerView.cs" company="Ace Poker Solutions">
+// <copyright file="SerieType.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
-
-namespace DriveHUD.Common.Wpf.Actions
+namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public interface IViewContainer
+    public enum SerieType
     {
-        ContentControl Window { get; set; }
-    } 
-
-    public interface IViewModelContainer
-    {
-    }
-
-    public interface IViewModelContainer<out TViewModel> : IViewModelContainer
-    {
-        TViewModel ViewModel { get; }
+        WinningsByMonth,
+        WinningByYear,
+        MoneyWonByCashGameType,
+        MoneyWonByTournamentGameType,
+        EVDiffToRealizedEVByMonth,
+        Top20BiggestLosingHands,
+        Top20BiggestWinningHands,
+        MoneyWonByPosition,
+        BB100ByTimeOfDay,
+        Top20ToughestOpponents
     }
 }

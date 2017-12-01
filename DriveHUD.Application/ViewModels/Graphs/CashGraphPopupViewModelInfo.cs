@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPopupContainerView.cs" company="Ace Poker Solutions">
+// <copyright file="CashGraphPopupViewModelInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
+using DriveHUD.Common.Wpf.Interactivity;
 
-namespace DriveHUD.Common.Wpf.Actions
+namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public interface IViewContainer
+    internal class CashGraphPopupViewModelInfo : ViewModelInfo
     {
-        ContentControl Window { get; set; }
-    } 
-
-    public interface IViewModelContainer
-    {
-    }
-
-    public interface IViewModelContainer<out TViewModel> : IViewModelContainer
-    {
-        TViewModel ViewModel { get; }
+        internal CashGraphViewModel MoneyWonCashGraphViewModel { get; set; }
     }
 }

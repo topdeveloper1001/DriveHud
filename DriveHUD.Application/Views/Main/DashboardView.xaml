@@ -7,7 +7,10 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:prism="http://www.codeplex.com/prism"
     xmlns:gaugeExample="clr-namespace:GaugeExample"
+    xmlns:vw="clr-namespace:DriveHUD.Application.Views"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="700">
@@ -167,16 +170,17 @@
                 <ctl:CashChart
                     Caption="{ResX Key=Common_Chart_MoneyWonCaption}"
                     CaptionColor="#4BA516"
-                    DisplayRange="{Binding WinningsGraphViewModel.ChartDisplayRange}"
-                    ItemsSource="{Binding WinningsGraphViewModel.ChartCollection}"
-                    HandsAxisMaxValue="{Binding WinningsGraphViewModel.HandsCount}"
+                    DisplayRange="{Binding MoneyWonGraphViewModel.ChartDisplayRange}"
+                    ItemsSource="{Binding MoneyWonGraphViewModel.ChartCollection}"
+                    HandsAxisMaxValue="{Binding MoneyWonGraphViewModel.HandsCount}"
                     HandsAxisLabelsCount="7"
                     HeaderStartColor="#4BA516"
                     HeaderStopColor="#deef6c"
                     Height="205"
                     ShowNonShowdownEnabled="True"
-                    ShowNonShowdown="{Binding WinningsGraphViewModel.ShowNonShowdown}"
-                    ShowShowdown="{Binding WinningsGraphViewModel.ShowShowdown}"
+                    ShowNonShowdown="{Binding MoneyWonGraphViewModel.ShowNonShowdown}"
+                    ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
+                    ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
                     WinningValueTypeEnabled="True" />
 
                 <ctl:CashChart
@@ -193,6 +197,36 @@
                     ShowShowdown="{Binding BB100GraphViewModel.ShowShowdown}" />
 
             </StackPanel>
+
         </Grid>
     </telerik:RadExpander>
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding ShowMoneyWonGraphPopupRequest}">
+            <dh:ShowWindowViewAction
+                ViewName="{x:Static vw:RegionViewNames.CashGraphPopupView}"
+                StartupLocation="CenterScreen"
+                SingleOnly="True"
+                IsModal="True">
+                <dh:ShowWindowViewAction.WindowStyle>
+                    <Style
+                        TargetType="Window">
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="Width"
+                            Value="800" />
+                        <Setter
+                            Property="Height"
+                            Value="600" />
+                        <Setter
+                            Property="ShowInTaskbar"
+                            Value="False" />
+                    </Style>
+                </dh:ShowWindowViewAction.WindowStyle>
+            </dh:ShowWindowViewAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
 </UserControl>

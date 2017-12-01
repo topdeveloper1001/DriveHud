@@ -147,6 +147,7 @@
     <Compile Include="ChartSerieResourceHelper.cs" />
     <Compile Include="ChartSeries.cs" />
     <Compile Include="ChartSeriesItem.cs" />
+    <Compile Include="ChartSeriesProvider.cs" />
     <Compile Include="ChipsInfo.cs" />
     <Compile Include="ColorHelper.cs" />
     <Compile Include="EnumerationExtension.cs" />

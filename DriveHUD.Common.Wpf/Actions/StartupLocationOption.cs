@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPopupContainerView.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="StartupLocationOption.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,21 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
-
 namespace DriveHUD.Common.Wpf.Actions
 {
-    public interface IViewContainer
+    public enum StartupLocationOption
     {
-        ContentControl Window { get; set; }
-    } 
-
-    public interface IViewModelContainer
-    {
-    }
-
-    public interface IViewModelContainer<out TViewModel> : IViewModelContainer
-    {
-        TViewModel ViewModel { get; }
+        None,
+        CenterScreen,
+        CenterAssosiated
     }
 }

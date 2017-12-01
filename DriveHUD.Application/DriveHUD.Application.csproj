@@ -476,6 +476,12 @@
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupRequestInfo.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupViewModelInfo.cs" />
+    <Compile Include="ViewModels\Graphs\GraphSerie.cs" />
+    <Compile Include="ViewModels\Graphs\GraphSerieDataPoint.cs" />
+    <Compile Include="ViewModels\Graphs\IGraphSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SerieType.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
@@ -549,7 +555,9 @@
     <Compile Include="ViewModels\Layouts\HudPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudPositionsInfo.cs" />
     <Compile Include="ViewModels\Main\AppsViewModel.cs" />
-    <Compile Include="ViewModels\Main\CashGraphViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\ICashGraphPopupViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />
@@ -594,6 +602,9 @@
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
+      <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Hud\HudDuplicateLayoutPopupView.xaml.cs">
       <DependentUpon>HudDuplicateLayoutPopupView.xaml</DependentUpon>
     </Compile>
@@ -612,6 +623,7 @@
     <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
       <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegionViewNames.cs" />
     <Compile Include="Views\SitesSetup\IncorrectlyConfiguredSitesView.xaml.cs">
       <DependentUpon>IncorrectlyConfiguredSitesView.xaml</DependentUpon>
     </Compile>
@@ -1048,6 +1060,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Graphs\CashGraphPopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

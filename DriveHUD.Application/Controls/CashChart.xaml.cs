@@ -17,6 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using Telerik.Charting;
 using Telerik.Windows.Controls.ChartView;
@@ -227,6 +228,21 @@ namespace DriveHUD.Application.Controls
             set
             {
                 SetValue(HandsAxisLabelsCountProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty ShowInPopupCommandProperty = DependencyProperty.Register("ShowInPopupCommand", typeof(ICommand), typeof(CashChart),
+            new PropertyMetadata(null));
+
+        public ICommand ShowInPopupCommand
+        {
+            get
+            {
+                return (ICommand)GetValue(ShowInPopupCommandProperty);
+            }
+            set
+            {
+                SetValue(ShowInPopupCommandProperty, value);
             }
         }
 

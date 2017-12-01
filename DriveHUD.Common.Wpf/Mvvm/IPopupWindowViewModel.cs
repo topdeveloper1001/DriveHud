@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPopupContainerView.cs" company="Ace Poker Solutions">
+// <copyright file="IPopupWindowViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
-
-namespace DriveHUD.Common.Wpf.Actions
+namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IViewContainer
+    public interface IPopupWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel
     {
-        ContentControl Window { get; set; }
-    } 
-
-    public interface IViewModelContainer
-    {
-    }
-
-    public interface IViewModelContainer<out TViewModel> : IViewModelContainer
-    {
-        TViewModel ViewModel { get; }
     }
 }
