@@ -14,7 +14,7 @@ using Prism.Mvvm;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    internal class GraphSerieDataPoint : BindableBase
+    public class GraphSerieDataPoint : BindableBase
     {
         private decimal pointValue;
 
@@ -43,5 +43,12 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 SetProperty(ref category, value);
             }
         }
+
+#if DEBUG
+        public override string ToString()
+        {
+            return $"{Category};{Value}";
+        }
+#endif
     }
 }

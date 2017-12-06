@@ -25,6 +25,7 @@ using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Graphs;
+using DriveHUD.Application.ViewModels.Graphs.SeriesProviders;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
@@ -303,6 +304,18 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
 
+            // Series providers
+            Container.RegisterType<IGraphsProvider, GraphsProvider>();
+            Container.RegisterType<IGraphSeriesProvider, WinningByMonthSeriesProvider>(SerieType.WinningsByMonth.ToString());
+            Container.RegisterType<IGraphSeriesProvider, WinningByYearSeriesProvider>(SerieType.WinningsByYear.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWinByCashGameTypeSeriesProvider>(SerieType.MoneyWonByCashGameType.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWinByTournamentGameTypeSeriesProvider>(SerieType.MoneyWonByTournamentGameType.ToString());
+            Container.RegisterType<IGraphSeriesProvider, EVDiffToRealizedEvByMonthSeriesProvider>(SerieType.EVDiffToRealizedEVByMonth.ToString());
+            Container.RegisterType<IGraphSeriesProvider, Top20BiggestLosingHandsSeriesProvider>(SerieType.Top20BiggestLosingHands.ToString());
+            Container.RegisterType<IGraphSeriesProvider, Top20BiggestWinningHandsSeriesProvider>(SerieType.Top20BiggestWinningHands.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWonByPositionSeriesProvider>(SerieType.MoneyWonByPosition.ToString());
+            Container.RegisterType<IGraphSeriesProvider, BB100ByTimeOfDaySeriesProvider>(SerieType.BB100ByTimeOfDay.ToString());
+            
             // Register views containers
             Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
 

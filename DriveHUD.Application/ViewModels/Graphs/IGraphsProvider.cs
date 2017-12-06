@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IGraphSeriesProvider.cs" company="Ace Poker Solutions">
+// <copyright file="IGraphsProvider.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    internal interface IGraphSeriesProvider
+    internal interface IGraphsProvider
     {
         /// <summary>
         /// Initializes provider to build series for the specified <see cref="SerieType"/>

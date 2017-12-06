@@ -15,19 +15,19 @@ using System.Collections.ObjectModel;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    internal class GraphSerie : BindableBase
+    public class GraphSerie : BindableBase
     {
-        private string label;
+        private string legend;
 
-        public string Label
+        public string Legend
         {
             get
             {
-                return label;
+                return legend;
             }
             set
             {
-                SetProperty(ref label, value);
+                SetProperty(ref legend, value);
             }
         }
 
@@ -44,5 +44,6 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 SetProperty(ref dataPoints, value);
             }
         }
+
     }
 }

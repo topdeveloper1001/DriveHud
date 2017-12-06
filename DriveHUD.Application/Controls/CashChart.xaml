@@ -596,7 +596,7 @@
                                 FontSize="10">
                             </telerik:LinearAxis>
                         </telerik:RadCartesianChart.VerticalAxis>
-
+ 
                         <telerik:RadCartesianChart.Grid>
                             <telerik:CartesianChartGrid
                                 StripLinesVisibility="X">
@@ -616,7 +616,7 @@
                                 <telerik:ChartSeriesProvider.SeriesDescriptors>
 
                                     <telerik:CategoricalSeriesDescriptor
-                                        x:Name="MainSeriesDescriptor"
+                                        x:Name="MainSeriesDescriptor"          
                                         Style="{StaticResource CategoricalLineSeriesDescriptorStyle}"
                                         ItemsSourcePath="ItemsCollection"
                                         ValuePath="Value"

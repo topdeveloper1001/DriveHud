@@ -248,7 +248,7 @@ namespace DriveHUD.Application.Controls
 
         #endregion
 
-        private static readonly string monthFormatString = "MMM";
+        private static readonly string monthFormatString = "MMM";        
         private static readonly string dayFormatString = "MMM dd";
 
         private static void OnDisplayRangeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)

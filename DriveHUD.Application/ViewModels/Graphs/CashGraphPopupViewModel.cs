@@ -17,6 +17,7 @@ using Model;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,25 @@ namespace DriveHUD.Application.ViewModels.Graphs
             set
             {
                 this.RaiseAndSetIfChanged(ref barMetric, value);
+
+                if (seriesDictionary.ContainsKey(barMetric))
+                {
+                    BarSeries = new ObservableCollection<GraphSerie>(seriesDictionary[barMetric]);
+                }
+                else
+                {
+                    BarSeries = new ObservableCollection<GraphSerie>();
+                }
+            }
+        }
+
+        private ObservableCollection<SerieType> barMetricsCollection;
+
+        public ObservableCollection<SerieType> BarMetricsCollection
+        {
+            get
+            {
+                return barMetricsCollection;
             }
         }
 
@@ -82,12 +102,60 @@ namespace DriveHUD.Application.ViewModels.Graphs
             set
             {
                 this.RaiseAndSetIfChanged(ref pieMetric, value);
+
+                if (seriesDictionary.ContainsKey(pieMetric))
+                {
+                    PieSeries = new ObservableCollection<GraphSerieDataPoint>(seriesDictionary[pieMetric]
+                        .SelectMany(x => x.DataPoints));
+                }
+                else
+                {
+                    PieSeries = new ObservableCollection<GraphSerieDataPoint>();
+                }
+            }
+        }
+
+        private ObservableCollection<SerieType> pieMetricsCollection;
+
+        public ObservableCollection<SerieType> PieMetricsCollection
+        {
+            get
+            {
+                return pieMetricsCollection;
             }
         }
 
         public SingletonStorageModel StorageModel
         {
             get { return ServiceLocator.Current.TryResolve<SingletonStorageModel>(); }
+        }
+
+        private ObservableCollection<GraphSerie> barSeries;
+
+        public ObservableCollection<GraphSerie> BarSeries
+        {
+            get
+            {
+                return barSeries;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref barSeries, value);
+            }
+        }
+
+        private ObservableCollection<GraphSerieDataPoint> pieSeries;
+
+        public ObservableCollection<GraphSerieDataPoint> PieSeries
+        {
+            get
+            {
+                return pieSeries;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref pieSeries, value);
+            }
         }
 
         #endregion
@@ -100,6 +168,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         private void Initialize()
         {
+            InitializeMetricsCollections();
             InitializeCommands();
             OnInitialized();
         }
@@ -110,12 +179,37 @@ namespace DriveHUD.Application.ViewModels.Graphs
             CloseCommand.Subscribe(x => OnClosed());
         }
 
+        private void InitializeMetricsCollections()
+        {
+            barMetricsCollection = new ObservableCollection<SerieType>
+            {
+                SerieType.WinningsByMonth,
+                SerieType.WinningsByYear,
+                SerieType.MoneyWonByCashGameType,
+                SerieType.MoneyWonByTournamentGameType,
+                SerieType.EVDiffToRealizedEVByMonth
+            };
+
+            pieMetricsCollection = new ObservableCollection<SerieType>
+            {
+                SerieType.Top20BiggestLosingHands,
+                SerieType.Top20BiggestWinningHands,
+                SerieType.MoneyWonByPosition,
+                SerieType.BB100ByTimeOfDay,
+                SerieType.Top20ToughestOpponents
+            };
+        }
+
         #region Data initializers
 
         private void InitializeData(CashGraphPopupViewModelInfo viewModelInfo)
         {
             InitializeMainChart(viewModelInfo);
             InitializeExtraCharts();
+
+            // initialize defaults
+            BarMetric = SerieType.WinningsByMonth;
+            PieMetric = SerieType.Top20BiggestLosingHands;
         }
 
         private void InitializeMainChart(CashGraphPopupViewModelInfo viewModelInfo)
@@ -138,7 +232,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
         {
             var seriesTypes = GetSeriesTypesToInitialize();
 
-            var seriesProvider = ServiceLocator.Current.GetInstance<IGraphSeriesProvider>();
+            var seriesProvider = ServiceLocator.Current.GetInstance<IGraphsProvider>();
             seriesProvider.Initialize(seriesTypes);
 
             var statisticCollection = StorageModel.StatisticCollection.ToArray();
@@ -153,7 +247,13 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         private SerieType[] GetSeriesTypesToInitialize()
         {
-            return Enum.GetValues(typeof(SerieType)).Cast<SerieType>().ToArray();
+
+            return new[] {
+                SerieType.WinningsByMonth, SerieType.WinningsByYear, SerieType.MoneyWonByCashGameType, SerieType.MoneyWonByTournamentGameType,
+                SerieType.EVDiffToRealizedEVByMonth, SerieType.Top20BiggestLosingHands, SerieType.Top20BiggestWinningHands, SerieType.MoneyWonByPosition,
+                SerieType.BB100ByTimeOfDay
+            };
+            //return Enum.GetValues(typeof(SerieType)).Cast<SerieType>().ToArray();
         }
 
         #endregion

@@ -159,6 +159,7 @@
     <Compile Include="BoardTextureAnalyzers\ToneAnalyzers.cs" />
     <Compile Include="CardComparer.cs" />
     <Compile Include="ChartData\CharItemDataBuilder.cs" />
+    <Compile Include="ChartData\ChartItemDateKey.cs" />
     <Compile Include="ChartData\IChartData.cs" />
     <Compile Include="ChartData\TournamentChartData.cs" />
     <Compile Include="Condition.cs" />

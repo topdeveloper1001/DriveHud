@@ -20,7 +20,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
         public CashGraphPopupRequestInfo(CashGraphPopupViewModelInfo viewModelInfo)
         {
             Content = viewModelInfo;
-            Title = RegionViewNames.CashGraphPopupView;
+            Title = "Graphs";
         }
 
         public object Content

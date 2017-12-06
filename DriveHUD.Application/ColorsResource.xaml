@@ -475,6 +475,12 @@
     <Color
         x:Key="GraphToogleButtonDisabledColor">#aea5a5</Color>
 
+    <SolidColorBrush
+        x:Key="BarGraphToolTipBackgroundBrush">#24272b</SolidColorBrush>
+
+    <SolidColorBrush
+        x:Key="PieChartInnerBackgroundBrush">#121316</SolidColorBrush>
+    
     <!--#endregion-->
 
 </ResourceDictionary>

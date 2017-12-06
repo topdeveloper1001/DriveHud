@@ -719,4 +719,34 @@
   <data name="Enum_EnumPokerSites_GGN" xml:space="preserve">
     <value>GGNetwork</value>
   </data>
+  <data name="Enum_SerieType_BB100ByTimeOfDay" xml:space="preserve">
+    <value>BB/100 by time of day</value>
+  </data>
+  <data name="Enum_SerieType_EVDiffToRealizedEVByMonth" xml:space="preserve">
+    <value>EV difference to realized EV by month</value>
+  </data>
+  <data name="Enum_SerieType_MoneyWonByCashGameType" xml:space="preserve">
+    <value>Money won by cash game type</value>
+  </data>
+  <data name="Enum_SerieType_MoneyWonByPosition" xml:space="preserve">
+    <value>Money won by position</value>
+  </data>
+  <data name="Enum_SerieType_MoneyWonByTournamentGameType" xml:space="preserve">
+    <value>Money won by tournament game type</value>
+  </data>
+  <data name="Enum_SerieType_Top20BiggestLosingHands" xml:space="preserve">
+    <value>Top 20 Biggest losing hands</value>
+  </data>
+  <data name="Enum_SerieType_Top20BiggestWinningHands" xml:space="preserve">
+    <value>Top 20 Biggest winning hands</value>
+  </data>
+  <data name="Enum_SerieType_Top20ToughestOpponents" xml:space="preserve">
+    <value>Top 20 toughest opponents by loss amount</value>
+  </data>
+  <data name="Enum_SerieType_WinningsByMonth" xml:space="preserve">
+    <value>Showdown and non-showdown winnings by month</value>
+  </data>
+  <data name="Enum_SerieType_WinningsByYear" xml:space="preserve">
+    <value>Showdown and non-showdown winnings by year</value>
+  </data>
 </root>

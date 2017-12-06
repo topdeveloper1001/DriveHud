@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SerieType.cs" company="Ace Poker Solutions">
+// <copyright file="IGraphSeriesProvider.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using System.Collections.Generic;
+
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public enum SerieType
+    internal interface IGraphSeriesProvider
     {
-        WinningsByMonth,
-        WinningsByYear,
-        MoneyWonByCashGameType,
-        MoneyWonByTournamentGameType,
-        EVDiffToRealizedEVByMonth,
-        Top20BiggestLosingHands,
-        Top20BiggestWinningHands,
-        MoneyWonByPosition,
-        BB100ByTimeOfDay,
-        Top20ToughestOpponents
+        /// <summary>
+        /// Processes <see cref="Playerstatistic"/> 
+        /// </summary>
+        /// <param name="statistic"><see cref="Playerstatistic"/> to process</param>
+        void Process(Playerstatistic statistic);
+
+        /// <summary>
+        /// Gets series
+        /// </summary>        
+        IEnumerable<GraphSerie> GetSeries();
     }
 }

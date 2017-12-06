@@ -48,7 +48,7 @@ namespace Model.ChartData
 
         public override object GetValueFromGroupKey(object groupKey)
         {
-            var charItemDateKey = groupKey as CharItemDateKey;
+            var charItemDateKey = groupKey as ChartItemDateKey;
 
             if (charItemDateKey == null)
             {
@@ -64,59 +64,18 @@ namespace Model.ChartData
             return BuildGroupKey(time);
         }
 
-        protected abstract DateTime GetDateTimeFromGroupKey(CharItemDateKey groupKey);
+        protected abstract DateTime GetDateTimeFromGroupKey(ChartItemDateKey groupKey);
 
         protected abstract DateTime GetStartDate(DateTime maxDateTime);
 
-        protected abstract object BuildGroupKey(DateTime time);
-
-        protected class CharItemDateKey
-        {
-            public int Year { get; set; }
-
-            public int Month { get; set; }
-
-            public int Day { get; set; }
-
-            public int Hour { get; set; }
-
-            public override bool Equals(object obj)
-            {
-                var dateKey = obj as CharItemDateKey;
-
-                if (dateKey == null)
-                {
-                    return false;
-                }
-
-                return Equals(dateKey);
-            }
-
-            public override int GetHashCode()
-            {
-                unchecked
-                {
-                    var hashcode = 23;
-                    hashcode = (hashcode * 31) + Year;
-                    hashcode = (hashcode * 31) + Month;
-                    hashcode = (hashcode * 31) + Day;
-                    hashcode = (hashcode * 31) + Hour;
-                    return hashcode;
-                }
-            }
-
-            private bool Equals(CharItemDateKey dateKey)
-            {
-                return Year == dateKey.Year && Month == dateKey.Month && Day == dateKey.Day && Hour == dateKey.Hour;
-            }
-        }
+        protected abstract object BuildGroupKey(DateTime time);        
     }
 
     public class YearItemDataBuilder : DateItemDataBuilder
     {
         protected override object BuildGroupKey(DateTime time)
         {
-            var dateKey = new CharItemDateKey
+            var dateKey = new ChartItemDateKey
             {
                 Year = time.Year,
                 Month = time.Month
@@ -130,7 +89,7 @@ namespace Model.ChartData
             return maxDateTime.AddYears(-1);
         }
 
-        protected override DateTime GetDateTimeFromGroupKey(CharItemDateKey dateKey)
+        protected override DateTime GetDateTimeFromGroupKey(ChartItemDateKey dateKey)
         {
             var dateTime = new DateTime(dateKey.Year, dateKey.Month, 1);
             return dateTime;
@@ -141,7 +100,7 @@ namespace Model.ChartData
     {
         protected override object BuildGroupKey(DateTime time)
         {
-            var dateKey = new CharItemDateKey
+            var dateKey = new ChartItemDateKey
             {
                 Year = time.Year,
                 Month = time.Month,
@@ -156,7 +115,7 @@ namespace Model.ChartData
             return maxDateTime.AddMonths(-1);
         }
 
-        protected override DateTime GetDateTimeFromGroupKey(CharItemDateKey dateKey)
+        protected override DateTime GetDateTimeFromGroupKey(ChartItemDateKey dateKey)
         {
             var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day);
             return dateTime;
