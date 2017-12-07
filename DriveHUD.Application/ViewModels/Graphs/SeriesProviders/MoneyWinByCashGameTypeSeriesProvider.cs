@@ -28,6 +28,11 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (dataPoints == null)
+            {
+                return series;
+            }
+
             foreach (KeyValuePair<string, GraphSerieDataPoint> dataPoint in dataPoints)
             {
                 var serie = new GraphSerie
@@ -64,6 +69,6 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
             }
 
             dataPoints[statistic.GameType].Value += statistic.NetWon;
-        } 
+        }
     }
 }

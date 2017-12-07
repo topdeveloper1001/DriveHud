@@ -315,7 +315,8 @@ namespace DriveHUD.Application
             Container.RegisterType<IGraphSeriesProvider, Top20BiggestWinningHandsSeriesProvider>(SerieType.Top20BiggestWinningHands.ToString());
             Container.RegisterType<IGraphSeriesProvider, MoneyWonByPositionSeriesProvider>(SerieType.MoneyWonByPosition.ToString());
             Container.RegisterType<IGraphSeriesProvider, BB100ByTimeOfDaySeriesProvider>(SerieType.BB100ByTimeOfDay.ToString());
-            
+            Container.RegisterType<IGraphSeriesProvider, Top20ToughestOpponentsByLossAmountSeriesProvider>(SerieType.Top20ToughestOpponents.ToString());
+
             // Register views containers
             Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
 

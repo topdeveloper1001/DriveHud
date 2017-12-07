@@ -469,6 +469,14 @@
         x:Key="GraphToogleButtonBackgroundBrush"
         Color="#2a2d31" />
 
+    <SolidColorBrush
+        x:Key="GraphAxisStrokeBrush"
+        Color="#696a6c" />
+
+    <SolidColorBrush
+        x:Key="GraphGridLineStrokeBrush"
+        Color="#3a3c3f" />
+
     <Color
         x:Key="GraphToogleButtonMouseOverColor">#34519c</Color>
 

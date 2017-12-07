@@ -403,6 +403,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EV.
+        /// </summary>
+        internal static string Common_Chart_EV {
+            get {
+                return ResourceManager.GetString("Common_Chart_EV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EV.
+        /// </summary>
+        internal static string Common_Chart_EVSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_EVSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hands.
         /// </summary>
         internal static string Common_Chart_Hands {

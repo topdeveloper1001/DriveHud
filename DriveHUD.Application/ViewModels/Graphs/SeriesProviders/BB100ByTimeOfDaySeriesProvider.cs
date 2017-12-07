@@ -26,6 +26,11 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (dataPoints == null)
+            {
+                return series;
+            }
+
             foreach (var dataPointKey in dataPoints.Keys.OrderBy(x => x))
             {
                 var dataPoint = dataPoints[dataPointKey];
@@ -33,7 +38,7 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
                 var handsCount = (int)dataPoint.Category;
                 var bb100value = dataPoint.Value / handsCount * 100;
 
-                var dataPointLabel = string.Format("{0}:00 - {0}:59 {1:#.##}", dataPointKey, bb100value);
+                var dataPointLabel = string.Format("{0}:00 - {0}:59: {1:#.##}", dataPointKey, bb100value);
 
                 dataPoint.Category = dataPointLabel;
                 dataPoint.Value = Math.Abs(bb100value);

@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:prism="http://www.codeplex.com/prism"
@@ -14,6 +15,17 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="700">
+    <UserControl.Resources>
+
+        <DataTemplate
+            x:Key="IconTemplate">
+            <Image
+                Height="25"
+                Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
+                Stretch="Uniform" />
+        </DataTemplate>
+
+    </UserControl.Resources>
 
     <telerik:RadExpander
         Style="{StaticResource RadExpanderStyle_CollapseButton}"
@@ -180,6 +192,7 @@
                     ShowNonShowdownEnabled="True"
                     ShowNonShowdown="{Binding MoneyWonGraphViewModel.ShowNonShowdown}"
                     ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
+                    ShowEV="{Binding MoneyWonGraphViewModel.ShowEV}"
                     ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
                     WinningValueTypeEnabled="True" />
 
@@ -211,7 +224,7 @@
                 IsModal="True">
                 <dh:ShowWindowViewAction.WindowStyle>
                     <Style
-                        TargetType="Window">
+                        TargetType="{x:Type telerik:RadWindow}">
                         <Setter
                             Property="UseLayoutRounding"
                             Value="True" />
@@ -222,8 +235,8 @@
                             Property="Height"
                             Value="600" />
                         <Setter
-                            Property="ShowInTaskbar"
-                            Value="False" />
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
                     </Style>
                 </dh:ShowWindowViewAction.WindowStyle>
             </dh:ShowWindowViewAction>

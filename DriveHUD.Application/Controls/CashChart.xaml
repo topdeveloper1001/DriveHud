@@ -284,7 +284,7 @@
                             <TextBlock
                                 Grid.Column="2"
                                 HorizontalAlignment="Right"
-                                Text="{Binding Path=DataPoint.Value}" />
+                                Text="{Binding Path=DataPoint.Value, StringFormat='{}{0:#.##}'}" />
                         </Grid>
                     </DataTemplate>
                 </Setter.Value>
@@ -405,6 +405,20 @@
             </Setter>
         </Style>
 
+        <DrawingBrush
+            x:Key="ShowPopupButtonBackground"
+            Stretch="Uniform">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing
+                            Brush="{StaticResource GraphToogleButtonForegroundBrush}"
+                            Geometry="M 0.475479,0.228394C -0.0328617,0.775085 0.000478745,-0.70166 0.000478745,20.1181L 0.000478745,38.9712L 0.182158,39.3095C 0.280474,39.4996 0.482141,39.7329 0.618809,39.8312L 0.878815,39.9995L 38.7167,39.9995L 39.1083,39.8179C 39.3233,39.7212 39.61,39.5129 39.7466,39.3495L 40,39.0629L 40,17.1682L 39.7267,16.8698C 38.925,15.9832 36.9984,15.9965 36.205,16.8948L 35.9634,17.1748L 35.9634,35.9645L 4.04375,35.9645L 4.04375,4.04333L 24.1402,4.04333L 24.3752,3.77002C 25.0452,3.0083 25.0268,0.893372 24.3369,0.203369L 24.1335,0L 0.683809,0L 0.475479,0.228394 Z M 27.4935,0.085083C 27.4935,0.138367 28.0468,0.716675 28.7168,1.38837C 29.3951,2.05829 30.1434,2.82001 30.3968,3.08002L 30.8468,3.56171L 28.8018,5.39832C 27.6752,6.40662 26.2702,7.68323 25.6702,8.22992C 25.0718,8.78326 24.2252,9.53156 23.7952,9.89655C 23.3602,10.2682 22.9952,10.5933 22.9819,10.6249C 22.9485,10.7032 21.5502,11.9599 21.0485,12.3633C 20.8602,12.5199 20.4036,12.9366 20.0386,13.2882C 19.6752,13.6332 19.0569,14.1932 18.6653,14.5249C 17.6636,15.3715 16.0803,16.8948 16.0803,17.0132C 16.0803,17.0648 16.3153,17.3765 16.6019,17.6964C 16.8953,18.0148 17.3303,18.5298 17.5853,18.8281C 17.8386,19.1348 18.3336,19.6815 18.6852,20.0397C 19.0436,20.4047 19.6152,21.0414 19.9619,21.4581C 20.3069,21.8748 20.6186,22.2147 20.6452,22.2147C 20.6969,22.2147 22.1819,20.8998 24.6618,18.6464C 25.2602,18.1065 25.9901,17.4548 26.2768,17.2015C 26.5685,16.9465 27.2201,16.3615 27.7151,15.8932C 28.2168,15.4298 29.0168,14.7215 29.4985,14.3165C 29.9735,13.9132 30.4168,13.5232 30.4684,13.4515C 30.5668,13.3149 31.7318,12.2665 32.2334,11.8566C 32.3834,11.7383 32.9434,11.2249 33.4767,10.7166C 34.0101,10.215 34.5967,9.68158 34.7717,9.54486C 34.9484,9.40155 35.2601,9.14825 35.4617,8.97827L 35.8267,8.66663L 37.8583,10.7432C 38.9717,11.8882 39.9083,12.8265 39.9416,12.8199C 39.9733,12.8199 40,9.93488 40,6.41333L 40,0L 33.7501,0C 29.3035,0 27.4935,0.0266724 27.4935,0.085083 Z " />
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+
     </UserControl.Resources>
 
     <Grid>
@@ -513,19 +527,28 @@
                         HorizontalAlignment="Right">
 
                         <Button
-                            Content="+"
                             Visibility="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand, Converter={dh:NullToVisibilityConverter}}"
                             Margin="0,0,20,0"
-                            Command="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand}" />
+                            Command="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand}">
+                            <Border
+                                Background="{StaticResource ShowPopupButtonBackground}"
+                                Width="17"
+                                Height="17" />
+                        </Button>
 
                         <ToggleButton
-                            Content="{ResX Key=Common_Chart_NSD}"
+                            Content="{ResX Key=Common_Chart_SD}"
                             Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=ShowShowdown}"
                             Style="{StaticResource GraphToggleButtonStyle}" />
                         <ToggleButton
-                            Content="{ResX Key=Common_Chart_SD}"
+                            Content="{ResX Key=Common_Chart_NSD}"
+                            Margin="0,0,5,0"
                             IsChecked="{Binding ElementName=CashChartControl, Path=ShowNonShowdown}"
+                            Style="{StaticResource GraphToggleButtonStyle}" />
+                        <ToggleButton
+                            Content="{ResX Key=Common_Chart_EV}"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ShowEV}"
                             Style="{StaticResource GraphToggleButtonStyle}" />
 
                     </StackPanel>
@@ -580,25 +603,18 @@
                                 SnapMode="ClosestPoint" />
                         </telerik:RadCartesianChart.Behaviors>
 
-                        <telerik:RadCartesianChart.Annotations>
-                            <telerik:CartesianGridLineAnnotation
-                                Axis="{Binding ElementName=verticalAxis}"
-                                Value="0"
-                                Stroke="Gray"
-                                StrokeThickness="0.1" />
-                        </telerik:RadCartesianChart.Annotations>
-
                         <telerik:RadCartesianChart.VerticalAxis>
                             <telerik:LinearAxis
                                 x:Name="verticalAxis"
                                 TickThickness="0"
-                                ElementBrush="#303134"
+                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                 FontSize="10">
                             </telerik:LinearAxis>
                         </telerik:RadCartesianChart.VerticalAxis>
- 
+
                         <telerik:RadCartesianChart.Grid>
                             <telerik:CartesianChartGrid
+                                MajorLinesVisibility="Y"
                                 StripLinesVisibility="X">
                                 <telerik:CartesianChartGrid.XStripeBrushes>
                                     <SolidColorBrush
@@ -607,8 +623,24 @@
                                     <SolidColorBrush
                                         Color="Transparent" />
                                 </telerik:CartesianChartGrid.XStripeBrushes>
+                                <telerik:CartesianChartGrid.MajorYLineStyle>
+                                    <Style
+                                        TargetType="{x:Type Line}">
+                                        <Setter
+                                            Property="Stroke"
+                                            Value="{StaticResource GraphGridLineStrokeBrush}" />
+                                    </Style>
+                                </telerik:CartesianChartGrid.MajorYLineStyle>
                             </telerik:CartesianChartGrid>
                         </telerik:RadCartesianChart.Grid>
+
+                        <telerik:RadCartesianChart.Annotations>
+                            <telerik:CartesianGridLineAnnotation
+                                Axis="{Binding ElementName=verticalAxis}"
+                                Stroke="White"
+                                Value="0"
+                                StrokeThickness="0.2" />
+                        </telerik:RadCartesianChart.Annotations>
 
                         <telerik:RadCartesianChart.SeriesProvider>
                             <telerik:ChartSeriesProvider
@@ -616,7 +648,7 @@
                                 <telerik:ChartSeriesProvider.SeriesDescriptors>
 
                                     <telerik:CategoricalSeriesDescriptor
-                                        x:Name="MainSeriesDescriptor"          
+                                        x:Name="MainSeriesDescriptor"
                                         Style="{StaticResource CategoricalLineSeriesDescriptorStyle}"
                                         ItemsSourcePath="ItemsCollection"
                                         ValuePath="Value"

@@ -111,6 +111,21 @@ namespace DriveHUD.Application.Controls
             }
         }
 
+        public static readonly DependencyProperty ShowEVProperty = DependencyProperty.Register("ShowEV", typeof(bool), typeof(CashChart),
+        new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnShowShowdownChanged));
+
+        public bool ShowEV
+        {
+            get
+            {
+                return (bool)GetValue(ShowEVProperty);
+            }
+            set
+            {
+                SetValue(ShowEVProperty, value);
+            }
+        }
+
         public static readonly DependencyProperty ValueTypeProperty = DependencyProperty.Register("ValueType", typeof(ChartCashSeriesValueType), typeof(CashChart),
             new PropertyMetadata(ChartCashSeriesValueType.Currency, OnValueTypeChanged));
 
@@ -248,7 +263,7 @@ namespace DriveHUD.Application.Controls
 
         #endregion
 
-        private static readonly string monthFormatString = "MMM";        
+        private static readonly string monthFormatString = "MMM";
         private static readonly string dayFormatString = "MMM dd";
 
         private static void OnDisplayRangeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -287,7 +302,7 @@ namespace DriveHUD.Application.Controls
             {
                 LabelFitMode = AxisLabelFitMode.MultiLine,
                 TickThickness = 0,
-                ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#303134")),
+                ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#696a6c")),
                 LabelFormat = labelFormat,
                 FontSize = 11
             };
@@ -300,7 +315,7 @@ namespace DriveHUD.Application.Controls
                 LabelFitMode = AxisLabelFitMode.None,
                 MajorTickInterval = majorTickInterval,
                 TickThickness = 0,
-                ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#303134")),
+                ElementBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#696a6c")),
                 FontSize = 10
             };
         }
@@ -367,7 +382,8 @@ namespace DriveHUD.Application.Controls
 
                 var result = chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.Netwon ||
                     (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.Showdown && ShowShowdown) ||
-                    (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.NonShowdown && ShowNonShowdown);
+                    (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.NonShowdown && ShowNonShowdown) ||
+                    (chartSerie.ChartCashSeriesWinningType == ChartCashSeriesWinningType.EV && ShowEV);
 
                 chartSerie.IsVisible = result;
             }

@@ -23,7 +23,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 {
     public class BarSeriesChartBehavior : Behavior<RadCartesianChart>
     {
-        public static readonly DependencyProperty SelectedSerieTypeProperty = DependencyProperty.RegisterAttached("SelectedSerieType", typeof(SerieType?),
+        public static readonly DependencyProperty SelectedSerieTypeProperty = DependencyProperty.Register("SelectedSerieType", typeof(SerieType?),
             typeof(BarSeriesChartBehavior), new PropertyMetadata(null, OnSelectedSerieTypePropertyChanged));
 
         public SerieType? SelectedSerieType
@@ -50,14 +50,14 @@ namespace DriveHUD.Application.ViewModels.Graphs
             behavior.UpdateHorizontalAxis();
         }
 
-        public static readonly DependencyProperty AxisesProperty = DependencyProperty.RegisterAttached("Axises", typeof(ObservableCollection<BarSeriesChartAxis>),
-            typeof(BarSeriesChartBehavior), new PropertyMetadata(new ObservableCollection<BarSeriesChartAxis>(), OnAxisesPropertyChanged));
+        public static readonly DependencyProperty AxisesProperty = DependencyProperty.Register("Axises", typeof(BarSeriesChartAxisCollection),
+            typeof(BarSeriesChartBehavior), new PropertyMetadata(new BarSeriesChartAxisCollection(), OnAxisesPropertyChanged));
 
-        public ObservableCollection<BarSeriesChartAxis> Axises
+        public BarSeriesChartAxisCollection Axises
         {
             get
             {
-                return (ObservableCollection<BarSeriesChartAxis>)GetValue(AxisesProperty);
+                return (BarSeriesChartAxisCollection)GetValue(AxisesProperty);
             }
             set
             {
@@ -82,7 +82,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             if (AssociatedObject == null)
             {
                 return;
-            }
+            }            
 
             var barSeriesChartAxis = Axises.FirstOrDefault(x => x.SerieType == SelectedSerieType);
 
@@ -103,6 +103,10 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
             }
         }
+    }
+
+    public class BarSeriesChartAxisCollection : ObservableCollection<BarSeriesChartAxis>
+    {
     }
 
     public class BarSeriesChartAxis : FrameworkElement
@@ -146,7 +150,10 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 {
                     LabelFormat = axis.LabelFormat,
                     MajorTickStyle = axis.MajorTickStyle,
-                    ShowLabels = axis.ShowLabels
+                    ShowLabels = axis.ShowLabels,
+                    ElementBrush = axis.ElementBrush,
+                    FontSize = axis.FontSize,
+                    FontWeight = axis.FontWeight                    
                 };
 
                 return axisCopy;
@@ -159,7 +166,10 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 var axisCopy = new CategoricalAxis
                 {
                     MajorTickStyle = axis.MajorTickStyle,
-                    ShowLabels = axis.ShowLabels
+                    ShowLabels = axis.ShowLabels,
+                    ElementBrush = axis.ElementBrush,
+                    FontSize = axis.FontSize,
+                    FontWeight = axis.FontWeight
                 };
 
                 return axisCopy;

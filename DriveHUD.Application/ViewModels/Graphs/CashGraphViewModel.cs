@@ -108,8 +108,22 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
+        private bool showEv;
+
+        public bool ShowEV
+        {
+            get
+            {
+                return showEv;
+            }
+            set
+            {
+                SetProperty(ref showEv, value);
+            }
+        }
+
         internal void Update()
-        {           
+        {
             var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
 
             // filter and orders
@@ -171,7 +185,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             {
                 charSerie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(chartSeriesItems[charSerie]);
             });
-        }     
+        }
 
         private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)
         {

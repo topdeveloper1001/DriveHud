@@ -80,22 +80,13 @@ namespace Model.Enums
         PFR,
         BB
     }
-
-    //public enum ChartSeriesType
-    //{
-    //    Winnings,
-    //    WinningsShowdown,
-    //    WinningsNonShowdown,
-    //    WinningsInBB,
-    //    WinningsInBBShowdown,
-    //    WinningsInBBNonShowdown
-    //}
-
+   
     public enum ChartCashSeriesWinningType
     {
         Netwon,
         Showdown,
-        NonShowdown
+        NonShowdown,
+        EV
     }
 
     public enum ChartCashSeriesValueType

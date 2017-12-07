@@ -145,6 +145,12 @@
             <System:Double
                 x:Key="PieOuterEllipseSize">1.02</System:Double>
 
+            <EllipseGeometry
+                x:Key="LegendGeometry"
+                Center="6 6"
+                RadiusX="4"
+                RadiusY="4" />
+
         </ResourceDictionary>
 
     </UserControl.Resources>
@@ -176,6 +182,7 @@
                 ShowNonShowdownEnabled="True"
                 ShowNonShowdown="{Binding MainGraphViewModel.ShowNonShowdown}"
                 ShowShowdown="{Binding MainGraphViewModel.ShowShowdown}"
+                ShowEV="{Binding MainGraphViewModel.ShowEV}"
                 WinningValueTypeEnabled="True" />
 
             <Border
@@ -237,6 +244,23 @@
 
             <Grid
                 Grid.Row="2">
+                <Grid.Style>
+                    <Style
+                        TargetType="{x:Type Grid}">
+                        <Setter
+                            Property="Visibility"
+                            Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding ., Converter={dh:NullToBoolConverter}}"
+                                Value="True">
+                                <Setter
+                                    Property="Visibility"
+                                    Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -266,6 +290,8 @@
                                         SerieType="WinningsByMonth">
                                         <graphs:BarSeriesChartAxis.Axis>
                                             <telerik:DateTimeCategoricalAxis
+                                                FontSize="11"
+                                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                                 LabelFormat="MMM" />
                                         </graphs:BarSeriesChartAxis.Axis>
                                     </graphs:BarSeriesChartAxis>
@@ -273,6 +299,8 @@
                                         SerieType="WinningsByYear">
                                         <graphs:BarSeriesChartAxis.Axis>
                                             <telerik:DateTimeCategoricalAxis
+                                                FontSize="11"
+                                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                                 LabelFormat="yyyy" />
                                         </graphs:BarSeriesChartAxis.Axis>
                                     </graphs:BarSeriesChartAxis>
@@ -280,6 +308,8 @@
                                         SerieType="MoneyWonByCashGameType">
                                         <graphs:BarSeriesChartAxis.Axis>
                                             <telerik:CategoricalAxis
+                                                FontSize="11"
+                                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                                 ShowLabels="False"
                                                 MajorTickStyle="{x:Null}" />
                                         </graphs:BarSeriesChartAxis.Axis>
@@ -288,6 +318,8 @@
                                         SerieType="MoneyWonByTournamentGameType">
                                         <graphs:BarSeriesChartAxis.Axis>
                                             <telerik:CategoricalAxis
+                                                FontSize="11"
+                                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                                 ShowLabels="False"
                                                 MajorTickStyle="{x:Null}" />
                                         </graphs:BarSeriesChartAxis.Axis>
@@ -296,12 +328,28 @@
                                         SerieType="EVDiffToRealizedEVByMonth">
                                         <graphs:BarSeriesChartAxis.Axis>
                                             <telerik:DateTimeCategoricalAxis
+                                                FontSize="11"
+                                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                                 LabelFormat="MMM" />
                                         </graphs:BarSeriesChartAxis.Axis>
                                     </graphs:BarSeriesChartAxis>
                                 </graphs:BarSeriesChartBehavior.Axises>
                             </graphs:BarSeriesChartBehavior>
                         </i:Interaction.Behaviors>
+                        <telerik:RadCartesianChart.Grid>
+                            <telerik:CartesianChartGrid
+                                MajorLinesVisibility="Y"
+                                MajorYLineDashArray="6 4">
+                                <telerik:CartesianChartGrid.MajorYLineStyle>
+                                    <Style
+                                        TargetType="{x:Type Line}">
+                                        <Setter
+                                            Property="Stroke"
+                                            Value="{StaticResource GraphGridLineStrokeBrush}" />
+                                    </Style>
+                                </telerik:CartesianChartGrid.MajorYLineStyle>
+                            </telerik:CartesianChartGrid>
+                        </telerik:RadCartesianChart.Grid>
                         <telerik:RadCartesianChart.Behaviors>
                             <telerik:ChartTooltipBehavior
                                 Placement="Top" />
@@ -328,16 +376,10 @@
                         </telerik:RadCartesianChart.TooltipTemplate>
                         <telerik:RadCartesianChart.VerticalAxis>
                             <telerik:LinearAxis
-                                x:Name="verticalAxis" />
+                                x:Name="verticalAxis"
+                                FontSize="10"
+                                ElementBrush="{StaticResource GraphAxisStrokeBrush}" />
                         </telerik:RadCartesianChart.VerticalAxis>
-
-                        <telerik:RadCartesianChart.Annotations>
-                            <telerik:CartesianGridLineAnnotation
-                                Axis="{Binding ElementName=verticalAxis}"
-                                Value="0"
-                                Stroke="Gray"
-                                StrokeThickness="0.1" />
-                        </telerik:RadCartesianChart.Annotations>
 
                         <telerik:RadCartesianChart.SeriesProvider>
                             <telerik:ChartSeriesProvider
@@ -374,6 +416,7 @@
                         Background="Transparent"
                         BorderThickness="0"
                         Items="{Binding LegendItems, ElementName=BarChart}"
+                        DefaultMarkerGeometry="{StaticResource LegendGeometry}"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top">
                         <telerik:RadLegend.ItemsPanel>
@@ -404,6 +447,34 @@
                             VerticalAlignment="Stretch"
                             Palette="{StaticResource ChartPalette}">
 
+                            <telerik:RadPieChart.Behaviors>
+                                <telerik:ChartTooltipBehavior
+                                    Placement="MousePoint"
+                                    HorizontalOffset="-6" VerticalOffset="-30" />
+                            </telerik:RadPieChart.Behaviors>
+
+                            <telerik:RadPieChart.TooltipTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Path
+                                            Data="M-1236,-441 L-1180,-441 -1180,-424 -1228,-424 -1230.5,-420 -1233,-424 -1236,-424 z"
+                                            Stretch="Fill"
+                                            Fill="{Binding ., Converter={dh:PieDataPointToPaletteColorConverter}}"
+                                            Stroke="{StaticResource ForegroundBrush}"
+                                            StrokeThickness="1" />
+
+                                        <TextBlock
+                                            Margin="3,3,3,10"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#FFFFFFFF"
+                                            Text="{Binding Path=DataItem.Category}"
+                                            FontSize="11" />
+                                        
+                                    </Grid>
+                                </DataTemplate>
+                            </telerik:RadPieChart.TooltipTemplate>
+
                             <telerik:PieSeries
                                 RadiusFactor="1"
                                 ItemsSource="{Binding PieSeries}"
@@ -419,7 +490,7 @@
 
                         <Ellipse
                             IsHitTestVisible="False"
-                            Fill="{StaticResource PieChartInnerBackgroundBrush}"                            
+                            Fill="{StaticResource PieChartInnerBackgroundBrush}"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             Opacity="0.3">
@@ -561,14 +632,21 @@
                         </Ellipse.Style>
                     </Ellipse>
 
-                    <telerik:RadLegend
+                    <ScrollViewer
                         Grid.Column="1"
                         Margin="10"
-                        Background="Transparent"
-                        BorderThickness="0"
-                        Items="{Binding LegendItems, ElementName=PieChart}"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top" />
+                        Padding="0,0,15,0"
+                        HorizontalScrollBarVisibility="Disabled"
+                        VerticalScrollBarVisibility="Auto"
+                        CanContentScroll="True">
+                        <telerik:RadLegend
+                            Background="Transparent"
+                            BorderThickness="0"
+                            DefaultMarkerGeometry="{StaticResource LegendGeometry}"
+                            Items="{Binding LegendItems, ElementName=PieChart}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top" />
+                    </ScrollViewer>
 
                 </Grid>
 

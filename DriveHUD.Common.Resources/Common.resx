@@ -960,4 +960,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Chart_SD" xml:space="preserve">
     <value>SD</value>
   </data>
+  <data name="Common_Chart_EV" xml:space="preserve">
+    <value>EV</value>
+  </data>
+  <data name="Common_Chart_EVSeries" xml:space="preserve">
+    <value>EV</value>
+  </data>
 </root>

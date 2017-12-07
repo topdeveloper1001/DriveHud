@@ -19,8 +19,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
@@ -196,7 +194,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 SerieType.Top20BiggestWinningHands,
                 SerieType.MoneyWonByPosition,
                 SerieType.BB100ByTimeOfDay,
-                SerieType.Top20ToughestOpponents
+                // SerieType.Top20ToughestOpponents
             };
         }
 
@@ -222,6 +220,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             {
                 MainGraphViewModel.ShowNonShowdown = viewModelInfo.MoneyWonCashGraphViewModel.ShowNonShowdown;
                 MainGraphViewModel.ShowShowdown = viewModelInfo.MoneyWonCashGraphViewModel.ShowShowdown;
+                MainGraphViewModel.ShowEV = viewModelInfo.MoneyWonCashGraphViewModel.ShowEV;
                 MainGraphViewModel.ChartDisplayRange = viewModelInfo.MoneyWonCashGraphViewModel.ChartDisplayRange;
             }
 
@@ -245,15 +244,12 @@ namespace DriveHUD.Application.ViewModels.Graphs
             seriesDictionary = seriesProvider.GetSeries();
         }
 
-        private SerieType[] GetSeriesTypesToInitialize()
+        private static SerieType[] GetSeriesTypesToInitialize()
         {
-
-            return new[] {
-                SerieType.WinningsByMonth, SerieType.WinningsByYear, SerieType.MoneyWonByCashGameType, SerieType.MoneyWonByTournamentGameType,
-                SerieType.EVDiffToRealizedEVByMonth, SerieType.Top20BiggestLosingHands, SerieType.Top20BiggestWinningHands, SerieType.MoneyWonByPosition,
-                SerieType.BB100ByTimeOfDay
-            };
-            //return Enum.GetValues(typeof(SerieType)).Cast<SerieType>().ToArray();
+            return Enum.GetValues(typeof(SerieType))
+                .Cast<SerieType>()
+                .Where(x => x != SerieType.Top20ToughestOpponents)
+                .ToArray();
         }
 
         #endregion

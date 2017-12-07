@@ -78,7 +78,7 @@ namespace DriveHUD.ViewModels
         }
 
         public static ChartSerieResourceHelper GetSerieRedPalette()
-        {
+        {            
             return new ChartSerieResourceHelper()
             {
                 LineColor = (Color)ColorConverter.ConvertFromString("#e60909"),

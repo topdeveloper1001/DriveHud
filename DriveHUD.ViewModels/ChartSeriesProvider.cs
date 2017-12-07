@@ -100,6 +100,29 @@ namespace DriveHUD.ViewModels
 
             winningsChartCollection.Add(new ChartSeries
             {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_EVSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieOrangePalette(),
+                Format = "{0:0.##}$",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.NetWon + stat.EVDiff;
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
@@ -117,7 +140,7 @@ namespace DriveHUD.ViewModels
                         current.Value = previous.Value;
                     }
 
-                    current.Value += stat.NetWon / stat.BigBlind;
+                    current.Value += (stat.NetWon + stat.EVDiff) / stat.BigBlind;
                 }
             });
 
@@ -170,6 +193,29 @@ namespace DriveHUD.ViewModels
                     {
                         current.Value += stat.NetWon / stat.BigBlind;
                     }
+                }
+            });
+
+            winningsChartCollection.Add(new ChartSeries
+            {
+                Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_EVSeries"),
+                ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
+                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
+                Format = "{0:0}$",
+                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.EVDiff / stat.BigBlind;
                 }
             });
 

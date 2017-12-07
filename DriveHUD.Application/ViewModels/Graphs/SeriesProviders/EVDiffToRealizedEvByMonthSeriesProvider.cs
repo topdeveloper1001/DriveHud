@@ -19,6 +19,7 @@ using DriveHUD.Entities;
 using Model.ChartData;
 using System.Collections.ObjectModel;
 using Model.Importer;
+using DriveHUD.Common.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
@@ -31,6 +32,13 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (evDiffDataPoints == null || evDataPoints == null)
+            {
+                return series;
+            }
+
+            evDiffDataPoints.Values.ForEach(x => x.Value = Math.Round(x.Value, 2));
+
             var showDownSerie = new GraphSerie
             {
                 DataPoints = new ObservableCollection<GraphSerieDataPoint>(evDiffDataPoints.Values),
@@ -40,7 +48,7 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
             var nonShowDownSerie = new GraphSerie
             {
                 DataPoints = new ObservableCollection<GraphSerieDataPoint>(evDataPoints.Values),
-                Legend = "EV"
+                Legend = "Money won"
             };
 
             series.Add(showDownSerie);
@@ -85,7 +93,7 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
             }
 
             evDiffDataPoints[groupKey].Value += statistic.EVDiff;
-            evDataPoints[groupKey].Value += statistic.Equity;
+            evDataPoints[groupKey].Value += statistic.NetWon;
         }
 
         protected virtual ChartItemDateKey BuildGroupKey(Playerstatistic statistic)

@@ -14,6 +14,7 @@ using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
@@ -25,9 +26,14 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (dataPoints == null)
+            {
+                return series;
+            }
+
             foreach (KeyValuePair<string, GraphSerieDataPoint> dataPoint in dataPoints)
             {
-                var dataPointLabel = string.Format("{0} ${1:#.##}", dataPoint.Key, dataPoint.Value.Value);
+                var dataPointLabel = string.Format("{0}: ${1:#.##}", dataPoint.Key, dataPoint.Value.Value);
 
                 dataPoint.Value.Category = dataPointLabel;
                 dataPoint.Value.Value = Math.Abs(dataPoint.Value.Value);

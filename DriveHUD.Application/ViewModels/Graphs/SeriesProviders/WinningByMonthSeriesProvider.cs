@@ -28,6 +28,11 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (showDownDataPoints == null || nonShowDownDataPoints == null)
+            {
+                return series;
+            }
+
             var showDownSerie = new GraphSerie
             {
                 DataPoints = new ObservableCollection<GraphSerieDataPoint>(showDownDataPoints.Values),

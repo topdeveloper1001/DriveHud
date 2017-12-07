@@ -26,11 +26,16 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
         {
             var series = new List<GraphSerie>();
 
+            if (dataPoints == null)
+            {
+                return series;
+            }
+
             var topIndex = 1;
 
             foreach (var dataPoint in dataPoints.OrderByDescending(x => x.Value).Take(20))
             {
-                var dataPointLabel = string.Format("#{0} - ${1:#.##}", topIndex++, Math.Abs(dataPoint.Value));
+                var dataPointLabel = string.Format("#{0}: ${1:#.##}", topIndex++, Math.Abs(dataPoint.Value));
 
                 dataPoint.Category = dataPointLabel;
 
