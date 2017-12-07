@@ -201,7 +201,7 @@ namespace DriveHUD.ViewModels
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_EVSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
-                ColorsPalette = ChartSerieResourceHelper.GetSerieGreenPalette(),
+                ColorsPalette = ChartSerieResourceHelper.GetSerieOrangePalette(),
                 Format = "{0:0}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
