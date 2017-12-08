@@ -10,9 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Resources;
-using DriveHUD.Entities;
-using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,11 +17,9 @@ using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
-    internal class Top20BiggestLosingHandsSeriesProvider : IGraphSeriesProvider
+    internal class Top20BiggestLosingHandsSeriesProvider : Top20BiggestWinningHandsSeriesProvider
     {
-        private Dictionary<string, GraphSerieDataPoint> dataPoints;
-
-        public IEnumerable<GraphSerie> GetSeries()
+        public override IEnumerable<GraphSerie> GetSeries()
         {
             var series = new List<GraphSerie>();
 
@@ -47,34 +42,6 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
             }
 
             return series;
-        }
-
-        public void Process(Playerstatistic statistic)
-        {
-            if (statistic == null || statistic.IsTourney ||
-                statistic.NetWon >= 0 || string.IsNullOrEmpty(statistic.Cards))
-            {
-                return;
-            }
-
-            if (dataPoints == null)
-            {
-                dataPoints = new Dictionary<string, GraphSerieDataPoint>();
-            }
-
-            var cardsRange = ParserUtils.ConvertToCardRange(statistic.Cards);
-
-            if (string.IsNullOrEmpty(cardsRange))
-            {
-                return;
-            }
-
-            if (!dataPoints.ContainsKey(cardsRange))
-            {
-                dataPoints.Add(cardsRange, new GraphSerieDataPoint());
-            }
-
-            dataPoints[cardsRange].Value += statistic.NetWon;
         }
     }
 }

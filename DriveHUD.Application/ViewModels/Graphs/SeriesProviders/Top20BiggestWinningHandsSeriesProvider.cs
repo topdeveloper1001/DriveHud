@@ -21,9 +21,9 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
     internal class Top20BiggestWinningHandsSeriesProvider : IGraphSeriesProvider
     {
-        private Dictionary<string, GraphSerieDataPoint> dataPoints;
+        protected Dictionary<string, GraphSerieDataPoint> dataPoints;
 
-        public IEnumerable<GraphSerie> GetSeries()
+        public virtual IEnumerable<GraphSerie> GetSeries()
         {
             var series = new List<GraphSerie>();
 
@@ -48,10 +48,9 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
             return series;
         }
 
-        public void Process(Playerstatistic statistic)
+        public virtual void Process(Playerstatistic statistic)
         {
-            if (statistic == null || statistic.IsTourney ||
-                statistic.NetWon <= 0 || string.IsNullOrEmpty(statistic.Cards))
+            if (statistic == null || statistic.IsTourney || string.IsNullOrEmpty(statistic.Cards))
             {
                 return;
             }
