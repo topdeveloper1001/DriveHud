@@ -34,7 +34,7 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 
             var topIndex = 1;
 
-            foreach (var dataPoint in dataPoints.OrderByDescending(x => x.Value.Value).Take(20))
+            foreach (var dataPoint in dataPoints.OrderByDescending(x => x.Value.Value).Take(20).Where(x => x.Value.Value > 0))
             {
                 dataPoint.Value.Category = string.Format("#{0}: {1} ${2:#.##}", topIndex++, dataPoint.Key, Math.Abs(dataPoint.Value.Value));
 
