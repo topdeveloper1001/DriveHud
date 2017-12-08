@@ -82,7 +82,7 @@ namespace DriveHUD.Importers
         {
             lock (locker)
             {
-                return playersCacheInfo.ToList();
+                return playersCacheInfo?.ToList();
             }
         }
     }
