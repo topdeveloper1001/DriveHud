@@ -162,10 +162,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                     {
                         chartSeriesItem = new ChartSeriesItem
                         {
-                            Format = chartSerie.Format,
-                            PointColor = chartSerie.ColorsPalette.PointColor,
-                            TrackBallColor = chartSerie.ColorsPalette.TrackBallColor,
-                            TooltipColor = chartSerie.ColorsPalette.TooltipColor,
+                            Format = chartSerie.Format,                         
                             Category = chartItemDataBuilder.GetValueFromGroupKey(currentGroupKey)
                         };
 

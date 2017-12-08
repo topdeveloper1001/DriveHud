@@ -10,11 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Linq;
+using DriveHUD.Application.ValueConverters;
 using Model.Enums;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -260,6 +259,58 @@ namespace DriveHUD.Application.Controls
                 SetValue(ShowInPopupCommandProperty, value);
             }
         }
+
+        #region Colors scheme
+
+        public readonly static DependencyProperty LineColorsProperty = DependencyProperty.Register("LineColors",
+            typeof(ColorBrushChartCashSeriesWinningTypeCollection), typeof(CashChart),
+            new PropertyMetadata(new ColorBrushChartCashSeriesWinningTypeCollection()));
+   
+        public ColorBrushChartCashSeriesWinningTypeCollection LineColors
+        {
+            get
+            {
+                return (ColorBrushChartCashSeriesWinningTypeCollection)GetValue(LineColorsProperty);
+            }
+            set
+            {
+                SetValue(LineColorsProperty, value);
+            }
+        }
+
+        public readonly static DependencyProperty PointColorsProperty = DependencyProperty.Register("PointColors",
+           typeof(ColorBrushChartCashSeriesWinningTypeCollection), typeof(CashChart),
+           new PropertyMetadata(new ColorBrushChartCashSeriesWinningTypeCollection()));
+
+        public ColorBrushChartCashSeriesWinningTypeCollection PointColors
+        {
+            get
+            {
+                return (ColorBrushChartCashSeriesWinningTypeCollection)GetValue(PointColorsProperty);
+            }
+            set
+            {
+                SetValue(PointColorsProperty, value);
+            }
+        }
+
+        public readonly static DependencyProperty TrackBallColorsProperty = DependencyProperty.Register("TrackBallColors",
+            typeof(ColorBrushChartCashSeriesWinningTypeCollection), typeof(CashChart),
+            new PropertyMetadata(new ColorBrushChartCashSeriesWinningTypeCollection()));
+
+        public ColorBrushChartCashSeriesWinningTypeCollection TrackBallColors
+        {
+            get
+            {
+                return (ColorBrushChartCashSeriesWinningTypeCollection)GetValue(TrackBallColorsProperty);
+            }
+            set
+            {
+                SetValue(TrackBallColorsProperty, value);
+            }
+        }
+
+        #endregion
 
         #endregion
 

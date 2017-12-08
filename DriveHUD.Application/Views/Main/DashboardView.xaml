@@ -11,19 +11,28 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:gaugeExample="clr-namespace:GaugeExample"
-    xmlns:vw="clr-namespace:DriveHUD.Application.Views"
+    xmlns:vw="clr-namespace:DriveHUD.Application.Views"  
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="700">
     <UserControl.Resources>
 
-        <DataTemplate
-            x:Key="IconTemplate">
-            <Image
-                Height="25"
-                Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
-                Stretch="Uniform" />
-        </DataTemplate>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/CashChartColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate
+                x:Key="IconTemplate">
+                <Image
+                    Height="25"
+                    Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
+                    Stretch="Uniform" />
+            </DataTemplate>
+
+        </ResourceDictionary>
 
     </UserControl.Resources>
 
@@ -194,6 +203,9 @@
                     ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
                     ShowEV="{Binding MoneyWonGraphViewModel.ShowEV}"
                     ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
+                    LineColors="{StaticResource MoneyWonLineColors}"
+                    PointColors="{StaticResource MoneyWonPointColors}"
+                    TrackBallColors="{StaticResource MoneyWonTrackBallColors}"
                     WinningValueTypeEnabled="True" />
 
                 <ctl:CashChart
@@ -207,7 +219,10 @@
                     HeaderStopColor="#ffdc50"
                     Height="205"
                     ShowNonShowdown="{Binding BB100GraphViewModel.ShowNonShowdown}"
-                    ShowShowdown="{Binding BB100GraphViewModel.ShowShowdown}" />
+                    ShowShowdown="{Binding BB100GraphViewModel.ShowShowdown}"
+                    LineColors="{StaticResource BB100LineColors}"
+                    PointColors="{StaticResource BB100PointColors}"
+                    TrackBallColors="{StaticResource BB100TrackBallColors}" />
 
             </StackPanel>
 

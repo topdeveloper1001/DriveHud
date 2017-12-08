@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +21,7 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
     internal class Top20BiggestWinningHandsSeriesProvider : IGraphSeriesProvider
     {
-        private List<GraphSerieDataPoint> dataPoints;
+        private Dictionary<string, GraphSerieDataPoint> dataPoints;
 
         public IEnumerable<GraphSerie> GetSeries()
         {
@@ -33,16 +34,14 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 
             var topIndex = 1;
 
-            foreach (var dataPoint in dataPoints.OrderByDescending(x => x.Value).Take(20))
+            foreach (var dataPoint in dataPoints.OrderByDescending(x => x.Value.Value).Take(20))
             {
-                var dataPointLabel = string.Format("#{0}: ${1:#.##}", topIndex++, Math.Abs(dataPoint.Value));
-
-                dataPoint.Category = dataPointLabel;
+                dataPoint.Value.Category = string.Format("#{0}: {1} ${2:#.##}", topIndex++, dataPoint.Key, Math.Abs(dataPoint.Value.Value));
 
                 series.Add(new GraphSerie
                 {
-                    Legend = dataPointLabel,
-                    DataPoints = new ObservableCollection<GraphSerieDataPoint> { dataPoint }
+                    Legend = dataPoint.Key,
+                    DataPoints = new ObservableCollection<GraphSerieDataPoint> { dataPoint.Value }
                 });
             }
 
@@ -51,22 +50,30 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 
         public void Process(Playerstatistic statistic)
         {
-            if (statistic == null || statistic.IsTourney || statistic.NetWon <= 0)
+            if (statistic == null || statistic.IsTourney ||
+                statistic.NetWon <= 0 || string.IsNullOrEmpty(statistic.Cards))
             {
                 return;
             }
 
             if (dataPoints == null)
             {
-                dataPoints = new List<GraphSerieDataPoint>();
+                dataPoints = new Dictionary<string, GraphSerieDataPoint>();
             }
 
-            var dataPoint = new GraphSerieDataPoint
-            {
-                Value = statistic.NetWon
-            };
+            var cardsRange = ParserUtils.ConvertToCardRange(statistic.Cards);
 
-            dataPoints.Add(dataPoint);
+            if (string.IsNullOrEmpty(cardsRange))
+            {
+                return;
+            }
+
+            if (!dataPoints.ContainsKey(cardsRange))
+            {
+                dataPoints.Add(cardsRange, new GraphSerieDataPoint());
+            }
+
+            dataPoints[cardsRange].Value += statistic.NetWon;
         }
     }
 }

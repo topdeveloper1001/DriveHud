@@ -36,7 +36,6 @@ namespace DriveHUD.ViewModels
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#34519C"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushBlue")
             };
-
         }
 
         public static ChartSerieResourceHelper GetSeriesYellowPalette()
@@ -48,7 +47,6 @@ namespace DriveHUD.ViewModels
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#FFF714"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#FDE40F"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushYellow")
-
             };
 
         }

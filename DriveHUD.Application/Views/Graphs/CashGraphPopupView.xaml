@@ -18,6 +18,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
                     Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
+                <ResourceDictionary
+                    Source="/DriveHUD.Application;component/ControlStyles/CashChartColors.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <SolidColorBrush
@@ -183,7 +185,11 @@
                 ShowNonShowdown="{Binding MainGraphViewModel.ShowNonShowdown}"
                 ShowShowdown="{Binding MainGraphViewModel.ShowShowdown}"
                 ShowEV="{Binding MainGraphViewModel.ShowEV}"
-                WinningValueTypeEnabled="True" />
+                WinningValueTypeEnabled="True"
+                LineColors="{StaticResource MoneyWonLineColors}"
+                PointColors="{StaticResource MoneyWonPointColors}"
+                TrackBallColors="{StaticResource MoneyWonTrackBallColors}">
+            </ctl:CashChart>
 
             <Border
                 Grid.Row="1"
@@ -450,7 +456,8 @@
                             <telerik:RadPieChart.Behaviors>
                                 <telerik:ChartTooltipBehavior
                                     Placement="MousePoint"
-                                    HorizontalOffset="-6" VerticalOffset="-30" />
+                                    HorizontalOffset="-6"
+                                    VerticalOffset="-30" />
                             </telerik:RadPieChart.Behaviors>
 
                             <telerik:RadPieChart.TooltipTemplate>
@@ -470,7 +477,7 @@
                                             Foreground="#FFFFFFFF"
                                             Text="{Binding Path=DataItem.Category}"
                                             FontSize="11" />
-                                        
+
                                     </Grid>
                                 </DataTemplate>
                             </telerik:RadPieChart.TooltipTemplate>
