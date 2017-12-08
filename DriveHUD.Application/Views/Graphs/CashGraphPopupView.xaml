@@ -153,6 +153,10 @@
                 RadiusX="4"
                 RadiusY="4" />
 
+            <SolidColorBrush
+                x:Key="BarSeriesToolTipStrokeBrush"
+                Color="#000000" />
+
         </ResourceDictionary>
 
     </UserControl.Resources>
@@ -366,8 +370,8 @@
                                     <Path
                                         Data="M-1236,-441 L-1180,-441 -1180,-424 -1228,-424 -1230.5,-420 -1233,-424 -1236,-424 z"
                                         Stretch="Fill"
-                                        Fill="{StaticResource BarGraphToolTipBackgroundBrush}"
-                                        Stroke="{StaticResource ForegroundBrush}"
+                                        Fill="{Binding Presenter, Converter={dh:BarSeriesToPaletteColorConverter}}"
+                                        Stroke="{StaticResource BarSeriesToolTipStrokeBrush}"
                                         StrokeThickness="1" />
 
                                     <TextBlock
