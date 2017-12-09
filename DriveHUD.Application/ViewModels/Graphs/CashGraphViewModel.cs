@@ -127,7 +127,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
 
             // filter and orders
-            var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney));
+            var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.FilteredPlayerStatistic.ToList().Where(x => !x.IsTourney));
 
             object previousGroupKey = null;
 

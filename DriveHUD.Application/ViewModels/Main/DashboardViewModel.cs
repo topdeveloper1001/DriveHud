@@ -95,7 +95,7 @@ namespace DriveHUD.Application.ViewModels
             ServiceLocator.Current
                 .GetInstance<IEventAggregator>()
                 .GetEvent<BuiltFilterChangedEvent>()
-                .Subscribe(UpdateFilteredData);
+                .Subscribe(arg => Update());
 
             ShowMoneyWonGraphPopupRequest = new InteractionRequest<INotification>();
             ShowMoneyWonGraphPopupCommand = new RelayCommand(() =>
@@ -114,13 +114,26 @@ namespace DriveHUD.Application.ViewModels
             InitializeBB100Chart();
         }
 
-        internal void UpdateFilteredData(BuiltFilterChangedEventArgs args)
+        internal void Update()
         {
             if (!IsActive)
             {
                 return;
             }
 
+            if (StorageModel.StatisticCollection == null)
+            {
+                return;
+            }
+
+            UpdateFilteredData();
+
+            MoneyWonGraphViewModel?.Update();
+            BB100GraphViewModel?.Update();
+        }
+
+        private void UpdateFilteredData()
+        {
             if (IndicatorCollection == null)
             {
                 IndicatorCollection = new LightIndicators();
@@ -138,20 +151,8 @@ namespace DriveHUD.Application.ViewModels
             var statistics = StorageModel.FilteredPlayerStatistic.Where(x => !x.IsTourney).ToList();
 
             IndicatorCollection.UpdateSource(statistics);
+
             OnPropertyChanged(() => IndicatorCollection);
-        }
-
-        internal void Update()
-        {
-            if (StorageModel.StatisticCollection == null)
-            {
-                return;
-            }
-
-            UpdateFilteredData(null);
-
-            MoneyWonGraphViewModel?.Update();
-            BB100GraphViewModel?.Update();
         }
 
         private void InitializeWinningsChart()

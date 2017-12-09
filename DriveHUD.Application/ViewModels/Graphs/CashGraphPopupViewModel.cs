@@ -234,7 +234,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             var seriesProvider = ServiceLocator.Current.GetInstance<IGraphsProvider>();
             seriesProvider.Initialize(seriesTypes);
 
-            var statisticCollection = StorageModel.StatisticCollection.ToArray();
+            var statisticCollection = StorageModel.FilteredPlayerStatistic.ToArray();
 
             foreach (var statistic in statisticCollection)
             {
