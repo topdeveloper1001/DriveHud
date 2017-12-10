@@ -645,6 +645,7 @@
                         x:Name="MainChart"
                         Grid.Column="1"
                         Margin="0,10,0,0"
+                        EmptyContent="{ResX Key=Common_Chart_NoData}"
                         TrackBallInfoStyle="{StaticResource TrackBallInfoStyle}"
                         TrackBallLineStyle="{StaticResource TrackBallLineStyle}">
                         <telerik:RadCartesianChart.Behaviors>

@@ -291,6 +291,7 @@
                     <telerik:RadCartesianChart
                         x:Name="BarChart"
                         Grid.Row="1"
+                        EmptyContent="{ResX Key=Common_Chart_NoData}"
                         Palette="{StaticResource ChartPalette}">
                         <i:Interaction.Behaviors>
                             <graphs:BarSeriesChartBehavior
@@ -453,6 +454,7 @@
 
                         <telerik:RadPieChart
                             x:Name="PieChart"
+                            EmptyContent="{ResX Key=Common_Chart_NoData}"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             Palette="{StaticResource ChartPalette}">
@@ -500,6 +502,7 @@
                         </telerik:RadPieChart>
 
                         <Ellipse
+                            Visibility="{Binding PieSeries, Converter={dh:EmptyCollectionToVisibilityConverter}}"
                             IsHitTestVisible="False"
                             Fill="{StaticResource PieChartInnerBackgroundBrush}"
                             VerticalAlignment="Center"
@@ -547,6 +550,7 @@
                         </Ellipse>
 
                         <Ellipse
+                            Visibility="{Binding PieSeries, Converter={dh:EmptyCollectionToVisibilityConverter}}"
                             IsHitTestVisible="False"
                             Fill="{StaticResource PieChartInnerBackgroundBrush}"
                             VerticalAlignment="Center"
@@ -595,6 +599,7 @@
                     </Grid>
 
                     <Ellipse
+                        Visibility="{Binding PieSeries, Converter={dh:EmptyCollectionToVisibilityConverter}}"
                         IsHitTestVisible="False"
                         Stroke="{StaticResource PieChartInnerBackgroundBrush}"
                         StrokeThickness="15"

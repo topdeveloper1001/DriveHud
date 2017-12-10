@@ -457,6 +457,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No data to plot.
+        /// </summary>
+        internal static string Common_Chart_NoData {
+            get {
+                return ResourceManager.GetString("Common_Chart_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Non Showdown.
         /// </summary>
         internal static string Common_Chart_NonShowdownSeries {

@@ -231,10 +231,16 @@ namespace DriveHUD.Application.ViewModels.Graphs
         {
             var seriesTypes = GetSeriesTypesToInitialize();
 
+            var statisticCollection = StorageModel.FilteredPlayerStatistic?.ToArray();
+
+            if (statisticCollection == null)
+            {
+                seriesDictionary = new Dictionary<SerieType, IEnumerable<GraphSerie>>();
+                return;
+            }
+
             var seriesProvider = ServiceLocator.Current.GetInstance<IGraphsProvider>();
             seriesProvider.Initialize(seriesTypes);
-
-            var statisticCollection = StorageModel.FilteredPlayerStatistic.ToArray();
 
             foreach (var statistic in statisticCollection)
             {

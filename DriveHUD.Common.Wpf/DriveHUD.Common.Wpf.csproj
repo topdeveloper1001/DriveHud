@@ -160,6 +160,7 @@
     <Compile Include="Converters\ColorToSolidBrushConverter.cs" />
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
+    <Compile Include="Converters\EmptyCollectionToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
     <Compile Include="Converters\EnumTriStateToColorConverter.cs" />
     <Compile Include="Converters\HeatMapValueToBackgroundConverter.cs" />
