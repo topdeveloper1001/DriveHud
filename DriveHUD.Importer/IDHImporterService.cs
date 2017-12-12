@@ -15,7 +15,7 @@ using System.ServiceModel;
 namespace DriveHUD.Importers
 {
     [ServiceContract]
-    internal interface IDHImporterService
+    public interface IDHImporterService
     {
         [OperationContract]
         void ImportHandHistory(string handHistory);
