@@ -226,6 +226,7 @@
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
+    <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
     <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />

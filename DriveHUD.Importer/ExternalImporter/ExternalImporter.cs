@@ -146,33 +146,11 @@ namespace DriveHUD.Importers.ExternalImporter
 
             if (parsingResult.Source.GameDescription.IsTournament)
             {
-                var colonIndex = title.IndexOf(':');
-                var lastHyphenIndex = title.LastIndexOf('-');
-
-                if (colonIndex <= 0 || lastHyphenIndex <= 0)
-                {
-                    return false;
-                }
-
-                var tournamentName = title.Substring(0, colonIndex - 1).Replace("undefined", string.Empty).Trim();
-                var tableNumber = title.Substring(lastHyphenIndex).Trim();
-
-                var titleToCompare = $"{tournamentName} {tableNumber}";
-
-                var result = titleToCompare.Equals(parsingResult.Source.TableName, StringComparison.OrdinalIgnoreCase);
-
-                if (!result)
-                {
-                    var tableName = ExternalImporterUtils.ReplaceMoneyWithChipsInTitle(parsingResult.Source.TableName);
-                    result = titleToCompare.Equals(tableName, StringComparison.OrdinalIgnoreCase);
-                }
-
-                return result;
+                return ExternalImporterUtils.IsTournamentTableMatch(title, parsingResult.Source.TableName);
             }
 
             return title.Contains(parsingResult.Source.TableName);
         }
-
 
         /// <summary>
         /// Cleans up resources
