@@ -20,6 +20,8 @@ namespace Model.ChartData
 {
     public abstract class CharItemDataBuilder
     {
+        public abstract void Prepare(int statsCount);
+
         public abstract Playerstatistic[] PrepareStatistic(IEnumerable<Playerstatistic> stats);
 
         public abstract object BuildGroupKey(Playerstatistic stat, int index);
@@ -29,6 +31,10 @@ namespace Model.ChartData
 
     public abstract class DateItemDataBuilder : CharItemDataBuilder
     {
+        public override void Prepare(int statsCount)
+        {
+        }
+
         public override Playerstatistic[] PrepareStatistic(IEnumerable<Playerstatistic> stats)
         {
             if (stats == null || !stats.Any())
@@ -68,7 +74,7 @@ namespace Model.ChartData
 
         protected abstract DateTime GetStartDate(DateTime maxDateTime);
 
-        protected abstract object BuildGroupKey(DateTime time);        
+        protected abstract object BuildGroupKey(DateTime time);
     }
 
     public class YearItemDataBuilder : DateItemDataBuilder
@@ -132,9 +138,27 @@ namespace Model.ChartData
 
     public class HandsItemDataBuilder : CharItemDataBuilder
     {
+        private double approximator = 10000d;
+
+        private int groupingStep = 1;
+
+        private int statsCount = 0;
+
+        public override void Prepare(int statsCount)
+        {
+            this.statsCount = statsCount;
+
+            if (statsCount > approximator)
+            {
+                groupingStep = (int)Math.Round(statsCount / approximator);
+            }
+        }
+
         public override object BuildGroupKey(Playerstatistic stat, int index)
         {
-            return index;
+            var groupKey = groupingStep != 0 ? index / groupingStep : index;
+
+            return groupKey;
         }
 
         public override object GetValueFromGroupKey(object groupKey)
@@ -146,7 +170,14 @@ namespace Model.ChartData
                 return 0;
             }
 
-            return index.Value + 1;
+            var value = (index.Value + 1) * groupingStep;
+
+            if (value > statsCount)
+            {
+                return statsCount;
+            }
+
+            return value;
         }
 
         public override Playerstatistic[] PrepareStatistic(IEnumerable<Playerstatistic> stats)
