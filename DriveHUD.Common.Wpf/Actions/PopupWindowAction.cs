@@ -41,7 +41,12 @@ namespace DriveHUD.Common.Wpf.Actions
 
         protected override Window CreateWindow()
         {
-            var window = new Window();
+            var window = new Window
+            {
+                Owner = Application.Current.MainWindow,
+                ShowActivated = true
+            };
+
             return window;
         }
 
@@ -95,7 +100,6 @@ namespace DriveHUD.Common.Wpf.Actions
 
             if (IsModal)
             {
-                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }

@@ -232,12 +232,12 @@
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding ShowMoneyWonGraphPopupRequest}">
-            <dh:ShowWindowViewAction
+            <dh:ShowRadWindowViewAction
                 ViewName="{x:Static vw:RegionViewNames.CashGraphPopupView}"
                 StartupLocation="CenterScreen"
                 SingleOnly="True"
                 IsModal="True">
-                <dh:ShowWindowViewAction.WindowStyle>
+                <dh:ShowRadWindowViewAction.WindowStyle>
                     <Style
                         TargetType="{x:Type telerik:RadWindow}">
                         <Setter
@@ -253,8 +253,8 @@
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />
                     </Style>
-                </dh:ShowWindowViewAction.WindowStyle>
-            </dh:ShowWindowViewAction>
+                </dh:ShowRadWindowViewAction.WindowStyle>
+            </dh:ShowRadWindowViewAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 </UserControl>

@@ -12,18 +12,18 @@
 
 using DriveHUD.Common.Wpf.Controls;
 using DriveHUD.Common.Wpf.Interactivity;
-using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
-using System.ComponentModel;
 using System.Windows;
+using Telerik.Windows.Controls;
+using DriveHUD.Common.Wpf.Mvvm;
 
 namespace DriveHUD.Common.Wpf.Actions
 {
-    public class ShowWindowViewAction : ShowViewActionBase<Window>
+    public class ShowRadWindowViewAction : ShowViewActionBase<RadWindow>
     {
-        protected override void Activate(Window window)
+        protected override void Activate(RadWindow window)
         {
             if (window == null)
             {
@@ -36,10 +36,10 @@ namespace DriveHUD.Common.Wpf.Actions
                 return;
             }
 
-            window.Activate();
+            window.BringToFront();
         }
 
-        protected override void CloseWindow(Window window)
+        protected override void CloseWindow(RadWindow window)
         {
             if (window != null)
             {
@@ -47,13 +47,23 @@ namespace DriveHUD.Common.Wpf.Actions
             }
         }
 
-        protected override Window CreateWindow(INotification context)
+        protected override RadWindow CreateWindow(INotification context)
         {
-            var window = new Window
+            var window = new RadWindow
             {
-                Title = context != null ? context.Title : string.Empty,
-                Owner = Application.Current.MainWindow,
-                ShowActivated = true
+                Header = context != null ? context.Title : string.Empty,
+                Owner = Application.Current.MainWindow
+            };
+
+            window.Loaded += (o, e) =>
+            {
+                var parent = window.Parent as Window;
+
+                if (parent != null)
+                {
+                    parent.Title = context != null ? context.Title : string.Empty;
+                    parent.ShowInTaskbar = false;
+                }
             };
 
             if (StartupLocation == StartupLocationOption.CenterScreen)
@@ -68,9 +78,9 @@ namespace DriveHUD.Common.Wpf.Actions
             return window;
         }
 
-        protected override void OnClosed(Window window, Action callback)
+        protected override void OnClosed(RadWindow window, Action callback)
         {
-            EventHandler handler = null;
+            EventHandler<WindowClosedEventArgs> handler = null;
 
             handler = (o, e) =>
             {
@@ -96,9 +106,9 @@ namespace DriveHUD.Common.Wpf.Actions
             window.Closed += handler;
         }
 
-        protected override void OnClosing(Window window, ICloseableViewModel viewModel)
+        protected override void OnClosing(RadWindow window, ICloseableViewModel viewModel)
         {
-            CancelEventHandler handler = null;
+            EventHandler<WindowPreviewClosedEventArgs> handler = null;
 
             handler = (s, e) =>
             {
@@ -107,14 +117,14 @@ namespace DriveHUD.Common.Wpf.Actions
                     e.Cancel = true;
                     return;
                 }
-             
-                window.Closing -= handler;
+
+                window.PreviewClosed -= handler;
             };
 
-            window.Closing += handler;       
+            window.PreviewClosed += handler;
         }
 
-        protected override void SetWindowPosition(Window window, double left, double top)
+        protected override void SetWindowPosition(RadWindow window, double left, double top)
         {
             if (window == null)
             {
@@ -125,7 +135,7 @@ namespace DriveHUD.Common.Wpf.Actions
             window.Top = top;
         }
 
-        protected override void Show(Window window)
+        protected override void Show(RadWindow window)
         {
             NonTopmostPopup.DisableTopMost = true;
 
@@ -142,6 +152,7 @@ namespace DriveHUD.Common.Wpf.Actions
             }
 
             window.Show();
+            window.BringToFront();
         }
     }
 }

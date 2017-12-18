@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Resources;
 using Prism.Interactivity.InteractionRequest;
 
 namespace DriveHUD.Application.ViewModels.Graphs
@@ -20,7 +21,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
         public CashGraphPopupRequestInfo(CashGraphPopupViewModelInfo viewModelInfo)
         {
             Content = viewModelInfo;
-            Title = "Graphs";
+            Title = CommonResourceManager.Instance.GetResourceString("Common_GraphsPopup_Title");
         }
 
         public object Content

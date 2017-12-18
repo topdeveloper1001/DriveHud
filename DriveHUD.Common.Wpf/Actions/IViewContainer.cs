@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Windows.Controls;
 
 namespace DriveHUD.Common.Wpf.Actions
@@ -17,13 +18,14 @@ namespace DriveHUD.Common.Wpf.Actions
     public interface IViewContainer
     {
         ContentControl Window { get; set; }
-    } 
+    }
 
     public interface IViewModelContainer
     {
     }
 
     public interface IViewModelContainer<out TViewModel> : IViewModelContainer
+        where TViewModel : IDisposable
     {
         TViewModel ViewModel { get; }
     }
