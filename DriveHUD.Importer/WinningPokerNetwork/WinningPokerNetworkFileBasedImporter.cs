@@ -213,6 +213,18 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return isTitleMatch;
         }
 
+        protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
+        {
+            var tableType = base.ParseTableType(parsingResult, gameInfo);
+
+            if (gameInfo.TableType > tableType)
+            {
+                return gameInfo.TableType;
+            }
+
+            return tableType;
+        }
+
         private string AddAdditionalData(string handHistory, GameInfo gameInfo)
         {
             if (string.IsNullOrWhiteSpace(handHistory))
