@@ -52,7 +52,6 @@ namespace DriveHUD.Common.Wpf.Actions
             var window = new Window
             {
                 Title = context != null ? context.Title : string.Empty,
-                Owner = Application.Current.MainWindow,
                 ShowActivated = true
             };
 
@@ -68,7 +67,7 @@ namespace DriveHUD.Common.Wpf.Actions
             return window;
         }
 
-        protected override void OnClosed(Window window, Action callback)
+        protected override void OnClosed(Window window, Action callback, string viewName)
         {
             EventHandler handler = null;
 
@@ -87,7 +86,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 if (SingleOnly)
                 {
                     var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
-                    windowController.RemoveWindow(ViewName);
+                    windowController.RemoveWindow(viewName);
                 }
 
                 callback?.Invoke();
@@ -107,11 +106,11 @@ namespace DriveHUD.Common.Wpf.Actions
                     e.Cancel = true;
                     return;
                 }
-             
+
                 window.Closing -= handler;
             };
 
-            window.Closing += handler;       
+            window.Closing += handler;
         }
 
         protected override void SetWindowPosition(Window window, double left, double top)
@@ -137,6 +136,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
             if (IsModal)
             {
+                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }

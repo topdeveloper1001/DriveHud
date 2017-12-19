@@ -24,11 +24,7 @@ namespace DriveHUD.Common.Wpf.Actions
     {
         protected override RadWindow CreateWindow()
         {
-            var window = new RadWindow
-            {
-                Owner = Application.Current.MainWindow
-            };
-
+            var window = new RadWindow();          
             return window;
         }
 
@@ -74,6 +70,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
             if (IsModal)
             {
+                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }

@@ -43,7 +43,6 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             var window = new Window
             {
-                Owner = Application.Current.MainWindow,
                 ShowActivated = true
             };
 
@@ -100,6 +99,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
             if (IsModal)
             {
+                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }

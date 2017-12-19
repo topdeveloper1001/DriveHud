@@ -51,8 +51,7 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             var window = new RadWindow
             {
-                Header = context != null ? context.Title : string.Empty,
-                Owner = Application.Current.MainWindow
+                Header = context != null ? context.Title : string.Empty
             };
 
             window.Loaded += (o, e) =>
@@ -78,7 +77,7 @@ namespace DriveHUD.Common.Wpf.Actions
             return window;
         }
 
-        protected override void OnClosed(RadWindow window, Action callback)
+        protected override void OnClosed(RadWindow window, Action callback, string viewName)
         {
             EventHandler<WindowClosedEventArgs> handler = null;
 
@@ -97,7 +96,7 @@ namespace DriveHUD.Common.Wpf.Actions
                 if (SingleOnly)
                 {
                     var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
-                    windowController.RemoveWindow(ViewName);
+                    windowController.RemoveWindow(viewName);
                 }
 
                 callback?.Invoke();
@@ -147,6 +146,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
             if (IsModal)
             {
+                window.Owner = Application.Current.MainWindow;
                 window.ShowDialog();
                 return;
             }
