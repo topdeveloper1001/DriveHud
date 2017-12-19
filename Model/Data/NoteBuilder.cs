@@ -40,7 +40,7 @@ namespace Model.Data
                                   let noteText = $"{groupedNotes.Key}"
                                   let cardRange = string.Join(", ", groupedNotes.Select(x => x.CardRange).Distinct().ToArray())
                                   let count = groupedNotes.Count()
-                                  let cardRangeText = !string.IsNullOrWhiteSpace(cardRange) ? $" [{cardRange}]" : string.Empty
+                                  let cardRangeText = !string.IsNullOrWhiteSpace(cardRange) ? $" {cardRange}" : string.Empty
                                   let countText = count > 1 ? $" ({count})" : string.Empty
                                   select $"{noteText}{cardRangeText}{countText}").ToArray();
 
