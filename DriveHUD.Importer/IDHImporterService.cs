@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ICloseableViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="IDHImporterService.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using System.ServiceModel;
 
-namespace DriveHUD.Common.Wpf.Mvvm
+namespace DriveHUD.Importers
 {
-    public interface ICloseableViewModel
+    [ServiceContract]
+    public interface IDHImporterService
     {
-        event EventHandler Closed;
-
-        bool OnClosing();
+        [OperationContract]
+        void ImportHandHistory(string handHistory);
     }
 }

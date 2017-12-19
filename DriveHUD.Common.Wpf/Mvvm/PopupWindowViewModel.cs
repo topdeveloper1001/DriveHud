@@ -30,6 +30,11 @@ namespace DriveHUD.Common.Wpf.Mvvm
             Closed?.Invoke(this, EventArgs.Empty);
         }
 
+        public virtual bool OnClosing()
+        {
+            return true;
+        }
+
         public abstract void Configure(object viewModelInfo);
     }
 }

@@ -101,6 +101,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -215,11 +216,15 @@
     <Compile Include="FileImporter.cs" />
     <Compile Include="GameInfo.cs" />
     <Compile Include="GameMatchInfo.cs" />
+    <Compile Include="ExternalImporter\ExternalImporter.cs" />
+    <Compile Include="ExternalImporter\ExternalImporterUtils.cs" />
+    <Compile Include="ExternalImporter\IExternalImporter.cs" />
     <Compile Include="Helpers\BovadaHelper.cs" />
     <Compile Include="Helpers\GeneralHelpers.cs" />
     <Compile Include="IAutoImporter.cs" />
     <Compile Include="IBackgroundProcess.cs" />
     <Compile Include="Bovada\IgnitionImporter.cs" />
+    <Compile Include="IDHImporterService.cs" />
     <Compile Include="IImporterInternalService.cs" />
     <Compile Include="IImporterService.cs" />
     <Compile Include="IFileImporter.cs" />

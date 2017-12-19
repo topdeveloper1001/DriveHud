@@ -226,6 +226,7 @@
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
+    <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
     <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />
@@ -463,6 +464,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-24.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-11.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-11.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">

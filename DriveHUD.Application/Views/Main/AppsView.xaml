@@ -56,10 +56,11 @@
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
-            <infra:PopupWindowAction
-                IsSingle="True"
+            <infra:ShowWindowViewAction
+                SingleOnly="True"         
+                StartupLocation="CenterScreen"
                 ViewName="{Binding AppStoreViewModel.ViewName}">
-                <infra:PopupWindowAction.WindowStyle>
+                <infra:ShowWindowViewAction.WindowStyle>
                     <Style
                         TargetType="{x:Type Window}">
                         <Setter
@@ -90,14 +91,8 @@
                             Property="Icon"
                             Value="{markupext:IconExtension  /images/xray.ico, 32}" />
                     </Style>
-                </infra:PopupWindowAction.WindowStyle>
-                <infra:PopupWindowAction.IsModal>
-                    <system:Boolean>False</system:Boolean>
-                </infra:PopupWindowAction.IsModal>
-                <infra:PopupWindowAction.CenterOverAssociatedObject>
-                    <system:Boolean>True</system:Boolean>
-                </infra:PopupWindowAction.CenterOverAssociatedObject>
-            </infra:PopupWindowAction>
+                </infra:ShowWindowViewAction.WindowStyle>
+            </infra:ShowWindowViewAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 

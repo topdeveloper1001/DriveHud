@@ -41,7 +41,11 @@ namespace DriveHUD.Common.Wpf.Actions
 
         protected override Window CreateWindow()
         {
-            var window = new Window();
+            var window = new Window
+            {
+                ShowActivated = true
+            };
+
             return window;
         }
 

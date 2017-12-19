@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ICloseableViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="ViewRequestInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,21 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using Prism.Interactivity.InteractionRequest;
 
-namespace DriveHUD.Common.Wpf.Mvvm
+namespace DriveHUD.Common.Wpf.Interactivity
 {
-    public interface ICloseableViewModel
+    public class ViewRequestInfo : INotification
     {
-        event EventHandler Closed;
+        public object Content
+        {
+            get;
+            set;
+        }
 
-        bool OnClosing();
+        public string Title
+        {
+            get; set;
+        }
     }
 }

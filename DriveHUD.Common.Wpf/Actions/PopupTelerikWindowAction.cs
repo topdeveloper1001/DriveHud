@@ -24,7 +24,8 @@ namespace DriveHUD.Common.Wpf.Actions
     {
         protected override RadWindow CreateWindow()
         {
-            return new RadWindow();
+            var window = new RadWindow();          
+            return window;
         }
 
         protected override void ApplyStyles(RadWindow window, INotification notification)
@@ -81,6 +82,7 @@ namespace DriveHUD.Common.Wpf.Actions
             }
 
             window.Show();
+            window.BringToFront();
         }
 
         protected override void Activate(RadWindow window)

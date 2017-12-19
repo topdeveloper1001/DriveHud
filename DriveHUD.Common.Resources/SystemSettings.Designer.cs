@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to net.pipe://localhost/DriveHUD/Importer.
+        /// </summary>
+        internal static string SystemSettings_ImporterPipeAddress {
+            get {
+                return ResourceManager.GetString("SystemSettings_ImporterPipeAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/knowledgebase/.
         /// </summary>
         internal static string SystemSettings_KnowledgeBase {

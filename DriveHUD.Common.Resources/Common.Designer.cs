@@ -710,6 +710,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Graphs.
+        /// </summary>
+        internal static string Common_GraphsPopup_Title {
+            get {
+                return ResourceManager.GetString("Common_GraphsPopup_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         internal static string Common_Help {

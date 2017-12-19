@@ -719,7 +719,7 @@ namespace DriveHUD.Importers.Bovada
                     }
 
                     if (IsZonePokerTable &&
-                        (TableState == BovadaTableState.Unknown || TableState == BovadaTableState.Preparing))
+                        (TableState == BovadaTableState.Unknown || TableState == BovadaTableState.Preparing) && cmdObj.cash > 0)
                     {
                         if (initialStacks.ContainsKey(cmdObj.seat))
                         {
@@ -754,7 +754,7 @@ namespace DriveHUD.Importers.Bovada
                     if (IsZonePokerTable)
                     {
                         RemoveNotEnoughPlayersCommand();
-                    }                    
+                    }
 
                     // Push hand                    
                     var handModel = new HandModel2(commands.ToList());

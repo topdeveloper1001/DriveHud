@@ -131,12 +131,11 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
             object previousGroupKey = null;
 
-            if (ChartDisplayRange == ChartDisplayRange.Hands)
-            {
-                HandsCount = stats.Length;
-            }
+            chartItemDataBuilder.Prepare(stats.Length);
 
             var chartSeriesItems = new Dictionary<ChartSeries, List<ChartSeriesItem>>();
+
+            var itemsCounter = 0;
 
             for (var statIndex = 0; statIndex < stats.Length; statIndex++)
             {
@@ -145,6 +144,11 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 var currentGroupKey = chartItemDataBuilder.BuildGroupKey(stat, statIndex);
 
                 var isNew = !currentGroupKey.Equals(previousGroupKey);
+
+                if (isNew)
+                {
+                    itemsCounter++;
+                }
 
                 previousGroupKey = currentGroupKey;
 
@@ -162,7 +166,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                     {
                         chartSeriesItem = new ChartSeriesItem
                         {
-                            Format = chartSerie.Format,                         
+                            Format = chartSerie.Format,
                             Category = chartItemDataBuilder.GetValueFromGroupKey(currentGroupKey)
                         };
 
@@ -178,10 +182,22 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
             }
 
-            chartSeriesItems.Keys.ForEach(charSerie =>
+            if (ChartDisplayRange == ChartDisplayRange.Hands)
             {
-                charSerie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(chartSeriesItems[charSerie]);
-            });
+                HandsCount = itemsCounter;
+            }
+
+            if (chartSeriesItems.Count > 0)
+            {
+                chartSeriesItems.Keys.ForEach(charSerie =>
+                {
+                    charSerie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(chartSeriesItems[charSerie]);
+                });
+            }
+            else
+            {
+                chartCollection.ForEach(x => x.ItemsCollection.Clear());
+            }
         }
 
         private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)

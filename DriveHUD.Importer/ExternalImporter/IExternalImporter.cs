@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ICloseableViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IGGNImporter.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,14 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-
-namespace DriveHUD.Common.Wpf.Mvvm
+namespace DriveHUD.Importers.ExternalImporter
 {
-    public interface ICloseableViewModel
+    internal interface IExternalImporter : IAutoImporter
     {
-        event EventHandler Closed;
-
-        bool OnClosing();
     }
 }

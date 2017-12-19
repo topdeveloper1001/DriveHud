@@ -133,6 +133,7 @@
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
     <Compile Include="Actions\PopupWindowAction.cs" />
     <Compile Include="Actions\ShowViewActionBase.cs" />
+    <Compile Include="Actions\ShowRadWindowViewAction.cs" />
     <Compile Include="Actions\ShowWindowViewAction.cs" />
     <Compile Include="Actions\StartupLocationOption.cs" />
     <Compile Include="AttachedBehaviors\DragAdorner.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="Interactivity\ViewInteractionRequest.cs" />
     <Compile Include="Interactivity\ViewInteractionRequestEventArgs.cs" />
     <Compile Include="Interactivity\ViewModelInfo.cs" />
+    <Compile Include="Interactivity\ViewRequestInfo.cs" />
     <Compile Include="Interactivity\WindowController.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />

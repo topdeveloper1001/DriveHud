@@ -10,9 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IPopupWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel
+    public interface IPopupWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
     {
     }
 }

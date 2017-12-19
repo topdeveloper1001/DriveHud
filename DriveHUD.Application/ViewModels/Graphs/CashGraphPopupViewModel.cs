@@ -162,7 +162,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         public ReactiveCommand<object> CloseCommand { get; private set; }
 
-        #endregion
+        #endregion     
 
         private void Initialize()
         {

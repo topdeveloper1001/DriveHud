@@ -49,7 +49,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -74,7 +74,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -99,7 +99,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_EVSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -121,7 +121,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -143,7 +143,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NonShowdownSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0.##}",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -168,7 +168,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_ShowdownSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0.##}",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -193,7 +193,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_EVSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
