@@ -26,6 +26,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
@@ -181,7 +182,7 @@ namespace DriveHUD.Importers
                         .Take(handHistoryRowsPerQuery)
                         .ToArray();
 
-                    handHistories.ForEach(handHistory =>
+                    Parallel.ForEach(handHistories, handHistory =>
                     {
                         var parsingResult = ParseHandHistory(handHistory);
 

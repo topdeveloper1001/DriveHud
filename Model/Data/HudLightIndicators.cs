@@ -744,7 +744,7 @@ namespace Model.Data
                 {
                     Value = BetFlopCalled3BetPreflopIp,
                     Occurred = Source.BetFlopCalled3BetPreflopIp,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.CouldBetFlopCalled3BetPreflopIp
                 };
             }
         }
@@ -757,7 +757,7 @@ namespace Model.Data
                 {
                     Value = BetFoldFlopPfrRaiser,
                     Occurred = Source.BetFoldFlopPfrRaiser,
-                    CouldOccurred = Source.Pfrhands
+                    CouldOccurred = Source.CouldBetFoldFlopPfrRaiser
                 };
             }
         }
