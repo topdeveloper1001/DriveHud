@@ -3,28 +3,36 @@ using HandHistories.Objects.Actions;
 namespace Model
 {
     /// <summary>
-    /// Same as Condition but extended with player responce ti particular situtation
+    /// Same as Condition but extended with player response to particular situation
     /// </summary>
     public class ConditionalBet : Condition
     {
         public bool Faced { get; set; }
+
         public bool Folded { get; set; }
+
         public bool Called { get; set; }
+
         public bool Raised { get; set; }
+
+        public string HappenedByPlayer { get; set; }
 
         public bool CheckAction(HandAction action)
         {
             Faced = true;
+
             if (action.HandActionType == HandActionType.FOLD)
             {
-               Folded = true;
-               return true;
+                Folded = true;
+                return true;
             }
+
             if (action.IsCall())
             {
-               Called = true;
-               return true;
+                Called = true;
+                return true;
             }
+
             if (action.IsRaise())
             {
                 Raised = true;

@@ -1465,7 +1465,7 @@ namespace Model
             }
         }
 
-        private static void Calculate3Bet(ConditionalBet threeBet,
+        public static void Calculate3Bet(ConditionalBet threeBet,
                                           IList<HandAction> actions,
                                           string player,
                                           string raiser)
@@ -1496,6 +1496,7 @@ namespace Model
                         }
 
                         threeBet.Happened = true;
+                        threeBet.HappenedByPlayer = action.PlayerName;
 
                         if (action.PlayerName != player)
                         {
