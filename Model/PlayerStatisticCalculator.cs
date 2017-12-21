@@ -566,6 +566,10 @@ namespace Model
 
             stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
 
+            var couldBetOnFlop = parsedHand.Flop != null &&
+                ((parsedHand.Flop.FirstOrDefault()?.PlayerName == player) ||
+                parsedHand.Flop.Any(x => x.PlayerName == player && (x.IsBet() || x.IsCheck)));
+
             var couldBetOnTurn = parsedHand.Turn != null &&
                 ((parsedHand.Turn.FirstOrDefault()?.PlayerName == player) ||
                 parsedHand.Turn.Any(x => x.PlayerName == player && (x.IsBet() || x.IsCheck)));
@@ -597,9 +601,11 @@ namespace Model
             stat.LimpReraised = limp.Raised ? 1 : 0;
 
             stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && isFoldedFlop ? 1 : 0;
+            stat.CouldBetFoldFlopPfrRaiser = pfr && couldBetOnFlop ? 1 : 0;
             stat.CheckFoldFlopPfrOop = pfr && isCheckedFlop && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.BetFlopCalled3BetPreflopIp = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
+            stat.CouldBetFlopCalled3BetPreflopIp = couldBetOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
 
             stat.FacedRaiseFlop = flopRaiseBet.Faced ? 1 : 0;
             stat.FoldedFacedRaiseFlop = flopRaiseBet.Folded ? 1 : 0;

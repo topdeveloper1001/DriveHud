@@ -97,6 +97,18 @@ namespace DriveHUD.Importers.IPoker
                     { 10, 6 }
                  }
             },
+            { 8, new Dictionary<int, int>
+                 {
+                    { 1, 1 },
+                    { 2, 2 },
+                    { 4, 3 },
+                    { 5, 4 },
+                    { 6, 5 },
+                    { 7, 6 },
+                    { 9, 7 },
+                    { 10, 8 }
+                 }
+            },
             { 9, new Dictionary<int, int>
                  {
                     { 1, 1 },

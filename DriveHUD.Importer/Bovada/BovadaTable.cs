@@ -857,6 +857,10 @@ namespace DriveHUD.Importers.Bovada
             {
                 ClearInfo();
             }
+            else
+            {
+                IsInvalid = false;
+            }
 
             AddHandNumberTableName();
             // add missed add/remove commands from middle hand list

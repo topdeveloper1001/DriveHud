@@ -388,7 +388,11 @@ namespace DriveHUD.Application.ViewModels
                 // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
-                    LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                    if (e.GameInfo.GameFormat != GameFormat.Zone)
+                    {
+                        LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                    }
+
                     return;
                 }
 

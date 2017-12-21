@@ -806,6 +806,12 @@ namespace DriveHUD.Entities
         [ProtoMember(293)]
         public virtual int MaxPlayers { get; set; }
 
+        [ProtoMember(294)]
+        public virtual int CouldBetFlopCalled3BetPreflopIp { get; set; }
+
+        [ProtoMember(295)]
+        public virtual int CouldBetFoldFlopPfrRaiser { get; set; }
+
 
         #region Workarounds for broken stats
 
@@ -1268,7 +1274,10 @@ namespace DriveHUD.Entities
             CheckFoldFlopPfrOop += a.CheckFoldFlopPfrOop;
             CheckFoldFlop3BetOop += a.CheckFoldFlop3BetOop;
             BetFoldFlopPfrRaiser += a.BetFoldFlopPfrRaiser;
+            CouldBetFoldFlopPfrRaiser += a.CouldBetFoldFlopPfrRaiser;
             BetFlopCalled3BetPreflopIp += a.BetFlopCalled3BetPreflopIp;
+            CouldBetFlopCalled3BetPreflopIp += a.CouldBetFlopCalled3BetPreflopIp;
+
             PfrOop += a.PfrOop;
             PfrInEp += a.PfrInEp;
             PfrInMp += a.PfrInMp;
@@ -1636,9 +1645,11 @@ namespace DriveHUD.Entities
             r.RiverAggPossible = a.RiverAggPossible + b.RiverAggPossible;
 
             r.CheckFoldFlopPfrOop = a.CheckFoldFlopPfrOop + b.CheckFoldFlopPfrOop;
+            r.CouldBetFoldFlopPfrRaiser = a.CouldBetFoldFlopPfrRaiser + b.CouldBetFoldFlopPfrRaiser;
             r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlopPfrOop;
             r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
             r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
+            r.CouldBetFlopCalled3BetPreflopIp = a.CouldBetFlopCalled3BetPreflopIp + b.CouldBetFlopCalled3BetPreflopIp;
             r.PfrOop = a.PfrOop + b.PfrOop;
             r.PfrInEp = a.PfrInEp + b.PfrInEp;
             r.PfrInMp = a.PfrInMp + b.PfrInMp;

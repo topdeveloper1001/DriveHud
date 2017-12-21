@@ -131,7 +131,12 @@ namespace DriveHUD.Common.Wpf.Actions
             if (SingleOnly)
             {
                 var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
-                windowController.AddWindow(ViewName, window, () => window.Close());
+                windowController.AddWindow(ViewName, window, () =>
+                {
+                    window.Owner = Application.Current.MainWindow;
+                    window.Closing += (o, e) => e.Cancel = false;
+                    window.Close();
+                });
             }
 
             if (IsModal)

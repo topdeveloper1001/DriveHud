@@ -38,9 +38,13 @@ namespace Model.Data
                                   where note.IsAutoNote
                                   group note by note.Note into groupedNotes
                                   let noteText = $"{groupedNotes.Key}"
-                                  let cardRange = string.Join(", ", groupedNotes.Select(x => x.CardRange).Distinct().ToArray())
+                                  let cardRange = string.Join(", ", groupedNotes
+                                        .Where(x => !string.IsNullOrEmpty(x.CardRange))
+                                        .Select(x => x.CardRange)
+                                        .Distinct()
+                                        .ToArray())
                                   let count = groupedNotes.Count()
-                                  let cardRangeText = !string.IsNullOrWhiteSpace(cardRange) ? $" [{cardRange}]" : string.Empty
+                                  let cardRangeText = !string.IsNullOrWhiteSpace(cardRange) ? $" {cardRange}" : string.Empty
                                   let countText = count > 1 ? $" ({count})" : string.Empty
                                   select $"{noteText}{cardRangeText}{countText}").ToArray();
 
