@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             set
             {
                 // possible exception, but we aren't going to use deserialization
-                StartDate = DateTime.ParseExact(value, PokerConfiguration.DateTimeFormat, null);                
+                StartDate = DateTime.ParseExact(value, PokerConfiguration.DateTimeFormat, null);
             }
         }
 
@@ -92,7 +93,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         [XmlElement("is_asian")]
         public string IsAsian { get; set; }
 
-        [XmlElement("maxplayers")]
+        [XmlElement("maxplayers"), DefaultValue(0)]
         public int MaxPlayers { get; set; }
     }
 }
