@@ -20,6 +20,7 @@
     <buyin>0</buyin>
     <totalbuyin>0</totalbuyin>
     <win>0</win>
+    <maxplayers>2</maxplayers>
   </general>
   <game gamecode="4830566">
     <general>

@@ -83,10 +83,16 @@ namespace DriveHUD.Importers.Builders.iPoker
         [XmlElement("totalbuyin")]
         public string TotalBuyIn { get; set; }
 
+        [XmlElement("totalprize")]
+        public string TotalPrizePool { get; set; }
+
         [XmlElement("win")]
         public decimal Win { get; set; }
 
         [XmlElement("is_asian")]
         public string IsAsian { get; set; }
+
+        [XmlElement("maxplayers")]
+        public int MaxPlayers { get; set; }
     }
 }

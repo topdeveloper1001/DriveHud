@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="101810121">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table, Windfall SNG - $3</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-12-22 13:39:03</startdate>
+    <currency>USD</currency>
+    <nickname>Peon84</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>Windfall SNG - $3</tournamentname>
+    <place>0</place>
+    <buyin>$2.79+$0.21</buyin>
+    <totalbuyin>$3</totalbuyin>
+    <totalprize>$60</totalprize>
+    <win>0</win>
+    <maxplayers>3</maxplayers>
+  </general>
+  <game gamecode="249361905">
+    <general>
+      <startdate>2017-12-22 13:39:03</startdate>
+      <players>
+        <player seat="1" name="Rjg4498" chips="500" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="Peon84" chips="500" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+        <player seat="3" name="ace3d" chips="500" dealer="0" win="60" bet="40" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Peon84" type="1" sum="10" cards="" />
+      <action no="2" player="ace3d" type="2" sum="20" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Rjg4498">X X</cards>
+      <cards type="Pocket" player="Peon84">DK S5</cards>
+      <cards type="Pocket" player="ace3d">X X</cards>
+      <action no="3" player="Rjg4498" type="0" sum="0" cards="" />
+      <action no="4" player="Peon84" type="3" sum="10" cards="" />
+      <action no="5" player="ace3d" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">CA C10 H9</cards>
+      <action no="6" player="Peon84" type="4" sum="0" cards="" />
+      <action no="7" player="ace3d" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D3</cards>
+      <action no="8" player="Peon84" type="4" sum="0" cards="" />
+      <action no="9" player="ace3d" type="5" sum="20" cards="" />
+      <action no="10" player="Peon84" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

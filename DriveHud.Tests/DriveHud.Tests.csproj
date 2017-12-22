@@ -255,6 +255,12 @@
     <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
+    <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\WindfallHand-3max.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">

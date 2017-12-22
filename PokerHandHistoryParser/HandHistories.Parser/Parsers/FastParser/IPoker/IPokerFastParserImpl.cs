@@ -301,6 +301,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
+            var maxPlayersText = GetMaxPlayersFromHandLines(handLines);
+
+            if (!string.IsNullOrEmpty(maxPlayersText))
+            {
+                var maxPlayers = 0;
+
+                if (int.TryParse(maxPlayersText, out maxPlayers) && maxPlayers > 0 && maxPlayers < 11)
+                {
+                    return SeatType.FromMaxPlayers(maxPlayers);
+                }
+            }
+
             var playerLines = GetPlayerLinesFromHandLines(handLines);
 
             int numPlayers = playerLines.Length;
@@ -342,6 +354,23 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return handLines[8];
+        }
+
+        private string GetMaxPlayersFromHandLines(string[] handLines)
+        {
+            foreach (var handLine in handLines)
+            {
+                if (handLine.IndexOf("<maxplayers", StringComparison.OrdinalIgnoreCase) != -1)
+                {
+                    return GetTagValue(handLine);
+                }
+                else if (handLine.IndexOf("</general>", StringComparison.OrdinalIgnoreCase) != -1)
+                {
+                    break;
+                }
+            }
+
+            return null;
         }
 
         protected string[] GetPlayerLinesFromHandLines(string[] handLines)
@@ -1039,6 +1068,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             string tournamentName = string.Empty;
 
             decimal winning = 0;
+            decimal totalPrize = 0;
 
             TournamentSpeed speed = TournamentSpeed.Regular;
 
@@ -1143,6 +1173,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 {
                     tournamentName = GetTagValue(handLine);
                 }
+
+                if (handLine.StartsWith("<totalprize", StringComparison.Ordinal))
+                {
+                    var totalPrizeText = GetTagValue(handLine);
+                    ParserUtils.TryParseMoney(totalPrizeText, out totalPrize);
+                }
             }
 
             var tournamentDescriptor = new TournamentDescriptor
@@ -1154,7 +1190,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 Winning = winning,
                 FinishPosition = finishPosition,
                 StartDate = startDate,
-                Speed = speed
+                Speed = speed,
+                TotalPrize = totalPrize
             };
 
             return tournamentDescriptor;
@@ -1333,7 +1370,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             handHistory.GameDescription.Tournament.Speed = TournamentSpeed.Turbo;
         }
-    
+
         private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)
         {
             int playerNumber;
