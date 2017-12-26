@@ -126,12 +126,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Common
         public GameType ParseGameType(string handText)
         {
             throw new NotImplementedException();
-        }
-
-        public List<HandAction> ParseHandActions(string handText)
-        {
-            throw new NotImplementedException();
-        }
+        }     
 
         public long ParseHandId(string handText)
         {

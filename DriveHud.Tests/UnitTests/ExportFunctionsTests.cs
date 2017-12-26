@@ -30,6 +30,7 @@ namespace DriveHud.Tests.UnitTests
 
         [Test]
         [TestCase("ExportTest-Forum-Source-MTT.xml", "ExportTest-Forum-Result-MTT.txt")]
+        [TestCase("ExportTest-Forum-Source-Zone.xml", "ExportTest-Forum-Result-Zone.txt")]
         public void HandHistoryIsConvertedIntoForumFormat(string sourceFileName, string expectedResultFileName)
         {
             var sourceFile = Path.Combine(testFolder, sourceFileName);
@@ -47,7 +48,7 @@ namespace DriveHud.Tests.UnitTests
 
             var handHistoryText = File.ReadAllText(sourceFile);
 
-            var parser = new IPokerFastParserImpl();
+            var parser = new IPokerBovadaFastParserImpl();
 
             var handHistory = parser.ParseFullHandHistory(handHistoryText);
 

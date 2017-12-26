@@ -1,0 +1,67 @@
+<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.10</gametype>
+    <tablename>Zone Poker - Dolphins</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-12-21 04:57:02</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>$0+$0</buyin>
+    <totalbuyin>$0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="3543990297">
+    <general>
+      <startdate>2017-12-21 05:07:48</startdate>
+      <players>
+        <player seat="1" name="P1_157552BJ" chips="9.41" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="2" name="P2_821892AR" chips="12.51" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+        <player seat="3" name="P3_856846FV" chips="9.85" dealer="0" win="0" bet="9.85" rebuy="0" addon="0" />
+        <player seat="4" name="Hero" chips="16.68" dealer="0" win="18.86" bet="9.85" rebuy="0" addon="0" />
+        <player seat="5" name="P5_675749MS" chips="9.12" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="P6_989276HE" chips="12.61" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P1_157552BJ" type="1" sum="0.05" cards="[cards]" />
+      <action no="2" player="P2_821892AR" type="2" sum="0.1" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P1_157552BJ">X X</cards>
+      <cards type="Pocket" player="P2_821892AR">X X</cards>
+      <cards type="Pocket" player="P3_856846FV">DJ H9</cards>
+      <cards type="Pocket" player="Hero">D10 C10</cards>
+      <cards type="Pocket" player="P5_675749MS">X X</cards>
+      <cards type="Pocket" player="P6_989276HE">X X</cards>
+      <action no="3" player="P3_856846FV" type="23" sum="0.56" cards="" />
+      <action no="4" player="P1_157552BJ" type="0" sum="0" cards="" />
+      <action no="5" player="P2_821892AR" type="0" sum="0" cards="" />
+      <action no="6" player="Hero" type="3" sum="0.56" cards="" />
+      <action no="7" player="P5_675749MS" type="0" sum="0" cards="" />
+      <action no="8" player="P6_989276HE" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">D3 C3 DQ</cards>
+      <action no="9" player="P3_856846FV" type="5" sum="1.27" cards="" />
+      <action no="10" player="Hero" type="3" sum="1.27" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">C4</cards>
+      <action no="11" player="P3_856846FV" type="7" sum="8.02" cards="" />
+      <action no="12" player="Hero" type="3" sum="8.02" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">CQ</cards>
+    </round>
+  </game>
+</session>

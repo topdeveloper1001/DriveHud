@@ -243,7 +243,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresActionSorting)
                 {
-                    handHistory.HandActions = OrderHandActions(handHistory.HandActions);
+                    handHistory.HandActions = OrderHandActions(handHistory.HandActions, handHistory.Players);
                 }
 
                 if (RequiresAdjustedRaiseSizes)
@@ -521,40 +521,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public abstract bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled);
-
-        public List<HandAction> ParseHandActions(string handText)
-        {
-            try
-            {
-                string[] handLines = SplitHandsLines(handText);
-                GameType gameType = ParseGameType(handLines);
-                List<HandAction> handActions = ParseHandActions(handLines, gameType);
-
-                if (RequiresActionSorting)
-                {
-                    handActions = OrderHandActions(handActions);
-                }
-                if (RequiresAdjustedRaiseSizes)
-                {
-                    handActions = AdjustRaiseSizes(handActions);
-                }
-                if (RequiresAllInDetection)
-                {
-                    handActions = AllInActionHelper.IdentifyAllInActions(ParsePlayers(handLines), handActions);
-                }
-                if (RequiresAllInUpdates)
-                {
-                    handActions = AllInActionHelper.UpdateAllInActions(handActions);
-                }
-
-                return handActions;
-            }
-            catch (Exception ex)
-            {
-                throw new HandActionException(handText, "ParseHandActions: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            }
-        }
-
+     
         // We pass the game-type in as it can change the actions and parsing logic
         protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown);
 
@@ -562,7 +529,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         /// Sometimes hand actions are listed out of order, but with an order number or time stamp (this happens on IPoker).
         /// In these cases the hands must be reorganized before being displayed.
         /// </summary>
-        protected List<HandAction> OrderHandActions(List<HandAction> handActions)
+        protected virtual List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players)
         {
             return handActions.OrderBy(action => action.ActionNumber).ToList();
         }
