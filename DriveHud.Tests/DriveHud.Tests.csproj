@@ -255,6 +255,12 @@
     <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Zone.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Zone.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2017-12-26.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
