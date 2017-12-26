@@ -294,10 +294,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
                     break;
             }
 
-            //finding all players having hole cards  
+            // finding all players having hole cards  
             ActivePlayerHasHoleCard = CurrentGame.Players.Where(pl => pl.hasHoleCards).ToList();
 
-            //searching for deadcards and removing this player from list of ActivePlayerHasHoleCard 
+            // searching for dead cards and removing this player from list of ActivePlayerHasHoleCard 
             ActivePlayerHasHoleCardFolded = new List<Player>();
 
             foreach (ReplayerTableState replayerTableState in TableStateList)
