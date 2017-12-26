@@ -76,7 +76,7 @@ namespace DriveHUD.Importers.Bovada
 
         private void ParseCatcherInfoData(string dataText)
         {
-            var url = dataText.Split(new[] { '\r', '\n' }).FirstOrDefault().Trim();
+            var url = dataText.Split(new[] { '\r', '\n' }).FirstOrDefault().Trim();      
 
             if (url.Contains(cashUrlPattern))
             {
