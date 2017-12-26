@@ -20,9 +20,7 @@ namespace HandHistories.Parser.Parsers.Base
 {
     public interface IHandHistoryParser : IHandHistorySummaryParser
     {
-        HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false);
-        
-        List<HandAction> ParseHandActions(string handText);
+        HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false);                
 
         PlayerList ParsePlayers(string handText);
         
