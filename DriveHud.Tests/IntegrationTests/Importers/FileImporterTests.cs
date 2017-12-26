@@ -87,6 +87,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("1705825174", "Peon347", 2560)]
         [TestCase("910226258", "Peon384", 1)]
         [TestCase("125460058", "Justfold88", 1)]
+        [TestCase("102233028", "Peon84", 1)]
         public void TournamentsFinishPositionIsImported(string tournamentNumber, string playerName, int expectedFinishPosition)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsPlacesAreImported"))
@@ -113,6 +114,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5944035303", "AntoniAG9", 18)]
         [TestCase("910226258", "Peon384", 18)]
         [TestCase("125460058", "Justfold88", 2000)]
+        [TestCase("102233028", "Peon84", 505)]
+        [TestCase("102233028", "Ironbark", 299)]
+        [TestCase("101810121", "ace3d", 6000)]
+        [TestCase("101810121", "Rjg4498", 0)]
         public void TournamentsWinIsImported(string tournamentNumber, string playerName, int winningInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsWinIsImported"))
@@ -138,6 +143,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5569123611", "yako70", 20)]
         [TestCase("1705825174", "Peon347", 0)]
         [TestCase("125460058", "Justfold88", 1000)]
+        [TestCase("102233028", "Peon84", 134)]
         public void TournamentsBuyinIsImported(string tournamentNumber, string playerName, int buyInInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsBuyinIsImported"))
@@ -163,6 +169,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("5569123611", "yako70", 4)]
         [TestCase("1705825174", "Peon347", 0)]
         [TestCase("125460058", "Justfold88", 50)]
+        [TestCase("102233028", "Peon84", 16)]
         public void TournamentsRakeIsImported(string tournamentNumber, string playerName, int rakeInInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsRakeIsImported"))
@@ -204,6 +211,25 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             }
         }
 
+        [Test]
+        [TestCase("101810121", "ace3d", 3)]
+        public void TournamentsTableSizeIsImported(string tournamentNumber, string playerName, int tableSize)
+        {
+            using (var perfScope = new PerformanceMonitor("TournamentsTableSizeIsImported"))
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var tournament = session.Query<Tournaments>()
+                        .SingleOrDefault(x => x.Tourneynumber == tournamentNumber && x.Player.Playername == playerName);
+
+                    Assert.IsNotNull(tournament, $"Tournament data for '{playerName}' has not been found in tournament '{tournamentNumber}'");
+
+                    Assert.That(tournament.Tablesize, Is.EqualTo(tableSize),
+                        $"Tournament table size doesn't match for '{playerName}' in tournament '{tournamentNumber}' [{(EnumPokerSites)tournament.SiteId}]");
+                }
+            }
+        }
+
         [Test, Order(1)]
         public void ImporterDoesntThrowExceptions()
         {
@@ -238,6 +264,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-6-max-DON-6732774762.xml", EnumPokerSites.IPoker),
             Tuple.Create(@"iPoker\NLH-2-max-125460058.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"iPoker\NLH-6-max-102233028.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"iPoker\NLH-3-max-Windfall-101810121.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)

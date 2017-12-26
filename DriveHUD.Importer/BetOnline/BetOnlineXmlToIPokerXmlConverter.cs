@@ -327,6 +327,8 @@ namespace DriveHUD.Importers.BetOnline
             var general = BuildGeneral();
             var games = new List<Game> { BuildGame() };
 
+            general.MaxPlayers = maxPlayers;
+
             var handNumber = games[0].GameCode;
 
             EnumPokerSites site;
@@ -365,31 +367,6 @@ namespace DriveHUD.Importers.BetOnline
         {
             var buyIn = PokerConfiguration.DefaultBuyIn;
             var totalBuyIn = PokerConfiguration.DefaultBuyIn;
-            var tournamentName = GetTournamentName();
-
-            if (!string.IsNullOrEmpty(tournamentName))
-            {
-                var tournamentCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
-                var tournamentInfo = tournamentCacheService.GetTournamentInfo(tournamentName);
-
-                if (tournamentInfo != null)
-                {
-                    var prizeFee = tournamentInfo.Attribute("prizeFee") != null ? tournamentInfo.Attribute("prizeFee").Value : PokerConfiguration.DefaultBuyIn;
-                    var fee = tournamentInfo.Attribute("fee") != null ? tournamentInfo.Attribute("fee").Value : PokerConfiguration.DefaultBuyIn;
-                    var buyInValue = tournamentInfo.Attribute("buyIn") != null ? tournamentInfo.Attribute("buyIn").Value : PokerConfiguration.DefaultBuyIn;
-
-                    decimal buyInNumber = 0m;
-
-                    // only numbers could be here
-                    if (!decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out buyInNumber))
-                    {
-                        buyInValue = PokerConfiguration.DefaultBuyIn;
-                    }
-
-                    buyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.BuyInFormat, prizeFee, fee);
-                    totalBuyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.TotalBuyInFormat, buyInValue);
-                }
-            }
 
             var general = new General
             {
@@ -401,9 +378,66 @@ namespace DriveHUD.Importers.BetOnline
                 Nickname = configuration.HeroName,
                 BuyIn = buyIn,
                 Currency = Currency.USD,
-                TotalBuyIn = totalBuyIn,
-                TournamentName = tournamentName
+                TotalBuyIn = totalBuyIn
             };
+
+            if (isTournament)
+            {
+                var tournamentName = GetTournamentName();
+
+                var tournamentTableNode = tableDetails.Descendants("TournamentTable").First();
+
+                if (tournamentTableNode.Attribute("buyIn") != null && tournamentTableNode.Attribute("fee") != null)
+                {
+                    var feeText = tournamentTableNode.Attribute("fee").Value;
+                    var buyInValue = tournamentTableNode.Attribute("buyIn").Value;
+
+                    decimal buyInNumber = 0m;
+                    decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out buyInNumber);
+
+                    decimal fee = 0m;
+                    decimal.TryParse(feeText, NumberStyles.Currency, CultureInfo.InvariantCulture, out fee);
+
+                    var prizeFee = buyInNumber - fee;
+
+                    buyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.BuyInFormat, prizeFee, fee);
+                    totalBuyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.TotalBuyInFormat, buyInNumber);
+                }
+                else if (!string.IsNullOrEmpty(tournamentName))
+                {
+                    var tournamentCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
+                    var tournamentInfo = tournamentCacheService.GetTournamentInfo(tournamentName);
+
+                    if (tournamentInfo != null)
+                    {
+                        var prizeFee = tournamentInfo.Attribute("prizeFee") != null ? tournamentInfo.Attribute("prizeFee").Value : PokerConfiguration.DefaultBuyIn;
+                        var fee = tournamentInfo.Attribute("fee") != null ? tournamentInfo.Attribute("fee").Value : PokerConfiguration.DefaultBuyIn;
+                        var buyInValue = tournamentInfo.Attribute("buyIn") != null ? tournamentInfo.Attribute("buyIn").Value : PokerConfiguration.DefaultBuyIn;
+
+                        decimal buyInNumber = 0m;
+
+                        // only numbers could be here
+                        if (!decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out buyInNumber))
+                        {
+                            buyInValue = PokerConfiguration.DefaultBuyIn;
+                        }
+
+                        buyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.BuyInFormat, prizeFee, fee);
+                        totalBuyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.TotalBuyInFormat, buyInValue);
+                    }
+                }
+
+                general.TournamentName = tournamentName;
+                general.BuyIn = buyIn;
+                general.TotalBuyIn = totalBuyIn;
+
+                var prizeInfoNode = gameState.GetFirstElementOrDefault("PrizeInfo");
+
+                if (prizeInfoNode != null && prizeInfoNode.Attribute("prizePool") != null)
+                {
+                    general.TotalPrizePool = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.TotalBuyInFormat, prizeInfoNode.Attribute("prizePool").Value);
+                }
+            }
 
             return general;
         }
@@ -737,7 +771,8 @@ namespace DriveHUD.Importers.BetOnline
 
             var tournamentType = tableDetails.GetFirstElement("TournamentTable").Attribute("type").Value;
 
-            if (tournamentType.Equals("SITANDGO_TOURNAMENT", StringComparison.InvariantCultureIgnoreCase))
+            if (tournamentType.Equals("SITANDGO_TOURNAMENT", StringComparison.InvariantCultureIgnoreCase) ||
+                tournamentType.Equals("WINDFALL_TOURNAMENT", StringComparison.InvariantCultureIgnoreCase))
             {
                 return GameFormat.SnG;
             }

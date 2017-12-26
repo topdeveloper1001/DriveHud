@@ -26,11 +26,10 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                 {
                     2,
                     new[,] { { 324, 64 }, { 324, 389 } }
-                },
-                // not presented in BOL
+                },                
                 {
                     3,
-                    new[,] { { 352, 105 }, { 541, 422 }, { 161, 422 }}
+                    new[,] { { 608, 134 }, { 324, 389 }, { 39, 134 } }
                 },
                 {
                     4,

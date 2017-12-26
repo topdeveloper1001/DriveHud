@@ -222,9 +222,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ColdCall_MP, Is.EqualTo(expected.ColdCall_MP), nameof(HudLightIndicators.ColdCall_MP));
                 Assert.That(actual.ColdCall_SB, Is.EqualTo(expected.ColdCall_SB), nameof(HudLightIndicators.ColdCall_SB));
                 Assert.That(actual.DonkBet, Is.EqualTo(expected.DonkBet), nameof(HudLightIndicators.DonkBet));
-                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));
-                Assert.That(actual.MRatio, Is.EqualTo(expected.MRatio), nameof(HudLightIndicators.MRatio));
-                Assert.That(actual.StackInBBs, Is.EqualTo(expected.StackInBBs), nameof(HudLightIndicators.StackInBBs));
+                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));             
                 Assert.That(actual.UO_PFR_EP, Is.EqualTo(expected.UO_PFR_EP), nameof(HudLightIndicators.UO_PFR_EP));
                 Assert.That(actual.UO_PFR_MP, Is.EqualTo(expected.UO_PFR_MP), nameof(HudLightIndicators.UO_PFR_MP));
                 Assert.That(actual.UO_PFR_CO, Is.EqualTo(expected.UO_PFR_CO), nameof(HudLightIndicators.UO_PFR_CO));

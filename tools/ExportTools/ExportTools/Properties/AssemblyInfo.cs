@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DriveHUD.Importer")]
+[assembly: AssemblyTitle("ExportTools")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ace Poker Solutions LLC")]
-[assembly: AssemblyProduct("DriveHUD.Importer")]
-[assembly: AssemblyCopyright("Copyright © 2017")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ExportTools")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,14 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("67ee116c-c86b-46aa-964a-f80cae372a8b")]
-
-#if DEBUG
-
-[assembly: InternalsVisibleTo("DriveHud.Tests")]
-[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
-
-#endif
+[assembly: Guid("34877333-e403-4387-a229-1bd9f123567f")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -41,10 +34,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.4.1.1861")]
 [assembly: AssemblyVersion("1.4.1.1861")]
 [assembly: AssemblyFileVersion("1.4.1.1861")]
-
-#if DEBUG
-
-[assembly: InternalsVisibleTo("DriveHUD.Tests")]
-[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
-
-#endif
