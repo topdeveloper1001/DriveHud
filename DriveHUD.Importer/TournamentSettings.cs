@@ -45,8 +45,10 @@ namespace DriveHUD.Importers
         private static readonly Dictionary<int, decimal[]> BetOnlineSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 2, new decimal[] { 1m } },
+            { 3, new decimal[] { 1m } },
             { 6, new decimal[] { 0.7m, 0.3m } },
             { 8, new decimal[] { 0.25m, 0.25m, 0.25m, 0.25m } },
+            { 9, new decimal[] { 0.5m, 0.3m, 0.2m } },
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 

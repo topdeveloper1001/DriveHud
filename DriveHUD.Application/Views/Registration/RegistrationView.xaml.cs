@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RegistrationView.cs" company="Ace Poker Solutions">
+// <copyright file="RegistrationView.xaml.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,12 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.Licensing;
-using System;
-using System.IO;
-using System.Net;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Application.Views
 {

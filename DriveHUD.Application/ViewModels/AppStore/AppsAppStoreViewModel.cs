@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
@@ -44,7 +45,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         #endregion
 
         protected override void InitializeCommands()
-        {            
+        {
             LaunchCommand = ReactiveCommand.Create();
             LaunchCommand.Subscribe(x => Launch(x));
         }
@@ -59,11 +60,14 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
 
             try
-            {            
-                ViewName = appStoreModule.ModuleName;
+            {
+                var moduleViewRequest = new ViewRequestInfo
+                {
+                    Title = appStoreModule.ProductName
+                };
 
-                var moduleViewModel = ServiceLocator.Current.GetInstance<IModuleEntryViewModel>(appStoreModule.ModuleName);
-                ViewRequest?.Raise(moduleViewModel, x => moduleViewModel.Dispose());
+                ViewName = appStoreModule.ModuleName;
+                ViewRequest?.Raise(moduleViewRequest);
             }
             catch (Exception e)
             {

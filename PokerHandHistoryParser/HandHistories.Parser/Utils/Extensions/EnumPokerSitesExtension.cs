@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using System;
+using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -82,9 +83,27 @@ namespace HandHistories.Parser.Utils.Extensions
                     var xElement = XElement.Parse(handText);
 
                     // iPoker starts with <session>
-                    if (xElement.Name.LocalName.Equals("session", StringComparison.InvariantCultureIgnoreCase))
+                    if (xElement.Name.LocalName.Equals("session", StringComparison.OrdinalIgnoreCase))
                     {
                         siteName = EnumPokerSites.IPoker;
+                        return true;
+                    }
+
+                    // command hand starts with <HandHistory
+                    if (xElement.Name.LocalName.Equals("HandHistory", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var siteNode = xElement.Descendants("Site").FirstOrDefault();
+
+                        if (siteNode == null)
+                        {
+                            return false;
+                        }
+
+                        if (!Enum.TryParse(siteNode.Value, out siteName))
+                        {
+                            return false;
+                        }
+
                         return true;
                     }
                 }

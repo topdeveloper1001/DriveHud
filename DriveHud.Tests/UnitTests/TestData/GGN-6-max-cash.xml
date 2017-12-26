@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2017-10-31T19:45:08.596Z</DateOfHandUtc>
+  <HandId>200267971</HandId>
+  <DealerButtonPosition>2</DealerButtonPosition>
+  <TableName>BMW 6</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>GGN</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>USD</Currency>
+      <SmallBlind>2</SmallBlind>
+      <BigBlind>4</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableTypeDescriptors>
+      <TableTypeDescription>Regular</TableTypeDescription>
+    </TableTypeDescriptors>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>6</NumPlayersSeated>
+  <TotalPot>128.36</TotalPot>
+  <Rake>6.41</Rake>
+  <Actions>
+    <HandAction PlayerName="jijipuke" HandActionType="SMALL_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="TheMagician" HandActionType="BIG_BLIND" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bjsarang1" HandActionType="CALL" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="greenlight" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Depolaretto" HandActionType="RAISE" Amount="-12" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="smothope" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="jijipuke" HandActionType="CALL" Amount="-10" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="TheMagician" HandActionType="CALL" Amount="-8" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bjsarang1" HandActionType="CALL" Amount="-8" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="jijipuke" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="TheMagician" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bjsarang1" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Depolaretto" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="jijipuke" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="TheMagician" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="bjsarang1" HandActionType="BET" Amount="-20" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Depolaretto" HandActionType="RAISE" Amount="-56" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="jijipuke" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="TheMagician" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="bjsarang1" HandActionType="ALL_IN" Amount="-20.18" Street="Turn" IsAllIn="true" />
+  </Actions>
+  <CommunityCards>8h5dKh3h3c</CommunityCards>
+  <Players>
+    <Player PlayerName="Depolaretto" StartingStack="427.33" Bet="0" Win="0" SeatNumber="1" Cards="AhJd" IsSittingOut="false" />
+    <Player PlayerName="smothope" StartingStack="112.4" Bet="0" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="jijipuke" StartingStack="422.7" Bet="0" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="TheMagician" StartingStack="123.24" Bet="0" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="bjsarang1" StartingStack="52.18" Bet="0" Win="69.77" SeatNumber="5" Cards="4sKs" IsSittingOut="false" />
+    <Player PlayerName="greenlight" StartingStack="235.82" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

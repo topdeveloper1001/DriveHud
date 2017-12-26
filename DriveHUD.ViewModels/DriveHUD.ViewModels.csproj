@@ -144,8 +144,10 @@
   <ItemGroup>
     <Compile Include="Bracelet.cs" />
     <Compile Include="BraceletItem.cs" />
+    <Compile Include="ChartSerieResourceHelper.cs" />
     <Compile Include="ChartSeries.cs" />
     <Compile Include="ChartSeriesItem.cs" />
+    <Compile Include="ChartSeriesProvider.cs" />
     <Compile Include="ChipsInfo.cs" />
     <Compile Include="ColorHelper.cs" />
     <Compile Include="EnumerationExtension.cs" />
@@ -189,6 +191,10 @@
     <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
       <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
       <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{92F8B855-AF92-4969-8882-CE8FD3797CF0}</Project>

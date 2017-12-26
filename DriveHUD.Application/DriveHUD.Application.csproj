@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.3.0.1765, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.4.1.1861, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.3.0.1765, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.4.1.1861, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.3.0.1765, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.4.1.1861, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -285,14 +285,16 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Bootstrappers\ISQLiteBootstrapper.cs" />
     <Compile Include="Bootstrappers\SQLiteBootstrapper.cs" />
-    <Compile Include="BraceletControl.xaml.cs">
+    <Compile Include="Controls\BraceletControl.xaml.cs">
       <DependentUpon>BraceletControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="CardUC.cs" />
-    <Compile Include="ChartGadget.xaml.cs">
+    <Compile Include="Controls\CashChart.xaml.cs">
+      <DependentUpon>CashChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChartGadget.xaml.cs">
       <DependentUpon>ChartGadget.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChartSeriesTypeSwitch.cs" />
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
     </Compile>
@@ -373,6 +375,7 @@
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />
+    <Compile Include="Licensing\IBaseLicenseInfo.cs" />
     <Compile Include="Licensing\ILicenseInfo.cs" />
     <Compile Include="Licensing\LicenseCouldNotActivateException.cs" />
     <Compile Include="Licensing\LicenseException.cs" />
@@ -429,6 +432,7 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\GGNPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
@@ -440,6 +444,7 @@
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\GGNSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\IPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PartyPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\WinningPokerNetworkSiteSettingTableConfigurator.cs" />
@@ -457,6 +462,7 @@
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ValueConverters\ChartCashSeriesWinningTypeToColorBrushConverter.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ViewModels\Alias\AliasAddEditViewModel.cs" />
     <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
@@ -471,6 +477,25 @@
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupRequestInfo.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupViewModelInfo.cs" />
+    <Compile Include="ViewModels\Graphs\GraphsProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\BB100ByTimeOfDaySeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\EVDiffToRealizedEvByMonthSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\IGraphSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\GraphSerie.cs" />
+    <Compile Include="ViewModels\Graphs\GraphSerieDataPoint.cs" />
+    <Compile Include="ViewModels\Graphs\IGraphsProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\MoneyWinByCashGameTypeSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\MoneyWinByTournamentGameTypeSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\MoneyWonByPositionSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\Top20BiggestLosingHandsSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\Top20BiggestWinningHandsSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\Top20ToughestOpponentsByLossAmountSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByMonthSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByYearSeriesProvider.cs" />
+    <Compile Include="ViewModels\Graphs\SerieType.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
@@ -492,6 +517,7 @@
     <Compile Include="ViewModels\Hud\Designer\IHudNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudStatsToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\IHudToolFactory.cs" />
+    <Compile Include="ViewModels\Hud\GGNHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HeatMapStatDtoViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudBaseToolTipBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudDragDropGroups.cs" />
@@ -543,6 +569,9 @@
     <Compile Include="ViewModels\Layouts\HudPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudPositionsInfo.cs" />
     <Compile Include="ViewModels\Main\AppsViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphPopupViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\ICashGraphPopupViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />
@@ -587,6 +616,9 @@
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
+      <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Hud\HudDuplicateLayoutPopupView.xaml.cs">
       <DependentUpon>HudDuplicateLayoutPopupView.xaml</DependentUpon>
     </Compile>
@@ -605,6 +637,7 @@
     <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
       <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegionViewNames.cs" />
     <Compile Include="Views\SitesSetup\IncorrectlyConfiguredSitesView.xaml.cs">
       <DependentUpon>IncorrectlyConfiguredSitesView.xaml</DependentUpon>
     </Compile>
@@ -855,15 +888,23 @@
     <Compile Include="Views\Update\UpdateView.xaml.cs">
       <DependentUpon>UpdateView.xaml</DependentUpon>
     </Compile>
-    <Page Include="BraceletControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Brushes.xaml">
+    <Page Include="ControlStyles\CashChartColors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChartGadget.xaml">
+    <Page Include="ControlStyles\CashChartStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BraceletControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CashChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChartGadget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1044,6 +1085,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Graphs\CashGraphPopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Hud\HudDuplicateLayoutPopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1184,7 +1229,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="GadgetPanel.xaml">
+    <Page Include="Controls\GadgetPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1200,7 +1245,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GadgetPanel.xaml.cs">
+    <Compile Include="Controls\GadgetPanel.xaml.cs">
       <DependentUpon>GadgetPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -1252,10 +1297,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Social\TwitterOAuth.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Steel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1357,7 +1398,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PaletteManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1498,8 +1538,8 @@
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.2\build\net45\System.Data.SQLite.Core.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>call "$(VS140COMNTOOLS)..\tools\vsvars32.bat"
+editbin /largeaddressaware $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>tasklist /fi "imagename eq DriveHUD.HUD.exe" | find ":" &gt; nul

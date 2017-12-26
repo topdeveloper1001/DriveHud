@@ -1388,7 +1388,7 @@ namespace DriveHUD.Importers.Bovada
 
         private Dictionary<int, decimal> GetStacksAfterHand(List<Command> commands)
         {
-            // it might happen that player immidiiately adds some more chips to his stack after the hands is over
+            // it might happen that player immediately adds some more chips to his stack after the hands is over
             // in that case, for this seat, return the smaller stack size, ats it is a base to calculate hand winner, rake, etc
             Dictionary<int, decimal> endStacks = new Dictionary<int, decimal>();
             List<Command> endStacksList = new List<Command>();

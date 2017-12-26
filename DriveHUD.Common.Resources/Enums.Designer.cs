@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GGNetwork.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_GGN {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_GGN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignition/Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Ignition {
@@ -678,6 +687,96 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_PredefinedRange_UTG {
             get {
                 return ResourceManager.GetString("Enum_PredefinedRange_UTG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB/100 by time of day.
+        /// </summary>
+        internal static string Enum_SerieType_BB100ByTimeOfDay {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_BB100ByTimeOfDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EV difference to realized EV by month.
+        /// </summary>
+        internal static string Enum_SerieType_EVDiffToRealizedEVByMonth {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_EVDiffToRealizedEVByMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money won by cash game type.
+        /// </summary>
+        internal static string Enum_SerieType_MoneyWonByCashGameType {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_MoneyWonByCashGameType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money won by position.
+        /// </summary>
+        internal static string Enum_SerieType_MoneyWonByPosition {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_MoneyWonByPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money won by tournament game type.
+        /// </summary>
+        internal static string Enum_SerieType_MoneyWonByTournamentGameType {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_MoneyWonByTournamentGameType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top 20 Biggest losing hands.
+        /// </summary>
+        internal static string Enum_SerieType_Top20BiggestLosingHands {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_Top20BiggestLosingHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top 20 Biggest winning hands.
+        /// </summary>
+        internal static string Enum_SerieType_Top20BiggestWinningHands {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_Top20BiggestWinningHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top 20 toughest opponents by loss amount.
+        /// </summary>
+        internal static string Enum_SerieType_Top20ToughestOpponents {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_Top20ToughestOpponents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown and non-showdown winnings by month.
+        /// </summary>
+        internal static string Enum_SerieType_WinningsByMonth {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_WinningsByMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown and non-showdown winnings by year.
+        /// </summary>
+        internal static string Enum_SerieType_WinningsByYear {
+            get {
+                return ResourceManager.GetString("Enum_SerieType_WinningsByYear", resourceCulture);
             }
         }
         

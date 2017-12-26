@@ -126,6 +126,8 @@ namespace DriveHUD.Importers
 
                 if (!isRunning)
                 {
+                    System.Diagnostics.Debug.WriteLine($"All importers have exited");
+
                     IsStarted = false;
                     RaiseImportingStopped();
 

@@ -34,6 +34,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 {
     internal abstract class WinningPokerNetworkFileBasedImporter : FileBasedImporter
     {
+        private const string PhhFileExtension = ".phh";
         private const string GameStartedSearchPattern = "Game started at:";
         private const string HandEndedPattern = "Game ended at: ";
 
@@ -211,6 +212,98 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return isTitleMatch;
+        }
+     
+        protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
+        {
+            EnumTableType tableType;
+
+            if (!TryParseTableTypeFromFile(gameInfo.FullFileName, out tableType))
+            {
+                tableType = base.ParseTableType(parsingResult, gameInfo);
+            }
+
+            if (gameInfo.TableType > tableType)
+            {
+                return gameInfo.TableType;
+            }
+
+            return tableType;
+        }
+
+        private Dictionary<string, EnumTableType> handHistoryFileTableType = new Dictionary<string, EnumTableType>();
+
+        protected bool TryParseTableTypeFromFile(string fileName, out EnumTableType tableType)
+        {
+            if (handHistoryFileTableType.ContainsKey(fileName))
+            {
+                tableType = handHistoryFileTableType[fileName];
+                return true;
+            }
+
+            tableType = EnumTableType.Nine;
+
+            try
+            {
+                var phhFileName = Path.ChangeExtension(fileName, PhhFileExtension);
+
+                if (!File.Exists(phhFileName))
+                {
+                    LogProvider.Log.Error(this, $"Could not find '{phhFileName}'.");
+                    return false;
+                }
+
+                string phhFileLine = null;
+
+                using (var fs = new FileStream(phhFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (var sr = new StreamReader(fs))
+                    {
+                        if (!sr.EndOfStream)
+                        {
+                            phhFileLine = sr.ReadLine();
+                        }
+                    }
+                }
+
+                if (string.IsNullOrEmpty(phhFileLine))
+                {
+                    LogProvider.Log.Error(this, $".phh file '{phhFileName}' is empty.");
+                    return false;
+                }
+
+                var splittedPhhFileLine = phhFileLine.Split('~');
+
+                if (splittedPhhFileLine.Length < 14)
+                {
+                    LogProvider.Log.Error(this, $".phh file '{phhFileName}' data is incorrect.");
+                    return false;
+                }
+
+                var tableTypeText = splittedPhhFileLine[14];
+
+                if (!Enum.TryParse(tableTypeText, out tableType))
+                {
+                    LogProvider.Log.Error(this, $".phh file '{phhFileName}' data '{tableTypeText}' couldn't be parsed.");
+                    return false;
+                }
+
+                handHistoryFileTableType.Add(fileName, tableType);
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not parse data from .phh file of '{fileName}'.", e);
+            }
+
+            return false;
+        }
+
+        protected override void Clean()
+        {
+            base.Clean();
+            handHistoryFileTableType.Clear();
         }
 
         private string AddAdditionalData(string handHistory, GameInfo gameInfo)

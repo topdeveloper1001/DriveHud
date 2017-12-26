@@ -15,10 +15,11 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser._888;
+using HandHistories.Parser.Parsers.FastParser.Common;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
+using HandHistories.Parser.Parsers.FastParser.PartyPoker;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.Parsers.FastParser.Winning;
-using HandHistories.Parser.Parsers.FastParser.PartyPoker;
 using HandHistories.Parser.Utils.Extensions;
 using System;
 
@@ -76,6 +77,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     }
 
                     return new WinningPokerNetworkFastParserImpl();
+                case EnumPokerSites.GGN:
+                    return new CommonHandHistoryParser(EnumPokerSites.GGN);
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

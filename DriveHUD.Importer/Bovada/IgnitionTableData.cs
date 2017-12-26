@@ -28,9 +28,11 @@ namespace DriveHUD.Importers.Bovada
 
         public GameLimit GameLimit { get; set; }
 
+        public bool IsZone { get; set; }
+
         public override string ToString()
         {
-            return $"TableId: {Id} TableSize: {TableSize} GameFormat: {GameFormat} GameType: {GameType} GameLimit: {GameLimit} TableName: {TableName}";
+            return $"TableId: {Id} TableSize: {TableSize} GameFormat: {GameFormat} GameType: {GameType} GameLimit: {GameLimit} TableName: {TableName} Zone: {IsZone}";
         }
     }
 }

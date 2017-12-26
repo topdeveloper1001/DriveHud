@@ -1,0 +1,12863 @@
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation":"SUBSCRIBE","values":["poker.tournaments.sng","poker.tournaments.scheduled"]}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation": "SUBSCRIBE","success": "true"}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation": "SUBSCRIBE","success": "true"}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation":"AUTHENTICATE","data":{"token":"TGT-7143502-HluRnryJt9e0B7dw9MYcFejbAtS2XzVSL9V-50","clientType":"download","clientVersion":"4.57.00","platformType":"1","browserInfo":"","blackbox":"347C/xI5BYEQ8k33HtkDakqXeytACYxFUAkaeKWrB+37Le7L//1tDuxQUPokXCxjWBtKOiCFFmtU/zspZgDrz0t+sbEMk0o7kEiurEafUwDVWiR7LK2ZF5Hn6FNu8bPcMPksUFKZ9pLIGueYP5ILamFgwYoujsbdPrQVmKdGBik6UR3eOtmwrIbqHRyedANkSeZz+lMcX9aeF3ZIjq69kZfWOpPY5ZcQTEslKUiO+siJ4Gi68Nu8k7z6BrbIOOe0P5JU8yg5jDOq/+NBR5FKmpP3267Gutm9Pe5DYKDN+vn4G8I6ZMkkGrWdZXCxRvKZ8REcsdOqp7BXNn/N8CwelVw7xo9tb1RQsANFRn2aOKvsZE2WY6D86DqBY9Ckl2qW"}}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation":"AUTHENTICATE","success":true,"data":{"pokerToken":"FE51F43DE36E4B11B63BF36884674BDA"}}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation":"SUBSCRIBE","values":["poker.tournaments.registered"]}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation": "SUBSCRIBE","success": "true"}}
+
+13:41:22
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"operation": "SUBSCRIBE","success": "true"}}
+
+13:41:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"gid":"Join","ip":"10.42.24.51","port":7005,"bTournament":0}}
+
+13:41:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"gid": "Joined"}}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CONNECT_INFO","siNo":51,"highVer":1,"lowVer":3,"siteKey":7110,"tableNo":1210,"userID":"14130006","userPW":"FE51F43DE36E4B11B63BF36884674BDA","zoneEntryNo":0,"mobile":1}}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "nickName" : "14130006700",
+   "pid" : "CONNECT_LOGIN_INFO",
+   "zoneEntryNo" : 1
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 10
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_INIT_OPTION"
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 3938, 1750, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5000,
+   "nickName" : "14130006700",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "cash" : 5000,
+   "pid" : "PLAY_ACCOUNT_CASH_RES",
+   "seat" : 3,
+   "type" : 2
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6359,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2475,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:41:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:41:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:41:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:41:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:41:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198052"
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 1
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 3
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1725,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 36, 40 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:41:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:41:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6309,
+   "bet" : 50,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:41:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:41:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2475,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:41:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:41:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4750,
+   "bet" : 50,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 200,
+   "seat" : 6
+}
+}
+
+13:41:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:41:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 150,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3738,
+   "bet" : 200,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 27
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 8368, 4463, 4975, 5118, 5253, 4950, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "mySeat" : [ 6 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 16, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:41:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:41:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:41:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198157"
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 3
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 6
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5093,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5203,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 5
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 37, 42 ]
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:41:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 4950,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:41:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":306,"y":293,"timeBank":0,"cardPos":0}}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 6
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 19
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 2425, 2711, 8368, 3558, 4950, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 3,
+   "lockSeat" : 0,
+   "mySeat" : [ 5 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:41:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:42:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4975,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:42:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:42:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:42:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:42:01
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198181"
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 4
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 5
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4925,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 5
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4925,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 13, 39 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:42:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 25,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:42:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2425,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:42:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:42:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"5046bc25-392b-47f6-baa0-2154883e45ea"}}
+
+13:42:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "5046bc25-392b-47f6-baa0-2154883e45ea"}}
+
+13:42:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2561,
+   "bet" : 50,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 150,
+   "seat" : 2
+}
+}
+
+13:42:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:42:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 125,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:42:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 8218,
+   "bet" : 150,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:42:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:42:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3408,
+   "bet" : 150,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:42:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:42:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 125,
+   "betPot" : 800,
+   "btns" : 6293248,
+   "halfPot" : 412,
+   "maxRaise" : 4950,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 250,
+   "timeBank" : 0
+}
+}
+
+13:42:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198157"
+}
+}
+
+13:42:16
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":512,"bet":850,"x":410,"y":320,"timeBank":0,"cardPos":0}}
+
+13:42:16
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4100,
+   "bet" : 125,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 825,
+   "seat" : 5
+}
+}
+
+13:42:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:42:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:42:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:42:20
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4925,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:42:20
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:20
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:42:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2561,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:42:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:42:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 7518, 3408, 0, 0, 0, 0, 0 ],
+   "bet" : [ 0, 0, 700, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 0, 256, 1024, 0, 0, 0, 0, 0 ],
+   "firstSeat" : 3,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 2050 ],
+   "curRake" : [ 102 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 18, 38, 4 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 1, 0, 3, 2, 4 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 5,
+   "type" : 0
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:42:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 2050,
+   "btns" : 6291648,
+   "halfPot" : 1025,
+   "maxRaise" : 4100,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:42:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"9a577e78-14ec-40b1-b5e9-7ff39c120cef"}}
+
+13:42:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "9a577e78-14ec-40b1-b5e9-7ff39c120cef"}}
+
+13:42:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":128,"bet":750,"x":388,"y":302,"timeBank":0,"cardPos":0}}
+
+13:42:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3350,
+   "bet" : 750,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:42:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:42:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:42:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7518,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:42:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 2050 ],
+   "curRake" : [ 102 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "returnBet" : 750,
+   "seat" : 5
+}
+}
+
+13:42:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:42:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:42:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:42:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 40960,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":32768}}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 32768,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 5
+}
+}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 0, 6048, 0, 0, 0, 0 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 0,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 0, 0, 1948, 0, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:42:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 12,
+   "pid" : "CO_RABBITCARD_INFO",
+   "pos" : 4
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6048,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 5
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:42:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531198181"}}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198181"
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 27
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 4975, 7518, 6048, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 2,
+   "lockSeat" : 0,
+   "mySeat" : [ 3 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3895,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:42:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:42:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 406,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5288,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198460"
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 6
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 3
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7468,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 39, 26 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:42:51
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 6048,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:42:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":256,"bet":50,"x":354,"y":314,"timeBank":0,"cardPos":0}}
+
+13:42:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5998,
+   "bet" : 50,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:42:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:42:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:42:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:42:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198052"
+}
+}
+
+13:43:01
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3845,
+   "bet" : 50,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:43:01
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:01
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:43:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"0b0c887a-448f-44d4-9b64-e289ef6a77b2"}}
+
+13:43:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 406,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:43:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:43:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "0b0c887a-448f-44d4-9b64-e289ef6a77b2"}}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 4950, 7468, 0, 0, 0, 5238, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 50, 0, 0, 0 ],
+   "btn" : [ 1024, 64, 0, 0, 0, 256, 0, 0, 0 ],
+   "firstSeat" : 6,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 225 ],
+   "curRake" : [ 11 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 3, 40, 8 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 0, 1, 4, 2, 3 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 3,
+   "type" : 0
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7468,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:43:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 225,
+   "btns" : 6291648,
+   "halfPot" : 112,
+   "maxRaise" : 5998,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:43:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":128,"bet":275,"x":409,"y":318,"timeBank":0,"cardPos":0}}
+
+13:43:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5723,
+   "bet" : 275,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:43:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:43:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:43:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:43:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3570,
+   "bet" : 275,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:43:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 7468, 0, 0, 0, 5238, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 1024, 0, 0, 0, 1024, 0, 0, 0 ],
+   "firstSeat" : 6,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 775 ],
+   "curRake" : [ 38 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 19,
+   "pid" : "CO_BCARD1_INFO",
+   "pos" : 4
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 0, 1, 4, 5, 2 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 3,
+   "type" : 0
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:43:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 775,
+   "btns" : 6291648,
+   "halfPot" : 387,
+   "maxRaise" : 5723,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:43:35
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":32,"btn":128,"bet":537,"x":382,"y":304,"timeBank":0,"cardPos":0}}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5186,
+   "bet" : 537,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"b73cebc0-7ae3-4cef-9166-8ca2dbc6bd79"}}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:43:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "b73cebc0-7ae3-4cef-9166-8ca2dbc6bd79"}}
+
+13:43:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3570,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:43:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 775 ],
+   "curRake" : [ 38 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "returnBet" : 537,
+   "seat" : 3
+}
+}
+
+13:43:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:43:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:43:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:43:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 40960,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":32768}}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 32768,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 3
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 6460, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 0,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 737, 0, 0, 0, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 47,
+   "pid" : "CO_RABBITCARD_INFO",
+   "pos" : 5
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6460,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 3
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:43:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531198460"}}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198460"
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 28
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 4875, 5789, 2814, 2843, 6460, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 1,
+   "lockSeat" : 0,
+   "mySeat" : [ 5 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4583,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:43:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198763"
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 2
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 5
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2789,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2793,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 23, 34 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:43:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 6460,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:43:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":283,"y":299,"timeBank":0,"cardPos":0}}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6460,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 5
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 8
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 6460, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 1 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 5
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2472,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 4
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3019,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:43:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7467,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6576,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7688,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:43:47
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198795"
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 4
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 1
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6551,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 5
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7638,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 21, 46 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:43:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 6460,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:43:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":345,"y":316,"timeBank":0,"cardPos":0}}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6460,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 1
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 4
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 6460, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 3,
+   "lockSeat" : 0,
+   "mySeat" : [ 1 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 5
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 538,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 4
+}
+}
+
+13:43:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3792,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:43:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6197,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:43:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4351,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:43:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4101,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:43:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:43:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531198842"
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 5
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 1
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4076,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 19, 31 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:43:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:43:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 488,
+   "bet" : 50,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:43:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:43:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:44:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 3792, 6197, 4351, 0, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 0, 1024, 1024, 1024, 0, 0, 0, 0 ],
+   "firstSeat" : 3,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:44:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:44:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4051,
+   "bet" : 25,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:44:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:44:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "betPot" : 200,
+   "btns" : 6292032,
+   "halfPot" : 125,
+   "maxRaise" : 6460,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:44:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"c5e3392b-c45e-492e-9ebc-b978adfb734e"}}
+
+13:44:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "c5e3392b-c45e-492e-9ebc-b978adfb734e"}}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":64,"bet":0,"x":327,"y":316,"timeBank":0,"cardPos":0}}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 150 ],
+   "curRake" : [ 7 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 8, 40, 13 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 4, 2, 0, 1, 3 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 1,
+   "type" : 0
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198763"
+}
+}
+
+13:44:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4051,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:44:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:44:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 150,
+   "btns" : 6291648,
+   "halfPot" : 75,
+   "maxRaise" : 6410,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:44:10
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":64,"bet":0,"x":371,"y":299,"timeBank":0,"cardPos":0}}
+
+13:44:10
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:44:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:44:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 488,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 150 ],
+   "curRake" : [ 7 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 39,
+   "pid" : "CO_BCARD1_INFO",
+   "pos" : 4
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 5, 4, 2, 0, 1 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 1,
+   "type" : 0
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:44:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:14
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198795"
+}
+}
+
+13:44:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4051,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:44:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:44:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 150,
+   "btns" : 6291648,
+   "halfPot" : 75,
+   "maxRaise" : 6410,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:44:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":4,"state":32,"btn":64,"bet":0,"x":358,"y":297,"timeBank":0,"cardPos":0}}
+
+13:44:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:44:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:44:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:44:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 488,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 150 ],
+   "curRake" : [ 7 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 64
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 41,
+   "pid" : "CO_BCARD1_INFO",
+   "pos" : 5
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 5, 4, 2, 0, 1 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 1,
+   "type" : 0
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:44:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4051,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:44:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:44:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 150,
+   "btns" : 6291648,
+   "halfPot" : 75,
+   "maxRaise" : 6410,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:44:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":64,"btn":64,"bet":0,"x":320,"y":305,"timeBank":0,"cardPos":0}}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 6410, 488, 0, 0, 0, 0, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 64, 64, 0, 0, 0, 0, 0, 0, 0 ],
+   "firstSeat" : 1,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 150 ],
+   "curRake" : [ 7 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : [ 12, 23 ],
+   "pid" : "CO_PCARD_INFO",
+   "seat" : 6,
+   "type" : 0
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 8192,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 6
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:44:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 24576,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":16384}}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 16384,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 1
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : [ 7, 6 ],
+   "pid" : "CO_PCARD_INFO",
+   "seat" : 2,
+   "type" : 0
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 8192,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 2
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 6410, 0, 0, 0, 0, 4194, 0, 0, 0 ],
+   "handHi2" : [ 5, 4, 2, 0, 1 ],
+   "handHi6" : [ 5, 4, 0, 1, 2 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 1,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 12, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 0, 0, 0, 143, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 1
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:44:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:44:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:44:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:44:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531198842"}}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531198842"
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 6
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 2375, 2649, 5000, 5714, 6410, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 3,
+   "lockSeat" : 0,
+   "mySeat" : [ 5 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4194,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199053"
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 1
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 5
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2624,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 19, 43 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:44:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"c5b2d75c-a52f-473e-87fd-20da02bf33da"}}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "c5b2d75c-a52f-473e-87fd-20da02bf33da"}}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5714,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:44:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 6410,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:44:39
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":339,"y":303,"timeBank":0,"cardPos":0}}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6410,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 5
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 11
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5424, 6410, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 2 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:44:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 4
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7588,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5193,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5689,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7417,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:44:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199105"
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 1
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 2
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6385,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7538,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 17, 34 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:44:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 25,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:44:46
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199053"
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 22
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 4879, 3485, 5525, 6385, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 2,
+   "lockSeat" : 0,
+   "mySeat" : [ 4 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 11031,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:44:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1940,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:44:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:44:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:44:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199190"
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 5
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 4
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1915,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4829,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 12, 9 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:45:00
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:03
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 3435, 5525, 0, 0, 0, 0, 0, 0 ],
+   "bet" : [ 0, 50, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 256, 1024, 0, 0, 0, 0, 0, 0 ],
+   "firstSeat" : 2,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:45:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 225,
+   "btns" : 6293248,
+   "halfPot" : 112,
+   "maxRaise" : 6385,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:45:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"79c8bc21-6085-4bb6-9eed-3823887bb931"}}
+
+13:45:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "79c8bc21-6085-4bb6-9eed-3823887bb931"}}
+
+13:45:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199105"
+}
+}
+
+13:45:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":512,"bet":225,"x":496,"y":310,"timeBank":0,"cardPos":0}}
+
+13:45:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 6160, 11031, 1915, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 50, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 0, 0, 512, 1024, 1024, 0, 0, 0 ],
+   "firstSeat" : 4,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 225, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:45:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:45:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4829,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:45:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:17
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:45:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3260,
+   "bet" : 175,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 525 ],
+   "curRake" : [ 26 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 27, 39, 51 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 4, 0, 3, 1, 2 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 4,
+   "type" : 0
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:45:18
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3052,
+   "bet" : 208,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:45:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 208,
+   "betPot" : 1149,
+   "btns" : 7341824,
+   "halfPot" : 574,
+   "maxRaise" : 6160,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 416,
+   "timeBank" : 0
+}
+}
+
+13:45:26
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":512,"bet":416,"x":426,"y":336,"timeBank":0,"cardPos":0}}
+
+13:45:26
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5744,
+   "bet" : 208,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 416,
+   "seat" : 4
+}
+}
+
+13:45:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:45:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3052,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 941 ],
+   "curRake" : [ 47 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "returnBet" : 208,
+   "seat" : 4
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 40960,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:45:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":32768}}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 32768,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 4
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 6846, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 0,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 0, 894, 0, 0, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 49,
+   "pid" : "CO_RABBITCARD_INFO",
+   "pos" : 4
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6846,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 4
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:45:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531199190"}}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199190"
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 4
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 9031, 892, 6973, 2325, 5589, 6846, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 3,
+   "lockSeat" : 0,
+   "mySeat" : [ 6 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 16, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:45:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199378"
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 6
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 6
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 9006,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 842,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 51, 19 ]
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:45:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"a9e3985c-c357-4741-8a47-703a0b3e62b5"}}
+
+13:45:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "a9e3985c-c357-4741-8a47-703a0b3e62b5"}}
+
+13:45:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6973,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:45:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 2
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5589, 6973, 5100, 6846, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 2,
+   "lockSeat" : 0,
+   "mySeat" : [ 4 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2688,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3096,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:45:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199412"
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 2
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 4
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5075,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6796,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 27, 14 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:45:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2688,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:45:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:45:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5589, 6973, 0, 0, 0, 2994, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 50, 0, 0, 0 ],
+   "btn" : [ 1024, 1024, 0, 0, 0, 512, 0, 0, 0 ],
+   "firstSeat" : 6,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 102, 0, 0, 0 ]
+}
+}
+
+13:45:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:45:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 52,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:45:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5075,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:45:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 52,
+   "betPot" : 331,
+   "btns" : 7341824,
+   "halfPot" : 190,
+   "maxRaise" : 6846,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 154,
+   "timeBank" : 0
+}
+}
+
+13:45:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199378"
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":256,"bet":52,"x":356,"y":326,"timeBank":0,"cardPos":0}}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6744,
+   "bet" : 52,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 229 ],
+   "curRake" : [ 11 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 29, 0, 9 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 0, 1, 3, 4, 2 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 4,
+   "type" : 0
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:45:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 229,
+   "btns" : 6291648,
+   "halfPot" : 114,
+   "maxRaise" : 6744,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:45:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":64,"bet":0,"x":357,"y":291,"timeBank":0,"cardPos":0}}
+
+13:45:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6744,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:45:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:45:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:45:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:46:05
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2851,
+   "bet" : 143,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:46:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:46:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 143,
+   "betPot" : 658,
+   "btns" : 7341824,
+   "halfPot" : 329,
+   "maxRaise" : 6744,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 286,
+   "timeBank" : 0
+}
+}
+
+13:46:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"5675e90d-61f8-4b7f-93b6-a5b6265c783a"}}
+
+13:46:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "5675e90d-61f8-4b7f-93b6-a5b6265c783a"}}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":16,"btn":1024,"bet":0,"x":276,"y":307,"timeBank":0,"cardPos":0}}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6744,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 4
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 25
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 1412, 5351, 5400, 5396, 5025, 6744, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 6 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 16, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:46:07
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199574"
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 6
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 6
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1387,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5301,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 42, 15 ]
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:46:08
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:46:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199412"
+}
+}
+
+13:46:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5250,
+   "bet" : 50,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 150,
+   "seat" : 3
+}
+}
+
+13:46:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:46:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 150,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:46:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5396,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:46:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:13
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:46:14
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5025,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:46:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:46:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 150,
+   "betPot" : 525,
+   "btns" : 6293248,
+   "halfPot" : 262,
+   "maxRaise" : 6744,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 250,
+   "timeBank" : 0
+}
+}
+
+13:46:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:46:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":293,"y":295,"timeBank":0,"cardPos":0}}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6744,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 6
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 29
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5093, 4825, 6744, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 1,
+   "lockSeat" : 0,
+   "mySeat" : [ 3 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2754,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2642,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6588,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:46:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199682"
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 2
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 3
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6719,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2704,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 18, 10 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:46:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 25,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:46:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2642,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:46:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:46:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199574"
+}
+}
+
+13:46:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5093, 0, 0, 0, 0, 6588, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 1024, 0, 0, 0, 0, 1024, 0, 0, 0 ],
+   "firstSeat" : 6,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:46:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:46:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"b0d6dd8a-3158-4bad-a16a-73511d251958"}}
+
+13:46:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "b0d6dd8a-3158-4bad-a16a-73511d251958"}}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 11
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5251, 5260, 6513, 2642, 4925, 6719, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "mySeat" : [ 6 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 16, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:46:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531199778"
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 2
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 6
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6488,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2592,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 19, 20 ]
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:46:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:46:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4825,
+   "bet" : 50,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 100,
+   "seat" : 5
+}
+}
+
+13:46:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:46:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 100,
+   "betPot" : 375,
+   "btns" : 6293248,
+   "halfPot" : 187,
+   "maxRaise" : 6719,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 150,
+   "timeBank" : 0
+}
+}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":512,"bet":250,"x":422,"y":292,"timeBank":0,"cardPos":0}}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199682"
+}
+}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5251, 0, 0, 0, 0, 6469, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 100, 0, 0, 0 ],
+   "btn" : [ 1024, 0, 0, 0, 0, 512, 0, 0, 0 ],
+   "firstSeat" : 6,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 250, 0, 0, 0 ]
+}
+}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:46:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:47:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 5260, 6488, 2592, 0, 0, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 1024, 1024, 1024, 0, 0, 0, 0, 0 ],
+   "firstSeat" : 2,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:47:03
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:03
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:47:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"fe6d739a-4dc0-45a9-9650-6ffa3be3d222"}}
+
+13:47:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "fe6d739a-4dc0-45a9-9650-6ffa3be3d222"}}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4675,
+   "bet" : 150,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 575 ],
+   "curRake" : [ 28 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "seat" : 0
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 16
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bcard" : [ 30, 42, 12 ],
+   "pid" : "CO_BCARD3_INFO"
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "CardHi" : [ 4, 1, 0, 2, 3 ],
+   "CardLo" : [ 0, 0, 0, 0, 0 ],
+   "bEnableHi" : 1,
+   "bEnableLo" : 0,
+   "pid" : "CO_CARDHAND_INFO",
+   "seat" : 6,
+   "type" : 0
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:47:09
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:47:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4675,
+   "bet" : 0,
+   "btn" : 64,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:47:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:47:11
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 575,
+   "btns" : 6291648,
+   "halfPot" : 287,
+   "maxRaise" : 6469,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 0,
+   "timeBank" : 0
+}
+}
+
+13:47:14
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":16,"btn":128,"bet":300,"x":403,"y":313,"timeBank":0,"cardPos":0}}
+
+13:47:14
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6169,
+   "bet" : 300,
+   "btn" : 128,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 6
+}
+}
+
+13:47:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:47:15
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:47:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4675,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 5
+}
+}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 575 ],
+   "curRake" : [ 28 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "returnBet" : 300,
+   "seat" : 6
+}
+}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 6
+}
+}
+
+13:47:19
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 40960,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:47:20
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":32768}}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 32768,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 6
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 0, 0, 7016, 0, 0, 0 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 0,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 0, 0, 0, 547, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "card" : 41,
+   "pid" : "CO_RABBITCARD_INFO",
+   "pos" : 4
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 6
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:47:21
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531199778"}}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531199778"
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 21
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 2542, 2831, 2829, 7016, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 2,
+   "lockSeat" : 0,
+   "mySeat" : [ 4 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4770,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1264,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:47:23
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200003"
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 1
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 4
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2806,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2779,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 44, 23 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:47:25
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 7016,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:47:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":307,"y":317,"timeBank":0,"cardPos":0}}
+
+13:47:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 4
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 28
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 7016, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "mySeat" : [ 1 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 5
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 4
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4675,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 8066,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5001,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3292,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:47:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200038"
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 5
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 1
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3267,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6966,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 15, 14 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:47:30
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 130,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:47:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4950,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:47:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:32
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:47:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4675,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:47:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:34
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:47:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"bb48d73f-d3d2-4f84-8b35-6291f5b89d9a"}}
+
+13:47:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "bb48d73f-d3d2-4f84-8b35-6291f5b89d9a"}}
+
+13:47:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 8016,
+   "bet" : 50,
+   "btn" : 256,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:47:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:47:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 0, 4776, 3267, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 50, 0, 0, 0, 0 ],
+   "btn" : [ 0, 0, 0, 0, 512, 1024, 0, 0, 0 ],
+   "firstSeat" : 5,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 225, 0, 0, 0, 0 ]
+}
+}
+
+13:47:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:47:45
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 175,
+   "betPot" : 750,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 7016,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 400,
+   "timeBank" : 0
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":344,"y":300,"timeBank":0,"cardPos":0}}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6966,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 1
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 6
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 7452, 2617, 5000, 4884, 4934, 6966, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 6 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 16, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:47:52
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200170"
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 6
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 6
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7427,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2567,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 23, 16 ]
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:47:53
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:47:54
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531200003"
+}
+}
+
+13:47:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_CHECKOPTION_INFO","type":2,"check":1}}
+
+13:47:55
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5000,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 3
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 21
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 2756, 7021, 6966, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 1,
+   "lockSeat" : 0,
+   "mySeat" : [ 3 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:47:56
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:47:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2500,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:57
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4884,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1514,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:47:58
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200202"
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 2
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 3
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6941,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2450,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 4
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 10, 6 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 5
+}
+}
+
+13:47:59
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 25,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:48:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 0, 0, 4884, 1514, 0, 0, 0 ],
+   "bet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "btn" : [ 0, 0, 0, 0, 1024, 1024, 0, 0, 0 ],
+   "firstSeat" : 5,
+   "pid" : "CO_SELECT_SPEED_INFO",
+   "raise" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:48:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:02
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 1
+}
+}
+
+13:48:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531200038"
+}
+}
+
+13:48:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"165ec68e-369b-4d20-912b-c4f4b844e377"}}
+
+13:48:06
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "165ec68e-369b-4d20-912b-c4f4b844e377"}}
+
+13:48:10
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2756,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 1
+}
+}
+
+13:48:10
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:10
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:48:12
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531200170"
+}
+}
+
+13:48:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:48:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7021,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 2
+}
+}
+
+13:48:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:48:22
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 25,
+   "betPot" : 150,
+   "btns" : 3147520,
+   "halfPot" : 0,
+   "maxRaise" : 6966,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:48:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":1,"state":8,"btn":512,"bet":100,"x":472,"y":332,"timeBank":0,"cardPos":0}}
+
+13:48:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6866,
+   "bet" : 25,
+   "btn" : 512,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 75,
+   "seat" : 3
+}
+}
+
+13:48:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:48:24
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 1,
+   "call" : 0,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:48:27
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2450,
+   "bet" : 0,
+   "btn" : 1024,
+   "pid" : "CO_SELECT_INFO",
+   "raise" : 0,
+   "seat" : 4
+}
+}
+
+13:48:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "curPot" : [ 100 ],
+   "curRake" : [ 0 ],
+   "pid" : "CO_CHIPTABLE_INFO",
+   "potCount" : 0,
+   "returnBet" : 50,
+   "seat" : 3
+}
+}
+
+13:48:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 32768
+}
+}
+
+13:48:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 4
+}
+}
+
+13:48:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:48:28
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btns" : 40960,
+   "pid" : "CO_SHOW_REQ"
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SHOW_RES","type":0,"state":32768,"btn":32768}}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "btn" : 32768,
+   "pid" : "CO_SHOW_INFO",
+   "seat" : 3
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 65536
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 0, 0, 7016, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_RESULT_INFO"
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "kicker" : 0,
+   "kickerCard" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_POT_INFO",
+   "potNo" : 0,
+   "returnHi" : [ 0, 0, 100, 0, 0, 0, 0, 0, 0 ],
+   "returnLo" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 3
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 2,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 0,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:29
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_END_REQ"
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PLAY_STAGE_END_RES","stageNo":"3531200202"}}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531200202"
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 23
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5363, 7377, 5605, 5210, 7016, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 5 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5534,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:48:31
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200408"
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 1
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 5
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7352,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5555,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 3
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 15, 34 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 4
+}
+}
+
+13:48:33
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:48:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"PING","uuid":"3e76d328-0a4c-4210-88c7-832205c2460f"}}
+
+13:48:36
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid": "PONG", "uuid": "3e76d328-0a4c-4210-88c7-832205c2460f"}}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 24
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 5534, 5363, 2667, 567, 7016, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 5,
+   "lockSeat" : 0,
+   "mySeat" : [ 5 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 16, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1664,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:48:37
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200436"
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 6
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 5
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5509,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5313,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 2
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 32896, 32896 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 14, 34 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 3
+}
+}
+
+13:48:38
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 0,
+   "btns" : 9,
+   "call" : 50,
+   "pid" : "CO_SELECT_SPEED_BTN",
+   "raise" : 0,
+   "selected" : 0
+}
+}
+
+13:48:40
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_SPEED_REQ","state":8,"btn":1,"bet":0}}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 5
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 1664, 7016, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "mySeat" : [ 2 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 4
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 2667,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 3,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 3
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7352,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:48:41
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 3850,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:48:42
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 5000,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:48:43
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_STAGE_INFO",
+   "stageNo" : "3531200469"
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 2
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_DEALER_SEAT",
+   "seat" : 5
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 1,
+   "seat" : 2
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 4
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 4975,
+   "baseStakes" : 0,
+   "bet" : 25,
+   "btn" : 2,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 6
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 1614,
+   "baseStakes" : 0,
+   "bet" : 50,
+   "btn" : 4,
+   "dead" : 0,
+   "pid" : "CO_BLIND_INFO",
+   "seat" : 1
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 8
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CARDTABLE_INFO",
+   "seat1" : [ 32896, 32896 ],
+   "seat2" : [ 22, 23 ],
+   "seat3" : [ 32896, 32896 ],
+   "seat4" : [ 32896, 32896 ],
+   "seat5" : [ 32896, 32896 ],
+   "seat6" : [ 32896, 32896 ]
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 15
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_CURRENT_PLAYER",
+   "seat" : 2
+}
+}
+
+13:48:44
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bet" : 50,
+   "betPot" : 175,
+   "btns" : 2098944,
+   "halfPot" : 0,
+   "maxRaise" : 7016,
+   "pid" : "CO_SELECT_REQ",
+   "raise" : 100,
+   "timeBank" : 0
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_SELECT_RES_V2","type":0,"state":8,"btn":1024,"bet":0,"x":343,"y":317,"timeBank":0,"cardPos":0}}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "pid" : "PLAY_ACCOUNT_INFO"
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_SIT_PLAY",
+   "play" : 0,
+   "seat" : 2
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 21
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 1644, 3981, 5325, 7016, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 1,
+   "lockSeat" : 0,
+   "mySeat" : [ 4 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 16, 16, 16, 16, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 2
+}
+}
+
+13:48:48
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 6983,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 5,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 1
+}
+}
+
+13:48:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7591,
+   "nickName" : "",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 6,
+   "state" : 16,
+   "type" : 1
+}
+}
+
+13:48:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 1
+}
+}
+
+13:48:49
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 1
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "nickName" : "14130006700",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 32,
+   "type" : 1
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_TABLE_STATE",
+   "tableState" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TIME_INFO",
+   "time" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_CLEAR_INFO"
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "nickName" : "14130006700",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 4,
+   "state" : 16,
+   "type" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "PLAY_TABLE_NUMBER",
+   "tableNo" : 10
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_CHANGE_TABLE_INFO"
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : 7016,
+   "nickName" : "14130006700",
+   "pid" : "PLAY_SEAT_INFO",
+   "seat" : 1,
+   "state" : 32,
+   "type" : 1
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "bblind" : 50,
+   "gameType" : 2,
+   "gameType2" : 0,
+   "hiLow" : 0,
+   "maxSeat" : 9,
+   "maxStakes" : 0,
+   "minStakes" : 0,
+   "pid" : "CO_OPTION_INFO",
+   "real" : 1,
+   "sblind" : 25
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_NO_INFO",
+   "zoneNo" : 1210
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CO_CHECKOPTION_INFO","type":3,"check":0}}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "account" : [ 7016, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curPot" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "curRake" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "currentSeat" : 0,
+   "dealerSeat" : 6,
+   "lockSeat" : 0,
+   "mySeat" : [ 1 ],
+   "pbet" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "pid" : "CO_TABLE_INFO",
+   "potCount" : 0,
+   "seatState" : [ 48, 0, 0, 0, 0, 0, 0, 0, 0 ],
+   "tableState" : 0,
+   "time" : 0,
+   "totalpot" : 0
+}
+}
+
+13:48:50
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_ZONE_WAITING_PLAYERS_INFO",
+   "waitingPlayers" : 0
+}
+}
+
+13:49:03
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "pid" : "CO_LAST_HAND_NUMBER",
+   "stageNo" : "3531200469"
+}
+}
+
+13:49:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"pid":"CONNECT_CLOSE"}}
+
+13:49:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{
+   "data" : 1,
+   "pid" : "SYS_INFO",
+   "type" : 10
+}
+}
+
+13:49:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"gid": "Unjoined"}}
+
+13:49:04
+{
+"uid" : "0x06A3E238",
+"cmd" :
+{"gid":"disconnecting"}}
+
+13:49:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:50:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+
+13:51:18
+{
+"uid" : "0x06F53628",
+"cmd" :
+{"pid":"PING"}}
+

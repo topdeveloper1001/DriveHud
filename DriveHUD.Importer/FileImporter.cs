@@ -426,7 +426,7 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
 
-                gameInfo.PlayersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+                gameInfo.ResetPlayersCacheInfo();
 
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
@@ -466,7 +466,7 @@ namespace DriveHUD.Importers
                             GameFormat = gameInfo.GameFormat
                         };
 
-                        gameInfo.PlayersCacheInfo.Add(cacheInfo);
+                        gameInfo.AddToPlayersCacheInfo(cacheInfo);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -624,6 +624,7 @@ namespace DriveHUD.Importers
                 Filename = processingFile != null ? processingFile.FullName : string.Empty,
                 Tourneynumber = parsedHand.GameDescription.Tournament.TournamentId,
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
+                Tourneysize = parsedHand.GameDescription.Tournament.TotalPlayers,
                 Tourneytagscsv = string.Empty,
                 SiteId = parsingResult.HandHistory.PokersiteId,
                 SpeedtypeId = gameInfo.TournamentSpeed.HasValue ? (short)gameInfo.TournamentSpeed.Value : (short)parsedHand.GameDescription.Tournament.Speed,
@@ -794,7 +795,13 @@ namespace DriveHUD.Importers
                 return;
             }
 
+            var tourneySize = tournaments.Select(x => x.Tourneysize).Max();
             var totalPlayers = tournaments.Select(x => x.Player.PlayerId).Count();
+
+            if (tourneySize > totalPlayers)
+            {
+                totalPlayers = tourneySize;
+            }
 
             // max players among all new hands and existing
             var tableSize = parsingResult.Select(x => (short)x.Source.GameDescription.SeatType.MaxPlayers).Concat(tournaments.Select(x => x.Tablesize)).Max();
@@ -850,7 +857,8 @@ namespace DriveHUD.Importers
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Winningsincents = isHero && lastParsingResult.Source.GameDescription.Tournament.Winning != 0 ?
                     Utils.ConvertToCents(lastParsingResult.Source.GameDescription.Tournament.Winning) :
-                    GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
+                    GetTournamentWinnings(tournamentName, currentPosition, tournamentBase.Buyinincents, totalPlayers,
+                        lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId, totalPrize: lastParsingResult.Source.GameDescription.Tournament.TotalPrize);
 
                 tournamentsByPlayer[lastHandByPlayer.PlayerName].Finishposition = isHero && lastParsingResult.Source.GameDescription.Tournament.FinishPosition != 0 ?
                     lastParsingResult.Source.GameDescription.Tournament.FinishPosition :
@@ -877,7 +885,8 @@ namespace DriveHUD.Importers
                     }
                     else
                     {
-                        winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers, lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId);
+                        winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers,
+                            lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId, totalPrize: lastParsingResult.Source.GameDescription.Tournament.TotalPrize);
                     }
 
                     winnerPlayer.Tourneyendedforplayer = true;
@@ -978,10 +987,11 @@ namespace DriveHUD.Importers
         /// Gets player's winnings amount for the tournament
         /// </summary>
         /// <returns>Winnings in cents</returns>
-        private int GetTournamentWinnings(string tournamentName, int finishPosition, int buyinInCents, int totalPlayers, Currency currency, short siteId, TournamentsTags tournamentTag = TournamentsTags.STT)
+        private int GetTournamentWinnings(string tournamentName, int finishPosition, int buyinInCents, int totalPlayers, Currency currency, short siteId, TournamentsTags tournamentTag = TournamentsTags.STT, decimal totalPrize = 0)
         {
             // try to find tournament in the predefined tournaments 
             var predefinedTournament = TournamentsResolver.GetPredefinedTournament(tournamentName, buyinInCents, totalPlayers, currency);
+
             if (predefinedTournament != null)
             {
                 return predefinedTournament.Prizes.FirstOrDefault(x => x.Place == finishPosition)?.WinningsInCents ?? 0;
@@ -990,12 +1000,34 @@ namespace DriveHUD.Importers
             if (tournamentTag == TournamentsTags.STT)
             {
                 var sttType = Converter.ToSitNGoType(tournamentName);
+
                 switch (sttType)
                 {
                     case STTTypes.DoubleUp:
                         return (finishPosition <= (totalPlayers / 2)) ? buyinInCents * 2 : 0;
                     case STTTypes.TripleUp:
                         return (finishPosition <= (totalPlayers / 3)) ? buyinInCents * 3 : 0;
+                }
+
+                var siteNetwork = EntityUtils.GetSiteNetwork((EnumPokerSites)siteId);
+
+                if (siteNetwork == EnumPokerNetworks.Chico)
+                {
+                    if (tournamentName.IndexOf("Windfall", StringComparison.OrdinalIgnoreCase) >= 0 && totalPrize != 0 && finishPosition == 1)
+                    {
+                        return Utils.ConvertToCents(totalPrize);
+                    }
+
+                    if (totalPlayers == (int)EnumTableType.Six)
+                    {
+                        var chicoSixMaxResults = TournamentResultModel.GetPredefinedChicoSixMaxResults();
+                        var tournamentResult = chicoSixMaxResults.FirstOrDefault(x => x.BuyinInCents == buyinInCents);
+
+                        if (tournamentResult != null)
+                        {
+                            return tournamentResult.Prizes.FirstOrDefault(x => x.Place == finishPosition)?.WinningsInCents ?? 0;
+                        }
+                    }
                 }
 
                 var prizePool = buyinInCents * totalPlayers;

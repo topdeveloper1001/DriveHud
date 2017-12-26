@@ -15,9 +15,9 @@ using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Helpers;
 using HandHistories.Parser.Parsers;
 using Model;
-using Model.Enums;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Importers
 {
@@ -26,6 +26,10 @@ namespace DriveHUD.Importers
     /// </summary>
     public class GameInfo
     {
+        private readonly object locker = new object();
+
+        private List<PlayerStatsSessionCacheInfo> playersCacheInfo;
+
         public string Session { get; set; }
 
         public int WindowHandle { get; set; }
@@ -53,11 +57,33 @@ namespace DriveHUD.Importers
         public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }
 
         public PlayerCollectionItem[] AddedPlayers { get; set; }
-
-        public List<PlayerStatsSessionCacheInfo> PlayersCacheInfo { get; set; }
-
+        
         public string FileName { get; set; }
 
         public string FullFileName { get; set; }
+
+        public void ResetPlayersCacheInfo()
+        {
+            lock (locker)
+            {
+                playersCacheInfo = new List<PlayerStatsSessionCacheInfo>();
+            }
+        }
+
+        public void AddToPlayersCacheInfo(PlayerStatsSessionCacheInfo cacheInfo)
+        {
+            lock (locker)
+            {
+                playersCacheInfo?.Add(cacheInfo);
+            }
+        }
+
+        public List<PlayerStatsSessionCacheInfo> GetPlayersCacheInfo()
+        {
+            lock (locker)
+            {
+                return playersCacheInfo?.ToList();
+            }
+        }
     }
 }

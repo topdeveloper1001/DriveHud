@@ -124,7 +124,10 @@ namespace Model
 
         public RangeObservableCollection<Playerstatistic> StatisticCollection
         {
-            get { return _statisticCollection; }
+            get
+            {
+                return _statisticCollection;
+            }
             set
             {
                 if (StatisticCollection != null)

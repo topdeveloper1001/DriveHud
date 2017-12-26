@@ -20,9 +20,7 @@ using System.Threading;
 namespace DriveHUD.Common.Infrastructure.Base
 {
     public abstract class BaseViewModel : BindableBase
-    {
-        public SynchronizationContext synchronizationContext;
-
+    {     
         private Guid _id = Guid.NewGuid();
         private EnumViewModelType _type = EnumViewModelType.NotDefined;
         private bool _isActive;

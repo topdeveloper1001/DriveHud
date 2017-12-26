@@ -111,7 +111,7 @@ namespace DriveHUD.Importers.Bovada
                 return;
             }
 
-            var infoImporter = importerService.GetRunningImporter<IgnitionInfoImporter>();
+            var infoImporter = importerService.GetRunningImporter<IIgnitionInfoImporter>();
 
             if (infoImporter != null && infoImporter.InfoDataManager != null)
             {

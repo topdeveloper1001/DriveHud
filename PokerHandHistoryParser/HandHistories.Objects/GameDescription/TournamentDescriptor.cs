@@ -35,6 +35,9 @@ namespace HandHistories.Objects.GameDescription
         public decimal Winning { get; set; }
 
         [XmlElement]
+        public decimal TotalPrize { get; set; }
+
+        [XmlElement]
         public short FinishPosition { get; set; }
 
         [XmlElement]

@@ -38,6 +38,8 @@ namespace Model.Interfaces
 
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 
+        IList<HandHistoryRecord> GetPlayerHandRecords(IEnumerable<int> playerIds, Func<HandHistoryRecord, bool> predicate);
+
         Players GetPlayer(string playerName, short pokersiteId);
 
         IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId);

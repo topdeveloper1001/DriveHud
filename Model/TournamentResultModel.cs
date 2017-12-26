@@ -89,7 +89,26 @@ namespace Model
             resultList.Add(new TournamentResultModel() { Name = "$1K Cage Satelite 6-Max", BuyinInCents = 17500, Currency = Currency.USD, TotalPlayers = 6, Prizes = TournamentPrize.CreatePrizesArray(105000) });
 
             return resultList;
+        }
 
+        /// <summary>
+        /// The set of results of 6-max Chico SnG
+        /// </summary>        
+        public static IList<TournamentResultModel> GetPredefinedChicoSixMaxResults()
+        {
+            var resultList = new List<TournamentResultModel>
+            {
+                new TournamentResultModel { BuyinInCents = 134, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(505, 299)},
+                new TournamentResultModel { BuyinInCents = 270, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(1020, 600)},
+                new TournamentResultModel { BuyinInCents = 630, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(2380, 1400)},
+                new TournamentResultModel { BuyinInCents = 1350, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(5100, 3000)},
+                new TournamentResultModel { BuyinInCents = 2700, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(10200, 6000)},
+                new TournamentResultModel { BuyinInCents = 5400, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(20400, 12000)},
+                new TournamentResultModel { BuyinInCents = 10000, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(38196, 21804)},
+                new TournamentResultModel { BuyinInCents = 20000, Currency = Currency.USD, Prizes = TournamentPrize.CreatePrizesArray(76992, 43008)},
+            };
+
+            return resultList;
         }
     }
 

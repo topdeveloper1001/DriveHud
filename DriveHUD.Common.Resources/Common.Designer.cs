@@ -376,6 +376,168 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bb/100.
+        /// </summary>
+        internal static string Common_Chart_BB100Caption {
+            get {
+                return ResourceManager.GetString("Common_Chart_BB100Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB.
+        /// </summary>
+        internal static string Common_Chart_BBSign {
+            get {
+                return ResourceManager.GetString("Common_Chart_BBSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $.
+        /// </summary>
+        internal static string Common_Chart_DollarSign {
+            get {
+                return ResourceManager.GetString("Common_Chart_DollarSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EV.
+        /// </summary>
+        internal static string Common_Chart_EV {
+            get {
+                return ResourceManager.GetString("Common_Chart_EV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EV.
+        /// </summary>
+        internal static string Common_Chart_EVSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_EVSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hands.
+        /// </summary>
+        internal static string Common_Chart_Hands {
+            get {
+                return ResourceManager.GetString("Common_Chart_Hands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money Won.
+        /// </summary>
+        internal static string Common_Chart_MoneyWonCaption {
+            get {
+                return ResourceManager.GetString("Common_Chart_MoneyWonCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        internal static string Common_Chart_Month {
+            get {
+                return ResourceManager.GetString("Common_Chart_Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Won.
+        /// </summary>
+        internal static string Common_Chart_NetWonSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_NetWonSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No data to plot.
+        /// </summary>
+        internal static string Common_Chart_NoData {
+            get {
+                return ResourceManager.GetString("Common_Chart_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non Showdown.
+        /// </summary>
+        internal static string Common_Chart_NonShowdownSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_NonShowdownSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NSD.
+        /// </summary>
+        internal static string Common_Chart_NSD {
+            get {
+                return ResourceManager.GetString("Common_Chart_NSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SD.
+        /// </summary>
+        internal static string Common_Chart_SD {
+            get {
+                return ResourceManager.GetString("Common_Chart_SD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown.
+        /// </summary>
+        internal static string Common_Chart_ShowdownSeries {
+            get {
+                return ResourceManager.GetString("Common_Chart_ShowdownSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date:.
+        /// </summary>
+        internal static string Common_Chart_TrackBallInfoHeader_Date {
+            get {
+                return ResourceManager.GetString("Common_Chart_TrackBallInfoHeader_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hand:.
+        /// </summary>
+        internal static string Common_Chart_TrackBallInfoHeader_Hand {
+            get {
+                return ResourceManager.GetString("Common_Chart_TrackBallInfoHeader_Hand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Week.
+        /// </summary>
+        internal static string Common_Chart_Week {
+            get {
+                return ResourceManager.GetString("Common_Chart_Week", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        internal static string Common_Chart_Year {
+            get {
+                return ResourceManager.GetString("Common_Chart_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check.
         /// </summary>
         internal static string Common_Check {
@@ -544,6 +706,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_GameType {
             get {
                 return ResourceManager.GetString("Common_GameType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graphs.
+        /// </summary>
+        internal static string Common_GraphsPopup_Title {
+            get {
+                return ResourceManager.GetString("Common_GraphsPopup_Title", resourceCulture);
             }
         }
         

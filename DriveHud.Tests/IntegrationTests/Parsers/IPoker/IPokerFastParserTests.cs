@@ -104,6 +104,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 7668185353)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-WildTwister.xml", 7680274162)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", 3531068283)]
         public void HandIdIsParsedTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -112,6 +113,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", GameType.NoLimitHoldem)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", GameType.NoLimitHoldem)]
         public void GameTypeIsParsedTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -121,6 +123,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 0.02)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 50)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", 0.05)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -130,9 +133,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", 0.01)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 25)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", 0.02)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);
+            var handHistory = ParseHandHistory(handHistoryFile);            
             Assert.That(handHistory.GameDescription.Limit.SmallBlind, Is.EqualTo(smallBlind));
         }
 
@@ -148,6 +152,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", PokerFormat.CashGame)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", PokerFormat.Tournament)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-9-max-SNG-Turbo.xml", PokerFormat.Tournament)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", PokerFormat.CashGame)]
         public void PokerFormatIsParsedTest(string handHistoryFile, PokerFormat pokerFormat)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -168,7 +173,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", 1)]
         public void TournamentFinishPositionIsParsedTest(string handHistoryFile, int place)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);
+            var handHistory = ParseHandHistory(handHistoryFile);            
             Assert.That(handHistory.GameDescription.Tournament.FinishPosition, Is.EqualTo(place));
         }
 
@@ -204,6 +209,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", "Peon384")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-2.xml", "Hero")]
         public void HeroPlayerNameIsParsedTest(string handHistoryFile, string heroPlayerName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -317,6 +323,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 4)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-2.xml", 6)]
         public void PlayersCountIsParsedTest(string handHistoryFile, int playersCount)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

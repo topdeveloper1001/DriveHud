@@ -1,156 +1,138 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
+﻿//-----------------------------------------------------------------------
+// <copyright file="DashboardViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
-using Model;
-using Model.Enums;
-
-using DriveHUD.ViewModels;
+using DriveHUD.Application.ViewModels.Graphs;
 using DriveHUD.Common.Infrastructure.Base;
-using System.Collections.Generic;
-using Prism.Events;
-using Model.Events;
+using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
-using System;
-using System.Windows.Input;
 using Model.Data;
-using Model.Reports;
-using System.Diagnostics;
-using Model.ChartData;
+using Model.Enums;
+using Model.Events;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
-        #region Fields
-        private ObservableCollection<ChartSeries> _firstChartCollection = new ObservableCollection<ChartSeries>();
-        private ObservableCollection<ChartSeries> _secondChartCollection = new ObservableCollection<ChartSeries>();
-        private EnumTelerikRadChartDisplayRange _firstChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
-        private EnumTelerikRadChartDisplayRange _secondChartDisplayRange = EnumTelerikRadChartDisplayRange.Month;
-        private LightIndicators _indicatorCollection;
-        private bool _isExpanded = true;
-        #endregion
-
         #region Properties
+
+        public InteractionRequest<INotification> ShowMoneyWonGraphPopupRequest { get; private set; }
+
+        private bool isExpanded = true;
 
         public bool IsExpanded
         {
-            get { return _isExpanded; }
-            set { SetProperty(ref _isExpanded, value); }
+            get
+            {
+                return isExpanded;
+            }
+            set
+            {
+                SetProperty(ref isExpanded, value);
+            }
         }
 
-        public ObservableCollection<ChartSeries> FirstChartCollection
+        private CashGraphViewModel moneyWonGraphViewModel;
+
+        public CashGraphViewModel MoneyWonGraphViewModel
         {
             get
             {
-                return _firstChartCollection;
+                return moneyWonGraphViewModel;
             }
-
-            set
+            private set
             {
-                _firstChartCollection = value;
+                SetProperty(ref moneyWonGraphViewModel, value);
             }
         }
 
-        public ObservableCollection<ChartSeries> SecondChartCollection
+        private CashGraphViewModel bb100GraphViewModel;
+
+        public CashGraphViewModel BB100GraphViewModel
         {
             get
             {
-                return _secondChartCollection;
+                return bb100GraphViewModel;
             }
-
-            set
+            private set
             {
-                _secondChartCollection = value;
+                SetProperty(ref bb100GraphViewModel, value);
             }
         }
 
-        public EnumTelerikRadChartDisplayRange FirstChartDisplayRange
-        {
-            get { return _firstChartDisplayRange; }
-            set
-            {
-                if (value != _firstChartDisplayRange)
-                    SetProperty(ref _firstChartDisplayRange, value);
-
-                SetSerieData(FirstChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), FirstChartDisplayRange);
-            }
-        }
-
-        public EnumTelerikRadChartDisplayRange SecondChartDisplayRange
-        {
-            get { return _secondChartDisplayRange; }
-            set
-            {
-                if (value != _secondChartDisplayRange)
-                    SetProperty(ref _secondChartDisplayRange, value);
-
-                SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
-            }
-        }
+        private LightIndicators indicatorCollection;
 
         public LightIndicators IndicatorCollection
         {
-            get { return _indicatorCollection; }
+            get
+            {
+                return indicatorCollection;
+            }
             set
             {
-                SetProperty(ref _indicatorCollection, value);
+                SetProperty(ref indicatorCollection, value);
             }
         }
+
+        public ICommand ShowMoneyWonGraphPopupCommand { get; private set; }
+
         #endregion
 
-        internal DashboardViewModel(SynchronizationContext _synchronizationContext)
+        internal DashboardViewModel()
         {
-            synchronizationContext = _synchronizationContext;
+            ServiceLocator.Current
+                .GetInstance<IEventAggregator>()
+                .GetEvent<BuiltFilterChangedEvent>()
+                .Subscribe(arg => Update());
 
-            Init();
-        }
-
-        private void Init()
-        {
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateFilteredData);
-
-            InitCharts();
-        }
-
-        private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartSerieResourceHelper resource, EnumTelerikRadChartDisplayRange displayRange)
-        {
-            foreach (var serie in chartCollection)
+            ShowMoneyWonGraphPopupRequest = new InteractionRequest<INotification>();
+            ShowMoneyWonGraphPopupCommand = new RelayCommand(() =>
             {
-                List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-                foreach (var stat in GetGroupedStats(displayRange))
+                var cashGraphPopupViewModelInfo = new CashGraphPopupViewModelInfo
                 {
-                    switch (serie.FunctionName)
-                    {
-                        case EnumTelerikRadChartFunctionType.MoneyWon:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Source.Time,
-                                Value = stat.TotalWon,
-                                ValueText = string.Format("{0:0.##}$", stat.TotalWon),
-                                PointColor = resource.PointColor,
-                                TrackBallColor = resource.TrackBallColor,
-                                TooltipColor = resource.TooltipColor
-                            });
-                            break;
-                        case EnumTelerikRadChartFunctionType.BB:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Source.Time,
-                                Value = stat.BB,
-                                ValueText = string.Format("{0:0.##}", stat.BB),
-                                PointColor = resource.PointColor,
-                                TrackBallColor = resource.TrackBallColor,
-                                TooltipColor = resource.TooltipColor
-                            });
-                            break;
-                    }
-                }
-                serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
-            }
+                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel
+                };
+
+                var cashGraphPopupRequestInfo = new CashGraphPopupRequestInfo(cashGraphPopupViewModelInfo);
+
+                ShowMoneyWonGraphPopupRequest.Raise(cashGraphPopupRequestInfo);
+            });
+
+            InitializeWinningsChart();
+            InitializeBB100Chart();
         }
 
-        internal void UpdateFilteredData(BuiltFilterChangedEventArgs args)
+        internal void Update()
+        {
+            if (!IsActive)
+            {
+                return;
+            }
+
+            if (StorageModel.StatisticCollection == null)
+            {
+                return;
+            }
+
+            UpdateFilteredData();
+
+            MoneyWonGraphViewModel?.Update();
+            BB100GraphViewModel?.Update();
+        }
+
+        private void UpdateFilteredData()
         {
             if (IndicatorCollection == null)
             {
@@ -169,69 +151,20 @@ namespace DriveHUD.Application.ViewModels
             var statistics = StorageModel.FilteredPlayerStatistic.Where(x => !x.IsTourney).ToList();
 
             IndicatorCollection.UpdateSource(statistics);
+
             OnPropertyChanged(() => IndicatorCollection);
         }
 
-        internal void Update()
+        private void InitializeWinningsChart()
         {
-            if (StorageModel.StatisticCollection == null)
-            {
-                return;
-            }
-
-            UpdateFilteredData(null);
-
-            SetSerieData(SecondChartCollection, ChartSerieResourceHelper.GetSerieOrangePalette(), SecondChartDisplayRange);
-            SetSerieData(FirstChartCollection, ChartSerieResourceHelper.GetSerieGreenPalette(), FirstChartDisplayRange);
+            var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
+            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries);
         }
 
-        private void InitCharts()
+        private void InitializeBB100Chart()
         {
-            ChartSerieResourceHelper resource = ChartSerieResourceHelper.GetSerieGreenPalette();
-            ChartSeries series0 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "Money Won",
-                FunctionName = EnumTelerikRadChartFunctionType.MoneyWon,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = resource.LineColor,
-                AreaStyle = resource.AreaBrush
-            };
-
-            resource = ChartSerieResourceHelper.GetSerieOrangePalette();
-            ChartSeries series1 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "bb/100",
-                FunctionName = EnumTelerikRadChartFunctionType.BB,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                LineColor = resource.LineColor,
-                AreaStyle = resource.AreaBrush
-            };
-
-            FirstChartCollection.Clear();
-            FirstChartCollection.Add(series0);
-            SecondChartCollection.Clear();
-            SecondChartCollection.Add(series1);
-        }
-
-        private IEnumerable<Indicators> GetGroupedStats(EnumTelerikRadChartDisplayRange range)
-        {
-            List<Indicators> indicators = null;
-            switch (range)
-            {
-                case EnumTelerikRadChartDisplayRange.Year:
-                    indicators = new List<Indicators>(new YearChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
-                case EnumTelerikRadChartDisplayRange.Month:
-                    indicators = new List<Indicators>(new MonthChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
-                case EnumTelerikRadChartDisplayRange.Week:
-                    indicators = new List<Indicators>(new WeekChartData().Create(StorageModel.StatisticCollection.ToList().Where(x => !x.IsTourney).ToList()));
-                    break;
-            }
-
-            return indicators;
+            var bb100ChartSeries = ChartSeriesProvider.CreateBB100ChartSeries();
+            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, ChartDisplayRange.Month);
         }
     }
 }

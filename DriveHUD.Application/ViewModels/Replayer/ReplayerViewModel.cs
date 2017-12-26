@@ -260,6 +260,11 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void UpdatePlayersEquityWin(ReplayerTableState state)
         {
+            if (state == null)
+            {
+                return;
+            }
+
             //preparing for formula Card on the Board in dependence of street in current state
             switch (state.CurrentAction.Street)
             {
@@ -284,20 +289,21 @@ namespace DriveHUD.Application.ViewModels.Replayer
                     CurrentBoardCards = CurrentGame.CommunityCardsString;
                     break;
                 case Street.Summary:
-                    CurrentBoard = CurrentGame.CommunityCards.ToArray();//todo the_weeknd 9J268
+                    CurrentBoard = CurrentGame.CommunityCards.ToArray();
                     CurrentBoardCards = CurrentGame.CommunityCardsString;
                     break;
             }
-
 
             //finding all players having hole cards  
             ActivePlayerHasHoleCard = CurrentGame.Players.Where(pl => pl.hasHoleCards).ToList();
 
             //searching for deadcards and removing this player from list of ActivePlayerHasHoleCard 
             ActivePlayerHasHoleCardFolded = new List<Player>();
+
             foreach (ReplayerTableState replayerTableState in TableStateList)
             {
                 Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
+
                 if (playerInTableState != null
                     && TableStateList.IndexOf(replayerTableState) <= TableStateList.IndexOf(state)
                     && replayerTableState.CurrentAction.IsFold
@@ -310,36 +316,35 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 }
             }
 
-            //calculation of probabilities
-            List<decimal> equities;
-
-            equities = Converter.CalculateEquity(CurrentGame,
+            var equities = Converter.CalculateEquity(CurrentGame,
                 ActivePlayerHasHoleCard,
                 AllDeadCards,
                 AllDeadCardsString,
                 CurrentBoardCards,
                 CurrentBoard);
 
-
-
-            //updating states in replayer view 
-            if (equities != null) //if equity was returned null, it means that there were no players to whome we need to calcualte, for example there was one player with holecards in the game and he was folded in some step
+            // updating states in replayer view             
+            if (equities != null)
+            {
                 RefreshBoard(equities, state.CurrentStreet);
-
+            }
 
             //case of last state. Needed for All-in before River for some cases
             if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
             {
                 //calculation of probabilities
                 equities = Converter.CalculateEquity(CurrentGame,
-                                                                                      ActivePlayerHasHoleCard,
-                                                                                      AllDeadCards,
-                                                                                      AllDeadCardsString,
-                                                                                      CurrentBoardCards,
-                                                                                      CurrentBoard);
-                //updating states in replayer view
+                    ActivePlayerHasHoleCard,
+                    AllDeadCards,
+                    AllDeadCardsString,
+                    CurrentBoardCards,
+                    CurrentBoard);
+
+                // updating states in replayer view
                 if (equities != null)
+                {
                     RefreshBoard(equities, Street.Preflop);
+                }
             }
         }
 

@@ -91,6 +91,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\Telerik\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart">
+      <HintPath>..\dependencies\Telerik\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
@@ -129,6 +132,10 @@
     <Compile Include="Actions\PopupActionNotification.cs" />
     <Compile Include="Actions\PopupTelerikWindowAction.cs" />
     <Compile Include="Actions\PopupWindowAction.cs" />
+    <Compile Include="Actions\ShowViewActionBase.cs" />
+    <Compile Include="Actions\ShowRadWindowViewAction.cs" />
+    <Compile Include="Actions\ShowWindowViewAction.cs" />
+    <Compile Include="Actions\StartupLocationOption.cs" />
     <Compile Include="AttachedBehaviors\DragAdorner.cs" />
     <Compile Include="AttachedBehaviors\DragDrop.cs" />
     <Compile Include="AttachedBehaviors\DragDropDataObject.cs" />
@@ -146,6 +153,7 @@
     <Compile Include="Controls\ProgressBarEx.cs" />
     <Compile Include="Controls\ToggleSwitch.cs" />
     <Compile Include="Converters\BackgroundToForegroundColorConverter.cs" />
+    <Compile Include="Converters\BarSeriesToPaletteColorConverter.cs" />
     <Compile Include="Converters\BoolNotConverter.cs" />
     <Compile Include="Converters\BoolToGreenRedColorConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
@@ -153,6 +161,7 @@
     <Compile Include="Converters\ColorToSolidBrushConverter.cs" />
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
+    <Compile Include="Converters\EmptyCollectionToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
     <Compile Include="Converters\EnumTriStateToColorConverter.cs" />
     <Compile Include="Converters\HeatMapValueToBackgroundConverter.cs" />
@@ -167,10 +176,12 @@
     <Compile Include="Converters\MultiBooleanAndConverter.cs" />
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
     <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
+    <Compile Include="Converters\MultiplierSizeConverter.cs" />
     <Compile Include="Converters\NullToBoolConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
+    <Compile Include="Converters\PieDataPointToPaletteColorConverter.cs" />
     <Compile Include="Converters\PokerSiteToShortStringConverter.cs" />
     <Compile Include="Converters\StaticResourceConverter.cs" />
     <Compile Include="Converters\StringIsEmptyToBoolConverter.cs" />
@@ -197,13 +208,19 @@
     <Compile Include="Interactivity\ViewInteractionRequest.cs" />
     <Compile Include="Interactivity\ViewInteractionRequestEventArgs.cs" />
     <Compile Include="Interactivity\ViewModelInfo.cs" />
+    <Compile Include="Interactivity\ViewRequestInfo.cs" />
     <Compile Include="Interactivity\WindowController.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
     <Compile Include="Mvvm\AsyncOperationItem.cs" />
     <Compile Include="Mvvm\IAsyncOperationItem.cs" />
+    <Compile Include="Mvvm\ICloseableViewModel.cs" />
+    <Compile Include="Mvvm\IConfigurableViewModel.cs" />
+    <Compile Include="Mvvm\IInitializedViewModel.cs" />
     <Compile Include="Mvvm\IModuleEntryViewModel.cs" />
     <Compile Include="Mvvm\IOperationViewModel.cs" />
+    <Compile Include="Mvvm\IPopupWindowViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
+    <Compile Include="Mvvm\PopupWindowViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
     <Compile Include="Mvvm\WindowViewModelBase.cs" />

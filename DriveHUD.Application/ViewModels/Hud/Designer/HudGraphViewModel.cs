@@ -182,7 +182,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return MainStat != null && MainStat.Stat == Stat.NetWon ?
                     string.Format(MainStat.Format, StatSessionCollection?.Sum()) :
-                    MainStat.Caption;
+                    (MainStat != null ? MainStat.Caption : string.Empty);
             }
         }
 

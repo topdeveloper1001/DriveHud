@@ -227,4 +227,7 @@
   <data name="SystemSettings_ModulesFolder" xml:space="preserve">
     <value>bin</value>
   </data>
+  <data name="SystemSettings_ImporterPipeAddress" xml:space="preserve">
+    <value>net.pipe://localhost/DriveHUD/Importer</value>
+  </data>
 </root>

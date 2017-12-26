@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +72,7 @@ namespace DriveHUD.Common.Wpf.Interactivity
         public void CloseAllWindows()
         {
             foreach (var window in windows.Values)
-            {
+            {                
                 window?.Close();
             }
         }
@@ -89,6 +90,10 @@ namespace DriveHUD.Common.Wpf.Interactivity
 
                     windows.Remove(viewName);
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not remove window [{viewName}] from controller.", e);
             }
             finally
             {

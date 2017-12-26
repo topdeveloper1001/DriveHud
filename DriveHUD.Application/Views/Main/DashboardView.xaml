@@ -1,94 +1,260 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.DashboardView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             xmlns:application="clr-namespace:DriveHUD.Application"
-             xmlns:gaugeExample="clr-namespace:GaugeExample"
-             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="700">
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.DashboardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
+    xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:gaugeExample="clr-namespace:GaugeExample"
+    xmlns:vw="clr-namespace:DriveHUD.Application.Views"  
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="700">
+    <UserControl.Resources>
 
-    <telerik:RadExpander Style="{StaticResource RadExpanderStyle_CollapseButton}" Header="Collapse" HorizontalAlignment="Center" ExpandDirection="Up" IsExpanded="{Binding IsExpanded, Mode=TwoWay}">
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/CashChartColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate
+                x:Key="IconTemplate">
+                <Image
+                    Height="25"
+                    Source="{markupext:IconExtension  /images/drivehud.ico, 32}"
+                    Stretch="Uniform" />
+            </DataTemplate>
+
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <telerik:RadExpander
+        Style="{StaticResource RadExpanderStyle_CollapseButton}"
+        Header="Collapse"
+        HorizontalAlignment="Center"
+        ExpandDirection="Up"
+        IsExpanded="{Binding IsExpanded, Mode=TwoWay}">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="620"/>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition
+                    Width="620" />
+                <ColumnDefinition
+                    Width="15" />
+                <ColumnDefinition
+                    Width="*" />
             </Grid.ColumnDefinitions>
 
-            <application:GadgetPanel HeaderColor="White">
+            <ctl:GadgetPanel
+                HeaderColor="White">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition
+                            Height="60" />
+                        <RowDefinition
+                            Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Grid Margin="100 0 0 0">
+                    <Grid
+                        Margin="100 0 0 0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Grid.Column="0" Orientation="Horizontal">
-                            <TextBlock Text="Total Hands : " FontSize="14" VerticalAlignment="Center"/>
-                            <TextBlock FontSize="14" VerticalAlignment="Center" Foreground="White"
-                                       Text="{Binding IndicatorCollection.TotalHands}"/>
+                        <StackPanel
+                            Grid.Column="0"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Text="Total Hands : "
+                                FontSize="14"
+                                VerticalAlignment="Center" />
+                            <TextBlock
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="{Binding IndicatorCollection.TotalHands}" />
                         </StackPanel>
-                        <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <TextBlock Text="Money Won : " FontSize="14" VerticalAlignment="Center"/>
-                            <TextBlock FontSize="14" VerticalAlignment="Center" Foreground="White"
-                                       Text="{Binding IndicatorCollection.Source.NetWon}"/>
+                        <StackPanel
+                            Grid.Column="1"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Text="Money Won : "
+                                FontSize="14"
+                                VerticalAlignment="Center" />
+                            <TextBlock
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="{Binding IndicatorCollection.Source.NetWon}" />
                         </StackPanel>
-                        <StackPanel Grid.Column="2" Orientation="Horizontal">
-                            <TextBlock Text="bb/100 : " FontSize="14" VerticalAlignment="Center"/>
-                            <TextBlock FontSize="14" VerticalAlignment="Center" Foreground="White"
-                                       Text="{Binding IndicatorCollection.BB}"/>
+                        <StackPanel
+                            Grid.Column="2"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Text="bb/100 : "
+                                FontSize="14"
+                                VerticalAlignment="Center" />
+                            <TextBlock
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="{Binding IndicatorCollection.BB}" />
                         </StackPanel>
                     </Grid>
-                    <WrapPanel  Orientation="Horizontal" Grid.Row="1">
+                    <WrapPanel
+                        Orientation="Horizontal"
+                        Grid.Row="1">
                         <WrapPanel.Resources>
-                            <Style TargetType="{x:Type gaugeExample:CustomeGauge}">
-                                <Setter Property="Margin" Value="15 20 0 0" />
+                            <Style
+                                TargetType="{x:Type gaugeExample:CustomeGauge}">
+                                <Setter
+                                    Property="Margin"
+                                    Value="15 20 0 0" />
                             </Style>
                         </WrapPanel.Resources>
 
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="VPIP" ThemeColor="#376cbb" GlowColor="#4a7fc3"
-                                                   Value="{Binding Path=IndicatorCollection.VPIP, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="PFR" ThemeColor="#2ecc71" GlowColor="#39d88c"
-                                                   Value="{Binding Path=IndicatorCollection.PFR, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="3-Bet%" ThemeColor="#9b59b6" GlowColor="#d58fde"
-                                                   Value="{Binding Path=IndicatorCollection.ThreeBet, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="AF" ThemeColor="#1abc9c" GlowColor="#26c8b1"
-                                                   Value="{Binding Path=IndicatorCollection.Agg, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="AGG%" ThemeColor="#3498db" GlowColor="#41b0e4"
-                                                   Value="{Binding Path=IndicatorCollection.AggPr, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="WTSD" ThemeColor="#f1c40f" GlowColor="#f3de16"
-                                                   Value="{Binding Path=IndicatorCollection.WTSD, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="W$SD" ThemeColor="#e74c3c" GlowColor="#d75d4a"
-                                                   Value="{Binding Path=IndicatorCollection.WSSD, Mode=OneWay}"/>
-                        <gaugeExample:CustomeGauge Height="140" Width="140" Caption="W$WSF" ThemeColor="#E75BE1" GlowColor="#e972e6"
-                                                   Value="{Binding Path=IndicatorCollection.WSWSF, Mode=OneWay}"/>
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="VPIP"
+                            ThemeColor="#376cbb"
+                            GlowColor="#4a7fc3"
+                            Value="{Binding Path=IndicatorCollection.VPIP, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="PFR"
+                            ThemeColor="#2ecc71"
+                            GlowColor="#39d88c"
+                            Value="{Binding Path=IndicatorCollection.PFR, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="3-Bet%"
+                            ThemeColor="#9b59b6"
+                            GlowColor="#d58fde"
+                            Value="{Binding Path=IndicatorCollection.ThreeBet, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="AF"
+                            ThemeColor="#1abc9c"
+                            GlowColor="#26c8b1"
+                            Value="{Binding Path=IndicatorCollection.Agg, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="AGG%"
+                            ThemeColor="#3498db"
+                            GlowColor="#41b0e4"
+                            Value="{Binding Path=IndicatorCollection.AggPr, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="WTSD"
+                            ThemeColor="#f1c40f"
+                            GlowColor="#f3de16"
+                            Value="{Binding Path=IndicatorCollection.WTSD, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="W$SD"
+                            ThemeColor="#e74c3c"
+                            GlowColor="#d75d4a"
+                            Value="{Binding Path=IndicatorCollection.WSSD, Mode=OneWay}" />
+                        <gaugeExample:CustomeGauge
+                            Height="140"
+                            Width="140"
+                            Caption="W$WSF"
+                            ThemeColor="#E75BE1"
+                            GlowColor="#e972e6"
+                            Value="{Binding Path=IndicatorCollection.WSWSF, Mode=OneWay}" />
 
                     </WrapPanel>
                 </Grid>
-            </application:GadgetPanel>
+            </ctl:GadgetPanel>
 
-            <StackPanel MinWidth="270" x:Name="ChartStack" Grid.Column="2">
-                <application:ChartGadget Height="205" DataContext="{Binding FirstChartCollection}" 
-                                         HeaderStartColor="#4BA516" 
-                                         HeaderStopColor="#deef6c"
-                                         CaptionColor="#4BA516"
-                                         Caption="Money Won"
-                                         SelectedRange="{Binding ElementName=ChartStack, Path=DataContext.FirstChartDisplayRange, Mode=TwoWay}"/>
+            <StackPanel
+                Grid.Column="2"
+                MinHeight="410"
+                MinWidth="270">
 
-                <application:ChartGadget Height="205" DataContext="{Binding SecondChartCollection}" Margin="0 10 0 0"
-                                         HeaderStartColor="#fd3e0e" 
-                                         HeaderStopColor="#ffdc50"
-                                         CaptionColor="#bd5922"
-                                         Caption="bb/100"
-                                         SelectedRange="{Binding ElementName=ChartStack, Path=DataContext.SecondChartDisplayRange, Mode=TwoWay}"/>
+                <ctl:CashChart
+                    Caption="{ResX Key=Common_Chart_MoneyWonCaption}"
+                    CaptionColor="#4BA516"
+                    DisplayRange="{Binding MoneyWonGraphViewModel.ChartDisplayRange}"
+                    ItemsSource="{Binding MoneyWonGraphViewModel.ChartCollection}"
+                    HandsAxisMaxValue="{Binding MoneyWonGraphViewModel.HandsCount}"
+                    HandsAxisLabelsCount="7"
+                    HeaderStartColor="#4BA516"
+                    HeaderStopColor="#deef6c"
+                    Height="205"
+                    ShowNonShowdownEnabled="True"
+                    ShowNonShowdown="{Binding MoneyWonGraphViewModel.ShowNonShowdown}"
+                    ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
+                    ShowEV="{Binding MoneyWonGraphViewModel.ShowEV}"
+                    ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
+                    LineColors="{StaticResource MoneyWonLineColors}"
+                    PointColors="{StaticResource MoneyWonPointColors}"
+                    TrackBallColors="{StaticResource MoneyWonTrackBallColors}"
+                    WinningValueTypeEnabled="True" />
+
+                <ctl:CashChart
+                    Caption="{ResX Key=Common_Chart_BB100Caption}"
+                    CaptionColor="#bd5922"
+                    DisplayRange="{Binding BB100GraphViewModel.ChartDisplayRange}"
+                    ItemsSource="{Binding BB100GraphViewModel.ChartCollection}"
+                    HandsAxisMaxValue="{Binding BB100GraphViewModel.HandsCount}"
+                    HandsAxisLabelsCount="7"
+                    HeaderStartColor="#fd3e0e"
+                    HeaderStopColor="#ffdc50"
+                    Height="205"
+                    ShowNonShowdown="{Binding BB100GraphViewModel.ShowNonShowdown}"
+                    ShowShowdown="{Binding BB100GraphViewModel.ShowShowdown}"
+                    LineColors="{StaticResource BB100LineColors}"
+                    PointColors="{StaticResource BB100PointColors}"
+                    TrackBallColors="{StaticResource BB100TrackBallColors}" />
+
             </StackPanel>
+
         </Grid>
     </telerik:RadExpander>
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding ShowMoneyWonGraphPopupRequest}">
+            <dh:ShowRadWindowViewAction
+                ViewName="{x:Static vw:RegionViewNames.CashGraphPopupView}"
+                StartupLocation="CenterScreen"
+                SingleOnly="True"
+                IsModal="True">
+                <dh:ShowRadWindowViewAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="Width"
+                            Value="800" />
+                        <Setter
+                            Property="Height"
+                            Value="600" />
+                        <Setter
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
+                    </Style>
+                </dh:ShowRadWindowViewAction.WindowStyle>
+            </dh:ShowRadWindowViewAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
 </UserControl>

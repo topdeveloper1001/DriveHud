@@ -1,0 +1,59 @@
+<session sessioncode="0">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.02/$0.05</gametype>
+		<tablename>Zone Poker - Patriots</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-11-21 19:13:03</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3531068283">
+		<general>
+			<startdate>2017-11-21 19:13:08</startdate>
+			<players>
+				<player seat="1" name="P1_190118CE" chips="5.66" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="2" name="P2_467669NI" chips="2.36" dealer="1" win="0" bet="0.15" rebuy="0" addon="0" />
+				<player seat="3" name="P3_646358FT" chips="7.92" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+				<player seat="4" name="Hero" chips="2.5" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+				<player seat="5" name="P5_365795MB" chips="5.5" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P6_608411JV" chips="7.19" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P3_646358FT" type="1" sum="0.02" cards="[cards]" />
+			<action no="2" player="Hero" type="2" sum="0.05" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_190118CE">X X</cards>
+			<cards type="Pocket" player="P2_467669NI">X X</cards>
+			<cards type="Pocket" player="P3_646358FT">X X</cards>
+			<cards type="Pocket" player="Hero">S7 C7</cards>
+			<cards type="Pocket" player="P5_365795MB">X X</cards>
+			<cards type="Pocket" player="P6_608411JV">X X</cards>
+			<action no="3" player="P5_365795MB" type="0" sum="0" cards="" />
+			<action no="4" player="P6_608411JV" type="0" sum="0" cards="" />
+			<action no="5" player="P1_190118CE" type="0" sum="0" cards="" />
+			<action no="6" player="P2_467669NI" type="3" sum="0.05" cards="" />
+			<action no="7" player="P3_646358FT" type="0" sum="0" cards="" />
+			<action no="8" player="Hero" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HJ D8 D3</cards>
+			<action no="9" player="Hero" type="4" sum="0" cards="" />
+			<action no="10" player="P2_467669NI" type="5" sum="0.1" cards="" />
+		</round>
+	</game>
+</session>

@@ -128,6 +128,7 @@ namespace DriveHud.Tests
         [TestCase("CashHand-10-max-relocate", "CashHand-10-max-relocate-ipoker", "<RelocationData me=\"8\" pivot=\"5\" />")]
         [TestCase("CashOmaha-10-max-big-rake-error", "CashOmaha-10-max-big-rake-error-ipoker", "")]
         [TestCase("MTT-Holdem-10-max-invalid-relocation", "MTT-Holdem-10-max-invalid-relocation-ipoker", "<RelocationData me=\"1\" pivot=\"5\" />")]
+        [TestCase("WindfallHand-3max", "WindfallHand-3max-ipoker", "")]
         public void TestConverter(string sourceXmlFile, string expectedXmlFile, string rellocation)
         {
             var source = File.ReadAllText(GetTestDataFilePath(sourceXmlFile));

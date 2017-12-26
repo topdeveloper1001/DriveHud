@@ -72,15 +72,36 @@ namespace Model.Enums
 
     public enum EnumTelerikRadChartFunctionType
     {
-        ROI, ITM, MoneyWon, Luck, ThreeBet, PFR, BB
+        ROI,
+        ITM,
+        MoneyWon,
+        Luck,
+        ThreeBet,
+        PFR,
+        BB
+    }
+   
+    public enum ChartCashSeriesWinningType
+    {
+        Netwon,
+        Showdown,
+        NonShowdown,
+        EV
     }
 
-    public enum EnumTelerikRadChartDisplayRange
+    public enum ChartCashSeriesValueType
     {
-        Day,
+        Currency,
+        BB
+    }
+
+    public enum ChartDisplayRange
+    {     
+        None,   
         Week,
         Month,
-        Year
+        Year,
+        Hands
     }
 
     public enum EnumDashBoardScreen
@@ -89,7 +110,7 @@ namespace Model.Enums
         Tournament = 1,
         HUD = 2
     }
-     
+
     public enum EnumReports
     {
         None,
@@ -110,7 +131,7 @@ namespace Model.Enums
         TournamentShowdownHands,
         ShowdownHands,
         OpponentAnalysis
-    }   
+    }
 
     public enum EnumReplayerTableType : byte
     {

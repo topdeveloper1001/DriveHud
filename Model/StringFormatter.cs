@@ -130,6 +130,11 @@ namespace Model
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, modulesFolder);
         }
 
+        public static string GetImporterPipeAddress()
+        {
+            return CommonResourceManager.Instance.GetResourceString(ResourceStrings.ImporterPipeAddress);
+        }
+
         #region DB strings
 
         public static string GetConnectionString(string server, string port, string database, string user, string password)
@@ -207,7 +212,7 @@ namespace Model
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteTrainingProductHash);
             return data;
-        }
+        }     
 
         #endregion
     }

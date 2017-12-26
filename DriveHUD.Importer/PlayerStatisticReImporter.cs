@@ -22,10 +22,15 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
 using NHibernate.Linq;
+using ProtoBuf;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
@@ -74,6 +79,7 @@ namespace DriveHUD.Importers
                 BuildPlayersDictonary();
                 PrepareTemporaryPlayerStatisticData();
                 ImportHandHistories();
+                ClosePlayerstatisticStreams();
                 ReplaceOriginalPlayerstatistic();
             }
             catch (Exception e)
@@ -158,6 +164,11 @@ namespace DriveHUD.Importers
             Directory.CreateDirectory(playerStatisticTempDataFolder);
 
             dataService.SetPlayerStatisticPath(playerStatisticTempDataFolder);
+
+            if (playerStatisticStreamWriters.Count > 0)
+            {
+                ClosePlayerstatisticStreams();
+            }
         }
 
         /// <summary>
@@ -181,7 +192,7 @@ namespace DriveHUD.Importers
                         .Take(handHistoryRowsPerQuery)
                         .ToArray();
 
-                    handHistories.ForEach(handHistory =>
+                    Parallel.ForEach(handHistories, handHistory =>
                     {
                         var parsingResult = ParseHandHistory(handHistory);
 
@@ -271,9 +282,9 @@ namespace DriveHUD.Importers
         {
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-            var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+            var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player);
 
-            dataService.Store(playerStat);
+            StorePlayerStatistic(statistic);
         }
 
         /// <summary>
@@ -291,15 +302,116 @@ namespace DriveHUD.Importers
 
             if (newPlayerStatisticBackupDataFolder != playerStatisticBackupDataFolder)
             {
-                Directory.Move(playerStatisticBackupDataFolder, newPlayerStatisticBackupDataFolder);
+                try
+                {
+                    Directory.Move(playerStatisticBackupDataFolder, newPlayerStatisticBackupDataFolder);
+                }
+                catch
+                {
+                    LogProvider.Log.Error(this, $"Could not move {playerStatisticBackupDataFolder} to {newPlayerStatisticBackupDataFolder}");
+                    throw;
+                }
             }
 
             if (Directory.Exists(playerStatisticDataFolder))
             {
-                Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+                try
+                {
+                    Directory.Move(playerStatisticDataFolder, playerStatisticBackupDataFolder);
+                }
+                catch
+                {
+                    LogProvider.Log.Error(this, $"Could not move {playerStatisticDataFolder} to {playerStatisticBackupDataFolder}");
+                    throw;
+                }
             }
 
-            Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
+            try
+            {
+                Directory.Move(playerStatisticTempDataFolder, playerStatisticDataFolder);
+            }
+            catch
+            {
+                LogProvider.Log.Error(this, $"Could not move {playerStatisticTempDataFolder} to {playerStatisticDataFolder}");
+                throw;
+            }
+        }
+
+        private void StorePlayerStatistic(Playerstatistic statistic)
+        {
+            try
+            {
+                var serializedStatistic = string.Empty;
+
+                using (var ms = new MemoryStream())
+                {
+                    Serializer.Serialize(ms, statistic);
+                    serializedStatistic = Convert.ToBase64String(ms.ToArray()).Trim();
+                }
+
+                var streamWriter = GetOrCreatePlayestatisticStreamWriter(statistic);
+
+                lock (streamWriter)
+                {
+                    streamWriter.WriteLine(serializedStatistic);
+                }
+            }
+            catch
+            {
+                LogProvider.Log.Error(this, "Could not store statistic.");
+                throw;
+            }
+        }
+
+        private readonly ConcurrentDictionary<string, Lazy<StreamWriter>> playerStatisticStreamWriters = new ConcurrentDictionary<string, Lazy<StreamWriter>>();
+
+        private StreamWriter GetOrCreatePlayestatisticStreamWriter(Playerstatistic statistic)
+        {
+            var playerDirectory = Path.Combine(playerStatisticTempDataFolder, statistic.PlayerId.ToString());
+
+            var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
+
+            var playestatisticStreamWriter = playerStatisticStreamWriters.GetOrAdd(fileName,
+                key => new Lazy<StreamWriter>(() => CreatePlayerstatisticStreamWriter(playerDirectory, key)));
+
+            return playestatisticStreamWriter.Value;
+        }
+
+        private StreamWriter CreatePlayerstatisticStreamWriter(string playerDirectory, string fileName)
+        {
+            try
+            {
+                if (!Directory.Exists(playerDirectory))
+                {
+                    Directory.CreateDirectory(playerDirectory);
+                }
+
+                var streamWriter = new StreamWriter(fileName, true);
+
+                return streamWriter;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not open stream for '{fileName}'.");
+                throw e;
+            }
+        }
+
+        private void ClosePlayerstatisticStreams()
+        {
+            foreach (KeyValuePair<string, Lazy<StreamWriter>> playerStatisticStreamWriter in playerStatisticStreamWriters)
+            {
+                try
+                {
+                    playerStatisticStreamWriter.Value.Value.Close();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not close stream for '{playerStatisticStreamWriter.Key}'", e);
+                }
+            }
+
+            playerStatisticStreamWriters.Clear();
         }
 
         #region Class helpers

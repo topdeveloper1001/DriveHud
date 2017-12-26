@@ -24,12 +24,17 @@ using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Graphs;
+using DriveHUD.Application.ViewModels.Graphs.SeriesProviders;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Application.Views;
+using DriveHUD.Application.Views.Graphs;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
@@ -47,7 +52,6 @@ using Prism.Unity;
 using ProtoBuf.Meta;
 using System;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using Telerik.Windows.Controls;
 
@@ -115,7 +119,7 @@ namespace DriveHUD.Application
                 }
                 else
                 {
-                    mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
+                    mainWindowViewModel = new MainWindowViewModel();
                     ((RadWindow)Shell).DataContext = mainWindowViewModel;
                     ((RadWindow)Shell).IsTopmost = true;
                     ((RadWindow)Shell).Show();
@@ -298,6 +302,26 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
+
+            // Series providers
+            Container.RegisterType<IGraphsProvider, GraphsProvider>();
+            Container.RegisterType<IGraphSeriesProvider, WinningByMonthSeriesProvider>(SerieType.WinningsByMonth.ToString());
+            Container.RegisterType<IGraphSeriesProvider, WinningByYearSeriesProvider>(SerieType.WinningsByYear.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWinByCashGameTypeSeriesProvider>(SerieType.MoneyWonByCashGameType.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWinByTournamentGameTypeSeriesProvider>(SerieType.MoneyWonByTournamentGameType.ToString());
+            Container.RegisterType<IGraphSeriesProvider, EVDiffToRealizedEvByMonthSeriesProvider>(SerieType.EVDiffToRealizedEVByMonth.ToString());
+            Container.RegisterType<IGraphSeriesProvider, Top20BiggestLosingHandsSeriesProvider>(SerieType.Top20BiggestLosingHands.ToString());
+            Container.RegisterType<IGraphSeriesProvider, Top20BiggestWinningHandsSeriesProvider>(SerieType.Top20BiggestWinningHands.ToString());
+            Container.RegisterType<IGraphSeriesProvider, MoneyWonByPositionSeriesProvider>(SerieType.MoneyWonByPosition.ToString());
+            Container.RegisterType<IGraphSeriesProvider, BB100ByTimeOfDaySeriesProvider>(SerieType.BB100ByTimeOfDay.ToString());
+            Container.RegisterType<IGraphSeriesProvider, Top20ToughestOpponentsByLossAmountSeriesProvider>(SerieType.Top20ToughestOpponents.ToString());
+
+            // Register views containers
+            Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
+
+            // Register view models
+            Container.RegisterType<ICashGraphPopupViewModel, CashGraphPopupViewModel>();
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

@@ -133,7 +133,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 var positionX = uiPosition != null ? uiPosition.Position.X : default(double);
                 var positionY = uiPosition != null ? uiPosition.Position.Y : default(double);
-
+          
                 // do not change position if element is inside or above player label
                 if (positionY > playerLabelPosition[currentSeat, 1] + HudDefaultSettings.TablePlayerLabelActualHeight)
                 {

@@ -226,7 +226,11 @@
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
-    <Compile Include="UnitTests\BovadaTableTests.cs" />
+    <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
+    <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
+    <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
+    <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />
+    <Compile Include="UnitTests\IgnitionTableTests.cs" />
     <Compile Include="IntegrationTests\Importers\FileImporterTests.cs" />
     <Compile Include="UnitTests\CardTests.cs" />
     <Compile Include="UnitTests\ExportFunctionsTests.cs" />
@@ -251,6 +255,12 @@
     <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
+    <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\WindfallHand-3max.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
@@ -337,6 +347,48 @@
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <Content Include="UnitTests\TestData\Ignition\ign-info.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-21-2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-21.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-21-2.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-1.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-2.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-3.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-24-2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-24.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-24-2.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-19.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -410,6 +462,27 @@
     </Content>
     <Content Include="UnitTests\TestData\FilterModelSerializedData\FilterHoleCardsModel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\GGN-6-max-cash.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-21.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-22-3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-11-24.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-11.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-11.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-zone-2017-12-19.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\iPoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

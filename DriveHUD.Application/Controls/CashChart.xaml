@@ -1,0 +1,724 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Controls.CashChart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:me="clr-namespace:Model.Enums;assembly=Model"
+    xmlns:cnv="clr-namespace:DriveHUD.Application.ValueConverters"
+    x:Name="CashChartControl">
+
+    <UserControl.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/CashChartColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <cnv:ChartCashSeriesWinningTypeToColorBrushConverter
+                x:Key="LineColorConverter"
+                DefaultBrush="{StaticResource ForegroundBrush}"
+                ColorBrushChartCashSeriesWinningTypes="{Binding Path=LineColors, Source={x:Reference CashChartControl}}" />
+
+            <cnv:ChartCashSeriesWinningTypeToColorBrushConverter
+                x:Key="PointColorConverter"
+                DefaultBrush="{StaticResource ForegroundBrush}"
+                ColorBrushChartCashSeriesWinningTypes="{Binding Path=PointColors, Source={x:Reference CashChartControl}}" />
+
+            <cnv:ChartCashSeriesWinningTypeToColorBrushConverter
+                x:Key="TrackBallColorConverter"
+                DefaultBrush="{StaticResource ForegroundBrush}"
+                ColorBrushChartCashSeriesWinningTypes="{Binding Path=TrackBallColors, Source={x:Reference CashChartControl}}" />
+
+            <Style
+                x:Key="TrackBallLineStyle"
+                TargetType="Polyline">
+                <Setter
+                    Property="Visibility"
+                    Value="Collapsed" />
+            </Style>
+
+            <Style
+                x:Key="GraphToggleButtonStyle"
+                TargetType="{x:Type ToggleButton}"
+                BasedOn="{StaticResource {x:Type ToggleButton}}">
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+                <Setter
+                    Property="SnapsToDevicePixels"
+                    Value="true" />
+                <Setter
+                    Property="OverridesDefaultStyle"
+                    Value="true" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{DynamicResource ButtonFocusVisual}" />
+                <Setter
+                    Property="MinHeight"
+                    Value="23" />
+                <Setter
+                    Property="MinWidth"
+                    Value="20" />
+                <Setter
+                    Property="Width"
+                    Value="40" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type ToggleButton}">
+                            <Border
+                                x:Name="Border"
+                                TextBlock.Foreground="{StaticResource GraphToogleButtonForegroundBrush}"
+                                CornerRadius="1"
+                                BorderThickness="0"
+                                Background="{StaticResource GraphToogleButtonBackgroundBrush}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding Background.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding BorderBrush.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding Background.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding BorderBrush.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding Background.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding BorderBrush.Color, Source={x:Reference Name=HiddenBorder}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource GraphToogleButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid>
+                                    <Border
+                                        x:Name="HiddenBorder"
+                                        BorderBrush="{TemplateBinding Foreground}"
+                                        Background="{TemplateBinding Background}"
+                                        Visibility="Collapsed" />
+
+                                    <ContentPresenter
+                                        Margin="3,2,3,2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        RecognizesAccessKey="True" />
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="DisplayRangeRadioButton"
+                TargetType="RadioButton"
+                BasedOn="{StaticResource RadioButtonStyle}">
+                <Setter
+                    Property="MinWidth"
+                    Value="20" />
+                <Setter
+                    Property="Width"
+                    Value="45" />
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource GraphToogleButtonForegroundBrush}" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource GraphToogleButtonBackgroundBrush}" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="RadioButton">
+                            <Border
+                                x:Name="Border"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"
+                                CornerRadius="1"
+                                BorderThickness="0"
+                                Background="{TemplateBinding Background}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource GraphToogleButtonMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding CaptionColor, Source={x:Reference Name=CashChartControl}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{Binding CaptionColor, Source={x:Reference Name=CashChartControl}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource GraphToogleButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="3,2,3,2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="CategoricalLineSeriesDescriptorStyle"
+                TargetType="telerik:LineSeries">
+                <Setter
+                    Property="Stroke"
+                    Value="{Binding ChartCashSeriesWinningType, Converter={StaticResource LineColorConverter}}" />
+                <Setter
+                    Property="StrokeThickness"
+                    Value="1" />
+                <Setter
+                    Property="Visibility"
+                    Value="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}" />
+                <Setter
+                    Property="TrackBallTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Border
+                                BorderBrush="White"
+                                BorderThickness="3"
+                                CornerRadius="8">
+                                <Ellipse
+                                    Height="7"
+                                    Width="7"
+                                    Fill="{Binding Series.DataContext.ChartCashSeriesWinningType, Converter={StaticResource TrackBallColorConverter}}" />
+                            </Border>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter
+                    Property="TrackBallInfoTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="TrackBallGridSizeGroupSeries" />
+                                    <ColumnDefinition
+                                        Width="10" />
+                                    <ColumnDefinition
+                                        Width="*"
+                                        SharedSizeGroup="TrackBallGridValueSizeGroup" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock
+                                    Grid.Column="0"
+                                    Text="{Binding Path=DataPoint.Presenter.DataContext.Caption, StringFormat='{}{0}:'}" />
+                                <TextBlock
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Right"
+                                    Text="{Binding Path=DataPoint.Value, StringFormat='{}{0:#.##}'}" />
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="CategoricalLineSeriesDescriptorWithPointsStyle"
+                TargetType="telerik:LineSeries"
+                BasedOn="{StaticResource CategoricalLineSeriesDescriptorStyle}">
+                <Setter
+                    Property="PointTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Ellipse
+                                Height="7"
+                                Width="7"
+                                Fill="{Binding Presenter.DataContext.ChartCashSeriesWinningType, Converter={StaticResource PointColorConverter}}" />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="TrackBallInfoStyle"
+                TargetType="{x:Type telerik:TrackBallInfoControl}">
+                <Setter
+                    Property="Foreground"
+                    Value="#FFFFFFFF" />
+                <Setter
+                    Property="FontSize"
+                    Value="11" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource PopupBackground}" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{StaticResource ForegroundBrush}" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="1" />
+                <Setter
+                    Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type telerik:TrackBallInfoControl}">
+                            <Border
+                                Background="Transparent"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid
+                                    SnapsToDevicePixels="true">
+
+                                    <Border
+                                        Background="{TemplateBinding Background}"
+                                        Opacity="0.7"
+                                        BorderThickness="0" />
+
+                                    <Grid
+                                        Grid.IsSharedSizeScope="True"
+                                        Margin="3">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="Auto" />
+                                            <RowDefinition
+                                                Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid
+                                            Name="header">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="Auto"
+                                                    SharedSizeGroup="TrackBallGridSizeGroupSeries" />
+                                                <ColumnDefinition
+                                                    Width="10" />
+                                                <ColumnDefinition
+                                                    Width="*"
+                                                    SharedSizeGroup="TrackBallGridValueSizeGroup" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock
+                                                Grid.Column="0"
+                                                Visibility="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static me:ChartDisplayRange.Hands}}"
+                                                Text="{ResX Key=Common_Chart_TrackBallInfoHeader_Hand}" />
+                                            <TextBlock
+                                                Grid.Column="0"
+                                                Visibility="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static me:ChartDisplayRange.Hands}}"
+                                                Text="{ResX Key=Common_Chart_TrackBallInfoHeader_Date}" />
+                                            <TextBlock
+                                                Grid.Column="2"
+                                                HorizontalAlignment="Right"
+                                                Text="{TemplateBinding telerik:TrackBallInfoControl.Header}" />
+                                        </Grid>
+
+                                        <StackPanel
+                                            Name="panel"
+                                            Grid.Row="1"
+                                            Margin="0 0 0 4" />
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter
+                    Property="telerik:TrackBallInfoControl.DataPointInfoTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock
+                                    Margin="4 0 4 4"
+                                    Text="{Binding Path=DisplayContent}" />
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <DrawingBrush
+                x:Key="ShowPopupButtonBackground"
+                Stretch="Uniform">
+                <DrawingBrush.Drawing>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <GeometryDrawing
+                                Brush="{StaticResource GraphToogleButtonForegroundBrush}"
+                                Geometry="M 0.475479,0.228394C -0.0328617,0.775085 0.000478745,-0.70166 0.000478745,20.1181L 0.000478745,38.9712L 0.182158,39.3095C 0.280474,39.4996 0.482141,39.7329 0.618809,39.8312L 0.878815,39.9995L 38.7167,39.9995L 39.1083,39.8179C 39.3233,39.7212 39.61,39.5129 39.7466,39.3495L 40,39.0629L 40,17.1682L 39.7267,16.8698C 38.925,15.9832 36.9984,15.9965 36.205,16.8948L 35.9634,17.1748L 35.9634,35.9645L 4.04375,35.9645L 4.04375,4.04333L 24.1402,4.04333L 24.3752,3.77002C 25.0452,3.0083 25.0268,0.893372 24.3369,0.203369L 24.1335,0L 0.683809,0L 0.475479,0.228394 Z M 27.4935,0.085083C 27.4935,0.138367 28.0468,0.716675 28.7168,1.38837C 29.3951,2.05829 30.1434,2.82001 30.3968,3.08002L 30.8468,3.56171L 28.8018,5.39832C 27.6752,6.40662 26.2702,7.68323 25.6702,8.22992C 25.0718,8.78326 24.2252,9.53156 23.7952,9.89655C 23.3602,10.2682 22.9952,10.5933 22.9819,10.6249C 22.9485,10.7032 21.5502,11.9599 21.0485,12.3633C 20.8602,12.5199 20.4036,12.9366 20.0386,13.2882C 19.6752,13.6332 19.0569,14.1932 18.6653,14.5249C 17.6636,15.3715 16.0803,16.8948 16.0803,17.0132C 16.0803,17.0648 16.3153,17.3765 16.6019,17.6964C 16.8953,18.0148 17.3303,18.5298 17.5853,18.8281C 17.8386,19.1348 18.3336,19.6815 18.6852,20.0397C 19.0436,20.4047 19.6152,21.0414 19.9619,21.4581C 20.3069,21.8748 20.6186,22.2147 20.6452,22.2147C 20.6969,22.2147 22.1819,20.8998 24.6618,18.6464C 25.2602,18.1065 25.9901,17.4548 26.2768,17.2015C 26.5685,16.9465 27.2201,16.3615 27.7151,15.8932C 28.2168,15.4298 29.0168,14.7215 29.4985,14.3165C 29.9735,13.9132 30.4168,13.5232 30.4684,13.4515C 30.5668,13.3149 31.7318,12.2665 32.2334,11.8566C 32.3834,11.7383 32.9434,11.2249 33.4767,10.7166C 34.0101,10.215 34.5967,9.68158 34.7717,9.54486C 34.9484,9.40155 35.2601,9.14825 35.4617,8.97827L 35.8267,8.66663L 37.8583,10.7432C 38.9717,11.8882 39.9083,12.8265 39.9416,12.8199C 39.9733,12.8199 40,9.93488 40,6.41333L 40,0L 33.7501,0C 29.3035,0 27.4935,0.0266724 27.4935,0.085083 Z " />
+                        </DrawingGroup.Children>
+                    </DrawingGroup>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.OpacityMask>
+                <VisualBrush
+                    Visual="{Binding ElementName=mask}" />
+            </Grid.OpacityMask>
+
+            <Border
+                x:Name="mask"
+                Background="#181A1D"
+                CornerRadius="5,3,0,0"
+                BorderThickness="0" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="10" />
+                    <RowDefinition
+                        Height="45" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="10" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="25" />
+                </Grid.ColumnDefinitions>
+
+                <Path
+                    Grid.ColumnSpan="3"
+                    Stretch="Fill"
+                    Data="M0,0 C2,0 733,0 733,0 733,0 733,5 733,5 733,5 372,5 158,5 L157,5 C157,5 153,10 153,10 153,10 0,10 0,10 0,10 0,5 0,5 0,5 0,0 0,0z">
+                    <Path.Fill>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="1,0">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStopCollection>
+                                    <GradientStop
+                                        Color="{Binding ElementName=CashChartControl, Path=HeaderStartColor}"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="{Binding ElementName=CashChartControl, Path=HeaderStopColor}"
+                                        Offset="1" />
+                                </GradientStopCollection>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+
+                <DockPanel
+                    Grid.Row="1"
+                    Grid.Column="2">
+
+                    <TextBlock
+                        DockPanel.Dock="Left"
+                        VerticalAlignment="Bottom"
+                        FontSize="16"
+                        Margin="15,0,0,0"
+                        Foreground="{Binding ElementName=CashChartControl, Path=CaptionColor, Converter={dh:ColorToSolidBrushConverter}}"
+                        Text="{Binding ElementName=CashChartControl, Path=Caption}" />
+
+                    <StackPanel
+                        DockPanel.Dock="Right"
+                        Height="30"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_Hands}"
+                            Margin="0,0,5,0"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Hands}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_Year}"
+                            Margin="0,0,5,0"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Year}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_Month}"
+                            Margin="0,0,5,0"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Month}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_Week}"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=DisplayRange, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Week}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+
+                    </StackPanel>
+
+                    <StackPanel
+                        DockPanel.Dock="Right"
+                        Height="30"
+                        Margin="0,0,50,0"
+                        Orientation="Horizontal"
+                        Visibility="{Binding ElementName=CashChartControl, Path=ShowNonShowdownEnabled, Converter={dh:BoolToVisibilityConverter}}"
+                        HorizontalAlignment="Right">
+
+                        <Button
+                            Visibility="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand, Converter={dh:NullToVisibilityConverter}}"
+                            Margin="0,0,20,0"
+                            Command="{Binding ElementName=CashChartControl, Path=ShowInPopupCommand}">
+                            <Border
+                                Background="{StaticResource ShowPopupButtonBackground}"
+                                Width="17"
+                                Height="17" />
+                        </Button>
+
+                        <ToggleButton
+                            Content="{ResX Key=Common_Chart_SD}"
+                            Margin="0,0,5,0"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ShowShowdown}"
+                            Background="{StaticResource YellowLineColorBrush}"
+                            Foreground="#000000"
+                            Style="{StaticResource GraphToggleButtonStyle}" />
+                        <ToggleButton
+                            Content="{ResX Key=Common_Chart_NSD}"
+                            Margin="0,0,5,0"
+                            Foreground="{StaticResource GraphToogleButtonForegroundBrush}"
+                            Background="{StaticResource RedLineColorBrush}"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ShowNonShowdown}"
+                            Style="{StaticResource GraphToggleButtonStyle}" />
+                        <ToggleButton
+                            Content="{ResX Key=Common_Chart_EV}"
+                            Foreground="{StaticResource GraphToogleButtonForegroundBrush}"
+                            Background="{StaticResource OrangeLineColorBrush}"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ShowEV}"
+                            Style="{StaticResource GraphToggleButtonStyle}" />
+
+                    </StackPanel>
+
+                </DockPanel>
+
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel
+                        Grid.Column="0"
+                        Visibility="{Binding ElementName=CashChartControl, Path=WinningValueTypeEnabled, Converter={dh:BoolToVisibilityConverter}}"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_DollarSign}"
+                            Width="30"
+                            Height="30"
+                            Margin="0,0,0,5"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ValueType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartCashSeriesValueType.Currency}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+                        <RadioButton
+                            Content="{ResX Key=Common_Chart_BBSign}"
+                            Width="30"
+                            Height="30"
+                            IsChecked="{Binding ElementName=CashChartControl, Path=ValueType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartCashSeriesValueType.BB}}"
+                            Style="{StaticResource DisplayRangeRadioButton}" />
+
+                    </StackPanel>
+
+                    <telerik:RadCartesianChart
+                        x:Name="MainChart"
+                        Grid.Column="1"
+                        Margin="0,10,0,0"
+                        EmptyContent="{ResX Key=Common_Chart_NoData}"
+                        TrackBallInfoStyle="{StaticResource TrackBallInfoStyle}"
+                        TrackBallLineStyle="{StaticResource TrackBallLineStyle}">
+                        <telerik:RadCartesianChart.Behaviors>
+                            <telerik:ChartTrackBallBehavior
+                                TrackInfoUpdated="ChartTrackBallBehavior_TrackInfoUpdated"
+                                ShowIntersectionPoints="True"
+                                ShowTrackInfo="True"
+                                SnapMode="ClosestPoint" />
+                        </telerik:RadCartesianChart.Behaviors>
+
+                        <telerik:RadCartesianChart.VerticalAxis>
+                            <telerik:LinearAxis
+                                x:Name="verticalAxis"
+                                TickThickness="0"
+                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
+                                FontSize="10">
+                            </telerik:LinearAxis>
+                        </telerik:RadCartesianChart.VerticalAxis>
+
+                        <telerik:RadCartesianChart.Grid>
+                            <telerik:CartesianChartGrid
+                                MajorLinesVisibility="Y"
+                                StripLinesVisibility="X">
+                                <telerik:CartesianChartGrid.XStripeBrushes>
+                                    <SolidColorBrush
+                                        Color="White"
+                                        Opacity="0.01" />
+                                    <SolidColorBrush
+                                        Color="Transparent" />
+                                </telerik:CartesianChartGrid.XStripeBrushes>
+                                <telerik:CartesianChartGrid.MajorYLineStyle>
+                                    <Style
+                                        TargetType="{x:Type Line}">
+                                        <Setter
+                                            Property="Stroke"
+                                            Value="{StaticResource GraphGridLineStrokeBrush}" />
+                                    </Style>
+                                </telerik:CartesianChartGrid.MajorYLineStyle>
+                            </telerik:CartesianChartGrid>
+                        </telerik:RadCartesianChart.Grid>
+
+                        <telerik:RadCartesianChart.Annotations>
+                            <telerik:CartesianGridLineAnnotation
+                                Axis="{Binding ElementName=verticalAxis}"
+                                Stroke="White"
+                                Value="0"
+                                StrokeThickness="0.2" />
+                        </telerik:RadCartesianChart.Annotations>
+
+                        <telerik:RadCartesianChart.SeriesProvider>
+                            <telerik:ChartSeriesProvider
+                                Source="{Binding ElementName=CashChartControl, Path=ItemsSource}">
+                                <telerik:ChartSeriesProvider.SeriesDescriptors>
+
+                                    <telerik:CategoricalSeriesDescriptor
+                                        x:Name="MainSeriesDescriptor"
+                                        Style="{StaticResource CategoricalLineSeriesDescriptorStyle}"
+                                        ItemsSourcePath="ItemsCollection"
+                                        ValuePath="Value"
+                                        CategoryPath="Category">
+
+                                    </telerik:CategoricalSeriesDescriptor>
+
+                                </telerik:ChartSeriesProvider.SeriesDescriptors>
+                            </telerik:ChartSeriesProvider>
+
+                        </telerik:RadCartesianChart.SeriesProvider>
+
+                    </telerik:RadCartesianChart>
+                </Grid>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,450 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Controls.ChartGadget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:application="clr-namespace:DriveHUD.Application"
+    xmlns:me="clr-namespace:Model.Enums;assembly=Model"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+    x:Name="Control">
+    <UserControl.Resources>
+
+        <VisualBrush
+            x:Key="ChartMask">
+            <VisualBrush.Visual>
+                <Rectangle
+                    Width="1"
+                    Height="1">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush
+                            EndPoint="0,0"
+                            StartPoint="1,0"
+                            SpreadMethod="Repeat">
+                            <GradientStop
+                                Offset="0"
+                                Color="{Binding ElementName=Control, Path=LineColor, Mode=OneTime}" />
+                            <GradientStop
+                                Offset="0.201"
+                                Color="#00000000" />
+                            <GradientStop
+                                Offset="1"
+                                Color="#00000000" />
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform
+                                        ScaleY="0.03"
+                                        ScaleX="0.015" />
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                    <Rectangle.OpacityMask>
+                        <LinearGradientBrush
+                            EndPoint="0,0"
+                            StartPoint="0,1">
+                            <GradientStop
+                                Offset="0"
+                                Color="Transparent" />
+                            <GradientStop
+                                Offset="0.7"
+                                Color="White" />
+                            <GradientStop
+                                Offset="1"
+                                Color="White" />
+                        </LinearGradientBrush>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+        <Style
+            x:Key="TrackBallLineStyle"
+            TargetType="Polyline">
+            <Setter
+                Property="Visibility"
+                Value="Collapsed" />
+        </Style>
+
+        <Style
+            x:Key="DateRadioButton"
+            TargetType="RadioButton"
+            BasedOn="{StaticResource RadioButtonStyle}">
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource GraphToogleButtonForegroundBrush}" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource GraphToogleButtonBackgroundBrush}" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="RadioButton">
+                        <Border
+                            x:Name="Border"
+                            TextBlock.Foreground="{TemplateBinding Foreground}"
+                            CornerRadius="1"
+                            BorderThickness="0"
+                            Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup
+                                    x:Name="CommonStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition
+                                            GeneratedDuration="0:0:0.5" />
+                                        <VisualTransition
+                                            GeneratedDuration="0"
+                                            To="Pressed" />
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState
+                                        x:Name="Normal" />
+                                    <VisualState
+                                        x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetName="Border"
+                                                Storyboard.TargetProperty="(Border.Background).Color">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#34519c" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState
+                                        x:Name="Checked">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Border.Background).Color"
+                                                Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="{Binding CaptionColor, Source={x:Reference Name=Control}}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState
+                                        x:Name="Pressed">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Border.Background).Color"
+                                                Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="{Binding CaptionColor, Source={x:Reference Name=Control}}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState
+                                        x:Name="Disabled">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Border.Background).Color"
+                                                Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#FFAEA5A5" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter
+                                Margin="2"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.OpacityMask>
+                <VisualBrush
+                    Visual="{Binding ElementName=mask}" />
+            </Grid.OpacityMask>
+
+            <Border
+                Name="mask"
+                Background="#181A1D"
+                CornerRadius="5,3,0,0"
+                BorderThickness="0" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="10" />
+                    <RowDefinition
+                        Height="45" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="25" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="25" />
+                </Grid.ColumnDefinitions>
+                <Path
+                    Grid.ColumnSpan="3"
+                    Stretch="Fill"
+                    Data="M0,0 C2,0 733,0 733,0 733,0 733,5 733,5 733,5 372,5 158,5 L157,5 C157,5 153,10 153,10 153,10 0,10 0,10 0,10 0,5 0,5 0,5 0,0 0,0z">
+                    <Path.Fill>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="1,0">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStopCollection>
+                                    <GradientStop
+                                        Color="{Binding ElementName=Control, Path=HeaderStartColor}"
+                                        Offset="0" />
+                                    <GradientStop
+                                        Color="{Binding ElementName=Control, Path=HeaderStopColor}"
+                                        Offset="1" />
+                                </GradientStopCollection>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+
+                <DockPanel
+                    Grid.Row="1"
+                    Grid.Column="2">
+                    <TextBlock
+                        DockPanel.Dock="Left"
+                        VerticalAlignment="Bottom"
+                        FontSize="16"
+                        Text="{Binding ElementName=Control, Path=Caption}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush
+                                Color="{Binding ElementName=Control, Path=CaptionColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+
+                    <Border
+                        DockPanel.Dock="Left"
+                        VerticalAlignment="Center">
+
+                        <Grid
+                            VerticalAlignment="Stretch">
+                            <ItemsControl
+                                ItemsSource="{Binding}">
+                                <ItemsControl.Style>
+                                    <Style
+                                        TargetType="ItemsControl">
+                                        <Setter
+                                            Property="Visibility"
+                                            Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding Count}"
+                                                Value="1">
+                                                <Setter
+                                                    Property="Visibility"
+                                                    Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ItemsControl.Style>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel
+                                            Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox
+                                            Foreground="{StaticResource GraphToogleButtonForegroundBrush}"
+                                            IsChecked="{Binding IsVisible, Mode=TwoWay}"
+                                            Margin="10">
+                                            <CheckBox.Content>
+                                                <StackPanel
+                                                    Orientation="Horizontal">
+                                                    <Ellipse
+                                                        Width="7"
+                                                        Height="7"
+                                                        Fill="{Binding ColorsPalette.LineColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                                        Margin="0 0 5 0" />
+                                                    <TextBlock
+                                                        Text="{Binding Caption}" />
+                                                </StackPanel>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+
+                    </Border>
+
+
+                    <StackPanel
+                        DockPanel.Dock="Right"
+                        Height="40"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                        <RadioButton
+                            Content="Year"
+                            IsChecked="{Binding SelectedRange, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Year} }"
+                            Style="{StaticResource DateRadioButton}" />
+                        <RadioButton
+                            Content="Month"
+                            IsChecked="{Binding SelectedRange, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Month} }"
+                            Style="{StaticResource DateRadioButton}" />
+                        <RadioButton
+                            Content="Week"
+                            IsChecked="{Binding SelectedRange, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static me:ChartDisplayRange.Week} }"
+                            Style="{StaticResource DateRadioButton}" />
+                    </StackPanel>
+                </DockPanel>
+
+
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2">
+                    <telerik:RadCartesianChart
+                        x:Name="MainChart"
+                        Margin="0,10,0,0"
+                        TrackBallLineStyle="{StaticResource TrackBallLineStyle}">
+                        <telerik:RadCartesianChart.Behaviors>
+                            <telerik:ChartTrackBallBehavior
+                                ShowIntersectionPoints="True"
+                                ShowTrackInfo="False"
+                                SnapMode="ClosestPoint" />
+                            <telerik:ChartTooltipBehavior
+                                Placement="Right"
+                                VerticalOffset="-15" />
+                        </telerik:RadCartesianChart.Behaviors>
+                        <telerik:RadCartesianChart.HorizontalAxis>
+                            <telerik:DateTimeCategoricalAxis
+                                x:Name="AxisDateTime"
+                                LabelFitMode="MultiLine"
+                                TickThickness="0"
+                                ElementBrush="#303134"
+                                FontSize="11" />
+                        </telerik:RadCartesianChart.HorizontalAxis>
+                        <telerik:RadCartesianChart.VerticalAxis>
+                            <telerik:LinearAxis
+                                TickThickness="0"
+                                ElementBrush="#303134"
+                                FontSize="10">
+                            </telerik:LinearAxis>
+                        </telerik:RadCartesianChart.VerticalAxis>
+                        <telerik:RadCartesianChart.Grid>
+                            <telerik:CartesianChartGrid
+                                StripLinesVisibility="X">
+                                <telerik:CartesianChartGrid.XStripeBrushes>
+                                    <SolidColorBrush
+                                        Color="White"
+                                        Opacity="0.01" />
+                                    <SolidColorBrush
+                                        Color="Transparent" />
+                                </telerik:CartesianChartGrid.XStripeBrushes>
+                            </telerik:CartesianChartGrid>
+                        </telerik:RadCartesianChart.Grid>
+
+                        <telerik:RadCartesianChart.SeriesProvider>
+                            <telerik:ChartSeriesProvider
+                                Source="{Binding}">
+                                <telerik:ChartSeriesProvider.SeriesDescriptors>
+
+                                    <telerik:CategoricalSeriesDescriptor
+                                        ItemsSourcePath="ItemsCollection"
+                                        ValuePath="Value"
+                                        CategoryPath="Date">
+                                        <telerik:CategoricalSeriesDescriptor.Style>
+                                            <Style
+                                                TargetType="telerik:AreaSeries">
+                                                <Setter
+                                                    Property="Stroke"
+                                                    Value="{Binding ColorsPalette.LineColor, Converter={dh:ColorToSolidBrushConverter}}" />
+                                                <Setter
+                                                    Property="Visibility"
+                                                    Value="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}" />
+                                                <Setter
+                                                    Property="StrokeThickness"
+                                                    Value="1" />
+                                                <Setter
+                                                    Property="Fill"
+                                                    Value="{Binding ColorsPalette.AreaBrush}" />
+                                                <Setter
+                                                    Property="PointTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Ellipse
+                                                                Height="7"
+                                                                Width="7"
+                                                                Fill="{Binding DataItem.PointColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}" />
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter
+                                                    Property="TrackBallTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Border
+                                                                BorderBrush="White"
+                                                                BorderThickness="3"
+                                                                CornerRadius="8">
+                                                                <Ellipse
+                                                                    Height="7"
+                                                                    Width="7"
+                                                                    Fill="{Binding DataPoint.DataItem.TrackBallColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}" />
+                                                            </Border>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter
+                                                    Property="TooltipTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Grid
+                                                                HorizontalAlignment="Center">
+                                                                <Path
+                                                                    Data="M -15,15 L 15,15 15,33 -15,33 -15,20 -22.5,24.375 z"
+                                                                    Stretch="Fill"
+                                                                    Fill="{Binding Path=DataItem.TooltipColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
+                                                                    Stroke="{Binding Path=DataItem.TooltipColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
+                                                                    StrokeThickness="2" />
+                                                                <TextBlock
+                                                                    Foreground="White"
+                                                                    Margin="15, 5, 5, 5"
+                                                                    Text="{Binding DataItem.ValueText, Mode=OneTime}"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center" />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </telerik:CategoricalSeriesDescriptor.Style>
+                                    </telerik:CategoricalSeriesDescriptor>
+
+                                </telerik:ChartSeriesProvider.SeriesDescriptors>
+                            </telerik:ChartSeriesProvider>
+
+                        </telerik:RadCartesianChart.SeriesProvider>
+
+                    </telerik:RadCartesianChart>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

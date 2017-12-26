@@ -90,7 +90,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Constructor
 
-        internal MainWindowViewModel(SynchronizationContext _synchronizationContext)
+        internal MainWindowViewModel()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
@@ -100,7 +100,6 @@ namespace DriveHUD.Application.ViewModels
 
             hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
-            synchronizationContext = _synchronizationContext;
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Subscribe(ShowCalculateEquityView);
@@ -250,28 +249,33 @@ namespace DriveHUD.Application.ViewModels
 
         private void OnImportingStopped(object sender, EventArgs e)
         {
-            hudTransmitter.Dispose();
-
-            importerSessionCacheService.End();
-
-            System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+            try
             {
-                try
-                {
-                    // update data after hud is stopped
-                    CreatePositionReport();
-                    UpdateCurrentView();
+                hudTransmitter.Dispose();
 
-                    RefreshCommandsCanExecute();
-                }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(this, ex);
-                }
-            });
+                importerSessionCacheService.End();
 
-            GC.Collect();
-            LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+                System.Windows.Application.Current?.Dispatcher.Invoke(() =>
+                {
+                    try
+                    {
+                        // update data after hud is stopped
+                        CreatePositionReport();
+                        UpdateCurrentView();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Reports has not been updated after HUD stopped.", ex);
+                    }
+                });
+
+                GC.Collect();
+                LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
+            }
+            finally
+            {
+                System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+            }
         }
 
         internal void Load()
@@ -384,7 +388,11 @@ namespace DriveHUD.Application.ViewModels
                 // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
-                    LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                    if (e.GameInfo.GameFormat != GameFormat.Zone)
+                    {
+                        LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                    }
+
                     return;
                 }
 
@@ -418,12 +426,14 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+
                 if (e.DoNotUpdateHud)
                 {
                     // update cache if even we don't need to build HUD
-                    if (gameInfo.PlayersCacheInfo != null)
+                    if (playersCacheInfo != null)
                     {
-                        foreach (var playerCacheInfo in gameInfo.PlayersCacheInfo)
+                        foreach (var playerCacheInfo in playersCacheInfo)
                         {
                             playerCacheInfo.GameFormat = gameInfo.GameFormat;
 
@@ -482,7 +492,7 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = gameInfo.PlayersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
 
                     if (playerCacheInfo != null)
                     {
@@ -870,12 +880,13 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (DashboardViewModel == null)
                 {
-                    DashboardViewModel = new DashboardViewModel(synchronizationContext)
+                    DashboardViewModel = new DashboardViewModel
                     {
                         Type = EnumViewModelType.DashboardViewModel,
                     };
                 }
 
+                DashboardViewModel.IsActive = true;
                 CurrentViewModel = DashboardViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = false;
                 UpdateCurrentView();
@@ -891,6 +902,11 @@ namespace DriveHUD.Application.ViewModels
                     {
                         Type = EnumViewModelType.TournamentViewModel,
                     };
+                }
+
+                if (DashboardViewModel != null)
+                {
+                    DashboardViewModel.IsActive = false;
                 }
 
                 CurrentViewModel = TournamentViewModel;

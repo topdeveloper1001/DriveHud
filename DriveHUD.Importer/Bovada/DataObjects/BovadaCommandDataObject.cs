@@ -96,5 +96,7 @@ namespace DriveHUD.Importers.Bovada
         public string prize { get; set; }
 
         public int cash { get; set; }
+
+        public object mySeat { get; set; }
     }
 }

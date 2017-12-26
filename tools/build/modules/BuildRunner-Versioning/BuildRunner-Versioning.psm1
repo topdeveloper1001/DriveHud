@@ -8,6 +8,7 @@
 #>
 
 Import-Module BuildRunner-Log
+Import-Module BuildRunner-Tools
 
 $ModuleName = 'VERSION'
 
@@ -23,6 +24,13 @@ function Set-Version($session)
         throw "Revision number must be more than 1. Check the branch."
    }
 
+   [string[]]$excludeFilters = @()
+
+   if(-Not [string]::IsNullOrWhiteSpace($session.VersionExlcudeFilter))
+   {
+        $excludeFilters = $session.VersionExlcudeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }        
+   }    
+
    $version = [Version]($session.Version)
    $version = New-Object System.Version($version.Major, $version.Minor, $version.Build, $revisionNumber)
       
@@ -36,16 +44,21 @@ function Set-Version($session)
    {
         Get-ChildItem -Path $session.BaseDir -Filter $fileTemplate  -Recurse | ForEach-Object {
             
-            Write-LogInfo $ModuleName "Updating $($_.FullName)"
+            $doExclude = Get-IsFilterMatch $_.FullName $excludeFilters
 
-            if($_.Extension -eq '.cs')
-            {
-                Update-AssemblyInfo $_.FullName $version
-            }
+            if(-Not $doExclude) {
 
-            if($_.Extension -eq '.wxs' -Or $_.Extension -eq '.wxi')
-            {
-                Update-Wix $_.FullName $version
+                Write-LogInfo $ModuleName "Updating $($_.FullName)"
+
+                if($_.Extension -eq '.cs')
+                {
+                    Update-AssemblyInfo $_.FullName $version
+                }
+
+                if($_.Extension -eq '.wxs' -Or $_.Extension -eq '.wxi')
+                {
+                    Update-Wix $_.FullName $version
+                }
             }
         }
    }
