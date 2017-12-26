@@ -120,6 +120,15 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        protected virtual bool DoDelayBeforeImport
+        {
+            get
+            {
+                return true;
+
+            }
+        }
+
         #region General Table Data
 
         public uint Uid
@@ -845,12 +854,7 @@ namespace DriveHUD.Importers.Bovada
         }
 
         protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
-        {
-            if (CurrentHandNumber == cmdObj.stageNo)
-            {
-                return;
-            }
-
+        {           
             CurrentHandNumber = cmdObj.stageNo;
 
             if (!IsZonePokerTable)
@@ -891,7 +895,7 @@ namespace DriveHUD.Importers.Bovada
         protected virtual void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
         {
             // wait for tournament results
-            if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
+            if (DoDelayBeforeImport && (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG))
             {
                 importHandResetEvent.Wait(delayBeforeImport);
 
