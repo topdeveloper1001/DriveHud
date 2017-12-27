@@ -1,0 +1,25 @@
+Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com]Poker HUD & Database[/url]
+
+NL Holdem $0.10(BB)
+SB ($9.41)
+BB ($12.51)
+[color=red]UTG[/color] ($9.85)
+[color=red]HERO[/color] ($16.68)
+CO ($9.12)
+BTN ($12.61)
+
+Dealt to Hero T:diamond: T:club:
+
+[color=red]UTG Raises To $0.56 (Rem. Stack: 9.29)[/color], [color=red]HERO Calls $0.56 (Rem. Stack: 16.12)[/color], CO Folds, BTN Folds, SB Folds, BB Folds
+
+Flop ($1.27) 3:diamond: 3:club: Q:diamond:
+[color=red]UTG Bets $1.27 (Rem. Stack: 8.02)[/color], [color=red]HERO Calls $1.27 (Rem. Stack: 14.85)[/color]
+
+Turn ($3.81) 3:diamond: 3:club: Q:diamond: 4:club:
+[color=red]UTG Bets $8.02 (allin) (Rem. Stack: 0.00)[/color], [color=red]HERO Calls $8.02 (Rem. Stack: 6.83)[/color]
+
+River ($19.85) 3:diamond: 3:club: Q:diamond: 4:club: Q:club:
+
+UTG shows J:diamond: 9:heart:
+
+HERO wins $18.86
