@@ -19,34 +19,21 @@ namespace DriveHUD.Importers
     /// </summary>
     public class PokerClientTableClosedEventArgs : EventArgs
     {
-        private readonly string site;
-        private readonly IntPtr tableHandle;
+        private readonly IntPtr windowHandle;
 
-        public PokerClientTableClosedEventArgs(string site, IntPtr tableHandle)
+        public PokerClientTableClosedEventArgs(IntPtr windowHandle)
         {
-            this.site = site;
-            this.tableHandle = tableHandle;
-        }
-
-        /// <summary>
-        /// Closed table Site
-        /// </summary>
-        public string Site
-        {
-            get
-            {
-                return site;
-            }
+            this.windowHandle = windowHandle;
         }
 
         /// <summary>
         /// Closed table windows handle
         /// </summary>
-        public IntPtr TableHandle
+        public IntPtr WindowHandle
         {
             get
             {
-                return tableHandle;
+                return windowHandle;
             }
         }
     }
