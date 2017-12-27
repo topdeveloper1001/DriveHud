@@ -23,14 +23,15 @@ namespace DriveHUD.Importers.Bovada
         /// Checks whenever the specified handle exists in the cache
         /// </summary>
         /// <param name="hWnd">The handle to check if exists in the cache</param>
-        /// <returns>Returns true if the handle exists in the cache, otherwise - false</returns>
-        bool IsWindowCached(IntPtr hWnd);
+        /// <returns>Returns table associated with the handle if the handle exists in the cache, otherwise - false</returns>
+        BovadaTable GetCachedTable(IntPtr hWnd);
 
         /// <summary>
         /// Adds the specified handle to the cache
         /// </summary>
         /// <param name="hWnd">The handle to add to the cache</param>
-        void AddWindow(IntPtr hWnd);
+        /// <param name="bovadaTable">The table associated with the handle</param>
+        void AddWindow(IntPtr hWnd, BovadaTable bovadaTable);
 
         /// <summary>
         /// Removes the specified window from the cache
