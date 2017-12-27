@@ -317,6 +317,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo3Bet", nameof(Indicators.FoldToThreeBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo4Bet", nameof(Indicators.FoldToFourBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldCBet", nameof(Indicators.FoldCBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FoldToDoubleBarrel", nameof(Indicators.FoldToTurnCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToCBet3BetPot", nameof(Indicators.FoldFlopCBetFromThreeBetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToCBet4BetPot", nameof(Indicators.FoldFlopCBetFromFourBetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToFlopRaise", nameof(Indicators.FoldToFlopRaise), ColumnType.Percentile),

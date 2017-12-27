@@ -461,6 +461,27 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated("PreflopIPIsCalculated", x => x.PreflopIP, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-MP-DidNotFaceCBet-1.txt", EnumPokerSites.PokerStars, "FastEddie267", 0)]
+        public void TurncontinuationbetmadeIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("TurncontinuationbetmadeIsCalculated", x => x.Turncontinuationbetmade, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-MP-DidNotFaceCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void FacingturncontinuationbetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("FacingturncontinuationbetIsCalculated", x => x.Facingturncontinuationbet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CO-DidNotFaceRiverCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void FacingrivercontinuationbetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated("FacingrivercontinuationbetIsCalculated", x => x.Facingrivercontinuationbet, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(string method, Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01)
         {
             using (var perfScope = new PerformanceMonitor(method))

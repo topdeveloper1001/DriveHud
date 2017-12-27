@@ -160,6 +160,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToTurnCBet
+        {
+            get
+            {
+                return GetPercentage(Source.Foldedtoturncontinuationbet, Source.Facingturncontinuationbet);
+            }
+        }
+
         public virtual decimal FlopCBetInThreeBetPot
         {
             get

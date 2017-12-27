@@ -150,6 +150,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToTurnCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCBet,
+                    Occurred = Source.Foldedtoturncontinuationbet,
+                    CouldOccurred = Source.Facingturncontinuationbet
+                };
+            }
+        }
+
         public virtual StatDto FlopCBetInThreeBetPotObject
         {
             get

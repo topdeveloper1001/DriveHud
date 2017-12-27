@@ -146,6 +146,7 @@ namespace Model.Enums
         FoldToFlopRaise,
         FoldToTurnRaise,
         FoldToRiverCBet,
-        NetWon
+        NetWon,
+        FoldToDoubleBarrel
     }
 }

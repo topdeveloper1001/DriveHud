@@ -87,7 +87,8 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FoldTo4Bet, PropertyName = nameof(Indicators.FoldToFourBet), CreateStatDto = x => new StatDto(x.Foldedtofourbetpreflop, x.Facedfourbetpreflop) },
             new StatBase { Stat = Stat.FoldToCBet, PropertyName = nameof(Indicators.FoldCBet), CreateStatDto = x => new StatDto(x.Foldedtoflopcontinuationbet, x.Facingflopcontinuationbet) },
             new StatBase { Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromFourBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromFourBetPot, x.FacingFlopContinuationBetFromFourBetPot) },
-            new StatBase { Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromThreeBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromThreeBetPot, x.FacingFlopContinuationBetFromThreeBetPot)  },
+            new StatBase { Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromThreeBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromThreeBetPot, x.FacingFlopContinuationBetFromThreeBetPot) },
+            new StatBase { Stat = Stat.FoldToDoubleBarrel, PropertyName =  nameof(Indicators.FoldToTurnCBet), CreateStatDto = x => new StatDto(x.Foldedtoturncontinuationbet, x.Facingturncontinuationbet) },
             new StatBase { Stat = Stat.FoldToFlopRaise, PropertyName = nameof(Indicators.FoldToFlopRaise), CreateStatDto = x => new StatDto(x.FoldedFacedRaiseFlop, x.FacedRaiseFlop) },
             new StatBase { Stat = Stat.FoldToRiverCBet, PropertyName = nameof(Indicators.FoldToRiverCBet), CreateStatDto = x => new StatDto(x.Foldedtorivercontinuationbet, x.Facingrivercontinuationbet) },
             new StatBase { Stat = Stat.FoldToSqueez, PropertyName = nameof(Indicators.FoldToSqueez), CreateStatDto = x => new StatDto(x.FoldedFacedSqueez, x.FacedSqueez) },
@@ -337,6 +338,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAGG },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnSeen },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DoubleBarrel },
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToDoubleBarrel },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnRaise },
 
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RaiseRiver },

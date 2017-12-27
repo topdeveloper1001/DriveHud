@@ -124,9 +124,12 @@ namespace Model
             Player dealer = GetDealerPlayer(parsedHand);
 
             var numberOfActivePlayerOnFlop = parsedHand.NumPlayersActive - parsedHand.PreFlop.Count(x => x.IsFold);
-            #region cbet
 
-            ConditionalBet flopCBet = new ConditionalBet(), turnCBet = new ConditionalBet(), riverCBet = new ConditionalBet();
+            #region C-Bet
+
+            var flopCBet = new ConditionalBet();
+            var turnCBet = new ConditionalBet();
+            var riverCBet = new ConditionalBet();
 
             if (pfrOcurred)
             {
@@ -137,18 +140,22 @@ namespace Model
                 if (wasFlop && !wasAllIn)
                 {
                     var flops = parsedHand.Flop.ToList();
+
                     wasAllIn = flops.OfType<AllInAction>().Any(x => x.PlayerName != player);
-                    var wasReraise = flops.Any(x => x.PlayerName != player && x.IsRaise());
 
                     CalculateContinuationBet(flopCBet, flops, player, raiser);
+
+                    var wasReraise = flops.Any(x => (!flopCBet.Made && x.IsRaise()) || (x.PlayerName != player && x.IsRaise()));
 
                     if (flopCBet.Happened && wasTurn && !wasAllIn && !wasReraise)
                     {
                         var turns = parsedHand.Turn.ToList();
+
                         wasAllIn = turns.OfType<AllInAction>().Any(x => x.PlayerName != player);
-                        wasReraise = turns.Any(x => x.PlayerName != player && x.IsRaise());
 
                         CalculateContinuationBet(turnCBet, turns, player, raiser);
+
+                        wasReraise = turns.Any(x => (!turnCBet.Made && x.IsRaise()) || (x.PlayerName != player && x.IsRaise()));
 
                         if (turnCBet.Happened && wasRiver && !wasAllIn && !wasReraise)
                         {
@@ -159,7 +166,8 @@ namespace Model
                 }
             }
 
-            ConditionalBet turnIpPassFlopCbet = new ConditionalBet();
+            var turnIpPassFlopCbet = new ConditionalBet();
+
             var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop);
 
             var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
@@ -167,17 +175,25 @@ namespace Model
             if (positionturnPlayer != null && positionturnPlayer.PlayerName == player && flopCBet.Passed)
             {
                 var action = parsedHand.Turn.FirstOrDefault(x => x.PlayerName == player);
+
                 if (action != null)
+                {
                     turnIpPassFlopCbet.CheckAction(action);
+                }
             }
 
-            ConditionalBet riverIpPassFlopCbet = new ConditionalBet();
+            var riverIpPassFlopCbet = new ConditionalBet();
+
             var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
+
             if (positionRiverPlayer != null && positionRiverPlayer.PlayerName == player && turnCBet.Passed)
             {
                 var action = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
+
                 if (action != null)
+                {
                     riverIpPassFlopCbet.CheckAction(action);
+                }
             }
 
             #endregion

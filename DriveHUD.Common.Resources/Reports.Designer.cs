@@ -673,6 +673,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel %.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrel {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Flop C-bet%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCBet {

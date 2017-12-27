@@ -131,7 +131,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             var dataService = ServiceLocator.Current.GetInstance<IDataService>();
             dataService.SetPlayerStatisticPath(playerStatisticFolder);
 
-            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);      
+            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);
 
             var indicators = new HudLightIndicators(playerStatistic);
 
@@ -160,6 +160,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ThreeBetCall, Is.EqualTo(expected.ThreeBetCall), nameof(HudLightIndicators.ThreeBetCall));
                 Assert.That(actual.FlopCBet, Is.EqualTo(expected.FlopCBet), nameof(HudLightIndicators.FlopCBet));
                 Assert.That(actual.TurnCBet, Is.EqualTo(expected.TurnCBet), nameof(HudLightIndicators.TurnCBet));
+                Assert.That(actual.FoldToTurnCBet, Is.EqualTo(expected.FoldToTurnCBet), nameof(HudLightIndicators.FoldToTurnCBet));
                 Assert.That(actual.FlopCBetInThreeBetPot, Is.EqualTo(expected.FlopCBetInThreeBetPot), nameof(HudLightIndicators.FlopCBetInThreeBetPot));
                 Assert.That(actual.FlopCBetInFourBetPot, Is.EqualTo(expected.FlopCBetInFourBetPot), nameof(HudLightIndicators.FlopCBetInFourBetPot));
                 Assert.That(actual.FlopCBetVsOneOpp, Is.EqualTo(expected.FlopCBetVsOneOpp), nameof(HudLightIndicators.FlopCBetVsOneOpp));
@@ -222,7 +223,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ColdCall_MP, Is.EqualTo(expected.ColdCall_MP), nameof(HudLightIndicators.ColdCall_MP));
                 Assert.That(actual.ColdCall_SB, Is.EqualTo(expected.ColdCall_SB), nameof(HudLightIndicators.ColdCall_SB));
                 Assert.That(actual.DonkBet, Is.EqualTo(expected.DonkBet), nameof(HudLightIndicators.DonkBet));
-                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));             
+                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));
                 Assert.That(actual.UO_PFR_EP, Is.EqualTo(expected.UO_PFR_EP), nameof(HudLightIndicators.UO_PFR_EP));
                 Assert.That(actual.UO_PFR_MP, Is.EqualTo(expected.UO_PFR_MP), nameof(HudLightIndicators.UO_PFR_MP));
                 Assert.That(actual.UO_PFR_CO, Is.EqualTo(expected.UO_PFR_CO), nameof(HudLightIndicators.UO_PFR_CO));
@@ -269,6 +270,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ThreeBet_BN, Is.EqualTo(expected.ThreeBet_BN), nameof(HudLightIndicators.ThreeBet_BN));
                 Assert.That(actual.ThreeBet_SB, Is.EqualTo(expected.ThreeBet_SB), nameof(HudLightIndicators.ThreeBet_SB));
                 Assert.That(actual.ThreeBet_BB, Is.EqualTo(expected.ThreeBet_BB), nameof(HudLightIndicators.ThreeBet_BB));
+                Assert.That(actual.StdDev, Is.EqualTo(expected.StdDev), nameof(HudLightIndicators.StdDev));
+                Assert.That(actual.StdDevBB, Is.EqualTo(expected.StdDevBB), nameof(HudLightIndicators.StdDevBB));
+                Assert.That(actual.StdDevBBPer100Hands, Is.EqualTo(expected.StdDevBBPer100Hands), nameof(HudLightIndicators.StdDevBBPer100Hands));
+                Assert.That(actual.NetWonPerHour, Is.EqualTo(expected.NetWonPerHour), nameof(HudLightIndicators.NetWonPerHour));
             });
         }
 

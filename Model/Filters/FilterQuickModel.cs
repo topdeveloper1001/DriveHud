@@ -33,6 +33,13 @@ namespace Model.Filters
         {
             QuickFilterCollection = new ObservableCollection<QuickFilterItem>()
             {
+                new QuickFilterItem() { Name = "Double barrel", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Turncontinuationbetmade), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible) },
+                new QuickFilterItem() { Name = "Fold to Double barrel", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Foldedtoturncontinuationbet), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
+                new QuickFilterItem() { Name = "Facing Double barrel", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Facingturncontinuationbet), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
+
+                 new QuickFilterItem() { Name = "Fold to Triple barrel", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Foldedtorivercontinuationbet), NoPropertyName = nameof(Playerstatistic.Facingrivercontinuationbet) },
+                new QuickFilterItem() { Name = "Facing Triple barrel", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Facingrivercontinuationbet), NoPropertyName = nameof(Playerstatistic.Facingrivercontinuationbet) },
+
                 new QuickFilterItem() { Name = "3-Bet non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
                 new QuickFilterItem() { Name = "3-Bet premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.PremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet w/ non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
@@ -283,7 +290,7 @@ namespace Model.Filters
         }
 
         private string _propertyName;
-        private string _isPossiblePropertyName;        
+        private string _isPossiblePropertyName;
         private QuickFilterHandTypeEnum _quickFilterHandType;
         private QuickFilterPositionEnum? _quickFilterPosition;
 
