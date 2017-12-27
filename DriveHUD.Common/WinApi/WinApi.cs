@@ -485,6 +485,30 @@ namespace DriveHUD.Common.WinApi
         [DllImport("user32.dll", ExactSpelling = true, CharSet = CharSet.Auto)]
         public static extern IntPtr GetParent(IntPtr hWnd);
 
+        #region Setting hooks
+
+        public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc, WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
+
+        [DllImport("user32.dll")]
+        public static extern bool UnhookWinEvent(IntPtr hWinEventHook);
+
+        public const uint WINEVENT_OUTOFCONTEXT = 0;
+
+        public const uint EVENT_OBJECT_DESTROY = 0x8001;
+
+        public static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
+        {
+            return SetWinEventHook(eventId, eventId, IntPtr.Zero, callback, idProcess, 0, WINEVENT_OUTOFCONTEXT);
+        }
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint processId);
+
+        #endregion
+
         #endregion
     }
 }

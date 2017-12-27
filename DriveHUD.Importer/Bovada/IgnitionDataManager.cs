@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using System.Text;
 
@@ -41,11 +42,22 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="tableUid">Unique identifier of table</param>
         protected override void AddTable(uint tableUid)
         {
-            if (openedTables != null && !openedTables.ContainsKey(tableUid))
+            lock (openedTables)
             {
-                var catcherTable = new IgnitionTable(eventAggregator);
-                openedTables.Add(tableUid, catcherTable);
+                if (openedTables != null && !openedTables.ContainsKey(tableUid))
+                {
+                    var catcherTable = new IgnitionTable(eventAggregator);
+                    openedTables.Add(tableUid, catcherTable);
+                }
             }
+        }
+
+        public override void RemoveOpenedTable(PokerClientTableClosedEventArgs e)
+        {
+            base.RemoveOpenedTable(e);
+
+            var ignitionWindowCache = ServiceLocator.Current.GetInstance<IIgnitionWindowCache>();
+            ignitionWindowCache.RemoveWindow(e.WindowHandle);
         }
     }
 }

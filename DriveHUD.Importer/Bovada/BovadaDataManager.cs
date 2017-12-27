@@ -52,7 +52,7 @@ namespace DriveHUD.Importers.Bovada
             logger = dataManagerInfo.Logger;
             site = dataManagerInfo.Site;
 
-            pokerClientTableClosedSubsciption = eventAggregator.GetEvent<PokerClientTableClosedEvent>().Subscribe(RemoveOpenedTable);
+            pokerClientTableClosedSubsciption = eventAggregator.GetEvent<PokerClientTableClosedEvent>().Subscribe(RemoveOpenedTable, ThreadOption.BackgroundThread);
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             var settings = settingsService.GetSettings();
@@ -110,13 +110,16 @@ namespace DriveHUD.Importers.Bovada
 
             var handle = BovadaConverters.ConvertHexStringToInt32(handleText);
 
-            var tablesToMerge = openedTables.Where(x => x.Value.WindowHandle.ToInt32() == handle && x.Key != tableUid);
-
-            if (tablesToMerge.Any())
+            lock (openedTables)
             {
-                var mergeTable = tablesToMerge.Last();
-                openedTables.Remove(mergeTable.Key);
-                openedTables[tableUid] = mergeTable.Value;
+                var tablesToMerge = openedTables.Where(x => x.Value.WindowHandle.ToInt32() == handle && x.Key != tableUid);
+
+                if (tablesToMerge.Any())
+                {
+                    var mergeTable = tablesToMerge.Last();
+                    openedTables.Remove(mergeTable.Key);
+                    openedTables[tableUid] = mergeTable.Value;
+                }
             }
         }
 
@@ -127,17 +130,20 @@ namespace DriveHUD.Importers.Bovada
         {
             if (openedTables != null)
             {
-                // it is possible to have more than 1 table here, because of disconnection
-                var tablesToRemove = openedTables.Values.Where(x => x.WindowHandle == e.TableHandle).ToArray();
-
-                foreach (var tableToRemove in tablesToRemove)
+                lock (openedTables)
                 {
-                    if (!openedTables.ContainsKey(tableToRemove.Uid))
-                    {
-                        continue;
-                    }
+                    // it is possible to have more than 1 table here, because of disconnection
+                    var tablesToRemove = openedTables.Values.Where(x => x.WindowHandle == e.WindowHandle).ToArray();
 
-                    openedTables.Remove(tableToRemove.Uid);
+                    foreach (var tableToRemove in tablesToRemove)
+                    {
+                        if (!openedTables.ContainsKey(tableToRemove.Uid))
+                        {
+                            continue;
+                        }
+
+                        openedTables.Remove(tableToRemove.Uid);
+                    }
                 }
             }
         }
@@ -193,10 +199,13 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="tableUid">Unique identifier of table</param>
         protected virtual void AddTable(uint tableUid)
         {
-            if (openedTables != null && !openedTables.ContainsKey(tableUid))
+            lock (openedTables)
             {
-                var catcherTable = new BovadaTable(eventAggregator);
-                openedTables.Add(tableUid, catcherTable);
+                if (openedTables != null && !openedTables.ContainsKey(tableUid))
+                {
+                    var catcherTable = new BovadaTable(eventAggregator);
+                    openedTables.Add(tableUid, catcherTable);
+                }
             }
         }
 
