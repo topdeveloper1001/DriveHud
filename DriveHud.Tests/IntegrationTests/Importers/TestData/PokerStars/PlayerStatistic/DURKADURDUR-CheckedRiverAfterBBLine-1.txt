@@ -1,0 +1,37 @@
+PokerStars Game #47180536059:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:02:21 ET
+Table 'Hormuthia IV' 6-max Seat #1 is the button
+Seat 1: Nehekus ($412.90 in chips) 
+Seat 2: Pappe_Ruk ($236.85 in chips) 
+Seat 3: DURKADURDUR ($200 in chips) 
+Seat 4: 10zzzzzzzzzz ($72.45 in chips) 
+Seat 5: rivichico ($540.05 in chips) 
+Pappe_Ruk: posts small blind $1
+DURKADURDUR: posts big blind $2
+MiraCIe: sits out 
+*** HOLE CARDS ***
+10zzzzzzzzzz: calls $2
+rivichico: folds 
+Nehekus: folds 
+Pappe_Ruk: folds 
+DURKADURDUR: checks 
+*** FLOP *** [2d Js 9d]
+DURKADURDUR: bets $3
+10zzzzzzzzzz: calls $3
+*** TURN *** [2d Js 9d] [7s]
+DURKADURDUR: bets $8
+10zzzzzzzzzz: calls $8
+*** RIVER *** [2d Js 9d 7s] [6s]
+DURKADURDUR: checks 
+10zzzzzzzzzz: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [9c 7d] (two pair, Nines and Sevens)
+10zzzzzzzzzz: mucks hand 
+DURKADURDUR collected $25.70 from pot
+*** SUMMARY ***
+Total pot $27 | Rake $1.30 
+Board [2d Js 9d 7s 6s]
+Seat 1: Nehekus (button) folded before Flop (didn't bet)
+Seat 2: Pappe_Ruk (small blind) folded before Flop
+Seat 3: DURKADURDUR (big blind) showed [9c 7d] and won ($25.70) with two pair, Nines and Sevens
+Seat 4: 10zzzzzzzzzz mucked
+Seat 5: rivichico folded before Flop (didn't bet)

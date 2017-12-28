@@ -684,6 +684,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CheckRiverAfterBBLineObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRiverAfterBBLine,
+                    Occurred = Source.CheckedRiverAfterBBLine,
+                    CouldOccurred = Source.CouldCheckRiverAfterBBLine
+                };
+            }
+        }
+
         public virtual StatDto CBetIPObject
         {
             get

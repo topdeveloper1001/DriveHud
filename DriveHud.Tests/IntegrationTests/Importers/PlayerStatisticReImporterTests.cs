@@ -278,6 +278,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.FoldToTurnCheckRaise, Is.EqualTo(expected.FoldToTurnCheckRaise), nameof(HudLightIndicators.FoldToTurnCheckRaise));
                 Assert.That(actual.FoldToRiverCheckRaise, Is.EqualTo(expected.FoldToRiverCheckRaise), nameof(HudLightIndicators.FoldToRiverCheckRaise));
                 Assert.That(actual.CalledTurnCheckRaise, Is.EqualTo(expected.CalledTurnCheckRaise), nameof(HudLightIndicators.CalledTurnCheckRaise));
+                Assert.That(actual.CheckRiverAfterBBLine, Is.EqualTo(expected.CheckRiverAfterBBLine), nameof(HudLightIndicators.CheckRiverAfterBBLine));
                 // add new stats here
             });
         }

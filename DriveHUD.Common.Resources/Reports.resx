@@ -573,6 +573,9 @@
   <data name="Reports_Column_CalledTurnCheckRaise" xml:space="preserve">
     <value>Call Turn Check-Raise %</value>
   </data>
+  <data name="Reports_Column_CheckRiverAfterBBLine" xml:space="preserve">
+    <value>Check River after BB Line%</value>
+  </data>
   <data name="Reports_Column_FoldToFlopCheckRaise" xml:space="preserve">
     <value>Fold to Flop Check-Raise %</value>
   </data>

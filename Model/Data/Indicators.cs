@@ -569,6 +569,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CheckRiverAfterBBLine
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedRiverAfterBBLine, Source.CouldCheckRiverAfterBBLine);
+            }
+        }
+
         public virtual decimal CBetIP
         {
             get

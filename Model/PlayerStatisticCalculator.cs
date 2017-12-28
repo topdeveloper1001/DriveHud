@@ -552,6 +552,9 @@ namespace Model
             stat.Rivercallippassonturncb = riverIpPassFlopCbet.Called ? 1 : 0;
             stat.Riverraiseippassonturncb = riverIpPassFlopCbet.Raised ? 1 : 0;
 
+            stat.CheckedRiverAfterBBLine = betOnFlop && betOnTurn && playerHandActions.Any(x => x.Street == Street.River && x.IsCheck) ? 1 : 0;
+            stat.CouldCheckRiverAfterBBLine = playedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
             stat.Couldsqueeze = squeezBet.Possible ? 1 : 0;
@@ -762,6 +765,7 @@ namespace Model
 
             var checkedPlayers = new List<string>();
             var betIsAllIn = false;
+            var heroMadeBet = false;
 
             foreach (var action in actions)
             {
@@ -778,6 +782,11 @@ namespace Model
 
                 if (action.IsBet())
                 {
+                    if (player == action.PlayerName)
+                    {
+                        heroMadeBet = true;
+                    }
+
                     // if player who made bets went all-in then we need to check if check-raise is possible for Hero
                     if (action.IsAllIn || action.IsAllInAction)
                     {
@@ -787,7 +796,6 @@ namespace Model
 
                     checkRaise.Possible = checkedPlayers.Contains(player);
                 }
-
 
                 if (betIsAllIn && !checkRaise.Possible)
                 {
@@ -823,7 +831,7 @@ namespace Model
                     }
                 }
 
-                if (checkRaise.Happened &&
+                if (heroMadeBet && checkRaise.Happened &&
                     action.PlayerName == player && checkRaise.HappenedByPlayer != player)
                 {
                     checkRaise.CheckAction(action);
