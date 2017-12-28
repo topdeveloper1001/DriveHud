@@ -147,6 +147,10 @@ namespace Model.Enums
         FoldToTurnRaise,
         FoldToRiverCBet,
         NetWon,
-        FoldToDoubleBarrel
+        FoldToDoubleBarrel,
+        FoldToFlopCheckRaise,
+        FoldToTurnCheckRaise,
+        FoldToRiverCheckRaise,
+        CalledTurnCheckRaise            
     }
 }

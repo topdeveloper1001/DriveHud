@@ -1,0 +1,52 @@
+PokerStars Game #47181341425:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:26:47 ET
+Table 'Malabar III' 6-max Seat #2 is the button
+Seat 1: dimsumboy ($202 in chips) 
+Seat 2: Pappe_Ruk ($411.30 in chips) 
+Seat 3: nachtvogel ($564.55 in chips) 
+Seat 4: Nehekus ($649.45 in chips) 
+Seat 5: 1_ADDER_! ($366.90 in chips) 
+Seat 6: DURKADURDUR ($200 in chips) 
+nachtvogel: posts small blind $1
+Nehekus: posts big blind $2
+*** HOLE CARDS ***
+1_ADDER_!: raises $2 to $4
+DURKADURDUR: calls $4
+dimsumboy: folds 
+Pappe_Ruk: calls $4
+nachtvogel: calls $3
+Nehekus: folds 
+*** FLOP *** [4d 3h Ts]
+nachtvogel: checks 
+1_ADDER_!: checks 
+DURKADURDUR: bets $12
+Pappe_Ruk: calls $12
+nachtvogel: raises $24 to $36
+1_ADDER_!: folds 
+DURKADURDUR: folds 
+Pappe_Ruk: calls $24
+*** TURN *** [4d 3h Ts] [Ad]
+nachtvogel: bets $72
+Pappe_Ruk: calls $72
+*** RIVER *** [4d 3h Ts Ad] [Kc]
+nachtvogel: bets $124
+Pappe_Ruk: raises $175.30 to $299.30 and is all-in
+nachtvogel: calls $175.30
+*** SHOW DOWN ***
+Pappe_Ruk: shows [2c 5c] (a straight, Ace to Five)
+nachtvogel: shows [4c 4s] (three of a kind, Fours)
+Pappe_Ruk collected $841.60 from pot
+*** SUMMARY ***
+Total pot $844.60 | Rake $3 
+Board [4d 3h Ts Ad Kc]
+Seat 1: dimsumboy folded before Flop (didn't bet)
+Seat 2: Pappe_Ruk (button) showed [2c 5c] and won ($841.60) with a straight, Ace to Five
+Seat 3: nachtvogel (small blind) showed [4c 4s] and lost with three of a kind, Fours
+Seat 4: Nehekus (big blind) folded before Flop
+Seat 5: 1_ADDER_! folded on the Flop
+Seat 6: DURKADURDUR folded on the Flop
+
+
+
+
+
+

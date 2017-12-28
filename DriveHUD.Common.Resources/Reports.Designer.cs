@@ -322,6 +322,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call Turn Check-Raise %.
+        /// </summary>
+        internal static string Reports_Column_CalledTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet%.
         /// </summary>
         internal static string Reports_Column_CBet {
@@ -691,6 +700,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Check-Raise %.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold To Flop Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopRaise {
@@ -709,11 +727,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to River Check-Raise %.
+        /// </summary>
+        internal static string Reports_Column_FoldToRiverCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToRiverCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold To Squeeze%.
         /// </summary>
         internal static string Reports_Column_FoldToSqueez {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToSqueez", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Turn Check-Raise %.
+        /// </summary>
+        internal static string Reports_Column_FoldToTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTurnCheckRaise", resourceCulture);
             }
         }
         

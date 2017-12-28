@@ -1,0 +1,41 @@
+PokerStars Game #47184130528:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:57:09 ET
+Table 'Lonnrot III' 6-max Seat #1 is the button
+Seat 1: sexygee ($353 in chips) 
+Seat 2: spacecakezzz ($200 in chips) 
+Seat 3: DURKADURDUR ($248.85 in chips) 
+Seat 4: depomp ($589.75 in chips) 
+Seat 5: rivichico ($554.30 in chips) 
+Seat 6: FrAnWaN ($284.35 in chips) 
+spacecakezzz: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+depomp: calls $2
+rivichico: folds 
+FrAnWaN: folds 
+sexygee: folds 
+spacecakezzz: raises $8 to $10
+DURKADURDUR: calls $8
+depomp: calls $8
+*** FLOP *** [Td 4s 8c]
+spacecakezzz: bets $19
+DURKADURDUR: calls $19
+depomp: folds 
+*** TURN *** [Td 4s 8c] [9d]
+spacecakezzz: checks 
+DURKADURDUR: bets $45
+spacecakezzz: raises $126 to $171 and is all-in
+DURKADURDUR: calls $126
+*** RIVER *** [Td 4s 8c 9d] [6c]
+*** SHOW DOWN ***
+spacecakezzz: shows [Ad As] (a pair of Aces)
+DURKADURDUR: shows [8h 8s] (three of a kind, Eights)
+DURKADURDUR collected $407 from pot
+*** SUMMARY ***
+Total pot $410 | Rake $3 
+Board [Td 4s 8c 9d 6c]
+Seat 1: sexygee (button) folded before Flop (didn't bet)
+Seat 2: spacecakezzz (small blind) showed [Ad As] and lost with a pair of Aces
+Seat 3: DURKADURDUR (big blind) showed [8h 8s] and won ($407) with three of a kind, Eights
+Seat 4: depomp folded on the Flop
+Seat 5: rivichico folded before Flop (didn't bet)
+Seat 6: FrAnWaN folded before Flop (didn't bet)

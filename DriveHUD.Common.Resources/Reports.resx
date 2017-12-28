@@ -570,4 +570,16 @@
   <data name="Reports_Column_FoldToDoubleBarrel" xml:space="preserve">
     <value>Fold to Double Barrel %</value>
   </data>
+  <data name="Reports_Column_CalledTurnCheckRaise" xml:space="preserve">
+    <value>Call Turn Check-Raise %</value>
+  </data>
+  <data name="Reports_Column_FoldToFlopCheckRaise" xml:space="preserve">
+    <value>Fold to Flop Check-Raise %</value>
+  </data>
+  <data name="Reports_Column_FoldToRiverCheckRaise" xml:space="preserve">
+    <value>Fold to River Check-Raise %</value>
+  </data>
+  <data name="Reports_Column_FoldToTurnCheckRaise" xml:space="preserve">
+    <value>Fold to Turn Check-Raise %</value>
+  </data>
 </root>

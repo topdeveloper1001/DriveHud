@@ -1,0 +1,42 @@
+PokerStars Game #47150990539:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:58:34 ET
+Table 'Pyxis III' 6-max Seat #6 is the button
+Seat 1: checkitout12 ($200 in chips) 
+Seat 2: DURKADURDUR ($459.05 in chips) 
+Seat 3: twinpsych ($253.35 in chips) 
+Seat 4: maestroB ($65 in chips) 
+Seat 5: Desateur ($202 in chips) 
+Seat 6: pterygoid ($197 in chips) 
+checkitout12: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+twinpsych: folds 
+maestroB: folds 
+Desateur: raises $4 to $6
+pterygoid: calls $6
+checkitout12: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [Kh 9c 8c]
+DURKADURDUR: checks 
+Desateur: bets $12
+pterygoid: calls $12
+DURKADURDUR: raises $25 to $37
+Desateur: folds 
+pterygoid: calls $25
+*** TURN *** [Kh 9c 8c] [8h]
+DURKADURDUR: bets $35
+pterygoid: calls $35
+*** RIVER *** [Kh 9c 8c 8h] [Th]
+DURKADURDUR: bets $381.05 and is all-in
+pterygoid: folds 
+Uncalled bet ($381.05) returned to DURKADURDUR
+DURKADURDUR collected $172 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Kh 9c 8c 8h Th]
+Seat 1: checkitout12 (small blind) folded before Flop
+Seat 2: DURKADURDUR (big blind) collected ($172)
+Seat 3: twinpsych folded before Flop (didn't bet)
+Seat 4: maestroB folded before Flop (didn't bet)
+Seat 5: Desateur folded on the Flop
+Seat 6: pterygoid (button) folded on the River

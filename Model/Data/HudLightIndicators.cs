@@ -935,6 +935,20 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToFlopCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCheckRaise,
+                    Occurred = Source.FoldedToFlopCheckRaise,
+                    CouldOccurred = Source.FacedFlopCheckRaise,
+                };
+            }
+        }
+
+
         public virtual StatDto FoldToFlopRaiseObject
         {
             get
@@ -944,6 +958,32 @@ namespace Model.Data
                     Value = FoldToFlopRaise,
                     Occurred = Source.FoldedFacedRaiseFlop,
                     CouldOccurred = Source.FacedRaiseFlop,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCheckRaise,
+                    Occurred = Source.FoldedToTurnCheckRaise,
+                    CouldOccurred = Source.FacedTurnCheckRaise,
+                };
+            }
+        }
+
+        public virtual StatDto CalledTurnCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledTurnCheckRaise,
+                    Occurred = Source.CalledTurnCheckRaise,
+                    CouldOccurred = Source.FacedTurnCheckRaise,
                 };
             }
         }
@@ -970,6 +1010,19 @@ namespace Model.Data
                     Value = FoldToRiverCBet,
                     Occurred = Source.Foldedtorivercontinuationbet,
                     CouldOccurred = Source.Facingrivercontinuationbet
+                };
+            }
+        }
+
+        public virtual StatDto FoldToRiverCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToRiverCheckRaise,
+                    Occurred = Source.FoldedToRiverCheckRaise,
+                    CouldOccurred = Source.FacedRiverCheckRaise,
                 };
             }
         }

@@ -812,6 +812,26 @@ namespace DriveHUD.Entities
         [ProtoMember(295)]
         public virtual int CouldBetFoldFlopPfrRaiser { get; set; }
 
+        [ProtoMember(296)]
+        public virtual int FacedFlopCheckRaise { get; set; }
+
+        [ProtoMember(297)]
+        public virtual int FacedTurnCheckRaise { get; set; }
+
+        [ProtoMember(298)]
+        public virtual int FacedRiverCheckRaise { get; set; }
+
+        [ProtoMember(299)]
+        public virtual int FoldedToFlopCheckRaise { get; set; }
+
+        [ProtoMember(300)]
+        public virtual int FoldedToTurnCheckRaise { get; set; }
+
+        [ProtoMember(301)]
+        public virtual int FoldedToRiverCheckRaise { get; set; }
+
+        [ProtoMember(302)]
+        public virtual int CalledTurnCheckRaise { get; set; }
 
         #region Workarounds for broken stats
 
@@ -1162,6 +1182,14 @@ namespace DriveHUD.Entities
             CouldFlopCheckRaise += a.CouldFlopCheckRaise;
             CouldTurnCheckRaise += a.CouldTurnCheckRaise;
             CouldRiverCheckRaise += a.CouldRiverCheckRaise;
+            FacedFlopCheckRaise += a.FacedFlopCheckRaise;
+            FoldedToFlopCheckRaise += a.FoldedToFlopCheckRaise;
+            FacedTurnCheckRaise += a.FacedTurnCheckRaise;
+            FoldedToTurnCheckRaise += a.FoldedToTurnCheckRaise;
+            FacedRiverCheckRaise += a.FacedRiverCheckRaise;
+            FoldedToRiverCheckRaise += a.FoldedToRiverCheckRaise;
+            CalledTurnCheckRaise += a.CalledTurnCheckRaise;
+
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -1530,6 +1558,7 @@ namespace DriveHUD.Entities
             r.Couldsqueeze = a.Couldsqueeze + b.Couldsqueeze;
             r.DidOpenRaise = a.DidOpenRaise + b.DidOpenRaise;
             r.Didsqueeze = a.Didsqueeze + b.Didsqueeze;
+
             r.DidCheckRaise = a.DidCheckRaise + b.DidCheckRaise;
             r.DidFlopCheckRaise = a.DidFlopCheckRaise + b.DidFlopCheckRaise;
             r.DidTurnCheckRaise = a.DidTurnCheckRaise + b.DidTurnCheckRaise;
@@ -1537,6 +1566,14 @@ namespace DriveHUD.Entities
             r.CouldFlopCheckRaise = a.CouldFlopCheckRaise + b.CouldFlopCheckRaise;
             r.CouldTurnCheckRaise = a.CouldTurnCheckRaise + b.CouldTurnCheckRaise;
             r.CouldRiverCheckRaise = a.CouldRiverCheckRaise + b.CouldRiverCheckRaise;
+            r.FacedFlopCheckRaise = a.FacedFlopCheckRaise + b.FacedFlopCheckRaise;
+            r.FoldedToFlopCheckRaise = a.FoldedToFlopCheckRaise + b.FoldedToFlopCheckRaise;
+            r.FacedTurnCheckRaise = a.FacedTurnCheckRaise + b.FacedTurnCheckRaise;
+            r.FoldedToTurnCheckRaise = a.FoldedToTurnCheckRaise + b.FoldedToTurnCheckRaise;
+            r.FacedRiverCheckRaise = a.FacedRiverCheckRaise + b.FacedRiverCheckRaise;
+            r.FoldedToRiverCheckRaise = a.FoldedToRiverCheckRaise + b.FoldedToRiverCheckRaise;
+            r.CalledTurnCheckRaise = a.CalledTurnCheckRaise + b.CalledTurnCheckRaise;
+
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;
 

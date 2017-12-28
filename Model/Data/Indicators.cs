@@ -1127,6 +1127,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToFlopCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToFlopCheckRaise, Source.FacedFlopCheckRaise);
+            }
+        }
+
         public virtual decimal FoldToFlopRaise
         {
             get
@@ -1135,11 +1143,35 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToTurnCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToTurnCheckRaise, Source.FacedTurnCheckRaise);
+            }
+        }
+
         public virtual decimal FoldToTurnRaise
         {
             get
             {
                 return GetPercentage(Source.FoldedFacedRaiseTurn, Source.FacedRaiseTurn);
+            }
+        }
+
+        public virtual decimal CalledTurnCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.CalledTurnCheckRaise, Source.FacedTurnCheckRaise);
+            }
+        }
+
+        public virtual decimal FoldToRiverCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToRiverCheckRaise, Source.FacedRiverCheckRaise);
             }
         }
 

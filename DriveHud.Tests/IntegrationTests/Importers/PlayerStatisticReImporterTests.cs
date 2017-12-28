@@ -274,6 +274,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.StdDevBB, Is.EqualTo(expected.StdDevBB), nameof(HudLightIndicators.StdDevBB));
                 Assert.That(actual.StdDevBBPer100Hands, Is.EqualTo(expected.StdDevBBPer100Hands), nameof(HudLightIndicators.StdDevBBPer100Hands));
                 Assert.That(actual.NetWonPerHour, Is.EqualTo(expected.NetWonPerHour), nameof(HudLightIndicators.NetWonPerHour));
+                Assert.That(actual.FoldToFlopCheckRaise, Is.EqualTo(expected.FoldToFlopCheckRaise), nameof(HudLightIndicators.FoldToFlopCheckRaise));
+                Assert.That(actual.FoldToTurnCheckRaise, Is.EqualTo(expected.FoldToTurnCheckRaise), nameof(HudLightIndicators.FoldToTurnCheckRaise));
+                Assert.That(actual.FoldToRiverCheckRaise, Is.EqualTo(expected.FoldToRiverCheckRaise), nameof(HudLightIndicators.FoldToRiverCheckRaise));
+                Assert.That(actual.CalledTurnCheckRaise, Is.EqualTo(expected.CalledTurnCheckRaise), nameof(HudLightIndicators.CalledTurnCheckRaise));
+                // add new stats here
             });
         }
 
