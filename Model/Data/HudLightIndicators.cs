@@ -827,6 +827,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CallFlopCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallFlopCBetIP,
+                    Occurred = Source.CalledflopcontinuationbetIP,
+                    CouldOccurred = Source.FacingflopcontinuationbetIP
+                };
+            }
+        }
+
+        public virtual StatDto CallFlopCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallFlopCBetOOP,
+                    Occurred = Source.CalledflopcontinuationbetOOP,
+                    CouldOccurred = Source.FacingflopcontinuationbetOOP
+                };
+            }
+        }
+
         #endregion
 
         #region Limp

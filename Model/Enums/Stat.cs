@@ -153,6 +153,8 @@ namespace Model.Enums
         FoldToRiverCheckRaise,
         CalledTurnCheckRaise,
         CheckRiverAfterBBLine,
-        BetRiverOnBXLine
+        BetRiverOnBXLine,
+        CallFlopCBetIP,
+        CallFlopCBetOOP
     }
 }

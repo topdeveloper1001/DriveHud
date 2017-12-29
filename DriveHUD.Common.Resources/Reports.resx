@@ -588,4 +588,10 @@
   <data name="Reports_Column_BetRiverOnBXLine" xml:space="preserve">
     <value>Bet River on BX Line%</value>
   </data>
+  <data name="Reports_Column_CallFlopCBetIP" xml:space="preserve">
+    <value>Call Flop C-Bet IP%</value>
+  </data>
+  <data name="Reports_Column_CallFlopCBetOOP" xml:space="preserve">
+    <value>Call Flop C-Bet OOP%</value>
+  </data>
 </root>

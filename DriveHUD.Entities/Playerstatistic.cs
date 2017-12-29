@@ -845,6 +845,18 @@ namespace DriveHUD.Entities
         [ProtoMember(306)]
         public virtual int CouldBetRiverOnBXLine { get; set; }
 
+        [ProtoMember(307)]
+        public virtual int FacingflopcontinuationbetIP { get; set; }
+
+        [ProtoMember(308)]
+        public virtual int FacingflopcontinuationbetOOP { get; set; }
+
+        [ProtoMember(309)]
+        public virtual int CalledflopcontinuationbetIP { get; set; }
+
+        [ProtoMember(310)]
+        public virtual int CalledflopcontinuationbetOOP { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1119,6 +1131,11 @@ namespace DriveHUD.Entities
             Foldedtoflopcontinuationbet += a.Foldedtoflopcontinuationbet;
             Calledflopcontinuationbet += a.Calledflopcontinuationbet;
             Raisedflopcontinuationbet += a.Raisedflopcontinuationbet;
+
+            FacingflopcontinuationbetIP += a.FacingflopcontinuationbetIP;
+            FacingflopcontinuationbetOOP += a.FacingflopcontinuationbetOOP;
+            CalledflopcontinuationbetIP += a.CalledflopcontinuationbetIP;
+            CalledflopcontinuationbetOOP += a.CalledflopcontinuationbetOOP;
 
             FacingFlopContinuationBetFromThreeBetPot += a.FacingFlopContinuationBetFromThreeBetPot;
             FoldedToFlopContinuationBetFromThreeBetPot += a.FoldedToFlopContinuationBetFromThreeBetPot;
@@ -1509,6 +1526,11 @@ namespace DriveHUD.Entities
             r.Foldedtoflopcontinuationbet = a.Foldedtoflopcontinuationbet + b.Foldedtoflopcontinuationbet;
             r.Calledflopcontinuationbet = a.Calledflopcontinuationbet + b.Calledflopcontinuationbet;
             r.Raisedflopcontinuationbet = a.Raisedflopcontinuationbet + b.Raisedflopcontinuationbet;
+
+            r.FacingflopcontinuationbetIP = a.FacingflopcontinuationbetIP + b.FacingflopcontinuationbetIP;
+            r.FacingflopcontinuationbetOOP = a.FacingflopcontinuationbetOOP + b.FacingflopcontinuationbetOOP;
+            r.CalledflopcontinuationbetIP = a.CalledflopcontinuationbetIP + b.CalledflopcontinuationbetIP;
+            r.CalledflopcontinuationbetOOP = a.CalledflopcontinuationbetOOP + b.CalledflopcontinuationbetOOP;
 
             r.FacingFlopContinuationBetFromThreeBetPot = a.FacingFlopContinuationBetFromThreeBetPot + b.FacingFlopContinuationBetFromThreeBetPot;
             r.FoldedToFlopContinuationBetFromThreeBetPot = a.FoldedToFlopContinuationBetFromThreeBetPot + b.FoldedToFlopContinuationBetFromThreeBetPot;

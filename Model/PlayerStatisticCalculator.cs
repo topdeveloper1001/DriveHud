@@ -287,10 +287,12 @@ namespace Model
             #region Check river on bx line
 
             Condition checkRiverOnBxLine = new Condition();
+
             if (playedRiver)
             {
                 CalculateCheckRiverOnBxLine(checkRiverOnBxLine, parsedHand, player);
             }
+
             #endregion
 
             #region Limp
@@ -533,6 +535,11 @@ namespace Model
             stat.Foldedtorivercontinuationbet = riverCBet.Folded ? 1 : 0;
             stat.Calledrivercontinuationbet = riverCBet.Called ? 1 : 0;
             stat.Raisedrivercontinuationbet = riverCBet.Raised ? 1 : 0;
+
+            stat.FacingflopcontinuationbetIP = flopCBet.Faced && preflopInPosition ? 1 : 0;
+            stat.FacingflopcontinuationbetOOP = flopCBet.Faced && !preflopInPosition ? 1 : 0;
+            stat.CalledflopcontinuationbetIP = flopCBet.Called && preflopInPosition ? 1 : 0;
+            stat.CalledflopcontinuationbetOOP = flopCBet.Called && !preflopInPosition ? 1 : 0;
 
             stat.Couldfourbet = fourBet.Possible ? 1 : 0;
             stat.Didfourbet = fourBet.Made ? 1 : 0;

@@ -592,6 +592,41 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldBetRiverOnBXLine, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetInPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetInPosition-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FacingflopcontinuationbetIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacingflopcontinuationbetIP, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetOutPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetOutPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]        
+        public void FacingflopcontinuationbetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacingflopcontinuationbetOOP, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CalledFlopCBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledFlopCBetInPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]        
+        public void CalledflopcontinuationbetIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CalledflopcontinuationbetIP, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CalledFlopCBetOutPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledFlopCBetOutPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedFlopCBetOutPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void CalledflopcontinuationbetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CalledflopcontinuationbetOOP, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

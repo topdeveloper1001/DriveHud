@@ -1,0 +1,38 @@
+PokerStars Game #47185828438:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:59:38 ET
+Table 'Neckar VII' 6-max Seat #1 is the button
+Seat 1: Marker275 ($187.35 in chips) 
+Seat 2: DURKADURDUR ($276.10 in chips) 
+Seat 3: TODO ADENTR0 ($395.25 in chips) 
+Seat 4: THEDUTCH4141 ($224.85 in chips) 
+Seat 5: FastEddie267 ($242 in chips) 
+DURKADURDUR: posts small blind $1
+TODO ADENTR0: posts big blind $2
+*** HOLE CARDS ***
+THEDUTCH4141: folds 
+FastEddie267: folds 
+Marker275: raises $4 to $6
+DURKADURDUR: calls $5
+TODO ADENTR0: folds 
+*** FLOP *** [3h 7c 9c]
+DURKADURDUR: checks 
+Marker275: bets $8
+DURKADURDUR: calls $8
+*** TURN *** [3h 7c 9c] [Kd]
+DURKADURDUR: checks 
+Marker275: bets $25
+DURKADURDUR: calls $25
+*** RIVER *** [3h 7c 9c Kd] [7s]
+DURKADURDUR: checks 
+Marker275: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [5c Ac] (a pair of Sevens)
+Marker275: shows [As Qh] (a pair of Sevens - Ace+King+Queen kicker)
+Marker275 collected $78 from pot
+*** SUMMARY ***
+Total pot $80 | Rake $2 
+Board [3h 7c 9c Kd 7s]
+Seat 1: Marker275 (button) showed [As Qh] and won ($78) with a pair of Sevens
+Seat 2: DURKADURDUR (small blind) showed [5c Ac] and lost with a pair of Sevens
+Seat 3: TODO ADENTR0 (big blind) folded before Flop
+Seat 4: THEDUTCH4141 folded before Flop (didn't bet)
+Seat 5: FastEddie267 folded before Flop (didn't bet)

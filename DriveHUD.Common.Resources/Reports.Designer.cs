@@ -340,6 +340,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet IP%.
+        /// </summary>
+        internal static string Reports_Column_CallFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_CallFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet%.
         /// </summary>
         internal static string Reports_Column_CBet {

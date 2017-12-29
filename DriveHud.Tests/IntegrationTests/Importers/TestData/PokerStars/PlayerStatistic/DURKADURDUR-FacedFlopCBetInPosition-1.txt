@@ -1,0 +1,34 @@
+PokerStars Game #47185776849:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:57:04 ET
+Table 'Neckar VII' 6-max Seat #2 is the button
+Seat 1: Marker275 ($193.10 in chips) 
+Seat 2: DURKADURDUR ($284.10 in chips) 
+Seat 3: TODO ADENTR0 ($396.25 in chips) 
+Seat 4: THEDUTCH4141 ($211.55 in chips) 
+Seat 5: imthesky ($217.65 in chips) 
+Seat 6: botano ($100 in chips) 
+TODO ADENTR0: posts small blind $1
+THEDUTCH4141: posts big blind $2
+*** HOLE CARDS ***
+imthesky: folds 
+imthesky leaves the table
+botano: folds 
+Marker275: raises $4 to $6
+DURKADURDUR: calls $6
+TODO ADENTR0: folds 
+FastEddie267 joins the table at seat #5 
+THEDUTCH4141: folds 
+*** FLOP *** [4d 6d 4s]
+Marker275: bets $8
+DURKADURDUR: folds 
+Uncalled bet ($8) returned to Marker275
+Marker275 collected $14.25 from pot
+Marker275: doesn't show hand 
+*** SUMMARY ***
+Total pot $15 | Rake $0.75 
+Board [4d 6d 4s]
+Seat 1: Marker275 collected ($14.25)
+Seat 2: DURKADURDUR (button) folded on the Flop
+Seat 3: TODO ADENTR0 (small blind) folded before Flop
+Seat 4: THEDUTCH4141 (big blind) folded before Flop
+Seat 5: imthesky folded before Flop (didn't bet)
+Seat 6: botano folded before Flop (didn't bet)

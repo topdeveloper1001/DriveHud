@@ -1,0 +1,36 @@
+PokerStars Game #47143363993:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:07:52 ET
+Table 'Vindobona' 6-max Seat #2 is the button
+Seat 1: DURKADURDUR ($255 in chips) 
+Seat 2: leukehond ($248 in chips) 
+Seat 3: shnizzel ($556.10 in chips) 
+Seat 4: bluffinmyway ($106.40 in chips) 
+Seat 5: rkothapalli8 ($47.05 in chips) 
+Seat 6: pablostar ($484.15 in chips) 
+shnizzel: posts small blind $1
+bluffinmyway: posts big blind $2
+*** HOLE CARDS ***
+rkothapalli8: folds 
+pablostar: raises $4 to $6
+DURKADURDUR: calls $6
+leukehond: folds 
+shnizzel: folds 
+bluffinmyway: folds 
+*** FLOP *** [3c 2s As]
+pablostar: bets $14
+DURKADURDUR: calls $14
+*** TURN *** [3c 2s As] [9c]
+pablostar: checks 
+DURKADURDUR: bets $28
+pablostar: folds 
+Uncalled bet ($28) returned to DURKADURDUR
+DURKADURDUR collected $40.90 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $43 | Rake $2.10 
+Board [3c 2s As 9c]
+Seat 1: DURKADURDUR collected ($40.90)
+Seat 2: leukehond (button) folded before Flop (didn't bet)
+Seat 3: shnizzel (small blind) folded before Flop
+Seat 4: bluffinmyway (big blind) folded before Flop
+Seat 5: rkothapalli8 folded before Flop (didn't bet)
+Seat 6: pablostar folded on the Turn

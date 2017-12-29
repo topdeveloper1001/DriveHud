@@ -1,0 +1,38 @@
+PokerStars Game #47144067644:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:43:59 ET
+Table 'Onnie IV' 6-max Seat #3 is the button
+Seat 1: bluffinmyway ($231.80 in chips) 
+Seat 2: shermanash ($200 in chips) 
+Seat 3: DURKADURDUR ($240.25 in chips) 
+Seat 4: Jetize ($201 in chips) 
+Seat 5: Pok3rGod ($443.35 in chips) 
+Seat 6: HeidiKlummm ($243 in chips) 
+Jetize: posts small blind $1
+Pok3rGod: posts big blind $2
+*** HOLE CARDS ***
+HeidiKlummm: folds 
+bluffinmyway: folds 
+shermanash: raises $4 to $6
+DURKADURDUR: calls $6
+Jetize: folds 
+Pok3rGod: folds 
+*** FLOP *** [Jc 9h 5s]
+shermanash: bets $9
+DURKADURDUR: calls $9
+*** TURN *** [Jc 9h 5s] [Td]
+shermanash: bets $24
+DURKADURDUR: calls $24
+*** RIVER *** [Jc 9h 5s Td] [7c]
+shermanash: bets $46
+DURKADURDUR: folds 
+Uncalled bet ($46) returned to shermanash
+shermanash collected $78 from pot
+shermanash: doesn't show hand 
+*** SUMMARY ***
+Total pot $81 | Rake $3 
+Board [Jc 9h 5s Td 7c]
+Seat 1: bluffinmyway folded before Flop (didn't bet)
+Seat 2: shermanash collected ($78)
+Seat 3: DURKADURDUR (button) folded on the River
+Seat 4: Jetize (small blind) folded before Flop
+Seat 5: Pok3rGod (big blind) folded before Flop
+Seat 6: HeidiKlummm folded before Flop (didn't bet)
