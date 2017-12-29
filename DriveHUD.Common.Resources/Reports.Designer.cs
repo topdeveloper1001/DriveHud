@@ -736,6 +736,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop C-Bet IP %.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop C-Bet OOP %.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Flop Check-Raise %.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCheckRaise {

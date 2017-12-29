@@ -155,6 +155,8 @@ namespace Model.Enums
         CheckRiverAfterBBLine,
         BetRiverOnBXLine,
         CallFlopCBetIP,
-        CallFlopCBetOOP
+        CallFlopCBetOOP,
+        FoldToFlopCBetIP,
+        FoldToFlopCBetOOP
     }
 }

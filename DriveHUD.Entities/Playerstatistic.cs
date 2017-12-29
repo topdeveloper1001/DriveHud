@@ -857,6 +857,12 @@ namespace DriveHUD.Entities
         [ProtoMember(310)]
         public virtual int CalledflopcontinuationbetOOP { get; set; }
 
+        [ProtoMember(311)]
+        public virtual int FoldToFlopcontinuationbetIP { get; set; }
+
+        [ProtoMember(312)]
+        public virtual int FoldToFlopcontinuationbetOOP { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1136,6 +1142,8 @@ namespace DriveHUD.Entities
             FacingflopcontinuationbetOOP += a.FacingflopcontinuationbetOOP;
             CalledflopcontinuationbetIP += a.CalledflopcontinuationbetIP;
             CalledflopcontinuationbetOOP += a.CalledflopcontinuationbetOOP;
+            FoldToFlopcontinuationbetIP += a.FoldToFlopcontinuationbetIP;
+            FoldToFlopcontinuationbetOOP += a.FoldToFlopcontinuationbetOOP;
 
             FacingFlopContinuationBetFromThreeBetPot += a.FacingFlopContinuationBetFromThreeBetPot;
             FoldedToFlopContinuationBetFromThreeBetPot += a.FoldedToFlopContinuationBetFromThreeBetPot;
@@ -1530,7 +1538,8 @@ namespace DriveHUD.Entities
             r.FacingflopcontinuationbetIP = a.FacingflopcontinuationbetIP + b.FacingflopcontinuationbetIP;
             r.FacingflopcontinuationbetOOP = a.FacingflopcontinuationbetOOP + b.FacingflopcontinuationbetOOP;
             r.CalledflopcontinuationbetIP = a.CalledflopcontinuationbetIP + b.CalledflopcontinuationbetIP;
-            r.CalledflopcontinuationbetOOP = a.CalledflopcontinuationbetOOP + b.CalledflopcontinuationbetOOP;
+            r.FoldToFlopcontinuationbetIP = a.FoldToFlopcontinuationbetIP + b.FoldToFlopcontinuationbetIP;
+            r.FoldToFlopcontinuationbetOOP = a.FoldToFlopcontinuationbetOOP + b.FoldToFlopcontinuationbetOOP;
 
             r.FacingFlopContinuationBetFromThreeBetPot = a.FacingFlopContinuationBetFromThreeBetPot + b.FacingFlopContinuationBetFromThreeBetPot;
             r.FoldedToFlopContinuationBetFromThreeBetPot = a.FoldedToFlopContinuationBetFromThreeBetPot + b.FoldedToFlopContinuationBetFromThreeBetPot;

@@ -1231,6 +1231,22 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToFlopCBetIP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToFlopcontinuationbetIP, Source.FacingflopcontinuationbetIP);
+            }
+        }
+
+        public virtual decimal FoldToFlopCBetOOP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToFlopcontinuationbetOOP, Source.FacingflopcontinuationbetOOP);
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

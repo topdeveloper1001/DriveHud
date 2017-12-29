@@ -94,6 +94,8 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromThreeBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromThreeBetPot, x.FacingFlopContinuationBetFromThreeBetPot) },
             new StatBase { Stat = Stat.FoldToDoubleBarrel, PropertyName =  nameof(Indicators.FoldToTurnCBet), CreateStatDto = x => new StatDto(x.Foldedtoturncontinuationbet, x.Facingturncontinuationbet) },
             new StatBase { Stat = Stat.FoldToFlopRaise, PropertyName = nameof(Indicators.FoldToFlopRaise), CreateStatDto = x => new StatDto(x.FoldedFacedRaiseFlop, x.FacedRaiseFlop) },
+            new StatBase { Stat = Stat.FoldToFlopCBetIP, PropertyName = nameof(Indicators.FoldToFlopCBetIP), CreateStatDto = x => new StatDto(x.FoldToFlopcontinuationbetIP, x.FacingflopcontinuationbetIP) },
+            new StatBase { Stat = Stat.FoldToFlopCBetOOP, PropertyName = nameof(Indicators.FoldToFlopCBetOOP), CreateStatDto = x => new StatDto(x.FoldToFlopcontinuationbetOOP, x.FacingflopcontinuationbetOOP) },
             new StatBase { Stat = Stat.FoldToFlopCheckRaise, PropertyName = nameof(Indicators.FoldToFlopCheckRaise), CreateStatDto = x => new StatDto(x.FoldedToFlopCheckRaise, x.FacedFlopCheckRaise) },
             new StatBase { Stat = Stat.FoldToRiverCBet, PropertyName = nameof(Indicators.FoldToRiverCBet), CreateStatDto = x => new StatDto(x.Foldedtorivercontinuationbet, x.Facingrivercontinuationbet) },
             new StatBase { Stat = Stat.FoldToSqueez, PropertyName = nameof(Indicators.FoldToSqueez), CreateStatDto = x => new StatDto(x.FoldedFacedSqueez, x.FacedSqueez) },
@@ -341,6 +343,8 @@ namespace Model.Stats
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.BetFlopCalled3BetPreflopIp },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopCheckRaise },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopRaise },
+                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopCBetIP },
+                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopCBetOOP },
 
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DelayedTurnCBet },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnCheckRaise },

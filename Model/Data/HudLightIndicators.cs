@@ -853,6 +853,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToFlopCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCBetIP,
+                    Occurred = Source.FoldToFlopcontinuationbetIP,
+                    CouldOccurred = Source.FacingflopcontinuationbetIP
+                };
+            }
+        }
+
+        public virtual StatDto FoldToFlopCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCBetOOP,
+                    Occurred = Source.FoldToFlopcontinuationbetOOP,
+                    CouldOccurred = Source.FacingflopcontinuationbetOOP
+                };
+            }
+        }
+
         #endregion
 
         #region Limp

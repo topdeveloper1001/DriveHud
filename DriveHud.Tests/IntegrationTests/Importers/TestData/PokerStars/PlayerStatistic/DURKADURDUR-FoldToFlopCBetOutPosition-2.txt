@@ -1,0 +1,40 @@
+PokerStars Game #47183203729:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:26:10 ET
+Table 'Neckar VII' 6-max Seat #6 is the button
+Seat 1: zxcvb2 ($222 in chips) 
+Seat 2: DURKADURDUR ($207.65 in chips) 
+Seat 3: Fierytycoon ($221.30 in chips) 
+Seat 4: wazawskiHH ($239.95 in chips) 
+Seat 5: FLA LEFEVRE ($235.50 in chips) 
+Seat 6: LingXY ($200 in chips) 
+zxcvb2: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+Fierytycoon: raises $4 to $6
+wazawskiHH: folds 
+FLA LEFEVRE: calls $6
+LingXY: folds 
+zxcvb2: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [Kd 6c 2d]
+DURKADURDUR: checks 
+Fierytycoon: bets $14
+FLA LEFEVRE: calls $14
+DURKADURDUR: folds 
+*** TURN *** [Kd 6c 2d] [8h]
+Fierytycoon: bets $36
+FLA LEFEVRE: calls $36
+*** RIVER *** [Kd 6c 2d 8h] [Ts]
+Fierytycoon: bets $58
+FLA LEFEVRE: folds 
+Uncalled bet ($58) returned to Fierytycoon
+Fierytycoon collected $116 from pot
+Fierytycoon: doesn't show hand 
+*** SUMMARY ***
+Total pot $119 | Rake $3 
+Board [Kd 6c 2d 8h Ts]
+Seat 1: zxcvb2 (small blind) folded before Flop
+Seat 2: DURKADURDUR (big blind) folded on the Flop
+Seat 3: Fierytycoon collected ($116)
+Seat 4: wazawskiHH folded before Flop (didn't bet)
+Seat 5: FLA LEFEVRE folded on the River
+Seat 6: LingXY (button) folded before Flop (didn't bet)

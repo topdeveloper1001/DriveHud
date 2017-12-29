@@ -37,6 +37,8 @@ namespace Model.Filters
                 new QuickFilterItem() { Name = "Could bet river on BX line", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.CouldBetRiverOnBXLine), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
                 new QuickFilterItem() { Name = "Call Flop C-Bet IP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.CalledflopcontinuationbetIP), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible) },
                 new QuickFilterItem() { Name = "Call Flop C-Bet OOP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.CalledflopcontinuationbetOOP), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
+                new QuickFilterItem() { Name = "Fold To Flop C-Bet IP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FoldToFlopcontinuationbetIP), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible) },
+                new QuickFilterItem() { Name = "Fold To Flop C-Bet OOP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FoldToFlopcontinuationbetOOP), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
                 new QuickFilterItem() { Name = "Facing Flop C-Bet IP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FacingflopcontinuationbetIP), NoPropertyName = nameof(Playerstatistic.Turncontinuationbetpossible) },
                 new QuickFilterItem() { Name = "Facing Flop C-Bet OOP%", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.FacingflopcontinuationbetOOP), NoPropertyName = nameof(Playerstatistic.Facingturncontinuationbet) },
 

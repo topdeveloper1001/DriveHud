@@ -540,6 +540,8 @@ namespace Model
             stat.FacingflopcontinuationbetOOP = flopCBet.Faced && !preflopInPosition ? 1 : 0;
             stat.CalledflopcontinuationbetIP = flopCBet.Called && preflopInPosition ? 1 : 0;
             stat.CalledflopcontinuationbetOOP = flopCBet.Called && !preflopInPosition ? 1 : 0;
+            stat.FoldToFlopcontinuationbetIP = flopCBet.Folded && preflopInPosition ? 1 : 0;
+            stat.FoldToFlopcontinuationbetOOP = flopCBet.Folded && !preflopInPosition ? 1 : 0;
 
             stat.Couldfourbet = fourBet.Possible ? 1 : 0;
             stat.Didfourbet = fourBet.Made ? 1 : 0;
