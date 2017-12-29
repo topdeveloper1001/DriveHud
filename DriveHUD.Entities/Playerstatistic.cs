@@ -839,6 +839,12 @@ namespace DriveHUD.Entities
         [ProtoMember(304)]
         public virtual int CouldCheckRiverAfterBBLine { get; set; }
 
+        [ProtoMember(305)]
+        public virtual int DidBetRiverOnBXLine { get; set; }
+
+        [ProtoMember(306)]
+        public virtual int CouldBetRiverOnBXLine { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1198,6 +1204,8 @@ namespace DriveHUD.Entities
 
             CheckedRiverAfterBBLine += a.CheckedRiverAfterBBLine;
             CouldCheckRiverAfterBBLine += a.CouldCheckRiverAfterBBLine;
+            DidBetRiverOnBXLine += a.DidBetRiverOnBXLine;
+            CouldBetRiverOnBXLine += a.CouldBetRiverOnBXLine;
 
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
@@ -1585,6 +1593,8 @@ namespace DriveHUD.Entities
 
             r.CheckedRiverAfterBBLine = a.CheckedRiverAfterBBLine + b.CheckedRiverAfterBBLine;
             r.CouldCheckRiverAfterBBLine = a.CouldCheckRiverAfterBBLine + b.CouldCheckRiverAfterBBLine;
+            r.DidBetRiverOnBXLine = a.DidBetRiverOnBXLine + b.DidBetRiverOnBXLine;
+            r.CouldBetRiverOnBXLine = a.CouldBetRiverOnBXLine + b.CouldBetRiverOnBXLine;
 
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;

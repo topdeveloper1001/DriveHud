@@ -577,6 +577,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal BetRiverOnBXLine
+        {
+            get
+            {
+                return GetPercentage(Source.DidBetRiverOnBXLine, Source.CouldBetRiverOnBXLine);
+            }
+        }
+
         public virtual decimal CBetIP
         {
             get

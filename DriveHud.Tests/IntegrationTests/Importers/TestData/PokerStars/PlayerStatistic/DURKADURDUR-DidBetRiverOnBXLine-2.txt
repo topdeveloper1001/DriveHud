@@ -1,0 +1,39 @@
+PokerStars Game #47148895487:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:23:34 ET
+Table 'Pan IV' 6-max Seat #5 is the button
+Seat 1: pobolero ($313.20 in chips) 
+Seat 2: ChrisChamber ($205 in chips) 
+Seat 3: thomaswkm ($386.80 in chips) 
+Seat 4: DURKADURDUR ($203 in chips) 
+Seat 5: TimK0123 ($397 in chips) 
+Seat 6: twofinger777 ($135.10 in chips) 
+twofinger777: posts small blind $1
+pobolero: posts big blind $2
+*** HOLE CARDS ***
+ChrisChamber: folds 
+thomaswkm: folds 
+DURKADURDUR: raises $4 to $6
+TimK0123: calls $6
+twofinger777: folds 
+pobolero: folds 
+*** FLOP *** [9c Tc 5c]
+DURKADURDUR: bets $11
+TimK0123: calls $11
+*** TURN *** [9c Tc 5c] [4d]
+DURKADURDUR: checks 
+TimK0123: bets $26
+DURKADURDUR: calls $26
+*** RIVER *** [9c Tc 5c 4d] [8s]
+DURKADURDUR: bets $52
+TimK0123: folds 
+Uncalled bet ($52) returned to DURKADURDUR
+DURKADURDUR collected $86 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $89 | Rake $3 
+Board [9c Tc 5c 4d 8s]
+Seat 1: pobolero (big blind) folded before Flop
+Seat 2: ChrisChamber folded before Flop (didn't bet)
+Seat 3: thomaswkm folded before Flop (didn't bet)
+Seat 4: DURKADURDUR collected ($86)
+Seat 5: TimK0123 (button) folded on the River
+Seat 6: twofinger777 (small blind) folded before Flop

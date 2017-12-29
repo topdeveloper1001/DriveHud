@@ -697,6 +697,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto BetRiverOnBXLineObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetRiverOnBXLine,
+                    Occurred = Source.DidBetRiverOnBXLine,
+                    CouldOccurred = Source.CouldBetRiverOnBXLine
+                };
+            }
+        }
+
         public virtual StatDto CBetIPObject
         {
             get

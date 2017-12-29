@@ -49,6 +49,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.BBs, PropertyName = nameof(Indicators.StackInBBs) },
             new StatBase { Stat = Stat.BetFlopCalled3BetPreflopIp, PropertyName = nameof(Indicators.BetFlopCalled3BetPreflopIp), CreateStatDto = x => new StatDto(x.BetFlopCalled3BetPreflopIp, x.CouldBetFlopCalled3BetPreflopIp) },
             new StatBase { Stat = Stat.BetFoldFlopPfrRaiser, PropertyName = nameof(Indicators.BetFoldFlopPfrRaiser), CreateStatDto = x => new StatDto(x.BetFoldFlopPfrRaiser, x.CouldBetFoldFlopPfrRaiser) },
+            new StatBase { Stat = Stat.BetRiverOnBXLine, PropertyName = nameof(Indicators.BetRiverOnBXLine), CreateStatDto = x => new StatDto(x.DidBetRiverOnBXLine, x.CouldBetRiverOnBXLine) },
             new StatBase { Stat = Stat.BetWhenCheckedTo, PropertyName = nameof(Indicators.BetWhenCheckedTo), CreateStatDto = x => new StatDto(x.DidBetWhenCheckedToFlop + x.DidBetWhenCheckedToTurn + x.DidBetWhenCheckedToRiver, x.CanBetWhenCheckedToFlop + x.CanBetWhenCheckedToTurn + x.CanBetWhenCheckedToRiver) },
             new StatBase { Stat = Stat.BTNDefendCORaise, PropertyName = nameof(Indicators.BTNDefendCORaise), CreateStatDto = x => new StatDto(x.Buttonstealdefended, x.Buttonstealfaced) },
             new StatBase { Stat = Stat.CBet, PropertyName = nameof(Indicators.FlopCBet), CreateStatDto = x => new StatDto(x.Flopcontinuationbetmade, x.Flopcontinuationbetpossible) },
@@ -348,9 +349,11 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.CalledTurnCheckRaise },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnCheckRaise },
 
+
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RaiseRiver },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverAGG },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverSeen },
+                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.BetRiverOnBXLine },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CheckRiverOnBXLine },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CheckRiverAfterBBLine },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.FoldToRiverCBet },

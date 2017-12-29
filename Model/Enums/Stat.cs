@@ -152,6 +152,7 @@ namespace Model.Enums
         FoldToTurnCheckRaise,
         FoldToRiverCheckRaise,
         CalledTurnCheckRaise,
-        CheckRiverAfterBBLine
+        CheckRiverAfterBBLine,
+        BetRiverOnBXLine
     }
 }

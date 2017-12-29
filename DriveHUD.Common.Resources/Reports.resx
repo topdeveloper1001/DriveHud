@@ -585,4 +585,7 @@
   <data name="Reports_Column_FoldToTurnCheckRaise" xml:space="preserve">
     <value>Fold to Turn Check-Raise %</value>
   </data>
+  <data name="Reports_Column_BetRiverOnBXLine" xml:space="preserve">
+    <value>Bet River on BX Line%</value>
+  </data>
 </root>

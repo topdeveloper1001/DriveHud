@@ -1,0 +1,42 @@
+PokerStars Game #47148648125:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:11:17 ET
+Table 'Pan IV' 6-max Seat #3 is the button
+Seat 1: pobolero ($262.70 in chips) 
+Seat 2: ChrisChamber ($205 in chips) 
+Seat 3: thomaswkm ($398.80 in chips) 
+Seat 4: DURKADURDUR ($232.75 in chips) 
+Seat 5: TimK0123 ($218 in chips) 
+Seat 6: twofinger777 ($140 in chips) 
+DURKADURDUR: posts small blind $1
+TimK0123: posts big blind $2
+*** HOLE CARDS ***
+twofinger777: folds 
+pobolero: folds 
+ChrisChamber: folds 
+thomaswkm: folds 
+DURKADURDUR: raises $4 to $6
+TimK0123: calls $4
+*** FLOP *** [2c As Kc]
+DURKADURDUR: bets $7
+TimK0123: calls $7
+*** TURN *** [2c As Kc] [9s]
+DURKADURDUR: checks 
+TimK0123: bets $16
+DURKADURDUR: raises $38 to $54
+TimK0123: calls $38
+*** RIVER *** [2c As Kc 9s] [3c]
+DURKADURDUR: bets $165.75 and is all-in
+TimK0123: calls $151 and is all-in
+Uncalled bet ($14.75) returned to DURKADURDUR
+*** SHOW DOWN ***
+DURKADURDUR: shows [2h 2d] (three of a kind, Deuces)
+TimK0123: shows [Jc Qc] (a flush, King high)
+TimK0123 collected $433 from pot
+*** SUMMARY ***
+Total pot $436 | Rake $3 
+Board [2c As Kc 9s 3c]
+Seat 1: pobolero folded before Flop (didn't bet)
+Seat 2: ChrisChamber folded before Flop (didn't bet)
+Seat 3: thomaswkm (button) folded before Flop (didn't bet)
+Seat 4: DURKADURDUR (small blind) showed [2h 2d] and lost with three of a kind, Deuces
+Seat 5: TimK0123 (big blind) showed [Jc Qc] and won ($433) with a flush, King high
+Seat 6: twofinger777 folded before Flop (didn't bet)

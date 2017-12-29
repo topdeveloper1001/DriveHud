@@ -277,6 +277,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet River on BX Line%.
+        /// </summary>
+        internal static string Reports_Column_BetRiverOnBXLine {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetRiverOnBXLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet When Checked To%.
         /// </summary>
         internal static string Reports_Column_BetWhenCheckedTo {

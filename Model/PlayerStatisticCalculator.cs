@@ -555,6 +555,11 @@ namespace Model
             stat.CheckedRiverAfterBBLine = betOnFlop && betOnTurn && playerHandActions.Any(x => x.Street == Street.River && x.IsCheck) ? 1 : 0;
             stat.CouldCheckRiverAfterBBLine = playedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
+            var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
+
+            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && playerHandActions.RiverAny(x => x.IsBet()) ? 1 : 0;
+            stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
             stat.Couldsqueeze = squeezBet.Possible ? 1 : 0;
