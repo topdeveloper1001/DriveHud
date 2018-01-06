@@ -54,6 +54,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.BTNDefendCORaise, PropertyName = nameof(Indicators.BTNDefendCORaise), CreateStatDto = x => new StatDto(x.Buttonstealdefended, x.Buttonstealfaced) },
             new StatBase { Stat = Stat.CallFlopCBetIP, PropertyName = nameof(Indicators.CallFlopCBetIP), CreateStatDto = x => new StatDto(x.CalledflopcontinuationbetIP, x.FacingflopcontinuationbetIP) },
             new StatBase { Stat = Stat.CallFlopCBetOOP, PropertyName = nameof(Indicators.CallFlopCBetOOP), CreateStatDto = x => new StatDto(x.CalledflopcontinuationbetOOP, x.FacingflopcontinuationbetOOP) },
+            new StatBase { Stat = Stat.CallRiverRaise, PropertyName = nameof(Indicators.CallRiverRaise), CreateStatDto = x => new StatDto(x.CalledFacedRaiseRiver, x.FacedRaiseRiver) },
             new StatBase { Stat = Stat.CBet, PropertyName = nameof(Indicators.FlopCBet), CreateStatDto = x => new StatDto(x.Flopcontinuationbetmade, x.Flopcontinuationbetpossible) },
             new StatBase { Stat = Stat.CBetInFourBetPot, PropertyName = nameof(Indicators.FlopCBetInFourBetPot), CreateStatDto = x => new StatDto(x.FlopContinuationBetInFourBetPotMade, x.FlopContinuationBetInFourBetPotPossible) },
             new StatBase { Stat = Stat.CBetInThreeBetPot, PropertyName = nameof(Indicators.FlopCBetInThreeBetPot), CreateStatDto = x => new StatDto(x.FlopContinuationBetInThreeBetPotMade, x.FlopContinuationBetInThreeBetPotPossible)  },
@@ -357,7 +358,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.CalledTurnCheckRaise },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnCheckRaise },
 
-
+                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CallRiverRaise },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RaiseRiver },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverAGG },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.RiverSeen },

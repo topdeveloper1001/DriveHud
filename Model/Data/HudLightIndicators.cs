@@ -879,6 +879,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CallRiverRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallRiverRaise,
+                    Occurred = Source.CalledFacedRaiseRiver,
+                    CouldOccurred = Source.FacedRaiseRiver
+                };
+            }
+        }
+
         #endregion
 
         #region Limp

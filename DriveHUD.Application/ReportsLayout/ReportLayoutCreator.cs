@@ -283,6 +283,7 @@ namespace DriveHUD.Application.ReportsLayout
             // C
             new Tuple<string, string, ColumnType>("Reports_Column_CallFlopCBetIP", nameof(Indicators.CallFlopCBetIP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_CallFlopCBetOOP", nameof(Indicators.CallFlopCBetOOP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_CallRiverRaise", nameof(Indicators.CallRiverRaise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_CBet", nameof(Indicators.FlopCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_CBet_IP", nameof(Indicators.CBetIP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_CBet_OOP", nameof(Indicators.CBetOOP), ColumnType.Percentile),

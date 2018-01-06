@@ -157,6 +157,7 @@ namespace Model.Enums
         CallFlopCBetIP,
         CallFlopCBetOOP,
         FoldToFlopCBetIP,
-        FoldToFlopCBetOOP
+        FoldToFlopCBetOOP,
+        CallRiverRaise
     }
 }

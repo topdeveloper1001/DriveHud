@@ -358,6 +358,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call River Raise %.
+        /// </summary>
+        internal static string Reports_Column_CallRiverRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallRiverRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet%.
         /// </summary>
         internal static string Reports_Column_CBet {

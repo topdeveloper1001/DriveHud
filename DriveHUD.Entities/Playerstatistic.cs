@@ -863,6 +863,12 @@ namespace DriveHUD.Entities
         [ProtoMember(312)]
         public virtual int FoldToFlopcontinuationbetOOP { get; set; }
 
+        [ProtoMember(313)]
+        public virtual int FoldToThreeBetIP { get; set; }
+
+        [ProtoMember(314)]
+        public virtual int FoldToThreeBetOOP { get; set; }    
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1144,6 +1150,9 @@ namespace DriveHUD.Entities
             CalledflopcontinuationbetOOP += a.CalledflopcontinuationbetOOP;
             FoldToFlopcontinuationbetIP += a.FoldToFlopcontinuationbetIP;
             FoldToFlopcontinuationbetOOP += a.FoldToFlopcontinuationbetOOP;
+
+            FoldToThreeBetIP += a.FoldToThreeBetIP;
+            FoldToThreeBetOOP += a.FoldToThreeBetOOP;
 
             FacingFlopContinuationBetFromThreeBetPot += a.FacingFlopContinuationBetFromThreeBetPot;
             FoldedToFlopContinuationBetFromThreeBetPot += a.FoldedToFlopContinuationBetFromThreeBetPot;
@@ -1540,6 +1549,9 @@ namespace DriveHUD.Entities
             r.CalledflopcontinuationbetIP = a.CalledflopcontinuationbetIP + b.CalledflopcontinuationbetIP;
             r.FoldToFlopcontinuationbetIP = a.FoldToFlopcontinuationbetIP + b.FoldToFlopcontinuationbetIP;
             r.FoldToFlopcontinuationbetOOP = a.FoldToFlopcontinuationbetOOP + b.FoldToFlopcontinuationbetOOP;
+
+            r.FoldToThreeBetIP = a.FoldToThreeBetIP + b.FoldToThreeBetIP;
+            r.FoldToThreeBetOOP = a.FoldToThreeBetOOP + b.FoldToThreeBetOOP;
 
             r.FacingFlopContinuationBetFromThreeBetPot = a.FacingFlopContinuationBetFromThreeBetPot + b.FacingFlopContinuationBetFromThreeBetPot;
             r.FoldedToFlopContinuationBetFromThreeBetPot = a.FoldedToFlopContinuationBetFromThreeBetPot + b.FoldedToFlopContinuationBetFromThreeBetPot;

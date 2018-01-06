@@ -1247,6 +1247,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CallRiverRaise
+        {
+            get
+            {
+                return GetPercentage(Source.CalledFacedRaiseRiver, Source.FacedRaiseRiver);
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

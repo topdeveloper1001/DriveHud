@@ -78,18 +78,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-SB-DidColdCallIp-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         public void DidColdCallIpIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            using (var perfScope = new PerformanceMonitor("DidColdCallIpIsCalculated"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(playerstatistic.DidColdCallIp, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.DidColdCallIp, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -104,54 +93,21 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-BTN-DidColdCall.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void DidColdCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            using (var perfScope = new PerformanceMonitor("DidColdCallIsCalculated"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(playerstatistic.Didcoldcall, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.Didcoldcall, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
         [TestCase(@"DURKADURDUR-SB-PfrOop-2-max.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         public void PfrOopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            using (var perfScope = new PerformanceMonitor("PfrOopIsCalculated"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(playerstatistic.PfrOop, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.PfrOop, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
         [TestCase(@"DURKADURDUR-BTN-Cards.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "AcJh")]
         public void CardsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expected)
         {
-            using (var perfScope = new PerformanceMonitor("CardsAreImported"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(playerstatistic.Cards, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.Cards, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -197,19 +153,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "EP")]
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
         {
-            using (var perfScope = new PerformanceMonitor("PositionsAreImported"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-
-                Assert.That(playerstatistic.PositionString, Is.EqualTo(expectedPosition));
-            }
+            AssertThatStatIsCalculated(x => x.PositionString, fileName, pokerSite, playerName, expectedPosition);
         }
 
         [Test]
@@ -222,19 +166,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", false)]
         public void IsCutoffImported(string fileName, EnumPokerSites pokerSite, string playerName, bool expected)
         {
-            using (var perfScope = new PerformanceMonitor("PositionsAreImported"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-
-                Assert.That(playerstatistic.IsCutoff, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.IsCutoff, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -242,18 +174,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-FoldedThreeBet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void FoldedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            using (var perfScope = new PerformanceMonitor("DidColdCallIsCalculated"))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-                Assert.That(playerstatistic.FoldedtothreebetpreflopVirtual, Is.EqualTo(expected));
-            }
+            AssertThatStatIsCalculated(x => x.FoldedtothreebetpreflopVirtual, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -268,7 +189,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-CouldNotFourBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
         public void FacedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated(x => x.Facedthreebetpreflop, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated(x => x.FacedthreebetpreflopVirtual, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -641,6 +562,48 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void FoldToFlopcontinuationbetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.FoldToFlopcontinuationbetOOP, fileName, pokerSite, playerName, expected);
+        }
+
+        //[Test]
+        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]        
+        //public void FoldToThreeBetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        //{
+        //    AssertThatStatIsCalculated(x => x.FoldToThreeBetOOP, fileName, pokerSite, playerName, expected);
+        //}
+
+        //[Test]
+        //[TestCase(@"DURKADURDUR-FoldToThreeBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]  
+        //public void FoldToThreeBetIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        //{
+        //    AssertThatStatIsCalculated(x => x.FoldToThreeBetIP, fileName, pokerSite, playerName, expected);
+        //}
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FacedRiverRaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FacedRiverRaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledRiverRaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledRiverRaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FacedRiverRaiseIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedRaiseRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CalledRiverRaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledRiverRaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void CalledRiverRaiseIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CalledFacedRaiseRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CouldNotRiverRaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-CouldNotRiverRaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void CouldRiverRaiseIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldRaiseRiver, fileName, pokerSite, playerName, expected);
         }
 
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")

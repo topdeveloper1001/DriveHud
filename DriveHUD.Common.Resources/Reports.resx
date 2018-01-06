@@ -600,4 +600,7 @@
   <data name="Reports_Column_FoldToFlopCBetOOP" xml:space="preserve">
     <value>Fold to Flop C-Bet OOP %</value>
   </data>
+  <data name="Reports_Column_CallRiverRaise" xml:space="preserve">
+    <value>Call River Raise %</value>
+  </data>
 </root>
