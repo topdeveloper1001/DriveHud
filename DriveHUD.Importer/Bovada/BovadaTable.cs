@@ -854,11 +854,36 @@ namespace DriveHUD.Importers.Bovada
         }
 
         protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
-        {           
+        {
+            //if (CurrentHandNumber == cmdObj.stageNo)
+            //{
+            //    return;
+            //}
+
             CurrentHandNumber = cmdObj.stageNo;
 
             if (!IsZonePokerTable)
             {
+                // move all player add/remove commands to next hand
+                var playerAddRemoveCommands = commands
+                    .Where(x => x.CommandCodeEnum == CommandCodeEnum.PlayerAdded || x.CommandCodeEnum == CommandCodeEnum.PlayerRemoved)
+                    .ToArray();
+
+                playerAddRemoveCommands.ForEach(x =>
+                {
+                    if (x.CommandObject is PlayerAdded)
+                    {
+                        ((PlayerAdded)x.CommandObject).Previous = true;
+                    }
+
+                    if (x.CommandObject is PlayerRemoved)
+                    {
+                        ((PlayerRemoved)x.CommandObject).Previous = true;
+                    }
+
+                    middleHandCommands.Add(x);
+                });
+
                 ClearInfo();
             }
             else

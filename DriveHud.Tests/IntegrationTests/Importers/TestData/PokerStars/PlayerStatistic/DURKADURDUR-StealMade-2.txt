@@ -1,0 +1,19 @@
+PokerStars Game #47150761327:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:48:27 ET
+Table 'Pluto' 6-max Seat #6 is the button
+Seat 4: Zyrano86 ($76.25 in chips) 
+Seat 6: DURKADURDUR ($200 in chips) 
+HSVJobig will be allowed to play after the button
+DURKADURDUR: posts small blind $1
+Zyrano86: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+Zyrano86: folds 
+Uncalled bet ($4) returned to DURKADURDUR
+Zyrano86 leaves the table
+DURKADURDUR collected $4 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $4 | Rake $0 
+Seat 4: Zyrano86 (big blind) folded before Flop
+Seat 6: DURKADURDUR (button) (small blind) collected ($4)
+
