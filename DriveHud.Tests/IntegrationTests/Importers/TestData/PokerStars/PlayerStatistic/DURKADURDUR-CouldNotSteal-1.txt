@@ -1,0 +1,20 @@
+PokerStars Game #47152421348:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:49:43 ET
+Table 'Siri III' 6-max Seat #3 is the button
+Seat 1: DURKADURDUR ($200 in chips)
+Seat 3: kaader ($214 in chips)
+Seat 5: xxxmagicxxx ($386.30 in chips)
+twinpsych will be allowed to play after the button
+xxxmagicxxx: posts small blind $1
+pappadogg: is sitting out
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+kaader: folds
+xxxmagicxxx: folds
+Uncalled bet ($1) returned to DURKADURDUR
+DURKADURDUR collected $2 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $2 | Rake $0
+Seat 1: DURKADURDUR (big blind) collected ($2)
+Seat 3: kaader (button) folded before Flop (didn't bet)
+Seat 5: xxxmagicxxx (small blind) folded before Flop
