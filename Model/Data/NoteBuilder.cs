@@ -46,7 +46,9 @@ namespace Model.Data
                                   let count = groupedNotes.Count()
                                   let cardRangeText = !string.IsNullOrWhiteSpace(cardRange) ? $" {cardRange}" : string.Empty
                                   let countText = count > 1 ? $" ({count})" : string.Empty
-                                  select $"{noteText}{cardRangeText}{countText}").ToArray();
+                                  select $"{noteText}{cardRangeText}{countText}")
+                                  .OrderBy(x => GetStreetOrderNumber(x))
+                                  .ToArray();
 
             var autoNoteText = string.Join(Environment.NewLine, autoNotesLines);
 
@@ -93,6 +95,33 @@ namespace Model.Data
             var manualNotes = indexOfSeparateLine > 0 ? noteText.Substring(0, indexOfSeparateLine).Trim() : null;
 
             return new Tuple<string, string>(manualNotes, autoNotes);
+        }
+
+        private static int GetStreetOrderNumber(string noteText)
+        {
+            var bracketsStartIndex = noteText.IndexOf('[');
+            var bracketsEndIndex = noteText.IndexOf(']');
+
+            if (bracketsStartIndex < 0 || bracketsEndIndex < 0 || (bracketsEndIndex - bracketsStartIndex) <= 0)
+            {
+                return 4;
+            }
+
+            var streetText = noteText.Substring(bracketsStartIndex + 1, bracketsEndIndex - bracketsStartIndex - 1);
+
+            switch (streetText)
+            {
+                case "PreFlop":
+                    return 0;
+                case "Flop":
+                    return 1;
+                case "Turn":
+                    return 2;
+                case "River":
+                    return 3;
+                default:
+                    return 4;
+            }
         }
     }
 }

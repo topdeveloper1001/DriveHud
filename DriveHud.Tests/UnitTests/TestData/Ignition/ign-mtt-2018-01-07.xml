@@ -1,0 +1,616 @@
+<session sessioncode="10080">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>$500 Guaranteed (50K Chips Super Turbo) (#18798824)</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-01-07 15:35:35</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>$500 Guaranteed (50K Chips Super Turbo) (#18798824)</tournamentname>
+    <place>0</place>
+    <buyin>$10+$1</buyin>
+    <totalbuyin>$11</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="3614362237">
+    <general>
+      <startdate>2018-01-07 15:35:36</startdate>
+      <players>
+        <player seat="1" name="P35_436382NL" chips="50000" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="63485" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="59580" dealer="0" win="0" bet="2440" rebuy="0" addon="0" />
+        <player seat="5" name="P3_380330YO" chips="23390" dealer="1" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="6" name="P34_580083OY" chips="48760" dealer="0" win="0" bet="240" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="95527" dealer="0" win="0" bet="440" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="166068" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="64365" dealer="0" win="9320" bet="6040" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P35_436382NL" type="15" sum="40" cards="[cards]" />
+      <action no="2" player="P20_375168KS" type="15" sum="40" cards="[cards]" />
+      <action no="3" player="P19_750442DU" type="15" sum="40" cards="[cards]" />
+      <action no="4" player="P3_380330YO" type="15" sum="40" cards="[cards]" />
+      <action no="5" player="P34_580083OY" type="15" sum="40" cards="[cards]" />
+      <action no="6" player="P6_598287PN" type="15" sum="40" cards="[cards]" />
+      <action no="7" player="P12_588480JN" type="15" sum="40" cards="[cards]" />
+      <action no="8" player="P21_123771RR" type="15" sum="40" cards="[cards]" />
+      <action no="9" player="P34_580083OY" type="1" sum="200" cards="[cards]" />
+      <action no="10" player="P6_598287PN" type="2" sum="400" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P35_436382NL">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P3_380330YO">X X</cards>
+      <cards type="Pocket" player="P34_580083OY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="11" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="12" player="P21_123771RR" type="23" sum="1200" cards="" />
+      <action no="13" player="P35_436382NL" type="0" sum="0" cards="" />
+      <action no="14" player="P20_375168KS" type="0" sum="0" cards="" />
+      <action no="15" player="P19_750442DU" type="3" sum="1200" cards="" />
+      <action no="16" player="P3_380330YO" type="0" sum="0" cards="" />
+      <action no="17" player="P34_580083OY" type="0" sum="0" cards="" />
+      <action no="18" player="P6_598287PN" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S4 D8 H6</cards>
+      <action no="19" player="P21_123771RR" type="5" sum="1200" cards="" />
+      <action no="20" player="P19_750442DU" type="3" sum="1200" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">CJ</cards>
+      <action no="21" player="P21_123771RR" type="5" sum="3600" cards="" />
+      <action no="22" player="P19_750442DU" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614362327">
+    <general>
+      <startdate>2018-01-07 15:35:46</startdate>
+      <players>
+        <player seat="1" name="P35_436382NL" chips="49960" dealer="0" win="0" bet="49960" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="63445" dealer="0" win="0" bet="6476" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="57140" dealer="0" win="0" bet="50" rebuy="0" addon="0" />
+        <player seat="5" name="P3_380330YO" chips="23350" dealer="0" win="0" bet="23350" rebuy="0" addon="0" />
+        <player seat="6" name="P34_580083OY" chips="48520" dealer="1" win="0" bet="50" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="95087" dealer="0" win="0" bet="300" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="166028" dealer="0" win="163688" bet="83452" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="67645" dealer="0" win="0" bet="50" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P35_436382NL" type="15" sum="50" cards="[cards]" />
+      <action no="2" player="P20_375168KS" type="15" sum="50" cards="[cards]" />
+      <action no="3" player="P19_750442DU" type="15" sum="50" cards="[cards]" />
+      <action no="4" player="P3_380330YO" type="15" sum="50" cards="[cards]" />
+      <action no="5" player="P34_580083OY" type="15" sum="50" cards="[cards]" />
+      <action no="6" player="P6_598287PN" type="15" sum="50" cards="[cards]" />
+      <action no="7" player="P12_588480JN" type="15" sum="50" cards="[cards]" />
+      <action no="8" player="P21_123771RR" type="15" sum="50" cards="[cards]" />
+      <action no="9" player="P6_598287PN" type="1" sum="250" cards="[cards]" />
+      <action no="10" player="P12_588480JN" type="2" sum="500" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P35_436382NL">H8 D8</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P3_380330YO">C8 D7</cards>
+      <cards type="Pocket" player="P34_580083OY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">HK SK</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="11" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="12" player="P35_436382NL" type="23" sum="1000" cards="" />
+      <action no="13" player="P20_375168KS" type="3" sum="1000" cards="" />
+      <action no="14" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="15" player="P3_380330YO" type="3" sum="1000" cards="" />
+      <action no="16" player="P34_580083OY" type="0" sum="0" cards="" />
+      <action no="17" player="P6_598287PN" type="0" sum="0" cards="" />
+      <action no="18" player="P12_588480JN" type="23" sum="6426" cards="" />
+      <action no="19" player="P35_436382NL" type="3" sum="5426" cards="" />
+      <action no="20" player="P20_375168KS" type="3" sum="5426" cards="" />
+      <action no="21" player="P3_380330YO" type="7" sum="22300" cards="" />
+      <action no="22" player="P12_588480JN" type="23" sum="83402" cards="" />
+      <action no="23" player="P35_436382NL" type="7" sum="43484" cards="" />
+      <action no="24" player="P20_375168KS" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C4 H10 SQ</cards>
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D5</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">CK</cards>
+    </round>
+  </game>
+  <game gamecode="3614362455">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="3" name="P20_375168KS" chips="56969" dealer="0" win="81219" bet="56969" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="57090" dealer="0" win="0" bet="1550" rebuy="0" addon="0" />
+        <player seat="6" name="P34_580083OY" chips="48470" dealer="0" win="0" bet="50" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="94787" dealer="1" win="0" bet="4050" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="246264" dealer="0" win="0" bet="18050" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="67595" dealer="0" win="0" bet="550" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P20_375168KS" type="15" sum="50" cards="[cards]" />
+      <action no="2" player="P19_750442DU" type="15" sum="50" cards="[cards]" />
+      <action no="3" player="P34_580083OY" type="15" sum="50" cards="[cards]" />
+      <action no="4" player="P6_598287PN" type="15" sum="50" cards="[cards]" />
+      <action no="5" player="P12_588480JN" type="15" sum="50" cards="[cards]" />
+      <action no="6" player="P21_123771RR" type="15" sum="50" cards="[cards]" />
+      <action no="7" player="P12_588480JN" type="1" sum="250" cards="[cards]" />
+      <action no="8" player="P21_123771RR" type="2" sum="500" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P20_375168KS">C5 SA</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P34_580083OY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">HQ HA</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="9" player="P20_375168KS" type="23" sum="1500" cards="" />
+      <action no="10" player="P19_750442DU" type="3" sum="1500" cards="" />
+      <action no="11" player="P34_580083OY" type="0" sum="0" cards="" />
+      <action no="12" player="P6_598287PN" type="3" sum="1500" cards="" />
+      <action no="13" player="P12_588480JN" type="23" sum="4000" cards="" />
+      <action no="14" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="15" player="P20_375168KS" type="3" sum="2500" cards="" />
+      <action no="16" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="17" player="P6_598287PN" type="3" sum="2500" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C10 C2 D4</cards>
+      <action no="18" player="P12_588480JN" type="4" sum="0" cards="" />
+      <action no="19" player="P20_375168KS" type="5" sum="4500" cards="" />
+      <action no="20" player="P6_598287PN" type="0" sum="0" cards="" />
+      <action no="21" player="P12_588480JN" type="3" sum="4500" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H4</cards>
+      <action no="22" player="P12_588480JN" type="4" sum="0" cards="" />
+      <action no="23" player="P20_375168KS" type="5" sum="9500" cards="" />
+      <action no="24" player="P12_588480JN" type="3" sum="9500" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">CJ</cards>
+      <action no="25" player="P12_588480JN" type="4" sum="0" cards="" />
+      <action no="26" player="P20_375168KS" type="7" sum="38919" cards="" />
+      <action no="27" player="P12_588480JN" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614362597">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="1" name="P38_755539CC" chips="50000" dealer="0" win="0" bet="660" rebuy="0" addon="0" />
+        <player seat="2" name="P37_613170KN" chips="50000" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="81219" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="55540" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="45850" dealer="0" win="0" bet="2460" rebuy="0" addon="0" />
+        <player seat="6" name="P34_580083OY" chips="48420" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="90737" dealer="0" win="0" bet="2460" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="228214" dealer="1" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="67045" dealer="0" win="8340" bet="2460" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P38_755539CC" type="15" sum="60" cards="[cards]" />
+      <action no="2" player="P37_613170KN" type="15" sum="60" cards="[cards]" />
+      <action no="3" player="P20_375168KS" type="15" sum="60" cards="[cards]" />
+      <action no="4" player="P19_750442DU" type="15" sum="60" cards="[cards]" />
+      <action no="5" player="P32_226089NM" type="15" sum="60" cards="[cards]" />
+      <action no="6" player="P34_580083OY" type="15" sum="60" cards="[cards]" />
+      <action no="7" player="P6_598287PN" type="15" sum="60" cards="[cards]" />
+      <action no="8" player="P12_588480JN" type="15" sum="60" cards="[cards]" />
+      <action no="9" player="P21_123771RR" type="15" sum="60" cards="[cards]" />
+      <action no="10" player="P21_123771RR" type="1" sum="300" cards="[cards]" />
+      <action no="11" player="P38_755539CC" type="2" sum="600" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P38_755539CC">X X</cards>
+      <cards type="Pocket" player="P37_613170KN">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">C8 D8</cards>
+      <cards type="Pocket" player="P34_580083OY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">SK SJ</cards>
+      <action no="12" player="P37_613170KN" type="0" sum="0" cards="" />
+      <action no="13" player="P20_375168KS" type="0" sum="0" cards="" />
+      <action no="14" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="15" player="P32_226089NM" type="3" sum="600" cards="" />
+      <action no="16" player="P34_580083OY" type="0" sum="0" cards="" />
+      <action no="17" player="P6_598287PN" type="3" sum="600" cards="" />
+      <action no="18" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="19" player="P21_123771RR" type="3" sum="300" cards="" />
+      <action no="20" player="P38_755539CC" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">SQ C4 DJ</cards>
+      <action no="21" player="P21_123771RR" type="4" sum="0" cards="" />
+      <action no="22" player="P38_755539CC" type="4" sum="0" cards="" />
+      <action no="23" player="P32_226089NM" type="5" sum="600" cards="" />
+      <action no="24" player="P6_598287PN" type="3" sum="600" cards="" />
+      <action no="25" player="P21_123771RR" type="3" sum="600" cards="" />
+      <action no="26" player="P38_755539CC" type="0" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D5</cards>
+      <action no="27" player="P21_123771RR" type="4" sum="0" cards="" />
+      <action no="28" player="P32_226089NM" type="5" sum="600" cards="" />
+      <action no="29" player="P6_598287PN" type="3" sum="600" cards="" />
+      <action no="30" player="P21_123771RR" type="3" sum="600" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">C2</cards>
+      <action no="31" player="P21_123771RR" type="4" sum="0" cards="" />
+      <action no="32" player="P32_226089NM" type="5" sum="600" cards="" />
+      <action no="33" player="P6_598287PN" type="3" sum="600" cards="" />
+      <action no="34" player="P21_123771RR" type="3" sum="600" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614362715">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="1" name="P38_755539CC" chips="49340" dealer="0" win="0" bet="360" rebuy="0" addon="0" />
+        <player seat="2" name="P37_613170KN" chips="49940" dealer="0" win="0" bet="660" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="81159" dealer="0" win="0" bet="1980" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="55480" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="43390" dealer="0" win="0" bet="5580" rebuy="0" addon="0" />
+        <player seat="6" name="P34_580083OY" chips="48360" dealer="0" win="24480" bet="13740" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="88277" dealer="0" win="0" bet="1980" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="228154" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="72925" dealer="1" win="0" bet="60" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P38_755539CC" type="15" sum="60" cards="[cards]" />
+      <action no="2" player="P37_613170KN" type="15" sum="60" cards="[cards]" />
+      <action no="3" player="P20_375168KS" type="15" sum="60" cards="[cards]" />
+      <action no="4" player="P19_750442DU" type="15" sum="60" cards="[cards]" />
+      <action no="5" player="P32_226089NM" type="15" sum="60" cards="[cards]" />
+      <action no="6" player="P34_580083OY" type="15" sum="60" cards="[cards]" />
+      <action no="7" player="P6_598287PN" type="15" sum="60" cards="[cards]" />
+      <action no="8" player="P12_588480JN" type="15" sum="60" cards="[cards]" />
+      <action no="9" player="P21_123771RR" type="15" sum="60" cards="[cards]" />
+      <action no="10" player="P38_755539CC" type="1" sum="300" cards="[cards]" />
+      <action no="11" player="P37_613170KN" type="2" sum="600" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P38_755539CC">X X</cards>
+      <cards type="Pocket" player="P37_613170KN">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">X X</cards>
+      <cards type="Pocket" player="P34_580083OY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="12" player="P20_375168KS" type="3" sum="600" cards="" />
+      <action no="13" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="14" player="P32_226089NM" type="3" sum="600" cards="" />
+      <action no="15" player="P34_580083OY" type="23" sum="1920" cards="" />
+      <action no="16" player="P6_598287PN" type="3" sum="1920" cards="" />
+      <action no="17" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="18" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="19" player="P38_755539CC" type="0" sum="0" cards="" />
+      <action no="20" player="P37_613170KN" type="0" sum="0" cards="" />
+      <action no="21" player="P20_375168KS" type="3" sum="1320" cards="" />
+      <action no="22" player="P32_226089NM" type="3" sum="1320" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">CA S9 D7</cards>
+      <action no="23" player="P20_375168KS" type="4" sum="0" cards="" />
+      <action no="24" player="P32_226089NM" type="5" sum="600" cards="" />
+      <action no="25" player="P34_580083OY" type="3" sum="600" cards="" />
+      <action no="26" player="P6_598287PN" type="0" sum="0" cards="" />
+      <action no="27" player="P20_375168KS" type="0" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H2</cards>
+      <action no="28" player="P32_226089NM" type="5" sum="600" cards="" />
+      <action no="29" player="P34_580083OY" type="23" sum="3000" cards="" />
+      <action no="30" player="P32_226089NM" type="3" sum="2400" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">D9</cards>
+      <action no="31" player="P32_226089NM" type="4" sum="0" cards="" />
+      <action no="32" player="P34_580083OY" type="5" sum="8160" cards="" />
+      <action no="33" player="P32_226089NM" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614362858">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="1" name="P38_755539CC" chips="48980" dealer="1" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="2" name="P37_613170KN" chips="49280" dealer="0" win="0" bet="480" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="79179" dealer="0" win="0" bet="880" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="55420" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="37810" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="86297" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="228094" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="72865" dealer="0" win="5040" bet="3280" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P38_755539CC" type="15" sum="80" cards="[cards]" />
+      <action no="2" player="P37_613170KN" type="15" sum="80" cards="[cards]" />
+      <action no="3" player="P20_375168KS" type="15" sum="80" cards="[cards]" />
+      <action no="4" player="P19_750442DU" type="15" sum="80" cards="[cards]" />
+      <action no="5" player="P32_226089NM" type="15" sum="80" cards="[cards]" />
+      <action no="6" player="P6_598287PN" type="15" sum="80" cards="[cards]" />
+      <action no="7" player="P12_588480JN" type="15" sum="80" cards="[cards]" />
+      <action no="8" player="P21_123771RR" type="15" sum="80" cards="[cards]" />
+      <action no="9" player="P37_613170KN" type="1" sum="400" cards="[cards]" />
+      <action no="10" player="P20_375168KS" type="2" sum="800" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P38_755539CC">X X</cards>
+      <cards type="Pocket" player="P37_613170KN">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="11" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="12" player="P32_226089NM" type="0" sum="0" cards="" />
+      <action no="13" player="P6_598287PN" type="0" sum="0" cards="" />
+      <action no="14" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="15" player="P21_123771RR" type="23" sum="3200" cards="" />
+      <action no="16" player="P38_755539CC" type="0" sum="0" cards="" />
+      <action no="17" player="P37_613170KN" type="0" sum="0" cards="" />
+      <action no="18" player="P20_375168KS" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614362917">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="1" name="P38_755539CC" chips="48900" dealer="0" win="0" bet="880" rebuy="0" addon="0" />
+        <player seat="2" name="P37_613170KN" chips="48800" dealer="1" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="78299" dealer="0" win="60640" bet="36080" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="55340" dealer="0" win="0" bet="880" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="37730" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="86217" dealer="0" win="0" bet="20880" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="228014" dealer="0" win="0" bet="880" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="74625" dealer="0" win="0" bet="880" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P38_755539CC" type="15" sum="80" cards="[cards]" />
+      <action no="2" player="P37_613170KN" type="15" sum="80" cards="[cards]" />
+      <action no="3" player="P20_375168KS" type="15" sum="80" cards="[cards]" />
+      <action no="4" player="P19_750442DU" type="15" sum="80" cards="[cards]" />
+      <action no="5" player="P32_226089NM" type="15" sum="80" cards="[cards]" />
+      <action no="6" player="P6_598287PN" type="15" sum="80" cards="[cards]" />
+      <action no="7" player="P12_588480JN" type="15" sum="80" cards="[cards]" />
+      <action no="8" player="P21_123771RR" type="15" sum="80" cards="[cards]" />
+      <action no="9" player="P20_375168KS" type="1" sum="400" cards="[cards]" />
+      <action no="10" player="P19_750442DU" type="2" sum="800" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P38_755539CC">X X</cards>
+      <cards type="Pocket" player="P37_613170KN">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">HA SA</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="11" player="P32_226089NM" type="0" sum="0" cards="" />
+      <action no="12" player="P6_598287PN" type="3" sum="800" cards="" />
+      <action no="13" player="P12_588480JN" type="3" sum="800" cards="" />
+      <action no="14" player="P21_123771RR" type="3" sum="800" cards="" />
+      <action no="15" player="P38_755539CC" type="3" sum="800" cards="" />
+      <action no="16" player="P37_613170KN" type="0" sum="0" cards="" />
+      <action no="17" player="P20_375168KS" type="23" sum="6400" cards="" />
+      <action no="18" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="19" player="P6_598287PN" type="3" sum="5600" cards="" />
+      <action no="20" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="21" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="22" player="P38_755539CC" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H8 H4 H9</cards>
+      <action no="23" player="P20_375168KS" type="5" sum="7200" cards="" />
+      <action no="24" player="P6_598287PN" type="23" sum="14400" cards="" />
+      <action no="25" player="P20_375168KS" type="23" sum="29600" cards="" />
+      <action no="26" player="P6_598287PN" type="0" sum="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="3614363073">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="1" name="P38_755539CC" chips="48020" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="2" name="P37_613170KN" chips="48720" dealer="0" win="0" bet="5500" rebuy="0" addon="0" />
+        <player seat="3" name="P20_375168KS" chips="102859" dealer="1" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="54460" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="37650" dealer="0" win="0" bet="1100" rebuy="0" addon="0" />
+        <player seat="6" name="P46_543988HY" chips="50000" dealer="0" win="107600" bet="50000" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="65337" dealer="0" win="15337" bet="65337" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="227134" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="73745" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P38_755539CC" type="15" sum="100" cards="[cards]" />
+      <action no="2" player="P37_613170KN" type="15" sum="100" cards="[cards]" />
+      <action no="3" player="P20_375168KS" type="15" sum="100" cards="[cards]" />
+      <action no="4" player="P19_750442DU" type="15" sum="100" cards="[cards]" />
+      <action no="5" player="P32_226089NM" type="15" sum="100" cards="[cards]" />
+      <action no="6" player="P46_543988HY" type="15" sum="100" cards="[cards]" />
+      <action no="7" player="P6_598287PN" type="15" sum="100" cards="[cards]" />
+      <action no="8" player="P12_588480JN" type="15" sum="100" cards="[cards]" />
+      <action no="9" player="P21_123771RR" type="15" sum="100" cards="[cards]" />
+      <action no="10" player="P19_750442DU" type="1" sum="500" cards="[cards]" />
+      <action no="11" player="P32_226089NM" type="2" sum="1000" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P38_755539CC">X X</cards>
+      <cards type="Pocket" player="P37_613170KN">X X</cards>
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">X X</cards>
+      <cards type="Pocket" player="P46_543988HY">CA CQ</cards>
+      <cards type="Pocket" player="P6_598287PN">HJ SJ</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="12" player="P46_543988HY" type="3" sum="1000" cards="" />
+      <action no="13" player="P6_598287PN" type="23" sum="5400" cards="" />
+      <action no="14" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="15" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="16" player="P38_755539CC" type="0" sum="0" cards="" />
+      <action no="17" player="P37_613170KN" type="3" sum="5400" cards="" />
+      <action no="18" player="P20_375168KS" type="0" sum="0" cards="" />
+      <action no="19" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="20" player="P32_226089NM" type="0" sum="0" cards="" />
+      <action no="21" player="P46_543988HY" type="7" sum="48900" cards="" />
+      <action no="22" player="P6_598287PN" type="7" sum="59837" cards="" />
+      <action no="23" player="P37_613170KN" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H8 DQ C9</cards>
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D2</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">C6</cards>
+    </round>
+  </game>
+  <game gamecode="3614363190">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="3" name="P20_375168KS" chips="102759" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="53860" dealer="1" win="0" bet="3100" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="36550" dealer="0" win="80600" bet="36550" rebuy="0" addon="0" />
+        <player seat="6" name="P46_543988HY" chips="107600" dealer="0" win="0" bet="1100" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="15337" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="227034" dealer="0" win="190484" bet="227034" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="73645" dealer="0" win="0" bet="3100" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P20_375168KS" type="15" sum="100" cards="[cards]" />
+      <action no="2" player="P19_750442DU" type="15" sum="100" cards="[cards]" />
+      <action no="3" player="P32_226089NM" type="15" sum="100" cards="[cards]" />
+      <action no="4" player="P46_543988HY" type="15" sum="100" cards="[cards]" />
+      <action no="5" player="P6_598287PN" type="15" sum="100" cards="[cards]" />
+      <action no="6" player="P12_588480JN" type="15" sum="100" cards="[cards]" />
+      <action no="7" player="P21_123771RR" type="15" sum="100" cards="[cards]" />
+      <action no="8" player="P32_226089NM" type="1" sum="500" cards="[cards]" />
+      <action no="9" player="P46_543988HY" type="2" sum="1000" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">C10 DJ</cards>
+      <cards type="Pocket" player="P46_543988HY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">HA D10</cards>
+      <cards type="Pocket" player="P21_123771RR">X X</cards>
+      <action no="10" player="P6_598287PN" type="0" sum="0" cards="" />
+      <action no="11" player="P12_588480JN" type="23" sum="3000" cards="" />
+      <action no="12" player="P21_123771RR" type="3" sum="3000" cards="" />
+      <action no="13" player="P20_375168KS" type="0" sum="0" cards="" />
+      <action no="14" player="P19_750442DU" type="3" sum="3000" cards="" />
+      <action no="15" player="P32_226089NM" type="3" sum="2500" cards="" />
+      <action no="16" player="P46_543988HY" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H10 D2 S8</cards>
+      <action no="17" player="P32_226089NM" type="5" sum="1000" cards="" />
+      <action no="18" player="P12_588480JN" type="7" sum="223934" cards="" />
+      <action no="19" player="P21_123771RR" type="0" sum="0" cards="" />
+      <action no="20" player="P19_750442DU" type="0" sum="0" cards="" />
+      <action no="21" player="P32_226089NM" type="7" sum="32450" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D9</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">DQ</cards>
+    </round>
+  </game>
+  <game gamecode="3614363266">
+    <general>
+      <startdate>2018-01-07 15:35:49</startdate>
+      <players>
+        <player seat="3" name="P20_375168KS" chips="102659" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="4" name="P19_750442DU" chips="50760" dealer="0" win="0" bet="50760" rebuy="0" addon="0" />
+        <player seat="5" name="P32_226089NM" chips="80600" dealer="1" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="6" name="P46_543988HY" chips="106500" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+        <player seat="7" name="P6_598287PN" chips="15237" dealer="0" win="0" bet="1100" rebuy="0" addon="0" />
+        <player seat="8" name="P12_588480JN" chips="190484" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+        <player seat="9" name="P21_123771RR" chips="70545" dealer="0" win="104060" bet="51300" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="P20_375168KS" type="15" sum="100" cards="[cards]" />
+      <action no="2" player="P19_750442DU" type="15" sum="100" cards="[cards]" />
+      <action no="3" player="P32_226089NM" type="15" sum="100" cards="[cards]" />
+      <action no="4" player="P46_543988HY" type="15" sum="100" cards="[cards]" />
+      <action no="5" player="P6_598287PN" type="15" sum="100" cards="[cards]" />
+      <action no="6" player="P12_588480JN" type="15" sum="100" cards="[cards]" />
+      <action no="7" player="P21_123771RR" type="15" sum="100" cards="[cards]" />
+      <action no="8" player="P46_543988HY" type="1" sum="500" cards="[cards]" />
+      <action no="9" player="P6_598287PN" type="2" sum="1000" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="P20_375168KS">X X</cards>
+      <cards type="Pocket" player="P19_750442DU">X X</cards>
+      <cards type="Pocket" player="P32_226089NM">X X</cards>
+      <cards type="Pocket" player="P46_543988HY">X X</cards>
+      <cards type="Pocket" player="P6_598287PN">X X</cards>
+      <cards type="Pocket" player="P12_588480JN">X X</cards>
+      <cards type="Pocket" player="P21_123771RR">D8 DQ</cards>
+      <action no="10" player="P12_588480JN" type="0" sum="0" cards="" />
+      <action no="11" player="P21_123771RR" type="23" sum="3000" cards="" />
+      <action no="12" player="P20_375168KS" type="0" sum="0" cards="" />
+      <action no="13" player="P19_750442DU" type="3" sum="3000" cards="" />
+      <action no="14" player="P32_226089NM" type="0" sum="0" cards="" />
+      <action no="15" player="P46_543988HY" type="0" sum="0" cards="" />
+      <action no="16" player="P6_598287PN" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">D10 C5 HQ</cards>
+      <action no="17" player="P21_123771RR" type="5" sum="5000" cards="" />
+      <action no="18" player="P19_750442DU" type="23" sum="10000" cards="" />
+      <action no="19" player="P21_123771RR" type="3" sum="5000" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D7</cards>
+      <action no="20" player="P21_123771RR" type="4" sum="0" cards="" />
+      <action no="21" player="P19_750442DU" type="5" sum="34200" cards="" />
+      <action no="22" player="P21_123771RR" type="3" sum="34200" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">H8</cards>
+      <action no="23" player="P21_123771RR" type="5" sum="4000" cards="" />
+      <action no="24" player="P19_750442DU" type="7" sum="3460" cards="" />
+    </round>
+  </game>
+</session>

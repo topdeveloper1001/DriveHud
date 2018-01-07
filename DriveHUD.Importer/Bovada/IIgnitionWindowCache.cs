@@ -23,7 +23,7 @@ namespace DriveHUD.Importers.Bovada
         /// Checks whenever the specified handle exists in the cache
         /// </summary>
         /// <param name="hWnd">The handle to check if exists in the cache</param>
-        /// <returns>Returns table associated with the handle if the handle exists in the cache, otherwise - false</returns>
+        /// <returns>Returns table associated with the handle if the handle exists in the cache, otherwise - null</returns>
         BovadaTable GetCachedTable(IntPtr hWnd);
 
         /// <summary>
