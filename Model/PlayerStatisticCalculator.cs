@@ -554,8 +554,10 @@ namespace Model
 
             var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
 
-            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && playerHandActions.RiverAny(x => x.IsBet()) ? 1 : 0;
-            stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.DidRiverBet = playerHandActions.RiverAny(x => x.IsBet()) ? 1 : 0;
+            stat.CouldRiverBet = parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.DidRiverBet == 1 ? 1 : 0;
+            stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
 
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 

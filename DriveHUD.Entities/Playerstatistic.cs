@@ -867,7 +867,13 @@ namespace DriveHUD.Entities
         public virtual int FoldToThreeBetIP { get; set; }
 
         [ProtoMember(314)]
-        public virtual int FoldToThreeBetOOP { get; set; }    
+        public virtual int FoldToThreeBetOOP { get; set; }
+
+        [ProtoMember(315)]
+        public virtual int DidRiverBet { get; set; }
+
+        [ProtoMember(316)]
+        public virtual int CouldRiverBet { get; set; }
 
         #region Workarounds for broken stats
 
@@ -984,9 +990,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return (FacingPreflop == EnumFacingPreflop.Unopened
-                        || FacingPreflop == EnumFacingPreflop.Limper
-                        || FacingPreflop == EnumFacingPreflop.MultipleLimpers);
+                return FacingPreflop == EnumFacingPreflop.Unopened;
             }
         }
 
@@ -1240,6 +1244,8 @@ namespace DriveHUD.Entities
             CouldCheckRiverAfterBBLine += a.CouldCheckRiverAfterBBLine;
             DidBetRiverOnBXLine += a.DidBetRiverOnBXLine;
             CouldBetRiverOnBXLine += a.CouldBetRiverOnBXLine;
+            DidRiverBet += a.DidRiverBet;
+            CouldRiverBet += a.CouldRiverBet;
 
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
@@ -1638,6 +1644,8 @@ namespace DriveHUD.Entities
             r.CouldCheckRiverAfterBBLine = a.CouldCheckRiverAfterBBLine + b.CouldCheckRiverAfterBBLine;
             r.DidBetRiverOnBXLine = a.DidBetRiverOnBXLine + b.DidBetRiverOnBXLine;
             r.CouldBetRiverOnBXLine = a.CouldBetRiverOnBXLine + b.CouldBetRiverOnBXLine;
+            r.DidRiverBet = a.DidRiverBet + b.DidRiverBet;
+            r.CouldRiverBet = a.CouldRiverBet + b.CouldRiverBet;
 
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;

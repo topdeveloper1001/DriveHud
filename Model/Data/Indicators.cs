@@ -585,6 +585,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RiverBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidRiverBet, Source.CouldRiverBet);
+            }
+        }
+
         public virtual decimal CBetIP
         {
             get

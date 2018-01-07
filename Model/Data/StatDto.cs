@@ -36,5 +36,10 @@ namespace Model.Data
 
         [ProtoMember(3)]
         public virtual int CouldOccurred { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0:n1} {1}/{2}", Value, Occurred, CouldOccurred);
+        }
     }
 }

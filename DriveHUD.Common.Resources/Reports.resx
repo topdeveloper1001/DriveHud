@@ -603,4 +603,7 @@
   <data name="Reports_Column_CallRiverRaise" xml:space="preserve">
     <value>Call River Raise %</value>
   </data>
+  <data name="Reports_Column_RiverBet" xml:space="preserve">
+    <value>River Bet %</value>
+  </data>
 </root>

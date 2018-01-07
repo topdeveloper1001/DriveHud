@@ -1141,6 +1141,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River Bet %.
+        /// </summary>
+        internal static string Reports_Column_RiverBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ROI%.
         /// </summary>
         internal static string Reports_Column_ROI {
