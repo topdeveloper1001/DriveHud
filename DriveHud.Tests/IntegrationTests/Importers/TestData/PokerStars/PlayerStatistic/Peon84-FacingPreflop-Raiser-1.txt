@@ -1,0 +1,55 @@
+***** Hand History for Game 16839725665 *****
+NL Texas Hold'em $0.22 USD Buy-in Trny:156115529 Level:6  Blinds-Antes(300/600 -75) - Monday, January 08, 17:28:30 MSK 2018
+Table $10 Gtd Turbo (156115529) Table #4 (Real Money)
+Seat 5 is the button
+Total number of players : 8/8
+Seat 3: Anice84 ( 24,780 )
+Seat 6: Bulldozer-M ( 71,911 )
+Seat 2: Peon84 ( 26,005 )
+Seat 4: badhands05 ( 27,640 )
+Seat 1: hyggesejler ( 91,775 )
+Seat 8: jaaas999 ( 28,435 )
+Seat 7: jakgut ( 19,470 )
+Seat 5: jasko1973 ( 84,926 )
+Trny:156115529 Level:6
+Blinds-Antes(300/600 -75)
+hyggesejler posts ante [75]
+Peon84 posts ante [75]
+Anice84 posts ante [75]
+badhands05 posts ante [75]
+jasko1973 posts ante [75]
+Bulldozer-M posts ante [75]
+jakgut posts ante [75]
+jaaas999 posts ante [75]
+Bulldozer-M posts small blind [300].
+jakgut posts big blind [600].
+** Dealing down cards **
+Dealt to Peon84 [  Jc Jh ]
+jaaas999 raises [1,200]
+hyggesejler folds
+Peon84 raises [1,800]
+Anice84 folds
+badhands05 folds
+jasko1973 folds
+Bulldozer-M folds
+jakgut calls [1,200]
+jaaas999 calls [600]
+** Dealing Flop ** [ 4h, 6c, 5d ]
+jakgut checks
+jaaas999 bets [600]
+Peon84 raises [1,800]
+jakgut folds
+jaaas999 raises [2,400]
+Peon84 calls [1,200]
+** Dealing Turn ** [ Qh ]
+jaaas999 checks
+Peon84 bets [4,800]
+jaaas999 calls [4,800]
+** Dealing River ** [ Qs ]
+jaaas999 is all-In  [18,760]
+Peon84 is all-In  [16,330]
+jaaas999 shows [ 3d, 2d ]a straight, Two to Six.
+Peon84 shows [ Jc, Jh ]two pairs, Queens and Jacks.
+jaaas999 wins 2,430 chips from the side pot 1 with a straight, Two to Six.
+jaaas999 wins 54,560 chips from the main pot with a straight, Two to Six.
+Player Peon84 finished in 41.

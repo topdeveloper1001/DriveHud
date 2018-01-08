@@ -130,12 +130,10 @@ namespace DriveHUD.Application.ReportsLayout
         {
             var fef = new FrameworkElementFactory(typeof(TextBlock));
 
-            var bindingText = new Binding(member);// { StringFormat = "{0:n1}" };
-
-            if (!member.EndsWith("Object"))
+            var bindingText = new Binding(member)
             {
-                bindingText.StringFormat = "{0:n1}";
-            }
+                StringFormat = "{0:n1}"
+            };
 
             fef.SetBinding(TextBlock.TextProperty, bindingText);
 
@@ -369,7 +367,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_RiverBet", nameof(Indicators.RiverBet), ColumnType.Percentile),
             // S
             new Tuple<string, string, ColumnType>("Reports_Column_Squeeze", nameof(Indicators.Squeeze), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_Steal", nameof(HudLightIndicators.StealObject), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_Steal", nameof(Indicators.Steal), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_SeenTurn", nameof(Indicators.TurnSeen), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_SeenRiver", nameof(Indicators.RiverSeen), ColumnType.Percentile),
             // T
@@ -378,11 +376,11 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_TurnCheckRaise", nameof(Indicators.TurnCheckRaise), ColumnType.Percentile),
             // U
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BB", nameof(Indicators.UO_PFR_BB), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BTN", nameof(HudLightIndicators.UO_PFR_BNObject), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_CO", nameof(HudLightIndicators.UO_PFR_COObject), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BTN", nameof(Indicators.UO_PFR_BN), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_CO", nameof(Indicators.UO_PFR_CO), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_EP", nameof(Indicators.UO_PFR_EP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_MP", nameof(Indicators.UO_PFR_MP), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_SB", nameof(HudLightIndicators.UO_PFR_SBObject), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_SB", nameof(Indicators.UO_PFR_SB), ColumnType.Percentile),
             // V
             new Tuple<string, string, ColumnType>("Reports_Column_VPIP", nameof(Indicators.VPIP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_VPIP_BB", nameof(Indicators.VPIP_BB), ColumnType.Percentile),

@@ -855,11 +855,6 @@ namespace DriveHUD.Importers.Bovada
 
         protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
         {
-            //if (CurrentHandNumber == cmdObj.stageNo)
-            //{
-            //    return;
-            //}
-
             CurrentHandNumber = cmdObj.stageNo;
 
             if (!IsZonePokerTable)

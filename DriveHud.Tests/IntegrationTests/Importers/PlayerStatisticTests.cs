@@ -625,6 +625,17 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.StealPossible, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"Peon84-FacingPreflop-Raiser-1.txt", EnumPokerSites.PartyPoker, "Peon84", EnumFacingPreflop.Raiser)]
+        [TestCase(@"Peon84-FacingPreflop-Unopened-1.txt", EnumPokerSites.PartyPoker, "Peon84", EnumFacingPreflop.Unopened)]
+        [TestCase(@"Peon84-FacingPreflop-Limper-1.txt", EnumPokerSites.PartyPoker, "Peon84", EnumFacingPreflop.Limper)]
+        [TestCase(@"Peon84-FacingPreflop-Limper2-1.txt", EnumPokerSites.PartyPoker, "Peon84", EnumFacingPreflop.MultipleLimpers)]
+        [TestCase(@"Peon84-FacingPreflop-Raiser-Caller-1.txt", EnumPokerSites.PartyPoker, "Peon84", EnumFacingPreflop.RaiserAndCaller)]
+        public void FacingPreflopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, EnumFacingPreflop expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacingPreflop, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

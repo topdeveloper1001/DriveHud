@@ -35,7 +35,7 @@ namespace Model.Reports
                 return report;
             }
 
-            var stat = new HudLightIndicators();
+            var stat = new ReportIndicators();
 
             foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).ToArray())
             {
