@@ -461,6 +461,8 @@ namespace Model.Importer
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
             HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName
+                                                                && x.HandActionType != HandActionType.ANTE
+                                                                && x.HandActionType != HandActionType.POSTS
                                                                 && x.HandActionType != HandActionType.SMALL_BLIND
                                                                 && x.HandActionType != HandActionType.BIG_BLIND);
             if (firstPlayerAction == null)
@@ -472,7 +474,9 @@ namespace Model.Importer
 
             IEnumerable<HandAction> actions = preflopHandActions
                                                     .Take(indexOfFirstPlayerAction)
-                                                    .Where(x => x.HandActionType != HandActionType.SMALL_BLIND
+                                                    .Where(x => x.HandActionType != HandActionType.ANTE
+                                                            && x.HandActionType != HandActionType.POSTS
+                                                            && x.HandActionType != HandActionType.SMALL_BLIND
                                                             && x.HandActionType != HandActionType.BIG_BLIND);
 
             if (actions.Any(x => x.IsRaise()))
