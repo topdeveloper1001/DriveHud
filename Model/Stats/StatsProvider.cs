@@ -78,6 +78,8 @@ namespace Model.Stats
             new StatBase { Stat = Stat.ColdCallVsOpenRaiseCO, PropertyName = nameof(Indicators.ColdCallVsCoOpen), CreateStatDto = x => new StatDto(x.DidColdCallVsOpenRaiseCo, x.CouldColdCallVsOpenRaiseCo) },
             new StatBase { Stat = Stat.ColdCallVsOpenRaiseSB, PropertyName = nameof(Indicators.ColdCallVsSbOpen), CreateStatDto = x => new StatDto(x.DidColdCallVsOpenRaiseSb, x.CouldColdCallVsOpenRaiseSb) },
             new StatBase { Stat = Stat.DelayedTurnCBet, PropertyName = nameof(Indicators.DidDelayedTurnCBet), CreateStatDto = x => new StatDto(x.DidDelayedTurnCBet, x.CouldDelayedTurnCBet) },
+            new StatBase { Stat = Stat.DelayedTurnCBetIP, PropertyName = nameof(Indicators.DelayedTurnCBetIP), CreateStatDto = x => new StatDto(x.DidDelayedTurnCBetIP, x.CouldDelayedTurnCBetOOP) },
+            new StatBase { Stat = Stat.DelayedTurnCBetOOP, PropertyName = nameof(Indicators.DelayedTurnCBetOOP), CreateStatDto = x => new StatDto(x.DidDelayedTurnCBetOOP, x.CouldDelayedTurnCBetOOP) },
             new StatBase { Stat = Stat.DonkBet, PropertyName = nameof(Indicators.DonkBet), CreateStatDto = x => new StatDto(x.DidDonkBet, x.CouldDonkBet) },
             new StatBase { Stat = Stat.DoubleBarrel, PropertyName = nameof(Indicators.TurnCBet), CreateStatDto = x => new StatDto(x.Turncontinuationbetmade, x.Turncontinuationbetpossible) },
             new StatBase { Stat = Stat.FloatFlop, PropertyName = nameof(Indicators.FloatFlop), CreateStatDto = x => new StatDto(x.PlayedFloatFlop, x.Facingflopcontinuationbet)},
@@ -348,6 +350,8 @@ namespace Model.Stats
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FoldToFlopCBetOOP },
 
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DelayedTurnCBet },
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DelayedTurnCBetIP },
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DelayedTurnCBetOOP },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnCheckRaise },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.RaiseTurn },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAGG },
@@ -404,7 +408,9 @@ namespace Model.Stats
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.RaiseFrequencyFactor },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.TrueAggression },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DonkBet },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet }
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetIP },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetOOP }
             };
 
             return statsCollection;

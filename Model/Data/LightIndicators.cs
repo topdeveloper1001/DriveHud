@@ -373,6 +373,34 @@ namespace Model.Data
 
         #endregion
 
+        #region IP/OOP based stats
+
+        private int didDelayedTurnCBetIP;
+
+        private int couldDelayedTurnCBetIP;
+
+        public override decimal DelayedTurnCBetIP
+        {
+            get
+            {
+                return GetPercentage(didDelayedTurnCBetIP, couldDelayedTurnCBetIP);
+            }
+        }
+
+        private int didDelayedTurnCBetOOP;
+
+        private int couldDelayedTurnCBetOOP;
+
+        public override decimal DelayedTurnCBetOOP
+        {
+            get
+            {
+                return GetPercentage(didDelayedTurnCBetOOP, couldDelayedTurnCBetOOP);
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -397,6 +425,11 @@ namespace Model.Data
             {
                 sessionEndTime = statistic.Time;
             }
+
+            didDelayedTurnCBetIP += statistic.DidDelayedTurnCBetIP;
+            couldDelayedTurnCBetIP += statistic.CouldDelayedTurnCBetIP;
+            didDelayedTurnCBetOOP += statistic.DidDelayedTurnCBetOOP;
+            couldDelayedTurnCBetOOP += statistic.CouldDelayedTurnCBetOOP;
         }
 
         public override void Clean()

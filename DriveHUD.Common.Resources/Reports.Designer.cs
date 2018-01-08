@@ -358,7 +358,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Call River Raise %.
+        ///   Looks up a localized string similar to Call River Raise%.
         /// </summary>
         internal static string Reports_Column_CallRiverRaise {
             get {
@@ -601,6 +601,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-bet IP%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Donk Bet%.
         /// </summary>
         internal static string Reports_Column_DonkBet {
@@ -727,7 +745,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to Double Barrel %.
+        ///   Looks up a localized string similar to Fold to Double Barrel%.
         /// </summary>
         internal static string Reports_Column_FoldToDoubleBarrel {
             get {
@@ -745,7 +763,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to Flop C-Bet IP %.
+        ///   Looks up a localized string similar to Fold to Flop C-Bet IP%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCBetIP {
             get {
@@ -754,7 +772,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to Flop C-Bet OOP %.
+        ///   Looks up a localized string similar to Fold to Flop C-Bet OOP%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCBetOOP {
             get {
@@ -763,7 +781,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to Flop Check-Raise %.
+        ///   Looks up a localized string similar to Fold to Flop Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCheckRaise {
             get {
@@ -790,7 +808,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to River Check-Raise %.
+        ///   Looks up a localized string similar to Fold to River Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToRiverCheckRaise {
             get {
@@ -808,7 +826,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to Turn Check-Raise %.
+        ///   Looks up a localized string similar to Fold to Turn Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToTurnCheckRaise {
             get {

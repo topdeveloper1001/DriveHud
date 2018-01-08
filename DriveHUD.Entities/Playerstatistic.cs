@@ -952,6 +952,42 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region IP/OOP based stats (not for serialization)
+
+        public virtual int DidDelayedTurnCBetIP
+        {
+            get
+            {
+                return PreflopIP == 1 && DidDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldDelayedTurnCBetIP
+        {
+            get
+            {
+                return PreflopIP == 1 && CouldDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidDelayedTurnCBetOOP
+        {
+            get
+            {
+                return PreflopIP == 0 && DidDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldDelayedTurnCBetOOP
+        {
+            get
+            {
+                return PreflopIP == 0 && CouldDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session         

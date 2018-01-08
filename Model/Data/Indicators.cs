@@ -665,6 +665,22 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal DelayedTurnCBetIP
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetIP), Statistics.Sum(x => x.CouldDelayedTurnCBetIP));
+            }
+        }
+
+        public virtual decimal DelayedTurnCBetOOP
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetOOP), Statistics.Sum(x => x.CouldDelayedTurnCBetOOP));
+            }
+        }
+
         public virtual decimal MRatio
         {
             get

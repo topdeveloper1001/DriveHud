@@ -568,7 +568,7 @@
     <value>Fold to C-Bet%</value>
   </data>
   <data name="Reports_Column_FoldToDoubleBarrel" xml:space="preserve">
-    <value>Fold to Double Barrel %</value>
+    <value>Fold to Double Barrel%</value>
   </data>
   <data name="Reports_Column_CalledTurnCheckRaise" xml:space="preserve">
     <value>Call Turn Check-Raise %</value>
@@ -577,13 +577,13 @@
     <value>Check River after BB Line%</value>
   </data>
   <data name="Reports_Column_FoldToFlopCheckRaise" xml:space="preserve">
-    <value>Fold to Flop Check-Raise %</value>
+    <value>Fold to Flop Check-Raise%</value>
   </data>
   <data name="Reports_Column_FoldToRiverCheckRaise" xml:space="preserve">
-    <value>Fold to River Check-Raise %</value>
+    <value>Fold to River Check-Raise%</value>
   </data>
   <data name="Reports_Column_FoldToTurnCheckRaise" xml:space="preserve">
-    <value>Fold to Turn Check-Raise %</value>
+    <value>Fold to Turn Check-Raise%</value>
   </data>
   <data name="Reports_Column_BetRiverOnBXLine" xml:space="preserve">
     <value>Bet River on BX Line%</value>
@@ -595,15 +595,21 @@
     <value>Call Flop C-Bet OOP%</value>
   </data>
   <data name="Reports_Column_FoldToFlopCBetIP" xml:space="preserve">
-    <value>Fold to Flop C-Bet IP %</value>
+    <value>Fold to Flop C-Bet IP%</value>
   </data>
   <data name="Reports_Column_FoldToFlopCBetOOP" xml:space="preserve">
-    <value>Fold to Flop C-Bet OOP %</value>
+    <value>Fold to Flop C-Bet OOP%</value>
   </data>
   <data name="Reports_Column_CallRiverRaise" xml:space="preserve">
-    <value>Call River Raise %</value>
+    <value>Call River Raise%</value>
   </data>
   <data name="Reports_Column_RiverBet" xml:space="preserve">
     <value>River Bet %</value>
+  </data>
+  <data name="Reports_Column_DelayedTurnCBetIP" xml:space="preserve">
+    <value>Delayed Turn C-bet IP%</value>
+  </data>
+  <data name="Reports_Column_DelayedTurnCBetOOP" xml:space="preserve">
+    <value>Delayed Turn C-bet OOP%</value>
   </data>
 </root>
