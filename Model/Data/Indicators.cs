@@ -363,6 +363,46 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CheckFlopAsPFRAndXCOnTurnOOP
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedCalledTurnWhenCheckedFlopAsPfr, Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndXFOnTurnOOP
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedFoldedToTurnWhenCheckedFlopAsPfr, Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndCallOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.CalledTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndFoldOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndRaiseOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.RaisedTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
+            }
+        }
+
         public virtual decimal TotalHands
         {
             get { return Source.Totalhands; }

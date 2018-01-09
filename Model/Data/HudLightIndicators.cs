@@ -1183,6 +1183,71 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CheckFlopAsPFRAndXCOnTurnOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndXCOnTurnOOP,
+                    Occurred = Source.CheckedCalledTurnWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndXFOnTurnOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndXFOnTurnOOP,
+                    Occurred = Source.CheckedFoldedToTurnWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndCallOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndCallOnTurn,
+                    Occurred = Source.CalledTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldOnTurn,
+                    Occurred = Source.FoldedToTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndRaiseOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndRaiseOnTurn,
+                    Occurred = Source.RaisedTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
+                };
+            }
+        }
+
         #endregion
 
         #region Positional

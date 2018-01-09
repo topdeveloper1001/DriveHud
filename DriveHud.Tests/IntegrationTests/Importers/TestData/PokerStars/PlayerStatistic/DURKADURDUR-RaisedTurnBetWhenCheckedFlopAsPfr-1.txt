@@ -1,0 +1,42 @@
+PokerStars Game #47147981022:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:35:44 ET
+Table 'Siri III' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($200.70 in chips) 
+Seat 2: iLeftFTP ($200 in chips) 
+Seat 3: darasxxx ($222.55 in chips) 
+Seat 4: tristyle ($398.20 in chips) 
+Seat 5: LuckKi$$Me ($202 in chips) 
+Seat 6: Desateur ($635.65 in chips) 
+iLeftFTP: posts small blind $1
+darasxxx: posts big blind $2
+*** HOLE CARDS ***
+tristyle: folds 
+LuckKi$$Me: folds 
+Desateur: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+iLeftFTP: folds 
+darasxxx: folds 
+Desateur: calls $14
+*** FLOP *** [8c 7d 6d]
+Desateur: checks 
+DURKADURDUR: checks 
+*** TURN *** [8c 7d 6d] [9c]
+Desateur: bets $26
+DURKADURDUR: raises $54 to $80
+Desateur: calls $54
+*** RIVER *** [8c 7d 6d 9c] [5c]
+Desateur: checks 
+DURKADURDUR: bets $100.70 and is all-in
+Desateur: folds 
+Uncalled bet ($100.70) returned to DURKADURDUR
+DURKADURDUR collected $200 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $203 | Rake $3 
+Board [8c 7d 6d 9c 5c]
+Seat 1: DURKADURDUR (button) collected ($200)
+Seat 2: iLeftFTP (small blind) folded before Flop
+Seat 3: darasxxx (big blind) folded before Flop
+Seat 4: tristyle folded before Flop (didn't bet)
+Seat 5: LuckKi$$Me folded before Flop (didn't bet)
+Seat 6: Desateur folded on the River
+

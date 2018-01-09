@@ -107,6 +107,7 @@ namespace Model
             bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
+            bool isCheckedTurn = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn)?.IsCheck ?? false;
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
             var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
@@ -759,9 +760,68 @@ namespace Model
             stat.CalledCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsCall() ? 1 : 0;
             stat.FoldedCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsFold ? 1 : 0;
 
+            stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP = pfr && flopCBet.Possible && isCheckedFlop && !preflopInPosition &&
+                isCheckedTurn && parsedHand.Turn.SkipWhile(x => !x.IsBet()).TakeWhile(x => x.PlayerName != player).All(x => !x.IsRaise(), true) ? 1 : 0;
+
+            stat.CheckedCalledTurnWhenCheckedFlopAsPfr = stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP == 1 &&
+                (playerHandActions.Where(x => x.Street == Street.Turn).Skip(1).FirstOrDefault()?.IsCall() ?? false) ? 1 : 0;
+
+            stat.CheckedFoldedToTurnWhenCheckedFlopAsPfr = stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP == 1 &&
+                (playerHandActions.Where(x => x.Street == Street.Turn).Skip(1).FirstOrDefault()?.IsFold ?? false) ? 1 : 0;
+
+            var playerActionOnTurnBet = GetPlayerActionOnTurnBet(parsedHand.Turn, player);
+            var facedTurnBetWhenCheckedFlopAsPfr = pfr && flopCBet.Possible && isCheckedFlop && playerActionOnTurnBet != null;
+
+            stat.FacedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr ? 1 : 0;
+            stat.CalledTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsCall() ? 1 : 0;
+            stat.FoldedToTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsFold ? 1 : 0;
+            stat.RaisedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsRaise() ? 1 : 0;
+
             #endregion
 
             return stat;
+        }
+
+        private static HandAction GetPlayerActionOnTurnBet(IEnumerable<HandAction> turnActions, string player, bool checkAllowed = false)
+        {
+            var wasBet = false;
+
+            foreach (var action in turnActions)
+            {
+                if (action.IsBet())
+                {
+                    wasBet = true;
+
+                    if (action.PlayerName == player)
+                    {
+                        return null;
+                    }
+
+                    continue;
+                }
+
+                if (!wasBet)
+                {
+                    if (!checkAllowed && action.PlayerName == player)
+                    {
+                        return null;
+                    }
+
+                    continue;
+                }
+
+                if (action.IsRaise() && action.PlayerName != player)
+                {
+                    return null;
+                }
+
+                if (action.PlayerName == player)
+                {
+                    return action;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>

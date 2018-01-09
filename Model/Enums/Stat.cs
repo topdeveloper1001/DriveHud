@@ -164,6 +164,11 @@ namespace Model.Enums
         DelayedTurnCBetOOP,
         S5Bet,
         CalledCheckRaiseVsFlopCBet,
-        FoldToCheckRaiseVsFlopCBet
+        FoldToCheckRaiseVsFlopCBet,
+        CheckFlopAsPFRAndXCOnTurnOOP,
+        CheckFlopAsPFRAndXFOnTurnOOP,
+        CheckFlopAsPFRAndCallOnTurn,
+        CheckFlopAsPFRAndFoldOnTurn,
+        CheckFlopAsPFRAndRaiseOnTurn,
     }
 }

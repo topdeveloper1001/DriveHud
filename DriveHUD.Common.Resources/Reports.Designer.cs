@@ -475,6 +475,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Calls Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndCallOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndCallOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Fold to Turn Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Raises Turn Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndRaiseOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndRaiseOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/C OOP on Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndXCOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndXCOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/F OOP on Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise%.
         /// </summary>
         internal static string Reports_Column_CheckRaise {

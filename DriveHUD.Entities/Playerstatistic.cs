@@ -890,6 +890,27 @@ namespace DriveHUD.Entities
         [ProtoMember(321)]
         public virtual int FacedCheckRaiseVsFlopCBet { get; set; }
 
+        [ProtoMember(322)]
+        public virtual int FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP { get; set; }
+
+        [ProtoMember(323)]
+        public virtual int CheckedCalledTurnWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(324)]
+        public virtual int CheckedFoldedToTurnWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(325)]
+        public virtual int FacedTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(326)]
+        public virtual int CalledTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(327)]
+        public virtual int FoldedToTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(328)]
+        public virtual int RaisedTurnBetWhenCheckedFlopAsPfr { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1499,6 +1520,14 @@ namespace DriveHUD.Entities
 
             DidDonkBet += a.DidDonkBet;
             CouldDonkBet += a.CouldDonkBet;
+
+            FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP += a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
+            CheckedCalledTurnWhenCheckedFlopAsPfr += a.CheckedCalledTurnWhenCheckedFlopAsPfr;
+            CheckedFoldedToTurnWhenCheckedFlopAsPfr += a.CheckedFoldedToTurnWhenCheckedFlopAsPfr;
+            FacedTurnBetWhenCheckedFlopAsPfr += a.FacedTurnBetWhenCheckedFlopAsPfr;
+            CalledTurnBetWhenCheckedFlopAsPfr += a.CalledTurnBetWhenCheckedFlopAsPfr;
+            FoldedToTurnBetWhenCheckedFlopAsPfr += a.FoldedToTurnBetWhenCheckedFlopAsPfr;
+            RaisedTurnBetWhenCheckedFlopAsPfr += a.RaisedTurnBetWhenCheckedFlopAsPfr;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1888,6 +1917,14 @@ namespace DriveHUD.Entities
             r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
             r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
             r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
+
+            r.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP = a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP + b.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
+            r.CheckedCalledTurnWhenCheckedFlopAsPfr = a.CheckedCalledTurnWhenCheckedFlopAsPfr + b.CheckedCalledTurnWhenCheckedFlopAsPfr;
+            r.CheckedFoldedToTurnWhenCheckedFlopAsPfr = a.CheckedFoldedToTurnWhenCheckedFlopAsPfr + b.CheckedFoldedToTurnWhenCheckedFlopAsPfr;
+            r.FacedTurnBetWhenCheckedFlopAsPfr = a.FacedTurnBetWhenCheckedFlopAsPfr + b.FacedTurnBetWhenCheckedFlopAsPfr;
+            r.CalledTurnBetWhenCheckedFlopAsPfr = a.CalledTurnBetWhenCheckedFlopAsPfr + b.CalledTurnBetWhenCheckedFlopAsPfr;
+            r.FoldedToTurnBetWhenCheckedFlopAsPfr = a.FoldedToTurnBetWhenCheckedFlopAsPfr + b.FoldedToTurnBetWhenCheckedFlopAsPfr;
+            r.RaisedTurnBetWhenCheckedFlopAsPfr = a.RaisedTurnBetWhenCheckedFlopAsPfr + b.RaisedTurnBetWhenCheckedFlopAsPfr;
 
             return r;
         }

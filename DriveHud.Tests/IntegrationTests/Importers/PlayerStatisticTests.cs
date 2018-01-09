@@ -681,6 +681,60 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FoldedCheckRaiseVsFlopCBet, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-DidNotFaceTurnBetAfterCheckWhenCheckedFlopAsPfrOOP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CheckedCalledTurnWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CheckedCalledTurnWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void CheckedCalledTurnWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckedCalledTurnWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CheckedFoldedToTurnWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void CheckedFoldedToTurnWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckedFoldedToTurnWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FoldedToTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CalledTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-DidNotFaceTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void FacedTurnBetWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedTurnBetWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-CalledTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void CalledTurnBetWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CalledTurnBetWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FoldedToTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FoldedToTurnBetWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToTurnBetWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-RaisedTurnBetWhenCheckedFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void RaisedTurnBetWhenCheckedFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.RaisedTurnBetWhenCheckedFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))
