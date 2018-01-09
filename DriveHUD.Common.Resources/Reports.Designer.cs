@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5-Bet%.
+        /// </summary>
+        internal static string Reports_Column_5Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_5Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AF.
         /// </summary>
         internal static string Reports_Column_AF {

@@ -1,0 +1,31 @@
+PokerStars Game #47183144147:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:24:18 ET
+Table 'Thoas' 6-max Seat #3 is the button
+Seat 1: sexygee ($211.55 in chips) 
+Seat 2: DURKADURDUR ($567.60 in chips) 
+Seat 3: rivichico ($509.85 in chips) 
+Seat 4: skipper8922 ($249.35 in chips) 
+Seat 5: FrAnWaN ($217.05 in chips) 
+Seat 6: P1ngPoNgPr0 ($376.40 in chips) 
+skipper8922: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+P1ngPoNgPr0: folds 
+sexygee: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+rivichico: folds 
+skipper8922: folds 
+FrAnWaN: folds 
+sexygee: raises $28 to $48
+DURKADURDUR: raises $519.60 to $567.60 and is all-in
+sexygee: folds 
+Uncalled bet ($519.60) returned to DURKADURDUR
+DURKADURDUR collected $99 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $99 | Rake $0 
+Seat 1: sexygee folded before Flop
+Seat 2: DURKADURDUR collected ($99)
+Seat 3: rivichico (button) folded before Flop (didn't bet)
+Seat 4: skipper8922 (small blind) folded before Flop
+Seat 5: FrAnWaN (big blind) folded before Flop
+Seat 6: P1ngPoNgPr0 folded before Flop (didn't bet)

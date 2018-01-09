@@ -136,6 +136,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FiveBet
+        {
+            get
+            {
+                return GetPercentage(Source.Did5Bet, Source.Could5Bet);
+            }
+        }
+
         public virtual decimal ThreeBetCall
         {
             get

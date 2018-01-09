@@ -1,0 +1,28 @@
+PokerStars Game #47154304612:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:55:24 ET
+Table 'Melete II' 6-max Seat #5 is the button
+Seat 1: fakker11 ($200 in chips) 
+Seat 3: AceKanone ($251.30 in chips) 
+Seat 4: stopme10 ($313 in chips) 
+Seat 5: DURKADURDUR ($203 in chips) 
+Seat 6: FuIlh0use ($220.85 in chips) 
+FuIlh0use: posts small blind $1
+fakker11: posts big blind $2
+TheKaas: sits out 
+*** HOLE CARDS ***
+AceKanone: folds 
+stopme10: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+FuIlh0use: raises $28 to $48
+fakker11: folds 
+stopme10: folds 
+DURKADURDUR: folds 
+Uncalled bet ($28) returned to FuIlh0use
+FuIlh0use collected $48 from pot
+FuIlh0use: doesn't show hand 
+*** SUMMARY ***
+Total pot $48 | Rake $0 
+Seat 1: fakker11 (big blind) folded before Flop
+Seat 3: AceKanone folded before Flop (didn't bet)
+Seat 4: stopme10 folded before Flop
+Seat 5: DURKADURDUR (button) folded before Flop
+Seat 6: FuIlh0use (small blind) collected ($48)

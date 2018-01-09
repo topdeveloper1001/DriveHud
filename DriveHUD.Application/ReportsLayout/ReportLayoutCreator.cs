@@ -273,6 +273,8 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_4Bet_SB", nameof(Indicators.FourBetInSB), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_4Bet_BB", nameof(Indicators.FourBetInBB), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_4BetRange", nameof(Indicators.FourBetRange), ColumnType.Percentile),
+            // 5-bet based
+            new Tuple<string, string, ColumnType>("Reports_Column_5Bet", nameof(Indicators.FiveBet), ColumnType.Percentile),
             // A
             new Tuple<string, string, ColumnType>("Reports_Column_AF", nameof(Indicators.Agg), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_AggPercent", nameof(Indicators.AggPr), ColumnType.Percentile),

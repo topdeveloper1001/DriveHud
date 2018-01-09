@@ -637,6 +637,27 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FacingPreflop, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-Did5Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Did5Bet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Did5Bet-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Did5Bet-4.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void Did5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Did5Bet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-Could5Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Could5Bet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Could5Bet-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-Could5Bet-4.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"HeroTest-CouldNot5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void Could5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Could5Bet, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

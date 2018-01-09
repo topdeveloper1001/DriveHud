@@ -612,4 +612,7 @@
   <data name="Reports_Column_DelayedTurnCBetOOP" xml:space="preserve">
     <value>Delayed Turn C-bet OOP%</value>
   </data>
+  <data name="Reports_Column_5Bet" xml:space="preserve">
+    <value>5-Bet%</value>
+  </data>
 </root>

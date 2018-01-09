@@ -875,6 +875,12 @@ namespace DriveHUD.Entities
         [ProtoMember(316)]
         public virtual int CouldRiverBet { get; set; }
 
+        [ProtoMember(317)]
+        public virtual int Did5Bet { get; set; }
+
+        [ProtoMember(318)]
+        public virtual int Could5Bet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -952,7 +958,7 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        #region IP/OOP based stats (not for serialization)
+        #region Simple IP/OOP based stats (not for serialization)
 
         public virtual int DidDelayedTurnCBetIP
         {
@@ -1140,6 +1146,8 @@ namespace DriveHUD.Entities
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
+            Did5Bet += a.Did5Bet;
+            Could5Bet += a.Could5Bet;
 
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
@@ -1645,6 +1653,9 @@ namespace DriveHUD.Entities
             r.Foldedtofourbetpreflop = a.Foldedtofourbetpreflop + b.Foldedtofourbetpreflop;
             r.Calledfourbetpreflop = a.Calledfourbetpreflop + b.Calledfourbetpreflop;
             r.Raisedfourbetpreflop = a.Raisedfourbetpreflop + b.Raisedfourbetpreflop;
+
+            r.Did5Bet = a.Did5Bet + b.Did5Bet;
+            r.Could5Bet = a.Could5Bet + b.Could5Bet;
 
             r.Facingtwopreflopraisers = a.Facingtwopreflopraisers + b.Facingtwopreflopraisers;
             r.Calledtwopreflopraisers = a.Calledtwopreflopraisers + b.Calledtwopreflopraisers;

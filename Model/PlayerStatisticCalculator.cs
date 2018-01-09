@@ -204,16 +204,19 @@ namespace Model
 
             #endregion
 
-            #region 3bet/4bet
+            #region 3bet/4bet/5bet
 
-            ConditionalBet threeBet = new ConditionalBet();
-            ConditionalBet fourBet = new ConditionalBet();
+            var threeBet = new ConditionalBet();
+            var fourBet = new ConditionalBet();
+            var fiveBet = new ConditionalBet();
 
             if (pfrOcurred)
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
+
                 Calculate3Bet(threeBet, preflops, player, raiser);
                 Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
+                Calculate5Bet(threeBet, fourBet, fiveBet, preflops, player, raiser);
             }
 
             #endregion
@@ -537,6 +540,9 @@ namespace Model
             stat.Foldedtofourbetpreflop = fourBet.Folded ? 1 : 0;
             stat.Calledfourbetpreflop = fourBet.Called ? 1 : 0;
             stat.Raisedfourbetpreflop = fourBet.Raised ? 1 : 0;
+
+            stat.Could5Bet = fiveBet.Possible ? 1 : 0;
+            stat.Did5Bet = fiveBet.Made ? 1 : 0;
 
             stat.Facingtwopreflopraisers = twoPfr.Faced ? 1 : 0;
             stat.Calledtwopreflopraisers = twoPfr.Called ? 1 : 0;
@@ -1354,6 +1360,7 @@ namespace Model
                         }
 
                         fourBet.Happened = true;
+                        fourBet.HappenedByPlayer = action.PlayerName;
 
                         if (action.IsAllInAction || action.IsAllIn)
                         {
@@ -1426,6 +1433,31 @@ namespace Model
                     }
                 }
             }
+        }
+
+        private static void Calculate5Bet(ConditionalBet threeBet, ConditionalBet fourBet, ConditionalBet fiveBet, List<HandAction> actions, string player, string raiser)
+        {
+            if (!threeBet.Happened && !fourBet.Happened)
+            {
+                return;
+            }
+
+            // could did 5-bet
+            if (fourBet.Faced)
+            {
+                var fourBetAction = actions.LastOrDefault(x => x.PlayerName == fourBet.HappenedByPlayer && x.IsRaise());
+                fiveBet.Possible = !fourBetAction.IsAllIn && !fourBetAction.IsAllInAction;
+
+                var raises = actions.Count(x => x.PlayerName == player && x.IsRaise());
+
+                if (raises > 1)
+                {
+                    fiveBet.Possible = true;
+                    fiveBet.Made = raises > 1;
+                }
+            }
+
+
         }
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
@@ -1671,10 +1703,7 @@ namespace Model
             }
         }
 
-        public static void Calculate3Bet(ConditionalBet threeBet,
-                                          IList<HandAction> actions,
-                                          string player,
-                                          string raiser)
+        public static void Calculate3Bet(ConditionalBet threeBet, IList<HandAction> actions, string player, string raiser)
         {
             bool start3Bet = false;
 

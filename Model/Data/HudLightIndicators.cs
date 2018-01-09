@@ -111,6 +111,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FiveBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FiveBet,
+                    Occurred = Source.Did5Bet,
+                    CouldOccurred = Source.Could5Bet
+                };
+            }
+        }
+
         public virtual StatDto ThreeBetCallObject
         {
             get

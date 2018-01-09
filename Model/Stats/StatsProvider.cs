@@ -143,6 +143,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.S4BetEP, PropertyName = nameof(HudLightIndicators.FourBetInEP), CreateStatDto = x => new StatDto(x.PositionDidFourBet?.EP, x.PositionCouldFourBet?.EP) },
             new StatBase { Stat = Stat.S4BetMP, PropertyName = nameof(HudLightIndicators.FourBetInMP), CreateStatDto = x => new StatDto(x.PositionDidFourBet?.MP, x.PositionCouldFourBet?.MP) },
             new StatBase { Stat = Stat.S4BetSB, PropertyName = nameof(HudLightIndicators.FourBetInSB), CreateStatDto = x => new StatDto(x.PositionDidFourBet?.SB, x.PositionCouldFourBet?.SB) },
+            new StatBase { Stat = Stat.S5Bet, PropertyName = nameof(Indicators.FiveBet), CreateStatDto = x => new StatDto(x.Did5Bet, x.Could5Bet) },
             new StatBase { Stat = Stat.Squeeze, PropertyName = nameof(Indicators.Squeeze), CreateStatDto = x => new StatDto(x.Didsqueeze, x.Totalhands) },
             new StatBase { Stat = Stat.Steal, PropertyName = nameof(Indicators.Steal), CreateStatDto = x => new StatDto(x.StealMade, x.StealPossible) },
             new StatBase { Stat = Stat.ThreeBet_BB, PropertyName = nameof(HudLightIndicators.ThreeBet_BB), CreateStatDto = x => new StatDto(x.PositionDidThreeBet?.BB, x.PositionCouldThreeBet?.BB) },
@@ -410,7 +411,8 @@ namespace Model.Stats
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DonkBet },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetIP },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetOOP }
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetOOP },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.S5Bet }
             };
 
             return statsCollection;

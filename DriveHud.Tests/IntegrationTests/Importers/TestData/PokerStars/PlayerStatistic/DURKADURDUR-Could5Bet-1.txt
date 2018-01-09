@@ -1,0 +1,29 @@
+PokerStars Game #47182241916:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:55:04 ET
+Table 'Lonnrot III' 6-max Seat #2 is the button
+Seat 1: sexygee ($230.25 in chips) 
+Seat 2: imthesky ($200 in chips) 
+Seat 3: DURKADURDUR ($296.90 in chips) 
+Seat 4: depomp ($324.15 in chips) 
+Seat 5: rivichico ($634.65 in chips) 
+Seat 6: FrAnWaN ($203 in chips) 
+DURKADURDUR: posts small blind $1
+depomp: posts big blind $2
+*** HOLE CARDS ***
+rivichico: folds 
+FrAnWaN: folds 
+sexygee: raises $4 to $6
+imthesky: folds 
+DURKADURDUR: raises $14 to $20
+depomp: folds 
+sexygee: raises $28 to $48
+DURKADURDUR: folds 
+Uncalled bet ($28) returned to sexygee
+sexygee collected $42 from pot
+*** SUMMARY ***
+Total pot $42 | Rake $0 
+Seat 1: sexygee collected ($42)
+Seat 2: imthesky (button) folded before Flop (didn't bet)
+Seat 3: DURKADURDUR (small blind) folded before Flop
+Seat 4: depomp (big blind) folded before Flop
+Seat 5: rivichico folded before Flop (didn't bet)
+Seat 6: FrAnWaN folded before Flop (didn't bet)
