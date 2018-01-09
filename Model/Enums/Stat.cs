@@ -162,6 +162,8 @@ namespace Model.Enums
         RiverBet,
         DelayedTurnCBetIP,
         DelayedTurnCBetOOP,
-        S5Bet
+        S5Bet,
+        CalledCheckRaiseVsFlopCBet,
+        FoldToCheckRaiseVsFlopCBet
     }
 }

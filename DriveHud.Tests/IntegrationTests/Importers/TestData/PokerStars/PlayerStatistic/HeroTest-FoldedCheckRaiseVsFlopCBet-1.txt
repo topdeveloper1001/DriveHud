@@ -1,0 +1,36 @@
+PokerStars Game #11111111113:  Hold'em No Limit ($1/$2 USD) - 2018/01/09 10:00:30 ET
+Table 'Test Table' 6-max Seat #1 is the button
+Seat 1: Villain1 ($100 in chips) 
+Seat 2: Villain2 ($100 in chips) 
+Seat 3: Villain3 ($100 in chips) 
+Seat 4: Villain4 ($100 in chips) 
+Seat 5: HeroTest ($100 in chips) 
+Seat 6: Villain5 ($100 in chips) 
+Villain2: posts small blind $1
+Villain3: posts big blind $2
+*** HOLE CARDS ***
+Villain4: folds 
+HeroTest: raises $4 to $6
+Villain5: raises $14 to $20
+Villain1: folds 
+Villain2: folds 
+Villain3: folds 
+HeroTest: calls $14
+*** FLOP *** [9h Th Jh]
+HeroTest: checks 
+Villain5: bets $20
+HeroTest: raises $20 to $40
+Villain5: raises $20 to $60 and is all-in
+HeroTest: folds
+Uncalled bet ($20) returned to Villain5
+Villain5 collected $120 from pot
+Villain5: doesn't show hand 
+*** SUMMARY ***
+Total pot $120 | Rake $3 
+Board [9h Th Jh Ts Js]
+Seat 1: Villain1 (button) folded before Flop (didn't bet)
+Seat 2: Villain2 (small blind) folded before Flop
+Seat 3: Villain3 (big blind) folded before Flop
+Seat 4: Villain4 folded before Flop (didn't bet)
+Seat 5: HeroTest folded before Turn
+Seat 6: Villain5 collected ($120)

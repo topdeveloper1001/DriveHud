@@ -347,6 +347,22 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CalledCheckRaiseVsFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Source.CalledCheckRaiseVsFlopCBet, Source.FacedCheckRaiseVsFlopCBet);
+            }
+        }
+
+        public virtual decimal FoldedCheckRaiseVsFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedCheckRaiseVsFlopCBet, Source.FacedCheckRaiseVsFlopCBet);
+            }
+        }
+
         public virtual decimal TotalHands
         {
             get { return Source.Totalhands; }

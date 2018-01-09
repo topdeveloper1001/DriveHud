@@ -650,12 +650,35 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase(@"DURKADURDUR-Could5Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-Could5Bet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
-        [TestCase(@"DURKADURDUR-Could5Bet-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-CouldNot5Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-Could5Bet-4.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"HeroTest-CouldNot5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
         public void Could5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Could5Bet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-CalledCheckRaiseVsFlopCBet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedCheckRaiseVsFlopCBet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void CalledCheckRaiseVsFlopCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CalledCheckRaiseVsFlopCBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-CalledCheckRaiseVsFlopCBet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedCheckRaiseVsFlopCBet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void FacedCheckRaiseVsFlopCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedCheckRaiseVsFlopCBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-FoldedCheckRaiseVsFlopCBet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void FoldedCheckRaiseVsFlopCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedCheckRaiseVsFlopCBet, fileName, pokerSite, playerName, expected);
         }
 
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")

@@ -753,6 +753,12 @@ namespace Model
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
 
+            stat.FacedCheckRaiseVsFlopCBet = flopCBet.Raised && flopCheckRaise.Made &&
+                parsedHand.Flop.SkipWhile(x => x.PlayerName == player && x.IsRaise()).Any(x => x.PlayerName != player && x.IsRaise()) ? 1 : 0;
+
+            stat.CalledCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsCall() ? 1 : 0;
+            stat.FoldedCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsFold ? 1 : 0;
+
             #endregion
 
             return stat;

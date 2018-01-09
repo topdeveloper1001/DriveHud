@@ -340,6 +340,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-bet%.
+        /// </summary>
+        internal static string Reports_Column_CalledCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Call Turn Check-Raise %.
         /// </summary>
         internal static string Reports_Column_CalledTurnCheckRaise {
@@ -750,6 +759,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToCBet4BetPot {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToCBet4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Fold vs. Flop C-bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldToCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToCheckRaiseVsFlopCBet", resourceCulture);
             }
         }
         

@@ -54,10 +54,10 @@
     <Grid>
         <telerik:RadRadialGauge x:Name="RadialGauge"  Style="{StaticResource NewGaugeStyle}" Width="130" Height="130">
 
-            <telerik:RadialScale Min="0" LabelRotationMode="None"  Radius="1"  MajorTicks="10" 
+            <telerik:RadialScale Min="0" LabelRotationMode="None"  Radius="0.97"  MajorTicks="10" 
                                  MiddleTickBackground="Transparent" MinorTickBackground="Transparent"  
                                  MajorTickTemplate="{DynamicResource MajorTriangleTickTemplate}"
-                                 Max="100" MajorTickRelativeWidth="2" MajorTickRelativeHeight="15" MajorTickOffset="2"
+                                 Max="100" MajorTickRelativeWidth="2" MajorTickRelativeHeight="15" MajorTickOffset="2"                                 
                                  FontSize="8" Foreground="White" LabelOffset="10">
                 <telerik:RadialScale.Ranges>
                     <telerik:GaugeRange  Min="0" Max="100" StartWidth="0.1" EndWidth="0.1" StrokeThickness="20">

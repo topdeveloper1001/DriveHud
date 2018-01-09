@@ -1157,6 +1157,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CalledCheckRaiseVsFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledCheckRaiseVsFlopCBet,
+                    Occurred = Source.CalledCheckRaiseVsFlopCBet,
+                    CouldOccurred = Source.FacedCheckRaiseVsFlopCBet,
+                };
+            }
+        }
+
+        public virtual StatDto FoldedCheckRaiseVsFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldedCheckRaiseVsFlopCBet,
+                    Occurred = Source.FoldedCheckRaiseVsFlopCBet,
+                    CouldOccurred = Source.FacedCheckRaiseVsFlopCBet,
+                };
+            }
+        }
+
         #endregion
 
         #region Positional

@@ -615,4 +615,10 @@
   <data name="Reports_Column_5Bet" xml:space="preserve">
     <value>5-Bet%</value>
   </data>
+  <data name="Reports_Column_CalledCheckRaiseVsFlopCBet" xml:space="preserve">
+    <value>Check-Raise &amp; Call vs. Flop C-bet%</value>
+  </data>
+  <data name="Reports_Column_FoldToCheckRaiseVsFlopCBet" xml:space="preserve">
+    <value>Check-Raise &amp; Fold vs. Flop C-bet%</value>
+  </data>
 </root>

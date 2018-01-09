@@ -881,6 +881,15 @@ namespace DriveHUD.Entities
         [ProtoMember(318)]
         public virtual int Could5Bet { get; set; }
 
+        [ProtoMember(319)]
+        public virtual int CalledCheckRaiseVsFlopCBet { get; set; }
+
+        [ProtoMember(320)]
+        public virtual int FoldedCheckRaiseVsFlopCBet { get; set; }
+
+        [ProtoMember(321)]
+        public virtual int FacedCheckRaiseVsFlopCBet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1148,6 +1157,10 @@ namespace DriveHUD.Entities
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
             Did5Bet += a.Did5Bet;
             Could5Bet += a.Could5Bet;
+
+            CalledCheckRaiseVsFlopCBet += a.CalledCheckRaiseVsFlopCBet;
+            FoldedCheckRaiseVsFlopCBet += a.FoldedCheckRaiseVsFlopCBet;
+            FacedCheckRaiseVsFlopCBet += a.FacedCheckRaiseVsFlopCBet;
 
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
@@ -1656,6 +1669,10 @@ namespace DriveHUD.Entities
 
             r.Did5Bet = a.Did5Bet + b.Did5Bet;
             r.Could5Bet = a.Could5Bet + b.Could5Bet;
+
+            r.CalledCheckRaiseVsFlopCBet = a.CalledCheckRaiseVsFlopCBet + b.CalledCheckRaiseVsFlopCBet;
+            r.FoldedCheckRaiseVsFlopCBet = a.FoldedCheckRaiseVsFlopCBet + b.FoldedCheckRaiseVsFlopCBet;
+            r.FacedCheckRaiseVsFlopCBet = a.FacedCheckRaiseVsFlopCBet + b.FacedCheckRaiseVsFlopCBet;
 
             r.Facingtwopreflopraisers = a.Facingtwopreflopraisers + b.Facingtwopreflopraisers;
             r.Calledtwopreflopraisers = a.Calledtwopreflopraisers + b.Calledtwopreflopraisers;
