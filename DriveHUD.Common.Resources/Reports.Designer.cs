@@ -529,6 +529,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check-Raise Flop C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckRaisedFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckRaisedFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check River after BB Line%.
         /// </summary>
         internal static string Reports_Column_CheckRiverAfterBBLine {

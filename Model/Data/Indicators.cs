@@ -1343,6 +1343,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CheckRaisedFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.CheckRaisedFlopCBet), Statistics.Sum(x => x.CouldCheckRaiseFlopCBet));
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

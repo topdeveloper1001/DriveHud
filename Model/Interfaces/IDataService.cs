@@ -30,9 +30,7 @@ namespace Model.Interfaces
 
         void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
 
-        void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
-
-        Indicators GetPlayerIndicator(int playerId, short pokersiteId);
+        void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);        
 
         IList<HandHistoryRecord> GetHandHistoryRecords();
 

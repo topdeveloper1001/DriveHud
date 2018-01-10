@@ -70,16 +70,7 @@ namespace Model
             {
                 Directory.CreateDirectory(playersPath);
             }
-        }
-
-        public Indicators GetPlayerIndicator(int playerId, short pokersiteId)
-        {
-            var indicator = new Indicators();
-            var statistics = GetPlayerStatisticFromFile(playerId, pokersiteId);
-            indicator.UpdateSource(statistics);
-
-            return indicator;
-        }
+        }     
 
         public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
         {

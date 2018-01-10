@@ -1024,6 +1024,26 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Stats built from existing properties
+
+        public virtual int CheckRaisedFlopCBet
+        {
+            get
+            {
+                return DidCheckFlop == 1 && Raisedflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldCheckRaiseFlopCBet
+        {
+            get
+            {
+                return DidCheckFlop == 1 && Facingflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session         

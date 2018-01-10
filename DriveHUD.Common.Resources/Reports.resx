@@ -636,4 +636,7 @@
   <data name="Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP" xml:space="preserve">
     <value>Checks Flop as PFR and X/F OOP on Turn%</value>
   </data>
+  <data name="Reports_Column_CheckRaisedFlopCBet" xml:space="preserve">
+    <value>Check-Raise Flop C-Bet%</value>
+  </data>
 </root>

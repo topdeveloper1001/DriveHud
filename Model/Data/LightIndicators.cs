@@ -375,9 +375,9 @@ namespace Model.Data
 
         #region IP/OOP based stats
 
-        private int didDelayedTurnCBetIP;
+        protected int didDelayedTurnCBetIP;
 
-        private int couldDelayedTurnCBetIP;
+        protected int couldDelayedTurnCBetIP;
 
         public override decimal DelayedTurnCBetIP
         {
@@ -387,15 +387,31 @@ namespace Model.Data
             }
         }
 
-        private int didDelayedTurnCBetOOP;
+        protected int didDelayedTurnCBetOOP;
 
-        private int couldDelayedTurnCBetOOP;
+        protected int couldDelayedTurnCBetOOP;
 
         public override decimal DelayedTurnCBetOOP
         {
             get
             {
                 return GetPercentage(didDelayedTurnCBetOOP, couldDelayedTurnCBetOOP);
+            }
+        }
+
+        #endregion
+
+        #region Calculated stats
+
+        protected int checkRaisedFlopCBet;
+
+        protected int couldCheckRaiseFlopCBet;
+
+        public override decimal CheckRaisedFlopCBet
+        {
+            get
+            {
+                return GetPercentage(checkRaisedFlopCBet, couldCheckRaiseFlopCBet);
             }
         }
 
@@ -430,6 +446,8 @@ namespace Model.Data
             couldDelayedTurnCBetIP += statistic.CouldDelayedTurnCBetIP;
             didDelayedTurnCBetOOP += statistic.DidDelayedTurnCBetOOP;
             couldDelayedTurnCBetOOP += statistic.CouldDelayedTurnCBetOOP;
+            checkRaisedFlopCBet += statistic.CheckRaisedFlopCBet;
+            couldCheckRaiseFlopCBet += statistic.CouldCheckRaiseFlopCBet;
         }
 
         public override void Clean()
@@ -442,6 +460,12 @@ namespace Model.Data
             netWonByBigBlind = 0;
             sessionStartTime = DateTime.MaxValue;
             sessionEndTime = DateTime.MinValue;
+            didDelayedTurnCBetIP = 0;
+            couldDelayedTurnCBetIP = 0;
+            didDelayedTurnCBetOOP = 0;
+            couldDelayedTurnCBetOOP = 0;
+            checkRaisedFlopCBet = 0;
+            couldCheckRaiseFlopCBet = 0;
         }
 
         #endregion

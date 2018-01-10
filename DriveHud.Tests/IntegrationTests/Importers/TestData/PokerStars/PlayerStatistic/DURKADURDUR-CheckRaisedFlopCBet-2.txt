@@ -1,0 +1,39 @@
+PokerStars Game #47184508922:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:11:03 ET
+Table 'Sonja' 6-max Seat #6 is the button
+Seat 1: P1ngPoNgPr0 ($201 in chips) 
+Seat 2: TODO ADENTR0 ($237.85 in chips) 
+Seat 3: 1tormentor ($255.90 in chips) 
+Seat 4: DURKADURDUR ($200 in chips) 
+Seat 5: FastEddie267 ($209 in chips) 
+Seat 6: spacecakezzz ($536.80 in chips) 
+P1ngPoNgPr0: posts small blind $1
+TODO ADENTR0: posts big blind $2
+*** HOLE CARDS ***
+1tormentor: folds 
+DURKADURDUR: raises $2 to $4
+FastEddie267: raises $14 to $18
+spacecakezzz: folds 
+P1ngPoNgPr0: folds 
+TODO ADENTR0: folds 
+DURKADURDUR: calls $14
+*** FLOP *** [3h 8c Ah]
+DURKADURDUR: checks 
+FastEddie267: bets $20
+DURKADURDUR: raises $38 to $58
+FastEddie267: calls $38
+*** TURN *** [3h 8c Ah] [9d]
+DURKADURDUR: checks 
+FastEddie267: bets $125
+DURKADURDUR: folds 
+Uncalled bet ($125) returned to FastEddie267
+FastEddie267 collected $152 from pot
+FastEddie267: doesn't show hand 
+*** SUMMARY ***
+Total pot $155 | Rake $3 
+Board [3h 8c Ah 9d]
+Seat 1: P1ngPoNgPr0 (small blind) folded before Flop
+Seat 2: TODO ADENTR0 (big blind) folded before Flop
+Seat 3: 1tormentor folded before Flop (didn't bet)
+Seat 4: DURKADURDUR folded on the Turn
+Seat 5: FastEddie267 collected ($152)
+Seat 6: spacecakezzz (button) folded before Flop (didn't bet)

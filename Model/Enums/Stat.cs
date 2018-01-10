@@ -170,5 +170,6 @@ namespace Model.Enums
         CheckFlopAsPFRAndCallOnTurn,
         CheckFlopAsPFRAndFoldOnTurn,
         CheckFlopAsPFRAndRaiseOnTurn,
+        CheckRaisedFlopCBet
     }
 }

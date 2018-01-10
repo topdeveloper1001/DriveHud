@@ -918,6 +918,45 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto DelayedTurnCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetIP,
+                    Occurred = didDelayedTurnCBetIP,
+                    CouldOccurred = couldDelayedTurnCBetIP
+                };
+            }
+        }
+
+        public virtual StatDto DelayedTurnCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetOOP,
+                    Occurred = didDelayedTurnCBetOOP,
+                    CouldOccurred = couldDelayedTurnCBetOOP
+                };
+            }
+        }
+
+        public virtual StatDto CheckRaisedFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRaisedFlopCBet,
+                    Occurred = checkRaisedFlopCBet,
+                    CouldOccurred = couldCheckRaiseFlopCBet
+                };
+            }
+        }
+
         #endregion
 
         #region Limp
