@@ -27,6 +27,14 @@ namespace DriveHud.Tests.UnitTests
         {
             var actual = ExternalImporterUtils.IsTournamentTableMatch(title, tableName);
             Assert.That(actual, Is.EqualTo(expected));
-        }        
+        }
+
+        [Test]
+        [TestCase("Louis Vuitton 03 - $2 / $4", "LouisVuitton 03", true)]
+        public void CashTableMatchTest(string title, string tableName, bool expected)
+        {
+            var actual = ExternalImporterUtils.IsCashTableMatch(title, tableName);
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }

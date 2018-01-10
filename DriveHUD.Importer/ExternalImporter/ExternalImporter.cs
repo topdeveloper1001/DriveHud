@@ -149,7 +149,7 @@ namespace DriveHUD.Importers.ExternalImporter
                 return ExternalImporterUtils.IsTournamentTableMatch(title, parsingResult.Source.TableName);
             }
 
-            return title.Contains(parsingResult.Source.TableName);
+            return ExternalImporterUtils.IsCashTableMatch(title, parsingResult.Source.TableName);
         }
 
         /// <summary>
