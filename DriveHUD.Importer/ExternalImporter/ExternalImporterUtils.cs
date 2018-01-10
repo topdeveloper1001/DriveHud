@@ -97,6 +97,11 @@ namespace DriveHUD.Importers.ExternalImporter
             return result;
         }
 
+        public static bool IsCashTableMatch(string title, string tableName)
+        {
+            return title.Replace("Louis Vuitton", "LouisVuitton").Contains(tableName);
+        }
+
         private static bool IsTitleMatchTableName(string tableName, string titleToCompare)
         {
             var result = titleToCompare.Equals(tableName, StringComparison.OrdinalIgnoreCase);
