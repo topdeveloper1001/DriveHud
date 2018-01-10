@@ -957,6 +957,84 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FlopBetSizeOneHalfOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneHalfOrLess,
+                    Occurred = flopBetSizeOneHalfOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeOneQuarterOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneQuarterOrLess,
+                    Occurred = flopBetSizeOneQuarterOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeTwoThirdsOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeTwoThirdsOrLess,
+                    Occurred = flopBetSizeTwoThirdsOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeThreeQuartersOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeThreeQuartersOrLess,
+                    Occurred = flopBetSizeThreeQuartersOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeOneOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneOrLess,
+                    Occurred = flopBetSizeOneOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeMoreThanOne,
+                    Occurred = flopBetSizeMoreThanOne,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
         #endregion
 
         #region Limp

@@ -1351,6 +1351,54 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneHalfOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneQuarterOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeTwoThirdsOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeThreeQuartersOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeMoreThanOne), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

@@ -763,6 +763,60 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeTwoThirdsOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FlopCheckRaise {

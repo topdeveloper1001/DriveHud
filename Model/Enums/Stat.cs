@@ -170,6 +170,12 @@ namespace Model.Enums
         CheckFlopAsPFRAndCallOnTurn,
         CheckFlopAsPFRAndFoldOnTurn,
         CheckFlopAsPFRAndRaiseOnTurn,
-        CheckRaisedFlopCBet
+        CheckRaisedFlopCBet,
+        FlopBetSizeOneHalfOrLess,
+        FlopBetSizeOneQuarterOrLess,
+        FlopBetSizeTwoThirdsOrLess,
+        FlopBetSizeThreeQuartersOrLess,
+        FlopBetSizeOneOrLess,
+        FlopBetSizeMoreThanOne
     }
 }

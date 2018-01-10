@@ -1,0 +1,43 @@
+PokerStars Game #47153145229:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:16:08 ET
+Table 'Alzirr IV' 6-max Seat #1 is the button
+Seat 1: @moepolo83@ ($201.75 in chips) 
+Seat 2: DURKADURDUR ($348.85 in chips) 
+Seat 3: mojox ($184.10 in chips) 
+Seat 4: mad.afurable ($200 in chips) 
+Seat 5: welle85 ($236 in chips) 
+Seat 6: twinpsych ($409 in chips) 
+DURKADURDUR: posts small blind $1
+mojox: posts big blind $2
+*** HOLE CARDS ***
+mad.afurable: raises $4 to $6
+welle85: calls $6
+twinpsych has timed out
+twinpsych: folds 
+@moepolo83@: calls $6
+DURKADURDUR: calls $5
+mojox: calls $4
+*** FLOP *** [7s 6h 6d]
+DURKADURDUR: bets $12
+mojox: calls $12
+mad.afurable: folds 
+welle85: folds 
+@moepolo83@: folds 
+*** TURN *** [7s 6h 6d] [Jh]
+DURKADURDUR: bets $14
+mojox: calls $14
+*** RIVER *** [7s 6h 6d Jh] [Jc]
+DURKADURDUR: checks 
+mojox: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [8c 7c] (two pair, Jacks and Sevens)
+mojox: shows [Th Tc] (two pair, Jacks and Tens)
+mojox collected $79 from pot
+*** SUMMARY ***
+Total pot $82 | Rake $3 
+Board [7s 6h 6d Jh Jc]
+Seat 1: @moepolo83@ (button) folded on the Flop
+Seat 2: DURKADURDUR (small blind) showed [8c 7c] and lost with two pair, Jacks and Sevens
+Seat 3: mojox (big blind) showed [Th Tc] and won ($79) with two pair, Jacks and Tens
+Seat 4: mad.afurable folded on the Flop
+Seat 5: welle85 folded on the Flop
+Seat 6: twinpsych folded before Flop (didn't bet)

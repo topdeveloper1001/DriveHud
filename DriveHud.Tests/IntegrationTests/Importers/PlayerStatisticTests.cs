@@ -754,6 +754,59 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CheckRaisedFlopCBet, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"DURKADURDUR-FlopBetSizeOneHalfOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FlopBetSizeOneHalfOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeOneHalfOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Peon384-FlopBetSizeOneQuarterOrLess-1.txt", EnumPokerSites.BetOnline, "Peon384", 1)]
+        public void FlopBetSizeOneQuarterOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeOneQuarterOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FlopBetSizeTwoThirdsOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FlopBetSizeTwoThirdsOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeTwoThirdsOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FlopBetSizeThreeQuartersOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FlopBetSizeThreeQuartersOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeThreeQuartersOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-FlopBetSizeOneOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FlopBetSizeOneOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeOneOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-FlopBetSizeMoreThanOne-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void FlopBetSizeMoreThanOneIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopBetSizeMoreThanOne, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-FlopBetSizeMoreThanOne-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"DURKADURDUR-FlopBetSizeOneOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FlopBetSizeThreeQuartersOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"Peon384-FlopBetSizeOneQuarterOrLess-1.txt", EnumPokerSites.BetOnline, "Peon384", 1)]
+        [TestCase(@"DURKADURDUR-DidBetRiverOnBXLine-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void DidFlopBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidFlopBet, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

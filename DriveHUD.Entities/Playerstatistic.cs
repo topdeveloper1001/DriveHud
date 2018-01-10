@@ -911,6 +911,9 @@ namespace DriveHUD.Entities
         [ProtoMember(328)]
         public virtual int RaisedTurnBetWhenCheckedFlopAsPfr { get; set; }
 
+        [ProtoMember(329)]
+        public virtual decimal FlopBetToPotRatio { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1039,6 +1042,62 @@ namespace DriveHUD.Entities
             get
             {
                 return DidCheckFlop == 1 && Facingflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidFlopBet
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.5m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.25m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 2 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.75m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 1m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return FlopBetToPotRatio > 1.01m ? 1 : 0;
             }
         }
 
@@ -1548,6 +1607,8 @@ namespace DriveHUD.Entities
             CalledTurnBetWhenCheckedFlopAsPfr += a.CalledTurnBetWhenCheckedFlopAsPfr;
             FoldedToTurnBetWhenCheckedFlopAsPfr += a.FoldedToTurnBetWhenCheckedFlopAsPfr;
             RaisedTurnBetWhenCheckedFlopAsPfr += a.RaisedTurnBetWhenCheckedFlopAsPfr;
+
+            FlopBetToPotRatio = a.FlopBetToPotRatio;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1945,6 +2006,8 @@ namespace DriveHUD.Entities
             r.CalledTurnBetWhenCheckedFlopAsPfr = a.CalledTurnBetWhenCheckedFlopAsPfr + b.CalledTurnBetWhenCheckedFlopAsPfr;
             r.FoldedToTurnBetWhenCheckedFlopAsPfr = a.FoldedToTurnBetWhenCheckedFlopAsPfr + b.FoldedToTurnBetWhenCheckedFlopAsPfr;
             r.RaisedTurnBetWhenCheckedFlopAsPfr = a.RaisedTurnBetWhenCheckedFlopAsPfr + b.RaisedTurnBetWhenCheckedFlopAsPfr;
+
+            r.FlopBetToPotRatio = b.FlopBetToPotRatio;
 
             return r;
         }

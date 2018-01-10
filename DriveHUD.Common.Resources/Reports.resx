@@ -639,4 +639,22 @@
   <data name="Reports_Column_CheckRaisedFlopCBet" xml:space="preserve">
     <value>Check-Raise Flop C-Bet%</value>
   </data>
+  <data name="Reports_Column_FlopBetSizeMoreThanOne" xml:space="preserve">
+    <value>Flop Overbet Pot%</value>
+  </data>
+  <data name="Reports_Column_FlopBetSizeOneHalfOrLess" xml:space="preserve">
+    <value>Flop Bet Size 1/2 or less%</value>
+  </data>
+  <data name="Reports_Column_FlopBetSizeOneOrLess" xml:space="preserve">
+    <value>Flop Bet Size Pot Size or less%</value>
+  </data>
+  <data name="Reports_Column_FlopBetSizeOneQuarterOrLess" xml:space="preserve">
+    <value>Flop Bet Size 1/4 or less%</value>
+  </data>
+  <data name="Reports_Column_FlopBetSizeThreeQuartersOrLess" xml:space="preserve">
+    <value>Flop Bet Size 3/4 or less%</value>
+  </data>
+  <data name="Reports_Column_FlopBetSizeTwoThirdsOrLess" xml:space="preserve">
+    <value>Flop Bet Size 2/3 or less%</value>
+  </data>
 </root>

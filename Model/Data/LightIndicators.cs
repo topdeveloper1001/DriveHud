@@ -415,6 +415,68 @@ namespace Model.Data
             }
         }
 
+        protected int didFlopBet;
+
+        protected int flopBetSizeOneHalfOrLess;
+
+        public override decimal FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneHalfOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeOneQuarterOrLess;
+
+        public override decimal FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneQuarterOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeTwoThirdsOrLess;
+
+        public override decimal FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeTwoThirdsOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeThreeQuartersOrLess;
+
+        public override decimal FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeThreeQuartersOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeOneOrLess;
+
+        public override decimal FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeMoreThanOne;
+
+        public override decimal FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeMoreThanOne, didFlopBet);
+            }
+        }
+
         #endregion
 
         #endregion
@@ -448,6 +510,14 @@ namespace Model.Data
             couldDelayedTurnCBetOOP += statistic.CouldDelayedTurnCBetOOP;
             checkRaisedFlopCBet += statistic.CheckRaisedFlopCBet;
             couldCheckRaiseFlopCBet += statistic.CouldCheckRaiseFlopCBet;
+
+            didFlopBet += statistic.DidFlopBet;
+            flopBetSizeMoreThanOne += statistic.FlopBetSizeMoreThanOne;
+            flopBetSizeOneHalfOrLess += statistic.FlopBetSizeOneHalfOrLess;
+            flopBetSizeOneQuarterOrLess += statistic.FlopBetSizeOneQuarterOrLess;
+            flopBetSizeTwoThirdsOrLess += statistic.FlopBetSizeTwoThirdsOrLess;
+            flopBetSizeThreeQuartersOrLess += statistic.FlopBetSizeThreeQuartersOrLess;
+            flopBetSizeOneOrLess += statistic.FlopBetSizeOneOrLess;
         }
 
         public override void Clean()
@@ -460,12 +530,21 @@ namespace Model.Data
             netWonByBigBlind = 0;
             sessionStartTime = DateTime.MaxValue;
             sessionEndTime = DateTime.MinValue;
+
             didDelayedTurnCBetIP = 0;
             couldDelayedTurnCBetIP = 0;
             didDelayedTurnCBetOOP = 0;
             couldDelayedTurnCBetOOP = 0;
             checkRaisedFlopCBet = 0;
             couldCheckRaiseFlopCBet = 0;
+
+            didFlopBet = 0;
+            flopBetSizeMoreThanOne = 0;
+            flopBetSizeOneHalfOrLess = 0;
+            flopBetSizeOneQuarterOrLess = 0;
+            flopBetSizeTwoThirdsOrLess = 0;
+            flopBetSizeThreeQuartersOrLess = 0;
+            flopBetSizeOneOrLess = 0;
         }
 
         #endregion
