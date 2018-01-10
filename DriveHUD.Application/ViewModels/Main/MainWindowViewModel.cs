@@ -563,7 +563,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
-                    var playerNotes = dataService.GetPlayerNotes(player.PlayerName, (short)site);
+                    var playerNotes = dataService.GetPlayerNotes(player.PlayerId);
                     playerHudContent.HudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
                     playerHudContent.HudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 
