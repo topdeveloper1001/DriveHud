@@ -148,6 +148,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", 13551973065)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 13550515602)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 11614201072)]
+        [TestCase(TestDataFolder + @"Hands/JabMicroWarmUpPko500Hand.txt", 16847329734)]
         public void ParseHandIdTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -265,6 +266,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"MultipleHands/Orange-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 146, 0)]
         [TestCase(TestDataFolder + @"MultipleHands/Union City-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 466, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 0)]
+        [TestCase(TestDataFolder + @"Tournaments/Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15.txt", 77, 0)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
             var parser = new HandHistories.Parser.Parsers.FastParser.PartyPoker.PartyPokerFastParserImpl();
