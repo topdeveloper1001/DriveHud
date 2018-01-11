@@ -1351,6 +1351,8 @@ namespace Model.Data
             }
         }
 
+        #region FlopBetSize stats
+
         public virtual decimal FlopBetSizeOneHalfOrLess
         {
             get
@@ -1398,6 +1400,68 @@ namespace Model.Data
                 return GetPercentage(Statistics.Sum(x => x.FlopBetSizeMoreThanOne), Statistics.Sum(x => x.DidFlopBet));
             }
         }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual decimal TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneHalfOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneQuarterOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneThirdOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeTwoThirdsOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeThreeQuartersOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeMoreThanOne), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        #endregion
 
         public virtual void UpdateSource(Playerstatistic statistic)
         {

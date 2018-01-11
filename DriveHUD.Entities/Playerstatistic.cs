@@ -914,6 +914,9 @@ namespace DriveHUD.Entities
         [ProtoMember(329)]
         public virtual decimal FlopBetToPotRatio { get; set; }
 
+        [ProtoMember(330)]
+        public virtual decimal TurnBetToPotRatio { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1053,6 +1056,16 @@ namespace DriveHUD.Entities
             }
         }
 
+        public virtual int DidTurnBet
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 ? 1 : 0;
+            }
+        }
+
+        #region FlopBetSize stats
+
         public virtual int FlopBetSizeOneHalfOrLess
         {
             get
@@ -1100,6 +1113,68 @@ namespace DriveHUD.Entities
                 return FlopBetToPotRatio > 1.01m ? 1 : 0;
             }
         }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual int TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.5m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 1 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.25m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 2 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.75m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 1m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return TurnBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        #endregion
 
         #endregion
 
@@ -1609,6 +1684,7 @@ namespace DriveHUD.Entities
             RaisedTurnBetWhenCheckedFlopAsPfr += a.RaisedTurnBetWhenCheckedFlopAsPfr;
 
             FlopBetToPotRatio = a.FlopBetToPotRatio;
+            TurnBetToPotRatio = a.TurnBetToPotRatio;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2008,6 +2084,7 @@ namespace DriveHUD.Entities
             r.RaisedTurnBetWhenCheckedFlopAsPfr = a.RaisedTurnBetWhenCheckedFlopAsPfr + b.RaisedTurnBetWhenCheckedFlopAsPfr;
 
             r.FlopBetToPotRatio = b.FlopBetToPotRatio;
+            r.TurnBetToPotRatio = b.TurnBetToPotRatio;
 
             return r;
         }

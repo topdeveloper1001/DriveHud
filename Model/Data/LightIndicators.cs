@@ -417,6 +417,10 @@ namespace Model.Data
 
         protected int didFlopBet;
 
+        protected int didTurnBet;
+
+        #region FlopBetSize stats
+
         protected int flopBetSizeOneHalfOrLess;
 
         public override decimal FlopBetSizeOneHalfOrLess
@@ -479,6 +483,82 @@ namespace Model.Data
 
         #endregion
 
+        #region TurnBetSize stats
+
+        protected int turnBetSizeOneHalfOrLess;
+
+        public override decimal TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneHalfOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneQuarterOrLess;
+
+        public override decimal TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneQuarterOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneThirdOrLess;
+
+        public override decimal TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneThirdOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeTwoThirdsOrLess;
+
+        public override decimal TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeTwoThirdsOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeThreeQuartersOrLess;
+
+        public override decimal TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeThreeQuartersOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneOrLess;
+
+        public override decimal TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeMoreThanOne;
+
+        public override decimal TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeMoreThanOne, didTurnBet);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -518,6 +598,15 @@ namespace Model.Data
             flopBetSizeTwoThirdsOrLess += statistic.FlopBetSizeTwoThirdsOrLess;
             flopBetSizeThreeQuartersOrLess += statistic.FlopBetSizeThreeQuartersOrLess;
             flopBetSizeOneOrLess += statistic.FlopBetSizeOneOrLess;
+
+            didTurnBet += statistic.DidTurnBet;
+            turnBetSizeMoreThanOne += statistic.TurnBetSizeMoreThanOne;
+            turnBetSizeOneHalfOrLess += statistic.TurnBetSizeOneHalfOrLess;
+            turnBetSizeOneQuarterOrLess += statistic.TurnBetSizeOneQuarterOrLess;
+            turnBetSizeOneThirdOrLess += statistic.TurnBetSizeOneThirdOrLess;
+            turnBetSizeTwoThirdsOrLess += statistic.TurnBetSizeTwoThirdsOrLess;
+            turnBetSizeThreeQuartersOrLess += statistic.TurnBetSizeThreeQuartersOrLess;
+            turnBetSizeOneOrLess += statistic.TurnBetSizeOneOrLess;
         }
 
         public override void Clean()
@@ -545,6 +634,15 @@ namespace Model.Data
             flopBetSizeTwoThirdsOrLess = 0;
             flopBetSizeThreeQuartersOrLess = 0;
             flopBetSizeOneOrLess = 0;
+
+            didTurnBet = 0;
+            turnBetSizeMoreThanOne = 0;
+            turnBetSizeOneHalfOrLess = 0;
+            turnBetSizeOneQuarterOrLess = 0;
+            turnBetSizeOneThirdOrLess = 0;
+            turnBetSizeTwoThirdsOrLess = 0;
+            turnBetSizeThreeQuartersOrLess = 0;
+            turnBetSizeOneOrLess = 0;
         }
 
         #endregion

@@ -1492,6 +1492,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Turn Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneThirdOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneThirdOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeTwoThirdsOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn Check-Raise%.
         /// </summary>
         internal static string Reports_Column_TurnCheckRaise {

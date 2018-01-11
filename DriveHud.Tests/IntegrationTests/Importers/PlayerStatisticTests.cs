@@ -754,6 +754,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CheckRaisedFlopCBet, fileName, pokerSite, playerName, expected);
         }
 
+        #region FlopBetSize tests
+
         [Test]
         [TestCase(@"DURKADURDUR-FlopBetSizeOneHalfOrLess-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void FlopBetSizeOneHalfOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
@@ -806,6 +808,74 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         {
             AssertThatStatIsCalculated(x => x.DidFlopBet, fileName, pokerSite, playerName, expected);
         }
+
+        #endregion
+
+        #region TurnBetSize tests
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeOneHalfOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeOneHalfOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeOneHalfOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeOneQuarterOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeOneQuarterOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeOneQuarterOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeOneThirdOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeOneThirdOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeOneThirdOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeTwoThirdsOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeTwoThirdsOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeTwoThirdsOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeThreeQuartersOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeThreeQuartersOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeThreeQuartersOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeOneOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeOneOrLessIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeOneOrLess, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeMoreThanOne-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void TurnBetSizeMoreThanOneIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnBetSizeMoreThanOne, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-TurnBetSizeOneHalfOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeOneQuarterOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeOneThirdOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeTwoThirdsOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeThreeQuartersOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeOneOrLess-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-TurnBetSizeMoreThanOne-1.txt", EnumPokerSites.Ignition, "Hero", 1)]
+        public void DidTurnBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidTurnBet, fileName, pokerSite, playerName, expected);
+        }
+
+        #endregion
 
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {

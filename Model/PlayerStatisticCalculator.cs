@@ -104,9 +104,10 @@ namespace Model
             bool aggresiveRiver = playerHandActions.RiverAny(handAction => handAction.IsRaise() || handAction.IsBet());
 
             var betOnFlopAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop && x.IsBet());
+            var betOnTurnAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn && x.IsBet());
 
             bool betOnFlop = betOnFlopAction != null;
-            bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
+            bool betOnTurn = betOnTurnAction != null;
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
             bool isCheckedTurn = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn)?.IsCheck ?? false;
@@ -780,6 +781,9 @@ namespace Model
             stat.RaisedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsRaise() ? 1 : 0;
 
             stat.FlopBetToPotRatio = betOnFlop ? Math.Abs(betOnFlopAction.Amount / parsedHand.PreFlop.Sum(x => x.Amount)) : 0;
+            stat.TurnBetToPotRatio = betOnTurn ? Math.Abs(betOnTurnAction.Amount / parsedHand.HandActions
+                .Where(x => x.Street == Street.Preflop || x.Street == Street.Flop)
+                .Sum(x => x.Amount)) : 0;
 
             #endregion
 

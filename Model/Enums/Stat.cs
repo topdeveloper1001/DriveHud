@@ -176,6 +176,13 @@ namespace Model.Enums
         FlopBetSizeTwoThirdsOrLess,
         FlopBetSizeThreeQuartersOrLess,
         FlopBetSizeOneOrLess,
-        FlopBetSizeMoreThanOne
+        FlopBetSizeMoreThanOne,
+        TurnBetSizeOneHalfOrLess,
+        TurnBetSizeOneQuarterOrLess,
+        TurnBetSizeOneThirdOrLess,
+        TurnBetSizeTwoThirdsOrLess,
+        TurnBetSizeThreeQuartersOrLess,
+        TurnBetSizeOneOrLess,
+        TurnBetSizeMoreThanOne
     }
 }

@@ -392,6 +392,13 @@ namespace DriveHUD.Application.ReportsLayout
             // T
             new Tuple<string, string, ColumnType>("Reports_Column_TrueAgg", nameof(Indicators.TrueAggression), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnAgg", nameof(Indicators.TurnAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneHalfOrLess", nameof(Indicators.TurnBetSizeOneHalfOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneQuarterOrLess", nameof(Indicators.TurnBetSizeOneQuarterOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneThirdOrLess", nameof(Indicators.TurnBetSizeOneThirdOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeTwoThirdsOrLess", nameof(Indicators.TurnBetSizeTwoThirdsOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeThreeQuartersOrLess", nameof(Indicators.TurnBetSizeThreeQuartersOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneOrLess", nameof(Indicators.TurnBetSizeOneOrLess), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeMoreThanOne", nameof(Indicators.TurnBetSizeMoreThanOne), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnCheckRaise", nameof(Indicators.TurnCheckRaise), ColumnType.Percentile),
             // U
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BB", nameof(Indicators.UO_PFR_BB), ColumnType.Percentile),

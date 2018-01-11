@@ -957,6 +957,8 @@ namespace Model.Data
             }
         }
 
+        #region FlopBetSize stats
+
         public virtual StatDto FlopBetSizeOneHalfOrLessObject
         {
             get
@@ -1034,6 +1036,103 @@ namespace Model.Data
                 };
             }
         }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual StatDto TurnBetSizeOneHalfOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneHalfOrLess,
+                    Occurred = turnBetSizeOneHalfOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneQuarterOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneQuarterOrLess,
+                    Occurred = turnBetSizeOneQuarterOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneThirdOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneThirdOrLess,
+                    Occurred = turnBetSizeOneThirdOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeTwoThirdsOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeTwoThirdsOrLess,
+                    Occurred = turnBetSizeTwoThirdsOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeThreeQuartersOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeThreeQuartersOrLess,
+                    Occurred = turnBetSizeThreeQuartersOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneOrLess,
+                    Occurred = turnBetSizeOneOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeMoreThanOne,
+                    Occurred = turnBetSizeMoreThanOne,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        #endregion
 
         #endregion
 

@@ -657,4 +657,25 @@
   <data name="Reports_Column_FlopBetSizeTwoThirdsOrLess" xml:space="preserve">
     <value>Flop Bet Size 2/3 or less%</value>
   </data>
+  <data name="Reports_Column_TurnBetSizeMoreThanOne" xml:space="preserve">
+    <value>Turn Overbet Pot%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeOneHalfOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/2 or less%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeOneOrLess" xml:space="preserve">
+    <value>Turn Bet Size Pot Size or less%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeOneQuarterOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/4 or less%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeOneThirdOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/3 or less%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeThreeQuartersOrLess" xml:space="preserve">
+    <value>Turn Bet Size 3/4 or less%</value>
+  </data>
+  <data name="Reports_Column_TurnBetSizeTwoThirdsOrLess" xml:space="preserve">
+    <value>Turn Bet Size 2/3 or less%</value>
+  </data>
 </root>
