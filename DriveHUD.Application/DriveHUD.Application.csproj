@@ -1516,7 +1516,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Lib\CapPipedB.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Lib\CapPipedI.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

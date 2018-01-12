@@ -49,6 +49,8 @@ namespace DriveHUD.Application.Views
 
         public HudWindow()
         {
+            DataContext = new HudWindowViewModel(Dispatcher);
+
             InitializeComponent();
 
             dgCanvas.DragEnded += DgCanvas_DragEnded;

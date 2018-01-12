@@ -4,6 +4,11 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.Application.ControlStyles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary
+            Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <SolidColorBrush
         x:Key="BorderBrush"
         Color="#33519b" />
@@ -79,7 +84,7 @@
             FontSize="{Binding SettingsAppearanceFontSize}"
             FontWeight="{Binding SettingsAppearanceFontBold}"
             FontStyle="{Binding SettingsAppearanceFontItalic}"
-            TextDecorations="{Binding SettingsAppearanceFontUnderline}"            
+            TextDecorations="{Binding SettingsAppearanceFontUnderline}"
             VerticalAlignment="Bottom">           
             <Run
                 Text="{Binding Label}" />
