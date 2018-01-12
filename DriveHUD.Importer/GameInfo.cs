@@ -54,9 +54,7 @@ namespace DriveHUD.Importers
 
         public HandHistories.Objects.GameDescription.TournamentSpeed? TournamentSpeed { get; set; }
 
-        public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }
-
-        public PlayerCollectionItem[] AddedPlayers { get; set; }
+        public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }      
         
         public string FileName { get; set; }
 

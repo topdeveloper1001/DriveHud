@@ -33,6 +33,7 @@ using Model.Interfaces;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -55,11 +56,13 @@ namespace DriveHUD.Importers
 
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
+        private readonly IEventAggregator eventAggregator;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
 
         /// <summary>
@@ -699,7 +702,10 @@ namespace DriveHUD.Importers
                 }).ToArray();
 
             dataService.AddPlayerRangeToList(playerItemCollection);
-            gameInfo.AddedPlayers = playerItemCollection;
+
+            // send added players to update UI
+            var playersAddedEventArgs = new PlayersAddedEventArgs(playerItemCollection);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Publish(playersAddedEventArgs);
 
             existingPlayers.AddRange(playersToAdd);
 
