@@ -478,13 +478,6 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
-
-                if (report != null)
-                {
-                    ReportGadgetViewModel.ReportSelectedItem = report;
-                }
-
                 var players = e.Players;
                 var gameInfo = e.GameInfo;
                 var maxSeats = (int)gameInfo.TableType;
