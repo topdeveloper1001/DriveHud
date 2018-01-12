@@ -20,7 +20,7 @@ namespace Model.Data
 {
     public class HudIndicators : HudLightIndicators
     {
-        private Dictionary<StatBase, Dictionary<string, StatDto>> heatMaps = new Dictionary<StatBase, Dictionary<string, StatDto>>();
+        private Dictionary<StatBase, HeatMapDto> heatMaps = new Dictionary<StatBase, HeatMapDto>();
 
         public HudIndicators() : base()
         {
@@ -35,10 +35,10 @@ namespace Model.Data
         private void InitializeHeatMaps()
         {
             var heatMapsStats = StatsProvider.GetHeatMapStats();
-            heatMapsStats.ForEach(heatMapStat => heatMaps.Add(heatMapStat, new Dictionary<string, StatDto>()));
+            heatMapsStats.ForEach(heatMapStat => heatMaps.Add(heatMapStat, new HeatMapDto()));
         }
 
-        public Dictionary<StatBase, Dictionary<string, StatDto>> HeatMaps
+        public Dictionary<StatBase, HeatMapDto> HeatMaps
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Model.Data
                 {
                     continue;
                 }
-                
+
                 var statDto = stat.CreateStatDto(statistic);
 
                 var cardsRange = ParserUtils.ConvertToCardRange(statistic.Cards);
@@ -66,14 +66,14 @@ namespace Model.Data
                     continue;
                 }
 
-                if (!heatMaps[stat].ContainsKey(cardsRange))
+                if (!heatMaps[stat].OccuredByCardRange.ContainsKey(cardsRange))
                 {
-                    heatMaps[stat].Add(cardsRange, new StatDto());
+                    heatMaps[stat].OccuredByCardRange.Add(cardsRange, 0);
                 }
 
-                heatMaps[stat][cardsRange].Occurred += statDto.Occurred;
-                heatMaps[stat][cardsRange].CouldOccurred += statDto.CouldOccurred;
+                heatMaps[stat].OccuredByCardRange[cardsRange] += statDto.Occurred;
+                heatMaps[stat].TotalOccured += statDto.Occurred;
             }
         }
-    }
+    }  
 }

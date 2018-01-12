@@ -11,12 +11,17 @@
 //----------------------------------------------------------------------
 
 using ProtoBuf;
+using System.Collections.Generic;
 
 namespace Model.Data
 {
-    public class HeatMapStatDto : StatDto
-    {          
-        [ProtoMember(4)]
-        public string CardRange { get; set; }
+    [ProtoContract]
+    public class HeatMapDto
+    {
+        [ProtoMember(1)]
+        public int TotalOccured { get; set; }
+
+        [ProtoMember(2)]
+        public Dictionary<string, int> OccuredByCardRange { get; set; } = new Dictionary<string, int>();
     }
 }

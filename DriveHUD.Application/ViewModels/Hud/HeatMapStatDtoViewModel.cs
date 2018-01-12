@@ -12,7 +12,6 @@
 
 using DriveHUD.Common;
 using DriveHUD.Common.Wpf.Mvvm;
-using Model.Data;
 using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -20,15 +19,14 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HeatMapStatDtoViewModel : ViewModelBase
     {
         private readonly string cardRange;
-        private readonly StatDto statDto;
+        private int occurred;
+        private int totalOccured;
 
-        public HeatMapStatDtoViewModel(string cardRange, StatDto statDto)
+        public HeatMapStatDtoViewModel(string cardRange)
         {
             Check.Require(cardRange != null);
-            Check.Require(statDto != null);
 
-            this.cardRange = cardRange;
-            this.statDto = statDto;
+            this.cardRange = cardRange;       
         }
 
         public string CardRange
@@ -43,8 +41,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return statDto.CouldOccurred != 0 ?
-                    (decimal)statDto.Occurred / statDto.CouldOccurred :
+                return totalOccured != 0 ?
+                    (decimal)occurred / totalOccured :
                     default(decimal);
             }
         }
@@ -53,38 +51,38 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return statDto.Occurred;
+                return occurred;
             }
             set
             {
-                if (statDto.Occurred == value)
+                if (occurred == value)
                 {
                     return;
                 }
 
-                statDto.Occurred = value;
+                occurred = value;
 
                 this.RaisePropertyChanged(nameof(Occurred));
                 this.RaisePropertyChanged(nameof(Value));
             }
         }
 
-        public int CouldOccurred
+        public int TotalOccurred
         {
             get
             {
-                return statDto.CouldOccurred;
+                return totalOccured;
             }
             set
             {
-                if (statDto.CouldOccurred == value)
+                if (totalOccured == value)
                 {
                     return;
                 }
 
-                statDto.CouldOccurred = value;
+                totalOccured = value;
 
-                this.RaisePropertyChanged(nameof(CouldOccurred));
+                this.RaisePropertyChanged(nameof(TotalOccurred));
                 this.RaisePropertyChanged(nameof(Value));
             }
         }

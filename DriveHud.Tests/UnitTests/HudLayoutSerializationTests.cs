@@ -144,7 +144,7 @@ namespace DriveHud.Tests.UnitTests
                     new StatInfo { Stat = Stat.PFR },
                     new StatInfo { Stat = Stat.S3Bet },
                     new StatInfo { Stat = Stat.ColdCall }
-                }                
+                }
             };
 
             var hudElement = new HudElementViewModel
@@ -658,7 +658,12 @@ namespace DriveHud.Tests.UnitTests
             };
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudHeatMapViewModel;
-            hudToolViewModelExpected.HeatMap.Add("AA", new StatDto(10, 15));
+
+            var heatMap = new HeatMapDto();
+            heatMap.OccuredByCardRange.Add("AA", 10);
+            heatMap.TotalOccured = 15;
+
+            hudToolViewModelExpected.HeatMap = heatMap;
 
             var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
@@ -668,10 +673,9 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Width, Is.EqualTo(hudToolViewModelExpected.Width));
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
-            Assert.That(hudToolViewModelActual.HeatMap.Count, Is.EqualTo(hudToolViewModelExpected.HeatMap.Count));
-            Assert.That(hudToolViewModelActual.HeatMap.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.Keys.First()));
-            Assert.That(hudToolViewModelActual.HeatMap.Values.First().Occurred, Is.EqualTo(hudToolViewModelExpected.HeatMap.Values.First().Occurred));
-            Assert.That(hudToolViewModelActual.HeatMap.Values.First().CouldOccurred, Is.EqualTo(hudToolViewModelExpected.HeatMap.Values.First().CouldOccurred));
+            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Count, Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Count));
+            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Keys.First()));
+            Assert.That(hudToolViewModelActual.HeatMap.TotalOccured, Is.EqualTo(hudToolViewModelExpected.HeatMap.TotalOccured));
         }
 
         /// <summary>
@@ -685,7 +689,7 @@ namespace DriveHud.Tests.UnitTests
                 TableType = EnumTableType.HU,
                 Name = "TestLayout",
                 Filter = new HudLayoutFilter
-                {                    
+                {
                     DataFreshness = 30,
                     TableTypes = new[] { (int)EnumTableType.HU, (int)EnumTableType.Six }
                 }

@@ -12,11 +12,7 @@
 
 using HandHistories.Objects.Cards;
 using Model.Data;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -43,14 +39,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private static DependencyProperty ItemsSourceProperty = DependencyProperty.RegisterAttached("ItemsSource", typeof(Dictionary<string, StatDto>),
+        private static DependencyProperty ItemsSourceProperty = DependencyProperty.RegisterAttached("ItemsSource", typeof(HeatMapDto),
             typeof(HudHeatMapBehavior), new PropertyMetadata(OnItemsSourceChanged));
 
-        public Dictionary<string, StatDto> ItemsSource
+        public HeatMapDto ItemsSource
         {
             get
             {
-                return (Dictionary<string, StatDto>)GetValue(ItemsSourceProperty);
+                return (HeatMapDto)GetValue(ItemsSourceProperty);
             }
             set
             {
@@ -84,7 +80,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             foreach (var cardRange in cardRanges)
             {
-                var content = new HeatMapStatDtoViewModel(cardRange, new StatDto());
+                var content = new HeatMapStatDtoViewModel(cardRange);
 
                 var rangeBlock = new ContentControl
                 {
@@ -116,14 +112,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var source = d as HudHeatMapBehavior;
 
-            var heatMaps = e.NewValue as Dictionary<string, StatDto>;
+            var heatMaps = e.NewValue as HeatMapDto;
 
             if (source == null || heatMaps == null || source.AssociatedObject == null)
             {
                 return;
             }
 
-            foreach (var heatMap in heatMaps)
+            foreach (var heatMap in heatMaps.OccuredByCardRange)
             {
                 if (!source.rangeBlocks.ContainsKey(heatMap.Key))
                 {
@@ -137,8 +133,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                heatMapStatDtoViewModel.Occurred = heatMap.Value.Occurred;
-                heatMapStatDtoViewModel.CouldOccurred = heatMap.Value.CouldOccurred;
+                heatMapStatDtoViewModel.Occurred = heatMap.Value;
+                heatMapStatDtoViewModel.TotalOccurred = heatMaps.TotalOccured;
             }
         }
     }
