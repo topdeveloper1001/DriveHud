@@ -20,7 +20,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         private readonly string cardRange;
         private int occurred;
-        private int totalOccured;
+        private int maxOccured;
 
         public HeatMapStatDtoViewModel(string cardRange)
         {
@@ -41,8 +41,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             get
             {
-                return totalOccured != 0 ?
-                    (decimal)occurred / totalOccured :
+                return maxOccured != 0 ?
+                    (decimal)occurred / maxOccured :
                     default(decimal);
             }
         }
@@ -67,22 +67,22 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        public int TotalOccurred
+        public int MaxOccurred
         {
             get
             {
-                return totalOccured;
+                return maxOccured;
             }
             set
             {
-                if (totalOccured == value)
+                if (maxOccured == value)
                 {
                     return;
                 }
 
-                totalOccured = value;
+                maxOccured = value;
 
-                this.RaisePropertyChanged(nameof(TotalOccurred));
+                this.RaisePropertyChanged(nameof(MaxOccurred));
                 this.RaisePropertyChanged(nameof(Value));
             }
         }

@@ -71,8 +71,7 @@ namespace Model.Data
                     heatMaps[stat].OccuredByCardRange.Add(cardsRange, 0);
                 }
 
-                heatMaps[stat].OccuredByCardRange[cardsRange] += statDto.Occurred;
-                heatMaps[stat].TotalOccured += statDto.Occurred;
+                heatMaps[stat].OccuredByCardRange[cardsRange] += statDto.Occurred;                
             }
         }
     }  

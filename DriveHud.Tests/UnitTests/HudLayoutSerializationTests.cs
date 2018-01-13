@@ -660,8 +660,7 @@ namespace DriveHud.Tests.UnitTests
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudHeatMapViewModel;
 
             var heatMap = new HeatMapDto();
-            heatMap.OccuredByCardRange.Add("AA", 10);
-            heatMap.TotalOccured = 15;
+            heatMap.OccuredByCardRange.Add("AA", 10);            
 
             hudToolViewModelExpected.HeatMap = heatMap;
 
@@ -674,8 +673,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
             Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Count, Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Count));
-            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Keys.First()));
-            Assert.That(hudToolViewModelActual.HeatMap.TotalOccured, Is.EqualTo(hudToolViewModelExpected.HeatMap.TotalOccured));
+            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Keys.First()));            
         }
 
         /// <summary>

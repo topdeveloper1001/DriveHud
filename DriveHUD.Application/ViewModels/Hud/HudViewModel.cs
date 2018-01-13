@@ -687,8 +687,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     OccuredByCardRange = (from cardRange in cardRanges
                                           let occurred = random.Next(0, 100)
-                                          select new { CardRange = cardRange, Occured = occurred }).ToDictionary(x => x.CardRange, x => x.Occured),
-                    TotalOccured = 100
+                                          select new { CardRange = cardRange, Occured = occurred }).ToDictionary(x => x.CardRange, x => x.Occured)
                 };
 
                 tool.HeatMap = heatMap;

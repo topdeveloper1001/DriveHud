@@ -13,6 +13,7 @@
 using HandHistories.Objects.Cards;
 using Model.Data;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -119,6 +120,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
+            var maxOccured = heatMaps.OccuredByCardRange.Count > 0 ? heatMaps.OccuredByCardRange.Max(x => x.Value) : 0;
+
             foreach (var heatMap in heatMaps.OccuredByCardRange)
             {
                 if (!source.rangeBlocks.ContainsKey(heatMap.Key))
@@ -134,7 +137,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 heatMapStatDtoViewModel.Occurred = heatMap.Value;
-                heatMapStatDtoViewModel.TotalOccurred = heatMaps.TotalOccured;
+                heatMapStatDtoViewModel.MaxOccurred = maxOccured;
             }
         }
     }

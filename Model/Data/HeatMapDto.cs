@@ -17,11 +17,8 @@ namespace Model.Data
 {
     [ProtoContract]
     public class HeatMapDto
-    {
+    {      
         [ProtoMember(1)]
-        public int TotalOccured { get; set; }
-
-        [ProtoMember(2)]
         public Dictionary<string, int> OccuredByCardRange { get; set; } = new Dictionary<string, int>();
     }
 }
