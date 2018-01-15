@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace DriveHUD.HUD
 {
@@ -105,8 +106,18 @@ namespace DriveHUD.HUD
                     Handle = windowHandle
                 };
 
+                if (windows.ContainsKey(hwnd))
+                {
+                    return;
+                }
+
                 using (rwWindowsLock.Write())
                 {
+                    if (windows.ContainsKey(hwnd))
+                    {
+                        return;
+                    }
+
                     windows.Add(hwnd, windowItem);
                 }
 
@@ -115,7 +126,7 @@ namespace DriveHUD.HUD
                     Owner = windowHandle
                 };
 
-                window.Closed += (s, e) => window.Dispatcher.InvokeShutdown();
+                window.Closed += (s, e) => window.Dispatcher.BeginInvokeShutdown(DispatcherPriority.Background);
 
                 window.Initialize(hudLayout, hwnd);
 
@@ -179,11 +190,7 @@ namespace DriveHUD.HUD
             var window = windows[hwnd];
             windows.Remove(hwnd);
 
-            window.Window.Dispatcher.Invoke(() =>
-            {
-                window.Window.Close();
-                window.Window.Dispose();
-            });
+            window.Window.Dispatcher.Invoke(() => window.Window.Close());
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)
