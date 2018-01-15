@@ -106,11 +106,6 @@ namespace DriveHUD.HUD
                     Handle = windowHandle
                 };
 
-                if (windows.ContainsKey(hwnd))
-                {
-                    return;
-                }
-
                 using (rwWindowsLock.Write())
                 {
                     if (windows.ContainsKey(hwnd))
