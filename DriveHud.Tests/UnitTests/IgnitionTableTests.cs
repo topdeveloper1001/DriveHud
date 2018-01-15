@@ -117,6 +117,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ign-zone-2017-12-19.log", "ign-info.log", "ign-zone-2017-12-19.xml")]
         [TestCase("ign-mtt-2017-12-26.log", "ign-info.log", "ign-mtt-2017-12-26.xml")]
         [TestCase("ign-mtt-2018-01-07.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
+        //[TestCase("ign-mtt-2018-01-09.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
         public void HandsAreImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data

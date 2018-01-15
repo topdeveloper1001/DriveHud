@@ -26,7 +26,7 @@ namespace DriveHud.Tests.UnitTests.Helpers
             var infoDataText = File.ReadAllText(fileName);
 
             // split data by new lines
-            var splittedInfoData = infoDataText.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            var splittedInfoData = infoDataText.Split(new string[] { $"{Environment.NewLine}{Environment.NewLine}" }, StringSplitOptions.RemoveEmptyEntries);
 
             // convert string to bytes (utf-8)
             var testData = splittedInfoData.Select(s => Encoding.UTF8.GetBytes(s)).ToList();

@@ -61,6 +61,11 @@ namespace DriveHUD.HUD
             {
                 if (windows.ContainsKey(hwnd))
                 {
+                    if (!windows[hwnd].IsInitialized)
+                    {
+                        return;
+                    }
+
                     windows[hwnd].Window.Dispatcher.Invoke(() =>
                     {
                         windows[hwnd].Window.Initialize(hudLayout, hwnd);
