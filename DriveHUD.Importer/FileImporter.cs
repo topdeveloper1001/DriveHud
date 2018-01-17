@@ -21,6 +21,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
@@ -431,6 +432,8 @@ namespace DriveHUD.Importers
 
                 gameInfo.ResetPlayersCacheInfo();
 
+                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
                     if (existingGameType.Istourney)
@@ -444,7 +447,7 @@ namespace DriveHUD.Importers
 
                     session.Update(existingPlayer);
 
-                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession);
+                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession, calculatedEquity);
 
                     if (playerStat != null)
                     {
@@ -567,13 +570,13 @@ namespace DriveHUD.Importers
         /// <param name="handHistory">Hand history</param>
         /// <param name="player">Player</param>
         /// <returns>Calculated player statistic</returns>
-        public Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session)
+        protected virtual Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             try
             {
                 var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
 
                 if (playerStat == null)
                 {

@@ -270,14 +270,14 @@ namespace DriveHUD.Application.ViewModels
                     playerStatisticReImporter.ReImport();
 
                     LogProvider.Log.Info("Statistics rebuild has been completed.");
-
-                    Load();
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
                 }
             });
+
+            Load();
 
             ProgressViewModel.IsActive = false;
             ProgressViewModel.Reset();
@@ -300,14 +300,14 @@ namespace DriveHUD.Application.ViewModels
                     playerStatisticReImporter.Recover();
 
                     LogProvider.Log.Info("Statistics recovering has been completed.");
-
-                    Load();
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics recovering failed.", e);
                 }
             });
+
+            Load();
 
             ProgressViewModel.IsActive = false;
             ProgressViewModel.Reset();
