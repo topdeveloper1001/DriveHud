@@ -380,6 +380,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 8840)]
         [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 450)]
+        [TestCase(@"Hero-Equity-1.txt", EnumPokerSites.PokerStars, "Hero", 450)]
         public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             var expectedEVDiff = expected / 10000m;

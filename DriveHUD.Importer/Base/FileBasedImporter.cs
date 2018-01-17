@@ -222,22 +222,22 @@ namespace DriveHUD.Importers
 
                     if (modifiedCapturedFiles.Length > 0)
                     {
-                        lock (dbLocker)
+                        using (var session = ModelEntities.OpenSession())
                         {
-                            using (var session = ModelEntities.OpenSession())
+                            var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
+
+                            var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
+
+                            var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
+                                                             join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
+                                                                equals existingImportedFile.FileName into gj
+                                                             from existingImportedFile in gj.DefaultIfEmpty()
+                                                             select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
+
+                            lock (dbLocker)
                             {
                                 using (var transaction = session.BeginTransaction())
                                 {
-                                    var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
-
-                                    var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
-
-                                    var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
-                                                                     join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
-                                                                        equals existingImportedFile.FileName into gj
-                                                                     from existingImportedFile in gj.DefaultIfEmpty()
-                                                                     select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
-
                                     capturedFilesWithExisting.ForEach(x =>
                                     {
                                         if (x.ExistingImportedFile != null)
