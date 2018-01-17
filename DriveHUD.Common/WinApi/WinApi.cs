@@ -496,8 +496,9 @@ namespace DriveHUD.Common.WinApi
         public static extern bool UnhookWinEvent(IntPtr hWinEventHook);
 
         public const uint WINEVENT_OUTOFCONTEXT = 0;
-
+        public const uint EVENT_SYSTEM_MOVESIZEEND = 0x800B;
         public const uint EVENT_OBJECT_DESTROY = 0x8001;
+        public const uint EVENT_OBJECT_NAMECHANGE = 0x800C;
 
         public static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
         {
@@ -506,6 +507,13 @@ namespace DriveHUD.Common.WinApi
 
         [DllImport("user32.dll", SetLastError = true)]
         public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint processId);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool IsIconic(IntPtr hWnd);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
 
         #endregion
 

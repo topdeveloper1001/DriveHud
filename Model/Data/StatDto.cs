@@ -14,8 +14,7 @@ using ProtoBuf;
 
 namespace Model.Data
 {
-    [ProtoContract]
-    [ProtoInclude(4, typeof(HeatMapStatDto))]
+    [ProtoContract]    
     public class StatDto
     {
         public StatDto()

@@ -31,7 +31,7 @@ namespace Model
     /// </summary>
     public class PlayerStatisticCalculator : IPlayerStatisticCalculator
     {
-        public Playerstatistic CalculateStatistic(ParsingResult result, Players u)
+        public Playerstatistic CalculateStatistic(ParsingResult result, Players u, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             HandHistory parsedHand = result.Source;
             var player = u.Playername;
@@ -690,19 +690,52 @@ namespace Model
             stat.CalculateTotalPot();
 
             List<string> line = new List<string>();
+
             foreach (var streetLine in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
             {
                 line.Add(String.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
             }
+
             stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
 
             stat.Board = parsedHand.CommunityCards != null ? parsedHand.CommunityCards.ToString() : string.Empty;
             stat.Allin = Converter.ToAllin(parsedHand, stat);
             stat.Action = Converter.ToAction(stat);
-            stat.Equity = Converter.CalculateAllInEquity(parsedHand, stat);
             stat.Position = Converter.ToPosition(parsedHand, stat);
             stat.PositionString = Converter.ToPositionString(stat.Position);
             stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
+
+            HandAction lastHeroActionStreetAction;
+
+            if (Converter.CanAllInEquity(parsedHand, stat, out lastHeroActionStreetAction))
+            {
+                if (calculatedEquity != null && calculatedEquity.ContainsKey(player) && calculatedEquity[player].ContainsKey(lastHeroActionStreetAction.Street))
+                {
+                    stat.Equity = calculatedEquity[player][lastHeroActionStreetAction.Street];
+                }
+                else
+                {
+                    var equityByPlayer = Converter.CalculateAllInEquity(parsedHand, stat);
+
+                    stat.Equity = equityByPlayer != null && equityByPlayer.ContainsKey(player) ? equityByPlayer[player] : 0;
+
+                    if (equityByPlayer != null && calculatedEquity != null)
+                    {
+                        foreach (var equity in equityByPlayer)
+                        {
+                            if (!calculatedEquity.ContainsKey(equity.Key))
+                            {
+                                calculatedEquity.Add(equity.Key, new Dictionary<Street, decimal>());
+                            }
+
+                            if (!calculatedEquity[equity.Key].ContainsKey(lastHeroActionStreetAction.Street))
+                            {
+                                calculatedEquity[equity.Key].Add(lastHeroActionStreetAction.Street, equity.Value);
+                            }
+                        }
+                    }
+                }
+            }
 
             if (stat.Equity > 0)
             {

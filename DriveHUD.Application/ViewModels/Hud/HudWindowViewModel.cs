@@ -31,6 +31,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -39,9 +40,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         private ReaderWriterLockSlim readerWriterLock;
         private HudLayout layout;
         private Dictionary<HudToolKey, Point> panelOffsets;
+        private readonly Dispatcher dispatcher;
 
-        public HudWindowViewModel()
+        public HudWindowViewModel(Dispatcher dispatcher)
         {
+            this.dispatcher = dispatcher;
+
             readerWriterLock = new ReaderWriterLockSlim();
 
             NotificationRequest = new InteractionRequest<INotification>();
@@ -425,9 +429,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void RaiseNotification(string content, string title)
         {
-            App.Current.Dispatcher.Invoke(() =>
+            dispatcher.Invoke(() =>
             {
-                this.NotificationRequest.Raise(
+                NotificationRequest.Raise(
                         new PopupActionNotification
                         {
                             Content = content,

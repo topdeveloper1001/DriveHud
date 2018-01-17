@@ -333,15 +333,17 @@ namespace Model.Filters
 
         public void LoadFilter(IFilterModel filter)
         {
-            if (filter is FilterHandValueModel)
-            {
-                var filterToLoad = filter as FilterHandValueModel;
+            var filterToLoad = filter as FilterHandValueModel;
 
-                ResetFastFilterTo(filterToLoad.FastFilterCollection.ToList());
-                ResetFlopHandValuesTo(filterToLoad.FlopHandValuesCollection.ToList());
-                ResetTurnHandValuesTo(filterToLoad.TurnHandValuesCollection.ToList());
-                ResetRiverHandValuesTo(filterToLoad.RiverHandValuesCollection.ToList());
+            if (filterToLoad == null)
+            {
+                return;
             }
+
+            ResetFastFilterTo(filterToLoad.FastFilterCollection.ToList());
+            ResetFlopHandValuesTo(filterToLoad.FlopHandValuesCollection.ToList());
+            ResetTurnHandValuesTo(filterToLoad.TurnHandValuesCollection.ToList());
+            ResetRiverHandValuesTo(filterToLoad.RiverHandValuesCollection.ToList());
         }
 
         #endregion

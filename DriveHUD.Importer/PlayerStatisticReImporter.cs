@@ -16,6 +16,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using HandHistories.Objects.Cards;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
@@ -200,9 +201,11 @@ namespace DriveHUD.Importers
                         {
                             parsingResult.Players.ForEach(player =>
                             {
+                                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+
                                 if (player.PlayerId != 0)
                                 {
-                                    BuildPlayerStatistic(parsingResult, player);
+                                    BuildPlayerStatistic(parsingResult, player, calculatedEquity);
                                 }
                             });
                         }
@@ -278,11 +281,11 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="handHistory"></param>
         /// <param name="player"></param>
-        private void BuildPlayerStatistic(ParsingResult handHistory, Players player)
+        private void BuildPlayerStatistic(ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-            var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+            var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
 
             StorePlayerStatistic(statistic);
         }

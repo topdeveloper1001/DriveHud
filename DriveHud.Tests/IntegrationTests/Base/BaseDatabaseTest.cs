@@ -25,6 +25,7 @@ using Model;
 using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
+using Prism.Events;
 using System.Collections.Generic;
 using System.IO;
 
@@ -58,6 +59,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeFileImporterLogger(unityContainer);
             InitializeLicenseService(unityContainer);
             InitializeSessionService(unityContainer);
+            InitializeEventAggregator(unityContainer);
             InitializeResources();
         }
 
@@ -115,7 +117,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     }
                 }
             }
-        }      
+        }
 
         /// <summary>        
         /// Fills the database with the data from the specified hand history file
@@ -199,6 +201,13 @@ namespace DriveHud.Tests.IntegrationTests.Base
             userSession.IsMatch(Arg.Any<GameMatchInfo>()).Returns(true);
 
             sessionService.GetUserSession().Returns(userSession);
+        }
+
+        protected virtual void InitializeEventAggregator(UnityContainer unityContainer)
+        {
+            var eventAggregator = Substitute.For<IEventAggregator>();
+            eventAggregator.GetEvent<PlayersAddedEvent>().ReturnsForAnyArgs(new PlayersAddedEvent());
+            unityContainer.RegisterInstance(eventAggregator);
         }
 
         protected virtual void InitializeResources()

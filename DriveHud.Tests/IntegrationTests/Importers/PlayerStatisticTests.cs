@@ -372,12 +372,17 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [Test]
-        [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 8840)]
-        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 450)]
-        public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
-        {
-            var expectedEVDiff = expected / 10000m;
-            AssertThatStatIsCalculated(x => x.Equity, fileName, pokerSite, playerName, expectedEVDiff, 0.001);
+        [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.884)]
+        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.045)]        
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "deadman426", 0.23)]
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "tmacnich", 0.43)]
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "pitervper777", 0.33)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "ktm85888", 0.128)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "Griffindorgirl", 0.285)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "pistike88", 0.62)]
+        public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
+        {            
+            AssertThatStatIsCalculated(x => x.Equity, fileName, pokerSite, playerName, expected, 0.02);
         }
 
         [Test]

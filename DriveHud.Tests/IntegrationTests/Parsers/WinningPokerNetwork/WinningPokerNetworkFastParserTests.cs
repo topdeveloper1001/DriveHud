@@ -353,7 +353,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
             Assert.That(stat.PositionString, Is.EqualTo(position.ToString()));
         }
 
@@ -364,7 +364,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.BB));
         }
 
@@ -375,7 +375,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
         }
 

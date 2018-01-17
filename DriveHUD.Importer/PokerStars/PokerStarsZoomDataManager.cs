@@ -125,8 +125,7 @@ namespace DriveHUD.Importers.PokerStars
                     WindowHandle = catcherDataObject.Handle,
                     PokerSite = EnumPokerSites.PokerStars,
                     GameType = BovadaConverters.ConvertGameTypeFromTitle(catcherDataObject.Title),
-                    TableType = (EnumTableType)catcherDataObject.Size,
-                    AddedPlayers = new PlayerCollectionItem[0]
+                    TableType = (EnumTableType)catcherDataObject.Size                    
                 };
 
                 var players = new PlayerList(catcherDataObject.Players.Select(x =>

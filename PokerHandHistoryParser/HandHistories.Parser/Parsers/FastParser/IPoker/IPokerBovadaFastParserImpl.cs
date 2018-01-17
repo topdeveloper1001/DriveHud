@@ -74,7 +74,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             var orderedPlayersDictionary = orderedPlayers
                  .Select((x, index) => new { Index = index, PlayerName = x.PlayerName })
-                 .ToDictionary(x => x.PlayerName, x => x.Index);
+                 .GroupBy(x => x.PlayerName)
+                 .ToDictionary(x => x.Key, x => x.FirstOrDefault().Index);
 
             var orderedHandActions = new List<HandAction>();
 
