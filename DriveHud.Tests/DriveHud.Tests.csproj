@@ -261,10 +261,16 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Zone.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2017-12-26.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-07.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-14.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
@@ -407,7 +413,7 @@
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-07.log">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-09.log">
+    <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-14.log">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
