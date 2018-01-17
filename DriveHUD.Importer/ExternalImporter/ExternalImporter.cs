@@ -13,6 +13,9 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Utils.FastParsing;
 using Model;
@@ -149,7 +152,7 @@ namespace DriveHUD.Importers.ExternalImporter
                 return ExternalImporterUtils.IsTournamentTableMatch(title, parsingResult.Source.TableName);
             }
 
-            return title.Contains(parsingResult.Source.TableName);
+            return ExternalImporterUtils.IsCashTableMatch(title, parsingResult.Source.TableName);
         }
 
         /// <summary>
@@ -171,6 +174,36 @@ namespace DriveHUD.Importers.ExternalImporter
             {
                 LogProvider.Log.Error(this, $"Could close host service [{SiteString}]", e);
             }
+        }
+
+        private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
+        {
+            { 4, 3 },
+            { 6, 4 },
+            { 9, 6 }
+        };
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            if (heroSeat != 0 && autoCenterSeats.ContainsKey(maxPlayers))
+            {
+                var prefferedSeat = autoCenterSeats[maxPlayers];
+
+                var shift = (prefferedSeat - heroSeat) % maxPlayers;
+
+                foreach (var player in playerList)
+                {
+                    player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                }
+            }
+
+            return playerList;
         }
 
         protected override bool IsDisabled()

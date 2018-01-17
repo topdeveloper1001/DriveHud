@@ -12,8 +12,18 @@
     Opacity="{Binding Opacity}">
 
     <UserControl.Resources>
-        <ResourceDictionary
-            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudTiltMeterStyles.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/Resources.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/RadDropDownButtonTemplate.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudTiltMeterStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>
@@ -22,7 +32,7 @@
             Stretch="Fill">
 
             <Border
-                Grid.Row="0"                
+                Grid.Row="0"
                 Style="{StaticResource TopLeftBorderStyle}"
                 Padding="0">
                 <Border

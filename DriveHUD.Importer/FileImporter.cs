@@ -21,6 +21,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
@@ -33,6 +34,7 @@ using Model.Interfaces;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -55,11 +57,13 @@ namespace DriveHUD.Importers
 
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
+        private readonly IEventAggregator eventAggregator;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
 
         /// <summary>
@@ -428,6 +432,8 @@ namespace DriveHUD.Importers
 
                 gameInfo.ResetPlayersCacheInfo();
 
+                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
                     if (existingGameType.Istourney)
@@ -441,7 +447,7 @@ namespace DriveHUD.Importers
 
                     session.Update(existingPlayer);
 
-                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession);
+                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession, calculatedEquity);
 
                     if (playerStat != null)
                     {
@@ -564,13 +570,13 @@ namespace DriveHUD.Importers
         /// <param name="handHistory">Hand history</param>
         /// <param name="player">Player</param>
         /// <returns>Calculated player statistic</returns>
-        public Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session)
+        protected virtual Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             try
             {
                 var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
 
                 if (playerStat == null)
                 {
@@ -699,7 +705,10 @@ namespace DriveHUD.Importers
                 }).ToArray();
 
             dataService.AddPlayerRangeToList(playerItemCollection);
-            gameInfo.AddedPlayers = playerItemCollection;
+
+            // send added players to update UI
+            var playersAddedEventArgs = new PlayersAddedEventArgs(playerItemCollection);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Publish(playersAddedEventArgs);
 
             existingPlayers.AddRange(playersToAdd);
 

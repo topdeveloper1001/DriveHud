@@ -131,6 +131,7 @@
     <Compile Include="WinApi\ProcessAccesFlags.cs" />
     <Compile Include="WinApi\ProcessCreationFlags.cs" />
     <Compile Include="WinApi\ProcessInformation.cs" />
+    <Compile Include="WinApi\RectType.cs" />
     <Compile Include="WinApi\SecurityAttributes.cs" />
     <Compile Include="WinApi\SecurityDescriptor.cs" />
     <Compile Include="WinApi\StartupInfo.cs" />

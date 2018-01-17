@@ -153,7 +153,7 @@ namespace Model
         public static string GetSQLiteConnectionString()
         {
             var dbFile = GetSQLiteDbFilePath();
-            return $"Data Source={dbFile};Version=3;foreign keys=true;journal_mode=WAL;";
+            return $"Data Source={dbFile};Version=3;foreign keys=true;journal_mode=WAL;Pooling=true;";
         }
 
         #endregion

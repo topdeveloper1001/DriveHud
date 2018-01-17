@@ -1,0 +1,65 @@
+<session sessioncode="1234567891">
+	<general>
+		<client_version>17.9.6.2</client_version>
+		<uncalled_bet_enabled>true</uncalled_bet_enabled>
+		<mode>real</mode>
+		<gametype>Holdem NL £0.02/£0.04</gametype>
+		<tablename>Achenkirch, 817042612</tablename>
+		<tablecurrency>GBP</tablecurrency>
+		<duration>00:33:26</duration>
+		<gamecount>48</gamecount>
+		<startdate>2018-01-09 12:15:16</startdate>
+		<currency>GBP</currency>
+		<nickname>IPokerTest</nickname>
+		<bets>£5.51</bets>
+		<wins>£2.93</wins>
+		<chipsin>£3.96</chipsin>
+		<chipsout>£4.72</chipsout>
+		<statuspoints>0.00</statuspoints>
+		<awardpoints>0.00</awardpoints>
+		<ipoints>0.00</ipoints>
+	</general>
+	<game gamecode="1122334457">
+		<general>
+			<startdate>2018-01-09 12:34:04</startdate>
+			<players>
+				<player dealer="0" name="Ogri13" seat="1" chips="£10.26" bet="£0.02" win="£0" />
+				<player dealer="0" name="ABdeVilliers" seat="6" chips="£4" bet="£0.73" win="£0" />
+				<player dealer="0" name="NlSmetana" seat="8" chips="£5.34" bet="£0" win="£0" />
+				<player dealer="1" name="IPokerTest" seat="10" chips="£4.30" bet="£2.09" win="£1.39" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" sum="£0.02" cards="" player="Ogri13" type="1" />
+			<action no="2" sum="£0.04" cards="" player="ABdeVilliers" type="2" />
+		</round>
+		<round no="1">
+			<cards player="NlSmetana" type="Pocket">X X</cards>
+			<action no="3" sum="£0" cards="" player="NlSmetana" type="0" />
+			<cards player="IPokerTest" type="Pocket">D8 D10</cards>
+			<action no="4" sum="£0.12" cards="" player="IPokerTest" type="23" />
+			<cards player="Ogri13" type="Pocket">X X</cards>
+			<action no="5" sum="£0" cards="" player="Ogri13" type="0" />
+			<cards player="ABdeVilliers" type="Pocket">X X</cards>
+			<action no="6" sum="£0.08" cards="" player="ABdeVilliers" type="3" />
+		</round>
+		<round no="2">
+			<cards player="" type="Flop">HK S4 C7</cards>
+			<action no="7" sum="£0" cards="" player="ABdeVilliers" type="4" />
+			<action no="8" sum="£0.18" cards="" player="IPokerTest" type="5" />
+			<action no="9" sum="£0.18" cards="" player="ABdeVilliers" type="3" />
+		</round>
+		<round no="3">
+			<cards player="" type="Turn">C2</cards>
+			<action no="10" sum="£0" cards="" player="ABdeVilliers" type="4" />
+			<action no="11" sum="£0.43" cards="" player="IPokerTest" type="5" />
+			<action no="12" sum="£0.43" cards="" player="ABdeVilliers" type="3" />
+		</round>
+		<round no="4">
+			<cards player="" type="River">D6</cards>
+			<action no="13" sum="£0" cards="" player="ABdeVilliers" type="4" />
+			<action no="14" sum="£1.36" cards="" player="IPokerTest" type="5" />
+			<action no="15" sum="£0" cards="" player="ABdeVilliers" type="0" />
+		</round>
+	</game>
+</session>

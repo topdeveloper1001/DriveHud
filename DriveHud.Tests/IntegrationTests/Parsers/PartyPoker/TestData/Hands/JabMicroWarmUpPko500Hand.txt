@@ -1,0 +1,54 @@
+#Game No : 16847329734 
+***** Hand History for Game 16847329734 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:156119820 Level:10  Blinds-Antes(500/1K -125) - Wednesday, January 10, 18:03:16 GMT 2018
+Table Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15 (Real Money)
+Seat 8 is the button
+Total number of players : 8/8 
+Seat 2: KolchinTM ( 157,988 )
+Seat 6: SAMS5BET ( 59,808 )
+Seat 8: Skameikin888 ( 34,565 )
+Seat 7: Stalinski ( 46,270 )
+Seat 5: Turn_The_Nutz ( 74,435 )
+Seat 3: jimakos gr ( 28,990 )
+Seat 1: richf99 ( 28,990 )
+Seat 4: t  mand ( 54,059 )
+Trny:156119820 Level:10 
+Blinds-Antes(500/1,000 -125)
+richf99 posts ante [125]
+KolchinTM posts ante [125]
+jimakos gr posts ante [125]
+t  mand posts ante [125]
+Turn_The_Nutz posts ante [125]
+SAMS5BET posts ante [125]
+Stalinski posts ante [125]
+Skameikin888 posts ante [125]
+richf99 posts small blind [500].
+KolchinTM posts big blind [1,000].
+** Dealing down cards **
+Dealt to Stalinski [  Kd 9s ]
+jimakos gr calls [1,000]
+t  mand calls [1,000]
+Turn_The_Nutz folds
+SAMS5BET folds
+Stalinski folds
+Skameikin888 folds
+richf99 calls [500]
+KolchinTM checks
+** Dealing Flop ** [ 9d, 7c, 4s ]
+richf99 checks
+KolchinTM checks
+jimakos gr checks
+t  mand checks
+** Dealing Turn ** [ 2c ]
+richf99 checks
+KolchinTM bets [2,750]
+jimakos gr folds
+t  mand folds
+richf99 calls [2,750]
+** Dealing River ** [ 2d ]
+richf99 checks
+KolchinTM checks
+richf99 shows [ 8c, 4c ]two pairs, Fours and Twos.
+KolchinTM shows [ 9c, 3d ]two pairs, Nines and Twos.
+KolchinTM wins 10,500 chips from the main pot with two pairs, Nines and Twos.
+Game #16847334888 starts.

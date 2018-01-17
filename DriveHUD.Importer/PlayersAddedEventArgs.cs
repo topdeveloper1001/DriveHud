@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HeatMapStatDto.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="PlayersAddedEventArgs.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,13 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using ProtoBuf;
+using Model;
+using System;
 
-namespace Model.Data
+namespace DriveHUD.Importers
 {
-    public class HeatMapStatDto : StatDto
-    {          
-        [ProtoMember(4)]
-        public string CardRange { get; set; }
+    public class PlayersAddedEventArgs : EventArgs
+    {
+        public PlayersAddedEventArgs(PlayerCollectionItem[] addedPlayers)
+        {
+            AddedPlayers = addedPlayers;
+        }
+
+        public PlayerCollectionItem[] AddedPlayers { get; set; }
     }
 }

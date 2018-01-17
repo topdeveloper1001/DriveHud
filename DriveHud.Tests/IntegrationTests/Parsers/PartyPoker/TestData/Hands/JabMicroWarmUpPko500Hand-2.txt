@@ -1,0 +1,51 @@
+#Game No : 16847397339 
+***** Hand History for Game 16847397339 *****
+NL Texas Hold'em $1.10 USD Buy-in Trny:156119820 Level:12  Blinds-Antes(700/1.4K -175) - Wednesday, January 10, 18:18:55 GMT 2018
+Table Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8 
+Seat 2: KolchinTM ( 94,680 )
+Seat 8: MarieJuana23 ( 29,825 )
+Seat 6: SAMS5BET ( 138,341 )
+Seat 7: Stalinski ( 46,345 )
+Seat 5: Turn_The_Nutz ( 63,585 )
+Seat 3: jimakos gr ( 96,855 )
+Seat 4: t  mand ( 48,184 )
+Seat 1: vishoff68 ( 23,525 )
+Trny:156119820 Level:12 
+Blinds-Antes(700/1,400 -175)
+vishoff68 posts ante [175]
+KolchinTM posts ante [175]
+jimakos gr posts ante [175]
+t  mand posts ante [175]
+Turn_The_Nutz posts ante [175]
+SAMS5BET posts ante [175]
+Stalinski posts ante [175]
+MarieJuana23 posts ante [175]
+jimakos gr posts small blind [700].
+t  mand posts big blind [1,400].
+** Dealing down cards **
+Dealt to Stalinski [  4h 9d ]
+Turn_The_Nutz raises [3,080]
+SAMS5BET calls [3,080]
+Stalinski folds
+MarieJuana23 folds
+vishoff68 folds
+KolchinTM folds
+jimakos gr folds
+t  mand folds
+** Dealing Flop ** [ 8s, Td, 3c ]
+Turn_The_Nutz checks
+SAMS5BET bets [4,830]
+Turn_The_Nutz calls [4,830]
+** Dealing Turn ** [ 6s ]
+Turn_The_Nutz checks
+SAMS5BET bets [8,960]
+Turn_The_Nutz calls [8,960]
+** Dealing River ** [ 8d ]
+Turn_The_Nutz checks
+SAMS5BET bets [15,820]
+Turn_The_Nutz folds
+SAMS5BET does not show cards.
+SAMS5BET wins 53,060 chips
+Game #16847402450 starts.

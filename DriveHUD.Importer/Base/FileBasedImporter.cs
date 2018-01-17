@@ -37,6 +37,8 @@ namespace DriveHUD.Importers
 
         protected const int ReadingTimeout = 3000;
 
+        protected static readonly object dbLocker = new object();
+
         public FileBasedImporter()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
@@ -222,34 +224,37 @@ namespace DriveHUD.Importers
                     {
                         using (var session = ModelEntities.OpenSession())
                         {
-                            using (var transaction = session.BeginTransaction())
+                            var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
+
+                            var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
+
+                            var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
+                                                             join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
+                                                                equals existingImportedFile.FileName into gj
+                                                             from existingImportedFile in gj.DefaultIfEmpty()
+                                                             select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
+
+                            lock (dbLocker)
                             {
-                                var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
-
-                                var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
-
-                                var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
-                                                                 join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
-                                                                    equals existingImportedFile.FileName into gj
-                                                                 from existingImportedFile in gj.DefaultIfEmpty()
-                                                                 select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
-
-                                capturedFilesWithExisting.ForEach(x =>
+                                using (var transaction = session.BeginTransaction())
                                 {
-                                    if (x.ExistingImportedFile != null)
+                                    capturedFilesWithExisting.ForEach(x =>
                                     {
-                                        x.ExistingImportedFile.FileSize = x.CapturedFile.ImportedFile.FileSize;
-                                        x.ExistingImportedFile.LastWriteTime = x.CapturedFile.ImportedFile.LastWriteTime;
+                                        if (x.ExistingImportedFile != null)
+                                        {
+                                            x.ExistingImportedFile.FileSize = x.CapturedFile.ImportedFile.FileSize;
+                                            x.ExistingImportedFile.LastWriteTime = x.CapturedFile.ImportedFile.LastWriteTime;
 
-                                        x.CapturedFile.ImportedFile = x.ExistingImportedFile;
-                                    }
+                                            x.CapturedFile.ImportedFile = x.ExistingImportedFile;
+                                        }
 
-                                    session.Save(x.CapturedFile.ImportedFile);
+                                        session.Save(x.CapturedFile.ImportedFile);
 
-                                    x.CapturedFile.WasModified = false;
-                                });
+                                        x.CapturedFile.WasModified = false;
+                                    });
 
-                                transaction.Commit();
+                                    transaction.Commit();
+                                }
                             }
                         }
                     }
