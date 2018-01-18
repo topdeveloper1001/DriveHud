@@ -196,6 +196,8 @@
     <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />
     <Compile Include="IntegrationTests\Migrations\BaseLayoutsMigrationTest.cs" />
     <Compile Include="IntegrationTests\Migrations\LayoutMigratorTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBaseParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />

@@ -1,0 +1,49 @@
+<session sessioncode="0">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.25/$0.50</gametype>
+		<tablename>Zone Poker - Browns</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-12-20 10:31:31</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3543641210">
+		<general>
+			<startdate>2017-12-20 10:31:32</startdate>
+			<players>
+				<player seat="1" name="P1_904705EA" chips="23" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+				<player seat="2" name="P2_520308KT" chips="28.19" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="3" name="Hero" chips="49" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="P4_716061UH" chips="45.35" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="P5_873008TP" chips="33.01" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P6_559330IL" chips="67.5" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P1_904705EA" type="1" sum="0.25" cards="[cards]" />
+			<action no="2" player="P2_520308KT" type="2" sum="0.5" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_904705EA">X X</cards>
+			<cards type="Pocket" player="P2_520308KT">X X</cards>
+			<cards type="Pocket" player="Hero">D2 H5</cards>
+			<cards type="Pocket" player="P4_716061UH">X X</cards>
+			<cards type="Pocket" player="P5_873008TP">X X</cards>
+			<cards type="Pocket" player="P6_559330IL">X X</cards>
+			<action no="3" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

@@ -1,0 +1,50 @@
+<session sessioncode="0">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.25/$0.50</gametype>
+		<tablename>Zone Poker - Browns</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-11-27 15:19:45</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<win>0</win>
+		<totalbuyin>$0</totalbuyin>
+	</general>
+	<game gamecode="3533019676">
+		<general>
+			<startdate>2017-11-27 15:19:46</startdate>
+			<players>
+				<player seat="1" name="P1_985705GL" chips="49.25" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="2" name="P2_127068GC" chips="24.25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="3" name="Hero" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="P4_753926TU" chips="11.85" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="P5_530485GH" chips="51.74" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="P6_697505QX" chips="123.05" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P6_697505QX" type="1" sum="0.25" cards="[cards]" />
+			<action no="2" player="P1_985705GL" type="2" sum="0.5" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_985705GL">X X</cards>
+			<cards type="Pocket" player="P2_127068GC">X X</cards>
+			<cards type="Pocket" player="Hero">HQ S9</cards>
+			<cards type="Pocket" player="P4_753926TU">X X</cards>
+			<cards type="Pocket" player="P5_530485GH">X X</cards>
+			<cards type="Pocket" player="P6_697505QX">X X</cards>
+			<action no="3" player="P2_127068GC" type="0" sum="0" cards="" />
+			<action no="4" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

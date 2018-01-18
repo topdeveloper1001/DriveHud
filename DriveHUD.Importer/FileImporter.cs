@@ -49,6 +49,8 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class FileImporter : IFileImporter
     {
+        private const int PlayersPerQuery = 100;
+
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 
         private static readonly object locker = new object();
@@ -213,6 +215,8 @@ namespace DriveHUD.Importers
             {
                 var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
                 logger.Log(text);
+
+                Console.WriteLine(text);
 
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
@@ -677,16 +681,27 @@ namespace DriveHUD.Importers
 
             var playersGroupedByPokersite = playersToSelect.GroupBy(x => x.PokersiteId);
 
-            Disjunction restriction = Restrictions.Disjunction();
+            var existingPlayers = new List<Players>();
 
             foreach (var pokersiteGroup in playersGroupedByPokersite)
             {
-                restriction.Add(Restrictions.Conjunction()
-                     .Add(Restrictions.On<Players>(x => x.Playername).IsIn(pokersiteGroup.Select(x => x.Playername).ToList()))
-                     .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
-            }
+                var queriesCount = (int)Math.Ceiling((double)pokersiteGroup.Count() / PlayersPerQuery);
 
-            var existingPlayers = session.QueryOver<Players>().Where(restriction).List();
+                for (var i = 0; i < queriesCount; i++)
+                {
+                    var restriction = Restrictions.Disjunction();
+
+                    var playersToQuery = pokersiteGroup.Skip(i * PlayersPerQuery).Take(PlayersPerQuery).ToArray();
+
+                    restriction.Add(Restrictions.Conjunction()
+                         .Add(Restrictions.On<Players>(x => x.Playername).IsIn(playersToQuery.Select(x => x.Playername).ToList()))
+                         .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
+
+                    var players = session.QueryOver<Players>().Where(restriction).List();
+
+                    existingPlayers.AddRange(players);
+                }
+            }
 
             var playersToAdd = playersToSelect.Where(s => !existingPlayers.Any(e => s.Playername == e.Playername
                                                                                 && s.PokersiteId == e.PokersiteId));

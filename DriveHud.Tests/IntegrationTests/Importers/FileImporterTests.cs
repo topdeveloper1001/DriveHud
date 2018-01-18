@@ -266,6 +266,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-2-max-125460058.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-6-max-102233028.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-3-max-Windfall-101810121.xml", EnumPokerSites.BetOnline),
+            Tuple.Create(@"iPoker\NLH-Zone-many-players.xml", EnumPokerSites.Ignition),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)
