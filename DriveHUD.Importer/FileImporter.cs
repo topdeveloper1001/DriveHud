@@ -861,9 +861,13 @@ namespace DriveHUD.Importers
             var lastHandsByPlayer = (from player in handsByPlayer
                                      let lastHand = player.Hands.LastOrDefault()
                                      where lastHand != null && lastHand.IsLost
-                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name, InitialStackSize = lastHand.InitialStackSize }).ToArray();
+                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name, InitialStackSize = lastHand.InitialStackSize }).ToList();
 
-            var currentPosition = firstParsingResult.Players.Count;
+            var currentPosition = tournaments
+                .Where(x => x.Finishposition == 0 && (lastHandsByPlayer.Any(y => y.PlayerName == x.PlayerName) ||
+                   lastParsingResult.Source.Players.Any(y => y.PlayerName == x.PlayerName)))
+                .Select(x => x.Player.PlayerId)
+                .Count();
 
             var tournamentsByPlayer = tournaments.ToDictionary(x => x.PlayerName, x => x);
 

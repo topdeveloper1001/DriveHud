@@ -89,6 +89,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             // convert hand text to XML to be able to parse it string by string

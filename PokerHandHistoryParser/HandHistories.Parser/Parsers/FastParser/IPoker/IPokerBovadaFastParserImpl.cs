@@ -39,6 +39,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players)
         {
             try

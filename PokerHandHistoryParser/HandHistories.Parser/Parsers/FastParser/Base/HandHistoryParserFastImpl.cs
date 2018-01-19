@@ -303,6 +303,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                             {
                                 player.Win = playerActions.Where(x => x.IsWinningsAction).Sum(x => x.Amount);
                                 player.Bet = Math.Abs(playerActions.Where(x => x.Amount < 0).Sum(x => x.Amount));
+
+                                var uncalledBet = playerActions.Where(x => x.HandActionType == HandActionType.UNCALLED_BET).Sum(x => x.Amount);
+                                player.Bet -= uncalledBet;
                             }
                         }
 
@@ -521,7 +524,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public abstract bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled);
-     
+
         // We pass the game-type in as it can change the actions and parsing logic
         protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown);
 

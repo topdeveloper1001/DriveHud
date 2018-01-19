@@ -88,6 +88,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("910226258", "Peon384", 1)]
         [TestCase("125460058", "Justfold88", 1)]
         [TestCase("102233028", "Peon84", 1)]
+        [TestCase("8192538", "Granny_Annie", 2)]
+        [TestCase("918178286", "Peon384", 1)]
         public void TournamentsFinishPositionIsImported(string tournamentNumber, string playerName, int expectedFinishPosition)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsPlacesAreImported"))
@@ -118,6 +120,9 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("102233028", "Ironbark", 299)]
         [TestCase("101810121", "ace3d", 6000)]
         [TestCase("101810121", "Rjg4498", 0)]
+        [TestCase("918178286", "Peon384", 36)]
+        [TestCase("918178286", "anhanga", 21)]
+        [TestCase("918178286", "CVETANKA71", 14)]
         public void TournamentsWinIsImported(string tournamentNumber, string playerName, int winningInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsWinIsImported"))
@@ -260,6 +265,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         private Tuple<string, EnumPokerSites>[] TestCaseDataSet = new Tuple<string, EnumPokerSites>[]
         {
             Tuple.Create(@"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt", EnumPokerSites.Unknown),
+            Tuple.Create(@"WinningPokerNetwork\HH20180107 T8192538-G39795657.txt", EnumPokerSites.AmericasCardroom),
             Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-6-max-DON-6732774762.xml", EnumPokerSites.IPoker),
@@ -267,6 +273,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-6-max-102233028.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-3-max-Windfall-101810121.xml", EnumPokerSites.BetOnline),
             Tuple.Create(@"iPoker\NLH-Zone-many-players.xml", EnumPokerSites.Ignition),
+            Tuple.Create(@"iPoker\NLH-9-max-6780120497.xml", EnumPokerSites.IPoker),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)
