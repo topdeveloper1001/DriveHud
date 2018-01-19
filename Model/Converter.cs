@@ -368,66 +368,62 @@ namespace Model.Importer
 
             var allInEquity = new Dictionary<string, decimal>();
 
-            using (var pf = new PerformanceMonitor($"{nameof(CalculateAllInEquity)}:{stat.PlayerName}"))
+            try
             {
+                var gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
 
-                try
+                // holdem
+                var boardCards = CardHelper.IsStreetAvailable(hand.CommunityCards.ToString(), lastHeroStreetAction.Street)
+                      ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street)
+                      : hand.CommunityCards;
+
+                if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.HoleCards.Count <= 2))
                 {
-                    var gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
+                    var wins = new long[count];
+                    var losses = new long[count];
+                    var ties = new long[count];
+                    long totalhands = 0;
 
-                    // holdem
-                    var boardCards = CardHelper.IsStreetAvailable(hand.CommunityCards.ToString(), lastHeroStreetAction.Street)
-                          ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street)
-                          : hand.CommunityCards;
+                    Hand.HandWinOdds(cards.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
 
-                    if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.HoleCards.Count <= 2))
+                    if (totalhands != 0)
                     {
-                        var wins = new long[count];
-                        var losses = new long[count];
-                        var ties = new long[count];
-                        long totalhands = 0;
-
-                        Hand.HandWinOdds(cards.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
-
-                        if (totalhands != 0)
-                        {
-                            for (var i = 0; i < wins.Length; i++)
-                            {
-                                var playerCards = cards.FirstOrDefault(x => x.Index == i);
-
-                                if (playerCards != null && !allInEquity.ContainsKey(playerCards.PlayerName))
-                                {
-                                    var equity = (decimal)(wins[i] + ties[i] / 2.0) / totalhands;
-                                    allInEquity.Add(playerCards.PlayerName, equity);
-                                }
-                            }
-                        }
-                    }
-                    else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && cards.All(x => x.HoleCards.Count >= 2 && x.HoleCards.Count < 5))
-                    {
-                        var calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
-
-                        var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.HoleCards.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
-
-                        for (var i = 0; i < eq.Length; i++)
+                        for (var i = 0; i < wins.Length; i++)
                         {
                             var playerCards = cards.FirstOrDefault(x => x.Index == i);
 
                             if (playerCards != null && !allInEquity.ContainsKey(playerCards.PlayerName))
                             {
-                                var equity = (decimal)eq[i].TotalEq / 100;
+                                var equity = (decimal)(wins[i] + ties[i] / 2.0) / totalhands;
                                 allInEquity.Add(playerCards.PlayerName, equity);
                             }
                         }
                     }
                 }
-                catch (Exception ex)
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && cards.All(x => x.HoleCards.Count >= 2 && x.HoleCards.Count < 5))
                 {
-                    LogProvider.Log.Error(ex);
-                }
+                    var calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
 
-                return allInEquity;
+                    var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.HoleCards.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
+
+                    for (var i = 0; i < eq.Length; i++)
+                    {
+                        var playerCards = cards.FirstOrDefault(x => x.Index == i);
+
+                        if (playerCards != null && !allInEquity.ContainsKey(playerCards.PlayerName))
+                        {
+                            var equity = (decimal)eq[i].TotalEq / 100;
+                            allInEquity.Add(playerCards.PlayerName, equity);
+                        }
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(ex);
+            }
+
+            return allInEquity;
         }
 
         public static string ActionToString(HandActionType type)
