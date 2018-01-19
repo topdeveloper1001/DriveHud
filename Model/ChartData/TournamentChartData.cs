@@ -42,26 +42,34 @@ namespace Model.ChartData
                 .OrderBy(x => x.Firsthandtimestamp)
                 .GroupBy(x => BuildGroupedDateKey(x));
 
+            TournamentReportRecord previousRecord = null;
+
             foreach (var group in groupedTournaments)
             {
-                var stat = new TournamentReportRecord();
+                var reportRecord = new TournamentReportRecord();
 
-                stat.Started = CreateDateTimeFromDateKey(group.Key);
+                reportRecord.Started = CreateDateTimeFromDateKey(group.Key);
+                reportRecord.SetTotalBuyIn(group.Sum(x => x.Buyinincents));
+                reportRecord.SetRake(group.Sum(x => x.Rakeincents));
+                reportRecord.SetRebuy(group.Sum(x => x.Rebuyamountincents));
+                reportRecord.SetWinning(group.Sum(x => x.Winningsincents));
 
-                var tournamentStats = tournaments
-                    .Where(t => t.Firsthandtimestamp >= firstDate
-                        && (t.Firsthandtimestamp <= stat.Started || group.Any(g => g.Tourneynumber == t.Tourneynumber))).
-                    ToArray();
+                reportRecord.TournamentsInPrizes = group.Where(x => x.Winningsincents > 0).Count();
+                reportRecord.TournamentsPlayed = group.Count();
 
-                stat.SetTotalBuyIn(tournamentStats.Sum(x => x.Buyinincents));
-                stat.SetRake(tournamentStats.Sum(x => x.Rakeincents));
-                stat.SetRebuy(tournamentStats.Sum(x => x.Rebuyamountincents));
-                stat.SetWinning(tournamentStats.Sum(x => x.Winningsincents));
+                if (previousRecord != null)
+                {
+                    reportRecord.TotalBuyIn += previousRecord.TotalBuyIn;
+                    reportRecord.Rake += previousRecord.Rake;
+                    reportRecord.Rebuy += previousRecord.Rebuy;
+                    reportRecord.Won += previousRecord.Won;
+                    reportRecord.TournamentsInPrizes += previousRecord.TournamentsInPrizes;
+                    reportRecord.TournamentsPlayed += previousRecord.TournamentsPlayed;
+                }
 
-                stat.TournamentsInPrizes = tournamentStats.Where(x => x.Winningsincents > 0).Count();
-                stat.TournamentsPlayed = tournamentStats.Length;
+                report.Add(reportRecord);
 
-                report.Add(stat);
+                previousRecord = reportRecord;
             }
 
             return report;
