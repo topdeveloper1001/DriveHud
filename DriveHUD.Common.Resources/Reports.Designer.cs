@@ -673,6 +673,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet in 3-Bet pot%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delayed Turn C-bet IP%.
         /// </summary>
         internal static string Reports_Column_DelayedTurnCBetIP {
@@ -885,6 +894,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToDoubleBarrel {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrell in 3-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrelIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrelIn3BetPot", resourceCulture);
             }
         }
         

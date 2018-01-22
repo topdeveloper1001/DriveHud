@@ -1,0 +1,40 @@
+PokerStars Game #47153154478:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:16:27 ET
+Table 'Palma V' 6-max Seat #4 is the button
+Seat 1: DURKADURDUR ($232.25 in chips) 
+Seat 2: Bosas2 ($200 in chips) 
+Seat 3: Sjonie ($292 in chips) 
+Seat 4: gebek8923 ($192 in chips) 
+Seat 5: N_Rimer ($202 in chips) 
+Seat 6: LiraMaker ($67.35 in chips) 
+N_Rimer: posts small blind $1
+LiraMaker: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+Bosas2: folds 
+Sjonie: folds 
+gebek8923: folds 
+N_Rimer: folds 
+LiraMaker: calls $4
+*** FLOP *** [6d 2c 4s]
+LiraMaker: checks 
+DURKADURDUR: checks 
+*** TURN *** [6d 2c 4s] [Th]
+LiraMaker: checks 
+DURKADURDUR: checks 
+*** RIVER *** [6d 2c 4s Th] [8c]
+LiraMaker: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+LiraMaker: shows [Qd Kd] (high card King)
+DURKADURDUR: shows [Ah Qs] (high card Ace)
+DURKADURDUR collected $12.35 from pot
+*** SUMMARY ***
+Total pot $13 | Rake $0.65 
+Board [6d 2c 4s Th 8c]
+Seat 1: DURKADURDUR showed [Ah Qs] and won ($12.35) with high card Ace
+Seat 2: Bosas2 folded before Flop (didn't bet)
+Seat 3: Sjonie folded before Flop (didn't bet)
+Seat 4: gebek8923 (button) folded before Flop (didn't bet)
+Seat 5: N_Rimer (small blind) folded before Flop
+Seat 6: LiraMaker (big blind) showed [Qd Kd] and lost with high card King
+

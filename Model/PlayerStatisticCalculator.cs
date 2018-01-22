@@ -618,6 +618,9 @@ namespace Model
 
             stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && couldBetOnTurn ? 1 : 0;
 
+            stat.DidDelayedTurnCBetIn3BetPot = pfr && flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
+            stat.CouldDelayedTurnCBetIn3BetPot = pfr && flopCBet.Possible && !flopCBet.Made && couldBetOnTurn ? 1 : 0;
+
             stat.PlayedFloatFlop = isFloatFlop ? 1 : 0;
 
             stat.CouldRaiseFlop = flopRaise.Possible ? 1 : 0;

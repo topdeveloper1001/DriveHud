@@ -188,6 +188,8 @@ namespace Model.Enums
         WTSDAfterCallingPfr,
         WTSDAfterNotCBettingFlopAsPfr,
         WTSDAfterSeeingTurn,
-        WTSDAsPF3Bettor
+        WTSDAsPF3Bettor,
+        DelayedTurnCBetIn3BetPot,
+        FoldToDoubleBarrelIn3BetPot
     }
 }

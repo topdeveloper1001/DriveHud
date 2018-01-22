@@ -917,6 +917,12 @@ namespace DriveHUD.Entities
         [ProtoMember(330)]
         public virtual decimal TurnBetToPotRatio { get; set; }
 
+        [ProtoMember(331)]
+        public virtual int DidDelayedTurnCBetIn3BetPot { get; set; }
+
+        [ProtoMember(332)]
+        public virtual int CouldDelayedTurnCBetIn3BetPot { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1111,6 +1117,22 @@ namespace DriveHUD.Entities
             get
             {
                 return FlopBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        public virtual int FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return Foldedtoturncontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int FacedToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return Facingflopcontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
             }
         }
 
@@ -1747,6 +1769,8 @@ namespace DriveHUD.Entities
 
             DidDelayedTurnCBet += a.DidDelayedTurnCBet;
             CouldDelayedTurnCBet += a.CouldDelayedTurnCBet;
+            DidDelayedTurnCBetIn3BetPot += a.DidDelayedTurnCBetIn3BetPot;
+            CouldDelayedTurnCBetIn3BetPot += a.CouldDelayedTurnCBetIn3BetPot;
 
             DidDonkBet += a.DidDonkBet;
             CouldDonkBet += a.CouldDonkBet;
@@ -2148,6 +2172,9 @@ namespace DriveHUD.Entities
 
             r.DidDelayedTurnCBet = a.DidDelayedTurnCBet + b.DidDelayedTurnCBet;
             r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
+            r.DidDelayedTurnCBetIn3BetPot = a.DidDelayedTurnCBetIn3BetPot + b.DidDelayedTurnCBetIn3BetPot;
+            r.CouldDelayedTurnCBetIn3BetPot = a.CouldDelayedTurnCBetIn3BetPot + b.CouldDelayedTurnCBetIn3BetPot;
+
             r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
             r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
 

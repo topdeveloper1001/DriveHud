@@ -415,6 +415,18 @@ namespace Model.Data
             }
         }
 
+        protected int foldToTurnCBetIn3BetPot;
+
+        protected int facedToTurnCBetIn3BetPot;
+
+        public override decimal FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(foldToTurnCBetIn3BetPot, facedToTurnCBetIn3BetPot);
+            }
+        }
+
         protected int didFlopBet;
 
         protected int didTurnBet;
@@ -679,6 +691,9 @@ namespace Model.Data
             wtsdAfterSeeingTurn += statistic.WTSDAfterSeeingTurn;
             wtsdAsPF3Bettor += statistic.WTSDAsPF3Bettor;
             wtsdAsPF3BettorOpportunity += statistic.WTSDAsPF3BettorOpportunity;
+
+            foldToTurnCBetIn3BetPot += statistic.FoldToTurnCBetIn3BetPot;
+            facedToTurnCBetIn3BetPot += statistic.FacedToTurnCBetIn3BetPot;
         }
 
         public override void Clean()
@@ -725,6 +740,9 @@ namespace Model.Data
             wtsdAfterSeeingTurn = 0;
             wtsdAsPF3Bettor = 0;
             wtsdAsPF3BettorOpportunity = 0;
+
+            foldToTurnCBetIn3BetPot = 0;
+            facedToTurnCBetIn3BetPot = 0;
         }
 
         #endregion

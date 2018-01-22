@@ -329,6 +329,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_DelayedCBet", nameof(Indicators.DidDelayedTurnCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_DelayedTurnCBetIP", nameof(Indicators.DelayedTurnCBetIP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_DelayedTurnCBetOOP", nameof(Indicators.DelayedTurnCBetOOP), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_DelayedTurnCBetIn3BetPot", nameof(Indicators.DelayedTurnCBetIn3BetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_DonkBet", nameof(Indicators.DonkBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_DoubleBarrel", nameof(Indicators.TurnCBet), ColumnType.Percentile),
             // E
@@ -347,6 +348,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo4Bet", nameof(Indicators.FoldToFourBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldCBet", nameof(Indicators.FoldCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToDoubleBarrel", nameof(Indicators.FoldToTurnCBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FoldToDoubleBarrelIn3BetPot", nameof(Indicators.FoldToTurnCBetIn3BetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToCBet3BetPot", nameof(Indicators.FoldFlopCBetFromThreeBetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToCBet4BetPot", nameof(Indicators.FoldFlopCBetFromFourBetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToFlopCheckRaise", nameof(Indicators.FoldToFlopCheckRaise), ColumnType.Percentile),

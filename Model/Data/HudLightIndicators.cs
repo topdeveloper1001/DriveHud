@@ -788,6 +788,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto DelayedTurnCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetIn3BetPot,
+                    Occurred = Source.DidDelayedTurnCBetIn3BetPot,
+                    CouldOccurred = Source.CouldDelayedTurnCBetIn3BetPot
+                };
+            }
+        }
+
         public virtual StatDto BTNDefendCORaiseObject
         {
             get
@@ -953,6 +966,19 @@ namespace Model.Data
                     Value = CheckRaisedFlopCBet,
                     Occurred = checkRaisedFlopCBet,
                     CouldOccurred = couldCheckRaiseFlopCBet
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCBetIn3BetPot,
+                    Occurred = foldToTurnCBetIn3BetPot,
+                    CouldOccurred = facedToTurnCBetIn3BetPot
                 };
             }
         }

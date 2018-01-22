@@ -678,6 +678,9 @@
   <data name="Reports_Column_TurnBetSizeTwoThirdsOrLess" xml:space="preserve">
     <value>Turn Bet Size 2/3 or less%</value>
   </data>
+  <data name="Reports_Column_DelayedTurnCBetIn3BetPot" xml:space="preserve">
+    <value>Delayed Turn C-Bet in 3-Bet pot%</value>
+  </data>
   <data name="Reports_Column_WTSDAfterCalling3Bet" xml:space="preserve">
     <value>WTSD% after calling 3-Bet PF%</value>
   </data>

@@ -745,6 +745,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal DelayedTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Source.DidDelayedTurnCBetIn3BetPot, Source.CouldDelayedTurnCBetIn3BetPot);
+            }
+        }
+
         public virtual decimal MRatio
         {
             get
@@ -1348,6 +1356,14 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Statistics.Sum(x => x.CheckRaisedFlopCBet), Statistics.Sum(x => x.CouldCheckRaiseFlopCBet));
+            }
+        }
+
+        public virtual decimal FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FoldToTurnCBetIn3BetPot), Statistics.Sum(x => x.FacedToTurnCBetIn3BetPot));
             }
         }
 
