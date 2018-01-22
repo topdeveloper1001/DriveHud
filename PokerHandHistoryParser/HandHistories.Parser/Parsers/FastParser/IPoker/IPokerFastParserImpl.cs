@@ -89,6 +89,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             // convert hand text to XML to be able to parse it string by string
@@ -955,7 +963,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
                 Player player = playerList.First(p => p.PlayerName.Equals(playerName));
 
-
                 int playerCardsStartIndex = handLine.IndexOf(">", StringComparison.OrdinalIgnoreCase) + 1;
                 int playerCardsEndIndex = handLine.Length - 9;
 
@@ -967,6 +974,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 if (cards.Length > 1)
                 {
                     player.HoleCards = HoleCards.NoHolecards(player.PlayerName);
+
                     foreach (string card in cards)
                     {
                         //Suit and rank are reversed in these strings, so we flip them around before adding

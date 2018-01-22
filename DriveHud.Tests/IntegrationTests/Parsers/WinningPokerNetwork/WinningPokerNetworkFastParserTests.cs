@@ -275,6 +275,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain1", -10, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain2", -20, HandActionType.BIG_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithBets.txt", "Villain9", -300, HandActionType.BET, Street.Turn, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-AllIn-UncalledBet.txt", "Granny_Annie", 2696, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -301,14 +302,16 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
         }
 
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5")]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-HeroLost.txt", "Peon_84")]
-        public void PlayerIsLostTest(string handHistoryFile, string playerName)
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain5", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-HeroLost.txt", "Peon_84", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-HeroLost.txt", "Peon_84", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-AllIn-UncalledBet.txt", "Granny_Annie", false)]
+        public void PlayerIsLostTest(string handHistoryFile, string playerName, bool expected)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             var player = handHistory.Players.FirstOrDefault(x => x.PlayerName == playerName);
 
-            Assert.IsTrue(player.IsLost);
+            Assert.That(player.IsLost, Is.EqualTo(expected));
         }
 
         [Test]

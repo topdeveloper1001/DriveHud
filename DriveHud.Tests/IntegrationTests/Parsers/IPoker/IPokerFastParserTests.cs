@@ -14,11 +14,8 @@ using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Hand;
+using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
-using Microsoft.Practices.Prism.PubSubEvents;
-using Microsoft.Practices.ServiceLocation;
-using Microsoft.Practices.Unity;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -31,16 +28,8 @@ using System.Threading;
 namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 {
     [TestFixture]
-    public class IPokerFastParserTests
+    class IPokerFastParserTests : IPokerBaseTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData";
-
-        [OneTimeSetUp]
-        public void Initialize()
-        {
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
-        }
-
         [Test]
         [TestCase("en-US")]
         [TestCase("hu-HU")]
@@ -381,28 +370,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
             Assert.That(winAction.Amount, Is.EqualTo(amount), $"WIN amount doesn't match expected for {playerName}");
         }
 
-        private HandHistory ParseHandHistory(string handHistoryFile)
+        protected override IHandHistoryParser CreateParser()
         {
-            var parser = new IPokerFastParserImpl();
-
-            var handHistoryText = File.ReadAllText(handHistoryFile);
-
-            var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
-
-            var hand = hands.Single();
-
-            var handHistory = parser.ParseFullHandHistory(hand, true);
-
-            return handHistory;
-        }
-
-        private void ConfigureContainer()
-        {
-            var unityContainer = new UnityContainer();
-            unityContainer.RegisterType<IEventAggregator, EventAggregator>();
-
-            var locator = new UnityServiceLocator(unityContainer);
-            ServiceLocator.SetLocatorProvider(() => locator);
+            return new IPokerFastParserImpl();
         }
     }
 }

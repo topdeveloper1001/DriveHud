@@ -873,11 +873,12 @@ namespace DriveHUD.Application.ViewModels
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
                 UpdateCurrentView();
+                CreatePositionReport();
             });
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
-            ProgressViewModel.Reset();
+            ProgressViewModel.Reset();       
         }
 
         private async void ImportFromDirectory()
@@ -910,6 +911,7 @@ namespace DriveHUD.Application.ViewModels
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
                 UpdateCurrentView();
+                CreatePositionReport();
             });
 
             ProgressViewModel.IsActive = false;
@@ -944,7 +946,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void CreatePositionReport()
         {
-            ReportGadgetViewModel.UpdateReport();
+            ReportGadgetViewModel?.UpdateReport();
         }
 
         private void SwitchViewModel(EnumViewModelType viewModelType)
