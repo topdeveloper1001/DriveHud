@@ -678,4 +678,19 @@
   <data name="Reports_Column_TurnBetSizeTwoThirdsOrLess" xml:space="preserve">
     <value>Turn Bet Size 2/3 or less%</value>
   </data>
+  <data name="Reports_Column_WTSDAfterCalling3Bet" xml:space="preserve">
+    <value>WTSD% after calling 3-Bet PF%</value>
+  </data>
+  <data name="Reports_Column_WTSDAfterCallingPfr" xml:space="preserve">
+    <value>WTSD% after calling PFR%</value>
+  </data>
+  <data name="Reports_Column_WTSDAfterNotCBettingFlopAsPfr" xml:space="preserve">
+    <value>WTSD% after not C-Betting flop as PFR%</value>
+  </data>
+  <data name="Reports_Column_WTSDAfterSeeingTurn" xml:space="preserve">
+    <value>WTSD% after seeing Turn%</value>
+  </data>
+  <data name="Reports_Column_WTSDAsPF3Bettor" xml:space="preserve">
+    <value>WTSD% as PF 3-Bettor%</value>
+  </data>
 </root>

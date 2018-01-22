@@ -557,6 +557,68 @@ namespace Model.Data
 
         #endregion
 
+        #region WTSD After stats
+
+        protected int wtsdAfterCalling3Bet;
+
+        protected int wtsdAfterCalling3BetOpportunity;
+
+        public override decimal WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterCalling3Bet, wtsdAfterCalling3BetOpportunity);
+            }
+        }
+
+        protected int wtsdAfterCallingPfr;
+
+        protected int wtsdAfterCallingPfrOpportunity;
+
+        public override decimal WTSDAfterCallingPfr
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterCallingPfr, wtsdAfterCallingPfrOpportunity);
+            }
+        }
+
+        protected int wtsdAfterNotCBettingFlopAsPfr;
+
+        protected int wtsdAfterNotCBettingFlopAsPfrOpportunity;
+
+        public override decimal WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterNotCBettingFlopAsPfr, wtsdAfterNotCBettingFlopAsPfrOpportunity);
+            }
+        }
+
+        protected int wtsdAfterSeeingTurn;
+
+        public override decimal WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterSeeingTurn, Source.SawTurn);
+            }
+        }
+
+        protected int wtsdAsPF3Bettor;
+
+        protected int wtsdAsPF3BettorOpportunity;
+
+        public override decimal WTSDAsPF3Bettor
+        {
+            get
+            {
+                return GetPercentage(wtsdAsPF3Bettor, wtsdAsPF3BettorOpportunity);
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #endregion
@@ -607,6 +669,16 @@ namespace Model.Data
             turnBetSizeTwoThirdsOrLess += statistic.TurnBetSizeTwoThirdsOrLess;
             turnBetSizeThreeQuartersOrLess += statistic.TurnBetSizeThreeQuartersOrLess;
             turnBetSizeOneOrLess += statistic.TurnBetSizeOneOrLess;
+
+            wtsdAfterCalling3Bet += statistic.WTSDAfterCalling3Bet;
+            wtsdAfterCalling3BetOpportunity += statistic.WTSDAfterCalling3BetOpportunity;
+            wtsdAfterCallingPfr += statistic.WTSDAfterCallingPfr;
+            wtsdAfterCallingPfrOpportunity += statistic.WTSDAfterCallingPfrOpportunity;
+            wtsdAfterNotCBettingFlopAsPfr += statistic.WTSDAfterNotCBettingFlopAsPfr;
+            wtsdAfterNotCBettingFlopAsPfrOpportunity += statistic.WTSDAfterNotCBettingFlopAsPfrOpportunity;
+            wtsdAfterSeeingTurn += statistic.WTSDAfterSeeingTurn;
+            wtsdAsPF3Bettor += statistic.WTSDAsPF3Bettor;
+            wtsdAsPF3BettorOpportunity += statistic.WTSDAsPF3BettorOpportunity;
         }
 
         public override void Clean()
@@ -643,6 +715,16 @@ namespace Model.Data
             turnBetSizeTwoThirdsOrLess = 0;
             turnBetSizeThreeQuartersOrLess = 0;
             turnBetSizeOneOrLess = 0;
+
+            wtsdAfterCalling3Bet = 0;
+            wtsdAfterCalling3BetOpportunity = 0;
+            wtsdAfterCallingPfr = 0;
+            wtsdAfterCallingPfrOpportunity = 0;
+            wtsdAfterNotCBettingFlopAsPfr = 0;
+            wtsdAfterNotCBettingFlopAsPfrOpportunity = 0;
+            wtsdAfterSeeingTurn = 0;
+            wtsdAsPF3Bettor = 0;
+            wtsdAsPF3BettorOpportunity = 0;
         }
 
         #endregion

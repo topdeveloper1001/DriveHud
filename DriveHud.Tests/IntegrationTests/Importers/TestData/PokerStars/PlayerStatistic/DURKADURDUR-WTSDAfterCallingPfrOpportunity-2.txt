@@ -1,0 +1,38 @@
+PokerStars Game #47180328975:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 20:54:43 ET
+Table 'Thoas' 6-max Seat #6 is the button
+Seat 1: HeidiKlummm ($210 in chips) 
+Seat 2: DURKADURDUR ($200 in chips) 
+Seat 3: rivichico ($486.50 in chips) 
+Seat 4: skipper8922 ($314 in chips) 
+Seat 5: Nehekus ($1275.75 in chips) 
+Seat 6: P1ngPoNgPr0 ($618.80 in chips) 
+HeidiKlummm: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+rivichico: folds 
+skipper8922: folds 
+Nehekus: folds 
+P1ngPoNgPr0: raises $4 to $6
+HeidiKlummm: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [Tc 7d 7s]
+DURKADURDUR: checks 
+P1ngPoNgPr0: bets $8
+DURKADURDUR: raises $16 to $24
+P1ngPoNgPr0: calls $16
+*** TURN *** [Tc 7d 7s] [3c]
+DURKADURDUR: bets $42
+P1ngPoNgPr0: folds 
+Uncalled bet ($42) returned to DURKADURDUR
+DURKADURDUR collected $58 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $61 | Rake $3 
+Board [Tc 7d 7s 3c]
+Seat 1: HeidiKlummm (small blind) folded before Flop
+Seat 2: DURKADURDUR (big blind) collected ($58)
+Seat 3: rivichico folded before Flop (didn't bet)
+Seat 4: skipper8922 folded before Flop (didn't bet)
+Seat 5: Nehekus folded before Flop (didn't bet)
+Seat 6: P1ngPoNgPr0 (button) folded on the Turn
+

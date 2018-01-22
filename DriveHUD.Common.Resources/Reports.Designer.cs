@@ -1742,5 +1742,50 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Reports_Column_WTSD", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling 3-Bet PF%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterCalling3Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterCalling3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling PFR%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterCallingPfr {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterCallingPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after not C-Betting flop as PFR%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterNotCBettingFlopAsPfr {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterNotCBettingFlopAsPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after seeing Turn%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterSeeingTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterSeeingTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% as PF 3-Bettor%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAsPF3Bettor {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAsPF3Bettor", resourceCulture);
+            }
+        }
     }
 }

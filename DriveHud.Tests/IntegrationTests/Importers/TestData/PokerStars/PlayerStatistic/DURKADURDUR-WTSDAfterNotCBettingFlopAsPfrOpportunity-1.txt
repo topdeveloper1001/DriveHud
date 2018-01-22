@@ -1,0 +1,43 @@
+PokerStars Game #47153942677:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:43:19 ET
+Table 'Istria II' 6-max Seat #3 is the button
+Seat 1: stopme10 ($200 in chips) 
+Seat 2: mad.afurable ($473.80 in chips) 
+Seat 3: DURKADURDUR ($206.35 in chips) 
+Seat 4: fakker11 ($200 in chips) 
+Seat 5: ramones099 ($182.95 in chips) 
+Seat 6: Bosas2 ($698.25 in chips) 
+fakker11: posts small blind $1
+ramones099: posts big blind $2
+*** HOLE CARDS ***
+Bosas2: raises $4 to $6
+stopme10: folds 
+mad.afurable: calls $6
+DURKADURDUR: raises $4 to $10
+fakker11: calls $9
+ramones099: folds 
+Bosas2: calls $4
+mad.afurable: calls $4
+*** FLOP *** [Qs 2c Th]
+fakker11: checks 
+Bosas2: checks 
+mad.afurable: checks 
+DURKADURDUR: checks 
+*** TURN *** [Qs 2c Th] [Ac]
+fakker11: checks 
+Bosas2: bets $28
+mad.afurable: folds 
+DURKADURDUR: folds 
+fakker11: folds 
+Uncalled bet ($28) returned to Bosas2
+Bosas2 collected $39.90 from pot
+Bosas2: doesn't show hand 
+*** SUMMARY ***
+Total pot $42 | Rake $2.10 
+Board [Qs 2c Th Ac]
+Seat 1: stopme10 folded before Flop (didn't bet)
+Seat 2: mad.afurable folded on the Turn
+Seat 3: DURKADURDUR (button) folded on the Turn
+Seat 4: fakker11 (small blind) folded on the Turn
+Seat 5: ramones099 (big blind) folded before Flop
+Seat 6: Bosas2 collected ($39.90)
+

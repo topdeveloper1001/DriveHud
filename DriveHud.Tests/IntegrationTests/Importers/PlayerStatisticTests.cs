@@ -386,7 +386,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "Griffindorgirl", 0.285)]
         [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "pistike88", 0.62)]
         public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
-        {            
+        {
             AssertThatStatIsCalculated(x => x.Equity, fileName, pokerSite, playerName, expected, 0.03);
         }
 
@@ -883,6 +883,83 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void DidTurnBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.DidTurnBet, fileName, pokerSite, playerName, expected);
+        }
+
+        #endregion
+
+        #region WTSD after stats
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3Bet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3BetOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3BetOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void WTSDAfterCalling3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterCalling3Bet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3BetOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCalling3BetOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void WTSDAfterCalling3BetOpportunityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterCalling3BetOpportunity, fileName, pokerSite, playerName, expected);
+        }
+
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfr-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfrOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfrOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void WTSDAfterCallingPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterCallingPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfrOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterCallingPfrOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void WTSDAfterCallingPfrOpportunityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterCallingPfrOpportunity, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfr-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfr-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfrOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfrOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void WTSDAfterNotCBettingFlopAsPfrIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterNotCBettingFlopAsPfr, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfrOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAfterNotCBettingFlopAsPfrOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void WTSDAfterNotCBettingFlopAsPfrOpportunityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAfterNotCBettingFlopAsPfrOpportunity, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3Bettor-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3Bettor-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3BettorOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3BettorOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void WTSDAsPF3BettorIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAsPF3Bettor, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3BettorOpportunity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-WTSDAsPF3BettorOpportunity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void WTSDAsPF3BettorOpportunityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.WTSDAsPF3BettorOpportunity, fileName, pokerSite, playerName, expected);
         }
 
         #endregion

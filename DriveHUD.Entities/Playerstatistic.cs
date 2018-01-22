@@ -1176,6 +1176,82 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region WTSD after stats
+
+        public virtual int WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return Calledthreebetpreflop == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCalling3BetOpportunity
+        {
+            get
+            {
+                return Calledthreebetpreflop == 1 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCallingPfr
+        {
+            get
+            {
+                return Couldthreebet == 1 && Didthreebet == 0 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCallingPfrOpportunity
+        {
+            get
+            {
+                return Couldthreebet == 1 && Didthreebet == 0 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return Pfrhands == 1 && Flopcontinuationbetpossible == 1 && Flopcontinuationbetmade == 0 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterNotCBettingFlopAsPfrOpportunity
+        {
+            get
+            {
+                return Pfrhands == 1 && Flopcontinuationbetpossible == 1 && Flopcontinuationbetmade == 0 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return SawTurn == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAsPF3Bettor
+        {
+            get
+            {
+                return Didthreebet == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAsPF3BettorOpportunity
+        {
+            get
+            {
+                return Didthreebet == 1 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)

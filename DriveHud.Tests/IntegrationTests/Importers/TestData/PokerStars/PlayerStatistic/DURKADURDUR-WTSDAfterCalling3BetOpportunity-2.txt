@@ -1,0 +1,35 @@
+PokerStars Game #47180743454:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:08:32 ET
+Table 'Rosalind IV' 6-max Seat #3 is the button
+Seat 1: P1ngPoNgPr0 ($309 in chips) 
+Seat 2: FishHop ($197 in chips) 
+Seat 3: DURKADURDUR ($270.50 in chips) 
+Seat 4: ladodend ($214.05 in chips) 
+Seat 5: zxcvb2 ($221 in chips) 
+Seat 6: Da3dalus ($223.45 in chips) 
+ladodend: posts small blind $1
+zxcvb2: posts big blind $2
+*** HOLE CARDS ***
+Da3dalus: folds 
+P1ngPoNgPr0: folds 
+FishHop: folds 
+DURKADURDUR: raises $4 to $6
+ladodend: folds 
+zxcvb2: raises $16 to $22
+DURKADURDUR: calls $16
+*** FLOP *** [3d 4c 5h]
+zxcvb2: checks 
+DURKADURDUR: bets $25
+zxcvb2: folds 
+Uncalled bet ($25) returned to DURKADURDUR
+DURKADURDUR collected $42.75 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $45 | Rake $2.25 
+Board [3d 4c 5h]
+Seat 1: P1ngPoNgPr0 folded before Flop (didn't bet)
+Seat 2: FishHop folded before Flop (didn't bet)
+Seat 3: DURKADURDUR (button) collected ($42.75)
+Seat 4: ladodend (small blind) folded before Flop
+Seat 5: zxcvb2 (big blind) folded on the Flop
+Seat 6: Da3dalus folded before Flop (didn't bet)
+

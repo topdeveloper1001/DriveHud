@@ -1134,6 +1134,75 @@ namespace Model.Data
 
         #endregion
 
+        #region WTSD After stats
+
+        public virtual StatDto WTSDAfterCalling3BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterCalling3Bet,
+                    Occurred = wtsdAfterCalling3Bet,
+                    CouldOccurred = wtsdAfterCalling3BetOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterCallingPfrObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterCallingPfr,
+                    Occurred = wtsdAfterCallingPfr,
+                    CouldOccurred = wtsdAfterCallingPfrOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterNotCBettingFlopAsPfrObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterNotCBettingFlopAsPfr,
+                    Occurred = wtsdAfterNotCBettingFlopAsPfr,
+                    CouldOccurred = wtsdAfterNotCBettingFlopAsPfrOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterSeeingTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterSeeingTurn,
+                    Occurred = wtsdAfterSeeingTurn,
+                    CouldOccurred = Source.SawTurn
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAsPF3BettorObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAsPF3Bettor,
+                    Occurred = wtsdAsPF3Bettor,
+                    CouldOccurred = wtsdAsPF3BettorOpportunity
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Limp

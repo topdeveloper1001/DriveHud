@@ -194,6 +194,11 @@ namespace Model.Stats
             new StatBase { Stat = Stat.VPIP, PropertyName = nameof(Indicators.VPIP), CreateStatDto = x => new StatDto(x.Vpiphands, x.Totalhands) },
             new StatBase { Stat = Stat.WSSD, PropertyName = nameof(Indicators.WSSD), CreateStatDto = x => new StatDto(x.Wonshowdown, x.Sawshowdown) },
             new StatBase { Stat = Stat.WTSD, PropertyName = nameof(Indicators.WTSD), CreateStatDto = x => new StatDto(x.Sawshowdown, x.Sawflop) },
+            new StatBase { Stat = Stat.WTSDAfterCalling3Bet, PropertyName = nameof(Indicators.WTSDAfterCalling3Bet), CreateStatDto = x => new StatDto(x.WTSDAfterCalling3Bet, x.WTSDAfterCalling3BetOpportunity) },
+            new StatBase { Stat = Stat.WTSDAfterCallingPfr, PropertyName = nameof(Indicators.WTSDAfterCallingPfr), CreateStatDto = x => new StatDto(x.WTSDAfterCallingPfr, x.WTSDAfterCallingPfrOpportunity) },
+            new StatBase { Stat = Stat.WTSDAfterNotCBettingFlopAsPfr, PropertyName = nameof(Indicators.WTSDAfterNotCBettingFlopAsPfr), CreateStatDto = x => new StatDto(x.WTSDAfterNotCBettingFlopAsPfr, x.WTSDAfterNotCBettingFlopAsPfrOpportunity) },
+            new StatBase { Stat = Stat.WTSDAfterSeeingTurn, PropertyName = nameof(Indicators.WTSDAfterSeeingTurn), CreateStatDto = x => new StatDto(x.WTSDAfterSeeingTurn, x.SawTurn) },
+            new StatBase { Stat = Stat.WTSDAsPF3Bettor, PropertyName = nameof(Indicators.WTSDAsPF3Bettor), CreateStatDto = x => new StatDto(x.WTSDAsPF3Bettor, x.WTSDAsPF3BettorOpportunity) },
             new StatBase { Stat = Stat.WWSF, PropertyName = nameof(Indicators.WSWSF), CreateStatDto = x => new StatDto(x.Wonhandwhensawflop, x.Sawflop) }
             }).ToDictionary(x => x.Stat)
         );
@@ -399,7 +404,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeTwoThirdsOrLess },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeThreeQuartersOrLess },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeOneOrLess },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeMoreThanOne },                
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeMoreThanOne },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnSeen },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.DoubleBarrel },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToDoubleBarrel },
@@ -456,7 +461,12 @@ namespace Model.Stats
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBet },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetIP },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.DelayedTurnCBetOOP },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.S5Bet }
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.S5Bet },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterCalling3Bet },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterCallingPfr },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterNotCBettingFlopAsPfr },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterSeeingTurn },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAsPF3Bettor }
             };
 
             return statsCollection;

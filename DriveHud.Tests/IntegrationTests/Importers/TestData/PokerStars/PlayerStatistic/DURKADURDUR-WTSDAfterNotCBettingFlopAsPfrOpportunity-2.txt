@@ -1,0 +1,29 @@
+PokerStars Game #47152202828:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:41:52 ET
+Table 'Iris IV' 6-max Seat #2 is the button
+Seat 1: DURKADURDUR ($542 in chips) 
+Seat 2: AceKanone ($200 in chips) 
+Seat 5: stopme10 ($206.35 in chips) 
+stopme10: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+AceKanone: folds 
+stopme10: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+stopme10: calls $14
+*** FLOP *** [5c 3s 8c]
+stopme10: checks 
+DURKADURDUR: checks 
+*** TURN *** [5c 3s 8c] [Ah]
+stopme10: checks 
+DURKADURDUR: bets $29
+stopme10: folds 
+Uncalled bet ($29) returned to DURKADURDUR
+DURKADURDUR collected $39 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $1 
+Board [5c 3s 8c Ah]
+Seat 1: DURKADURDUR (big blind) collected ($39)
+Seat 2: AceKanone (button) folded before Flop (didn't bet)
+Seat 5: stopme10 (small blind) folded on the Turn
+

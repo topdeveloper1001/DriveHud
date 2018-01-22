@@ -183,6 +183,11 @@ namespace Model.Enums
         TurnBetSizeTwoThirdsOrLess,
         TurnBetSizeThreeQuartersOrLess,
         TurnBetSizeOneOrLess,
-        TurnBetSizeMoreThanOne
+        TurnBetSizeMoreThanOne,
+        WTSDAfterCalling3Bet,
+        WTSDAfterCallingPfr,
+        WTSDAfterNotCBettingFlopAsPfr,
+        WTSDAfterSeeingTurn,
+        WTSDAsPF3Bettor
     }
 }

@@ -1463,6 +1463,50 @@ namespace Model.Data
 
         #endregion
 
+        #region WTSD After stats
+
+        public virtual decimal WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterCalling3Bet), Statistics.Sum(x => x.WTSDAfterCalling3BetOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterCallingPfr
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterCallingPfr), Statistics.Sum(x => x.WTSDAfterCallingPfrOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterNotCBettingFlopAsPfr), Statistics.Sum(x => x.WTSDAfterNotCBettingFlopAsPfrOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterSeeingTurn), Statistics.Sum(x => x.SawTurn));
+            }
+        }
+
+        public virtual decimal WTSDAsPF3Bettor
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAsPF3Bettor), Statistics.Sum(x => x.WTSDAsPF3BettorOpportunity));
+            }
+        }
+
+        #endregion
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;
