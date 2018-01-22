@@ -188,10 +188,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-Position-EP-2.xml", EnumPokerSites.IPoker, "Peon84", "EP")]
         [TestCase(@"Hero-Position-EP-3.xml", EnumPokerSites.IPoker, "Peon_184", "EP")]
         [TestCase(@"Hero-Position-EP-4.txt", EnumPokerSites.PokerStars, "Peon347", "EP")]
+        [TestCase(@"Hero-Position-EP-5.xml", EnumPokerSites.Ignition, "Hero", "EP")]
         [TestCase(@"Hero-Position-CO-1.xml", EnumPokerSites.IPoker, "Peon_184", "CO")]
         [TestCase(@"Hero-Position-MP-1.xml", EnumPokerSites.IPoker, "Peon84", "MP")]
         [TestCase(@"Hero-Position-MP-2.xml", EnumPokerSites.IPoker, "Peon84", "MP")]
         [TestCase(@"Hero-Position-MP-3.xml", EnumPokerSites.IPoker, "Peon84", "MP")]
+        [TestCase(@"Hero-Position-MP-4.xml", EnumPokerSites.Ignition, "Hero", "MP")]
         [TestCase(@"DURKADURDUR-CO-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "CO")]
         [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "EP")]
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
@@ -379,16 +381,20 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [Test]
         [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.884)]
-        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.045)]        
+        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.045)]
         [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "deadman426", 0.23)]
         [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "tmacnich", 0.43)]
         [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "pitervper777", 0.33)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "Mooseslayer", 0.17)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "zc13expert", 0.24)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "SinmanJr", 0.25)]
         [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "ktm85888", 0.128)]
         [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "Griffindorgirl", 0.285)]
         [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "pistike88", 0.62)]
         public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
-        {            
-            AssertThatStatIsCalculated("EquityIsCalculated", x => x.Equity, fileName, pokerSite, playerName, expected, 0.02);
+        {
+            // measurement error is too high
+            AssertThatStatIsCalculated("EquityIsCalculated", x => x.Equity, fileName, pokerSite, playerName, expected, 0.03);
         }
 
         [Test]

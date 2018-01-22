@@ -222,7 +222,9 @@ namespace DriveHUD.Application.ViewModels
             var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
             var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
             var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
+
             ObservableCollection<ChartSeries> chartSeriesCollection = new ObservableCollection<ChartSeries>();
+
             ChartSeries series0 = new ChartSeries()
             {
                 IsVisible = true,
@@ -273,8 +275,10 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Update()
         {
-            if (this.StorageModel.StatisticCollection == null)
+            if (StorageModel.StatisticCollection == null)
+            {
                 return;
+            }
 
             SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
 
@@ -296,11 +300,11 @@ namespace DriveHUD.Application.ViewModels
                     switch (tag)
                     {
                         case TournamentsTags.MTT:
-                            MTTWon += tournament.Winningsincents / 100m;
+                            MTTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
                             TotalMTT++;
                             break;
                         case TournamentsTags.STT:
-                            STTWon += tournament.Winningsincents / 100m;
+                            STTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
                             TotalSTT++;
                             break;
                     }
@@ -334,10 +338,13 @@ namespace DriveHUD.Application.ViewModels
 
         private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
         {
+            var groupedStats = GetGroupedStats(displayRange);
+
             foreach (var serie in chartCollection)
             {
                 List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-                foreach (var stat in GetGroupedStats(displayRange))
+
+                foreach (var stat in groupedStats)
                 {
                     switch (serie.FunctionName)
                     {
@@ -368,7 +375,7 @@ namespace DriveHUD.Application.ViewModels
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
-                                Value = stat.Won,
+                                Value = stat.NetWon,
                                 Format = "{0:0.##}$",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
@@ -388,6 +395,7 @@ namespace DriveHUD.Application.ViewModels
                             break;
                     }
                 }
+
                 serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
             }
         }
@@ -395,6 +403,7 @@ namespace DriveHUD.Application.ViewModels
         private IEnumerable<TournamentReportRecord> GetGroupedStats(ChartDisplayRange range)
         {
             List<TournamentReportRecord> indicators = null;
+
             switch (range)
             {
                 case ChartDisplayRange.Year:

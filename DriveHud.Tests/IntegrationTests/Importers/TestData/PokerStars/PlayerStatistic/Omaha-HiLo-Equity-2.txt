@@ -1,0 +1,82 @@
+Game started at: 2018/1/7 10:22:54
+Game ID: 1092512047 20/40 $200 GTD PLO8 R/A, Table 5 (Omaha HiLow)
+Seat 9 is the button
+Seat 1: xxPokerVixenxx (5148).
+Seat 2: Mike789! (5884).
+Seat 3: john victor6 (4000).
+Seat 4: zc13expert (2985).
+Seat 5: Mooseslayer (2373).
+Seat 6: Freaky7 (3920).
+Seat 7: Granny_Annie (20287).
+Seat 8: HAYABUSATIGRE (4180).
+Seat 9: SinmanJr (2575).
+Player xxPokerVixenxx has small blind (20)
+Player Mike789! has big blind (40)
+Player xxPokerVixenxx received a card.
+Player xxPokerVixenxx received a card.
+Player xxPokerVixenxx received a card.
+Player xxPokerVixenxx received a card.
+Player Mike789! received a card.
+Player Mike789! received a card.
+Player Mike789! received a card.
+Player Mike789! received a card.
+Player john victor6 received a card.
+Player john victor6 received a card.
+Player john victor6 received a card.
+Player john victor6 received a card.
+Player zc13expert received a card.
+Player zc13expert received a card.
+Player zc13expert received a card.
+Player zc13expert received a card.
+Player Mooseslayer received a card.
+Player Mooseslayer received a card.
+Player Mooseslayer received a card.
+Player Mooseslayer received a card.
+Player Freaky7 received a card.
+Player Freaky7 received a card.
+Player Freaky7 received a card.
+Player Freaky7 received a card.
+Player Granny_Annie received card: [3d]
+Player Granny_Annie received card: [5h]
+Player Granny_Annie received card: [6s]
+Player Granny_Annie received card: [2s]
+Player HAYABUSATIGRE received a card.
+Player HAYABUSATIGRE received a card.
+Player HAYABUSATIGRE received a card.
+Player HAYABUSATIGRE received a card.
+Player SinmanJr received a card.
+Player SinmanJr received a card.
+Player SinmanJr received a card.
+Player SinmanJr received a card.
+Player john victor6 folds
+Player zc13expert raises (140)
+Player Mooseslayer raises (480)
+Player Freaky7 folds
+Player Granny_Annie folds
+Player HAYABUSATIGRE folds
+Player SinmanJr calls (480)
+Player xxPokerVixenxx calls (460)
+Player Mike789! folds
+Player zc13expert raises (2260)
+Player Mooseslayer allin (1893)
+Player SinmanJr calls (1920)
+Player xxPokerVixenxx raises (3840)
+Player zc13expert allin (585)
+Player SinmanJr allin (175)
+Uncalled bet (1335) returned to xxPokerVixenxx
+*** FLOP ***: [10h 2h 4d]
+*** TURN ***: [10h 2h 4d] [3h]
+*** RIVER ***: [10h 2h 4d 3h] [5d]
+------ Summary ------
+Pot: 10958
+Board: [10h 2h 4d 3h 5d]
+*Player xxPokerVixenxx shows: Straight to 5 [4s Ad 2c 10d] Low hand (A A 2 3 4 5 ).Bets: 2985. Collects: 5479. Wins: 2494.
+Player Mike789! does not show cards.Bets: 40. Collects: 0. Loses: 40.
+Player john victor6 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player zc13expert shows: Flush, A high [Ah 7h 8s Ks]. Bets: 2985. Collects: 5479. Wins: 2494.
+Player Mooseslayer shows: Two pairs. 4s and 3s [2d 3s 9s 4c]. Bets: 2373. Collects: 0. Loses: 2373.
+Player Freaky7 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Granny_Annie does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player HAYABUSATIGRE does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player SinmanJr shows: One pair of Ks [Kh 10c Kd Qc]. Bets: 2575. Collects: 0. Loses: 2575.
+Game ended at: 2018/1/7 10:23:42
