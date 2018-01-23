@@ -1,0 +1,44 @@
+PokerStars Game #47184267446:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:02:48 ET
+Table 'Natalie' 6-max Seat #3 is the button
+Seat 1: DURKADURDUR ($476.70 in chips) 
+Seat 2: plls ($323.45 in chips) 
+Seat 3: grac ($170.75 in chips) 
+Seat 4: bluffinmyway ($117.15 in chips) 
+Seat 5: Fierytycoon ($206.35 in chips) 
+Seat 6: brizzybreech ($852.55 in chips) 
+bluffinmyway: posts small blind $1
+Fierytycoon: posts big blind $2
+*** HOLE CARDS ***
+brizzybreech: raises $4 to $6
+DURKADURDUR: calls $6
+plls: folds 
+grac: folds 
+bluffinmyway: calls $5
+Fierytycoon: folds 
+*** FLOP *** [2s 6s 2h]
+bluffinmyway: checks 
+brizzybreech: checks 
+DURKADURDUR: bets $12
+bluffinmyway: calls $12
+brizzybreech: folds 
+*** TURN *** [2s 6s 2h] [8h]
+bluffinmyway: checks 
+DURKADURDUR: bets $27
+bluffinmyway: calls $27
+*** RIVER *** [2s 6s 2h 8h] [7d]
+bluffinmyway: bets $72.15 and is all-in
+DURKADURDUR: calls $72.15
+*** SHOW DOWN ***
+bluffinmyway: shows [8c 2c] (a full house, Deuces full of Eights)
+DURKADURDUR: shows [Ad As] (two pair, Aces and Deuces)
+bluffinmyway collected $239.30 from pot
+*** SUMMARY ***
+Total pot $242.30 | Rake $3 
+Board [2s 6s 2h 8h 7d]
+Seat 1: DURKADURDUR showed [Ad As] and lost with two pair, Aces and Deuces
+Seat 2: plls folded before Flop (didn't bet)
+Seat 3: grac (button) folded before Flop (didn't bet)
+Seat 4: bluffinmyway (small blind) showed [8c 2c] and won ($239.30) with a full house, Deuces full of Eights
+Seat 5: Fierytycoon (big blind) folded before Flop
+Seat 6: brizzybreech folded on the Flop
+

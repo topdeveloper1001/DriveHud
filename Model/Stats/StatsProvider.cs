@@ -103,6 +103,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FlopCBetRag, PropertyName = nameof(Indicators.FlopCBetRag), CreateStatDto = x => new StatDto(x.FlopContinuationBetRagPotMade, x.FlopContinuationBetRagPotPossible) },
             new StatBase { Stat = Stat.FlopCBetVsOneOpp, PropertyName = nameof(Indicators.FlopCBetVsOneOpp), CreateStatDto = x => new StatDto(x.FlopContinuationBetVsOneOpponentMade, x.FlopContinuationBetVsOneOpponentPossible) },
             new StatBase { Stat = Stat.FlopCBetVsTwoOpp, PropertyName = nameof(Indicators.FlopCBetVsTwoOpp), CreateStatDto = x => new StatDto(x.FlopContinuationBetVsTwoOpponentsMade, x.FlopContinuationBetVsTwoOpponentsPossible) },
+            new StatBase { Stat = Stat.FlopCheckBehind, PropertyName = nameof(Indicators.FlopCheckBehind), CreateStatDto = x => new StatDto(x.DidFlopCheckBehind, x.CouldFlopCheckBehind) },
             new StatBase { Stat = Stat.FlopCheckRaise, PropertyName = nameof(Indicators.FlopCheckRaise), CreateStatDto = x => new StatDto(x.DidFlopCheckRaise, x.Sawflop) },
             new StatBase { Stat = Stat.FoldTo3Bet, PropertyName = nameof(Indicators.FoldToThreeBet), CreateStatDto = x => new StatDto(x.Foldedtothreebetpreflop, x.Facedthreebetpreflop) },
             new StatBase { Stat = Stat.FoldTo4Bet, PropertyName = nameof(Indicators.FoldToFourBet), CreateStatDto = x => new StatDto(x.Foldedtofourbetpreflop, x.Facedfourbetpreflop) },
@@ -365,6 +366,7 @@ namespace Model.Stats
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise },
+                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckBehind },                
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CBet, },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FloatFlop, },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopAGG },

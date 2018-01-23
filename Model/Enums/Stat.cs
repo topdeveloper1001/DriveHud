@@ -190,6 +190,7 @@ namespace Model.Enums
         WTSDAfterSeeingTurn,
         WTSDAsPF3Bettor,
         DelayedTurnCBetIn3BetPot,
-        FoldToDoubleBarrelIn3BetPot
+        FoldToDoubleBarrelIn3BetPot,
+        FlopCheckBehind
     }
 }

@@ -983,6 +983,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FlopCheckBehindObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCheckBehind,
+                    Occurred = Source.DidFlopCheckBehind,
+                    CouldOccurred = Source.CouldFlopCheckBehind
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject

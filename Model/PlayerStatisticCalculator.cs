@@ -823,6 +823,14 @@ namespace Model
 
             #endregion
 
+            var lastFlopAction = parsedHand.Flop.LastOrDefault();
+
+            if (lastFlopAction != null)
+            {
+                stat.DidFlopCheckBehind = playedTurn && lastFlopAction.PlayerName == player && lastFlopAction.IsCheck ? 1 : 0;
+                stat.CouldFlopCheckBehind = preflopInPosition && !parsedHand.Flop.Any(x => x.IsBet() && x.PlayerName != player) ? 1 : 0;
+            }
+
             return stat;
         }
 
@@ -2194,7 +2202,7 @@ namespace Model
             var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
             foldedPlayers.ForEach(x => players.Remove(x));
 
-            if (players.Count > 0)
+            if (players.Count > 1)
             {
                 var ipPlayer = players.LastOrDefault();
 

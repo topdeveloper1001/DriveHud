@@ -1367,6 +1367,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FlopCheckBehind
+        {
+            get
+            {
+                return GetPercentage(Source.DidFlopCheckBehind, Source.CouldFlopCheckBehind);
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual decimal FlopBetSizeOneHalfOrLess

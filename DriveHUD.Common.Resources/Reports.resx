@@ -681,6 +681,9 @@
   <data name="Reports_Column_DelayedTurnCBetIn3BetPot" xml:space="preserve">
     <value>Delayed Turn C-Bet in 3-Bet pot%</value>
   </data>
+  <data name="Reports_Column_FoldToDoubleBarrelIn3BetPot" xml:space="preserve">
+    <value>Fold to Double Barrell in 3-Bet Pot%</value>
+  </data>
   <data name="Reports_Column_WTSDAfterCalling3Bet" xml:space="preserve">
     <value>WTSD% after calling 3-Bet PF%</value>
   </data>
@@ -695,5 +698,8 @@
   </data>
   <data name="Reports_Column_WTSDAsPF3Bettor" xml:space="preserve">
     <value>WTSD% as PF 3-Bettor%</value>
+  </data>
+  <data name="Reports_Column_FlopCheckBehind" xml:space="preserve">
+    <value>Flop Check Behind%</value>
   </data>
 </root>

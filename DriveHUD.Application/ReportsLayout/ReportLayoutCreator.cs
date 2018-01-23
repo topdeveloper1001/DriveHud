@@ -337,6 +337,7 @@ namespace DriveHUD.Application.ReportsLayout
             // F
             new Tuple<string, string, ColumnType>("Reports_Column_FloatFlop", nameof(Indicators.FloatFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopCheckRaise", nameof(Indicators.FlopCheckRaise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FlopCheckBehind", nameof(Indicators.FlopCheckBehind), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopAgg", nameof(Indicators.FlopAgg), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeOneHalfOrLess", nameof(Indicators.FlopBetSizeOneHalfOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeOneQuarterOrLess", nameof(Indicators.FlopBetSizeOneQuarterOrLess), ColumnType.Percentile),

@@ -1,0 +1,42 @@
+PokerStars Game #47153696526:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:34:57 ET
+Table 'Alzirr IV' 6-max Seat #3 is the button
+Seat 1: @moepolo83@ ($212 in chips) 
+Seat 2: DURKADURDUR ($310.85 in chips) 
+Seat 3: mojox ($339.65 in chips) 
+Seat 4: mad.afurable ($206.35 in chips) 
+Seat 5: welle85 ($201.75 in chips) 
+Seat 6: twinpsych ($346.40 in chips) 
+mad.afurable: posts small blind $1
+welle85: posts big blind $2
+*** HOLE CARDS ***
+twinpsych: folds 
+@moepolo83@: folds 
+DURKADURDUR: raises $4 to $6
+mojox: calls $6
+mad.afurable: raises $20 to $26
+welle85: folds 
+DURKADURDUR: calls $20
+mojox: folds 
+*** FLOP *** [3d 5h Qh]
+mad.afurable: checks 
+DURKADURDUR: checks 
+*** TURN *** [3d 5h Qh] [2h]
+mad.afurable: bets $42
+DURKADURDUR: calls $42
+*** RIVER *** [3d 5h Qh 2h] [9c]
+mad.afurable: bets $138.35 and is all-in
+DURKADURDUR: calls $138.35
+*** SHOW DOWN ***
+mad.afurable: shows [9h 7h] (a flush, Queen high)
+DURKADURDUR: shows [Qd Kd] (a pair of Queens)
+mad.afurable collected $417.70 from pot
+*** SUMMARY ***
+Total pot $420.70 | Rake $3 
+Board [3d 5h Qh 2h 9c]
+Seat 1: @moepolo83@ folded before Flop (didn't bet)
+Seat 2: DURKADURDUR showed [Qd Kd] and lost with a pair of Queens
+Seat 3: mojox (button) folded before Flop
+Seat 4: mad.afurable (small blind) showed [9h 7h] and won ($417.70) with a flush, Queen high
+Seat 5: welle85 (big blind) folded before Flop
+Seat 6: twinpsych folded before Flop (didn't bet)
+

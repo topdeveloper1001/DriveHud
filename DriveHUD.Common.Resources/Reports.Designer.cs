@@ -826,6 +826,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Check Behind%.
+        /// </summary>
+        internal static string Reports_Column_FlopCheckBehind {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopCheckBehind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FlopCheckRaise {

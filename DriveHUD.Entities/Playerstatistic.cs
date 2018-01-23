@@ -923,6 +923,12 @@ namespace DriveHUD.Entities
         [ProtoMember(332)]
         public virtual int CouldDelayedTurnCBetIn3BetPot { get; set; }
 
+        [ProtoMember(333)]
+        public virtual int DidFlopCheckBehind { get; set; }
+
+        [ProtoMember(334)]
+        public virtual int CouldFlopCheckBehind { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1785,6 +1791,9 @@ namespace DriveHUD.Entities
 
             FlopBetToPotRatio = a.FlopBetToPotRatio;
             TurnBetToPotRatio = a.TurnBetToPotRatio;
+
+            DidFlopCheckBehind += a.DidFlopCheckBehind;
+            CouldFlopCheckBehind += a.CouldFlopCheckBehind;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2188,6 +2197,9 @@ namespace DriveHUD.Entities
 
             r.FlopBetToPotRatio = b.FlopBetToPotRatio;
             r.TurnBetToPotRatio = b.TurnBetToPotRatio;
+
+            r.DidFlopCheckBehind = a.DidFlopCheckBehind + b.DidFlopCheckBehind;
+            r.CouldFlopCheckBehind = a.CouldFlopCheckBehind + b.CouldFlopCheckBehind;
 
             return r;
         }
