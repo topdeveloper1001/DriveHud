@@ -705,4 +705,7 @@
   <data name="Reports_Column_FoldToDonkBet" xml:space="preserve">
     <value>Fold to Flop Donk Bet %</value>
   </data>
+  <data name="Reports_Column_FoldTurn" xml:space="preserve">
+    <value>Fold Turn%</value>
+  </data>
 </root>

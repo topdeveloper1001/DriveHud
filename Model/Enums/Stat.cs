@@ -192,6 +192,7 @@ namespace Model.Enums
         DelayedTurnCBetIn3BetPot,
         FoldToDoubleBarrelIn3BetPot,
         FlopCheckBehind,
-        FoldToDonkBet
+        FoldToDonkBet,
+        FoldTurn
     }
 }

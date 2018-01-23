@@ -1015,6 +1015,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold Turn%.
+        /// </summary>
+        internal static string Reports_Column_FoldTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Games Played.
         /// </summary>
         internal static string Reports_Column_GamesPlayed {

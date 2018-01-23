@@ -1009,6 +1009,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTurn,
+                    Occurred = Source.FoldedTurn,
+                    CouldOccurred = Source.FacedBetOnTurn
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject

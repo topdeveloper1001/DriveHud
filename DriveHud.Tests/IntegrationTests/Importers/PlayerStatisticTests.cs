@@ -962,6 +962,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.WTSDAsPF3BettorOpportunity, fileName, pokerSite, playerName, expected);
         }
 
+        #endregion
+
         [Test]
         [TestCase(@"DURKADURDUR-DidDelayedTurnCBetIn3BetPot-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-DidDelayedTurnCBetIn3BetPot-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
@@ -1039,7 +1041,29 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FoldedToDonkBet, fileName, pokerSite, playerName, expected);
         }
 
-        #endregion
+        [Test]
+        [TestCase(@"HeroTest-FoldedTurn-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTurn-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTurn-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTurn-4.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-3.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-4.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void FoldedTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-FacedBetOnTurn-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FacedBetOnTurn-4.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void FacedBetOnTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedBetOnTurn, fileName, pokerSite, playerName, expected);
+        }
 
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {

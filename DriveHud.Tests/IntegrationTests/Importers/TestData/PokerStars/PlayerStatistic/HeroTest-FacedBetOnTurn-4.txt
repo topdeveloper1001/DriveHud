@@ -1,0 +1,42 @@
+PokerStars Game #47149261906:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:41:31 ET
+Table 'Pan IV' 6-max Seat #1 is the button
+Seat 1: stopme10 ($215.50 in chips) 
+Seat 2: MegaMarc1 ($299.95 in chips) 
+Seat 3: thomaswkm ($409.40 in chips) 
+Seat 4: HeroTest ($240 in chips) 
+Seat 5: alepa ($200 in chips) 
+Seat 6: twofinger777 ($184.30 in chips) 
+MegaMarc1: posts small blind $1
+thomaswkm: posts big blind $2
+*** HOLE CARDS ***
+HeroTest: raises $4 to $6
+alepa: folds 
+twofinger777: folds 
+stopme10: folds 
+MegaMarc1: calls $5
+thomaswkm: calls $4
+*** FLOP *** [Qd 9s 9d]
+MegaMarc1: checks 
+thomaswkm: checks 
+HeroTest: checks 
+*** TURN *** [Qd 9s 9d] [4c]
+MegaMarc1: bets $12
+thomaswkm: calls $12
+HeroTest: folds 
+*** RIVER *** [Qd 9s 9d 4c] [7c]
+MegaMarc1: checks 
+thomaswkm: checks 
+*** SHOW DOWN ***
+MegaMarc1: shows [6d 6h] (two pair, Nines and Sixes)
+thomaswkm: mucks hand 
+MegaMarc1 collected $39.95 from pot
+*** SUMMARY ***
+Total pot $42 | Rake $2.05 
+Board [Qd 9s 9d 4c 7c]
+Seat 1: stopme10 (button) folded before Flop (didn't bet)
+Seat 2: MegaMarc1 (small blind) showed [6d 6h] and won ($39.95) with two pair, Nines and Sixes
+Seat 3: thomaswkm (big blind) mucked
+Seat 4: HeroTest folded on the Turn
+Seat 5: alepa folded before Flop (didn't bet)
+Seat 6: twofinger777 folded before Flop (didn't bet)
+

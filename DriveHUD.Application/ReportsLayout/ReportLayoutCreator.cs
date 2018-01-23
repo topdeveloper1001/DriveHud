@@ -362,6 +362,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToTurnCheckRaise", nameof(Indicators.FoldToTurnCheckRaise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToTurnRaise", nameof(Indicators.FoldToTurnRaise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldToRiverCheckRaise", nameof(Indicators.FoldToRiverCheckRaise), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FoldTurn", nameof(Indicators.FoldTurn), ColumnType.Percentile),
             // L
             new Tuple<string, string, ColumnType>("Reports_Column_Limp", nameof(Indicators.DidLimp), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_Limp_EP", nameof(Indicators.LimpEp), ColumnType.Percentile),

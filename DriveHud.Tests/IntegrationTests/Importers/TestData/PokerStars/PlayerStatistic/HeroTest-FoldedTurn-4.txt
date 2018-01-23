@@ -1,0 +1,46 @@
+PokerStars Game #47143228350:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:01:17 ET
+Table 'Vindobona' 6-max Seat #2 is the button
+Seat 1: HeroTest ($200 in chips) 
+Seat 2: leukehond ($250.60 in chips) 
+Seat 3: shnizzel ($511.10 in chips) 
+Seat 4: JMP69 ($108 in chips) 
+Seat 5: rkothapalli8 ($39.95 in chips) 
+Seat 6: pablostar ($482.85 in chips) 
+shnizzel: posts small blind $1
+JMP69: posts big blind $2
+*** HOLE CARDS ***
+rkothapalli8: folds 
+pablostar: folds 
+HeroTest: raises $4 to $6
+leukehond: calls $6
+shnizzel: calls $5
+JMP69: calls $4
+*** FLOP *** [4d Qc 4h]
+shnizzel: checks 
+JMP69: checks 
+HeroTest: checks 
+leukehond: checks 
+*** TURN *** [4d Qc 4h] [5d]
+shnizzel: bets $5
+JMP69: raises $11 to $16
+HeroTest: folds 
+leukehond: folds 
+shnizzel: calls $11
+*** RIVER *** [4d Qc 4h 5d] [8c]
+shnizzel: checks 
+JMP69: bets $26
+shnizzel: calls $26
+*** SHOW DOWN ***
+JMP69: shows [3h 2d] (a pair of Fours)
+shnizzel: shows [Qs Js] (two pair, Queens and Fours)
+shnizzel collected $105 from pot
+*** SUMMARY ***
+Total pot $108 | Rake $3 
+Board [4d Qc 4h 5d 8c]
+Seat 1: HeroTest folded on the Turn
+Seat 2: leukehond (button) folded on the Turn
+Seat 3: shnizzel (small blind) showed [Qs Js] and won ($105) with two pair, Queens and Fours
+Seat 4: JMP69 (big blind) showed [3h 2d] and lost with a pair of Fours
+Seat 5: rkothapalli8 folded before Flop (didn't bet)
+Seat 6: pablostar folded before Flop (didn't bet)
+

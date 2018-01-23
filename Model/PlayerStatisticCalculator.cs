@@ -698,7 +698,7 @@ namespace Model
 
             foreach (var streetLine in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
             {
-                line.Add(String.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
+                line.Add(string.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
             }
 
             stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
@@ -833,10 +833,21 @@ namespace Model
                 stat.CouldFlopCheckBehind = preflopInPosition && !parsedHand.Flop.Any(x => x.IsBet() && x.PlayerName != player) ? 1 : 0;
             }
 
+            if (playedTurn)
+            {
+                playerActionOnTurnBet = GetPlayerActionOnTurnBet(parsedHand.Turn, player, true, true);
+
+                if (playerActionOnTurnBet != null)
+                {
+                    stat.FacedBetOnTurn = 1;
+                    stat.FoldedTurn = playerActionOnTurnBet.IsFold ? 1 : 0;
+                }
+            }
+
             return stat;
         }
 
-        private static HandAction GetPlayerActionOnTurnBet(IEnumerable<HandAction> turnActions, string player, bool checkAllowed = false)
+        private static HandAction GetPlayerActionOnTurnBet(IEnumerable<HandAction> turnActions, string player, bool raiseAllowed = false, bool checkAllowed = false)
         {
             var wasBet = false;
 
@@ -864,7 +875,7 @@ namespace Model
                     continue;
                 }
 
-                if (action.IsRaise() && action.PlayerName != player)
+                if (action.IsRaise() && action.PlayerName != player && !raiseAllowed)
                 {
                     return null;
                 }

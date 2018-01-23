@@ -1383,6 +1383,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldTurn
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedTurn, Source.FacedBetOnTurn);
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual decimal FlopBetSizeOneHalfOrLess
