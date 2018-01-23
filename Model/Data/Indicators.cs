@@ -1519,6 +1519,18 @@ namespace Model.Data
 
         #endregion
 
+        #region RiverBetSize stats
+
+        public virtual decimal RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.RiverBetSizeMoreThanOne), Statistics.Sum(x => x.DidRiverBet));
+            }
+        }
+
+        #endregion
+
         #region WTSD After stats
 
         public virtual decimal WTSDAfterCalling3Bet

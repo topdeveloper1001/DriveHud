@@ -961,7 +961,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Flop Raise%.
+        ///   Looks up a localized string similar to Fold to Flop Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopRaise {
             get {
@@ -970,7 +970,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To River C-Bet%.
+        ///   Looks up a localized string similar to Fold to River C-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldToRiverCBet {
             get {
@@ -988,7 +988,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Squeeze%.
+        ///   Looks up a localized string similar to Fold to Squeeze%.
         /// </summary>
         internal static string Reports_Column_FoldToSqueez {
             get {
@@ -1006,7 +1006,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Turn Raise%.
+        ///   Looks up a localized string similar to Fold to Turn Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToTurnRaise {
             get {
@@ -1344,6 +1344,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_RiverBet {
             get {
                 return ResourceManager.GetString("Reports_Column_RiverBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_RiverBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverBetSizeMoreThanOne", resourceCulture);
             }
         }
         

@@ -569,6 +569,20 @@ namespace Model.Data
 
         #endregion
 
+        #region RiverBetSize stats
+
+        protected int riverBetSizeMoreThanOne;
+
+        public override decimal RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(riverBetSizeMoreThanOne, Source.DidRiverBet);
+            }
+        }
+
+        #endregion
+
         #region WTSD After stats
 
         protected int wtsdAfterCalling3Bet;
@@ -682,6 +696,8 @@ namespace Model.Data
             turnBetSizeThreeQuartersOrLess += statistic.TurnBetSizeThreeQuartersOrLess;
             turnBetSizeOneOrLess += statistic.TurnBetSizeOneOrLess;
 
+            riverBetSizeMoreThanOne += statistic.RiverBetSizeMoreThanOne;
+
             wtsdAfterCalling3Bet += statistic.WTSDAfterCalling3Bet;
             wtsdAfterCalling3BetOpportunity += statistic.WTSDAfterCalling3BetOpportunity;
             wtsdAfterCallingPfr += statistic.WTSDAfterCallingPfr;
@@ -730,6 +746,8 @@ namespace Model.Data
             turnBetSizeTwoThirdsOrLess = 0;
             turnBetSizeThreeQuartersOrLess = 0;
             turnBetSizeOneOrLess = 0;
+
+            riverBetSizeMoreThanOne = 0;
 
             wtsdAfterCalling3Bet = 0;
             wtsdAfterCalling3BetOpportunity = 0;

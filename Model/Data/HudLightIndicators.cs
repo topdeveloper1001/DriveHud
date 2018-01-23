@@ -1225,6 +1225,24 @@ namespace Model.Data
 
         #endregion
 
+        #region TurnBetSize stats
+
+        public virtual StatDto RiverBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverBetSizeMoreThanOne,
+                    Occurred = riverBetSizeMoreThanOne,
+                    CouldOccurred = Source.DidRiverBet
+                };
+            }
+        }
+
+        #endregion
+
+
         #region WTSD After stats
 
         public virtual StatDto WTSDAfterCalling3BetObject

@@ -105,9 +105,11 @@ namespace Model
 
             var betOnFlopAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop && x.IsBet());
             var betOnTurnAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn && x.IsBet());
+            var betOnRiverAction = playerHandActions.FirstOrDefault(x => x.Street == Street.River && x.IsBet());
 
             bool betOnFlop = betOnFlopAction != null;
             bool betOnTurn = betOnTurnAction != null;
+            bool betOnRiver = betOnRiverAction != null;
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
             bool isCheckedTurn = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn)?.IsCheck ?? false;
@@ -566,9 +568,9 @@ namespace Model
 
             var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
 
-            stat.DidRiverBet = playerHandActions.RiverAny(x => x.IsBet()) ? 1 : 0;
+            stat.DidRiverBet = betOnRiver ? 1 : 0;
             stat.CouldRiverBet = parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
-            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.DidRiverBet == 1 ? 1 : 0;
+            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
             stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
 
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
@@ -821,6 +823,9 @@ namespace Model
             stat.FlopBetToPotRatio = betOnFlop ? Math.Abs(betOnFlopAction.Amount / parsedHand.PreFlop.Sum(x => x.Amount)) : 0;
             stat.TurnBetToPotRatio = betOnTurn ? Math.Abs(betOnTurnAction.Amount / parsedHand.HandActions
                 .Where(x => x.Street == Street.Preflop || x.Street == Street.Flop)
+                .Sum(x => x.Amount)) : 0;
+            stat.RiverBetToPotRatio = betOnRiver ? Math.Abs(betOnRiverAction.Amount / parsedHand.HandActions
+                .Where(x => x.Street == Street.Preflop || x.Street == Street.Flop || x.Street == Street.Turn)
                 .Sum(x => x.Amount)) : 0;
 
             #endregion

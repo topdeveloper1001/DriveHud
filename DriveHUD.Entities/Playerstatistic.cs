@@ -950,6 +950,9 @@ namespace DriveHUD.Entities
         [ProtoMember(341)]
         public virtual int CheckedThenFacedBetOnRiver { get; set; }
 
+        [ProtoMember(342)]
+        public virtual decimal RiverBetToPotRatio { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1220,6 +1223,18 @@ namespace DriveHUD.Entities
             get
             {
                 return TurnBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #region RiverBetSize stats
+
+        public virtual int RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return RiverBetToPotRatio > 1.01m ? 1 : 0;
             }
         }
 
@@ -1814,6 +1829,7 @@ namespace DriveHUD.Entities
 
             FlopBetToPotRatio = a.FlopBetToPotRatio;
             TurnBetToPotRatio = a.TurnBetToPotRatio;
+            RiverBetToPotRatio = a.RiverBetToPotRatio;
 
             DidFlopCheckBehind += a.DidFlopCheckBehind;
             CouldFlopCheckBehind += a.CouldFlopCheckBehind;
@@ -2229,6 +2245,7 @@ namespace DriveHUD.Entities
 
             r.FlopBetToPotRatio = b.FlopBetToPotRatio;
             r.TurnBetToPotRatio = b.TurnBetToPotRatio;
+            r.RiverBetToPotRatio = b.RiverBetToPotRatio;
 
             r.DidFlopCheckBehind = a.DidFlopCheckBehind + b.DidFlopCheckBehind;
             r.CouldFlopCheckBehind = a.CouldFlopCheckBehind + b.CouldFlopCheckBehind;

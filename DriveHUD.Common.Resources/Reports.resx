@@ -514,16 +514,16 @@
     <value>Double Barrel%</value>
   </data>
   <data name="Reports_Column_FoldToFlopRaise" xml:space="preserve">
-    <value>Fold To Flop Raise%</value>
+    <value>Fold to Flop Raise%</value>
   </data>
   <data name="Reports_Column_FoldToRiverCBet" xml:space="preserve">
-    <value>Fold To River C-Bet%</value>
+    <value>Fold to River C-Bet%</value>
   </data>
   <data name="Reports_Column_FoldToSqueez" xml:space="preserve">
-    <value>Fold To Squeeze%</value>
+    <value>Fold to Squeeze%</value>
   </data>
   <data name="Reports_Column_FoldToTurnRaise" xml:space="preserve">
-    <value>Fold To Turn Raise%</value>
+    <value>Fold to Turn Raise%</value>
   </data>
   <data name="Reports_Column_PFR_BB" xml:space="preserve">
     <value>PFR in BB%</value>
@@ -707,6 +707,9 @@
   </data>
   <data name="Reports_Column_FoldTurn" xml:space="preserve">
     <value>Fold Turn%</value>
+  </data>
+  <data name="Reports_Column_RiverBetSizeMoreThanOne" xml:space="preserve">
+    <value>River Overbet Pot%</value>
   </data>
   <data name="Reports_Column_RiverCheckCall" xml:space="preserve">
     <value>River Check/Call%</value>
