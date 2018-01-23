@@ -929,6 +929,12 @@ namespace DriveHUD.Entities
         [ProtoMember(334)]
         public virtual int CouldFlopCheckBehind { get; set; }
 
+        [ProtoMember(335)]
+        public virtual int FacedDonkBet { get; set; }
+
+        [ProtoMember(336)]
+        public virtual int FoldedToDonkBet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1780,6 +1786,8 @@ namespace DriveHUD.Entities
 
             DidDonkBet += a.DidDonkBet;
             CouldDonkBet += a.CouldDonkBet;
+            FacedDonkBet += a.FacedDonkBet;
+            FoldedToDonkBet += a.FoldedToDonkBet;
 
             FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP += a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
             CheckedCalledTurnWhenCheckedFlopAsPfr += a.CheckedCalledTurnWhenCheckedFlopAsPfr;
@@ -2186,6 +2194,8 @@ namespace DriveHUD.Entities
 
             r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
             r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
+            r.FacedDonkBet = a.FacedDonkBet + b.FacedDonkBet;
+            r.FoldedToDonkBet = a.FoldedToDonkBet + b.FoldedToDonkBet;
 
             r.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP = a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP + b.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
             r.CheckedCalledTurnWhenCheckedFlopAsPfr = a.CheckedCalledTurnWhenCheckedFlopAsPfr + b.CheckedCalledTurnWhenCheckedFlopAsPfr;

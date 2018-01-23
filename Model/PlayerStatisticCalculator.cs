@@ -311,11 +311,11 @@ namespace Model
 
             #region Donk Bet
 
-            Condition donkBet = new Condition();
+            var donkBet = new ConditionalBet();
 
-            if (pfrOcurred && !pfr)
+            if (pfrOcurred && positionFlopPlayer != null)
             {
-                CalculateDonkBet(donkBet, parsedHand.HandActions, player);
+                CalculateDonkBet(donkBet, parsedHand.HandActions, player, positionFlopPlayer.PlayerName);
             }
 
             #endregion          
@@ -418,6 +418,8 @@ namespace Model
 
             stat.DidDonkBet = donkBet.Made ? 1 : 0;
             stat.CouldDonkBet = donkBet.Possible ? 1 : 0;
+            stat.FacedDonkBet = donkBet.Faced ? 1 : 0;
+            stat.FoldedToDonkBet = donkBet.Folded ? 1 : 0;
 
             stat.Didthreebet = threeBet.Made ? 1 : 0;
             stat.DidThreeBetIp = threeBet.Made && preflopInPosition ? 1 : 0;
@@ -2202,7 +2204,7 @@ namespace Model
             var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
             foldedPlayers.ForEach(x => players.Remove(x));
 
-            if (players.Count > 1)
+            if (players.Count > 0)
             {
                 var ipPlayer = players.LastOrDefault();
 
@@ -2218,17 +2220,33 @@ namespace Model
             return null;
         }
 
-        private static void CalculateDonkBet(Condition donkBet, IList<HandAction> actions, string player)
+        private static void CalculateDonkBet(ConditionalBet donkBet, IList<HandAction> actions, string player, string playerInPosition)
         {
             var raisers = actions.PreFlopWhere(x => x.IsRaise());
 
-            if (raisers.Any(x => x.PlayerName == player) || !raisers.Any())
+            if (!raisers.Any())
             {
                 return;
             }
 
             foreach (var action in actions.Street(Street.Flop))
             {
+                if (donkBet.Happened)
+                {
+                    if (action.PlayerName == player)
+                    {
+                        donkBet.CheckAction(action);
+                        return;
+                    }
+
+                    if (!action.IsFold)
+                    {
+                        return;
+                    }
+
+                    continue;
+                }
+
                 if (raisers.Any(x => x.PlayerName == action.PlayerName))
                 {
                     return;
@@ -2237,13 +2255,21 @@ namespace Model
                 if (action.PlayerName == player)
                 {
                     donkBet.Possible = true;
-                    donkBet.Made = action.IsBet();
+                    donkBet.Happened = donkBet.Made = action.IsBet();
+                    return;
                 }
 
                 // somebody else did a donk bet
                 if (action.IsBet())
                 {
-                    return;
+                    // not a donk bet
+                    if (raisers.Any(x => x.PlayerName == action.PlayerName) || action.PlayerName == playerInPosition)
+                    {
+                        return;
+                    }
+
+                    donkBet.Happened = true;
+                    donkBet.HappenedByPlayer = action.PlayerName;
                 }
             }
         }

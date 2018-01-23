@@ -996,6 +996,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToDonkBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToDonkBet,
+                    Occurred = Source.FoldedToDonkBet,
+                    CouldOccurred = Source.FacedDonkBet
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject

@@ -1375,6 +1375,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToDonkBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToDonkBet, Source.FacedDonkBet);
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual decimal FlopBetSizeOneHalfOrLess

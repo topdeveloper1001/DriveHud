@@ -702,4 +702,7 @@
   <data name="Reports_Column_FlopCheckBehind" xml:space="preserve">
     <value>Flop Check Behind%</value>
   </data>
+  <data name="Reports_Column_FoldToDonkBet" xml:space="preserve">
+    <value>Fold to Flop Donk Bet %</value>
+  </data>
 </root>

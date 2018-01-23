@@ -1,0 +1,39 @@
+PokerStars Game #47182380029:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:00:44 ET
+Table 'Natalie' 6-max Seat #5 is the button
+Seat 1: DURKADURDUR ($205.35 in chips)
+Seat 2: roso19 ($78.90 in chips)
+Seat 3: KodyKirlinko ($250.45 in chips)
+Seat 4: bluffinmyway ($192.45 in chips)
+Seat 5: HeroTest ($255.90 in chips)
+Seat 6: brizzybreech ($633.75 in chips)
+brizzybreech: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+roso19: folds
+KodyKirlinko: folds
+bluffinmyway: folds
+HeroTest: raises $4 to $6
+brizzybreech: folds
+DURKADURDUR: calls $4
+*** FLOP *** [Qc 6h 8c]
+DURKADURDUR: bets $8
+HeroTest: raises $16 to $24
+DURKADURDUR: raises $53 to $77
+HeroTest: raises $172.90 to $249.90 and is all-in
+DURKADURDUR: calls $122.35 and is all-in
+Uncalled bet ($50.55) returned to HeroTest
+*** TURN *** [Qc 6h 8c] [Ks]
+*** RIVER *** [Qc 6h 8c Ks] [Kh]
+*** SHOW DOWN ***
+DURKADURDUR: shows [8d 8h] (a full house, Eights full of Kings)
+HeroTest: shows [Kc Ac] (three of a kind, Kings)
+DURKADURDUR collected $408.70 from pot
+*** SUMMARY ***
+Total pot $411.70 | Rake $3
+Board [Qc 6h 8c Ks Kh]
+Seat 1: DURKADURDUR (big blind) showed [8d 8h] and won ($408.70) with a full house, Eights full of Kings
+Seat 2: roso19 folded before Flop (didn't bet)
+Seat 3: KodyKirlinko folded before Flop (didn't bet)
+Seat 4: bluffinmyway folded before Flop (didn't bet)
+Seat 5: HeroTest (button) showed [Kc Ac] and lost with three of a kind, Kings
+Seat 6: brizzybreech (small blind) folded before Flop
