@@ -1407,6 +1407,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RiverCallEffeciency
+        {
+            get
+            {
+                return GetDivisionResult(Source.RiverWonOnFacingBet, Source.RiverCallSizeOnFacingBet);
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual decimal FlopBetSizeOneHalfOrLess

@@ -711,6 +711,9 @@
   <data name="Reports_Column_RiverBetSizeMoreThanOne" xml:space="preserve">
     <value>River Overbet Pot%</value>
   </data>
+  <data name="Reports_Column_RiverCallEffeciency" xml:space="preserve">
+    <value>River Call Efficiency</value>
+  </data>
   <data name="Reports_Column_RiverCheckCall" xml:space="preserve">
     <value>River Check/Call%</value>
   </data>

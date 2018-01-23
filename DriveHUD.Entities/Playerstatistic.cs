@@ -953,6 +953,12 @@ namespace DriveHUD.Entities
         [ProtoMember(342)]
         public virtual decimal RiverBetToPotRatio { get; set; }
 
+        [ProtoMember(343)]
+        public virtual decimal RiverWonOnFacingBet { get; set; }
+
+        [ProtoMember(344)]
+        public virtual decimal RiverCallSizeOnFacingBet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1840,6 +1846,9 @@ namespace DriveHUD.Entities
             CheckedCalledRiver += a.CheckedCalledRiver;
             CheckedFoldedRiver += a.CheckedFoldedRiver;
             CheckedThenFacedBetOnRiver += a.CheckedThenFacedBetOnRiver;
+
+            RiverWonOnFacingBet += a.RiverWonOnFacingBet;
+            RiverCallSizeOnFacingBet += a.RiverCallSizeOnFacingBet;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2256,6 +2265,9 @@ namespace DriveHUD.Entities
             r.CheckedCalledRiver = a.CheckedCalledRiver + b.CheckedCalledRiver;
             r.CheckedFoldedRiver = a.CheckedFoldedRiver + b.CheckedFoldedRiver;
             r.CheckedThenFacedBetOnRiver = a.CheckedThenFacedBetOnRiver + b.CheckedThenFacedBetOnRiver;
+
+            r.RiverWonOnFacingBet = a.RiverWonOnFacingBet + b.RiverWonOnFacingBet;
+            r.RiverCallSizeOnFacingBet = a.RiverCallSizeOnFacingBet + b.RiverCallSizeOnFacingBet;
 
             return r;
         }

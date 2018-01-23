@@ -390,6 +390,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseFreqFactor", nameof(Indicators.RaiseFrequencyFactor), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverAgg", nameof(Indicators.RiverAgg), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverBet", nameof(Indicators.RiverBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_RiverCallEffeciency", nameof(Indicators.RiverCallEffeciency), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckCall", nameof(Indicators.RiverCheckCall), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckFold", nameof(Indicators.RiverCheckFold), ColumnType.Percentile),
             // S

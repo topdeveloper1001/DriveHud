@@ -1357,6 +1357,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River Call Efficiency.
+        /// </summary>
+        internal static string Reports_Column_RiverCallEffeciency {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCallEffeciency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to River Check/Call%.
         /// </summary>
         internal static string Reports_Column_RiverCheckCall {

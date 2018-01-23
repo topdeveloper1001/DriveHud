@@ -849,15 +849,33 @@ namespace Model
                 }
             }
 
-            if (playedRiver && playerHandActions.RiverAny(x => x.IsCheck))
+            if (playedRiver)
             {
                 var playerActionOnRiverBet = GetPlayerActionOnBet(parsedHand.River, player, true, true);
-
                 var facedBetOnRiver = playerActionOnRiverBet != null;
 
-                stat.CheckedThenFacedBetOnRiver = facedBetOnRiver ? 1 : 0;
-                stat.CheckedCalledRiver = facedBetOnRiver && playerActionOnRiverBet.IsCall() ? 1 : 0;
-                stat.CheckedFoldedRiver = facedBetOnRiver && playerActionOnRiverBet.IsFold ? 1 : 0;
+                if (playerHandActions.RiverAny(x => x.IsCheck))
+                {
+                    stat.CheckedThenFacedBetOnRiver = facedBetOnRiver ? 1 : 0;
+                    stat.CheckedCalledRiver = facedBetOnRiver && playerActionOnRiverBet.IsCall() ? 1 : 0;
+                    stat.CheckedFoldedRiver = facedBetOnRiver && playerActionOnRiverBet.IsFold ? 1 : 0;
+                }
+
+                if (facedBetOnRiver && playerActionOnRiverBet.IsCall())
+                {
+                    stat.RiverCallSizeOnFacingBet = Math.Abs(playerActionOnRiverBet.Amount);
+
+                    if (won)
+                    {
+                        var wonOnFacingBet = Math.Abs(parsedHand.HandActions.TakeWhile(x => x != playerActionOnRiverBet).Sum(x => x.Amount));
+                        var uncalledBets = parsedHand.HandActions
+                            .SkipWhile(x => x != playerActionOnRiverBet)
+                            .Skip(1)
+                            .TakeWhile(x => x.HandActionType == HandActionType.UNCALLED_BET).Sum(x => x.Amount);
+
+                        stat.RiverWonOnFacingBet = wonOnFacingBet - uncalledBets;
+                    }
+                }
             }
 
             return stat;

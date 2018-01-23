@@ -1,0 +1,43 @@
+PokerStars Game #11111111115:  Hold'em No Limit ($1/$2 USD) - 2018/07/23 4:04:09 ET
+Table 'Tomita' 6-max Seat #2 is the button
+Seat 1: HENS0N ($95.80 in chips) 
+Seat 2: dannyolah ($158.50 in chips) 
+Seat 3: Punkfloyd ($99.90 in chips) 
+Seat 4: J/10 MY FAV ($108.15 in chips) 
+Seat 5: HeroTest ($100 in chips) 
+Seat 6: Nikitos555 ($103.60 in chips) 
+Punkfloyd: posts small blind $1
+J/10 MY FAV: posts big blind $2
+*** HOLE CARDS ***
+HeroTest: raises $4 to $6
+Nikitos555: folds 
+HENS0N: folds 
+dannyolah: folds 
+Punkfloyd: folds 
+J/10 MY FAV: calls $4
+*** FLOP *** [8d 8s 7d]
+J/10 MY FAV: bets $4
+HeroTest: raises $12 to $16
+J/10 MY FAV: raises $12 to $28
+HeroTest: calls $12
+*** TURN *** [8d 8s 7d] [7h]
+J/10 MY FAV: bets $22
+HeroTest: calls $22
+*** RIVER *** [8d 8s 7d 7h] [Qs]
+J/10 MY FAV: bets $52.15 and is all-in
+HeroTest: calls $44 and is all-in
+Uncalled bet ($8.15) returned to J/10 MY FAV
+*** SHOW DOWN ***
+J/10 MY FAV: shows [Kc Ks] (two pairs, Kings and Eights)
+HeroTest: shows [7c Ac] (a full house, Sevens full of Eights)
+HeroTest collected $198 from pot
+*** SUMMARY ***
+Total pot $201 | Rake $3 
+Board [8d 8s 7d 7h Qs]
+Seat 1: HENS0N folded before Flop (didn't bet)
+Seat 2: dannyolah (button) folded before Flop (didn't bet)
+Seat 3: Punkfloyd (small blind) folded before Flop
+Seat 4: J/10 MY FAV (big blind) showed [Kc Ks] and lost
+Seat 5: HeroTest showed [7c Ac] and won ($198) with a full house, Sevens full of Eights
+Seat 6: Nikitos555 folded before Flop (didn't bet)
+

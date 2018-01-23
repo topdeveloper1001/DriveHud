@@ -36,7 +36,8 @@ namespace Model.Stats
             Stat.BBs,
             Stat.AF,
             Stat.RecentAgg,
-            Stat.MRatio
+            Stat.MRatio,            
+            Stat.RiverCallEffeciency
         };
 
         /// <summary>
@@ -152,6 +153,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.RecentAgg, PropertyName = nameof(HudLightIndicators.RecentAggPr) },
             new StatBase { Stat = Stat.RiverAGG, PropertyName = nameof(Indicators.RiverAgg), CreateStatDto = x => new StatDto(x.TotalbetsRiver, x.RiverAggPossible) },
             new StatBase { Stat = Stat.RiverBetSizeMoreThanOne, PropertyName = nameof(Indicators.RiverBetSizeMoreThanOne), CreateStatDto = x => new StatDto(x.RiverBetSizeMoreThanOne, x.DidRiverBet) },
+            new StatBase { Stat = Stat.RiverCallEffeciency, PropertyName = nameof(Indicators.RiverCallEffeciency) },
             new StatBase { Stat = Stat.RiverCheckCall, PropertyName = nameof(Indicators.RiverCheckCall), CreateStatDto = x => new StatDto(x.CheckedCalledRiver, x.CheckedThenFacedBetOnRiver) },
             new StatBase { Stat = Stat.RiverCheckFold, PropertyName = nameof(Indicators.RiverCheckFold), CreateStatDto = x => new StatDto(x.CheckedFoldedRiver, x.CheckedThenFacedBetOnRiver) },
             new StatBase { Stat = Stat.RiverSeen, PropertyName = nameof(Indicators.RiverSeen), CreateStatDto = x => new StatDto(x.SawRiver, x.WasRiver) },
