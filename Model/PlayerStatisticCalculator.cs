@@ -810,7 +810,7 @@ namespace Model
             stat.CheckedFoldedToTurnWhenCheckedFlopAsPfr = stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP == 1 &&
                 (playerHandActions.Where(x => x.Street == Street.Turn).Skip(1).FirstOrDefault()?.IsFold ?? false) ? 1 : 0;
 
-            var playerActionOnTurnBet = GetPlayerActionOnTurnBet(parsedHand.Turn, player);
+            var playerActionOnTurnBet = GetPlayerActionOnBet(parsedHand.Turn, player);
             var facedTurnBetWhenCheckedFlopAsPfr = pfr && flopCBet.Possible && isCheckedFlop && playerActionOnTurnBet != null;
 
             stat.FacedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr ? 1 : 0;
@@ -835,7 +835,7 @@ namespace Model
 
             if (playedTurn)
             {
-                playerActionOnTurnBet = GetPlayerActionOnTurnBet(parsedHand.Turn, player, true, true);
+                playerActionOnTurnBet = GetPlayerActionOnBet(parsedHand.Turn, player, true, true);
 
                 if (playerActionOnTurnBet != null)
                 {
@@ -844,14 +844,25 @@ namespace Model
                 }
             }
 
+            if (playedRiver && playerHandActions.RiverAny(x => x.IsCheck))
+            {
+                var playerActionOnRiverBet = GetPlayerActionOnBet(parsedHand.River, player, true, true);
+
+                var facedBetOnRiver = playerActionOnRiverBet != null;
+
+                stat.CheckedThenFacedBetOnRiver = facedBetOnRiver ? 1 : 0;
+                stat.CheckedCalledRiver = facedBetOnRiver && playerActionOnRiverBet.IsCall() ? 1 : 0;
+                stat.CheckedFoldedRiver = facedBetOnRiver && playerActionOnRiverBet.IsFold ? 1 : 0;
+            }
+
             return stat;
         }
 
-        private static HandAction GetPlayerActionOnTurnBet(IEnumerable<HandAction> turnActions, string player, bool raiseAllowed = false, bool checkAllowed = false)
+        private static HandAction GetPlayerActionOnBet(IEnumerable<HandAction> streetActions, string player, bool raiseAllowed = false, bool checkAllowed = false)
         {
             var wasBet = false;
 
-            foreach (var action in turnActions)
+            foreach (var action in streetActions)
             {
                 if (action.IsBet())
                 {

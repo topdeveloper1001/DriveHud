@@ -708,4 +708,10 @@
   <data name="Reports_Column_FoldTurn" xml:space="preserve">
     <value>Fold Turn%</value>
   </data>
+  <data name="Reports_Column_RiverCheckCall" xml:space="preserve">
+    <value>River Check/Call%</value>
+  </data>
+  <data name="Reports_Column_RiverCheckFold" xml:space="preserve">
+    <value>River Check/Fold%</value>
+  </data>
 </root>

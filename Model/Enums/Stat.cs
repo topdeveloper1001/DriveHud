@@ -193,6 +193,8 @@ namespace Model.Enums
         FoldToDoubleBarrelIn3BetPot,
         FlopCheckBehind,
         FoldToDonkBet,
-        FoldTurn
+        FoldTurn,
+        RiverCheckCall,
+        RiverCheckFold
     }
 }

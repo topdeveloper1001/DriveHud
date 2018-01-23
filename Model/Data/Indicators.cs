@@ -1391,6 +1391,22 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RiverCheckCall
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedCalledRiver, Source.CheckedThenFacedBetOnRiver);
+            }
+        }
+
+        public virtual decimal RiverCheckFold
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedFoldedRiver, Source.CheckedThenFacedBetOnRiver);
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual decimal FlopBetSizeOneHalfOrLess

@@ -1022,6 +1022,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto RiverCheckCallObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCheckCall,
+                    Occurred = Source.CheckedCalledRiver,
+                    CouldOccurred = Source.CheckedThenFacedBetOnRiver
+                };
+            }
+        }
+
+        public virtual StatDto RiverCheckFoldObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCheckFold,
+                    Occurred = Source.CheckedFoldedRiver,
+                    CouldOccurred = Source.CheckedThenFacedBetOnRiver
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject

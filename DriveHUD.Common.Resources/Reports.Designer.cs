@@ -1348,6 +1348,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River Check/Call%.
+        /// </summary>
+        internal static string Reports_Column_RiverCheckCall {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCheckCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Check/Fold%.
+        /// </summary>
+        internal static string Reports_Column_RiverCheckFold {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCheckFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ROI%.
         /// </summary>
         internal static string Reports_Column_ROI {

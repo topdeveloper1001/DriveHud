@@ -1,0 +1,42 @@
+PokerStars Game #47147049615:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 4:43:22 ET
+Table 'Sagitta V' 6-max Seat #3 is the button
+Seat 1: FastEddie267 ($361.35 in chips) 
+Seat 3: stopme10 ($232 in chips) 
+Seat 4: HeroTest ($201 in chips) 
+Seat 5: tristyle ($570.05 in chips) 
+Seat 6: cheeksmtg ($228.25 in chips) 
+HeroTest: posts small blind $1
+tristyle: posts big blind $2
+*** HOLE CARDS ***
+cheeksmtg: folds 
+FastEddie267: folds 
+stopme10: folds 
+HeroTest: raises $4 to $6
+tristyle: calls $4
+*** FLOP *** [7d 4h 2d]
+HeroTest: bets $8
+stopme10 leaves the table
+tristyle: raises $14 to $22
+HeroTest: calls $14
+*** TURN *** [7d 4h 2d] [As]
+HeroTest: checks 
+tristyle: bets $24
+HeroTest: calls $24
+*** RIVER *** [7d 4h 2d As] [Jc]
+HeroTest: checks 
+tristyle: bets $518.05 and is all-in
+HeroTest: calls $149 and is all-in
+Uncalled bet ($369.05) returned to tristyle
+*** SHOW DOWN ***
+tristyle: shows [Js Ah] (two pair, Aces and Jacks)
+HeroTest: shows [Ad Td] (a pair of Aces)
+tristyle collected $400 from pot
+*** SUMMARY ***
+Total pot $402 | Rake $2 
+Board [7d 4h 2d As Jc]
+Seat 1: FastEddie267 folded before Flop (didn't bet)
+Seat 3: stopme10 (button) folded before Flop (didn't bet)
+Seat 4: HeroTest (small blind) showed [Ad Td] and lost with a pair of Aces
+Seat 5: tristyle (big blind) showed [Js Ah] and won ($400) with two pair, Aces and Jacks
+Seat 6: cheeksmtg folded before Flop (didn't bet)
+

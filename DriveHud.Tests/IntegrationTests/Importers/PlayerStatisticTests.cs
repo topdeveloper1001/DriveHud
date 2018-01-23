@@ -1065,6 +1065,31 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FacedBetOnTurn, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"HeroTest-CheckedCalledRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CheckedFacedBetOnRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void CheckedCalledRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckedCalledRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-CheckedFoldedRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CheckedFacedBetOnRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void CheckedFoldedRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckedFoldedRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-CheckedFacedBetOnRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CheckedCalledRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CheckedFoldedRiver-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void CheckedFacedBetOnRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckedThenFacedBetOnRiver, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))
