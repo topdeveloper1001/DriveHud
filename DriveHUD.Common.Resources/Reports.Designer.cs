@@ -871,6 +871,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to 5-Bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldTo5Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo5Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to C-Bet 3-Bet Pot%.
         /// </summary>
         internal static string Reports_Column_FoldToCBet3BetPot {

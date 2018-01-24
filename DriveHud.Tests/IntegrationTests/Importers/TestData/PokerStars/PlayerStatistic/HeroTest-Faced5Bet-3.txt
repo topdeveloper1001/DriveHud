@@ -1,0 +1,36 @@
+PokerStars Game #47147875368:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:30:12 ET
+Table 'Gormeisa' 6-max Seat #2 is the button
+Seat 1: HeroTest ($200 in chips) 
+Seat 2: pobolero ($285.05 in chips) 
+Seat 3: twinpsych ($451.70 in chips) 
+Seat 4: maestroB ($134 in chips) 
+Seat 5: Desateur ($588.35 in chips) 
+Seat 6: thomaswkm ($207.35 in chips) 
+twinpsych: posts small blind $1
+maestroB: posts big blind $2
+*** HOLE CARDS ***
+Desateur: folds 
+thomaswkm: folds 
+HeroTest: raises $4 to $6
+pobolero: folds 
+twinpsych: folds 
+maestroB: raises $10 to $16
+HeroTest: raises $21 to $37
+maestroB: raises $97 to $134 and is all-in
+HeroTest: calls $97
+*** FLOP *** [4c 4h Js]
+*** TURN *** [4c 4h Js] [5h]
+*** RIVER *** [4c 4h Js 5h] [7h]
+*** SHOW DOWN ***
+maestroB: shows [Ks Kc] (two pair, Kings and Fours)
+HeroTest: shows [Qc Qh] (two pair, Queens and Fours)
+maestroB collected $266 from pot
+*** SUMMARY ***
+Total pot $269 | Rake $3 
+Board [4c 4h Js 5h 7h]
+Seat 1: HeroTest showed [Qc Qh] and lost with two pair, Queens and Fours
+Seat 2: pobolero (button) folded before Flop (didn't bet)
+Seat 3: twinpsych (small blind) folded before Flop
+Seat 4: maestroB (big blind) showed [Ks Kc] and won ($266) with two pair, Kings and Fours
+Seat 5: Desateur folded before Flop (didn't bet)
+Seat 6: thomaswkm folded before Flop (didn't bet)

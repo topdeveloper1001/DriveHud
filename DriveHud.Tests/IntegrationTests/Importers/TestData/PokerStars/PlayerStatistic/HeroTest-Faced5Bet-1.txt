@@ -1,0 +1,36 @@
+PokerStars Game #47181796356:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:40:52 ET
+Table 'Rigilkent VIII' 6-max Seat #3 is the button
+Seat 1: mayhem920 ($509.85 in chips) 
+Seat 2: HeroTest ($477.30 in chips) 
+Seat 3: Nehekus ($535.05 in chips) 
+Seat 4: rivichico ($209.25 in chips) 
+Seat 5: FrAnWaN ($203 in chips) 
+Seat 6: thomaswkm ($179.25 in chips) 
+rivichico: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+thomaswkm: folds 
+mayhem920: folds 
+HeroTest: raises $4 to $6
+Nehekus: folds 
+rivichico: raises $16 to $22
+FrAnWaN: folds 
+HeroTest: raises $24 to $46
+rivichico: raises $163.25 to $209.25 and is all-in
+HeroTest: calls $163.25
+*** FLOP *** [Jh Ad 3d]
+*** TURN *** [Jh Ad 3d] [Kd]
+*** RIVER *** [Jh Ad 3d Kd] [Jc]
+*** SHOW DOWN ***
+rivichico: shows [Ks Kh] (a full house, Kings full of Jacks)
+HeroTest: shows [As Kc] (two pair, Aces and Kings)
+rivichico collected $417.50 from pot
+*** SUMMARY ***
+Total pot $420.50 | Rake $3 
+Board [Jh Ad 3d Kd Jc]
+Seat 1: mayhem920 folded before Flop (didn't bet)
+Seat 2: HeroTest showed [As Kc] and lost with two pair, Aces and Kings
+Seat 3: Nehekus (button) folded before Flop (didn't bet)
+Seat 4: rivichico (small blind) showed [Ks Kh] and won ($417.50) with a full house, Kings full of Jacks
+Seat 5: FrAnWaN (big blind) folded before Flop
+Seat 6: thomaswkm folded before Flop (didn't bet)

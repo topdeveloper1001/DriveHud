@@ -1095,7 +1095,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"HeroTest-RiverCallSizeOnFacingBet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 178)]
         [TestCase(@"HeroTest-RiverCallSizeOnFacingBet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 2)]
         [TestCase(@"HeroTest-RiverCallSizeOnFacingBet-4.txt", EnumPokerSites.PokerStars, "HeroTest", 44)]
-        [TestCase(@"HeroTest-RiverCallSizeOnFacingBet-Zero-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]     
+        [TestCase(@"HeroTest-RiverCallSizeOnFacingBet-Zero-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
         public void RiverCallSizeOnFacingBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
         {
             AssertThatStatIsCalculated(x => x.RiverCallSizeOnFacingBet, fileName, pokerSite, playerName, expected);
@@ -1110,6 +1110,32 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void RiverWonOnFacingBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
         {
             AssertThatStatIsCalculated(x => x.RiverWonOnFacingBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-FoldedTo5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTo5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTo5Bet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Faced5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-Faced5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-Faced5Bet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-Faced5Bet-4.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void FoldedTo5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedTo5Bet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-FoldedTo5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTo5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldedTo5Bet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Faced5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Faced5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Faced5Bet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Faced5Bet-4.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void Faced5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Faced5Bet, fileName, pokerSite, playerName, expected);
         }
 
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")

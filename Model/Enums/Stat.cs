@@ -197,6 +197,7 @@ namespace Model.Enums
         RiverCheckCall,
         RiverCheckFold,
         RiverBetSizeMoreThanOne,
-        RiverCallEffeciency
+        RiverCallEffeciency,
+        FoldTo5Bet
     }
 }

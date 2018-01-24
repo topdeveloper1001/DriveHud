@@ -36,7 +36,7 @@ namespace Model.Stats
             Stat.BBs,
             Stat.AF,
             Stat.RecentAgg,
-            Stat.MRatio,            
+            Stat.MRatio,
             Stat.RiverCallEffeciency
         };
 
@@ -108,6 +108,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FlopCheckRaise, PropertyName = nameof(Indicators.FlopCheckRaise), CreateStatDto = x => new StatDto(x.DidFlopCheckRaise, x.Sawflop) },
             new StatBase { Stat = Stat.FoldTo3Bet, PropertyName = nameof(Indicators.FoldToThreeBet), CreateStatDto = x => new StatDto(x.Foldedtothreebetpreflop, x.Facedthreebetpreflop) },
             new StatBase { Stat = Stat.FoldTo4Bet, PropertyName = nameof(Indicators.FoldToFourBet), CreateStatDto = x => new StatDto(x.Foldedtofourbetpreflop, x.Facedfourbetpreflop) },
+            new StatBase { Stat = Stat.FoldTo5Bet, PropertyName = nameof(Indicators.FoldToFiveBet), CreateStatDto = x => new StatDto(x.FoldedTo5Bet, x.Faced5Bet) },
             new StatBase { Stat = Stat.FoldToCBet, PropertyName = nameof(Indicators.FoldCBet), CreateStatDto = x => new StatDto(x.Foldedtoflopcontinuationbet, x.Facingflopcontinuationbet) },
             new StatBase { Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromFourBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromFourBetPot, x.FacingFlopContinuationBetFromFourBetPot) },
             new StatBase { Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = nameof(Indicators.FoldFlopCBetFromThreeBetPot), CreateStatDto = x => new StatDto(x.FoldedToFlopContinuationBetFromThreeBetPot, x.FacingFlopContinuationBetFromThreeBetPot) },
@@ -270,6 +271,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldTo3Bet },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S4Bet },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldTo4Bet },
+                new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldTo5Bet },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FlopAGG },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.TurnAGG  },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.RiverAGG },
@@ -370,6 +372,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.S4BetBB },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldToSqueez },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldTo4Bet },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FoldTo5Bet },
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise },

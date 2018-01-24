@@ -551,6 +551,8 @@ namespace Model
 
             stat.Could5Bet = fiveBet.Possible ? 1 : 0;
             stat.Did5Bet = fiveBet.Made ? 1 : 0;
+            stat.Faced5Bet = fiveBet.Faced ? 1 : 0;
+            stat.FoldedTo5Bet = fiveBet.Folded ? 1 : 0;
 
             stat.Facingtwopreflopraisers = twoPfr.Faced ? 1 : 0;
             stat.Calledtwopreflopraisers = twoPfr.Called ? 1 : 0;
@@ -1621,8 +1623,28 @@ namespace Model
                     fiveBet.Made = raises > 1;
                 }
             }
+            // 5-bet is possible
+            else if (fourBet.Made)
+            {
+                var playerActions = actions.Where(x => x.PlayerName == player).ToArray();
 
+                var raiseNum = 0;
 
+                foreach (var playerAction in playerActions)
+                {
+                    // 4-bet happened
+                    if (raiseNum == 2)
+                    {
+                        fiveBet.CheckAction(playerAction);
+                        return;
+                    }
+
+                    if (playerAction.IsRaise())
+                    {
+                        raiseNum++;
+                    }
+                }
+            }
         }
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)

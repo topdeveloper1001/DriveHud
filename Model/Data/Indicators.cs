@@ -144,6 +144,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToFiveBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedTo5Bet, Source.Faced5Bet);
+            }
+        }
+
         public virtual decimal ThreeBetCall
         {
             get

@@ -959,6 +959,12 @@ namespace DriveHUD.Entities
         [ProtoMember(344)]
         public virtual decimal RiverCallSizeOnFacingBet { get; set; }
 
+        [ProtoMember(345)]
+        public virtual int Faced5Bet { get; set; }
+
+        [ProtoMember(346)]
+        public virtual int FoldedTo5Bet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1478,6 +1484,8 @@ namespace DriveHUD.Entities
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
             Did5Bet += a.Did5Bet;
             Could5Bet += a.Could5Bet;
+            Faced5Bet += a.Faced5Bet;
+            FoldedTo5Bet += a.FoldedTo5Bet;
 
             CalledCheckRaiseVsFlopCBet += a.CalledCheckRaiseVsFlopCBet;
             FoldedCheckRaiseVsFlopCBet += a.FoldedCheckRaiseVsFlopCBet;
@@ -2019,6 +2027,8 @@ namespace DriveHUD.Entities
 
             r.Did5Bet = a.Did5Bet + b.Did5Bet;
             r.Could5Bet = a.Could5Bet + b.Could5Bet;
+            r.Faced5Bet = a.Faced5Bet + b.Faced5Bet;
+            r.FoldedTo5Bet = a.FoldedTo5Bet + b.Faced5Bet;
 
             r.CalledCheckRaiseVsFlopCBet = a.CalledCheckRaiseVsFlopCBet + b.CalledCheckRaiseVsFlopCBet;
             r.FoldedCheckRaiseVsFlopCBet = a.FoldedCheckRaiseVsFlopCBet + b.FoldedCheckRaiseVsFlopCBet;

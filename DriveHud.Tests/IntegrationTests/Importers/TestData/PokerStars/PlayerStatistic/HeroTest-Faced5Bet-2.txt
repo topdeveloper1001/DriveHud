@@ -1,0 +1,36 @@
+PokerStars Game #47150465177:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:36:10 ET
+Table 'Callisto III' 6-max Seat #2 is the button
+Seat 1: twinpsych ($280.55 in chips) 
+Seat 2: kaader ($361.95 in chips) 
+Seat 3: dippidude ($92 in chips) 
+Seat 4: whollyflush ($200 in chips) 
+Seat 5: Bosas2 ($203 in chips) 
+Seat 6: HeroTest ($288.55 in chips) 
+dippidude: posts small blind $1
+whollyflush: posts big blind $2
+*** HOLE CARDS ***
+Bosas2: folds 
+HeroTest: raises $4 to $6
+twinpsych: folds 
+kaader: folds 
+dippidude: folds 
+whollyflush: raises $16 to $22
+HeroTest: raises $24 to $46
+whollyflush: raises $154 to $200 and is all-in
+HeroTest: calls $154
+*** FLOP *** [Td 7d 5s]
+*** TURN *** [Td 7d 5s] [2d]
+*** RIVER *** [Td 7d 5s 2d] [9h]
+*** SHOW DOWN ***
+whollyflush: shows [Qd Qc] (a pair of Queens)
+HeroTest: shows [Ks Kc] (a pair of Kings)
+HeroTest collected $398 from pot
+*** SUMMARY ***
+Total pot $401 | Rake $3 
+Board [Td 7d 5s 2d 9h]
+Seat 1: twinpsych folded before Flop (didn't bet)
+Seat 2: kaader (button) folded before Flop (didn't bet)
+Seat 3: dippidude (small blind) folded before Flop
+Seat 4: whollyflush (big blind) showed [Qd Qc] and lost with a pair of Queens
+Seat 5: Bosas2 folded before Flop (didn't bet)
+Seat 6: HeroTest showed [Ks Kc] and won ($398) with a pair of Kings

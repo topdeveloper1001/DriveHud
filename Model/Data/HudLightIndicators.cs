@@ -124,6 +124,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToFiveBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFiveBet,
+                    Occurred = Source.FoldedTo5Bet,
+                    CouldOccurred = Source.Faced5Bet
+                };
+            }
+        }
+
         public virtual StatDto ThreeBetCallObject
         {
             get
