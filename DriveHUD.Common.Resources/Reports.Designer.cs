@@ -1573,6 +1573,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Turn AF.
+        /// </summary>
+        internal static string Reports_Column_TurnAF {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnAF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn AGG%.
         /// </summary>
         internal static string Reports_Column_TurnAgg {

@@ -35,6 +35,7 @@ namespace Model.Stats
             Stat.NetWon,
             Stat.BBs,
             Stat.AF,
+            Stat.TurnAF,
             Stat.RecentAgg,
             Stat.MRatio,
             Stat.RiverCallEffeciency
@@ -179,6 +180,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.ThreeBet_SB, PropertyName = nameof(HudLightIndicators.ThreeBet_SB), CreateStatDto = x => new StatDto(x.PositionDidThreeBet?.SB, x.PositionCouldThreeBet?.SB) },
             new StatBase { Stat = Stat.ThreeBetVsSteal, PropertyName = nameof(Indicators.ThreeBetVsSteal), CreateStatDto = x => new StatDto(x.DidThreeBetVsSteal, x.CouldThreeBetVsSteal)  },
             new StatBase { Stat = Stat.TotalHands, PropertyName = nameof(Indicators.TotalHands) },
+            new StatBase { Stat = Stat.TurnAF, PropertyName = nameof(Indicators.TurnAF) },
             new StatBase { Stat = Stat.TrueAggression, PropertyName = nameof(Indicators.TrueAggression), CreateStatDto = x => new StatDto(x.TotalAggressiveBets, x.Totalpostflopstreetsplayed - x.Flopcontinuationbetmade) },
             new StatBase { Stat = Stat.TurnAGG, PropertyName = nameof(Indicators.TurnAgg), CreateStatDto = x => new StatDto(x.TotalbetsTurn, x.TurnAggPossible) },
             new StatBase { Stat = Stat.TurnBetSizeOneHalfOrLess, PropertyName = nameof(Indicators.TurnBetSizeOneHalfOrLess), CreateStatDto = x => new StatDto(x.TurnBetSizeOneHalfOrLess, x.DidTurnBet) },
@@ -419,6 +421,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnCheckRaise },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldTurn },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnCheckRaise },
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAF },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAGG },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeOneHalfOrLess },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBetSizeOneQuarterOrLess },

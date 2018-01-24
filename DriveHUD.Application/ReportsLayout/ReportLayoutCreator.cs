@@ -401,6 +401,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_SeenRiver", nameof(Indicators.RiverSeen), ColumnType.Percentile),
             // T
             new Tuple<string, string, ColumnType>("Reports_Column_TrueAgg", nameof(Indicators.TrueAggression), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnAF", nameof(Indicators.TurnAF), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnAgg", nameof(Indicators.TurnAgg), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneHalfOrLess", nameof(Indicators.TurnBetSizeOneHalfOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneQuarterOrLess", nameof(Indicators.TurnBetSizeOneQuarterOrLess), ColumnType.Percentile),

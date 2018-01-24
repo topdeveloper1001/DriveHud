@@ -331,6 +331,21 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal TurnAF
+        {
+            get
+            {
+                if (Source.TotalcallsTurn > 0)
+                {
+                    return (Convert.ToDecimal(Source.TotalbetsTurn) / Convert.ToDecimal(Source.TotalcallsTurn));
+                }
+                else
+                {
+                    return Source.TotalbetsTurn * 2m;
+                }
+            }
+        }
+
         public virtual decimal AggPr
         {
             get
