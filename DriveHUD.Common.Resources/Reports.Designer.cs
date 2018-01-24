@@ -277,6 +277,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Flop when Checked to SRP%.
+        /// </summary>
+        internal static string Reports_Column_BetFlopWhenCheckedToSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetFlopWhenCheckedToSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet/fold flop when PFR raiser%.
         /// </summary>
         internal static string Reports_Column_BetFoldFlopPfrRaiser {

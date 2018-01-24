@@ -824,6 +824,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal BetFlopWhenCheckedToSRP
+        {
+            get
+            {
+                return GetPercentage(Source.BetFlopWhenCheckedToSRP, Source.CouldBetFlopWhenCheckedToSRP);
+            }
+        }
+
         #region Unopened PFR
 
         public virtual decimal UO_PFR_EP

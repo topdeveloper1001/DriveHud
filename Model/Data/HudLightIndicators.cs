@@ -1113,6 +1113,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto BetFlopWhenCheckedToSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetFlopWhenCheckedToSRP,
+                    Occurred = Source.BetFlopWhenCheckedToSRP,
+                    CouldOccurred = Source.CouldBetFlopWhenCheckedToSRP
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject

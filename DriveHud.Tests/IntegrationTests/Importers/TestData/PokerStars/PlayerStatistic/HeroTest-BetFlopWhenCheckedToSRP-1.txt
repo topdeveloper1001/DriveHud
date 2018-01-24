@@ -1,0 +1,40 @@
+PokerStars Game #47185725087:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:54:38 ET
+Table 'Maia III' 6-max Seat #1 is the button
+Seat 1: thomaswkm ($192.35 in chips) 
+Seat 2: FrAnWaN ($369.65 in chips) 
+Seat 3: dertaylor ($211.25 in chips) 
+Seat 4: TODO ADENTR0 ($221 in chips) 
+Seat 5: HeroTest ($204.20 in chips) 
+Seat 6: hellokittery ($219.40 in chips) 
+FrAnWaN: posts small blind $1
+dertaylor: posts big blind $2
+*** HOLE CARDS ***
+TODO ADENTR0: folds 
+HeroTest: raises $4 to $6
+hellokittery: folds 
+thomaswkm: folds 
+FrAnWaN: folds 
+dertaylor: calls $4
+*** FLOP *** [3h 3c 4s]
+dertaylor: checks 
+HeroTest: bets $9
+dertaylor: calls $9
+*** TURN *** [3h 3c 4s] [7h]
+dertaylor: checks 
+HeroTest: bets $23
+dertaylor: calls $23
+*** RIVER *** [3h 3c 4s 7h] [8s]
+dertaylor: bets $64
+HeroTest: folds 
+Uncalled bet ($64) returned to dertaylor
+dertaylor collected $74 from pot
+*** SUMMARY ***
+Total pot $77 | Rake $3 
+Board [3h 3c 4s 7h 8s]
+Seat 1: thomaswkm (button) folded before Flop (didn't bet)
+Seat 2: FrAnWaN (small blind) folded before Flop
+Seat 3: dertaylor (big blind) collected ($74)
+Seat 4: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 5: HeroTest folded on the River
+Seat 6: hellokittery folded before Flop (didn't bet)
+

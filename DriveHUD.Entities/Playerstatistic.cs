@@ -977,6 +977,11 @@ namespace DriveHUD.Entities
         [ProtoMember(350)]
         public virtual int FacedThreeBetOOP { get; set; }
 
+        [ProtoMember(351)]
+        public virtual int BetFlopWhenCheckedToSRP { get; set; }
+
+        [ProtoMember(352)]
+        public virtual int CouldBetFlopWhenCheckedToSRP { get; set; }
 
         #region Workarounds for broken stats
 
@@ -1891,6 +1896,9 @@ namespace DriveHUD.Entities
 
             ShovedFlopAfter4Bet += a.ShovedFlopAfter4Bet;
             CouldShoveFlopAfter4Bet += a.CouldShoveFlopAfter4Bet;
+
+            BetFlopWhenCheckedToSRP += a.BetFlopWhenCheckedToSRP;
+            CouldBetFlopWhenCheckedToSRP += a.CouldBetFlopWhenCheckedToSRP;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2317,6 +2325,9 @@ namespace DriveHUD.Entities
 
             r.ShovedFlopAfter4Bet = a.ShovedFlopAfter4Bet + b.ShovedFlopAfter4Bet;
             r.CouldShoveFlopAfter4Bet = a.CouldShoveFlopAfter4Bet + b.CouldShoveFlopAfter4Bet;
+
+            r.BetFlopWhenCheckedToSRP = a.BetFlopWhenCheckedToSRP + b.BetFlopWhenCheckedToSRP;
+            r.CouldBetFlopWhenCheckedToSRP = a.CouldBetFlopWhenCheckedToSRP + b.CouldBetFlopWhenCheckedToSRP;
 
             return r;
         }

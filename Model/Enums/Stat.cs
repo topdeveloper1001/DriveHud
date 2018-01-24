@@ -203,6 +203,7 @@ namespace Model.Enums
         ShovedFlopAfter4Bet,
         RaiseFlopCBetIn3BetPot,
         FoldTo3BetIP,
-        FoldTo3BetOOP
+        FoldTo3BetOOP,
+        BetFlopWhenCheckedToSRP
     }
 }

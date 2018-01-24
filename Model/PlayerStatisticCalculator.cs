@@ -900,6 +900,13 @@ namespace Model
                 stat.FoldToThreeBetOOP = !preflop3BetInPosition && threeBet.Folded ? 1 : 0;
             }
 
+            if (pfrOcurred && preflopInPosition && parsedHand.PreFlop.Count(x => x.IsRaise()) == 1 &&
+                parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold))
+            {
+                stat.CouldBetFlopWhenCheckedToSRP = 1;
+                stat.BetFlopWhenCheckedToSRP = betOnFlop ? 1 : 0;
+            }
+
             return stat;
         }
 

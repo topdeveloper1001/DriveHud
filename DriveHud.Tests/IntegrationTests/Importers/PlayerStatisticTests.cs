@@ -1162,6 +1162,28 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldShoveFlopAfter4Bet, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"HeroTest-BetFlopWhenCheckedToSRP-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-BetFlopWhenCheckedToSRP-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CouldBetFlopWhenCheckedToSRP-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-CouldBetFlopWhenCheckedToSRP-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-CouldNotBetFlopWhenCheckedToSRP-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-CouldNotBetFlopWhenCheckedToSRP-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void BetFlopWhenCheckedToSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.BetFlopWhenCheckedToSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"HeroTest-CouldBetFlopWhenCheckedToSRP-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CouldBetFlopWhenCheckedToSRP-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CouldNotBetFlopWhenCheckedToSRP-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-CouldNotBetFlopWhenCheckedToSRP-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void CouldBetFlopWhenCheckedToSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldBetFlopWhenCheckedToSRP, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))
