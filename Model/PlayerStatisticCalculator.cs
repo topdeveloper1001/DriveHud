@@ -115,7 +115,7 @@ namespace Model
             bool isCheckedTurn = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn)?.IsCheck ?? false;
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
-            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
+            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop, player);
             var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player && playedFlop;
 
             bool isBluffPreflop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
@@ -174,7 +174,7 @@ namespace Model
 
             var turnIpPassFlopCbet = new ConditionalBet();
 
-            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop);
+            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop, player);
 
             var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
 
@@ -190,7 +190,7 @@ namespace Model
 
             var riverIpPassFlopCbet = new ConditionalBet();
 
-            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
+            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn, player);
 
             if (positionRiverPlayer != null && positionRiverPlayer.PlayerName == player && turnCBet.Passed)
             {
@@ -433,6 +433,8 @@ namespace Model
             stat.Foldedtothreebetpreflop = threeBet.Folded ? 1 : 0;
             stat.Calledthreebetpreflop = threeBet.Called ? 1 : 0;
             stat.Raisedthreebetpreflop = threeBet.Raised ? 1 : 0;
+
+
 
             stat.Totalhands = 1;
             stat.Totalcalls = call;
@@ -884,6 +886,18 @@ namespace Model
             {
                 stat.ShovedFlopAfter4Bet = playerHandActions.FlopAny(x => (x.IsBet() || x.IsRaise()) && (x.IsAllIn || x.IsAllInAction)) ? 1 : 0;
                 stat.CouldShoveFlopAfter4Bet = playerHandActions.Any(x => x.Street == Street.Flop) ? 1 : 0;
+            }
+
+            if (threeBet.Faced)
+            {
+                var preflop3BetInPositionPlayer = GetInPositionPlayer(parsedHand, Street.Preflop, player, true);
+
+                var preflop3BetInPosition = preflop3BetInPositionPlayer != null && preflop3BetInPositionPlayer.PlayerName == player;
+
+                stat.FacedThreeBetIP = preflop3BetInPosition ? 1 : 0;
+                stat.FacedThreeBetOOP = !preflop3BetInPosition ? 1 : 0;
+                stat.FoldToThreeBetIP = preflop3BetInPosition && threeBet.Folded ? 1 : 0;
+                stat.FoldToThreeBetOOP = !preflop3BetInPosition && threeBet.Folded ? 1 : 0;
             }
 
             return stat;
@@ -2238,7 +2252,7 @@ namespace Model
             return buttonPlayer;
         }
 
-        private static Player GetInPositionPlayer(HandHistory hand, Street street)
+        private static Player GetInPositionPlayer(HandHistory hand, Street street, string player, bool foldAllowed = false)
         {
             var actions = hand.HandActions.Street(street)
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
@@ -2274,7 +2288,13 @@ namespace Model
             }
 
             // DHUD-273: remove players who folded from the list
-            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
+            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToList();
+
+            if (foldAllowed && player == foldedPlayers.LastOrDefault())
+            {
+                foldedPlayers.Remove(player);
+            }
+
             foldedPlayers.ForEach(x => players.Remove(x));
 
             if (players.Count > 0)

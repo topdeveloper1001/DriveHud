@@ -800,6 +800,30 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RaiseFlopCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.RaisedFlopCBetIn3BetPot), Statistics.Sum(x => x.CouldRaiseFlopCBetIn3BetPot));
+            }
+        }
+
+        public virtual decimal FoldToThreeBetIP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToThreeBetIP, Source.FacedThreeBetIP);
+            }
+        }
+
+        public virtual decimal FoldToThreeBetOOP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToThreeBetOOP, Source.FacedThreeBetOOP);
+            }
+        }
+
         #region Unopened PFR
 
         public virtual decimal UO_PFR_EP

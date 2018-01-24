@@ -723,10 +723,19 @@
   <data name="Reports_Column_FoldTo5Bet" xml:space="preserve">
     <value>Fold to 5-Bet%</value>
   </data>
+  <data name="Reports_Column_RaiseFlopCBetIn3BetPot" xml:space="preserve">
+    <value>Raise Flop C-Bet 3-Bet pot%</value>
+  </data>
   <data name="Reports_Column_ShovedFlopAfter4Bet" xml:space="preserve">
     <value>Shove flop after 4-betting pre-flop%</value>
   </data>
   <data name="Reports_Column_TurnAF" xml:space="preserve">
     <value>Turn AF</value>
+  </data>
+  <data name="Reports_Column_FoldTo3BetIP" xml:space="preserve">
+    <value>Fold to 3-Bet IP %</value>
+  </data>
+  <data name="Reports_Column_FoldTo3BetOOP" xml:space="preserve">
+    <value>Fold to 3-Bet OOP %</value>
   </data>
 </root>

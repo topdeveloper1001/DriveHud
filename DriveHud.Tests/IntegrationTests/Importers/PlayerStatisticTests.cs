@@ -576,21 +576,23 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FoldToFlopcontinuationbetOOP, fileName, pokerSite, playerName, expected);
         }
 
-        //[Test]
-        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
-        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
-        //[TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]        
-        //public void FoldToThreeBetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
-        //{
-        //    AssertThatStatIsCalculated(x => x.FoldToThreeBetOOP, fileName, pokerSite, playerName, expected);
-        //}
+        [Test]
+        [TestCase(@"HeroTest-FoldToThreeBetOutPosition-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-FoldToThreeBetOutPosition-2.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"DURKADURDUR-FoldToThreeBetOutPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FoldToThreeBetOOPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldToThreeBetOOP, fileName, pokerSite, playerName, expected);
+        }
 
-        //[Test]
-        //[TestCase(@"DURKADURDUR-FoldToThreeBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]  
-        //public void FoldToThreeBetIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
-        //{
-        //    AssertThatStatIsCalculated(x => x.FoldToThreeBetIP, fileName, pokerSite, playerName, expected);
-        //}
+        [Test]
+        [TestCase(@"DURKADURDUR-FoldToThreeBetInPosition-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FoldToThreeBetInPosition-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"DURKADURDUR-FoldToThreeBetInPosition-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        public void FoldToThreeBetIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldToThreeBetIP, fileName, pokerSite, playerName, expected);
+        }
 
         [Test]
         [TestCase(@"DURKADURDUR-FacedRiverRaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
@@ -1147,7 +1149,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.ShovedFlopAfter4Bet, fileName, pokerSite, playerName, expected);
         }
 
-        [Test]        
+        [Test]
         [TestCase(@"HeroTest-ShovedFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
         [TestCase(@"HeroTest-ShovedFlopAfter4Bet-2.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
         [TestCase(@"HeroTest-DidNotShoveFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]

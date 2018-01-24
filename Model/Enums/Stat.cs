@@ -200,6 +200,9 @@ namespace Model.Enums
         RiverCallEffeciency,
         FoldTo5Bet,
         TurnAF,
-        ShovedFlopAfter4Bet
+        ShovedFlopAfter4Bet,
+        RaiseFlopCBetIn3BetPot,
+        FoldTo3BetIP,
+        FoldTo3BetOOP
     }
 }

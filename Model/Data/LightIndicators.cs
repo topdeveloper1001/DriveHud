@@ -427,6 +427,18 @@ namespace Model.Data
             }
         }
 
+        protected int raisedFlopCBetIn3BetPot;
+
+        protected int couldRaiseFlopCBetIn3BetPot;
+
+        public override decimal RaiseFlopCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(raisedFlopCBetIn3BetPot, couldRaiseFlopCBetIn3BetPot);
+            }
+        }
+
         protected int didFlopBet;
 
         protected int didTurnBet;
@@ -710,6 +722,9 @@ namespace Model.Data
 
             foldToTurnCBetIn3BetPot += statistic.FoldToTurnCBetIn3BetPot;
             facedToTurnCBetIn3BetPot += statistic.FacedToTurnCBetIn3BetPot;
+
+            raisedFlopCBetIn3BetPot += statistic.RaisedFlopCBetIn3BetPot;
+            couldRaiseFlopCBetIn3BetPot += statistic.CouldRaiseFlopCBetIn3BetPot;
         }
 
         public override void Clean()
@@ -761,6 +776,9 @@ namespace Model.Data
 
             foldToTurnCBetIn3BetPot = 0;
             facedToTurnCBetIn3BetPot = 0;
+
+            raisedFlopCBetIn3BetPot = 0;
+            couldRaiseFlopCBetIn3BetPot = 0;
         }
 
         #endregion

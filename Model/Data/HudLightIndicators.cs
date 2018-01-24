@@ -1074,6 +1074,45 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto RaiseFlopCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseFlopCBetIn3BetPot,
+                    Occurred = raisedFlopCBetIn3BetPot,
+                    CouldOccurred = couldRaiseFlopCBetIn3BetPot
+                };
+            }
+        }
+
+        public virtual StatDto FoldToThreeBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToThreeBetIP,
+                    Occurred = Source.FoldToThreeBetIP,
+                    CouldOccurred = Source.FoldToThreeBetIP
+                };
+            }
+        }
+
+        public virtual StatDto FoldToThreeBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToThreeBetOOP,
+                    Occurred = Source.FoldToThreeBetOOP,
+                    CouldOccurred = Source.FoldToThreeBetOOP
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject
@@ -2370,6 +2409,6 @@ namespace Model.Data
             }
         }
 
-        #endregion       
+        #endregion
     }
 }

@@ -862,6 +862,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet IP %.
+        /// </summary>
+        internal static string Reports_Column_FoldTo3BetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo3BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet OOP %.
+        /// </summary>
+        internal static string Reports_Column_FoldTo3BetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo3BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to 4-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldTo4Bet {
@@ -1290,6 +1308,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_RaiseFlop {
             get {
                 return ResourceManager.GetString("Reports_Column_RaiseFlop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raise Flop C-Bet 3-Bet pot%.
+        /// </summary>
+        internal static string Reports_Column_RaiseFlopCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_RaiseFlopCBetIn3BetPot", resourceCulture);
             }
         }
         
