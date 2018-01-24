@@ -6,26 +6,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.IO;
+using System.Xml;
 
 namespace ExportTools
 {
     class Program
     {
+        private const string ExportFolder = @"d:\DH-Exported";
+
+        private const int handHistoryRowsPerQuery = 10000;
+
         static void Main(string[] args)
         {
             try
             {
-                var tournamentNumber = "101810121";
-                var fileToBuild = @"d:\101810121.xml";
-
-                Handhistory[] handHistories;
-
-                using (var session = SessionFactory.Instance.OpenSession())
+                if (!Directory.Exists(ExportFolder))
                 {
-                    handHistories = session.Query<Handhistory>().Where(x => x.Tourneynumber == tournamentNumber).ToArray();
+                    Directory.CreateDirectory(ExportFolder);
                 }
 
-                BuildHandHistoryFile(fileToBuild, handHistories);
+                using (var session = SessionFactory.Instance.OpenStatelessSession())
+                {
+                    var entitiesCount = session.Query<Handhistory>().Count(x => x.PokersiteId == (int)EnumPokerSites.BetOnline);
+
+                    var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
+
+                    for (var i = 0; i < numOfQueries; i++)
+                    {
+                        Console.WriteLine($"Processing {i}/{numOfQueries}...");
+
+                        var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
+
+                        var handHistories = session.Query<Handhistory>()
+                            .Where(x => x.PokersiteId == (int)EnumPokerSites.BetOnline)
+                            .OrderBy(x => x.HandhistoryId)
+                            .Skip(numOfRowToStartQuery)
+                            .Take(handHistoryRowsPerQuery)
+                            .ToArray();
+
+                        var handHistoriesBySessionCode = BuildHandHistories(handHistories);
+
+                        foreach (KeyValuePair<string, XDocument> handHistoryBySessionCode in handHistoriesBySessionCode)
+                        {
+                            SaveHandHistoryToFile(handHistoryBySessionCode.Key, handHistoryBySessionCode.Value);
+                        }
+                    }                    
+                }
             }
             catch (Exception e)
             {
@@ -33,23 +60,92 @@ namespace ExportTools
             }
         }
 
-        private static void BuildHandHistoryFile(string fileName, Handhistory[] handHistories)
+        private static Dictionary<string, XDocument> BuildHandHistories(Handhistory[] handHistories)
         {
-            XDocument handHistoriesXml = null;
+            var handHistoriesBySessionCode = new Dictionary<string, XDocument>();
 
             foreach (var handHistory in handHistories)
             {
-                var handHistoryXml = XDocument.Parse(handHistory.HandhistoryVal);
-
-                if (handHistoriesXml == null)
+                try
                 {
-                    handHistoriesXml = handHistoryXml;
-                    continue;
+                    var handHistoryXml = XDocument.Parse(handHistory.HandhistoryVal);
+
+                    var sessionCodeAtt = handHistoryXml.Root.Attribute("sessioncode");
+
+                    if (sessionCodeAtt == null)
+                    {
+                        Console.WriteLine($"Hand {handHistory.HandhistoryId} has no sessioncode");
+                        continue;
+                    }
+
+                    var sessionCode = sessionCodeAtt.Value;
+
+                    if (!handHistoriesBySessionCode.ContainsKey(sessionCode))
+                    {
+                        handHistoriesBySessionCode.Add(sessionCode, handHistoryXml);
+                        continue;
+                    }
+
+                    var game = handHistoryXml.Descendants("game").FirstOrDefault();
+
+                    handHistoriesBySessionCode[sessionCode].Root.Add(game);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Hand {handHistory.HandhistoryId} could not be processed: {e}");
+                }
+            }
+
+            return handHistoriesBySessionCode;
+        }
+
+        private static void SaveHandHistoryToFile(string sessionCode, XDocument handHistoryXml)
+        {
+            try
+            {
+                var handHistoryFile = Path.Combine(ExportFolder, $"{sessionCode}.xml");
+
+                if (!File.Exists(handHistoryFile))
+                {
+                    SaveXml(handHistoryXml, handHistoryFile);
+                    return;
                 }
 
-                var game = handHistoryXml.Descendants("game").FirstOrDefault();                
-                handHistoriesXml.Root.Add(game);
+                var existingHandHistoryXml = XDocument.Load(handHistoryFile);
 
+                var games = handHistoryXml.Descendants("game").ToArray();
+
+                foreach (var game in games)
+                {
+                    existingHandHistoryXml.Root.Add(game);
+                }
+
+                SaveXml(existingHandHistoryXml, handHistoryFile);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Hands with sessioncode={sessionCode} could not be saved: {e}");
+            }
+        }
+
+        private static void SaveXml(XDocument xml, string path)
+        {
+            try
+            {
+                var settings = new XmlWriterSettings
+                {
+                    Indent = true,
+                    Encoding = new UTF8Encoding(false)
+                };
+
+                using (var writer = XmlWriter.Create(path, settings))
+                {
+                    xml.Save(writer);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"File {path} could not be saved: {e}");
             }
         }
     }
