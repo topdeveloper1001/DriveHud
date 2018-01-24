@@ -1,0 +1,29 @@
+PokerStars Game #47150987953:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:58:26 ET
+Table 'Gormeisa' 6-max Seat #1 is the button
+Seat 1: HeroTest ($321.50 in chips)
+Seat 2: Chojjasd ($207.35 in chips)
+Seat 3: stopme10 ($200 in chips)
+Seat 4: de schonne ($187 in chips)
+Seat 5: Desateur ($423.90 in chips)
+Seat 6: Bosas2 ($275.05 in chips)
+Chojjasd: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+de schonne: folds
+Desateur: folds
+Bosas2: folds
+HeroTest: raises $4 to $6
+Chojjasd: raises $14 to $20
+stopme10: folds
+HeroTest: raises $25 to $45
+Chojjasd: folds
+Uncalled bet ($25) returned to HeroTest
+HeroTest collected $42 from pot
+*** SUMMARY ***
+Total pot $42 | Rake $0
+Seat 1: HeroTest (button) collected ($42)
+Seat 2: Chojjasd (small blind) folded before Flop
+Seat 3: stopme10 (big blind) folded before Flop
+Seat 4: de schonne folded before Flop (didn't bet)
+Seat 5: Desateur folded before Flop (didn't bet)
+Seat 6: Bosas2 folded before Flop (didn't bet)

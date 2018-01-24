@@ -153,7 +153,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-Position-MP-4.xml", EnumPokerSites.Ignition, "Hero", "MP")]
         [TestCase(@"DURKADURDUR-CO-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "CO")]
         [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "EP")]
-        [TestCase(@"DURKADURDUR-SB-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "SB")]
+        [TestCase(@"DURKADURDUR-SB-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "BTN")]
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
         {
             AssertThatStatIsCalculated(x => x.PositionString, fileName, pokerSite, playerName, expectedPosition);
@@ -1135,6 +1135,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"HeroTest-Faced5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
         [TestCase(@"HeroTest-Faced5Bet-3.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
         [TestCase(@"HeroTest-Faced5Bet-4.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-DidNotFace5Bet-1.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-DidNotFace5Bet-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
         public void Faced5BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Faced5Bet, fileName, pokerSite, playerName, expected);

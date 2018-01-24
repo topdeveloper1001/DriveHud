@@ -2064,7 +2064,7 @@ namespace DriveHUD.Entities
             r.Did5Bet = a.Did5Bet + b.Did5Bet;
             r.Could5Bet = a.Could5Bet + b.Could5Bet;
             r.Faced5Bet = a.Faced5Bet + b.Faced5Bet;
-            r.FoldedTo5Bet = a.FoldedTo5Bet + b.Faced5Bet;
+            r.FoldedTo5Bet = a.FoldedTo5Bet + b.FoldedTo5Bet;
 
             r.CalledCheckRaiseVsFlopCBet = a.CalledCheckRaiseVsFlopCBet + b.CalledCheckRaiseVsFlopCBet;
             r.FoldedCheckRaiseVsFlopCBet = a.FoldedCheckRaiseVsFlopCBet + b.FoldedCheckRaiseVsFlopCBet;

@@ -1646,7 +1646,7 @@ namespace Model
             // 5-bet is possible
             else if (fourBet.Made)
             {
-                var playerActions = actions.Where(x => x.PlayerName == player).ToArray();
+                var playerActions = actions.Where(x => x.PlayerName == player && x.HandActionType != HandActionType.UNCALLED_BET).ToArray();
 
                 var raiseNum = 0;
 
@@ -2217,7 +2217,7 @@ namespace Model
 
         private static Player GetCutOffPlayer(HandHistory hand)
         {
-            if (hand.Players.Count == 2)
+            if (hand.Players.Count == 3)
             {
                 return null;
             }
@@ -2242,6 +2242,8 @@ namespace Model
             }
 
             var coPlayer = btnPlayerIndex == 0 ? orderedPlayers.Last() : orderedPlayers[btnPlayerIndex - 1];
+
+
 
             return coPlayer;
         }
