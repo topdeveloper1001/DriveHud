@@ -792,6 +792,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal ShovedFlopAfter4Bet
+        {
+            get
+            {
+                return GetPercentage(Source.ShovedFlopAfter4Bet, Source.CouldShoveFlopAfter4Bet);
+            }
+        }
+
         #region Unopened PFR
 
         public virtual decimal UO_PFR_EP

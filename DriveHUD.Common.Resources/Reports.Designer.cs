@@ -1438,6 +1438,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shove flop after 4-betting pre-flop%.
+        /// </summary>
+        internal static string Reports_Column_ShovedFlopAfter4Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_ShovedFlopAfter4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Showdown Hand.
         /// </summary>
         internal static string Reports_Column_ShowdownHand {

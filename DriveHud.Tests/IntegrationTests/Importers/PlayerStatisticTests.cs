@@ -1138,6 +1138,26 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.Faced5Bet, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"HeroTest-ShovedFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-ShovedFlopAfter4Bet-2.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-DidNotShoveFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 0)]
+        public void ShoveFlopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.ShovedFlopAfter4Bet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]        
+        [TestCase(@"HeroTest-ShovedFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-ShovedFlopAfter4Bet-2.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-DidNotShoveFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 1)]
+        [TestCase(@"HeroTest-CouldNotShoveFlopAfter4Bet-1.xml", EnumPokerSites.BetOnline, "HeroTest", 0)]
+        [TestCase(@"HeroTest-CouldNotShoveFlopAfter4Bet-2.xml", EnumPokerSites.BetOnline, "HeroTest", 0)]
+        public void CouldShoveFlopAfter4BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldShoveFlopAfter4Bet, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

@@ -1061,6 +1061,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto ShovedFlopAfter4BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ShovedFlopAfter4Bet,
+                    Occurred = Source.ShovedFlopAfter4Bet,
+                    CouldOccurred = Source.CouldShoveFlopAfter4Bet
+                };
+            }
+        }
+
         #region FlopBetSize stats
 
         public virtual StatDto FlopBetSizeOneHalfOrLessObject
@@ -1238,7 +1251,7 @@ namespace Model.Data
 
         #endregion
 
-        #region TurnBetSize stats
+        #region RiverBetSize stats
 
         public virtual StatDto RiverBetSizeMoreThanOneObject
         {
@@ -1254,7 +1267,6 @@ namespace Model.Data
         }
 
         #endregion
-
 
         #region WTSD After stats
 

@@ -880,6 +880,12 @@ namespace Model
                 }
             }
 
+            if (fourBet.Made)
+            {
+                stat.ShovedFlopAfter4Bet = playerHandActions.FlopAny(x => (x.IsBet() || x.IsRaise()) && (x.IsAllIn || x.IsAllInAction)) ? 1 : 0;
+                stat.CouldShoveFlopAfter4Bet = playerHandActions.Any(x => x.Street == Street.Flop) ? 1 : 0;
+            }
+
             return stat;
         }
 

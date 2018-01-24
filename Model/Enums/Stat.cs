@@ -199,6 +199,7 @@ namespace Model.Enums
         RiverBetSizeMoreThanOne,
         RiverCallEffeciency,
         FoldTo5Bet,
-        TurnAF
+        TurnAF,
+        ShovedFlopAfter4Bet
     }
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="18438640035">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.05/$0.1</gametype>
+		<tablename>NL Hold’em: $0.05/$0.10 - 6 Seater #7434</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-03-21 21:51:21</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="115570563">
+		<general>
+			<startdate>2017-03-22 01:33:59</startdate>
+			<players>
+				<player seat="4" name="Linsey95" chips="12.05" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="Remy LaBeau" chips="10.02" dealer="0" win="0" bet="10.02" rebuy="0" addon="0" />
+				<player seat="6" name="JohnG123" chips="11.36" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+				<player seat="1" name="UbuntuFoo" chips="10.2" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="2" name="HeroTest" chips="10.59" dealer="0" win="19.71" bet="10.59" rebuy="0" addon="0" />
+				<player seat="3" name="Hartman" chips="18.55" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Remy LaBeau" type="1" sum="0.05" cards="" />
+			<action no="2" player="JohnG123" type="2" sum="0.1" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Linsey95">X X</cards>
+			<cards type="Pocket" player="Remy LaBeau">CJ HJ</cards>
+			<cards type="Pocket" player="JohnG123">X X</cards>
+			<cards type="Pocket" player="UbuntuFoo">C10 S9</cards>
+			<cards type="Pocket" player="HeroTest">DA SA</cards>
+			<cards type="Pocket" player="Hartman">X X</cards>
+			<action no="3" player="UbuntuFoo" type="0" sum="0" cards="" />
+			<action no="4" player="HeroTest" type="23" sum="0.3" cards="" />
+			<action no="5" player="Hartman" type="0" sum="0" cards="" />
+			<action no="6" player="Linsey95" type="0" sum="0" cards="" />
+			<action no="7" player="Remy LaBeau" type="23" sum="0.55" cards="" />
+			<action no="8" player="JohnG123" type="0" sum="0" cards="" />
+			<action no="9" player="HeroTest" type="23" sum="1.9" cards="" />
+			<action no="10" player="Remy LaBeau" type="23" sum="3.5" cards="" />
+			<action no="11" player="HeroTest" type="23" sum="10.59" cards="" />
+			<action no="12" player="Remy LaBeau" type="3" sum="6.52" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C3 HQ D8</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DQ</cards>
+		</round>
+	</game>
+</session>

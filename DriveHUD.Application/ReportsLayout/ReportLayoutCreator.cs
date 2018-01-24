@@ -395,6 +395,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckCall", nameof(Indicators.RiverCheckCall), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckFold", nameof(Indicators.RiverCheckFold), ColumnType.Percentile),
             // S
+            new Tuple<string, string, ColumnType>("Reports_Column_ShovedFlopAfter4Bet", nameof(Indicators.ShovedFlopAfter4Bet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_Squeeze", nameof(Indicators.Squeeze), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_Steal", nameof(Indicators.Steal), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_SeenTurn", nameof(Indicators.TurnSeen), ColumnType.Percentile),
