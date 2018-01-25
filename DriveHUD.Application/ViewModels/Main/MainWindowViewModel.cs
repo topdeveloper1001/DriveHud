@@ -878,7 +878,7 @@ namespace DriveHUD.Application.ViewModels
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
-            ProgressViewModel.Reset();       
+            ProgressViewModel.Reset();
         }
 
         private async void ImportFromDirectory()
@@ -1440,9 +1440,11 @@ namespace DriveHUD.Application.ViewModels
         #region Commands
 
         public ICommand UpgradeCommand { get; private set; }
+
         public ICommand PurchaseCommand { get; private set; }
 
         public ICommand RadioGroupTab_CommandClick { get; set; }
+
         private void RadioGroupTab_OnClick(object viewModelType)
         {
             SwitchViewModel((EnumViewModelType)viewModelType);
@@ -1453,6 +1455,7 @@ namespace DriveHUD.Application.ViewModels
         private void MenuItemPopupFilter_OnClick(object filterType)
         {
             var type = filterType as FilterDropDownModel;
+
             if (type == null)
             {
                 return;
@@ -1463,12 +1466,15 @@ namespace DriveHUD.Application.ViewModels
                 RadDropDownButtonFilterKeepOpen = false;
                 RadDropDownButtonFilterIsOpen = false;
                 RadDropDownButtonFilterKeepOpen = true;
+
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
+
                 return;
             }
-            EnumDateFiterStruct enumDateFiterStruct = new EnumDateFiterStruct();
-            IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
+            var enumDateFiterStruct = new EnumDateFiterStruct();
+
             switch (type.FilterType)
             {
                 case EnumFilterDropDown.FilterToday:
@@ -1492,7 +1498,6 @@ namespace DriveHUD.Application.ViewModels
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterCustomDateRange:
-
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;
                     enumDateFiterStruct.DateTo = CalendarTo;
@@ -1508,19 +1513,28 @@ namespace DriveHUD.Application.ViewModels
                     eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
                     break;
             }
-
         }
 
         public ICommand PurgeCommand { get; set; }
+
         public ICommand ImportCommand { get; set; }
+
         public ICommand ImportFromFileCommand { get; set; }
+
         public ICommand ImportFromDirectoryCommand { get; set; }
+
         public ICommand SupportCommand { get; set; }
+
         public ICommand StartHudCommand { get; set; }
+
         public ICommand StopHudCommand { get; set; }
+
         public ICommand CalculateEquityCommand { get; set; }
+
         public ICommand HideEquityCalculatorCommand { get; set; }
+
         public ICommand SettingsCommand { get; set; }
+
         public ICommand AliasMenuCommand { get; set; }
 
         #endregion

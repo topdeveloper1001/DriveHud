@@ -14,9 +14,12 @@ using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Enums;
+using Model.Filters;
 using Model.Interfaces;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 {
@@ -33,11 +36,17 @@ namespace DriveHUD.Application.ViewModels.Graphs.SeriesProviders
 
             var tournaments = dataService.GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds);
 
+            var filterModelManagerService = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
+
+            var dateFilter = filterModelManagerService.FilterModelCollection?.OfType<FilterDateModel>().FirstOrDefault();
+
+            var filteredTournaments = dateFilter != null ? dateFilter.FilterTournaments(tournaments) : tournaments;
+
             var series = new List<GraphSerie>();
 
             var dataPoints = new Dictionary<string, GraphSerieDataPoint>();
 
-            foreach (var tournament in tournaments)
+            foreach (var tournament in filteredTournaments)
             {
                 var gameType = (GameType)tournament.PokergametypeId;
 

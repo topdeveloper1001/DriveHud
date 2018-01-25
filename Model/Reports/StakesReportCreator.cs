@@ -21,9 +21,9 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by stakes. Ex - 0,25$/0,5$
     /// </summary>
-    public class StakesReportCreator : IReportCreator
+    public class StakesReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -32,7 +32,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.GameType).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.GameType).ToArray())
             {
                 var stat = new ReportIndicators();
 

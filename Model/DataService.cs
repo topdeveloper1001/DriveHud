@@ -70,7 +70,7 @@ namespace Model
             {
                 Directory.CreateDirectory(playersPath);
             }
-        }     
+        }
 
         public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
         {
@@ -289,14 +289,6 @@ namespace Model
             using (var session = ModelEntities.OpenSession())
             {
                 return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).Select(x => x.GameType).Distinct().ToList();
-            }
-        }
-
-        public IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<Tournaments>().Where(x => x.Player.Playername == playerName && x.SiteId == pokersiteId).Fetch(x => x.Player).ToList();
             }
         }
 

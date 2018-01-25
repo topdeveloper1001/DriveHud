@@ -22,9 +22,9 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by cards that was dealt to player
     /// </summary>
-    public class HoleCardsReportCreator : IReportCreator
+    public class HoleCardsReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -33,7 +33,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.Cards.ToCards()).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.Cards.ToCards()).ToArray())
             {
                 var stat = new HoleCardsReportRecord();
 
@@ -56,9 +56,9 @@ namespace Model.Reports
         }
     }
 
-    public class TournamentHoleCardsReportCreator : IReportCreator
+    public class TournamentHoleCardsReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -67,7 +67,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.Cards.ToCards()).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.Cards.ToCards()).ToArray())
             {
                 var stat = new HoleCardsReportRecord();
 

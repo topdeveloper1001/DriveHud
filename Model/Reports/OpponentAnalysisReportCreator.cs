@@ -18,9 +18,9 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class OpponentAnalysisReportCreator : IReportCreator
+    public class OpponentAnalysisReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -29,7 +29,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PlayerName).OrderByDescending(x => x.Sum(p => p.NetWon)).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.PlayerName).OrderByDescending(x => x.Sum(p => p.NetWon)).ToArray())
             {
                 var stat = new ReportIndicators();
 

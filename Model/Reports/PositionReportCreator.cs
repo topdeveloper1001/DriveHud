@@ -21,9 +21,9 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by players position : Button, Small Blind, Early Position e.t.c
     /// </summary>
-    public class PositionReportCreator : IReportCreator
+    public class PositionReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -32,7 +32,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PositionString).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.PositionString).ToArray())
             {
                 var stat = new ReportIndicators();
 
@@ -48,9 +48,9 @@ namespace Model.Reports
         }
     }
 
-    public class TournamentPositionReportCreator : IReportCreator
+    public class TournamentPositionReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -59,7 +59,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => x.PositionString).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.PositionString).ToArray())
             {
                 var stat = new ReportIndicators();
 

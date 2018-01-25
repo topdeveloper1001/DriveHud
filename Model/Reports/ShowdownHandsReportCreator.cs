@@ -20,9 +20,9 @@ using Cards = HandHistories.Objects.Cards;
 
 namespace Model.Reports
 {
-    public class ShowdownHandsReportCreator : IReportCreator
+    public class ShowdownHandsReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -40,7 +40,7 @@ namespace Model.Reports
                     Cards.BoardCards.FromCards(x.Board).Count == 5)
                 .ToArray();
 
-            var hands = s.Where(x => !x.IsTourney)
+            var hands = s
                 .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))
                 .ToList();
 
@@ -73,9 +73,9 @@ namespace Model.Reports
         }
     }
 
-    public class TournamentShowdownHandsReportCreator : IReportCreator
+    public class TournamentShowdownHandsReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
             var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
@@ -87,7 +87,7 @@ namespace Model.Reports
                     Cards.BoardCards.FromCards(x.Board).Count == 5)
                 .ToArray();
 
-            var hands = s.Where(x => x.IsTourney)
+            var hands = s
                 .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))
                 .ToList();
 

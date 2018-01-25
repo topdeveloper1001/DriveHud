@@ -24,9 +24,9 @@ namespace Model.Reports
     /// <summary>
     /// Report will all basic indicators. No grouping
     /// </summary>
-    public class OverAllReportCreator : IReportCreator
+    public class OverAllReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -37,7 +37,7 @@ namespace Model.Reports
 
             var stat = new ReportIndicators();
 
-            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).ToArray())
+            foreach (var playerstatistic in statistics.ToArray())
             {
                 stat.AddStatistic(playerstatistic);
             }
@@ -48,9 +48,9 @@ namespace Model.Reports
         }
     }
 
-    public class TournamentOverAllReportCreator : IReportCreator
+    public class TournamentOverAllReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -67,7 +67,7 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                var stats = statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray();
+                var stats = statistics.Where(x => group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray();
 
                 if (stats.Length == 0)
                 {
