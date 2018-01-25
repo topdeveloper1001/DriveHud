@@ -1980,6 +1980,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reset licenses.
+        /// </summary>
+        internal static string Common_RegistrationView_ResetLicenses {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_ResetLicenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Licenses have not been reset. Please check logs or contact support..
+        /// </summary>
+        internal static string Common_RegistrationView_ResetLicensesFailed {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_ResetLicensesFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Licenses have been reset. Please restart DriveHUD..
+        /// </summary>
+        internal static string Common_RegistrationView_ResetLicensesSuccess {
+            get {
+                return ResourceManager.GetString("Common_RegistrationView_ResetLicensesSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Serial:.
         /// </summary>
         internal static string Common_RegistrationView_Serial {

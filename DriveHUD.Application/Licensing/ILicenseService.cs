@@ -32,6 +32,11 @@ namespace DriveHUD.Application.Licensing
         bool Register(string serial, string email);
 
         /// <summary>
+        /// Deletes all licenses files
+        /// </summary>
+        void ResetLicenses();
+
+        /// <summary>
         /// Encrypts the specified email
         /// </summary>
         /// <param name="email">Email to encrypt</param>
