@@ -230,7 +230,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rebuilding stats {0}/{1}....
+        ///   Looks up a localized string similar to Preparing stats ....
         /// </summary>
         internal static string Message_Migration0025_Status {
             get {
@@ -243,13 +243,12 @@ namespace DriveHUD.Common.Resources {
         ///
         ///New stats:
         ///
-        ///5-Bet%
-        ///Bet Flop when Checked to SRP%
-        ///Bet River on BX Line%
-        ///Call Flop C-Bet IP%
-        ///Call Flop C-Bet OOP%
-        ///Call River Raise%
-        ///Call Tur [rest of string was truncated]&quot;;.
+        ///    5-Bet%
+        ///    Bet Flop when Checked to SRP%
+        ///    Bet River on BX Line%
+        ///    Call Flop C-Bet IP%
+        ///    Call Flop C-Bet OOP%
+        ///    Cal [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Message_Migration0025_Text {
             get {
