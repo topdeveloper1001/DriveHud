@@ -465,7 +465,7 @@
     <value>Total Hands</value>
   </data>
   <data name="Enum_Stat_TrueAggression" xml:space="preserve">
-    <value>True Aggression % (TAP)</value>
+    <value>True Aggression% (TAP)</value>
   </data>
   <data name="Enum_Stat_TurnAGG" xml:space="preserve">
     <value>Turn AGG%</value>
@@ -523,9 +523,6 @@
   </data>
   <data name="Enum_Stat_WWSF" xml:space="preserve">
     <value>WWSF</value>
-  </data>
-  <data name="Enum_Stat__VPIP_MP" xml:space="preserve">
-    <value>MP VPIP%</value>
   </data>
   <data name="Enum_EnumPokerSites_PokerStars" xml:space="preserve">
     <value>PokerStars</value>
@@ -748,5 +745,182 @@
   </data>
   <data name="Enum_SerieType_WinningsByYear" xml:space="preserve">
     <value>Showdown and non-showdown winnings by year</value>
+  </data>
+  <data name="Enum_Stat_BetFlopWhenCheckedToSRP" xml:space="preserve">
+    <value>Bet Flop when Checked to SRP%</value>
+  </data>
+  <data name="Enum_Stat_BetRiverOnBXLine" xml:space="preserve">
+    <value>Bet River on BX Line%</value>
+  </data>
+  <data name="Enum_Stat_CalledCheckRaiseVsFlopCBet" xml:space="preserve">
+    <value>Check-Raise &amp; Call vs. Flop C-Bet%</value>
+  </data>
+  <data name="Enum_Stat_CalledTurnCheckRaise" xml:space="preserve">
+    <value>Call Turn Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_CallFlopCBetIP" xml:space="preserve">
+    <value>Call Flop C-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_CallFlopCBetOOP" xml:space="preserve">
+    <value>Call Flop C-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_CallRiverRaise" xml:space="preserve">
+    <value>Call River Raise%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndCallOnTurn" xml:space="preserve">
+    <value>Checks Flop as PFR and Calls Turn%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldOnTurn" xml:space="preserve">
+    <value>Checks Flop as PFR and Fold to Turn Bet%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndRaiseOnTurn" xml:space="preserve">
+    <value>Checks Flop as PFR and Raises Turn Bet%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndXCOnTurnOOP" xml:space="preserve">
+    <value>Checks Flop as PFR and X/C OOP on Turn%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndXFOnTurnOOP" xml:space="preserve">
+    <value>Checks Flop as PFR and X/F Turn%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaisedFlopCBet" xml:space="preserve">
+    <value>Check-Raise Flop C-Bet%</value>
+  </data>
+  <data name="Enum_Stat_CheckRiverAfterBBLine" xml:space="preserve">
+    <value>Check River after BB Line%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetIn3BetPot" xml:space="preserve">
+    <value>Delayed Turn C-bet in 3-bet pot%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetIP" xml:space="preserve">
+    <value>Delayed Turn C-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetOOP" xml:space="preserve">
+    <value>Delayed Turn C-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeMoreThanOne" xml:space="preserve">
+    <value>Flop Overbet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeOneHalfOrLess" xml:space="preserve">
+    <value>Flop Bet Size 1/2 or less%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeOneOrLess" xml:space="preserve">
+    <value>Flop Bet Size Pot Size or less%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeOneQuarterOrLess" xml:space="preserve">
+    <value>Flop Bet Size 1/4 or less%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeThreeQuartersOrLess" xml:space="preserve">
+    <value>Flop Bet Size 3/4 or less%</value>
+  </data>
+  <data name="Enum_Stat_FlopBetSizeTwoThirdsOrLess" xml:space="preserve">
+    <value>Flop Bet Size 2/3 or less%</value>
+  </data>
+  <data name="Enum_Stat_FlopCheckBehind" xml:space="preserve">
+    <value>Flop Check Behind%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetIP" xml:space="preserve">
+    <value>Fold to 3-Bet IP %</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetOOP" xml:space="preserve">
+    <value>Fold to 3-Bet OOP %</value>
+  </data>
+  <data name="Enum_Stat_FoldTo5Bet" xml:space="preserve">
+    <value>Fold to 5-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCheckRaiseVsFlopCBet" xml:space="preserve">
+    <value>Check-Raise &amp; Fold vs. Flop C-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDonkBet" xml:space="preserve">
+    <value>Fold to Flop Donk Bet %</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrel" xml:space="preserve">
+    <value>Fold to Double Barrel%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrelIn3BetPot" xml:space="preserve">
+    <value>Fold to Double Barrell in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToFlopCBetIP" xml:space="preserve">
+    <value>Fold to Flop C-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToFlopCBetOOP" xml:space="preserve">
+    <value>Fold to Flop C-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToFlopCheckRaise" xml:space="preserve">
+    <value>Fold to Flop Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_FoldToRiverCheckRaise" xml:space="preserve">
+    <value>Fold to River Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTurnCheckRaise" xml:space="preserve">
+    <value>Fold to Turn Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_FoldTurn" xml:space="preserve">
+    <value>Fold Turn%</value>
+  </data>
+  <data name="Enum_Stat_RaiseFlopCBetIn3BetPot" xml:space="preserve">
+    <value>Raise Flop C-Bet 3-bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverBet" xml:space="preserve">
+    <value>River Bet%</value>
+  </data>
+  <data name="Enum_Stat_RiverBetSizeMoreThanOne" xml:space="preserve">
+    <value>River Overbet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverCallEffeciency" xml:space="preserve">
+    <value>River Call Effeciency</value>
+  </data>
+  <data name="Enum_Stat_RiverCheckCall" xml:space="preserve">
+    <value>River Check-Call%</value>
+  </data>
+  <data name="Enum_Stat_RiverCheckFold" xml:space="preserve">
+    <value>River Check-Fold%</value>
+  </data>
+  <data name="Enum_Stat_S3BetEP" xml:space="preserve">
+    <value>3-Bet EP%</value>
+  </data>
+  <data name="Enum_Stat_S5Bet" xml:space="preserve">
+    <value>5-Bet%</value>
+  </data>
+  <data name="Enum_Stat_ShovedFlopAfter4Bet" xml:space="preserve">
+    <value>Shove flop after 4-betting pre-flop%</value>
+  </data>
+  <data name="Enum_Stat_TurnAF" xml:space="preserve">
+    <value>Turn AF</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeMoreThanOne" xml:space="preserve">
+    <value>Turn Overbet Pot%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeOneHalfOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/2 or less%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeOneOrLess" xml:space="preserve">
+    <value>Turn Bet Size Pot Size or less%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeOneQuarterOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/4 or less%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeOneThirdOrLess" xml:space="preserve">
+    <value>Turn Bet Size 1/3 or less%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeThreeQuartersOrLess" xml:space="preserve">
+    <value>Turn Bet Size 3/4 or less%</value>
+  </data>
+  <data name="Enum_Stat_TurnBetSizeTwoThirdsOrLess" xml:space="preserve">
+    <value>Turn Bet Size 2/3 or less%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAfterCalling3Bet" xml:space="preserve">
+    <value>WTSD% after calling 3-Bet PF%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAfterCallingPfr" xml:space="preserve">
+    <value>WTSD% after calling PFR%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAfterNotCBettingFlopAsPfr" xml:space="preserve">
+    <value>WTSD% after not c-betting flop as PFR%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAfterSeeingTurn" xml:space="preserve">
+    <value>WTSD% after seeing Turn%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAsPF3Bettor" xml:space="preserve">
+    <value>WTSD% as PF 3-Bettor%</value>
   </data>
 </root>
