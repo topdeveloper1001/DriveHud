@@ -368,6 +368,8 @@ namespace DriveHUD.Importers
                             var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
                             var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
 
+                            gameInfo.ResetPlayersCacheInfo();
+
                             for (var i = 0; i < parsingResult.Count; i++)
                             {
                                 var handHistory = parsingResult[i];
@@ -432,9 +434,7 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
-
-                gameInfo.ResetPlayersCacheInfo();
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));              
 
                 var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
@@ -473,7 +473,8 @@ namespace DriveHUD.Importers
                             },
                             Stats = playerStatCopy,
                             IsHero = isHero,
-                            GameFormat = gameInfo.GameFormat
+                            GameFormat = gameInfo.GameFormat,
+                            GameNumber = handHistory.HandHistory.Gamenumber
                         };
 
                         gameInfo.AddToPlayersCacheInfo(cacheInfo);

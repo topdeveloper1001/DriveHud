@@ -21,11 +21,12 @@ namespace DriveHUD.Importers
     /// </summary>
     public class DataImportedEventArgs : EventArgs
     {
-        public DataImportedEventArgs(PlayerList players, GameInfo gameInfo, Player hero)
+        public DataImportedEventArgs(PlayerList players, GameInfo gameInfo, Player hero, long gameNumber)
         {
             Players = players;
             GameInfo = gameInfo;
             Hero = hero;
+            GameNumber = gameNumber;
         }
 
         public PlayerList Players { get; private set; }
@@ -33,6 +34,8 @@ namespace DriveHUD.Importers
         public Player Hero { get; private set; }
 
         public GameInfo GameInfo { get; private set; }
+
+        public long GameNumber { get; private set; }
 
         public bool DoNotUpdateHud { get; set; }
     }

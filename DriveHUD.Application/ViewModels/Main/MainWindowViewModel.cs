@@ -567,7 +567,7 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem && x.GameNumber == e.GameNumber);
 
                     if (playerCacheInfo != null)
                     {

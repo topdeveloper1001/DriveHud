@@ -854,7 +854,7 @@ namespace DriveHUD.Importers.Bovada
         }
 
         protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
-        {            
+        {
             CurrentHandNumber = cmdObj.stageNo;
 
             if (!IsZonePokerTable)
@@ -985,7 +985,7 @@ namespace DriveHUD.Importers.Bovada
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
 
-                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero, result.Source.HandId);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }

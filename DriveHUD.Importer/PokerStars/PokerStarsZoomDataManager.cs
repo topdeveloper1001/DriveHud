@@ -125,7 +125,7 @@ namespace DriveHUD.Importers.PokerStars
                     WindowHandle = catcherDataObject.Handle,
                     PokerSite = EnumPokerSites.PokerStars,
                     GameType = BovadaConverters.ConvertGameTypeFromTitle(catcherDataObject.Title),
-                    TableType = (EnumTableType)catcherDataObject.Size                    
+                    TableType = (EnumTableType)catcherDataObject.Size
                 };
 
                 var players = new PlayerList(catcherDataObject.Players.Select(x =>
@@ -148,7 +148,7 @@ namespace DriveHUD.Importers.PokerStars
                     return;
                 }
 
-                var importedArgs = new DataImportedEventArgs(players, gameInfo, heroPlayer);
+                var importedArgs = new DataImportedEventArgs(players, gameInfo, heroPlayer, 0);
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(importedArgs);
 
                 cachedObject.IsProcessed = true;

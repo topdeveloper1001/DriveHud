@@ -194,7 +194,7 @@ namespace DriveHUD.Importers.BetOnline
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
 
-                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo, result.Source.Hero);
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo, result.Source.Hero, result.Source.HandId);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
