@@ -14,6 +14,7 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Progress;
 using System.Globalization;
+using System.Windows;
 
 namespace DriveHUD.Application.SplashScreen
 {
@@ -58,13 +59,21 @@ namespace DriveHUD.Application.SplashScreen
             }
 
             Status = e.Message.ToString(CultureInfo.CurrentUICulture);
-        }   
+        }
 
         private NotificationWindow notificationWindow;
 
         public void ShowNotification(BaseViewModel viewModel)
         {
             notificationWindow = new NotificationWindow();
+
+            var owner = App.SplashScreen as Window;
+
+            if (owner != null && notificationWindow.Owner != owner)
+            {
+                notificationWindow.Owner = owner;
+            }
+
             notificationWindow.DataContext = viewModel;
             notificationWindow.ShowDialog();
         }
