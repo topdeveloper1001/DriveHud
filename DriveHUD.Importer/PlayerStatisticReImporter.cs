@@ -205,7 +205,7 @@ namespace DriveHUD.Importers
 
                                 if (player.PlayerId != 0)
                                 {
-                                    BuildPlayerStatistic(parsingResult, player, calculatedEquity);
+                                    BuildPlayerStatistic(handHistory, parsingResult, player, calculatedEquity);
                                 }
                             });
                         }
@@ -281,11 +281,17 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="handHistory"></param>
         /// <param name="player"></param>
-        private void BuildPlayerStatistic(ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
+        private void BuildPlayerStatistic(Handhistory dbHandHistory, ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
             var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
+
+            if (!string.IsNullOrEmpty(dbHandHistory.Tourneynumber))
+            {
+                statistic.IsTourney = true;
+                statistic.TournamentId = dbHandHistory.Tourneynumber;
+            }
 
             StorePlayerStatistic(statistic);
         }
