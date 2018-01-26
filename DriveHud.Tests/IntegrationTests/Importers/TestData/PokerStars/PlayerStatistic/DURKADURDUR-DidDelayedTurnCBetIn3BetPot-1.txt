@@ -1,0 +1,40 @@
+PokerStars Game #47153252002:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:19:49 ET
+Table 'Malabar III' 6-max Seat #3 is the button
+Seat 1: gebek8923 ($196 in chips) 
+Seat 2: mad.afurable ($397.35 in chips) 
+Seat 3: MasterSilviu ($230 in chips) 
+Seat 4: stopme10 ($235 in chips) 
+Seat 5: ewagenvo ($197.95 in chips) 
+Seat 6: DURKADURDUR ($211.55 in chips) 
+stopme10: posts small blind $1
+ewagenvo: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+gebek8923: folds 
+mad.afurable: folds 
+MasterSilviu: calls $6
+stopme10: folds 
+ewagenvo: folds 
+*** FLOP *** [8h 6d 9h]
+DURKADURDUR: checks 
+MasterSilviu: checks 
+*** TURN *** [8h 6d 9h] [5d]
+DURKADURDUR: bets $11
+MasterSilviu: calls $11
+*** RIVER *** [8h 6d 9h 5d] [Qd]
+DURKADURDUR: checks 
+MasterSilviu: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [6s 6h] (three of a kind, Sixes)
+MasterSilviu: mucks hand 
+DURKADURDUR collected $35.20 from pot
+*** SUMMARY ***
+Total pot $37 | Rake $1.80 
+Board [8h 6d 9h 5d Qd]
+Seat 1: gebek8923 folded before Flop (didn't bet)
+Seat 2: mad.afurable folded before Flop (didn't bet)
+Seat 3: MasterSilviu (button) mucked
+Seat 4: stopme10 (small blind) folded before Flop
+Seat 5: ewagenvo (big blind) folded before Flop
+Seat 6: DURKADURDUR showed [6s 6h] and won ($35.20) with three of a kind, Sixes
+

@@ -1,0 +1,38 @@
+PokerStars Game #47179220988:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 20:23:38 ET
+Table 'Neckar VII' 6-max Seat #6 is the button
+Seat 1: IAmDaTruth ($201 in chips) 
+Seat 2: DURKADURDUR ($235.40 in chips) 
+Seat 3: TODO ADENTR0 ($203 in chips) 
+Seat 4: Pappe_Ruk ($234.10 in chips) 
+Seat 5: PEGAZ inc ($64.70 in chips) 
+Seat 6: Nehekus ($285.80 in chips) 
+IAmDaTruth: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+TODO ADENTR0: folds 
+Pappe_Ruk: folds 
+PEGAZ inc: calls $2
+Nehekus: folds 
+IAmDaTruth: folds 
+DURKADURDUR: checks 
+*** FLOP *** [Jd 5d 4d]
+DURKADURDUR: bets $3
+PEGAZ inc: calls $3
+*** TURN *** [Jd 5d 4d] [6s]
+DURKADURDUR: bets $6
+PEGAZ inc: calls $6
+*** RIVER *** [Jd 5d 4d 6s] [Jc]
+DURKADURDUR: bets $13
+PEGAZ inc: folds 
+Uncalled bet ($13) returned to DURKADURDUR
+DURKADURDUR collected $21.90 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $23 | Rake $1.10 
+Board [Jd 5d 4d 6s Jc]
+Seat 1: IAmDaTruth (small blind) folded before Flop
+Seat 2: DURKADURDUR (big blind) collected ($21.90)
+Seat 3: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 4: Pappe_Ruk folded before Flop (didn't bet)
+Seat 5: PEGAZ inc folded on the River
+Seat 6: Nehekus (button) folded before Flop (didn't bet)

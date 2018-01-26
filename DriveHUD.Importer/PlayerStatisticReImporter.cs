@@ -13,6 +13,7 @@
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
@@ -48,6 +49,8 @@ namespace DriveHUD.Importers
         private readonly IDataService dataService;
         private const int handHistoryRowsPerQuery = 1000;
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
+
+        private IDHProgress progress;
 
         /// <summary>
         /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
@@ -130,6 +133,14 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
+        /// Initializes progress to report progress
+        /// </summary>
+        public void InitializeProgress(IDHProgress progress)
+        {
+            this.progress = progress;
+        }
+
+        /// <summary>
         /// Builds players dictionary
         /// </summary>
         private void BuildPlayersDictonary()
@@ -183,6 +194,10 @@ namespace DriveHUD.Importers
 
                 var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
 
+                progress?.Report(new LocalizableString("Progress_RebuildingStatistics_Status", 0, entitiesCount));
+
+                var progressResult = 0;
+
                 for (var i = 0; i < numOfQueries; i++)
                 {
                     var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
@@ -205,13 +220,16 @@ namespace DriveHUD.Importers
 
                                 if (player.PlayerId != 0)
                                 {
-                                    BuildPlayerStatistic(parsingResult, player, calculatedEquity);
+                                    BuildPlayerStatistic(handHistory, parsingResult, player, calculatedEquity);
                                 }
                             });
                         }
                     });
 
                     GC.Collect();
+
+                    progressResult += handHistories.Length;
+                    progress?.Report(new LocalizableString("Progress_RebuildingStatistics_Status", progressResult, entitiesCount));
                 }
             }
         }
@@ -281,11 +299,17 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="handHistory"></param>
         /// <param name="player"></param>
-        private void BuildPlayerStatistic(ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
+        private void BuildPlayerStatistic(Handhistory dbHandHistory, ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
             var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
+
+            if (!string.IsNullOrEmpty(dbHandHistory.Tourneynumber))
+            {
+                statistic.IsTourney = true;
+                statistic.TournamentId = dbHandHistory.Tourneynumber;
+            }
 
             StorePlayerStatistic(statistic);
         }

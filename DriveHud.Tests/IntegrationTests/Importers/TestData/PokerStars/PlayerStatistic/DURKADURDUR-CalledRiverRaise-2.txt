@@ -1,0 +1,41 @@
+PokerStars Game #47150821128:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:50:56 ET
+Table 'Pan IV' 6-max Seat #3 is the button
+Seat 1: stopme10 ($266.65 in chips) 
+Seat 2: BNNJH ($160 in chips) 
+Seat 3: Chojjasd ($209.40 in chips) 
+Seat 4: DURKADURDUR ($581.60 in chips) 
+Seat 5: maestroB ($153.90 in chips) 
+Seat 6: LiraMaker ($28.35 in chips) 
+DURKADURDUR: posts small blind $1
+maestroB: posts big blind $2
+*** HOLE CARDS ***
+LiraMaker: folds 
+stopme10: folds 
+BNNJH: folds 
+Chojjasd: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+maestroB: folds 
+Chojjasd: calls $14
+*** FLOP *** [Th Ad 7d]
+DURKADURDUR: bets $28
+Chojjasd: calls $28
+*** TURN *** [Th Ad 7d] [As]
+DURKADURDUR: checks 
+Chojjasd: checks 
+*** RIVER *** [Th Ad 7d As] [2d]
+DURKADURDUR: bets $37
+Chojjasd: raises $124.40 to $161.40 and is all-in
+DURKADURDUR: calls $124.40
+*** SHOW DOWN ***
+Chojjasd: shows [Ac Ah] (four of a kind, Aces)
+DURKADURDUR: shows [Ks Kc] (two pair, Aces and Kings)
+Chojjasd collected $417.80 from pot
+*** SUMMARY ***
+Total pot $420.80 | Rake $3 
+Board [Th Ad 7d As 2d]
+Seat 1: stopme10 folded before Flop (didn't bet)
+Seat 2: BNNJH folded before Flop (didn't bet)
+Seat 3: Chojjasd (button) showed [Ac Ah] and won ($417.80) with four of a kind, Aces
+Seat 4: DURKADURDUR (small blind) showed [Ks Kc] and lost with two pair, Aces and Kings
+Seat 5: maestroB (big blind) folded before Flop
+Seat 6: LiraMaker folded before Flop (didn't bet)

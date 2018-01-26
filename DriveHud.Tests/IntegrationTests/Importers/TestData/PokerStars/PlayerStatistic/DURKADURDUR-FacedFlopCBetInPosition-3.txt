@@ -1,0 +1,32 @@
+PokerStars Game #47149448469:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:50:09 ET
+Table 'Sitarski III' 6-max Seat #1 is the button
+Seat 1: tristyle ($1225.30 in chips) 
+Seat 2: nvrbet ($92.35 in chips) 
+Seat 3: Chojjasd ($360 in chips) 
+Seat 4: Desateur ($197 in chips) 
+Seat 5: twinpsych ($479.25 in chips) 
+Seat 6: DURKADURDUR ($229.25 in chips) 
+nvrbet: posts small blind $1
+Chojjasd: posts big blind $2
+*** HOLE CARDS ***
+Desateur: raises $4 to $6
+twinpsych: calls $6
+DURKADURDUR: calls $6
+tristyle: folds 
+nvrbet: folds 
+Chojjasd: folds 
+*** FLOP *** [4d 8s 3s]
+Desateur: bets $14
+twinpsych: folds 
+DURKADURDUR: folds 
+Uncalled bet ($14) returned to Desateur
+Desateur collected $19.95 from pot
+*** SUMMARY ***
+Total pot $21 | Rake $1.05 
+Board [4d 8s 3s]
+Seat 1: tristyle (button) folded before Flop (didn't bet)
+Seat 2: nvrbet (small blind) folded before Flop
+Seat 3: Chojjasd (big blind) folded before Flop
+Seat 4: Desateur collected ($19.95)
+Seat 5: twinpsych folded on the Flop
+Seat 6: DURKADURDUR folded on the Flop

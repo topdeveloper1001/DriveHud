@@ -1,0 +1,19 @@
+PokerStars Game #47150063409:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:19:42 ET
+Table 'Idelsonia' 6-max Seat #1 is the button
+Seat 2: Desateur ($497.60 in chips) 
+Seat 3: Chojjasd ($277.45 in chips) 
+Seat 4: DURKADURDUR ($207.30 in chips) 
+Desateur: posts small blind $1
+Chojjasd: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+Desateur: raises $18 to $24
+Chojjasd: folds 
+DURKADURDUR: folds
+Uncalled bet ($18) returned to Desateur
+Desateur collected $14 from pot
+*** SUMMARY ***
+Total pot $14 | Rake $0 
+Seat 2: Desateur (small blind) collected ($14)
+Seat 3: Chojjasd (big blind) folded before Flop
+Seat 4: DURKADURDUR folded before Flop

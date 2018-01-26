@@ -1,0 +1,36 @@
+PokerStars Game #47152939054:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:09:00 ET
+Table 'Istria II' 6-max Seat #2 is the button
+Seat 2: mad.afurable ($239.35 in chips) 
+Seat 3: DURKADURDUR ($201 in chips) 
+Seat 4: MasterSilviu ($226 in chips) 
+Seat 5: ramones099 ($223.95 in chips) 
+Seat 6: Bosas2 ($592.25 in chips) 
+DURKADURDUR: posts small blind $1
+MasterSilviu: posts big blind $2
+*** HOLE CARDS ***
+ramones099: folds 
+Chojjasd is disconnected 
+Bosas2: folds 
+mad.afurable: raises $2 to $4
+DURKADURDUR: raises $12 to $16
+MasterSilviu: folds 
+mad.afurable: raises $22 to $38
+DURKADURDUR: raises $163 to $201 and is all-in
+mad.afurable: calls $163
+*** FLOP *** [3c Kc Js]
+*** TURN *** [3c Kc Js] [Jd]
+*** RIVER *** [3c Kc Js Jd] [2h]
+Chojjasd is connected 
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ts Tc] (two pair, Jacks and Tens)
+mad.afurable: shows [Jc Jh] (four of a kind, Jacks)
+mad.afurable collected $402 from pot
+*** SUMMARY ***
+Total pot $404 | Rake $2 
+Board [3c Kc Js Jd 2h]
+Seat 2: mad.afurable (button) showed [Jc Jh] and won ($402) with four of a kind, Jacks
+Seat 3: DURKADURDUR (small blind) showed [Ts Tc] and lost with two pair, Jacks and Tens
+Seat 4: MasterSilviu (big blind) folded before Flop
+Seat 5: ramones099 folded before Flop (didn't bet)
+Seat 6: Bosas2 folded before Flop (didn't bet)
+

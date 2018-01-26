@@ -255,6 +255,7 @@
     <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
     <Compile Include="UnitTests\ReportCreatorTests.cs" />
     <Compile Include="UnitTests\StatInfoTests.cs" />
+    <Compile Include="UnitTests\StatResourcesTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Zone.txt">

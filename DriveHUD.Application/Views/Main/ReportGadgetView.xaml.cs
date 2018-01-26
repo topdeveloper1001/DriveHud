@@ -354,7 +354,11 @@ namespace DriveHUD.Application.Views
                     return;
                 }
 
-                var reportCollection = GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+
+                var statistic = creator.IsTournament ? storageModel.FilteredTournamentPlayerStatistic : storageModel.FilteredCashPlayerStatistic;
+
+                var reportCollection = GetReportCollectionAsync(creator, statistic);
 
                 reportGadgetViewModel.IsBusy = false;
 

@@ -1,0 +1,37 @@
+PokerStars Game #47149990124:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:15:47 ET
+Table 'Sagitta V' 6-max Seat #3 is the button
+Seat 1: twinpsych ($663.65 in chips) 
+Seat 3: stopme10 ($200 in chips) 
+Seat 4: DURKADURDUR ($363.45 in chips) 
+Seat 5: FIrmFighter ($200 in chips) 
+DURKADURDUR: posts small blind $1
+FIrmFighter: posts big blind $2
+kaader: sits out 
+Krilin736: sits out 
+*** HOLE CARDS ***
+twinpsych: folds 
+stopme10: raises $4 to $6
+DURKADURDUR: calls $5
+FIrmFighter: folds 
+*** FLOP *** [Qc Ks Td]
+DURKADURDUR: checks 
+stopme10: bets $8
+DURKADURDUR: calls $8
+*** TURN *** [Qc Ks Td] [5h]
+DURKADURDUR: checks 
+stopme10: checks 
+*** RIVER *** [Qc Ks Td 5h] [7h]
+DURKADURDUR: checks 
+stopme10: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ah Th] (a pair of Tens)
+stopme10: mucks hand 
+DURKADURDUR collected $28.55 from pot
+*** SUMMARY ***
+Total pot $30 | Rake $1.45 
+Board [Qc Ks Td 5h 7h]
+Seat 1: twinpsych folded before Flop (didn't bet)
+Seat 3: stopme10 (button) mucked
+Seat 4: DURKADURDUR (small blind) showed [Ah Th] and won ($28.55) with a pair of Tens
+Seat 5: FIrmFighter (big blind) folded before Flop
+

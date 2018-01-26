@@ -20,5 +20,7 @@ namespace Model.Reports
     public interface IReportCreator
     {
         ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics);
+
+        bool IsTournament { get; }
     }
 }

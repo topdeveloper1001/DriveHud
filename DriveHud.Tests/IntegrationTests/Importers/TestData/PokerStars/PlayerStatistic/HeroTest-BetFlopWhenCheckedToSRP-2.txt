@@ -1,0 +1,36 @@
+PokerStars Game #47149906895:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:12:07 ET
+Table 'Lilaea III' 6-max Seat #4 is the button
+Seat 1: twofinger777 ($205.70 in chips) 
+Seat 2: stopme10 ($215 in chips) 
+Seat 3: HeroTest ($293.75 in chips) 
+Seat 4: FIrmFighter ($200 in chips) 
+Seat 5: Desateur ($453.60 in chips) 
+Seat 6: chrisdm ($200 in chips) 
+Desateur: posts small blind $1
+chrisdm: posts big blind $2
+*** HOLE CARDS ***
+twofinger777: raises $4 to $6
+stopme10: folds 
+HeroTest: calls $6
+FIrmFighter: folds 
+Desateur: calls $5
+chrisdm: folds 
+*** FLOP *** [Qc Ks 5s]
+Desateur: checks 
+twofinger777: checks 
+HeroTest: bets $14
+Desateur: folds 
+twofinger777: folds 
+Uncalled bet ($14) returned to HeroTest
+HeroTest collected $19 from pot
+HeroTest: doesn't show hand 
+*** SUMMARY ***
+Total pot $20 | Rake $1 
+Board [Qc Ks 5s]
+Seat 1: twofinger777 folded on the Flop
+Seat 2: stopme10 folded before Flop (didn't bet)
+Seat 3: HeroTest collected ($19)
+Seat 4: FIrmFighter (button) folded before Flop (didn't bet)
+Seat 5: Desateur (small blind) folded on the Flop
+Seat 6: chrisdm (big blind) folded before Flop
+

@@ -690,6 +690,10 @@
   <ItemGroup>
     <Resource Include="images\settings\bovada-3max.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\gauge-small.png" />
+    <Resource Include="images\icons\textbox-small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

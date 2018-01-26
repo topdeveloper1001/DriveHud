@@ -1,0 +1,28 @@
+PokerStars Game #47184595877:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:14:02 ET
+Table 'Natalie' 6-max Seat #3 is the button
+Seat 1: HeroTest ($375.40 in chips)
+Seat 2: plls ($353.90 in chips)
+Seat 3: grac ($146.75 in chips)
+Seat 4: bluffinmyway ($227.65 in chips)
+Seat 5: Fierytycoon ($200 in chips)
+bluffinmyway: posts small blind $1
+Fierytycoon: posts big blind $2
+FastEddie267: sits out
+*** HOLE CARDS ***
+HeroTest: raises $4 to $6
+plls: folds
+grac: raises $10 to $16
+bluffinmyway: folds
+Fierytycoon: folds
+HeroTest: raises $359.40 to $375.40 and is all-in
+grac: folds
+Uncalled bet ($359.40) returned to HeroTest
+HeroTest collected $35 from pot
+HeroTest: doesn't show hand
+*** SUMMARY ***
+Total pot $35 | Rake $0
+Seat 1: HeroTest collected ($35)
+Seat 2: plls folded before Flop (didn't bet)
+Seat 3: grac (button) folded before Flop
+Seat 4: bluffinmyway (small blind) folded before Flop
+Seat 5: Fierytycoon (big blind) folded before Flop

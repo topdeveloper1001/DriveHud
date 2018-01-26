@@ -20,9 +20,9 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class PokerSiteReportCreator : IReportCreator
+    public class PokerSiteReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -31,7 +31,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.PokersiteId).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.PokersiteId).ToArray())
             {
                 var stat = new ReportIndicators();
 
@@ -47,9 +47,9 @@ namespace Model.Reports
         }
     }
 
-    public class TournamentPokerSiteReportCreator : IReportCreator
+    public class TournamentPokerSiteReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -66,7 +66,7 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray())
+                foreach (var playerstatistic in statistics.Where(x => group.Any(g => g.Tourneynumber == x.TournamentId)).ToArray())
                 {
                     stat.AddStatistic(playerstatistic);
                 }

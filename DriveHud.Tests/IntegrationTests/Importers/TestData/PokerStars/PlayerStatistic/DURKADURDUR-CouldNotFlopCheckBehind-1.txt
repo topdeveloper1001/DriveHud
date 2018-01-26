@@ -1,0 +1,42 @@
+PokerStars Game #47181909815:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:44:26 ET
+Table 'Natalie' 6-max Seat #2 is the button
+Seat 1: DURKADURDUR ($222.25 in chips)
+Seat 2: roso19 ($109.45 in chips)
+Seat 3: KodyKirlinko ($155.05 in chips)
+Seat 4: bluffinmyway ($238.45 in chips)
+Seat 5: dimsumboy ($242 in chips)
+Seat 6: brizzybreech ($567.60 in chips)
+KodyKirlinko: posts small blind $1
+bluffinmyway: posts big blind $2
+*** HOLE CARDS ***
+dimsumboy: folds
+brizzybreech: raises $4 to $6
+DURKADURDUR: calls $6
+roso19: folds
+KodyKirlinko: calls $5
+bluffinmyway: calls $4
+*** FLOP *** [8s 5d Kc]
+KodyKirlinko: checks
+bluffinmyway: checks
+brizzybreech: bets $18
+DURKADURDUR: calls $18
+KodyKirlinko: folds
+bluffinmyway: folds
+*** TURN *** [8s 5d Kc] [Qh]
+brizzybreech: checks
+DURKADURDUR: checks
+*** RIVER *** [8s 5d Kc Qh] [8d]
+brizzybreech: bets $40
+DURKADURDUR: folds
+Uncalled bet ($40) returned to brizzybreech
+brizzybreech collected $57.10 from pot
+brizzybreech: doesn't show hand
+*** SUMMARY ***
+Total pot $60 | Rake $2.90
+Board [8s 5d Kc Qh 8d]
+Seat 1: DURKADURDUR folded on the River
+Seat 2: roso19 (button) folded before Flop (didn't bet)
+Seat 3: KodyKirlinko (small blind) folded on the Flop
+Seat 4: bluffinmyway (big blind) folded on the Flop
+Seat 5: dimsumboy folded before Flop (didn't bet)
+Seat 6: brizzybreech collected ($57.10)

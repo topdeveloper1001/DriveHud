@@ -1,0 +1,43 @@
+PokerStars Game #47185523006:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:47:03 ET
+Table 'Neckar VII' 6-max Seat #1 is the button
+Seat 1: Marker275 ($147.10 in chips)
+Seat 2: DURKADURDUR ($313.10 in chips)
+Seat 3: Fierytycoon ($251.05 in chips)
+Seat 4: jaeh00d ($200 in chips)
+Seat 5: imthesky ($200 in chips)
+DURKADURDUR: posts small blind $1
+Fierytycoon: posts big blind $2
+*** HOLE CARDS ***
+jaeh00d: folds
+imthesky: raises $6 to $8
+Marker275: calls $8
+DURKADURDUR: calls $7
+Fierytycoon: calls $6
+*** FLOP *** [9h 4s Ks]
+DURKADURDUR: checks
+Fierytycoon: checks
+imthesky: checks
+Marker275: checks
+*** TURN *** [9h 4s Ks] [Js]
+DURKADURDUR: bets $24
+Fierytycoon: calls $24
+imthesky: folds
+Marker275: calls $24
+*** RIVER *** [9h 4s Ks Js] [Qs]
+DURKADURDUR: checks
+Fierytycoon: checks
+Marker275: bets $80
+DURKADURDUR: folds
+jaeh00d leaves the table
+Fierytycoon: folds
+Uncalled bet ($80) returned to Marker275
+Marker275 collected $102 from pot
+Marker275: doesn't show hand
+*** SUMMARY ***
+Total pot $104 | Rake $2
+Board [9h 4s Ks Js Qs]
+Seat 1: Marker275 (button) collected ($102)
+Seat 2: DURKADURDUR (small blind) folded on the River
+Seat 3: Fierytycoon (big blind) folded on the River
+Seat 4: jaeh00d folded before Flop (didn't bet)
+Seat 5: imthesky folded on the Turn

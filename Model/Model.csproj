@@ -285,6 +285,7 @@
     <Compile Include="Replayer\ChipModel.cs" />
     <Compile Include="Replayer\ReplayerDataModel.cs" />
     <Compile Include="Replayer\ReplayerHelpers.cs" />
+    <Compile Include="Reports\CashBaseReportCreator.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
@@ -295,6 +296,7 @@
     <Compile Include="Reports\ShowdownHandsReportCreator.cs" />
     <Compile Include="Reports\StakesReportCreator.cs" />
     <Compile Include="Reports\TimeReportCreator.cs" />
+    <Compile Include="Reports\TournamentBaseReportCreator.cs" />
     <Compile Include="Reports\TournamentReportCreator.cs" />
     <Compile Include="Reports\TournamentStackSizeReportCreator.cs" />
     <Compile Include="SessionFactoryService.cs" />

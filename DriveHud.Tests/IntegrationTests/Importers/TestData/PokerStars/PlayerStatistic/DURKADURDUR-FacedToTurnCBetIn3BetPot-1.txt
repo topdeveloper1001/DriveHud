@@ -1,0 +1,38 @@
+PokerStars Game #47148131894:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:43:41 ET
+Table 'Libussa' 6-max Seat #3 is the button
+Seat 1: CCF20 ($203.35 in chips) 
+Seat 2: pobolero ($216.20 in chips) 
+Seat 3: DURKADURDUR ($280 in chips) 
+Seat 4: Desateur ($468 in chips) 
+Seat 5: maestroB ($77 in chips) 
+Desateur: posts small blind $1
+maestroB: posts big blind $2
+Shiko19: sits out 
+*** HOLE CARDS ***
+CCF20: folds 
+pobolero: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+Desateur: folds 
+maestroB: folds 
+pobolero: raises $28 to $48
+DURKADURDUR: calls $28
+*** FLOP *** [Th 2s 4d]
+pobolero: bets $48
+DURKADURDUR: calls $48
+*** TURN *** [Th 2s 4d] [6s]
+pobolero: bets $120.20 and is all-in
+DURKADURDUR: calls $120.20
+*** RIVER *** [Th 2s 4d 6s] [Ah]
+*** SHOW DOWN ***
+pobolero: shows [Qd Qc] (a pair of Queens)
+DURKADURDUR: mucks hand 
+pobolero collected $433.40 from pot
+*** SUMMARY ***
+Total pot $435.40 | Rake $2 
+Board [Th 2s 4d 6s Ah]
+Seat 1: CCF20 folded before Flop (didn't bet)
+Seat 2: pobolero showed [Qd Qc] and won ($433.40) with a pair of Queens
+Seat 3: DURKADURDUR (button) mucked
+Seat 4: Desateur (small blind) folded before Flop
+Seat 5: maestroB (big blind) folded before Flop
+

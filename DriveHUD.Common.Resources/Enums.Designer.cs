@@ -781,15 +781,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MP VPIP%.
-        /// </summary>
-        internal static string Enum_Stat__VPIP_MP {
-            get {
-                return ResourceManager.GetString("Enum_Stat__VPIP_MP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to AF (Aggression Factor).
         /// </summary>
         internal static string Enum_Stat_AF {
@@ -826,11 +817,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Flop when Checked to SRP%.
+        /// </summary>
+        internal static string Enum_Stat_BetFlopWhenCheckedToSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetFlopWhenCheckedToSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet/fold flop when PFR raiser.
         /// </summary>
         internal static string Enum_Stat_BetFoldFlopPfrRaiser {
             get {
                 return ResourceManager.GetString("Enum_Stat_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet River on BX Line%.
+        /// </summary>
+        internal static string Enum_Stat_BetRiverOnBXLine {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetRiverOnBXLine", resourceCulture);
             }
         }
         
@@ -849,6 +858,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_BTNDefendCORaise {
             get {
                 return ResourceManager.GetString("Enum_Stat_BTNDefendCORaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_CalledCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Turn Check-Raise%.
+        /// </summary>
+        internal static string Enum_Stat_CalledTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet IP%.
+        /// </summary>
+        internal static string Enum_Stat_CallFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CallFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet OOP%.
+        /// </summary>
+        internal static string Enum_Stat_CallFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CallFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call River Raise%.
+        /// </summary>
+        internal static string Enum_Stat_CallRiverRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CallRiverRaise", resourceCulture);
             }
         }
         
@@ -898,6 +952,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Calls Turn%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndCallOnTurn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndCallOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Fold to Turn Bet%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldOnTurn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Raises Turn Bet%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndRaiseOnTurn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndRaiseOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/C OOP on Turn%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndXCOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndXCOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/F Turn%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndXFOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndXFOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check/fold flop when 3-betting OOP.
         /// </summary>
         internal static string Enum_Stat_CheckFoldFlop3BetOop {
@@ -921,6 +1020,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_CheckRaise {
             get {
                 return ResourceManager.GetString("Enum_Stat_CheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise Flop C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_CheckRaisedFlopCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckRaisedFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check River after BB Line%.
+        /// </summary>
+        internal static string Enum_Stat_CheckRiverAfterBBLine {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckRiverAfterBBLine", resourceCulture);
             }
         }
         
@@ -1105,6 +1222,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-bet in 3-bet pot%.
+        /// </summary>
+        internal static string Enum_Stat_DelayedTurnCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_DelayedTurnCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet IP%.
+        /// </summary>
+        internal static string Enum_Stat_DelayedTurnCBetIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_DelayedTurnCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet OOP%.
+        /// </summary>
+        internal static string Enum_Stat_DelayedTurnCBetOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_DelayedTurnCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Donk Bet%.
         /// </summary>
         internal static string Enum_Stat_DonkBet {
@@ -1137,6 +1281,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FlopAGG {
             get {
                 return ResourceManager.GetString("Enum_Stat_FlopAGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Overbet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBetSizeTwoThirdsOrLess", resourceCulture);
             }
         }
         
@@ -1186,6 +1384,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Check Behind%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCheckBehind {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCheckBehind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Enum_Stat_FlopCheckRaise {
@@ -1204,11 +1411,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet IP %.
+        /// </summary>
+        internal static string Enum_Stat_FoldTo3BetIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldTo3BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet OOP %.
+        /// </summary>
+        internal static string Enum_Stat_FoldTo3BetOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldTo3BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to 4-bet%.
         /// </summary>
         internal static string Enum_Stat_FoldTo4Bet {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldTo4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to 5-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_FoldTo5Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldTo5Bet", resourceCulture);
             }
         }
         
@@ -1240,6 +1474,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Fold vs. Flop C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Donk Bet %.
+        /// </summary>
+        internal static string Enum_Stat_FoldToDonkBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToDonkBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToDoubleBarrel {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToDoubleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrell in 3-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToDoubleBarrelIn3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToDoubleBarrelIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop C-Bet IP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop C-Bet OOP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Check-Raise%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToFlopCheckRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToFlopCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold To Flop Raise.
         /// </summary>
         internal static string Enum_Stat_FoldToFlopRaise {
@@ -1254,6 +1551,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldToRiverCBet {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToRiverCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to River Check-Raise%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToRiverCheckRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToRiverCheckRaise", resourceCulture);
             }
         }
         
@@ -1276,11 +1582,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Turn Check-Raise%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold To Turn Raise.
         /// </summary>
         internal static string Enum_Stat_FoldToTurnRaise {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToTurnRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold Turn%.
+        /// </summary>
+        internal static string Enum_Stat_FoldTurn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldTurn", resourceCulture);
             }
         }
         
@@ -1474,6 +1798,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raise Flop C-Bet 3-bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_RaiseFlopCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RaiseFlopCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raise Frequency Factor.
         /// </summary>
         internal static string Enum_Stat_RaiseFrequencyFactor {
@@ -1515,6 +1848,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_RiverAGG {
             get {
                 return ResourceManager.GetString("Enum_Stat_RiverAGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Bet%.
+        /// </summary>
+        internal static string Enum_Stat_RiverBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Overbet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_RiverBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Call Effeciency.
+        /// </summary>
+        internal static string Enum_Stat_RiverCallEffeciency {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverCallEffeciency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Check-Call%.
+        /// </summary>
+        internal static string Enum_Stat_RiverCheckCall {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverCheckCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Check-Fold%.
+        /// </summary>
+        internal static string Enum_Stat_RiverCheckFold {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverCheckFold", resourceCulture);
             }
         }
         
@@ -1569,6 +1947,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_S3BetCO {
             get {
                 return ResourceManager.GetString("Enum_Stat_S3BetCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_S3BetEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_S3BetEP", resourceCulture);
             }
         }
         
@@ -1672,6 +2059,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_S5Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_S5Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shove flop after 4-betting pre-flop%.
+        /// </summary>
+        internal static string Enum_Stat_ShovedFlopAfter4Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ShovedFlopAfter4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Squeeze%.
         /// </summary>
         internal static string Enum_Stat_Squeeze {
@@ -1762,11 +2167,20 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to True Aggression % (TAP).
+        ///   Looks up a localized string similar to True Aggression% (TAP).
         /// </summary>
         internal static string Enum_Stat_TrueAggression {
             get {
                 return ResourceManager.GetString("Enum_Stat_TrueAggression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn AF.
+        /// </summary>
+        internal static string Enum_Stat_TurnAF {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnAF", resourceCulture);
             }
         }
         
@@ -1776,6 +2190,69 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_TurnAGG {
             get {
                 return ResourceManager.GetString("Enum_Stat_TurnAGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Overbet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/3 or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeOneThirdOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeOneThirdOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBetSizeTwoThirdsOrLess", resourceCulture);
             }
         }
         
@@ -1929,6 +2406,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_WTSD {
             get {
                 return ResourceManager.GetString("Enum_Stat_WTSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling 3-Bet PF%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDAfterCalling3Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDAfterCalling3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling PFR%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDAfterCallingPfr {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDAfterCallingPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after not c-betting flop as PFR%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDAfterNotCBettingFlopAsPfr {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDAfterNotCBettingFlopAsPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after seeing Turn%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDAfterSeeingTurn {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDAfterSeeingTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% as PF 3-Bettor%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDAsPF3Bettor {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDAsPF3Bettor", resourceCulture);
             }
         }
         

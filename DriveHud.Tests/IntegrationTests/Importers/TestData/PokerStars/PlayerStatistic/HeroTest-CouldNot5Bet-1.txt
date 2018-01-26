@@ -1,0 +1,36 @@
+PokerStars Game #11111111111:  Hold'em No Limit ($1/$2 USD) - 2018/01/09 10:00:00 ET
+Table 'Test Table' 6-max Seat #6 is the button
+Seat 1: Villain1 ($100 in chips) 
+Seat 2: Villain2 ($100 in chips) 
+Seat 3: Villain3 ($100 in chips) 
+Seat 4: Villain4 ($100 in chips) 
+Seat 5: Villain5 ($100 in chips) 
+Seat 6: HeroTest ($100 in chips) 
+Villain1: posts small blind $1
+Villain2: posts big blind $2
+*** HOLE CARDS ***
+Dealt to HeroTest [Kc Ad]
+Villain3: folds 
+Villain4: folds 
+Villain5: raises $4 to $6
+HeroTest: raises $14 to $20
+Villain1: folds 
+Villain2: folds 
+Villain5: raises $80 to $100 and is all-in
+HeroTest: calls $80
+*** FLOP *** [5h 6s Ah]
+*** TURN *** [5h 6s Ah] [5d]
+*** RIVER *** [5h 6s Ah 5d] [Js]
+*** SHOW DOWN ***
+Villain5: shows [Kh Kd] (two pair, Kings and Fives)
+HeroTest: shows [Kc Ad] (two pair, Aces and Fives)
+HeroTest collected $200 from pot
+*** SUMMARY ***
+Total pot $203 | Rake $3 
+Board [5h 6s Ah 5d Js]
+Seat 1: Villain1 (small blind) folded before Flop
+Seat 2: Villain2 (big blind) folded before Flop
+Seat 3: Villain3 folded before Flop (didn't bet)
+Seat 4: Villain4 folded before Flop (didn't bet)
+Seat 5: Villain5 showed [Kh Kd] and lost with two pair, Kings and Fives
+Seat 6: HeroTest (button) showed [Kc Ad] and won ($200) with two pair, Aces and Fives

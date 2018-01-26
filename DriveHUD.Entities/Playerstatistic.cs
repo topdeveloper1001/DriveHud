@@ -812,6 +812,176 @@ namespace DriveHUD.Entities
         [ProtoMember(295)]
         public virtual int CouldBetFoldFlopPfrRaiser { get; set; }
 
+        [ProtoMember(296)]
+        public virtual int FacedFlopCheckRaise { get; set; }
+
+        [ProtoMember(297)]
+        public virtual int FacedTurnCheckRaise { get; set; }
+
+        [ProtoMember(298)]
+        public virtual int FacedRiverCheckRaise { get; set; }
+
+        [ProtoMember(299)]
+        public virtual int FoldedToFlopCheckRaise { get; set; }
+
+        [ProtoMember(300)]
+        public virtual int FoldedToTurnCheckRaise { get; set; }
+
+        [ProtoMember(301)]
+        public virtual int FoldedToRiverCheckRaise { get; set; }
+
+        [ProtoMember(302)]
+        public virtual int CalledTurnCheckRaise { get; set; }
+
+        [ProtoMember(303)]
+        public virtual int CheckedRiverAfterBBLine { get; set; }
+
+        [ProtoMember(304)]
+        public virtual int CouldCheckRiverAfterBBLine { get; set; }
+
+        [ProtoMember(305)]
+        public virtual int DidBetRiverOnBXLine { get; set; }
+
+        [ProtoMember(306)]
+        public virtual int CouldBetRiverOnBXLine { get; set; }
+
+        [ProtoMember(307)]
+        public virtual int FacingflopcontinuationbetIP { get; set; }
+
+        [ProtoMember(308)]
+        public virtual int FacingflopcontinuationbetOOP { get; set; }
+
+        [ProtoMember(309)]
+        public virtual int CalledflopcontinuationbetIP { get; set; }
+
+        [ProtoMember(310)]
+        public virtual int CalledflopcontinuationbetOOP { get; set; }
+
+        [ProtoMember(311)]
+        public virtual int FoldToFlopcontinuationbetIP { get; set; }
+
+        [ProtoMember(312)]
+        public virtual int FoldToFlopcontinuationbetOOP { get; set; }
+
+        [ProtoMember(313)]
+        public virtual int FoldToThreeBetIP { get; set; }
+
+        [ProtoMember(314)]
+        public virtual int FoldToThreeBetOOP { get; set; }
+
+        [ProtoMember(315)]
+        public virtual int DidRiverBet { get; set; }
+
+        [ProtoMember(316)]
+        public virtual int CouldRiverBet { get; set; }
+
+        [ProtoMember(317)]
+        public virtual int Did5Bet { get; set; }
+
+        [ProtoMember(318)]
+        public virtual int Could5Bet { get; set; }
+
+        [ProtoMember(319)]
+        public virtual int CalledCheckRaiseVsFlopCBet { get; set; }
+
+        [ProtoMember(320)]
+        public virtual int FoldedCheckRaiseVsFlopCBet { get; set; }
+
+        [ProtoMember(321)]
+        public virtual int FacedCheckRaiseVsFlopCBet { get; set; }
+
+        [ProtoMember(322)]
+        public virtual int FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP { get; set; }
+
+        [ProtoMember(323)]
+        public virtual int CheckedCalledTurnWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(324)]
+        public virtual int CheckedFoldedToTurnWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(325)]
+        public virtual int FacedTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(326)]
+        public virtual int CalledTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(327)]
+        public virtual int FoldedToTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(328)]
+        public virtual int RaisedTurnBetWhenCheckedFlopAsPfr { get; set; }
+
+        [ProtoMember(329)]
+        public virtual decimal FlopBetToPotRatio { get; set; }
+
+        [ProtoMember(330)]
+        public virtual decimal TurnBetToPotRatio { get; set; }
+
+        [ProtoMember(331)]
+        public virtual int DidDelayedTurnCBetIn3BetPot { get; set; }
+
+        [ProtoMember(332)]
+        public virtual int CouldDelayedTurnCBetIn3BetPot { get; set; }
+
+        [ProtoMember(333)]
+        public virtual int DidFlopCheckBehind { get; set; }
+
+        [ProtoMember(334)]
+        public virtual int CouldFlopCheckBehind { get; set; }
+
+        [ProtoMember(335)]
+        public virtual int FacedDonkBet { get; set; }
+
+        [ProtoMember(336)]
+        public virtual int FoldedToDonkBet { get; set; }
+
+        [ProtoMember(337)]
+        public virtual int FoldedTurn { get; set; }
+
+        [ProtoMember(338)]
+        public virtual int FacedBetOnTurn { get; set; }
+
+        [ProtoMember(339)]
+        public virtual int CheckedCalledRiver { get; set; }
+
+        [ProtoMember(340)]
+        public virtual int CheckedFoldedRiver { get; set; }
+
+        [ProtoMember(341)]
+        public virtual int CheckedThenFacedBetOnRiver { get; set; }
+
+        [ProtoMember(342)]
+        public virtual decimal RiverBetToPotRatio { get; set; }
+
+        [ProtoMember(343)]
+        public virtual decimal RiverWonOnFacingBet { get; set; }
+
+        [ProtoMember(344)]
+        public virtual decimal RiverCallSizeOnFacingBet { get; set; }
+
+        [ProtoMember(345)]
+        public virtual int Faced5Bet { get; set; }
+
+        [ProtoMember(346)]
+        public virtual int FoldedTo5Bet { get; set; }
+
+        [ProtoMember(347)]
+        public virtual int ShovedFlopAfter4Bet { get; set; }
+
+        [ProtoMember(348)]
+        public virtual int CouldShoveFlopAfter4Bet { get; set; }
+
+        [ProtoMember(349)]
+        public virtual int FacedThreeBetIP { get; set; }
+
+        [ProtoMember(350)]
+        public virtual int FacedThreeBetOOP { get; set; }
+
+        [ProtoMember(351)]
+        public virtual int BetFlopWhenCheckedToSRP { get; set; }
+
+        [ProtoMember(352)]
+        public virtual int CouldBetFlopWhenCheckedToSRP { get; set; }
 
         #region Workarounds for broken stats
 
@@ -890,6 +1060,310 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Simple IP/OOP based stats (not for serialization)
+
+        public virtual int DidDelayedTurnCBetIP
+        {
+            get
+            {
+                return PreflopIP == 1 && DidDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldDelayedTurnCBetIP
+        {
+            get
+            {
+                return PreflopIP == 1 && CouldDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidDelayedTurnCBetOOP
+        {
+            get
+            {
+                return PreflopIP == 0 && DidDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldDelayedTurnCBetOOP
+        {
+            get
+            {
+                return PreflopIP == 0 && CouldDelayedTurnCBet == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #region Stats built from existing properties
+
+        public virtual int CheckRaisedFlopCBet
+        {
+            get
+            {
+                return DidCheckFlop == 1 && Raisedflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldCheckRaiseFlopCBet
+        {
+            get
+            {
+                return DidCheckFlop == 1 && Facingflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidFlopBet
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 ? 1 : 0;
+            }
+        }
+
+        public virtual int DidTurnBet
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 ? 1 : 0;
+            }
+        }
+
+        public virtual int RaisedFlopCBetIn3BetPot
+        {
+            get
+            {
+                return Didthreebet == 1 && Raisedflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int CouldRaiseFlopCBetIn3BetPot
+        {
+            get
+            {
+                return Didthreebet == 1 && Facingflopcontinuationbet == 1 ? 1 : 0;
+            }
+        }
+
+        #region FlopBetSize stats
+
+        public virtual int FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.5m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.25m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 2 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 0.75m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return FlopBetToPotRatio > 0 && FlopBetToPotRatio <= 1m ? 1 : 0;
+            }
+        }
+
+        public virtual int FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return FlopBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        public virtual int FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return Foldedtoturncontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int FacedToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return Facingflopcontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual int TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.5m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 1 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.25m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 2 / 3m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 0.75m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return TurnBetToPotRatio > 0 && TurnBetToPotRatio <= 1m ? 1 : 0;
+            }
+        }
+
+        public virtual int TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return TurnBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #region RiverBetSize stats
+
+        public virtual int RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return RiverBetToPotRatio > 1.01m ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #region WTSD after stats
+
+        public virtual int WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return Calledthreebetpreflop == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCalling3BetOpportunity
+        {
+            get
+            {
+                return Calledthreebetpreflop == 1 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCallingPfr
+        {
+            get
+            {
+                return Couldthreebet == 1 && Didthreebet == 0 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterCallingPfrOpportunity
+        {
+            get
+            {
+                return Couldthreebet == 1 && Didthreebet == 0 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return Pfrhands == 1 && Flopcontinuationbetpossible == 1 && Flopcontinuationbetmade == 0 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterNotCBettingFlopAsPfrOpportunity
+        {
+            get
+            {
+                return Pfrhands == 1 && Flopcontinuationbetpossible == 1 && Flopcontinuationbetmade == 0 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return SawTurn == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAsPF3Bettor
+        {
+            get
+            {
+                return Didthreebet == 1 && Sawshowdown == 1 ? 1 : 0;
+            }
+        }
+
+        public virtual int WTSDAsPF3BettorOpportunity
+        {
+            get
+            {
+                return Didthreebet == 1 && Sawflop == 1 ? 1 : 0;
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session         
@@ -928,9 +1402,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return (FacingPreflop == EnumFacingPreflop.Unopened
-                        || FacingPreflop == EnumFacingPreflop.Limper
-                        || FacingPreflop == EnumFacingPreflop.MultipleLimpers);
+                return FacingPreflop == EnumFacingPreflop.Unopened;
             }
         }
 
@@ -1044,6 +1516,14 @@ namespace DriveHUD.Entities
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
             Raisedthreebetpreflop += a.Raisedthreebetpreflop;
+            Did5Bet += a.Did5Bet;
+            Could5Bet += a.Could5Bet;
+            Faced5Bet += a.Faced5Bet;
+            FoldedTo5Bet += a.FoldedTo5Bet;
+
+            CalledCheckRaiseVsFlopCBet += a.CalledCheckRaiseVsFlopCBet;
+            FoldedCheckRaiseVsFlopCBet += a.FoldedCheckRaiseVsFlopCBet;
+            FacedCheckRaiseVsFlopCBet += a.FacedCheckRaiseVsFlopCBet;
 
             Totalbbswon += a.Totalbbswon;
             Totalhands += a.Totalhands;
@@ -1087,6 +1567,18 @@ namespace DriveHUD.Entities
             Foldedtoflopcontinuationbet += a.Foldedtoflopcontinuationbet;
             Calledflopcontinuationbet += a.Calledflopcontinuationbet;
             Raisedflopcontinuationbet += a.Raisedflopcontinuationbet;
+
+            FacingflopcontinuationbetIP += a.FacingflopcontinuationbetIP;
+            FacingflopcontinuationbetOOP += a.FacingflopcontinuationbetOOP;
+            CalledflopcontinuationbetIP += a.CalledflopcontinuationbetIP;
+            CalledflopcontinuationbetOOP += a.CalledflopcontinuationbetOOP;
+            FoldToFlopcontinuationbetIP += a.FoldToFlopcontinuationbetIP;
+            FoldToFlopcontinuationbetOOP += a.FoldToFlopcontinuationbetOOP;
+
+            FoldToThreeBetIP += a.FoldToThreeBetIP;
+            FoldToThreeBetOOP += a.FoldToThreeBetOOP;
+            FacedThreeBetIP += a.FacedThreeBetIP;
+            FacedThreeBetOOP += a.FacedThreeBetOOP;
 
             FacingFlopContinuationBetFromThreeBetPot += a.FacingFlopContinuationBetFromThreeBetPot;
             FoldedToFlopContinuationBetFromThreeBetPot += a.FoldedToFlopContinuationBetFromThreeBetPot;
@@ -1162,6 +1654,21 @@ namespace DriveHUD.Entities
             CouldFlopCheckRaise += a.CouldFlopCheckRaise;
             CouldTurnCheckRaise += a.CouldTurnCheckRaise;
             CouldRiverCheckRaise += a.CouldRiverCheckRaise;
+            FacedFlopCheckRaise += a.FacedFlopCheckRaise;
+            FoldedToFlopCheckRaise += a.FoldedToFlopCheckRaise;
+            FacedTurnCheckRaise += a.FacedTurnCheckRaise;
+            FoldedToTurnCheckRaise += a.FoldedToTurnCheckRaise;
+            FacedRiverCheckRaise += a.FacedRiverCheckRaise;
+            FoldedToRiverCheckRaise += a.FoldedToRiverCheckRaise;
+            CalledTurnCheckRaise += a.CalledTurnCheckRaise;
+
+            CheckedRiverAfterBBLine += a.CheckedRiverAfterBBLine;
+            CouldCheckRiverAfterBBLine += a.CouldCheckRiverAfterBBLine;
+            DidBetRiverOnBXLine += a.DidBetRiverOnBXLine;
+            CouldBetRiverOnBXLine += a.CouldBetRiverOnBXLine;
+            DidRiverBet += a.DidRiverBet;
+            CouldRiverBet += a.CouldRiverBet;
+
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -1354,9 +1861,44 @@ namespace DriveHUD.Entities
 
             DidDelayedTurnCBet += a.DidDelayedTurnCBet;
             CouldDelayedTurnCBet += a.CouldDelayedTurnCBet;
+            DidDelayedTurnCBetIn3BetPot += a.DidDelayedTurnCBetIn3BetPot;
+            CouldDelayedTurnCBetIn3BetPot += a.CouldDelayedTurnCBetIn3BetPot;
 
             DidDonkBet += a.DidDonkBet;
             CouldDonkBet += a.CouldDonkBet;
+            FacedDonkBet += a.FacedDonkBet;
+            FoldedToDonkBet += a.FoldedToDonkBet;
+
+            FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP += a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
+            CheckedCalledTurnWhenCheckedFlopAsPfr += a.CheckedCalledTurnWhenCheckedFlopAsPfr;
+            CheckedFoldedToTurnWhenCheckedFlopAsPfr += a.CheckedFoldedToTurnWhenCheckedFlopAsPfr;
+            FacedTurnBetWhenCheckedFlopAsPfr += a.FacedTurnBetWhenCheckedFlopAsPfr;
+            CalledTurnBetWhenCheckedFlopAsPfr += a.CalledTurnBetWhenCheckedFlopAsPfr;
+            FoldedToTurnBetWhenCheckedFlopAsPfr += a.FoldedToTurnBetWhenCheckedFlopAsPfr;
+            RaisedTurnBetWhenCheckedFlopAsPfr += a.RaisedTurnBetWhenCheckedFlopAsPfr;
+
+            FlopBetToPotRatio = a.FlopBetToPotRatio;
+            TurnBetToPotRatio = a.TurnBetToPotRatio;
+            RiverBetToPotRatio = a.RiverBetToPotRatio;
+
+            DidFlopCheckBehind += a.DidFlopCheckBehind;
+            CouldFlopCheckBehind += a.CouldFlopCheckBehind;
+
+            FoldedTurn += a.FoldedTurn;
+            FacedBetOnTurn += a.FacedBetOnTurn;
+
+            CheckedCalledRiver += a.CheckedCalledRiver;
+            CheckedFoldedRiver += a.CheckedFoldedRiver;
+            CheckedThenFacedBetOnRiver += a.CheckedThenFacedBetOnRiver;
+
+            RiverWonOnFacingBet += a.RiverWonOnFacingBet;
+            RiverCallSizeOnFacingBet += a.RiverCallSizeOnFacingBet;
+
+            ShovedFlopAfter4Bet += a.ShovedFlopAfter4Bet;
+            CouldShoveFlopAfter4Bet += a.CouldShoveFlopAfter4Bet;
+
+            BetFlopWhenCheckedToSRP += a.BetFlopWhenCheckedToSRP;
+            CouldBetFlopWhenCheckedToSRP += a.CouldBetFlopWhenCheckedToSRP;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -1465,6 +2007,17 @@ namespace DriveHUD.Entities
             r.Calledflopcontinuationbet = a.Calledflopcontinuationbet + b.Calledflopcontinuationbet;
             r.Raisedflopcontinuationbet = a.Raisedflopcontinuationbet + b.Raisedflopcontinuationbet;
 
+            r.FacingflopcontinuationbetIP = a.FacingflopcontinuationbetIP + b.FacingflopcontinuationbetIP;
+            r.FacingflopcontinuationbetOOP = a.FacingflopcontinuationbetOOP + b.FacingflopcontinuationbetOOP;
+            r.CalledflopcontinuationbetIP = a.CalledflopcontinuationbetIP + b.CalledflopcontinuationbetIP;
+            r.FoldToFlopcontinuationbetIP = a.FoldToFlopcontinuationbetIP + b.FoldToFlopcontinuationbetIP;
+            r.FoldToFlopcontinuationbetOOP = a.FoldToFlopcontinuationbetOOP + b.FoldToFlopcontinuationbetOOP;
+
+            r.FoldToThreeBetIP = a.FoldToThreeBetIP + b.FoldToThreeBetIP;
+            r.FoldToThreeBetOOP = a.FoldToThreeBetOOP + b.FoldToThreeBetOOP;
+            r.FacedThreeBetIP = a.FacedThreeBetIP + b.FacedThreeBetIP;
+            r.FacedThreeBetOOP = a.FacedThreeBetOOP + b.FacedThreeBetOOP;
+
             r.FacingFlopContinuationBetFromThreeBetPot = a.FacingFlopContinuationBetFromThreeBetPot + b.FacingFlopContinuationBetFromThreeBetPot;
             r.FoldedToFlopContinuationBetFromThreeBetPot = a.FoldedToFlopContinuationBetFromThreeBetPot + b.FoldedToFlopContinuationBetFromThreeBetPot;
             r.CalledFlopContinuationBetFromThreeBetPot = a.CalledFlopContinuationBetFromThreeBetPot + b.CalledFlopContinuationBetFromThreeBetPot;
@@ -1516,6 +2069,15 @@ namespace DriveHUD.Entities
             r.Calledfourbetpreflop = a.Calledfourbetpreflop + b.Calledfourbetpreflop;
             r.Raisedfourbetpreflop = a.Raisedfourbetpreflop + b.Raisedfourbetpreflop;
 
+            r.Did5Bet = a.Did5Bet + b.Did5Bet;
+            r.Could5Bet = a.Could5Bet + b.Could5Bet;
+            r.Faced5Bet = a.Faced5Bet + b.Faced5Bet;
+            r.FoldedTo5Bet = a.FoldedTo5Bet + b.FoldedTo5Bet;
+
+            r.CalledCheckRaiseVsFlopCBet = a.CalledCheckRaiseVsFlopCBet + b.CalledCheckRaiseVsFlopCBet;
+            r.FoldedCheckRaiseVsFlopCBet = a.FoldedCheckRaiseVsFlopCBet + b.FoldedCheckRaiseVsFlopCBet;
+            r.FacedCheckRaiseVsFlopCBet = a.FacedCheckRaiseVsFlopCBet + b.FacedCheckRaiseVsFlopCBet;
+
             r.Facingtwopreflopraisers = a.Facingtwopreflopraisers + b.Facingtwopreflopraisers;
             r.Calledtwopreflopraisers = a.Calledtwopreflopraisers + b.Calledtwopreflopraisers;
             r.Raisedtwopreflopraisers = a.Raisedtwopreflopraisers + b.Raisedtwopreflopraisers;
@@ -1530,6 +2092,7 @@ namespace DriveHUD.Entities
             r.Couldsqueeze = a.Couldsqueeze + b.Couldsqueeze;
             r.DidOpenRaise = a.DidOpenRaise + b.DidOpenRaise;
             r.Didsqueeze = a.Didsqueeze + b.Didsqueeze;
+
             r.DidCheckRaise = a.DidCheckRaise + b.DidCheckRaise;
             r.DidFlopCheckRaise = a.DidFlopCheckRaise + b.DidFlopCheckRaise;
             r.DidTurnCheckRaise = a.DidTurnCheckRaise + b.DidTurnCheckRaise;
@@ -1537,6 +2100,21 @@ namespace DriveHUD.Entities
             r.CouldFlopCheckRaise = a.CouldFlopCheckRaise + b.CouldFlopCheckRaise;
             r.CouldTurnCheckRaise = a.CouldTurnCheckRaise + b.CouldTurnCheckRaise;
             r.CouldRiverCheckRaise = a.CouldRiverCheckRaise + b.CouldRiverCheckRaise;
+            r.FacedFlopCheckRaise = a.FacedFlopCheckRaise + b.FacedFlopCheckRaise;
+            r.FoldedToFlopCheckRaise = a.FoldedToFlopCheckRaise + b.FoldedToFlopCheckRaise;
+            r.FacedTurnCheckRaise = a.FacedTurnCheckRaise + b.FacedTurnCheckRaise;
+            r.FoldedToTurnCheckRaise = a.FoldedToTurnCheckRaise + b.FoldedToTurnCheckRaise;
+            r.FacedRiverCheckRaise = a.FacedRiverCheckRaise + b.FacedRiverCheckRaise;
+            r.FoldedToRiverCheckRaise = a.FoldedToRiverCheckRaise + b.FoldedToRiverCheckRaise;
+            r.CalledTurnCheckRaise = a.CalledTurnCheckRaise + b.CalledTurnCheckRaise;
+
+            r.CheckedRiverAfterBBLine = a.CheckedRiverAfterBBLine + b.CheckedRiverAfterBBLine;
+            r.CouldCheckRiverAfterBBLine = a.CouldCheckRiverAfterBBLine + b.CouldCheckRiverAfterBBLine;
+            r.DidBetRiverOnBXLine = a.DidBetRiverOnBXLine + b.DidBetRiverOnBXLine;
+            r.CouldBetRiverOnBXLine = a.CouldBetRiverOnBXLine + b.CouldBetRiverOnBXLine;
+            r.DidRiverBet = a.DidRiverBet + b.DidRiverBet;
+            r.CouldRiverBet = a.CouldRiverBet + b.CouldRiverBet;
+
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;
 
@@ -1712,8 +2290,44 @@ namespace DriveHUD.Entities
 
             r.DidDelayedTurnCBet = a.DidDelayedTurnCBet + b.DidDelayedTurnCBet;
             r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
+            r.DidDelayedTurnCBetIn3BetPot = a.DidDelayedTurnCBetIn3BetPot + b.DidDelayedTurnCBetIn3BetPot;
+            r.CouldDelayedTurnCBetIn3BetPot = a.CouldDelayedTurnCBetIn3BetPot + b.CouldDelayedTurnCBetIn3BetPot;
+
             r.DidDonkBet = a.DidDonkBet + b.DidDonkBet;
             r.CouldDonkBet = a.CouldDonkBet + b.CouldDonkBet;
+            r.FacedDonkBet = a.FacedDonkBet + b.FacedDonkBet;
+            r.FoldedToDonkBet = a.FoldedToDonkBet + b.FoldedToDonkBet;
+
+            r.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP = a.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP + b.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP;
+            r.CheckedCalledTurnWhenCheckedFlopAsPfr = a.CheckedCalledTurnWhenCheckedFlopAsPfr + b.CheckedCalledTurnWhenCheckedFlopAsPfr;
+            r.CheckedFoldedToTurnWhenCheckedFlopAsPfr = a.CheckedFoldedToTurnWhenCheckedFlopAsPfr + b.CheckedFoldedToTurnWhenCheckedFlopAsPfr;
+            r.FacedTurnBetWhenCheckedFlopAsPfr = a.FacedTurnBetWhenCheckedFlopAsPfr + b.FacedTurnBetWhenCheckedFlopAsPfr;
+            r.CalledTurnBetWhenCheckedFlopAsPfr = a.CalledTurnBetWhenCheckedFlopAsPfr + b.CalledTurnBetWhenCheckedFlopAsPfr;
+            r.FoldedToTurnBetWhenCheckedFlopAsPfr = a.FoldedToTurnBetWhenCheckedFlopAsPfr + b.FoldedToTurnBetWhenCheckedFlopAsPfr;
+            r.RaisedTurnBetWhenCheckedFlopAsPfr = a.RaisedTurnBetWhenCheckedFlopAsPfr + b.RaisedTurnBetWhenCheckedFlopAsPfr;
+
+            r.FlopBetToPotRatio = b.FlopBetToPotRatio;
+            r.TurnBetToPotRatio = b.TurnBetToPotRatio;
+            r.RiverBetToPotRatio = b.RiverBetToPotRatio;
+
+            r.DidFlopCheckBehind = a.DidFlopCheckBehind + b.DidFlopCheckBehind;
+            r.CouldFlopCheckBehind = a.CouldFlopCheckBehind + b.CouldFlopCheckBehind;
+
+            r.FoldedTurn = a.FoldedTurn + b.FoldedTurn;
+            r.FacedBetOnTurn = a.FacedBetOnTurn + b.FacedBetOnTurn;
+
+            r.CheckedCalledRiver = a.CheckedCalledRiver + b.CheckedCalledRiver;
+            r.CheckedFoldedRiver = a.CheckedFoldedRiver + b.CheckedFoldedRiver;
+            r.CheckedThenFacedBetOnRiver = a.CheckedThenFacedBetOnRiver + b.CheckedThenFacedBetOnRiver;
+
+            r.RiverWonOnFacingBet = a.RiverWonOnFacingBet + b.RiverWonOnFacingBet;
+            r.RiverCallSizeOnFacingBet = a.RiverCallSizeOnFacingBet + b.RiverCallSizeOnFacingBet;
+
+            r.ShovedFlopAfter4Bet = a.ShovedFlopAfter4Bet + b.ShovedFlopAfter4Bet;
+            r.CouldShoveFlopAfter4Bet = a.CouldShoveFlopAfter4Bet + b.CouldShoveFlopAfter4Bet;
+
+            r.BetFlopWhenCheckedToSRP = a.BetFlopWhenCheckedToSRP + b.BetFlopWhenCheckedToSRP;
+            r.CouldBetFlopWhenCheckedToSRP = a.CouldBetFlopWhenCheckedToSRP + b.CouldBetFlopWhenCheckedToSRP;
 
             return r;
         }

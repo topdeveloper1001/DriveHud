@@ -1,0 +1,39 @@
+PokerStars Game #11111111112:  Hold'em No Limit ($1/$2 USD) - 2018/01/09 10:00:30 ET
+Table 'Test Table' 6-max Seat #1 is the button
+Seat 1: Villain1 ($189.05 in chips) 
+Seat 2: Villain2 ($431.30 in chips) 
+Seat 3: Villain3 ($200 in chips) 
+Seat 4: Villain4 ($396.25 in chips) 
+Seat 5: HeroTest ($276.55 in chips) 
+Seat 6: Villain5 ($229.45 in chips) 
+Villain2: posts small blind $1
+Villain3: posts big blind $2
+*** HOLE CARDS ***
+Villain4: folds 
+HeroTest: raises $4 to $6
+Villain5: raises $14 to $20
+Villain1: folds 
+Villain2: folds 
+Villain3: folds 
+HeroTest: calls $14
+*** FLOP *** [9h Th Jh]
+HeroTest: checks 
+Villain5: bets $20
+HeroTest: raises $36 to $56
+Villain5: raises $153.45 to $209.45 and is all-in
+HeroTest: calls $153.45
+*** TURN *** [9h Th Jh] [Ts]
+*** RIVER *** [9h Th Jh Ts] [Js]
+*** SHOW DOWN ***
+HeroTest: shows [Ad Qh] (two pair, Jacks and Tens)
+Villain5: shows [Ah 7h] (a flush, Ace high)
+Villain5 collected $458.90 from pot
+*** SUMMARY ***
+Total pot $461.90 | Rake $3 
+Board [9h Th Jh Ts Js]
+Seat 1: Villain1 (button) folded before Flop (didn't bet)
+Seat 2: Villain2 (small blind) folded before Flop
+Seat 3: Villain3 (big blind) folded before Flop
+Seat 4: Villain4 folded before Flop (didn't bet)
+Seat 5: HeroTest showed [Ad Qh] and lost with two pair, Jacks and Tens
+Seat 6: Villain5 showed [Ah 7h] and won ($458.90) with a flush, Ace high

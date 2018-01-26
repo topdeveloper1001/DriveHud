@@ -1,0 +1,35 @@
+PokerStars Game #47178433220:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 20:03:40 ET
+Table 'Thoas' 6-max Seat #6 is the button
+Seat 1: redargoe ($220.75 in chips) 
+Seat 2: DURKADURDUR ($200 in chips) 
+Seat 3: rivichico ($499.15 in chips) 
+Seat 5: Nehekus ($1194.65 in chips) 
+Seat 6: P1ngPoNgPr0 ($607.45 in chips) 
+redargoe: posts small blind $1
+DURKADURDUR: posts big blind $2
+Hismoon: sits out 
+*** HOLE CARDS ***
+rivichico: folds 
+Nehekus: raises $4 to $6
+P1ngPoNgPr0: calls $6
+redargoe: folds 
+DURKADURDUR: raises $19 to $25
+Nehekus: raises $29 to $54
+P1ngPoNgPr0: folds 
+DURKADURDUR: raises $146 to $200 and is all-in
+Nehekus: calls $146
+*** FLOP *** [3s 4c 4h]
+*** TURN *** [3s 4c 4h] [7s]
+*** RIVER *** [3s 4c 4h 7s] [Jd]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ad Ks] (a pair of Fours)
+Nehekus: shows [Ts Td] (two pair, Tens and Fours)
+Nehekus collected $405 from pot
+*** SUMMARY ***
+Total pot $407 | Rake $2 
+Board [3s 4c 4h 7s Jd]
+Seat 1: redargoe (small blind) folded before Flop
+Seat 2: DURKADURDUR (big blind) showed [Ad Ks] and lost with a pair of Fours
+Seat 3: rivichico folded before Flop (didn't bet)
+Seat 5: Nehekus showed [Ts Td] and won ($405) with two pair, Tens and Fours
+Seat 6: P1ngPoNgPr0 (button) folded before Flop

@@ -1,0 +1,30 @@
+PokerStars Game #47147716368:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:21:50 ET
+Table 'Idelsonia' 6-max Seat #6 is the button
+Seat 1: DURKADURDUR ($476.45 in chips) 
+Seat 3: iLeftFTP ($265.40 in chips) 
+Seat 4: Lazy_Jack ($210.30 in chips) 
+Seat 6: DeLepel ($302.95 in chips) 
+DURKADURDUR: posts small blind $1
+iLeftFTP: posts big blind $2
+twinpsych: sits out 
+*** HOLE CARDS ***
+Lazy_Jack: folds 
+DeLepel: raises $4 to $6
+DURKADURDUR: calls $5
+iLeftFTP: folds 
+*** FLOP *** [Ac 5d 7c]
+DURKADURDUR: checks 
+DeLepel: bets $8
+DURKADURDUR: raises $16 to $24
+DeLepel: raises $52 to $76
+DURKADURDUR: folds 
+Uncalled bet ($52) returned to DeLepel
+DeLepel collected $60 from pot
+DeLepel: doesn't show hand 
+*** SUMMARY ***
+Total pot $62 | Rake $2 
+Board [Ac 5d 7c]
+Seat 1: DURKADURDUR (small blind) folded on the Flop
+Seat 3: iLeftFTP (big blind) folded before Flop
+Seat 4: Lazy_Jack folded before Flop (didn't bet)
+Seat 6: DeLepel (button) collected ($60)

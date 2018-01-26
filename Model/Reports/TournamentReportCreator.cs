@@ -20,9 +20,9 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class TournamentReportCreator : IReportCreator
+    public class TournamentReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -31,7 +31,7 @@ namespace Model.Reports
                 return report;
             }
 
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;     
+            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
             var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
@@ -39,7 +39,7 @@ namespace Model.Reports
             {
                 var stat = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => x.IsTourney && tournament.Tourneynumber == x.TournamentId).ToArray())
+                foreach (var playerstatistic in statistics.Where(x => tournament.Tourneynumber == x.TournamentId).ToArray())
                 {
                     stat.AddStatistic(playerstatistic);
                 }

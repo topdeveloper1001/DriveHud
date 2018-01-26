@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -19,22 +21,20 @@ using DriveHUD.Importers.Builders.iPoker;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model.Settings;
 using Model.Site;
 using Newtonsoft.Json;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
-using System;
-using DriveHud.Tests.UnitTests.Helpers;
-using Model.Settings;
-using DriveHUD.Common.Resources;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace DriveHud.Tests.UnitTests
 {

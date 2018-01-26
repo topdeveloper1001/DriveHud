@@ -327,6 +327,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref selectedToolViewModel, value);
                 this.RaisePropertyChanged(nameof(CanAddStats));
+                this.RaisePropertyChanged(nameof(LineBarOrSimpleStatSelectorVisible));
             }
         }
 
@@ -335,6 +336,14 @@ namespace DriveHUD.Application.ViewModels
             get
             {
                 return !IsInDesignMode || (IsInDesignMode && SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel);
+            }
+        }
+
+        public bool LineBarOrSimpleStatSelectorVisible
+        {
+            get
+            {
+                return SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel;
             }
         }
 

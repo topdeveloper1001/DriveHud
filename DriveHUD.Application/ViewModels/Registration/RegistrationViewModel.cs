@@ -48,7 +48,6 @@ namespace DriveHUD.Application.ViewModels.Registration
             server = new DeployLXLicensingServer();
             server.CookieContainer = new CookieContainer();
 
-
             licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
             NotificationRequest = new InteractionRequest<INotification>();
@@ -159,6 +158,26 @@ namespace DriveHUD.Application.ViewModels.Registration
                     LogProvider.Log.Error(this, "Could not open renew link", ex);
                 }
             });
+
+            ResetLicensesCommand = ReactiveCommand.Create();
+            ResetLicensesCommand.Subscribe(x =>
+            {
+                try
+                {
+                    LogProvider.Log.Info("Resetting licenses");
+
+                    licenseService.ResetLicenses();
+
+                    LogProvider.Log.Info("Licenses has been reset");
+
+                    InitializeMessage("Common_RegistrationView_ResetLicensesSuccess");
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Could not reset licenses", ex);
+                    InitializeMessage("Common_RegistrationView_ResetLicensesFailed");
+                }
+            });
         }
 
         /// <summary>
@@ -182,6 +201,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsOKButtonVisible = false;
             IsCancelButtonVisible = true;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = false;
@@ -208,6 +228,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsBackButtonVisible = false;
             IsCancelButtonVisible = false;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = true;
             IsLicenseDaysLeftVisible = false;
@@ -234,6 +255,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsBackButtonVisible = false;
             IsCancelButtonVisible = true;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = true;
 
             IsTrialProgressBarVisible = true;
             IsLicenseDaysLeftVisible = false;
@@ -260,6 +282,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsBackButtonVisible = true;
             IsCancelButtonVisible = false;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = false;
@@ -286,6 +309,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsBackButtonVisible = !calledFromMain;
             IsCancelButtonVisible = calledFromMain;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = false;
@@ -309,6 +333,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsOKButtonVisible = false;
             IsCancelButtonVisible = false;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = false;
@@ -332,6 +357,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsOKButtonVisible = false;
             IsCancelButtonVisible = false;
             IsActivateButtonVisible = true;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = false;
@@ -371,6 +397,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             IsOKButtonVisible = false;
             IsCancelButtonVisible = true;
             IsActivateButtonVisible = false;
+            IsResetLicensesButtonVisible = false;
 
             IsTrialProgressBarVisible = false;
             IsLicenseDaysLeftVisible = true;
@@ -627,6 +654,20 @@ namespace DriveHUD.Application.ViewModels.Registration
             }
         }
 
+        private bool isResetLicensesButtonVisible;
+
+        public bool IsResetLicensesButtonVisible
+        {
+            get
+            {
+                return isResetLicensesButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isResetLicensesButtonVisible, value);
+            }
+        }
+
         private ObservableCollection<LicenseInfoViewModel> licenses;
 
         public ObservableCollection<LicenseInfoViewModel> Licenses
@@ -724,6 +765,8 @@ namespace DriveHUD.Application.ViewModels.Registration
         public ReactiveCommand<object> ActivateCommand { get; private set; }
 
         public ReactiveCommand<object> BackCommand { get; private set; }
+
+        public ReactiveCommand<object> ResetLicensesCommand { get; private set; }
 
         #endregion
 

@@ -1,0 +1,41 @@
+PokerStars Game #47145126421:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 2:45:24 ET
+Table 'Malabar III' 6-max Seat #2 is the button
+Seat 1: Desateur ($209.85 in chips) 
+Seat 2: twinpsych ($393.05 in chips) 
+Seat 3: pablostar ($296 in chips) 
+Seat 4: RiverRock55 ($200 in chips) 
+Seat 5: ROBERTJON ($298 in chips) 
+Seat 6: DURKADURDUR ($217.15 in chips) 
+pablostar: posts small blind $1
+RiverRock55: posts big blind $2
+*** HOLE CARDS ***
+ROBERTJON: folds 
+DURKADURDUR: raises $4 to $6
+Desateur: folds 
+twinpsych: folds 
+pablostar: folds 
+RiverRock55: raises $16 to $22
+DURKADURDUR: calls $16
+*** FLOP *** [Th Tc 4s]
+RiverRock55: bets $24
+DURKADURDUR: calls $24
+*** TURN *** [Th Tc 4s] [2d]
+RiverRock55: bets $38
+DURKADURDUR: calls $38
+*** RIVER *** [Th Tc 4s 2d] [5d]
+RiverRock55: bets $116 and is all-in
+DURKADURDUR: calls $116
+*** SHOW DOWN ***
+RiverRock55: shows [Qc Qd] (two pair, Queens and Tens)
+DURKADURDUR: shows [Js Jd] (two pair, Jacks and Tens)
+RiverRock55 collected $398 from pot
+*** SUMMARY ***
+Total pot $401 | Rake $3 
+Board [Th Tc 4s 2d 5d]
+Seat 1: Desateur folded before Flop (didn't bet)
+Seat 2: twinpsych (button) folded before Flop (didn't bet)
+Seat 3: pablostar (small blind) folded before Flop
+Seat 4: RiverRock55 (big blind) showed [Qc Qd] and won ($398) with two pair, Queens and Tens
+Seat 5: ROBERTJON folded before Flop (didn't bet)
+Seat 6: DURKADURDUR showed [Js Jd] and lost with two pair, Jacks and Tens
+

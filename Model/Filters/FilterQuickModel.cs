@@ -32,7 +32,7 @@ namespace Model.Filters
         private void FilterSectionQuickFilterInitialize()
         {
             QuickFilterCollection = new ObservableCollection<QuickFilterItem>()
-            {
+            {              
                 new QuickFilterItem() { Name = "3-Bet non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
                 new QuickFilterItem() { Name = "3-Bet premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.PremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet w/ non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
@@ -283,7 +283,7 @@ namespace Model.Filters
         }
 
         private string _propertyName;
-        private string _isPossiblePropertyName;        
+        private string _isPossiblePropertyName;
         private QuickFilterHandTypeEnum _quickFilterHandType;
         private QuickFilterPositionEnum? _quickFilterPosition;
 

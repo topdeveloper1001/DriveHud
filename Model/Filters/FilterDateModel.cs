@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -18,6 +19,7 @@ using Model.Enums;
 using Model.Importer;
 using Model.Settings;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -39,49 +41,89 @@ namespace Model.Filters
 
         #region Methods
 
-        public Expression<Func<Playerstatistic, bool>> GetFilterPredicate()
+        public Expression<Func<T, bool>> GetFilterPredicate<T>(Expression<Func<T, DateTime>> getDateExpression, Expression<Func<T, bool>> lastMonthExpression)
         {
+            if (getDateExpression == null || lastMonthExpression == null)
+            {
+                return null;
+            }
+
+            var getDate = getDateExpression.Compile();
+
             switch (DateFilterType.EnumDateRange)
             {
                 case EnumDateFiterStruct.EnumDateFiter.Today:
-                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.StartOfDay());
+                    return PredicateBuilder.Create<T>(x => getDate(x) >= DateTime.Now.StartOfDay());
 
                 case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
                     FirstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
-                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
+                    return PredicateBuilder.Create<T>(x => getDate(x) >= DateTime.Now.FirstDayOfWeek(FirstDayOfWeek));
 
                 case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
-                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfMonth());
+                    return PredicateBuilder.Create<T>(x => getDate(x) >= DateTime.Now.FirstDayOfMonth());
 
                 case EnumDateFiterStruct.EnumDateFiter.LastMonth:
-                    var statisticCollection = ServiceLocator.Current.GetInstance<SingletonStorageModel>()?.StatisticCollection;
-
-                    if (statisticCollection == null || !statisticCollection.Any())
-                    {
-                        break;
-                    }
-
-                    var lastAvailableDate = statisticCollection.Max(x => Converter.ToLocalizedDateTime(x.Time));
-
-                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= lastAvailableDate.FirstDayOfMonth());
+                    return lastMonthExpression;
 
                 case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
                     if (DateFilterType.DateFrom <= DateFilterType.DateTo)
                     {
-                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateFrom &&
-                            Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateTo);
+                        return PredicateBuilder.Create<T>(x => getDate(x) >= DateFilterType.DateFrom &&
+                            getDate(x) <= DateFilterType.DateTo);
                     }
                     else
                     {
-                        return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) <= DateFilterType.DateFrom &&
-                            Converter.ToLocalizedDateTime(x.Time) >= DateFilterType.DateTo);
+                        return PredicateBuilder.Create<T>(x => getDate(x) <= DateFilterType.DateFrom &&
+                            getDate(x) >= DateFilterType.DateTo);
                     }
 
                 case EnumDateFiterStruct.EnumDateFiter.ThisYear:
-                    return PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= DateTime.Now.FirstDayOfYear());
+                    return PredicateBuilder.Create<T>(x => getDate(x) >= DateTime.Now.FirstDayOfYear());
             };
 
             return null;
+        }
+
+        public Expression<Func<Playerstatistic, bool>> GetFilterPredicate()
+        {
+            var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+
+            var lastCashAvailableDate = storageModel.StatisticCollection?.Where(x => !x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+            var lastTournamentAvailableDate = storageModel.StatisticCollection?.Where(x => x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+
+            lastCashAvailableDate = lastCashAvailableDate ?? DateTime.Now;
+            lastTournamentAvailableDate = lastTournamentAvailableDate ?? DateTime.Now;
+
+            var lastMonthPredicateExpression = PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= (x.IsTourney ?
+                   lastTournamentAvailableDate.Value.FirstDayOfMonth() :
+                   lastCashAvailableDate.Value.FirstDayOfMonth()));
+
+            return GetFilterPredicate(x => Converter.ToLocalizedDateTime(x.Time), lastMonthPredicateExpression);
+        }
+
+        public IEnumerable<Tournaments> FilterTournaments(IEnumerable<Tournaments> tournaments)
+        {
+            if (tournaments == null || !tournaments.Any())
+            {
+                return tournaments;
+            }
+
+            var lastTournamentAvailableDate = tournaments?.MaxOrDefault(x => x.Firsthandtimestamp);
+
+            lastTournamentAvailableDate = lastTournamentAvailableDate ?? DateTime.Now;
+
+            var lastMonthPredicateExpression = PredicateBuilder.Create<Tournaments>(x => x.Firsthandtimestamp >= lastTournamentAvailableDate.Value.FirstDayOfMonth());
+
+            var filterPredicate = GetFilterPredicate(x => x.Firsthandtimestamp, lastMonthPredicateExpression);
+
+            var dateFilterPredicate = PredicateBuilder.True<Tournaments>();
+
+            if (filterPredicate != null)
+            {
+                dateFilterPredicate = dateFilterPredicate.And(filterPredicate);
+            }
+
+            return tournaments.AsQueryable().Where(dateFilterPredicate);
         }
 
         public void ResetFilter()

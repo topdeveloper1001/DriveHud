@@ -747,66 +747,16 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/gauge.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/gauge.png"                 
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GaugeIndicatorAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_TextBoxTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_GraphTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_HeatMapTool}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}" />
-
-                    <controls:ImageButton
-                        Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
-                        ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
-                        dh:DragDrop.IsDragSource="True"
-                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.LineBreak}" />
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.GaugeIndicator}">
+                        <controls:ImageButton.ToolTip>
+                            <ToolTip
+                                MaxWidth="300"
+                                Content="{ResX Key=Common_HudSideBar_GaugeIndicatorTool}" />
+                        </controls:ImageButton.ToolTip>
+                    </controls:ImageButton>
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
@@ -818,11 +768,66 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_GraphTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_HeatMapTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_4StatDHBoxTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"
                         ToolTip="{ResX Key=Common_HudSideBar_BumperStickersTool}"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_BreakLine}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.LineBreak}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_TiltMeterTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}" />
+
+                    <controls:ImageButton
+                        Style="{StaticResource HudDesignerToolButtonStyle}"
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
+                        ToolTip="{ResX Key=Common_HudSideBar_TextBoxTool}"
+                        dh:DragDrop.IsDragSource="True"
+                        dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
+                        dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}" />
 
                 </UniformGrid>
 
@@ -1151,7 +1156,7 @@
                             Padding="0,0,0,10"
                             SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
                             ItemsSource="{Binding Path=StatInfoObserveCollection}"
-                            ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
+                            ItemTemplate="{StaticResource RadListBoxItemTemplate_SelectedStatInfo}">
                             <telerik:RadListBox.Style>
                                 <Style
                                     TargetType="{x:Type telerik:RadListBox}"

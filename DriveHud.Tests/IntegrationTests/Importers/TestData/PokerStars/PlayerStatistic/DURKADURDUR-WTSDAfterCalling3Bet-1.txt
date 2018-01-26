@@ -1,0 +1,39 @@
+PokerStars Game #47180801992:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:10:18 ET
+Table 'Hormuthia IV' 6-max Seat #6 is the button
+Seat 1: Nehekus ($413.90 in chips) 
+Seat 2: Pappe_Ruk ($302.30 in chips) 
+Seat 3: DURKADURDUR ($200 in chips) 
+Seat 5: rivichico ($558.05 in chips) 
+Seat 6: MiraCIe ($208 in chips) 
+Nehekus: posts small blind $1
+Pappe_Ruk: posts big blind $2
+thomaswkm: sits out 
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+rivichico: folds 
+MiraCIe: raises $13 to $19
+Nehekus: folds 
+Pappe_Ruk: folds 
+DURKADURDUR: calls $13
+*** FLOP *** [5h Kh 7s]
+DURKADURDUR: checks 
+MiraCIe: bets $21.30
+DURKADURDUR: raises $34.70 to $56
+MiraCIe: calls $34.70
+*** TURN *** [5h Kh 7s] [8s]
+DURKADURDUR: bets $125 and is all-in
+MiraCIe: calls $125
+*** RIVER *** [5h Kh 7s 8s] [Td]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ks Ad] (a pair of Kings)
+MiraCIe: shows [9c Kc] (a pair of Kings - lower kicker)
+DURKADURDUR collected $401 from pot
+*** SUMMARY ***
+Total pot $403 | Rake $2 
+Board [5h Kh 7s 8s Td]
+Seat 1: Nehekus (small blind) folded before Flop
+Seat 2: Pappe_Ruk (big blind) folded before Flop
+Seat 3: DURKADURDUR showed [Ks Ad] and won ($401) with a pair of Kings
+Seat 5: rivichico folded before Flop (didn't bet)
+Seat 6: MiraCIe (button) showed [9c Kc] and lost with a pair of Kings
+

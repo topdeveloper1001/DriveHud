@@ -1,0 +1,40 @@
+PokerStars Game #47184772755:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:20:16 ET
+Table 'Sonja' 6-max Seat #3 is the button
+Seat 1: The Diablos ($147.35 in chips) 
+Seat 2: TODO ADENTR0 ($214.65 in chips) 
+Seat 3: 1tormentor ($279.40 in chips) 
+Seat 4: DURKADURDUR ($201 in chips) 
+Seat 5: FastEddie267 ($282 in chips) 
+Seat 6: spacecakezzz ($555.20 in chips) 
+DURKADURDUR: posts small blind $1
+FastEddie267: posts big blind $2
+*** HOLE CARDS ***
+spacecakezzz: folds 
+The Diablos: raises $4 to $6
+TODO ADENTR0: folds 
+1tormentor: folds 
+DURKADURDUR: calls $5
+FastEddie267: folds 
+*** FLOP *** [Ts Kc 3d]
+DURKADURDUR: checks 
+The Diablos: bets $8
+DURKADURDUR: calls $8
+*** TURN *** [Ts Kc 3d] [9s]
+DURKADURDUR: checks 
+The Diablos: checks 
+*** RIVER *** [Ts Kc 3d 9s] [6d]
+DURKADURDUR: checks 
+The Diablos: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [Ah Th] (a pair of Tens)
+The Diablos: mucks hand 
+DURKADURDUR collected $28.55 from pot
+*** SUMMARY ***
+Total pot $30 | Rake $1.45 
+Board [Ts Kc 3d 9s 6d]
+Seat 1: The Diablos mucked
+Seat 2: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 3: 1tormentor (button) folded before Flop (didn't bet)
+Seat 4: DURKADURDUR (small blind) showed [Ah Th] and won ($28.55) with a pair of Tens
+Seat 5: FastEddie267 (big blind) folded before Flop
+Seat 6: spacecakezzz folded before Flop (didn't bet)

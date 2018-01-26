@@ -131,7 +131,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             var dataService = ServiceLocator.Current.GetInstance<IDataService>();
             dataService.SetPlayerStatisticPath(playerStatisticFolder);
 
-            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);      
+            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);
 
             var indicators = new HudLightIndicators(playerStatistic);
 
@@ -160,6 +160,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ThreeBetCall, Is.EqualTo(expected.ThreeBetCall), nameof(HudLightIndicators.ThreeBetCall));
                 Assert.That(actual.FlopCBet, Is.EqualTo(expected.FlopCBet), nameof(HudLightIndicators.FlopCBet));
                 Assert.That(actual.TurnCBet, Is.EqualTo(expected.TurnCBet), nameof(HudLightIndicators.TurnCBet));
+                Assert.That(actual.FoldToTurnCBet, Is.EqualTo(expected.FoldToTurnCBet), nameof(HudLightIndicators.FoldToTurnCBet));
                 Assert.That(actual.FlopCBetInThreeBetPot, Is.EqualTo(expected.FlopCBetInThreeBetPot), nameof(HudLightIndicators.FlopCBetInThreeBetPot));
                 Assert.That(actual.FlopCBetInFourBetPot, Is.EqualTo(expected.FlopCBetInFourBetPot), nameof(HudLightIndicators.FlopCBetInFourBetPot));
                 Assert.That(actual.FlopCBetVsOneOpp, Is.EqualTo(expected.FlopCBetVsOneOpp), nameof(HudLightIndicators.FlopCBetVsOneOpp));
@@ -222,7 +223,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ColdCall_MP, Is.EqualTo(expected.ColdCall_MP), nameof(HudLightIndicators.ColdCall_MP));
                 Assert.That(actual.ColdCall_SB, Is.EqualTo(expected.ColdCall_SB), nameof(HudLightIndicators.ColdCall_SB));
                 Assert.That(actual.DonkBet, Is.EqualTo(expected.DonkBet), nameof(HudLightIndicators.DonkBet));
-                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));             
+                Assert.That(actual.DidDelayedTurnCBet, Is.EqualTo(expected.DidDelayedTurnCBet), nameof(HudLightIndicators.DidDelayedTurnCBet));
                 Assert.That(actual.UO_PFR_EP, Is.EqualTo(expected.UO_PFR_EP), nameof(HudLightIndicators.UO_PFR_EP));
                 Assert.That(actual.UO_PFR_MP, Is.EqualTo(expected.UO_PFR_MP), nameof(HudLightIndicators.UO_PFR_MP));
                 Assert.That(actual.UO_PFR_CO, Is.EqualTo(expected.UO_PFR_CO), nameof(HudLightIndicators.UO_PFR_CO));
@@ -269,6 +270,68 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.ThreeBet_BN, Is.EqualTo(expected.ThreeBet_BN), nameof(HudLightIndicators.ThreeBet_BN));
                 Assert.That(actual.ThreeBet_SB, Is.EqualTo(expected.ThreeBet_SB), nameof(HudLightIndicators.ThreeBet_SB));
                 Assert.That(actual.ThreeBet_BB, Is.EqualTo(expected.ThreeBet_BB), nameof(HudLightIndicators.ThreeBet_BB));
+                Assert.That(actual.StdDev, Is.EqualTo(expected.StdDev), nameof(HudLightIndicators.StdDev));
+                Assert.That(actual.StdDevBB, Is.EqualTo(expected.StdDevBB), nameof(HudLightIndicators.StdDevBB));
+                Assert.That(actual.StdDevBBPer100Hands, Is.EqualTo(expected.StdDevBBPer100Hands), nameof(HudLightIndicators.StdDevBBPer100Hands));
+                Assert.That(actual.NetWonPerHour, Is.EqualTo(expected.NetWonPerHour), nameof(HudLightIndicators.NetWonPerHour));
+                Assert.That(actual.FoldToFlopCheckRaise, Is.EqualTo(expected.FoldToFlopCheckRaise), nameof(HudLightIndicators.FoldToFlopCheckRaise));
+                Assert.That(actual.FoldToTurnCheckRaise, Is.EqualTo(expected.FoldToTurnCheckRaise), nameof(HudLightIndicators.FoldToTurnCheckRaise));
+                Assert.That(actual.FoldToRiverCheckRaise, Is.EqualTo(expected.FoldToRiverCheckRaise), nameof(HudLightIndicators.FoldToRiverCheckRaise));
+                Assert.That(actual.CalledTurnCheckRaise, Is.EqualTo(expected.CalledTurnCheckRaise), nameof(HudLightIndicators.CalledTurnCheckRaise));
+                Assert.That(actual.CheckRiverAfterBBLine, Is.EqualTo(expected.CheckRiverAfterBBLine), nameof(HudLightIndicators.CheckRiverAfterBBLine));
+                Assert.That(actual.BetRiverOnBXLine, Is.EqualTo(expected.BetRiverOnBXLine), nameof(HudLightIndicators.BetRiverOnBXLine));
+                Assert.That(actual.CallFlopCBetIP, Is.EqualTo(expected.CallFlopCBetIP), nameof(HudLightIndicators.CallFlopCBetIP));
+                Assert.That(actual.CallFlopCBetOOP, Is.EqualTo(expected.CallFlopCBetOOP), nameof(HudLightIndicators.CallFlopCBetOOP));
+                Assert.That(actual.FoldToFlopCBetIP, Is.EqualTo(expected.FoldToFlopCBetIP), nameof(HudLightIndicators.FoldToFlopCBetIP));
+                Assert.That(actual.FoldToFlopCBetOOP, Is.EqualTo(expected.FoldToFlopCBetOOP), nameof(HudLightIndicators.FoldToFlopCBetOOP));
+                Assert.That(actual.CallRiverRaise, Is.EqualTo(expected.CallRiverRaise), nameof(HudLightIndicators.CallRiverRaise));
+                Assert.That(actual.RiverBet, Is.EqualTo(expected.RiverBet), nameof(HudLightIndicators.RiverBet));
+                Assert.That(actual.DelayedTurnCBetIP, Is.EqualTo(expected.DelayedTurnCBetIP), nameof(HudLightIndicators.DelayedTurnCBetIP));
+                Assert.That(actual.DelayedTurnCBetOOP, Is.EqualTo(expected.DelayedTurnCBetOOP), nameof(HudLightIndicators.DelayedTurnCBetOOP));
+                Assert.That(actual.FiveBet, Is.EqualTo(expected.FiveBet), nameof(HudLightIndicators.FiveBet));
+                Assert.That(actual.CalledCheckRaiseVsFlopCBet, Is.EqualTo(expected.CalledCheckRaiseVsFlopCBet), nameof(HudLightIndicators.CalledCheckRaiseVsFlopCBet));
+                Assert.That(actual.FoldedCheckRaiseVsFlopCBet, Is.EqualTo(expected.FoldedCheckRaiseVsFlopCBet), nameof(HudLightIndicators.FoldedCheckRaiseVsFlopCBet));
+                Assert.That(actual.CheckFlopAsPFRAndXCOnTurnOOP, Is.EqualTo(expected.CheckFlopAsPFRAndXCOnTurnOOP), nameof(HudLightIndicators.CheckFlopAsPFRAndXCOnTurnOOP));
+                Assert.That(actual.CheckFlopAsPFRAndXFOnTurnOOP, Is.EqualTo(expected.CheckFlopAsPFRAndXFOnTurnOOP), nameof(HudLightIndicators.CheckFlopAsPFRAndXFOnTurnOOP));
+                Assert.That(actual.CheckFlopAsPFRAndCallOnTurn, Is.EqualTo(expected.CheckFlopAsPFRAndCallOnTurn), nameof(HudLightIndicators.CheckFlopAsPFRAndCallOnTurn));
+                Assert.That(actual.CheckFlopAsPFRAndFoldOnTurn, Is.EqualTo(expected.CheckFlopAsPFRAndFoldOnTurn), nameof(HudLightIndicators.CheckFlopAsPFRAndFoldOnTurn));
+                Assert.That(actual.CheckFlopAsPFRAndRaiseOnTurn, Is.EqualTo(expected.CheckFlopAsPFRAndRaiseOnTurn), nameof(HudLightIndicators.CheckFlopAsPFRAndRaiseOnTurn));
+                Assert.That(actual.CheckRaisedFlopCBet, Is.EqualTo(expected.CheckRaisedFlopCBet), nameof(HudLightIndicators.CheckRaisedFlopCBet));
+                Assert.That(actual.FlopBetSizeOneHalfOrLess, Is.EqualTo(expected.FlopBetSizeOneHalfOrLess), nameof(HudLightIndicators.FlopBetSizeOneHalfOrLess));
+                Assert.That(actual.FlopBetSizeOneQuarterOrLess, Is.EqualTo(expected.FlopBetSizeOneQuarterOrLess), nameof(HudLightIndicators.FlopBetSizeOneQuarterOrLess));
+                Assert.That(actual.FlopBetSizeTwoThirdsOrLess, Is.EqualTo(expected.FlopBetSizeTwoThirdsOrLess), nameof(HudLightIndicators.FlopBetSizeTwoThirdsOrLess));
+                Assert.That(actual.FlopBetSizeThreeQuartersOrLess, Is.EqualTo(expected.FlopBetSizeThreeQuartersOrLess), nameof(HudLightIndicators.FlopBetSizeThreeQuartersOrLess));
+                Assert.That(actual.FlopBetSizeOneOrLess, Is.EqualTo(expected.FlopBetSizeOneOrLess), nameof(HudLightIndicators.FlopBetSizeOneOrLess));
+                Assert.That(actual.FlopBetSizeMoreThanOne, Is.EqualTo(expected.FlopBetSizeMoreThanOne), nameof(HudLightIndicators.FlopBetSizeMoreThanOne));
+                Assert.That(actual.TurnBetSizeOneHalfOrLess, Is.EqualTo(expected.TurnBetSizeOneHalfOrLess), nameof(HudLightIndicators.TurnBetSizeOneHalfOrLess));
+                Assert.That(actual.TurnBetSizeOneQuarterOrLess, Is.EqualTo(expected.TurnBetSizeOneQuarterOrLess), nameof(HudLightIndicators.TurnBetSizeOneQuarterOrLess));
+                Assert.That(actual.TurnBetSizeOneThirdOrLess, Is.EqualTo(expected.TurnBetSizeOneThirdOrLess), nameof(HudLightIndicators.TurnBetSizeOneThirdOrLess));
+                Assert.That(actual.TurnBetSizeTwoThirdsOrLess, Is.EqualTo(expected.TurnBetSizeTwoThirdsOrLess), nameof(HudLightIndicators.TurnBetSizeTwoThirdsOrLess));
+                Assert.That(actual.TurnBetSizeThreeQuartersOrLess, Is.EqualTo(expected.TurnBetSizeThreeQuartersOrLess), nameof(HudLightIndicators.TurnBetSizeThreeQuartersOrLess));
+                Assert.That(actual.TurnBetSizeOneOrLess, Is.EqualTo(expected.TurnBetSizeOneOrLess), nameof(HudLightIndicators.TurnBetSizeOneOrLess));
+                Assert.That(actual.TurnBetSizeMoreThanOne, Is.EqualTo(expected.TurnBetSizeMoreThanOne), nameof(HudLightIndicators.TurnBetSizeMoreThanOne));
+                Assert.That(actual.WTSDAfterCalling3Bet, Is.EqualTo(expected.WTSDAfterCalling3Bet), nameof(HudLightIndicators.WTSDAfterCalling3Bet));
+                Assert.That(actual.WTSDAfterCallingPfr, Is.EqualTo(expected.WTSDAfterCallingPfr), nameof(HudLightIndicators.WTSDAfterCallingPfr));
+                Assert.That(actual.WTSDAfterNotCBettingFlopAsPfr, Is.EqualTo(expected.WTSDAfterNotCBettingFlopAsPfr), nameof(HudLightIndicators.WTSDAfterNotCBettingFlopAsPfr));
+                Assert.That(actual.WTSDAfterSeeingTurn, Is.EqualTo(expected.WTSDAfterSeeingTurn), nameof(HudLightIndicators.WTSDAfterSeeingTurn));
+                Assert.That(actual.WTSDAsPF3Bettor, Is.EqualTo(expected.WTSDAsPF3Bettor), nameof(HudLightIndicators.WTSDAsPF3Bettor));
+                Assert.That(actual.DelayedTurnCBetIn3BetPot, Is.EqualTo(expected.DelayedTurnCBetIn3BetPot), nameof(HudLightIndicators.DelayedTurnCBetIn3BetPot));
+                Assert.That(actual.FoldToTurnCBetIn3BetPot, Is.EqualTo(expected.FoldToTurnCBetIn3BetPot), nameof(HudLightIndicators.FoldToTurnCBetIn3BetPot));
+                Assert.That(actual.FlopCheckBehind, Is.EqualTo(expected.FlopCheckBehind), nameof(HudLightIndicators.FlopCheckBehind));
+                Assert.That(actual.FoldToDonkBet, Is.EqualTo(expected.FoldToDonkBet), nameof(HudLightIndicators.FoldToDonkBet));
+                Assert.That(actual.FoldTurn, Is.EqualTo(expected.FoldTurn), nameof(HudLightIndicators.FoldTurn));
+                Assert.That(actual.RiverCheckCall, Is.EqualTo(expected.RiverCheckCall), nameof(HudLightIndicators.RiverCheckCall));
+                Assert.That(actual.RiverCheckFold, Is.EqualTo(expected.RiverCheckFold), nameof(HudLightIndicators.RiverCheckFold));
+                Assert.That(actual.RiverBetSizeMoreThanOne, Is.EqualTo(expected.RiverBetSizeMoreThanOne), nameof(HudLightIndicators.RiverBetSizeMoreThanOne));
+                Assert.That(actual.RiverCallEffeciency, Is.EqualTo(expected.RiverCallEffeciency), nameof(HudLightIndicators.RiverCallEffeciency));
+                Assert.That(actual.FoldToFiveBet, Is.EqualTo(expected.FoldToFiveBet), nameof(HudLightIndicators.FoldToFiveBet));
+                Assert.That(actual.TurnAF, Is.EqualTo(expected.TurnAF), nameof(HudLightIndicators.TurnAF));
+                Assert.That(actual.ShovedFlopAfter4Bet, Is.EqualTo(expected.ShovedFlopAfter4Bet), nameof(HudLightIndicators.ShovedFlopAfter4Bet));
+                Assert.That(actual.RaiseFlopCBetIn3BetPot, Is.EqualTo(expected.RaiseFlopCBetIn3BetPot), nameof(HudLightIndicators.RaiseFlopCBetIn3BetPot));
+                Assert.That(actual.FoldToThreeBetIP, Is.EqualTo(expected.FoldToThreeBetIP), nameof(HudLightIndicators.FoldToThreeBetIP));
+                Assert.That(actual.FoldToThreeBetOOP, Is.EqualTo(expected.FoldToThreeBetOOP), nameof(HudLightIndicators.FoldToThreeBetOOP));
+                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));
+                // add new stats here            
             });
         }
 

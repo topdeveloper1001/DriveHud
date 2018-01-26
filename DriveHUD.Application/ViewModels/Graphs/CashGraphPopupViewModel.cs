@@ -231,7 +231,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
         {
             var seriesTypes = GetSeriesTypesToInitialize();
 
-            var statisticCollection = StorageModel.FilteredPlayerStatistic?.ToArray();
+            var statisticCollection = StorageModel.FilteredCashPlayerStatistic?.ToArray();
 
             if (statisticCollection == null)
             {

@@ -292,6 +292,12 @@ namespace DriveHUD.Importers
 
         protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
+            if (fs.Position > fs.Length)
+            {
+                fs.Seek(0, SeekOrigin.End);
+                return string.Empty;
+            }
+        
             var data = new byte[fs.Length - fs.Position];
 
             if (data.Length == 0)

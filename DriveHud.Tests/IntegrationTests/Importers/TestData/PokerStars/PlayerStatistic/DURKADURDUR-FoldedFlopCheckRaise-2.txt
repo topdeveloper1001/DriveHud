@@ -1,0 +1,40 @@
+PokerStars Game #47154062447:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:47:20 ET
+Table 'Scorpius II' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($200 in chips) 
+Seat 2: AceKanone ($367.75 in chips) 
+Seat 3: stopme10 ($206.50 in chips) 
+Seat 4: fakker11 ($200 in chips) 
+Seat 5: mad.afurable ($382.45 in chips) 
+Seat 6: Yohan Owari ($87.75 in chips) 
+AceKanone: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+fakker11: folds 
+mad.afurable: folds 
+Yohan Owari: raises $3 to $5
+DURKADURDUR: calls $5
+AceKanone: folds 
+stopme10: folds 
+*** FLOP *** [Qd Ac 8d]
+Yohan Owari: checks 
+DURKADURDUR: bets $8
+Yohan Owari: raises $10 to $18
+DURKADURDUR: folds 
+Uncalled bet ($10) returned to Yohan Owari
+Yohan Owari collected $27.60 from pot
+Yohan Owari: doesn't show hand 
+*** SUMMARY ***
+Total pot $29 | Rake $1.40 
+Board [Qd Ac 8d]
+Seat 1: DURKADURDUR (button) folded on the Flop
+Seat 2: AceKanone (small blind) folded before Flop
+Seat 3: stopme10 (big blind) folded before Flop
+Seat 4: fakker11 folded before Flop (didn't bet)
+Seat 5: mad.afurable folded before Flop (didn't bet)
+Seat 6: Yohan Owari collected ($27.60)
+
+
+
+
+
+

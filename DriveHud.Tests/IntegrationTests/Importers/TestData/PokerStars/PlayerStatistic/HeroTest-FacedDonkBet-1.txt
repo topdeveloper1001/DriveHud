@@ -1,0 +1,40 @@
+PokerStars Game #47183430669:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:33:20 ET
+Table 'Maia III' 6-max Seat #3 is the button
+Seat 1: HeroTest ($273.75 in chips) 
+Seat 2: FrAnWaN ($200 in chips) 
+Seat 3: rivichico ($200 in chips) 
+Seat 4: sexygee ($662.10 in chips) 
+Seat 5: DURKADURDUR ($229.30 in chips) 
+Seat 6: derisaltied ($252.75 in chips) 
+sexygee: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+derisaltied: folds 
+HeroTest: raises $4 to $6
+FrAnWaN: folds 
+rivichico: folds 
+sexygee: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [Tc Td Ah]
+DURKADURDUR: bets $8
+HeroTest: calls $8
+*** TURN *** [Tc Td Ah] [Js]
+DURKADURDUR: checks 
+HeroTest: checks 
+*** RIVER *** [Tc Td Ah Js] [Kc]
+DURKADURDUR: bets $18
+HeroTest: calls $18
+*** SHOW DOWN ***
+DURKADURDUR: shows [Qd Ad] (a straight, Ten to Ace)
+HeroTest: mucks hand 
+DURKADURDUR collected $62 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $3 
+Board [Tc Td Ah Js Kc]
+Seat 1: HeroTest mucked
+Seat 2: FrAnWaN folded before Flop (didn't bet)
+Seat 3: rivichico (button) folded before Flop (didn't bet)
+Seat 4: sexygee (small blind) folded before Flop
+Seat 5: DURKADURDUR (big blind) showed [Qd Ad] and won ($62) with a straight, Ten to Ace
+Seat 6: derisaltied folded before Flop (didn't bet)
+

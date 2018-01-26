@@ -1,0 +1,39 @@
+PokerStars Game #47150291422:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:28:53 ET
+Table 'Asmodeus IX' 6-max Seat #5 is the button
+Seat 1: stopme10 ($217.05 in chips) 
+Seat 2: kaader ($219.85 in chips) 
+Seat 3: Desateur ($206.35 in chips) 
+Seat 4: HeroTest ($654.75 in chips) 
+Seat 5: LiraMaker ($203.10 in chips) 
+Seat 6: twinpsych ($364.15 in chips) 
+twinpsych: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+kaader: folds 
+Desateur: folds 
+HeroTest: raises $4 to $6
+LiraMaker: calls $6
+twinpsych: folds 
+stopme10: calls $4
+*** FLOP *** [8h 9c Kc]
+stopme10: checks 
+HeroTest: checks 
+LiraMaker: checks 
+*** TURN *** [8h 9c Kc] [4d]
+stopme10: checks 
+HeroTest: checks 
+LiraMaker: bets $22
+stopme10: folds 
+HeroTest: folds 
+Uncalled bet ($22) returned to LiraMaker
+LiraMaker collected $18.05 from pot
+*** SUMMARY ***
+Total pot $19 | Rake $0.95 
+Board [8h 9c Kc 4d]
+Seat 1: stopme10 (big blind) folded on the Turn
+Seat 2: kaader folded before Flop (didn't bet)
+Seat 3: Desateur folded before Flop (didn't bet)
+Seat 4: HeroTest folded on the Turn
+Seat 5: LiraMaker (button) collected ($18.05)
+Seat 6: twinpsych (small blind) folded before Flop
+

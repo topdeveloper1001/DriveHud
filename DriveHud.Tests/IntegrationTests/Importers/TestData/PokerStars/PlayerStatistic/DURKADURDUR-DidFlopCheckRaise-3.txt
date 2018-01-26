@@ -1,0 +1,35 @@
+PokerStars Game #47149701419:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:02:59 ET
+Table 'Lilaea III' 6-max Seat #6 is the button
+Seat 1: twofinger777 ($195.30 in chips) 
+Seat 2: stopme10 ($200 in chips) 
+Seat 3: DURKADURDUR ($258.75 in chips) 
+Seat 4: alepa ($407.65 in chips) 
+Seat 5: Desateur ($509.60 in chips) 
+Seat 6: chrisdm ($200 in chips) 
+twofinger777: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+alepa: folds 
+Desateur: raises $14 to $20
+chrisdm: folds 
+twofinger777: folds 
+stopme10: folds 
+DURKADURDUR: calls $14
+*** FLOP *** [Td 9h 4d]
+DURKADURDUR: checks 
+Desateur: bets $34
+DURKADURDUR: raises $204.75 to $238.75 and is all-in
+Desateur: folds 
+Uncalled bet ($204.75) returned to DURKADURDUR
+DURKADURDUR collected $108 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $111 | Rake $3 
+Board [Td 9h 4d]
+Seat 1: twofinger777 (small blind) folded before Flop
+Seat 2: stopme10 (big blind) folded before Flop
+Seat 3: DURKADURDUR collected ($108)
+Seat 4: alepa folded before Flop (didn't bet)
+Seat 5: Desateur folded on the Flop
+Seat 6: chrisdm (button) folded before Flop (didn't bet)

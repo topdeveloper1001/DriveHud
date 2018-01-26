@@ -79,18 +79,34 @@ namespace Model
 
         private void StatisticCollection_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (FilteredPlayerStatistic == null)
+            if (FilteredCashPlayerStatistic == null)
             {
-                FilteredPlayerStatistic = new List<Playerstatistic>();
+                FilteredCashPlayerStatistic = new List<Playerstatistic>();
             }
+
+            if (FilteredTournamentPlayerStatistic == null)
+            {
+                FilteredTournamentPlayerStatistic = new List<Playerstatistic>();
+            }
+
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                    var newItems = e.NewItems?.Cast<Playerstatistic>().AsQueryable().Where(FilterPredicate).ToList();
-                    if (newItems != null && newItems.Any())
+                    var newItems = e.NewItems?.Cast<Playerstatistic>().ToList();
+
+                    var cashItems = newItems.Where(x => !x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
+                    var tournamentItems = newItems.Where(x => x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
+
+                    if (cashItems != null && cashItems.Any())
                     {
-                        ((List<Playerstatistic>)FilteredPlayerStatistic).AddRange(newItems);
+                        FilteredCashPlayerStatistic.AddRange(cashItems);
                     }
+
+                    if (tournamentItems != null && tournamentItems.Any())
+                    {
+                        FilteredTournamentPlayerStatistic.AddRange(tournamentItems);
+                    }
+
                     break;
                 case NotifyCollectionChangedAction.Reset:
                     UpdateFilteredStatistics();
@@ -106,7 +122,9 @@ namespace Model
 
         private void UpdateFilteredStatistics()
         {
-            FilteredPlayerStatistic = StatisticCollection?.ToList().AsQueryable().Where(FilterPredicate).ToList();
+            var statistic = StatisticCollection?.ToList();
+            FilteredCashPlayerStatistic = statistic?.Where(x => !x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
+            FilteredTournamentPlayerStatistic = statistic?.Where(x => x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
         }
 
         #endregion
@@ -181,21 +199,45 @@ namespace Model
             }
         }
 
-        private IList<Playerstatistic> _filteredPlayerStatistic;
+        private List<Playerstatistic> filteredCashPlayerStatistic;
 
-        public IList<Playerstatistic> FilteredPlayerStatistic
+        public List<Playerstatistic> FilteredCashPlayerStatistic
         {
-            set
-            {
-                _filteredPlayerStatistic = value;
-            }
             get
             {
-                return _filteredPlayerStatistic;
+                return filteredCashPlayerStatistic;
+            }
+            set
+            {
+                if (ReferenceEquals(filteredCashPlayerStatistic, value))
+                {
+                    return;
+                }
+
+                filteredCashPlayerStatistic = value;
+                OnPropertyChanged();
             }
         }
 
-        public IList<Playerstatistic> FilteredTopStatistic { get; set; }
+        private List<Playerstatistic> filteredTournamentPlayerStatistic;
+
+        public List<Playerstatistic> FilteredTournamentPlayerStatistic
+        {
+            get
+            {
+                return filteredTournamentPlayerStatistic;
+            }
+            set
+            {
+                if (ReferenceEquals(filteredTournamentPlayerStatistic, value))
+                {
+                    return;
+                }
+
+                filteredTournamentPlayerStatistic = value;
+                OnPropertyChanged();
+            }
+        }
 
         #endregion
 

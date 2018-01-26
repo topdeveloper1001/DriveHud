@@ -162,11 +162,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         protected virtual Expression<Func<Playerstatistic, bool>> GetCurrentFilter()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
+
             if (CurrentlyBuiltFilter != null && CurrentlyBuiltFilter.FilterSectionCollection.Any(x => x.IsActive))
             {
                 foreach (var filter in FilterModelManager.FilterModelCollection)
                 {
                     var filterPredicate = filter.GetFilterPredicate();
+
                     if (filterPredicate != null)
                     {
                         predicate = predicate.And(filterPredicate);
@@ -174,6 +176,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 }
 
             }
+
             return predicate;
         }
 

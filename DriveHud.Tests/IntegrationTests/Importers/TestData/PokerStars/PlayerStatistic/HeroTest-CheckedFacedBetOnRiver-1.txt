@@ -1,0 +1,44 @@
+PokerStars Game #47143726143:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:25:58 ET
+Table 'Sitarski III' 6-max Seat #1 is the button
+Seat 1: anthony8416 ($351.40 in chips) 
+Seat 2: HeroTest ($200 in chips) 
+Seat 3: thomaswkm ($172.95 in chips) 
+Seat 4: brizzybreech ($235.70 in chips) 
+Seat 5: twinpsych ($685.25 in chips) 
+Seat 6: HeidiKlummm ($220 in chips) 
+HeroTest: posts small blind $1
+thomaswkm: posts big blind $2
+*** HOLE CARDS ***
+brizzybreech: folds 
+twinpsych: folds 
+HeidiKlummm: folds 
+anthony8416: calls $2
+HeroTest: calls $1
+thomaswkm: checks 
+*** FLOP *** [2s Qs Th]
+HeroTest: bets $4
+thomaswkm: folds 
+anthony8416: raises $4 to $8
+HeroTest: calls $4
+*** TURN *** [2s Qs Th] [Qd]
+HeroTest: bets $12
+anthony8416: calls $12
+*** RIVER *** [2s Qs Th Qd] [7h]
+HeroTest: checks 
+anthony8416: bets $25
+HeroTest: raises $153 to $178 and is all-in
+anthony8416: calls $153
+*** SHOW DOWN ***
+HeroTest: shows [7c Qc] (a full house, Queens full of Sevens)
+anthony8416: shows [2c 2h] (a full house, Deuces full of Queens)
+HeroTest collected $399 from pot
+*** SUMMARY ***
+Total pot $402 | Rake $3 
+Board [2s Qs Th Qd 7h]
+Seat 1: anthony8416 (button) showed [2c 2h] and lost with a full house, Deuces full of Queens
+Seat 2: HeroTest (small blind) showed [7c Qc] and won ($399) with a full house, Queens full of Sevens
+Seat 3: thomaswkm (big blind) folded on the Flop
+Seat 4: brizzybreech folded before Flop (didn't bet)
+Seat 5: twinpsych folded before Flop (didn't bet)
+Seat 6: HeidiKlummm folded before Flop (didn't bet)
+

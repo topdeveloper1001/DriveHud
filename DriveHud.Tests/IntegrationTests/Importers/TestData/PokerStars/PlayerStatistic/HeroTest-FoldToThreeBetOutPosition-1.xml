@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="309636812983">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.1/$0.25</gametype>
+    <tablename>NL Hold’em: $0.10/$0.25 - 6 Seater #7356</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-05-08 20:30:55</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="139342730">
+    <general>
+      <startdate>2017-05-08 21:14:56</startdate>
+      <players>
+        <player seat="1" name="sneakypete25" chips="24.44" dealer="0" win="0" bet="1.25" rebuy="0" addon="0" />
+        <player seat="2" name="texasmoxie" chips="15.64" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="Major0110" chips="11.17" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+        <player seat="4" name="INURBUTT" chips="35.67" dealer="0" win="6.34" bet="4.42" rebuy="0" addon="0" />
+        <player seat="5" name="NiceTits" chips="25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="HeroTest" chips="43.15" dealer="0" win="0" bet="0.75" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Major0110" type="1" sum="0.1" cards="" />
+      <action no="2" player="INURBUTT" type="2" sum="0.25" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="sneakypete25">X X</cards>
+      <cards type="Pocket" player="texasmoxie">X X</cards>
+      <cards type="Pocket" player="Major0110">X X</cards>
+      <cards type="Pocket" player="INURBUTT">X X</cards>
+      <cards type="Pocket" player="NiceTits">X X</cards>
+      <cards type="Pocket" player="HeroTest">X X</cards>
+      <action no="3" player="NiceTits" type="0" sum="0" cards="" />
+      <action no="4" player="HeroTest" type="23" sum="0.75" cards="" />
+      <action no="5" player="sneakypete25" type="23" sum="1.25" cards="" />
+      <action no="6" player="texasmoxie" type="0" sum="0" cards="" />
+      <action no="7" player="Major0110" type="0" sum="0" cards="" />
+      <action no="8" player="INURBUTT" type="3" sum="1" cards="" />
+      <action no="9" player="HeroTest" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">SK S2 D10</cards>
+      <action no="10" player="INURBUTT" type="4" sum="0" cards="" />
+      <action no="11" player="sneakypete25" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H9</cards>
+      <action no="12" player="INURBUTT" type="5" sum="3.17" cards="" />
+      <action no="13" player="sneakypete25" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

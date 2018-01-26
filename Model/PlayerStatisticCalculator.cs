@@ -103,13 +103,19 @@ namespace Model
             bool aggresiveTurn = playerHandActions.TurnAny(handAction => handAction.IsRaise() || handAction.IsBet());
             bool aggresiveRiver = playerHandActions.RiverAny(handAction => handAction.IsRaise() || handAction.IsBet());
 
-            bool betOnFlop = playerHandActions.FlopAny(handAction => handAction.IsBet());
-            bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
+            var betOnFlopAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop && x.IsBet());
+            var betOnTurnAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn && x.IsBet());
+            var betOnRiverAction = playerHandActions.FirstOrDefault(x => x.Street == Street.River && x.IsBet());
+
+            bool betOnFlop = betOnFlopAction != null;
+            bool betOnTurn = betOnTurnAction != null;
+            bool betOnRiver = betOnRiverAction != null;
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
+            bool isCheckedTurn = playerHandActions.FirstOrDefault(x => x.Street == Street.Turn)?.IsCheck ?? false;
             bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
-            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
+            var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop, player);
             var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player && playedFlop;
 
             bool isBluffPreflop = IsBluff(currentPlayer.HoleCards, parsedHand.CommunityCards, Street.Preflop);
@@ -124,9 +130,12 @@ namespace Model
             Player dealer = GetDealerPlayer(parsedHand);
 
             var numberOfActivePlayerOnFlop = parsedHand.NumPlayersActive - parsedHand.PreFlop.Count(x => x.IsFold);
-            #region cbet
 
-            ConditionalBet flopCBet = new ConditionalBet(), turnCBet = new ConditionalBet(), riverCBet = new ConditionalBet();
+            #region C-Bet
+
+            var flopCBet = new ConditionalBet();
+            var turnCBet = new ConditionalBet();
+            var riverCBet = new ConditionalBet();
 
             if (pfrOcurred)
             {
@@ -137,18 +146,22 @@ namespace Model
                 if (wasFlop && !wasAllIn)
                 {
                     var flops = parsedHand.Flop.ToList();
+
                     wasAllIn = flops.OfType<AllInAction>().Any(x => x.PlayerName != player);
-                    var wasReraise = flops.Any(x => x.PlayerName != player && x.IsRaise());
 
                     CalculateContinuationBet(flopCBet, flops, player, raiser);
+
+                    var wasReraise = flops.Any(x => (!flopCBet.Made && x.IsRaise()) || (x.PlayerName != player && x.IsRaise()));
 
                     if (flopCBet.Happened && wasTurn && !wasAllIn && !wasReraise)
                     {
                         var turns = parsedHand.Turn.ToList();
+
                         wasAllIn = turns.OfType<AllInAction>().Any(x => x.PlayerName != player);
-                        wasReraise = turns.Any(x => x.PlayerName != player && x.IsRaise());
 
                         CalculateContinuationBet(turnCBet, turns, player, raiser);
+
+                        wasReraise = turns.Any(x => (!turnCBet.Made && x.IsRaise()) || (x.PlayerName != player && x.IsRaise()));
 
                         if (turnCBet.Happened && wasRiver && !wasAllIn && !wasReraise)
                         {
@@ -159,25 +172,34 @@ namespace Model
                 }
             }
 
-            ConditionalBet turnIpPassFlopCbet = new ConditionalBet();
-            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop);
+            var turnIpPassFlopCbet = new ConditionalBet();
+
+            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop, player);
 
             var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
 
             if (positionturnPlayer != null && positionturnPlayer.PlayerName == player && flopCBet.Passed)
             {
                 var action = parsedHand.Turn.FirstOrDefault(x => x.PlayerName == player);
+
                 if (action != null)
+                {
                     turnIpPassFlopCbet.CheckAction(action);
+                }
             }
 
-            ConditionalBet riverIpPassFlopCbet = new ConditionalBet();
-            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn);
+            var riverIpPassFlopCbet = new ConditionalBet();
+
+            var positionRiverPlayer = GetInPositionPlayer(parsedHand, Street.Turn, player);
+
             if (positionRiverPlayer != null && positionRiverPlayer.PlayerName == player && turnCBet.Passed)
             {
                 var action = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
+
                 if (action != null)
+                {
                     riverIpPassFlopCbet.CheckAction(action);
+                }
             }
 
             #endregion
@@ -188,16 +210,19 @@ namespace Model
 
             #endregion
 
-            #region 3bet/4bet
+            #region 3bet/4bet/5bet
 
-            ConditionalBet threeBet = new ConditionalBet();
-            ConditionalBet fourBet = new ConditionalBet();
+            var threeBet = new ConditionalBet();
+            var fourBet = new ConditionalBet();
+            var fiveBet = new ConditionalBet();
 
             if (pfrOcurred)
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
+
                 Calculate3Bet(threeBet, preflops, player, raiser);
                 Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
+                Calculate5Bet(threeBet, fourBet, fiveBet, preflops, player, raiser);
             }
 
             #endregion
@@ -262,19 +287,21 @@ namespace Model
 
             #region Raise
 
-            var flopRaise = CalculateRaise(parsedHand.Flop, player);
-            var turnRaise = CalculateRaise(parsedHand.Turn, player);
-            var riverRaise = CalculateRaise(parsedHand.River, player);
+            var flopRaise = playedFlop ? CalculateRaise(parsedHand.Flop, player, parsedHand.Players) : new ConditionalBet();
+            var turnRaise = playedTurn ? CalculateRaise(parsedHand.Turn, player, parsedHand.Players) : new ConditionalBet();
+            var riverRaise = playedRiver ? CalculateRaise(parsedHand.River, player, parsedHand.Players) : new ConditionalBet();
 
             #endregion
 
             #region Check river on bx line
 
             Condition checkRiverOnBxLine = new Condition();
+
             if (playedRiver)
             {
                 CalculateCheckRiverOnBxLine(checkRiverOnBxLine, parsedHand, player);
             }
+
             #endregion
 
             #region Limp
@@ -286,26 +313,14 @@ namespace Model
 
             #region Donk Bet
 
-            Condition donkBet = new Condition();
+            var donkBet = new ConditionalBet();
 
-            if (pfrOcurred && !pfr)
+            if (pfrOcurred && positionFlopPlayer != null)
             {
-                CalculateDonkBet(donkBet, parsedHand.HandActions, player);
+                CalculateDonkBet(donkBet, parsedHand.HandActions, player, positionFlopPlayer.PlayerName);
             }
 
-            #endregion
-
-            #region Raise Bet
-
-            ConditionalBet flopRaiseBet = new ConditionalBet();
-            ConditionalBet turnRaiseBet = new ConditionalBet();
-            ConditionalBet riverRaiseBet = new ConditionalBet();
-
-            CalculateRaiseBet(flopRaiseBet, parsedHand.Flop, player);
-            CalculateRaiseBet(turnRaiseBet, parsedHand.Turn, player);
-            CalculateRaiseBet(riverRaiseBet, parsedHand.River, player);
-
-            #endregion
+            #endregion          
 
             #region Bet when checked to 
 
@@ -348,17 +363,19 @@ namespace Model
 
             bool isOpenRaise = IsOpenRaise(preflops, player);
             bool isRaisedLimpers = IsRaisedLimpers(preflops, player);
-            var checkRaisedOnStreetDictionary = GetCheckRaisedOnStreets(parsedHand.HandActions, player);
-            var checkRaiseOpportunities = GetCheckRaiseOpportunities(parsedHand.HandActions, parsedHand.Players, player);
+
+            var flopCheckRaise = CalculateCheckRaise(parsedHand.Flop, player, parsedHand.Players);
+            var turnCheckRaise = CalculateCheckRaise(parsedHand.Turn, player, parsedHand.Players);
+            var riverCheckRaise = CalculateCheckRaise(parsedHand.River, player, parsedHand.Players);
 
             stat.IsRelativePosition = IsRelativePosition(parsedHand.HandActions, player);
             stat.IsRelative3BetPosition = IsRelative3BetPosition(parsedHand.HandActions, player);
 
             #region True Aggression
 
-            int flopTrueAggressionBets = checkRaisedOnStreetDictionary[Street.Flop] ? 2 : ((aggresiveFlop && !flopCBet.Made) ? 1 : 0);
-            int turnTrueAggressionBets = checkRaisedOnStreetDictionary[Street.Turn] ? 2 : (aggresiveTurn ? 1 : 0);
-            int riverTrueAggressionBets = checkRaisedOnStreetDictionary[Street.River] ? 2 : (aggresiveRiver ? 1 : 0);
+            int flopTrueAggressionBets = flopCheckRaise.Made ? 2 : ((aggresiveFlop && !flopCBet.Made) ? 1 : 0);
+            int turnTrueAggressionBets = turnCheckRaise.Made ? 2 : (aggresiveTurn ? 1 : 0);
+            int riverTrueAggressionBets = riverCheckRaise.Made ? 2 : (aggresiveRiver ? 1 : 0);
 
             #endregion
 
@@ -403,6 +420,8 @@ namespace Model
 
             stat.DidDonkBet = donkBet.Made ? 1 : 0;
             stat.CouldDonkBet = donkBet.Possible ? 1 : 0;
+            stat.FacedDonkBet = donkBet.Faced ? 1 : 0;
+            stat.FoldedToDonkBet = donkBet.Folded ? 1 : 0;
 
             stat.Didthreebet = threeBet.Made ? 1 : 0;
             stat.DidThreeBetIp = threeBet.Made && preflopInPosition ? 1 : 0;
@@ -414,6 +433,8 @@ namespace Model
             stat.Foldedtothreebetpreflop = threeBet.Folded ? 1 : 0;
             stat.Calledthreebetpreflop = threeBet.Called ? 1 : 0;
             stat.Raisedthreebetpreflop = threeBet.Raised ? 1 : 0;
+
+
 
             stat.Totalhands = 1;
             stat.Totalcalls = call;
@@ -516,12 +537,24 @@ namespace Model
             stat.Calledrivercontinuationbet = riverCBet.Called ? 1 : 0;
             stat.Raisedrivercontinuationbet = riverCBet.Raised ? 1 : 0;
 
+            stat.FacingflopcontinuationbetIP = flopCBet.Faced && preflopInPosition ? 1 : 0;
+            stat.FacingflopcontinuationbetOOP = flopCBet.Faced && !preflopInPosition ? 1 : 0;
+            stat.CalledflopcontinuationbetIP = flopCBet.Called && preflopInPosition ? 1 : 0;
+            stat.CalledflopcontinuationbetOOP = flopCBet.Called && !preflopInPosition ? 1 : 0;
+            stat.FoldToFlopcontinuationbetIP = flopCBet.Folded && preflopInPosition ? 1 : 0;
+            stat.FoldToFlopcontinuationbetOOP = flopCBet.Folded && !preflopInPosition ? 1 : 0;
+
             stat.Couldfourbet = fourBet.Possible ? 1 : 0;
             stat.Didfourbet = fourBet.Made ? 1 : 0;
             stat.Facedfourbetpreflop = fourBet.Faced ? 1 : 0;
             stat.Foldedtofourbetpreflop = fourBet.Folded ? 1 : 0;
             stat.Calledfourbetpreflop = fourBet.Called ? 1 : 0;
             stat.Raisedfourbetpreflop = fourBet.Raised ? 1 : 0;
+
+            stat.Could5Bet = fiveBet.Possible ? 1 : 0;
+            stat.Did5Bet = fiveBet.Made ? 1 : 0;
+            stat.Faced5Bet = fiveBet.Faced ? 1 : 0;
+            stat.FoldedTo5Bet = fiveBet.Folded ? 1 : 0;
 
             stat.Facingtwopreflopraisers = twoPfr.Faced ? 1 : 0;
             stat.Calledtwopreflopraisers = twoPfr.Called ? 1 : 0;
@@ -534,6 +567,16 @@ namespace Model
             stat.Rivercallippassonturncb = riverIpPassFlopCbet.Called ? 1 : 0;
             stat.Riverraiseippassonturncb = riverIpPassFlopCbet.Raised ? 1 : 0;
 
+            stat.CheckedRiverAfterBBLine = betOnFlop && betOnTurn && playerHandActions.Any(x => x.Street == Street.River && x.IsCheck) ? 1 : 0;
+            stat.CouldCheckRiverAfterBBLine = playedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+
+            var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
+
+            stat.DidRiverBet = betOnRiver ? 1 : 0;
+            stat.CouldRiverBet = parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
+            stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
+
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
             stat.Couldsqueeze = squeezBet.Possible ? 1 : 0;
@@ -541,13 +584,20 @@ namespace Model
 
             stat.DidOpenRaise = isOpenRaise ? 1 : 0;
             stat.IsRaisedLimpers = isRaisedLimpers ? 1 : 0;
-            stat.DidCheckRaise = checkRaisedOnStreetDictionary.Any(x => x.Value) ? 1 : 0;
-            stat.DidFlopCheckRaise = checkRaisedOnStreetDictionary[Street.Flop] ? 1 : 0;
-            stat.DidTurnCheckRaise = checkRaisedOnStreetDictionary[Street.Turn] ? 1 : 0;
-            stat.DidRiverCheckRaise = checkRaisedOnStreetDictionary[Street.River] ? 1 : 0;
-            stat.CouldFlopCheckRaise = checkRaiseOpportunities[Street.Flop] ? 1 : 0;
-            stat.CouldTurnCheckRaise = checkRaiseOpportunities[Street.Turn] ? 1 : 0;
-            stat.CouldRiverCheckRaise = checkRaiseOpportunities[Street.River] ? 1 : 0;
+            stat.DidCheckRaise = flopCheckRaise.Made || turnCheckRaise.Made || riverCheckRaise.Made ? 1 : 0;
+            stat.DidFlopCheckRaise = flopCheckRaise.Made ? 1 : 0;
+            stat.DidTurnCheckRaise = turnCheckRaise.Made ? 1 : 0;
+            stat.DidRiverCheckRaise = riverCheckRaise.Made ? 1 : 0;
+            stat.CouldFlopCheckRaise = flopCheckRaise.Possible ? 1 : 0;
+            stat.CouldTurnCheckRaise = turnCheckRaise.Possible ? 1 : 0;
+            stat.CouldRiverCheckRaise = riverCheckRaise.Possible ? 1 : 0;
+            stat.FacedFlopCheckRaise = flopCheckRaise.Faced ? 1 : 0;
+            stat.FoldedToFlopCheckRaise = flopCheckRaise.Folded ? 1 : 0;
+            stat.FacedTurnCheckRaise = turnCheckRaise.Faced ? 1 : 0;
+            stat.CalledTurnCheckRaise = turnCheckRaise.Called ? 1 : 0;
+            stat.FoldedToTurnCheckRaise = turnCheckRaise.Folded ? 1 : 0;
+            stat.FacedRiverCheckRaise = riverCheckRaise.Faced ? 1 : 0;
+            stat.FoldedToRiverCheckRaise = riverCheckRaise.Folded ? 1 : 0;
 
             stat.Couldcoldcall = coldCall.Possible ? 1 : 0;
             stat.Didcoldcall = coldCall.Made ? 1 : 0;
@@ -576,14 +626,17 @@ namespace Model
 
             stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && couldBetOnTurn ? 1 : 0;
 
+            stat.DidDelayedTurnCBetIn3BetPot = pfr && flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
+            stat.CouldDelayedTurnCBetIn3BetPot = pfr && flopCBet.Possible && !flopCBet.Made && couldBetOnTurn ? 1 : 0;
+
             stat.PlayedFloatFlop = isFloatFlop ? 1 : 0;
 
-            stat.CouldRaiseFlop = flopRaise.Count(x => x.Possible);
-            stat.DidRaiseFlop = flopRaise.Count(x => x.Made);
-            stat.CouldRaiseTurn = turnRaise.Count(x => x.Possible);
-            stat.DidRaiseTurn = turnRaise.Count(x => x.Made);
-            stat.CouldRaiseRiver = riverRaise.Count(x => x.Possible);
-            stat.DidRaiseRiver = riverRaise.Count(x => x.Made);
+            stat.CouldRaiseFlop = flopRaise.Possible ? 1 : 0;
+            stat.DidRaiseFlop = flopRaise.Made ? 1 : 0;
+            stat.CouldRaiseTurn = turnRaise.Possible ? 1 : 0;
+            stat.DidRaiseTurn = turnRaise.Made ? 1 : 0;
+            stat.CouldRaiseRiver = riverRaise.Possible ? 1 : 0;
+            stat.DidRaiseRiver = riverRaise.Made ? 1 : 0;
 
             stat.WasFlop = wasFlop ? 1 : 0;
             stat.WasTurn = wasTurn ? 1 : 0;
@@ -607,20 +660,20 @@ namespace Model
             stat.BetFlopCalled3BetPreflopIp = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
             stat.CouldBetFlopCalled3BetPreflopIp = couldBetOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
 
-            stat.FacedRaiseFlop = flopRaiseBet.Faced ? 1 : 0;
-            stat.FoldedFacedRaiseFlop = flopRaiseBet.Folded ? 1 : 0;
-            stat.CalledFacedRaiseFlop = flopRaiseBet.Called ? 1 : 0;
-            stat.ReraisedFacedRaiseFlop = flopRaiseBet.Raised ? 1 : 0;
+            stat.FacedRaiseFlop = flopRaise.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseFlop = flopRaise.Folded ? 1 : 0;
+            stat.CalledFacedRaiseFlop = flopRaise.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseFlop = flopRaise.Raised ? 1 : 0;
 
-            stat.FacedRaiseTurn = turnRaiseBet.Faced ? 1 : 0;
-            stat.FoldedFacedRaiseTurn = turnRaiseBet.Folded ? 1 : 0;
-            stat.CalledFacedRaiseTurn = turnRaiseBet.Called ? 1 : 0;
-            stat.ReraisedFacedRaiseTurn = turnRaiseBet.Raised ? 1 : 0;
+            stat.FacedRaiseTurn = turnRaise.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseTurn = turnRaise.Folded ? 1 : 0;
+            stat.CalledFacedRaiseTurn = turnRaise.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseTurn = turnRaise.Raised ? 1 : 0;
 
-            stat.FacedRaiseRiver = riverRaiseBet.Faced ? 1 : 0;
-            stat.FoldedFacedRaiseRiver = riverRaiseBet.Folded ? 1 : 0;
-            stat.CalledFacedRaiseRiver = riverRaiseBet.Called ? 1 : 0;
-            stat.ReraisedFacedRaiseRiver = riverRaiseBet.Raised ? 1 : 0;
+            stat.FacedRaiseRiver = riverRaise.Faced ? 1 : 0;
+            stat.FoldedFacedRaiseRiver = riverRaise.Folded ? 1 : 0;
+            stat.CalledFacedRaiseRiver = riverRaise.Called ? 1 : 0;
+            stat.ReraisedFacedRaiseRiver = riverRaise.Raised ? 1 : 0;
 
             stat.CanBetWhenCheckedToFlop = flopBetWhenCheckedTo.Possible ? 1 : 0;
             stat.DidBetWhenCheckedToFlop = flopBetWhenCheckedTo.Made ? 1 : 0;
@@ -651,7 +704,7 @@ namespace Model
 
             foreach (var streetLine in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
             {
-                line.Add(String.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
+                line.Add(string.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
             }
 
             stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
@@ -748,9 +801,249 @@ namespace Model
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
 
+            stat.FacedCheckRaiseVsFlopCBet = flopCBet.Raised && flopCheckRaise.Made &&
+                parsedHand.Flop.SkipWhile(x => x.PlayerName == player && x.IsRaise()).Any(x => x.PlayerName != player && x.IsRaise()) ? 1 : 0;
+
+            stat.CalledCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsCall() ? 1 : 0;
+            stat.FoldedCheckRaiseVsFlopCBet = stat.FacedCheckRaiseVsFlopCBet == 1 && parsedHand.Flop.Last(x => x.PlayerName == player).IsFold ? 1 : 0;
+
+            stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP = pfr && flopCBet.Possible && isCheckedFlop && !preflopInPosition &&
+                isCheckedTurn && parsedHand.Turn.SkipWhile(x => !x.IsBet()).TakeWhile(x => x.PlayerName != player).All(x => !x.IsRaise(), true) ? 1 : 0;
+
+            stat.CheckedCalledTurnWhenCheckedFlopAsPfr = stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP == 1 &&
+                (playerHandActions.Where(x => x.Street == Street.Turn).Skip(1).FirstOrDefault()?.IsCall() ?? false) ? 1 : 0;
+
+            stat.CheckedFoldedToTurnWhenCheckedFlopAsPfr = stat.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP == 1 &&
+                (playerHandActions.Where(x => x.Street == Street.Turn).Skip(1).FirstOrDefault()?.IsFold ?? false) ? 1 : 0;
+
+            var playerActionOnTurnBet = GetPlayerActionOnBet(parsedHand.Turn, player);
+            var facedTurnBetWhenCheckedFlopAsPfr = pfr && flopCBet.Possible && isCheckedFlop && playerActionOnTurnBet != null;
+
+            stat.FacedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr ? 1 : 0;
+            stat.CalledTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsCall() ? 1 : 0;
+            stat.FoldedToTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsFold ? 1 : 0;
+            stat.RaisedTurnBetWhenCheckedFlopAsPfr = facedTurnBetWhenCheckedFlopAsPfr && playerActionOnTurnBet.IsRaise() ? 1 : 0;
+
+            stat.FlopBetToPotRatio = betOnFlop ? Math.Abs(betOnFlopAction.Amount / parsedHand.PreFlop.Sum(x => x.Amount)) : 0;
+            stat.TurnBetToPotRatio = betOnTurn ? Math.Abs(betOnTurnAction.Amount / parsedHand.HandActions
+                .Where(x => x.Street == Street.Preflop || x.Street == Street.Flop)
+                .Sum(x => x.Amount)) : 0;
+            stat.RiverBetToPotRatio = betOnRiver ? Math.Abs(betOnRiverAction.Amount / parsedHand.HandActions
+                .Where(x => x.Street == Street.Preflop || x.Street == Street.Flop || x.Street == Street.Turn)
+                .Sum(x => x.Amount)) : 0;
+
             #endregion
 
+            var lastFlopAction = parsedHand.Flop.LastOrDefault();
+
+            if (lastFlopAction != null)
+            {
+                stat.DidFlopCheckBehind = playedTurn && lastFlopAction.PlayerName == player && lastFlopAction.IsCheck ? 1 : 0;
+                stat.CouldFlopCheckBehind = preflopInPosition && !parsedHand.Flop.Any(x => x.IsBet() && x.PlayerName != player) ? 1 : 0;
+            }
+
+            if (playedTurn)
+            {
+                playerActionOnTurnBet = GetPlayerActionOnBet(parsedHand.Turn, player, true, true);
+
+                if (playerActionOnTurnBet != null)
+                {
+                    stat.FacedBetOnTurn = 1;
+                    stat.FoldedTurn = playerActionOnTurnBet.IsFold ? 1 : 0;
+                }
+            }
+
+            if (playedRiver)
+            {
+                var playerActionOnRiverBet = GetPlayerActionOnBet(parsedHand.River, player, true, true);
+                var facedBetOnRiver = playerActionOnRiverBet != null;
+
+                if (playerHandActions.RiverAny(x => x.IsCheck))
+                {
+                    stat.CheckedThenFacedBetOnRiver = facedBetOnRiver ? 1 : 0;
+                    stat.CheckedCalledRiver = facedBetOnRiver && playerActionOnRiverBet.IsCall() ? 1 : 0;
+                    stat.CheckedFoldedRiver = facedBetOnRiver && playerActionOnRiverBet.IsFold ? 1 : 0;
+                }
+
+                if (facedBetOnRiver && playerActionOnRiverBet.IsCall())
+                {
+                    stat.RiverCallSizeOnFacingBet = Math.Abs(playerActionOnRiverBet.Amount);
+
+                    if (won)
+                    {
+                        var wonOnFacingBet = Math.Abs(parsedHand.HandActions.TakeWhile(x => x != playerActionOnRiverBet).Sum(x => x.Amount));
+                        var uncalledBets = parsedHand.HandActions
+                            .SkipWhile(x => x != playerActionOnRiverBet)
+                            .Skip(1)
+                            .TakeWhile(x => x.HandActionType == HandActionType.UNCALLED_BET).Sum(x => x.Amount);
+
+                        stat.RiverWonOnFacingBet = wonOnFacingBet - uncalledBets;
+                    }
+                }
+            }
+
+            if (fourBet.Made)
+            {
+                stat.ShovedFlopAfter4Bet = playerHandActions.FlopAny(x => (x.IsBet() || x.IsRaise()) && (x.IsAllIn || x.IsAllInAction)) ? 1 : 0;
+                stat.CouldShoveFlopAfter4Bet = playerHandActions.Any(x => x.Street == Street.Flop) ? 1 : 0;
+            }
+
+            if (threeBet.Faced)
+            {
+                var preflop3BetInPositionPlayer = GetInPositionPlayer(parsedHand, Street.Preflop, player, true);
+
+                var preflop3BetInPosition = preflop3BetInPositionPlayer != null && preflop3BetInPositionPlayer.PlayerName == player;
+
+                stat.FacedThreeBetIP = preflop3BetInPosition ? 1 : 0;
+                stat.FacedThreeBetOOP = !preflop3BetInPosition ? 1 : 0;
+                stat.FoldToThreeBetIP = preflop3BetInPosition && threeBet.Folded ? 1 : 0;
+                stat.FoldToThreeBetOOP = !preflop3BetInPosition && threeBet.Folded ? 1 : 0;
+            }
+
+            if (pfrOcurred && preflopInPosition && parsedHand.PreFlop.Count(x => x.IsRaise()) == 1 &&
+                parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold))
+            {
+                stat.CouldBetFlopWhenCheckedToSRP = 1;
+                stat.BetFlopWhenCheckedToSRP = betOnFlop ? 1 : 0;
+            }
+
             return stat;
+        }
+
+        private static HandAction GetPlayerActionOnBet(IEnumerable<HandAction> streetActions, string player, bool raiseAllowed = false, bool checkAllowed = false)
+        {
+            var wasBet = false;
+
+            foreach (var action in streetActions)
+            {
+                if (action.IsBet())
+                {
+                    wasBet = true;
+
+                    if (action.PlayerName == player)
+                    {
+                        return null;
+                    }
+
+                    continue;
+                }
+
+                if (!wasBet)
+                {
+                    if (!checkAllowed && action.PlayerName == player)
+                    {
+                        return null;
+                    }
+
+                    continue;
+                }
+
+                if (action.IsRaise() && action.PlayerName != player && !raiseAllowed)
+                {
+                    return null;
+                }
+
+                if (action.PlayerName == player)
+                {
+                    return action;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Calculate the check-raise based events for the specified player
+        /// </summary>
+        /// <param name="actions">The list of actions of the hand</param>
+        /// <param name="player">The player for whom the check-raise events will be determined</param>
+        /// <returns>The check-raise object</returns>
+        private ConditionalBet CalculateCheckRaise(IEnumerable<HandAction> actions, string player, PlayerList players)
+        {
+            var checkRaise = new ConditionalBet();
+
+            if (!actions.Any())
+            {
+                return checkRaise;
+            }
+
+            var checkedPlayers = new List<string>();
+            var betIsAllIn = false;
+            var heroMadeBet = false;
+
+            foreach (var action in actions)
+            {
+                if (action.IsCheck)
+                {
+                    checkedPlayers.Add(action.PlayerName);
+                    continue;
+                }
+
+                if (checkedPlayers.Count == 0)
+                {
+                    return checkRaise;
+                }
+
+                if (action.IsBet())
+                {
+                    if (player == action.PlayerName)
+                    {
+                        heroMadeBet = true;
+                    }
+
+                    // if player who made bets went all-in then we need to check if check-raise is possible for Hero
+                    if (action.IsAllIn || action.IsAllInAction)
+                    {
+                        betIsAllIn = true;
+                        continue;
+                    }
+
+                    checkRaise.Possible = checkedPlayers.Contains(player);
+                }
+
+                if (betIsAllIn && !checkRaise.Possible)
+                {
+                    // check-raise isn't possible because player can only call or fold because of all-in bet
+                    if (action.PlayerName == player)
+                    {
+                        checkRaise.Possible = false;
+                        break;
+                    }
+
+                    // if someone raise and his raise isn't all-in, then Hero still can make raise
+                    if (action.IsRaise() && !action.IsAllIn && !action.IsAllInAction)
+                    {
+                        checkRaise.Possible = true;
+                    }
+                }
+
+                if (action.IsRaise())
+                {
+                    if (checkedPlayers.Contains(action.PlayerName))
+                    {
+                        checkRaise.Happened = true;
+
+                        if (string.IsNullOrEmpty(checkRaise.HappenedByPlayer))
+                        {
+                            checkRaise.HappenedByPlayer = action.PlayerName;
+                        }
+
+                        if (action.PlayerName == player)
+                        {
+                            checkRaise.Made = true;
+                        }
+                    }
+                }
+
+                if (heroMadeBet && checkRaise.Happened &&
+                    action.PlayerName == player && checkRaise.HappenedByPlayer != player)
+                {
+                    checkRaise.CheckAction(action);
+                    break;
+                }
+            }
+
+            return checkRaise;
         }
 
         private static decimal GetExpectedValue(HandHistory parsedHand, HandAction[] playerHandActions, decimal equity, string player)
@@ -843,23 +1136,103 @@ namespace Model
             }
         }
 
-        private static IEnumerable<Condition> CalculateRaise(IEnumerable<HandAction> streetActions, string player)
+        private static ConditionalBet CalculateRaise(IEnumerable<HandAction> streetActions, string player, PlayerList players)
         {
-            var conditions = new List<Condition>();
-            if (streetActions.Any(x => x.IsBet()))
-            {
-                var betIndex = streetActions.ToList().IndexOf(streetActions.First(x => x.IsBet()));
-                var playerActionsAfterBet = streetActions.Skip(betIndex + 1).Where(x => x.PlayerName == player);
-                foreach (var action in playerActionsAfterBet)
-                {
-                    Condition raiseCondition = new Condition();
-                    raiseCondition.Possible = true;
-                    raiseCondition.Made = raiseCondition.Happened = action.IsRaise();
+            var raise = new ConditionalBet();
 
-                    conditions.Add(raiseCondition);
+            var wasBet = false;
+            var wasAllInBet = false;
+            var heroMadeBet = false;
+            var heroMadeActionAfterBet = false;
+            var allInPlayers = new List<string>();
+
+            foreach (var action in streetActions)
+            {
+                if (!wasBet)
+                {
+                    if (action.IsBet())
+                    {
+                        wasBet = true;
+                        heroMadeBet = action.PlayerName == player;
+
+                        if (action.IsAllIn || action.IsAllInAction)
+                        {
+                            wasAllInBet = true;
+                            allInPlayers.Add(action.PlayerName);
+                            continue;
+                        }
+
+                        raise.Possible = !heroMadeBet;
+                    }
+
+                    continue;
+                }
+
+                if (!heroMadeBet && wasAllInBet && !raise.Happened && !raise.Possible)
+                {
+                    if (action.PlayerName != player)
+                    {
+                        if ((action.IsCall() || action.IsRaise()))
+                        {
+                            if (!action.IsAllIn && !action.IsAllInAction)
+                            {
+                                raise.Possible = true;
+                            }
+                            else
+                            {
+                                allInPlayers.Add(action.PlayerName);
+                            }
+                        }
+                        // fold
+                        else
+                        {
+                            if (heroMadeActionAfterBet)
+                            {
+                                var allInPlayersStacks = (from pl in players
+                                                          join allInPlayer in allInPlayers on pl.PlayerName equals allInPlayer
+                                                          select pl.StartingStack).ToArray();
+
+                                var actionPlayer = players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
+
+                                if (actionPlayer != null && allInPlayersStacks.All(x => x < actionPlayer.StartingStack))
+                                {
+                                    raise.Possible = true;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        heroMadeActionAfterBet = true;
+                    }
+                }
+
+                if (action.IsRaise())
+                {
+                    if (!raise.Happened)
+                    {
+                        raise.Happened = true;
+                        raise.HappenedByPlayer = action.PlayerName;
+                    }
+
+                    if (!heroMadeBet && action.PlayerName == player)
+                    {
+                        raise.Possible = true;
+                        raise.Made = true;
+                    }
+                }
+
+                if (action.PlayerName == player)
+                {
+                    if (raise.Happened && raise.HappenedByPlayer != player)
+                    {
+                        raise.CheckAction(action);
+                        break;
+                    }
                 }
             }
-            return conditions;
+
+            return raise;
         }
 
         private static bool IsBluff(HoleCards holeCards, BoardCards communityCards, Street street)
@@ -1181,6 +1554,7 @@ namespace Model
                         }
 
                         fourBet.Happened = true;
+                        fourBet.HappenedByPlayer = action.PlayerName;
 
                         if (action.IsAllInAction || action.IsAllIn)
                         {
@@ -1250,6 +1624,51 @@ namespace Model
                     if (action.IsCall() && !playersCannot3Bet.Contains(action.PlayerName))
                     {
                         playersCannot3Bet.Add(action.PlayerName);
+                    }
+                }
+            }
+        }
+
+        private static void Calculate5Bet(ConditionalBet threeBet, ConditionalBet fourBet, ConditionalBet fiveBet, List<HandAction> actions, string player, string raiser)
+        {
+            if (!threeBet.Happened && !fourBet.Happened)
+            {
+                return;
+            }
+
+            // could did 5-bet
+            if (fourBet.Faced)
+            {
+                var fourBetAction = actions.LastOrDefault(x => x.PlayerName == fourBet.HappenedByPlayer && x.IsRaise());
+                fiveBet.Possible = !fourBetAction.IsAllIn && !fourBetAction.IsAllInAction;
+
+                var raises = actions.Count(x => x.PlayerName == player && x.IsRaise());
+
+                if (raises > 1)
+                {
+                    fiveBet.Possible = true;
+                    fiveBet.Made = raises > 1;
+                }
+            }
+            // 5-bet is possible
+            else if (fourBet.Made)
+            {
+                var playerActions = actions.Where(x => x.PlayerName == player && x.HandActionType != HandActionType.UNCALLED_BET).ToArray();
+
+                var raiseNum = 0;
+
+                foreach (var playerAction in playerActions)
+                {
+                    // 4-bet happened
+                    if (raiseNum == 2)
+                    {
+                        fiveBet.CheckAction(playerAction);
+                        return;
+                    }
+
+                    if (playerAction.IsRaise())
+                    {
+                        raiseNum++;
                     }
                 }
             }
@@ -1498,10 +1917,7 @@ namespace Model
             }
         }
 
-        public static void Calculate3Bet(ConditionalBet threeBet,
-                                          IList<HandAction> actions,
-                                          string player,
-                                          string raiser)
+        public static void Calculate3Bet(ConditionalBet threeBet, IList<HandAction> actions, string player, string raiser)
         {
             bool start3Bet = false;
 
@@ -1703,48 +2119,6 @@ namespace Model
             }
         }
 
-        /// <summary>
-        /// Determines player's reply to raise action on a specific street
-        /// </summary>
-        /// <param name="raiseBet"></param>
-        /// <param name="streetActions"></param>
-        /// <param name="player"></param>
-        private static void CalculateRaiseBet(ConditionalBet raiseBet, IEnumerable<HandAction> streetActions, string player)
-        {
-            var wasBet = false;
-            foreach (var action in streetActions)
-            {
-                if (wasBet)
-                {
-                    if (action.PlayerName != player)
-                    {
-                        continue;
-                    }
-
-                    raiseBet.Faced = true;
-                    raiseBet.CheckAction(action);
-                }
-                else
-                {
-                    if (action.IsBet())
-                    {
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
-
-                        wasBet = true;
-                        continue;
-                    }
-
-                    if (action.PlayerName == player && action.IsFold)
-                    {
-                        return;
-                    }
-                }
-            }
-        }
-
         private static void CalculateBetWhenCheckedTo(Condition betWhenCheckedTo, IEnumerable<HandAction> streetActions, string player)
         {
             bool wasCheck = false;
@@ -1782,125 +2156,6 @@ namespace Model
                     return;
                 }
             }
-        }
-
-        private static Dictionary<Street, bool> GetCheckRaisedOnStreets(IList<HandAction> actions, string player)
-        {
-            var checkedRaisedOnStreetDictionary = new Dictionary<Street, bool>
-            {
-                { Street.Flop, false },
-                { Street.Turn, false },
-                { Street.River, false },
-            };
-
-            foreach (var group in actions.Where(x => x.PlayerName == player).GroupBy(x => x.Street).Where(x => x.Key >= Street.Flop && x.Key <= Street.River && x.Count() > 1))
-            {
-                var checkAction = group.FirstOrDefault(x => x.HandActionType == HandActionType.CHECK);
-                var raiseAction = group.FirstOrDefault(x => x.IsRaise());
-
-                if (checkAction != null && raiseAction != null)
-                {
-                    if (checkedRaisedOnStreetDictionary.ContainsKey(group.Key))
-                    {
-                        checkedRaisedOnStreetDictionary[group.Key] = true;
-                    }
-                    else
-                    {
-                        LogProvider.Log.Warn(typeof(PlayerStatisticCalculator), String.Format("GetCheckRaisedOnStreets: failed to add check raise action on street: {0}", group.Key));
-                    }
-                }
-            }
-
-            return checkedRaisedOnStreetDictionary;
-        }
-
-        /// <summary>
-        /// Determine the check-raise opportunities for the specified player
-        /// </summary>
-        /// <param name="actions">The list of actions of the hand</param>
-        /// <param name="player">The player for whom the check-raise opportunities will be determined</param>
-        /// <returns>The dictionary with the check-raise opportunities for each street</returns>
-        private static Dictionary<Street, bool> GetCheckRaiseOpportunities(IList<HandAction> actions, PlayerList players, string player)
-        {
-            var checkRaiseOpportunities = new Dictionary<Street, bool>()
-            {
-                { Street.Flop, false },
-                { Street.Turn, false },
-                { Street.River, false },
-            };
-
-            var actionsGroupedByStreet = actions
-                .GroupBy(x => x.Street)
-                .Where(x => x.Key >= Street.Flop && x.Key <= Street.River && x.Count() > 1)
-                .ToArray();
-
-            foreach (var streetActionsGroup in actionsGroupedByStreet)
-            {
-                var playerChecked = false;
-
-                Player allInPlayer = null;
-
-                var streetActions = streetActionsGroup.ToArray();
-
-                for (var i = 0; i < streetActions.Length; i++)
-                {
-                    var action = streetActions[i];
-
-                    if (!playerChecked)
-                    {
-                        if (action.PlayerName == player)
-                        {
-                            if (!action.IsCheck)
-                            {
-                                break;
-                            }
-
-                            playerChecked = true;
-                            continue;
-                        }
-
-                        continue;
-                    }
-
-                    if (action.IsBet() && action.PlayerName != player)
-                    {
-                        var couldCheckRaise = true;
-
-                        // if player bets and goes all-in we need to check if there is any other raiser, otherwise player can't raise
-                        if (action.IsAllIn || action.IsAllInAction)
-                        {
-                            couldCheckRaise = false;
-
-                            allInPlayer = players.FirstOrDefault(x => x.PlayerName == action.PlayerName);
-
-                            for (var j = i + 1; j < streetActions.Length; j++)
-                            {
-                                if (streetActions[j].PlayerName == player)
-                                {
-                                    break;
-                                }
-
-                                if (streetActions[j].IsRaise())
-                                {
-                                    if (!streetActions[j].IsAllIn && !streetActions[j].IsAllInAction)
-                                    {
-                                        couldCheckRaise = true;
-                                    }
-                                    else
-                                    {
-                                        couldCheckRaise = false;
-                                    }
-                                }
-                            }
-                        }
-
-                        checkRaiseOpportunities[streetActionsGroup.Key] = couldCheckRaise;
-                        break;
-                    }
-                }
-            }
-
-            return checkRaiseOpportunities;
         }
 
         private static bool IsOpenRaise(IList<HandAction> preflops, string player)
@@ -1969,7 +2224,7 @@ namespace Model
 
         private static Player GetCutOffPlayer(HandHistory hand)
         {
-            if (hand.Players.Count == 2)
+            if (hand.Players.Count == 3)
             {
                 return null;
             }
@@ -1995,6 +2250,8 @@ namespace Model
 
             var coPlayer = btnPlayerIndex == 0 ? orderedPlayers.Last() : orderedPlayers[btnPlayerIndex - 1];
 
+
+
             return coPlayer;
         }
 
@@ -2004,7 +2261,7 @@ namespace Model
             return buttonPlayer;
         }
 
-        private static Player GetInPositionPlayer(HandHistory hand, Street street)
+        private static Player GetInPositionPlayer(HandHistory hand, Street street, string player, bool foldAllowed = false)
         {
             var actions = hand.HandActions.Street(street)
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
@@ -2040,7 +2297,13 @@ namespace Model
             }
 
             // DHUD-273: remove players who folded from the list
-            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToArray();
+            var foldedPlayers = actions.Where(x => x.HandActionType == HandActionType.FOLD).Select(x => x.PlayerName).ToList();
+
+            if (foldAllowed && player == foldedPlayers.LastOrDefault())
+            {
+                foldedPlayers.Remove(player);
+            }
+
             foldedPlayers.ForEach(x => players.Remove(x));
 
             if (players.Count > 0)
@@ -2059,17 +2322,33 @@ namespace Model
             return null;
         }
 
-        private static void CalculateDonkBet(Condition donkBet, IList<HandAction> actions, string player)
+        private static void CalculateDonkBet(ConditionalBet donkBet, IList<HandAction> actions, string player, string playerInPosition)
         {
             var raisers = actions.PreFlopWhere(x => x.IsRaise());
 
-            if (raisers.Any(x => x.PlayerName == player) || !raisers.Any())
+            if (!raisers.Any())
             {
                 return;
             }
 
             foreach (var action in actions.Street(Street.Flop))
             {
+                if (donkBet.Happened)
+                {
+                    if (action.PlayerName == player)
+                    {
+                        donkBet.CheckAction(action);
+                        return;
+                    }
+
+                    if (!action.IsFold)
+                    {
+                        return;
+                    }
+
+                    continue;
+                }
+
                 if (raisers.Any(x => x.PlayerName == action.PlayerName))
                 {
                     return;
@@ -2078,13 +2357,21 @@ namespace Model
                 if (action.PlayerName == player)
                 {
                     donkBet.Possible = true;
-                    donkBet.Made = action.IsBet();
+                    donkBet.Happened = donkBet.Made = action.IsBet();
+                    return;
                 }
 
                 // somebody else did a donk bet
                 if (action.IsBet())
                 {
-                    return;
+                    // not a donk bet
+                    if (raisers.Any(x => x.PlayerName == action.PlayerName) || action.PlayerName == playerInPosition)
+                    {
+                        return;
+                    }
+
+                    donkBet.Happened = true;
+                    donkBet.HappenedByPlayer = action.PlayerName;
                 }
             }
         }

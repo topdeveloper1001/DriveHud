@@ -1,0 +1,40 @@
+PokerStars Game #47179915874:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 20:42:37 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 2: Pappe_Ruk ($447.80 in chips) 
+Seat 3: nachtvogel ($301.70 in chips) 
+Seat 5: 1_ADDER_! ($222.95 in chips) 
+Seat 6: HeroTest ($200 in chips) 
+Pappe_Ruk: posts small blind $1
+nachtvogel: posts big blind $2
+*** HOLE CARDS ***
+1_ADDER_!: folds 
+HeroTest: raises $4 to $6
+dimsumboy joins the table at seat #1 
+Pappe_Ruk: folds 
+nachtvogel: calls $4
+*** FLOP *** [4s Td 5h]
+nachtvogel: checks 
+HeroTest: bets $8
+nachtvogel: calls $8
+*** TURN *** [4s Td 5h] [7s]
+nachtvogel: checks 
+HeroTest: bets $22
+nachtvogel: calls $22
+*** RIVER *** [4s Td 5h 7s] [Ah]
+nachtvogel: checks 
+HeroTest: bets $45
+nachtvogel: raises $220.70 to $265.70 and is all-in
+HeroTest: calls $119 and is all-in
+Uncalled bet ($101.70) returned to nachtvogel
+*** SHOW DOWN ***
+nachtvogel: shows [3c 6c] (a straight, Three to Seven)
+HeroTest: shows [4d 4c] (three of a kind, Fours)
+nachtvogel collected $399 from pot
+*** SUMMARY ***
+Total pot $401 | Rake $2 
+Board [4s Td 5h 7s Ah]
+Seat 2: Pappe_Ruk (small blind) folded before Flop
+Seat 3: nachtvogel (big blind) showed [3c 6c] and won ($399) with a straight, Three to Seven
+Seat 5: 1_ADDER_! folded before Flop (didn't bet)
+Seat 6: HeroTest (button) showed [4d 4c] and lost with three of a kind, Fours
+

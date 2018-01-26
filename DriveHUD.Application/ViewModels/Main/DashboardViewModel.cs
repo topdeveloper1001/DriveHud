@@ -143,12 +143,12 @@ namespace DriveHUD.Application.ViewModels
                 IndicatorCollection.Clean();
             }
 
-            if (StorageModel.FilteredPlayerStatistic == null)
+            if (StorageModel.FilteredCashPlayerStatistic == null)
             {
                 return;
             }
 
-            var statistics = StorageModel.FilteredPlayerStatistic.Where(x => !x.IsTourney).ToList();
+            var statistics = StorageModel.FilteredCashPlayerStatistic.ToList();
 
             IndicatorCollection.UpdateSource(statistics);
 

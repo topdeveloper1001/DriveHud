@@ -1,0 +1,33 @@
+PokerStars Game #47154879907:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 10:13:25 ET
+Table 'Victoria III' 6-max Seat #3 is the button
+Seat 1: floatalert ($253.10 in chips) 
+Seat 2: HeroTest ($402.35 in chips) 
+Seat 3: gebek8923 ($283 in chips) 
+Seat 4: DURKADURDUR ($273.70 in chips) 
+Seat 5: fakker11 ($219.30 in chips) 
+Seat 6: jklhgf ($203 in chips) 
+DURKADURDUR: posts small blind $1
+fakker11: posts big blind $2
+*** HOLE CARDS ***
+jklhgf: folds 
+floatalert: folds 
+HeroTest: raises $4 to $6
+gebek8923: folds 
+DURKADURDUR: calls $5
+fakker11: folds 
+*** FLOP *** [Ac 4c 2d]
+DURKADURDUR: bets $8
+HeroTest: folds 
+Uncalled bet ($8) returned to DURKADURDUR
+DURKADURDUR collected $13.30 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0.70 
+Board [Ac 4c 2d]
+Seat 1: floatalert folded before Flop (didn't bet)
+Seat 2: HeroTest folded on the Flop
+Seat 3: gebek8923 (button) folded before Flop (didn't bet)
+Seat 4: DURKADURDUR (small blind) collected ($13.30)
+Seat 5: fakker11 (big blind) folded before Flop
+Seat 6: jklhgf folded before Flop (didn't bet)
+

@@ -1,0 +1,33 @@
+PokerStars Game #47185824381:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:59:26 ET
+Table 'Lonnrot III' 6-max Seat #2 is the button
+Seat 1: THEDUTCH4141 ($224 in chips) 
+Seat 2: Duke_Moto ($187.35 in chips) 
+Seat 3: DURKADURDUR ($212.45 in chips) 
+Seat 4: FastEddie267 ($200 in chips) 
+Seat 5: dajatt13 ($340 in chips) 
+Seat 6: FrAnWaN ($274.75 in chips) 
+DURKADURDUR: posts small blind $1
+FastEddie267: posts big blind $2
+*** HOLE CARDS ***
+dajatt13: folds 
+FrAnWaN: folds 
+THEDUTCH4141: folds 
+Duke_Moto: raises $4 to $6
+DURKADURDUR: calls $5
+FastEddie267: folds 
+*** FLOP *** [9h Jc 7h]
+DURKADURDUR: checks 
+Duke_Moto: bets $8
+DURKADURDUR: folds 
+Uncalled bet ($8) returned to Duke_Moto
+Duke_Moto collected $13.30 from pot
+Duke_Moto: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0.70 
+Board [9h Jc 7h]
+Seat 1: THEDUTCH4141 folded before Flop (didn't bet)
+Seat 2: Duke_Moto (button) collected ($13.30)
+Seat 3: DURKADURDUR (small blind) folded on the Flop
+Seat 4: FastEddie267 (big blind) folded before Flop
+Seat 5: dajatt13 folded before Flop (didn't bet)
+Seat 6: FrAnWaN folded before Flop (didn't bet)

@@ -19,9 +19,9 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class TournamentStackSizeReportCreator : IReportCreator
+    public class TournamentStackSizeReportCreator : TournamentBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -30,7 +30,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => x.IsTourney).GroupBy(x => GetMRatio(x)).ToArray())
+            foreach (var group in statistics.GroupBy(x => GetMRatio(x)).ToArray())
             {
                 var stat = new MRatioReportRecord();
 

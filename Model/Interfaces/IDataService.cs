@@ -32,8 +32,6 @@ namespace Model.Interfaces
 
         void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
 
-        Indicators GetPlayerIndicator(int playerId, short pokersiteId);
-
         IList<HandHistoryRecord> GetHandHistoryRecords();
 
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
@@ -43,8 +41,6 @@ namespace Model.Interfaces
         Players GetPlayer(string playerName, short pokersiteId);
 
         IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId);
-
-        IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId);
 
         IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
 

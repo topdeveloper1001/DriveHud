@@ -26,7 +26,7 @@ namespace DriveHUD.Common.Utils
             try
             {
                 //Grab values and build Web Request to the API
-                string apiURL = String.Format("https://www.google.com/finance/converter?a={0}&from={1}&to={2}&meta={3}", amount, fromCurrency, toCurrency, Guid.NewGuid().ToString());
+                string apiURL = String.Format("https://finance.google.com/finance/converter?a={0}&from={1}&to={2}&meta={3}", amount, fromCurrency, toCurrency, Guid.NewGuid().ToString());
 
                 //Make Web Request and grab the results
                 var request = WebRequest.Create(apiURL);

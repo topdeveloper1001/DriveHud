@@ -1,0 +1,29 @@
+PokerStars Game #47184528103:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:11:42 ET
+Table 'Neckar VII' 6-max Seat #2 is the button
+Seat 1: TODO ADENTR0 ($397.30 in chips) 
+Seat 2: DURKADURDUR ($212.05 in chips) 
+Seat 3: Fierytycoon ($246 in chips) 
+Seat 4: FastEddie267 ($208.25 in chips) 
+Seat 5: FLA LEFEVRE ($289.55 in chips) 
+Seat 6: LingXY ($215.30 in chips) 
+Fierytycoon: posts small blind $1
+FastEddie267: posts big blind $2
+*** HOLE CARDS ***
+FLA LEFEVRE: folds 
+LingXY: folds 
+TODO ADENTR0: folds 
+DURKADURDUR: raises $4 to $6
+Fierytycoon: raises $14 to $20
+FastEddie267: folds 
+DURKADURDUR: folds 
+Uncalled bet ($14) returned to Fierytycoon
+Fierytycoon collected $14 from pot
+Fierytycoon: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0 
+Seat 1: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 2: DURKADURDUR (button) folded before Flop
+Seat 3: Fierytycoon (small blind) collected ($14)
+Seat 4: FastEddie267 (big blind) folded before Flop
+Seat 5: FLA LEFEVRE folded before Flop (didn't bet)
+Seat 6: LingXY folded before Flop (didn't bet)

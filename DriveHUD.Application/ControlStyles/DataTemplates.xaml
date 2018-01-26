@@ -181,7 +181,7 @@
     <DataTemplate
         x:Key="RadListBoxItemTemplate_StatInfo">
         <Grid>
-            <Grid                                
+            <Grid
                 Background="#1d1e20"
                 Height="30"
                 Visibility="{Binding Path=., Mode=OneWay,Converter={StaticResource StatTypeToVisibilityConverter},ConverterParameter=StatInfo}">
@@ -201,6 +201,140 @@
                     Background="#1d1e20"
                     FontSize="13"
                     Text="{Binding Caption}" />
+
+            </Grid>
+            <Grid
+                Height="5"
+                Background="#1d1e20"
+                Visibility="{Binding Path=., Mode=OneWay, Converter={StaticResource StatTypeToVisibilityConverter}, ConverterParameter=StatInfoBreak}">
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <Style
+        x:Key="LineBarRadioButtonStyle"
+        TargetType="RadioButton">
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+        <Setter
+            Property="ToolTip"
+            Value="{ResX Key=Common_Hud_ShowLineBarTooltip}" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RadioButton}">
+                    <Image
+                        x:Name="Main"
+                        Width="19"
+                        Height="16"
+                        Source="/DriveHUD.Common.Resources;Component/images/icons/gauge-small.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsChecked"
+                            Value="True">
+                            <Setter
+                                Property="Opacity"
+                                TargetName="Main"
+                                Value="1" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsChecked"
+                            Value="False">
+                            <Setter
+                                Property="Opacity"
+                                TargetName="Main"
+                                Value="0.25" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="SimpleStatRadioButtonStyle"
+        TargetType="RadioButton">
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+        <Setter
+            Property="ToolTip"
+            Value="{ResX Key=Common_Hud_DoNotShowLineBarTooltip}" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RadioButton}">
+                    <Image
+                        x:Name="Main"
+                        Width="20"
+                        Height="19"
+                        Source="/DriveHUD.Common.Resources;Component/images/icons/textbox-small.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsChecked"
+                            Value="True">
+                            <Setter
+                                Property="Opacity"
+                                TargetName="Main"
+                                Value="1" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsChecked"
+                            Value="False">
+                            <Setter
+                                Property="Opacity"
+                                TargetName="Main"
+                                Value="0.25" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <DataTemplate
+        x:Key="RadListBoxItemTemplate_SelectedStatInfo">
+        <Grid>
+            <Grid
+                Background="#1d1e20"
+                Height="30"
+                Visibility="{Binding Path=., Mode=OneWay,Converter={StaticResource StatTypeToVisibilityConverter},ConverterParameter=StatInfo}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    Margin="10 0 0 0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Foreground="#4a4b4f"
+                    Background="#1d1e20"
+                    FontSize="13"
+                    Text="{Binding Caption}" />
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Visibility="{Binding DataContext.LineBarOrSimpleStatSelectorVisible, Converter={dh:BoolToVisibilityConverter}, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                    Grid.Column="1">
+
+                    <RadioButton
+                        Style="{StaticResource LineBarRadioButtonStyle}"
+                        IsChecked="{Binding IsPopupBarNotSupported, Converter={dh:BoolNotConverter}}" />
+
+                    <RadioButton
+                        Margin="5,0,7,0"
+                        Style="{StaticResource SimpleStatRadioButtonStyle}"
+                        IsChecked="{Binding IsPopupBarNotSupported}" />
+
+                </StackPanel>
 
             </Grid>
             <Grid
