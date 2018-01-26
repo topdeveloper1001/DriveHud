@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Progress;
+
 namespace DriveHUD.Importers
 {
     /// <summary>
@@ -20,5 +22,7 @@ namespace DriveHUD.Importers
         void ReImport();
 
         void Recover();
+
+        void InitializeProgress(IDHProgress progress);
     }
 }

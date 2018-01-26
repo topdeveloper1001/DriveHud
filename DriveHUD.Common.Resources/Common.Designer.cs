@@ -782,6 +782,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do not show line bar.
+        /// </summary>
+        internal static string Common_Hud_DoNotShowLineBarTooltip {
+            get {
+                return ResourceManager.GetString("Common_Hud_DoNotShowLineBarTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Duplicate.
         /// </summary>
         internal static string Common_Hud_Duplicate {
@@ -859,6 +868,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_SaveAs {
             get {
                 return ResourceManager.GetString("Common_Hud_SaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show line bar.
+        /// </summary>
+        internal static string Common_Hud_ShowLineBarTooltip {
+            get {
+                return ResourceManager.GetString("Common_Hud_ShowLineBarTooltip", resourceCulture);
             }
         }
         
@@ -1214,7 +1232,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Line Bar Graphs.
+        ///   Looks up a localized string similar to Line Bar Graphs
+        ///This is added to pop-up HUD stats to show a line bar indicator for the stat it&apos;s dragged to.
         /// </summary>
         internal static string Common_HudSideBar_GaugeIndicatorTool {
             get {

@@ -267,6 +267,7 @@ namespace DriveHUD.Application.ViewModels
                     ProgressViewModel.Progress.Report(new LocalizableString("Progress_RebuildingStatistics"));
 
                     var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.InitializeProgress(ProgressViewModel.Progress);
                     playerStatisticReImporter.ReImport();
 
                     LogProvider.Log.Info("Statistics rebuild has been completed.");

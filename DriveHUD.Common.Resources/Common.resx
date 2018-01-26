@@ -673,7 +673,8 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Bumper Stickers</value>
   </data>
   <data name="Common_HudSideBar_GaugeIndicatorTool" xml:space="preserve">
-    <value>Line Bar Graphs</value>
+    <value>Line Bar Graphs
+This is added to pop-up HUD stats to show a line bar indicator for the stat it's dragged to</value>
   </data>
   <data name="Common_HudSideBar_GraphTool" xml:space="preserve">
     <value>Graph</value>
@@ -980,5 +981,11 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_RegistrationView_ResetLicensesSuccess" xml:space="preserve">
     <value>Licenses have been reset. Please restart DriveHUD.</value>
+  </data>
+  <data name="Common_Hud_DoNotShowLineBarTooltip" xml:space="preserve">
+    <value>Do not show line bar</value>
+  </data>
+  <data name="Common_Hud_ShowLineBarTooltip" xml:space="preserve">
+    <value>Show line bar</value>
   </data>
 </root>

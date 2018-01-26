@@ -126,6 +126,9 @@
   <data name="Progress_RebuildingStatistics" xml:space="preserve">
     <value>Rebuilding statistics</value>
   </data>
+  <data name="Progress_RebuildingStatistics_Status" xml:space="preserve">
+    <value>Rebuilding statistics {0}/{1}</value>
+  </data>
   <data name="Progress_RecoveringStatistics" xml:space="preserve">
     <value>Recovering statistics</value>
   </data>
