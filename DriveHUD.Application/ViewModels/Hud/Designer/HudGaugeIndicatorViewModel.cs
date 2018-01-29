@@ -16,6 +16,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
+using Model.Data;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
@@ -376,7 +377,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     x.CurrentValue = random.Next(0, 100);
                     x.StatInfoMeter = new StatInfoMeterModel();
-                });             
+
+                    if (StatsProvider.StatsBases.ContainsKey(x.Stat) && StatsProvider.StatsBases[x.Stat].CreateStatDto != null)
+                    {
+                        x.StatDto = new StatDto(0, 0);
+                    }
+                });
             }
 
             this.RaisePropertyChanged(nameof(GroupedStats));

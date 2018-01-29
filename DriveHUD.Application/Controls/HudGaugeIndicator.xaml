@@ -79,9 +79,7 @@
                     ItemsSource="{Binding Stats}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel
-                                MinWidth="265"
-                                Width="{Binding ActualWidth, ElementName=StatsPanel}"
+                            <StackPanel
                                 Orientation="Horizontal" />
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
@@ -398,7 +396,6 @@
                                         <ItemsControl.ItemsPanel>
                                             <ItemsPanelTemplate>
                                                 <StackPanel
-                                                    x:Name="StatsPanel"
                                                     Orientation="Vertical" />
                                             </ItemsPanelTemplate>
                                         </ItemsControl.ItemsPanel>

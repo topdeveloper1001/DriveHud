@@ -91,10 +91,8 @@
                     ItemsSource="{Binding Stats}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel
-                                Width="{Binding ActualWidth, ElementName=StatsPanel}"
-                                Orientation="Horizontal"
-                                IsItemsHost="True" />
+                            <StackPanel
+                                Orientation="Horizontal" />
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
@@ -123,6 +121,17 @@
                                         Height="16"
                                         VerticalAlignment="Center"
                                         Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                </Border>
+                                <Border
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Margin="3"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding IterationsText}" />
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
@@ -235,8 +244,7 @@
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel
-                                    Orientation="Vertical"
-                                    x:Name="StatsPanel" />
+                                    Orientation="Vertical" />
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>

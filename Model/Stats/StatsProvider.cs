@@ -156,7 +156,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.RaiseFrequencyFactor, PropertyName = nameof(Indicators.RaiseFrequencyFactor), CreateStatDto = x => new StatDto(x.DidRaiseFlop + x.DidRaiseTurn + x.DidRaiseRiver, x.CouldRaiseFlop + x.CouldRaiseTurn + x.CouldRaiseRiver) },
             new StatBase { Stat = Stat.RaiseRiver, PropertyName = nameof(Indicators.RaiseRiver), CreateStatDto = x => new StatDto(x.DidRaiseRiver, x.CouldRaiseRiver) },
             new StatBase { Stat = Stat.RaiseTurn, PropertyName = nameof(Indicators.RaiseTurn), CreateStatDto = x => new StatDto(x.DidRaiseTurn, x.CouldRaiseTurn) },
-            new StatBase { Stat = Stat.RecentAgg, PropertyName = nameof(HudLightIndicators.RecentAggPr) },
+            new StatBase { Stat = Stat.RecentAgg, PropertyName = nameof(HudLightIndicators.RecentAggPr), CreateStatDto = x => new StatDto(0,0) },
             new StatBase { Stat = Stat.RiverAGG, PropertyName = nameof(Indicators.RiverAgg), CreateStatDto = x => new StatDto(x.TotalbetsRiver, x.RiverAggPossible) },
             new StatBase { Stat = Stat.RiverBetSizeMoreThanOne, PropertyName = nameof(Indicators.RiverBetSizeMoreThanOne), CreateStatDto = x => new StatDto(x.RiverBetSizeMoreThanOne, x.DidRiverBet) },
             new StatBase { Stat = Stat.RiverCallEffeciency, PropertyName = nameof(Indicators.RiverCallEffeciency) },
