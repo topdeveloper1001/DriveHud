@@ -2575,6 +2575,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Total MTT&apos;s : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalMTTs {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalMTTs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total MTT$&apos;s Won : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalMTTsWon {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalMTTsWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total S&amp;amp;G&apos;s : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalSnGs {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalSnGs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total S&amp;amp;G$&apos;s Won : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalSnGsWon {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalSnGsWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn.
         /// </summary>
         internal static string Common_Turn {

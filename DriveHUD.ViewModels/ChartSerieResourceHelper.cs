@@ -24,6 +24,8 @@ namespace DriveHUD.ViewModels
 
         public Color TooltipColor { get; set; }
 
+        public Color TooltipForeground { get; set; }
+
         public VisualBrush AreaBrush { get; set; }
 
         public static ChartSerieResourceHelper GetSeriesBluePalette()
@@ -34,6 +36,7 @@ namespace DriveHUD.ViewModels
                 PointColor = (Color)ColorConverter.ConvertFromString("#115576"),
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#115576"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#34519C"),
+                TooltipForeground = (Color)ColorConverter.ConvertFromString("#FFFFFF"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushBlue")
             };
         }
@@ -46,6 +49,7 @@ namespace DriveHUD.ViewModels
                 PointColor = (Color)ColorConverter.ConvertFromString("#FFF714"),
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#FFF714"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#FDE40F"),
+                TooltipForeground = (Color)ColorConverter.ConvertFromString("#000000"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushYellow")
             };
 
@@ -59,6 +63,7 @@ namespace DriveHUD.ViewModels
                 PointColor = (Color)ColorConverter.ConvertFromString("#ffdc50"),
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#ffbf43"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#bd5922"),
+                TooltipForeground = (Color)ColorConverter.ConvertFromString("#FFFFFF"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushOrange")
             };
         }
@@ -71,18 +76,20 @@ namespace DriveHUD.ViewModels
                 PointColor = (Color)ColorConverter.ConvertFromString("#93c940"),
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#92c840"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#4BA516"),
+                TooltipForeground = (Color)ColorConverter.ConvertFromString("#FFFFFF"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushGreen")
             };
         }
 
         public static ChartSerieResourceHelper GetSerieRedPalette()
-        {            
+        {
             return new ChartSerieResourceHelper()
             {
                 LineColor = (Color)ColorConverter.ConvertFromString("#e60909"),
                 PointColor = (Color)ColorConverter.ConvertFromString("#f32e2e"),
                 TrackBallColor = (Color)ColorConverter.ConvertFromString("#f32e2e"),
                 TooltipColor = (Color)ColorConverter.ConvertFromString("#e60909"),
+                TooltipForeground = (Color)ColorConverter.ConvertFromString("#FFFFFF"),
                 AreaBrush = (VisualBrush)System.Windows.Application.Current.FindResource("AreaVisualBrushOrange")
             };
         }

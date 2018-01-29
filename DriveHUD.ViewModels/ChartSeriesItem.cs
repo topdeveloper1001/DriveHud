@@ -130,6 +130,20 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        private Color tooltipForegroundColor = new Color();
+
+        public Color TooltipForegroundColor
+        {
+            get
+            {
+                return tooltipForegroundColor;
+            }
+            set
+            {
+                SetProperty(ref tooltipForegroundColor, value);
+            }
+        }
+
         #endregion       
     }
 }

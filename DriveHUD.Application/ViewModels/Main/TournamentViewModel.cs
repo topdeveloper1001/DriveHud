@@ -378,7 +378,8 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.ROI:
@@ -389,7 +390,8 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.MoneyWon:
@@ -400,7 +402,8 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}$",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.Luck:
@@ -411,7 +414,8 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                     }

@@ -1659,8 +1659,6 @@
             <!-- COMMANDS PANEL ********************************************************************* -->
             <!-- ************************************************************************************ -->
 
-
-
             <StackPanel
                 x:Name="UserPanel"
                 Grid.Row="2"
@@ -1704,9 +1702,9 @@
                     Foreground="White"
                     BorderThickness="0"
                     Background="{StaticResource BackgroundBrush2}"
-                    SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=1000}"
                     DisplayMemberPath="DecodedName"
-                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"
+                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"                    
                     Style="{StaticResource PlayerComboBoxStyle}"
                     ItemContainerStyle="{StaticResource PlayerComboBoxItemStyle}">
                     <telerik:RadComboBox.ItemsPanel>
@@ -1739,6 +1737,7 @@
                         </telerik:RadContextMenu>
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>
+                
                 <Button
                     Name="btnPurge"
                     Width="40"

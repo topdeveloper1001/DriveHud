@@ -1691,7 +1691,7 @@
                     MaxHeight="260"
                     VerticalAlignment="Stretch"
                     RowHeight="40"
-                    SelectionMode="Single"
+                    SelectionMode="Single"                    
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
                     CanUserReorderColumns="True"
