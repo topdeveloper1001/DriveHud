@@ -28,6 +28,7 @@ using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -89,6 +90,7 @@ namespace DriveHUD.Importers
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Re-import of player statistic failed.", e);
+                ClosePlayerstatisticStreams();
                 throw new DHBusinessException(new NonLocalizableString("Player statistic rebuilding failed"));
             }
             finally
@@ -203,10 +205,18 @@ namespace DriveHUD.Importers
                     var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
 
                     var handHistories = session.Query<Handhistory>()
-                        .OrderBy(x => x.HandhistoryId)
+                        .OrderBy(x => x.Handtimestamp)
                         .Skip(numOfRowToStartQuery)
                         .Take(handHistoryRowsPerQuery)
                         .ToArray();
+
+                    // close opened handles
+                    var minDateOfHand = handHistories.MinOrDefault(x => x.Handtimestamp);
+
+                    if (minDateOfHand.HasValue)
+                    {
+                        ClosePlayerstatisticStreams(minDateOfHand.Value);
+                    }
 
                     Parallel.ForEach(handHistories, handHistory =>
                     {
@@ -424,21 +434,55 @@ namespace DriveHUD.Importers
             }
         }
 
+        private void ClosePlayerstatisticStreams(DateTime timestamp)
+        {
+            playerStatisticStreamWriters.ToArray().ForEach(x =>
+            {
+                var fileName = Path.GetFileNameWithoutExtension(x.Key);
+                var minDate = new DateTime(timestamp.Year, timestamp.Month, 1);
+
+                var fileDate = DateTime.ParseExact(fileName, "yyyyMM", CultureInfo.InvariantCulture);
+
+                if (fileDate < minDate)
+                {
+                    try
+                    {
+                        x.Value.Value.Close();
+
+                        Lazy<StreamWriter> removedValue = null;
+
+                        playerStatisticStreamWriters.TryRemove(x.Key, out removedValue);
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Could not release StreamWriter of '{x.Key}'", ex);
+                    }
+                }
+            });
+        }
+
         private void ClosePlayerstatisticStreams()
         {
-            foreach (KeyValuePair<string, Lazy<StreamWriter>> playerStatisticStreamWriter in playerStatisticStreamWriters)
+            try
             {
-                try
+                foreach (KeyValuePair<string, Lazy<StreamWriter>> playerStatisticStreamWriter in playerStatisticStreamWriters)
                 {
-                    playerStatisticStreamWriter.Value.Value.Close();
+                    try
+                    {
+                        playerStatisticStreamWriter.Value.Value.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Could not close stream for '{playerStatisticStreamWriter.Key}'", e);
+                    }
                 }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, $"Could not close stream for '{playerStatisticStreamWriter.Key}'", e);
-                }
-            }
 
-            playerStatisticStreamWriters.Clear();
+                playerStatisticStreamWriters.Clear();
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not close file streams", ex);
+            }
         }
 
         #region Class helpers
