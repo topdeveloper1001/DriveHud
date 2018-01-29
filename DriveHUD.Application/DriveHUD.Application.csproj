@@ -501,6 +501,8 @@
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolTypeExtensions.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorStatGroupType.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorStatViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudFourStatsBoxViewModel.cs" />

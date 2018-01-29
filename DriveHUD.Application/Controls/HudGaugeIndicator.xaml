@@ -19,33 +19,92 @@
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate
-                x:Key="StatInfoTextTemplate">
-                <TextBlock
-                    Style="{StaticResource HudToolTipTextBlockStyle}"
-                    Foreground="White"
-                    Height="16"
-                    VerticalAlignment="Center"
-                    Margin="3"
-                    Text="{Binding ToolTip}" />
+                x:Key="LineBarStatInfoTextTemplate">
+                <ItemsControl
+                    ItemsSource="{Binding Stats}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel
+                                Orientation="Vertical" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="LeftGroup" />
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="MiddleGroup" />
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="RightGroup" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock
+                                    Grid.Column="0"
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Foreground="White"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Margin="3"
+                                    Text="{Binding ToolTip}" />
+
+                                <ContentControl
+                                    Grid.Column="1"
+                                    Margin="3"
+                                    Style="{StaticResource MeterControlStyle}"
+                                    Height="16"
+                                    Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                                    VerticalAlignment="Center" />
+
+                                <TextBlock
+                                    Grid.Column="2"
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Margin="3"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </DataTemplate>
 
             <DataTemplate
-                x:Key="StatInfoMeterTemplate">
-                <ContentControl
-                    Margin="3"
-                    Style="{StaticResource MeterControlStyle}"
-                    Height="16"
-                    VerticalAlignment="Center" />
-            </DataTemplate>
-
-            <DataTemplate
-                x:Key="StatInfoValueTemplate">
-                <TextBlock
-                    Style="{StaticResource HudToolTipTextBlockStyle}"
-                    Margin="3"
-                    Height="16"
-                    VerticalAlignment="Center"
-                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                x:Key="TextStatInfoTextTemplate">
+                <ItemsControl
+                    ItemsSource="{Binding Stats}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel
+                                Width="{Binding ActualWidth, ElementName=StatsPanel}"
+                                Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Foreground="White"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Margin="3"
+                                    Text="{Binding ToolTip}" />
+                                <TextBlock
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Margin="3"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </DataTemplate>
 
             <DataTemplate
@@ -61,18 +120,9 @@
             </DataTemplate>
 
             <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoTextTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoTextTemplate}"
-                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
-
-            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoMeterTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoMeterTemplate}"
-                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
-
-            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoValueTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoValueTemplate}"
+                x:Key="StatInfoTemplateSelector"
+                StatInfoTemplate="{StaticResource TextStatInfoTextTemplate}"
+                LineBarStatInfoTemplate="{StaticResource LineBarStatInfoTextTemplate}"
                 StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
 
         </ResourceDictionary>
@@ -331,36 +381,20 @@
                                 Background="{StaticResource BackgroundBrush1}"
                                 BorderBrush="{StaticResource GaugeBorderBrush}">
 
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition
-                                            Width="Auto" />
-                                        <ColumnDefinition
-                                            Width="Auto" />
-                                        <ColumnDefinition
-                                            Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-
-
-                                    <!-- Use separate items controls in order to properly size columns -->
-                                    <ItemsControl
-                                        Grid.Column="0"
-                                        ItemsSource="{Binding Stats}"
-                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                                        ItemTemplateSelector="{StaticResource StatInfoTextTemplateSelector}" />
+                                <Grid
+                                    Grid.IsSharedSizeScope="True">
 
                                     <ItemsControl
-                                        Grid.Column="1"
-                                        Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
-                                        ItemsSource="{Binding Stats}"
-                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                                        ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />
-
-                                    <ItemsControl
-                                        Grid.Column="2"
-                                        ItemsSource="{Binding Stats}"
-                                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                                        ItemTemplateSelector="{StaticResource StatInfoValueTemplateSelector}" />
+                                        ItemsSource="{Binding GroupedStats}"
+                                        ItemTemplateSelector="{StaticResource StatInfoTemplateSelector}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel
+                                                    x:Name="StatsPanel"
+                                                    Orientation="Vertical" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                    </ItemsControl>
 
                                 </Grid>
 
