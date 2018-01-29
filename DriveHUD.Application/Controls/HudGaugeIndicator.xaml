@@ -80,6 +80,7 @@
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel
+                                MinWidth="265"
                                 Width="{Binding ActualWidth, ElementName=StatsPanel}"
                                 Orientation="Horizontal" />
                         </ItemsPanelTemplate>
@@ -94,13 +95,20 @@
                                     Height="16"
                                     VerticalAlignment="Center"
                                     Margin="3"
-                                    Text="{Binding ToolTip}" />
+                                    Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
                                     Margin="3"
                                     Height="16"
                                     VerticalAlignment="Center"
                                     Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                <TextBlock
+                                    Style="{StaticResource HudToolTipTextBlockStyle}"
+                                    Foreground="White"
+                                    Height="16"
+                                    VerticalAlignment="Center"
+                                    Margin="3"
+                                    Text="{Binding IterationsText}" />
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

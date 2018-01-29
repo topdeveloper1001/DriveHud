@@ -111,7 +111,7 @@
                                         Height="16"
                                         VerticalAlignment="Center"
                                         Margin="3"
-                                        Text="{Binding ToolTip}" />
+                                        Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 </Border>
                                 <Border
                                     Style="{StaticResource StatInfoBorderStyle}">
