@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6777238179">
+	<general>
+		<client_version>17.9.6.2</client_version>
+		<uncalled_bet_enabled>true</uncalled_bet_enabled>
+		<mode>real</mode>
+		<gametype>Holdem NL €0.01/€0.02</gametype>
+		<tablename>Halblech, 817753348</tablename>
+		<tablecurrency>EUR</tablecurrency>
+		<duration>00:06:47</duration>
+		<gamecount>11</gamecount>
+		<startdate>2018-01-11 20:19:36</startdate>
+		<currency>USD</currency>
+		<nickname>Peon384</nickname>
+		<bets>€0.11</bets>
+		<wins>€0.12</wins>
+		<chipsin>€0.81</chipsin>
+		<chipsout>€0.88</chipsout>
+		<statuspoints>0.00</statuspoints>
+		<awardpoints>0.00</awardpoints>
+		<ipoints>0.00</ipoints>
+	</general>
+	<game gamecode="7808518787">
+		<general>
+			<startdate>2018-01-11 20:23:13</startdate>
+			<players>
+				<player chips="€0.72" bet="€0" name="akm7" win="€0" seat="1" dealer="0"/>
+				<player chips="€2" bet="€0.05" name="FAT1Raccoon" win="€0.05" seat="3" dealer="1"/>
+				<player chips="€0.81" bet="€0.01" name="Peon384" win="€0" seat="6" dealer="0"/>
+				<player chips="€0.45" bet="€0.02" name="Pavvelll" win="€0" seat="8" dealer="0"/>
+				<player chips="€3.33" bet="€0" name="JoeRichy1" win="€0" seat="10" dealer="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" sum="€0.01" player="Peon384" cards="" type="1"/>
+			<action no="2" sum="€0.02" player="Pavvelll" cards="" type="2"/>
+		</round>
+		<round no="1">
+			<cards player="JoeRichy1" type="Pocket">X X</cards>
+			<action no="3" sum="€0" player="JoeRichy1" cards="" type="0"/>
+			<cards player="akm7" type="Pocket">X X</cards>
+			<action no="4" sum="€0" player="akm7" cards="" type="0"/>
+			<cards player="FAT1Raccoon" type="Pocket">X X</cards>
+			<action no="5" sum="€0.05" player="FAT1Raccoon" cards="" type="23"/>
+			<cards player="Peon384" type="Pocket">C9 CJ</cards>
+			<action no="6" sum="€0" player="Peon384" cards="" type="0"/>
+			<cards player="Pavvelll" type="Pocket">X X</cards>
+			<action no="7" sum="€0" player="Pavvelll" cards="" type="0"/>
+		</round>
+	</game>
+</session>

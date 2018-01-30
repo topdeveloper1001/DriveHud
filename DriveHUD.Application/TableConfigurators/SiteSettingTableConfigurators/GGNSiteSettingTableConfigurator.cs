@@ -21,6 +21,7 @@ namespace DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators
 
         protected override Dictionary<int, double[,]> PredefinedPlayerPositions { get; } = new Dictionary<int, double[,]>()
         {
+            {  4, new double[,] { { 219, 34 }, { 401, 130 }, { 219, 230 }, { 37, 130 } } },
             {  6, new double[,] { { 380, 65 }, { 380, 175 }, { 219, 230 }, { 57, 175 }, { 57, 65 }, { 219, 34 } } },
             {  9, new double[,] { { 264, 34 }, { 380, 65 }, { 390, 165 }, { 309, 230 }, { 219, 230 }, { 128, 230 }, { 55, 175 }, { 57, 65 }, { 173, 34 } } },
         };

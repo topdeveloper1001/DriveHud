@@ -373,6 +373,292 @@ namespace Model.Data
 
         #endregion
 
+        #region IP/OOP based stats
+
+        protected int didDelayedTurnCBetIP;
+
+        protected int couldDelayedTurnCBetIP;
+
+        public override decimal DelayedTurnCBetIP
+        {
+            get
+            {
+                return GetPercentage(didDelayedTurnCBetIP, couldDelayedTurnCBetIP);
+            }
+        }
+
+        protected int didDelayedTurnCBetOOP;
+
+        protected int couldDelayedTurnCBetOOP;
+
+        public override decimal DelayedTurnCBetOOP
+        {
+            get
+            {
+                return GetPercentage(didDelayedTurnCBetOOP, couldDelayedTurnCBetOOP);
+            }
+        }
+
+        #endregion
+
+        #region Calculated stats
+
+        protected int checkRaisedFlopCBet;
+
+        protected int couldCheckRaiseFlopCBet;
+
+        public override decimal CheckRaisedFlopCBet
+        {
+            get
+            {
+                return GetPercentage(checkRaisedFlopCBet, couldCheckRaiseFlopCBet);
+            }
+        }
+
+        protected int foldToTurnCBetIn3BetPot;
+
+        protected int facedToTurnCBetIn3BetPot;
+
+        public override decimal FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(foldToTurnCBetIn3BetPot, facedToTurnCBetIn3BetPot);
+            }
+        }
+
+        protected int raisedFlopCBetIn3BetPot;
+
+        protected int couldRaiseFlopCBetIn3BetPot;
+
+        public override decimal RaiseFlopCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(raisedFlopCBetIn3BetPot, couldRaiseFlopCBetIn3BetPot);
+            }
+        }
+
+        protected int didFlopBet;
+
+        protected int didTurnBet;
+
+        #region FlopBetSize stats
+
+        protected int flopBetSizeOneHalfOrLess;
+
+        public override decimal FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneHalfOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeOneQuarterOrLess;
+
+        public override decimal FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneQuarterOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeTwoThirdsOrLess;
+
+        public override decimal FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeTwoThirdsOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeThreeQuartersOrLess;
+
+        public override decimal FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeThreeQuartersOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeOneOrLess;
+
+        public override decimal FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeOneOrLess, didFlopBet);
+            }
+        }
+
+        protected int flopBetSizeMoreThanOne;
+
+        public override decimal FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(flopBetSizeMoreThanOne, didFlopBet);
+            }
+        }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        protected int turnBetSizeOneHalfOrLess;
+
+        public override decimal TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneHalfOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneQuarterOrLess;
+
+        public override decimal TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneQuarterOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneThirdOrLess;
+
+        public override decimal TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneThirdOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeTwoThirdsOrLess;
+
+        public override decimal TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeTwoThirdsOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeThreeQuartersOrLess;
+
+        public override decimal TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeThreeQuartersOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeOneOrLess;
+
+        public override decimal TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeOneOrLess, didTurnBet);
+            }
+        }
+
+        protected int turnBetSizeMoreThanOne;
+
+        public override decimal TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(turnBetSizeMoreThanOne, didTurnBet);
+            }
+        }
+
+        #endregion
+
+        #region RiverBetSize stats
+
+        protected int riverBetSizeMoreThanOne;
+
+        public override decimal RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(riverBetSizeMoreThanOne, Source.DidRiverBet);
+            }
+        }
+
+        #endregion
+
+        #region WTSD After stats
+
+        protected int wtsdAfterCalling3Bet;
+
+        protected int wtsdAfterCalling3BetOpportunity;
+
+        public override decimal WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterCalling3Bet, wtsdAfterCalling3BetOpportunity);
+            }
+        }
+
+        protected int wtsdAfterCallingPfr;
+
+        protected int wtsdAfterCallingPfrOpportunity;
+
+        public override decimal WTSDAfterCallingPfr
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterCallingPfr, wtsdAfterCallingPfrOpportunity);
+            }
+        }
+
+        protected int wtsdAfterNotCBettingFlopAsPfr;
+
+        protected int wtsdAfterNotCBettingFlopAsPfrOpportunity;
+
+        public override decimal WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterNotCBettingFlopAsPfr, wtsdAfterNotCBettingFlopAsPfrOpportunity);
+            }
+        }
+
+        protected int wtsdAfterSeeingTurn;
+
+        public override decimal WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return GetPercentage(wtsdAfterSeeingTurn, Source.SawTurn);
+            }
+        }
+
+        protected int wtsdAsPF3Bettor;
+
+        protected int wtsdAsPF3BettorOpportunity;
+
+        public override decimal WTSDAsPF3Bettor
+        {
+            get
+            {
+                return GetPercentage(wtsdAsPF3Bettor, wtsdAsPF3BettorOpportunity);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -397,6 +683,48 @@ namespace Model.Data
             {
                 sessionEndTime = statistic.Time;
             }
+
+            didDelayedTurnCBetIP += statistic.DidDelayedTurnCBetIP;
+            couldDelayedTurnCBetIP += statistic.CouldDelayedTurnCBetIP;
+            didDelayedTurnCBetOOP += statistic.DidDelayedTurnCBetOOP;
+            couldDelayedTurnCBetOOP += statistic.CouldDelayedTurnCBetOOP;
+            checkRaisedFlopCBet += statistic.CheckRaisedFlopCBet;
+            couldCheckRaiseFlopCBet += statistic.CouldCheckRaiseFlopCBet;
+
+            didFlopBet += statistic.DidFlopBet;
+            flopBetSizeMoreThanOne += statistic.FlopBetSizeMoreThanOne;
+            flopBetSizeOneHalfOrLess += statistic.FlopBetSizeOneHalfOrLess;
+            flopBetSizeOneQuarterOrLess += statistic.FlopBetSizeOneQuarterOrLess;
+            flopBetSizeTwoThirdsOrLess += statistic.FlopBetSizeTwoThirdsOrLess;
+            flopBetSizeThreeQuartersOrLess += statistic.FlopBetSizeThreeQuartersOrLess;
+            flopBetSizeOneOrLess += statistic.FlopBetSizeOneOrLess;
+
+            didTurnBet += statistic.DidTurnBet;
+            turnBetSizeMoreThanOne += statistic.TurnBetSizeMoreThanOne;
+            turnBetSizeOneHalfOrLess += statistic.TurnBetSizeOneHalfOrLess;
+            turnBetSizeOneQuarterOrLess += statistic.TurnBetSizeOneQuarterOrLess;
+            turnBetSizeOneThirdOrLess += statistic.TurnBetSizeOneThirdOrLess;
+            turnBetSizeTwoThirdsOrLess += statistic.TurnBetSizeTwoThirdsOrLess;
+            turnBetSizeThreeQuartersOrLess += statistic.TurnBetSizeThreeQuartersOrLess;
+            turnBetSizeOneOrLess += statistic.TurnBetSizeOneOrLess;
+
+            riverBetSizeMoreThanOne += statistic.RiverBetSizeMoreThanOne;
+
+            wtsdAfterCalling3Bet += statistic.WTSDAfterCalling3Bet;
+            wtsdAfterCalling3BetOpportunity += statistic.WTSDAfterCalling3BetOpportunity;
+            wtsdAfterCallingPfr += statistic.WTSDAfterCallingPfr;
+            wtsdAfterCallingPfrOpportunity += statistic.WTSDAfterCallingPfrOpportunity;
+            wtsdAfterNotCBettingFlopAsPfr += statistic.WTSDAfterNotCBettingFlopAsPfr;
+            wtsdAfterNotCBettingFlopAsPfrOpportunity += statistic.WTSDAfterNotCBettingFlopAsPfrOpportunity;
+            wtsdAfterSeeingTurn += statistic.WTSDAfterSeeingTurn;
+            wtsdAsPF3Bettor += statistic.WTSDAsPF3Bettor;
+            wtsdAsPF3BettorOpportunity += statistic.WTSDAsPF3BettorOpportunity;
+
+            foldToTurnCBetIn3BetPot += statistic.FoldToTurnCBetIn3BetPot;
+            facedToTurnCBetIn3BetPot += statistic.FacedToTurnCBetIn3BetPot;
+
+            raisedFlopCBetIn3BetPot += statistic.RaisedFlopCBetIn3BetPot;
+            couldRaiseFlopCBetIn3BetPot += statistic.CouldRaiseFlopCBetIn3BetPot;
         }
 
         public override void Clean()
@@ -409,6 +737,48 @@ namespace Model.Data
             netWonByBigBlind = 0;
             sessionStartTime = DateTime.MaxValue;
             sessionEndTime = DateTime.MinValue;
+
+            didDelayedTurnCBetIP = 0;
+            couldDelayedTurnCBetIP = 0;
+            didDelayedTurnCBetOOP = 0;
+            couldDelayedTurnCBetOOP = 0;
+            checkRaisedFlopCBet = 0;
+            couldCheckRaiseFlopCBet = 0;
+
+            didFlopBet = 0;
+            flopBetSizeMoreThanOne = 0;
+            flopBetSizeOneHalfOrLess = 0;
+            flopBetSizeOneQuarterOrLess = 0;
+            flopBetSizeTwoThirdsOrLess = 0;
+            flopBetSizeThreeQuartersOrLess = 0;
+            flopBetSizeOneOrLess = 0;
+
+            didTurnBet = 0;
+            turnBetSizeMoreThanOne = 0;
+            turnBetSizeOneHalfOrLess = 0;
+            turnBetSizeOneQuarterOrLess = 0;
+            turnBetSizeOneThirdOrLess = 0;
+            turnBetSizeTwoThirdsOrLess = 0;
+            turnBetSizeThreeQuartersOrLess = 0;
+            turnBetSizeOneOrLess = 0;
+
+            riverBetSizeMoreThanOne = 0;
+
+            wtsdAfterCalling3Bet = 0;
+            wtsdAfterCalling3BetOpportunity = 0;
+            wtsdAfterCallingPfr = 0;
+            wtsdAfterCallingPfrOpportunity = 0;
+            wtsdAfterNotCBettingFlopAsPfr = 0;
+            wtsdAfterNotCBettingFlopAsPfrOpportunity = 0;
+            wtsdAfterSeeingTurn = 0;
+            wtsdAsPF3Bettor = 0;
+            wtsdAsPF3BettorOpportunity = 0;
+
+            foldToTurnCBetIn3BetPot = 0;
+            facedToTurnCBetIn3BetPot = 0;
+
+            raisedFlopCBetIn3BetPot = 0;
+            couldRaiseFlopCBetIn3BetPot = 0;
         }
 
         #endregion

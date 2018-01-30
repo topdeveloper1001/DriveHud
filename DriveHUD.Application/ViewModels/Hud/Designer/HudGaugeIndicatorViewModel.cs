@@ -16,6 +16,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
+using Model.Data;
 using Model.Stats;
 using ProtoBuf;
 using ReactiveUI;
@@ -23,6 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -57,6 +59,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (Stats != null)
             {
                 Stats.CollectionChanged += OnStatsCollectionChanged;
+
+                Stats.ChangeTrackingEnabled = true;
+
+                Stats.ItemChanged
+                    .Where(x => x.PropertyName == nameof(StatInfo.IsPopupBarNotSupported))
+                    .Subscribe(x => this.RaisePropertyChanged(nameof(GroupedStats)));
             }
 
             InitializeCommands();
@@ -171,6 +179,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             get
             {
                 return tool.Stats;
+            }
+        }
+
+        public ReactiveList<HudGaugeIndicatorStatsGroupViewModel> GroupedStats
+        {
+            get
+            {
+                return HudGaugeIndicatorStatsGroupViewModel.GroupStats(tool.Stats);
             }
         }
 
@@ -361,8 +377,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     x.CurrentValue = random.Next(0, 100);
                     x.StatInfoMeter = new StatInfoMeterModel();
+
+                    if (StatsProvider.StatsBases.ContainsKey(x.Stat) && StatsProvider.StatsBases[x.Stat].CreateStatDto != null)
+                    {
+                        x.StatDto = new StatDto(0, 0);
+                    }
                 });
             }
+
+            this.RaisePropertyChanged(nameof(GroupedStats));
         }
     }
 }

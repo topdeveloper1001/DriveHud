@@ -337,13 +337,13 @@
                                 x:Name="AxisDateTime"
                                 LabelFitMode="MultiLine"
                                 TickThickness="0"
-                                ElementBrush="#303134"
+                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                 FontSize="11" />
                         </telerik:RadCartesianChart.HorizontalAxis>
                         <telerik:RadCartesianChart.VerticalAxis>
                             <telerik:LinearAxis
                                 TickThickness="0"
-                                ElementBrush="#303134"
+                                ElementBrush="{StaticResource GraphAxisStrokeBrush}"
                                 FontSize="10">
                             </telerik:LinearAxis>
                         </telerik:RadCartesianChart.VerticalAxis>
@@ -424,7 +424,7 @@
                                                                     Stroke="{Binding Path=DataItem.TooltipColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
                                                                     StrokeThickness="2" />
                                                                 <TextBlock
-                                                                    Foreground="White"
+                                                                    Foreground="{Binding Path=DataItem.TooltipForegroundColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneTime}"
                                                                     Margin="15, 5, 5, 5"
                                                                     Text="{Binding DataItem.ValueText, Mode=OneTime}"
                                                                     HorizontalAlignment="Center"

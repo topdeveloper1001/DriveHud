@@ -136,6 +136,22 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FiveBet
+        {
+            get
+            {
+                return GetPercentage(Source.Did5Bet, Source.Could5Bet);
+            }
+        }
+
+        public virtual decimal FoldToFiveBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedTo5Bet, Source.Faced5Bet);
+            }
+        }
+
         public virtual decimal ThreeBetCall
         {
             get
@@ -157,6 +173,14 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.Turncontinuationbetmade, Source.Turncontinuationbetpossible);
+            }
+        }
+
+        public virtual decimal FoldToTurnCBet
+        {
+            get
+            {
+                return GetPercentage(Source.Foldedtoturncontinuationbet, Source.Facingturncontinuationbet);
             }
         }
 
@@ -307,6 +331,21 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal TurnAF
+        {
+            get
+            {
+                if (Source.TotalcallsTurn > 0)
+                {
+                    return (Convert.ToDecimal(Source.TotalbetsTurn) / Convert.ToDecimal(Source.TotalcallsTurn));
+                }
+                else
+                {
+                    return Source.TotalbetsTurn * 2m;
+                }
+            }
+        }
+
         public virtual decimal AggPr
         {
             get
@@ -328,6 +367,62 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.Wonhandwhensawflop, Source.Sawflop);
+            }
+        }
+
+        public virtual decimal CalledCheckRaiseVsFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Source.CalledCheckRaiseVsFlopCBet, Source.FacedCheckRaiseVsFlopCBet);
+            }
+        }
+
+        public virtual decimal FoldedCheckRaiseVsFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedCheckRaiseVsFlopCBet, Source.FacedCheckRaiseVsFlopCBet);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndXCOnTurnOOP
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedCalledTurnWhenCheckedFlopAsPfr, Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndXFOnTurnOOP
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedFoldedToTurnWhenCheckedFlopAsPfr, Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndCallOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.CalledTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndFoldOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
+            }
+        }
+
+        public virtual decimal CheckFlopAsPFRAndRaiseOnTurn
+        {
+            get
+            {
+                return GetPercentage(Source.RaisedTurnBetWhenCheckedFlopAsPfr, Source.FacedTurnBetWhenCheckedFlopAsPfr);
             }
         }
 
@@ -561,6 +656,30 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal CheckRiverAfterBBLine
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedRiverAfterBBLine, Source.CouldCheckRiverAfterBBLine);
+            }
+        }
+
+        public virtual decimal BetRiverOnBXLine
+        {
+            get
+            {
+                return GetPercentage(Source.DidBetRiverOnBXLine, Source.CouldBetRiverOnBXLine);
+            }
+        }
+
+        public virtual decimal RiverBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidRiverBet, Source.CouldRiverBet);
+            }
+        }
+
         public virtual decimal CBetIP
         {
             get
@@ -633,6 +752,30 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal DelayedTurnCBetIP
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetIP), Statistics.Sum(x => x.CouldDelayedTurnCBetIP));
+            }
+        }
+
+        public virtual decimal DelayedTurnCBetOOP
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetOOP), Statistics.Sum(x => x.CouldDelayedTurnCBetOOP));
+            }
+        }
+
+        public virtual decimal DelayedTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Source.DidDelayedTurnCBetIn3BetPot, Source.CouldDelayedTurnCBetIn3BetPot);
+            }
+        }
+
         public virtual decimal MRatio
         {
             get
@@ -646,6 +789,46 @@ namespace Model.Data
             get
             {
                 return Source.StackInBBs;
+            }
+        }
+
+        public virtual decimal ShovedFlopAfter4Bet
+        {
+            get
+            {
+                return GetPercentage(Source.ShovedFlopAfter4Bet, Source.CouldShoveFlopAfter4Bet);
+            }
+        }
+
+        public virtual decimal RaiseFlopCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.RaisedFlopCBetIn3BetPot), Statistics.Sum(x => x.CouldRaiseFlopCBetIn3BetPot));
+            }
+        }
+
+        public virtual decimal FoldToThreeBetIP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToThreeBetIP, Source.FacedThreeBetIP);
+            }
+        }
+
+        public virtual decimal FoldToThreeBetOOP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToThreeBetOOP, Source.FacedThreeBetOOP);
+            }
+        }
+
+        public virtual decimal BetFlopWhenCheckedToSRP
+        {
+            get
+            {
+                return GetPercentage(Source.BetFlopWhenCheckedToSRP, Source.CouldBetFlopWhenCheckedToSRP);
             }
         }
 
@@ -1119,6 +1302,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToFlopCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToFlopCheckRaise, Source.FacedFlopCheckRaise);
+            }
+        }
+
         public virtual decimal FoldToFlopRaise
         {
             get
@@ -1127,11 +1318,35 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToTurnCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToTurnCheckRaise, Source.FacedTurnCheckRaise);
+            }
+        }
+
         public virtual decimal FoldToTurnRaise
         {
             get
             {
                 return GetPercentage(Source.FoldedFacedRaiseTurn, Source.FacedRaiseTurn);
+            }
+        }
+
+        public virtual decimal CalledTurnCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.CalledTurnCheckRaise, Source.FacedTurnCheckRaise);
+            }
+        }
+
+        public virtual decimal FoldToRiverCheckRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToRiverCheckRaise, Source.FacedRiverCheckRaise);
             }
         }
 
@@ -1158,6 +1373,278 @@ namespace Model.Data
                 return Statistics.Sum(x => x.NetWon);
             }
         }
+
+        public virtual decimal CallFlopCBetIP
+        {
+            get
+            {
+                return GetPercentage(Source.CalledflopcontinuationbetIP, Source.FacingflopcontinuationbetIP);
+            }
+        }
+
+        public virtual decimal CallFlopCBetOOP
+        {
+            get
+            {
+                return GetPercentage(Source.CalledflopcontinuationbetOOP, Source.FacingflopcontinuationbetOOP);
+            }
+        }
+
+        public virtual decimal FoldToFlopCBetIP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToFlopcontinuationbetIP, Source.FacingflopcontinuationbetIP);
+            }
+        }
+
+        public virtual decimal FoldToFlopCBetOOP
+        {
+            get
+            {
+                return GetPercentage(Source.FoldToFlopcontinuationbetOOP, Source.FacingflopcontinuationbetOOP);
+            }
+        }
+
+        public virtual decimal CallRiverRaise
+        {
+            get
+            {
+                return GetPercentage(Source.CalledFacedRaiseRiver, Source.FacedRaiseRiver);
+            }
+        }
+
+        public virtual decimal CheckRaisedFlopCBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.CheckRaisedFlopCBet), Statistics.Sum(x => x.CouldCheckRaiseFlopCBet));
+            }
+        }
+
+        public virtual decimal FoldToTurnCBetIn3BetPot
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FoldToTurnCBetIn3BetPot), Statistics.Sum(x => x.FacedToTurnCBetIn3BetPot));
+            }
+        }
+
+        public virtual decimal FlopCheckBehind
+        {
+            get
+            {
+                return GetPercentage(Source.DidFlopCheckBehind, Source.CouldFlopCheckBehind);
+            }
+        }
+
+        public virtual decimal FoldToDonkBet
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToDonkBet, Source.FacedDonkBet);
+            }
+        }
+
+        public virtual decimal FoldTurn
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedTurn, Source.FacedBetOnTurn);
+            }
+        }
+
+        public virtual decimal RiverCheckCall
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedCalledRiver, Source.CheckedThenFacedBetOnRiver);
+            }
+        }
+
+        public virtual decimal RiverCheckFold
+        {
+            get
+            {
+                return GetPercentage(Source.CheckedFoldedRiver, Source.CheckedThenFacedBetOnRiver);
+            }
+        }
+
+        public virtual decimal RiverCallEffeciency
+        {
+            get
+            {
+                return GetDivisionResult(Source.RiverWonOnFacingBet, Source.RiverCallSizeOnFacingBet);
+            }
+        }
+
+        #region FlopBetSize stats
+
+        public virtual decimal FlopBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneHalfOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneQuarterOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeTwoThirdsOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeThreeQuartersOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeOneOrLess), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        public virtual decimal FlopBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.FlopBetSizeMoreThanOne), Statistics.Sum(x => x.DidFlopBet));
+            }
+        }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual decimal TurnBetSizeOneHalfOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneHalfOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneQuarterOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneQuarterOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneThirdOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneThirdOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeTwoThirdsOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeTwoThirdsOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeThreeQuartersOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeThreeQuartersOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeOneOrLess
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeOneOrLess), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        public virtual decimal TurnBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.TurnBetSizeMoreThanOne), Statistics.Sum(x => x.DidTurnBet));
+            }
+        }
+
+        #endregion
+
+        #region RiverBetSize stats
+
+        public virtual decimal RiverBetSizeMoreThanOne
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.RiverBetSizeMoreThanOne), Statistics.Sum(x => x.DidRiverBet));
+            }
+        }
+
+        #endregion
+
+        #region WTSD After stats
+
+        public virtual decimal WTSDAfterCalling3Bet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterCalling3Bet), Statistics.Sum(x => x.WTSDAfterCalling3BetOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterCallingPfr
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterCallingPfr), Statistics.Sum(x => x.WTSDAfterCallingPfrOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterNotCBettingFlopAsPfr
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterNotCBettingFlopAsPfr), Statistics.Sum(x => x.WTSDAfterNotCBettingFlopAsPfrOpportunity));
+            }
+        }
+
+        public virtual decimal WTSDAfterSeeingTurn
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAfterSeeingTurn), Statistics.Sum(x => x.SawTurn));
+            }
+        }
+
+        public virtual decimal WTSDAsPF3Bettor
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.WTSDAsPF3Bettor), Statistics.Sum(x => x.WTSDAsPF3BettorOpportunity));
+            }
+        }
+
+        #endregion
 
         public virtual void UpdateSource(Playerstatistic statistic)
         {

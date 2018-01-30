@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="1234567889">
+	<general>
+		<client_version>17.5.5.19</client_version>
+		<uncalled_bet_enabled>false</uncalled_bet_enabled>
+		<mode>real</mode>
+		<gametype>Holdem NL €0.01/€0.02</gametype>
+		<tablename>Biebern, 817747678</tablename>
+		<tablecurrency>EUR</tablecurrency>
+		<duration>00:07:22</duration>
+		<gamecount>9</gamecount>
+		<startdate>2017-09-12 12:45:49</startdate>
+		<currency>USD</currency>
+		<nickname>IPokerTest</nickname>
+		<bets>€0.22</bets>
+		<wins>€0.31</wins>
+		<chipsin>€0.84</chipsin>
+		<chipsout>€0.89</chipsout>
+		<statuspoints>0.01</statuspoints>
+		<awardpoints>0.01</awardpoints>
+		<ipoints>0.01</ipoints>
+	</general>
+	<game gamecode="1122334456">
+		<general>
+			<startdate>2017-09-12 12:51:00</startdate>
+			<players>
+				<player name="IPokerTest" dealer="0" bet="€0.16" seat="1" win="€0.23" chips="€0.83"/>
+				<player name="zokiasov" dealer="0" bet="€0" seat="3" win="€0" chips="€2.38"/>
+				<player name="Action1987" dealer="1" bet="€0.06" seat="8" win="€0" chips="€2.07"/>
+				<player name="hjdsplt" dealer="0" bet="€0.01" seat="10" win="€0" chips="€3.92"/>
+			</players>
+		</general>
+		<round no="0">
+			<action sum="€0.01" no="1" cards="" type="1" player="hjdsplt"/>
+			<action sum="€0.02" no="2" cards="" type="2" player="IPokerTest"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="zokiasov">X X</cards>
+			<action sum="€0" no="3" cards="" type="0" player="zokiasov"/>
+			<cards type="Pocket" player="Action1987">X X</cards>
+			<action sum="€0.02" no="4" cards="" type="3" player="Action1987"/>
+			<cards type="Pocket" player="hjdsplt">X X</cards>
+			<action sum="€0" no="5" cards="" type="0" player="hjdsplt"/>
+			<cards type="Pocket" player="IPokerTest">S7 S5</cards>
+			<action sum="€0" no="6" cards="" type="4" player="IPokerTest"/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H5 D9 C4</cards>
+			<action sum="€0" no="7" cards="" type="4" player="IPokerTest"/>
+			<action sum="€0" no="8" cards="" type="4" player="Action1987"/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D7</cards>
+			<action sum="€0.04" no="9" cards="" type="5" player="IPokerTest"/>
+			<action sum="€0.04" no="10" cards="" type="3" player="Action1987"/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D10</cards>
+			<action sum="€0.10" no="11" cards="" type="5" player="IPokerTest"/>
+			<action sum="€0" no="12" cards="" type="0" player="Action1987"/>
+		</round>
+	</game>
+</session>

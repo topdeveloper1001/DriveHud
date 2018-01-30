@@ -1,0 +1,31 @@
+PokerStars Game #47152387243:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:48:29 ET
+Table 'Libussa' 6-max Seat #2 is the button
+Seat 1: AceKanone ($209 in chips)
+Seat 2: kaader ($200 in chips)
+Seat 3: DURKADURDUR ($231.95 in chips)
+Seat 4: pappadogg ($211.30 in chips)
+Seat 5: HeroTest ($206.40 in chips)
+DURKADURDUR: posts small blind $1
+pappadogg: posts big blind $2
+*** HOLE CARDS ***
+HeroTest: raises $4 to $6
+AceKanone: folds
+kaader: calls $6
+DURKADURDUR: calls $5
+MasterSilviu leaves the table
+pappadogg: folds
+*** FLOP *** [2h Kc 3d]
+DURKADURDUR: bets $13
+HeroTest: folds
+kaader: folds
+Uncalled bet ($13) returned to DURKADURDUR
+DURKADURDUR collected $19 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $20 | Rake $1
+Board [2h Kc 3d]
+Seat 1: AceKanone folded before Flop (didn't bet)
+Seat 2: kaader (button) folded on the Flop
+Seat 3: DURKADURDUR (small blind) collected ($19)
+Seat 4: pappadogg (big blind) folded before Flop
+Seat 5: HeroTest folded on the Flop

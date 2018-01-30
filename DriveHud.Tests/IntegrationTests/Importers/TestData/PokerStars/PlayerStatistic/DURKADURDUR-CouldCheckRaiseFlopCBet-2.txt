@@ -1,0 +1,40 @@
+PokerStars Game #47185371380:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:41:29 ET
+Table 'Natalie' 6-max Seat #5 is the button
+Seat 1: DURKADURDUR ($409.70 in chips) 
+Seat 2: TODO ADENTR0 ($216.40 in chips) 
+Seat 3: grac ($392.35 in chips) 
+Seat 4: bluffinmyway ($229.45 in chips) 
+Seat 5: Fierytycoon ($214 in chips) 
+Seat 6: leukehond ($200 in chips) 
+leukehond: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+TODO ADENTR0: folds 
+grac: raises $4 to $6
+bluffinmyway: folds 
+Fierytycoon: folds 
+leukehond: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [6s 5c 2h]
+DURKADURDUR: checks 
+grac: bets $10
+DURKADURDUR: calls $10
+*** TURN *** [6s 5c 2h] [6d]
+DURKADURDUR: checks 
+grac: checks 
+*** RIVER *** [6s 5c 2h 6d] [6h]
+DURKADURDUR: checks 
+grac: bets $60
+DURKADURDUR: folds 
+Uncalled bet ($60) returned to grac
+grac collected $31.40 from pot
+grac: doesn't show hand 
+*** SUMMARY ***
+Total pot $33 | Rake $1.60 
+Board [6s 5c 2h 6d 6h]
+Seat 1: DURKADURDUR (big blind) folded on the River
+Seat 2: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 3: grac collected ($31.40)
+Seat 4: bluffinmyway folded before Flop (didn't bet)
+Seat 5: Fierytycoon (button) folded before Flop (didn't bet)
+Seat 6: leukehond (small blind) folded before Flop

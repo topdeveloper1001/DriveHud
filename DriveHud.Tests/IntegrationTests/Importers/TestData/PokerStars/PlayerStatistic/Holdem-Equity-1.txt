@@ -1,0 +1,54 @@
+#Game No : 16849790060 
+***** Hand History for Game 16849790060 *****
+NL Texas Hold'em $0.22 USD Buy-in Trny:156115537 Level:10  Blinds-Antes(500/1 000 -125) - Thursday, January 11, 15:47:21 MSK 2018
+Table $10 Gtd Turbo (156115537) Table #6 (Real Money)
+Seat 7 is the button
+Total number of players : 8/8 
+Seat 6: Andorbacsi ( 45,010 )
+Seat 2: Griffindorgirl ( 26,610 )
+Seat 5: Peon84 ( 26,095 )
+Seat 1: ktm85888 ( 7,580 )
+Seat 7: limbi77 ( 54,520 )
+Seat 8: pistike88 ( 76,661 )
+Seat 4: vitosinicic ( 88,000 )
+Seat 3: welder40 ( 85,797 )
+Trny:156115537 Level:10 
+Blinds-Antes(500/1 000 -125)
+ktm85888 posts ante [125]
+Griffindorgirl posts ante [125]
+welder40 posts ante [125]
+vitosinicic posts ante [125]
+Peon84 posts ante [125]
+Andorbacsi posts ante [125]
+limbi77 posts ante [125]
+pistike88 posts ante [125]
+pistike88 posts small blind [500].
+ktm85888 posts big blind [1,000].
+** Dealing down cards **
+Dealt to Peon84 [  Ad 9s ]
+Griffindorgirl raises [3,000]
+welder40 folds
+vitosinicic folds
+Peon84 folds
+Andorbacsi folds
+limbi77 calls [3,000]
+pistike88 calls [2,500]
+ktm85888 calls [2,000]
+** Dealing Flop ** [ 2c, 7c, Qs ]
+pistike88 bets [6,500]
+ktm85888 is all-In  [4,455]
+Griffindorgirl calls [6,500]
+limbi77 folds
+** Dealing Turn ** [ 6h ]
+pistike88 bets [30,455]
+Griffindorgirl is all-In  [16,985]
+** Dealing River ** [ 9h ]
+pistike88 shows [ As, Qd ]a pair of Queens.
+ktm85888 shows [ 2h, 3h ]a pair of Twos.
+Griffindorgirl shows [ Ac, Kc ]high card Ace.
+pistike88 wins 13,470 chips from the side pot 2 with a pair of Queens.
+pistike88 wins 38,060 chips from the side pot 1 with a pair of Queens.
+pistike88 wins 26,365 chips from the main pot with a pair of Queens.
+Player ktm85888 finished in 42.
+Player Griffindorgirl finished in 41.
+Game #16849791482 starts.

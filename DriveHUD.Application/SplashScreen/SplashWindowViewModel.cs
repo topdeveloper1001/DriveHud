@@ -10,12 +10,24 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Progress;
+using System.Globalization;
+using System.Windows;
 
 namespace DriveHUD.Application.SplashScreen
 {
     public class SplashWindowViewModel : BaseViewModel
     {
+        private DHProgress progress;
+
+        public SplashWindowViewModel()
+        {
+            progress = new DHProgress();
+            progress.ProgressChanged += OnProgressChanged;
+        }
+
         private string status;
 
         public string Status
@@ -31,11 +43,37 @@ namespace DriveHUD.Application.SplashScreen
             }
         }
 
+        public IDHProgress Progress
+        {
+            get
+            {
+                return progress;
+            }
+        }
+
+        private void OnProgressChanged(object sender, ProgressItem e)
+        {
+            if (e == null)
+            {
+                return;
+            }
+
+            Status = e.Message.ToString(CultureInfo.CurrentUICulture);
+        }
+
         private NotificationWindow notificationWindow;
 
         public void ShowNotification(BaseViewModel viewModel)
         {
             notificationWindow = new NotificationWindow();
+
+            var owner = App.SplashScreen as Window;
+
+            if (owner != null && notificationWindow.Owner != owner)
+            {
+                notificationWindow.Owner = owner;
+            }
+
             notificationWindow.DataContext = viewModel;
             notificationWindow.ShowDialog();
         }

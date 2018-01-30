@@ -20,7 +20,9 @@ using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace DriveHUD.Application.Licensing
 {
@@ -30,6 +32,8 @@ namespace DriveHUD.Application.Licensing
     internal class LicenseService : ILicenseService
     {
         private const string serialRSAKey = "<RSAKeyValue><Modulus>qFM2NXCFclFl9kvhxFr2sXTvl6aWy7n2oVeGo8WM8FpfKz5zbTeYKlqdhczwW0li4wtoHKKykPOiGGpAoChjB95YYyJpOPIL2hQWsEunbJlnDBceBPg+9tsqT1HVCJe52fI5EWEBBGrGvKaYqi2lMdNh96cd19EIs7lmy6IPN+M=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+
+        private static readonly string[] licenseExtensions = new string[] { ".lic", ".ldat" };
 
         private readonly List<ILicenseInfo> licenseInfos;
 
@@ -264,6 +268,79 @@ namespace DriveHUD.Application.Licensing
 
                 UpdateExpirationDates(new[] { licenseInfo });
             }
+        }
+
+        /// <summary>
+        /// Deletes all licenses files (supports only trial)
+        /// </summary>
+        public void ResetLicenses()
+        {
+            var licenseFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "XHEO INC", "SharedLicenses");
+
+            var executingAssembly = Assembly.GetExecutingAssembly();
+
+            var filesToDelete = new List<string>();
+
+            foreach (var ext in licenseExtensions)
+            {
+                var possibleLicenseFile = $"{executingAssembly.Location}{ext}";
+                filesToDelete.Add(possibleLicenseFile);
+
+                var licenseFile = Path.GetFileName(possibleLicenseFile);
+                possibleLicenseFile = Path.Combine(licenseFolder, licenseFile);
+
+                filesToDelete.Add(possibleLicenseFile);
+            }
+
+            var errorOccurred = false;
+
+            foreach (var fileToDelete in filesToDelete)
+            {
+                try
+                {
+                    if (!File.Exists(fileToDelete))
+                    {
+                        continue;
+                    }
+
+                    File.SetAttributes(fileToDelete, FileAttributes.Normal);
+                    File.Delete(fileToDelete);
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not delete license file at 'fileToDelete'", e);
+                    errorOccurred = true;
+                }
+            }
+
+            var mirrorFolder = Path.Combine(licenseFolder, "Mirror");
+
+            if (Directory.Exists(mirrorFolder))
+            {
+                try
+                {
+                    var mirroredFiles = Directory.GetFiles(mirrorFolder);
+
+                    foreach (var mirroredFile in mirroredFiles)
+                    {
+                        File.SetAttributes(mirroredFile, FileAttributes.Normal);
+                    }
+
+                    Directory.Delete(mirrorFolder, true);
+                    LogProvider.Log.Info($"Mirror folder has been deleted");
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Mirror folder has not been deleted", e);
+                }
+            }
+
+            if (!errorOccurred)
+            {
+                return;
+            }
+
+            throw new DHInternalException(new NonLocalizableString("Some license files haven't been deleted."));
         }
 
         /// <summary>

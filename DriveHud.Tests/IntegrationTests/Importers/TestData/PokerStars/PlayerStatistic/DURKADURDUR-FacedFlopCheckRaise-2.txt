@@ -1,0 +1,35 @@
+PokerStars Game #47185713127:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:54:11 ET
+Table 'Rigilkent VIII' 6-max Seat #3 is the button
+Seat 1: TODO ADENTR0 ($203 in chips) 
+Seat 2: DURKADURDUR ($233.30 in chips) 
+Seat 3: -MinhNa- ($158.80 in chips) 
+Seat 4: jaeh00d ($330.75 in chips) 
+Seat 5: FrAnWaN ($234.75 in chips) 
+jaeh00d: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+TODO ADENTR0: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+-MinhNa-: folds 
+jaeh00d: folds 
+FrAnWaN: folds 
+TODO ADENTR0: calls $14
+*** FLOP *** [4s 9s Td]
+TODO ADENTR0: checks 
+DURKADURDUR: bets $27
+TODO ADENTR0: raises $156 to $183 and is all-in
+DURKADURDUR: calls $156
+*** TURN *** [4s 9s Td] [Qs]
+*** RIVER *** [4s 9s Td Qs] [7c]
+*** SHOW DOWN ***
+TODO ADENTR0: shows [9h 9c] (three of a kind, Nines)
+DURKADURDUR: shows [Kd Kh] (a pair of Kings)
+TODO ADENTR0 collected $407 from pot
+*** SUMMARY ***
+Total pot $409 | Rake $2 
+Board [4s 9s Td Qs 7c]
+Seat 1: TODO ADENTR0 showed [9h 9c] and won ($407) with three of a kind, Nines
+Seat 2: DURKADURDUR showed [Kd Kh] and lost with a pair of Kings
+Seat 3: -MinhNa- (button) folded before Flop (didn't bet)
+Seat 4: jaeh00d (small blind) folded before Flop
+Seat 5: FrAnWaN (big blind) folded before Flop

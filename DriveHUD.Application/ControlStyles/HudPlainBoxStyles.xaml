@@ -4,6 +4,11 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:local="clr-namespace:DriveHUD.Application.ControlStyles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary
+            Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <SolidColorBrush
         x:Key="BorderBrush"
         Color="#33519b" />
@@ -79,7 +84,7 @@
             FontSize="{Binding SettingsAppearanceFontSize}"
             FontWeight="{Binding SettingsAppearanceFontBold}"
             FontStyle="{Binding SettingsAppearanceFontItalic}"
-            TextDecorations="{Binding SettingsAppearanceFontUnderline}"            
+            TextDecorations="{Binding SettingsAppearanceFontUnderline}"
             VerticalAlignment="Bottom">           
             <Run
                 Text="{Binding Label}" />
@@ -120,27 +125,43 @@
 
     </DataTemplate>
 
+    <Style
+        x:Key="StatInfoButtonStyle"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Cursor"
+            Value="Hand" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBlock
+                        Foreground="{TemplateBinding Foreground}"
+                        TextWrapping="Wrap"
+                        FontFamily="{Binding SettingsAppearanceFontFamily}"
+                        FontSize="{Binding SettingsAppearanceFontSize}"
+                        FontWeight="{Binding SettingsAppearanceFontBold}"
+                        FontStyle="{Binding SettingsAppearanceFontItalic}"
+                        TextDecorations="{Binding SettingsAppearanceFontUnderline}"
+                        VerticalAlignment="Bottom">
+                        <Run
+                            Text="{Binding Label}" />
+                        <Run
+                            Text="{Binding Caption}" />
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <DataTemplate
         x:Key="StatDesignTemplate">
 
-        <TextBlock
-            TextWrapping="Wrap"
-            FontFamily="{Binding SettingsAppearanceFontFamily}"
-            FontSize="{Binding SettingsAppearanceFontSize}"
-            FontWeight="{Binding SettingsAppearanceFontBold}"
-            FontStyle="{Binding SettingsAppearanceFontItalic}"
-            VerticalAlignment="Bottom">         
-            <Hyperlink
-                Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
-                CommandParameter="{Binding}"
-                Foreground="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneWay}"
-                TextDecorations="{Binding SettingsAppearanceFontUnderline}">                        
-                <Run
-                    Text="{Binding Label}" />
-                <Run
-                    Text="{Binding Caption}" />
-            </Hyperlink>
-        </TextBlock>
+        <Button
+            Style="{StaticResource StatInfoButtonStyle}"
+            Command="{Binding DataContext.StatClickCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
+            CommandParameter="{Binding}"
+            Foreground="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}, Mode=OneWay}" />
 
     </DataTemplate>
 

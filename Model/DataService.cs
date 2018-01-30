@@ -72,15 +72,6 @@ namespace Model
             }
         }
 
-        public Indicators GetPlayerIndicator(int playerId, short pokersiteId)
-        {
-            var indicator = new Indicators();
-            var statistics = GetPlayerStatisticFromFile(playerId, pokersiteId);
-            indicator.UpdateSource(statistics);
-
-            return indicator;
-        }
-
         public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
         {
             var result = new List<Playerstatistic>();
@@ -298,14 +289,6 @@ namespace Model
             using (var session = ModelEntities.OpenSession())
             {
                 return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).Select(x => x.GameType).Distinct().ToList();
-            }
-        }
-
-        public IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<Tournaments>().Where(x => x.Player.Playername == playerName && x.SiteId == pokersiteId).Fetch(x => x.Player).ToList();
             }
         }
 

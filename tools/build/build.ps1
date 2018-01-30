@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.4.1',
+    [string] $Version = '1.4.2',
 
     [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
 
@@ -100,7 +100,7 @@ $session = @{
   Candle = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe'
   Light = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\Light.exe'
   Insignia = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\insignia.exe'
-  MSBuild = 'c:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe'
+  MSBuild = 'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe'
   Nuget = '.\.nuget\Nuget.exe'
   Git = 'c:\Program Files\Git\bin\git.exe'
   Mode = $Mode

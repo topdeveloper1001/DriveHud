@@ -1,0 +1,121 @@
+PokerStars Game #47185621293:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:50:43 ET
+Table 'Laocoon III' 6-max Seat #6 is the button
+Seat 1: 1tormentor ($293.20 in chips) 
+Seat 2: angryjamman ($162.55 in chips) 
+Seat 3: TODO ADENTR0 ($215.90 in chips) 
+Seat 5: DURKADURDUR ($210.05 in chips) 
+Seat 6: FrAnWaN ($293.70 in chips) 
+1tormentor: posts small blind $1
+angryjamman: posts big blind $2
+Fierytycoon: sits out 
+*** HOLE CARDS ***
+TODO ADENTR0: folds 
+DURKADURDUR: raises $4 to $6
+FrAnWaN: folds 
+1tormentor: folds 
+angryjamman: calls $4
+*** FLOP *** [Ah 9s 2c]
+angryjamman: checks 
+DURKADURDUR: bets $7
+angryjamman: calls $7
+*** TURN *** [Ah 9s 2c] [9h]
+angryjamman: checks 
+DURKADURDUR: checks 
+*** RIVER *** [Ah 9s 2c 9h] [4d]
+angryjamman: bets $10
+DURKADURDUR: calls $10
+*** SHOW DOWN ***
+angryjamman: shows [9d 9c] (four of a kind, Nines)
+DURKADURDUR: mucks hand 
+angryjamman collected $45 from pot
+*** SUMMARY ***
+Total pot $47 | Rake $2 
+Board [Ah 9s 2c 9h 4d]
+Seat 1: 1tormentor (small blind) folded before Flop
+Seat 2: angryjamman (big blind) showed [9d 9c] and won ($45) with four of a kind, Nines
+Seat 3: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 5: DURKADURDUR mucked
+Seat 6: FrAnWaN (button) folded before Flop (didn't bet)
+
+PokerStars Game #47181365763:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:27:33 ET
+Table 'Natalie' 6-max Seat #1 is the button
+Seat 1: DURKADURDUR ($203 in chips) 
+Seat 2: Jinn_Rooh ($242.05 in chips) 
+Seat 3: KodyKirlinko ($100 in chips) 
+Seat 4: bluffinmyway ($275.40 in chips) 
+Seat 5: dimsumboy ($263 in chips) 
+Seat 6: brizzybreech ($608.90 in chips) 
+Jinn_Rooh: posts small blind $1
+KodyKirlinko: posts big blind $2
+*** HOLE CARDS ***
+bluffinmyway: folds 
+dimsumboy: folds 
+brizzybreech: folds 
+DURKADURDUR: raises $4 to $6
+Jinn_Rooh: folds 
+KodyKirlinko: calls $4
+*** FLOP *** [8d Js Jh]
+KodyKirlinko: checks 
+DURKADURDUR: bets $7
+KodyKirlinko: calls $7
+*** TURN *** [8d Js Jh] [4c]
+KodyKirlinko: checks 
+DURKADURDUR: checks 
+*** RIVER *** [8d Js Jh 4c] [6c]
+KodyKirlinko: bets $18
+DURKADURDUR: calls $18
+*** SHOW DOWN ***
+KodyKirlinko: shows [Jd Qh] (three of a kind, Jacks)
+DURKADURDUR: mucks hand 
+KodyKirlinko collected $60 from pot
+*** SUMMARY ***
+Total pot $63 | Rake $3 
+Board [8d Js Jh 4c 6c]
+Seat 1: DURKADURDUR (button) mucked
+Seat 2: Jinn_Rooh (small blind) folded before Flop
+Seat 3: KodyKirlinko (big blind) showed [Jd Qh] and won ($60) with three of a kind, Jacks
+Seat 4: bluffinmyway folded before Flop (didn't bet)
+Seat 5: dimsumboy folded before Flop (didn't bet)
+Seat 6: brizzybreech folded before Flop (didn't bet)
+
+PokerStars Game #47150441725:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:35:11 ET
+Table 'Lilaea III' 6-max Seat #3 is the button
+Seat 1: twofinger777 ($215.80 in chips) 
+Seat 2: stopme10 ($209 in chips) 
+Seat 3: DURKADURDUR ($303 in chips) 
+Seat 4: FIrmFighter ($203 in chips) 
+Seat 5: Desateur ($535.60 in chips) 
+Seat 6: pobolero ($200 in chips) 
+FIrmFighter: posts small blind $1
+Desateur: posts big blind $2
+*** HOLE CARDS ***
+pobolero: folds 
+twofinger777: raises $4 to $6
+stopme10: folds 
+DURKADURDUR: calls $6
+FIrmFighter: folds 
+Desateur: folds 
+*** FLOP *** [2h Qh Ad]
+twofinger777: checks 
+DURKADURDUR: bets $11
+twofinger777: calls $11
+*** TURN *** [2h Qh Ad] [5c]
+twofinger777: checks 
+DURKADURDUR: checks 
+*** RIVER *** [2h Qh Ad 5c] [8h]
+twofinger777: bets $36
+DURKADURDUR: calls $36
+*** SHOW DOWN ***
+twofinger777: shows [Ts Js] (high card Ace)
+DURKADURDUR: shows [8d 8c] (three of a kind, Eights)
+DURKADURDUR collected $106 from pot
+*** SUMMARY ***
+Total pot $109 | Rake $3 
+Board [2h Qh Ad 5c 8h]
+Seat 1: twofinger777 showed [Ts Js] and lost with high card Ace
+Seat 2: stopme10 folded before Flop (didn't bet)
+Seat 3: DURKADURDUR (button) showed [8d 8c] and won ($106) with three of a kind, Eights
+Seat 4: FIrmFighter (small blind) folded before Flop
+Seat 5: Desateur (big blind) folded before Flop
+Seat 6: pobolero folded before Flop (didn't bet)
+

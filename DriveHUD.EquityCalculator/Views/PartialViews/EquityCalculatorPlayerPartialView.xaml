@@ -60,7 +60,9 @@
                                     <DataTemplate>
                                         <TextBlock Margin="2" Style="{StaticResource TextBlockStyle}">
                                             <TextBlock Text="{Binding}" />
-                                            <Button Margin="-30 -20 -8 0" Command="{Binding DataContext.RemoveRangeCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            <Button
+                                                Margin="-30 -20 -8 0"
+                                                Command="{Binding DataContext.RemoveRangeCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                 CommandParameter="{Binding}">
                                             <Button.Template>
                                                 <ControlTemplate TargetType="{x:Type Button}">

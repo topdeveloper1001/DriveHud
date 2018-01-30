@@ -10,20 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
-using ManagedWinapi.Windows;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
-using System.Runtime.InteropServices;
-using System.Text;
+using System.Threading;
 using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace DriveHUD.HUD
 {
@@ -34,96 +32,16 @@ namespace DriveHUD.HUD
     {
         private static Dictionary<IntPtr, HudWindowItem> windows = new Dictionary<IntPtr, HudWindowItem>();
 
-        #region PInvoke and Win Events      
-
-        public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType,
-            IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
-
-        [DllImport("user32.dll")]
-        private static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc,
-            WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
-
-        [DllImport("user32.dll")]
-        private static extern bool UnhookWinEvent(IntPtr hWinEventHook);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        private static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
-
-        [DllImport("User32.dll")]
-        public static extern IntPtr GetWindow(IntPtr hWnd, uint uCmd);
-
-        private static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
-        {
-            return SetWinEventHook(eventId, eventId, IntPtr.Zero, callback, idProcess, 0, WINEVENT_OUTOFCONTEXT);
-        }
-
-        public static string GetText(IntPtr hWnd)
-        {
-            // Allocate correct string length first
-            int length = WinApi.GetWindowTextLength(hWnd);
-            StringBuilder sb = new StringBuilder(length + 1);
-            WinApi.GetWindowText(hWnd, sb, sb.Capacity);
-            return sb.ToString();
-        }
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool IsWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool IsIconic(IntPtr hWnd);
-
-        static IEnumerable<IntPtr> EnumerateProcessWindowHandles(int processId)
-        {
-            var handles = new List<IntPtr>();
-
-            foreach (ProcessThread thread in Process.GetProcessById(processId).Threads)
-            {
-                WinApi.EnumThreadWindows(thread.Id,
-                    (hWnd, lParam) => { handles.Add(hWnd); return true; }, IntPtr.Zero);
-            }
-
-            return handles;
-        }
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint processId);
-
-        static List<IntPtr> GetChildWindows(IntPtr hParent, int maxCount = 100)
-        {
-            List<IntPtr> result = new List<IntPtr>();
-            int ct = 0;
-            IntPtr prevChild = IntPtr.Zero;
-            IntPtr currChild = IntPtr.Zero;
-            while (ct < maxCount)
-            {
-                currChild = WinApi.FindWindowEx(hParent, prevChild, null, null);
-                if (currChild == IntPtr.Zero) break;
-                result.Add(currChild);
-                prevChild = currChild;
-                ++ct;
-            }
-            return result;
-        }
-
         private static IntPtr moveHook;
         private static IntPtr closeHook;
         private static IntPtr createHook;
 
-        private const uint GW_OWNER = 4;
-        private const uint EVENT_SYSTEM_MOVESIZEEND = 0x800B;
-        private const uint EVENT_OBJECT_CREATE = 0x8000;
-        private const uint EVENT_OBJECT_DESTROY = 0x8001;
-        private const uint EVENT_OBJECT_NAMECHANGE = 0x800C;
-        private const uint WINEVENT_OUTOFCONTEXT = 0;
-
         //Create delegate instances to prevent GC collecting.
-        private static WinEventDelegate moveCallback = WindowMoved;
-        private static WinEventDelegate closeCallback = WindowClosed;
-        private static WinEventDelegate createCallback = WindowMoved;
+        private static WinApi.WinEventDelegate moveCallback = WindowMoved;
+        private static WinApi.WinEventDelegate closeCallback = WindowClosed;
+        private static WinApi.WinEventDelegate createCallback = WindowMoved;
 
-        #endregion
+        private static readonly ReaderWriterLockSlim rwWindowsLock = new ReaderWriterLockSlim();
 
         public static void UpdateHud(HudLayout hudLayout)
         {
@@ -134,88 +52,121 @@ namespace DriveHUD.HUD
 
             var hwnd = new IntPtr(hudLayout.WindowId);
 
-            if (!IsWindow(hwnd))
+            if (!WinApi.IsWindow(hwnd))
             {
                 return;
             }
 
-            if (windows.ContainsKey(hwnd))
+            using (rwWindowsLock.Read())
             {
-                windows[hwnd].Window.Initialize(hudLayout, hwnd);
-
-                if (!IsIconic(hwnd))
+                if (windows.ContainsKey(hwnd))
                 {
-                    windows[hwnd].Window.Refresh();
-                }
+                    if (!windows[hwnd].IsInitialized)
+                    {
+                        return;
+                    }
 
-                return;
+                    windows[hwnd].Window.Dispatcher.Invoke(() =>
+                    {
+                        windows[hwnd].Window.Initialize(hudLayout, hwnd);
+
+                        if (!WinApi.IsIconic(hwnd))
+                        {
+                            windows[hwnd].Window.Refresh();
+                        }
+                    });
+
+                    return;
+                }
             }
 
             uint processId = 0;
 
-            GetWindowThreadProcessId(hwnd, out processId);
+            WinApi.GetWindowThreadProcessId(hwnd, out processId);
 
             if (processId == 0)
             {
                 return;
             }
 
-            moveHook = SetWinEventHook(EVENT_SYSTEM_MOVESIZEEND, moveCallback, processId);
-            closeHook = SetWinEventHook(EVENT_OBJECT_DESTROY, closeCallback, processId);
-            createHook = SetWinEventHook(EVENT_OBJECT_NAMECHANGE, createCallback, processId);
+            moveHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_MOVESIZEEND, moveCallback, processId);
+            closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
+            createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
 
-            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
+            CreateHudWindow(hwnd, hudLayout);
+        }
 
-            var window = new HudWindow();
-            var windowHandle = hudPanelService.GetWindowHandle(hwnd);
-
-            var windowItem = new HudWindowItem
+        private static void CreateHudWindow(IntPtr hwnd, HudLayout hudLayout)
+        {
+            var thread = new Thread(() =>
             {
-                Window = window,
-                Handle = windowHandle
-            };
+                var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
 
-            windows.Add(hwnd, windowItem);
+                var window = new HudWindow();
+                var windowHandle = hudPanelService.GetWindowHandle(hwnd);
 
-            var windowInteropHelper = new WindowInteropHelper(window)
-            {
-                Owner = windowHandle
-            };
+                var windowItem = new HudWindowItem
+                {
+                    Window = window,
+                    Handle = windowHandle
+                };
 
-            window.Initialize(hudLayout, hwnd);
+                using (rwWindowsLock.Write())
+                {
+                    if (windows.ContainsKey(hwnd))
+                    {
+                        return;
+                    }
 
-            window.Show();
-         
-            RECT rect;
+                    windows.Add(hwnd, windowItem);
+                }
 
-            GetWindowRect(windowHandle, out rect);
+                var windowInteropHelper = new WindowInteropHelper(window)
+                {
+                    Owner = windowHandle
+                };
 
-            SizeF dpi = Utils.GetCurrentDpi();
+                window.Closed += (s, e) => window.Dispatcher.BeginInvokeShutdown(DispatcherPriority.Background);
 
-            SizeF scale = new SizeF()
-            {
-                Width = 96f / dpi.Width,
-                Height = 96f / dpi.Height
-            };
+                window.Initialize(hudLayout, hwnd);
 
-            window.Top = rect.Top * scale.Height;
-            window.Left = rect.Left * scale.Width;
-            window.Height = rect.Height * scale.Height;
-            window.Width = rect.Width * scale.Width;
+                window.Show();
 
-            if (IsIconic(hwnd))
-            {
-                return;
-            }
+                RECT rect;
 
-            window.Refresh();
+                WinApi.GetWindowRect(windowHandle, out rect);
+
+                SizeF dpi = Utils.GetCurrentDpi();
+
+                SizeF scale = new SizeF()
+                {
+                    Width = 96f / dpi.Width,
+                    Height = 96f / dpi.Height
+                };
+
+                window.Top = rect.Top * scale.Height;
+                window.Left = rect.Left * scale.Width;
+                window.Height = rect.Height * scale.Height;
+                window.Width = rect.Width * scale.Width;
+
+                windowItem.IsInitialized = true;
+
+                if (!WinApi.IsIconic(hwnd))
+                {
+                    window.Refresh();
+                }
+
+                System.Windows.Threading.Dispatcher.Run();
+            });
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
 
         #region Infrastructure
 
         private static void WindowMoved(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            // filter out non-HWND name changes... (e.g. items within a listbox)
             if (idObject != 0 || idChild != 0)
             {
                 return;
@@ -226,7 +177,6 @@ namespace DriveHUD.HUD
 
         private static void WindowClosed(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            // filter out non-HWND name changes... (e.g. items within a listbox)
             if (idObject != 0 || idChild != 0)
             {
                 return;
@@ -239,8 +189,8 @@ namespace DriveHUD.HUD
 
             var window = windows[hwnd];
             windows.Remove(hwnd);
-            window.Window.Close();
-            window.Window.Dispose();
+
+            window.Window.Dispatcher.Invoke(() => window.Window.Close());
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)
@@ -250,31 +200,41 @@ namespace DriveHUD.HUD
                 return;
             }
 
-            if (IsIconic(handle))
+            if (WinApi.IsIconic(handle))
             {
                 return;
             }
 
-            var windowItem = windows[handle];
+            HudWindowItem windowItem = null;
 
-            RECT rect;
+            windowItem = windows[handle];
 
-            GetWindowRect(windowItem.Handle, out rect);
-
-            SizeF dpi = Utils.GetCurrentDpi();
-
-            SizeF scale = new SizeF()
+            if (windowItem == null || !windowItem.IsInitialized)
             {
-                Width = 96f / dpi.Width,
-                Height = 96f / dpi.Height
-            };
+                return;
+            }
 
-            windowItem.Window.Top = rect.Top * scale.Height;
-            windowItem.Window.Left = rect.Left * scale.Width;
-            windowItem.Window.Height = rect.Height * scale.Height;
-            windowItem.Window.Width = rect.Width * scale.Width;
+            windowItem.Window.Dispatcher.Invoke(() =>
+            {
+                RECT rect;
 
-            windowItem.Window.Refresh();
+                WinApi.GetWindowRect(windowItem.Handle, out rect);
+
+                SizeF dpi = Utils.GetCurrentDpi();
+
+                SizeF scale = new SizeF()
+                {
+                    Width = 96f / dpi.Width,
+                    Height = 96f / dpi.Height
+                };
+
+                windowItem.Window.Top = rect.Top * scale.Height;
+                windowItem.Window.Left = rect.Left * scale.Width;
+                windowItem.Window.Height = rect.Height * scale.Height;
+                windowItem.Window.Width = rect.Width * scale.Width;
+
+                windowItem.Window.Refresh();
+            });
         }
 
         private class HudWindowItem
@@ -282,8 +242,10 @@ namespace DriveHUD.HUD
             public IntPtr Handle { get; set; }
 
             public HudWindow Window { get; set; }
+
+            public bool IsInitialized { get; set; }
         }
 
-        #endregion
+        #endregion       
     }
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6732920389">
+ <general>
+  <client_version>17.5.5.19</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL €0.01/€0.02</gametype>
+  <tablename>Candidoni, 817747486</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:04:53</duration>
+  <gamecount>4</gamecount>
+  <startdate>2017-09-14 19:17:30</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>€1.35</bets>
+  <wins>€0.54</wins>
+  <chipsin>€0.72</chipsin>
+  <chipsout>€0</chipsout>
+  <statuspoints>1.30</statuspoints>
+  <awardpoints>1.30</awardpoints>
+  <ipoints>1.30</ipoints>
+ </general>
+ <game gamecode="7682801765">
+  <general>
+   <startdate>2017-09-14 19:21:35</startdate>
+   <players>
+    <player dealer="0" chips="€0.46" bet="€0" name="perry123456" seat="1" win="€0"/>
+    <player dealer="0" chips="€0.35" bet="€0" name="delboyc" seat="2" win="€0"/>
+    <player dealer="1" chips="€2.67" bet="€0" name="TrickHowe9" seat="4" win="€0"/>
+    <player dealer="0" chips="€0.98" bet="€0.98" name="Peon384" seat="5" win="€0"/>
+    <player dealer="0" chips="€1.07" bet="€0.98" name="BLOODec1" seat="6" win="€1.83"/>
+    <player dealer="0" chips="€0.94" bet="€0" name="Hello20172" seat="8" win="€0"/>
+    <player dealer="0" chips="€2.19" bet="€0" name="CapCrocus" seat="9" win="€0"/>
+    <player dealer="0" chips="€1.95" bet="€0" name="MiMach96" seat="10" win="€0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action type="1" player="Peon384" cards="" sum="€0.01" no="1"/>
+   <action type="2" player="BLOODec1" cards="" sum="€0.02" no="2"/>
+  </round>
+  <round no="1">
+   <cards type="Pocket" player="Hello20172">X X</cards>
+   <action type="0" player="Hello20172" cards="" sum="€0" no="3"/>
+   <cards type="Pocket" player="CapCrocus">X X</cards>
+   <action type="0" player="CapCrocus" cards="" sum="€0" no="4"/>
+   <cards type="Pocket" player="MiMach96">X X</cards>
+   <action type="0" player="MiMach96" cards="" sum="€0" no="5"/>
+   <cards type="Pocket" player="perry123456">X X</cards>
+   <action type="0" player="perry123456" cards="" sum="€0" no="6"/>
+   <cards type="Pocket" player="delboyc">X X</cards>
+   <action type="0" player="delboyc" cards="" sum="€0" no="7"/>
+   <cards type="Pocket" player="TrickHowe9">X X</cards>
+   <action type="0" player="TrickHowe9" cards="" sum="€0" no="8"/>
+   <cards type="Pocket" player="Peon384">CA SA</cards>
+   <action type="23" player="Peon384" cards="" sum="€0.10" no="9"/>
+   <cards type="Pocket" player="BLOODec1">CQ CJ</cards>
+   <action type="3" player="BLOODec1" cards="" sum="€0.08" no="10"/>
+  </round>
+  <round no="2">
+   <cards type="Flop" player="">DA SK S3</cards>
+   <action type="5" player="Peon384" cards="" sum="€0.04" no="11"/>
+   <action type="3" player="BLOODec1" cards="" sum="€0.04" no="12"/>
+  </round>
+  <round no="3">
+   <cards type="Turn" player="">H10</cards>
+   <action type="5" player="Peon384" cards="" sum="€0.20" no="13"/>
+   <action type="23" player="BLOODec1" cards="" sum="€0.40" no="14"/>
+   <action type="3" player="Peon384" cards="" sum="€0.20" no="15"/>
+  </round>
+  <round no="4">
+   <cards type="River" player="">S4</cards>
+   <action type="5" player="Peon384" cards="" sum="€0.44" no="16"/>
+   <action type="3" player="BLOODec1" cards="" sum="€0.44" no="17"/>
+  </round>
+ </game>
+</session>

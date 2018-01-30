@@ -14,11 +14,8 @@ using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Hand;
+using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
-using Microsoft.Practices.Prism.PubSubEvents;
-using Microsoft.Practices.ServiceLocation;
-using Microsoft.Practices.Unity;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -31,16 +28,8 @@ using System.Threading;
 namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 {
     [TestFixture]
-    public class IPokerFastParserTests
+    class IPokerFastParserTests : IPokerBaseTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData";
-
-        [OneTimeSetUp]
-        public void Initialize()
-        {
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
-        }
-
         [Test]
         [TestCase("en-US")]
         [TestCase("hu-HU")]
@@ -136,7 +125,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-zone-1.xml", 0.02)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);            
+            var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Limit.SmallBlind, Is.EqualTo(smallBlind));
         }
 
@@ -173,7 +162,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", 1)]
         public void TournamentFinishPositionIsParsedTest(string handHistoryFile, int place)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);            
+            var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Tournament.FinishPosition, Is.EqualTo(place));
         }
 
@@ -192,7 +181,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 6)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-9-max-SeatType-Test.xml", 9)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-WildTwister.xml", 3)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-9-max-cash.xml", 9)]       
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-9-max-cash.xml", 9)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -363,28 +352,27 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }
 
-        private HandHistory ParseHandHistory(string handHistoryFile)
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-old-format-1.xml", "IPokerTest", 0.23)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-1.xml", "IPokerTest", 0.16)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-2.xml", "IPokerTest", 2.75)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-3.xml", "FAT1Raccoon", 0.08)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", "Peon384", 0.19)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", "Peon384", 3205)]
+        public void WinActionsAreParsed(string handHistoryFile, string playerName, decimal amount)
         {
-            var parser = new IPokerFastParserImpl();
+            var handHistory = ParseHandHistory(handHistoryFile);
 
-            var handHistoryText = File.ReadAllText(handHistoryFile);
+            var winAction = handHistory.HandActions
+                .FirstOrDefault(x => x.Street == Street.Summary && x.PlayerName.Equals(playerName) && x.HandActionType == HandActionType.WINS);
 
-            var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
-
-            var hand = hands.Single();
-
-            var handHistory = parser.ParseFullHandHistory(hand, true);
-
-            return handHistory;
+            Assert.IsNotNull(winAction, $"WIN action hasn't been found for {playerName}");
+            Assert.That(winAction.Amount, Is.EqualTo(amount), $"WIN amount doesn't match expected for {playerName}");
         }
 
-        private void ConfigureContainer()
+        protected override IHandHistoryParser CreateParser()
         {
-            var unityContainer = new UnityContainer();
-            unityContainer.RegisterType<IEventAggregator, EventAggregator>();
-
-            var locator = new UnityServiceLocator(unityContainer);
-            ServiceLocator.SetLocatorProvider(() => locator);
+            return new IPokerFastParserImpl();
         }
     }
 }

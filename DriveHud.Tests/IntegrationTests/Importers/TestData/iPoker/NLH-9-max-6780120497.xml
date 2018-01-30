@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6780120497">
+ <general>
+  <client_version>17.9.6.2</client_version>
+  <uncalled_bet_enabled>true</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Turbo (€0.10), 918179080</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:36:06</duration>
+  <gamecount>43</gamecount>
+  <startdate>2018-01-19 13:46:56</startdate>
+  <currency>USD</currency>
+  <nickname>Peon384</nickname>
+  <bets>33,502</bets>
+  <wins>32,565</wins>
+  <chipsin>1,460</chipsin>
+  <chipsout>13,500</chipsout>
+  <statuspoints>Club0.40</statuspoints>
+  <awardpoints>Club0.40</awardpoints>
+  <ipoints>Club0.40</ipoints>
+  <tournamentcode>918178286</tournamentcode>
+  <tournamentname>Turbo (€0.10)</tournamentname>
+  <place>0</place>
+  <buyin>€0.08 + €0.02</buyin>
+  <totalbuyin>€0.10</totalbuyin>
+  <win>0</win>
+ </general>
+ <game gamecode="7816647788">
+  <general>
+   <startdate>2018-01-19 13:46:56</startdate>
+   <players>
+    <player chips="1,500" dealer="1" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="40" addon="0" reg_code="6780120497"/>
+    <player chips="1,500" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="268" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Ljvon4ik" win="0" rebuy="0" seat="4" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="no9to5" win="576" rebuy="0" seat="5" bet="268" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="10" no="1" type="1" cards=""/>
+   <action player="rumguzzler" sum="20" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Ljvon4ik" type="Pocket">X X</cards>
+   <action player="Ljvon4ik" sum="0" no="3" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">D9 DQ</cards>
+   <action player="no9to5" sum="20" no="4" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="5" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="6" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="7" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="8" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="9" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C3 SK</cards>
+   <action player="Peon384" sum="10" no="10" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">S7 D5</cards>
+   <action player="rumguzzler" sum="0" no="11" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H9 S5 S9</cards>
+   <action player="Peon384" sum="0" no="12" type="4" cards=""/>
+   <action player="rumguzzler" sum="20" no="13" type="5" cards=""/>
+   <action player="no9to5" sum="20" no="14" type="3" cards=""/>
+   <action player="Peon384" sum="20" no="15" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+   <action player="Peon384" sum="0" no="16" type="4" cards=""/>
+   <action player="rumguzzler" sum="60" no="17" type="5" cards=""/>
+   <action player="no9to5" sum="60" no="18" type="3" cards=""/>
+   <action player="Peon384" sum="0" no="19" type="0" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HJ</cards>
+   <action player="rumguzzler" sum="0" no="20" type="4" cards=""/>
+   <action player="no9to5" sum="168" no="21" type="5" cards=""/>
+   <action player="rumguzzler" sum="168" no="22" type="3" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816647993">
+  <general>
+   <startdate>2018-01-19 13:48:28</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="1,460" dealer="1" name="Peon384" win="2,950" rebuy="0" seat="2" bet="1,460" addon="0" reg_code="6780120497"/>
+    <player chips="1,232" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="10" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Ljvon4ik" win="0" rebuy="0" seat="4" bet="1,801" addon="0" reg_code=""/>
+    <player chips="1,808" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="20" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="10" no="1" type="1" cards=""/>
+   <action player="Ljvon4ik" sum="20" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="3" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="4" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="20" no="5" type="3" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="6" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="7" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="8" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">H9 C9</cards>
+   <action player="Peon384" sum="60" no="9" type="23" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="10" type="0" cards=""/>
+   <cards player="Ljvon4ik" type="Pocket">HA HK</cards>
+   <action player="Ljvon4ik" sum="200" no="11" type="23" cards=""/>
+   <action player="anhanga" sum="0" no="12" type="0" cards=""/>
+   <action player="Peon384" sum="140" no="13" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D5 D9 H2</cards>
+   <action player="Ljvon4ik" sum="301" no="14" type="5" cards=""/>
+   <action player="Peon384" sum="602" no="15" type="23" cards=""/>
+   <action player="Ljvon4ik" sum="1,300" no="16" type="23" cards=""/>
+   <action player="Peon384" sum="658" no="17" type="7" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S9</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+  </round>
+ </game>
+ <game gamecode="7816648230">
+  <general>
+   <startdate>2018-01-19 13:50:08</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="2,950" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="0" addon="0" reg_code="6780120497"/>
+    <player chips="1,222" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="0" addon="0" reg_code=""/>
+    <player chips="40" dealer="0" name="Ljvon4ik" win="0" rebuy="0" seat="4" bet="40" addon="0" reg_code=""/>
+    <player chips="1,808" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="325" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="CVETANKA71" win="690" rebuy="0" seat="6" bet="1,015" addon="0" reg_code=""/>
+    <player chips="1,480" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Ljvon4ik" sum="10" no="1" type="1" cards=""/>
+   <action player="no9to5" sum="20" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">HJ SK</cards>
+   <action player="CVETANKA71" sum="20" no="3" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="4" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="5" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="6" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">CJ C9</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="9" type="0" cards=""/>
+   <cards player="Ljvon4ik" type="Pocket">S9 H8</cards>
+   <action player="Ljvon4ik" sum="30" no="10" type="7" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="20" no="11" type="3" cards=""/>
+   <action player="CVETANKA71" sum="20" no="12" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H10 CQ C3</cards>
+   <action player="no9to5" sum="0" no="13" type="4" cards=""/>
+   <action player="CVETANKA71" sum="84" no="14" type="5" cards=""/>
+   <action player="no9to5" sum="84" no="15" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H7</cards>
+   <action player="no9to5" sum="201" no="16" type="5" cards=""/>
+   <action player="CVETANKA71" sum="201" no="17" type="3" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+   <action player="no9to5" sum="0" no="18" type="4" cards=""/>
+   <action player="CVETANKA71" sum="690" no="19" type="5" cards=""/>
+   <action player="no9to5" sum="0" no="20" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816648383">
+  <general>
+   <startdate>2018-01-19 13:51:13</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="2,950" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="30" addon="0" reg_code="6780120497"/>
+    <player chips="1,222" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="0" addon="0" reg_code=""/>
+    <player chips="1,483" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="15" addon="0" reg_code=""/>
+    <player chips="1,865" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="30" addon="0" reg_code=""/>
+    <player chips="1,480" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="Barbarela66" win="105" rebuy="0" seat="9" bet="60" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="no9to5" sum="15" no="1" type="1" cards=""/>
+   <action player="CVETANKA71" sum="30" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="3" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="30" no="4" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="5" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">SQ D10</cards>
+   <action player="Peon384" sum="30" no="7" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="8" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="9" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C3 D9 D4</cards>
+   <action player="CVETANKA71" sum="0" no="11" type="4" cards=""/>
+   <action player="Barbarela66" sum="30" no="12" type="5" cards=""/>
+   <action player="Peon384" sum="0" no="13" type="0" cards=""/>
+   <action player="CVETANKA71" sum="0" no="14" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816648488">
+  <general>
+   <startdate>2018-01-19 13:51:53</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="2,920" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="30" addon="0" reg_code="6780120497"/>
+    <player chips="1,222" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="30" addon="0" reg_code=""/>
+    <player chips="1,468" dealer="1" name="no9to5" win="0" rebuy="0" seat="5" bet="30" addon="0" reg_code=""/>
+    <player chips="1,835" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="15" addon="0" reg_code=""/>
+    <player chips="1,480" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="30" addon="0" reg_code=""/>
+    <player chips="1,575" dealer="0" name="Barbarela66" win="165" rebuy="0" seat="9" bet="60" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="15" no="1" type="1" cards=""/>
+   <action player="anhanga" sum="30" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="30" no="3" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="4" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="5" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S4 C4</cards>
+   <action player="Peon384" sum="30" no="6" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="30" no="7" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="30" no="8" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">HK HA C2</cards>
+   <action player="anhanga" sum="0" no="11" type="4" cards=""/>
+   <action player="Barbarela66" sum="30" no="12" type="5" cards=""/>
+   <action player="Peon384" sum="0" no="13" type="0" cards=""/>
+   <action player="rumguzzler" sum="0" no="14" type="0" cards=""/>
+   <action player="no9to5" sum="0" no="15" type="0" cards=""/>
+   <action player="anhanga" sum="0" no="16" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816648627">
+  <general>
+   <startdate>2018-01-19 13:52:51</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="2,890" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="0" addon="0" reg_code="6780120497"/>
+    <player chips="1,192" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="120" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="1,820" dealer="1" name="CVETANKA71" win="390" rebuy="0" seat="6" bet="120" addon="0" reg_code=""/>
+    <player chips="1,450" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="120" addon="0" reg_code=""/>
+    <player chips="1,710" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="30" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="15" no="1" type="1" cards=""/>
+   <action player="Barbarela66" sum="30" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="3" type="0" cards=""/>
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="4" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S2 C3</cards>
+   <action player="Peon384" sum="0" no="5" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">C8 CJ</cards>
+   <action player="rumguzzler" sum="30" no="6" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="7" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">HK CA</cards>
+   <action player="CVETANKA71" sum="120" no="8" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">DJ H10</cards>
+   <action player="anhanga" sum="105" no="9" type="3" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="10" type="0" cards=""/>
+   <action player="rumguzzler" sum="90" no="11" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H2 C4 D5</cards>
+   <action player="anhanga" sum="0" no="12" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="13" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D9</cards>
+   <action player="anhanga" sum="0" no="15" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="16" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="17" type="4" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C9</cards>
+   <action player="anhanga" sum="0" no="18" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="19" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="20" type="4" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816648787">
+  <general>
+   <startdate>2018-01-19 13:53:56</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="0" addon="0" reg_code=""/>
+    <player chips="2,890" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="0" addon="0" reg_code="6780120497"/>
+    <player chips="1,072" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="0" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="2,090" dealer="0" name="CVETANKA71" win="195" rebuy="0" seat="6" bet="90" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,680" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="15" addon="0" reg_code=""/>
+    <player chips="1,500" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="90" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Barbarela66" sum="15" no="1" type="1" cards=""/>
+   <action player="kobewit" sum="30" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="mikeogor" type="Pocket">X X</cards>
+   <action player="mikeogor" sum="0" no="3" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">H4 SQ</cards>
+   <action player="Peon384" sum="0" no="4" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="5" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="6" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">C4 S4</cards>
+   <action player="CVETANKA71" sum="30" no="7" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="8" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="9" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">H3 C6</cards>
+   <action player="kobewit" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C7 C5 H9</cards>
+   <action player="kobewit" sum="0" no="11" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="12" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">DK</cards>
+   <action player="kobewit" sum="0" no="13" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C2</cards>
+   <action player="kobewit" sum="60" no="15" type="5" cards=""/>
+   <action player="CVETANKA71" sum="60" no="16" type="3" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816648961">
+  <general>
+   <startdate>2018-01-19 13:55:02</startdate>
+   <players>
+    <player chips="1,500" dealer="0" name="mikeogor" win="0" rebuy="0" seat="1" bet="1,600" addon="0" reg_code=""/>
+    <player chips="2,890" dealer="0" name="Peon384" win="3,100" rebuy="0" seat="2" bet="1,500" addon="0" reg_code="6780120497"/>
+    <player chips="1,072" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="50" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,665" dealer="1" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="1,410" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="50" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="kobewit" sum="25" no="1" type="1" cards=""/>
+   <action player="mikeogor" sum="50" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C4 H4</cards>
+   <action player="Peon384" sum="50" no="3" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="50" no="4" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="5" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="6" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="8" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="25" no="9" type="3" cards=""/>
+   <cards player="mikeogor" type="Pocket">SA HJ</cards>
+   <action player="mikeogor" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S4 CA C5</cards>
+   <action player="kobewit" sum="0" no="11" type="4" cards=""/>
+   <action player="mikeogor" sum="100" no="12" type="5" cards=""/>
+   <action player="Peon384" sum="200" no="13" type="23" cards=""/>
+   <action player="rumguzzler" sum="0" no="14" type="0" cards=""/>
+   <action player="kobewit" sum="0" no="15" type="0" cards=""/>
+   <action player="mikeogor" sum="1,450" no="16" type="23" cards=""/>
+   <action player="Peon384" sum="1,250" no="17" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D5</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D4</cards>
+  </round>
+ </game>
+ <game gamecode="7816649147">
+  <general>
+   <startdate>2018-01-19 13:56:04</startdate>
+   <players>
+    <player chips="4,490" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="50" addon="0" reg_code="6780120497"/>
+    <player chips="1,022" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="0" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="1,665" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="1,665" addon="0" reg_code=""/>
+    <player chips="1,360" dealer="1" name="kobewit" win="2,770" rebuy="0" seat="10" bet="1,360" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="50" no="1" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="2" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="3" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="4" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="5" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">C8 C6</cards>
+   <action player="Barbarela66" sum="50" no="6" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">HA SJ</cards>
+   <action player="kobewit" sum="200" no="7" type="23" cards=""/>
+   <cards player="Peon384" type="Pocket">C2 S2</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+   <action player="Barbarela66" sum="150" no="9" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H2 D4 D8</cards>
+   <action player="Barbarela66" sum="1,465" no="10" type="5" cards=""/>
+   <action player="kobewit" sum="1,160" no="11" type="7" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CJ</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">HK</cards>
+  </round>
+ </game>
+ <game gamecode="7816649323">
+  <general>
+   <startdate>2018-01-19 13:57:08</startdate>
+   <players>
+    <player chips="4,440" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="125" addon="0" reg_code="6780120497"/>
+    <player chips="1,022" dealer="0" name="rumguzzler" win="200" rebuy="0" seat="3" bet="300" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="0" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="305" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="2,770" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="1" cards=""/>
+   <action player="rumguzzler" sum="50" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="3" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="4" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="5" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="6" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S8 H8</cards>
+   <action player="Peon384" sum="100" no="8" type="23" cards=""/>
+   <cards player="rumguzzler" type="Pocket">CK H7</cards>
+   <action player="rumguzzler" sum="50" no="9" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D6 SQ DK</cards>
+   <action player="Peon384" sum="0" no="10" type="4" cards=""/>
+   <action player="rumguzzler" sum="200" no="11" type="5" cards=""/>
+   <action player="Peon384" sum="0" no="12" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816649420">
+  <general>
+   <startdate>2018-01-19 13:57:46</startdate>
+   <players>
+    <player chips="4,340" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="0" addon="0" reg_code="6780120497"/>
+    <player chips="1,122" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="150" addon="0" reg_code=""/>
+    <player chips="1,438" dealer="0" name="no9to5" win="300" rebuy="0" seat="5" bet="300" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="0" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="305" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="0" addon="0" reg_code=""/>
+    <player chips="2,770" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="0" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="25" no="1" type="1" cards=""/>
+   <action player="no9to5" sum="50" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="3" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="4" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="5" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C2 S3</cards>
+   <action player="Peon384" sum="0" no="7" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="25" no="8" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="9" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D5 SA C9</cards>
+   <action player="rumguzzler" sum="100" no="10" type="5" cards=""/>
+   <action player="no9to5" sum="100" no="11" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HQ</cards>
+   <action player="rumguzzler" sum="0" no="12" type="4" cards=""/>
+   <action player="no9to5" sum="150" no="13" type="5" cards=""/>
+   <action player="rumguzzler" sum="0" no="14" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816649586">
+  <general>
+   <startdate>2018-01-19 13:58:50</startdate>
+   <players>
+    <player chips="4,340" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="0" addon="0" reg_code="6780120497"/>
+    <player chips="972" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="0" addon="0" reg_code=""/>
+    <player chips="1,588" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="25" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="305" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="0" addon="0" reg_code=""/>
+    <player chips="305" dealer="0" name="Barbarela66" win="685" rebuy="0" seat="9" bet="305" addon="0" reg_code=""/>
+    <player chips="2,770" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="50" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="no9to5" sum="25" no="1" type="1" cards=""/>
+   <action player="CVETANKA71" sum="50" no="2" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="3" type="0" cards=""/>
+   <cards player="Barbarela66" type="Pocket">SJ HJ</cards>
+   <action player="Barbarela66" sum="50" no="4" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="50" no="5" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">S10 H7</cards>
+   <action player="Peon384" sum="0" no="6" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="7" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="8" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">H9 DJ</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H8 C8 S4</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="4" cards=""/>
+   <action player="Barbarela66" sum="255" no="11" type="5" cards=""/>
+   <action player="kobewit" sum="0" no="12" type="0" cards=""/>
+   <action player="CVETANKA71" sum="255" no="13" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D3</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CK</cards>
+  </round>
+ </game>
+ <game gamecode="7816658308">
+  <general>
+   <startdate>2018-01-19 13:59:43</startdate>
+   <players>
+    <player chips="4,340" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="10" addon="0" reg_code="6780120497"/>
+    <player chips="972" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="10" addon="0" reg_code=""/>
+    <player chips="1,563" dealer="1" name="no9to5" win="270" rebuy="0" seat="5" bet="170" addon="0" reg_code=""/>
+    <player chips="1,890" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="50" addon="0" reg_code=""/>
+    <player chips="1,330" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="90" addon="0" reg_code=""/>
+    <player chips="685" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="10" addon="0" reg_code=""/>
+    <player chips="2,720" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="10" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="10" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="10" no="2" type="15" cards=""/>
+   <action player="Barbarela66" sum="10" no="3" type="15" cards=""/>
+   <action player="kobewit" sum="10" no="4" type="15" cards=""/>
+   <action player="Peon384" sum="10" no="5" type="15" cards=""/>
+   <action player="rumguzzler" sum="10" no="6" type="15" cards=""/>
+   <action player="no9to5" sum="10" no="7" type="15" cards=""/>
+   <action player="CVETANKA71" sum="40" no="8" type="1" cards=""/>
+   <action player="anhanga" sum="80" no="9" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Barbarela66" type="Pocket">X X</cards>
+   <action player="Barbarela66" sum="0" no="10" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="11" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">CK H3</cards>
+   <action player="Peon384" sum="0" no="12" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="13" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="160" no="14" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="15" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="16" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816658365">
+  <general>
+   <startdate>2018-01-19 14:00:08</startdate>
+   <players>
+    <player chips="4,330" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="10" addon="0" reg_code="6780120497"/>
+    <player chips="962" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="10" addon="0" reg_code=""/>
+    <player chips="1,743" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="10" addon="0" reg_code=""/>
+    <player chips="1,840" dealer="1" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="10" addon="0" reg_code=""/>
+    <player chips="1,240" dealer="0" name="anhanga" win="1,480" rebuy="0" seat="8" bet="675" addon="0" reg_code=""/>
+    <player chips="675" dealer="0" name="Barbarela66" win="0" rebuy="0" seat="9" bet="755" addon="0" reg_code=""/>
+    <player chips="2,710" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="90" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="10" no="1" type="15" cards=""/>
+   <action player="Barbarela66" sum="10" no="2" type="15" cards=""/>
+   <action player="kobewit" sum="10" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="10" no="4" type="15" cards=""/>
+   <action player="rumguzzler" sum="10" no="5" type="15" cards=""/>
+   <action player="no9to5" sum="10" no="6" type="15" cards=""/>
+   <action player="CVETANKA71" sum="10" no="7" type="15" cards=""/>
+   <action player="anhanga" sum="40" no="8" type="1" cards=""/>
+   <action player="Barbarela66" sum="80" no="9" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="80" no="10" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">DK S7</cards>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="12" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="13" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="14" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">SJ HJ</cards>
+   <action player="anhanga" sum="160" no="15" type="23" cards=""/>
+   <cards player="Barbarela66" type="Pocket">CA C10</cards>
+   <action player="Barbarela66" sum="665" no="16" type="23" cards=""/>
+   <action player="kobewit" sum="0" no="17" type="0" cards=""/>
+   <action player="anhanga" sum="505" no="18" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H7 C4 CQ</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S5</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H6</cards>
+  </round>
+ </game>
+ <game gamecode="7816658502">
+  <general>
+   <startdate>2018-01-19 14:01:01</startdate>
+   <players>
+    <player chips="4,320" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="10" addon="0" reg_code="6780120497"/>
+    <player chips="952" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="10" addon="0" reg_code=""/>
+    <player chips="1,733" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="10" addon="0" reg_code=""/>
+    <player chips="1,830" dealer="0" name="CVETANKA71" win="700" rebuy="0" seat="6" bet="330" addon="0" reg_code=""/>
+    <player chips="2,045" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="10" addon="0" reg_code=""/>
+    <player chips="2,620" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="330" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="kobewit" sum="10" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="10" no="2" type="15" cards=""/>
+   <action player="rumguzzler" sum="10" no="3" type="15" cards=""/>
+   <action player="no9to5" sum="10" no="4" type="15" cards=""/>
+   <action player="CVETANKA71" sum="10" no="5" type="15" cards=""/>
+   <action player="anhanga" sum="10" no="6" type="15" cards=""/>
+   <action player="kobewit" sum="80" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D8 S10</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="9" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="10" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">H8 C8</cards>
+   <action player="CVETANKA71" sum="80" no="11" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="12" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">D2 DK</cards>
+   <action player="kobewit" sum="0" no="13" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D4 D10 HQ</cards>
+   <action player="kobewit" sum="80" no="14" type="5" cards=""/>
+   <action player="CVETANKA71" sum="80" no="15" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H7</cards>
+   <action player="kobewit" sum="160" no="16" type="5" cards=""/>
+   <action player="CVETANKA71" sum="160" no="17" type="3" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C3</cards>
+   <action player="kobewit" sum="0" no="18" type="4" cards=""/>
+   <action player="CVETANKA71" sum="0" no="19" type="4" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816658632">
+  <general>
+   <startdate>2018-01-19 14:01:49</startdate>
+   <players>
+    <player chips="4,310" dealer="0" name="Peon384" win="260" rebuy="0" seat="2" bet="170" addon="0" reg_code="6780120497"/>
+    <player chips="942" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="10" addon="0" reg_code=""/>
+    <player chips="1,723" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="90" addon="0" reg_code=""/>
+    <player chips="2,200" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="10" addon="0" reg_code=""/>
+    <player chips="2,035" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="10" addon="0" reg_code=""/>
+    <player chips="2,290" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="50" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="kobewit" sum="10" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="10" no="2" type="15" cards=""/>
+   <action player="rumguzzler" sum="10" no="3" type="15" cards=""/>
+   <action player="no9to5" sum="10" no="4" type="15" cards=""/>
+   <action player="CVETANKA71" sum="10" no="5" type="15" cards=""/>
+   <action player="anhanga" sum="10" no="6" type="15" cards=""/>
+   <action player="kobewit" sum="40" no="7" type="1" cards=""/>
+   <action player="Peon384" sum="80" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="9" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="80" no="10" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="11" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="12" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="13" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C3 S6</cards>
+   <action player="Peon384" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S3 H2 CA</cards>
+   <action player="Peon384" sum="0" no="15" type="4" cards=""/>
+   <action player="no9to5" sum="0" no="16" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H3</cards>
+   <action player="Peon384" sum="80" no="17" type="5" cards=""/>
+   <action player="no9to5" sum="0" no="18" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816658788">
+  <general>
+   <startdate>2018-01-19 14:02:57</startdate>
+   <players>
+    <player chips="4,480" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="75" addon="0" reg_code="6780120497"/>
+    <player chips="932" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="135" addon="0" reg_code=""/>
+    <player chips="1,633" dealer="0" name="no9to5" win="390" rebuy="0" seat="5" bet="408" addon="0" reg_code=""/>
+    <player chips="2,190" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="15" addon="0" reg_code=""/>
+    <player chips="2,025" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="15" addon="0" reg_code=""/>
+    <player chips="2,240" dealer="1" name="kobewit" win="0" rebuy="0" seat="10" bet="15" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="15" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="15" no="2" type="15" cards=""/>
+   <action player="no9to5" sum="15" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="15" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="15" no="5" type="15" cards=""/>
+   <action player="kobewit" sum="15" no="6" type="15" cards=""/>
+   <action player="Peon384" sum="60" no="7" type="1" cards=""/>
+   <action player="rumguzzler" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="120" no="9" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="11" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="12" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">HQ C7</cards>
+   <action player="Peon384" sum="0" no="13" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S6 C9 SQ</cards>
+   <action player="rumguzzler" sum="0" no="15" type="4" cards=""/>
+   <action player="no9to5" sum="0" no="16" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C3</cards>
+   <action player="rumguzzler" sum="0" no="17" type="4" cards=""/>
+   <action player="no9to5" sum="273" no="18" type="5" cards=""/>
+   <action player="rumguzzler" sum="0" no="19" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816658955">
+  <general>
+   <startdate>2018-01-19 14:04:02</startdate>
+   <players>
+    <player chips="4,405" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="255" addon="0" reg_code="6780120497"/>
+    <player chips="797" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="75" addon="0" reg_code=""/>
+    <player chips="1,888" dealer="0" name="no9to5" win="630" rebuy="0" seat="5" bet="570" addon="0" reg_code=""/>
+    <player chips="2,175" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="15" addon="0" reg_code=""/>
+    <player chips="2,010" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="15" addon="0" reg_code=""/>
+    <player chips="2,225" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="15" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="15" no="1" type="15" cards=""/>
+   <action player="no9to5" sum="15" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="15" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="15" no="4" type="15" cards=""/>
+   <action player="kobewit" sum="15" no="5" type="15" cards=""/>
+   <action player="Peon384" sum="15" no="6" type="15" cards=""/>
+   <action player="rumguzzler" sum="60" no="7" type="1" cards=""/>
+   <action player="no9to5" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="11" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">CJ C5</cards>
+   <action player="Peon384" sum="240" no="12" type="23" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="13" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="120" no="14" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D10 H8 C4</cards>
+   <action player="no9to5" sum="0" no="15" type="4" cards=""/>
+   <action player="Peon384" sum="0" no="16" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+   <action player="no9to5" sum="315" no="17" type="5" cards=""/>
+   <action player="Peon384" sum="0" no="18" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659053">
+  <general>
+   <startdate>2018-01-19 14:04:44</startdate>
+   <players>
+    <player chips="4,150" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="15" addon="0" reg_code="6780120497"/>
+    <player chips="722" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="15" addon="0" reg_code=""/>
+    <player chips="2,263" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="135" addon="0" reg_code=""/>
+    <player chips="2,160" dealer="0" name="CVETANKA71" win="330" rebuy="0" seat="6" bet="615" addon="0" reg_code=""/>
+    <player chips="1,995" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="15" addon="0" reg_code=""/>
+    <player chips="2,210" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="15" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="no9to5" sum="15" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="15" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="15" no="3" type="15" cards=""/>
+   <action player="kobewit" sum="15" no="4" type="15" cards=""/>
+   <action player="Peon384" sum="15" no="5" type="15" cards=""/>
+   <action player="rumguzzler" sum="15" no="6" type="15" cards=""/>
+   <action player="no9to5" sum="60" no="7" type="1" cards=""/>
+   <action player="CVETANKA71" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="9" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="10" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">H3 CA</cards>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="12" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="60" no="13" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="480" no="14" type="23" cards=""/>
+   <action player="no9to5" sum="0" no="15" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659153">
+  <general>
+   <startdate>2018-01-19 14:05:25</startdate>
+   <players>
+    <player chips="4,135" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="15" addon="0" reg_code="6780120497"/>
+    <player chips="707" dealer="0" name="rumguzzler" win="390" rebuy="0" seat="3" bet="525" addon="0" reg_code=""/>
+    <player chips="2,128" dealer="1" name="no9to5" win="0" rebuy="0" seat="5" bet="15" addon="0" reg_code=""/>
+    <player chips="2,355" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="75" addon="0" reg_code=""/>
+    <player chips="1,980" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="135" addon="0" reg_code=""/>
+    <player chips="2,195" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="15" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="15" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="15" no="2" type="15" cards=""/>
+   <action player="kobewit" sum="15" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="15" no="4" type="15" cards=""/>
+   <action player="rumguzzler" sum="15" no="5" type="15" cards=""/>
+   <action player="no9to5" sum="15" no="6" type="15" cards=""/>
+   <action player="CVETANKA71" sum="60" no="7" type="1" cards=""/>
+   <action player="anhanga" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="9" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C9 D7</cards>
+   <action player="Peon384" sum="0" no="10" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="120" no="11" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="12" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="13" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H7 HA C2</cards>
+   <action player="anhanga" sum="0" no="15" type="4" cards=""/>
+   <action player="rumguzzler" sum="390" no="16" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="17" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659266">
+  <general>
+   <startdate>2018-01-19 14:06:07</startdate>
+   <players>
+    <player chips="4,120" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="15" addon="0" reg_code="6780120497"/>
+    <player chips="962" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="15" addon="0" reg_code=""/>
+    <player chips="2,113" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="255" addon="0" reg_code=""/>
+    <player chips="2,280" dealer="1" name="CVETANKA71" win="750" rebuy="0" seat="6" bet="2,280" addon="0" reg_code=""/>
+    <player chips="1,845" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="75" addon="0" reg_code=""/>
+    <player chips="2,180" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="135" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="15" no="1" type="15" cards=""/>
+   <action player="kobewit" sum="15" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="15" no="3" type="15" cards=""/>
+   <action player="rumguzzler" sum="15" no="4" type="15" cards=""/>
+   <action player="no9to5" sum="15" no="5" type="15" cards=""/>
+   <action player="CVETANKA71" sum="15" no="6" type="15" cards=""/>
+   <action player="anhanga" sum="60" no="7" type="1" cards=""/>
+   <action player="kobewit" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D4 H7</cards>
+   <action player="Peon384" sum="0" no="9" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="10" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="240" no="11" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="2,265" no="12" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="13" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="14" type="0" cards=""/>
+   <action player="no9to5" sum="0" no="15" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659380">
+  <general>
+   <startdate>2018-01-19 14:06:54</startdate>
+   <players>
+    <player chips="4,105" dealer="0" name="Peon384" win="510" rebuy="0" seat="2" bet="255" addon="0" reg_code="6780120497"/>
+    <player chips="947" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="15" addon="0" reg_code=""/>
+    <player chips="1,858" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="135" addon="0" reg_code=""/>
+    <player chips="2,775" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="15" addon="0" reg_code=""/>
+    <player chips="1,770" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="135" addon="0" reg_code=""/>
+    <player chips="2,045" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="75" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="kobewit" sum="15" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="15" no="2" type="15" cards=""/>
+   <action player="rumguzzler" sum="15" no="3" type="15" cards=""/>
+   <action player="no9to5" sum="15" no="4" type="15" cards=""/>
+   <action player="CVETANKA71" sum="15" no="5" type="15" cards=""/>
+   <action player="anhanga" sum="15" no="6" type="15" cards=""/>
+   <action player="kobewit" sum="60" no="7" type="1" cards=""/>
+   <action player="Peon384" sum="120" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="9" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="120" no="10" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="11" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="120" no="12" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="13" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">D7 DQ</cards>
+   <action player="Peon384" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H5 H4 SQ</cards>
+   <action player="Peon384" sum="120" no="15" type="5" cards=""/>
+   <action player="no9to5" sum="0" no="16" type="0" cards=""/>
+   <action player="anhanga" sum="0" no="17" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659524">
+  <general>
+   <startdate>2018-01-19 14:07:51</startdate>
+   <players>
+    <player chips="4,480" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="180" addon="0" reg_code="6780120497"/>
+    <player chips="932" dealer="0" name="rumguzzler" win="2,264" rebuy="0" seat="3" bet="932" addon="0" reg_code=""/>
+    <player chips="1,723" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="20" addon="0" reg_code=""/>
+    <player chips="2,760" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="20" addon="0" reg_code=""/>
+    <player chips="1,635" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="180" addon="0" reg_code=""/>
+    <player chips="1,970" dealer="1" name="kobewit" win="0" rebuy="0" seat="10" bet="932" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="20" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="20" no="2" type="15" cards=""/>
+   <action player="no9to5" sum="20" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="20" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="20" no="5" type="15" cards=""/>
+   <action player="kobewit" sum="20" no="6" type="15" cards=""/>
+   <action player="Peon384" sum="80" no="7" type="1" cards=""/>
+   <action player="rumguzzler" sum="160" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="9" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="160" no="11" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">H5 HA</cards>
+   <action player="kobewit" sum="160" no="12" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">D3 HQ</cards>
+   <action player="Peon384" sum="80" no="13" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">C3 C5</cards>
+   <action player="rumguzzler" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D7 DK S5</cards>
+   <action player="Peon384" sum="0" no="15" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="16" type="4" cards=""/>
+   <action player="anhanga" sum="0" no="17" type="4" cards=""/>
+   <action player="kobewit" sum="0" no="18" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H3</cards>
+   <action player="Peon384" sum="0" no="19" type="4" cards=""/>
+   <action player="rumguzzler" sum="752" no="20" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="21" type="0" cards=""/>
+   <action player="kobewit" sum="752" no="22" type="3" cards=""/>
+   <action player="Peon384" sum="0" no="23" type="0" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+  </round>
+ </game>
+ <game gamecode="7816659695">
+  <general>
+   <startdate>2018-01-19 14:09:08</startdate>
+   <players>
+    <player chips="4,300" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="20" addon="0" reg_code="6780120497"/>
+    <player chips="2,264" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="100" addon="0" reg_code=""/>
+    <player chips="1,703" dealer="0" name="no9to5" win="280" rebuy="0" seat="5" bet="180" addon="0" reg_code=""/>
+    <player chips="2,740" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="20" addon="0" reg_code=""/>
+    <player chips="1,455" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="20" addon="0" reg_code=""/>
+    <player chips="1,038" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="20" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="20" no="1" type="15" cards=""/>
+   <action player="no9to5" sum="20" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="20" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="20" no="4" type="15" cards=""/>
+   <action player="kobewit" sum="20" no="5" type="15" cards=""/>
+   <action player="Peon384" sum="20" no="6" type="15" cards=""/>
+   <action player="rumguzzler" sum="80" no="7" type="1" cards=""/>
+   <action player="no9to5" sum="160" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="11" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C2 HJ</cards>
+   <action player="Peon384" sum="0" no="12" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="13" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659728">
+  <general>
+   <startdate>2018-01-19 14:09:22</startdate>
+   <players>
+    <player chips="4,280" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="20" addon="0" reg_code="6780120497"/>
+    <player chips="2,164" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="20" addon="0" reg_code=""/>
+    <player chips="1,883" dealer="0" name="no9to5" win="440" rebuy="0" seat="5" bet="400" addon="0" reg_code=""/>
+    <player chips="2,720" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="180" addon="0" reg_code=""/>
+    <player chips="1,435" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="20" addon="0" reg_code=""/>
+    <player chips="1,018" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="20" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="no9to5" sum="20" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="20" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="20" no="3" type="15" cards=""/>
+   <action player="kobewit" sum="20" no="4" type="15" cards=""/>
+   <action player="Peon384" sum="20" no="5" type="15" cards=""/>
+   <action player="rumguzzler" sum="20" no="6" type="15" cards=""/>
+   <action player="no9to5" sum="80" no="7" type="1" cards=""/>
+   <action player="CVETANKA71" sum="160" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="9" type="0" cards=""/>
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="10" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">HQ D3</cards>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="12" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="80" no="13" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DQ H3 D4</cards>
+   <action player="no9to5" sum="220" no="15" type="5" cards=""/>
+   <action player="CVETANKA71" sum="0" no="16" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659836">
+  <general>
+   <startdate>2018-01-19 14:10:04</startdate>
+   <players>
+    <player chips="4,260" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="20" addon="0" reg_code="6780120497"/>
+    <player chips="2,144" dealer="0" name="rumguzzler" win="520" rebuy="0" seat="3" bet="340" addon="0" reg_code=""/>
+    <player chips="2,143" dealer="1" name="no9to5" win="0" rebuy="0" seat="5" bet="20" addon="0" reg_code=""/>
+    <player chips="2,540" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="100" addon="0" reg_code=""/>
+    <player chips="1,415" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="180" addon="0" reg_code=""/>
+    <player chips="998" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="20" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="20" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="20" no="2" type="15" cards=""/>
+   <action player="kobewit" sum="20" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="20" no="4" type="15" cards=""/>
+   <action player="rumguzzler" sum="20" no="5" type="15" cards=""/>
+   <action player="no9to5" sum="20" no="6" type="15" cards=""/>
+   <action player="CVETANKA71" sum="80" no="7" type="1" cards=""/>
+   <action player="anhanga" sum="160" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="kobewit" type="Pocket">X X</cards>
+   <action player="kobewit" sum="0" no="9" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">D3 S3</cards>
+   <action player="Peon384" sum="0" no="10" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="160" no="11" type="3" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="12" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="13" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="14" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C7 DA C10</cards>
+   <action player="anhanga" sum="0" no="15" type="4" cards=""/>
+   <action player="rumguzzler" sum="160" no="16" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="17" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816659976">
+  <general>
+   <startdate>2018-01-19 14:11:01</startdate>
+   <players>
+    <player chips="4,240" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="2,484" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="2,123" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="1,235" addon="0" reg_code=""/>
+    <player chips="2,440" dealer="1" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="1,235" dealer="0" name="anhanga" win="3,523" rebuy="0" seat="8" bet="1,235" addon="0" reg_code=""/>
+    <player chips="978" dealer="0" name="kobewit" win="0" rebuy="0" seat="10" bet="978" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="kobewit" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="4" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="5" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="6" type="15" cards=""/>
+   <action player="anhanga" sum="100" no="7" type="1" cards=""/>
+   <action player="kobewit" sum="200" no="8" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HJ D4</cards>
+   <action player="Peon384" sum="0" no="9" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="10" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">CQ H10</cards>
+   <action player="no9to5" sum="400" no="11" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="12" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">H8 S8</cards>
+   <action player="anhanga" sum="300" no="13" type="3" cards=""/>
+   <cards player="kobewit" type="Pocket">D6 DJ</cards>
+   <action player="kobewit" sum="200" no="14" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H6 H9 C8</cards>
+   <action player="anhanga" sum="0" no="15" type="4" cards=""/>
+   <action player="kobewit" sum="553" no="16" type="5" cards=""/>
+   <action player="no9to5" sum="553" no="17" type="3" cards=""/>
+   <action player="anhanga" sum="810" no="18" type="7" cards=""/>
+   <action player="no9to5" sum="257" no="19" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">DK</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D3</cards>
+  </round>
+ </game>
+ <game gamecode="7816660099">
+  <general>
+   <startdate>2018-01-19 14:11:51</startdate>
+   <players>
+    <player chips="4,215" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="225" addon="0" reg_code="6780120497"/>
+    <player chips="2,459" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="888" dealer="0" name="no9to5" win="525" rebuy="0" seat="5" bet="888" addon="0" reg_code=""/>
+    <player chips="2,415" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="3,523" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="2" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="5" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="6" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="7" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="863" no="8" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S8 C6</cards>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816660150">
+  <general>
+   <startdate>2018-01-19 14:12:10</startdate>
+   <players>
+    <player chips="3,990" dealer="0" name="Peon384" win="725" rebuy="0" seat="2" bet="587" addon="0" reg_code="6780120497"/>
+    <player chips="2,434" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="225" addon="0" reg_code=""/>
+    <player chips="1,188" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="25" addon="0" reg_code=""/>
+    <player chips="2,390" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="3,498" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="2" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="5" type="15" cards=""/>
+   <action player="Peon384" sum="100" no="6" type="1" cards=""/>
+   <action player="rumguzzler" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="8" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="200" no="10" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">D6 CA</cards>
+   <action player="Peon384" sum="100" no="11" type="3" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="12" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S8 D4 H3</cards>
+   <action player="Peon384" sum="0" no="13" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="14" type="4" cards=""/>
+   <action player="anhanga" sum="0" no="15" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">SA</cards>
+   <action player="Peon384" sum="0" no="16" type="4" cards=""/>
+   <action player="rumguzzler" sum="0" no="17" type="4" cards=""/>
+   <action player="anhanga" sum="0" no="18" type="4" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S10</cards>
+   <action player="Peon384" sum="362" no="19" type="5" cards=""/>
+   <action player="rumguzzler" sum="0" no="20" type="0" cards=""/>
+   <action player="anhanga" sum="0" no="21" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816660326">
+  <general>
+   <startdate>2018-01-19 14:13:12</startdate>
+   <players>
+    <player chips="4,490" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="2,209" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="125" addon="0" reg_code=""/>
+    <player chips="1,163" dealer="0" name="no9to5" win="325" rebuy="0" seat="5" bet="225" addon="0" reg_code=""/>
+    <player chips="2,365" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="3,273" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="25" no="1" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="4" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="5" type="15" cards=""/>
+   <action player="rumguzzler" sum="100" no="6" type="1" cards=""/>
+   <action player="no9to5" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="8" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="9" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C7 S9</cards>
+   <action player="Peon384" sum="0" no="10" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="11" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816660353">
+  <general>
+   <startdate>2018-01-19 14:13:25</startdate>
+   <players>
+    <player chips="4,465" dealer="0" name="Peon384" win="625" rebuy="0" seat="2" bet="425" addon="0" reg_code="6780120497"/>
+    <player chips="2,084" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="1,363" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="125" addon="0" reg_code=""/>
+    <player chips="2,340" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="225" addon="0" reg_code=""/>
+    <player chips="3,248" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="no9to5" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="4" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="5" type="15" cards=""/>
+   <action player="no9to5" sum="100" no="6" type="1" cards=""/>
+   <action player="CVETANKA71" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="8" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">DA D6</cards>
+   <action player="Peon384" sum="400" no="9" type="23" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="10" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="11" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="12" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816669800">
+  <general>
+   <startdate>2018-01-19 14:13:47</startdate>
+   <players>
+    <player chips="4,865" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="2,059" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="1,238" dealer="1" name="no9to5" win="625" rebuy="0" seat="5" bet="425" addon="0" reg_code=""/>
+    <player chips="2,115" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="125" addon="0" reg_code=""/>
+    <player chips="3,223" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="4" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="5" type="15" cards=""/>
+   <action player="CVETANKA71" sum="100" no="6" type="1" cards=""/>
+   <action player="anhanga" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">DJ C3</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="9" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="400" no="10" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="11" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="12" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816669833">
+  <general>
+   <startdate>2018-01-19 14:14:01</startdate>
+   <players>
+    <player chips="4,840" dealer="0" name="Peon384" win="325" rebuy="0" seat="2" bet="225" addon="0" reg_code="6780120497"/>
+    <player chips="2,034" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="1,638" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="25" addon="0" reg_code=""/>
+    <player chips="1,990" dealer="1" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="2,998" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="125" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="3" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="4" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="5" type="15" cards=""/>
+   <action player="anhanga" sum="100" no="6" type="1" cards=""/>
+   <action player="Peon384" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">DK D5</cards>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="8" type="0" cards=""/>
+   <cards player="no9to5" type="Pocket">X X</cards>
+   <action player="no9to5" sum="0" no="9" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="11" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816669873">
+  <general>
+   <startdate>2018-01-19 14:14:16</startdate>
+   <players>
+    <player chips="5,040" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="125" addon="0" reg_code="6780120497"/>
+    <player chips="2,009" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="225" addon="0" reg_code=""/>
+    <player chips="1,613" dealer="0" name="no9to5" win="0" rebuy="0" seat="5" bet="1,613" addon="0" reg_code=""/>
+    <player chips="1,965" dealer="0" name="CVETANKA71" win="3,601" rebuy="0" seat="6" bet="1,965" addon="0" reg_code=""/>
+    <player chips="2,873" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="2" type="15" cards=""/>
+   <action player="no9to5" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="5" type="15" cards=""/>
+   <action player="Peon384" sum="100" no="6" type="1" cards=""/>
+   <action player="rumguzzler" sum="200" no="7" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="no9to5" type="Pocket">DA CQ</cards>
+   <action player="no9to5" sum="200" no="8" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">H10 C9</cards>
+   <action player="CVETANKA71" sum="1,940" no="9" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">CA C10</cards>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="12" type="0" cards=""/>
+   <action player="no9to5" sum="1,388" no="13" type="7" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C4 D5 S9</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S2</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">H4</cards>
+  </round>
+ </game>
+ <game gamecode="7816669982">
+  <general>
+   <startdate>2018-01-19 14:14:58</startdate>
+   <players>
+    <player chips="4,915" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="1,784" dealer="0" name="rumguzzler" win="700" rebuy="0" seat="3" bet="1,934" addon="0" reg_code=""/>
+    <player chips="3,953" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="325" addon="0" reg_code=""/>
+    <player chips="2,848" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="rumguzzler" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="4" type="15" cards=""/>
+   <action player="rumguzzler" sum="150" no="5" type="1" cards=""/>
+   <action player="CVETANKA71" sum="300" no="6" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S5 H6</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="1,759" no="9" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="10" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670024">
+  <general>
+   <startdate>2018-01-19 14:15:15</startdate>
+   <players>
+    <player chips="4,890" dealer="0" name="Peon384" win="850" rebuy="0" seat="2" bet="925" addon="0" reg_code="6780120497"/>
+    <player chips="2,159" dealer="1" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="3,628" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="175" addon="0" reg_code=""/>
+    <player chips="2,823" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="325" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="4" type="15" cards=""/>
+   <action player="CVETANKA71" sum="150" no="5" type="1" cards=""/>
+   <action player="anhanga" sum="300" no="6" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CK HA</cards>
+   <action player="Peon384" sum="900" no="7" type="23" cards=""/>
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="8" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="10" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670060">
+  <general>
+   <startdate>2018-01-19 14:15:29</startdate>
+   <players>
+    <player chips="5,415" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="325" addon="0" reg_code="6780120497"/>
+    <player chips="2,134" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="25" addon="0" reg_code=""/>
+    <player chips="3,453" dealer="1" name="CVETANKA71" win="850" rebuy="0" seat="6" bet="3,453" addon="0" reg_code=""/>
+    <player chips="2,498" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="175" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="4" type="15" cards=""/>
+   <action player="anhanga" sum="150" no="5" type="1" cards=""/>
+   <action player="Peon384" sum="300" no="6" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="rumguzzler" type="Pocket">X X</cards>
+   <action player="rumguzzler" sum="0" no="7" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="3,428" no="8" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="9" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S7 H7</cards>
+   <action player="Peon384" sum="0" no="10" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670115">
+  <general>
+   <startdate>2018-01-19 14:15:49</startdate>
+   <players>
+    <player chips="5,090" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="175" addon="0" reg_code="6780120497"/>
+    <player chips="2,109" dealer="0" name="rumguzzler" win="0" rebuy="0" seat="3" bet="2,109" addon="0" reg_code=""/>
+    <player chips="3,978" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="2,323" dealer="1" name="anhanga" win="4,418" rebuy="0" seat="8" bet="2,109" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="rumguzzler" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="4" type="15" cards=""/>
+   <action player="Peon384" sum="150" no="5" type="1" cards=""/>
+   <action player="rumguzzler" sum="300" no="6" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="7" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">C10 SJ</cards>
+   <action player="anhanga" sum="300" no="8" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">C4 HQ</cards>
+   <action player="Peon384" sum="0" no="9" type="0" cards=""/>
+   <cards player="rumguzzler" type="Pocket">CJ C9</cards>
+   <action player="rumguzzler" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">SK HJ H9</cards>
+   <action player="rumguzzler" sum="0" no="11" type="4" cards=""/>
+   <action player="anhanga" sum="300" no="12" type="5" cards=""/>
+   <action player="rumguzzler" sum="1,784" no="13" type="23" cards=""/>
+   <action player="anhanga" sum="1,484" no="14" type="3" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">HK</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C5</cards>
+  </round>
+ </game>
+ <game gamecode="7816670187">
+  <general>
+   <startdate>2018-01-19 14:16:20</startdate>
+   <players>
+    <player chips="4,915" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="3,953" dealer="0" name="CVETANKA71" win="75" rebuy="0" seat="6" bet="325" addon="0" reg_code=""/>
+    <player chips="4,632" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="300" no="4" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="5" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">H2 DQ</cards>
+   <action player="Peon384" sum="0" no="6" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670207">
+  <general>
+   <startdate>2018-01-19 14:16:28</startdate>
+   <players>
+    <player chips="4,890" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="325" addon="0" reg_code="6780120497"/>
+    <player chips="4,003" dealer="0" name="CVETANKA71" win="975" rebuy="0" seat="6" bet="625" addon="0" reg_code=""/>
+    <player chips="4,607" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="325" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="150" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">D9 H10</cards>
+   <action player="Peon384" sum="300" no="6" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="150" no="7" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="8" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C2 DA HA</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="4" cards=""/>
+   <action player="anhanga" sum="0" no="10" type="4" cards=""/>
+   <action player="Peon384" sum="0" no="11" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S3</cards>
+   <action player="CVETANKA71" sum="300" no="12" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="13" type="0" cards=""/>
+   <action player="Peon384" sum="0" no="14" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670273">
+  <general>
+   <startdate>2018-01-19 14:16:55</startdate>
+   <players>
+    <player chips="4,565" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="325" addon="0" reg_code="6780120497"/>
+    <player chips="4,653" dealer="1" name="CVETANKA71" win="825" rebuy="0" seat="6" bet="4,653" addon="0" reg_code=""/>
+    <player chips="4,282" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="175" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="150" no="4" type="1" cards=""/>
+   <action player="Peon384" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="4,628" no="6" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">D4 H9</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670337">
+  <general>
+   <startdate>2018-01-19 14:17:19</startdate>
+   <players>
+    <player chips="4,240" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="175" addon="0" reg_code="6780120497"/>
+    <player chips="5,153" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="325" addon="0" reg_code=""/>
+    <player chips="4,107" dealer="1" name="anhanga" win="825" rebuy="0" seat="8" bet="625" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="150" no="4" type="1" cards=""/>
+   <action player="CVETANKA71" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="300" no="6" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">S5 D9</cards>
+   <action player="Peon384" sum="0" no="7" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="8" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H8 SA S3</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="4" cards=""/>
+   <action player="anhanga" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C9</cards>
+   <action player="CVETANKA71" sum="0" no="11" type="4" cards=""/>
+   <action player="anhanga" sum="300" no="12" type="5" cards=""/>
+   <action player="CVETANKA71" sum="0" no="13" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670390">
+  <general>
+   <startdate>2018-01-19 14:17:41</startdate>
+   <players>
+    <player chips="4,065" dealer="1" name="Peon384" win="825" rebuy="0" seat="2" bet="325" addon="0" reg_code="6780120497"/>
+    <player chips="4,828" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="175" addon="0" reg_code=""/>
+    <player chips="4,607" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="325" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="150" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C8 SA</cards>
+   <action player="Peon384" sum="300" no="6" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="7" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">SQ D9</cards>
+   <action player="anhanga" sum="0" no="8" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DJ SK SJ</cards>
+   <action player="anhanga" sum="0" no="9" type="4" cards=""/>
+   <action player="Peon384" sum="0" no="10" type="4" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D2</cards>
+   <action player="anhanga" sum="0" no="11" type="4" cards=""/>
+   <action player="Peon384" sum="0" no="12" type="4" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D4</cards>
+   <action player="anhanga" sum="0" no="13" type="4" cards=""/>
+   <action player="Peon384" sum="0" no="14" type="4" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670465">
+  <general>
+   <startdate>2018-01-19 14:18:09</startdate>
+   <players>
+    <player chips="4,565" dealer="0" name="Peon384" win="1,275" rebuy="0" seat="2" bet="4,565" addon="0" reg_code="6780120497"/>
+    <player chips="4,653" dealer="1" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="25" addon="0" reg_code=""/>
+    <player chips="4,282" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="625" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="150" no="4" type="1" cards=""/>
+   <action player="Peon384" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="6" type="0" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="150" no="7" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">DA SA</cards>
+   <action player="Peon384" sum="600" no="8" type="23" cards=""/>
+   <action player="anhanga" sum="300" no="9" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DK C5 HQ</cards>
+   <action player="anhanga" sum="0" no="10" type="4" cards=""/>
+   <action player="Peon384" sum="3,940" no="11" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="12" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670523">
+  <general>
+   <startdate>2018-01-19 14:18:31</startdate>
+   <players>
+    <player chips="5,215" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="175" addon="0" reg_code="6780120497"/>
+    <player chips="4,628" dealer="0" name="CVETANKA71" win="375" rebuy="0" seat="6" bet="325" addon="0" reg_code=""/>
+    <player chips="3,657" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="150" no="4" type="1" cards=""/>
+   <action player="CVETANKA71" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C3 H2</cards>
+   <action player="Peon384" sum="0" no="7" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670558">
+  <general>
+   <startdate>2018-01-19 14:18:46</startdate>
+   <players>
+    <player chips="5,040" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="325" addon="0" reg_code="6780120497"/>
+    <player chips="4,828" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="1,225" addon="0" reg_code=""/>
+    <player chips="3,632" dealer="0" name="anhanga" win="2,775" rebuy="0" seat="8" bet="1,225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="150" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="300" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">C10 H9</cards>
+   <action player="Peon384" sum="300" no="6" type="3" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">H5 S5</cards>
+   <action player="CVETANKA71" sum="150" no="7" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">D6 H6</cards>
+   <action player="anhanga" sum="0" no="8" type="4" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C4 SQ D7</cards>
+   <action player="CVETANKA71" sum="300" no="9" type="5" cards=""/>
+   <action player="anhanga" sum="300" no="10" type="3" cards=""/>
+   <action player="Peon384" sum="0" no="11" type="0" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">CQ</cards>
+   <action player="CVETANKA71" sum="300" no="12" type="5" cards=""/>
+   <action player="anhanga" sum="300" no="13" type="3" cards=""/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S10</cards>
+   <action player="CVETANKA71" sum="300" no="14" type="5" cards=""/>
+   <action player="anhanga" sum="300" no="15" type="3" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670640">
+  <general>
+   <startdate>2018-01-19 14:19:19</startdate>
+   <players>
+    <player chips="4,715" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="425" addon="0" reg_code="6780120497"/>
+    <player chips="3,603" dealer="1" name="CVETANKA71" win="1,075" rebuy="0" seat="6" bet="3,603" addon="0" reg_code=""/>
+    <player chips="5,182" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="200" no="4" type="1" cards=""/>
+   <action player="Peon384" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="3,578" no="6" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">SQ S6</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670678">
+  <general>
+   <startdate>2018-01-19 14:19:33</startdate>
+   <players>
+    <player chips="4,290" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="225" addon="0" reg_code="6780120497"/>
+    <player chips="4,253" dealer="0" name="CVETANKA71" win="475" rebuy="0" seat="6" bet="425" addon="0" reg_code=""/>
+    <player chips="4,957" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="4" type="1" cards=""/>
+   <action player="CVETANKA71" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">D10 H6</cards>
+   <action player="Peon384" sum="0" no="7" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670715">
+  <general>
+   <startdate>2018-01-19 14:19:50</startdate>
+   <players>
+    <player chips="4,065" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="4,503" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="225" addon="0" reg_code=""/>
+    <player chips="4,932" dealer="0" name="anhanga" win="475" rebuy="0" seat="8" bet="425" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="200" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">H4 C9</cards>
+   <action player="Peon384" sum="0" no="6" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="0" no="7" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670747">
+  <general>
+   <startdate>2018-01-19 14:20:02</startdate>
+   <players>
+    <player chips="4,040" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="425" addon="0" reg_code="6780120497"/>
+    <player chips="4,278" dealer="1" name="CVETANKA71" win="1,075" rebuy="0" seat="6" bet="4,278" addon="0" reg_code=""/>
+    <player chips="5,182" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="200" no="4" type="1" cards=""/>
+   <action player="Peon384" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="4,253" no="6" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">C4 S4</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670797">
+  <general>
+   <startdate>2018-01-19 14:20:24</startdate>
+   <players>
+    <player chips="3,615" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="225" addon="0" reg_code="6780120497"/>
+    <player chips="4,928" dealer="0" name="CVETANKA71" win="475" rebuy="0" seat="6" bet="425" addon="0" reg_code=""/>
+    <player chips="4,957" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="4" type="1" cards=""/>
+   <action player="CVETANKA71" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">S6 D7</cards>
+   <action player="Peon384" sum="0" no="7" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670826">
+  <general>
+   <startdate>2018-01-19 14:20:34</startdate>
+   <players>
+    <player chips="3,390" dealer="1" name="Peon384" win="2,075" rebuy="0" seat="2" bet="1,625" addon="0" reg_code="6780120497"/>
+    <player chips="5,178" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="825" addon="0" reg_code=""/>
+    <player chips="4,932" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="425" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="200" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">CA D8</cards>
+   <action player="Peon384" sum="800" no="6" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="600" no="7" type="3" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="8" type="0" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D7 H5 DA</cards>
+   <action player="CVETANKA71" sum="0" no="9" type="4" cards=""/>
+   <action player="Peon384" sum="800" no="10" type="5" cards=""/>
+   <action player="CVETANKA71" sum="0" no="11" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670905">
+  <general>
+   <startdate>2018-01-19 14:21:02</startdate>
+   <players>
+    <player chips="4,640" dealer="0" name="Peon384" win="0" rebuy="0" seat="2" bet="425" addon="0" reg_code="6780120497"/>
+    <player chips="4,353" dealer="1" name="CVETANKA71" win="1,075" rebuy="0" seat="6" bet="1,625" addon="0" reg_code=""/>
+    <player chips="4,507" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="3" type="15" cards=""/>
+   <action player="anhanga" sum="200" no="4" type="1" cards=""/>
+   <action player="Peon384" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="CVETANKA71" type="Pocket">X X</cards>
+   <action player="CVETANKA71" sum="1,600" no="6" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="7" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">D10 D3</cards>
+   <action player="Peon384" sum="0" no="8" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816670937">
+  <general>
+   <startdate>2018-01-19 14:21:14</startdate>
+   <players>
+    <player chips="4,215" dealer="0" name="Peon384" win="8,455" rebuy="0" seat="2" bet="4,215" addon="0" reg_code="6780120497"/>
+    <player chips="5,003" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="5,403" addon="0" reg_code=""/>
+    <player chips="4,282" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="25" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="CVETANKA71" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="3" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="4" type="1" cards=""/>
+   <action player="CVETANKA71" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="6" type="0" cards=""/>
+   <cards player="Peon384" type="Pocket">HK CK</cards>
+   <action player="Peon384" sum="800" no="7" type="23" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">S8 CJ</cards>
+   <action player="CVETANKA71" sum="4,978" no="8" type="23" cards=""/>
+   <action player="Peon384" sum="3,390" no="9" type="7" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">C5 HA S9</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S4</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">DK</cards>
+  </round>
+ </game>
+ <game gamecode="7816671026">
+  <general>
+   <startdate>2018-01-19 14:21:46</startdate>
+   <players>
+    <player chips="8,455" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="25" addon="0" reg_code="6780120497"/>
+    <player chips="788" dealer="0" name="CVETANKA71" win="0" rebuy="0" seat="6" bet="788" addon="0" reg_code=""/>
+    <player chips="4,257" dealer="0" name="anhanga" win="1,601" rebuy="0" seat="8" bet="788" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="CVETANKA71" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="3" type="15" cards=""/>
+   <action player="CVETANKA71" sum="200" no="4" type="1" cards=""/>
+   <action player="anhanga" sum="400" no="5" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">S7 H4</cards>
+   <action player="Peon384" sum="0" no="6" type="0" cards=""/>
+   <cards player="CVETANKA71" type="Pocket">H9 CQ</cards>
+   <action player="CVETANKA71" sum="563" no="7" type="7" cards=""/>
+   <cards player="anhanga" type="Pocket">S9 H3</cards>
+   <action player="anhanga" sum="363" no="8" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S3 S10 D2</cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H6</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">S8</cards>
+  </round>
+ </game>
+ <game gamecode="7816671108">
+  <general>
+   <startdate>2018-01-19 14:22:10</startdate>
+   <players>
+    <player chips="8,430" dealer="0" name="Peon384" win="450" rebuy="0" seat="2" bet="425" addon="0" reg_code="6780120497"/>
+    <player chips="5,070" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="225" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="200" no="3" type="1" cards=""/>
+   <action player="Peon384" sum="400" no="4" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">HA S4</cards>
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="0" no="5" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816671125">
+  <general>
+   <startdate>2018-01-19 14:22:17</startdate>
+   <players>
+    <player chips="8,655" dealer="1" name="Peon384" win="0" rebuy="0" seat="2" bet="225" addon="0" reg_code="6780120497"/>
+    <player chips="4,845" dealer="0" name="anhanga" win="450" rebuy="0" seat="8" bet="425" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="3" type="1" cards=""/>
+   <action player="anhanga" sum="400" no="4" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <cards player="Peon384" type="Pocket">D7 C3</cards>
+   <action player="Peon384" sum="0" no="5" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816671156">
+  <general>
+   <startdate>2018-01-19 14:22:25</startdate>
+   <players>
+    <player chips="8,430" dealer="0" name="Peon384" win="1,650" rebuy="0" seat="2" bet="1,225" addon="0" reg_code="6780120497"/>
+    <player chips="5,070" dealer="1" name="anhanga" win="0" rebuy="0" seat="8" bet="825" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="anhanga" sum="25" no="1" type="15" cards=""/>
+   <action player="Peon384" sum="25" no="2" type="15" cards=""/>
+   <action player="anhanga" sum="200" no="3" type="1" cards=""/>
+   <action player="Peon384" sum="400" no="4" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="anhanga" type="Pocket">X X</cards>
+   <action player="anhanga" sum="200" no="5" type="3" cards=""/>
+   <cards player="Peon384" type="Pocket">H8 HQ</cards>
+   <action player="Peon384" sum="800" no="6" type="23" cards=""/>
+   <action player="anhanga" sum="400" no="7" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H4 S5 H10</cards>
+   <action player="Peon384" sum="400" no="8" type="5" cards=""/>
+   <action player="anhanga" sum="0" no="9" type="0" cards=""/>
+  </round>
+ </game>
+ <game gamecode="7816671194">
+  <general>
+   <startdate>2018-01-19 14:22:41</startdate>
+   <players>
+    <player chips="9,255" dealer="1" name="Peon384" win="8,490" rebuy="0" seat="2" bet="9,255" addon="0" reg_code="6780120497"/>
+    <player chips="4,245" dealer="0" name="anhanga" win="0" rebuy="0" seat="8" bet="4,245" addon="0" reg_code=""/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="Peon384" sum="25" no="1" type="15" cards=""/>
+   <action player="anhanga" sum="25" no="2" type="15" cards=""/>
+   <action player="Peon384" sum="200" no="3" type="1" cards=""/>
+   <action player="anhanga" sum="400" no="4" type="2" cards=""/>
+  </round>
+  <round no="1">
+   <cards player="Peon384" type="Pocket">SA SJ</cards>
+   <action player="Peon384" sum="800" no="5" type="23" cards=""/>
+   <cards player="anhanga" type="Pocket">CA H9</cards>
+   <action player="anhanga" sum="400" no="6" type="3" cards=""/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H10 H3 HA</cards>
+   <action player="anhanga" sum="0" no="7" type="4" cards=""/>
+   <action player="Peon384" sum="8,430" no="8" type="5" cards=""/>
+   <action player="anhanga" sum="3,420" no="9" type="7" cards=""/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">C6</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+  </round>
+ </game>
+</session>

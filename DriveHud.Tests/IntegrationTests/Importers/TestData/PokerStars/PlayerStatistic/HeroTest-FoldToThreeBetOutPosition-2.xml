@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="19558533154">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.25/$0.5</gametype>
+    <tablename>NL Hold’em: $0.25/$0.50 - 6 Seater #3475</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-04-27 21:11:20</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+    <game gamecode="133854678">
+    <general>
+      <startdate>2017-04-28 00:35:35</startdate>
+      <players>
+        <player seat="1" name="AlessandroM0" chips="71.03" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="maka1922" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="yudodis" chips="54.09" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="HeroTest" chips="149.04" dealer="0" win="0" bet="2" rebuy="0" addon="0" />
+        <player seat="5" name="Darth_Maul_Sith" chips="66.61" dealer="0" win="0" bet="51.1" rebuy="0" addon="0" />
+        <player seat="6" name="cfo" chips="57.27" dealer="0" win="102.2" bet="51.1" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="HeroTest" type="1" sum="0.25" cards="" />
+      <action no="2" player="Darth_Maul_Sith" type="2" sum="0.5" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="AlessandroM0">X X</cards>
+      <cards type="Pocket" player="yudodis">X X</cards>
+      <cards type="Pocket" player="HeroTest">X X</cards>
+      <cards type="Pocket" player="Darth_Maul_Sith">X X</cards>
+      <cards type="Pocket" player="cfo">D9 D8</cards>
+      <action no="3" player="cfo" type="3" sum="0.5" cards="" />
+      <action no="4" player="AlessandroM0" type="0" sum="0" cards="" />
+      <action no="5" player="yudodis" type="0" sum="0" cards="" />
+      <action no="6" player="HeroTest" type="23" sum="2" cards="" />
+      <action no="7" player="Darth_Maul_Sith" type="23" sum="6" cards="" />
+      <action no="8" player="cfo" type="3" sum="5.5" cards="" />
+      <action no="9" player="HeroTest" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H8 DK C8</cards>
+      <action no="10" player="Darth_Maul_Sith" type="4" sum="0" cards="" />
+      <action no="11" player="cfo" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S3</cards>
+      <action no="12" player="Darth_Maul_Sith" type="5" sum="6.62" cards="" />
+      <action no="13" player="cfo" type="23" sum="13.24" cards="" />
+      <action no="14" player="Darth_Maul_Sith" type="3" sum="6.62" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">C5</cards>
+      <action no="15" player="Darth_Maul_Sith" type="4" sum="0" cards="" />
+      <action no="16" player="cfo" type="5" sum="31.86" cards="" />
+      <action no="17" player="Darth_Maul_Sith" type="3" sum="31.86" cards="" />
+    </round>
+  </game>
+</session>

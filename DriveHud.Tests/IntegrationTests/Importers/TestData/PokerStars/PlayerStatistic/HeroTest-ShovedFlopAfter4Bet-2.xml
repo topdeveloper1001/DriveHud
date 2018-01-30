@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="270916811468">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.1</gametype>
+    <tablename>NL Hold’em: $0.05/$0.10 - 6 Seater #7108</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-03-01 00:29:28</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="104544808">
+    <general>
+      <startdate>2017-03-01 01:29:11</startdate>
+      <players>
+        <player seat="1" name="AlwaysOnTilt22" chips="19.69" dealer="0" win="0" bet="0.2" rebuy="0" addon="0" />
+        <player seat="2" name="1BoTaNiK1" chips="23.8" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="easymony4u" chips="17.81" dealer="0" win="34.82" bet="17.81" rebuy="0" addon="0" />
+        <player seat="4" name="Bashka" chips="35.29" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="d33m" chips="10" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="HeroTest" chips="20.49" dealer="1" win="2.68" bet="20.49" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="AlwaysOnTilt22" type="1" sum="0.05" cards="" />
+      <action no="2" player="easymony4u" type="2" sum="0.1" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="AlwaysOnTilt22">X X</cards>
+      <cards type="Pocket" player="easymony4u">CA D4</cards>
+      <cards type="Pocket" player="Bashka">X X</cards>
+      <cards type="Pocket" player="d33m">X X</cards>
+      <cards type="Pocket" player="HeroTest">CK SK</cards>
+      <action no="3" player="Bashka" type="0" sum="0" cards="" />
+      <action no="4" player="d33m" type="0" sum="0" cards="" />
+      <action no="5" player="HeroTest" type="23" sum="0.2" cards="" />
+      <action no="6" player="AlwaysOnTilt22" type="3" sum="0.15" cards="" />
+      <action no="7" player="easymony4u" type="23" sum="0.8" cards="" />
+      <action no="8" player="HeroTest" type="23" sum="2.8" cards="" />
+      <action no="9" player="AlwaysOnTilt22" type="0" sum="0" cards="" />
+      <action no="10" player="easymony4u" type="3" sum="2" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">DQ H8 HQ</cards>
+      <action no="11" player="easymony4u" type="4" sum="0" cards="" />
+      <action no="12" player="HeroTest" type="5" sum="2.1" cards="" />
+      <action no="13" player="easymony4u" type="23" sum="11.78" cards="" />
+      <action no="14" player="HeroTest" type="23" sum="17.69" cards="" />
+      <action no="15" player="easymony4u" type="3" sum="3.23" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">DA</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">S5</cards>
+    </round>
+  </game>
+</session>

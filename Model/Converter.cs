@@ -15,6 +15,7 @@ using Model.Extensions;
 using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Players;
 using Card = HandHistories.Objects.Cards.Card;
+using DriveHud.Common.Log;
 
 namespace Model.Importer
 {
@@ -313,7 +314,20 @@ namespace Model.Importer
             return equity;
         }
 
-        public static decimal CalculateAllInEquity(HandHistory hand, Playerstatistic stat)
+        public static bool CanAllInEquity(HandHistory hand, Playerstatistic stat, out HandAction lastStreetAction)
+        {
+            var lastHeroStreetAction = hand.HandActions
+                .LastOrDefault(x => x.PlayerName == stat.PlayerName
+                                    && x.Street >= Street.Preflop
+                                    && x.Street <= Street.River);
+
+            lastStreetAction = lastHeroStreetAction;
+
+            return lastHeroStreetAction != null && !lastHeroStreetAction.IsFold && lastHeroStreetAction.Street != Street.River &&
+                hand.HandActions.Any(x => x.Street == lastHeroStreetAction.Street && (x.IsAllInAction || x.IsAllIn));
+        }
+
+        public static Dictionary<string, decimal> CalculateAllInEquity(HandHistory hand, Playerstatistic stat)
         {
             // last hero street action
             var lastHeroStreetAction = hand.HandActions
@@ -321,21 +335,16 @@ namespace Model.Importer
                                     && x.Street >= Street.Preflop
                                     && x.Street <= Street.River);
 
-            if (lastHeroStreetAction == null || lastHeroStreetAction.IsFold || lastHeroStreetAction.Street == Street.River)
+            if (lastHeroStreetAction == null)
             {
-                return 0m;
-            }
-
-            if (!hand.HandActions.Where(x => x.Street == lastHeroStreetAction.Street).Any(x => x.IsAllInAction || x.IsAllIn))
-            {
-                return 0m;
+                return null;
             }
 
             var currentPlayer = hand.Players.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
 
             if (currentPlayer == null || !currentPlayer.hasHoleCards)
             {
-                return 0m;
+                return null;
             }
 
             var activePlayers = hand.Players.Where(p => hand.HandActions.Any(x => p.PlayerName == x.PlayerName))
@@ -343,21 +352,21 @@ namespace Model.Importer
 
             if (activePlayers.Count() < 2)
             {
-                return 0m;
+                return null;
             }
 
-            var cards = activePlayers.Select(x => x.HoleCards).ToArray();
+            var cards = activePlayers.Select((x, i) => new { x.HoleCards, x.PlayerName, Index = i }).ToArray();
 
             int count = cards.Count();
-            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer.HoleCards);
+
             // something went wrong
-            if (count == 0 || targetPlayerIndex < 0)
+            if (count == 0 || !cards.Any(x => x.PlayerName == stat.PlayerName))
             {
                 LogProvider.Log.Debug($"Wasn't able to calculate AllIn equity for hand {hand.HandId}. Hand date: {hand.DateOfHandUtc}. HandHistory:{Environment.NewLine}{hand.FullHandHistoryText}");
-                return 0;
+                return null;
             }
 
-            decimal equity = 0;
+            var allInEquity = new Dictionary<string, decimal>();
 
             try
             {
@@ -368,36 +377,53 @@ namespace Model.Importer
                       ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street)
                       : hand.CommunityCards;
 
-                if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.Count <= 2))
+                if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.HoleCards.Count <= 2))
                 {
-                    long[] wins = new long[count];
-                    long[] losses = new long[count];
-                    long[] ties = new long[count];
+                    var wins = new long[count];
+                    var losses = new long[count];
+                    var ties = new long[count];
                     long totalhands = 0;
 
-
-                    Hand.HandWinOdds(cards.Select(x => x.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
+                    Hand.HandWinOdds(cards.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
 
                     if (totalhands != 0)
                     {
-                        equity = (decimal)(wins[targetPlayerIndex] + ties[targetPlayerIndex] / 2.0) / totalhands;
+                        for (var i = 0; i < wins.Length; i++)
+                        {
+                            var playerCards = cards.FirstOrDefault(x => x.Index == i);
+
+                            if (playerCards != null && !allInEquity.ContainsKey(playerCards.PlayerName))
+                            {
+                                var equity = (decimal)(wins[i] + ties[i] / 2.0) / totalhands;
+                                allInEquity.Add(playerCards.PlayerName, equity);
+                            }
+                        }
                     }
                 }
-                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && cards.All(x => x.Count >= 2 && x.Count < 5))
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && cards.All(x => x.HoleCards.Count >= 2 && x.HoleCards.Count < 5))
                 {
-                    OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
-                    var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
+                    var calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
 
-                    equity = (decimal)eq[targetPlayerIndex].TotalEq / 100;
+                    var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.HoleCards.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
+
+                    for (var i = 0; i < eq.Length; i++)
+                    {
+                        var playerCards = cards.FirstOrDefault(x => x.Index == i);
+
+                        if (playerCards != null && !allInEquity.ContainsKey(playerCards.PlayerName))
+                        {
+                            var equity = (decimal)eq[i].TotalEq / 100;
+                            allInEquity.Add(playerCards.PlayerName, equity);
+                        }
+                    }
                 }
-
             }
             catch (Exception ex)
             {
                 LogProvider.Log.Error(ex);
             }
 
-            return equity;
+            return allInEquity;
         }
 
         public static string ActionToString(HandActionType type)
@@ -435,6 +461,8 @@ namespace Model.Importer
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
             HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName
+                                                                && x.HandActionType != HandActionType.ANTE
+                                                                && x.HandActionType != HandActionType.POSTS
                                                                 && x.HandActionType != HandActionType.SMALL_BLIND
                                                                 && x.HandActionType != HandActionType.BIG_BLIND);
             if (firstPlayerAction == null)
@@ -446,7 +474,9 @@ namespace Model.Importer
 
             IEnumerable<HandAction> actions = preflopHandActions
                                                     .Take(indexOfFirstPlayerAction)
-                                                    .Where(x => x.HandActionType != HandActionType.SMALL_BLIND
+                                                    .Where(x => x.HandActionType != HandActionType.ANTE
+                                                            && x.HandActionType != HandActionType.POSTS
+                                                            && x.HandActionType != HandActionType.SMALL_BLIND
                                                             && x.HandActionType != HandActionType.BIG_BLIND);
 
             if (actions.Any(x => x.IsRaise()))
@@ -515,7 +545,7 @@ namespace Model.Importer
             if (tournamentName.IndexOf("Triple-Up", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.TripleUp;
-            }     
+            }
 
             return STTTypes.Normal;
         }

@@ -120,6 +120,15 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+        protected virtual bool DoDelayBeforeImport
+        {
+            get
+            {
+                return true;
+
+            }
+        }
+
         #region General Table Data
 
         public uint Uid
@@ -846,15 +855,30 @@ namespace DriveHUD.Importers.Bovada
 
         protected virtual void ParseStageInfo(BovadaCommandDataObject cmdObj)
         {
-            if (CurrentHandNumber == cmdObj.stageNo)
-            {
-                return;
-            }
-
             CurrentHandNumber = cmdObj.stageNo;
 
             if (!IsZonePokerTable)
             {
+                // move all player add/remove commands to next hand
+                var playerAddRemoveCommands = commands
+                    .Where(x => x.CommandCodeEnum == CommandCodeEnum.PlayerAdded || x.CommandCodeEnum == CommandCodeEnum.PlayerRemoved)
+                    .ToArray();
+
+                playerAddRemoveCommands.ForEach(x =>
+                {
+                    if (x.CommandObject is PlayerAdded)
+                    {
+                        ((PlayerAdded)x.CommandObject).Previous = true;
+                    }
+
+                    if (x.CommandObject is PlayerRemoved)
+                    {
+                        ((PlayerRemoved)x.CommandObject).Previous = true;
+                    }
+
+                    middleHandCommands.Add(x);
+                });
+
                 ClearInfo();
             }
             else
@@ -891,7 +915,7 @@ namespace DriveHUD.Importers.Bovada
         protected virtual void ImportHand(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
         {
             // wait for tournament results
-            if (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG)
+            if (DoDelayBeforeImport && (gameInfo.GameFormat == GameFormat.MTT || gameInfo.GameFormat == GameFormat.SnG))
             {
                 importHandResetEvent.Wait(delayBeforeImport);
 
@@ -961,7 +985,7 @@ namespace DriveHUD.Importers.Bovada
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
 
-                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero);
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero, result.Source.HandId);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }

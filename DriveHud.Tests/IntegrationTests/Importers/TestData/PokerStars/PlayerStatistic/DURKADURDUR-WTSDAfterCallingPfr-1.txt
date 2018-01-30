@@ -1,0 +1,42 @@
+PokerStars Game #47181748468:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:39:22 ET
+Table 'Lonnrot III' 6-max Seat #5 is the button
+Seat 1: sexygee ($209.65 in chips) 
+Seat 2: Pappe_Ruk ($242.20 in chips) 
+Seat 3: DURKADURDUR ($200 in chips) 
+Seat 4: depomp ($254 in chips) 
+Seat 5: rivichico ($714.65 in chips) 
+Seat 6: dimsumboy ($261.35 in chips) 
+dimsumboy: posts small blind $1
+sexygee: posts big blind $2
+*** HOLE CARDS ***
+Pappe_Ruk: raises $4 to $6
+DURKADURDUR: calls $6
+depomp: folds 
+rivichico: folds 
+dimsumboy: folds 
+sexygee: folds 
+*** FLOP *** [2c 3h 5d]
+Pappe_Ruk: bets $10
+DURKADURDUR: calls $10
+*** TURN *** [2c 3h 5d] [Ad]
+Pappe_Ruk: checks 
+DURKADURDUR: bets $30
+Pappe_Ruk: calls $30
+*** RIVER *** [2c 3h 5d Ad] [Kh]
+Pappe_Ruk: checks 
+DURKADURDUR: bets $61
+Pappe_Ruk: calls $61
+*** SHOW DOWN ***
+DURKADURDUR: shows [4d 4h] (a straight, Ace to Five)
+Pappe_Ruk: mucks hand 
+DURKADURDUR collected $214 from pot
+*** SUMMARY ***
+Total pot $217 | Rake $3 
+Board [2c 3h 5d Ad Kh]
+Seat 1: sexygee (big blind) folded before Flop
+Seat 2: Pappe_Ruk mucked
+Seat 3: DURKADURDUR showed [4d 4h] and won ($214) with a straight, Ace to Five
+Seat 4: depomp folded before Flop (didn't bet)
+Seat 5: rivichico (button) folded before Flop (didn't bet)
+Seat 6: dimsumboy (small blind) folded before Flop
+

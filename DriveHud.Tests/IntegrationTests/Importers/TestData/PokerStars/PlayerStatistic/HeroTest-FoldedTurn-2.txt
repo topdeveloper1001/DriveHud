@@ -1,0 +1,37 @@
+PokerStars Game #47184996690:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:28:07 ET
+Table 'Lonnrot III' 6-max Seat #6 is the button
+Seat 1: sexygee ($372.20 in chips) 
+Seat 3: HeroTest ($433.85 in chips) 
+Seat 4: botano ($106 in chips) 
+Seat 5: dajatt13 ($239.30 in chips) 
+Seat 6: FrAnWaN ($255.50 in chips) 
+sexygee: posts small blind $1
+spacecakezzz: is sitting out 
+HeroTest: posts big blind $2
+*** HOLE CARDS ***
+spacecakezzz leaves the table
+botano: folds 
+dajatt13: raises $4 to $6
+FrAnWaN: calls $6
+sexygee: calls $5
+HeroTest: calls $4
+*** FLOP *** [9h 2d Qh]
+sexygee: bets $16
+HeroTest: raises $32 to $48
+dajatt13: folds 
+FrAnWaN: folds 
+sexygee: calls $32
+*** TURN *** [9h 2d Qh] [Kh]
+sexygee: bets $82
+HeroTest: folds 
+Uncalled bet ($82) returned to sexygee
+sexygee collected $118 from pot
+*** SUMMARY ***
+Total pot $120 | Rake $2 
+Board [9h 2d Qh Kh]
+Seat 1: sexygee (small blind) collected ($118)
+Seat 3: HeroTest (big blind) folded on the Turn
+Seat 4: botano folded before Flop (didn't bet)
+Seat 5: dajatt13 folded on the Flop
+Seat 6: FrAnWaN (button) folded on the Flop
+

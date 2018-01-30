@@ -1,0 +1,38 @@
+PokerStars Game #47185231606:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:36:26 ET
+Table 'Triton III' 6-max Seat #4 is the button
+Seat 1: Cardsdevil27 ($87.80 in chips) 
+Seat 2: Fierytycoon ($200 in chips) 
+Seat 4: thomaswkm ($458.05 in chips) 
+Seat 5: DURKADURDUR ($254.30 in chips) 
+Seat 6: FrAnWaN ($388.20 in chips) 
+DURKADURDUR: posts small blind $1
+FrAnWaN: posts big blind $2
+Jetize: sits out 
+*** HOLE CARDS ***
+Cardsdevil27: folds 
+Fierytycoon: folds 
+thomaswkm: folds 
+DURKADURDUR: raises $4 to $6
+FrAnWaN: calls $4
+*** FLOP *** [9h Js 7d]
+DURKADURDUR: checks 
+FrAnWaN: checks 
+*** TURN *** [9h Js 7d] [Kc]
+DURKADURDUR: bets $8
+FrAnWaN: calls $8
+*** RIVER *** [9h Js 7d Kc] [9s]
+DURKADURDUR: checks 
+FrAnWaN: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [5s 6s] (a pair of Nines)
+FrAnWaN: shows [4d Kd] (two pair, Kings and Nines)
+FrAnWaN collected $26.65 from pot
+*** SUMMARY ***
+Total pot $28 | Rake $1.35 
+Board [9h Js 7d Kc 9s]
+Seat 1: Cardsdevil27 folded before Flop (didn't bet)
+Seat 2: Fierytycoon folded before Flop (didn't bet)
+Seat 4: thomaswkm (button) folded before Flop (didn't bet)
+Seat 5: DURKADURDUR (small blind) showed [5s 6s] and lost with a pair of Nines
+Seat 6: FrAnWaN (big blind) showed [4d Kd] and won ($26.65) with two pair, Kings and Nines
+

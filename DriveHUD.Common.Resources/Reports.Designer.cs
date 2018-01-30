@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5-Bet%.
+        /// </summary>
+        internal static string Reports_Column_5Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_5Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AF.
         /// </summary>
         internal static string Reports_Column_AF {
@@ -268,11 +277,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Flop when Checked to SRP%.
+        /// </summary>
+        internal static string Reports_Column_BetFlopWhenCheckedToSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetFlopWhenCheckedToSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet/fold flop when PFR raiser%.
         /// </summary>
         internal static string Reports_Column_BetFoldFlopPfrRaiser {
             get {
                 return ResourceManager.GetString("Reports_Column_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet River on BX Line%.
+        /// </summary>
+        internal static string Reports_Column_BetRiverOnBXLine {
+            get {
+                return ResourceManager.GetString("Reports_Column_BetRiverOnBXLine", resourceCulture);
             }
         }
         
@@ -318,6 +345,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_Buyin {
             get {
                 return ResourceManager.GetString("Reports_Column_Buyin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-bet%.
+        /// </summary>
+        internal static string Reports_Column_CalledCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Turn Check-Raise %.
+        /// </summary>
+        internal static string Reports_Column_CalledTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet IP%.
+        /// </summary>
+        internal static string Reports_Column_CallFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop C-Bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_CallFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call River Raise%.
+        /// </summary>
+        internal static string Reports_Column_CallRiverRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallRiverRaise", resourceCulture);
             }
         }
         
@@ -412,11 +484,74 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Calls Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndCallOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndCallOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Fold to Turn Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and Raises Turn Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndRaiseOnTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndRaiseOnTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/C OOP on Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndXCOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndXCOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checks Flop as PFR and X/F OOP on Turn%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise%.
         /// </summary>
         internal static string Reports_Column_CheckRaise {
             get {
                 return ResourceManager.GetString("Reports_Column_CheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise Flop C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_CheckRaisedFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckRaisedFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check River after BB Line%.
+        /// </summary>
+        internal static string Reports_Column_CheckRiverAfterBBLine {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckRiverAfterBBLine", resourceCulture);
             }
         }
         
@@ -547,6 +682,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet in 3-Bet pot%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-bet IP%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Donk Bet%.
         /// </summary>
         internal static string Reports_Column_DonkBet {
@@ -619,6 +781,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_FlopBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBetSizeTwoThirdsOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flop Check Behind%.
+        /// </summary>
+        internal static string Reports_Column_FlopCheckBehind {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopCheckBehind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FlopCheckRaise {
@@ -646,11 +871,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet IP %.
+        /// </summary>
+        internal static string Reports_Column_FoldTo3BetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo3BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to 3-Bet OOP %.
+        /// </summary>
+        internal static string Reports_Column_FoldTo3BetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo3BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to 4-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldTo4Bet {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldTo4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to 5-Bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldTo5Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTo5Bet", resourceCulture);
             }
         }
         
@@ -673,6 +925,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check-Raise &amp; Fold vs. Flop C-bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldToCheckRaiseVsFlopCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Donk Bet %.
+        /// </summary>
+        internal static string Reports_Column_FoldToDonkBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDonkBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel%.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrel {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrell in 3-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrelIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrelIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Flop C-bet%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopCBet {
@@ -682,7 +970,34 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Flop Raise%.
+        ///   Looks up a localized string similar to Fold to Flop C-Bet IP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCBetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCBetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop C-Bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCBetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Check-Raise%.
+        /// </summary>
+        internal static string Reports_Column_FoldToFlopCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToFlopCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Flop Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToFlopRaise {
             get {
@@ -691,7 +1006,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To River C-Bet%.
+        ///   Looks up a localized string similar to Fold to River C-Bet%.
         /// </summary>
         internal static string Reports_Column_FoldToRiverCBet {
             get {
@@ -700,7 +1015,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Squeeze%.
+        ///   Looks up a localized string similar to Fold to River Check-Raise%.
+        /// </summary>
+        internal static string Reports_Column_FoldToRiverCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToRiverCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Squeeze%.
         /// </summary>
         internal static string Reports_Column_FoldToSqueez {
             get {
@@ -709,11 +1033,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold To Turn Raise%.
+        ///   Looks up a localized string similar to Fold to Turn Check-Raise%.
+        /// </summary>
+        internal static string Reports_Column_FoldToTurnCheckRaise {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Turn Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToTurnRaise {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToTurnRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold Turn%.
+        /// </summary>
+        internal static string Reports_Column_FoldTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldTurn", resourceCulture);
             }
         }
         
@@ -979,6 +1321,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raise Flop C-Bet 3-Bet pot%.
+        /// </summary>
+        internal static string Reports_Column_RaiseFlopCBetIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_RaiseFlopCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raise Frequency Factor%.
         /// </summary>
         internal static string Reports_Column_RaiseFreqFactor {
@@ -1033,6 +1384,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River Bet %.
+        /// </summary>
+        internal static string Reports_Column_RiverBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_RiverBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Call Efficiency.
+        /// </summary>
+        internal static string Reports_Column_RiverCallEffeciency {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCallEffeciency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Check/Call%.
+        /// </summary>
+        internal static string Reports_Column_RiverCheckCall {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCheckCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Check/Fold%.
+        /// </summary>
+        internal static string Reports_Column_RiverCheckFold {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCheckFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ROI%.
         /// </summary>
         internal static string Reports_Column_ROI {
@@ -1074,6 +1470,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_SessionStart {
             get {
                 return ResourceManager.GetString("Reports_Column_SessionStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shove flop after 4-betting pre-flop%.
+        /// </summary>
+        internal static string Reports_Column_ShovedFlopAfter4Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_ShovedFlopAfter4Bet", resourceCulture);
             }
         }
         
@@ -1213,11 +1618,83 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Turn AF.
+        /// </summary>
+        internal static string Reports_Column_TurnAF {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnAF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn AGG%.
         /// </summary>
         internal static string Reports_Column_TurnAgg {
             get {
                 return ResourceManager.GetString("Reports_Column_TurnAgg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Overbet Pot%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeMoreThanOne {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeMoreThanOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/2 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneHalfOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneHalfOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size Pot Size or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneQuarterOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneQuarterOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 1/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeOneThirdOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeOneThirdOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 3/4 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeThreeQuartersOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeThreeQuartersOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet Size 2/3 or less%.
+        /// </summary>
+        internal static string Reports_Column_TurnBetSizeTwoThirdsOrLess {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBetSizeTwoThirdsOrLess", resourceCulture);
             }
         }
         
@@ -1407,6 +1884,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_WTSD {
             get {
                 return ResourceManager.GetString("Reports_Column_WTSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling 3-Bet PF%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterCalling3Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterCalling3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after calling PFR%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterCallingPfr {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterCallingPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after not C-Betting flop as PFR%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterNotCBettingFlopAsPfr {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterNotCBettingFlopAsPfr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% after seeing Turn%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAfterSeeingTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAfterSeeingTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD% as PF 3-Bettor%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAsPF3Bettor {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAsPF3Bettor", resourceCulture);
             }
         }
     }

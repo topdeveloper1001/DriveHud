@@ -1,0 +1,30 @@
+PokerStars Game #47150939251:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:55:59 ET
+Table 'Alzirr IV' 6-max Seat #1 is the button
+Seat 1: stopme10 ($203.65 in chips) 
+Seat 2: DURKADURDUR ($213.50 in chips) 
+Seat 6: maestroB ($50.45 in chips) 
+DURKADURDUR: posts small blind $1
+miss_klick: is sitting out 
+maestroB: posts big blind $2
+*** HOLE CARDS ***
+Mariapigen joins the table at seat #3 
+stopme10: raises $4 to $6
+elseyking joins the table at seat #5 
+DURKADURDUR: raises $14 to $20
+maestroB: raises $30.45 to $50.45 and is all-in
+miss_klick leaves the table
+stopme10: folds 
+DURKADURDUR: calls $30.45
+*** FLOP *** [Ts Qc 7h]
+*** TURN *** [Ts Qc 7h] [4d]
+*** RIVER *** [Ts Qc 7h 4d] [2h]
+*** SHOW DOWN ***
+DURKADURDUR: shows [Tc Td] (three of a kind, Tens)
+maestroB: shows [Ad Ks] (high card Ace)
+DURKADURDUR collected $105.90 from pot
+*** SUMMARY ***
+Total pot $106.90 | Rake $1 
+Board [Ts Qc 7h 4d 2h]
+Seat 1: stopme10 (button) folded before Flop
+Seat 2: DURKADURDUR (small blind) showed [Tc Td] and won ($105.90) with three of a kind, Tens
+Seat 6: maestroB (big blind) showed [Ad Ks] and lost with high card Ace

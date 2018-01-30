@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHUD.API;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
@@ -56,7 +55,6 @@ using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
@@ -86,6 +84,8 @@ namespace DriveHUD.Application.ViewModels
 
         private const int ImportFileUpdateDelay = 750;
 
+        private static readonly object playerAddedLock = new object();
+
         #endregion
 
         #region Constructor
@@ -104,6 +104,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Subscribe(ShowCalculateEquityView);
             eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Subscribe(OnPlayersAdded, ThreadOption.BackgroundThread, false);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
@@ -215,7 +216,143 @@ namespace DriveHUD.Application.ViewModels
 
         #endregion
 
-        #region Methods
+        #region Public methods 
+
+        internal void Load()
+        {
+            var player = StorageModel.PlayerSelectedItem;
+
+            List<Playerstatistic> statistics = new List<Playerstatistic>();
+
+            if (player is PlayerCollectionItem)
+            {
+                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+            }
+            else if (player is AliasCollectionItem)
+            {
+                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+            }
+
+            AddHandTags(statistics);
+
+            if (statistics != null || statistics.Any())
+            {
+                StorageModel.StatisticCollection.Reset(statistics);
+            }
+            else
+            {
+                StorageModel.StatisticCollection.Clear();
+            }
+
+            CreatePositionReport();
+
+            UpdateCurrentView();
+        }
+
+        internal void UpdateHeader()
+        {
+            OnPropertyChanged(nameof(AppStartupHeader));
+        }
+
+        internal async void RebuildStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    LogProvider.Log.Info("Executing statistics rebuild");
+
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RebuildingStatistics"));
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.InitializeProgress(ProgressViewModel.Progress);
+                    playerStatisticReImporter.ReImport();
+
+                    LogProvider.Log.Info("Statistics rebuild has been completed.");
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
+                }
+            });
+
+            Load();
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void RecoverStats()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RecoveringStatistics"));
+
+                    LogProvider.Log.Info("Executing statistics recovering");
+
+                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
+                    playerStatisticReImporter.Recover();
+
+                    LogProvider.Log.Info("Statistics recovering has been completed.");
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Statistics recovering failed.", e);
+                }
+            });
+
+            Load();
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal async void VacuumDatabase()
+        {
+            IsEnabled = false;
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_VacuumingDatabase"));
+
+                    LogProvider.Log.Info("Vacuuming database");
+
+                    dataService.VacuumDatabase();
+
+                    LogProvider.Log.Info("Database has been vacuumed.");
+
+                    Load();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Database vacuuming failed.", e);
+                }
+            });
+
+            ProgressViewModel.IsActive = false;
+            ProgressViewModel.Reset();
+            IsEnabled = true;
+        }
+
+        internal void ShowUpdate()
+        {
+            var updateViewModel = new UpdateViewModel(App.UpdateApplicationInfo);
+            UpdateViewRequest?.Raise(updateViewModel);
+        }
+
+        #endregion
+
+        #region Infrastructure
 
         private void ShowCalculateEquityView(RequestEquityCalculatorEventArgs obj)
         {
@@ -278,37 +415,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        internal void Load()
-        {
-            var player = StorageModel.PlayerSelectedItem;
-
-            List<Playerstatistic> statistics = new List<Playerstatistic>();
-
-            if (player is PlayerCollectionItem)
-            {
-                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
-            }
-            else if (player is AliasCollectionItem)
-            {
-                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
-            }
-
-            AddHandTags(statistics);
-
-            if (statistics != null || statistics.Any())
-            {
-                StorageModel.StatisticCollection.Reset(statistics);
-            }
-            else
-            {
-                StorageModel.StatisticCollection.Clear();
-            }
-
-            CreatePositionReport();
-
-            UpdateCurrentView();
-        }
-
         private void HandleSettingsChangedEvent(SettingsUpdatedEventArgs args)
         {
             if (args.IsUpdatePlayersCollection)
@@ -352,26 +458,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void RefreshData(GameInfo gameInfo = null)
-        {
-            UpdatePlayerList(gameInfo);
-
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name))
-            {
-                App.Current.Dispatcher.Invoke(() =>
-                {
-                    StorageModel.TryLoadHeroPlayer();
-                });
-
-                return;
-            }
-
-            if (gameInfo == null)
-            {
-                UpdateCurrentView();
-            }
-        }
-
         private void OnDataImported(DataImportedEventArgs e)
         {
             try
@@ -382,9 +468,6 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                // need to update UI info
-                RefreshData(e.GameInfo);
-
                 // if no handle available then we don't need to do anything with this data, because hud won't show up
                 if (e.GameInfo.WindowHandle == 0)
                 {
@@ -394,13 +477,6 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     return;
-                }
-
-                var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
-
-                if (report != null)
-                {
-                    ReportGadgetViewModel.ReportSelectedItem = report;
                 }
 
                 var players = e.Players;
@@ -492,7 +568,7 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem);
+                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem && x.GameNumber == e.GameNumber);
 
                     if (playerCacheInfo != null)
                     {
@@ -563,7 +639,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
-                    var playerNotes = dataService.GetPlayerNotes(player.PlayerName, (short)site);
+                    var playerNotes = dataService.GetPlayerNotes(player.PlayerId);
                     playerHudContent.HudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
                     playerHudContent.HudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 
@@ -743,7 +819,40 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        internal async void ImportFromFile()
+        private void OnPlayersAdded(PlayersAddedEventArgs e)
+        {
+            if (e == null || e.AddedPlayers == null || e.AddedPlayers.Length == 0)
+            {
+                return;
+            }
+
+            lock (playerAddedLock)
+            {
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    try
+                    {
+                        foreach (var player in e.AddedPlayers)
+                        {
+                            StorageModel.PlayerCollection.Add(player);
+                        }
+
+                        if (!string.IsNullOrEmpty(StorageModel.PlayerSelectedItem?.Name))
+                        {
+                            return;
+                        }
+
+                        StorageModel.TryLoadHeroPlayer();
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Could not update player list.", ex);
+                    }
+                });
+            }
+        }
+
+        private async void ImportFromFile()
         {
             var openFileDialog = new Microsoft.Win32.OpenFileDialog();
 
@@ -764,7 +873,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                RefreshData();
+                UpdateCurrentView();
+                CreatePositionReport();
             });
 
             ProgressViewModel.IsActive = false;
@@ -772,7 +882,7 @@ namespace DriveHUD.Application.ViewModels
             ProgressViewModel.Reset();
         }
 
-        internal async void ImportFromDirectory()
+        private async void ImportFromDirectory()
         {
             var folderDialog = new FolderBrowserDialog();
 
@@ -801,7 +911,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                RefreshData();
+                UpdateCurrentView();
+                CreatePositionReport();
             });
 
             ProgressViewModel.IsActive = false;
@@ -822,7 +933,7 @@ namespace DriveHUD.Application.ViewModels
             PopupSupportRequest.Raise(new PopupActionNotification() { Title = "DriveHUD Support" });
         }
 
-        internal async void Purge()
+        private async void Purge()
         {
             ProgressViewModel.IsActive = true;
 
@@ -834,42 +945,9 @@ namespace DriveHUD.Application.ViewModels
             Load();
         }
 
-        internal void CreatePositionReport()
+        private void CreatePositionReport()
         {
-            ReportGadgetViewModel.UpdateReport();
-        }
-
-        private void UpdatePlayerList(GameInfo gameInfo)
-        {
-            var isPlayersReloadRequired = gameInfo == null || gameInfo.AddedPlayers == null;
-
-            var players = isPlayersReloadRequired ? dataService.GetPlayersList() : gameInfo.AddedPlayers;
-
-            if (isPlayersReloadRequired)
-            {
-                App.Current.Dispatcher.Invoke(() =>
-                {
-                    var selectedPlayer = StorageModel.PlayerSelectedItem;
-
-                    StorageModel.PlayerCollection.RemoveAll(x => x is PlayerCollectionItem);
-                    StorageModel.PlayerCollection.AddRange(players);
-
-                    if (selectedPlayer is PlayerCollectionItem)
-                    {
-                        StorageModel.PlayerSelectedItem = StorageModel.PlayerCollection.FirstOrDefault(x => x.PlayerId == selectedPlayer.PlayerId);
-                    }
-                });
-            }
-            else
-            {
-                App.Current.Dispatcher.Invoke(() =>
-                {
-                    foreach (var player in players)
-                    {
-                        StorageModel.PlayerCollection.Add(player);
-                    }
-                });
-            }
+            ReportGadgetViewModel?.UpdateReport();
         }
 
         private void SwitchViewModel(EnumViewModelType viewModelType)
@@ -998,106 +1076,6 @@ namespace DriveHUD.Application.ViewModels
         private void Purchase()
         {
             Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("SystemSettings_PricingLink"));
-        }
-
-        internal void UpdateHeader()
-        {
-            OnPropertyChanged(nameof(AppStartupHeader));
-        }
-
-        internal async void RebuildStats()
-        {
-            IsEnabled = false;
-
-            await Task.Run(() =>
-            {
-                try
-                {
-                    LogProvider.Log.Info("Executing statistics rebuild");
-
-                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RebuildingStatistics"));
-
-                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
-                    playerStatisticReImporter.ReImport();
-
-                    LogProvider.Log.Info("Statistics rebuild has been completed.");
-
-                    Load();
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
-                }
-            });
-
-            ProgressViewModel.IsActive = false;
-            ProgressViewModel.Reset();
-            IsEnabled = true;
-        }
-
-        internal async void RecoverStats()
-        {
-            IsEnabled = false;
-
-            await Task.Run(() =>
-            {
-                try
-                {
-                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_RecoveringStatistics"));
-
-                    LogProvider.Log.Info("Executing statistics recovering");
-
-                    var playerStatisticReImporter = ServiceLocator.Current.GetInstance<IPlayerStatisticReImporter>();
-                    playerStatisticReImporter.Recover();
-
-                    LogProvider.Log.Info("Statistics recovering has been completed.");
-
-                    Load();
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, "Statistics recovering failed.", e);
-                }
-            });
-
-            ProgressViewModel.IsActive = false;
-            ProgressViewModel.Reset();
-            IsEnabled = true;
-        }
-
-        internal async void VacuumDatabase()
-        {
-            IsEnabled = false;
-
-            await Task.Run(() =>
-            {
-                try
-                {
-                    ProgressViewModel.Progress.Report(new LocalizableString("Progress_VacuumingDatabase"));
-
-                    LogProvider.Log.Info("Vacuuming database");
-
-                    dataService.VacuumDatabase();
-
-                    LogProvider.Log.Info("Database has been vacuumed.");
-
-                    Load();
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, "Database vacuuming failed.", e);
-                }
-            });
-
-            ProgressViewModel.IsActive = false;
-            ProgressViewModel.Reset();
-            IsEnabled = true;
-        }
-
-        internal void ShowUpdate()
-        {
-            var updateViewModel = new UpdateViewModel(App.UpdateApplicationInfo);
-            UpdateViewRequest?.Raise(updateViewModel);
         }
 
         #endregion
@@ -1463,9 +1441,11 @@ namespace DriveHUD.Application.ViewModels
         #region Commands
 
         public ICommand UpgradeCommand { get; private set; }
+
         public ICommand PurchaseCommand { get; private set; }
 
         public ICommand RadioGroupTab_CommandClick { get; set; }
+
         private void RadioGroupTab_OnClick(object viewModelType)
         {
             SwitchViewModel((EnumViewModelType)viewModelType);
@@ -1476,6 +1456,7 @@ namespace DriveHUD.Application.ViewModels
         private void MenuItemPopupFilter_OnClick(object filterType)
         {
             var type = filterType as FilterDropDownModel;
+
             if (type == null)
             {
                 return;
@@ -1486,12 +1467,15 @@ namespace DriveHUD.Application.ViewModels
                 RadDropDownButtonFilterKeepOpen = false;
                 RadDropDownButtonFilterIsOpen = false;
                 RadDropDownButtonFilterKeepOpen = true;
+
                 var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
+
                 return;
             }
-            EnumDateFiterStruct enumDateFiterStruct = new EnumDateFiterStruct();
-            IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
+            var enumDateFiterStruct = new EnumDateFiterStruct();
+
             switch (type.FilterType)
             {
                 case EnumFilterDropDown.FilterToday:
@@ -1515,7 +1499,6 @@ namespace DriveHUD.Application.ViewModels
                     eventAggregator.GetEvent<DateFilterChangedEvent>().Publish(new DateFilterChangedEventArgs(enumDateFiterStruct));
                     break;
                 case EnumFilterDropDown.FilterCustomDateRange:
-
                     enumDateFiterStruct.EnumDateRange = EnumDateFiterStruct.EnumDateFiter.CustomDateRange;
                     enumDateFiterStruct.DateFrom = CalendarFrom;
                     enumDateFiterStruct.DateTo = CalendarTo;
@@ -1531,19 +1514,28 @@ namespace DriveHUD.Application.ViewModels
                     eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs());
                     break;
             }
-
         }
 
         public ICommand PurgeCommand { get; set; }
+
         public ICommand ImportCommand { get; set; }
+
         public ICommand ImportFromFileCommand { get; set; }
+
         public ICommand ImportFromDirectoryCommand { get; set; }
+
         public ICommand SupportCommand { get; set; }
+
         public ICommand StartHudCommand { get; set; }
+
         public ICommand StopHudCommand { get; set; }
+
         public ICommand CalculateEquityCommand { get; set; }
+
         public ICommand HideEquityCalculatorCommand { get; set; }
+
         public ICommand SettingsCommand { get; set; }
+
         public ICommand AliasMenuCommand { get; set; }
 
         #endregion

@@ -20,9 +20,9 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class SessionsReportCreator : IReportCreator
+    public class SessionsReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -34,7 +34,7 @@ namespace Model.Reports
             var stat = new ReportIndicators();
             var gametypes = new List<string>();
 
-            foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).OrderByDescending(x => x.Time).ToArray())
+            foreach (var playerstatistic in statistics.OrderByDescending(x => x.Time).ToArray())
             {
                 if (stat.Statistics == null || stat.StatisticsCount == 0)
                 {

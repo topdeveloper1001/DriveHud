@@ -135,6 +135,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
 
             var dateFilter = FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault();
+
             if (dateFilter != null)
             {
                 dateFilter.DateFilterType = obj.DateFilterType;

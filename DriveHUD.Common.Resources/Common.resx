@@ -667,34 +667,43 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Table Layout</value>
   </data>
   <data name="Common_HudSideBar_4StatDHBoxTool" xml:space="preserve">
-    <value>4-Stat DH Box</value>
+    <value>4-Stat DH Box
+This is a static box of 4 stats that can be added horizontally or vertically. It's a great tool to make 4 specific stats more visual</value>
   </data>
   <data name="Common_HudSideBar_BumperStickersTool" xml:space="preserve">
-    <value>Bumper Stickers</value>
+    <value>Bumper Stickers
+Adding this element will allow you HUD to show any of the bumper stickers you have programmed. Bumper stickers are badge like elements that appear by a HUD when their sticker is triggered</value>
   </data>
   <data name="Common_HudSideBar_GaugeIndicatorTool" xml:space="preserve">
-    <value>Line Bar Graphs</value>
+    <value>Line Bar Graphs
+This is added to pop-up HUD stats to show a line bar indicator for the stat it's dragged to</value>
   </data>
   <data name="Common_HudSideBar_GraphTool" xml:space="preserve">
-    <value>Graph</value>
+    <value>Graph
+This element will add an in session graph of how much money a player is winning or losing</value>
   </data>
   <data name="Common_HudSideBar_HeatMapTool" xml:space="preserve">
-    <value>Heat Map</value>
+    <value>Heat Map
+You can add this element to any stat or pop-up stat to display a visual hand grid map of how often hands are used for this stat. The more red, the more they have been used</value>
   </data>
   <data name="Common_HudSideBar_PlayerProfileIconTool" xml:space="preserve">
-    <value>Player Profile Icon</value>
+    <value>Player Profile Icon
+This will place an element on your HUD that shows a visual icon that represents what kind of player that player is</value>
   </data>
   <data name="Common_HudSideBar_TextBoxTool" xml:space="preserve">
-    <value>Text Box</value>
+    <value>Text Box
+This element allows you to add any kind of text you may want to have over a stat or HUD element</value>
   </data>
   <data name="Common_HudSideBar_TiltMeterTool" xml:space="preserve">
-    <value>Tilt Meter</value>
+    <value>Tilt Meter
+This element will add a visual indicator that shows when a user is likely tilting or starting to tilt</value>
   </data>
   <data name="Common_HudSideBar_Title" xml:space="preserve">
     <value>HUD Design Elements</value>
   </data>
   <data name="Common_HudSideBar_PlainStatBoxTool" xml:space="preserve">
-    <value>Plain Stat Box</value>
+    <value>Plain Stat Box
+This is the primary HUD element which allows you to add non-pop up stats to your HUD</value>
   </data>
   <data name="Common_Hud_IgnWarning" xml:space="preserve">
     <value>Note: This HUD is for Ignition/Bodog only.</value>
@@ -742,7 +751,8 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Rotate</value>
   </data>
   <data name="Common_HudSideBar_BreakLine" xml:space="preserve">
-    <value>Break Line</value>
+    <value>Break Line
+This will add a line spacer in any pop-up menu. It's used to break up large chunks of data</value>
   </data>
   <data name="Common_Hud_Duplicate" xml:space="preserve">
     <value>Duplicate</value>
@@ -971,5 +981,32 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_GraphsPopup_Title" xml:space="preserve">
     <value>Graphs</value>
+  </data>
+  <data name="Common_RegistrationView_ResetLicenses" xml:space="preserve">
+    <value>Reset licenses</value>
+  </data>
+  <data name="Common_RegistrationView_ResetLicensesFailed" xml:space="preserve">
+    <value>Licenses have not been reset. Please check logs or contact support.</value>
+  </data>
+  <data name="Common_RegistrationView_ResetLicensesSuccess" xml:space="preserve">
+    <value>Licenses have been reset. Please restart DriveHUD.</value>
+  </data>
+  <data name="Common_Hud_DoNotShowLineBarTooltip" xml:space="preserve">
+    <value>Do not show line bar</value>
+  </data>
+  <data name="Common_Hud_ShowLineBarTooltip" xml:space="preserve">
+    <value>Show line bar</value>
+  </data>
+  <data name="Common_TournamentView_TotalMTTs" xml:space="preserve">
+    <value>Total MTT's : </value>
+  </data>
+  <data name="Common_TournamentView_TotalMTTsWon" xml:space="preserve">
+    <value>Total MTT$'s Won : </value>
+  </data>
+  <data name="Common_TournamentView_TotalSnGs" xml:space="preserve">
+    <value>Total S&amp;amp;G's : </value>
+  </data>
+  <data name="Common_TournamentView_TotalSnGsWon" xml:space="preserve">
+    <value>Total S&amp;amp;G$'s Won : </value>
   </data>
 </root>

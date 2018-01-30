@@ -1,0 +1,40 @@
+PokerStars Game #47181032983:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:17:22 ET
+Table 'Triton III' 6-max Seat #1 is the button
+Seat 1: Pappe_Ruk ($296.35 in chips) 
+Seat 2: rivichico ($419 in chips) 
+Seat 3: sexygee ($200 in chips) 
+Seat 4: thomaswkm ($211 in chips) 
+Seat 5: DURKADURDUR ($270.85 in chips) 
+Seat 6: FrAnWaN ($227.60 in chips) 
+rivichico: posts small blind $1
+sexygee: posts big blind $2
+*** HOLE CARDS ***
+thomaswkm: folds 
+DURKADURDUR: raises $4 to $6
+FrAnWaN: calls $6
+Pappe_Ruk: folds 
+rivichico: folds 
+sexygee: folds 
+*** FLOP *** [Js Ah Td]
+DURKADURDUR: checks 
+FrAnWaN: checks 
+*** TURN *** [Js Ah Td] [Kc]
+DURKADURDUR: checks 
+FrAnWaN: checks 
+*** RIVER *** [Js Ah Td Kc] [Tc]
+DURKADURDUR: checks 
+FrAnWaN: checks 
+*** SHOW DOWN ***
+DURKADURDUR: shows [9s 9h] (two pair, Tens and Nines)
+FrAnWaN: mucks hand 
+DURKADURDUR collected $14.25 from pot
+*** SUMMARY ***
+Total pot $15 | Rake $0.75 
+Board [Js Ah Td Kc Tc]
+Seat 1: Pappe_Ruk (button) folded before Flop (didn't bet)
+Seat 2: rivichico (small blind) folded before Flop
+Seat 3: sexygee (big blind) folded before Flop
+Seat 4: thomaswkm folded before Flop (didn't bet)
+Seat 5: DURKADURDUR showed [9s 9h] and won ($14.25) with two pair, Tens and Nines
+Seat 6: FrAnWaN mucked
+

@@ -188,4 +188,81 @@ COLD CALL
   <data name="Message_Migration0022_Title" xml:space="preserve">
     <value>DriveHUD: Action is required</value>
   </data>
+  <data name="Message_Migration0025_Cancel" xml:space="preserve">
+    <value>Don't Rebuild Now</value>
+  </data>
+  <data name="Message_Migration0025_Rebuild" xml:space="preserve">
+    <value>Rebuild stats</value>
+  </data>
+  <data name="Message_Migration0025_Status" xml:space="preserve">
+    <value>Preparing stats ...</value>
+  </data>
+  <data name="Message_Migration0025_Text" xml:space="preserve">
+    <value>New stats have been added to DriveHUD. You'll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (5 - 120 minutes depending on database size), but it isn't mandatory to perform. You can skip it by clicking on Don't Rebuild Now. You can run the rebuild stats function at a later time from the settings menu.
+
+New stats:
+
+    5-Bet%
+    Bet Flop when Checked to SRP%
+    Bet River on BX Line%
+    Call Flop C-Bet IP%
+    Call Flop C-Bet OOP%
+    Call River Raise%
+    Call Turn Check-Raise%
+    Check River after BB Line%
+    Check-Raise &amp; Call vs. Flop C-bet%
+    Check-Raise &amp; Fold vs. Flop C-bet%
+    Check-Raise C-Bet%
+    Checks Flop as PFR and X/C OOP on Turn%
+    Checks Flop as PFR and X/F Turn%
+    Checks Flop as PFR and Calls Turn%
+    Checks Flop as PFR and Fold to Turn Bet%
+    Checks Flop as PFR and Raises Turn Bet%
+    Delayed Turn C-bet in 3-bet pot%
+    Delayed Turn C-bet IP%
+    Delayed Turn C-bet OOP%
+    Flop Bet Size 1/2 or less%
+    Flop Bet Size 1/4 or less%
+    Flop Bet Size 2/3 or less%
+    Flop Bet Size 3/4 or less%
+    Flop Bet Size Pot Size or less%
+    Flop Check Behind%
+    Flop Overbet Pot%
+    Fold to 3-Bet IP %
+    Fold to 3-Bet OOP %
+    Fold to 4-bet%
+    Fold to 5-Bet%
+    Fold to Double Barrel %
+    Fold to Double Barrell in 3-Bet Pot%
+    Fold to Flop C-Bet IP %
+    Fold to Flop C-Bet OOP %
+    Fold to Flop Check-Raise %
+    Fold to Flop Donk Bet %
+    Fold to River Check/Raise%
+    Fold to Turn CheckRaise%
+    Fold Turn%
+    Raise Flop C-Bet 3-bet Pot%
+    River Bet%
+    River Call Effeciency
+    River Check/Call%
+    River Check/Fold%
+    River Overbet Pot%
+    Shove flop after 4-betting pre-flop%
+    Turn AF
+    Turn Bet Size 1/2 or less%
+    Turn Bet Size 1/3 or less%
+    Turn Bet Size 1/4 or less%
+    Turn Bet Size 2/3 or less%
+    Turn Bet Size 3/4 or less%
+    Turn Bet Size Pot Size or less%
+    Turn Overbet Pot%
+    WTSD% after calling 3-Bet PF%
+    WTSD% after calling PFR%
+    WTSD% after not c-betting flop as PFR%
+    WTSD% after seeing Turn%
+    WTSD% as PF 3-Bettor%</value>
+  </data>
+  <data name="Message_Migration0025_Title" xml:space="preserve">
+    <value>DriveHUD: Action is required</value>
+  </data>
 </root>

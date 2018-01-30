@@ -1691,7 +1691,7 @@
                     MaxHeight="260"
                     VerticalAlignment="Stretch"
                     RowHeight="40"
-                    SelectionMode="Single"
+                    SelectionMode="Single"                    
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
                     CanUserReorderColumns="True"
@@ -1708,7 +1708,7 @@
                                 <ItemsPanelTemplate>
                                     <WrapPanel
                                         Orientation="Vertical"
-                                        MaxHeight="470"
+                                        MaxHeight="540"
                                         Background="#181A1D" />
                                 </ItemsPanelTemplate>
                             </telerik:RadContextMenu.ItemsPanel>

@@ -1,0 +1,45 @@
+PokerStars Game #47148020174:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:37:47 ET
+Table 'Tomita' 6-max Seat #4 is the button
+Seat 1: joão DK ($95 in chips) 
+Seat 2: HeroTest ($127.25 in chips) 
+Seat 4: pojkstreck ($79.50 in chips) 
+Seat 5: Pro_Uzbek ($9.55 in chips) 
+Seat 6: positivo5382 ($70.80 in chips) 
+Pro_Uzbek: posts small blind $1
+positivo5382: posts big blind $2
+Many FE: sits out 
+*** HOLE CARDS ***
+joão DK: raises $2 to $4
+HeroTest: calls $4
+pojkstreck: folds 
+Pro_Uzbek: folds 
+positivo5382: calls $2
+*** FLOP *** [7c 3h 3s]
+positivo5382: checks 
+joão DK: bets $6
+HeroTest: calls $6
+positivo5382: raises $6 to $12
+joão DK: calls $6
+HeroTest: calls $6
+*** TURN *** [7c 3h 3s] [5s]
+positivo5382: bets $2
+joão DK: calls $2
+HeroTest: calls $2
+*** RIVER *** [7c 3h 3s 5s] [Qd]
+positivo5382: bets $2
+joão DK: calls $2
+HeroTest: calls $2
+*** SHOW DOWN ***
+positivo5382: shows [4s 4h] (two pair, Fours and Threes)
+joão DK: mucks hand 
+HeroTest: shows [7s 9s] (two pair, Sevens and Threes)
+HeroTest collected $59 from pot
+*** SUMMARY ***
+Total pot $61 | Rake $2 
+Board [7c 3h 3s 5s Qd]
+Seat 1: joão DK mucked
+Seat 2: HeroTest showed [7s 9s] and won ($59) with two pair, Sevens and Threes
+Seat 4: pojkstreck (button) folded before Flop (didn't bet)
+Seat 5: Pro_Uzbek (small blind) folded before Flop
+Seat 6: positivo5382 (big blind) showed [4s 4h] and lost with two pair, Fours and Threes
+

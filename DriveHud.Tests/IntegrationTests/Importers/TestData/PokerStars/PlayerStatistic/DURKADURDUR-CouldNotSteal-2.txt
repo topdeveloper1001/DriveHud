@@ -1,0 +1,18 @@
+PokerStars Game #47147209198:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 4:52:33 ET
+Table 'Vindobona' 6-max Seat #5 is the button
+Seat 2: pepecarlos58 ($235.85 in chips)
+Seat 4: DURKADURDUR ($202 in chips)
+Seat 5: VladKramnik ($217 in chips)
+pepecarlos58: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+VladKramnik: folds
+pepecarlos58: folds
+Uncalled bet ($1) returned to DURKADURDUR
+DURKADURDUR collected $2 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $2 | Rake $0
+Seat 2: pepecarlos58 (small blind) folded before Flop
+Seat 4: DURKADURDUR (big blind) collected ($2)
+Seat 5: VladKramnik (button) folded before Flop (didn't bet)

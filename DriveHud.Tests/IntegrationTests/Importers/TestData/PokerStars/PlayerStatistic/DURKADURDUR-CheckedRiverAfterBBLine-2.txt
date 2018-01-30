@@ -1,0 +1,41 @@
+PokerStars Game #47143949119:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:37:37 ET
+Table 'Malabar III' 6-max Seat #3 is the button
+Seat 1: Desateur ($200 in chips) 
+Seat 2: twinpsych ($550.50 in chips) 
+Seat 3: pablostar ($239 in chips) 
+Seat 4: whirleymob ($201 in chips) 
+Seat 5: ROBERTJON ($301.80 in chips) 
+Seat 6: DURKADURDUR ($209 in chips) 
+whirleymob: posts small blind $1
+ROBERTJON: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+Desateur: folds 
+twinpsych: folds 
+pablostar: folds 
+whirleymob: folds 
+ROBERTJON: calls $4
+*** FLOP *** [Jd 2s 6d]
+ROBERTJON: checks 
+DURKADURDUR: bets $8
+ROBERTJON: calls $8
+*** TURN *** [Jd 2s 6d] [5s]
+ROBERTJON: checks 
+DURKADURDUR: bets $20
+ROBERTJON: calls $20
+*** RIVER *** [Jd 2s 6d 5s] [4s]
+ROBERTJON: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+ROBERTJON: shows [Ad Qd] (high card Ace)
+DURKADURDUR: shows [6s 6h] (three of a kind, Sixes)
+DURKADURDUR collected $66 from pot
+*** SUMMARY ***
+Total pot $69 | Rake $3 
+Board [Jd 2s 6d 5s 4s]
+Seat 1: Desateur folded before Flop (didn't bet)
+Seat 2: twinpsych folded before Flop (didn't bet)
+Seat 3: pablostar (button) folded before Flop (didn't bet)
+Seat 4: whirleymob (small blind) folded before Flop
+Seat 5: ROBERTJON (big blind) showed [Ad Qd] and lost with high card Ace
+Seat 6: DURKADURDUR showed [6s 6h] and won ($66) with three of a kind, Sixes

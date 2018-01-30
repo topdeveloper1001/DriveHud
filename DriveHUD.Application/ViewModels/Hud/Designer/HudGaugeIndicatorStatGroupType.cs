@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HeatMapStatDto.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="HudGaugeIndicatorStatGroupType.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,13 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using ProtoBuf;
-
-namespace Model.Data
+namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HeatMapStatDto : StatDto
-    {          
-        [ProtoMember(4)]
-        public string CardRange { get; set; }
+    public enum HudGaugeIndicatorStatGroupType
+    {
+        Text,
+        LineBar,
+        BreakLine
     }
 }

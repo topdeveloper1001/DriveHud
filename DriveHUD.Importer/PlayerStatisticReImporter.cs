@@ -13,9 +13,11 @@
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using HandHistories.Objects.Cards;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
@@ -26,6 +28,7 @@ using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -47,6 +50,8 @@ namespace DriveHUD.Importers
         private readonly IDataService dataService;
         private const int handHistoryRowsPerQuery = 1000;
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
+
+        private IDHProgress progress;
 
         /// <summary>
         /// Initialize a new instance of <see cref="PlayerStatisticReImporter"/> 
@@ -85,6 +90,7 @@ namespace DriveHUD.Importers
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Re-import of player statistic failed.", e);
+                ClosePlayerstatisticStreams();
                 throw new DHBusinessException(new NonLocalizableString("Player statistic rebuilding failed"));
             }
             finally
@@ -126,6 +132,14 @@ namespace DriveHUD.Importers
             {
                 LogProvider.Log.Error(this, "Recovering of player statistic failed.", e);
             }
+        }
+
+        /// <summary>
+        /// Initializes progress to report progress
+        /// </summary>
+        public void InitializeProgress(IDHProgress progress)
+        {
+            this.progress = progress;
         }
 
         /// <summary>
@@ -182,15 +196,27 @@ namespace DriveHUD.Importers
 
                 var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
 
+                progress?.Report(new LocalizableString("Progress_RebuildingStatistics_Status", 0, entitiesCount));
+
+                var progressResult = 0;
+
                 for (var i = 0; i < numOfQueries; i++)
                 {
                     var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
 
                     var handHistories = session.Query<Handhistory>()
-                        .OrderBy(x => x.HandhistoryId)
+                        .OrderBy(x => x.Handtimestamp)
                         .Skip(numOfRowToStartQuery)
                         .Take(handHistoryRowsPerQuery)
                         .ToArray();
+
+                    // close opened handles
+                    var minDateOfHand = handHistories.MinOrDefault(x => x.Handtimestamp);
+
+                    if (minDateOfHand.HasValue)
+                    {
+                        ClosePlayerstatisticStreams(minDateOfHand.Value);
+                    }
 
                     Parallel.ForEach(handHistories, handHistory =>
                     {
@@ -200,15 +226,20 @@ namespace DriveHUD.Importers
                         {
                             parsingResult.Players.ForEach(player =>
                             {
+                                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+
                                 if (player.PlayerId != 0)
                                 {
-                                    BuildPlayerStatistic(parsingResult, player);
+                                    BuildPlayerStatistic(handHistory, parsingResult, player, calculatedEquity);
                                 }
                             });
                         }
                     });
 
                     GC.Collect();
+
+                    progressResult += handHistories.Length;
+                    progress?.Report(new LocalizableString("Progress_RebuildingStatistics_Status", progressResult, entitiesCount));
                 }
             }
         }
@@ -278,11 +309,17 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="handHistory"></param>
         /// <param name="player"></param>
-        private void BuildPlayerStatistic(ParsingResult handHistory, Players player)
+        private void BuildPlayerStatistic(Handhistory dbHandHistory, ParsingResult handHistory, Players player, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-            var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+            var statistic = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
+
+            if (!string.IsNullOrEmpty(dbHandHistory.Tourneynumber))
+            {
+                statistic.IsTourney = true;
+                statistic.TournamentId = dbHandHistory.Tourneynumber;
+            }
 
             StorePlayerStatistic(statistic);
         }
@@ -397,21 +434,55 @@ namespace DriveHUD.Importers
             }
         }
 
+        private void ClosePlayerstatisticStreams(DateTime timestamp)
+        {
+            playerStatisticStreamWriters.ToArray().ForEach(x =>
+            {
+                var fileName = Path.GetFileNameWithoutExtension(x.Key);
+                var minDate = new DateTime(timestamp.Year, timestamp.Month, 1);
+
+                var fileDate = DateTime.ParseExact(fileName, "yyyyMM", CultureInfo.InvariantCulture);
+
+                if (fileDate < minDate)
+                {
+                    try
+                    {
+                        x.Value.Value.Close();
+
+                        Lazy<StreamWriter> removedValue = null;
+
+                        playerStatisticStreamWriters.TryRemove(x.Key, out removedValue);
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Could not release StreamWriter of '{x.Key}'", ex);
+                    }
+                }
+            });
+        }
+
         private void ClosePlayerstatisticStreams()
         {
-            foreach (KeyValuePair<string, Lazy<StreamWriter>> playerStatisticStreamWriter in playerStatisticStreamWriters)
+            try
             {
-                try
+                foreach (KeyValuePair<string, Lazy<StreamWriter>> playerStatisticStreamWriter in playerStatisticStreamWriters)
                 {
-                    playerStatisticStreamWriter.Value.Value.Close();
+                    try
+                    {
+                        playerStatisticStreamWriter.Value.Value.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Could not close stream for '{playerStatisticStreamWriter.Key}'", e);
+                    }
                 }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, $"Could not close stream for '{playerStatisticStreamWriter.Key}'", e);
-                }
-            }
 
-            playerStatisticStreamWriters.Clear();
+                playerStatisticStreamWriters.Clear();
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not close file streams", ex);
+            }
         }
 
         #region Class helpers

@@ -1,0 +1,38 @@
+PokerStars Game #47145165413:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 2:47:43 ET
+Table 'Piazzia IV' 6-max Seat #2 is the button
+Seat 1: RiverRock55 ($200 in chips) 
+Seat 2: bluffinmyway ($197 in chips) 
+Seat 3: dark_light_x ($210.80 in chips) 
+Seat 4: FastEddie267 ($200 in chips) 
+Seat 5: HeroTest ($200 in chips) 
+Seat 6: pablostar ($348.25 in chips) 
+dark_light_x: posts small blind $1
+FastEddie267: posts big blind $2
+*** HOLE CARDS ***
+HeroTest: raises $4 to $6
+pablostar: folds 
+RiverRock55: folds 
+bluffinmyway: calls $6
+dark_light_x: raises $20 to $26
+FastEddie267: folds 
+HeroTest: raises $28 to $54
+bluffinmyway: folds 
+dark_light_x: raises $156.80 to $210.80 and is all-in
+HeroTest: calls $146 and is all-in
+Uncalled bet ($10.80) returned to dark_light_x
+*** FLOP *** [Jh 7c 2h]
+*** TURN *** [Jh 7c 2h] [Jc]
+*** RIVER *** [Jh 7c 2h Jc] [Ah]
+*** SHOW DOWN ***
+dark_light_x: shows [Kd Kc] (two pair, Kings and Jacks)
+HeroTest: shows [Ad Ac] (a full house, Aces full of Jacks)
+HeroTest collected $405 from pot
+*** SUMMARY ***
+Total pot $408 | Rake $3 
+Board [Jh 7c 2h Jc Ah]
+Seat 1: RiverRock55 folded before Flop (didn't bet)
+Seat 2: bluffinmyway (button) folded before Flop
+Seat 3: dark_light_x (small blind) showed [Kd Kc] and lost with two pair, Kings and Jacks
+Seat 4: FastEddie267 (big blind) folded before Flop
+Seat 5: HeroTest showed [Ad Ac] and won ($405) with a full house, Aces full of Jacks
+Seat 6: pablostar folded before Flop (didn't bet)

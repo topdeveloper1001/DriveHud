@@ -1,0 +1,38 @@
+PokerStars Game #47185561760:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:48:29 ET
+Table 'Thoas' 6-max Seat #4 is the button
+Seat 1: mdeckND ($212.75 in chips)
+Seat 2: DURKADURDUR ($708.25 in chips)
+Seat 3: Jetize ($238.40 in chips)
+Seat 4: mojox ($132.55 in chips)
+Seat 5: FrAnWaN ($326.50 in chips)
+Seat 6: asseral ($226.65 in chips)
+FrAnWaN: posts small blind $1
+asseral: posts big blind $2
+*** HOLE CARDS ***
+mdeckND: raises $6 to $8
+DURKADURDUR: folds
+Jetize: folds
+mojox: calls $8
+FrAnWaN: folds
+asseral: folds
+*** FLOP *** [8c Kc 3c]
+mdeckND: bets $10
+mojox: calls $10
+*** TURN *** [8c Kc 3c] [6h]
+mdeckND: bets $24
+mojox: calls $24
+*** RIVER *** [8c Kc 3c 6h] [Ts]
+mdeckND: bets $50
+mojox: folds
+Uncalled bet ($50) returned to mdeckND
+mdeckND collected $84 from pot
+mdeckND: doesn't show hand
+*** SUMMARY ***
+Total pot $87 | Rake $3
+Board [8c Kc 3c 6h Ts]
+Seat 1: mdeckND collected ($84)
+Seat 2: DURKADURDUR folded before Flop (didn't bet)
+Seat 3: Jetize folded before Flop (didn't bet)
+Seat 4: mojox (button) folded on the River
+Seat 5: FrAnWaN (small blind) folded before Flop
+Seat 6: asseral (big blind) folded before Flop

@@ -21,9 +21,9 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by daily hours.
     /// </summary>
-    public class TimeReportCreator : IReportCreator
+    public class TimeReportCreator : CashBaseReportCreator
     {
-        public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
         {
             var report = new ObservableCollection<Indicators>();
 
@@ -32,7 +32,7 @@ namespace Model.Reports
                 return report;
             }
 
-            foreach (var group in statistics.Where(x => !x.IsTourney).GroupBy(x => x.Time.Hour).ToArray())
+            foreach (var group in statistics.GroupBy(x => x.Time.Hour).ToArray())
             {
                 var stat = new ReportIndicators();
 

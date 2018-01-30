@@ -65,6 +65,7 @@ namespace Model.Stats
             settingsAppearanceFontUnderline_IsChecked = false;
             isSelected = false;
             hasAttachedTools = false;
+            IsPopupBarNotSupported = false;
 
             if (SettingsAppearanceValueRangeCollection != null)
             {
@@ -680,6 +681,27 @@ namespace Model.Stats
             }
         }
 
+        private bool isPopupBarNotSupported;
+
+        [ProtoMember(23), DefaultValue(false)]
+        public bool IsPopupBarNotSupported
+        {
+            get
+            {
+                return isPopupBarNotSupported;
+            }
+            set
+            {
+                if (value == isPopupBarNotSupported)
+                {
+                    return;
+                }
+
+                isPopupBarNotSupported = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -766,6 +788,7 @@ namespace Model.Stats
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
             statInfoClone.GraphToolIconSource = GraphToolIconSource;
+            statInfoClone.IsPopupBarNotSupported = IsPopupBarNotSupported;
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);

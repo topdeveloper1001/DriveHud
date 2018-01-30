@@ -85,7 +85,7 @@
             Orientation="Vertical"
             IsItemsHost="True" />
     </ItemsPanelTemplate>
-
+   
     <Style
         x:Key="MeterControlStyle"
         TargetType="{x:Type ContentControl}">
@@ -94,7 +94,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <StackPanel
-                        Orientation="Horizontal"
+                        Orientation="Horizontal"                        
                         VerticalAlignment="Center"
                         Margin="3">
 

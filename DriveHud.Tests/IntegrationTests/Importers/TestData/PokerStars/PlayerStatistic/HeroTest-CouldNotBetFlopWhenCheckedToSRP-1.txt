@@ -1,0 +1,34 @@
+PokerStars Game #47181228961:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:23:20 ET
+Table 'Terpsichore' 6-max Seat #6 is the button
+Seat 1: Pappe_Ruk ($200 in chips) 
+Seat 2: HeroTest ($456.75 in chips) 
+Seat 3: visoring! ($420.65 in chips) 
+Seat 4: StoneCool 07 ($97.80 in chips) 
+Seat 6: P1ngPoNgPr0 ($228 in chips) 
+Pappe_Ruk: posts small blind $1
+HeroTest: posts big blind $2
+*** HOLE CARDS ***
+visoring!: folds 
+StoneCool 07: calls $2
+P1ngPoNgPr0: folds 
+Pappe_Ruk: folds 
+HeroTest: raises $8 to $10
+StoneCool 07: calls $8
+*** FLOP *** [9d 5d Js]
+HeroTest: bets $14
+StoneCool 07: calls $14
+*** TURN *** [9d 5d Js] [6h]
+HeroTest: bets $29
+StoneCool 07: folds 
+Uncalled bet ($29) returned to HeroTest
+HeroTest collected $47 from pot
+HeroTest: doesn't show hand 
+*** SUMMARY ***
+Total pot $49 | Rake $2 
+Board [9d 5d Js 6h]
+Seat 1: Pappe_Ruk (small blind) folded before Flop
+Seat 2: HeroTest (big blind) collected ($47)
+Seat 3: visoring! folded before Flop (didn't bet)
+Seat 4: StoneCool 07 folded on the Turn
+Seat 6: P1ngPoNgPr0 (button) folded before Flop (didn't bet)
+

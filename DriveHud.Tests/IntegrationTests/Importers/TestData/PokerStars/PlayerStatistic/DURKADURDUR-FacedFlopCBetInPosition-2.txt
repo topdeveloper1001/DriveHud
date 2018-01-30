@@ -1,0 +1,39 @@
+PokerStars Game #47184686659:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:17:13 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 1: imthesky ($315.40 in chips) 
+Seat 2: LingXY ($203 in chips) 
+Seat 3: FastEddie267 ($200 in chips) 
+Seat 4: Fierytycoon ($235.60 in chips) 
+Seat 5: TODO ADENTR0 ($200 in chips) 
+Seat 6: DURKADURDUR ($436.80 in chips) 
+imthesky: posts small blind $1
+LingXY: posts big blind $2
+*** HOLE CARDS ***
+FastEddie267: raises $4 to $6
+Fierytycoon: folds 
+TODO ADENTR0: folds 
+DURKADURDUR: calls $6
+imthesky: folds 
+LingXY: folds 
+*** FLOP *** [8s Kc Jh]
+FastEddie267: bets $11
+DURKADURDUR: calls $11
+*** TURN *** [8s Kc Jh] [9c]
+FastEddie267: bets $31
+DURKADURDUR: calls $31
+*** RIVER *** [8s Kc Jh 9c] [7d]
+FastEddie267: checks 
+DURKADURDUR: bets $78
+FastEddie267: folds 
+Uncalled bet ($78) returned to DURKADURDUR
+DURKADURDUR collected $96 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $99 | Rake $3 
+Board [8s Kc Jh 9c 7d]
+Seat 1: imthesky (small blind) folded before Flop
+Seat 2: LingXY (big blind) folded before Flop
+Seat 3: FastEddie267 folded on the River
+Seat 4: Fierytycoon folded before Flop (didn't bet)
+Seat 5: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 6: DURKADURDUR (button) collected ($96)

@@ -17,12 +17,14 @@ namespace DriveHUD.EquityCalculator.Models
     public class PlayerModel : CardCollectionContainer
     {
         #region Fields
-        private readonly int _containerSize = 2;
-        private string _playerName = "Player";
-        private double _equityValue = 0.0;
-        private double _tiePrct = 0.0;
-        private double _winPrct = 0.0;
-        private ObservableCollection<string> _playerCards = new ObservableCollection<string>();
+
+        private readonly int containerSize = 2;
+        private string playerName = "Player";
+        private double equityValue = 0.0;
+        private double tiePrct = 0.0;
+        private double winPrct = 0.0;
+        private ObservableCollection<string> playerCards = new ObservableCollection<string>();
+
         #endregion
 
         #region Properties
@@ -30,7 +32,7 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _containerSize;
+                return containerSize;
             }
         }
 
@@ -38,12 +40,11 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _playerName;
+                return playerName;
             }
-
             set
             {
-                SetProperty(ref _playerName, value);
+                SetProperty(ref playerName, value);
             }
         }
 
@@ -51,12 +52,11 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _playerCards;
+                return playerCards;
             }
-
             set
             {
-                _playerCards = value;
+                playerCards = value;
             }
         }
 
@@ -64,12 +64,11 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _equityValue;
+                return equityValue;
             }
-
             set
             {
-                SetProperty(ref _equityValue, value);
+                SetProperty(ref equityValue, value);
             }
         }
 
@@ -77,12 +76,11 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _tiePrct;
+                return tiePrct;
             }
-
             set
             {
-                _tiePrct = value;
+                tiePrct = value;
             }
         }
 
@@ -90,18 +88,20 @@ namespace DriveHUD.EquityCalculator.Models
         {
             get
             {
-                return _winPrct;
+                return winPrct;
             }
 
             set
             {
-                _winPrct = value;
+                winPrct = value;
             }
         }
         #endregion
 
         #region ICommand
-        public ICommand RemoveRangeCommand { get; set; }
+
+        public ICommand RemoveRangeCommand { get; private set; }
+
         #endregion
 
         public PlayerModel() : base()
@@ -128,8 +128,11 @@ namespace DriveHUD.EquityCalculator.Models
         {
             base.SetRanges(null);
             base.SetCollection(model);
+
             PlayerCards.Clear();
+
             var hands = CardHelper.GetHandsFormatted(GetPlayersHand());
+
             foreach (var hand in hands)
             {
                 PlayerCards.Add(hand);
@@ -142,7 +145,9 @@ namespace DriveHUD.EquityCalculator.Models
             base.SetRanges(model);
 
             PlayerCards.Clear();
+
             var hands = CardHelper.GetHandsFormatted(GetPlayersHand());
+
             foreach (var hand in hands)
             {
                 PlayerCards.Add(hand);
@@ -151,18 +156,20 @@ namespace DriveHUD.EquityCalculator.Models
 
         public List<String> GetPlayersHand()
         {
-            return this.GetPlayersHand(false);
+            return GetPlayersHand(false);
         }
 
         public List<String> GetPlayersHand(bool withPercent)
         {
-            var rangesList = new List<RangeSelectorItemViewModel>(this.Ranges);
+            var rangesList = Ranges.ToList();
+
             if (rangesList.Count > 0)
             {
                 if (!withPercent)
                 {
                     /* return only selected range hands */
-                    List<String> hands = new List<String>();
+                    var hands = new List<String>();
+
                     foreach (RangeSelectorItemViewModel hand in rangesList.Where(x => x.IsSelected))
                     {
                         if (hand.HandSuitsModelList.Where(x => x.IsVisible && x.IsSelected).Count() > 0)
@@ -170,6 +177,7 @@ namespace DriveHUD.EquityCalculator.Models
                             hands.Add(hand.Caption);
                         }
                     }
+
                     if (hands.Count() > 0)
                     {
                         return hands;
@@ -207,6 +215,7 @@ namespace DriveHUD.EquityCalculator.Models
                         else if (handSuits.Count > 0)
                             res.Add(hand.Caption + "(" + hand.LikelihoodPercent + ")");
                     }
+
                     return res;
                 }
             }
@@ -220,14 +229,16 @@ namespace DriveHUD.EquityCalculator.Models
         }
 
         #region ICommand Implementation
+
         private void RemoveRange(object obj)
         {
-            if(obj!= null)
+            if (obj != null)
             {
                 var range = obj.ToString().Trim('+');
+
                 if (Ranges.Count() != 0)
                 {
-                    if (Ranges.Any(x=> x.Caption == range))
+                    if (Ranges.Any(x => x.Caption == range))
                     {
                         SetRanges(Ranges.Where(x => x.Caption != range));
                         ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Publish(new EventArgs());
@@ -235,14 +246,15 @@ namespace DriveHUD.EquityCalculator.Models
                 }
                 else
                 {
-                    if(PlayerCards.First() ==  range)
+                    if (PlayerCards.First() == range)
                     {
-                        SetCollection(null);      
+                        SetCollection(null);
                         ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Publish(new EventArgs());
                     }
                 }
             }
         }
+
         #endregion
     }
 }

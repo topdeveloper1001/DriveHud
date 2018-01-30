@@ -253,6 +253,8 @@
     <Compile Include="PartyPoker\IPartyPokerImporter.cs" />
     <Compile Include="PartyPoker\PartyPokerImporter.cs" />
     <Compile Include="PipeManager.cs" />
+    <Compile Include="PlayersAddedEvent.cs" />
+    <Compile Include="PlayersAddedEventArgs.cs" />
     <Compile Include="PlayerStatisticReImporter.cs" />
     <Compile Include="PlayerStatsSessionCacheInfo.cs" />
     <Compile Include="PlayerStickersCacheData.cs" />

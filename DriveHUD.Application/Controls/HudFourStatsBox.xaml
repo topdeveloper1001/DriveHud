@@ -12,8 +12,18 @@
     Opacity="{Binding Opacity}">
 
     <UserControl.Resources>
-        <ResourceDictionary
-            Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudFourStatsBoxStyles.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/Resources.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/RadDropDownButtonTemplate.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudFourStatsBoxStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>

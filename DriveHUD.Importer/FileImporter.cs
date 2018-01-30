@@ -21,6 +21,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
@@ -33,6 +34,7 @@ using Model.Interfaces;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -47,6 +49,8 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class FileImporter : IFileImporter
     {
+        private const int PlayersPerQuery = 100;
+
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 
         private static readonly object locker = new object();
@@ -55,11 +59,13 @@ namespace DriveHUD.Importers
 
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
+        private readonly IEventAggregator eventAggregator;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
 
         /// <summary>
@@ -209,6 +215,8 @@ namespace DriveHUD.Importers
             {
                 var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
                 logger.Log(text);
+
+                Console.WriteLine(text);
 
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
@@ -360,6 +368,8 @@ namespace DriveHUD.Importers
                             var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
                             var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
 
+                            gameInfo.ResetPlayersCacheInfo();
+
                             for (var i = 0; i < parsingResult.Count; i++)
                             {
                                 var handHistory = parsingResult[i];
@@ -424,9 +434,9 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));              
 
-                gameInfo.ResetPlayersCacheInfo();
+                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
                 foreach (var existingPlayer in handPlayers.ToArray())
                 {
@@ -441,7 +451,7 @@ namespace DriveHUD.Importers
 
                     session.Update(existingPlayer);
 
-                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession);
+                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession, calculatedEquity);
 
                     if (playerStat != null)
                     {
@@ -463,7 +473,8 @@ namespace DriveHUD.Importers
                             },
                             Stats = playerStatCopy,
                             IsHero = isHero,
-                            GameFormat = gameInfo.GameFormat
+                            GameFormat = gameInfo.GameFormat,
+                            GameNumber = handHistory.HandHistory.Gamenumber
                         };
 
                         gameInfo.AddToPlayersCacheInfo(cacheInfo);
@@ -564,13 +575,13 @@ namespace DriveHUD.Importers
         /// <param name="handHistory">Hand history</param>
         /// <param name="player">Player</param>
         /// <returns>Calculated player statistic</returns>
-        public Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session)
+        protected virtual Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
         {
             try
             {
                 var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player);
+                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
 
                 if (playerStat == null)
                 {
@@ -671,16 +682,27 @@ namespace DriveHUD.Importers
 
             var playersGroupedByPokersite = playersToSelect.GroupBy(x => x.PokersiteId);
 
-            Disjunction restriction = Restrictions.Disjunction();
+            var existingPlayers = new List<Players>();
 
             foreach (var pokersiteGroup in playersGroupedByPokersite)
             {
-                restriction.Add(Restrictions.Conjunction()
-                     .Add(Restrictions.On<Players>(x => x.Playername).IsIn(pokersiteGroup.Select(x => x.Playername).ToList()))
-                     .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
-            }
+                var queriesCount = (int)Math.Ceiling((double)pokersiteGroup.Count() / PlayersPerQuery);
 
-            var existingPlayers = session.QueryOver<Players>().Where(restriction).List();
+                for (var i = 0; i < queriesCount; i++)
+                {
+                    var restriction = Restrictions.Disjunction();
+
+                    var playersToQuery = pokersiteGroup.Skip(i * PlayersPerQuery).Take(PlayersPerQuery).ToArray();
+
+                    restriction.Add(Restrictions.Conjunction()
+                         .Add(Restrictions.On<Players>(x => x.Playername).IsIn(playersToQuery.Select(x => x.Playername).ToList()))
+                         .Add(Restrictions.Where<Players>(x => x.PokersiteId == pokersiteGroup.Key)));
+
+                    var players = session.QueryOver<Players>().Where(restriction).List();
+
+                    existingPlayers.AddRange(players);
+                }
+            }
 
             var playersToAdd = playersToSelect.Where(s => !existingPlayers.Any(e => s.Playername == e.Playername
                                                                                 && s.PokersiteId == e.PokersiteId));
@@ -699,7 +721,10 @@ namespace DriveHUD.Importers
                 }).ToArray();
 
             dataService.AddPlayerRangeToList(playerItemCollection);
-            gameInfo.AddedPlayers = playerItemCollection;
+
+            // send added players to update UI
+            var playersAddedEventArgs = new PlayersAddedEventArgs(playerItemCollection);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Publish(playersAddedEventArgs);
 
             existingPlayers.AddRange(playersToAdd);
 
@@ -837,9 +862,13 @@ namespace DriveHUD.Importers
             var lastHandsByPlayer = (from player in handsByPlayer
                                      let lastHand = player.Hands.LastOrDefault()
                                      where lastHand != null && lastHand.IsLost
-                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name, InitialStackSize = lastHand.InitialStackSize }).ToArray();
+                                     select new { HandNumber = lastHand.HandNumber, PlayerName = player.Name, InitialStackSize = lastHand.InitialStackSize }).ToList();
 
-            var currentPosition = firstParsingResult.Players.Count;
+            var currentPosition = tournaments
+                .Where(x => x.Finishposition == 0 && (lastHandsByPlayer.Any(y => y.PlayerName == x.PlayerName) ||
+                   lastParsingResult.Source.Players.Any(y => y.PlayerName == x.PlayerName)))
+                .Select(x => x.Player.PlayerId)
+                .Count();
 
             var tournamentsByPlayer = tournaments.ToDictionary(x => x.PlayerName, x => x);
 

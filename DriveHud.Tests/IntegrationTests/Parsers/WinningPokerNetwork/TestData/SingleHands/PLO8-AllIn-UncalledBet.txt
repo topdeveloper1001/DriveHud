@@ -1,0 +1,29 @@
+Game started at: 2018/1/7 15:34:19 *** Summary: GameType: NL, TournamentId: 8192538, TournamentBuyIn: 12.60
+Game ID: 1092829773 600/1200 $10K NLO8 Deadline - 3 Seats GTD, Table 3 (Omaha HiLow)
+Seat 7 is the button
+Seat 4: QUADSBRUHHH (30152).
+Seat 7: Granny_Annie (32848).
+Player QUADSBRUHHH ante (100)
+Player Granny_Annie ante (100)
+Player Granny_Annie has small blind (600)
+Player QUADSBRUHHH has big blind (1200)
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player Granny_Annie received card: [9h]
+Player Granny_Annie received card: [3c]
+Player Granny_Annie received card: [2s]
+Player Granny_Annie received card: [Jc]
+Player Granny_Annie allin (32148)
+Player QUADSBRUHHH allin (28852)
+Uncalled bet (2696) returned to Granny_Annie
+*** FLOP ***: [Ad 10c Kd]
+*** TURN ***: [Ad 10c Kd] [7h]
+*** RIVER ***: [Ad 10c Kd 7h] [9d]
+------ Summary ------
+Pot: 60304
+Board: [Ad 10c Kd 7h 9d]
+*Player QUADSBRUHHH shows: Flush, A high [6d 10d 3d Jh]. Bets: 30152. Collects: 60304. Wins: 30152.
+Player Granny_Annie shows: One pair of 9s [9h 3c 2s Jc]. Bets: 30152. Collects: 0. Loses: 30152.
+Game ended at: 2018/1/7 15:34:31

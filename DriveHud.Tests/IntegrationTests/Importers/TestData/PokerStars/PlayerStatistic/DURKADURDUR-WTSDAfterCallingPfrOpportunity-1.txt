@@ -1,0 +1,35 @@
+PokerStars Game #47180477409:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:00:25 ET
+Table 'Maia III' 6-max Seat #3 is the button
+Seat 1: zxcvb2 ($206 in chips) 
+Seat 2: stakha ($180 in chips) 
+Seat 3: rivichico ($303.25 in chips) 
+Seat 4: TODO ADENTR0 ($200 in chips) 
+Seat 5: DURKADURDUR ($268.65 in chips) 
+Seat 6: Nehekus ($445.05 in chips) 
+TODO ADENTR0: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+Nehekus: raises $4 to $6
+zxcvb2: folds 
+stakha: folds 
+rivichico: calls $6
+TODO ADENTR0: folds 
+DURKADURDUR: calls $4
+*** FLOP *** [2s 4h 7s]
+DURKADURDUR: checks 
+Nehekus: bets $14
+rivichico: folds 
+DURKADURDUR: folds 
+Uncalled bet ($14) returned to Nehekus
+Nehekus collected $18.05 from pot
+Nehekus: doesn't show hand 
+*** SUMMARY ***
+Total pot $19 | Rake $0.95 
+Board [2s 4h 7s]
+Seat 1: zxcvb2 folded before Flop (didn't bet)
+Seat 2: stakha folded before Flop (didn't bet)
+Seat 3: rivichico (button) folded on the Flop
+Seat 4: TODO ADENTR0 (small blind) folded before Flop
+Seat 5: DURKADURDUR (big blind) folded on the Flop
+Seat 6: Nehekus collected ($18.05)
+

@@ -1,0 +1,38 @@
+PokerStars Game #47183658705:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:40:44 ET
+Table 'Rigilkent VIII' 6-max Seat #3 is the button
+Seat 1: mayhem920 ($479.25 in chips) 
+Seat 2: DURKADURDUR ($200 in chips) 
+Seat 3: DongNai444 ($144.30 in chips) 
+Seat 4: rivichico ($515.50 in chips) 
+Seat 5: FrAnWaN ($212.05 in chips) 
+Seat 6: thomaswkm ($171.85 in chips) 
+rivichico: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+thomaswkm: folds 
+mayhem920: folds 
+DURKADURDUR: raises $4 to $6
+DongNai444: folds 
+rivichico: raises $16 to $22
+FrAnWaN: folds 
+DURKADURDUR: calls $16
+*** FLOP *** [2c 9c Kd]
+rivichico: bets $24
+DURKADURDUR: calls $24
+*** TURN *** [2c 9c Kd] [Qc]
+rivichico: checks 
+DURKADURDUR: bets $62
+rivichico: raises $150.50 to $212.50
+DURKADURDUR: folds 
+Uncalled bet ($150.50) returned to rivichico
+rivichico collected $215 from pot
+rivichico: doesn't show hand 
+*** SUMMARY ***
+Total pot $218 | Rake $3 
+Board [2c 9c Kd Qc]
+Seat 1: mayhem920 folded before Flop (didn't bet)
+Seat 2: DURKADURDUR folded on the Turn
+Seat 3: DongNai444 (button) folded before Flop (didn't bet)
+Seat 4: rivichico (small blind) collected ($215)
+Seat 5: FrAnWaN (big blind) folded before Flop
+Seat 6: thomaswkm folded before Flop (didn't bet)

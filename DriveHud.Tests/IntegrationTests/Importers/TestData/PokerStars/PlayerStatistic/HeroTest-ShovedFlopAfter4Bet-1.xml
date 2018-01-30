@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="249472958630">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.1/$0.25</gametype>
+		<tablename>NL Hold’em: $0.10/$0.25 - 6 Seater #4940</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-01-14 04:30:07</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="80002423">
+		<general>
+			<startdate>2017-01-14 04:55:04</startdate>
+			<players>
+				<player seat="4" name="0VERMIND" chips="25" dealer="0" win="0" bet="25" rebuy="0" addon="0" />
+				<player seat="5" name="AnewmanV" chips="25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="tarheels33" chips="51.45" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="HeroTest" chips="25.5" dealer="0" win="50.85" bet="25.5" rebuy="0" addon="0" />
+				<player seat="2" name="MundusSheet" chips="35.3" dealer="1" win="0" bet="2.25" rebuy="0" addon="0" />
+				<player seat="3" name="BarBossa" chips="29.43" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="BarBossa" type="1" sum="0.1" cards="" />
+			<action no="2" player="0VERMIND" type="2" sum="0.25" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="0VERMIND">HJ SJ</cards>
+			<cards type="Pocket" player="AnewmanV">X X</cards>
+			<cards type="Pocket" player="tarheels33">X X</cards>
+			<cards type="Pocket" player="HeroTest">HA DA</cards>
+			<cards type="Pocket" player="MundusSheet">X X</cards>
+			<cards type="Pocket" player="BarBossa">X X</cards>
+			<action no="3" player="AnewmanV" type="0" sum="0" cards="" />
+			<action no="4" player="tarheels33" type="0" sum="0" cards="" />
+			<action no="5" player="HeroTest" type="23" sum="0.75" cards="" />
+			<action no="6" player="MundusSheet" type="23" sum="2.25" cards="" />
+			<action no="7" player="BarBossa" type="0" sum="0" cards="" />
+			<action no="8" player="0VERMIND" type="3" sum="2" cards="" />
+			<action no="9" player="HeroTest" type="23" sum="6.95" cards="" />
+			<action no="10" player="MundusSheet" type="0" sum="0" cards="" />
+			<action no="11" player="0VERMIND" type="3" sum="4.7" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 CK D3</cards>
+			<action no="12" player="0VERMIND" type="4" sum="0" cards="" />
+			<action no="13" player="HeroTest" type="5" sum="18.55" cards="" />
+			<action no="14" player="0VERMIND" type="3" sum="18.05" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H3</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C10</cards>
+		</round>
+	</game>
+</session

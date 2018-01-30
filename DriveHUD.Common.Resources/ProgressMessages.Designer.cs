@@ -88,6 +88,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rebuilding statistics {0}/{1}.
+        /// </summary>
+        internal static string Progress_RebuildingStatistics_Status {
+            get {
+                return ResourceManager.GetString("Progress_RebuildingStatistics_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recovering statistics.
         /// </summary>
         internal static string Progress_RecoveringStatistics {

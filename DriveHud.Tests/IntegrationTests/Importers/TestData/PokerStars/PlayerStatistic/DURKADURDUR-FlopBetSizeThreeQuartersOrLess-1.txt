@@ -1,0 +1,39 @@
+PokerStars Game #47184911636:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:25:09 ET
+Table 'Triton III' 6-max Seat #5 is the button
+Seat 1: Cardsdevil27 ($165 in chips) 
+Seat 3: sexygee ($551.90 in chips) 
+Seat 4: thomaswkm ($384.80 in chips) 
+Seat 5: DURKADURDUR ($241.80 in chips) 
+Seat 6: FrAnWaN ($392.20 in chips) 
+FrAnWaN: posts small blind $1
+Cardsdevil27: posts big blind $2
+Fierytycoon: sits out 
+*** HOLE CARDS ***
+sexygee: folds 
+thomaswkm: folds 
+DURKADURDUR: raises $4 to $6
+FrAnWaN: folds 
+Cardsdevil27: calls $4
+*** FLOP *** [Js 9c 4h]
+Cardsdevil27: checks 
+DURKADURDUR: bets $9
+Cardsdevil27: calls $9
+*** TURN *** [Js 9c 4h] [7s]
+Cardsdevil27: checks 
+DURKADURDUR: checks 
+*** RIVER *** [Js 9c 4h 7s] [4d]
+Cardsdevil27: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+Cardsdevil27: shows [Qc As] (a pair of Fours)
+DURKADURDUR: shows [6h 7h] (two pair, Sevens and Fours)
+DURKADURDUR collected $29.50 from pot
+*** SUMMARY ***
+Total pot $31 | Rake $1.50 
+Board [Js 9c 4h 7s 4d]
+Seat 1: Cardsdevil27 (big blind) showed [Qc As] and lost with a pair of Fours
+Seat 3: sexygee folded before Flop (didn't bet)
+Seat 4: thomaswkm folded before Flop (didn't bet)
+Seat 5: DURKADURDUR (button) showed [6h 7h] and won ($29.50) with two pair, Sevens and Fours
+Seat 6: FrAnWaN (small blind) folded before Flop
+

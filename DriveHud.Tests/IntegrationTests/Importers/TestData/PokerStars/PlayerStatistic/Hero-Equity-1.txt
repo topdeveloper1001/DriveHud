@@ -1,0 +1,47 @@
+PokerStars Hand #171239904447:  Omaha Hi/Lo Pot Limit ($0.01/$0.02 USD) - 2017/06/02 5:47:54 PT [2017/06/02 8:47:54 ET]
+Table 'Philagoria II' 6-max Seat #2 is the button
+Seat 1: Fede Z92 ($1.94 in chips) 
+Seat 2: Hero ($0.43 in chips) 
+Seat 3: HalloPapabär ($2.55 in chips) 
+Seat 4: Peon347 ($1.20 in chips) 
+Seat 5: LittleMate ($0.88 in chips) 
+Seat 6: Evniko ($1.09 in chips) 
+HalloPapabär: posts small blind $0.01
+Peon347: posts big blind $0.02
+*** HOLE CARDS ***
+Dealt to Peon347 [Kc Th Jh 7s]
+LittleMate: calls $0.02
+Evniko: folds 
+Fede Z92: folds 
+Hero: raises $0.07 to $0.09
+HalloPapabär: calls $0.08
+Peon347: folds 
+LittleMate: calls $0.07
+*** FLOP *** [Qc Ac 3c]
+HalloPapabär: checks 
+LittleMate: bets $0.28
+Hero: raises $0.06 to $0.34 and is all-in
+HalloPapabär: calls $0.34
+LittleMate: calls $0.06
+*** TURN *** [Qc Ac 3c] [5d]
+HalloPapabär: checks 
+LittleMate: bets $0.45 and is all-in
+HalloPapabär: calls $0.45
+*** RIVER *** [Qc Ac 3c 5d] [6d]
+*** SHOW DOWN ***
+HalloPapabär: shows [8h Ad 2c 6c] (HI: a flush, Ace high; LO: 6,5,3,2,A)
+LittleMate: shows [8s 7d 2s 4d] (HI: a straight, Three to Seven; LO: 5,4,3,2,A)
+HalloPapabär collected $0.44 from side pot
+LittleMate collected $0.43 from side pot
+Hero: shows [Kd Ts Td Kh] (HI: a pair of Kings)
+HalloPapabär collected $0.64 from main pot
+LittleMate collected $0.63 from main pot
+*** SUMMARY ***
+Total pot $2.21 Main pot $1.27. Side pot $0.87. | Rake $0.07 
+Board [Qc Ac 3c 5d 6d]
+Seat 1: Fede Z92 folded before Flop (didn't bet)
+Seat 2: Hero (button) showed [Kd Ts Td Kh] and lost with HI: a pair of Kings
+Seat 3: HalloPapabär (small blind) showed [8h Ad 2c 6c] and won ($1.08) with HI: a flush, Ace high; LO: 6,5,3,2,A
+Seat 4: Peon347 (big blind) folded before Flop
+Seat 5: LittleMate showed [8s 7d 2s 4d] and won ($1.06) with HI: a straight, Three to Seven; LO: 5,4,3,2,A
+Seat 6: Evniko folded before Flop (didn't bet)

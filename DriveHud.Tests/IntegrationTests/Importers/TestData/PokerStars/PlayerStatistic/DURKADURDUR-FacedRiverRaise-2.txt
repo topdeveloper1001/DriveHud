@@ -1,0 +1,41 @@
+PokerStars Game #47148616244:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:09:42 ET
+Table 'Vindobona' 6-max Seat #3 is the button
+Seat 1: twinpsych ($272.15 in chips) 
+Seat 2: kaader ($224 in chips) 
+Seat 3: pobolero ($510.65 in chips) 
+Seat 4: DURKADURDUR ($212.70 in chips) 
+Seat 6: TimK0123 ($200 in chips) 
+DURKADURDUR: posts small blind $1
+IhavBestHand: is sitting out 
+TimK0123: posts big blind $2
+*** HOLE CARDS ***
+IhavBestHand leaves the table
+twinpsych has timed out
+twinpsych: folds 
+kaader: folds 
+pobolero: raises $4 to $6
+DURKADURDUR: calls $5
+TimK0123: folds 
+*** FLOP *** [Ad 6c Ks]
+DURKADURDUR: checks 
+pobolero: bets $10
+DURKADURDUR: calls $10
+*** TURN *** [Ad 6c Ks] [Jh]
+DURKADURDUR: checks 
+pobolero: checks 
+*** RIVER *** [Ad 6c Ks Jh] [7s]
+DURKADURDUR: bets $24
+pobolero: raises $54 to $78
+Remorceless joins the table at seat #5 
+DURKADURDUR: folds 
+Uncalled bet ($54) returned to pobolero
+pobolero collected $80 from pot
+pobolero: doesn't show hand 
+*** SUMMARY ***
+Total pot $82 | Rake $2 
+Board [Ad 6c Ks Jh 7s]
+Seat 1: twinpsych folded before Flop (didn't bet)
+Seat 2: kaader folded before Flop (didn't bet)
+Seat 3: pobolero (button) collected ($80)
+Seat 4: DURKADURDUR (small blind) folded on the River
+Seat 6: TimK0123 (big blind) folded before Flop

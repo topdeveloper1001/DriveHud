@@ -1,0 +1,40 @@
+PokerStars Game #47180858483:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:12:02 ET
+Table 'Rigilkent VIII' 6-max Seat #3 is the button
+Seat 1: mayhem920 ($268.65 in chips) 
+Seat 2: DURKADURDUR ($758.60 in chips) 
+Seat 3: Nehekus ($453.05 in chips) 
+Seat 4: rivichico ($200 in chips) 
+Seat 5: MiraCIe ($200 in chips) 
+rivichico: posts small blind $1
+MiraCIe: posts big blind $2
+thomaswkm: sits out 
+*** HOLE CARDS ***
+mayhem920: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+Nehekus: folds 
+rivichico: folds 
+MiraCIe: folds 
+mayhem920: calls $14
+*** FLOP *** [3c 3s 4c]
+mayhem920: checks 
+DURKADURDUR: checks 
+*** TURN *** [3c 3s 4c] [Ad]
+mayhem920: checks 
+DURKADURDUR: bets $27
+mayhem920: raises $27 to $54
+DURKADURDUR: raises $684.60 to $738.60 and is all-in
+mayhem920: calls $194.65 and is all-in
+Uncalled bet ($489.95) returned to DURKADURDUR
+*** RIVER *** [3c 3s 4c Ad] [5s]
+*** SHOW DOWN ***
+mayhem920: shows [4h 4d] (a full house, Fours full of Threes)
+DURKADURDUR: mucks hand 
+mayhem920 collected $538.30 from pot
+*** SUMMARY ***
+Total pot $540.30 | Rake $2 
+Board [3c 3s 4c Ad 5s]
+Seat 1: mayhem920 showed [4h 4d] and won ($538.30) with a full house, Fours full of Threes
+Seat 2: DURKADURDUR mucked
+Seat 3: Nehekus (button) folded before Flop (didn't bet)
+Seat 4: rivichico (small blind) folded before Flop
+Seat 5: MiraCIe (big blind) folded before Flop

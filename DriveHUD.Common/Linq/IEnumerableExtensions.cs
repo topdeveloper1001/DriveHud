@@ -289,8 +289,23 @@ namespace DriveHUD.Common.Linq
         /// <param name="source"></param>
         /// <returns></returns>
         public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
-        {            
+        {
             return source == null || !source.Any();
+        }
+
+        public static bool All<T>(this IEnumerable<T> source, Func<T, bool> predicate, bool mustExist)
+        {
+            foreach (var e in source)
+            {
+                if (!predicate(e))
+                {
+                    return false;
+                }
+
+                mustExist = false;
+            }
+
+            return !mustExist;
         }
     }
 }

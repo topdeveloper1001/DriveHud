@@ -1,0 +1,42 @@
+PokerStars Game #47149733668:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:04:27 ET
+Table 'Melete II' 6-max Seat #2 is the button
+Seat 1: stopme10 ($203 in chips) 
+Seat 2: StewieZA ($272.70 in chips) 
+Seat 3: FIrmFighter ($200 in chips) 
+Seat 4: Desateur ($459 in chips) 
+Seat 5: DURKADURDUR ($247.25 in chips) 
+Seat 6: twinpsych ($208.80 in chips) 
+FIrmFighter: posts small blind $1
+Desateur: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+twinpsych: folds 
+stopme10: folds 
+StewieZA: folds 
+FIrmFighter: calls $5
+Desateur: folds 
+*** FLOP *** [Qc 5c 9h]
+FIrmFighter: checks 
+DURKADURDUR: bets $11
+FIrmFighter: calls $11
+*** TURN *** [Qc 5c 9h] [Js]
+FIrmFighter: checks 
+DURKADURDUR: bets $26
+FIrmFighter: calls $26
+*** RIVER *** [Qc 5c 9h Js] [Tc]
+FIrmFighter: checks 
+DURKADURDUR: bets $69
+FIrmFighter: raises $88 to $157 and is all-in
+DURKADURDUR: folds 
+Uncalled bet ($88) returned to FIrmFighter
+FIrmFighter collected $223 from pot
+FIrmFighter: doesn't show hand 
+*** SUMMARY ***
+Total pot $226 | Rake $3 
+Board [Qc 5c 9h Js Tc]
+Seat 1: stopme10 folded before Flop (didn't bet)
+Seat 2: StewieZA (button) folded before Flop (didn't bet)
+Seat 3: FIrmFighter (small blind) collected ($223)
+Seat 4: Desateur (big blind) folded before Flop
+Seat 5: DURKADURDUR folded on the River
+Seat 6: twinpsych folded before Flop (didn't bet)

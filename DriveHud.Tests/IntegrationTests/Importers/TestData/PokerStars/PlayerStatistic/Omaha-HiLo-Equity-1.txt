@@ -1,0 +1,46 @@
+PokerStars Hand #177681745389:  Omaha Hi/Lo Pot Limit ($0.01/$0.02 USD) - 2017/11/01 20:27:24 ET
+Table 'Achird' 9-max Seat #8 is the button
+Seat 1: dlolo30 ($2 in chips)
+Seat 2: VATNIKsAK-47 ($2 in chips)
+Seat 4: Tigran0608 ($1.61 in chips)
+Seat 5: deadman426 ($0.19 in chips)
+Seat 6: tmacnich ($2 in chips)
+Seat 7: pitervper777 ($3.38 in chips)
+Seat 8: 99barker99 ($2.12 in chips)
+Seat 9: xPeepx ($13.81 in chips)
+xPeepx: posts small blind $0.01
+dlolo30: posts big blind $0.02
+*** HOLE CARDS ***
+VATNIKsAK-47: folds
+Tigran0608: calls $0.02
+deadman426: raises $0.07 to $0.09
+tmacnich: raises $0.07 to $0.16
+pitervper777: raises $0.46 to $0.62
+99barker99: folds
+xPeepx: folds
+dlolo30: folds
+Tigran0608: folds
+deadman426: calls $0.10 and is all-in
+tmacnich: raises $1.38 to $2 and is all-in
+pitervper777: calls $1.38
+*** FLOP *** [Ad 7s 5d]
+*** TURN *** [Ad 7s 5d] [As]
+*** RIVER *** [Ad 7s 5d As] [Jc]
+*** SHOW DOWN ***
+tmacnich: shows [5c 3s Ac Jd] (HI: a full house, Aces full of Jacks)
+pitervper777: shows [2s 5h Ah 9h] (HI: a full house, Aces full of Fives)
+tmacnich collected $3.50 from side pot
+deadman426: shows [9c 8d 5s 2c] (HI: two pair, Aces and Fives; LO: 8,7,5,2,A)
+tmacnich collected $0.30 from main pot
+deadman426 collected $0.30 from main pot
+*** SUMMARY ***
+Total pot $4.24 Main pot $0.60. Side pot $3.50. | Rake $0.14
+Board [Ad 7s 5d As Jc]
+Seat 1: dlolo30 (big blind) folded before Flop
+Seat 2: VATNIKsAK-47 folded before Flop (didn't bet)
+Seat 4: Tigran0608 folded before Flop
+Seat 5: deadman426 showed [9c 8d 5s 2c] and won ($0.30) with HI: two pair, Aces and Fives; LO: 8,7,5,2,A
+Seat 6: tmacnich showed [5c 3s Ac Jd] and won ($3.80) with HI: a full house, Aces full of Jacks
+Seat 7: pitervper777 showed [2s 5h Ah 9h] and lost with HI: a full house, Aces full of Fives
+Seat 8: 99barker99 (button) folded before Flop (didn't bet)
+Seat 9: xPeepx (small blind) folded before Flop

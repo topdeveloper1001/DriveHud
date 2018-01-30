@@ -10,8 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.WinApi;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace DriveHUD.Importers.Bovada
@@ -23,19 +26,19 @@ namespace DriveHUD.Importers.Bovada
     {
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 
-        private HashSet<IntPtr> windowsHandles = new HashSet<IntPtr>();
+        private Dictionary<IntPtr, BovadaTable> windowsHandles = new Dictionary<IntPtr, BovadaTable>();
 
         /// <summary>
         /// Adds the specified handle to the cache
         /// </summary>
         /// <param name="hWnd">The handle to add to the cache</param>
-        public void AddWindow(IntPtr hWnd)
+        public void AddWindow(IntPtr hWnd, BovadaTable table)
         {
             cacheLock.EnterUpgradeableReadLock();
 
             try
             {
-                if (windowsHandles.Contains(hWnd))
+                if (windowsHandles.ContainsKey(hWnd))
                 {
                     return;
                 }
@@ -44,9 +47,9 @@ namespace DriveHUD.Importers.Bovada
 
                 try
                 {
-                    if (!windowsHandles.Contains(hWnd))
+                    if (!windowsHandles.ContainsKey(hWnd))
                     {
-                        windowsHandles.Add(hWnd);
+                        windowsHandles.Add(hWnd, table);
                     }
                 }
                 finally
@@ -81,18 +84,39 @@ namespace DriveHUD.Importers.Bovada
         /// Checks whenever the specified handle exists in the cache
         /// </summary>
         /// <param name="hWnd">The handle to check if exists in the cache</param>
-        /// <returns>Returns true if the handle exists in the cache, otherwise - false</returns>
-        public bool IsWindowCached(IntPtr hWnd)
+        /// <returns>Returns table associated with the handle if the handle exists in the cache, otherwise - null</returns>
+        public BovadaTable GetCachedTable(IntPtr hWnd)
         {
-            cacheLock.EnterReadLock();
+            cacheLock.EnterUpgradeableReadLock();
 
             try
             {
-                return windowsHandles.Contains(hWnd);
+                var closedWindows = windowsHandles.Keys.Where(wh => !WinApi.IsWindow(wh)).ToArray();
+
+                if (closedWindows.Length > 0)
+                {
+                    cacheLock.EnterWriteLock();
+
+                    try
+                    {
+                        closedWindows.ForEach(wh => windowsHandles.Remove(wh));
+                    }
+                    finally
+                    {
+                        cacheLock.ExitWriteLock();
+                    }
+                }
+
+                if (windowsHandles.ContainsKey(hWnd))
+                {
+                    return windowsHandles[hWnd];
+                }
+
+                return null;
             }
             finally
             {
-                cacheLock.ExitReadLock();
+                cacheLock.ExitUpgradeableReadLock();
             }
         }
 
@@ -106,7 +130,7 @@ namespace DriveHUD.Importers.Bovada
 
             try
             {
-                if (windowsHandles.Contains(hWnd))
+                if (!windowsHandles.ContainsKey(hWnd))
                 {
                     return;
                 }
@@ -115,7 +139,7 @@ namespace DriveHUD.Importers.Bovada
 
                 try
                 {
-                    if (!windowsHandles.Contains(hWnd))
+                    if (windowsHandles.ContainsKey(hWnd))
                     {
                         windowsHandles.Remove(hWnd);
                     }

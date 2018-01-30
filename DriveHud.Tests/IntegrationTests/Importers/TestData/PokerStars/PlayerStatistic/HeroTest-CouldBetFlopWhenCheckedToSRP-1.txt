@@ -1,0 +1,37 @@
+PokerStars Game #47181214550:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:22:54 ET
+Table 'Triton III' 6-max Seat #1 is the button
+Seat 1: Pappe_Ruk ($299.35 in chips) 
+Seat 2: rivichico ($416 in chips) 
+Seat 3: sexygee ($209.35 in chips) 
+Seat 4: thomaswkm ($211 in chips) 
+Seat 5: HeroTest ($276.10 in chips) 
+Seat 6: FrAnWaN ($214.60 in chips) 
+rivichico: posts small blind $1
+sexygee: posts big blind $2
+*** HOLE CARDS ***
+thomaswkm: folds 
+HeroTest: raises $4 to $6
+FrAnWaN: folds 
+Pappe_Ruk: folds 
+rivichico: folds 
+sexygee: calls $4
+*** FLOP *** [4h 3d 5s]
+sexygee: checks 
+HeroTest: checks 
+*** TURN *** [4h 3d 5s] [Th]
+sexygee: checks 
+HeroTest: bets $8
+sexygee: folds 
+Uncalled bet ($8) returned to HeroTest
+HeroTest collected $12.35 from pot
+HeroTest: doesn't show hand 
+*** SUMMARY ***
+Total pot $13 | Rake $0.65 
+Board [4h 3d 5s Th]
+Seat 1: Pappe_Ruk (button) folded before Flop (didn't bet)
+Seat 2: rivichico (small blind) folded before Flop
+Seat 3: sexygee (big blind) folded on the Turn
+Seat 4: thomaswkm folded before Flop (didn't bet)
+Seat 5: HeroTest collected ($12.35)
+Seat 6: FrAnWaN folded before Flop (didn't bet)
+

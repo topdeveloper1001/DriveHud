@@ -112,12 +112,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         [ProtoMember(2)]
-        private Dictionary<string, StatDto> heatMap = new Dictionary<string, StatDto>();
+        private HeatMapDto heatMap = new HeatMapDto();
 
         /// <summary>
         /// Gets the top stat of the graph
         /// </summary>
-        public Dictionary<string, StatDto> HeatMap
+        public HeatMapDto HeatMap
         {
             get
             {

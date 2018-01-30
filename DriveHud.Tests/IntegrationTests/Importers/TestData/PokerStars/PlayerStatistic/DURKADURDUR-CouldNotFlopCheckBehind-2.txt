@@ -1,0 +1,32 @@
+PokerStars Game #47184599310:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:14:10 ET
+Table 'Triton III' 6-max Seat #4 is the button
+Seat 1: Cardsdevil27 ($171 in chips)
+Seat 2: rivichico ($551.85 in chips)
+Seat 3: sexygee ($545.50 in chips)
+Seat 4: thomaswkm ($399.80 in chips)
+Seat 5: DURKADURDUR ($222.40 in chips)
+Seat 6: FrAnWaN ($401.20 in chips)
+DURKADURDUR: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+Cardsdevil27: folds
+rivichico: folds
+sexygee: folds
+thomaswkm: folds
+DURKADURDUR: raises $4 to $6
+FrAnWaN: calls $4
+*** FLOP *** [6s 8c 8d]
+DURKADURDUR: bets $8
+FrAnWaN: folds
+Uncalled bet ($8) returned to DURKADURDUR
+DURKADURDUR collected $11.40 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $12 | Rake $0.60
+Board [6s 8c 8d]
+Seat 1: Cardsdevil27 folded before Flop (didn't bet)
+Seat 2: rivichico folded before Flop (didn't bet)
+Seat 3: sexygee folded before Flop (didn't bet)
+Seat 4: thomaswkm (button) folded before Flop (didn't bet)
+Seat 5: DURKADURDUR (small blind) collected ($11.40)
+Seat 6: FrAnWaN (big blind) folded on the Flop

@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -19,22 +21,20 @@ using DriveHUD.Importers.Builders.iPoker;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model.Settings;
 using Model.Site;
 using Newtonsoft.Json;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
-using System;
-using DriveHud.Tests.UnitTests.Helpers;
-using Model.Settings;
-using DriveHUD.Common.Resources;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -65,7 +65,7 @@ namespace DriveHud.Tests.UnitTests
             unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());            
+            unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IFileImporter, FileImporterStub>(new ContainerControlledLifetimeManager());
@@ -115,7 +115,12 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ign-zone-2017-11-24-2.log", "ign-info.log", "ign-zone-2017-11-24-2.xml")]
         [TestCase("ign-zone-2017-12-11.log", "ign-info.log", "ign-zone-2017-12-11.xml")]
         [TestCase("ign-zone-2017-12-19.log", "ign-info.log", "ign-zone-2017-12-19.xml")]
-        public void ZoneHandsIsImported(string testData, string infoTestData, string expectedFile)
+        [TestCase("ign-cash-2017-11-22.log", "ign-info.log", "ign-cash-2017-11-22.xml")]
+        [TestCase("ign-mtt-2017-12-26.log", "ign-info.log", "ign-mtt-2017-12-26.xml")]
+        [TestCase("ign-mtt-2018-01-07.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
+        [TestCase("ign-mtt-2018-01-07.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
+        [TestCase("ign-mtt-2018-01-14.log", "ign-info.log", "ign-mtt-2018-01-14.xml")]
+        public void HandsAreImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data
             InitializeInfoDataManager(infoTestData);
@@ -218,6 +223,7 @@ namespace DriveHud.Tests.UnitTests
         {
             xml = Regex.Replace(xml, "<startdate>[^<]+</startdate>", $"<startdate>{predefinedDate}</startdate>");
             xml = Regex.Replace(xml, @"(name|player)=""P(\d+)_[^""]+", "$1=\"P$2");
+            xml = Regex.Replace(xml, @"<session sessioncode=""(\d+)""", "<session sessioncode=\"0\"");
 
             return xml;
         }
@@ -323,11 +329,20 @@ namespace DriveHud.Tests.UnitTests
         {
             public IgnitionTableStub(IEventAggregator eventAggregator) : base(eventAggregator)
             {
+                WindowHandle = new IntPtr(10080);
             }
 
             protected override void ImportHandAsync(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
             {
                 ImportHand(handHistoryXml, handNumber, gameInfo, game);
+            }
+
+            protected override bool DoDelayBeforeImport
+            {
+                get
+                {
+                    return false;
+                }
             }
         }
 

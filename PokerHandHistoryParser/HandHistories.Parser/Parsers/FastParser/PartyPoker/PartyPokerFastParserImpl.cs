@@ -424,13 +424,33 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             //Expected limitSubstring format:
             //0.05/$0.10
-            int splitIndex = limitSubstring.IndexOf('/');
-            string SB = limitSubstring.Remove(splitIndex);
-            string BB = limitSubstring.Substring(splitIndex + (isTournament ? 1 : 2));
+            //850/1.7K
 
-            decimal small = decimal.Parse(SB, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
-            decimal big = decimal.Parse(BB, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            var splitIndex = limitSubstring.IndexOf('/');
+            var SB = limitSubstring.Substring(0, splitIndex);
+            var BB = limitSubstring.Substring(splitIndex + (isTournament ? 1 : 2));
+
+            var small = ParseBlind(SB);
+            var big = ParseBlind(BB);
+
             return Limit.FromSmallBlindBigBlind(small, big, currency);
+        }
+
+        private const string blindThousandSymbol = "K";
+
+        private static decimal ParseBlind(string blindText)
+        {
+            var multiplier = 1;
+
+            if (blindText.IndexOf(blindThousandSymbol, StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                blindText = blindText.Replace(blindThousandSymbol, string.Empty);
+                multiplier = 1000;
+            }
+
+            var blind = decimal.Parse(blindText, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+
+            return multiplier > 1 ? blind * multiplier : blind;
         }
 
         public override bool IsValidHand(string[] handLines)

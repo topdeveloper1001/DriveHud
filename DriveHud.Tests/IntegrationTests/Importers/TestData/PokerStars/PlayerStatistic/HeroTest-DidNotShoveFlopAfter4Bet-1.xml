@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="270884496916">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.1</gametype>
+    <tablename>NL Hold’em: $0.05/$0.10 - 6 Seater #6907</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-02-26 16:17:03</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+    <game gamecode="103367718">
+    <general>
+      <startdate>2017-02-26 20:22:46</startdate>
+      <players>
+        <player seat="1" name="Izofir" chips="13.16" dealer="0" win="0" bet="0.3" rebuy="0" addon="0" />
+        <player seat="2" name="PIDORASHKA" chips="22.33" dealer="1" win="0" bet="0.3" rebuy="0" addon="0" />
+        <player seat="3" name="Piskanaft" chips="15.33" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="4" name="Dotemup" chips="6.9" dealer="0" win="0" bet="6.9" rebuy="0" addon="0" />
+        <player seat="5" name="Dirtyharry128" chips="20.59" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="HeroTest" chips="10.6" dealer="0" win="16.01" bet="9.26" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Piskanaft" type="1" sum="0.05" cards="" />
+      <action no="2" player="Dotemup" type="2" sum="0.1" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Izofir">X X</cards>
+      <cards type="Pocket" player="PIDORASHKA">X X</cards>
+      <cards type="Pocket" player="Piskanaft">X X</cards>
+      <cards type="Pocket" player="Dotemup">C10 HQ</cards>
+      <cards type="Pocket" player="Dirtyharry128">X X</cards>
+      <cards type="Pocket" player="HeroTest">DA SA</cards>
+      <action no="3" player="Dirtyharry128" type="0" sum="0" cards="" />
+      <action no="4" player="HeroTest" type="23" sum="0.3" cards="" />
+      <action no="5" player="Izofir" type="3" sum="0.3" cards="" />
+      <action no="6" player="PIDORASHKA" type="3" sum="0.3" cards="" />
+      <action no="7" player="Piskanaft" type="0" sum="0" cards="" />
+      <action no="8" player="Dotemup" type="23" sum="0.5" cards="" />
+      <action no="9" player="HeroTest" type="23" sum="2.4" cards="" />
+      <action no="10" player="Izofir" type="0" sum="0" cards="" />
+      <action no="11" player="PIDORASHKA" type="0" sum="0" cards="" />
+      <action no="12" player="Dotemup" type="3" sum="1.9" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">D8 S5 D9</cards>
+      <action no="13" player="Dotemup" type="5" sum="3.43" cards="" />
+      <action no="14" player="HeroTest" type="23" sum="6.86" cards="" />
+      <action no="15" player="Dotemup" type="3" sum="1.07" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H4</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">S6</cards>
+    </round>
+  </game>
+</session>

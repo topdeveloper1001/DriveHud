@@ -23,12 +23,24 @@
     x:Name="hudWindow">
 
     <Window.Resources>
-        <valueConverters:SelectedLayoutToCheckedConverter
-            x:Key="SelectedLayoutToCheckedConverter" />
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ColorsResource.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/Resources.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/DataTemplates.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/RadWindowTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <valueConverters:SelectedLayoutToCheckedConverter
+                x:Key="SelectedLayoutToCheckedConverter" />
+
+        </ResourceDictionary>
     </Window.Resources>
-    <Window.DataContext>
-        <vm:HudWindowViewModel />
-    </Window.DataContext>
 
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger

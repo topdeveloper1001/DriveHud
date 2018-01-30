@@ -14,8 +14,7 @@ using ProtoBuf;
 
 namespace Model.Data
 {
-    [ProtoContract]
-    [ProtoInclude(4, typeof(HeatMapStatDto))]
+    [ProtoContract]    
     public class StatDto
     {
         public StatDto()
@@ -36,5 +35,10 @@ namespace Model.Data
 
         [ProtoMember(3)]
         public virtual int CouldOccurred { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0:n1} {1}/{2}", Value, Occurred, CouldOccurred);
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace DriveHUD.Application.Views
     /// <summary>
     /// Interaction logic for HudWindow.xaml
     /// </summary>
-    public partial class HudWindow : Window, IDisposable
+    public partial class HudWindow : Window
     {
         private IHudPanelService hudPanelService;
 
@@ -49,6 +49,8 @@ namespace DriveHUD.Application.Views
 
         public HudWindow()
         {
+            DataContext = new HudWindowViewModel(Dispatcher);
+
             InitializeComponent();
 
             dgCanvas.DragEnded += DgCanvas_DragEnded;
@@ -213,23 +215,6 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        public void Dispose()
-        {
-            if (dgCanvas != null && dgCanvas.Children != null)
-            {
-                foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
-                {
-                    dgCanvas.Children.Remove(panel);
-                }
-
-                dgCanvas.UpdateLayout();
-            }
-
-            NameScope.GetNameScope(this).UnregisterName("dgCanvas");
-
-            GC.Collect();
-        }
-
         private void BuildTrackConditionsMeter(HudTrackConditionsViewModelInfo trackConditionViewModelInfo)
         {
             if (trackConditionViewModelInfo == null)
@@ -380,6 +365,32 @@ namespace DriveHUD.Application.Views
         {
             dgCanvas.DragEnded -= DgCanvas_DragEnded;
             base.OnClosing(e);
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            try
+            {
+                if (dgCanvas != null && dgCanvas.Children != null)
+                {
+                    foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
+                    {
+                        dgCanvas.Children.Remove(panel);
+                    }
+
+                    dgCanvas.UpdateLayout();
+                }
+
+                NameScope.GetNameScope(this).UnregisterName("dgCanvas");
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could freed resources.", ex);
+            }
+
+            GC.Collect();
+
+            base.OnClosed(e);
         }
 
         private List<RadMenuItem> GetSiblingGroupItems(RadMenuItem currentItem)

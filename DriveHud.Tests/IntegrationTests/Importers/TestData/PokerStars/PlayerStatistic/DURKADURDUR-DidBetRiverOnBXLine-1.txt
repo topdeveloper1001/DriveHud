@@ -1,0 +1,39 @@
+PokerStars Game #47184944991:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:26:19 ET
+Table 'Neckar VII' 6-max Seat #2 is the button
+Seat 2: DURKADURDUR ($231.05 in chips) 
+Seat 3: Fierytycoon ($241 in chips) 
+Seat 4: FastEddie267 ($226.15 in chips) 
+Seat 5: imthesky ($202 in chips) 
+Seat 6: LingXY ($218.30 in chips) 
+Fierytycoon: posts small blind $1
+FastEddie267: posts big blind $2
+*** HOLE CARDS ***
+imthesky: folds 
+LingXY: folds 
+DURKADURDUR: raises $4 to $6
+Fierytycoon: folds 
+FastEddie267: raises $14 to $20
+DURKADURDUR: calls $14
+*** FLOP *** [7h 2h Jd]
+FastEddie267: checks 
+DURKADURDUR: bets $26
+FastEddie267: calls $26
+*** TURN *** [7h 2h Jd] [3d]
+FastEddie267: checks 
+Marker275 joins the table at seat #1 
+DURKADURDUR: checks 
+*** RIVER *** [7h 2h Jd 3d] [8d]
+FastEddie267: checks 
+DURKADURDUR: bets $72
+FastEddie267: folds 
+Uncalled bet ($72) returned to DURKADURDUR
+DURKADURDUR collected $91 from pot
+DURKADURDUR: doesn't show hand 
+*** SUMMARY ***
+Total pot $93 | Rake $2 
+Board [7h 2h Jd 3d 8d]
+Seat 2: DURKADURDUR (button) collected ($91)
+Seat 3: Fierytycoon (small blind) folded before Flop
+Seat 4: FastEddie267 (big blind) folded on the River
+Seat 5: imthesky folded before Flop (didn't bet)
+Seat 6: LingXY folded before Flop (didn't bet)

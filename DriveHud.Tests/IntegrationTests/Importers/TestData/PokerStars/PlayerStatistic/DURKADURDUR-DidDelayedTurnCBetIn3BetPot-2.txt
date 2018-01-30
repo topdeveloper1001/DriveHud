@@ -1,0 +1,42 @@
+PokerStars Game #47151237840:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:07:48 ET
+Table 'Alzirr IV' 6-max Seat #2 is the button
+Seat 1: stopme10 ($222.35 in chips) 
+Seat 2: DURKADURDUR ($259.95 in chips) 
+Seat 3: eraser2308 ($200 in chips) 
+Seat 4: whollyflush ($200 in chips) 
+Seat 5: elseyking ($122.75 in chips) 
+Seat 6: maestroB ($131.45 in chips) 
+eraser2308: posts small blind $1
+whollyflush: posts big blind $2
+*** HOLE CARDS ***
+elseyking: folds 
+maestroB: folds 
+stopme10: folds 
+DURKADURDUR: raises $4 to $6
+eraser2308: folds 
+whollyflush: calls $4
+*** FLOP *** [8c 3c Ts]
+whollyflush: checks 
+DURKADURDUR: checks 
+*** TURN *** [8c 3c Ts] [Kc]
+whollyflush: checks 
+DURKADURDUR: bets $10
+whollyflush: calls $10
+*** RIVER *** [8c 3c Ts Kc] [Kd]
+whollyflush: checks 
+DURKADURDUR: bets $26
+whollyflush: calls $26
+*** SHOW DOWN ***
+DURKADURDUR: shows [6s 9s] (a pair of Kings)
+whollyflush: shows [Qd Kh] (three of a kind, Kings)
+whollyflush collected $82 from pot
+*** SUMMARY ***
+Total pot $85 | Rake $3 
+Board [8c 3c Ts Kc Kd]
+Seat 1: stopme10 folded before Flop (didn't bet)
+Seat 2: DURKADURDUR (button) showed [6s 9s] and lost with a pair of Kings
+Seat 3: eraser2308 (small blind) folded before Flop
+Seat 4: whollyflush (big blind) showed [Qd Kh] and won ($82) with three of a kind, Kings
+Seat 5: elseyking folded before Flop (didn't bet)
+Seat 6: maestroB folded before Flop (didn't bet)
+

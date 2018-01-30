@@ -96,7 +96,7 @@ namespace DriveHUD.Importers.Bovada
                 return;
             }
 
-            ignitionWindowCache.AddWindow(windowHandle);
+            ignitionWindowCache.AddWindow(windowHandle, this);
 
             WindowHandle = windowHandle;
         }
@@ -211,8 +211,34 @@ namespace DriveHUD.Importers.Bovada
                         var windowTitle = WinApi.GetWindowText(hWnd);
                         var windowClassName = sb.ToString();
 
-                        if (IsWindowMatch(windowTitle, windowClassName) && !ignitionWindowCache.IsWindowCached(hWnd))
+                        if (IsWindowMatch(windowTitle, windowClassName))
                         {
+                            // if window is already cached we need to check maybe d/c happened
+                            var cachedTable = ignitionWindowCache.GetCachedTable(hWnd);
+
+                            if (cachedTable != null)
+                            {
+                                var match = TableId != 0 && cachedTable.TableId == TableId &&
+                                    MaxSeat != 0 && cachedTable.MaxSeat == MaxSeat &&
+                                    cachedTable.GameFormat == GameFormat && cachedTable.GameLimit == GameLimit &&
+                                    cachedTable.GameType == GameType &&
+                                    (IsTournament && cachedTable.TableName == TableName &&
+                                    (cachedTable.TableIndex == TableIndex || HeroSeat != 0 && cachedTable.HeroSeat != 0) || !IsTournament);
+
+                                if (match)
+                                {
+                                    if (IsAdvancedLoggingEnabled)
+                                    {
+                                        LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}] was found in the cache, and it does match table [{TableName}, {TableId}, {TableIndex}, {HeroSeat}]. [{Identifier}]");
+                                    }
+
+                                    windowHandle = hWnd;
+                                    return false;
+                                }
+
+                                return true;
+                            }
+
                             if (IsAdvancedLoggingEnabled)
                             {
                                 LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}] does match table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");

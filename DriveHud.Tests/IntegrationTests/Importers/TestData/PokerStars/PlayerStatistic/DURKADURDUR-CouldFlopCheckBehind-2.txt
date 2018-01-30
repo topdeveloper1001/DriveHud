@@ -1,0 +1,44 @@
+PokerStars Game #47179731414:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 20:37:22 ET
+Table 'Rigilkent VIII' 6-max Seat #4 is the button
+Seat 1: mayhem920 ($298.65 in chips) 
+Seat 2: DURKADURDUR ($241 in chips) 
+Seat 3: Nehekus ($405.75 in chips) 
+Seat 4: rivichico ($206.85 in chips) 
+Seat 5: 75wilfork ($240.30 in chips) 
+Seat 6: redargoe ($200 in chips) 
+75wilfork: posts small blind $1
+redargoe: posts big blind $2
+*** HOLE CARDS ***
+mayhem920: folds 
+DURKADURDUR: raises $4 to $6
+Nehekus: folds 
+rivichico: folds 
+75wilfork: calls $5
+redargoe: calls $4
+*** FLOP *** [Td 4h Ah]
+75wilfork: checks 
+redargoe: checks 
+DURKADURDUR: bets $12
+75wilfork: raises $18 to $30
+redargoe: folds 
+DURKADURDUR: calls $18
+*** TURN *** [Td 4h Ah] [Kh]
+75wilfork: bets $45
+DURKADURDUR: calls $45
+*** RIVER *** [Td 4h Ah Kh] [Js]
+75wilfork: checks 
+DURKADURDUR: checks 
+*** SHOW DOWN ***
+75wilfork: shows [Th 7d] (a pair of Tens)
+DURKADURDUR: shows [As Kd] (two pair, Aces and Kings)
+DURKADURDUR collected $165 from pot
+*** SUMMARY ***
+Total pot $168 | Rake $3 
+Board [Td 4h Ah Kh Js]
+Seat 1: mayhem920 folded before Flop (didn't bet)
+Seat 2: DURKADURDUR showed [As Kd] and won ($165) with two pair, Aces and Kings
+Seat 3: Nehekus folded before Flop (didn't bet)
+Seat 4: rivichico (button) folded before Flop (didn't bet)
+Seat 5: 75wilfork (small blind) showed [Th 7d] and lost with a pair of Tens
+Seat 6: redargoe (big blind) folded on the Flop
+

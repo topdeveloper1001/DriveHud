@@ -1,0 +1,39 @@
+PokerStars Game #47185168419:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:34:11 ET
+Table 'Malabar III' 6-max Seat #3 is the button
+Seat 1: imthesky ($289.05 in chips) 
+Seat 3: FastEddie267 ($241.05 in chips) 
+Seat 4: hellokittery ($204 in chips) 
+Seat 5: MooMooTin ($100 in chips) 
+Seat 6: DURKADURDUR ($472.80 in chips) 
+hellokittery: posts small blind $1
+MooMooTin: posts big blind $2
+*** HOLE CARDS ***
+DURKADURDUR: raises $4 to $6
+imthesky: calls $6
+FastEddie267: calls $6
+hellokittery: folds 
+MooMooTin: folds 
+*** FLOP *** [Kh 5c Td]
+TODO ADENTR0 joins the table at seat #2 
+DURKADURDUR: bets $14
+imthesky: calls $14
+FastEddie267: folds 
+*** TURN *** [Kh 5c Td] [2c]
+DURKADURDUR: checks 
+imthesky: bets $45
+DURKADURDUR: calls $45
+*** RIVER *** [Kh 5c Td 2c] [7s]
+DURKADURDUR: checks 
+imthesky: bets $135
+DURKADURDUR: folds 
+Uncalled bet ($135) returned to imthesky
+imthesky collected $137 from pot
+imthesky: doesn't show hand 
+*** SUMMARY ***
+Total pot $139 | Rake $2 
+Board [Kh 5c Td 2c 7s]
+Seat 1: imthesky collected ($137)
+Seat 3: FastEddie267 (button) folded on the Flop
+Seat 4: hellokittery (small blind) folded before Flop
+Seat 5: MooMooTin (big blind) folded before Flop
+Seat 6: DURKADURDUR folded on the River

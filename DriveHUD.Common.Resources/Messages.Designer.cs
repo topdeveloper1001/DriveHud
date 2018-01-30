@@ -210,5 +210,59 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Message_Migration0022_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t Rebuild Now.
+        /// </summary>
+        internal static string Message_Migration0025_Cancel {
+            get {
+                return ResourceManager.GetString("Message_Migration0025_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rebuild stats.
+        /// </summary>
+        internal static string Message_Migration0025_Rebuild {
+            get {
+                return ResourceManager.GetString("Message_Migration0025_Rebuild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preparing stats ....
+        /// </summary>
+        internal static string Message_Migration0025_Status {
+            get {
+                return ResourceManager.GetString("Message_Migration0025_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New stats have been added to DriveHUD. You&apos;ll need to rebuild your stats to see the proper value of these new stats. This operation might take some time (5 - 120 minutes depending on database size), but it isn&apos;t mandatory to perform. You can skip it by clicking on Don&apos;t Rebuild Now. You can run the rebuild stats function at a later time from the settings menu.
+        ///
+        ///New stats:
+        ///
+        ///    5-Bet%
+        ///    Bet Flop when Checked to SRP%
+        ///    Bet River on BX Line%
+        ///    Call Flop C-Bet IP%
+        ///    Call Flop C-Bet OOP%
+        ///    Cal [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Message_Migration0025_Text {
+            get {
+                return ResourceManager.GetString("Message_Migration0025_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD: Action is required.
+        /// </summary>
+        internal static string Message_Migration0025_Title {
+            get {
+                return ResourceManager.GetString("Message_Migration0025_Title", resourceCulture);
+            }
+        }
     }
 }

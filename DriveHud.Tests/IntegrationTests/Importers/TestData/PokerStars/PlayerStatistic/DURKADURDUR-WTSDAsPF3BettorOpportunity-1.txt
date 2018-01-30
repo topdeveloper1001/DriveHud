@@ -1,0 +1,38 @@
+PokerStars Game #47183591758:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:38:33 ET
+Table 'Sonja' 6-max Seat #3 is the button
+Seat 1: P1ngPoNgPr0 ($200 in chips) 
+Seat 2: wazawskiHH ($203 in chips) 
+Seat 3: 1tormentor ($208.25 in chips) 
+Seat 4: DURKADURDUR ($200 in chips) 
+Seat 5: TODO ADENTR0 ($244.25 in chips) 
+Seat 6: spacecakezzz ($202 in chips) 
+DURKADURDUR: posts small blind $1
+TODO ADENTR0: posts big blind $2
+*** HOLE CARDS ***
+spacecakezzz: folds 
+P1ngPoNgPr0: folds 
+wazawskiHH: folds 
+1tormentor: raises $4 to $6
+DURKADURDUR: raises $14 to $20
+TODO ADENTR0: folds 
+1tormentor: calls $14
+*** FLOP *** [Jd Kh 5s]
+DURKADURDUR: bets $27
+1tormentor: calls $27
+*** TURN *** [Jd Kh 5s] [Qc]
+DURKADURDUR: checks 
+1tormentor: bets $70
+DURKADURDUR: folds 
+Uncalled bet ($70) returned to 1tormentor
+1tormentor collected $93 from pot
+1tormentor: doesn't show hand 
+*** SUMMARY ***
+Total pot $96 | Rake $3 
+Board [Jd Kh 5s Qc]
+Seat 1: P1ngPoNgPr0 folded before Flop (didn't bet)
+Seat 2: wazawskiHH folded before Flop (didn't bet)
+Seat 3: 1tormentor (button) collected ($93)
+Seat 4: DURKADURDUR (small blind) folded on the Turn
+Seat 5: TODO ADENTR0 (big blind) folded before Flop
+Seat 6: spacecakezzz folded before Flop (didn't bet)
+

@@ -310,6 +310,12 @@
 
                     <Button
                         Style="{StaticResource ButtonStyle}"
+                        Content="{ResX Key=Common_RegistrationView_ResetLicenses}"
+                        Visibility="{Binding IsResetLicensesButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
+                        Command="{Binding ResetLicensesCommand}" />
+
+                    <Button
+                        Style="{StaticResource ButtonStyle}"
                         Content="{ResX Key=Common_RegistrationView_Back}"
                         Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
                         Command="{Binding BackCommand}" />
@@ -319,7 +325,6 @@
                         Content="{ResX Key=Common_RegistrationView_OK}"
                         Visibility="{Binding IsOKButtonVisible, Converter={dh:BoolToVisibilityConverter} }"
                         Command="{Binding OKCommand}" />
-
 
                     <Button
                         Style="{StaticResource ButtonStyle}"

@@ -327,6 +327,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref selectedToolViewModel, value);
                 this.RaisePropertyChanged(nameof(CanAddStats));
+                this.RaisePropertyChanged(nameof(LineBarOrSimpleStatSelectorVisible));
             }
         }
 
@@ -335,6 +336,14 @@ namespace DriveHUD.Application.ViewModels
             get
             {
                 return !IsInDesignMode || (IsInDesignMode && SelectedToolViewModel != null && SelectedToolViewModel is IHudStatsToolViewModel);
+            }
+        }
+
+        public bool LineBarOrSimpleStatSelectorVisible
+        {
+            get
+            {
+                return SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel;
             }
         }
 
@@ -419,6 +428,11 @@ namespace DriveHUD.Application.ViewModels
                             (x as IHudStatsToolViewModel).Stats.ForEach(s =>
                             {
                                 s.CurrentValue = random.Next(0, 100);
+
+                                if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
+                                {
+                                    s.StatDto = new StatDto(0, 0);
+                                }
                             });
                         }
                     });
@@ -674,6 +688,11 @@ namespace DriveHUD.Application.ViewModels
                 {
                     s.CurrentValue = random.Next(0, 100);
                     s.Caption = string.Format(s.Format, s.CurrentValue);
+
+                    if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
+                    {
+                        s.StatDto = new StatDto(0, 0);
+                    }
                 });
             });
 
@@ -683,9 +702,14 @@ namespace DriveHUD.Application.ViewModels
             {
                 tool.BaseStat.CurrentValue = random.Next(0, 100);
 
-                tool.HeatMap = (from cardRange in cardRanges
-                                let occurred = random.Next(0, 100)
-                                select new { CardRange = cardRange, StatDto = new StatDto(occurred, 100) }).ToDictionary(x => x.CardRange, x => x.StatDto);
+                var heatMap = new HeatMapDto
+                {
+                    OccuredByCardRange = (from cardRange in cardRanges
+                                          let occurred = random.Next(0, 100)
+                                          select new { CardRange = cardRange, Occured = occurred }).ToDictionary(x => x.CardRange, x => x.Occured)
+                };
+
+                tool.HeatMap = heatMap;
             });
 
             previewHudElementViewModel.Seat = 1;

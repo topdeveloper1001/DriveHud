@@ -111,6 +111,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FiveBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FiveBet,
+                    Occurred = Source.Did5Bet,
+                    CouldOccurred = Source.Could5Bet
+                };
+            }
+        }
+
+        public virtual StatDto FoldToFiveBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFiveBet,
+                    Occurred = Source.FoldedTo5Bet,
+                    CouldOccurred = Source.Faced5Bet
+                };
+            }
+        }
+
         public virtual StatDto ThreeBetCallObject
         {
             get
@@ -146,6 +172,19 @@ namespace Model.Data
                     Value = TurnCBet,
                     Occurred = Source.Turncontinuationbetmade,
                     CouldOccurred = Source.Turncontinuationbetpossible
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCBet,
+                    Occurred = Source.Foldedtoturncontinuationbet,
+                    CouldOccurred = Source.Facingturncontinuationbet
                 };
             }
         }
@@ -671,6 +710,45 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto CheckRiverAfterBBLineObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRiverAfterBBLine,
+                    Occurred = Source.CheckedRiverAfterBBLine,
+                    CouldOccurred = Source.CouldCheckRiverAfterBBLine
+                };
+            }
+        }
+
+        public virtual StatDto BetRiverOnBXLineObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetRiverOnBXLine,
+                    Occurred = Source.DidBetRiverOnBXLine,
+                    CouldOccurred = Source.CouldBetRiverOnBXLine
+                };
+            }
+        }
+
+        public virtual StatDto RiverBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverBet,
+                    Occurred = Source.DidRiverBet,
+                    CouldOccurred = Source.CouldRiverBet
+                };
+            }
+        }
+
         public virtual StatDto CBetIPObject
         {
             get
@@ -719,6 +797,19 @@ namespace Model.Data
                     Value = DidDelayedTurnCBet,
                     Occurred = Source.DidDelayedTurnCBet,
                     CouldOccurred = Source.CouldDelayedTurnCBet
+                };
+            }
+        }
+
+        public virtual StatDto DelayedTurnCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetIn3BetPot,
+                    Occurred = Source.DidDelayedTurnCBetIn3BetPot,
+                    CouldOccurred = Source.CouldDelayedTurnCBetIn3BetPot
                 };
             }
         }
@@ -787,6 +878,516 @@ namespace Model.Data
                 };
             }
         }
+
+        public virtual StatDto CallFlopCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallFlopCBetIP,
+                    Occurred = Source.CalledflopcontinuationbetIP,
+                    CouldOccurred = Source.FacingflopcontinuationbetIP
+                };
+            }
+        }
+
+        public virtual StatDto CallFlopCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallFlopCBetOOP,
+                    Occurred = Source.CalledflopcontinuationbetOOP,
+                    CouldOccurred = Source.FacingflopcontinuationbetOOP
+                };
+            }
+        }
+
+        public virtual StatDto FoldToFlopCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCBetIP,
+                    Occurred = Source.FoldToFlopcontinuationbetIP,
+                    CouldOccurred = Source.FacingflopcontinuationbetIP
+                };
+            }
+        }
+
+        public virtual StatDto FoldToFlopCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCBetOOP,
+                    Occurred = Source.FoldToFlopcontinuationbetOOP,
+                    CouldOccurred = Source.FacingflopcontinuationbetOOP
+                };
+            }
+        }
+
+        public virtual StatDto CallRiverRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallRiverRaise,
+                    Occurred = Source.CalledFacedRaiseRiver,
+                    CouldOccurred = Source.FacedRaiseRiver
+                };
+            }
+        }
+
+        public virtual StatDto DelayedTurnCBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetIP,
+                    Occurred = didDelayedTurnCBetIP,
+                    CouldOccurred = couldDelayedTurnCBetIP
+                };
+            }
+        }
+
+        public virtual StatDto DelayedTurnCBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetOOP,
+                    Occurred = didDelayedTurnCBetOOP,
+                    CouldOccurred = couldDelayedTurnCBetOOP
+                };
+            }
+        }
+
+        public virtual StatDto CheckRaisedFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRaisedFlopCBet,
+                    Occurred = checkRaisedFlopCBet,
+                    CouldOccurred = couldCheckRaiseFlopCBet
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCBetIn3BetPot,
+                    Occurred = foldToTurnCBetIn3BetPot,
+                    CouldOccurred = facedToTurnCBetIn3BetPot
+                };
+            }
+        }
+
+        public virtual StatDto FlopCheckBehindObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCheckBehind,
+                    Occurred = Source.DidFlopCheckBehind,
+                    CouldOccurred = Source.CouldFlopCheckBehind
+                };
+            }
+        }
+
+        public virtual StatDto FoldToDonkBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToDonkBet,
+                    Occurred = Source.FoldedToDonkBet,
+                    CouldOccurred = Source.FacedDonkBet
+                };
+            }
+        }
+
+        public virtual StatDto FoldTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTurn,
+                    Occurred = Source.FoldedTurn,
+                    CouldOccurred = Source.FacedBetOnTurn
+                };
+            }
+        }
+
+        public virtual StatDto RiverCheckCallObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCheckCall,
+                    Occurred = Source.CheckedCalledRiver,
+                    CouldOccurred = Source.CheckedThenFacedBetOnRiver
+                };
+            }
+        }
+
+        public virtual StatDto RiverCheckFoldObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCheckFold,
+                    Occurred = Source.CheckedFoldedRiver,
+                    CouldOccurred = Source.CheckedThenFacedBetOnRiver
+                };
+            }
+        }
+
+        public virtual StatDto ShovedFlopAfter4BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ShovedFlopAfter4Bet,
+                    Occurred = Source.ShovedFlopAfter4Bet,
+                    CouldOccurred = Source.CouldShoveFlopAfter4Bet
+                };
+            }
+        }
+
+        public virtual StatDto RaiseFlopCBetIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseFlopCBetIn3BetPot,
+                    Occurred = raisedFlopCBetIn3BetPot,
+                    CouldOccurred = couldRaiseFlopCBetIn3BetPot
+                };
+            }
+        }
+
+        public virtual StatDto FoldToThreeBetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToThreeBetIP,
+                    Occurred = Source.FoldToThreeBetIP,
+                    CouldOccurred = Source.FoldToThreeBetIP
+                };
+            }
+        }
+
+        public virtual StatDto FoldToThreeBetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToThreeBetOOP,
+                    Occurred = Source.FoldToThreeBetOOP,
+                    CouldOccurred = Source.FoldToThreeBetOOP
+                };
+            }
+        }
+
+        public virtual StatDto BetFlopWhenCheckedToSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetFlopWhenCheckedToSRP,
+                    Occurred = Source.BetFlopWhenCheckedToSRP,
+                    CouldOccurred = Source.CouldBetFlopWhenCheckedToSRP
+                };
+            }
+        }
+
+        #region FlopBetSize stats
+
+        public virtual StatDto FlopBetSizeOneHalfOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneHalfOrLess,
+                    Occurred = flopBetSizeOneHalfOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeOneQuarterOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneQuarterOrLess,
+                    Occurred = flopBetSizeOneQuarterOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeTwoThirdsOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeTwoThirdsOrLess,
+                    Occurred = flopBetSizeTwoThirdsOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeThreeQuartersOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeThreeQuartersOrLess,
+                    Occurred = flopBetSizeThreeQuartersOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeOneOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeOneOrLess,
+                    Occurred = flopBetSizeOneOrLess,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBetSizeMoreThanOne,
+                    Occurred = flopBetSizeMoreThanOne,
+                    CouldOccurred = didFlopBet
+                };
+            }
+        }
+
+        #endregion
+
+        #region TurnBetSize stats
+
+        public virtual StatDto TurnBetSizeOneHalfOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneHalfOrLess,
+                    Occurred = turnBetSizeOneHalfOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneQuarterOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneQuarterOrLess,
+                    Occurred = turnBetSizeOneQuarterOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneThirdOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneThirdOrLess,
+                    Occurred = turnBetSizeOneThirdOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeTwoThirdsOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeTwoThirdsOrLess,
+                    Occurred = turnBetSizeTwoThirdsOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeThreeQuartersOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeThreeQuartersOrLess,
+                    Occurred = turnBetSizeThreeQuartersOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeOneOrLessObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeOneOrLess,
+                    Occurred = turnBetSizeOneOrLess,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto TurnBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBetSizeMoreThanOne,
+                    Occurred = turnBetSizeMoreThanOne,
+                    CouldOccurred = didTurnBet
+                };
+            }
+        }
+
+        #endregion
+
+        #region RiverBetSize stats
+
+        public virtual StatDto RiverBetSizeMoreThanOneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverBetSizeMoreThanOne,
+                    Occurred = riverBetSizeMoreThanOne,
+                    CouldOccurred = Source.DidRiverBet
+                };
+            }
+        }
+
+        #endregion
+
+        #region WTSD After stats
+
+        public virtual StatDto WTSDAfterCalling3BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterCalling3Bet,
+                    Occurred = wtsdAfterCalling3Bet,
+                    CouldOccurred = wtsdAfterCalling3BetOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterCallingPfrObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterCallingPfr,
+                    Occurred = wtsdAfterCallingPfr,
+                    CouldOccurred = wtsdAfterCallingPfrOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterNotCBettingFlopAsPfrObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterNotCBettingFlopAsPfr,
+                    Occurred = wtsdAfterNotCBettingFlopAsPfr,
+                    CouldOccurred = wtsdAfterNotCBettingFlopAsPfrOpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAfterSeeingTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAfterSeeingTurn,
+                    Occurred = wtsdAfterSeeingTurn,
+                    CouldOccurred = Source.SawTurn
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAsPF3BettorObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAsPF3Bettor,
+                    Occurred = wtsdAsPF3Bettor,
+                    CouldOccurred = wtsdAsPF3BettorOpportunity
+                };
+            }
+        }
+
+        #endregion
 
         #endregion
 
@@ -922,6 +1523,20 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToFlopCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToFlopCheckRaise,
+                    Occurred = Source.FoldedToFlopCheckRaise,
+                    CouldOccurred = Source.FacedFlopCheckRaise,
+                };
+            }
+        }
+
+
         public virtual StatDto FoldToFlopRaiseObject
         {
             get
@@ -931,6 +1546,32 @@ namespace Model.Data
                     Value = FoldToFlopRaise,
                     Occurred = Source.FoldedFacedRaiseFlop,
                     CouldOccurred = Source.FacedRaiseFlop,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTurnCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTurnCheckRaise,
+                    Occurred = Source.FoldedToTurnCheckRaise,
+                    CouldOccurred = Source.FacedTurnCheckRaise,
+                };
+            }
+        }
+
+        public virtual StatDto CalledTurnCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledTurnCheckRaise,
+                    Occurred = Source.CalledTurnCheckRaise,
+                    CouldOccurred = Source.FacedTurnCheckRaise,
                 };
             }
         }
@@ -961,6 +1602,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToRiverCheckRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToRiverCheckRaise,
+                    Occurred = Source.FoldedToRiverCheckRaise,
+                    CouldOccurred = Source.FacedRiverCheckRaise,
+                };
+            }
+        }
+
         public virtual StatDto FoldToSqueezObject
         {
             get
@@ -970,6 +1624,97 @@ namespace Model.Data
                     Value = FoldToSqueez,
                     Occurred = Source.FoldedFacedSqueez,
                     CouldOccurred = Source.FacedSqueez,
+                };
+            }
+        }
+
+        public virtual StatDto CalledCheckRaiseVsFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledCheckRaiseVsFlopCBet,
+                    Occurred = Source.CalledCheckRaiseVsFlopCBet,
+                    CouldOccurred = Source.FacedCheckRaiseVsFlopCBet,
+                };
+            }
+        }
+
+        public virtual StatDto FoldedCheckRaiseVsFlopCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldedCheckRaiseVsFlopCBet,
+                    Occurred = Source.FoldedCheckRaiseVsFlopCBet,
+                    CouldOccurred = Source.FacedCheckRaiseVsFlopCBet,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndXCOnTurnOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndXCOnTurnOOP,
+                    Occurred = Source.CheckedCalledTurnWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndXFOnTurnOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndXFOnTurnOOP,
+                    Occurred = Source.CheckedFoldedToTurnWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetAfterCheckWhenCheckedFlopAsPfrOOP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndCallOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndCallOnTurn,
+                    Occurred = Source.CalledTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldOnTurn,
+                    Occurred = Source.FoldedToTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndRaiseOnTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndRaiseOnTurn,
+                    Occurred = Source.RaisedTurnBetWhenCheckedFlopAsPfr,
+                    CouldOccurred = Source.FacedTurnBetWhenCheckedFlopAsPfr,
                 };
             }
         }
@@ -1677,6 +2422,6 @@ namespace Model.Data
             }
         }
 
-        #endregion       
+        #endregion
     }
 }

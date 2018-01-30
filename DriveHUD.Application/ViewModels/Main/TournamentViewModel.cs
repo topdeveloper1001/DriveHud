@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
@@ -18,6 +19,7 @@ using Model.ChartData;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
+using Model.Filters;
 using Model.Interfaces;
 using Prism.Events;
 using System;
@@ -31,73 +33,104 @@ namespace DriveHUD.Application.ViewModels
     public class TournamentViewModel : BaseViewModel
     {
         #region Fields
-        private bool _showLabels = true;
-        private bool _isShowLabelsEnabled = true;
-        private ObservableCollection<ChartSeries> _chartSeriesCollection;
-        private ChartSeries _chartSeriesSelectedItem;
-        private ChartDisplayRange _chartSeriesDisplayRange = ChartDisplayRange.Month;
-        private Bracelet _goldenBracelet = new Bracelet();
-        private Bracelet _silverBracelet = new Bracelet();
-        private Bracelet _bronzeBracelet = new Bracelet();
 
-        private int _totalMTT;
-        private int _totalSTT;
-        private decimal _sttWon;
-        private decimal _mttWon;
+        private bool showLabels = true;
+        private bool isShowLabelsEnabled = true;
+        private ObservableCollection<ChartSeries> chartSeriesCollection;
+        private ChartSeries chartSeriesSelectedItem;
+        private ChartDisplayRange chartSeriesDisplayRange = ChartDisplayRange.Month;
+        private Bracelet goldenBracelet;
+        private Bracelet silverBracelet;
+        private Bracelet bronzeBracelet;
 
-        private bool _isExpanded = true;
+        private int totalMTT;
+        private int totalSTT;
+        private decimal sttWon;
+        private decimal mttWon;
+
+        private bool isExpanded = true;
+
+        private readonly IEventAggregator eventAggregator;
+        private readonly IFilterModelManagerService filterModelManagerService;
+
         #endregion
 
+        internal TournamentViewModel()
+        {
+            InitializeChartSeries();
+
+            GoldenBracelet = new Bracelet { PlaceNumber = 1 };
+            SilverBracelet = new Bracelet { PlaceNumber = 2 };
+            BronzeBracelet = new Bracelet { PlaceNumber = 3 };
+
+            BraceletTournamentClickCommand = new RelayCommand(BraceletTournamentClick);
+
+            filterModelManagerService = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
+
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(x => Update());
+            eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(x => Update());
+        }
+
         #region Properties
+
         public bool IsExpanded
         {
-            get { return _isExpanded; }
-            set { SetProperty(ref _isExpanded, value); }
+            get
+            {
+                return isExpanded;
+            }
+            set
+            {
+                SetProperty(ref isExpanded, value);
+            }
         }
 
         public bool ShowLabels
         {
-            get { return this._showLabels; }
+            get
+            {
+                return showLabels;
+            }
             set
             {
-                if (value == _showLabels) return;
-                _showLabels = value;
-                OnPropertyChanged();
+                SetProperty(ref showLabels, value);
             }
         }
 
         public bool IsShowLabelsEnabled
         {
-            get { return this._isShowLabelsEnabled; }
+            get
+            {
+                return isShowLabelsEnabled;
+            }
             set
             {
-                if (this._isShowLabelsEnabled != value)
-                {
-                    this._isShowLabelsEnabled = value;
-                    this.OnPropertyChanged("IsShowLabelsEnabled");
-                }
+                SetProperty(ref isShowLabelsEnabled, value);
             }
         }
 
         public ObservableCollection<ChartSeries> ChartSeriesCollection
         {
-            get { return this._chartSeriesCollection; }
+            get
+            {
+                return chartSeriesCollection;
+            }
             set
             {
-                if (value == _chartSeriesCollection) return;
-                _chartSeriesCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref chartSeriesCollection, value);
             }
         }
 
         public ChartSeries ChartSeriesSelectedItem
         {
-            get { return this._chartSeriesSelectedItem; }
+            get
+            {
+                return chartSeriesSelectedItem;
+            }
             set
             {
-                if (value == _chartSeriesSelectedItem) return;
-                _chartSeriesSelectedItem = value;
-                OnPropertyChanged();
+                SetProperty(ref chartSeriesSelectedItem, value);
             }
         }
 
@@ -105,14 +138,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _chartSeriesDisplayRange;
+                return chartSeriesDisplayRange;
             }
-
             set
             {
-                if (value != _chartSeriesDisplayRange)
-                    SetProperty(ref _chartSeriesDisplayRange, value);
-
+                SetProperty(ref chartSeriesDisplayRange, value);
                 SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
             }
         }
@@ -121,12 +151,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _goldenBracelet;
+                return goldenBracelet;
             }
-
-            set
+            private set
             {
-                SetProperty(ref _goldenBracelet, value);
+                SetProperty(ref goldenBracelet, value);
             }
         }
 
@@ -134,12 +163,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _silverBracelet;
+                return silverBracelet;
             }
-
-            set
+            private set
             {
-                SetProperty(ref _silverBracelet, value);
+                SetProperty(ref silverBracelet, value);
             }
         }
 
@@ -147,12 +175,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _bronzeBracelet;
+                return bronzeBracelet;
             }
-
-            set
+            private set
             {
-                SetProperty(ref _bronzeBracelet, value);
+                SetProperty(ref bronzeBracelet, value);
             }
         }
 
@@ -160,12 +187,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _totalMTT;
+                return totalMTT;
             }
-
-            set
+            private set
             {
-                SetProperty(ref _totalMTT, value);
+                SetProperty(ref totalMTT, value);
             }
         }
 
@@ -173,47 +199,94 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return _totalSTT;
+                return totalSTT;
             }
-
-            set
+            private set
             {
-                SetProperty(ref _totalSTT, value);
+                SetProperty(ref totalSTT, value);
             }
         }
 
         public decimal MTTWon
         {
-            get { return _mttWon; }
-            set { SetProperty(ref _mttWon, value); }
+            get
+            {
+                return mttWon;
+            }
+            private set
+            {
+                SetProperty(ref mttWon, value);
+            }
         }
 
         public decimal STTWon
         {
-            get { return _sttWon; }
-            set { SetProperty(ref _sttWon, value); }
+            get
+            {
+                return sttWon;
+            }
+            private set
+            {
+                SetProperty(ref sttWon, value);
+            }
         }
 
         #endregion
 
-        #region ICommand
-        public ICommand BraceletTournamentClickCommand { get; set; }
+        #region Commands
+
+        public ICommand BraceletTournamentClickCommand { get; private set; }
+
         #endregion
 
-        internal TournamentViewModel()
+        internal void Update()
         {
-            InitializeChartSeries();
+            if (StorageModel.StatisticCollection == null)
+            {
+                return;
+            }
 
-            GoldenBracelet = new Bracelet() { PlaceNumber = 1 };
-            GoldenBracelet.BraceletItems = new ObservableCollection<BraceletItem>();
-            SilverBracelet = new Bracelet() { PlaceNumber = 2 };
-            SilverBracelet.BraceletItems = new ObservableCollection<BraceletItem>();
-            BronzeBracelet = new Bracelet() { PlaceNumber = 3 };
-            BronzeBracelet.BraceletItems = new ObservableCollection<BraceletItem>();
+            SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
 
-            BraceletTournamentClickCommand = new RelayCommand(BraceletTournamentClick);
+            var playerTournaments = StorageModel.PlayerSelectedItem != null ?
+                ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds) :
+                new List<Tournaments>();
 
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<TournamentDataUpdatedEvent>().Subscribe(Update);
+            MTTWon = 0;
+            STTWon = 0;
+            TotalMTT = 0;
+            TotalSTT = 0;
+
+            var dateFilter = filterModelManagerService.FilterModelCollection?.OfType<FilterDateModel>().FirstOrDefault();
+
+            var filteredTournaments = dateFilter != null ? dateFilter.FilterTournaments(playerTournaments) : playerTournaments;
+
+            foreach (var tournament in filteredTournaments)
+            {
+                TournamentsTags tag;
+
+                if (Enum.TryParse(tournament.Tourneytagscsv, out tag))
+                {
+                    switch (tag)
+                    {
+                        case TournamentsTags.MTT:
+                            MTTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
+                            TotalMTT++;
+                            break;
+                        case TournamentsTags.STT:
+                            STTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
+                            TotalSTT++;
+                            break;
+                    }
+                }
+            }
+
+            App.Current.Dispatcher.Invoke(() =>
+            {
+                SetBraceletData(GoldenBracelet, filteredTournaments);
+                SetBraceletData(SilverBracelet, filteredTournaments);
+                SetBraceletData(BronzeBracelet, filteredTournaments);
+            });
         }
 
         private void InitializeChartSeries()
@@ -222,7 +295,9 @@ namespace DriveHUD.Application.ViewModels
             var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
             var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
             var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
+
             ObservableCollection<ChartSeries> chartSeriesCollection = new ObservableCollection<ChartSeries>();
+
             ChartSeries series0 = new ChartSeries()
             {
                 IsVisible = true,
@@ -266,56 +341,6 @@ namespace DriveHUD.Application.ViewModels
             ChartSeriesCollection.Add(series3);
         }
 
-        private void Update(TournamentDataUpdatedEventArgs args)
-        {
-            Update();
-        }
-
-        internal void Update()
-        {
-            if (this.StorageModel.StatisticCollection == null)
-                return;
-
-            SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
-
-            var playerTournaments = StorageModel.PlayerSelectedItem != null ?
-                ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds) :
-                new List<Tournaments>();
-
-            MTTWon = 0;
-            STTWon = 0;
-            TotalMTT = 0;
-            TotalSTT = 0;
-
-            foreach (var tournament in playerTournaments)
-            {
-                TournamentsTags tag;
-
-                if (Enum.TryParse(tournament.Tourneytagscsv, out tag))
-                {
-                    switch (tag)
-                    {
-                        case TournamentsTags.MTT:
-                            MTTWon += tournament.Winningsincents / 100m;
-                            TotalMTT++;
-                            break;
-                        case TournamentsTags.STT:
-                            STTWon += tournament.Winningsincents / 100m;
-                            TotalSTT++;
-                            break;
-                    }
-                }
-            }
-
-            App.Current.Dispatcher.Invoke(() =>
-            {
-                SetBraceletData(GoldenBracelet, playerTournaments);
-                SetBraceletData(SilverBracelet, playerTournaments);
-                SetBraceletData(BronzeBracelet, playerTournaments);
-            });
-
-        }
-
         private void SetBraceletData(Bracelet bracelet, IEnumerable<Tournaments> playerTournaments)
         {
             bracelet.NumberOfWins = playerTournaments.Where(x => x.Finishposition == bracelet.PlaceNumber).Count();
@@ -334,10 +359,13 @@ namespace DriveHUD.Application.ViewModels
 
         private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
         {
+            var groupedStats = GetGroupedStats(displayRange);
+
             foreach (var serie in chartCollection)
             {
                 List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-                foreach (var stat in GetGroupedStats(displayRange))
+
+                foreach (var stat in groupedStats)
                 {
                     switch (serie.FunctionName)
                     {
@@ -350,7 +378,8 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.ROI:
@@ -361,18 +390,20 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.MoneyWon:
                             itemsList.Add(new ChartSeriesItem()
                             {
                                 Date = stat.Started,
-                                Value = stat.Won,
+                                Value = stat.NetWon,
                                 Format = "{0:0.##}$",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                         case EnumTelerikRadChartFunctionType.Luck:
@@ -383,11 +414,13 @@ namespace DriveHUD.Application.ViewModels
                                 Format = "{0:0.##}%",
                                 PointColor = serie.ColorsPalette.PointColor,
                                 TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor
+                                TooltipColor = serie.ColorsPalette.TooltipColor,
+                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
                             });
                             break;
                     }
                 }
+
                 serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
             }
         }
@@ -395,6 +428,7 @@ namespace DriveHUD.Application.ViewModels
         private IEnumerable<TournamentReportRecord> GetGroupedStats(ChartDisplayRange range)
         {
             List<TournamentReportRecord> indicators = null;
+
             switch (range)
             {
                 case ChartDisplayRange.Year:
