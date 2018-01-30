@@ -18,48 +18,125 @@
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate
-                x:Key="StatInfoTextTemplate">
-                <Border                    
-                    Style="{StaticResource StatInfoBorderStyle}">
-                    <TextBlock
-                        dh:DragDrop.IsDragTarget="True"
-                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
-                        Style="{StaticResource HudToolTipTextBlockStyle}"
-                        Foreground="White"
-                        Height="16"
-                        VerticalAlignment="Center"
-                        Margin="3"
-                        Text="{Binding ToolTip}" />
-                </Border>
+                x:Key="LineBarStatInfoTextTemplate">
+                <ItemsControl
+                    ItemsSource="{Binding Stats}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid
+                                Columns="1" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="LeftGroup" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="Auto"
+                                        SharedSizeGroup="RightGroup" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="White"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Margin="3"
+                                        Text="{Binding ToolTip}" />
+                                </Border>
+
+                                <Border
+                                    Grid.Column="1"
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <ContentControl
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Margin="3"
+                                        Style="{StaticResource MeterControlStyle}"
+                                        Height="16"
+                                        VerticalAlignment="Center" />
+                                </Border>
+
+                                <Border
+                                    Grid.Column="2"
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Margin="3"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                </Border>
+
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </DataTemplate>
 
             <DataTemplate
-                x:Key="StatInfoMeterTemplate">
-                <Border
-                    Style="{StaticResource StatInfoBorderStyle}">
-                    <ContentControl
-                        dh:DragDrop.IsDragTarget="True"
-                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
-                        Margin="3"
-                        Style="{StaticResource MeterControlStyle}"
-                        Height="16"
-                        VerticalAlignment="Center" />
-                </Border>
-            </DataTemplate>
-
-            <DataTemplate
-                x:Key="StatInfoValueTemplate">
-                <Border
-                    Style="{StaticResource StatInfoBorderStyle}">
-                    <TextBlock
-                        dh:DragDrop.IsDragTarget="True"
-                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
-                        Style="{StaticResource HudToolTipTextBlockStyle}"
-                        Margin="3"
-                        Height="16"
-                        VerticalAlignment="Center"
-                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
-                </Border>
+                x:Key="TextStatInfoTextTemplate">
+                <ItemsControl
+                    ItemsSource="{Binding Stats}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel
+                                Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <Border
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="White"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Margin="3"
+                                        Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
+                                </Border>
+                                <Border
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Margin="3"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                </Border>
+                                <Border
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Margin="3"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding IterationsText}" />
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </DataTemplate>
 
             <DataTemplate
@@ -76,19 +153,11 @@
             </DataTemplate>
 
             <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoTextTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoTextTemplate}"
+                x:Key="StatInfoTemplateSelector"
+                StatInfoTemplate="{StaticResource TextStatInfoTextTemplate}"
+                LineBarStatInfoTemplate="{StaticResource LineBarStatInfoTextTemplate}"
                 StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
 
-            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoMeterTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoMeterTemplate}"
-                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
-
-            <tpls:HudGaugeIndicatorStatInfoTemplateSelector
-                x:Key="StatInfoValueTemplateSelector"
-                StatInfoTemplate="{StaticResource StatInfoValueTemplate}"
-                StatInfoBreakTemplate="{StaticResource StatInfoBreakTemplate}" />
 
         </ResourceDictionary>
     </UserControl.Resources>
@@ -165,37 +234,23 @@
                 BorderThickness="0,0,1,1"
                 Background="{StaticResource BackgroundBrush1}"
                 BorderBrush="{StaticResource GaugeBorderBrush}">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition
-                            Width="Auto" />
-                        <ColumnDefinition
-                            Width="*" />
-                        <ColumnDefinition
-                            Width="Auto" />
-                    </Grid.ColumnDefinitions>
 
-
-                    <!-- Use separate items controls in order to properly size columns -->
-                    <ItemsControl
-                        Grid.Column="0"
-                        ItemsSource="{Binding Stats}"
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                        ItemTemplateSelector="{StaticResource StatInfoTextTemplateSelector}" />
+                <Grid
+                    Grid.IsSharedSizeScope="True">
 
                     <ItemsControl
-                        Grid.Column="1"
-                        ItemsSource="{Binding Stats}"                        
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                        ItemTemplateSelector="{StaticResource StatInfoMeterTemplateSelector}" />
-
-                    <ItemsControl
-                        Grid.Column="2"
-                        ItemsSource="{Binding Stats}"
-                        ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}"
-                        ItemTemplateSelector="{StaticResource StatInfoValueTemplateSelector}" />
+                        ItemsSource="{Binding GroupedStats}"
+                        ItemTemplateSelector="{StaticResource StatInfoTemplateSelector}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel
+                                    Orientation="Vertical" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
 
                 </Grid>
+
             </Border>
 
         </Grid>

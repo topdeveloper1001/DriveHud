@@ -428,6 +428,11 @@ namespace DriveHUD.Application.ViewModels
                             (x as IHudStatsToolViewModel).Stats.ForEach(s =>
                             {
                                 s.CurrentValue = random.Next(0, 100);
+
+                                if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
+                                {
+                                    s.StatDto = new StatDto(0, 0);
+                                }
                             });
                         }
                     });
@@ -683,6 +688,11 @@ namespace DriveHUD.Application.ViewModels
                 {
                     s.CurrentValue = random.Next(0, 100);
                     s.Caption = string.Format(s.Format, s.CurrentValue);
+
+                    if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
+                    {
+                        s.StatDto = new StatDto(0, 0);
+                    }
                 });
             });
 

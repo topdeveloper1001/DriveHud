@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Stats;
+using DriveHUD.Application.ViewModels.Hud;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -20,15 +20,29 @@ namespace DriveHUD.Application.ControlTemplateSelectors
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            if (item is StatInfoBreak)
+            var group = item as HudGaugeIndicatorStatsGroupViewModel;
+
+            if (group == null)
             {
-                return StatInfoBreakTemplate;
+                return LineBarStatInfoTemplate;
             }
 
-            return StatInfoTemplate;
+            switch (group.GroupType)
+            {
+                case HudGaugeIndicatorStatGroupType.BreakLine:
+                    return StatInfoBreakTemplate;
+                case HudGaugeIndicatorStatGroupType.LineBar:
+                    return LineBarStatInfoTemplate;
+                case HudGaugeIndicatorStatGroupType.Text:
+                    return StatInfoTemplate;
+            }
+
+            return LineBarStatInfoTemplate;
         }
 
         public DataTemplate StatInfoTemplate { get; set; }
+
+        public DataTemplate LineBarStatInfoTemplate { get; set; }
 
         public DataTemplate StatInfoBreakTemplate { get; set; }
     }

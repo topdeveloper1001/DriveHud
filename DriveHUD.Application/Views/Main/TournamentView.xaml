@@ -184,7 +184,7 @@
                             Grid.Column="0"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Total MTT's : "
+                                Text="{ResX Key=Common_TournamentView_TotalMTTs}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
@@ -197,7 +197,7 @@
                             Grid.Column="2"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Total MTT$'s Won : "
+                                Text="{ResX Key=Common_TournamentView_TotalMTTsWon}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
@@ -210,7 +210,7 @@
                             Grid.Column="4"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Total S&amp;G's : "
+                                Text="{ResX Key=Common_TournamentView_TotalSnGs}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
@@ -223,7 +223,7 @@
                             Grid.Column="6"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Total S&amp;G$'s Won : "
+                                Text="{ResX Key=Common_TournamentView_TotalSnGsWon}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock

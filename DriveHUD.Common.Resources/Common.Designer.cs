@@ -1205,7 +1205,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4-Stat DH Box.
+        ///   Looks up a localized string similar to 4-Stat DH Box
+        ///This is a static box of 4 stats that can be added horizontally or vertically. It&apos;s a great tool to make 4 specific stats more visual.
         /// </summary>
         internal static string Common_HudSideBar_4StatDHBoxTool {
             get {
@@ -1214,7 +1215,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Break Line.
+        ///   Looks up a localized string similar to Break Line
+        ///This will add a line spacer in any pop-up menu. It&apos;s used to break up large chunks of data.
         /// </summary>
         internal static string Common_HudSideBar_BreakLine {
             get {
@@ -1223,7 +1225,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bumper Stickers.
+        ///   Looks up a localized string similar to Bumper Stickers
+        ///Adding this element will allow you HUD to show any of the bumper stickers you have programmed. Bumper stickers are badge like elements that appear by a HUD when their sticker is triggered.
         /// </summary>
         internal static string Common_HudSideBar_BumperStickersTool {
             get {
@@ -1242,7 +1245,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Graph.
+        ///   Looks up a localized string similar to Graph
+        ///This element will add an in session graph of how much money a player is winning or losing.
         /// </summary>
         internal static string Common_HudSideBar_GraphTool {
             get {
@@ -1251,7 +1255,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heat Map.
+        ///   Looks up a localized string similar to Heat Map
+        ///You can add this element to any stat or pop-up stat to display a visual hand grid map of how often hands are used for this stat. The more red, the more they have been used.
         /// </summary>
         internal static string Common_HudSideBar_HeatMapTool {
             get {
@@ -1260,7 +1265,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plain Stat Box.
+        ///   Looks up a localized string similar to Plain Stat Box
+        ///This is the primary HUD element which allows you to add non-pop up stats to your HUD.
         /// </summary>
         internal static string Common_HudSideBar_PlainStatBoxTool {
             get {
@@ -1269,7 +1275,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Player Profile Icon.
+        ///   Looks up a localized string similar to Player Profile Icon
+        ///This will place an element on your HUD that shows a visual icon that represents what kind of player that player is.
         /// </summary>
         internal static string Common_HudSideBar_PlayerProfileIconTool {
             get {
@@ -1278,7 +1285,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Text Box.
+        ///   Looks up a localized string similar to Text Box
+        ///This element allows you to add any kind of text you may want to have over a stat or HUD element.
         /// </summary>
         internal static string Common_HudSideBar_TextBoxTool {
             get {
@@ -1287,7 +1295,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tilt Meter.
+        ///   Looks up a localized string similar to Tilt Meter
+        ///This element will add a visual indicator that shows when a user is likely tilting or starting to tilt.
         /// </summary>
         internal static string Common_HudSideBar_TiltMeterTool {
             get {
@@ -2562,6 +2571,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_TournamentType {
             get {
                 return ResourceManager.GetString("Common_TournamentType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total MTT&apos;s : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalMTTs {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalMTTs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total MTT$&apos;s Won : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalMTTsWon {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalMTTsWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total S&amp;amp;G&apos;s : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalSnGs {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalSnGs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total S&amp;amp;G$&apos;s Won : .
+        /// </summary>
+        internal static string Common_TournamentView_TotalSnGsWon {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_TotalSnGsWon", resourceCulture);
             }
         }
         
