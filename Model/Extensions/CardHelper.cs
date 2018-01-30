@@ -179,27 +179,36 @@ namespace Model.Extensions
         /// <returns>List of grouped hands</returns>
         public static List<string> GetHandsFormatted(List<string> hands)
         {
-            List<char> cards = new List<char>(new char[] { '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A' });
+            var cards = new List<char>(new char[] { '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A' });
+            var allGroups = new List<List<string>>();
+            var handsToRemove = new List<string>();
 
-            int c = 0;
-            List<List<string>> allGroups = new List<List<string>>();
-
-
-            List<string> handsToRemove = new List<string>();
             for (int i = 0; i < hands.Count; i++)
             {
-                if (hands[i].Equals("")) continue;
-                if (handsToRemove.Contains(hands[i])) continue;
-                List<string> group = new List<string>();
-                string firstHand = hands[i];
+                if (string.IsNullOrEmpty(hands[i]))
+                {
+                    continue;
+                }
+
+                if (handsToRemove.Contains(hands[i]))
+                {
+                    continue;
+                }
+
+                var group = new List<string>();
+
+                var firstHand = hands[i];
+
                 group.Add(firstHand);
 
                 string lastHand = firstHand;
 
                 bool newCardAdded = true;
+
                 while (newCardAdded)
                 {
                     int countBefore = group.Count;
+
                     foreach (string hand in hands)
                     {
                         if (lastHand[0] == lastHand[1] && hand[0] == hand[1] && hand != firstHand && hand != lastHand)
@@ -224,31 +233,44 @@ namespace Model.Extensions
                                 group.Insert(0, hand);
                             }
                         }
+
                         lastHand = group[group.Count - 1];
                         firstHand = group[0];
                     }
+
                     newCardAdded = countBefore != group.Count;
                 }
 
                 allGroups.Add(group);
+
                 foreach (string hand in group)
                 {
                     handsToRemove.Add(hand);
                 }
             }
 
-            List<string> res = new List<string>();
-            foreach (List<string> group in allGroups)
+            var res = new List<string>();
+
+            foreach (var group in allGroups)
             {
                 if (group.Count > 1)
                 {
                     if ((group[0][0] != group[0][1] && cards.IndexOf(group[group.Count - 1][1]) == cards.IndexOf(group[0][0]) - 1)
                         || (group[0][0] == group[0][1] && group[group.Count - 1][0] == 'A'))
+                    {
                         res.Add(group[0] + "+");
-                    else res.Add(group[0] + "-" + group[group.Count - 1]);
+                    }
+                    else
+                    {
+                        res.Add(group[0] + "-" + group[group.Count - 1]);
+                    }
+
+                    continue;
                 }
-                else res.Add(group[0]);
+
+                res.Add(group[0]);
             }
+
             return res;
         }
     }
