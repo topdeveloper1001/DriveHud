@@ -1279,11 +1279,24 @@ namespace Model
 
         private static void CalculateUnopenedPot(Playerstatistic stat, HandHistory parsedHand)
         {
-            var firstRaiser = parsedHand.PreFlop.FirstOrDefault(x => x.IsRaise());
-            stat.FirstRaiser = (firstRaiser != null && firstRaiser.PlayerName == stat.PlayerName) ? 1 : 0;
+            foreach (var action in parsedHand.PreFlop)
+            {
+                if (action.IsCall() || action.IsCheck)
+                {
+                    return;
+                }
 
-            if (stat.FirstRaiser == 0)
-                return;
+                if (action.IsRaise())
+                {
+                    if (action.PlayerName == stat.PlayerName)
+                    {
+                        stat.FirstRaiser = 1;
+                        break;
+                    }
+
+                    return;
+                }
+            }
 
             switch (stat.PositionString)
             {
