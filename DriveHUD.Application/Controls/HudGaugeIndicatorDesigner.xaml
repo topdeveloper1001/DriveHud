@@ -100,7 +100,7 @@
                             <StackPanel
                                 Orientation="Horizontal">
                                 <Border
-                                    Visibility="{Binding Label, Converter={dh:NullToVisibilityConverter}, ConverterParameter=1}"
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
                                     Style="{StaticResource StatInfoBorderStyle}">
                                     <TextBlock
                                         dh:DragDrop.IsDragTarget="True"
@@ -113,7 +113,7 @@
                                         Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 </Border>
                                 <Border
-                                    Visibility="{Binding Label, Converter={dh:NullToVisibilityConverter}}"
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
                                     Style="{StaticResource StatInfoBorderStyle}">
                                     <TextBlock
                                         dh:DragDrop.IsDragTarget="True"

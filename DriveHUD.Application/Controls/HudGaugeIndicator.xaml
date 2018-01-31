@@ -93,7 +93,7 @@
                                     Height="16"
                                     VerticalAlignment="Center"
                                     Margin="3"
-                                    Visibility="{Binding Label, Converter={dh:NullToVisibilityConverter}, ConverterParameter=1}"
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
                                     Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
@@ -101,7 +101,7 @@
                                     Height="16"
                                     VerticalAlignment="Center"
                                     Margin="3"
-                                    Visibility="{Binding Label, Converter={dh:NullToVisibilityConverter}}"
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
                                     Text="{Binding Label, StringFormat='{}{0}:'}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
