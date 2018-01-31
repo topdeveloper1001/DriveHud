@@ -80,9 +80,13 @@
     <Compile Include="Mappings\HandhistoryrecordMap.cs" />
     <Compile Include="Mappings\HandnotesMap.cs" />
     <Compile Include="Mappings\ImportedFilesMap.cs" />
+    <Compile Include="Mappings\PlayerGameInfoMap.cs" />
+    <Compile Include="Mappings\PlayerNetWonMap.cs" />
     <Compile Include="Mappings\PlayernotesMap.cs" />
     <Compile Include="Mappings\PlayersMap.cs" />
     <Compile Include="Mappings\TournamentsMap.cs" />
+    <Compile Include="PlayerGameInfo.cs" />
+    <Compile Include="PlayerNetWon.cs" />
     <Compile Include="PlayerNotes.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Playerstatistic.cs" />

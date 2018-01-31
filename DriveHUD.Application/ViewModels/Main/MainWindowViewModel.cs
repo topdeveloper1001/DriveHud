@@ -159,7 +159,6 @@ namespace DriveHUD.Application.ViewModels
 
             MenuItemPopupFilter_CommandClick = new RelayCommand(new Action<object>(MenuItemPopupFilter_OnClick));
 
-            PurgeCommand = new RelayCommand(Purge);
             ImportFromFileCommand = new DelegateCommand(x => ImportFromFile(), x => !isManualImportingRunning);
             ImportFromDirectoryCommand = new DelegateCommand(x => ImportFromDirectory(), x => !isManualImportingRunning);
             SupportCommand = new RelayCommand(ShowSupportView);
@@ -933,18 +932,6 @@ namespace DriveHUD.Application.ViewModels
             PopupSupportRequest.Raise(new PopupActionNotification() { Title = "DriveHUD Support" });
         }
 
-        private async void Purge()
-        {
-            ProgressViewModel.IsActive = true;
-
-            await Task.Factory.StartNew(() => dataService.Purge());
-
-            ProgressViewModel.IsActive = false;
-            StorageModel.PlayerCollection.Clear();
-
-            Load();
-        }
-
         private void CreatePositionReport()
         {
             ReportGadgetViewModel?.UpdateReport();
@@ -1515,8 +1502,6 @@ namespace DriveHUD.Application.ViewModels
                     break;
             }
         }
-
-        public ICommand PurgeCommand { get; set; }
 
         public ICommand ImportCommand { get; set; }
 

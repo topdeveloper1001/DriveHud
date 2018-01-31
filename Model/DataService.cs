@@ -17,7 +17,6 @@ using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
-using Model.Data;
 using Model.Interfaces;
 using NHibernate;
 using NHibernate.Criterion;
@@ -204,14 +203,6 @@ namespace Model
             }
         }
 
-        public IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).ToList();
-            }
-        }
-
         public Players GetPlayer(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -276,19 +267,15 @@ namespace Model
 
         #endregion
 
-        public IList<HandHistoryRecord> GetHandHistoryRecords()
+        public IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds)
         {
-            using (var session = ModelEntities.OpenSession())
+            using (var session = ModelEntities.OpenStatelessSession())
             {
-                return session.Query<HandHistoryRecord>().Fetch(x => x.Player).ToList();
-            }
-        }
-
-        public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).Select(x => x.GameType).Distinct().ToList();
+                return session.Query<PlayerGameInfo>()
+                    .Where(x => playerIds.Contains(x.PlayerId))
+                    .Select(x => x.GameInfo)
+                    .Distinct()
+                    .ToList();
             }
         }
 
@@ -317,31 +304,6 @@ namespace Model
             }
 
             return new List<Tournaments>();
-        }
-
-        public IList<HandHistoryRecord> GetPlayerHandRecords(IEnumerable<int> playerIds, Func<HandHistoryRecord, bool> predicate)
-        {
-            if (playerIds.IsNullOrEmpty())
-            {
-                return new List<HandHistoryRecord>();
-            }
-
-            try
-            {
-                using (var session = ModelEntities.OpenSession())
-                {
-                    return session.Query<HandHistoryRecord>()
-                        .Where(x => playerIds.Contains(x.Player.PlayerId) && (predicate == null || predicate(x)))
-                        .Fetch(x => x.Player)
-                        .ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, "Could not read tournaments", ex);
-            }
-
-            return new List<HandHistoryRecord>();
         }
 
         public Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId)
@@ -477,19 +439,6 @@ namespace Model
             }
         }
 
-        /// <summary>
-        /// DO NOT USE - BAD PERFORMANCE
-        /// </summary>
-        /// <param name="gameNumbers"></param>
-        /// <returns></returns>
-        public IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<Handnotes>().Where(x => gameNumbers.Contains(x.Gamenumber) && x.PokersiteId == pokersiteId).ToList();
-            }
-        }
-
         public IList<Handnotes> GetHandNotes(short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -542,19 +491,6 @@ namespace Model
             using (var session = ModelEntities.OpenSession())
             {
                 return GetImportedFiles(fileNames, session);
-            }
-        }
-
-        public void Purge()
-        {
-            using (var session = ModelEntities.OpenStatelessSession())
-            {
-                session.CreateSQLQuery("TRUNCATE HandNotes, HandHistories, HandRecords, Players CASCADE").ExecuteUpdate();
-            }
-
-            if (Directory.Exists(playersPath))
-            {
-                Directory.Delete(playersPath, true);
             }
         }
 

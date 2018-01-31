@@ -397,6 +397,8 @@
     <Compile Include="Migration\Migrations\Migration0022_AddMaxPlayersToPlayerstatistic.cs" />
     <Compile Include="Migration\Migrations\Migration0024_AddAutoNoteColumnToPlayerNotes.cs" />
     <Compile Include="Migration\Migrations\Migration0025_RebuildPlayerStatistic.cs" />
+    <Compile Include="Migration\Migrations\Migration0026_AddPlayerNetWonTable.cs" />
+    <Compile Include="Migration\Migrations\Migration0027_MigrateHandRecords.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />

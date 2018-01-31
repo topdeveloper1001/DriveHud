@@ -253,7 +253,6 @@
     <Compile Include="HandAnalyzers\StubAnalyzer.cs" />
     <Compile Include="HandAnalyzers\ThreeOfAKindAnalyzers.cs" />
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
-    <Compile Include="Interfaces\ITopPlayersService.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />
@@ -350,7 +349,6 @@
     <Compile Include="StealAttempt.cs" />
     <Compile Include="PlayerStatisticCalculator.cs" />
     <Compile Include="StringFormatter.cs" />
-    <Compile Include="TopPlayersService.cs" />
     <Compile Include="TournamentResultModel.cs" />
   </ItemGroup>
   <ItemGroup>

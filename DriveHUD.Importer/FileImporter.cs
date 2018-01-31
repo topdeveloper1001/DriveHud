@@ -434,7 +434,7 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));              
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
 
                 var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
@@ -479,13 +479,21 @@ namespace DriveHUD.Importers
 
                         gameInfo.AddToPlayersCacheInfo(cacheInfo);
 
-                        var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
-
-                        if (hh != null)
+                        if (!session.Query<PlayerGameInfo>()
+                            .Any(x => x.PlayerId == existingPlayer.PlayerId && x.GameInfoId == existingGameType.GametypeId))
                         {
-                            hh.GameType = existingGameType;
-                            hh.Player = existingPlayer;
-                            session.Insert(hh);
+                            var playerGameInfo = new PlayerGameInfo
+                            {
+                                PlayerId = existingPlayer.PlayerId,
+                                GameInfoId = existingGameType.GametypeId
+                            };
+
+                            session.Insert(playerGameInfo);
+                        }
+
+                        if (!handHistory.GameType.Istourney)
+                        {
+                            UpdatePlayerNetWon(session, existingPlayer, playerStat);
                         }
 
                         BuildAutoNotes(playerStatCopy, handHistory.Source, session);
@@ -1107,6 +1115,35 @@ namespace DriveHUD.Importers
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Could not build auto notes", e);
+            }
+        }
+
+        /// <summary>
+        /// Insert/Update player net won record for the specified player
+        /// </summary>
+        /// <param name="session">DB session</param>
+        /// <param name="player">Player to insert/update player net won record</param>
+        /// <param name="playerStat">Player stats</param>
+        private void UpdatePlayerNetWon(IStatelessSession session, Players player, Playerstatistic playerStat)
+        {
+            var playerNetWon = session.Query<PlayerNetWon>().FirstOrDefault(x => x.PlayerId == player.PlayerId &&
+                                x.Currency == playerStat.CurrencyId);
+
+            if (playerNetWon == null)
+            {
+                playerNetWon = new PlayerNetWon
+                {
+                    PlayerId = player.PlayerId,
+                    Currency = playerStat.CurrencyId,
+                    NetWon = Utils.ConvertToCents(playerStat.NetWon)
+                };
+
+                session.Insert(playerNetWon);
+            }
+            else
+            {
+                playerNetWon.NetWon += Utils.ConvertToCents(playerStat.NetWon);
+                session.Update(playerNetWon);
             }
         }
     }

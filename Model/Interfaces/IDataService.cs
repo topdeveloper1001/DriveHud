@@ -12,7 +12,6 @@
 
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
-using Model.Data;
 using NHibernate;
 using System;
 using System.Collections.Generic;
@@ -32,15 +31,9 @@ namespace Model.Interfaces
 
         void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
 
-        IList<HandHistoryRecord> GetHandHistoryRecords();
-
-        IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
-
-        IList<HandHistoryRecord> GetPlayerHandRecords(IEnumerable<int> playerIds, Func<HandHistoryRecord, bool> predicate);
-
         Players GetPlayer(string playerName, short pokersiteId);
 
-        IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId);
+        IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds);
 
         IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
 
@@ -58,8 +51,6 @@ namespace Model.Interfaces
 
         void DeletePlayerNotes(IEnumerable<Playernotes> playernotes);
 
-        IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers, short pokersiteId);
-
         IList<Handnotes> GetHandNotes(short pokersiteId);
 
         Handhistory GetHandHistory(long gameNumber, short pokersiteId);
@@ -67,8 +58,6 @@ namespace Model.Interfaces
         IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames, ISession session);
 
         IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames);
-
-        void Purge();
 
         void Store(Playerstatistic statistic);
 
