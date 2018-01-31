@@ -186,8 +186,8 @@ namespace Model.Stats
                 return IsCaptionHidden ?
                         string.Empty :
                             StatDto != null ?
-                                string.Format("{0} ({1}/{2})", CommonResourceManager.Instance.GetEnumResource(Stat), statDto.Occurred, statDto.CouldOccurred) :
-                                CommonResourceManager.Instance.GetEnumResource(Stat);
+                                string.Format("{0} ({1}/{2})", !string.IsNullOrEmpty(Label) ? Label : CommonResourceManager.Instance.GetEnumResource(Stat), statDto.Occurred, statDto.CouldOccurred) :
+                                !string.IsNullOrEmpty(Label) ? Label : CommonResourceManager.Instance.GetEnumResource(Stat);
             }
         }
 
@@ -542,9 +542,15 @@ namespace Model.Stats
             }
             set
             {
-                if (value == label) return;
+                if (value == label)
+                {
+                    return;
+                }
+
                 label = value;
+
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(ToolTip));
             }
         }
 
