@@ -1280,7 +1280,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            
+
             <Style
                 x:Key="CustomListBoxItem"
                 TargetType="{x:Type ListBoxItem}">
@@ -1485,7 +1485,7 @@
             <VisualBrush
                 Visual="{Binding ElementName=mask}" />
         </Grid.OpacityMask>
-        
+
         <Border
             Name="mask"
             Background="#181A1D"
@@ -1600,10 +1600,18 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Poker Site"
+                        Content="{ResX Key=Common_PokerSite}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
+                        Command="{Binding ReportRadioButtonClickCommand}"
+                        Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
+                    <RadioButton
+                        Style="{StaticResource ReportRadioButton}"
+                        Content="{ResX Key=Common_Opponents}"
+                        Width="150"
+                        Height="51"
+                        IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
                         Command="{Binding ReportRadioButtonClickCommand}"
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <!-- Tournament Columns -->
@@ -1691,7 +1699,7 @@
                     MaxHeight="260"
                     VerticalAlignment="Stretch"
                     RowHeight="40"
-                    SelectionMode="Single"                    
+                    SelectionMode="Single"
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
                     CanUserReorderColumns="True"
@@ -1718,9 +1726,10 @@
 
                 <telerik:RadBusyIndicator
                     Grid.Row="0"
-                    IsBusy="{Binding Path=IsBusy}"
-                    Background="{StaticResource BackgroundBrush}"
-                    Visibility="{Binding Path=IsBusy, Converter={dh:BoolToVisibilityConverter}}">
+                    IsBusy="{Binding IsBusy}"
+                    BorderThickness="1"
+                    Height="24"
+                    Background="Transparent">
                     <telerik:RadBusyIndicator.OverlayStyle>
                         <Style
                             TargetType="Rectangle">
@@ -1751,12 +1760,21 @@
                                 Property="IsTabStop"
                                 Value="False" />
                             <Setter
+                                Property="Height"
+                                Value="22" />
+                            <Setter
                                 Property="Margin"
-                                Value="0,0,0,-20" />
+                                Value="0,0,0,0" />
                         </Style>
                     </telerik:RadBusyIndicator.ProgressBarStyle>
                     <telerik:RadBusyIndicator.BusyContentTemplate>
-                        <DataTemplate />
+                        <DataTemplate>
+                            <TextBlock
+                                FontSize="11"
+                                Margin="0,-24,0,0"
+                                Foreground="White"
+                                Text="{ResX Key=Common_BusyIndicator_Loading}" />
+                        </DataTemplate>
                     </telerik:RadBusyIndicator.BusyContentTemplate>
                 </telerik:RadBusyIndicator>
 

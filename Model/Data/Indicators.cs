@@ -14,6 +14,8 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Importer;
+using Model.Reports;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +27,8 @@ namespace Model.Data
     /// <summary>
     /// This entity holds all high level indicators. These indicators are based on PlayerStatistic fields
     /// </summary>
+    [ProtoContract]
+    [ProtoInclude(2, typeof(LightIndicators))]
     public class Indicators : INotifyPropertyChanged, IComparable
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -46,6 +50,7 @@ namespace Model.Data
             playerStatistic.ForEach(x => AddStatistic(x));
         }
 
+        [ProtoMember(1)]
         public Playerstatistic Source { get; set; }
 
         public List<Playerstatistic> Statistics { get; private set; }

@@ -12,18 +12,33 @@
 
 using DriveHUD.Entities;
 using Model.Importer;
+using Model.Reports;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 
 namespace Model.Data
 {
+    [ProtoContract]
+    [ProtoInclude(100, typeof(OpponentReportIndicators))]
     public class LightIndicators : Indicators
     {
+        [ProtoMember(1)]
         private int statisticCount;
+
+        [ProtoMember(2)]
         private decimal netWon;
+
+        [ProtoMember(3)]
         private decimal bigBlind;
+
+        [ProtoMember(4)]
         private decimal netWonByBigBlind;
+
+        [ProtoMember(5)]
         private DateTime sessionStartTime = DateTime.MaxValue;
+
+        [ProtoMember(6)]
         private DateTime sessionEndTime = DateTime.MinValue;
 
         public LightIndicators() : base()
@@ -375,8 +390,10 @@ namespace Model.Data
 
         #region IP/OOP based stats
 
+        [ProtoMember(7)]
         protected int didDelayedTurnCBetIP;
 
+        [ProtoMember(8)]
         protected int couldDelayedTurnCBetIP;
 
         public override decimal DelayedTurnCBetIP
@@ -387,8 +404,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(9)]
         protected int didDelayedTurnCBetOOP;
 
+        [ProtoMember(10)]
         protected int couldDelayedTurnCBetOOP;
 
         public override decimal DelayedTurnCBetOOP
@@ -403,8 +422,10 @@ namespace Model.Data
 
         #region Calculated stats
 
+        [ProtoMember(11)]
         protected int checkRaisedFlopCBet;
 
+        [ProtoMember(12)]
         protected int couldCheckRaiseFlopCBet;
 
         public override decimal CheckRaisedFlopCBet
@@ -415,8 +436,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(13)]
         protected int foldToTurnCBetIn3BetPot;
 
+        [ProtoMember(14)]
         protected int facedToTurnCBetIn3BetPot;
 
         public override decimal FoldToTurnCBetIn3BetPot
@@ -427,8 +450,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(15)]
         protected int raisedFlopCBetIn3BetPot;
 
+        [ProtoMember(16)]
         protected int couldRaiseFlopCBetIn3BetPot;
 
         public override decimal RaiseFlopCBetIn3BetPot
@@ -439,12 +464,15 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(17)]
         protected int didFlopBet;
 
+        [ProtoMember(18)]
         protected int didTurnBet;
 
         #region FlopBetSize stats
 
+        [ProtoMember(19)]
         protected int flopBetSizeOneHalfOrLess;
 
         public override decimal FlopBetSizeOneHalfOrLess
@@ -455,6 +483,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(20)]
         protected int flopBetSizeOneQuarterOrLess;
 
         public override decimal FlopBetSizeOneQuarterOrLess
@@ -465,6 +494,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(21)]
         protected int flopBetSizeTwoThirdsOrLess;
 
         public override decimal FlopBetSizeTwoThirdsOrLess
@@ -475,6 +505,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(22)]
         protected int flopBetSizeThreeQuartersOrLess;
 
         public override decimal FlopBetSizeThreeQuartersOrLess
@@ -485,6 +516,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(23)]
         protected int flopBetSizeOneOrLess;
 
         public override decimal FlopBetSizeOneOrLess
@@ -495,6 +527,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(24)]
         protected int flopBetSizeMoreThanOne;
 
         public override decimal FlopBetSizeMoreThanOne
@@ -509,6 +542,7 @@ namespace Model.Data
 
         #region TurnBetSize stats
 
+        [ProtoMember(25)]
         protected int turnBetSizeOneHalfOrLess;
 
         public override decimal TurnBetSizeOneHalfOrLess
@@ -519,6 +553,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(26)]
         protected int turnBetSizeOneQuarterOrLess;
 
         public override decimal TurnBetSizeOneQuarterOrLess
@@ -529,6 +564,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(27)]
         protected int turnBetSizeOneThirdOrLess;
 
         public override decimal TurnBetSizeOneThirdOrLess
@@ -539,6 +575,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(28)]
         protected int turnBetSizeTwoThirdsOrLess;
 
         public override decimal TurnBetSizeTwoThirdsOrLess
@@ -549,6 +586,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(29)]
         protected int turnBetSizeThreeQuartersOrLess;
 
         public override decimal TurnBetSizeThreeQuartersOrLess
@@ -559,6 +597,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(30)]
         protected int turnBetSizeOneOrLess;
 
         public override decimal TurnBetSizeOneOrLess
@@ -569,6 +608,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(31)]
         protected int turnBetSizeMoreThanOne;
 
         public override decimal TurnBetSizeMoreThanOne
@@ -583,6 +623,7 @@ namespace Model.Data
 
         #region RiverBetSize stats
 
+        [ProtoMember(32)]
         protected int riverBetSizeMoreThanOne;
 
         public override decimal RiverBetSizeMoreThanOne
@@ -597,8 +638,10 @@ namespace Model.Data
 
         #region WTSD After stats
 
+        [ProtoMember(33)]
         protected int wtsdAfterCalling3Bet;
 
+        [ProtoMember(34)]
         protected int wtsdAfterCalling3BetOpportunity;
 
         public override decimal WTSDAfterCalling3Bet
@@ -609,8 +652,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(35)]
         protected int wtsdAfterCallingPfr;
 
+        [ProtoMember(36)]
         protected int wtsdAfterCallingPfrOpportunity;
 
         public override decimal WTSDAfterCallingPfr
@@ -621,8 +666,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(37)]
         protected int wtsdAfterNotCBettingFlopAsPfr;
 
+        [ProtoMember(38)]
         protected int wtsdAfterNotCBettingFlopAsPfrOpportunity;
 
         public override decimal WTSDAfterNotCBettingFlopAsPfr
@@ -633,6 +680,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(39)]
         protected int wtsdAfterSeeingTurn;
 
         public override decimal WTSDAfterSeeingTurn
@@ -643,8 +691,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(40)]
         protected int wtsdAsPF3Bettor;
 
+        [ProtoMember(41)]
         protected int wtsdAsPF3BettorOpportunity;
 
         public override decimal WTSDAsPF3Bettor

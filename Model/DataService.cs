@@ -1046,6 +1046,35 @@ namespace Model
             }
         }
 
+        public IEnumerable<PlayerNetWon> GetTopPlayersByNetWon(int top, IEnumerable<int> playersToExclude)
+        {
+            if (top < 1)
+            {
+                return new List<PlayerNetWon>();
+            }
+
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var result = session
+                        .Query<PlayerNetWon>()
+                        .Where(x => playersToExclude != null && !playersToExclude.Contains(x.PlayerId))
+                        .OrderByDescending(x => x.NetWon)
+                        .Take(top)
+                        .ToList();
+
+                    return result;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not read top players by net won [{top}, {string.Join(";", playersToExclude)}]", e);
+            }
+
+            return new List<PlayerNetWon>();
+        }
+
         private string[] GetPlayerFiles(int playerId)
         {
             try

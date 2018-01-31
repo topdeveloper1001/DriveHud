@@ -1184,6 +1184,15 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldBetFlopWhenCheckedToSRP, fileName, pokerSite, playerName, expected);
         }
 
+        [Test]
+        [TestCase(@"HeroTest-UO-PFR-BN-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        [TestCase(@"HeroTest-Not-UO-PFR-BN-2.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        [TestCase(@"HeroTest-Not-UO-PFR-BN-3.txt", EnumPokerSites.PokerStars, "HeroTest", 0)]
+        public void UOPFRBNIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.UO_PFR_BN, fileName, pokerSite, playerName, expected);
+        }
+
         protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
         {
             using (var perfScope = new PerformanceMonitor(method))

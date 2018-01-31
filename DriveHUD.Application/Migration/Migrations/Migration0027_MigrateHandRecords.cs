@@ -64,6 +64,11 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private void FillPlayerNetWonTable()
         {
+            if (!Schema.Table(handRecordsTableName).Exists())
+            {
+                return;
+            }
+
             using (var session = ModelEntities.OpenStatelessSession())
             {
                 using (var transaction = session.BeginTransaction())
@@ -89,6 +94,11 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private void FillPlayerGameInfoTable()
         {
+            if (!Schema.Table(handRecordsTableName).Exists())
+            {
+                return;
+            }
+
             using (var session = ModelEntities.OpenStatelessSession())
             {
                 using (var transaction = session.BeginTransaction())
@@ -123,6 +133,11 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private void DeleteHandRecordsTable()
         {
+            if (!Schema.Table(handRecordsTableName).Exists())
+            {
+                return;
+            }
+
             LogProvider.Log.Info($"Deleting {handRecordsTableName} table");
             Delete.Table(handRecordsTableName);
             LogProvider.Log.Info($"{handRecordsTableName} table has been successfully deleted.");

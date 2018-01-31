@@ -343,6 +343,7 @@ namespace DriveHUD.Application.Views
             try
             {
                 reportGadgetViewModel.IsBusy = true;
+
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
@@ -360,8 +361,6 @@ namespace DriveHUD.Application.Views
 
                 var reportCollection = GetReportCollectionAsync(creator, statistic);
 
-                reportGadgetViewModel.IsBusy = false;
-
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
 
@@ -371,6 +370,8 @@ namespace DriveHUD.Application.Views
                 {
                     reportGadgetViewModel.ReportCollection.Add(item);
                 }
+
+                reportGadgetViewModel.IsBusy = false;
 
                 layout.Create(GridViewReport);
 

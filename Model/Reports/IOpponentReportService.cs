@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="OpponentAnalysisReportCreator.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IOpponentReportService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -11,22 +11,15 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Model.Reports
 {
-    public class OpponentAnalysisReportCreator : CashBaseReportCreator
+    public interface IOpponentReportService
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
-        {
-            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+        IEnumerable<Indicators> GetReport();
 
-            var report = new ObservableCollection<Indicators>(opponentReportService.GetReport());
-
-            return report ?? new ObservableCollection<Indicators>();
-        }
+        void UpdateReport(Playerstatistic stat);
     }
 }

@@ -83,19 +83,6 @@ namespace DriveHUD.Application.ViewModels
             _eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
             _eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
             _eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
-            _eventAggregator.GetEvent<OpponentAnalysisBuildedEvent>().Subscribe(OnOpponentAnalysisBuilded, ThreadOption.UIThread);
-            _eventAggregator.GetEvent<OpponentAnalysisBuildingEvent>().Subscribe(OnOpponentAnalysisBuilding, ThreadOption.UIThread);
-        }
-
-        private void OnOpponentAnalysisBuilding()
-        {
-            IsBusy = true;
-        }
-
-        private void OnOpponentAnalysisBuilded()
-        {
-            IsBusy = false;
-            OnPropertyChanged(nameof(ReportSelectedItemStat));
         }
 
         private void InitializeFilter()
@@ -560,10 +547,14 @@ namespace DriveHUD.Application.ViewModels
             get { return _isBusy; }
             set
             {
+                SetProperty(ref _isBusy, value);
+
+                /*
+
                 if ((value && ReportSelectedItemStat == EnumReports.OpponentAnalysis))
                     SetProperty(ref _isBusy, true);
                 else
-                    SetProperty(ref _isBusy, false);
+                    SetProperty(ref _isBusy, false);*/
             }
         }
 

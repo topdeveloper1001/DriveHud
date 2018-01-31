@@ -91,6 +91,8 @@ namespace Model.Interfaces
 
         void VacuumDatabase();
 
+        IEnumerable<PlayerNetWon> GetTopPlayersByNetWon(int top, IEnumerable<int> playersToExclude);
+
         #region Aliases
 
         Aliases GetAlias(string aliasName);
