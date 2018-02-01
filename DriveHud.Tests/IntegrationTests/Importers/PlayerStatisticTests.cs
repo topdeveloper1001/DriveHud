@@ -234,6 +234,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-DidFourBet-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-DidNotFourBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
         [TestCase(@"Hero-DidNotFourBet-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-FacedFourBet-4.xml", EnumPokerSites.Ignition, "P9_485136KK", 0)]
         public void DidFourBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Didfourbet, fileName, pokerSite, playerName, expected);
@@ -249,6 +250,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-CouldFourBet-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-CouldFourBet-4.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-CouldFourBet-5.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-FacedFourBet-4.xml", EnumPokerSites.Ignition, "P9_485136KK", 0)]
         public void CouldFourBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Couldfourbet, fileName, pokerSite, playerName, expected);
@@ -258,6 +260,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-FacedFourBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-FacedFourBet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-FacedFourBet-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"Hero-FacedFourBet-4.xml", EnumPokerSites.Ignition, "Hero", 1)]
         public void FacedFourBetPreflopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Facedfourbetpreflop, fileName, pokerSite, playerName, expected);

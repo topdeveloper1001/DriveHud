@@ -1529,12 +1529,7 @@ namespace Model
                         {
                             callAfterThreeBet = true;
                         }
-
-                        if (playersCannot3Bet.Contains(action.PlayerName))
-                        {
-                            continue;
-                        }
-
+                     
                         if (action.PlayerName == player && raiser == action.PlayerName)
                         {
                             if (threeBetIsAllIn && !callAfterThreeBet)
