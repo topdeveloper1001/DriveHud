@@ -416,8 +416,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneOrLess", nameof(Indicators.TurnBetSizeOneOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeMoreThanOne", nameof(Indicators.TurnBetSizeMoreThanOne), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnCheckRaise", nameof(Indicators.TurnCheckRaise), ColumnType.Percentile),
-            // U
-            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BB", nameof(Indicators.UO_PFR_BB), ColumnType.Percentile),
+            // U            
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BTN", nameof(Indicators.UO_PFR_BN), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_CO", nameof(Indicators.UO_PFR_CO), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_EP", nameof(Indicators.UO_PFR_EP), ColumnType.Percentile),

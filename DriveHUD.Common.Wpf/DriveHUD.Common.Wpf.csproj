@@ -178,6 +178,7 @@
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
     <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
     <Compile Include="Converters\MultiplierSizeConverter.cs" />
+    <Compile Include="Converters\NullOrEmptyToVisibilityConverter.cs" />
     <Compile Include="Converters\NullToBoolConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
