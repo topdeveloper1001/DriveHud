@@ -228,7 +228,7 @@ namespace DriveHUD.Application.ViewModels
                 }
                 else
                 {
-                    OnPropertyChanged(nameof(ReportGadgetViewModel.ReportSelectedItemStat));
+                    OnPropertyChanged(nameof(ReportSelectedItemStat));
                 }
             });
 

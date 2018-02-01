@@ -195,7 +195,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 });
             }
             else
-            {
+            {                
                 chartCollection.ForEach(x => x.ItemsCollection.Clear());
             }
         }
