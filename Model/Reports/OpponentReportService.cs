@@ -182,5 +182,7 @@ namespace Model.Reports
     {
         [ProtoMember(1)]
         public int PlayerId { get; set; }
+
+
     }
 }

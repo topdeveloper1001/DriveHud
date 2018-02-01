@@ -991,17 +991,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && Pfrhands == 1 && Foldedtothreebetpreflop == 1 ? 1 : 0;
             }
-        }
-
-        public virtual int FoldedtothreebetpreflopVirtualCounter
-        {
-            get
-            {
-                return Totalhands != 1 ? FoldedtothreebetpreflopCounter + FoldedtothreebetpreflopVirtual : FoldedtothreebetpreflopVirtual;
-            }
-        }
-
-        public virtual int FoldedtothreebetpreflopCounter { get; set; }
+        }    
 
         public virtual int FacedthreebetpreflopVirtual
         {
@@ -1009,36 +999,16 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && Position != EnumPosition.BB && Pfrhands == 1 && Facedthreebetpreflop == 1 ? 1 : 0;
             }
-        }
+        }     
 
-        public virtual int FacedthreebetpreflopVirtualCounter
-        {
-            get
-            {
-                return Totalhands != 1 ? FacedthreebetpreflopCounter + FacedthreebetpreflopVirtual : FacedthreebetpreflopVirtual;
-            }
-        }
-
-        public virtual int FacedthreebetpreflopCounter { get; set; }
-
-        // 4 -bet workaround
+        // 4-bet workaround
         public virtual int DidfourbetpreflopVirtual
         {
             get
             {
                 return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Didfourbet == 1 ? 1 : 0;
             }
-        }
-
-        public virtual int DidfourbetpreflopVirtualCounter
-        {
-            get
-            {
-                return Totalhands != 1 ? DidfourbetpreflopCounter + DidfourbetpreflopVirtual : DidfourbetpreflopVirtual;
-            }
-        }
-
-        public virtual int DidfourbetpreflopCounter { get; set; }
+        }      
 
         public virtual int CouldfourbetpreflopVirtual
         {
@@ -1046,17 +1016,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Couldfourbet == 1 ? 1 : 0;
             }
-        }
-
-        public virtual int CouldfourbetpreflopVirtualCounter
-        {
-            get
-            {
-                return Totalhands != 1 ? CouldfourbetpreflopCounter + CouldfourbetpreflopVirtual : CouldfourbetpreflopVirtual;
-            }
-        }
-
-        public virtual int CouldfourbetpreflopCounter { get; set; }
+        }    
 
         #endregion
 
@@ -1366,38 +1326,6 @@ namespace DriveHUD.Entities
 
         #region Additional properties (not for serialization)
 
-        #region Positional stats for current session         
-
-        public virtual PositionalStat PositionUnoppened { get; set; }
-
-        public virtual PositionalStat PositionTotal { get; set; }
-
-        public virtual PositionalStat PositionVPIP { get; set; }
-
-        public virtual PositionalStat PositionDidColdCall { get; set; }
-
-        public virtual PositionalStat PositionCouldColdCall { get; set; }
-
-        public virtual PositionalStat PositionDidThreeBet { get; set; }
-
-        public virtual PositionalStat PositionCouldThreeBet { get; set; }
-
-        public virtual PositionalStat PositionDidFourBet { get; set; }
-
-        public virtual PositionalStat PositionCouldFourBet { get; set; }
-
-        #endregion
-
-        #region Session Only Collections
-
-        public virtual FixedSizeList<string> CardsList { get; set; }
-
-        public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
-
-        public virtual FixedSizeList<Tuple<int, int>> RecentAggList { get; set; }
-
-        #endregion
-
         public virtual bool IsUnopened
         {
             get
@@ -1405,6 +1333,160 @@ namespace DriveHUD.Entities
                 return FacingPreflop == EnumFacingPreflop.Unopened;
             }
         }
+
+        #region Positional stats helpers     
+
+        public virtual bool IsBBPosition
+        {
+            get
+            {
+                return Position == EnumPosition.BB;
+            }
+        }
+
+        public virtual bool IsSBPosition
+        {
+            get
+            {
+                return Position == EnumPosition.SB;
+            }
+        }
+
+        public virtual bool IsEPPosition
+        {
+            get
+            {
+                return Position == EnumPosition.EP || Position == EnumPosition.UTG ||
+                    Position == EnumPosition.UTG_1 || Position == EnumPosition.UTG_2;
+            }
+        }
+
+        public virtual bool IsMPPosition
+        {
+            get
+            {
+                return Position == EnumPosition.MP || Position == EnumPosition.MP1 ||
+                    Position == EnumPosition.MP2 || Position == EnumPosition.MP3;
+            }
+        }
+
+        public virtual bool IsCOPosition
+        {
+            get
+            {
+                return Position == EnumPosition.CO;
+            }
+        }
+
+        public virtual bool IsBNPosition
+        {
+            get
+            {
+                return Position == EnumPosition.BTN;
+            }
+        }
+
+        #region Positional Cold call 
+
+        public virtual int DidColdCallBB => IsBBPosition ? Didcoldcall : 0;
+
+        public virtual int DidColdCallSB => IsSBPosition ? Didcoldcall : 0;
+
+        public virtual int DidColdCallEP => IsEPPosition ? Didcoldcall : 0;
+
+        public virtual int DidColdCallMP => IsMPPosition ? Didcoldcall : 0;
+
+        public virtual int DidColdCallCO => IsCOPosition ? Didcoldcall : 0;
+
+        public virtual int DidColdCallBN => IsBNPosition ? Didcoldcall : 0;
+
+        public virtual int CouldColdCallBB => IsBBPosition ? Couldcoldcall : 0;
+
+        public virtual int CouldColdCallSB => IsSBPosition ? Couldcoldcall : 0;
+
+        public virtual int CouldColdCallEP => IsEPPosition ? Couldcoldcall : 0;
+
+        public virtual int CouldColdCallMP => IsMPPosition ? Couldcoldcall : 0;
+
+        public virtual int CouldColdCallCO => IsCOPosition ? Couldcoldcall : 0;
+
+        public virtual int CouldColdCallBN => IsBNPosition ? Couldcoldcall : 0;
+
+        #endregion
+
+        #region Positional VPIP
+
+        public virtual int VPIPBB => IsBBPosition ? Vpiphands : 0;
+
+        public virtual int VPIPSB => IsSBPosition ? Vpiphands : 0;
+
+        public virtual int VPIPEP => IsEPPosition ? Vpiphands : 0;
+
+        public virtual int VPIPMP => IsMPPosition ? Vpiphands : 0;
+
+        public virtual int VPIPCO => IsCOPosition ? Vpiphands : 0;
+
+        public virtual int VPIPBN => IsBNPosition ? Vpiphands : 0;
+
+        #endregion
+
+        #region Positional 3-bet
+
+        public virtual int DidThreeBetBB => IsBBPosition ? Didthreebet : 0;
+
+        public virtual int DidThreeBetSB => IsSBPosition ? Didthreebet : 0;
+
+        public virtual int DidThreeBetEP => IsEPPosition ? Didthreebet : 0;
+
+        public virtual int DidThreeBetMP => IsMPPosition ? Didthreebet : 0;
+
+        public virtual int DidThreeBetCO => IsCOPosition ? Didthreebet : 0;
+
+        public virtual int DidThreeBetBN => IsBNPosition ? Didthreebet : 0;
+
+        public virtual int CouldThreeBetBB => IsBBPosition ? Couldthreebet : 0;
+
+        public virtual int CouldThreeBetSB => IsSBPosition ? Couldthreebet : 0;
+
+        public virtual int CouldThreeBetEP => IsEPPosition ? Couldthreebet : 0;
+
+        public virtual int CouldThreeBetMP => IsMPPosition ? Couldthreebet : 0;
+
+        public virtual int CouldThreeBetCO => IsCOPosition ? Couldthreebet : 0;
+
+        public virtual int CouldThreeBetBN => IsBNPosition ? Couldthreebet : 0;
+
+        #endregion
+
+        #region Positional 4-bet
+
+        public virtual int DidFourBetBB => IsBBPosition ? Didfourbet : 0;
+
+        public virtual int DidFourBetSB => IsSBPosition ? Didfourbet : 0;
+
+        public virtual int DidFourBetEP => IsEPPosition ? Didfourbet : 0;
+
+        public virtual int DidFourBetMP => IsMPPosition ? Didfourbet : 0;
+
+        public virtual int DidFourBetCO => IsCOPosition ? Didfourbet : 0;
+
+        public virtual int DidFourBetBN => IsBNPosition ? Didfourbet : 0;
+
+        public virtual int CouldFourBetBB => IsBBPosition ? Couldfourbet : 0;
+
+        public virtual int CouldFourBetSB => IsSBPosition ? Couldfourbet : 0;
+
+        public virtual int CouldFourBetEP => IsEPPosition ? Couldfourbet : 0;
+
+        public virtual int CouldFourBetMP => IsMPPosition ? Couldfourbet : 0;
+
+        public virtual int CouldFourBetCO => IsCOPosition ? Couldfourbet : 0;
+
+        public virtual int CouldFourBetBN => IsBNPosition ? Couldfourbet : 0;
+
+        #endregion
+
+        #endregion
 
         public virtual decimal TotalPot { get; set; }
 
@@ -1816,31 +1898,6 @@ namespace DriveHUD.Entities
             CalledFacedSqueez += a.CalledFacedSqueez;
             ReraisedFacedSqueez += a.ReraisedFacedSqueez;
 
-            if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
-            {
-                CardsList.Add(a.Cards);
-            }
-
-            if (ThreeBetCardsList != null && !string.IsNullOrWhiteSpace(a.Cards) && a.Didthreebet != 0)
-            {
-                ThreeBetCardsList.Add(a.Cards);
-            }
-
-            if (RecentAggList != null)
-            {
-                RecentAggList.Add(new Tuple<int, int>(a.Totalbets, a.Totalpostflopstreetsplayed));
-            }
-
-            PositionUnoppened?.Add(a.PositionUnoppened);
-            PositionTotal?.Add(a.PositionTotal);
-            PositionVPIP?.Add(a.PositionVPIP);
-            PositionDidColdCall?.Add(a.PositionDidColdCall);
-            PositionCouldColdCall?.Add(a.PositionCouldColdCall);
-            PositionDidThreeBet?.Add(a.PositionDidThreeBet);
-            PositionCouldThreeBet?.Add(a.PositionCouldThreeBet);
-            PositionDidFourBet?.Add(a.PositionDidFourBet);
-            PositionCouldFourBet?.Add(a.PositionCouldFourBet);
-
             MRatio = a.MRatio;
             StackInBBs = a.StackInBBs;
             EVDiff = a.EVDiff;
@@ -1853,11 +1910,6 @@ namespace DriveHUD.Entities
             CalculateTiltMeterValue(this, a);
 
             #endregion
-
-            FoldedtothreebetpreflopCounter += a.FoldedtothreebetpreflopVirtualCounter;
-            FacedthreebetpreflopCounter += a.FacedthreebetpreflopVirtualCounter;
-            DidfourbetpreflopCounter += a.DidfourbetpreflopVirtualCounter;
-            CouldfourbetpreflopCounter += a.CouldfourbetpreflopVirtualCounter;
 
             DidDelayedTurnCBet += a.DidDelayedTurnCBet;
             CouldDelayedTurnCBet += a.CouldDelayedTurnCBet;
@@ -2259,16 +2311,6 @@ namespace DriveHUD.Entities
             r.CalledFacedSqueez = a.CalledFacedSqueez + b.CalledFacedSqueez;
             r.ReraisedFacedSqueez = a.ReraisedFacedSqueez + b.ReraisedFacedSqueez;
 
-            r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
-            r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);
-            r.PositionVPIP = PositionalStat.Sum(a.PositionVPIP, b.PositionVPIP);
-            r.PositionDidColdCall = PositionalStat.Sum(a.PositionDidColdCall, b.PositionDidColdCall);
-            r.PositionCouldColdCall = PositionalStat.Sum(a.PositionCouldColdCall, b.PositionCouldColdCall);
-            r.PositionDidThreeBet = PositionalStat.Sum(a.PositionDidThreeBet, b.PositionDidThreeBet);
-            r.PositionCouldThreeBet = PositionalStat.Sum(a.PositionCouldThreeBet, b.PositionCouldThreeBet);
-            r.PositionDidFourBet = PositionalStat.Sum(a.PositionDidFourBet, b.PositionDidFourBet);
-            r.PositionCouldFourBet = PositionalStat.Sum(a.PositionCouldFourBet, b.PositionCouldFourBet);
-
             r.MRatio = b.MRatio;
             r.StackInBBs = b.StackInBBs;
 
@@ -2282,11 +2324,6 @@ namespace DriveHUD.Entities
             CalculateTiltMeterValue(r, b);
 
             #endregion
-
-            r.FoldedtothreebetpreflopCounter = a.FoldedtothreebetpreflopVirtualCounter + b.FoldedtothreebetpreflopVirtualCounter;
-            r.FacedthreebetpreflopCounter = a.FacedthreebetpreflopVirtualCounter + b.FacedthreebetpreflopVirtualCounter;
-            r.DidfourbetpreflopCounter = a.DidfourbetpreflopVirtualCounter + b.DidfourbetpreflopVirtualCounter;
-            r.CouldfourbetpreflopCounter = a.CouldfourbetpreflopVirtualCounter + b.CouldfourbetpreflopVirtualCounter;
 
             r.DidDelayedTurnCBet = a.DidDelayedTurnCBet + b.DidDelayedTurnCBet;
             r.CouldDelayedTurnCBet = a.CouldDelayedTurnCBet + b.CouldDelayedTurnCBet;
@@ -2339,69 +2376,6 @@ namespace DriveHUD.Entities
         public virtual Playerstatistic Copy()
         {
             return (Playerstatistic)MemberwiseClone();
-        }
-
-        /// <summary>
-        /// Calculates <see cref="PositionalStat"/> stats of the current <see cref="Playerstatistic"/>
-        /// </summary>
-        public virtual void CalculatePositionalStats()
-        {
-            var unopened = IsUnopened ? 1 : 0;
-
-            if (PositionTotal == null)
-            {
-                PositionTotal = new PositionalStat();
-            }
-
-            if (PositionUnoppened == null)
-            {
-                PositionUnoppened = new PositionalStat();
-            }
-
-            if (PositionVPIP == null)
-            {
-                PositionVPIP = new PositionalStat();
-            }
-
-            if (PositionDidColdCall == null)
-            {
-                PositionDidColdCall = new PositionalStat();
-            }
-
-            if (PositionCouldColdCall == null)
-            {
-                PositionCouldColdCall = new PositionalStat();
-            }
-
-            if (PositionDidThreeBet == null)
-            {
-                PositionDidThreeBet = new PositionalStat();
-            }
-
-            if (PositionCouldThreeBet == null)
-            {
-                PositionCouldThreeBet = new PositionalStat();
-            }
-
-            if (PositionDidFourBet == null)
-            {
-                PositionDidFourBet = new PositionalStat();
-            }
-
-            if (PositionCouldFourBet == null)
-            {
-                PositionCouldFourBet = new PositionalStat();
-            }
-
-            PositionTotal.SetPositionValue(Position, 1);
-            PositionUnoppened.SetPositionValue(Position, unopened);
-            PositionVPIP.SetPositionValue(Position, Vpiphands);
-            PositionDidColdCall.SetPositionValue(Position, Didcoldcall);
-            PositionCouldColdCall.SetPositionValue(Position, Couldcoldcall);
-            PositionDidThreeBet.SetPositionValue(Position, Didthreebet);
-            PositionCouldThreeBet.SetPositionValue(Position, Couldthreebet);
-            PositionDidFourBet.SetPositionValue(Position, DidfourbetpreflopVirtualCounter);
-            PositionCouldFourBet.SetPositionValue(Position, CouldfourbetpreflopVirtualCounter);
         }
 
         /// <summary>
@@ -2478,7 +2452,9 @@ namespace DriveHUD.Entities
             source.TiltMeterTemporaryHistory.Enqueue(tiltMeterValue);
         }
 
+#pragma warning disable 0067
         // required to avoid binding leaks
         public virtual event PropertyChangedEventHandler PropertyChanged;
+#pragma warning restore 0067
     }
 }

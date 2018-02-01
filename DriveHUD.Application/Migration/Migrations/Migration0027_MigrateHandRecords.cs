@@ -107,7 +107,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         .CreateSQLQuery($@"insert into {playerGameInfoTableName} (PlayerId, GameInfoId) 
                                 select PlayerId, GameInfoId 
                                 from {handRecordsTableName}                                                               
-                                group by PlayerId, GameInfoId ");
+                                group by PlayerId, GameInfoId");
 
                     var result = sqlQuery.ExecuteUpdate();
 

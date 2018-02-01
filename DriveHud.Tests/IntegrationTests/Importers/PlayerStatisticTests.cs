@@ -177,7 +177,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-FoldedThreeBet-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void FoldedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated(x => x.FoldedtothreebetpreflopVirtual, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated(x => x.Foldedtothreebetpreflop, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -192,7 +192,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-CouldNotFourBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
         public void FacedThreeBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            AssertThatStatIsCalculated(x => x.FacedthreebetpreflopVirtual, fileName, pokerSite, playerName, expected);
+            AssertThatStatIsCalculated(x => x.Facedthreebetpreflop, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
@@ -251,9 +251,27 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-CouldFourBet-4.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-CouldFourBet-5.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"Hero-FacedFourBet-4.xml", EnumPokerSites.Ignition, "P9_485136KK", 0)]
+        [TestCase(@"DURKADURDUR-CouldNot4Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         public void CouldFourBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Couldfourbet, fileName, pokerSite, playerName, expected);
+        }
+
+        [Test]
+        [TestCase(@"Hero-CouldNotFourBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-CouldNotFourBet-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-CouldNotFourBet-3.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"DURKADURDUR-CouldNotFourBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Hero-CouldFourBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFourBet-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFourBet-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFourBet-4.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-CouldFourBet-5.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-FacedFourBet-4.xml", EnumPokerSites.Ignition, "P9_485136KK", 0)]
+        [TestCase(@"DURKADURDUR-CouldNot4Bet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        public void CouldfourbetpreflopVirtualIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldfourbetpreflopVirtual, fileName, pokerSite, playerName, expected);
         }
 
         [Test]
