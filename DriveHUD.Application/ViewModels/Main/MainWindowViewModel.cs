@@ -872,9 +872,10 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                UpdateCurrentView();
-                CreatePositionReport();
             });
+
+            UpdateCurrentView();
+            CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
@@ -910,9 +911,10 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                UpdateCurrentView();
-                CreatePositionReport();
             });
+
+            UpdateCurrentView();
+            CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
