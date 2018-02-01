@@ -42,32 +42,39 @@ namespace DriveHUD.Application.ViewModels
     public class ReportGadgetViewModel : BaseViewModel
     {
         #region Private Fields
-        private EnumReports _invisibleSelectedItemStat;
-        private readonly IEventAggregator _eventAggregator;
-        //private readonly ITopPlayersService _topPlayersService;
+
+        private EnumReports invisibleSelectedItemStat;
+        private readonly IEventAggregator eventAggregator;
+
         #endregion
 
         #region ICommand
+
         public ICommand CalculateEquityCommand { get; set; }
+
         public ICommand ButtonFilterModelSectionRemove_CommandClick { get; set; }
+
         public ICommand MakeNoteCommand { get; set; }
+
         public ICommand DeleteHandCommand { get; set; }
+
         public ICommand EditTournamentCommand { get; set; }
+
         public ICommand ReportRadioButtonClickCommand { get; set; }
+
         #endregion
 
         #region Initialize
 
         internal ReportGadgetViewModel()
         {
-            _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            // TODO: Opponent Analysis report turned off
-            //_topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
-            this.PopupRequest = new InteractionRequest<PopupBaseNotification>();
-            this.NotificationRequest = new InteractionRequest<INotification>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
-            this.ReportCollection = new RangeObservableCollection<Indicators>();
-            this.ReportSelectedItemStatisticsCollection_Filtered = new RangeObservableCollection<ComparableCardsStatistic>();
+            PopupRequest = new InteractionRequest<PopupBaseNotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
+
+            ReportCollection = new RangeObservableCollection<Indicators>();
+            ReportSelectedItemStatisticsCollection_Filtered = new RangeObservableCollection<ComparableCardsStatistic>();
 
             CalculateEquityCommand = new RelayCommand(ShowCalculateEquityView);
             ButtonFilterModelSectionRemove_CommandClick = new RelayCommand(ButtonFilterModelSectionRemove_OnClick);
@@ -79,32 +86,32 @@ namespace DriveHUD.Application.ViewModels
             InitializeFilter();
             UpdateReport();
 
-            _eventAggregator.GetEvent<RequestDisplayTournamentHands>().Subscribe(DisplayTournamentHands);
-            _eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
-            _eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
-            _eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            eventAggregator.GetEvent<RequestDisplayTournamentHands>().Subscribe(DisplayTournamentHands);
+            eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
+            eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
+            eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
         }
 
         private void InitializeFilter()
         {
-            _filterAmountDictionary = new Dictionary<int, string>();
+            filterAmountDictionary = new Dictionary<int, string>();
 
-            _filterAmountDictionary.Add(100, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last100"));
-            _filterAmountDictionary.Add(250, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last250"));
-            _filterAmountDictionary.Add(1000, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last1000"));
-            _filterAmountDictionary.Add(int.MaxValue, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_LastAll"));
+            filterAmountDictionary.Add(100, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last100"));
+            filterAmountDictionary.Add(250, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last250"));
+            filterAmountDictionary.Add(1000, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last1000"));
+            filterAmountDictionary.Add(int.MaxValue, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_LastAll"));
 
-            _filterAmountDictionarySelectedItem = _filterAmountDictionary.First().Key;
+            filterAmountDictionarySelectedItem = filterAmountDictionary.First().Key;
 
-            _filterHandTagDictionary = new Dictionary<EnumHandTag, string>();
+            filterHandTagDictionary = new Dictionary<EnumHandTag, string>();
 
-            _filterHandTagDictionary.Add(EnumHandTag.All, CommonResourceManager.Instance.GetResourceString(ResourceStrings.AllResourceString));
-            _filterHandTagDictionary.Add(EnumHandTag.ForReview, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagForReview));
-            _filterHandTagDictionary.Add(EnumHandTag.Bluff, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBluff));
-            _filterHandTagDictionary.Add(EnumHandTag.HeroCall, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagHeroCall));
-            _filterHandTagDictionary.Add(EnumHandTag.BigFold, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBigFold));
+            filterHandTagDictionary.Add(EnumHandTag.All, CommonResourceManager.Instance.GetResourceString(ResourceStrings.AllResourceString));
+            filterHandTagDictionary.Add(EnumHandTag.ForReview, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagForReview));
+            filterHandTagDictionary.Add(EnumHandTag.Bluff, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBluff));
+            filterHandTagDictionary.Add(EnumHandTag.HeroCall, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagHeroCall));
+            filterHandTagDictionary.Add(EnumHandTag.BigFold, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBigFold));
 
-            _filterHandTagSelectedItem = _filterHandTagDictionary.First().Key;
+            filterHandTagSelectedItem = filterHandTagDictionary.First().Key;
         }
 
         #endregion
@@ -113,33 +120,38 @@ namespace DriveHUD.Application.ViewModels
 
         private void ShowCalculateEquityView(object obj)
         {
-            if (obj is Playerstatistic)
-            {
-                var stat = obj as Playerstatistic;
-                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Publish(new RequestEquityCalculatorEventArgs(stat.GameNumber, (short)stat.PokersiteId));
-            }
-            else
-            {
-                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Publish(new RequestEquityCalculatorEventArgs());
-            }
+            var stat = obj as Playerstatistic;
+
+            var requestEquityCalculatorEventArgs = stat != null ?
+                new RequestEquityCalculatorEventArgs(stat.GameNumber, (short)stat.PokersiteId) :
+                new RequestEquityCalculatorEventArgs();
+
+            eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Publish(requestEquityCalculatorEventArgs);
         }
 
         private void ButtonFilterModelSectionRemove_OnClick(object param)
         {
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs((FilterSectionItem)param));
+            eventAggregator.GetEvent<ResetFiltersEvent>().Publish(new ResetFiltersEventArgs((FilterSectionItem)param));
         }
 
         private void MakeNote(object obj)
         {
-            if (obj != null && obj is ComparableCardsStatistic)
+            var stat = obj as ComparableCardsStatistic;
+
+            if (stat == null)
             {
-                var stat = (obj as ComparableCardsStatistic);
-                HandNoteViewModel viewModel = new HandNoteViewModel(stat.Statistic.GameNumber, (short)stat.Statistic.PokersiteId);
-                var frm = new HandNoteView(viewModel);
-                ((dynamic)frm).ShowDialog();
-                stat.Statistic.HandNote = viewModel.HandNoteEntity;
-                stat.UpdateHandNoteText();
+                return;
             }
+
+            var handNoteViewModel = new HandNoteViewModel(stat.Statistic.GameNumber, (short)stat.Statistic.PokersiteId);
+
+            var handNoteView = new HandNoteView(handNoteViewModel);
+
+            handNoteView.ShowDialog();
+
+            stat.Statistic.HandNote = handNoteViewModel.HandNoteEntity;
+
+            stat.UpdateHandNoteText();
         }
 
         private void DeleteHands()
@@ -170,7 +182,6 @@ namespace DriveHUD.Application.ViewModels
                           if (confirmation.Confirmed)
                           {
                               var dataservice = ServiceLocator.Current.GetInstance<IDataService>();
-                              var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
                               foreach (var stat in itemsToDelete)
                               {
@@ -186,27 +197,33 @@ namespace DriveHUD.Application.ViewModels
 
         private void EditTournament(object obj)
         {
-            if (obj != null && obj is TournamentReportRecord)
+            var tournament = obj as TournamentReportRecord;
+
+            if (tournament == null)
             {
-                var tournament = obj as TournamentReportRecord;
-                EditTournamentViewModel viewModel = new EditTournamentViewModel();
-                viewModel.LoadTournament(tournament.PlayerName, tournament.TournamentId, (short)tournament.Source.PokersiteId);
-                var frm = Activator.CreateInstance(typeof(EditTournamentView), viewModel);
-                ((dynamic)frm).ShowDialog();
+                return;
             }
+
+            var editTournamentViewModel = new EditTournamentViewModel();
+            editTournamentViewModel.LoadTournament(tournament.PlayerName, tournament.TournamentId, (short)tournament.Source.PokersiteId);
+
+            var tournamentView = new EditTournamentView(editTournamentViewModel);
+            tournamentView.ShowDialog();
         }
 
         private void ReportRadioButtonClick(object obj)
         {
-            _eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = false });
+            eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = false });
         }
+
         #endregion
 
         #region Methods
 
         internal void UpdateReport(object obj = null)
         {
-            _eventAggregator.GetEvent<UpdateReportEvent>().Publish(StorageModel?.FilterPredicate);
+            eventAggregator.GetEvent<UpdateReportEvent>().Publish(StorageModel?.FilterPredicate);
+
             App.Current.Dispatcher.Invoke(() =>
             {
                 if (ReportSelectedItemStat == EnumReports.None)
@@ -232,13 +249,26 @@ namespace DriveHUD.Application.ViewModels
 
         private void ReportSelectedItemStatisticsCollection_FilterApply()
         {
-            if (this.ReportSelectedItemStatisticsCollection == null) return;
+            if (ReportSelectedItemStatisticsCollection == null)
+            {
+                return;
+            }
+
             var predicate = PredicateBuilder.True<ComparableCardsStatistic>();
 
-            if (this.FilterTaggedHands_IsChecked && this.FilterHandTagSelectedItem != EnumHandTag.None) predicate = predicate.And(GetHandTagPredicate());
+            if (FilterTaggedHands_IsChecked && FilterHandTagSelectedItem != EnumHandTag.None)
+            {
+                predicate = predicate.And(GetHandTagPredicate());
+            }
 
-            var filteredCollection = this.ReportSelectedItemStatisticsCollection.AsQueryable().Select(x => new ComparableCardsStatistic(x)).Where(predicate).OrderByDescending(x => x.Statistic.Time).Take(this.FilterAmountDictionarySelectedItem);
-            this.ReportSelectedItemStatisticsCollection_Filtered.Reset(filteredCollection);
+            var filteredCollection = ReportSelectedItemStatisticsCollection
+                .AsQueryable()
+                .Select(x => new ComparableCardsStatistic(x))
+                .Where(predicate)
+                .OrderByDescending(x => x.Statistic.Time)
+                .Take(FilterAmountDictionarySelectedItem);
+
+            ReportSelectedItemStatisticsCollection_Filtered.Reset(filteredCollection);
         }
 
         private Expression<Func<ComparableCardsStatistic, bool>> GetHandTagPredicate()
@@ -256,7 +286,11 @@ namespace DriveHUD.Application.ViewModels
         private void SetDefaultSelection()
         {
             var report = ReportCollection.FirstOrDefault();
-            if (report == null) return;
+
+            if (report == null)
+            {
+                return;
+            }
 
             ReportSelectedItem = report;
         }
@@ -265,29 +299,31 @@ namespace DriveHUD.Application.ViewModels
         {
             if (isTournament)
             {
-                _reportSelectedItemStat = EnumReports.TournamentResults;
-                _invisibleSelectedItemStat = EnumReports.OverAll;
+                reportSelectedItemStat = EnumReports.TournamentResults;
+                invisibleSelectedItemStat = EnumReports.OverAll;
             }
             else
             {
-                _reportSelectedItemStat = EnumReports.OverAll;
-                _invisibleSelectedItemStat = EnumReports.TournamentResults;
+                reportSelectedItemStat = EnumReports.OverAll;
+                invisibleSelectedItemStat = EnumReports.TournamentResults;
             }
         }
 
         private void RestoreSelectedItemStat()
         {
-            var temp = _invisibleSelectedItemStat;
-            _invisibleSelectedItemStat = ReportSelectedItemStat;
+            var temp = invisibleSelectedItemStat;
+
+            invisibleSelectedItemStat = ReportSelectedItemStat;
+
             if (temp != EnumReports.None)
             {
-                _reportSelectedItemStat = temp;
+                reportSelectedItemStat = temp;
             }
         }
 
         internal void RaiseNotification(string content, string title)
         {
-            this.NotificationRequest.Raise(
+            NotificationRequest.Raise(
                     new PopupActionNotification
                     {
                         Content = content,
@@ -296,53 +332,49 @@ namespace DriveHUD.Application.ViewModels
                     n => { });
         }
 
-        // TODO: Opponent Analysis report turned off
-        //public async Task<IList<Playerstatistic>> GetTop()
-        //{
-        //    return await _topPlayersService.GetTop();
-        //}
         #endregion
 
         #region Properties
 
-        public InteractionRequest<PopupBaseNotification> PopupRequest { get; set; }
+        public InteractionRequest<PopupBaseNotification> PopupRequest { get; private set; }
+
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
-        private bool _isShowTournamentData = false;
+        private bool isShowTournamentData = false;
 
-        private RangeObservableCollection<Indicators> _reportCollection;
-        private EnumReports _reportSelectedItemStat;
+        private RangeObservableCollection<Indicators> reportCollection;
+        private EnumReports reportSelectedItemStat;
 
-        private Indicators _reportSelectedItem;
-        private IEnumerable<Playerstatistic> _reportSelectedItemStatisticsCollection;
-        private IEnumerable<Playerstatistic> _selectedStatistics;
+        private Indicators reportSelectedItem;
+        private IEnumerable<Playerstatistic> reportSelectedItemStatisticsCollection;
+        private IEnumerable<Playerstatistic> selectedStatistics;
 
-        private RangeObservableCollection<ComparableCardsStatistic> _reportSelectedItemStatisticsCollection_Filtered;
+        private RangeObservableCollection<ComparableCardsStatistic> reportSelectedItemStatisticsCollection_Filtered;
 
-        private bool _filterTaggedHands_IsChecked = false;
-        private bool _replayerShowHolecards_IsChecked = true;
+        private bool filterTaggedHands_IsChecked = false;
+        private bool replayerShowHolecards_IsChecked = true;
 
-        private bool _showHands;
+        private bool showHands;
 
-        private Dictionary<int, string> _filterAmountDictionary;
-        private int _filterAmountDictionarySelectedItem;
+        private Dictionary<int, string> filterAmountDictionary;
+        private int filterAmountDictionarySelectedItem;
 
-        private Dictionary<EnumHandTag, string> _filterHandTagDictionary;
-        private EnumHandTag _filterHandTagSelectedItem;
+        private Dictionary<EnumHandTag, string> filterHandTagDictionary;
+        private EnumHandTag filterHandTagSelectedItem;
 
-        private BuiltFilterModel _currentlyBuiltFilter;
-        private bool _isBusy;
+        private BuiltFilterModel currentlyBuiltFilter;
+        private bool isBusy;
 
-        private bool _isEquityCalculatorEnabled = true;
+        private bool isEquityCalculatorEnabled = true;
 
         public bool IsShowTournamentData
         {
-            get { return _isShowTournamentData; }
+            get { return isShowTournamentData; }
             set
             {
                 if (value != IsShowTournamentData)
                 {
-                    if (_invisibleSelectedItemStat != EnumReports.None)
+                    if (invisibleSelectedItemStat != EnumReports.None)
                     {
                         RestoreSelectedItemStat();
                     }
@@ -351,66 +383,68 @@ namespace DriveHUD.Application.ViewModels
                         SetDefaultItemStat(value);
                     }
                 }
-                SetProperty(ref _isShowTournamentData, value);
-                OnPropertyChanged("IsShowCashData");
+
+                SetProperty(ref isShowTournamentData, value);
+                OnPropertyChanged(nameof(IsShowCashData));
             }
         }
 
         public bool IsShowCashData
         {
-            get { return !_isShowTournamentData; }
+            get { return !isShowTournamentData; }
         }
 
         public RangeObservableCollection<Indicators> ReportCollection
         {
-            get { return _reportCollection; }
+            get { return reportCollection; }
             set
             {
-                _reportCollection = value;
+                reportCollection = value;
                 OnPropertyChanged();
             }
         }
 
         public EnumReports ReportSelectedItemStat
         {
-            get { return _reportSelectedItemStat; }
+            get { return reportSelectedItemStat; }
             set
             {
-                _reportSelectedItemStat = value;
+                reportSelectedItemStat = value;
                 OnPropertyChanged();
             }
         }
 
         public Indicators ReportSelectedItem
         {
-            get { return _reportSelectedItem; }
+            get { return reportSelectedItem; }
             set
             {
-                if (ReferenceEquals(_reportSelectedItem, value))
+                if (ReferenceEquals(reportSelectedItem, value))
                 {
                     return;
                 }
 
-                _reportSelectedItem = value;
+                reportSelectedItem = value;
+
                 OnPropertyChanged();
 
                 if (value != null)
                 {
-                    this.ReportSelectedItemStatisticsCollection = new List<Playerstatistic>(value.Statistics);
+                    ReportSelectedItemStatisticsCollection = new List<Playerstatistic>(value.Statistics);
                 }
                 else
                 {
-                    this.ReportSelectedItemStatisticsCollection = new List<Playerstatistic>();
+                    ReportSelectedItemStatisticsCollection = new List<Playerstatistic>();
                 }
             }
         }
 
         public IEnumerable<Playerstatistic> ReportSelectedItemStatisticsCollection
         {
-            get { return _reportSelectedItemStatisticsCollection; }
+            get { return reportSelectedItemStatisticsCollection; }
             set
             {
-                _reportSelectedItemStatisticsCollection = value;
+                reportSelectedItemStatisticsCollection = value;
                 OnPropertyChanged();
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
@@ -419,20 +453,20 @@ namespace DriveHUD.Application.ViewModels
 
         public IEnumerable<Playerstatistic> SelectedStatistics
         {
-            get { return _selectedStatistics; }
+            get { return selectedStatistics; }
             set
             {
-                _selectedStatistics = value;
+                selectedStatistics = value;
                 OnPropertyChanged();
             }
         }
 
         public RangeObservableCollection<ComparableCardsStatistic> ReportSelectedItemStatisticsCollection_Filtered
         {
-            get { return _reportSelectedItemStatisticsCollection_Filtered; }
+            get { return reportSelectedItemStatisticsCollection_Filtered; }
             set
             {
-                _reportSelectedItemStatisticsCollection_Filtered = value;
+                reportSelectedItemStatisticsCollection_Filtered = value;
                 OnPropertyChanged();
             }
         }
@@ -459,10 +493,10 @@ namespace DriveHUD.Application.ViewModels
 
         public bool FilterTaggedHands_IsChecked
         {
-            get { return _filterTaggedHands_IsChecked; }
+            get { return filterTaggedHands_IsChecked; }
             set
             {
-                SetProperty(ref _filterTaggedHands_IsChecked, value);
+                SetProperty(ref filterTaggedHands_IsChecked, value);
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
             }
@@ -470,29 +504,29 @@ namespace DriveHUD.Application.ViewModels
 
         public bool ReplayerShowHolecards_IsChecked
         {
-            get { return _replayerShowHolecards_IsChecked; }
+            get { return replayerShowHolecards_IsChecked; }
             set
             {
-                SetProperty(ref _replayerShowHolecards_IsChecked, value);
+                SetProperty(ref replayerShowHolecards_IsChecked, value);
             }
         }
 
         public Dictionary<int, string> FilterAmountDictionary
         {
-            get { return _filterAmountDictionary; }
+            get { return filterAmountDictionary; }
             set
             {
-                _filterAmountDictionary = value;
+                filterAmountDictionary = value;
                 OnPropertyChanged();
             }
         }
 
         public int FilterAmountDictionarySelectedItem
         {
-            get { return _filterAmountDictionarySelectedItem; }
+            get { return filterAmountDictionarySelectedItem; }
             set
             {
-                _filterAmountDictionarySelectedItem = value;
+                filterAmountDictionarySelectedItem = value;
                 OnPropertyChanged();
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
@@ -501,19 +535,19 @@ namespace DriveHUD.Application.ViewModels
 
         public Dictionary<EnumHandTag, string> FilterHandTagDictionary
         {
-            get { return _filterHandTagDictionary; }
+            get { return filterHandTagDictionary; }
             set
             {
-                SetProperty(ref _filterHandTagDictionary, value);
+                SetProperty(ref filterHandTagDictionary, value);
             }
         }
 
         public EnumHandTag FilterHandTagSelectedItem
         {
-            get { return _filterHandTagSelectedItem; }
+            get { return filterHandTagSelectedItem; }
             set
             {
-                SetProperty(ref _filterHandTagSelectedItem, value);
+                SetProperty(ref filterHandTagSelectedItem, value);
 
                 if (FilterTaggedHands_IsChecked)
                 {
@@ -524,44 +558,34 @@ namespace DriveHUD.Application.ViewModels
 
         public bool ShowHands
         {
-            get { return _showHands; }
+            get { return showHands; }
             set
             {
-                if (value.Equals(_showHands)) return;
-                _showHands = value;
+                if (value.Equals(showHands)) return;
+                showHands = value;
                 OnPropertyChanged();
             }
         }
 
         public BuiltFilterModel CurrentlyBuiltFilter
         {
-            get { return _currentlyBuiltFilter; }
+            get { return currentlyBuiltFilter; }
             set
             {
-                SetProperty(ref _currentlyBuiltFilter, value);
+                SetProperty(ref currentlyBuiltFilter, value);
             }
         }
 
         public bool IsBusy
         {
-            get { return _isBusy; }
-            set
-            {
-                SetProperty(ref _isBusy, value);
-
-                /*
-
-                if ((value && ReportSelectedItemStat == EnumReports.OpponentAnalysis))
-                    SetProperty(ref _isBusy, true);
-                else
-                    SetProperty(ref _isBusy, false);*/
-            }
+            get { return isBusy; }
+            set { SetProperty(ref isBusy, value); }
         }
 
         public bool IsEquityCalculatorEnabled
         {
-            get { return _isEquityCalculatorEnabled; }
-            set { SetProperty(ref _isEquityCalculatorEnabled, value); }
+            get { return isEquityCalculatorEnabled; }
+            set { SetProperty(ref isEquityCalculatorEnabled, value); }
         }
 
         #endregion

@@ -93,7 +93,10 @@ namespace Model.Reports
                 return;
             }
 
-            opponentsData[stat.PlayerId].AddStatistic(stat);
+            lock (syncLock)
+            {
+                opponentsData[stat.PlayerId].AddStatistic(stat);
+            }
         }
 
         /// <summary>

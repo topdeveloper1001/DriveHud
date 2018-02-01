@@ -31,6 +31,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Importer;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
@@ -60,12 +61,14 @@ namespace DriveHUD.Importers
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
         private readonly IEventAggregator eventAggregator;
+        private readonly IOpponentReportService opponentReportService;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
         }
 
         /// <summary>
@@ -495,6 +498,8 @@ namespace DriveHUD.Importers
                         {
                             UpdatePlayerNetWon(session, existingPlayer, playerStat);
                         }
+
+                        opponentReportService.UpdateReport(playerStat);
 
                         BuildAutoNotes(playerStatCopy, handHistory.Source, session);
                     }
