@@ -1,6 +1,8 @@
 ﻿using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Entities;
+using Prism.Mvvm;
+using ProtoBuf;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -18,7 +20,7 @@ namespace Model.Extensions
 
         public void UpdateHandNoteText()
         {
-            OnPropertyChanged(ReflectionHelper.GetPath<ComparableCardsStatistic>(o => o.HandNoteText));
+            OnPropertyChanged(nameof(HandNoteText));
         }
 
         #region Properties
@@ -48,16 +50,28 @@ namespace Model.Extensions
         }
     }
 
-    public class ComparableCard : IComparable<ComparableCard>, INotifyPropertyChanged
+    [ProtoContract]
+    public sealed class ComparableCard : BindableBase, IComparable<ComparableCard>
     {
-        public string Cards { get; set; }
-
         public ComparableCard(string cards)
         {
             Cards = cards;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        [ProtoMember(1)]
+        private string cards;
+
+        public string Cards
+        {
+            get
+            {
+                return cards;
+            }
+            private set
+            {
+                SetProperty(ref cards, value);
+            }
+        }
 
         public override string ToString()
         {
@@ -66,6 +80,11 @@ namespace Model.Extensions
 
         public int CompareTo(ComparableCard other)
         {
+            if (other == null)
+            {
+                return 1;
+            }
+
             var currentCards = CardHelper.Split(Cards);
             var otherCards = CardHelper.Split(other.Cards);
 
@@ -74,9 +93,7 @@ namespace Model.Extensions
                 return currentCards.Count - otherCards.Count;
             }
 
-            int length = currentCards.Count;
-
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < currentCards.Count; i++)
             {
                 int result = CardHelper.GetCardRank(currentCards[i]) - CardHelper.GetCardRank(otherCards[i]);
 

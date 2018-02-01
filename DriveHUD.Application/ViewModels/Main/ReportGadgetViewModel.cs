@@ -261,6 +261,8 @@ namespace DriveHUD.Application.ViewModels
                 predicate = predicate.And(GetHandTagPredicate());
             }
 
+
+
             var filteredCollection = ReportSelectedItemStatisticsCollection
                 .AsQueryable()
                 .Select(x => new ComparableCardsStatistic(x))
@@ -273,7 +275,7 @@ namespace DriveHUD.Application.ViewModels
 
         private Expression<Func<ComparableCardsStatistic, bool>> GetHandTagPredicate()
         {
-            if (this.FilterHandTagSelectedItem == EnumHandTag.All)
+            if (FilterHandTagSelectedItem == EnumHandTag.All)
             {
                 return PredicateBuilder.Create<ComparableCardsStatistic>(x => x.Statistic.HandTag != EnumHandTag.None);
             }
@@ -416,17 +418,13 @@ namespace DriveHUD.Application.ViewModels
 
         public Indicators ReportSelectedItem
         {
-            get { return reportSelectedItem; }
+            get
+            {
+                return reportSelectedItem;
+            }
             set
             {
-                if (ReferenceEquals(reportSelectedItem, value))
-                {
-                    return;
-                }
-
-                reportSelectedItem = value;
-
-                OnPropertyChanged();
+                SetProperty(ref reportSelectedItem, value);
 
                 if (value != null)
                 {
@@ -444,8 +442,7 @@ namespace DriveHUD.Application.ViewModels
             get { return reportSelectedItemStatisticsCollection; }
             set
             {
-                reportSelectedItemStatisticsCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref reportSelectedItemStatisticsCollection, value);
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
             }
@@ -523,11 +520,13 @@ namespace DriveHUD.Application.ViewModels
 
         public int FilterAmountDictionarySelectedItem
         {
-            get { return filterAmountDictionarySelectedItem; }
+            get
+            {
+                return filterAmountDictionarySelectedItem;
+            }
             set
             {
-                filterAmountDictionarySelectedItem = value;
-                OnPropertyChanged();
+                SetProperty(ref filterAmountDictionarySelectedItem, value);
 
                 ReportSelectedItemStatisticsCollection_FilterApply();
             }

@@ -446,17 +446,19 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #region ICommand Implementation
+
         private void BraceletTournamentClick(object obj)
         {
-            if (obj != null)
+            var item = obj as BraceletItem;
+
+            if (item == null)
             {
-                if (obj is BraceletItem)
-                {
-                    var item = obj as BraceletItem;
-                    ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestDisplayTournamentHands>().Publish(new RequestDisplayTournamentHandsEvent(item.Id));
-                }
+                return;
             }
+
+            eventAggregator.GetEvent<RequestDisplayTournamentHands>().Publish(new RequestDisplayTournamentHandsEvent(item.Id));
         }
+
         #endregion
     }
 }

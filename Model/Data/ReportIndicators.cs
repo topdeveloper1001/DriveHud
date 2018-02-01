@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Model.Data
 {
@@ -25,10 +26,20 @@ namespace Model.Data
         {
         }
 
+        public ObservableCollection<ReportHandViewModel> ReportHands { get; private set; } = new ObservableCollection<ReportHandViewModel>();
+
         public override void AddStatistic(Playerstatistic statistic)
         {
-            base.AddStatistic(statistic);
-            Statistics.Add(statistic);
+            base.AddStatistic(statistic);            
+
+            var reportHandViewModel = new ReportHandViewModel(statistic);
+            ReportHands.Add(reportHandViewModel);
         }
-    }
+
+        public override void Clean()
+        {
+            base.Clean();
+            ReportHands.Clear();
+        }
+    }    
 }
