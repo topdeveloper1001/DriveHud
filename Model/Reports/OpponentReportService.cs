@@ -148,18 +148,21 @@ namespace Model.Reports
         /// </summary>
         private void SaveData()
         {
-            var opponentsDataToSerialize = opponentsData.Values.ToList();
+            using (var pf = new PerformanceMonitor(nameof(SaveData)))
+            {
+                var opponentsDataToSerialize = opponentsData.Values.ToList();
 
-            try
-            {
-                using (var fs = new FileStream(ReportFile, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
+                try
                 {
-                    Serializer.Serialize(fs, opponentsDataToSerialize);
+                    using (var fs = new FileStream(ReportFile, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
+                    {
+                        Serializer.Serialize(fs, opponentsDataToSerialize);
+                    }
                 }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not save opponent report to '{ReportFile}'", e);
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not save opponent report to '{ReportFile}'", e);
+                }
             }
         }
 

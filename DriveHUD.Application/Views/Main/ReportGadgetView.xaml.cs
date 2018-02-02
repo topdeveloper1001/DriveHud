@@ -250,6 +250,18 @@ namespace DriveHUD.Application.Views
 
             dataService.Store(handNoteEntity);
 
+            reportHand.HandTag = handNoteEntity.HandTag.HasValue ?
+                (EnumHandTag)handNoteEntity.HandTag.Value :
+                EnumHandTag.None;
+
+            var statistic = reportGadgetViewModel.ReportSelectedItem?.Statistics?
+                .FirstOrDefault(x => x.GameNumber == reportHand.GameNumber && x.PokersiteId == reportHand.PokerSiteId);
+
+            if (statistic != null)
+            {
+                statistic.HandNote = handNoteEntity;
+            }
+
             if (reportGadgetViewModel.FilterTaggedHands_IsChecked)
             {
                 reportGadgetViewModel.RefreshReport();

@@ -35,7 +35,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 TruncateTable(playerGameInfoTableName);
                 FillPlayerNetWonTable();
                 FillPlayerGameInfoTable();
-                DeleteHandRecordsTable();
             }
             catch (Exception e)
             {
@@ -129,18 +128,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 sqlQuery.ExecuteUpdate();
             }
-        }
-
-        private void DeleteHandRecordsTable()
-        {
-            if (!Schema.Table(handRecordsTableName).Exists())
-            {
-                return;
-            }
-
-            LogProvider.Log.Info($"Deleting {handRecordsTableName} table");
-            Delete.Table(handRecordsTableName);
-            LogProvider.Log.Info($"{handRecordsTableName} table has been successfully deleted.");
         }
     }
 }

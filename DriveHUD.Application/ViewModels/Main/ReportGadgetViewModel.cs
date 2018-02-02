@@ -150,7 +150,17 @@ namespace DriveHUD.Application.ViewModels
 
             handNoteView.ShowDialog();
 
-            reportHand.HandNote = handNoteViewModel.HandNoteEntity.Note;
+            if (handNoteViewModel.HandNoteEntity != null)
+            {
+                reportHand.HandNote = handNoteViewModel.HandNoteEntity.Note;
+            }
+
+            var statistic = ReportSelectedItem.Statistics?.FirstOrDefault(x => x.GameNumber == reportHand.GameNumber && x.PokersiteId == reportHand.PokerSiteId);
+
+            if (statistic != null)
+            {
+                statistic.HandNote = handNoteViewModel.HandNoteEntity;
+            }
         }
 
         private void DeleteHands()

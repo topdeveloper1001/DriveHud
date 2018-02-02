@@ -502,35 +502,21 @@ namespace Model
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        session.SaveOrUpdate(handnotes);
-                        transaction.Commit();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Couldn't save hand notes", e);
-            }
-        }
-
-        public void StoreHandNote(Handnotes handnotes)
-        {
-            try
-            {
-                using (var session = ModelEntities.OpenSession())
-                {
-                    using (var transaction = session.BeginTransaction())
-                    {
                         var existingHandNote = session
                             .Query<Handnotes>()
                             .FirstOrDefault(x => x.PokersiteId == handnotes.PokersiteId && x.Gamenumber == handnotes.Gamenumber);
 
                         if (existingHandNote != null)
                         {
-                            handnotes.HandNoteId = existingHandNote.HandNoteId;
+                            existingHandNote.HandTag = handnotes.HandTag;
+                            existingHandNote.Note = handnotes.Note;
+                        }
+                        else
+                        {
+                            existingHandNote = handnotes;
                         }
 
-                        session.SaveOrUpdate(handnotes);
+                        session.SaveOrUpdate(existingHandNote);
                         transaction.Commit();
                     }
                 }

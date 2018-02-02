@@ -247,7 +247,7 @@ namespace Model.Data
             {
                 return handTag;
             }
-            private set
+            set
             {
                 SetProperty(ref handTag, value);
             }

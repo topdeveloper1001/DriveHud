@@ -25,7 +25,7 @@ namespace DriveHUD.Entities
 #if DEBUG
         public override string ToString()
         {
-            return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon: {NetWon}; Time: {Time}";
+            return $"Player: {PlayerName}; TotalHands: {Totalhands}; Cards: {Cards}; VPIP: {Vpiphands}; NetWon: {NetWon}; Time: {Time}; GameNumber: {GameNumber}; Site: {PokersiteId}";
         }
 #endif
 
@@ -991,7 +991,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && Pfrhands == 1 && Foldedtothreebetpreflop == 1 ? 1 : 0;
             }
-        }    
+        }
 
         public virtual int FacedthreebetpreflopVirtual
         {
@@ -999,7 +999,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && Position != EnumPosition.BB && Pfrhands == 1 && Facedthreebetpreflop == 1 ? 1 : 0;
             }
-        }     
+        }
 
         // 4-bet workaround
         public virtual int DidfourbetpreflopVirtual
@@ -1008,7 +1008,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Didfourbet == 1 ? 1 : 0;
             }
-        }      
+        }
 
         public virtual int CouldfourbetpreflopVirtual
         {
@@ -1016,7 +1016,7 @@ namespace DriveHUD.Entities
             {
                 return Totalhands == 1 && FacedthreebetpreflopVirtual == 1 && Couldfourbet == 1 ? 1 : 0;
             }
-        }    
+        }
 
         #endregion
 
