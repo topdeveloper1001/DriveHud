@@ -21,6 +21,10 @@ namespace Model.Data
     [ProtoContract]
     public class ReportHandViewModel : BindableBase
     {
+        private ReportHandViewModel()
+        {
+        }
+
         public ReportHandViewModel(Playerstatistic statistic)
         {
             cards = new ComparableCard(statistic.Cards);
@@ -36,6 +40,7 @@ namespace Model.Data
             positionString = statistic.PositionString;
             equity = statistic.Equity;
             handTag = statistic.HandTag;
+            playerName = statistic.PlayerName;
         }
 
         [ProtoMember(1)]
@@ -77,7 +82,7 @@ namespace Model.Data
             {
                 return handNote;
             }
-            private set
+            set
             {
                 SetProperty(ref handNote, value);
             }
@@ -245,6 +250,21 @@ namespace Model.Data
             private set
             {
                 SetProperty(ref handTag, value);
+            }
+        }
+
+        [ProtoMember(15)]
+        private string playerName;
+
+        public string PlayerName
+        {
+            get
+            {
+                return playerName;
+            }
+            private set
+            {
+                SetProperty(ref playerName, value);
             }
         }
     }

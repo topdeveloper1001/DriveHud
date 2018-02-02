@@ -22,9 +22,9 @@ namespace Model.Reports
 {
     public class ShowdownHandsReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var report = new ObservableCollection<Indicators>();
+            var report = new ObservableCollection<ReportIndicators>();
 
             if (statistics == null)
             {
@@ -75,9 +75,9 @@ namespace Model.Reports
 
     public class TournamentShowdownHandsReportCreator : TournamentBaseReportCreator
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var report = new ObservableCollection<Indicators>();
+            var report = new ObservableCollection<ReportIndicators>();
             var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
 
             var s = statistics

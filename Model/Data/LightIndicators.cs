@@ -21,7 +21,7 @@ using System.Linq;
 namespace Model.Data
 {
     [ProtoContract]
-    [ProtoInclude(100, typeof(OpponentReportIndicators))]
+    [ProtoInclude(300, typeof(ReportIndicators))]
     public class LightIndicators : Indicators
     {
         [ProtoMember(1)]

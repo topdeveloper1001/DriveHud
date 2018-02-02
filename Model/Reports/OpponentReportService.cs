@@ -51,7 +51,7 @@ namespace Model.Reports
         /// Gets the opponent report 
         /// </summary>
         /// <returns>The list of <see cref="Indicators"/></returns>
-        public IEnumerable<Indicators> GetReport()
+        public IEnumerable<ReportIndicators> GetReport()
         {
             using (var pf = new PerformanceMonitor(nameof(GetReport)))
             {
@@ -177,15 +177,8 @@ namespace Model.Reports
             opponentsData.Add(playerId, opponentReportIndicators);
 
             dataService.ActOnPlayerStatisticFromFile(playerId, x => !x.IsTourney, x => opponentReportIndicators.AddStatistic(x));
+
+            opponentReportIndicators.ShrinkReportHands(100);
         }
-    }
-
-    [ProtoContract]
-    public class OpponentReportIndicators : LightIndicators
-    {
-        [ProtoMember(1)]
-        public int PlayerId { get; set; }
-
-
     }
 }

@@ -11,11 +11,15 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Model.Reports;
+using ProtoBuf;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Model.Data
 {
+    [ProtoContract]
+    [ProtoInclude(100, typeof(OpponentReportIndicators))]
     public class ReportIndicators : LightIndicators
     {
         public ReportIndicators() : base()
@@ -26,14 +30,15 @@ namespace Model.Data
         {
         }
 
-        public ObservableCollection<ReportHandViewModel> ReportHands { get; private set; } = new ObservableCollection<ReportHandViewModel>();
+        [ProtoMember(1)]
+        public ObservableCollection<ReportHandViewModel> ReportHands { get; protected set; } = new ObservableCollection<ReportHandViewModel>();
 
         public override void AddStatistic(Playerstatistic statistic)
         {
-            base.AddStatistic(statistic);            
+            base.AddStatistic(statistic);
 
-            var reportHandViewModel = new ReportHandViewModel(statistic);
-            ReportHands.Add(reportHandViewModel);
+            AddStatToStatistic(statistic);
+            AddReportHand(statistic);
         }
 
         public override void Clean()
@@ -41,5 +46,16 @@ namespace Model.Data
             base.Clean();
             ReportHands.Clear();
         }
-    }    
+
+        protected virtual void AddStatToStatistic(Playerstatistic statistic)
+        {
+            Statistics.Add(statistic);
+        }
+
+        protected virtual void AddReportHand(Playerstatistic statistic)
+        {
+            var reportHandViewModel = new ReportHandViewModel(statistic);
+            ReportHands.Add(reportHandViewModel);
+        }
+    }
 }

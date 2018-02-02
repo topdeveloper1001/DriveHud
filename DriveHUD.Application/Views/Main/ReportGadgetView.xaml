@@ -1981,7 +1981,7 @@
                     Foreground="Red"
                     SelectionMode="Extended"
                     MouseDoubleClick="GridViewKnownHands_MouseDoubleClick"
-                    ItemsSource="{Binding Path=ReportSelectedItemStatisticsCollection_Filtered}"
+                    ItemsSource="{Binding Path=FilteredReportSelectedItemStatisticsCollection}"
                     RowLoaded="GridViewKnownHands_RowLoaded"
                     RowStyle="{StaticResource GridViewKnownHandsRowStyle}"
                     AlternateRowStyle="{StaticResource GridViewKnownHandsAlternateRowStyle}"
@@ -1992,7 +1992,7 @@
 
                     <i:Interaction.Behaviors>
                         <dh:RadGridViewMultiSelectBehavior
-                            SelectedItems="{Binding SelectedComparableCardsStatistic, Mode=OneWay}" />
+                            SelectedItems="{Binding SelectedReportHands, Mode=OneWay}" />
                     </i:Interaction.Behaviors>
 
                     <telerik:RadContextMenu.ContextMenu>
@@ -2009,7 +2009,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Date}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Time, Converter={dh:DateTimeToLocalizedDateTimeConverter}}">
+                            DataMemberBinding="{Binding Path=Time, Converter={dh:DateTimeToLocalizedDateTimeConverter}}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
@@ -2017,11 +2017,11 @@
                             UniqueName="Cards"
                             MinWidth="80"
                             Width="*"
-                            DataMemberBinding="{Binding Path=PlayerCards}">
+                            DataMemberBinding="{Binding Path=Cards}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <application:CardUC
-                                        Cards="{Binding Path=PlayerCards.Cards}"
+                                        Cards="{Binding Path=Cards.Cards}"
                                         HorizontalAlignment="Left" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
@@ -2031,7 +2031,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Preflop}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.FacingPreflop}"
+                            DataMemberBinding="{Binding Path=FacingPreflop}"
                             CellTemplateSelector="{StaticResource PreflopTemplateSelector}">
 
                         </telerik:GridViewDataColumn>
@@ -2048,7 +2048,7 @@
                                         HorizontalAlignment="Left"
                                         Width="130">
                                         <application:CardUC
-                                            Cards="{Binding Path=Statistic.Board}"
+                                            Cards="{Binding Path=BoardCards.Cards}"
                                             HorizontalAlignment="Left" />
                                     </Grid>
                                 </DataTemplate>
@@ -2059,7 +2059,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Line}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Line}">
+                            DataMemberBinding="{Binding Path=Line}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
@@ -2068,12 +2068,12 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.NetWon}">
+                            DataMemberBinding="{Binding Path=NetWon}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.NetWon, StringFormat=\{0:c2\}}"
-                                        Foreground="{Binding Path=Statistic.NetWon, Converter={StaticResource ValueToColorConverter}}" />
+                                        Text="{Binding Path=NetWon, StringFormat=\{0:c2\}}"
+                                        Foreground="{Binding Path=NetWon, Converter={StaticResource ValueToColorConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2082,11 +2082,11 @@
                             Header="{ResX Key=Common_ReportView_Hands_Position}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Position}">
+                            DataMemberBinding="{Binding Path=Position}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.PositionString}" />
+                                        Text="{Binding Path=PositionString}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2097,11 +2097,11 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Equity}">
+                            DataMemberBinding="{Binding Path=Equity}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.Equity, StringFormat=\{0:p2\}, Converter={StaticResource ValueToEquityConverter}}" />
+                                        Text="{Binding Path=Equity, StringFormat=\{0:p2\}, Converter={StaticResource ValueToEquityConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2112,12 +2112,12 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.EVDiff}">
+                            DataMemberBinding="{Binding Path=EVDiff}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.EVDiff, StringFormat=\{0:c2\}}"
-                                        Foreground="{Binding Path=Statistic.EVDiff, Converter={StaticResource ValueToColorConverter}}" />
+                                        Text="{Binding Path=EVDiff, StringFormat=\{0:c2\}}"
+                                        Foreground="{Binding Path=EVDiff, Converter={StaticResource ValueToColorConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>

@@ -18,7 +18,7 @@ namespace Model.Reports
 {
     public interface IOpponentReportService
     {
-        IEnumerable<Indicators> GetReport();
+        IEnumerable<ReportIndicators> GetReport();
 
         void UpdateReport(Playerstatistic stat);
     }

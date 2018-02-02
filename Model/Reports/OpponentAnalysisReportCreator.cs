@@ -20,13 +20,13 @@ namespace Model.Reports
 {
     public class OpponentAnalysisReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();            
 
-            var report = new ObservableCollection<Indicators>(opponentReportService.GetReport());
+            var report = new ObservableCollection<ReportIndicators>(opponentReportService.GetReport());
 
-            return report ?? new ObservableCollection<Indicators>();
+            return report ?? new ObservableCollection<ReportIndicators>();
         }
     }
 }

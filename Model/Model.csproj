@@ -173,6 +173,7 @@
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\NoteBuilder.cs" />
+    <Compile Include="Data\OpponentReportIndicators.cs" />
     <Compile Include="Data\ReportHandViewModel.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
@@ -212,7 +213,7 @@
     <Compile Include="Extensions\HandActionExtension.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="DataService.cs" />
-    <Compile Include="Extensions\ComparableCardsStatistic.cs" />
+    <Compile Include="Extensions\ComparableCard.cs" />
     <Compile Include="Filters\BuiltFilterModel.cs" />
     <Compile Include="Filters\FilterDataService.cs" />
     <Compile Include="Filters\FilterDateModel.cs" />

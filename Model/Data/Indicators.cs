@@ -1789,23 +1789,8 @@ namespace Model.Data
             return (actual / possible);
         }
 
-        protected virtual void CalculateStdDeviation()
+        protected virtual void CalculateStdDeviation(NetWonDeviationItem[] netWonCollection)
         {
-            if (Statistics.Count == 0)
-            {
-                return;
-            }
-
-            var statistic = Statistics.ToArray();
-
-            var netWonCollection = statistic
-                .Select(x => new
-                {
-                    NetWon = x.NetWon,
-                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
-                })
-                .ToArray();
-
             var netWonMean = 0m;
             var netWonMeanInBB = 0m;
 
@@ -1836,35 +1821,50 @@ namespace Model.Data
             stdDevBB = (decimal)Math.Sqrt((double)netWonVarianceInBB);
         }
 
-        protected virtual decimal CalculateNetWonPerHour()
+        protected virtual void CalculateStdDeviation()
         {
             if (Statistics == null || Statistics.Count == 0)
             {
-                return 0m;
+                return;
             }
 
+            var statistic = Statistics.ToArray();
+
+            var netWonCollection = statistic
+                .Select(x => new NetWonDeviationItem
+                {
+                    NetWon = x.NetWon,
+                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
+                })
+                .ToArray();
+
+            CalculateStdDeviation(netWonCollection);
+        }
+
+        protected virtual decimal CalculateNetWonPerHour(DateTime[] orderedTime)
+        {
             var totalMinutes = 0d;
 
             DateTime? sessionStart = null;
             DateTime? sessionEnd = null;
 
-            foreach (var playerstatistic in Statistics.OrderBy(x => x.Time).ToArray())
+            foreach (var time in orderedTime)
             {
-                if (Utils.IsDateInDateRange(playerstatistic.Time, sessionStart, sessionEnd, TimeSpan.FromMinutes(30)))
+                if (Utils.IsDateInDateRange(time, sessionStart, sessionEnd, TimeSpan.FromMinutes(30)))
                 {
                     if (!sessionStart.HasValue)
                     {
-                        sessionStart = playerstatistic.Time;
+                        sessionStart = time;
                     }
 
-                    sessionEnd = playerstatistic.Time;
+                    sessionEnd = time;
                 }
                 else
                 {
                     totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
 
-                    sessionStart = playerstatistic.Time;
-                    sessionEnd = playerstatistic.Time;
+                    sessionStart = time;
+                    sessionEnd = time;
                 }
             }
 
@@ -1878,6 +1878,27 @@ namespace Model.Data
             var netWonPerHour = NetWon / (decimal)totalMinutes * 60;
 
             return netWonPerHour;
+        }
+
+        protected virtual decimal CalculateNetWonPerHour()
+        {
+            if (Statistics == null || Statistics.Count == 0)
+            {
+                return 0m;
+            }
+
+            var orderedTime = Statistics.OrderBy(x => x.Time).Select(x => x.Time).ToArray();
+
+            var netWonPerHour = CalculateNetWonPerHour(orderedTime);
+
+            return netWonPerHour;
+        }
+
+        protected class NetWonDeviationItem
+        {
+            public decimal NetWon { get; set; }
+
+            public decimal NetWonInBB { get; set; }
         }
 
         #endregion        
