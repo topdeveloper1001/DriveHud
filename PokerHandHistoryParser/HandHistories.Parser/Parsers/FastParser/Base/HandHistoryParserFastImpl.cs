@@ -243,7 +243,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresActionSorting)
                 {
-                    handHistory.HandActions = OrderHandActions(handHistory.HandActions, handHistory.Players);
+                    handHistory.HandActions = OrderHandActions(handHistory.HandActions, handHistory.Players, handHistory);
                 }
 
                 if (RequiresAdjustedRaiseSizes)
@@ -532,7 +532,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         /// Sometimes hand actions are listed out of order, but with an order number or time stamp (this happens on IPoker).
         /// In these cases the hands must be reorganized before being displayed.
         /// </summary>
-        protected virtual List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players)
+        protected virtual List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players, HandHistory handHistory)
         {
             return handActions.OrderBy(action => action.ActionNumber).ToList();
         }

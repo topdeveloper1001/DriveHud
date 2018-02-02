@@ -47,11 +47,16 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
-        protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players)
+        protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players, HandHistory handHistory)
         {
             try
             {
                 if (handActions == null || handActions.Count == 0)
+                {
+                    return handActions;
+                }
+
+                if (!IsFastFold(handHistory.TableName))
                 {
                     return handActions;
                 }
@@ -71,8 +76,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 var orderedHandActions = new List<HandAction>();
 
                 orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Init));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop).Where(x => !x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop));
                 orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Flop));
                 orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Turn));
                 orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.River));
@@ -82,7 +86,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 if (orderedHandActions.Count != handActions.Count)
                 {
                     LogProvider.Log.Error(this, "Could not order hand actions. Arrays sizes doesn't match.");
-                    return base.OrderHandActions(handActions, players);
+                    return base.OrderHandActions(handActions, players, handHistory);
                 }
 
                 return orderedHandActions;
