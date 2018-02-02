@@ -23,6 +23,7 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.Unity;
 using Model;
 using Model.Interfaces;
+using Model.Reports;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
@@ -60,7 +61,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeLicenseService(unityContainer);
             InitializeSessionService(unityContainer);
             InitializeEventAggregator(unityContainer);
-            InitializeResources();
+            InitializeOpponentReportService(unityContainer);
+            InitializeResources();            
         }
 
         protected virtual void InitializeDatabase()
@@ -208,6 +210,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
             var eventAggregator = Substitute.For<IEventAggregator>();
             eventAggregator.GetEvent<PlayersAddedEvent>().ReturnsForAnyArgs(new PlayersAddedEvent());
             unityContainer.RegisterInstance(eventAggregator);
+        }
+
+        protected virtual void InitializeOpponentReportService(UnityContainer unityContainer)
+        {
+            var opponentReportService = Substitute.For<IOpponentReportService>();
+            unityContainer.RegisterInstance(opponentReportService);
         }
 
         protected virtual void InitializeResources()

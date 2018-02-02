@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="88070146">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>1NLRplusA100GT88070146</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-12-21 09:33:29</startdate>
+		<currency>USD</currency>
+		<nickname>HeroTest</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentcode>88070146</tournamentcode>
+		<tournamentname>$1 NL [R+A] $100 GT</tournamentname>
+		<place>0</place>
+		<buyin>$1+$0.10</buyin>
+		<totalbuyin>$1.10</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="248946174">
+		<general>
+			<startdate>2017-12-21 09:38:44</startdate>
+			<players>
+				<player seat="1" name="HeroTest" chips="36066" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="2" name="UGT2BKIDNME" chips="53181" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="4" name="mattyjp03" chips="75916" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="5" name="JuicyJosh" chips="90665" dealer="0" win="34200" bet="20400" rebuy="0" addon="0" />
+				<player seat="6" name="Moojuice" chips="40199" dealer="1" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="7" name="puffs" chips="49546" dealer="0" win="0" bet="3600" rebuy="0" addon="0" />
+				<player seat="8" name="PauloRoberto" chips="52216" dealer="0" win="0" bet="6600" rebuy="0" addon="0" />
+				<player seat="9" name="FatChipStaxX" chips="27712" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="10" name="calikimchii" chips="274499" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="HeroTest" type="15" sum="600" cards="" />
+			<action no="2" player="UGT2BKIDNME" type="15" sum="600" cards="" />
+			<action no="3" player="mattyjp03" type="15" sum="600" cards="" />
+			<action no="4" player="JuicyJosh" type="15" sum="600" cards="" />
+			<action no="5" player="Moojuice" type="15" sum="600" cards="" />
+			<action no="6" player="puffs" type="15" sum="600" cards="" />
+			<action no="7" player="PauloRoberto" type="15" sum="600" cards="" />
+			<action no="8" player="FatChipStaxX" type="15" sum="600" cards="" />
+			<action no="9" player="calikimchii" type="15" sum="600" cards="" />
+			<action no="10" player="puffs" type="1" sum="3000" cards="" />
+			<action no="11" player="PauloRoberto" type="2" sum="6000" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="HeroTest">X X</cards>
+			<cards type="Pocket" player="UGT2BKIDNME">X X</cards>
+			<cards type="Pocket" player="mattyjp03">X X</cards>
+			<cards type="Pocket" player="JuicyJosh">X X</cards>
+			<cards type="Pocket" player="Moojuice">X X</cards>
+			<cards type="Pocket" player="puffs">X X</cards>
+			<cards type="Pocket" player="PauloRoberto">X X</cards>
+			<cards type="Pocket" player="FatChipStaxX">X X</cards>
+			<cards type="Pocket" player="calikimchii">X X</cards>
+			<action no="12" player="FatChipStaxX" type="0" sum="0" cards="" />
+			<action no="13" player="calikimchii" type="0" sum="0" cards="" />
+			<action no="14" player="HeroTest" type="0" sum="0" cards="" />
+			<action no="15" player="UGT2BKIDNME" type="0" sum="0" cards="" />
+			<action no="16" player="mattyjp03" type="0" sum="0" cards="" />
+			<action no="17" player="JuicyJosh" type="23" sum="19800" cards="" />
+			<action no="18" player="Moojuice" type="0" sum="0" cards="" />
+			<action no="19" player="puffs" type="0" sum="0" cards="" />
+			<action no="20" player="PauloRoberto" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>
