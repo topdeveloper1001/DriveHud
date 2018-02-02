@@ -149,6 +149,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Hero-Position-EP-6.xml", EnumPokerSites.Ignition, "Hero", "EP")]
         [TestCase(@"Hero-Position-EP-7.xml", EnumPokerSites.BetOnline, "HeroTest", "EP")]
         [TestCase(@"Hero-Position-CO-1.xml", EnumPokerSites.IPoker, "Peon_184", "CO")]
+        [TestCase(@"Hero-Position-CO-2.xml", EnumPokerSites.BetOnline, "Hero", "CO")]
         [TestCase(@"Hero-Position-MP-1.xml", EnumPokerSites.BetOnline, "Peon84", "MP")]
         [TestCase(@"Hero-Position-MP-2.xml", EnumPokerSites.BetOnline, "Peon84", "MP")]
         [TestCase(@"Hero-Position-MP-3.xml", EnumPokerSites.BetOnline, "Peon84", "MP")]
