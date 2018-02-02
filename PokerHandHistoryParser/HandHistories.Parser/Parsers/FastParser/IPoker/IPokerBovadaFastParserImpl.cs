@@ -70,13 +70,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
                 var orderedHandActions = new List<HandAction>();
 
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Init));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Preflop));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Flop));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Turn));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.River));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Showdown));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Summary));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Init));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop).Where(x => !x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Flop));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Turn));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.River));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Showdown));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Summary));
 
                 if (orderedHandActions.Count != handActions.Count)
                 {
@@ -94,9 +95,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return handActions;
         }
 
-        private List<HandAction> OrderStreetHandActions(List<HandAction> handActions, Dictionary<string, int> orderedPlayersDictionary, Street street)
+        private List<HandAction> OrderStreetHandActions(List<HandAction> handActions, Dictionary<string, int> orderedPlayersDictionary, Func<HandAction, bool> filter)
         {
-            var streetActions = handActions.Where(x => x.Street == street).ToList();
+            var streetActions = handActions.Where(filter).ToList();
 
             if (streetActions.Count == 0)
             {
