@@ -214,8 +214,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         protected virtual void InitializeOpponentReportService(UnityContainer unityContainer)
         {
-            var opponentReportService = Substitute.For<IOpponentReportService>();
-            unityContainer.RegisterInstance(opponentReportService);
+            //var opponentReportService = Substitute.For<IOpponentReportService>();
+            //unityContainer.RegisterInstance(opponentReportService);
         }
 
         protected virtual void InitializeResources()
